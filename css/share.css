@@ -1,0 +1,5 @@
+/* Small unobtrusive share row — replaces injected social blocks */
+.share-row{display:flex;align-items:center;gap:14px;justify-content:center;padding:26px 16px 8px;color:#6e6e73;font-size:13px}
+.share-row span{opacity:.75}
+.share-row a{display:inline-flex;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;background:#fff;box-shadow:rgba(0,0,0,.08) 0 1px 2px;color:#6e6e73}
+.share-row a:hover{color:var(--blue);text-decoration:none}
