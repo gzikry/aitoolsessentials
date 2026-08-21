@@ -79,8 +79,12 @@
 </ul>
 </div>
 <div class="content-column">
-<form id="tool-submission" onsubmit="handleSubmit(event)">
+<form id="tool-submission" action="https://formsubmit.co/contact@aitoolsessentials.com" method="POST">
 <h2>Submit Your Tool</h2>
+<input type="hidden" name="_subject" value="New AI tool submission — leaderboard">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" style="display:none">
 <div class="form-group">
 <label for="tool-name">Tool Name</label>
 <input type="text" id="tool-name" name="name" required placeholder="e.g., Gamma, Jasper, Midjourney">
@@ -131,7 +135,7 @@
 <h3>The AI Tools You Need to Know</h3>
 <p>Get fresh AI tool reviews, comparisons, and workflows delivered daily.</p>
 <div class="cta-actions">
-<a class="cta-button" href="../../index.html#subscribe">Start my free newsletter</a>
+<a class="cta-button" href="index.html#subscribe">Start my free newsletter</a>
 </div>
 </div>
 </div>
@@ -143,21 +147,11 @@
   <footer class="footer">
 <span>© 2026 AIToolsEssentials</span>
 <a href="advertise/index.html" rel="nofollow">Advertise</a>
-<a href="submit-tool.html" rel="nofollow">Submit a tool (vendors)</a>
+<a href="#tool-submission">Submit a tool</a>
 <a href="legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
-</footer>
+<a href="mailto:contact@aitoolsessentials.com">Contact</a>
+  </footer>
 <script src="js/site.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>
-
-<script>
-function handleSubmit(e) {
-  e.preventDefault();
-  alert('Thank you for submitting! Your tool will be reviewed and added to our leaderboard within 24 hours.');
-  // TODO: Integrate with backend submission system
-}
-
-function submitTool() {
-  document.getElementById('tool-submission').scrollIntoView({behavior: 'smooth'});
-}
-</script>
