@@ -1,0 +1,20 @@
+{
+  "client_name": "Sample Local Services Co",
+  "business_type": "Small business providing local home services",
+  "team_size": "6",
+  "website": "https://example.com",
+  "current_tools": ["Google Workspace", "Canva", "QuickBooks"],
+  "tools_considered": ["ChatGPT", "Canva AI", "Zapier AI"],
+  "monthly_budget": "$150-$300/month",
+  "top_workflows": [
+    "Writing follow-up emails after quote requests",
+    "Creating weekly social media content",
+    "Researching competitors and local market trends",
+    "Routing website leads into a follow-up checklist"
+  ],
+  "outputs_needed": ["emails", "social posts", "research summaries", "lead follow-up"],
+  "biggest_bottleneck": "Owner handles too much writing and follow-up manually",
+  "privacy_constraints": "Do not upload customer addresses, phone numbers, invoices, or private job details into tools without approved privacy terms.",
+  "desired_outcome": "Choose a small AI stack that saves admin and marketing time without complex implementation.",
+  "timeline": "30 days"
+}
