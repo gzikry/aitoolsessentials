@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Your AIToolsEssentials Premium checkout status." />
+  <title>Checkout status — AIToolsEssentials</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="canonical" href="https://aitoolsessentials.com/checkout/complete/">
+  <meta name="robots" content="noindex">
+<link rel="stylesheet" href="../../css/share.css">
+</head>
+<body>
+  <header class="global-nav" aria-label="Primary navigation">
+    <a class="brand" href="../../index.html" aria-label="AIToolsEssentials home"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+    <nav class="nav-links">
+      <a href="../../tools/index.html">Tools</a>
+      <a href="../../comparisons/best-ai-tools.html">Best AI tools</a>
+      <a href="../../categories/index.html">Categories</a>
+      <a href="../../articles/index.html">Guides</a>
+    </nav>
+    <a class="nav-cta" href="../../legal/affiliate-disclosure.html">Disclosure</a>
+  </header>
+
+  <main>
+    <section class="hero scene scene-dark" id="status-hero">
+      <div class="hero-copy">
+        <p class="kicker" id="status-kicker">Checking your checkout…</p>
+        <h1 id="status-heading">One moment.</h1>
+        <p class="subhead" id="status-detail">We're confirming your payment status.</p>
+        <div class="actions" id="status-actions"></div>
+      </div>
+    </section>
+
+    <section class="scene scene-light intro-strip" id="next-steps" hidden>
+      <p><strong>What happens next:</strong> your Whop receipt arrives by email within a minute, and your Premium access is tied to that same email. Bookmark
+      <a href="../../pricing/">aitoolsessentials.com/pricing</a> — member links ship from there.</p>
+    </section>
+  </main>
+
+  <div id="share-row" hidden></div>
+  <footer class="footer">
+    <span>© 2026 AIToolsEssentials</span>
+    <a href="../../categories/index.html">Categories</a>
+    <a href="../../articles/index.html">Guides</a>
+  </footer>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  // Whop returns ?status=success|error (plus membership/checkout session ids).
+  var ok = params.get("status") === "success";
+  var kicker = document.getElementById("status-kicker");
+  var heading = document.getElementById("status-heading");
+  var detail = document.getElementById("status-detail");
+  var actions = document.getElementById("status-actions");
+  var next = document.getElementById("next-steps");
+
+  if (ok) {
+    kicker.textContent = "Payment confirmed 🎉";
+    heading.textContent = "Welcome to Premium.";
+    detail.textContent = "You're in. Your receipt is on its way by email — check your inbox for your Whop login so you can manage your membership anytime.";
+    next.hidden = false;
+    if (window.aitTrack) window.aitTrack("checkout_complete", { plan: params.get("planId") || "premium-monthly" });
+    actions.innerHTML =
+      '<a class="button button-blue" href="../../tools/index.html">Explore the tools database</a>' +
+      '<a class="button button-ghost-dark" href="../../articles/index.html">Browse guides</a>';
+  } else if (params.get("status") === "error") {
+    kicker.textContent = "Checkout didn't complete";
+    heading.textContent = "No charge was made.";
+    detail.textContent = "Something interrupted the payment — card declined or the window was closed early. Nothing was billed. You can retry whenever you're ready.";
+    actions.innerHTML =
+      '<a class="button button-blue" href="../pricing/">Try again</a>' +
+      '<a class="button button-ghost-dark" href="mailto:contact@aitoolsessentials.com?subject=Premium%20checkout%20issue">Email us about it</a>';
+  } else {
+    kicker.textContent = "Status unknown";
+    heading.textContent = "We couldn't read your checkout result.";
+    detail.textContent = "If you just paid, check your email for the Whop receipt before retrying — double charges are unlikely but easy to avoid. Questions? Email contact@aitoolsessentials.com.";
+    actions.innerHTML =
+      '<a class="button button-blue" href="../pricing/">Back to pricing</a>' +
+      '<a class="button button-ghost-dark" href="mailto:contact@aitoolsessentials.com?subject=Premium%20access">Contact support</a>';
+  }
+})();
+</script>
+<script src="../../js/site.js" defer></script>
+<script src="../../js/analytics.js" defer></script>
+</body>
+</html>
