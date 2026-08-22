@@ -17,6 +17,66 @@ NEW_COMPARISONS = {
         'subhead': 'Three automation platforms compared on pricing models, AI features, and self-hosting.',
         'bench_keys': [],
     },
+    'chatgpt-vs-gemini.html': {
+        'kicker': 'Versus comparison',
+        'a': 'chatgpt', 'b': 'gemini',
+        'subhead': 'The ecosystem-agnostic assistant against the one wired into Google Workspace and Android.',
+        'bench_keys': ['arena_text_snapshot'],
+    },
+    'claude-vs-perplexity.html': {
+        'kicker': 'Versus comparison',
+        'a': 'claude', 'b': 'perplexity',
+        'subhead': 'Deep document analysis and writing against source-backed web research.',
+        'bench_keys': ['arena_text_snapshot'],
+    },
+    'chatgpt-vs-deepseek.html': {
+        'kicker': 'Versus comparison',
+        'a': 'chatgpt', 'b': 'deepseek',
+        'subhead': 'The polished commercial default against the open-source value option.',
+        'bench_keys': ['arena_text_snapshot'],
+    },
+    'heygen-vs-synthesia.html': {
+        'kicker': 'Video comparison',
+        'a': 'heygen', 'b': 'synthesia',
+        'subhead': 'Two avatar-video leaders compared on plans, credits, consent rules, and output rights.',
+        'bench_keys': [],
+    },
+    'elevenlabs-vs-descript.html': {
+        'kicker': 'Audio & video comparison',
+        'a': 'elevenlabs', 'b': 'descript',
+        'subhead': 'Best-in-class voice generation against transcript-based editing — where they overlap and where they do not.',
+        'bench_keys': [],
+    },
+    'notion-ai-vs-microsoft-copilot.html': {
+        'kicker': 'Productivity comparison',
+        'a': 'notion-ai', 'b': 'microsoft-copilot',
+        'subhead': 'AI inside your docs workspace against AI across the Microsoft 365 estate.',
+        'bench_keys': [],
+    },
+    'midjourney-vs-leonardo-ai.html': {
+        'kicker': 'Image comparison',
+        'a': 'midjourney', 'b': 'leonardo-ai',
+        'subhead': 'Aesthetic quality leader against a controllable, credit-based production alternative.',
+        'bench_keys': [],
+    },
+    'fireflies-vs-otter-ai.html': {
+        'kicker': 'Meetings comparison',
+        'a': 'fireflies', 'b': 'otter-ai',
+        'subhead': 'Two meeting recorders compared on free-tier limits, storage, and team features.',
+        'bench_keys': [],
+    },
+    'gamma-vs-canva-ai.html': {
+        'kicker': 'Presentations comparison',
+        'a': 'gamma', 'b': 'canva-ai',
+        'subhead': 'Narrative-first deck generation against a full design suite with AI features.',
+        'bench_keys': [],
+    },
+    'perplexity-vs-you-com.html': {
+        'kicker': 'Research comparison',
+        'a': 'perplexity', 'b': 'you-com',
+        'subhead': 'Cited-answer search engines compared on focus, models available, and pricing.',
+        'bench_keys': [],
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

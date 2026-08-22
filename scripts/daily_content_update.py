@@ -52,6 +52,12 @@ enhance_buyer_guides(root)
 from generate_new_comparisons import generate as generate_new_comparison_pages
 generate_new_comparison_pages(root)
 
+from generate_audience_guides import generate as generate_audience_guide_pages
+generate_audience_guide_pages(root)
+
+from enhance_faq_schema import generate as enhance_faq_schema
+enhance_faq_schema(root)
+
 from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')
