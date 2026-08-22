@@ -25,9 +25,15 @@
     "key_location": "https://aitoolsessentials.com/7705dfd30f4617a4ac3a0c7b92f69126.txt"
   },
   "whop": {
-    "status": "plan_id_required",
-    "checkout_active": false,
-    "notes": "Premium is visibly marked coming soon. Checkout must remain disabled until the plan ID and member-delivery flow are configured and tested."
+    "status": "active_verified",
+    "checkout_active": true,
+    "plan_id": "plan_FNXWs3suBFwDN",
+    "product_url": "https://whop.com/aitoolsessentials/aitoolsessentials-premium/",
+    "checkout_url": "https://whop.com/checkout/plan_FNXWs3suBFwDN",
+    "price_usd_month": 12,
+    "refund_policy": "no_refunds",
+    "verified_at": "2026-08-22",
+    "notes": "Checkout URL verified rendering $12/month Premium. Wired into /pricing/."
   },
   "official_source_url_check": {
     "checked_at": "2026-08-22",
