@@ -68,9 +68,9 @@ def main():
     # Benchmark evidence integrity and review provenance gates.
     benchmark_data = json.loads((ROOT/'data/benchmarks.json').read_text())
     source_ids = {s['id'] for s in benchmark_data.get('sources', [])}
-    for row in benchmark_data.get('arena_text_snapshot', []):
+    for row in benchmark_data.get('arena_text_snapshot', []) + benchmark_data.get('coding_agent_snapshot', []):
         if row.get('source_id') not in source_ids:
-            errors.append(f"Benchmark row {row.get('model')} has unknown source_id")
+            errors.append(f"Benchmark row {row.get('model', row.get('configuration'))} has unknown source_id")
         if row.get('tool_slug') not in tool_slugs:
             errors.append(f"Benchmark row references unknown tool: {row.get('tool_slug')}")
     try:

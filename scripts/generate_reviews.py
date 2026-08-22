@@ -44,6 +44,13 @@ def _benchmark_html(root: Path, slug: str, category: str) -> str:
 <div class="review-benchmark-head"><div><span class="evidence-label">External benchmark snapshot</span><h3>Arena Text · {snapshot['model']}</h3><span class="benchmark-meta">Snapshot {data['snapshot_date']} · {snapshot['votes']:,} votes · exact model version shown</span></div><div class="review-benchmark-score">#{snapshot['rank']}<small> · {snapshot['score']}</small></div></div>
 <p>{snapshot['note']} This is supporting context—not the AIToolsEssentials product score. <a href="{source['url']}" target="_blank" rel="external noopener">Source [{source['id']}] ↗</a></p>
 </div>'''
+    coding_snapshot = next((x for x in data.get('coding_agent_snapshot', []) if x['tool_slug'] == slug), None)
+    if coding_snapshot:
+        source = sources[coding_snapshot['source_id']]
+        return f'''<div class="review-benchmark">
+<div class="review-benchmark-head"><div><span class="evidence-label">Verified agent configuration</span><h3>{coding_snapshot['benchmark']} · {coding_snapshot['configuration']}</h3><span class="benchmark-meta">Run {coding_snapshot['run_date']} · {coding_snapshot['trials']} trials · exact agent/model/effort shown</span></div><div class="review-benchmark-score">{coding_snapshot['score']}</div></div>
+<p>{coding_snapshot['note']} Reward-hack disqualifications: {coding_snapshot['reward_hack_disqualification']}. <a href="{source['url']}" target="_blank" rel="external noopener">Source [{source['id']}] ↗</a></p>
+</div>'''
     source_ids = data.get('coverage', {}).get(category, [])
     if not source_ids:
         return ''

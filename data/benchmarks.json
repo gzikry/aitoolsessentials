@@ -46,6 +46,46 @@
       "measures": "Independent intelligence, latency, speed, price, speech, image and video model evaluations.",
       "use_for": "Cost/speed context and non-text modality methodology",
       "caveat": "API model measurements do not equal the complete end-user product experience."
+    },
+    {
+      "id": 6,
+      "name": "Terminal-Bench 2.1",
+      "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1",
+      "measures": "Accuracy of an agent + model + reasoning-effort configuration on 89 complex containerized terminal tasks.",
+      "use_for": "Coding agents and terminal-capable development tools",
+      "caveat": "Never present this as a model-only score. Keep agent, exact model, effort, trial count and integrity metadata visible."
+    },
+    {
+      "id": 7,
+      "name": "Artificial Analysis Image methodology",
+      "url": "https://artificialanalysis.ai/image/methodology",
+      "measures": "Blind pairwise image preference with exact model/version and matched prompt conditions.",
+      "use_for": "Text-to-image and image-editing model context",
+      "caveat": "Keep text-to-image and editing pools separate; old model versions are historical evidence only."
+    },
+    {
+      "id": 8,
+      "name": "Artificial Analysis Video methodology",
+      "url": "https://artificialanalysis.ai/video/methodology",
+      "measures": "Modality-separated video quality, latency and price comparisons.",
+      "use_for": "Text-to-video and image-to-video model context",
+      "caveat": "Do not compare Elo across different video modalities or output settings."
+    },
+    {
+      "id": 9,
+      "name": "Artificial Analysis TTS methodology",
+      "url": "https://artificialanalysis.ai/text-to-speech/methodology",
+      "measures": "Provider-voice and controlled-voice human-preference comparisons for text-to-speech.",
+      "use_for": "Voice-generation model context",
+      "caveat": "Controlled-voice and provider-voice arenas answer different questions and must remain separate."
+    },
+    {
+      "id": 10,
+      "name": "Terminal-Bench: Cursor CLI + Grok 4.5 submission",
+      "url": "https://raw.githubusercontent.com/harbor-framework/terminal-bench-2-1/main/leaderboard/submissions/2026-07-09-cursor-grok-4-5-none-cursor-cli.json",
+      "measures": "Maintainer-verified Terminal-Bench 2.1 submission record for one exact Cursor CLI configuration.",
+      "use_for": "A configuration-specific Cursor benchmark snapshot",
+      "caveat": "This is Cursor CLI + Grok 4.5 at high effort, not a universal score for Cursor or Grok."
     }
   ],
   "arena_text_snapshot": [
@@ -105,14 +145,62 @@
     }
   ],
   "coverage": {
-    "General AI Assistant": [1, 2, 4, 5],
-    "Development": [3, 4, 5],
-    "Audio": [5],
-    "Video": [5],
-    "Audio & Video": [5],
-    "Creative": [5],
-    "Creative & Marketing": [5],
-    "Research": [1, 4, 5],
-    "Model Hub": [1, 4, 5]
-  }
+    "General AI Assistant": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "Development": [
+      3,
+      6,
+      4,
+      5
+    ],
+    "Audio": [
+      9,
+      5
+    ],
+    "Video": [
+      8,
+      5
+    ],
+    "Audio & Video": [
+      8,
+      9,
+      5
+    ],
+    "Creative": [
+      7,
+      5
+    ],
+    "Creative & Marketing": [
+      7,
+      5
+    ],
+    "Research": [
+      1,
+      4,
+      5
+    ],
+    "Model Hub": [
+      1,
+      4,
+      5
+    ]
+  },
+  "coding_agent_snapshot": [
+    {
+      "tool_slug": "cursor",
+      "benchmark": "Terminal-Bench 2.1",
+      "configuration": "Cursor CLI + Grok 4.5 · high effort",
+      "metric": "Accuracy",
+      "score": "79.3% ± 1.5%",
+      "trials": 445,
+      "run_date": "2026-07-09",
+      "reward_hack_disqualification": "9.0%",
+      "source_id": 10,
+      "note": "Maintainer-verified configuration snapshot. Agent, model, effort and integrity metadata are inseparable from the score."
+    }
+  ]
 }

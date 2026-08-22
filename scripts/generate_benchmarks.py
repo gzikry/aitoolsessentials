@@ -21,6 +21,18 @@ def generate(root: Path) -> Path:
 <td>{row['votes']:,}</td><td>{row['note']} <a href="{source['url']}" rel="external noopener">[{source['id']}]</a></td>
 </tr>'''
 
+    coding_cards = ""
+    for row in data.get("coding_agent_snapshot", []):
+        source = sources[row["source_id"]]
+        coding_cards += f'''<article class="benchmark-source-card">
+<span class="evidence-label">Verified agent configuration</span>
+<h3><a href="../tools/{row['tool_slug']}/">{tool_names.get(row['tool_slug'], row['tool_slug'].title())}</a> · {row['benchmark']}</h3>
+<p><strong>{row['score']}</strong> · {row['configuration']} · {row['trials']} trials · run {row['run_date']}</p>
+<p><strong>Integrity metadata:</strong> {row['reward_hack_disqualification']} reward-hack disqualifications.</p>
+<p class="benchmark-caveat">{row['note']}</p>
+<a class="text-link" href="{source['url']}" target="_blank" rel="external noopener">Open submission record [{source['id']}] ↗</a>
+</article>'''
+
     source_cards = ""
     for source in data["sources"]:
         source_cards += f'''<article class="benchmark-source-card">
@@ -58,6 +70,8 @@ def generate(root: Path) -> Path:
 <p>These rows provide model-family context for selected products. They do not claim that the listed model is the product's current default.</p></div>
 <div class="table-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th><button type="button" data-col="0">Product family</button></th><th><button type="button" data-col="1">Exact model</button></th><th><button type="button" data-col="2">Rank</button></th><th><button type="button" data-col="3">Arena score</button></th><th><button type="button" data-col="4">Votes</button></th><th>Interpretation</th></tr></thead><tbody>{snapshot_rows}</tbody></table></div>
 <p class="benchmark-caveat"><strong>Read this correctly:</strong> Arena scores human preference in anonymous pairwise battles. A higher rank does not prove better factuality, lower cost, stronger privacy, or a better end-user product. <a href="{sources[2]['url']}" target="_blank" rel="external noopener">Methodology [2] ↗</a></p></section>
+
+<section class="benchmark-section scene scene-light"><div class="section-title"><p class="kicker light">Coding-agent evidence</p><h2>Keep the full configuration attached.</h2><p>A coding score belongs to the agent, exact model, reasoning effort, harness version, trial policy, and integrity checks—not to one product name.</p></div><div class="benchmark-source-grid">{coding_cards}</div></section>
 
 <section class="benchmark-section scene scene-light"><div class="section-title"><p class="kicker light">Source registry</p><h2>What we trust—and what each source misses.</h2></div>
 <div class="benchmark-source-grid">{source_cards}</div></section>
