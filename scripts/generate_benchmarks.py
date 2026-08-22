@@ -56,7 +56,7 @@ def generate(root: Path) -> Path:
 
 <section class="benchmark-section"><div class="section-title"><p class="kicker light">Current snapshot</p><h2>Arena Text: representative model listings</h2>
 <p>These rows provide model-family context for selected products. They do not claim that the listed model is the product's current default.</p></div>
-<div class="table-wrap"><table class="benchmark-table"><thead><tr><th>Product family</th><th>Exact model</th><th>Rank</th><th>Arena score</th><th>Votes</th><th>Interpretation</th></tr></thead><tbody>{snapshot_rows}</tbody></table></div>
+<div class="table-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th><button type="button" data-col="0">Product family</button></th><th><button type="button" data-col="1">Exact model</button></th><th><button type="button" data-col="2">Rank</button></th><th><button type="button" data-col="3">Arena score</button></th><th><button type="button" data-col="4">Votes</button></th><th>Interpretation</th></tr></thead><tbody>{snapshot_rows}</tbody></table></div>
 <p class="benchmark-caveat"><strong>Read this correctly:</strong> Arena scores human preference in anonymous pairwise battles. A higher rank does not prove better factuality, lower cost, stronger privacy, or a better end-user product. <a href="{sources[2]['url']}" target="_blank" rel="external noopener">Methodology [2] ↗</a></p></section>
 
 <section class="benchmark-section scene scene-light"><div class="section-title"><p class="kicker light">Source registry</p><h2>What we trust—and what each source misses.</h2></div>
@@ -70,7 +70,7 @@ def generate(root: Path) -> Path:
 </div></section>
 
 <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="../advertise/index.html" rel="nofollow">Advertise</a><a href="../submit-tool.html" rel="nofollow">Submit a tool</a><a href="../legal/editorial-methodology.html">Methodology</a><a href="mailto:{EMAIL}">Contact</a></footer>
-<script src="../js/site.js" defer></script><script src="../js/analytics.js" defer></script>
+<script src="../js/site.js" defer></script><script src="../js/analytics.js" defer></script><script src="../js/benchmark-table.js" defer></script>
 </body></html>'''
     out = root / "benchmarks" / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
