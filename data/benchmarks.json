@@ -202,5 +202,21 @@
       "source_id": 10,
       "note": "Maintainer-verified configuration snapshot. Agent, model, effort and integrity metadata are inseparable from the score."
     }
+  ],
+  "benchmark_unavailable": [
+    {
+      "tool_slug": "heygen",
+      "reason": "No trustworthy independent public cross-vendor benchmark currently evaluates HeyGen as an end-user product under matched conditions.",
+      "method_source_ids": [
+        8
+      ]
+    },
+    {
+      "tool_slug": "synthesia",
+      "reason": "No trustworthy independent public cross-vendor benchmark currently evaluates Synthesia as an end-user product under matched conditions.",
+      "method_source_ids": [
+        8
+      ]
+    }
   ]
 }

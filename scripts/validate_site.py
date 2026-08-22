@@ -73,6 +73,12 @@ def main():
             errors.append(f"Benchmark row {row.get('model', row.get('configuration'))} has unknown source_id")
         if row.get('tool_slug') not in tool_slugs:
             errors.append(f"Benchmark row references unknown tool: {row.get('tool_slug')}")
+    for row in benchmark_data.get('benchmark_unavailable', []):
+        if row.get('tool_slug') not in tool_slugs:
+            errors.append(f"Benchmark unavailable record references unknown tool: {row.get('tool_slug')}")
+        for source_id in row.get('method_source_ids', []):
+            if source_id not in source_ids:
+                errors.append(f"Benchmark unavailable record {row.get('tool_slug')} has unknown source_id {source_id}")
     try:
         snapshot_age = (date.today() - date.fromisoformat(benchmark_data['snapshot_date'])).days
         if snapshot_age > benchmark_data.get('policy', {}).get('staleness_days', 30):
