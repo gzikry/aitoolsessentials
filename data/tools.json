@@ -55,7 +55,6 @@
       "Dubbing preserves original speaker's voice across languages",
       "Sound effects generation and voice changer"
     ],
-    "testing_notes": "Voice quality is category-defining — in blind tests listeners picked ElevenLabs narration over human VO about half the time. Instant cloning from a minute of audio was startlingly good, which is exactly why their consent safeguards matter. Dubbing kept emotional tone across languages better than expected.",
     "best_plan": "Starter at $5/mo for light use with commercial rights; Creator at $22 for regular production.",
     "faq": [
       [
@@ -127,7 +126,6 @@
       "Filler word removal in one click",
       "Screen recording with auto-transcription"
     ],
-    "testing_notes": "The edit-text-to-edit-video model genuinely changes how you work — cutting a paragraph cut the video. Studio Sound rescued several bad-mic recordings in testing. Overdub worked well for small corrections but uncanny for long insertions. Best podcast/video editing value anywhere.",
     "best_plan": "Creator at $35/mo for regular podcasters/YouTubers; Hobbyist to start.",
     "faq": [
       [
@@ -201,7 +199,6 @@
       "AI modules from OpenAI, Anthropic, and more",
       "Error handlers with retries and fallbacks"
     ],
-    "testing_notes": "Make handles complex branching workflows that would need multiple Zaps or code in Zapier — one test scenario replaced ~40 lines of Python. The learning curve is real: module mapping confused new users initially. At scale, the same workload cost us a third of the Zapier equivalent.",
     "best_plan": "Core at $9/mo is remarkable value; Pro adds error handling that production automations need.",
     "faq": [
       [
@@ -275,7 +272,6 @@
       "Tables, Interfaces, and Chatbots round out the no-code suite",
       "Reliable trigger/filter logic with error retry"
     ],
-    "testing_notes": "Zapier remains the default for a reason: the app catalog is unmatched and Zaps are dependable in month six, not just week one. AI steps inside Zaps work well for classify-and-route patterns. Pricing scales sharply with task volume — heavy automators should compare against Make.",
     "best_plan": "Professional at $19.99/mo covers most solo operators; watch task counts as multi-step Zaps burn tasks fast.",
     "faq": [
       [
@@ -349,7 +345,6 @@
       "400+ integrations plus generic HTTP node",
       "AI agent nodes with LangChain support"
     ],
-    "testing_notes": "n8n is what technical teams graduate to — self-hosting removed all cost anxiety during testing, and code steps meant nothing was impossible. It assumes comfort with concepts like JSON and webhooks; that's the tradeoff for its power. The AI agent nodes are the best native implementation we've used.",
     "best_plan": "Self-host free if you can run Docker; Cloud Pro for teams without DevOps.",
     "faq": [
       [
@@ -423,7 +418,6 @@
       "Structure reference matches composition of a sample image",
       "IP indemnification for enterprise customers"
     ],
-    "testing_notes": "Firefly's image quality trails Midjourney on aesthetics but its legal position is unmatched: trained only on licensed content, with enterprise indemnification. Generative Fill in Photoshop remains the most-used AI feature among working designers we surveyed.",
     "best_plan": "If you already have Creative Cloud, you're covered. Standalone plans make sense mainly for enterprises needing indemnification.",
     "faq": [
       [
@@ -497,7 +491,6 @@
       "Elements: mixable style modifiers",
       "Motion: short image-to-video clips"
     ],
-    "testing_notes": "Leonardo's custom model training is the differentiator — a model fine-tuned on 20 product shots produced consistent branded imagery in testing that generic prompting couldn't match. Realtime canvas makes it feel like drawing with AI rather than gambling with prompts.",
     "best_plan": "Free tier's daily tokens are genuinely usable; Apprentice at $12/mo for regular creators.",
     "faq": [
       [
@@ -571,7 +564,6 @@
       "Strong prompt adherence improvements in v6+",
       "Commercial rights on all paid plans"
     ],
-    "testing_notes": "Nothing matched Midjourney's default aesthetic in our side-by-sides — 'good on the first prompt' happened more often than with any competitor. Photorealism is its relative weak spot versus dedicated photoreal models. Stealth mode matters: on Basic/Standard your generations are public by default.",
     "best_plan": "Standard at $30/mo — unlimited relaxed mode is the plan most creators actually need.",
     "faq": [
       [
@@ -638,7 +630,6 @@
       "Brand Kit enforces fonts/colors across AI output",
       "One-click resize across formats (IG post to presentation)"
     ],
-    "testing_notes": "Canva's advantage is that AI lands inside a tool people already use — generating a social post with matching copy took under a minute in testing. Output quality is good-not-great versus dedicated generators, but the workflow integration wins for non-designers. Brand Kit + AI together is the real Pro value.",
     "best_plan": "Pro at $15/mo is worth it purely for Brand Kit and unlimited Magic features; free covers occasional use.",
     "faq": [
       [
@@ -707,7 +698,6 @@
       "Supports React, Next.js, Astro, Svelte stacks",
       "Error-aware AI fixes its own runtime errors"
     ],
-    "testing_notes": "Bolt's in-browser execution means zero setup — prompt to running app in minutes, which we confirmed with a working CRUD app. Complex apps need architectural guidance or token budgets balloon. Best of the prompt-to-app tools for pure speed-to-first-demo.",
     "best_plan": "Free to evaluate seriously; Pro at $20/mo once you're building weekly.",
     "faq": [
       [
@@ -776,7 +766,6 @@
       "Works with your existing extensions and keybindings",
       "Privacy mode keeps code out of training"
     ],
-    "testing_notes": "Cursor's tab completion is the feature that hooks teams — it suggested correct cross-file refactors in testing that no other editor matched. Agent mode handled multi-file feature work with supervision, though it needed course-correction on larger tasks. It replaced our testers' default editors within a week.",
     "best_plan": "Pro at $20/mo — the free tier's fast-request cap runs out in days for active developers.",
     "faq": [
       [
@@ -850,7 +839,6 @@
       "Agent mode for multi-file tasks",
       "Enterprise IP indemnification"
     ],
-    "testing_notes": "Copilot's completion quality improved sharply with newer models — suggestions now match project conventions, not just syntax. It trails Cursor's agent capabilities in testing but wins on price ($10 vs $20), editor ubiquity, and enterprise trust. The free tier is now genuinely useful.",
     "best_plan": "Pro at $10/mo is the best value in coding assistants; Business for teams needing indemnification.",
     "faq": [
       [
@@ -919,7 +907,6 @@
       "Edit with chat or direct visual selection",
       "One-click publish to lovable.app subdomain"
     ],
-    "testing_notes": "Lovable had the lowest friction of the app builders — non-developers on our test panel shipped working apps with auth and a database. The Supabase pairing means apps are 'real' not demos. Message credits vanish quickly when iterating; plan usage accordingly.",
     "best_plan": "Start free, expect to need Lite at $25/mo within days if building actively.",
     "faq": [
       [
@@ -988,7 +975,6 @@
       "Real collaborative editing like Google Docs",
       "Mobile apps let you build from anywhere"
     ],
-    "testing_notes": "The Agent's platform awareness is unique — it doesn't just write code, it provisions databases and deploys, handling the ops layer rivals ignore. Checkpoint-based pricing can surprise you on complex builds. For beginners wanting idea-to-live-app without touching terminals, nothing else covers the full journey.",
     "best_plan": "Core at $25/mo bundles AI credits with hosting — effectively replacing 3 services.",
     "faq": [
       [
@@ -1057,7 +1043,6 @@
       "Deploy to Vercel in one click",
       "Output is clean, readable, maintainable code"
     ],
-    "testing_notes": "v0's output quality separates it — generated components used proper shadcn patterns and looked designed, not templated. As a front-end accelerator for developers it's excellent; as a full app builder it deliberately stays in its lane. The Figma-to-code flow saved real time in testing.",
     "best_plan": "Premium at $20/mo for regular UI work; generous free credits to start.",
     "faq": [
       [
@@ -1131,7 +1116,6 @@
       "Deep Research mode for multi-source reports with citations",
       "Canvas for iterative long-form drafting and code editing"
     ],
-    "testing_notes": "In our evaluation, ChatGPT handled mixed-format prompts (screenshot + question) better than any competitor. Long-document summarization stayed accurate at 50+ pages, though it occasionally hedged on niche factual claims instead of admitting uncertainty. Voice mode latency was under a second in testing.",
     "best_plan": "Plus at $20/mo is the right entry point for daily users; the free tier is genuinely usable for occasional questions but hits caps fast.",
     "faq": [
       [
@@ -1205,7 +1189,6 @@
       "Computer Use for operating a browser and desktop apps",
       "Consistently strong long-form writing tone"
     ],
-    "testing_notes": "Claude produced the most publish-ready first drafts of any assistant we tested — fewer AI-isms, better instruction-following on tone. Its 200K context genuinely held a 600-page PDF query in testing. Message caps on Pro are the main friction point for heavy days.",
     "best_plan": "Pro at $20/mo for writers and analysts; Max only if you routinely hit Pro caps.",
     "faq": [
       [
@@ -1274,7 +1257,6 @@
       "Strong math and coding performance",
       "Web/app chat completely free"
     ],
-    "testing_notes": "DeepSeek's value story is unmatched — near-frontier quality at 5-10% of rival API pricing, plus open weights. In our math and code tests R1 matched premium models more often than expected. Censorship on politically sensitive topics is real, and data residency defaults to China-hosted infrastructure.",
     "best_plan": "Free chat for evaluation; API for cost-sensitive volume; self-host if data residency matters.",
     "faq": [
       [
@@ -1343,7 +1325,6 @@
       "Native image and video understanding",
       "Bundled storage makes the Pro plan a double value"
     ],
-    "testing_notes": "Gemini's edge is being where your files already are — summarizing a Drive folder or drafting from an email thread worked with less friction than uploading to competitors. Standalone chat quality is competitive but its writing voice is plainer than Claude's.",
     "best_plan": "If you live in Google Workspace, the Pro plan pays for itself in the storage bundle alone.",
     "faq": [
       [
@@ -1417,7 +1398,6 @@
       "Image generation and understanding",
       "Strong benchmark performance on reasoning"
     ],
-    "testing_notes": "Grok's differentiator is real-time X firehose access — breaking-news questions returned fresher results than any competitor in testing. Benchmark reasoning scores are genuinely competitive. The 'edgy' persona is configurable; treat output with the same verification you'd give any LLM.",
     "best_plan": "Free tier is usable; X Premium at $8/mo bundles Grok with the platform if you're already there.",
     "faq": [
       [
@@ -1476,7 +1456,6 @@
       "No subscription or caps currently enforced",
       "Imagine feature for image creation inside chats"
     ],
-    "testing_notes": "Meta AI's reach is the story — it's already where billions of people are, requiring no new app. Quality is solid-mid-tier: good everyday answers and decent images, below Claude/GPT-4o on complex reasoning in testing. As a free universal assistant, it's remarkable value.",
     "best_plan": "It's free — just use it where you already are.",
     "faq": [
       [
@@ -1545,7 +1524,6 @@
       "Canvas-style editing interface",
       "Open-model company — Mistral weights available for self-hosting"
     ],
-    "testing_notes": "Le Chat's speed is genuinely noticeable — token streaming felt instant versus competitors' pauses. It covers the full checklist (code, images, search) at a lower price than rivals. Model quality sits just behind the very top tier but the price-speed combination wins for European users with GDPR priorities.",
     "best_plan": "Pro at $14.99/mo undercuts rivals while covering all features.",
     "faq": [
       [
@@ -1614,7 +1592,6 @@
       "Unlimited words even on the entry paid plan",
       "Strong short-form marketing copy templates"
     ],
-    "testing_notes": "Copy.ai has pivoted from writing tool to GTM automation, and the workflow builder is the real product now — sales sequence generation with personalization worked well in testing. As a pure writer, it's fine but not class-leading. The free tier is a genuine trial, not a teaser.",
     "best_plan": "Starter at $49/mo for writers; Advanced only if you're building sales workflows.",
     "faq": [
       [
@@ -1683,7 +1660,6 @@
       "Knowledge base grounds output in your facts",
       "Team collaboration with approval flows"
     ],
-    "testing_notes": "Jasper's brand voice feature genuinely worked — output matched our test client's style guide better than generic prompting on ChatGPT. But you're paying a premium for workflow, not raw model quality: the underlying output needed similar editing to ChatGPT's. Best for marketing teams, not solo writers.",
     "best_plan": "Pro at $59/seat makes sense for teams; solo marketers get more value from ChatGPT Plus at $20.",
     "faq": [
       [
@@ -1757,7 +1733,6 @@
       "Real-time transcription during calls",
       "CRM auto-sync on paid plans"
     ],
-    "testing_notes": "Fathom's unlimited free tier is the most generous in the category — full recording and summaries at $0 made it our default recommendation. Summary structure (sections by topic with action items) was the cleanest we tested. Paid tiers add sales-team intelligence rather than fixing free-tier gaps.",
     "best_plan": "Free is genuinely sufficient for individuals; Team Edition for sales teams wanting CRM sync.",
     "faq": [
       [
@@ -1831,7 +1806,6 @@
       "Soundbites for sharing key moments",
       "CRM sync pushes notes to HubSpot/Salesforce"
     ],
-    "testing_notes": "Transcription accuracy was ~95% on clear audio in testing, degrading on crosstalk. The 'Ask Fireflies' cross-meeting search is the standout — 'what did the client say about pricing?' across three months of calls in seconds. Summaries are decent but need a skim before sending.",
     "best_plan": "Pro at $10/seat/mo is the sweet spot; free tier is too limited for regular meetings.",
     "faq": [
       [
@@ -1900,7 +1874,6 @@
       "Live notes visible to teammates in real time",
       "Integrates with Zoom, Meet, Teams calendars"
     ],
-    "testing_notes": "Otter's live transcription is its differentiator — real-time text during calls with speaker labels worked reliably. Accuracy on accented speech trailed Fireflies slightly in testing. The free tier's 30-min cap makes it useless for standard hour meetings, which pushes upgrades hard.",
     "best_plan": "Pro at $16.99/mo for regular meeting use; the free tier only works for short calls.",
     "faq": [
       [
@@ -1974,7 +1947,6 @@
       "Image and video generation models included",
       "One subscription replaces several AI subscriptions"
     ],
-    "testing_notes": "Poe's model-switching is its whole pitch — one $19.99 subscription covered what would otherwise be two-plus premium subscriptions in testing. Compute points deplete unevenly (Opus burns them fast), so heavy single-model users may prefer direct subscriptions.",
     "best_plan": "Pro at $19.99/mo if you'd otherwise pay for multiple AI subscriptions.",
     "faq": [
       [
@@ -2043,7 +2015,6 @@
       "Import PowerPoint/PDF and restyle automatically",
       "Presentations, docs, and micro-sites in one format"
     ],
-    "testing_notes": "Gamma produces the best first-draft decks of any AI presentation tool we tested — layouts look designed, not templated. Editing is faster than PowerPoint because content reflows between cards. Complex corporate templates are its limit; it has its own aesthetic rather than adopting yours.",
     "best_plan": "Plus at $10/mo removes branding and is enough for most users.",
     "faq": [
       [
@@ -2117,7 +2088,6 @@
       "Cobuilder: describe an app, get a working base",
       "AI stays inside your permission boundaries"
     ],
-    "testing_notes": "Airtable AI shines on data enrichment — categorizing 500 records or drafting per-record content ran as a column operation, which no chat tool matches. Cobuilder produced usable app skeletons from descriptions. Credit burn on large bases is real; monitor usage.",
     "best_plan": "Team plan includes meaningful credits; the AI add-on pricing scales with seats so big teams should model costs first.",
     "faq": [
       [
@@ -2186,7 +2156,6 @@
       "Teams meeting recaps with action items",
       "Enterprise Data Protection — prompts not used to train"
     ],
-    "testing_notes": "The $30/user price stings until you see it grounded in your actual files — summarizing a 40-message thread or analyzing a spreadsheet live in Excel worked where copy-paste workflows fail. Value depends entirely how deep you are in Microsoft 365; outside that ecosystem, skip it.",
     "best_plan": "For businesses already paying M365 E3/E5, Copilot slots in naturally. Individuals: Copilot Pro at $20.",
     "faq": [
       [
@@ -2255,7 +2224,6 @@
       "Meeting notes transcription and summaries",
       "No separate app — lives where your work already is"
     ],
-    "testing_notes": "Notion AI's killer feature is workspace Q&A: asking 'what did we decide about X?' and getting a sourced answer from your own notes worked remarkably well in testing. Writing features are competent but not class-leading. At $10/user/mo it's the cheapest way to add AI across a whole team.",
     "best_plan": "The $10 add-on is a no-brainer if your team already runs on Notion.",
     "faq": [
       [
@@ -2324,7 +2292,6 @@
       "Daily recap of what you missed",
       "Stays within Slack's existing security model"
     ],
-    "testing_notes": "Channel summaries are the feature that earns the fee — returning from a week away, recaps replaced hours of scrolling in testing. Search-with-citations answered 'what did we decide about X?' reliably when the discussion lived in Slack. Weakness: only knows what's in Slack.",
     "best_plan": "If your org runs on Slack, the $10/user add-on (or Business+ bundle) is easy value.",
     "faq": [
       [
@@ -2393,7 +2360,6 @@
       "Spaces for organizing research threads by project",
       "Model switching inside a single product"
     ],
-    "testing_notes": "Perplexity is the fastest route from question to cited answer — in testing it replaced 'Google + open 6 tabs' for most factual work. Citation accuracy was strong, though it occasionally cited low-authority sources on niche topics. The free tier alone justifies installing it.",
     "best_plan": "Start free; upgrade to Pro at $20/mo if you research daily — the Pro search depth is the real product.",
     "faq": [
       [
@@ -2462,7 +2428,6 @@
       "File upload analysis",
       "Custom assistant creation"
     ],
-    "testing_notes": "You.com blends Perplexity-style search with multi-model chat — both worked adequately but neither led its category in testing. Its niche is wanting search + model choice in one subscription. Citation hygiene was slightly weaker than Perplexity's in side-by-sides.",
     "best_plan": "Pro only if you specifically want search + multiple models combined; Perplexity or direct subscriptions otherwise.",
     "faq": [
       [
@@ -2536,7 +2501,6 @@
       "Templates for sales, training, and social formats",
       "API for programmatic video at scale"
     ],
-    "testing_notes": "HeyGen's video translate is the killer feature — our test clip localized to Spanish with convincing lip-sync in minutes. Avatar quality is a notch above acceptable for social content, slightly behind Synthesia for corporate polish. The free tier's watermark makes evaluation easy but production needs Creator.",
     "best_plan": "Creator at $29/mo for solo creators doing regular video.",
     "faq": [
       [
@@ -2610,7 +2574,6 @@
       "Camera controls (pan, zoom, dolly) on generations",
       "Full editing suite: green screen, inpainting, upscale"
     ],
-    "testing_notes": "Gen-3 output is the most controllable AI video we tested — Motion Brush and camera direction turn 'slot machine' generation into directed work. Clip lengths are short (5-10s), so it's b-roll generator, not a storyteller. Credits burn fast; budget accordingly.",
     "best_plan": "Standard at $15/mo to learn; Unlimited at $95 only if video is your core output.",
     "faq": [
       [
@@ -2684,7 +2647,6 @@
       "PPT-to-video and doc-to-video conversion",
       "1-click translation of finished videos"
     ],
-    "testing_notes": "Avatar realism leads the category — lip sync and gestures passed the 'is this real?' glance test for most viewers in our samples. Script-to-video turnaround is minutes. Best for training and comms at scale; not a creative storytelling tool. Custom avatar quality was excellent.",
     "best_plan": "Starter at $29/mo for regular training content; free tier is a demo.",
     "faq": [
       [
@@ -2753,7 +2715,6 @@
       "Plagiarism checker on Pro",
       "Generative AI for drafting and shortening"
     ],
-    "testing_notes": "Grammarly remains the least intrusive AI assistant — it improves text where you already write rather than demanding a new app. Rewrite quality improved noticeably with the newer models. The free tier covers most grammar needs; Pro earns its price mainly through tone and rewrites.",
     "best_plan": "Free for grammar basics; Pro at $12/mo (annual billing) if you write professionally daily.",
     "faq": [
       [
