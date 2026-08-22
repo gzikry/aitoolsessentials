@@ -49,6 +49,9 @@ enhance_comparison_pages(root)
 from enhance_guides import generate as enhance_buyer_guides
 enhance_buyer_guides(root)
 
+from generate_new_comparisons import generate as generate_new_comparison_pages
+generate_new_comparison_pages(root)
+
 from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')

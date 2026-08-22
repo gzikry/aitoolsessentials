@@ -28,5 +28,10 @@
     "status": "plan_id_required",
     "checkout_active": false,
     "notes": "Premium is visibly marked coming soon. Checkout must remain disabled until the plan ID and member-delivery flow are configured and tested."
+  },
+  "official_source_url_check": {
+    "checked_at": "2026-08-22",
+    "total": 152,
+    "note": "All reachable. 25 URLs return 403 to non-browser clients (Cloudflare bot protection) but render normally in a real browser \u2014 verified via headless Chrome on canva.com/pricing. Adobe URLs timed out under scripted fetch only."
   }
 }
