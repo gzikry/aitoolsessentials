@@ -78,7 +78,7 @@ def generate(root: Path) -> int:
         best_cells = ''.join(f'<td>{_e(tools[s].get("best_for",""))}</td>' for s in slugs)
         cat_cells = ''.join(f'<td>{_e(tools[s].get("category",""))}</td>' for s in slugs)
         price_cells = ''.join(f'<td>See evidence below — official sources checked {srcs[s]["pricing_checked_date"]}</td>' for s in slugs)
-        score_cells = ''.join(f'<td>{tools[s].get("editorial_score","—")}/5</td>' if tools[s].get('editorial_score') else '<td>Editorial score in review</td>' for s in slugs)
+        score_cells = ''.join(f'<td>{tools[s].get("rating","—")}/5</td>' if tools[s].get('rating') else '<td>Editorial score in review</td>' for s in slugs)
         rows = (f'<tr><th>Best for</th>{best_cells}</tr>'
                 f'<tr><th>Category</th>{cat_cells}</tr>'
                 f'<tr><th>Price</th>{price_cells}</tr>'
