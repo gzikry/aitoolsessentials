@@ -336,3 +336,9 @@ code { background: #fff; border-radius: 5px; padding: 2px 5px; }
 .category-links a{padding:6px 13px;border-radius:980px;background:#f5f5f7;color:#6e6e73;font-size:13px}
 .category-links a:hover{background:#e8e8ed;text-decoration:none}
 .summary{color:rgba(0,0,0,.68);line-height:1.5}
+
+
+/* Best plan recommendation card */
+.best-plan-card{margin:22px 0;padding:20px 22px;border-radius:16px;background:#e8f2ff;border:1px solid #cfe4ff}
+.best-plan-card span{display:block;color:#0066cc;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.best-plan-card strong{font-size:16px;line-height:1.5}
