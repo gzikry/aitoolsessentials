@@ -3,8 +3,9 @@
   "formsubmit": {
     "endpoint": "https://formsubmit.co/ajax/contact@aitoolsessentials.com",
     "http_status": 200,
-    "status": "activation_required",
-    "message": "Activation email requested for contact@aitoolsessentials.com. The mailbox owner must click the Activate Form link before delivery works."
+    "status": "active_verified",
+    "message": "Both AJAX endpoints return success:true post-activation; test emails sent 2026-08-22.",
+    "verified_at": "2026-08-22"
   },
   "plausible": {
     "status": "account_access_required",
