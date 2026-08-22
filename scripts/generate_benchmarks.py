@@ -38,7 +38,7 @@ def generate(root: Path) -> Path:
 <meta name="description" content="Dated AI benchmark snapshots with model versions, methodology, sources, and caveats. Compare evidence without confusing model scores with product reviews.">
 <title>AI Benchmarks — Dated, Sourced &amp; Explained | AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/benchmarks/">
-<link rel="stylesheet" href="../css/styles.css"><link rel="stylesheet" href="../css/share.css"><link rel="stylesheet" href="../css/benchmarks.css">
+<link rel="stylesheet" href="../css/styles.css"><link rel="stylesheet" href="../css/share.css">
 </head><body>
 <header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="index.html" aria-current="page">Benchmarks</a></nav>

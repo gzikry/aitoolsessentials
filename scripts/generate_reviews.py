@@ -158,7 +158,6 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <title>{name}: AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/tools/{slug}/">
 <link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="../css/benchmarks.css">
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
