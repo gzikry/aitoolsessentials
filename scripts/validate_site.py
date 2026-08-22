@@ -41,14 +41,47 @@ def load_json(path):
 
 def main():
     errors = []
-    for rel in ['data/tools.json','data/affiliate_programs.json','data/sponsors.json','data/newsletter.json','data/revenue_targets.json','data/sponsor_inventory.json','data/benchmarks.json']:
+    for rel in ['data/tools.json','data/tool_sources.json','data/test_cases.json','data/affiliate_programs.json','data/sponsors.json','data/revenue_targets.json','data/sponsor_inventory.json','data/benchmarks.json','data/integrations.json']:
         result = load_json(ROOT / rel)
         if isinstance(result, str):
             errors.append(result)
 
     tools = json.loads((ROOT/'data/tools.json').read_text())
     tool_slugs = {t['slug'] for t in tools}
+    tool_sources = json.loads((ROOT/'data/tool_sources.json').read_text())
+    source_records = {x.get('slug'): x for x in tool_sources.get('tools', [])}
+    if set(source_records) != tool_slugs:
+        errors.append('Official tool-source registry does not match tools.json slugs')
+    try:
+        source_age = (date.today() - date.fromisoformat(tool_sources['checked_at'])).days
+        if source_age > 30:
+            errors.append(f'Official tool-source registry is stale: {source_age} days old')
+    except Exception as exc:
+        errors.append(f'Official tool-source checked date invalid: {exc}')
+    for slug, record in source_records.items():
+        if not record.get('pricing_checked_date'):
+            errors.append(f'Official source record missing checked date: {slug}')
+        if not record.get('pricing_summary'):
+            errors.append(f'Official source record missing pricing summary: {slug}')
+        if not any(record.get(k) for k in ['pricing_url','docs_url','privacy_url','rights_url']):
+            errors.append(f'Official source record has no source URLs: {slug}')
     revenue_targets = json.loads((ROOT/'data/revenue_targets.json').read_text())
+    affiliate_data = json.loads((ROOT/'data/affiliate_programs.json').read_text())
+    affiliate_records = affiliate_data.get('affiliate_programs', [])
+    unknown_affiliate_tools = sorted({x.get('tool_slug') for x in affiliate_records} - tool_slugs)
+    if unknown_affiliate_tools:
+        errors.append(f'Affiliate registry references unknown tools: {unknown_affiliate_tools}')
+    try:
+        affiliate_age = (date.today() - date.fromisoformat(affiliate_data['checked_at'])).days
+        if affiliate_age > 30:
+            errors.append(f'Affiliate program registry is stale: {affiliate_age} days old')
+    except Exception as exc:
+        errors.append(f'Affiliate checked date invalid: {exc}')
+    for record in affiliate_records:
+        if not record.get('official_program_url'):
+            errors.append(f"Affiliate record missing official URL: {record.get('tool_slug')}")
+        if record.get('application_status') == 'approved' and not record.get('affiliate_url'):
+            errors.append(f"Approved affiliate record missing tracking URL: {record.get('tool_slug')}")
     target_slugs = {r.get('tool_slug') for r in revenue_targets}
     tool_slugs_for_targets = {t['slug'] for t in tools}
     if target_slugs != tool_slugs_for_targets:
@@ -86,6 +119,7 @@ def main():
     except Exception as exc:
         errors.append(f'Benchmark snapshot date invalid: {exc}')
     unsupported_claim_patterns = ['our test tasks', 'in testing', 'we tested', 'blind tests', 'our testers']
+    fabricated_growth_patterns = ['2,847 submissions', '156,234 upvotes', '892,415 clicks', '10k+ weekly visitors', '20k+ weekly visitors', 'guaranteed #1', 'guaranteed rankings']
     for tool in tools:
         review = ROOT/'tools'/tool['slug']/'index.html'
         if review.exists():
@@ -93,12 +127,15 @@ def main():
             for phrase in unsupported_claim_patterns:
                 if phrase in text:
                     errors.append(f"{review.relative_to(ROOT)} contains unsupported testing claim: {phrase}")
-            for required in ['Trial checklist', 'How we evaluated', 'editorial score']:
+            for required in ['Trial checklist', 'How we evaluated', 'editorial score', 'Official sources checked', 'Hands-on result not yet published']:
                 if required.lower() not in text:
                     errors.append(f"{review.relative_to(ROOT)} missing review evidence label: {required}")
     
     # Check for key viral pages
-    key_pages = ['leaderboard.html','submit-tool.html','downloads/ai-tool-evaluation-scorecard.html']
+    key_pages = ['leaderboard.html','submit-tool.html','downloads/ai-tool-evaluation-scorecard.html',
+                 'legal/privacy.html','legal/terms.html','legal/about.html','legal/corrections.html',
+                 'legal/testing-protocol.html','downloads/ai-tool-test-log.csv',
+                 'benchmarks/index.html']
     missing_keys = [p for p in key_pages if not (ROOT / p).exists()]
     if missing_keys:
         errors.append(f'Missing key pages: {missing_keys}')
@@ -108,6 +145,10 @@ def main():
         p = Parser(); p.feed(f.read_text()); parsers[f.resolve()] = p
     for f,p in parsers.items():
         page_text = ' '.join(p.text).lower()
+        if 'admin' not in f.parts:
+            for phrase in fabricated_growth_patterns:
+                if phrase in page_text:
+                    errors.append(f'{f.relative_to(ROOT)} contains unsupported growth claim: {phrase}')
         if any(part in f.parts for part in ['articles','comparisons','tools']):
             if 'disclosure' not in page_text and 'affiliate' not in page_text:
                 errors.append(f'{f.relative_to(ROOT)} missing disclosure language')
@@ -141,7 +182,12 @@ def main():
 
     sitemap = ROOT/'sitemap.xml'
     if sitemap.exists():
-        html_count = len([p for p in ROOT.rglob('*.html') if 'admin' not in str(p.relative_to(ROOT))])
+        html_count = len([
+            p for p in ROOT.rglob('*.html')
+            if 'admin' not in str(p.relative_to(ROOT))
+            and p.name != '404.html'
+            and 'name="robots" content="noindex' not in p.read_text()
+        ])
         url_count = sitemap.read_text().count('<url>')
         if html_count != url_count:
             errors.append(f'Sitemap URL count {url_count} != HTML count {html_count}')

@@ -1,0 +1,97 @@
+{
+  "protocol_version": "1.0",
+  "created_at": "2026-08-22",
+  "publication_rule": "Do not publish results until the exact plan/model, inputs, outputs, timing, corrections, failures, and evidence URL are logged.",
+  "cases": [
+    {
+      "slug": "chatgpt",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Create a 700-word buyer brief from the same five-source packet used for Claude and Gemini; preserve citations.",
+        "Analyze a supplied CSV and explain three material trends, including one chart recommendation.",
+        "Answer a question containing an unsupported premise; score whether the premise is challenged and citations are verified."
+      ]
+    },
+    {
+      "slug": "claude",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Create the matched five-source buyer brief with the same constraints and citation checks.",
+        "Review a long policy document and produce a cited change/risk matrix.",
+        "Revise an intentionally AI-sounding draft to a supplied brand guide; count material edits still required."
+      ]
+    },
+    {
+      "slug": "gemini",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Create the matched five-source buyer brief with citations.",
+        "Summarize a controlled Drive-style source packet and identify contradictory statements.",
+        "Analyze a long mixed text/image document while preserving source attribution."
+      ]
+    },
+    {
+      "slug": "perplexity",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Research one current market question and manually verify every cited claim.",
+        "Resolve a question with conflicting official sources and report both interpretations.",
+        "Research an obscure product-policy fact and score source authority, not just citation presence."
+      ]
+    },
+    {
+      "slug": "cursor",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Implement one contained feature from a pinned repository commit and pass existing tests.",
+        "Fix a seeded multi-file bug with a failing regression test.",
+        "Refactor an unfamiliar module without changing behavior; record interventions and regressions."
+      ]
+    },
+    {
+      "slug": "github-copilot",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Run the same pinned-repository feature task used for Cursor.",
+        "Run the same seeded multi-file bug and regression test used for Cursor.",
+        "Run the same unfamiliar-module refactor and record suggestions accepted, rejected, and corrected."
+      ]
+    },
+    {
+      "slug": "canva-ai",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Create a three-format campaign set from one supplied brand kit and copy brief.",
+        "Generate a product visual with fixed composition requirements and count manual corrections.",
+        "Resize and localize the approved design while checking brand consistency and text errors."
+      ]
+    },
+    {
+      "slug": "midjourney",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Generate matched campaign concepts from the same prompt set used for other image tools.",
+        "Maintain a character/product identity across four scenes and score consistency.",
+        "Follow a difficult spatial/compositional prompt and log failed or discarded generations."
+      ]
+    },
+    {
+      "slug": "zapier-ai",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Build a form-to-CRM workflow with data cleanup and notification.",
+        "Add a branch for high-priority submissions and a retry/error path.",
+        "Run 100 simulated records and record task consumption, failures, and monthly cost."
+      ]
+    },
+    {
+      "slug": "notion-ai",
+      "status": "pending_authenticated_run",
+      "tasks": [
+        "Answer five questions from a controlled workspace and verify source-page attribution.",
+        "Turn raw meeting notes into decisions, owners, and due dates; count invented actions.",
+        "Draft a project brief in a supplied style and measure edits before publication."
+      ]
+    }
+  ]
+}

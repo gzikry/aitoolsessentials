@@ -1,158 +1,37 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Submit your AI tool to get on our leaderboard. Free entry, instant visibility, and real traffic from our 20K+ weekly visitors.">
-<title>Submit Your AI Tool — AIToolsEssentials</title>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/share.css"></head>
-<body>
-<header class="global-nav">
-<a class="brand" href="index.html">
-<span class="brand-glyph">✦</span>
-<span>AIToolsEssentials</span>
-</a>
-<nav class="nav-links">
-<a href="tools/index.html">Tools</a>
-<a href="categories/index.html">Categories</a>
-<a href="articles/index.html">Guides</a>
-<a href="benchmarks/">Benchmarks</a>
-</nav>
-<a class="nav-cta" href="legal/affiliate-disclosure.html">Disclosure</a>
-</header>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Submit an AI tool for editorial consideration. No guaranteed rankings, fabricated reach claims, or pay-to-win placement.">
+<title>Submit an AI Tool — AIToolsEssentials</title>
+<link rel="canonical" href="https://aitoolsessentials.com/submit-tool.html">
+<link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/share.css"></head><body>
+<header class="global-nav"><a class="brand" href="index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="tools/index.html">Tools</a><a href="comparisons/best-ai-tools.html">Best AI tools</a><a href="categories/index.html">Categories</a><a href="articles/index.html">Guides</a><a href="benchmarks/">Benchmarks</a></nav><a class="nav-cta" href="legal/affiliate-disclosure.html">Disclosure</a></header>
 <main>
-<section class="scene scene-dark hero">
-<div class="hero-copy">
-<h1>Submit Your AI Tool</h1>
-<p class="subhead">Get on our weekly leaderboard. Free entry. Real traffic. No login required.</p>
-<p class="highlight">🔥 <strong>Why submit?</strong> Top tools get 10K+ weekly visitors from our audience of AI professionals, founders, and developers.</p>
-<div class="actions">
-<a class="button button-blue" onclick="submitTool()">Submit in 30 seconds</a>
-<a class="button button-outline" href="tools/index.html">Browse tools</a>
-</div>
-</div>
-</section>
-<section class="page-content">
-<div class="content-grid">
-<div class="content-column">
-<h2>How It Works</h2>
-<ol>
-<li><strong>Fill the form</strong> — Just 5 fields, 30 seconds</li>
-<li><strong>Get listed</strong> — Instantly visible on our leaderboard</li>
-<li><strong>Get traffic</strong> — Receive upvotes from our community</li>
-<li><strong>Rank higher</strong> — Share your results, invite friends</li>
-</ol>
-<h2>Free vs Premium</h2>
-<table class="comparison-table">
-<tr>
-<th>Free</th>
-<th>Premium ($29)</th>
-<th>Premium ($99)</th>
-</tr>
-<tr>
-<td>✓ Basic listing</td>
-<td>✓ Top 10 placement</td>
-<td>✓ Guaranteed #1</td>
-</tr>
-<tr>
-<td>✓ Community upvotes</td>
-<td>✓ Featured badge</td>
-<td>✓ Featured banner</td>
-</tr>
-<tr>
-<td>✓ Weekly visibility</td>
-<td>✓ Analytics dashboard</td>
-<td>✓ DR backlink</td>
-</tr>
-<tr>
-<td>✗ No boost</td>
-<td>✗ No boost</td>
-<td>✓ Weekly boost</td>
-</tr>
-</table>
-<h2>What We Track</h2>
-<ul>
-<li><strong>Upvotes</strong> — Community votes on your tool</li>
-<li><strong>Clicks</strong> — How many people visit your site</li>
-<li><strong>Engagement</strong> — Time spent, return visitors</li>
-<li><strong>Ranking</strong> — Your weekly position</li>
-</ul>
-</div>
-<div class="content-column">
-<form id="tool-submission" action="https://formsubmit.co/contact@aitoolsessentials.com" method="POST">
-<h2>Submit Your Tool</h2>
-<input type="hidden" name="_subject" value="New AI tool submission — leaderboard">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="_honey" style="display:none">
-<div class="form-group">
-<label for="tool-name">Tool Name</label>
-<input type="text" id="tool-name" name="name" required placeholder="e.g., Gamma, Jasper, Midjourney">
-</div>
-<div class="form-group">
-<label for="tool-url">Website URL</label>
-<input type="url" id="tool-url" name="url" required placeholder="https://yourtool.com">
-</div>
-<div class="form-group">
-<label for="tool-category">Category</label>
-<select id="tool-category" name="category" required>
-<option value="">Select a category...</option>
-<option value="Writing & Productivity">Writing & Productivity</option>
-<option value="Creative">Creative</option>
-<option value="Development">Development</option>
-<option value="Research">Research</option>
-<option value="Productivity">Productivity</option>
-<option value="Marketing">Marketing</option>
-<option value="Meetings">Meetings</option>
-<option value="Presentations">Presentations</option>
-<option value="Audio & Video">Audio & Video</option>
-<option value="Automation">Automation</option>
-<option value="Model Hub">Model Hub</option>
-<option value="Video">Video</option>
-</select>
-</div>
-<div class="form-group">
-<label for="tool-summary">One-sentence summary</label>
-<textarea id="tool-summary" name="summary" rows="3" required placeholder="What problem does your tool solve?"></textarea>
-</div>
-<div class="form-group">
-<label for="tool-screenshot">Screenshot URL (optional)</label>
-<input type="url" id="tool-screenshot" name="screenshot" placeholder="https://yoursite.com/screenshot.png">
-</div>
-<div class="form-check">
-<input type="checkbox" id="agree-terms" required>
-<label for="agree-terms">I confirm this tool is real and I have the right to list it.</label>
-</div>
-<button type="submit" class="button button-blue">Submit to Leaderboard</button>
-<p class="small">Already listed? <a href="tools/index.html">Browse all tools</a></p>
-</form>
-</div>
-</div>
-</section>
-<section class="newsletter-cta">
-<div class="cta-grid">
-<div class="cta-content">
-<h3>The AI Tools You Need to Know</h3>
-<p>Get fresh AI tool reviews, comparisons, and workflows delivered daily.</p>
-<div class="cta-actions">
-<a class="cta-button" href="index.html#subscribe">Start my free newsletter</a>
-</div>
-</div>
-</div>
-</section>
 
+<section class="review-hero scene scene-light"><p class="kicker light">Vendor submissions</p><h1>Submit your AI tool for editorial review.</h1><p>One short form. No login. Submission is free—but listing, ranking, review timing, and placement are not guaranteed.</p><p class="last-updated">Editorial rankings cannot be purchased. Sponsored placements, when offered, are labeled and kept separate.</p></section>
 
-</main>
+<div class="review-layout"><article class="review-content">
+<h2>What happens after submission</h2>
+<ol><li><strong>Identity check:</strong> we verify the product URL and basic company information.</li><li><strong>Editorial fit:</strong> we check whether the tool solves a repeated workflow covered by the directory.</li><li><strong>Evidence review:</strong> we look for official pricing, documentation, privacy information, and applicable benchmark evidence.</li><li><strong>Decision:</strong> accepted tools enter the review queue. We reply only when clarification or follow-up is needed.</li></ol>
+<h2>What submission does not buy</h2><ul><li>No guaranteed listing or review date</li><li>No guaranteed rank, badge, backlink authority, traffic, clicks, or votes</li><li>No ability to edit the editorial score</li><li>No hidden sponsored placement</li></ul>
+<h2>What helps</h2><p>Send direct links to pricing, documentation, privacy/security details, and any independent benchmark submission that names the exact model or version.</p>
+</article>
+<aside class="review-aside"><form id="tool-submission" class="score-card" action="https://formsubmit.co/ajax/contact@aitoolsessentials.com" method="POST">
+<span>Editorial submission</span><h2 style="font-size:28px">Tool details</h2>
+<input type="hidden" name="_subject" value="New AI tool submission — editorial review"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none">
+<div class="form-group"><label for="tool-name">Tool name</label><input id="tool-name" name="name" required></div>
+<div class="form-group"><label for="tool-url">Official website</label><input id="tool-url" type="url" name="url" placeholder="https://" required></div>
+<div class="form-group"><label for="tool-category">Category</label><select id="tool-category" name="category" required><option value="">Select…</option><option>General AI Assistant</option><option>Writing & Productivity</option><option>Development</option><option>Automation</option><option>Research</option><option>Creative</option><option>Video</option><option>Audio</option><option>Meetings</option><option>Presentations</option><option>Marketing</option><option>Other</option></select></div>
+<div class="form-group"><label for="tool-summary">What repeated job does it solve?</label><textarea id="tool-summary" name="summary" rows="4" required></textarea></div>
+<div class="form-group"><label for="pricing-url">Official pricing URL</label><input id="pricing-url" type="url" name="pricing_url" placeholder="https://"></div>
+<div class="form-group"><label for="docs-url">Documentation URL</label><input id="docs-url" type="url" name="docs_url" placeholder="https://"></div>
+<div class="form-group"><label for="contact-email">Vendor contact email</label><input id="contact-email" type="email" name="contact_email" required></div>
+<div class="form-check"><input type="checkbox" id="terms" required><label for="terms">I confirm the information is accurate and understand submission does not guarantee coverage or ranking.</label></div>
+<button class="button button-blue" type="submit">Submit for consideration</button>
+<p class="affiliate-inline">If the form fails, email <a href="mailto:contact@aitoolsessentials.com?subject=Tool%20submission">contact@aitoolsessentials.com</a>.</p>
+</form></aside></div>
+
 <div id="share-row" hidden></div>
-  <footer class="footer">
-<span>© 2026 AIToolsEssentials</span>
-<a href="advertise/index.html" rel="nofollow">Advertise</a>
-<a href="#tool-submission">Submit a tool</a>
-<a href="legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
-<a href="mailto:contact@aitoolsessentials.com">Contact</a>
-  </footer>
-<script src="js/site.js" defer></script>
-<script src="js/analytics.js" defer></script>
-</body>
-</html>
+  <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="advertise/index.html" rel="nofollow">Advertise</a><a href="leaderboard.html">Community</a><a href="legal/editorial-methodology.html">Methodology</a><a href="mailto:contact@aitoolsessentials.com">Contact</a></main>
+<footer>
+<script src="js/site.js" defer></script><script src="js/analytics.js" defer></script>
+<script>document.addEventListener('DOMContentLoaded',function(){var form=document.getElementById('tool-submission');form.addEventListener('submit',function(e){e.preventDefault();var btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Submitting…';fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}}).then(function(r){if(!r.ok)throw new Error();return r.json();}).then(function(data){if(!(data.success===true||data.success==='true'))throw new Error(data.message||'Form not active');form.innerHTML='<div class="form-success"><h3>✓ Submission received</h3><p>Thank you. We will review the evidence and contact you if follow-up is needed.</p><a class="button button-blue" href="tools/index.html">Browse reviewed tools</a></div>';}).catch(function(){btn.disabled=false;btn.textContent='Submit for consideration';var p=document.createElement('p');p.className='affiliate-inline';p.innerHTML='Submission failed. Email <a href="mailto:contact@aitoolsessentials.com?subject=Tool%20submission">contact@aitoolsessentials.com</a>.';form.appendChild(p);});});});</script></body></html>

@@ -149,12 +149,6 @@ EOF
 
 Edit `data/sponsors.json` with new sponsor opportunities
 
-### Newsletter
-
-Once you hit 1K+ visitors, enable:
-- Newsletter config in `data/newsletter.json`
-- Update all pages with newsletter signup
-
 ---
 
 ## Troubleshooting

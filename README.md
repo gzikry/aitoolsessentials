@@ -1,110 +1,82 @@
 # AIToolsEssentials
 
-**The #1 AI Tools Directory for Practical AI Discovery & Revenue Generation**
+Evidence-aware AI tool reviews, comparisons, buyer guides, benchmark context, and strategy-only AI Stack Audits.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Deploy](https://img.shields.io/badge/deployment-GitHub%20Pages-blue)](https://pages.github.com)
+**Live:** https://aitoolsessentials.com  
+**Repository:** https://github.com/gzikry/aitoolsessentials
 
-## 🚀 What is AIToolsEssentials?
+## Current site
 
-A curated directory of **practical AI tools** focused on real-world applications, workflows, and monetization. Built with viral growth strategies and revenue optimization in mind.
+- 39 generated tool reviews
+- 15 generated category buyer guides
+- Comparison and audience guides
+- Dated benchmark evidence hub
+- Free AI Tool Evaluation Scorecard
+- Honest community/editorial shortlist (no simulated votes or traffic)
+- Vendor submission form
+- AI Stack Audit intake and report workflow
+- Premium pricing page staged for Whop plan activation
 
-## 📊 Key Features
+## Editorial rules
 
-- **39+ AI Tools** reviewed and categorized
-- **145+ Pages** of high-intent content
-- **19 Category Guides** for buyer research
-- **Viral Growth Engine** with leaderboard & submissions
-- **Revenue Infrastructure** for affiliates & sponsors
+- AIToolsEssentials ratings are editorial product scores—not lab benchmarks.
+- External benchmark records retain exact model/version, date, harness, source, and caveat.
+- A product never inherits a score from an unspecified model.
+- Affiliate availability, commission rate, and sponsorship do not affect rankings.
+- No hands-on claim is published without a retained test log and evidence.
+- Unverified traffic, vote, submission, or performance numbers are not published.
 
-## 🛠️ Tech Stack
+## Source of truth
 
-- **Static HTML** - Fast, secure, no dependencies
-- **JSON Data** - Easy content management
-- **Python Automation** - Daily content updates
-- **Modern CSS** - Responsive, Apple-inspired design
+- `data/tools.json` — tool records and review content
+- `data/benchmarks.json` — benchmark sources, snapshots, coverage, and unavailable disclosures
+- `data/affiliate_programs.json` — verified application status only; no invented tracking links
+- `scripts/generate_reviews.py` — review generator
+- `scripts/generate_categories.py` — category generator
+- `scripts/generate_benchmarks.py` — benchmark hub generator
+- `scripts/generate_community.py` — honest community/editorial shortlist
+- `scripts/daily_content_update.py` — complete regeneration pipeline
+- `scripts/validate_site.py` — quality gates
 
-## 📁 Project Structure
-
-```
-aitoolsessentials/
-├── index.html                 # Homepage
-├── css/
-│   └── styles.css             # Main stylesheet
-├── js/
-│   ├── directory.js           # Search/filter logic
-│   └── tracking.js            # Click tracking
-├── tools/                     # Individual tool pages
-├── categories/                # Category buyer guides
-├── articles/                  # Best-of lists
-├── comparisons/               # Tool comparisons
-├── services/                  # AI Stack Audit offering
-├── admin/                     # Management pages
-├── legal/                     # Disclosures & methodology
-├── assets/                    # Logo & images
-└── robots.txt                 # SEO configuration
-```
-
-## 🚀 Getting Started
-
-### Deploy to GitHub Pages
-
-1. Create a new GitHub repository
-2. Push your code
-3. Enable GitHub Pages in repo settings
-4. Visit `https://yourusername.github.io/aitoolsessentials`
-
-### Deploy to Vercel/Netlify
-
-1. Install Vercel/Netlify CLI
-2. Run: `vercel deploy` or `netlify deploy`
-3. Connect your GitHub repo
-4. Auto-deploy on every push
-
-## 🔄 Automated Updates
-
-The site includes Python scripts for daily maintenance:
+## Local workflow
 
 ```bash
-# Update all tool reviews and category pages
-python scripts/daily_content_update.py
-
-# Validate site quality
-python scripts/validate_site.py
-
-# Add social sharing buttons
-python scripts/add_social_sharing.py
+python3 scripts/daily_content_update.py
+python3 scripts/validate_site.py
+git add -A
+git commit -m "Describe the verified change"
+git push
 ```
 
-## 💰 Revenue Streams
+GitHub Pages deploys from `main`. The Porkbun proxy serves the custom domain and TLS certificate.
 
-- **Affiliate Programs** (16 high-priority tools)
-- **Sponsored Placements** (5 placement types)
-- **AI Stack Audit** ($497 consulting)
-- **Newsletter Sponsorships** (at 1K+ visitors)
+## Review evidence
 
-## 📈 Viral Growth Strategy
+Every review separates:
 
-- Leaderboard with weekly rankings
-- One-click tool submission
-- Free evaluation scorecard (lead magnet)
-- Social sharing on all pages
-- Category buyer guides
+1. Official product/pricing/policy sources
+2. External benchmark evidence, when exact versions match
+3. Editorial product assessment
+4. Hands-on evidence status and repeatable trial checklist
 
-## 🤝 Contributing
+See:
 
-Contributions are welcome! Please read our [Code of Conduct](CODE_OF_CONDUCT.md) first.
+- `/legal/editorial-methodology.html`
+- `/legal/testing-protocol.html`
+- `/benchmarks/`
+- `/legal/corrections.html`
 
-## 📄 License
+## Revenue model
 
-MIT License - see [LICENSE](LICENSE) for details
+Priorities:
 
-## 📞 Contact
+1. Approved affiliate links—official product links remain until approval
+2. AI Stack Audit strategy reports; no implementation or account access
+3. Clearly labeled sponsored placements that never alter rankings
+4. Whop Premium membership after the live plan ID is supplied
 
-For business inquiries, sponsorships, or the AI Stack Audit:
-- **Email:** [REDACTED]
-- **Services:** [Strategy & recommendations only - no implementation]
+No newsletter is currently part of the operating strategy.
 
----
+## Security
 
-**Built with ❤️ for the AI community**
+Never commit credentials, tokens, FTP passwords, or payment secrets. Obsolete FTP deployment code was removed and purged from Git history. The formerly exposed Porkbun FTP password must be rotated in Porkbun.

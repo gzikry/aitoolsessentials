@@ -22,7 +22,6 @@
 - ✅ 5 sponsorship placement types defined
 - ✅ Scorecard download (lead magnet)
 - ✅ AI Stack Audit consulting ($497)
-- ✅ Newsletter CTA on all pages
 
 ### Viral Growth Features
 - ✅ `/leaderboard.html` — Weekly rankings with FOMO
@@ -75,31 +74,31 @@ python3 scripts/validate_site.py
 2. **Content Inline** — Between tool reviews
 3. **Sidebar** — Right sidebar, 300x250px
 4. **Category Featured** — Category page hero
-5. **Newsletter Header** — Email newsletter
+5. **Benchmark Hub Sponsor** — clearly labeled placement
 
 ### Scorecard Download
 **File:** `/downloads/ai-tool-evaluation-scorecard.html`  
-**Purpose:** Free lead magnet for email capture
+**Purpose:** Free decision aid and direct-response entry point; no email gate.
 
 ---
 
-## 🎯 Viral Growth Strategy
+## 🎯 Community Growth Strategy
 
-### Leaderboard Mechanics
-- **Weekly reset** (Mondays)
-- **Upvotes** from community
-- **Click tracking** for performance
-- **Premium tiers** for guaranteed rankings
+### Community Page
+- Currently shows an explicitly labeled editorial shortlist.
+- No vote, click, traffic, or submission totals are published without real data.
+- Community voting remains closed until eligibility, anti-spam controls, and verified counts are implemented.
+- Sponsored placements must be labeled and cannot alter rankings.
 
 ### Submit Tool Form
-- **One-click submission** (< 30 seconds)
-- **Free listing** on leaderboard
-- **Premium upgrades** for better placement
+- Short, no-login editorial submission.
+- No guaranteed listing, review date, rank, traffic, backlink, or votes.
+- Vendor evidence links are requested to improve verification.
 
 ### Social Sharing
-- **Twitter, Facebook, LinkedIn** buttons on all pages
-- **Pre-formatted tweets** for sharing
-- **OG images** for social media
+- **X and LinkedIn** buttons on public pages
+- Page titles and canonical URLs are shared dynamically
+- OG image available for social previews
 
 ---
 
@@ -113,7 +112,6 @@ aitoolessentials/site/
 │   ├── revenue_targets.json          # Approval tracking
 │   ├── sponsors.json                 # Sponsor placements
 │   ├── sponsor_inventory.json        # Draft pricing
-│   ├── newsletter.json               # Newsletter config
 │   └── social_sharing.json           # Social templates
 ├── scripts/
 │   ├── daily_content_update.py       # Main automation
@@ -178,7 +176,6 @@ aitoolessentials/site/
 ### Engagement
 - **Leaderboard upvotes**
 - **Social shares**
-- **Newsletter signups**
 - **Tool submissions**
 
 ---
@@ -228,7 +225,6 @@ For questions about the site infrastructure or revenue system, refer to:
 - [ ] Apply for affiliate programs
 - [ ] Pitch sponsorship deals
 - [ ] Recruit 100 power users
-- [ ] Launch newsletter (at 1K visitors)
 - [ ] Monitor and optimize
 
 ---

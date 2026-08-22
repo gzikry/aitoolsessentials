@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-08-22",
+  "formsubmit": {
+    "endpoint": "https://formsubmit.co/ajax/contact@aitoolsessentials.com",
+    "http_status": 200,
+    "status": "activation_required",
+    "message": "Activation email requested for contact@aitoolsessentials.com. The mailbox owner must click the Activate Form link before delivery works."
+  },
+  "plausible": {
+    "status": "account_access_required",
+    "domain_script_present": true,
+    "notes": "The production-domain loader is installed. Site creation and dashboard verification require authenticated account access."
+  },
+  "google_search_console": {
+    "status": "account_access_required",
+    "sitemap_url": "https://aitoolsessentials.com/sitemap.xml",
+    "notes": "Property creation/verification and sitemap submission require authenticated Google account access."
+  },
+  "bing": {
+    "status": "indexnow_ready_for_submission",
+    "sitemap_url": "https://aitoolsessentials.com/sitemap.xml",
+    "notes": "IndexNow key and URL submission will be completed after this release is deployed.",
+    "indexnow_key": "7705dfd30f4617a4ac3a0c7b92f69126",
+    "key_location": "https://aitoolsessentials.com/7705dfd30f4617a4ac3a0c7b92f69126.txt"
+  },
+  "whop": {
+    "status": "plan_id_required",
+    "checkout_active": false,
+    "notes": "Premium is visibly marked coming soon. Checkout must remain disabled until the plan ID and member-delivery flow are configured and tested."
+  }
+}

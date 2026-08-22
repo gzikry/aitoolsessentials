@@ -19,7 +19,9 @@ brief_file.parent.mkdir(exist_ok=True)
 # Load tools and benchmark evidence status
 tools = json.loads((root / 'data/tools.json').read_text())
 benchmark_data = json.loads((root / 'data/benchmarks.json').read_text())
+tool_source_data = json.loads((root / 'data/tool_sources.json').read_text())
 benchmark_age = (datetime.today().date() - datetime.fromisoformat(benchmark_data['snapshot_date']).date()).days
+tool_source_age = (datetime.today().date() - datetime.fromisoformat(tool_source_data['checked_at']).date()).days
 print(f'Loaded {len(tools)} tools')
 
 # Generate enriched tool review pages
@@ -35,12 +37,32 @@ from generate_benchmarks import generate as generate_benchmarks_page
 generate_benchmarks_page(root)
 print('Generated benchmark evidence hub')
 
+# Generate honest community shortlist (never fabricated votes/traffic)
+from generate_community import generate as generate_community_page
+generate_community_page(root, tools, today)
+print('Generated community shortlist')
+
+# Add official-source and benchmark context to major comparison pages.
+from enhance_comparisons import generate as enhance_comparison_pages
+enhance_comparison_pages(root)
+
+from enhance_guides import generate as enhance_buyer_guides
+enhance_buyer_guides(root)
+
+from generate_affiliate_tracker import generate as generate_affiliate_tracker
+generate_affiliate_tracker(root)
+print('Generated verified affiliate tracker')
+
 # Generate sitemap
 sitemap_urls = []
 for p in sorted(root.rglob('*.html')):
     if '.hermes' in p.parts:
         continue
     rel = p.relative_to(root)
+    html_text = p.read_text()
+    # Exclude internal, error, checkout-return, redirect, and noindex pages.
+    if 'admin' in str(rel) or p.name == '404.html' or 'name="robots" content="noindex' in html_text:
+        continue
     if p.name == 'index.html':
         url = f'/{rel.parent}/'
     else:
@@ -69,6 +91,8 @@ brief = f'''# Daily Content Brief — {today}
 - Sitemap URLs: {len(sitemap_urls)}
 - Benchmark snapshot: {benchmark_data['snapshot_date']} ({benchmark_age} days old)
 - Benchmark refresh due: {'YES' if benchmark_age > benchmark_data.get('policy', {}).get('staleness_days', 30) else 'No'}
+- Official tool sources: {tool_source_data['checked_at']} ({tool_source_age} days old)
+- Official source refresh due: {'YES' if tool_source_age > 30 else 'No'}
 
 ## Revenue Status
 - Affiliate programs: Check `data/affiliate_programs.json` for application status.

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /checkout/
 Sitemap: https://aitoolsessentials.com/sitemap.xml

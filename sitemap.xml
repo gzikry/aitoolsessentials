@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aitoolsessentials.com/404.html</loc></url>
   <url><loc>https://aitoolsessentials.com/advertise/</loc></url>
   <url><loc>https://aitoolsessentials.com/articles/best-ai-app-builders.html</loc></url>
   <url><loc>https://aitoolsessentials.com/articles/best-ai-assistants.html</loc></url>
@@ -49,7 +48,6 @@
   <url><loc>https://aitoolsessentials.com/categories/Video/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Writing & Productivity/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/</loc></url>
-  <url><loc>https://aitoolsessentials.com/checkout/complete/</loc></url>
   <url><loc>https://aitoolsessentials.com/comparisons/best-ai-tools.html</loc></url>
   <url><loc>https://aitoolsessentials.com/comparisons/chatgpt-vs-claude.html</loc></url>
   <url><loc>https://aitoolsessentials.com/comparisons/chatgpt-vs-grok.html</loc></url>
@@ -61,11 +59,15 @@
   <url><loc>https://aitoolsessentials.com/downloads/ai-tool-evaluation-scorecard.html</loc></url>
   <url><loc>https://aitoolsessentials.com/./</loc></url>
   <url><loc>https://aitoolsessentials.com/leaderboard.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/legal/about.html</loc></url>
   <url><loc>https://aitoolsessentials.com/legal/affiliate-disclosure.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/legal/corrections.html</loc></url>
   <url><loc>https://aitoolsessentials.com/legal/editorial-methodology.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/legal/privacy.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/legal/terms.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/legal/testing-protocol.html</loc></url>
   <url><loc>https://aitoolsessentials.com/pricing/</loc></url>
   <url><loc>https://aitoolsessentials.com/services/ai-stack-audit.html</loc></url>
-  <url><loc>https://aitoolsessentials.com/services/ai-stack-consulting.html</loc></url>
   <url><loc>https://aitoolsessentials.com/services/intake-questionnaire.html</loc></url>
   <url><loc>https://aitoolsessentials.com/submit-tool.html</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/adobe-firefly/</loc></url>

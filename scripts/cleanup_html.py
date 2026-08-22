@@ -90,9 +90,25 @@ def fix_page(p: Path) -> bool:
     if 'id="share-row"' not in h and '<footer' in h:
         h = h.replace('<footer', '<div id="share-row" hidden></div>\n  <footer', 1)
 
-    # 9. Canonical domain + contact email in footer
-    if '<footer' in h and EMAIL not in h:
-        h = h.replace('</footer>', f'<a href="mailto:{EMAIL}">Contact</a>\n  </footer>', 1)
+    # 9. Canonical trust/legal links in every public footer.
+    if '<footer' in h:
+        footer_match = re.search(r'<footer[^>]*>.*?</footer>', h, re.S)
+        if footer_match:
+            footer = footer_match.group(0)
+            additions = []
+            if '>About</a>' not in footer:
+                additions.append(f'<a href="{prefix}legal/about.html">About</a>')
+            if '>Privacy</a>' not in footer:
+                additions.append(f'<a href="{prefix}legal/privacy.html">Privacy</a>')
+            if '>Terms</a>' not in footer:
+                additions.append(f'<a href="{prefix}legal/terms.html">Terms</a>')
+            if '>Corrections</a>' not in footer:
+                additions.append(f'<a href="{prefix}legal/corrections.html">Corrections</a>')
+            if f'mailto:{EMAIL}' not in footer:
+                additions.append(f'<a href="mailto:{EMAIL}">Contact</a>')
+            if additions:
+                new_footer = footer.replace('</footer>', ''.join(additions) + '</footer>')
+                h = h.replace(footer, new_footer, 1)
 
     if h != orig:
         p.write_text(h)

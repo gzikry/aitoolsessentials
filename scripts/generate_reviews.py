@@ -10,6 +10,28 @@ DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
 
 
+def _source_record(root: Path, slug: str):
+    path = root / 'data/tool_sources.json'
+    if not path.exists():
+        return None
+    data = json.loads(path.read_text())
+    return next((x for x in data.get('tools', []) if x.get('slug') == slug), None)
+
+
+def _official_source_html(record) -> str:
+    if not record:
+        return '<div class="official-source-card pending"><span>Source status</span><strong>Official verification pending</strong><p>Verify the vendor pricing and policy pages before purchasing.</p></div>'
+    labels = [('Official pricing', 'pricing_url'), ('Product documentation', 'docs_url'), ('Privacy / data use', 'privacy_url'), ('Rights / terms', 'rights_url')]
+    links = ''.join(
+        f'<a href="{record[key]}" target="_blank" rel="external noopener">{label} ↗</a>'
+        for label, key in labels if record.get(key)
+    )
+    unresolved = ''.join(f'<li>{x}</li>' for x in record.get('unresolved_claims', []))
+    unresolved_html = f'<details><summary>Open verification questions</summary><ul>{unresolved}</ul></details>' if unresolved else ''
+    notes = record.get('verification_notes') or ''
+    return f'''<div class="official-source-card"><span>Official sources checked {record.get('pricing_checked_date', '')}</span><p><strong>Current official summary:</strong> {record.get('pricing_summary') or 'No stable public pricing was verified.'}</p><div class="official-source-links">{links}</div>{unresolved_html}<p class="source-notes">{notes}</p></div>'''
+
+
 def _price_rows(tool):
     detail = tool.get('pricing_detail')
     if detail:
@@ -26,9 +48,9 @@ def _price_rows(tool):
 def _who_for(tool):
     cat = tool.get('category', '')
     best = tool.get('best_for', '')
-    return (f"{tool['name']} fits teams and individuals who need {best.lower().rstrip('.')}. "
-            f"It is strongest in {cat.lower()} work where output quality and speed matter more than "
-            f"deep customization. Skip it if you need a self-hosted option or heavy API control on a budget plan.")
+    return (f"{tool['name']} is aimed at teams and individuals who need {best.lower().rstrip('.')}. "
+            f"It is designed for {cat.lower()} workflows where output quality, adoption effort, and operating cost all matter. "
+            f"Compare alternatives first if you require self-hosting, unusually deep customization, or tighter policy controls than the official plan provides.")
 
 
 def _benchmark_html(root: Path, slug: str, category: str) -> str:
@@ -75,6 +97,8 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     official = tool.get('official', '')
     summary = tool.get('summary', '')
     category = tool.get('category', '')
+    source_record = _source_record(root, slug)
+    official_source_html = _official_source_html(source_record)
     benchmark_html = _benchmark_html(root, slug, category)
 
     same_cat = [t for t in tools if t['slug'] != slug and category in t.get('category', '')]
@@ -102,11 +126,14 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     if not comp_html:
         comp_html = '<a class="text-link" href="../../comparisons/best-ai-tools.html">All AI tool comparisons</a>\n'
 
-    price_rows = _price_rows(tool)
-    price_html = '<table class="price-table"><tbody>\n'
-    for k, v in price_rows:
-        price_html += f'<tr><th>{k}</th><td>{v}</td></tr>\n'
-    price_html += '</tbody></table>\n'
+    if source_record:
+        price_html = official_source_html
+    else:
+        price_rows = _price_rows(tool)
+        price_html = '<table class="price-table"><tbody>\n'
+        for k, v in price_rows:
+            price_html += f'<tr><th>{k}</th><td>{v}</td></tr>\n'
+        price_html += '</tbody></table>\n'
 
     who_for = _who_for(tool)
     score_percent = max(0, min(100, rating / 5 * 100))
@@ -190,7 +217,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <p class="kicker light">{category}</p>
 <h1>{name} review</h1>
 <p>{summary}</p>
-<p class="last-updated">Editorial review · Updated {today}</p>
+<p class="last-updated">Editorial review · Updated {today} · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
 </section>
 
 <div class="review-layout">

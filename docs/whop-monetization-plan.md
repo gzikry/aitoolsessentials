@@ -11,7 +11,6 @@ _Created 2026-08-21 by superhub (ox-alpha session). Workdir reference: ~/aitoole
 ## Product ladder
 1. **Free:** existing daily content (unchanged — it's the funnel).
 2. **Premium database tier** — $9–15/mo: full searchable tools database, weekly deep-dives, "tool of the day" early access.
-3. **Newsletter tier** (Whop has native Newspaper template): premium weekly edition.
 
 ## Implementation steps
 1. [ ] Create Whop company (aitoolsessentials brand)

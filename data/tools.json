@@ -5,7 +5,6 @@
     "category": "Audio",
     "best_for": "AI voice generation, dubbing, narration, and voice agents",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.6,
     "official": "https://elevenlabs.io/",
     "summary": "A leading AI voice platform for realistic speech, narration, dubbing, and voice product experiences.",
@@ -26,40 +25,17 @@
       "Voice rights and consent matter",
       "Costs scale with usage"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "10k characters/mo (~10 min), attribution required"
-      ],
-      [
-        "Starter",
-        "$5/mo",
-        "30k chars, clone your voice, commercial license"
-      ],
-      [
-        "Creator",
-        "$22/mo",
-        "100k chars, professional cloning, dubbing"
-      ],
-      [
-        "Pro+ tiers",
-        "$99-$330/mo",
-        "Higher caps, highest fidelity audio"
-      ]
-    ],
     "key_features": [
-      "Most realistic TTS voices available",
+      "Realistic TTS voice generation",
       "Instant voice clone from ~1 minute of audio",
       "Professional cloning for studio-grade replicas",
       "Dubbing preserves original speaker's voice across languages",
       "Sound effects generation and voice changer"
     ],
-    "best_plan": "Starter at $5/mo for light use with commercial rights; Creator at $22 for regular production.",
     "faq": [
       [
         "Is ElevenLabs free?",
-        "10k characters monthly free with required attribution; paid plans start at $5/mo."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Can I clone my own voice legally?",
@@ -70,7 +46,9 @@
         "ElevenLabs leads on realism by a wide margin. See our best AI voice tools guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving voiceovers—not a demo prompt. Verify whether most realistic tts voices available materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to voice rights and consent matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving voiceovers—not a demo prompt. Verify whether realistic tts voice generation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to voice rights and consent matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "descript",
@@ -78,7 +56,6 @@
     "category": "Audio & Video",
     "best_for": "Podcast and video editing with transcript-based workflows",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://www.descript.com/",
     "summary": "An editor that lets creators edit audio and video by editing text, with AI cleanup and production features.",
@@ -97,28 +74,6 @@
       "Advanced video work may need dedicated tools",
       "Review exports carefully"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "1 transcription hour/mo, watermark on export"
-      ],
-      [
-        "Hobbyist",
-        "$19/mo",
-        "10 transcription hrs, no watermark, 1080p"
-      ],
-      [
-        "Creator",
-        "$35/mo",
-        "30 hrs, 4K, AI green screen, overdub clone"
-      ],
-      [
-        "Business",
-        "$65/seat/mo",
-        "12 hrs/seat, priority support, team features"
-      ]
-    ],
     "key_features": [
       "Edit video/audio by editing the transcript text",
       "Studio Sound removes background noise dramatically",
@@ -126,11 +81,10 @@
       "Filler word removal in one click",
       "Screen recording with auto-transcription"
     ],
-    "best_plan": "Creator at $35/mo for regular podcasters/YouTubers; Hobbyist to start.",
     "faq": [
       [
         "Is Descript free?",
-        "1 transcription hour monthly, watermarked export. Hobbyist at $19/mo for real use."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "What makes Descript different?",
@@ -141,7 +95,9 @@
         "Yes — one click removes all 'um's and 'uh's, and it works well."
       ]
     ],
-    "trial_checklist": "Use a real task involving podcast editing—not a demo prompt. Verify whether edit video/audio by editing the transcript text materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced video work may need dedicated tools. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving podcast editing—not a demo prompt. Verify whether edit video/audio by editing the transcript text materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced video work may need dedicated tools. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "make",
@@ -149,7 +105,6 @@
     "category": "Automation",
     "best_for": "Visual automation scenarios and multi-step operational workflows",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://www.make.com/",
     "summary": "A visual automation platform for building app-to-app workflows, including AI steps and operational routing.",
@@ -170,28 +125,6 @@
       "More complex than simple zaps",
       "Requires testing and monitoring"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "1,000 ops/mo, 15-min minimum interval"
-      ],
-      [
-        "Core",
-        "$9/mo",
-        "10,000 ops, unlimited scenarios, 1-min intervals"
-      ],
-      [
-        "Pro",
-        "$16/mo",
-        "10,000 ops, priority execution, error handlers"
-      ],
-      [
-        "Teams/Enterprise",
-        "$29+/mo",
-        "Team sharing, SSO, higher ops"
-      ]
-    ],
     "key_features": [
       "Visual scenario builder with branching logic",
       "Operations are far cheaper than Zapier tasks",
@@ -199,7 +132,6 @@
       "AI modules from OpenAI, Anthropic, and more",
       "Error handlers with retries and fallbacks"
     ],
-    "best_plan": "Core at $9/mo is remarkable value; Pro adds error handling that production automations need.",
     "faq": [
       [
         "Make vs Zapier?",
@@ -214,7 +146,9 @@
         "Moderately — expect a few days to feel fluent vs hours for Zapier."
       ]
     ],
-    "trial_checklist": "Use a real task involving operations automation—not a demo prompt. Verify whether visual scenario builder with branching logic materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more complex than simple zaps so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving operations automation—not a demo prompt. Verify whether visual scenario builder with branching logic materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more complex than simple zaps so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "zapier-ai",
@@ -222,7 +156,6 @@
     "category": "Automation",
     "best_for": "Automating business workflows across apps",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.4,
     "official": "https://zapier.com/ai",
     "summary": "AI-assisted automation builder for connecting apps, triggering workflows, and reducing manual operational tasks.",
@@ -243,36 +176,13 @@
       "Complex workflows need testing",
       "Costs scale with task volume"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "100 tasks/mo, two-step Zaps only"
-      ],
-      [
-        "Professional",
-        "$19.99/mo",
-        "Unlimited Zaps, multi-step, paths, premium apps"
-      ],
-      [
-        "Team",
-        "$69/mo",
-        "Unlimited users, shared workspaces"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "SAML, app restrictions, dedicated support"
-      ]
-    ],
     "key_features": [
       "AI actions: GPT/Claude steps inside any automation",
       "Zap builder from natural-language description",
-      "8,000+ app integrations — the widest catalog anywhere",
+      "8,000+ app integrations — a broad integration catalog",
       "Tables, Interfaces, and Chatbots round out the no-code suite",
       "Reliable trigger/filter logic with error retry"
     ],
-    "best_plan": "Professional at $19.99/mo covers most solo operators; watch task counts as multi-step Zaps burn tasks fast.",
     "faq": [
       [
         "Zapier vs Make — which is cheaper?",
@@ -287,7 +197,9 @@
         "Yes — GPT, Claude, and other AI steps drop into any Zap, plus AI-built workflow drafts."
       ]
     ],
-    "trial_checklist": "Use a real task involving lead routing—not a demo prompt. Verify whether ai actions: gpt/claude steps inside any automation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex workflows need testing so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving lead routing—not a demo prompt. Verify whether ai actions: gpt/claude steps inside any automation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex workflows need testing so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "n8n",
@@ -295,7 +207,6 @@
     "category": "Automation",
     "best_for": "Technical workflow automation with self-hosting and AI agent options",
     "price": "Free self-hosted + paid cloud",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://n8n.io/",
     "summary": "A flexible automation platform for technical teams that want deeper workflow control and self-hosting options.",
@@ -316,28 +227,6 @@
       "More technical setup",
       "Governance and maintenance required"
     ],
-    "pricing_detail": [
-      [
-        "Self-hosted",
-        "Free (open source)",
-        "Unlimited executions, community edition"
-      ],
-      [
-        "Cloud Starter",
-        "~$24/mo",
-        "2,500 executions, managed hosting"
-      ],
-      [
-        "Cloud Pro",
-        "~$60/mo",
-        "10,000 executions, static IPs, more concurrency"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "SSO, RBAC, air-gapped deployment"
-      ]
-    ],
     "key_features": [
       "Open source — self-host for unlimited runs at zero cost",
       "Code steps in JavaScript/Python when nodes aren't enough",
@@ -345,11 +234,10 @@
       "400+ integrations plus generic HTTP node",
       "AI agent nodes with LangChain support"
     ],
-    "best_plan": "Self-host free if you can run Docker; Cloud Pro for teams without DevOps.",
     "faq": [
       [
         "Is n8n really free?",
-        "Self-hosted yes — open source with unlimited executions. Cloud starts around $24/mo."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "n8n vs Make?",
@@ -360,7 +248,9 @@
         "Yes — native LangChain-powered agent nodes with tool calling."
       ]
     ],
-    "trial_checklist": "Use a real task involving internal automations—not a demo prompt. Verify whether open source — self-host for unlimited runs at zero cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more technical setup so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving internal automations—not a demo prompt. Verify whether open source — self-host for unlimited runs at zero cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more technical setup so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "adobe-firefly",
@@ -368,7 +258,6 @@
     "category": "Creative",
     "best_for": "Commercially oriented generative images and design assets inside Adobe workflows",
     "price": "Free + paid plans / Adobe plans",
-    "monetization": "affiliate-ready",
     "rating": 4.4,
     "official": "https://www.adobe.com/products/firefly.html",
     "summary": "Adobe’s generative AI suite for images, text effects, edits, and creative production within the Adobe ecosystem.",
@@ -389,28 +278,6 @@
       "Best value for Adobe users",
       "Creative review still required"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "25 generative credits/mo"
-      ],
-      [
-        "Firefly Standard",
-        "$9.99/mo",
-        "~2,000 credits, commercial safety"
-      ],
-      [
-        "Firefly Pro",
-        "$29.99/mo",
-        "~7,000 credits for heavy creators"
-      ],
-      [
-        "Creative Cloud",
-        "Bundle",
-        "Generative credits included with Photoshop etc."
-      ]
-    ],
     "key_features": [
       "Trained on licensed Adobe Stock — commercially safest output",
       "Generative Fill and Expand inside Photoshop",
@@ -418,7 +285,6 @@
       "Structure reference matches composition of a sample image",
       "IP indemnification for enterprise customers"
     ],
-    "best_plan": "If you already have Creative Cloud, you're covered. Standalone plans make sense mainly for enterprises needing indemnification.",
     "faq": [
       [
         "Is Firefly commercially safe?",
@@ -433,7 +299,9 @@
         "No — monthly credits expire."
       ]
     ],
-    "trial_checklist": "Use a real task involving commercial creative—not a demo prompt. Verify whether trained on licensed adobe stock — commercially safest output materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for adobe users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving commercial creative—not a demo prompt. Verify whether trained on licensed adobe stock — commercially safest output materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for adobe users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "leonardo-ai",
@@ -441,7 +309,6 @@
     "category": "Creative",
     "best_for": "Game assets, concept art, product mockups, and controlled image generation",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://leonardo.ai/",
     "summary": "A creative AI platform for image generation, asset production, style control, and visual experimentation.",
@@ -462,28 +329,6 @@
       "Requires visual direction",
       "Advanced workflows take practice"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "150 tokens/day (~15-30 images)"
-      ],
-      [
-        "Apprentice",
-        "$12/mo",
-        "8,500 tokens/mo, image upscaling"
-      ],
-      [
-        "Artisan",
-        "$30/mo",
-        "25,000 tokens, fine-tuned models"
-      ],
-      [
-        "Maestro",
-        "$60/mo",
-        "50,000 tokens, priority generation"
-      ]
-    ],
     "key_features": [
       "Fine-tune custom models on your own image sets",
       "Realtime canvas with live generation while drawing",
@@ -491,7 +336,6 @@
       "Elements: mixable style modifiers",
       "Motion: short image-to-video clips"
     ],
-    "best_plan": "Free tier's daily tokens are genuinely usable; Apprentice at $12/mo for regular creators.",
     "faq": [
       [
         "Is Leonardo AI free?",
@@ -506,7 +350,9 @@
         "Leonardo for consistency via trained models and API access; Midjourney for peak aesthetics. See our AI image tools guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving concept art—not a demo prompt. Verify whether fine-tune custom models on your own image sets materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires visual direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving concept art—not a demo prompt. Verify whether fine-tune custom models on your own image sets materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires visual direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "midjourney",
@@ -514,7 +360,6 @@
     "category": "Creative",
     "best_for": "High-quality image generation and concept visuals",
     "price": "Paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.5,
     "official": "https://www.midjourney.com/",
     "summary": "A premium image-generation tool for brand visuals, concept art, moodboards, and campaign creative.",
@@ -535,36 +380,13 @@
       "Workflow differs from standard design tools",
       "Requires human art direction"
     ],
-    "pricing_detail": [
-      [
-        "Basic",
-        "$10/mo",
-        "~200 generations, no unlimited relaxed mode"
-      ],
-      [
-        "Standard",
-        "$30/mo",
-        "15h fast GPU + unlimited relaxed generations"
-      ],
-      [
-        "Pro",
-        "$60/mo",
-        "30h fast, stealth mode so your images stay private"
-      ],
-      [
-        "Mega",
-        "$120/mo",
-        "60h fast GPU for heavy production use"
-      ]
-    ],
     "key_features": [
-      "Best-in-class aesthetic quality for stylized and concept imagery",
+      "Strong aesthetic controls for stylized and concept imagery",
       "Style references and character references for consistency",
       "Web editor with inpainting and outpainting",
       "Strong prompt adherence improvements in v6+",
       "Commercial rights on all paid plans"
     ],
-    "best_plan": "Standard at $30/mo — unlimited relaxed mode is the plan most creators actually need.",
     "faq": [
       [
         "Can I use Midjourney images commercially?",
@@ -579,7 +401,9 @@
         "Midjourney leads on aesthetics and concept art; Firefly integrates with Photoshop and is commercially safer for enterprise."
       ]
     ],
-    "trial_checklist": "Use a real task involving ad concepts—not a demo prompt. Verify whether best-in-class aesthetic quality for stylized and concept imagery materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to workflow differs from standard design tools. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving ad concepts—not a demo prompt. Verify whether strong aesthetic controls for stylized and concept imagery materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to workflow differs from standard design tools. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "canva-ai",
@@ -587,7 +411,6 @@
     "category": "Creative & Marketing",
     "best_for": "Non-designers making social, presentation, and marketing assets",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.4,
     "official": "https://www.canva.com/ai/",
     "summary": "AI-assisted design inside Canva’s familiar editor for quick branded assets and marketing production.",
@@ -606,23 +429,6 @@
       "Advanced control is limited",
       "Outputs can feel templated"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Magic Design limited uses, huge template library"
-      ],
-      [
-        "Pro",
-        "$15/mo",
-        "Unlimited Magic Write & Magic Media, Brand Kit, premium assets"
-      ],
-      [
-        "Teams",
-        "$10/user/mo (min 3)",
-        "Everything in Pro + collaboration and brand controls"
-      ]
-    ],
     "key_features": [
       "Magic Design generates full layouts from a prompt",
       "Magic Write drafts copy inside any design",
@@ -630,11 +436,10 @@
       "Brand Kit enforces fonts/colors across AI output",
       "One-click resize across formats (IG post to presentation)"
     ],
-    "best_plan": "Pro at $15/mo is worth it purely for Brand Kit and unlimited Magic features; free covers occasional use.",
     "faq": [
       [
         "Is Canva AI free?",
-        "Limited Magic uses are free. Pro at $15/mo makes everything unlimited."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Can Canva AI generate images?",
@@ -645,7 +450,9 @@
         "Canva for speed and templates; Firefly for professional image control in Photoshop. See our AI image tools guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving social posts—not a demo prompt. Verify whether magic design generates full layouts from a prompt materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced control is limited so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving social posts—not a demo prompt. Verify whether magic design generates full layouts from a prompt materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced control is limited so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "bolt-new",
@@ -653,7 +460,6 @@
     "category": "Development",
     "best_for": "Prompt-to-app prototyping in the browser",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://bolt.new/",
     "summary": "A browser-based AI development environment for quickly creating and iterating on web apps from prompts.",
@@ -674,23 +480,6 @@
       "Production hardening required",
       "Prompting skill matters"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Limited daily tokens, public projects"
-      ],
-      [
-        "Pro",
-        "$20/mo",
-        "10M token/mo, private projects, deploy features"
-      ],
-      [
-        "Teams",
-        "$40+/seat/mo",
-        "Shared workspaces and higher limits"
-      ]
-    ],
     "key_features": [
       "Prompt-to-full-stack app in browser (no local setup)",
       "Runs real Node/DB environment via WebContainers",
@@ -698,11 +487,10 @@
       "Supports React, Next.js, Astro, Svelte stacks",
       "Error-aware AI fixes its own runtime errors"
     ],
-    "best_plan": "Free to evaluate seriously; Pro at $20/mo once you're building weekly.",
     "faq": [
       [
         "Is Bolt.new free?",
-        "Yes with daily token limits; Pro at $20/mo for serious building."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Does Bolt host my app?",
@@ -713,7 +501,9 @@
         "Bolt for full-stack control in-browser; v0 for UI polish; Lovable for simplicity. See our AI app builders guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving rapid prototypes—not a demo prompt. Verify whether prompt-to-full-stack app in browser (no local setup) materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to production hardening required so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving rapid prototypes—not a demo prompt. Verify whether prompt-to-full-stack app in browser (no local setup) materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to production hardening required so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "cursor",
@@ -721,7 +511,6 @@
     "category": "Development",
     "best_for": "AI-assisted coding inside an editor",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.6,
     "official": "https://cursor.com/",
     "summary": "A developer-focused AI editor for code generation, refactoring, debugging, and repo-aware assistance.",
@@ -742,23 +531,6 @@
       "Requires engineering review",
       "Editor migration may be a hurdle"
     ],
-    "pricing_detail": [
-      [
-        "Hobby",
-        "$0",
-        "Limited fast requests, Pro trial"
-      ],
-      [
-        "Pro",
-        "$20/mo",
-        "Unlimited completions, ~500 fast premium requests/mo"
-      ],
-      [
-        "Business",
-        "$40/user/mo",
-        "SSO, privacy mode enforced, usage analytics"
-      ]
-    ],
     "key_features": [
       "Tab completion that predicts multi-line edits across files",
       "Codebase-aware chat — answers reference your actual code",
@@ -766,7 +538,6 @@
       "Works with your existing extensions and keybindings",
       "Privacy mode keeps code out of training"
     ],
-    "best_plan": "Pro at $20/mo — the free tier's fast-request cap runs out in days for active developers.",
     "faq": [
       [
         "Is Cursor worth it over VS Code + Copilot?",
@@ -781,7 +552,9 @@
         "Yes — Cursor is a VS Code fork and imports your setup."
       ]
     ],
-    "trial_checklist": "Use a real task involving feature prototypes—not a demo prompt. Verify whether tab completion that predicts multi-line edits across files materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires engineering review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving feature prototypes—not a demo prompt. Verify whether tab completion that predicts multi-line edits across files materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires engineering review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "github-copilot",
@@ -789,7 +562,6 @@
     "category": "Development",
     "best_for": "Autocomplete, code chat, and developer productivity in popular IDEs",
     "price": "Paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.5,
     "official": "https://github.com/features/copilot",
     "summary": "A mature coding assistant integrated into GitHub and major IDE workflows.",
@@ -810,28 +582,6 @@
       "Quality varies by task",
       "Can reinforce existing code issues"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "2,000 completions + 50 chat msgs/mo"
-      ],
-      [
-        "Pro",
-        "$10/mo",
-        "Unlimited completions, premium model requests"
-      ],
-      [
-        "Business",
-        "$19/user/mo",
-        "Org policy, IP indemnity, audit logs"
-      ],
-      [
-        "Enterprise",
-        "$39/user/mo",
-        "Codebase indexing, fine-tuned models"
-      ]
-    ],
     "key_features": [
       "Lives natively in VS Code, JetBrains, Xcode, and more",
       "Multi-line completions matching your code style",
@@ -839,11 +589,10 @@
       "Agent mode for multi-file tasks",
       "Enterprise IP indemnification"
     ],
-    "best_plan": "Pro at $10/mo is the best value in coding assistants; Business for teams needing indemnification.",
     "faq": [
       [
         "Is GitHub Copilot free?",
-        "A limited free tier exists (2,000 completions/mo); Pro is $10/mo unlimited."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Copilot vs Cursor?",
@@ -854,7 +603,9 @@
         "Business/Enterprise plans contractually exclude that; business code never trains models."
       ]
     ],
-    "trial_checklist": "Use a real task involving code completion—not a demo prompt. Verify whether lives natively in vs code, jetbrains, xcode, and more materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality varies by task so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving code completion—not a demo prompt. Verify whether lives natively in vs code, jetbrains, xcode, and more materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality varies by task so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "lovable",
@@ -862,7 +613,6 @@
     "category": "Development",
     "best_for": "AI app generation for product prototypes and front-end experiences",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://lovable.dev/",
     "summary": "An AI app builder focused on turning prompts into working web app prototypes and product interfaces.",
@@ -883,23 +633,6 @@
       "Generated apps need technical review",
       "Scaling requires engineering discipline"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Daily message limits, public projects"
-      ],
-      [
-        "Lite",
-        "$25/mo",
-        "More messages, private projects"
-      ],
-      [
-        "Pro",
-        "$50/mo",
-        "Best-model access, credit rolls, remove Lovable badge"
-      ]
-    ],
     "key_features": [
       "Chat-to-app with instant visual preview",
       "GitHub sync two-way — own your code",
@@ -907,7 +640,6 @@
       "Edit with chat or direct visual selection",
       "One-click publish to lovable.app subdomain"
     ],
-    "best_plan": "Start free, expect to need Lite at $25/mo within days if building actively.",
     "faq": [
       [
         "Do I own Lovable-generated code?",
@@ -922,7 +654,9 @@
         "Lovable for guided simplicity with real backend; Bolt for finer stack control. See our AI app builders guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving mvp prototypes—not a demo prompt. Verify whether chat-to-app with instant visual preview materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to generated apps need technical review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving mvp prototypes—not a demo prompt. Verify whether chat-to-app with instant visual preview materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to generated apps need technical review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "replit-ai",
@@ -930,7 +664,6 @@
     "category": "Development",
     "best_for": "Building and deploying apps from a browser-based development environment",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://replit.com/ai",
     "summary": "AI coding assistance inside Replit for prototyping, explaining, debugging, and shipping browser-based projects.",
@@ -951,23 +684,6 @@
       "Complex production work needs engineering review",
       "Platform fit matters"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Limited AI checkpoints, public repls"
-      ],
-      [
-        "Replit Core",
-        "$25/mo",
-        "Monthly AI credits, private apps, more compute"
-      ],
-      [
-        "Teams",
-        "$40/user/mo",
-        "Shared workspaces, centralized billing"
-      ]
-    ],
     "key_features": [
       "Full IDE + hosting + database in one platform",
       "AI Agent builds entire apps from descriptions",
@@ -975,11 +691,10 @@
       "Real collaborative editing like Google Docs",
       "Mobile apps let you build from anywhere"
     ],
-    "best_plan": "Core at $25/mo bundles AI credits with hosting — effectively replacing 3 services.",
     "faq": [
       [
         "What does Replit cost?",
-        "Free tier exists; Core at $25/mo includes AI credits, hosting, and private projects."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Is Replit good for beginners?",
@@ -990,7 +705,9 @@
         "Replit owns the whole lifecycle including deployment; others focus on generation. See our AI app builders guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving web prototypes—not a demo prompt. Verify whether full ide + hosting + database in one platform materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex production work needs engineering review. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving web prototypes—not a demo prompt. Verify whether full ide + hosting + database in one platform materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex production work needs engineering review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "v0",
@@ -998,7 +715,6 @@
     "category": "Development",
     "best_for": "Generating React/UI components and product interfaces",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://v0.dev/",
     "summary": "Vercel’s AI interface generator for UI components, React patterns, and rapid frontend iteration.",
@@ -1019,23 +735,6 @@
       "Needs integration into real codebase",
       "Not a full product process alone"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Limited monthly credits"
-      ],
-      [
-        "Premium",
-        "$20/mo",
-        "$20 of usage credits, Figma imports"
-      ],
-      [
-        "Team",
-        "$30/user/mo",
-        "Centralized billing, shared chats"
-      ]
-    ],
     "key_features": [
       "Generates production-grade React/Tailwind/shadcn UI",
       "Iterate by chatting or clicking elements directly",
@@ -1043,7 +742,6 @@
       "Deploy to Vercel in one click",
       "Output is clean, readable, maintainable code"
     ],
-    "best_plan": "Premium at $20/mo for regular UI work; generous free credits to start.",
     "faq": [
       [
         "What is v0 for?",
@@ -1058,7 +756,9 @@
         "Different jobs: v0 generates UI from prompts; Cursor edits whole codebases. Many devs use both."
       ]
     ],
-    "trial_checklist": "Use a real task involving ui components—not a demo prompt. Verify whether generates production-grade react/tailwind/shadcn ui materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs integration into real codebase so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving ui components—not a demo prompt. Verify whether generates production-grade react/tailwind/shadcn ui materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs integration into real codebase so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "chatgpt",
@@ -1066,7 +766,6 @@
     "category": "General AI Assistant",
     "best_for": "General-purpose writing, research, analysis, and multimodal help",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.8,
     "official": "https://chatgpt.com/",
     "summary": "A flexible AI assistant for drafting, analysis, brainstorming, coding help, and everyday knowledge work.",
@@ -1087,28 +786,6 @@
       "Needs review for factual claims",
       "Team governance depends on plan"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "GPT-4o mini with limits, web browsing, mobile apps"
-      ],
-      [
-        "Plus",
-        "$20/mo",
-        "GPT-4o and reasoning models, higher limits, voice, file uploads, image generation"
-      ],
-      [
-        "Team",
-        "$25-30/user/mo",
-        "Everything in Plus plus shared workspace and admin controls"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "SSO, longer context, no training on your data, dedicated support"
-      ]
-    ],
     "key_features": [
       "Multimodal input: text, images, files, and voice in one conversation",
       "Custom GPTs for reusable role-specific assistants",
@@ -1116,11 +793,10 @@
       "Deep Research mode for multi-source reports with citations",
       "Canvas for iterative long-form drafting and code editing"
     ],
-    "best_plan": "Plus at $20/mo is the right entry point for daily users; the free tier is genuinely usable for occasional questions but hits caps fast.",
     "faq": [
       [
         "Is ChatGPT free?",
-        "Yes — the free tier includes GPT-4o mini with usage caps. Most daily users need Plus at $20/month for the full models and higher limits."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Is my data used for training?",
@@ -1131,7 +807,9 @@
         "ChatGPT wins on multimodal features and ecosystem; Claude tends to produce more natural long-form writing and handles very long documents well. Our ChatGPT vs Claude comparison breaks down task-by-task results."
       ]
     ],
-    "trial_checklist": "Use a real task involving content drafts—not a demo prompt. Verify whether multimodal input: text, images, files, and voice in one conversation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs review for factual claims so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving content drafts—not a demo prompt. Verify whether multimodal input: text, images, files, and voice in one conversation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs review for factual claims so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "claude",
@@ -1139,7 +817,6 @@
     "category": "General AI Assistant",
     "best_for": "Long-form writing, careful analysis, document review, and coding assistance",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.7,
     "official": "https://claude.ai/",
     "summary": "A thoughtful assistant especially useful for editing, long-context analysis, and turning messy notes into structured outputs.",
@@ -1160,28 +837,6 @@
       "Can still miss details",
       "External integrations vary"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Daily message caps on the current model, web + desktop apps"
-      ],
-      [
-        "Pro",
-        "$20/mo",
-        "Higher caps, Projects, priority access at peak times"
-      ],
-      [
-        "Max",
-        "$100+/mo",
-        "5x Pro usage for heavy users and agent workloads"
-      ],
-      [
-        "Team/Enterprise",
-        "$25-30+/user/mo",
-        "Admin controls, SSO, no training on your data"
-      ]
-    ],
     "key_features": [
       "Projects that keep context, files, and instructions organized per workstream",
       "Artifacts for live-rendering documents, code, and prototypes beside the chat",
@@ -1189,22 +844,23 @@
       "Computer Use for operating a browser and desktop apps",
       "Consistently strong long-form writing tone"
     ],
-    "best_plan": "Pro at $20/mo for writers and analysts; Max only if you routinely hit Pro caps.",
     "faq": [
       [
         "What makes Claude different from ChatGPT?",
-        "Claude is strongest at long documents and natural writing; ChatGPT has a broader feature set. Many teams run both. See our ChatGPT vs Claude comparison."
+        "Claude emphasizes long documents and natural writing; ChatGPT emphasizes a broader product ecosystem. Many teams run both. See our ChatGPT vs Claude comparison."
       ],
       [
         "Does Claude have a free plan?",
-        "Yes, with daily message caps that reset. Heavy users need Pro at $20/month."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Can Claude read my whole codebase?",
         "With Projects and API use, yes — 200K tokens fits most small-to-mid repos in one context."
       ]
     ],
-    "trial_checklist": "Use a real task involving document analysis—not a demo prompt. Verify whether projects that keep context, files, and instructions organized per workstream materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to can still miss details so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving document analysis—not a demo prompt. Verify whether projects that keep context, files, and instructions organized per workstream materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to can still miss details so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "deepseek",
@@ -1212,7 +868,6 @@
     "category": "General AI Assistant",
     "best_for": "Reasoning, coding, and cost-conscious model evaluation",
     "price": "Free + API pricing",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://www.deepseek.com/",
     "summary": "An AI assistant and model provider known for reasoning and coding capabilities with strong price-performance interest.",
@@ -1233,23 +888,6 @@
       "Teams need data and compliance review",
       "Availability/performance can vary"
     ],
-    "pricing_detail": [
-      [
-        "Chat",
-        "Free",
-        "Full V3/R1 access via web and app"
-      ],
-      [
-        "API",
-        "From ~$0.27/M tokens in",
-        "Among the cheapest frontier-class API"
-      ],
-      [
-        "Open weights",
-        "Free license",
-        "Download and self-host the models"
-      ]
-    ],
     "key_features": [
       "Frontier-level reasoning at a fraction of rival cost",
       "R1 reasoning model shows its chain of thought",
@@ -1257,7 +895,6 @@
       "Strong math and coding performance",
       "Web/app chat completely free"
     ],
-    "best_plan": "Free chat for evaluation; API for cost-sensitive volume; self-host if data residency matters.",
     "faq": [
       [
         "Is DeepSeek really free?",
@@ -1272,7 +909,9 @@
         "Close on math/coding benchmarks, weaker on some general tasks — at a fraction of the price. See our comparisons."
       ]
     ],
-    "trial_checklist": "Use a real task involving coding—not a demo prompt. Verify whether frontier-level reasoning at a fraction of rival cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to teams need data and compliance review. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving coding—not a demo prompt. Verify whether frontier-level reasoning at a fraction of rival cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to teams need data and compliance review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "gemini",
@@ -1280,7 +919,6 @@
     "category": "General AI Assistant",
     "best_for": "Google-native AI assistance across search, docs, Gmail, Android, and multimodal tasks",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.6,
     "official": "https://gemini.google.com/",
     "summary": "Google’s AI assistant with strong multimodal capabilities and a natural fit for people already working in Google products.",
@@ -1301,23 +939,6 @@
       "Best features depend on account/plan",
       "Workspace controls matter for teams"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Gemini models with generous caps, multimodal input"
-      ],
-      [
-        "Google AI Pro",
-        "$19.99/mo",
-        "Latest models, Deep Research, Gemini in Gmail/Docs, 2TB storage bundle"
-      ],
-      [
-        "Workspace add-on",
-        "~$20-30/user/mo",
-        "Gemini across the full Google Workspace suite with data protections"
-      ]
-    ],
     "key_features": [
       "Deep integration with Gmail, Docs, Sheets, and Drive",
       "Huge context window handles very long documents and video",
@@ -1325,7 +946,6 @@
       "Native image and video understanding",
       "Bundled storage makes the Pro plan a double value"
     ],
-    "best_plan": "If you live in Google Workspace, the Pro plan pays for itself in the storage bundle alone.",
     "faq": [
       [
         "Is Gemini included with Google Workspace?",
@@ -1340,7 +960,9 @@
         "Yes, and it's one of the more generous free tiers — multimodal input included."
       ]
     ],
-    "trial_checklist": "Use a real task involving google workspace drafting—not a demo prompt. Verify whether deep integration with gmail, docs, sheets, and drive materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best features depend on account/plan so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving google workspace drafting—not a demo prompt. Verify whether deep integration with gmail, docs, sheets, and drive materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best features depend on account/plan so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "grok",
@@ -1348,7 +970,6 @@
     "category": "General AI Assistant",
     "best_for": "Conversational AI with real-time culture, news, social context, coding, and brainstorming",
     "price": "Free + paid plans / X plan availability varies",
-    "monetization": "affiliate-ready",
     "rating": 4.5,
     "official": "https://grok.com/",
     "summary": "xAI’s conversational assistant for fast answers, coding help, current-event context, and personality-forward brainstorming.",
@@ -1369,28 +990,6 @@
       "Enterprise workflows still need policy review",
       "Outputs still require source checking"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Limited queries on the latest model"
-      ],
-      [
-        "X Premium",
-        "$8/mo",
-        "Higher Grok limits included with X subscription"
-      ],
-      [
-        "SuperGrok",
-        "$30/mo",
-        "Highest limits, early access to new models"
-      ],
-      [
-        "API",
-        "Usage-based",
-        "xAI API for developers"
-      ]
-    ],
     "key_features": [
       "Real-time X (Twitter) data in answers",
       "Less restrictive personality and tone",
@@ -1398,11 +997,10 @@
       "Image generation and understanding",
       "Strong benchmark performance on reasoning"
     ],
-    "best_plan": "Free tier is usable; X Premium at $8/mo bundles Grok with the platform if you're already there.",
     "faq": [
       [
         "Is Grok free?",
-        "Yes with query limits; higher limits come with X Premium ($8/mo) or SuperGrok ($30/mo)."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "What makes Grok different?",
@@ -1413,7 +1011,9 @@
         "Competitive on benchmarks, unique on real-time social data. See our Grok alternatives guide for positioning."
       ]
     ],
-    "trial_checklist": "Use a real task involving current-event research—not a demo prompt. Verify whether real-time x (twitter) data in answers materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to enterprise workflows still need policy review. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving current-event research—not a demo prompt. Verify whether real-time x (twitter) data in answers materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to enterprise workflows still need policy review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "meta-ai",
@@ -1421,7 +1021,6 @@
     "category": "General AI Assistant",
     "best_for": "Consumer AI assistance inside Meta apps and open-model ecosystem discovery",
     "price": "Free",
-    "monetization": "affiliate-ready",
     "rating": 4.1,
     "official": "https://www.meta.ai/",
     "summary": "Meta’s assistant for consumer chat, image generation, social contexts, and broad AI access across Meta surfaces.",
@@ -1442,13 +1041,6 @@
       "Business workflows are less mature",
       "Privacy review needed for sensitive work"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Full access across WhatsApp, Instagram, Messenger, web"
-      ]
-    ],
     "key_features": [
       "Embedded in WhatsApp, Instagram, Messenger, and Ray-Ban glasses",
       "Llama-powered with image generation",
@@ -1456,7 +1048,6 @@
       "No subscription or caps currently enforced",
       "Imagine feature for image creation inside chats"
     ],
-    "best_plan": "It's free — just use it where you already are.",
     "faq": [
       [
         "Is Meta AI free?",
@@ -1471,7 +1062,9 @@
         "Great casual assistant; below top models on hard reasoning. See our AI assistants guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving consumer assistant tasks—not a demo prompt. Verify whether embedded in whatsapp, instagram, messenger, and ray-ban glasses materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to business workflows are less mature so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving consumer assistant tasks—not a demo prompt. Verify whether embedded in whatsapp, instagram, messenger, and ray-ban glasses materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to business workflows are less mature so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "mistral-le-chat",
@@ -1479,7 +1072,6 @@
     "category": "General AI Assistant",
     "best_for": "Fast AI chat from Mistral with European AI ecosystem appeal",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://chat.mistral.ai/",
     "summary": "Mistral’s assistant for general chat, reasoning, writing, coding help, and working with Mistral’s model family.",
@@ -1500,23 +1092,6 @@
       "Ecosystem smaller than incumbents",
       "Workflow integrations vary"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Generous free tier including flash responses"
-      ],
-      [
-        "Pro",
-        "$14.99/mo",
-        "Higher limits, latest models, expanded features"
-      ],
-      [
-        "API",
-        "Usage-based",
-        "Mistral models, EU-hosted option"
-      ]
-    ],
     "key_features": [
       "Fastest response streaming in category testing",
       "EU-based alternative with European data hosting",
@@ -1524,11 +1099,10 @@
       "Canvas-style editing interface",
       "Open-model company — Mistral weights available for self-hosting"
     ],
-    "best_plan": "Pro at $14.99/mo undercuts rivals while covering all features.",
     "faq": [
       [
         "Is Le Chat free?",
-        "Yes with generous limits; Pro is $14.99/mo."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Why choose Mistral over ChatGPT?",
@@ -1539,7 +1113,9 @@
         "Many weights are openly licensed — unusual among frontier labs."
       ]
     ],
-    "trial_checklist": "Use a real task involving general chat—not a demo prompt. Verify whether fastest response streaming in category testing materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to ecosystem smaller than incumbents so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving general chat—not a demo prompt. Verify whether fastest response streaming in category testing materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to ecosystem smaller than incumbents so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "copy-ai",
@@ -1547,7 +1123,6 @@
     "category": "Marketing",
     "best_for": "Go-to-market workflows, sales copy, and repeatable marketing content systems",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.1,
     "official": "https://www.copy.ai/",
     "summary": "An AI platform for marketing and sales content workflows, from copy generation to GTM process support.",
@@ -1568,23 +1143,6 @@
       "Quality depends on inputs",
       "Needs brand review"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "2,000 words/mo, 1 seat"
-      ],
-      [
-        "Starter",
-        "$49/mo",
-        "Unlimited words, all tools"
-      ],
-      [
-        "Advanced",
-        "$249/mo",
-        "Workflow automation, API, 5 seats"
-      ]
-    ],
     "key_features": [
       "GTM-focused: sales email sequences, prospecting workflows",
       "Workflow builder chains AI steps into repeatable processes",
@@ -1592,7 +1150,6 @@
       "Unlimited words even on the entry paid plan",
       "Strong short-form marketing copy templates"
     ],
-    "best_plan": "Starter at $49/mo for writers; Advanced only if you're building sales workflows.",
     "faq": [
       [
         "Copy.ai vs Jasper?",
@@ -1607,7 +1164,9 @@
         "Yes — that's its core focus now, with sequence workflows and CRM integrations."
       ]
     ],
-    "trial_checklist": "Use a real task involving sales copy—not a demo prompt. Verify whether gtm-focused: sales email sequences, prospecting workflows materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality depends on inputs so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving sales copy—not a demo prompt. Verify whether gtm-focused: sales email sequences, prospecting workflows materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality depends on inputs so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "jasper",
@@ -1615,7 +1174,6 @@
     "category": "Marketing",
     "best_for": "Marketing content workflows, brand voice, and campaign production",
     "price": "Paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://www.jasper.ai/",
     "summary": "A marketing-focused AI writing platform for brand voice, campaign assets, and content operations.",
@@ -1636,23 +1194,6 @@
       "Best value for active content teams",
       "Outputs still need editors"
     ],
-    "pricing_detail": [
-      [
-        "Creator",
-        "$39/mo",
-        "1 seat, 1 brand voice, SEO mode"
-      ],
-      [
-        "Pro",
-        "$59/seat/mo",
-        "3 brand voices, 10 knowledge assets, campaigns"
-      ],
-      [
-        "Business",
-        "Custom",
-        "No limits, API, SSO, dedicated success manager"
-      ]
-    ],
     "key_features": [
       "Brand voice trained on your existing content",
       "Campaign workflows: brief to multi-channel assets in one run",
@@ -1660,7 +1201,6 @@
       "Knowledge base grounds output in your facts",
       "Team collaboration with approval flows"
     ],
-    "best_plan": "Pro at $59/seat makes sense for teams; solo marketers get more value from ChatGPT Plus at $20.",
     "faq": [
       [
         "Is Jasper worth it vs ChatGPT?",
@@ -1675,7 +1215,9 @@
         "Jasper can build a voice profile from existing content. Verify it against your style guide and measure the edits required before rolling it out to a team."
       ]
     ],
-    "trial_checklist": "Use a real task involving marketing copy—not a demo prompt. Verify whether brand voice trained on your existing content materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for active content teams. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving marketing copy—not a demo prompt. Verify whether brand voice trained on your existing content materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for active content teams. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "fathom",
@@ -1683,7 +1225,6 @@
     "category": "Meetings",
     "best_for": "Meeting notes, call summaries, and CRM-friendly follow-up workflows",
     "price": "Free + paid team plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://fathom.video/",
     "summary": "An AI meeting assistant for recording calls, generating summaries, and sharing highlights with teams.",
@@ -1704,28 +1245,6 @@
       "Consent and privacy policies matter",
       "Integrations should be checked"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Unlimited recordings, transcripts, AI summaries — rare"
-      ],
-      [
-        "Premium",
-        "$15/mo",
-        "AI task extraction, CRM sync, keyword tracking"
-      ],
-      [
-        "Team Edition",
-        "$19/seat/mo",
-        "Admin controls, team playlists, Salesforce/HubSpot sync"
-      ],
-      [
-        "Team Edition Pro",
-        "$29/seat/mo",
-        "Coaching analytics, deeper CRM integration"
-      ]
-    ],
     "key_features": [
       "Unlimited free meeting recording + transcription",
       "5-second clip creation for sharing key moments",
@@ -1733,7 +1252,6 @@
       "Real-time transcription during calls",
       "CRM auto-sync on paid plans"
     ],
-    "best_plan": "Free is genuinely sufficient for individuals; Team Edition for sales teams wanting CRM sync.",
     "faq": [
       [
         "Is Fathom really free?",
@@ -1748,7 +1266,9 @@
         "Zoom, Google Meet, Microsoft Teams, and RingCentral."
       ]
     ],
-    "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether unlimited free meeting recording + transcription materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to consent and privacy policies matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether unlimited free meeting recording + transcription materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to consent and privacy policies matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "fireflies",
@@ -1756,7 +1276,6 @@
     "category": "Meetings",
     "best_for": "Meeting transcription, searchable call records, and conversation intelligence",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://fireflies.ai/",
     "summary": "A meeting intelligence tool for recording, transcribing, searching, and summarizing team conversations.",
@@ -1777,28 +1296,6 @@
       "Needs clear recording policy",
       "Transcript quality varies by audio"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Limited transcription credits, 800 min storage"
-      ],
-      [
-        "Pro",
-        "$10/seat/mo",
-        "Unlimited transcription, meeting summaries, 8,000 min/yr"
-      ],
-      [
-        "Business",
-        "$19/seat/mo",
-        "Video recording, conversation intelligence, integrations"
-      ],
-      [
-        "Enterprise",
-        "$39/seat/mo",
-        "SSO, dedicated support, custom retention"
-      ]
-    ],
     "key_features": [
       "Auto-joins Zoom, Meet, and Teams calls",
       "Action items and keyword tracking after each meeting",
@@ -1806,11 +1303,10 @@
       "Soundbites for sharing key moments",
       "CRM sync pushes notes to HubSpot/Salesforce"
     ],
-    "best_plan": "Pro at $10/seat/mo is the sweet spot; free tier is too limited for regular meetings.",
     "faq": [
       [
         "Is Fireflies free?",
-        "Yes with limited credits. Pro at $10/seat/mo unlocks unlimited transcription."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Which meeting apps does it join?",
@@ -1821,7 +1317,9 @@
         "Participants should consent — Fireflies announces itself, but check your local two-party consent laws."
       ]
     ],
-    "trial_checklist": "Use a real task involving meeting archive—not a demo prompt. Verify whether auto-joins zoom, meet, and teams calls materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs clear recording policy so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving meeting archive—not a demo prompt. Verify whether auto-joins zoom, meet, and teams calls materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs clear recording policy so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "otter-ai",
@@ -1829,7 +1327,6 @@
     "category": "Meetings",
     "best_for": "Meeting transcription, summaries, and action items",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://otter.ai/",
     "summary": "A meeting assistant for recording, transcribing, summarizing, and extracting follow-up items.",
@@ -1850,23 +1347,6 @@
       "Sensitive meetings need policy review",
       "Transcript accuracy depends on audio"
     ],
-    "pricing_detail": [
-      [
-        "Basic",
-        "$0",
-        "300 min/mo, 30 min per conversation"
-      ],
-      [
-        "Pro",
-        "$16.99/mo",
-        "1,200 min/mo, 90 min per meeting, advanced exports"
-      ],
-      [
-        "Business",
-        "$30/user/mo",
-        "Admin controls, higher limits, priority support"
-      ]
-    ],
     "key_features": [
       "Live transcription during meetings with highlighting",
       "OtterPilot auto-joins and records meetings",
@@ -1874,7 +1354,6 @@
       "Live notes visible to teammates in real time",
       "Integrates with Zoom, Meet, Teams calendars"
     ],
-    "best_plan": "Pro at $16.99/mo for regular meeting use; the free tier only works for short calls.",
     "faq": [
       [
         "Otter vs Fireflies?",
@@ -1889,7 +1368,9 @@
         "Yes — OtterPilot joins and transcribes Zoom, Meet, and Teams automatically."
       ]
     ],
-    "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether live transcription during meetings with highlighting materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sensitive meetings need policy review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether live transcription during meetings with highlighting materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sensitive meetings need policy review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "poe",
@@ -1897,7 +1378,6 @@
     "category": "Model Hub",
     "best_for": "Trying multiple AI models and bots from one interface",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://poe.com/",
     "summary": "A multi-model chat platform for comparing assistants, using specialized bots, and testing different model behaviors.",
@@ -1918,28 +1398,6 @@
       "Not a dedicated workflow system",
       "Availability depends on provider access"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Daily credits across limited models"
-      ],
-      [
-        "Basic",
-        "$9.99/mo",
-        "5,000 compute points/mo"
-      ],
-      [
-        "Pro",
-        "$19.99/mo",
-        "50,000 points — GPT-4o, Claude Opus, video/image models"
-      ],
-      [
-        "Enterprise teams",
-        "Custom",
-        "Shared workspaces and billing"
-      ]
-    ],
     "key_features": [
       "Access dozens of models in one app",
       "Compare answers side-by-side across models",
@@ -1947,7 +1405,6 @@
       "Image and video generation models included",
       "One subscription replaces several AI subscriptions"
     ],
-    "best_plan": "Pro at $19.99/mo if you'd otherwise pay for multiple AI subscriptions.",
     "faq": [
       [
         "Is Poe worth it?",
@@ -1962,7 +1419,9 @@
         "Yes — custom bots with custom prompts are shareable via link."
       ]
     ],
-    "trial_checklist": "Use a real task involving model comparison—not a demo prompt. Verify whether access dozens of models in one app materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to not a dedicated workflow system so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving model comparison—not a demo prompt. Verify whether access dozens of models in one app materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to not a dedicated workflow system so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "gamma",
@@ -1970,7 +1429,6 @@
     "category": "Presentations",
     "best_for": "AI-generated presentations, decks, microsites, and narrative documents",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://gamma.app/",
     "summary": "A fast AI presentation and document builder for turning ideas into polished decks and shareable pages.",
@@ -1991,23 +1449,6 @@
       "Important decks still need design review",
       "Brand control may require paid plans"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "400 AI credits at signup, Gamma branding on exports"
-      ],
-      [
-        "Plus",
-        "$10/mo",
-        "Unlimited AI, remove branding, custom fonts"
-      ],
-      [
-        "Pro",
-        "$20/mo",
-        "Advanced AI models, analytics, custom domains"
-      ]
-    ],
     "key_features": [
       "Prompt-to-deck in under a minute with real design",
       "Cards-based editing — no fighting with slide layout",
@@ -2015,11 +1456,10 @@
       "Import PowerPoint/PDF and restyle automatically",
       "Presentations, docs, and micro-sites in one format"
     ],
-    "best_plan": "Plus at $10/mo removes branding and is enough for most users.",
     "faq": [
       [
         "Is Gamma free?",
-        "Yes, with 400 starter credits and Gamma branding. Plus at $10/mo removes limits and branding."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Can I export to PowerPoint?",
@@ -2030,7 +1470,9 @@
         "Gamma leads on generation quality and web publishing. See our best AI presentation tools guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving pitch decks—not a demo prompt. Verify whether prompt-to-deck in under a minute with real design materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to important decks still need design review. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving pitch decks—not a demo prompt. Verify whether prompt-to-deck in under a minute with real design materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to important decks still need design review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "airtable-ai",
@@ -2038,7 +1480,6 @@
     "category": "Productivity",
     "best_for": "Adding AI to structured business databases and operational apps",
     "price": "Paid plan availability varies",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://www.airtable.com/platform/ai",
     "summary": "AI capabilities inside Airtable for summarizing records, categorizing data, drafting text, and powering operational workflows.",
@@ -2059,28 +1500,6 @@
       "Best for Airtable users",
       "Requires careful field design"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Limited AI credits, up to 5 editors"
-      ],
-      [
-        "Team",
-        "$20/seat/mo",
-        "50,000 AI credits/mo included"
-      ],
-      [
-        "Business",
-        "$45/seat/mo",
-        "More credits, admin panel, SSO"
-      ],
-      [
-        "Enterprise Scale",
-        "Custom",
-        "Audit logs, enterprise hub, security controls"
-      ]
-    ],
     "key_features": [
       "AI fields generate/enrich data per record automatically",
       "Ask across your base: natural-language queries of records",
@@ -2088,7 +1507,6 @@
       "Cobuilder: describe an app, get a working base",
       "AI stays inside your permission boundaries"
     ],
-    "best_plan": "Team plan includes meaningful credits; the AI add-on pricing scales with seats so big teams should model costs first.",
     "faq": [
       [
         "How is Airtable AI priced?",
@@ -2103,7 +1521,9 @@
         "Yes — AI operates within existing field/record permissions."
       ]
     ],
-    "trial_checklist": "Use a real task involving crm enrichment—not a demo prompt. Verify whether ai fields generate/enrich data per record automatically materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best for airtable users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving crm enrichment—not a demo prompt. Verify whether ai fields generate/enrich data per record automatically materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best for airtable users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "microsoft-copilot",
@@ -2111,7 +1531,6 @@
     "category": "Productivity",
     "best_for": "AI assistance across Microsoft 365, Windows, Edge, and enterprise productivity workflows",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.5,
     "official": "https://copilot.microsoft.com/",
     "summary": "Microsoft’s AI assistant for workplace productivity, search, writing, meetings, and enterprise software workflows.",
@@ -2132,23 +1551,6 @@
       "Value depends on Microsoft stack adoption",
       "Licensing can be complex"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Consumer Copilot chat with web search"
-      ],
-      [
-        "Microsoft 365 Copilot",
-        "$30/user/mo",
-        "Copilot inside Word, Excel, PowerPoint, Outlook, Teams"
-      ],
-      [
-        "Copilot Pro",
-        "$20/mo",
-        "Priority models + Office apps for individuals"
-      ]
-    ],
     "key_features": [
       "Drafts and rewrites inside Word with document context",
       "Excel analysis: formulas, trends, pivot suggestions",
@@ -2156,11 +1558,10 @@
       "Teams meeting recaps with action items",
       "Enterprise Data Protection — prompts not used to train"
     ],
-    "best_plan": "For businesses already paying M365 E3/E5, Copilot slots in naturally. Individuals: Copilot Pro at $20.",
     "faq": [
       [
         "Is Copilot included in Microsoft 365?",
-        "Basic chat yes; the in-app Office experience requires the $30/user/mo add-on."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Is my company data safe?",
@@ -2171,7 +1572,9 @@
         "For heavy Word/Excel/Outlook users, productivity gains justify it. Light Office users won't see ROI. See our review."
       ]
     ],
-    "trial_checklist": "Use a real task involving office documents—not a demo prompt. Verify whether drafts and rewrites inside word with document context materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on microsoft stack adoption. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving office documents—not a demo prompt. Verify whether drafts and rewrites inside word with document context materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on microsoft stack adoption. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "notion-ai",
@@ -2179,7 +1582,6 @@
     "category": "Productivity",
     "best_for": "Knowledge-base writing, summaries, and team docs",
     "price": "Paid add-on / included in some plans",
-    "monetization": "affiliate-ready",
     "rating": 4.3,
     "official": "https://www.notion.com/product/ai",
     "summary": "AI features inside Notion for summarizing docs, drafting pages, searching knowledge, and turning notes into plans.",
@@ -2200,23 +1602,6 @@
       "Best if Notion is already your workspace",
       "Not a full research system alone"
     ],
-    "pricing_detail": [
-      [
-        "Add-on",
-        "$10/user/mo",
-        "AI features on any Notion plan"
-      ],
-      [
-        "Business",
-        "$20/user/mo + AI",
-        "Everything plus SAML and private teamspaces"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "Advanced controls, audit log, dedicated support"
-      ]
-    ],
     "key_features": [
       "Writing, summarizing, and translating inside your docs",
       "Q&A searches your entire workspace and answers with sources",
@@ -2224,7 +1609,6 @@
       "Meeting notes transcription and summaries",
       "No separate app — lives where your work already is"
     ],
-    "best_plan": "The $10 add-on is a no-brainer if your team already runs on Notion.",
     "faq": [
       [
         "Is Notion AI worth $10/month?",
@@ -2239,7 +1623,9 @@
         "Yes — Slack, Google Drive, and Jira connectors extend Q&A beyond Notion itself."
       ]
     ],
-    "trial_checklist": "Use a real task involving meeting notes—not a demo prompt. Verify whether writing, summarizing, and translating inside your docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best if notion is already your workspace. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving meeting notes—not a demo prompt. Verify whether writing, summarizing, and translating inside your docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best if notion is already your workspace. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "slack-ai",
@@ -2247,7 +1633,6 @@
     "category": "Productivity",
     "best_for": "Team conversation summaries, channel catch-up, and workplace knowledge retrieval",
     "price": "Paid add-on / plan availability varies",
-    "monetization": "affiliate-ready",
     "rating": 4.1,
     "official": "https://slack.com/features/ai",
     "summary": "AI features inside Slack for summarizing channels, catching up on threads, and finding workplace context.",
@@ -2268,23 +1653,6 @@
       "Value depends on Slack adoption",
       "Knowledge quality depends on team habits"
     ],
-    "pricing_detail": [
-      [
-        "Add-on",
-        "$10/user/mo",
-        "On top of any paid Slack plan (Pro+)"
-      ],
-      [
-        "Included in Business+",
-        "Bundled",
-        "Slack Business+ now ships with AI features"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "Full suite with compliance integrations"
-      ]
-    ],
     "key_features": [
       "Channel and thread summaries catch you up instantly",
       "Huddle transcriptions with action items",
@@ -2292,11 +1660,10 @@
       "Daily recap of what you missed",
       "Stays within Slack's existing security model"
     ],
-    "best_plan": "If your org runs on Slack, the $10/user add-on (or Business+ bundle) is easy value.",
     "faq": [
       [
         "How much is Slack AI?",
-        "$10/user/mo as an add-on; now bundled into Slack Business+."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Can it read DMs?",
@@ -2307,7 +1674,9 @@
         "Different homes: Slack for conversation catch-up, Notion for docs. Teams often run both. See our reviews."
       ]
     ],
-    "trial_checklist": "Use a real task involving channel summaries—not a demo prompt. Verify whether channel and thread summaries catch you up instantly materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on slack adoption so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving channel summaries—not a demo prompt. Verify whether channel and thread summaries catch you up instantly materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on slack adoption so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "perplexity",
@@ -2315,7 +1684,6 @@
     "category": "Research",
     "best_for": "Source-backed web research and quick market scans",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.6,
     "official": "https://www.perplexity.ai/",
     "summary": "A research-first AI search engine that keeps sources visible while answering questions.",
@@ -2336,23 +1704,6 @@
       "Sources still need checking",
       "Less suited to complex workflows alone"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Unlimited quick searches, limited Pro searches per day"
-      ],
-      [
-        "Pro",
-        "$20/mo",
-        "300+ Pro searches, model choice (GPT-4o, Claude, Sonar), file uploads"
-      ],
-      [
-        "Enterprise Pro",
-        "$40/user/mo",
-        "Data retention controls, SSO, security reviews"
-      ]
-    ],
     "key_features": [
       "Every answer includes numbered source citations",
       "Pro Search runs multi-step research instead of one-shot answers",
@@ -2360,7 +1711,6 @@
       "Spaces for organizing research threads by project",
       "Model switching inside a single product"
     ],
-    "best_plan": "Start free; upgrade to Pro at $20/mo if you research daily — the Pro search depth is the real product.",
     "faq": [
       [
         "Is Perplexity better than Google?",
@@ -2375,7 +1725,9 @@
         "Mostly. Every claim links to a source so you can verify, but we found it occasionally picks low-authority pages on obscure topics."
       ]
     ],
-    "trial_checklist": "Use a real task involving competitor scans—not a demo prompt. Verify whether every answer includes numbered source citations materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sources still need checking so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving competitor scans—not a demo prompt. Verify whether every answer includes numbered source citations materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sources still need checking so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   },
   {
     "slug": "you-com",
@@ -2383,7 +1735,6 @@
     "category": "Research",
     "best_for": "AI search, research agents, and productivity-oriented web answers",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://you.com/",
     "summary": "An AI search and assistant platform for web answers, research, productivity, and agent-style tasks.",
@@ -2404,23 +1755,6 @@
       "Needs source verification",
       "Differentiation depends on workflow"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Limited Pro searches"
-      ],
-      [
-        "Pro",
-        "$20/mo",
-        "Unlimited Pro searches, all top models, file uploads"
-      ],
-      [
-        "Team/Enterprise",
-        "Custom",
-        "Security controls, SSO"
-      ]
-    ],
     "key_features": [
       "AI search with citations like Perplexity",
       "Model choice: GPT, Claude, Gemini, Llama in one UI",
@@ -2428,7 +1762,6 @@
       "File upload analysis",
       "Custom assistant creation"
     ],
-    "best_plan": "Pro only if you specifically want search + multiple models combined; Perplexity or direct subscriptions otherwise.",
     "faq": [
       [
         "You.com vs Perplexity?",
@@ -2443,7 +1776,9 @@
         "Yes, with limited Pro searches daily."
       ]
     ],
-    "trial_checklist": "Use a real task involving ai search—not a demo prompt. Verify whether ai search with citations like perplexity materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs source verification so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving ai search—not a demo prompt. Verify whether ai search with citations like perplexity materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs source verification so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "heygen",
@@ -2451,7 +1786,6 @@
     "category": "Video",
     "best_for": "AI avatars, video localization, and presenter-style business videos",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://www.heygen.com/",
     "summary": "A business video platform for AI avatars, translation, personalized videos, and presenter-led content.",
@@ -2472,28 +1806,6 @@
       "Avatar content can feel synthetic",
       "Brand review is important"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "3 videos/mo up to 3 min, watermark"
-      ],
-      [
-        "Creator",
-        "$29/mo",
-        "Unlimited videos, 1080p, faster processing"
-      ],
-      [
-        "Team",
-        "$39/seat/mo",
-        "4 seats+, brand kit, collaboration"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "SSO, API access, custom avatars"
-      ]
-    ],
     "key_features": [
       "500+ stock avatars, 175+ languages",
       "Instant avatar clone from webcam footage",
@@ -2501,11 +1813,10 @@
       "Templates for sales, training, and social formats",
       "API for programmatic video at scale"
     ],
-    "best_plan": "Creator at $29/mo for solo creators doing regular video.",
     "faq": [
       [
         "Is HeyGen free?",
-        "3 watermarked videos monthly free; Creator at $29/mo removes limits."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "HeyGen vs Synthesia?",
@@ -2516,7 +1827,9 @@
         "175+ languages with lip-synced translation on paid plans."
       ]
     ],
-    "trial_checklist": "Use a real task involving sales videos—not a demo prompt. Verify whether 500+ stock avatars, 175+ languages materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to avatar content can feel synthetic so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving sales videos—not a demo prompt. Verify whether 500+ stock avatars, 175+ languages materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to avatar content can feel synthetic so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "runway",
@@ -2524,7 +1837,6 @@
     "category": "Video",
     "best_for": "AI video generation and creative production experiments",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://runwayml.com/",
     "summary": "A creative video platform for generative video, editing, and motion experiments.",
@@ -2545,28 +1857,6 @@
       "Outputs need art direction",
       "Commercial workflows require testing"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "125 one-time credits, watermark"
-      ],
-      [
-        "Standard",
-        "$15/mo",
-        "625 credits/mo (~75s of Gen-3 video)"
-      ],
-      [
-        "Pro",
-        "$35/mo",
-        "2,250 credits, remove watermark, upscale"
-      ],
-      [
-        "Unlimited",
-        "$95/mo",
-        "Unlimited relaxed-mode generations"
-      ]
-    ],
     "key_features": [
       "Gen-3 text-to-video with strong motion quality",
       "Image-to-video animates stills",
@@ -2574,11 +1864,10 @@
       "Camera controls (pan, zoom, dolly) on generations",
       "Full editing suite: green screen, inpainting, upscale"
     ],
-    "best_plan": "Standard at $15/mo to learn; Unlimited at $95 only if video is your core output.",
     "faq": [
       [
         "How much does Runway cost?",
-        "Free trial credits, then $15-95/mo depending on volume. Video eats credits fast — roughly 75 seconds of Gen-3 per $15 month."
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
       ],
       [
         "Can Runway replace videographers?",
@@ -2589,7 +1878,9 @@
         "Runway leads on directorial control. See our best AI video tools guide for the full comparison."
       ]
     ],
-    "trial_checklist": "Use a real task involving concept videos—not a demo prompt. Verify whether gen-3 text-to-video with strong motion quality materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to outputs need art direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving concept videos—not a demo prompt. Verify whether gen-3 text-to-video with strong motion quality materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to outputs need art direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "synthesia",
@@ -2597,7 +1888,6 @@
     "category": "Video",
     "best_for": "Enterprise training videos and AI avatar presentations",
     "price": "Paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.2,
     "official": "https://www.synthesia.io/",
     "summary": "An AI video platform for creating training, enablement, and explainer videos with avatars and templates.",
@@ -2618,28 +1908,6 @@
       "Less suited to cinematic creative",
       "Needs governance for avatar use"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "3 min/mo, 140+ avatars"
-      ],
-      [
-        "Starter",
-        "$29/mo",
-        "10 min/mo, 120+ languages, personal avatar option"
-      ],
-      [
-        "Creator",
-        "$89/mo",
-        "30 min/mo, gesture avatars, one-click translation"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "Unlimited minutes option, SSO, brand kits"
-      ]
-    ],
     "key_features": [
       "230+ AI avatars with natural gestures",
       "140+ languages from one script",
@@ -2647,7 +1915,6 @@
       "PPT-to-video and doc-to-video conversion",
       "1-click translation of finished videos"
     ],
-    "best_plan": "Starter at $29/mo for regular training content; free tier is a demo.",
     "faq": [
       [
         "Is Synthesia free?",
@@ -2662,7 +1929,9 @@
         "Synthesia leads on enterprise features and language coverage; HeyGen on avatar realism for social content. See our AI video tools guide."
       ]
     ],
-    "trial_checklist": "Use a real task involving training videos—not a demo prompt. Verify whether 230+ ai avatars with natural gestures materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less suited to cinematic creative so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving training videos—not a demo prompt. Verify whether 230+ ai avatars with natural gestures materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less suited to cinematic creative so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   },
   {
     "slug": "grammarly",
@@ -2670,7 +1939,6 @@
     "category": "Writing & Productivity",
     "best_for": "Business writing, grammar, tone, and communication quality across apps",
     "price": "Free + paid plans",
-    "monetization": "affiliate-ready",
     "rating": 4.4,
     "official": "https://www.grammarly.com/",
     "summary": "A writing assistant for grammar, tone, clarity, rewriting, and communication support across everyday business apps.",
@@ -2691,23 +1959,6 @@
       "Less powerful for deep research",
       "Can over-standardize voice"
     ],
-    "pricing_detail": [
-      [
-        "Free",
-        "$0",
-        "Grammar, spelling, punctuation, 100 AI prompts/mo"
-      ],
-      [
-        "Pro",
-        "$12/mo (annual)",
-        "Full rewrites, tone adjustment, plagiarism, across apps"
-      ],
-      [
-        "Enterprise",
-        "Custom",
-        "Style guides, analytics, SSO, admin dashboard"
-      ]
-    ],
     "key_features": [
       "Works everywhere: browser, desktop, Office, Google Docs",
       "Tone detection and adjustment suggestions",
@@ -2715,7 +1966,6 @@
       "Plagiarism checker on Pro",
       "Generative AI for drafting and shortening"
     ],
-    "best_plan": "Free for grammar basics; Pro at $12/mo (annual billing) if you write professionally daily.",
     "faq": [
       [
         "Is Grammarly Pro worth it?",
@@ -2730,6 +1980,8 @@
         "Grammarly states text is not sold; Enterprise adds contractual controls. Free users' text may be processed to provide the service."
       ]
     ],
-    "trial_checklist": "Use a real task involving email polishing—not a demo prompt. Verify whether works everywhere: browser, desktop, office, google docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less powerful for deep research so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding."
+    "trial_checklist": "Use a real task involving email polishing—not a demo prompt. Verify whether works everywhere: browser, desktop, office, google docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less powerful for deep research so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   }
 ]
