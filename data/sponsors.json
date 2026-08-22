@@ -1,0 +1,44 @@
+{
+  "sponsors": [
+    {
+      "placement_id": "featured-category-ai-writing",
+      "label": "Sponsored",
+      "tool_slug": "",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "destination_url": "",
+      "disclosure_text": "This is a sponsored placement.",
+      "active": false,
+      "status": "draft"
+    },
+    {
+      "placement_id": "featured-category-automation",
+      "label": "Sponsored",
+      "tool_slug": "",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "destination_url": "",
+      "disclosure_text": "This is a sponsored placement.",
+      "active": false,
+      "status": "draft"
+    },
+    {
+      "placement_id": "homepage-hero",
+      "label": "Sponsored",
+      "tool_slug": "",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "destination_url": "",
+      "disclosure_text": "This is a sponsored placement.",
+      "active": false,
+      "status": "draft"
+    }
+  ],
+  "pricing": {
+    "category_featured": "$150-$250/month",
+    "homepage_hero": "$500-$750/month",
+    "category_sidebar": "$100-$200/month",
+    "one_time_feature": "$200-$500 one-time"
+  },
+  "contact_email": "contact@aitoolsessentials.com"
+}

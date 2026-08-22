@@ -1,0 +1,118 @@
+{
+  "snapshot_date": "2026-08-11",
+  "reviewed_date": "2026-08-21",
+  "policy": {
+    "title": "Benchmark evidence policy",
+    "summary": "Benchmarks are supporting evidence, not our final ranking. We identify the exact model/version, source, snapshot date and harness. Product scores are not treated as model scores, and results from different harness versions are not compared directly.",
+    "staleness_days": 30
+  },
+  "sources": [
+    {
+      "id": 1,
+      "name": "Arena Text Leaderboard",
+      "url": "https://arena.ai/leaderboard/text",
+      "measures": "Human preference in anonymous model-vs-model battles across open-ended text tasks.",
+      "use_for": "General assistants and model-family context",
+      "caveat": "A product such as ChatGPT or Claude can change its default model; Arena ranks specific model versions, not the whole product."
+    },
+    {
+      "id": 2,
+      "name": "Arena-Rank methodology",
+      "url": "https://arena.ai/blog/arena-rank/",
+      "measures": "Bradley-Terry ratings with reweighting and confidence intervals from pairwise preference data.",
+      "use_for": "Explaining how Arena scores are produced",
+      "caveat": "Human preference can reward style and verbosity; it is not an objective factuality test."
+    },
+    {
+      "id": 3,
+      "name": "SWE-bench Verified",
+      "url": "https://www.swebench.com/verified.html",
+      "measures": "Percentage of 500 human-validated real GitHub issues resolved by a coding model or agent.",
+      "use_for": "Coding models and coding-agent context",
+      "caveat": "Scores depend heavily on the agent harness. mini-SWE-agent v1.x and v2.x results are not directly comparable."
+    },
+    {
+      "id": 4,
+      "name": "LiveBench",
+      "url": "https://github.com/LiveBench/LiveBench",
+      "measures": "Objective, frequently refreshed tasks across reasoning, math, coding, language, instruction following and data analysis.",
+      "use_for": "Contamination-limited general-model context",
+      "caveat": "Always state the release; questions and model configurations change between snapshots."
+    },
+    {
+      "id": 5,
+      "name": "Artificial Analysis methodology",
+      "url": "https://artificialanalysis.ai/methodology",
+      "measures": "Independent intelligence, latency, speed, price, speech, image and video model evaluations.",
+      "use_for": "Cost/speed context and non-text modality methodology",
+      "caveat": "API model measurements do not equal the complete end-user product experience."
+    }
+  ],
+  "arena_text_snapshot": [
+    {
+      "tool_slug": "grok",
+      "model": "grok-4.1",
+      "rank": 46,
+      "score": "1459±3",
+      "votes": 67812,
+      "source_id": 1,
+      "note": "Representative public xAI model listing; not necessarily the product's current default."
+    },
+    {
+      "tool_slug": "deepseek",
+      "model": "deepseek-v4-pro",
+      "rank": 50,
+      "score": "1458±4",
+      "votes": 54147,
+      "source_id": 1,
+      "note": "Representative public DeepSeek model listing."
+    },
+    {
+      "tool_slug": "claude",
+      "model": "claude-sonnet-4-5-20250929",
+      "rank": 56,
+      "score": "1455±3",
+      "votes": 80929,
+      "source_id": 1,
+      "note": "Older public Claude listing retained for reproducible snapshot context; newer variants may rank differently."
+    },
+    {
+      "tool_slug": "gemini",
+      "model": "gemini-2.5-pro",
+      "rank": 68,
+      "score": "1445±2",
+      "votes": 124890,
+      "source_id": 1,
+      "note": "Specific Gemini model version, not the whole Gemini product."
+    },
+    {
+      "tool_slug": "chatgpt",
+      "model": "chatgpt-4o-latest-20250326",
+      "rank": 72,
+      "score": "1443±3",
+      "votes": 82785,
+      "source_id": 1,
+      "note": "Historical public ChatGPT model listing; do not interpret as the current default model's rank."
+    },
+    {
+      "tool_slug": "mistral-le-chat",
+      "model": "mistral-medium-3.5",
+      "rank": 94,
+      "score": "1427±7",
+      "votes": 11020,
+      "source_id": 1,
+      "note": "Representative Mistral model listing with a wider confidence interval."
+    }
+  ],
+  "coverage": {
+    "General AI Assistant": [1, 2, 4, 5],
+    "Development": [3, 4, 5],
+    "Audio": [5],
+    "Video": [5],
+    "Audio & Video": [5],
+    "Creative": [5],
+    "Creative & Marketing": [5],
+    "Research": [1, 4, 5],
+    "Model Hub": [1, 4, 5]
+  }
+}

@@ -1,19 +1,14 @@
 # Internal Hermes files
 .hermes/
 
-# Scripts (not needed for static site)
-scripts/
-
-# Data files (embedded in HTML)
-data/*.json
-data/**/*.json
-
-# Development files
+# Generated editorial work files
 content_briefs/
 audit_reports/
 launch-readiness.md
 
-# Build artifacts
+# Python/build caches
+__pycache__/
+*.pyc
 *.log
 npm-debug.log*
 

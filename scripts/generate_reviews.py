@@ -1,0 +1,285 @@
+#!/usr/bin/env python3
+"""Enriched tool review page generator for AIToolsEssentials.
+Called from daily_content_update.py. Expects `root`, `today`, `tools` in caller scope
+when run as a function; can also run standalone."""
+import json
+import re
+from pathlib import Path
+
+DOMAIN = 'https://aitoolsessentials.com'
+EMAIL = 'contact@aitoolsessentials.com'
+
+
+def _price_rows(tool):
+    detail = tool.get('pricing_detail')
+    if detail:
+        return [(r[0], f"{r[1]} — {r[2]}" if len(r) > 2 else r[1]) for r in detail]
+    price = tool.get('price', '')
+    rows = [('Entry price', price)]
+    if 'free' in price.lower():
+        rows.insert(0, ('Free tier', 'Yes'))
+    else:
+        rows.append(('Free tier', 'Not advertised — check current offers'))
+    return rows
+
+
+def _who_for(tool):
+    cat = tool.get('category', '')
+    best = tool.get('best_for', '')
+    return (f"{tool['name']} fits teams and individuals who need {best.lower().rstrip('.')}. "
+            f"It is strongest in {cat.lower()} work where output quality and speed matter more than "
+            f"deep customization. Skip it if you need a self-hosted option or heavy API control on a budget plan.")
+
+
+def _benchmark_html(root: Path, slug: str, category: str) -> str:
+    path = root / 'data/benchmarks.json'
+    if not path.exists():
+        return ''
+    data = json.loads(path.read_text())
+    sources = {x['id']: x for x in data.get('sources', [])}
+    snapshot = next((x for x in data.get('arena_text_snapshot', []) if x['tool_slug'] == slug), None)
+    if snapshot:
+        source = sources[snapshot['source_id']]
+        return f'''<div class="review-benchmark">
+<div class="review-benchmark-head"><div><span class="evidence-label">External benchmark snapshot</span><h3>Arena Text · {snapshot['model']}</h3><span class="benchmark-meta">Snapshot {data['snapshot_date']} · {snapshot['votes']:,} votes · exact model version shown</span></div><div class="review-benchmark-score">#{snapshot['rank']}<small> · {snapshot['score']}</small></div></div>
+<p>{snapshot['note']} This is supporting context—not the AIToolsEssentials product score. <a href="{source['url']}" target="_blank" rel="external noopener">Source [{source['id']}] ↗</a></p>
+</div>'''
+    source_ids = data.get('coverage', {}).get(category, [])
+    if not source_ids:
+        return ''
+    links = ' · '.join(
+        f'<a href="{sources[i]["url"]}" target="_blank" rel="external noopener">{sources[i]["name"]} [{i}] ↗</a>'
+        for i in source_ids if i in sources
+    )
+    return f'''<div class="review-benchmark"><span class="evidence-label">Relevant benchmark coverage</span><h3>Use category-specific evidence</h3><p>{links}</p><p>We do not paste a score here unless the exact product model/version and evaluation harness are known. <a href="../../benchmarks/">See benchmark policy →</a></p></div>'''
+
+
+def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> None:
+    slug = tool['slug']
+    name = tool.get('name', '')
+    rating = tool.get('rating', 4)
+    official = tool.get('official', '')
+    summary = tool.get('summary', '')
+    category = tool.get('category', '')
+    benchmark_html = _benchmark_html(root, slug, category)
+
+    same_cat = [t for t in tools if t['slug'] != slug and category in t.get('category', '')]
+    others = [t for t in tools if t['slug'] != slug and t not in same_cat]
+    related = (same_cat + others)[:3]
+
+    comp_dir = root / 'comparisons'
+    comp_links = []
+    if comp_dir.exists():
+        name_key = name.lower().replace(' ', '-')
+        for c in sorted(comp_dir.glob('*.html')):
+            parts = re.split('-vs-', c.stem)
+            if any(p == slug or p == name_key or p in name_key for p in parts):
+                comp_links.append((c.name, c.stem.replace('-', ' ').title()))
+    comp_links = comp_links[:3]
+
+    related_html = ''
+    for r in related:
+        related_html += (f'<li><a href="../{r["slug"]}/">{r["name"]}</a>'
+                         f'<span style="color:#6e6e73;font-size:13px"> · {r.get("category","")}</span></li>\n')
+
+    comp_html = ''
+    for fname, label in comp_links:
+        comp_html += f'<a class="text-link" href="../../comparisons/{fname}">{label}</a><br>\n'
+    if not comp_html:
+        comp_html = '<a class="text-link" href="../../comparisons/best-ai-tools.html">All AI tool comparisons</a>\n'
+
+    price_rows = _price_rows(tool)
+    price_html = '<table class="price-table"><tbody>\n'
+    for k, v in price_rows:
+        price_html += f'<tr><th>{k}</th><td>{v}</td></tr>\n'
+    price_html += '</tbody></table>\n'
+
+    who_for = _who_for(tool)
+    score_percent = max(0, min(100, rating / 5 * 100))
+
+    schema = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {"@type": "SoftwareApplication", "name": name,
+                          "applicationCategory": category, "url": official},
+        "reviewRating": {"@type": "Rating", "ratingValue": str(rating), "bestRating": "5"},
+        "reviewBody": summary,
+        "dateModified": today,
+        "positiveNotes": {"@type": "ItemList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": note}
+            for i, note in enumerate(tool.get('pros', []))
+        ]},
+        "negativeNotes": {"@type": "ItemList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": note}
+            for i, note in enumerate(tool.get('cons', []))
+        ]},
+        "author": {"@type": "Organization", "name": "AIToolsEssentials"},
+        "publisher": {"@type": "Organization", "name": "AIToolsEssentials"},
+        "url": f"{DOMAIN}/tools/{slug}/"
+    })
+
+    features_html = ''.join(f'<li>{f}</li>\n' for f in tool.get('key_features', []))
+    trial_checklist = tool.get('trial_checklist', '')
+    best_plan = tool.get('best_plan', '')
+    faq = tool.get('faq', [])
+    faq_html = ''
+    for q, a in faq:
+        faq_html += f'<details><summary>{q}</summary><p>{a}</p></details>\n'
+    same_cat_n = len([x for x in tools if x['slug'] != slug and category in x.get('category', '')])
+    compare_names = ', '.join(r['name'] for r in related[:3])
+    compare_para = (
+        f"Within {category.lower()}, {name} goes up against {compare_names}"
+        f"{f' and {same_cat_n - 3} others' if same_cat_n > 3 else ''}. "
+        f"Its edge is {tool.get('pros', ['its core workflow'])[0].lower().rstrip('.')}. "
+        f"Weigh that against the cons above — especially: {tool.get('cons', ['pricing'])[0].lower().rstrip('.')} — "
+        f"then check our side-by-side comparisons for task-level results before you commit."
+    )
+
+    best_plan_html = ''
+    if best_plan:
+        best_plan_html = f'<div class="best-plan-card"><span>Our recommendation</span><strong>{best_plan}</strong></div>\n'
+    buying_decision_html = (
+        f'<div class="decision-grid">'
+        f'<div><strong>Choose {name} when</strong><p>{tool.get("best_for", "its core workflow")} is the repeated job you need to improve.</p></div>'
+        f'<div><strong>Compare first when</strong><p>{tool.get("cons", ["The trade-offs affect your workflow"])[0]}.</p></div>'
+        f'<div><strong>Before paying</strong><p>Run the trial checklist above and verify the current plan limit on the official pricing page.</p></div>'
+        f'</div>'
+    )
+
+    pro1 = tool.get('pros', ['It delivers on its core promise'])[0]
+    con1 = tool.get('cons', ['Costs can grow with usage'])[0].lower().rstrip('.')
+
+    html = f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{summary}">
+<title>{name}: AI Tool Review — AIToolsEssentials</title>
+<link rel="canonical" href="{DOMAIN}/tools/{slug}/">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/benchmarks.css">
+<script type="application/ld+json">{schema}</script>
+</head>
+<body>
+<header class="global-nav">
+<a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<nav class="nav-links">
+<a href="../tools/index.html">Tools</a>
+<a href="../comparisons/best-ai-tools.html">Best AI tools</a>
+<a href="../categories/index.html">Categories</a>
+<a href="../articles/index.html">Guides</a>
+</nav>
+<a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a>
+</header>
+
+<section class="review-hero scene scene-light">
+<p class="kicker light">{category}</p>
+<h1>{name} review</h1>
+<p>{summary}</p>
+<p class="last-updated">Editorial review · Updated {today}</p>
+</section>
+
+<div class="review-layout">
+<article class="review-content">
+<h2>Overview</h2>
+<p>{summary}</p>
+
+<h2>Key features</h2>
+<ul>
+{features_html}</ul>
+
+<h2>Trial checklist</h2>
+<p>{trial_checklist}</p>
+{benchmark_html}
+
+<h2>Pricing</h2>
+{price_html}
+<p class="affiliate-inline">Pricing changes often — verify current plans on the official site before buying.</p>
+
+<h2>Use cases</h2>
+<ul>
+'''
+    for u in tool.get('use_cases', []):
+        html += f'<li>{u}</li>\n'
+    html += '</ul>\n<h2>Pros</h2>\n<ul>\n'
+    for pr in tool.get('pros', []):
+        html += f'<li>{pr}</li>\n'
+    html += '</ul>\n<h2>Cons</h2>\n<ul>\n'
+    for co in tool.get('cons', []):
+        html += f'<li>{co}</li>\n'
+
+    html += f'''</ul>
+<h2>Who {name} is for</h2>
+<p>{who_for}</p>
+
+<h2>Buying decision</h2>
+{buying_decision_html}
+
+<h2>Verdict</h2>
+<p><strong>Bottom line:</strong> {name} has an AIToolsEssentials editorial score of {rating}/5. {pro1}. The main trade-off to weigh: {con1}.</p>
+<p>Test it against one real task from your workflow this week — that tells you more than any review.</p>
+<h2>How {name} compares</h2>
+<p>{compare_para}</p>
+<h2>How we evaluated</h2>
+<p>The AIToolsEssentials rating is an editorial score—not an external benchmark. It summarizes job fit, likely output quality, ease of adoption, and operational cost using published product information, benchmark context where the exact model is identifiable, and the repeatable trial checklist above. Benchmarks never determine the final product rating by themselves. See our <a href="../../legal/editorial-methodology.html">full methodology</a> and <a href="../../benchmarks/">benchmark evidence policy</a>.</p>
+{best_plan_html}<h2>Frequently asked questions</h2>
+<div class="faq-list">
+{faq_html}</div>
+</article>
+
+<aside class="review-aside">
+<div class="score-card">
+<span>AIToolsEssentials editorial score</span>
+<strong>{rating}<small style="font-size:20px;color:#6e6e73">/5</small></strong>
+<div class="score-meter" aria-label="Editorial score {rating} out of 5"><i style="width:{score_percent}%"></i></div>
+<span>Evidence: editorial assessment + sourced benchmarks where the exact model is identifiable.</span>
+<a class="button button-blue small" style="margin-top:8px" href="{official}" rel="sponsored noopener nofollow" target="_blank">Visit {name}</a>
+<span>Affiliate link — supports editorial maintenance at no cost to you.</span>
+</div>
+<div class="score-card">
+<span>Related tools</span>
+<ul style="margin:0;padding-left:0;list-style:none;display:grid;gap:10px">
+{related_html}</ul>
+</div>
+<div class="score-card">
+<span>Comparisons</span>
+{comp_html}
+</div>
+</aside>
+</div>
+
+<section class="newsletter-cta"><div class="cta-grid"><div class="cta-content"><h3>Choose with evidence, not hype.</h3><p>Use the free scorecard for your own trial, then check the benchmark hub for versioned external evidence.</p><div class="cta-actions"><a class="cta-button" href="../../downloads/ai-tool-evaluation-scorecard.html">Download the free scorecard</a><a class="cta-secondary" href="../../benchmarks/">Open benchmarks</a></div></div></div></section>
+
+<footer class="footer">
+<span>© 2026 AIToolsEssentials</span>
+<a href="../advertise/index.html" rel="nofollow">Advertise</a>
+<a href="../submit-tool.html" rel="nofollow">Submit a tool</a>
+<a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
+<a href="mailto:{EMAIL}">Contact</a>
+</footer>
+<script src="../js/site.js" defer></script>
+<script src="../js/analytics.js" defer></script>
+</body>
+</html>'''
+
+    out = root / 'tools' / slug / 'index.html'
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(html)
+    return out
+
+
+def generate_all(root: Path, tools: list, today: str) -> int:
+    n = 0
+    for tool in tools:
+        generate_review_page(root, tool, tools, today)
+        print(f'Generated review: {tool["slug"]}')
+        n += 1
+    return n
+
+
+if __name__ == '__main__':
+    root = Path('/Users/georgezikry/aitoolessentials/site')
+    from datetime import datetime
+    tools = json.loads((root / 'data/tools.json').read_text())
+    generate_all(root, tools, datetime.today().strftime('%Y-%m-%d'))

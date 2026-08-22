@@ -1,0 +1,93 @@
+{
+  "affiliate_programs": [
+    {
+      "tool_slug": "canva",
+      "network": "PartnerStack",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "5-8% recurring",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "grammarly",
+      "network": "Impact",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "25-50% first-time",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "jasper",
+      "network": "PartnerStack",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "20-30% recurring",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "copy-ai",
+      "network": "PartnerStack",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "20-30% recurring",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "descript",
+      "network": "PartnerStack",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "10-20% recurring",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "elevenlabs",
+      "network": "PartnerStack",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "10-15% recurring",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "zapier-ai",
+      "network": "Impact",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "20-40% first-time",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "make",
+      "network": "PartnerStack",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "10-15% recurring",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "notion-ai",
+      "network": "PartnerStack",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "10-15% recurring",
+      "last_checked": null
+    },
+    {
+      "tool_slug": "replit-ai",
+      "network": "Impact",
+      "program_status": "not_applied",
+      "affiliate_url": "",
+      "commission_note": "15-25% first-time",
+      "last_checked": null
+    }
+  ],
+  "high_priority_tools": [
+    "canva", "grammarly", "jasper", "copy-ai", "descript", "elevenlabs", "zapier-ai", "make", "notion-ai", "replit-ai", "fireflies-ai", "synthesia", "gamma", "heygen", "perplexity", "fathom"
+  ],
+  "networks": {
+    "PartnerStack": "https://partnerstack.com",
+    "Impact": "https://impact.com",
+    "CJ Affiliate": "https://www.cj.com",
+    "ShareASale": "https://www.shareasale.com"
+  }
+}

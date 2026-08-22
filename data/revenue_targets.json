@@ -1,0 +1,1036 @@
+[
+  {
+    "tool_slug": "adobe-firefly",
+    "tool_name": "Adobe Firefly",
+    "priority": "medium",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Adobe affiliate/partner program search"
+    ],
+    "search_queries": [
+      "Adobe Firefly affiliate program",
+      "Adobe Firefly partner program",
+      "Adobe Firefly referral program"
+    ],
+    "target_pages": [
+      "tools/adobe-firefly.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "airtable-ai",
+    "tool_name": "Airtable AI",
+    "priority": "high",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct partner program search",
+      "PartnerStack"
+    ],
+    "search_queries": [
+      "Airtable AI affiliate program",
+      "Airtable AI partner program",
+      "Airtable AI referral program"
+    ],
+    "target_pages": [
+      "tools/airtable-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "operations",
+      "content teams"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "bolt-new",
+    "tool_name": "Bolt.new",
+    "priority": "medium",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Bolt.new affiliate program",
+      "Bolt.new partner program",
+      "Bolt.new referral program"
+    ],
+    "target_pages": [
+      "tools/bolt-new.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "canva-ai",
+    "tool_name": "Canva AI",
+    "priority": "high",
+    "category": "Creative & Marketing",
+    "recommended_networks_to_check": [
+      "Impact",
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Canva AI affiliate program",
+      "Canva AI partner program",
+      "Canva AI referral program"
+    ],
+    "target_pages": [
+      "tools/canva-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "small business",
+      "creators",
+      "real estate",
+      "marketing"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "chatgpt",
+    "tool_name": "ChatGPT",
+    "priority": "low",
+    "category": "General AI Assistant",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner program search"
+    ],
+    "search_queries": [
+      "ChatGPT affiliate program",
+      "ChatGPT partner program",
+      "ChatGPT referral program"
+    ],
+    "target_pages": [
+      "tools/chatgpt.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "claude",
+    "tool_name": "Claude",
+    "priority": "low",
+    "category": "General AI Assistant",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner program search"
+    ],
+    "search_queries": [
+      "Claude affiliate program",
+      "Claude partner program",
+      "Claude referral program"
+    ],
+    "target_pages": [
+      "tools/claude.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "copy-ai",
+    "tool_name": "Copy.ai",
+    "priority": "high",
+    "category": "Marketing",
+    "recommended_networks_to_check": [
+      "PartnerStack",
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Copy.ai affiliate program",
+      "Copy.ai partner program",
+      "Copy.ai referral program"
+    ],
+    "target_pages": [
+      "tools/copy-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "sales teams",
+      "go-to-market"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "cursor",
+    "tool_name": "Cursor",
+    "priority": "medium",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Cursor affiliate program",
+      "Cursor partner program",
+      "Cursor referral program"
+    ],
+    "target_pages": [
+      "tools/cursor.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "deepseek",
+    "tool_name": "DeepSeek",
+    "priority": "low",
+    "category": "General AI Assistant",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner program search"
+    ],
+    "search_queries": [
+      "DeepSeek affiliate program",
+      "DeepSeek partner program",
+      "DeepSeek referral program"
+    ],
+    "target_pages": [
+      "tools/deepseek.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "descript",
+    "tool_name": "Descript",
+    "priority": "high",
+    "category": "Audio & Video",
+    "recommended_networks_to_check": [
+      "PartnerStack",
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Descript affiliate program",
+      "Descript partner program",
+      "Descript referral program"
+    ],
+    "target_pages": [
+      "tools/descript.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "YouTubers",
+      "podcasters"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "elevenlabs",
+    "tool_name": "ElevenLabs",
+    "priority": "high",
+    "category": "Audio",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner search",
+      "PartnerStack"
+    ],
+    "search_queries": [
+      "ElevenLabs affiliate program",
+      "ElevenLabs partner program",
+      "ElevenLabs referral program"
+    ],
+    "target_pages": [
+      "tools/elevenlabs.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "creators",
+      "video teams"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "fathom",
+    "tool_name": "Fathom",
+    "priority": "high",
+    "category": "Meetings",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Fathom affiliate program",
+      "Fathom partner program",
+      "Fathom referral program"
+    ],
+    "target_pages": [
+      "tools/fathom.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "sales teams",
+      "consultants"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "fireflies",
+    "tool_name": "Fireflies.ai",
+    "priority": "high",
+    "category": "Meetings",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Fireflies.ai affiliate program",
+      "Fireflies.ai partner program",
+      "Fireflies.ai referral program"
+    ],
+    "target_pages": [
+      "tools/fireflies.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "sales teams",
+      "meeting-heavy teams"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "gamma",
+    "tool_name": "Gamma",
+    "priority": "high",
+    "category": "Presentations",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Gamma affiliate program",
+      "Gamma partner program",
+      "Gamma referral program"
+    ],
+    "target_pages": [
+      "tools/gamma.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "students",
+      "sales teams",
+      "consultants"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "gemini",
+    "tool_name": "Gemini",
+    "priority": "low",
+    "category": "General AI Assistant",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner program search"
+    ],
+    "search_queries": [
+      "Gemini affiliate program",
+      "Gemini partner program",
+      "Gemini referral program"
+    ],
+    "target_pages": [
+      "tools/gemini.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "github-copilot",
+    "tool_name": "GitHub Copilot",
+    "priority": "medium",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Microsoft/GitHub partner ecosystem search"
+    ],
+    "search_queries": [
+      "GitHub Copilot affiliate program",
+      "GitHub Copilot partner program",
+      "GitHub Copilot referral program"
+    ],
+    "target_pages": [
+      "tools/github-copilot.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "grammarly",
+    "tool_name": "Grammarly",
+    "priority": "high",
+    "category": "Writing & Productivity",
+    "recommended_networks_to_check": [
+      "CJ Affiliate",
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Grammarly affiliate program",
+      "Grammarly partner program",
+      "Grammarly referral program"
+    ],
+    "target_pages": [
+      "tools/grammarly.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "students",
+      "small business",
+      "marketing"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "grok",
+    "tool_name": "Grok",
+    "priority": "low",
+    "category": "General AI Assistant",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner program search"
+    ],
+    "search_queries": [
+      "Grok affiliate program",
+      "Grok partner program",
+      "Grok referral program"
+    ],
+    "target_pages": [
+      "tools/grok.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "heygen",
+    "tool_name": "HeyGen",
+    "priority": "high",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "HeyGen affiliate program",
+      "HeyGen partner program",
+      "HeyGen referral program"
+    ],
+    "target_pages": [
+      "tools/heygen.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "sales teams",
+      "training",
+      "localization"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "jasper",
+    "tool_name": "Jasper",
+    "priority": "high",
+    "category": "Marketing",
+    "recommended_networks_to_check": [
+      "PartnerStack",
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Jasper affiliate program",
+      "Jasper partner program",
+      "Jasper referral program"
+    ],
+    "target_pages": [
+      "tools/jasper.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "marketing teams",
+      "agencies"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "leonardo-ai",
+    "tool_name": "Leonardo AI",
+    "priority": "medium",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Leonardo AI affiliate program",
+      "Leonardo AI partner program",
+      "Leonardo AI referral program"
+    ],
+    "target_pages": [
+      "tools/leonardo-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "lovable",
+    "tool_name": "Lovable",
+    "priority": "medium",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Lovable affiliate program",
+      "Lovable partner program",
+      "Lovable referral program"
+    ],
+    "target_pages": [
+      "tools/lovable.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "make",
+    "tool_name": "Make",
+    "priority": "high",
+    "category": "Automation",
+    "recommended_networks_to_check": [
+      "PartnerStack",
+      "Impact",
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Make affiliate program",
+      "Make partner program",
+      "Make referral program"
+    ],
+    "target_pages": [
+      "tools/make.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "operations",
+      "automation buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "meta-ai",
+    "tool_name": "Meta AI",
+    "priority": "low",
+    "category": "General AI Assistant",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner program search"
+    ],
+    "search_queries": [
+      "Meta AI affiliate program",
+      "Meta AI partner program",
+      "Meta AI referral program"
+    ],
+    "target_pages": [
+      "tools/meta-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "microsoft-copilot",
+    "tool_name": "Microsoft Copilot",
+    "priority": "medium",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Microsoft partner ecosystem search"
+    ],
+    "search_queries": [
+      "Microsoft Copilot affiliate program",
+      "Microsoft Copilot partner program",
+      "Microsoft Copilot referral program"
+    ],
+    "target_pages": [
+      "tools/microsoft-copilot.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "midjourney",
+    "tool_name": "Midjourney",
+    "priority": "medium",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Midjourney affiliate program",
+      "Midjourney partner program",
+      "Midjourney referral program"
+    ],
+    "target_pages": [
+      "tools/midjourney.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "mistral-le-chat",
+    "tool_name": "Mistral Le Chat",
+    "priority": "low",
+    "category": "General AI Assistant",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner program search"
+    ],
+    "search_queries": [
+      "Mistral Le Chat affiliate program",
+      "Mistral Le Chat partner program",
+      "Mistral Le Chat referral program"
+    ],
+    "target_pages": [
+      "tools/mistral-le-chat.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "n8n",
+    "tool_name": "n8n",
+    "priority": "medium",
+    "category": "Automation",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "n8n affiliate program",
+      "n8n partner program",
+      "n8n referral program"
+    ],
+    "target_pages": [
+      "tools/n8n.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "notion-ai",
+    "tool_name": "Notion AI",
+    "priority": "high",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct partner program search",
+      "PartnerStack"
+    ],
+    "search_queries": [
+      "Notion AI affiliate program",
+      "Notion AI partner program",
+      "Notion AI referral program"
+    ],
+    "target_pages": [
+      "tools/notion-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "productivity",
+      "students",
+      "teams"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "otter-ai",
+    "tool_name": "Otter.ai",
+    "priority": "medium",
+    "category": "Meetings",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search"
+    ],
+    "search_queries": [
+      "Otter.ai affiliate program",
+      "Otter.ai partner program",
+      "Otter.ai referral program"
+    ],
+    "target_pages": [
+      "tools/otter-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "perplexity",
+    "tool_name": "Perplexity",
+    "priority": "medium",
+    "category": "Research",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Perplexity affiliate program",
+      "Perplexity partner program",
+      "Perplexity referral program"
+    ],
+    "target_pages": [
+      "tools/perplexity.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "poe",
+    "tool_name": "Poe",
+    "priority": "medium",
+    "category": "Model Hub",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Poe affiliate program",
+      "Poe partner program",
+      "Poe referral program"
+    ],
+    "target_pages": [
+      "tools/poe.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "replit-ai",
+    "tool_name": "Replit AI",
+    "priority": "high",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Replit AI affiliate program",
+      "Replit AI partner program",
+      "Replit AI referral program"
+    ],
+    "target_pages": [
+      "tools/replit-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "builders",
+      "students"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "runway",
+    "tool_name": "Runway",
+    "priority": "medium",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Runway affiliate program",
+      "Runway partner program",
+      "Runway referral program"
+    ],
+    "target_pages": [
+      "tools/runway.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "slack-ai",
+    "tool_name": "Slack AI",
+    "priority": "medium",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Salesforce/Slack partner ecosystem search"
+    ],
+    "search_queries": [
+      "Slack AI affiliate program",
+      "Slack AI partner program",
+      "Slack AI referral program"
+    ],
+    "target_pages": [
+      "tools/slack-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "synthesia",
+    "tool_name": "Synthesia",
+    "priority": "high",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct affiliate program search",
+      "PartnerStack"
+    ],
+    "search_queries": [
+      "Synthesia affiliate program",
+      "Synthesia partner program",
+      "Synthesia referral program"
+    ],
+    "target_pages": [
+      "tools/synthesia.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "training teams",
+      "enterprise"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "v0",
+    "tool_name": "v0",
+    "priority": "medium",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Vercel partner ecosystem search"
+    ],
+    "search_queries": [
+      "v0 affiliate program",
+      "v0 partner program",
+      "v0 referral program"
+    ],
+    "target_pages": [
+      "tools/v0.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "you-com",
+    "tool_name": "You.com",
+    "priority": "medium",
+    "category": "Research",
+    "recommended_networks_to_check": [
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "You.com affiliate program",
+      "You.com partner program",
+      "You.com referral program"
+    ],
+    "target_pages": [
+      "tools/you-com.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "zapier-ai",
+    "tool_name": "Zapier AI",
+    "priority": "high",
+    "category": "Automation",
+    "recommended_networks_to_check": [
+      "Impact",
+      "PartnerStack",
+      "Direct partner program search"
+    ],
+    "search_queries": [
+      "Zapier AI affiliate program",
+      "Zapier AI partner program",
+      "Zapier AI referral program"
+    ],
+    "target_pages": [
+      "tools/zapier-ai.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "small business",
+      "sales teams",
+      "operations"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  }
+]

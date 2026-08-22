@@ -1,0 +1,47 @@
+{
+  "currency": "USD",
+  "status": "internal_draft",
+  "note": "Internal planning only. Do not publish hard pricing until traffic metrics exist.",
+  "placements": [
+    {
+      "placement_id": "directory-top",
+      "name": "Featured directory placement",
+      "suggested_pilot_price": "250-500/month",
+      "availability": "available",
+      "label_required": true,
+      "best_for": "Broad AI tools and SaaS products"
+    },
+    {
+      "placement_id": "category-guide-inline",
+      "name": "Category guide sponsored card",
+      "suggested_pilot_price": "150-400/month",
+      "availability": "available",
+      "label_required": true,
+      "best_for": "Tools matching a specific buyer guide"
+    },
+    {
+      "placement_id": "comparison-page-inline",
+      "name": "Comparison page sponsorship",
+      "suggested_pilot_price": "200-600/month",
+      "availability": "available",
+      "label_required": true,
+      "best_for": "Alternatives and versus pages"
+    },
+    {
+      "placement_id": "custom-buyer-guide",
+      "name": "Custom sponsored buyer guide",
+      "suggested_pilot_price": "750-1500 one-time",
+      "availability": "manual approval",
+      "label_required": true,
+      "best_for": "Vendors wanting a workflow/category guide"
+    },
+    {
+      "placement_id": "tool-profile-upgrade",
+      "name": "Enhanced tool profile",
+      "suggested_pilot_price": "100-300/month",
+      "availability": "available",
+      "label_required": true,
+      "best_for": "Vendors already in the directory"
+    }
+  ]
+}

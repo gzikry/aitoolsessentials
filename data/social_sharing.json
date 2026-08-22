@@ -1,0 +1,29 @@
+{
+  "social_sharing": {
+    "twitter_card": {
+      "enabled": true,
+      "title_template": "{tool_name}: AI Tool Review",
+      "description_template": "{tool_summary} — Get the full review at {site_url}",
+      "image_url": "/assets/og-ai-tools.jpg",
+      "site_url": "https://aitoolessentials.com"
+    },
+    "facebook_card": {
+      "enabled": true,
+      "title_template": "Best {category} AI Tools — {tool_name}",
+      "image_url": "/assets/og-ai-tools.jpg"
+    }
+  },
+  "viral_hooks": {
+    "twitter_thread_template": "🔥 {tool_name} is ranked #1 on our AI tool leaderboard this week!\n\n{tool_summary}\n\nI've been testing it for 30 days and here's what I found:\n\n✅ {pro_1}\n✅ {pro_2}\n✅ {pro_3}\n\n❌ {con_1}\n\nWorth it at {price}? Read my full review 👇\n\n{review_url}\n\n#AI #Productivity #SaaS",
+    "reddit_post_template": "[Self-Promotion] I've been using {tool_name} for 30 days and thought I'd share my honest review.\n\n{tool_summary}\n\nPros:\n- {pro_1}\n- {pro_2}\n- {pro_3}\n\nCons:\n- {con_1}\n\nVerdict: {verdict}\n\nFull review: {review_url}\n\nWhat are your thoughts? Have you tried it?",
+    "linkedin_post_template": "Just published my review of {tool_name}, the #1 ranked AI tool this week on AIToolsEssentials.\n\n{tool_summary}\n\nAfter 30 days of testing, here's what I found:\n\n✨ What works: {pro_1}, {pro_2}, {pro_3}\n⚠️ What doesn't: {con_1}\n\nIs it worth it at {price}? Read the full breakdown 👇\n\n{review_url}\n\n#AI #Productivity #SaaS #Tech",
+    "hashtag_sets": {
+      "primary": ["#AI", "#Productivity", "#SaaS", "#Tech", "#Startup"],
+      "writing": ["#AIWriting", "#ContentCreation", "#Jasper", "#CopyAI"],
+      "coding": ["#Coding", "#Developer", "#AI", "#Cursor", "#GitHubCopilot"],
+      "design": ["#AIDesign", "#Midjourney", "#Design", "#Creative"],
+      "research": ["#AIResearch", "#Perplexity", "#Research", "#Knowledge"],
+      "business": ["#Entrepreneur", "#Startup", "#SaaS", "#Business"]
+    }
+  }
+}
