@@ -58,6 +58,12 @@ generate_audience_guide_pages(root)
 from enhance_faq_schema import generate as enhance_faq_schema
 enhance_faq_schema(root)
 
+from generate_faq_articles import generate as generate_faq_articles
+generate_faq_articles(root)
+
+from generate_learn_hub import generate as generate_learn_hub
+generate_learn_hub(root)
+
 from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')

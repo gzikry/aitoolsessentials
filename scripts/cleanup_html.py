@@ -79,6 +79,8 @@ def fix_page(p: Path) -> bool:
         lambda m: f'href="{prefix}{m.group(1)}"', h)
 
     # 7b. Keep benchmark evidence one click away from every primary nav.
+    if '<nav class="nav-links">' in h and '>Learn</a>' not in h:
+        h = h.replace('</nav>', f'<a href="{prefix}articles/learn.html">Learn</a></nav>', 1)
     if '<nav class="nav-links">' in h and '>Benchmarks</a>' not in h:
         h = h.replace('</nav>', f'<a href="{prefix}benchmarks/">Benchmarks</a>\n</nav>', 1)
 

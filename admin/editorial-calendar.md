@@ -1,0 +1,41 @@
+# AIToolsEssentials — Editorial Calendar (rolling)
+
+## Weekly cadence (automated where possible)
+- **Daily 8AM UTC:** regeneration + validation + deploy (existing cron)
+- **Mondays:** benchmark refresh + update-notes post in Whop member area
+- **Fridays:** publish one new article from the backlog below
+
+## Backlog: how-to / workflow (next 6 weeks)
+1. AI invoicing and admin stack for solo consultants
+2. Building a personal knowledge base with Notion AI
+3. From transcript to newsletter: a Descript-to-publish pipeline
+4. Evaluating AI coding tools for a team rollout (security review checklist)
+5. Image rights and licensing: using Midjourney/Leonardo output commercially
+6. Automating client onboarding with Zapier or Make
+
+## Backlog: audience guides (weeks 7–12)
+1. Best AI tools for lawyers (confidentiality-first)
+2. Best AI tools for teachers (free-tier focus)
+3. Best AI tools for nonprofits (grant-writing angle)
+4. Best AI tools for podcasters
+5. Best AI tools for property managers
+6. Best AI tools for healthcare admin (HIPAA-aware)
+
+## Backlog: question-intent (interleave)
+- ChatGPT free vs Plus: what the limits actually are
+- Is Perplexity better than Google?
+- Which AI tool writes best in [language]?
+- Can I cancel anytime? Subscription terms compared
+- Do AI tools work offline?
+- What happens to my data when I delete my account?
+
+## Premium member drops (monthly)
+- Month 1 (Sept): comparison archive + coding assistant spec ✅ built
+- Month 2 (Oct): Cursor vs Copilot hands-on results (run protocol first)
+- Month 3 (Nov): member-voted deep-dive
+
+## Rules for every piece
+- No fabricated claims, tests, or numbers; hands-on status labeled honestly
+- Every price claim dated + linked to official source
+- Editorial scores never presented as benchmarks
+- CTA ladder: scorecard → review → Premium/audit
