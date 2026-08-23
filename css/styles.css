@@ -392,3 +392,15 @@ code { background: #fff; border-radius: 5px; padding: 2px 5px; }
 .tool-pick h3{font-size:22px;margin:0}.tool-pick .pick-score{font-size:13px;color:#0066cc;font-weight:600}
 .tool-pick p{font-size:14px;line-height:1.5;margin:10px 0}.tool-pick .pick-meta{color:rgba(0,0,0,.56);font-size:12px}
 .tool-pick .pick-actions{display:flex;gap:14px;align-items:center;margin-top:8px}
+
+/* visual-polish-2026 */
+@media (max-width:640px){
+  .hero .actions,.actions{gap:14px}
+  .hero-copy h1{font-size:34px}
+}
+.kicker{color:#9aa4b2}
+.scene-dark .kicker{color:#aab4c0}
+.benchmark-policy .guide-pill,.scene-dark .pill{color:#d5dae2;border-color:rgba(255,255,255,.35)}
+.footer a{color:rgba(0,0,0,.72)}
+.benchmark-policy p,.benchmark-policy li{font-size:15px;line-height:1.7}
+.pricing-flag.live{position:static;display:inline-block;margin-bottom:8px}
