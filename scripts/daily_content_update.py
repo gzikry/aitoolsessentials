@@ -135,7 +135,8 @@ import subprocess
 r = subprocess.run(['python3', 'scripts/cleanup_html.py'], capture_output=True, text=True, cwd=str(root))
 print(r.stdout.strip() or r.stderr.strip())
 
-def ping_indexnow(root):
+def generate_media_kit(root)
+ping_indexnow(root):
     """Ping IndexNow with the full sitemap URL set after each successful deploy."""
     import json as _json, subprocess
     try:
@@ -154,4 +155,5 @@ def ping_indexnow(root):
         print(f'IndexNow ping skipped: {e}')
 
 # Auto-ping IndexNow with the fresh sitemap so search engines index new pages same-day
+generate_media_kit(root)
 ping_indexnow(root)

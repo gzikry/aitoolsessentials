@@ -1,8 +1,22 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Sponsor AIToolsEssentials: sponsored placements, newsletter-free audience, buyers actively comparing AI tools. Media kit and placement options."><title>Advertise &amp; Sponsor — AIToolsEssentials</title><link rel="stylesheet" href="../css/styles.css">
+#!/usr/bin/env python3
+"""Generate the sponsor media kit page."""
+import html as H
+from pathlib import Path
+
+HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n<a href="../articles/learn.html">Learn</a></nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
+FOOTER = '''<footer class="footer">
+    <span>© 2026 AIToolsEssentials</span>
+    <a href="../advertise/index.html" rel="nofollow">Advertise</a>
+    <a href="../submit-tool.html" rel="nofollow">Submit a tool</a>
+    <a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
+    <a href="mailto:contact@aitoolsessentials.com">Contact</a>
+  <a href="../legal/about.html">About</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a><a href="../legal/corrections.html">Corrections</a></footer>'''
+
+def generate(root: Path) -> int:
+    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Sponsor AIToolsEssentials: sponsored placements, newsletter-free audience, buyers actively comparing AI tools. Media kit and placement options."><title>Advertise &amp; Sponsor — AIToolsEssentials</title><link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/share.css">
 <link rel="canonical" href="https://aitoolsessentials.com/advertise/index.html">
-<link rel="icon" href="../assets/aitools-bot-mark.svg" type="image/svg+xml"></head><body><header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>
-<a href="../articles/learn.html">Learn</a></nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>
+<link rel="icon" href="../assets/aitools-bot-mark.svg" type="image/svg+xml"></head><body>{HEADER}
 <main>
 <section class="scene scene-dark hero compact-hero"><div class="hero-copy"><p class="kicker">For vendors &amp; sponsors</p><h1>Reach people at the moment they choose.</h1><p class="subhead">AIToolsEssentials readers are actively comparing AI tools and deciding what to pay for. Sponsored placements put your product in front of them with editorial integrity intact.</p></div></section>
 
@@ -40,10 +54,11 @@
 <section class="newsletter-panel"><div><span>For vendors</span><h2>Submitted a tool already?</h2><p>Listings are free. Sponsorship accelerates visibility but never changes editorial standards.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../submit-tool.html">Submit a tool free</a><a class="button button-dark" href="mailto:contact@aitoolsessentials.com?subject=Sponsorship%20inquiry">Email about sponsorships</a></div></section>
 
 </main><div id="share-row" hidden></div>
-<footer class="footer">
-    <span>© 2026 AIToolsEssentials</span>
-    <a href="../advertise/index.html" rel="nofollow">Advertise</a>
-    <a href="../submit-tool.html" rel="nofollow">Submit a tool</a>
-    <a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
-    <a href="mailto:contact@aitoolsessentials.com">Contact</a>
-  <a href="../legal/about.html">About</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a><a href="../legal/corrections.html">Corrections</a></footer><script src="../js/site.js" defer></script><script src="../js/analytics.js" defer></script></body></html>
+{FOOTER}<script src="../js/site.js" defer></script><script src="../js/analytics.js" defer></script></body></html>'''
+    out = root/'advertise'/'index.html'
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(page)
+    return 1
+
+if __name__ == '__main__':
+    print(generate(Path(__file__).resolve().parent.parent))
