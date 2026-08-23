@@ -134,3 +134,24 @@ print('Daily content maintenance complete:', today)
 import subprocess
 r = subprocess.run(['python3', 'scripts/cleanup_html.py'], capture_output=True, text=True, cwd=str(root))
 print(r.stdout.strip() or r.stderr.strip())
+
+def ping_indexnow(root):
+    """Ping IndexNow with the full sitemap URL set after each successful deploy."""
+    import json as _json, subprocess
+    try:
+        key = _json.loads((root / 'data' / 'integrations.json').read_text())['bing']['indexnow_key']
+        sm = (root / 'sitemap.xml').read_text()
+        urls = [u.strip() for u in __import__('re').findall(r'<loc>(https://aitoolsessentials\.com[^<]+)</loc>', sm)]
+        if not urls:
+            return
+        body = _json.dumps({"host": "aitoolsessentials.com", "key": key, "urlList": urls[:10000]})
+        r = subprocess.run(['curl', '-sS', '-o', '/dev/null', '-w', '%{http_code}',
+                            '-X', 'POST', 'https://api.indexnow.org/indexnow',
+                            '-H', 'Content-Type: application/json; charset=utf-8', '-d', body],
+                           capture_output=True, text=True, timeout=60)
+        print(f'IndexNow ping: {r.stdout} ({len(urls)} URLs)')
+    except Exception as e:
+        print(f'IndexNow ping skipped: {e}')
+
+# Auto-ping IndexNow with the fresh sitemap so search engines index new pages same-day
+ping_indexnow(root)
