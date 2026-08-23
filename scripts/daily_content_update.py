@@ -130,13 +130,15 @@ print(f'Wrote daily brief: {brief_file}')
 
 print('Daily content maintenance complete:', today)
 
+from generate_media_kit import generate as generate_media_kit
+generate_media_kit(root)
+
 # Run post-generation cleanup (idempotent: fixes paths, structure, share rows, emails)
 import subprocess
 r = subprocess.run(['python3', 'scripts/cleanup_html.py'], capture_output=True, text=True, cwd=str(root))
 print(r.stdout.strip() or r.stderr.strip())
 
-def generate_media_kit(root)
-ping_indexnow(root):
+def ping_indexnow(root):
     """Ping IndexNow with the full sitemap URL set after each successful deploy."""
     import json as _json, subprocess
     try:
