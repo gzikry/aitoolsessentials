@@ -159,3 +159,8 @@ def ping_indexnow(root):
 # Auto-ping IndexNow with the fresh sitemap so search engines index new pages same-day
 generate_media_kit(root)
 ping_indexnow(root)
+
+# Apply approved affiliate tracking URLs last so regeneration cannot wipe them
+import subprocess as _sp
+_r=_sp.run(['python3','scripts/wire_affiliate_links.py'],capture_output=True,text=True,cwd=str(root))
+print(_r.stdout.strip() or _r.stderr.strip())

@@ -138,12 +138,13 @@
    "program_type": "public affiliate program",
    "network": "direct (try.elevenlabs.io)",
    "official_program_url": "https://elevenlabs.io/affiliates",
-   "application_status": "not_applied",
-   "commission_note": "Official page advertises up to 22% for 12 months; exclusions and plan-specific rates apply.",
-   "notes": "Enterprise purchases are excluded according to the official page.",
+   "application_status": "approved",
+   "commission_note": "22% of qualifying subscriptions for 12 months",
+   "notes": "Approved 2026-08-23. Tracking URL verified (redirects to elevenlabs.io with partner params).",
    "status": "approved",
    "approved_tracking_url": "https://try.elevenlabs.io/xs6witq7izqe",
-   "approved_date": "2026-08-23"
+   "approved_date": "2026-08-23",
+   "affiliate_url": "https://try.elevenlabs.io/xs6witq7izqe"
   },
   {
    "tool_slug": "descript",
