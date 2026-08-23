@@ -112,6 +112,9 @@ def fix_page(p: Path) -> bool:
                 new_footer = footer.replace('</footer>', ''.join(additions) + '</footer>')
                 h = h.replace(footer, new_footer, 1)
 
+    # GSC verification on every page
+    if '<meta name="google-site-verification"' not in h:
+        h = h.replace('<head>', '<head><meta name="google-site-verification" content="OzzGs2QF4v6zSBd9uO95NGgSPH5B598E6DPtcjRNn_4">', 1)
     if h != orig:
         p.write_text(h)
         return True
@@ -130,3 +133,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
