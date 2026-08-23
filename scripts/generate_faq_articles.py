@@ -106,5 +106,39 @@ def generate(root: Path) -> int:
         p.write_text(page);made+=1
     return made
 
-if __name__=='__main__':
-    print(generate(Path(__file__).resolve().parent.parent))
+ARTICLES['best-ai-tools-for-lawyers.html'] = {
+ 'title':'Best AI tools for lawyers','kicker':'Audience guide','desc':'Research, drafting, and document review tools for legal work — with confidentiality as the first filter.',
+ 'body':'''
+<p>Legal work adds a constraint most professions don't have: privilege. Before any tool enters your practice, confirm its business-tier data terms (no training on inputs, defined retention) and check your bar's guidance on AI use — several state bars have published opinions.</p>
+<h2>The confidentiality filter</h2>
+<p>Consumer chat tiers are not appropriate for client-identifiable material. Prefer business tiers with explicit no-training commitments, and never paste anything covered by privilege into a tool whose data terms you haven't read. See <a href="are-ai-tools-safe-for-business-data.html">our data-safety guide</a>.</p>
+<h2>Where tools fit</h2>
+<ul><li><strong>Claude</strong>: long contract and case-file analysis with careful instruction adherence</li><li><strong>Perplexity</strong>: fast statutory and case research — verify every citation in Westlaw or Lexis before relying on it (fabricated citations are a documented failure mode)</li><li><strong>ChatGPT</strong>: first-draft client letters, demand letters, and summarization</li><li><strong>Otter AI</strong>: meeting capture where all parties consent to recording</li><li><strong>Microsoft Copilot</strong>: if your practice runs on Microsoft 365, it keeps AI inside your tenant</li></ul>
+<h2>What stays human</h2>
+<p>Legal judgment, filing, and anything under signature. AI drafts; you own every word that goes to a court or client.</p>
+<p class="monetization-note">Pricing verified against official sources August 21, 2026. Verify current plans before purchasing.</p>'''}
+
+ARTICLES['does-google-index-ai-content.html'] = {
+ 'title':'Does Google penalize AI content?','kicker':'Straight answer','desc':'What Google actually says about AI-generated content, and what it means for publishers.',
+ 'body':'''
+<p><strong>Short answer:</strong> Google rewards quality and originality regardless of how content is produced. Its policies target spam — mass-produced, unhelpful pages — not AI assistance itself.</p>
+<h2>What Google officially says</h2>
+<p>Google's guidance focuses on helpfulness and E-E-A-T signals: experience, expertise, authoritativeness, trustworthiness. Production method is not a ranking factor. The relevant policy is "scaled content abuse" — publishing volumes of pages with little value for searchers.</p>
+<h2>Why some AI-heavy sites lose rankings anyway</h2>
+<ul><li>Thin content: pages saying nothing beyond a search snippet</li><li>No first-hand experience or verifiable primary sources</li><li>Factual errors that erode trust signals over time</li></ul>
+<h2>The practical standard</h2>
+<p>Publish less, verify more: every claim sourced to a reference you actually checked, real experience included, human editing before publish. That standard protects you under any future policy change.</p>'''}
+
+ARTICLES['ai-tools-for-real-estate-listings.html'] = {
+ 'title':'AI workflow: listing photos to closing docs','kicker':'Workflow guide','desc':'Where AI tools slot into a real estate transaction pipeline — and which steps should stay manual.',
+ 'body':'''
+<h2>Listing creation</h2>
+<p><a href="../tools/canva-ai/">Canva AI</a> turns listing photos and copy into marketing materials; assistants draft property descriptions from feature lists. Review fair-housing compliance on every generated description — automation errors here carry legal cost.</p>
+<h2>Client communication</h2>
+<p><a href="../tools/chatgpt/">ChatGPT</a> drafts follow-ups from bullet notes. Never paste client financials into consumer-tier tools — see <a href="are-ai-tools-safe-for-business-data.html">the data-safety guide</a>.</p>
+<h2>Closing paperwork</h2>
+<p>This stays human. Contract review carries liability no current tool absorbs. Use <a href="../tools/otter-ai/">Otter</a> for meeting notes with consent; keep document review and execution manual.</p>
+<p>Full picks in the <a href="best-ai-tools-for-real-estate-agents.html">real estate agents guide</a>.</p>'''}
+
+
+

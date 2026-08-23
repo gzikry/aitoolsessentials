@@ -30,6 +30,12 @@ FAQS = {
         ('Should I use Claude or Perplexity for research?',
          'They solve different halves: Perplexity finds and cites web sources; Claude analyzes long documents you supply and produces structured writing. Many researchers run both — search in Perplexity, deep analysis in Claude.'),
     ],
+    'claude-vs-gemini.html': [
+        ('Claude vs Gemini: which is better for long documents?',
+         'Claude handles very long single documents with strong instruction adherence, making it a common choice for contract or report analysis. Gemini integrates with Google Drive and handles multimodal inputs. The right pick depends on where your material lives.'),
+        ('Do Claude and Gemini cost the same?',
+         'Both offer free tiers and paid plans around $20/month, but plan features and limits change often. Check the official pricing pages before deciding — our comparison page links both directly.'),
+    ],
     'heygen-vs-synthesia.html': [
         ('Do HeyGen and Synthesia allow commercial use of videos?',
          'Rights differ by plan: HeyGen\'s terms give Free-plan output only a personal, non-commercial license, while paid Creator/Pro/Business users own their outputs. Synthesia\'s terms vary by plan tier too. Read the vendor\'s current terms for your specific plan before client delivery.'),

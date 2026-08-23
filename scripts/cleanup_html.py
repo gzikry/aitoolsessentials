@@ -32,8 +32,11 @@ def fix_page(p: Path) -> bool:
     if '<main' in h:
         n = h.count('</main>')
         if n == 0:
-            h = h.replace('</footer>', '</main>\n<footer>', 1) if '</footer>' in h \
-                else h.replace('</body>', '</main>\n</body>', 1)
+            # Insert </main> BEFORE the footer close, not inside it
+            if '</footer>' in h:
+                h = h.replace('</footer>', '</main></footer>', 1)
+            else:
+                h = h.replace('</body>', '</main>\n</body>', 1)
         elif n > 1:
             first = h.find('</main>')
             h = h[:first + 7] + h[first + 7:].replace('</main>', '')
@@ -111,6 +114,10 @@ def fix_page(p: Path) -> bool:
             if additions:
                 new_footer = footer.replace('</footer>', ''.join(additions) + '</footer>')
                 h = h.replace(footer, new_footer, 1)
+
+    # stray script-footer removal (legacy bug)
+    h = __import__('re').sub(r'</footer>\s*</main>\s*<footer>(\s*<script)', '</footer></main>\n\\1', h)
+    h = __import__('re').sub(r'(Contact</a>)</main>\s*<footer>\s*(<script)', r'\1</footer></main>\n\2', h)
 
     # GSC verification on every page
     if '<meta name="google-site-verification"' not in h:
