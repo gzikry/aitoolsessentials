@@ -123,6 +123,10 @@ def fix_page(p: Path) -> bool:
     if "impact-site-verification" not in h:
         h = h.replace('<head>', '<head><meta name="impact-site-verification" content="972313e6-cecc-47f0-aea2-c99b4364ee09">', 1)
 
+    # og-image-injection: social share image + twitter card everywhere
+    if 'property="og:image"' not in h and '</head>' in h:
+        h = h.replace('</head>', '<meta property="og:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg"></head>', 1)
+
     # GSC verification on every page
     if '<meta name="google-site-verification"' not in h:
         h = h.replace('<head>', '<head><meta name="google-site-verification" content="OzzGs2QF4v6zSBd9uO95NGgSPH5B598E6DPtcjRNn_4">', 1)

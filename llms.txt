@@ -1,0 +1,23 @@
+# AIToolsEssentials
+
+> Evidence-first AI tools directory: 40+ independently reviewed tools with pricing verified from official vendor pages (dated), buyer guides by audience and workflow, head-to-head comparisons, and versioned benchmark evidence.
+
+The site is designed for people choosing which AI tools to pay for. Editorial scores are independent ratings; hands-on test results are labeled as such; benchmark data includes exact model versions and snapshot dates.
+
+## Main sections
+- /tools/: individual tool reviews with verified pricing
+- /comparisons/: head-to-head comparisons (e.g., chatgpt-vs-claude, zapier-vs-make-vs-n8n)
+- /articles/: buyer guides by audience (agencies, freelancers, developers) and question-intent answers
+- /benchmarks/: versioned external benchmark evidence hub
+- /pricing/: free directory vs $12/mo premium research membership
+- /advertise/: sponsorship information
+
+## Data access
+- sitemap.xml lists all pages
+- data/tools.json is the structured review dataset
+
+## Policies
+- Pricing claims are verified against official vendor pages and re-checked monthly; verification dates shown on-page.
+- Reviews include cons and tradeoffs. Sponsored content is labeled per FTC rules in legal/affiliate-disclosure.html.
+
+Contact: contact@aitoolsessentials.com
