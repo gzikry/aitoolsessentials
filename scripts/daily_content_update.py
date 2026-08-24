@@ -171,3 +171,8 @@ subprocess.run(['python3', str(root / 'scripts' / 'enhance_structured_data.py')]
 import subprocess as _sp
 _r=_sp.run(['python3','scripts/wire_affiliate_links.py'],capture_output=True,text=True,cwd=str(root))
 print(_r.stdout.strip() or _r.stderr.strip())
+
+# Final viral review modules must run after cleanup/affiliate post-passes so they persist.
+from generate_viral_growth import inject_review_stack_modules as _inject_review_stack_modules
+_inject_review_stack_modules(root, tools)
+print('Injected review-page stack modules')
