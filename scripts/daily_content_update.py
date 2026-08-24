@@ -78,6 +78,10 @@ from generate_knowledge_growth import generate as generate_knowledge_growth
 generate_knowledge_growth(root, tools, today)
 print('Generated knowledge growth utilities')
 
+from generate_resource_library import generate as generate_resource_library
+generate_resource_library(root, tools, today)
+print('Generated resource library')
+
 from generate_site_discovery import generate as generate_site_discovery
 generate_site_discovery(root, tools, today)
 print('Generated site discovery utilities')
