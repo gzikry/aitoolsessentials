@@ -70,6 +70,32 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "sample-report.html").write_text(sample)
 
+    roadmap_desc = "AIToolsEssentials Premium monthly research roadmap and member deliverable calendar."
+    roadmap_items = [
+        ("September", "Cut AI subscription sprawl", "Decision matrix, general assistant shortlist, automation pricing decoder, vendor security questions."),
+        ("October", "Coding and app-building workflow", "Cursor, GitHub Copilot, Replit AI, Bolt.new, Lovable, and v0 decision brief."),
+        ("November", "Meeting intelligence stack", "Fireflies, Otter, Fathom, Notion AI, and CRM handoff workflow review."),
+        ("December", "Content production stack", "ChatGPT, Claude, Jasper, Copy.ai, Canva AI, Descript, and distribution workflow playbook."),
+    ]
+    roadmap_cards = "".join(f'<article class="content-hub-card"><span>{esc(month)}</span><h3>{esc(title)}</h3><p>{esc(text)}</p></article>' for month, title, text in roadmap_items)
+    roadmap = f'''<!doctype html><html lang="en">{head("Premium Research Roadmap", roadmap_desc, DOMAIN+"/premium/roadmap.html")}<body>{HEADER}<main>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium roadmap</p><h1>The member library keeps compounding.</h1><p class="subhead">Premium is not a single PDF. It is a monthly research layer: dated briefs, CSV archives, workflow playbooks, and member-requested deep dives.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-blue" href="/premium/" style="margin-left:8px">Premium overview</a></p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><h2>Research calendar</h2><div class="content-hub-grid">{roadmap_cards}</div><section class="score-card"><span>Member-driven</span><h2>Requests shape the calendar.</h2><p>Whop members can request workflows to compare. Good requests include your role, current stack, weekly task, budget, data constraints, and tools you are deciding between.</p></section></div></section>
+</main>{FOOTER}{scripts()}</body></html>'''
+    (out / "roadmap.html").write_text(roadmap)
+
+    archive_desc = "AIToolsEssentials Premium archive preview for monthly AI tool research drops."
+    archive_rows = "".join([
+        '<tr><td>2026-09</td><td>AI stack cost-cutting brief</td><td>Decision matrix CSV, assistant shortlist, automation decoder</td><td>Ready for Whop upload</td></tr>',
+        '<tr><td>2026-10</td><td>Coding/app-building workflow</td><td>Planned decision brief and tool comparison archive</td><td>Planned</td></tr>',
+        '<tr><td>2026-11</td><td>Meeting intelligence workflow</td><td>Planned brief, policy notes, handoff checklist</td><td>Planned</td></tr>',
+    ])
+    archive = f'''<!doctype html><html lang="en">{head("Premium Research Archive Preview", archive_desc, DOMAIN+"/premium/archive.html")}<body>{HEADER}<main>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium archive</p><h1>Monthly research drops, organized for members.</h1><p class="subhead">A public preview of the member archive structure. Full posts, CSVs, and request threads live inside Whop.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-blue" href="/premium/sample-report.html" style="margin-left:8px">See sample report</a></p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="table-wrap"><table><thead><tr><th>Month</th><th>Drop</th><th>Member files</th><th>Status</th></tr></thead><tbody>{archive_rows}</tbody></table></div><section class="score-card"><span>Access note</span><h2>Full archive access is through Whop.</h2><p>Subscribers receive the actual posts, downloads, and request threads in the Whop member area. This page is a transparent preview, not the gated archive itself.</p></section></div></section>
+</main>{FOOTER}{scripts()}</body></html>'''
+    (out / "archive.html").write_text(archive)
+
 
 def write_csv(path: Path, headers: list[str], rows: list[list[Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -245,6 +271,46 @@ def update_checkout(root: Path) -> None:
     html = html.replace("'<a class=\"button button-blue\" href=\"../../tools/index.html\">Explore the tools database</a>' +\n      '<a class=\"button button-ghost-dark\" href=\"../../articles/index.html\">Browse guides</a>';", "'<a class=\"button button-blue\" href=\"https://whop.com/hub\" rel=\"external noopener\">Open Whop member hub</a>' +\n      '<a class=\"button button-ghost-dark\" href=\"../../premium/\">Preview Premium library</a>';")
     p.write_text(html)
 
+
+
+def premium_upsell_module() -> str:
+    return f'''<!-- AIT PREMIUM MODULE START -->
+<section class="newsletter-panel premium-conversion-panel"><div><span>Premium research layer</span><h2>Want the member-only decision archive?</h2><p>Premium adds monthly research briefs, CSV decision matrices, workflow playbooks, and member-requested deep dives through Whop.</p><p class="affiliate-inline">$12/month · Whop handles billing and access · research and strategy only.</p></div><div class="newsletter-actions"><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-dark" href="/premium/">See Premium library</a></div></section>
+<!-- AIT PREMIUM MODULE END -->'''
+
+
+def inject_before_main_end(html: str, module: str) -> str:
+    import re
+    html = re.sub(r'\n?<!-- AIT PREMIUM MODULE START -->.*?<!-- AIT PREMIUM MODULE END -->\n?', '\n', html, flags=re.S)
+    if '</main>' not in html:
+        return html
+    return html.replace('</main>', module + '\n</main>', 1)
+
+
+def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
+    targets = [
+        'stack-builder.html',
+        'cost-calculator.html',
+        'compare-shortlist.html',
+        'tool-finder.html',
+        'deals/index.html',
+        'resources/index.html',
+        'pricing-index/index.html',
+        'weekly/index.html',
+        'start-here/index.html',
+    ]
+    module = premium_upsell_module()
+    changed = 0
+    for rel in targets:
+        p = root / rel
+        if not p.exists():
+            continue
+        old = p.read_text()
+        new = inject_before_main_end(old, module)
+        if new != old:
+            p.write_text(new)
+            changed += 1
+    return changed
 
 def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
     tools_list = tools if tools is not None else json.loads((root / "data/tools.json").read_text())

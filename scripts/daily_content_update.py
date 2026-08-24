@@ -208,3 +208,7 @@ print('Injected site discovery head/status modules')
 from generate_knowledge_growth import postprocess as _knowledge_postprocess
 _knowledge_postprocess(root, tools, today)
 print('Injected knowledge schema modules')
+
+from generate_premium_membership import postprocess as _premium_postprocess
+_premium_postprocess(root, tools, today)
+print('Injected premium conversion modules')

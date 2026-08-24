@@ -577,3 +577,10 @@ button.shortlist-btn, .card-actions button.shortlist-btn { color:#1e2a8a !import
 .resource-checklist li { padding:10px 12px; border:1px solid rgba(94,106,210,.14); border-radius:12px; background:#f7f8ff; }
 .resource-checklist input[type="checkbox"] { transform:scale(1.15); margin-right:8px; accent-color:#5e6ad2; }
 @media print { .global-nav, .footer, .share-row, .related-next-steps, .button { display:none !important; } body { background:#fff !important; } .scene-dark { background:#fff !important; color:#111827 !important; } .scene-dark h1, .scene-dark p { color:#111827 !important; } .content-hub-card, .score-card { box-shadow:none !important; border:1px solid #d1d5db !important; break-inside:avoid; } }
+
+
+/* Premium conversion panel polish */
+.premium-conversion-panel { border: 1px solid rgba(94,106,210,.24); box-shadow: 0 24px 70px rgba(20,24,60,.14); }
+.premium-conversion-panel span { color: #4f46e5; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.premium-conversion-panel .newsletter-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+@media (max-width: 760px) { .premium-conversion-panel .newsletter-actions { justify-content: flex-start; } }
