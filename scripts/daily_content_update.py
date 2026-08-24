@@ -70,6 +70,10 @@ from generate_viral_growth import generate as generate_viral_growth
 generate_viral_growth(root, tools, today)
 print('Generated viral growth utilities')
 
+from generate_conversion_growth import generate as generate_conversion_growth
+generate_conversion_growth(root, tools, today)
+print('Generated conversion growth utilities')
+
 from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')
@@ -176,3 +180,7 @@ print(_r.stdout.strip() or _r.stderr.strip())
 from generate_viral_growth import inject_review_stack_modules as _inject_review_stack_modules
 _inject_review_stack_modules(root, tools)
 print('Injected review-page stack modules')
+
+from generate_conversion_growth import postprocess as _conversion_postprocess
+_conversion_postprocess(root, tools)
+print('Injected conversion growth post-process modules')
