@@ -1,0 +1,321 @@
+{
+  "site": "AIToolsEssentials",
+  "domain": "https://aitoolsessentials.com",
+  "generated": "2026-08-24",
+  "tools_count": 40,
+  "core_pages": [
+    {
+      "title": "Stack Builder",
+      "url": "https://aitoolsessentials.com/stack-builder.html",
+      "type": "utility",
+      "summary": "Generate a shareable AI stack."
+    },
+    {
+      "title": "Cost Calculator",
+      "url": "https://aitoolsessentials.com/cost-calculator.html",
+      "type": "utility",
+      "summary": "Estimate monthly AI tool stack cost."
+    },
+    {
+      "title": "Tool Finder",
+      "url": "https://aitoolsessentials.com/tool-finder.html",
+      "type": "utility",
+      "summary": "Filter tools by workflow, budget, and buyer."
+    },
+    {
+      "title": "Glossary",
+      "url": "https://aitoolsessentials.com/glossary/",
+      "type": "knowledge",
+      "summary": "Plain-English AI tool definitions."
+    },
+    {
+      "title": "Pricing Index",
+      "url": "https://aitoolsessentials.com/pricing-index/",
+      "type": "knowledge",
+      "summary": "Browse tools by pricing pressure."
+    }
+  ],
+  "tool_reviews": [
+    {
+      "name": "ElevenLabs",
+      "slug": "elevenlabs",
+      "category": "Audio",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/elevenlabs/"
+    },
+    {
+      "name": "Descript",
+      "slug": "descript",
+      "category": "Audio & Video",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/descript/"
+    },
+    {
+      "name": "Make",
+      "slug": "make",
+      "category": "Automation",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/make/"
+    },
+    {
+      "name": "Zapier AI",
+      "slug": "zapier-ai",
+      "category": "Automation",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/zapier-ai/"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n",
+      "category": "Automation",
+      "price": "Free self-hosted + paid cloud",
+      "url": "https://aitoolsessentials.com/tools/n8n/"
+    },
+    {
+      "name": "Adobe Firefly",
+      "slug": "adobe-firefly",
+      "category": "Creative",
+      "price": "Free + paid plans / Adobe plans",
+      "url": "https://aitoolsessentials.com/tools/adobe-firefly/"
+    },
+    {
+      "name": "Leonardo AI",
+      "slug": "leonardo-ai",
+      "category": "Creative",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/leonardo-ai/"
+    },
+    {
+      "name": "Midjourney",
+      "slug": "midjourney",
+      "category": "Creative",
+      "price": "Paid plans",
+      "url": "https://aitoolsessentials.com/tools/midjourney/"
+    },
+    {
+      "name": "Canva AI",
+      "slug": "canva-ai",
+      "category": "Creative & Marketing",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/canva-ai/"
+    },
+    {
+      "name": "Bolt.new",
+      "slug": "bolt-new",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/bolt-new/"
+    },
+    {
+      "name": "Cursor",
+      "slug": "cursor",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/cursor/"
+    },
+    {
+      "name": "GitHub Copilot",
+      "slug": "github-copilot",
+      "category": "Development",
+      "price": "Paid plans",
+      "url": "https://aitoolsessentials.com/tools/github-copilot/"
+    },
+    {
+      "name": "Lovable",
+      "slug": "lovable",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/lovable/"
+    },
+    {
+      "name": "Replit AI",
+      "slug": "replit-ai",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/replit-ai/"
+    },
+    {
+      "name": "v0",
+      "slug": "v0",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/v0/"
+    },
+    {
+      "name": "ChatGPT",
+      "slug": "chatgpt",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/chatgpt/"
+    },
+    {
+      "name": "Claude",
+      "slug": "claude",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/claude/"
+    },
+    {
+      "name": "DeepSeek",
+      "slug": "deepseek",
+      "category": "General AI Assistant",
+      "price": "Free + API pricing",
+      "url": "https://aitoolsessentials.com/tools/deepseek/"
+    },
+    {
+      "name": "Gemini",
+      "slug": "gemini",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/gemini/"
+    },
+    {
+      "name": "Grok",
+      "slug": "grok",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans / X plan availability varies",
+      "url": "https://aitoolsessentials.com/tools/grok/"
+    },
+    {
+      "name": "Meta AI",
+      "slug": "meta-ai",
+      "category": "General AI Assistant",
+      "price": "Free",
+      "url": "https://aitoolsessentials.com/tools/meta-ai/"
+    },
+    {
+      "name": "Mistral Le Chat",
+      "slug": "mistral-le-chat",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/mistral-le-chat/"
+    },
+    {
+      "name": "Copy.ai",
+      "slug": "copy-ai",
+      "category": "Marketing",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/copy-ai/"
+    },
+    {
+      "name": "Jasper",
+      "slug": "jasper",
+      "category": "Marketing",
+      "price": "Paid plans",
+      "url": "https://aitoolsessentials.com/tools/jasper/"
+    },
+    {
+      "name": "Fathom",
+      "slug": "fathom",
+      "category": "Meetings",
+      "price": "Free + paid team plans",
+      "url": "https://aitoolsessentials.com/tools/fathom/"
+    },
+    {
+      "name": "Fireflies.ai",
+      "slug": "fireflies",
+      "category": "Meetings",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/fireflies/"
+    },
+    {
+      "name": "Otter.ai",
+      "slug": "otter-ai",
+      "category": "Meetings",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/otter-ai/"
+    },
+    {
+      "name": "Poe",
+      "slug": "poe",
+      "category": "Model Hub",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/poe/"
+    },
+    {
+      "name": "Gamma",
+      "slug": "gamma",
+      "category": "Presentations",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/gamma/"
+    },
+    {
+      "name": "Airtable AI",
+      "slug": "airtable-ai",
+      "category": "Productivity",
+      "price": "Paid plan availability varies",
+      "url": "https://aitoolsessentials.com/tools/airtable-ai/"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "slug": "microsoft-copilot",
+      "category": "Productivity",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/microsoft-copilot/"
+    },
+    {
+      "name": "Notion AI",
+      "slug": "notion-ai",
+      "category": "Productivity",
+      "price": "Paid add-on / included in some plans",
+      "url": "https://aitoolsessentials.com/tools/notion-ai/"
+    },
+    {
+      "name": "Slack AI",
+      "slug": "slack-ai",
+      "category": "Productivity",
+      "price": "Paid add-on / plan availability varies",
+      "url": "https://aitoolsessentials.com/tools/slack-ai/"
+    },
+    {
+      "name": "Perplexity",
+      "slug": "perplexity",
+      "category": "Research",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/perplexity/"
+    },
+    {
+      "name": "You.com",
+      "slug": "you-com",
+      "category": "Research",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/you-com/"
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "category": "Video",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/heygen/"
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "category": "Video",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/runway/"
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "category": "Video",
+      "price": "Paid plans",
+      "url": "https://aitoolsessentials.com/tools/synthesia/"
+    },
+    {
+      "name": "Grammarly",
+      "slug": "grammarly",
+      "category": "Writing & Productivity",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/grammarly/"
+    },
+    {
+      "name": "AllVideoAI",
+      "slug": "allvideoai",
+      "category": "Video",
+      "price": "Free tier + credit plans from $17/month",
+      "url": "https://aitoolsessentials.com/tools/allvideoai/"
+    }
+  ],
+  "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
+}
