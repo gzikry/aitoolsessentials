@@ -94,13 +94,14 @@
   },
   {
    "tool_slug": "make",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "Make",
+   "availability": "approved_publisher_affiliate",
+   "program_type": "affiliate",
+   "network": "Make direct",
    "official_program_url": "https://www.make.com/en/affiliate",
-   "application_status": "not_applied",
-   "commission_note": "Official page advertises 35% commission for 12 months.",
-   "notes": "Join from a Make account."
+   "application_status": "approved",
+   "commission_note": null,
+   "notes": "Approved 2026-08-23. Partner code aitoolsessentials via make.com register URL.",
+   "affiliate_url": "https://www.make.com/en/register?pc=aitoolsessentials"
   },
   {
    "tool_slug": "notion-ai",
