@@ -28,6 +28,10 @@ def scripts() -> str:
     return '<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script>'
 
 
+def jsonld(data: dict[str, Any]) -> str:
+    return '<script type="application/ld+json">' + json.dumps(data, separators=(",", ":")) + '</script>'
+
+
 def category_top_tools(tools: list[dict[str, Any]], category: str, limit: int = 5) -> list[dict[str, Any]]:
     return sorted([t for t in tools if category.lower() in str(t.get("category", "")).lower()], key=lambda t: float(t.get("rating", 0) or 0), reverse=True)[:limit]
 
@@ -57,7 +61,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     desc = "AIToolsEssentials Premium is a $12/month Whop membership with monthly AI tool research briefs, CSV decision archives, workflow deep-dives, and strategy-only playbooks."
     page = f'''<!doctype html><html lang="en">{head("Premium AI Tool Research Membership", desc, DOMAIN+"/premium/")}<body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium research membership</p><h1>Give subscribers more than access. Give them decisions.</h1><p class="subhead">A $12/month Whop membership for people who want dated research briefs, side-by-side decision archives, workflow playbooks, and pricing/policy alerts before they buy more AI tools.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener" data-whop-checkout="plan_FNXWs3suBFwDN">Subscribe on Whop</a><a class="button button-blue" href="/premium/sample-report.html" style="margin-left:8px">See sample report</a></p><p class="affiliate-inline">Billing, login, cancellation, and member access are handled by Whop. Research and strategy only — no implementation, setup, account access, credentials, or ongoing support.</p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>What members get immediately</span><h2>A real member library from day one.</h2><ul>{deliverable_list}</ul></div><h2>Premium content library</h2><div class="content-hub-grid">{cards}</div><section class="score-card"><span>Scope boundary</span><h2>Premium does not buy rankings or implementation help.</h2><p>Premium is a research membership. It does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores. It does not include setup, integrations, credential handling, or technical support.</p></section></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>What members get immediately</span><h2>A real member library from day one.</h2><ul>{deliverable_list}</ul><p><a class="button button-blue" href="/premium/roadmap.html">View roadmap</a><a class="button button-blue" href="/premium/archive.html" style="margin-left:8px">Archive preview</a><a class="button button-blue" href="/premium/faq.html" style="margin-left:8px">Premium FAQ</a></p></div><h2>Premium content library</h2><div class="content-hub-grid">{cards}</div><section class="score-card"><span>Scope boundary</span><h2>Premium does not buy rankings or implementation help.</h2><p>Premium is a research membership. It does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores. It does not include setup, integrations, credential handling, or technical support.</p></section></div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "index.html").write_text(page)
 
@@ -95,6 +99,24 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
 <section class="scene scene-light content-hub"><div class="article-shell wide"><div class="table-wrap"><table><thead><tr><th>Month</th><th>Drop</th><th>Member files</th><th>Status</th></tr></thead><tbody>{archive_rows}</tbody></table></div><section class="score-card"><span>Access note</span><h2>Full archive access is through Whop.</h2><p>Subscribers receive the actual posts, downloads, and request threads in the Whop member area. This page is a transparent preview, not the gated archive itself.</p></section></div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "archive.html").write_text(archive)
+
+    faq_desc = "Premium membership FAQ for AIToolsEssentials Whop subscribers."
+    faqs = [
+        ("What do I get immediately after subscribing?", "Access is handled through Whop. The day-one member library includes a start-here post, September research brief, CSV tool decision matrix, general AI assistant shortlist, automation pricing decoder, vendor/security questions, and the member request thread."),
+        ("Is Premium a course, community, or consulting service?", "It is a research membership. Premium gives you decision briefs, CSVs, playbooks, and request threads. It does not include implementation, setup, integrations, account access, credential handling, or ongoing technical support."),
+        ("Can Premium vendors pay to change rankings?", "No. Premium does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores. Paid visibility and editorial scoring remain separate."),
+        ("How does billing and cancellation work?", "Billing, login, member access, and cancellation are handled by Whop. The plan is listed at $12/month unless the live checkout states otherwise. Cancel from your Whop account."),
+        ("Are refunds offered?", "No. The current Premium terms state all sales are final and there are no refunds. Review the sample report, roadmap, archive preview, and terms before subscribing."),
+        ("How do member requests work?", "Members can post the workflows they want compared next. Good requests include role, current stack, weekly task, candidate tools, budget, and data constraints."),
+    ]
+    faq_items = "".join(f'<article class="content-hub-card"><h3>{esc(q)}</h3><p>{esc(a)}</p></article>' for q, a in faqs)
+    faq_schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]}
+    product_schema = {"@context":"https://schema.org","@type":"Product","name":"AIToolsEssentials Premium","description":"Monthly AI tool research membership with briefings, CSV decision archives, workflow playbooks, and member-requested deep dives.","brand":{"@type":"Brand","name":"AIToolsEssentials"},"offers":{"@type":"Offer","price":"12","priceCurrency":"USD","availability":"https://schema.org/InStock","url":WHOP_CHECKOUT},"category":"Research membership"}
+    faq = f'''<!doctype html><html lang="en">{head("Premium Membership FAQ", faq_desc, DOMAIN+"/premium/faq.html")}<body>{HEADER}<main>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium FAQ</p><h1>Know exactly what the Whop membership includes.</h1><p class="subhead">Clear answers on deliverables, billing, cancellations, refunds, editorial independence, and scope boundaries before anyone subscribes.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-blue" href="/premium/sample-report.html" style="margin-left:8px">See sample report</a></p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="content-hub-grid">{faq_items}</div><section class="score-card"><span>Before launch</span><h2>Whop still needs the member posts uploaded.</h2><p>The site and content pack are ready. George still needs to upload the prepared posts and CSV files to Whop and run the $12 test transaction before promoting the checkout heavily.</p></section></div></section>
+</main>{FOOTER}{jsonld(faq_schema)}{jsonld(product_schema)}{scripts()}</body></html>'''
+    (out / "faq.html").write_text(faq)
 
 
 def write_csv(path: Path, headers: list[str], rows: list[list[Any]]) -> None:
@@ -261,6 +283,30 @@ Premium is research and strategy only. Do not promise implementation, setup, int
 '''
     (admin / "whop-setup-checklist.md").write_text(checklist)
 
+    readiness = {
+        "updated_at": today,
+        "site_ready": True,
+        "public_pages": ["/premium/", "/premium/sample-report.html", "/premium/roadmap.html", "/premium/archive.html", "/premium/faq.html", "/pricing/", "/checkout/complete/?status=success"],
+        "whop_assets_ready": [
+            "whop-posts-2026-09.md",
+            "files/premium-tool-decision-matrix-2026-09.csv",
+            "files/general-ai-assistant-shortlist-2026-09.csv",
+            "files/automation-pricing-model-decoder-2026-09.csv",
+        ],
+        "george_still_needs_to_do": [
+            "Upload posts from whop-posts-2026-09.md into Whop",
+            "Attach the three CSV files inside the Whop member area",
+            "Pin the start-here post",
+            "Run the $12 Whop test transaction",
+            "Confirm the checkout URL still resolves to the correct product",
+        ],
+        "scope_boundary": "Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support."
+    }
+    (admin / "whop-launch-readiness.json").write_text(json.dumps(readiness, indent=2))
+
+    readiness_md = "# Whop Launch Readiness\n\n" + "## Site-ready public pages\n" + "\n".join(f"- [x] {x}" for x in readiness["public_pages"]) + "\n\n## Whop assets ready\n" + "\n".join(f"- [x] {x}" for x in readiness["whop_assets_ready"]) + "\n\n## George still needs to do in Whop\n" + "\n".join(f"- [ ] {x}" for x in readiness["george_still_needs_to_do"]) + "\n\n## Scope boundary\n" + readiness["scope_boundary"] + "\n"
+    (admin / "whop-launch-readiness.md").write_text(readiness_md)
+
 
 def update_checkout(root: Path) -> None:
     p = root / "checkout" / "complete" / "index.html"
@@ -275,7 +321,7 @@ def update_checkout(root: Path) -> None:
 
 def premium_upsell_module() -> str:
     return f'''<!-- AIT PREMIUM MODULE START -->
-<section class="newsletter-panel premium-conversion-panel"><div><span>Premium research layer</span><h2>Want the member-only decision archive?</h2><p>Premium adds monthly research briefs, CSV decision matrices, workflow playbooks, and member-requested deep dives through Whop.</p><p class="affiliate-inline">$12/month · Whop handles billing and access · research and strategy only.</p></div><div class="newsletter-actions"><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-dark" href="/premium/">See Premium library</a></div></section>
+<section class="newsletter-panel premium-conversion-panel"><div><span>Premium research layer</span><h2>Want the member-only decision archive?</h2><p>Premium adds monthly research briefs, CSV decision matrices, workflow playbooks, and member-requested deep dives through Whop.</p><p class="affiliate-inline">$12/month · Whop handles billing and access · research and strategy only.</p></div><div class="newsletter-actions"><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-dark" href="/premium/">See Premium library</a><a class="button button-dark" href="/premium/faq.html">FAQ</a></div></section>
 <!-- AIT PREMIUM MODULE END -->'''
 
 

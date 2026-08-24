@@ -1,0 +1,27 @@
+{
+  "updated_at": "2026-08-24",
+  "site_ready": true,
+  "public_pages": [
+    "/premium/",
+    "/premium/sample-report.html",
+    "/premium/roadmap.html",
+    "/premium/archive.html",
+    "/premium/faq.html",
+    "/pricing/",
+    "/checkout/complete/?status=success"
+  ],
+  "whop_assets_ready": [
+    "whop-posts-2026-09.md",
+    "files/premium-tool-decision-matrix-2026-09.csv",
+    "files/general-ai-assistant-shortlist-2026-09.csv",
+    "files/automation-pricing-model-decoder-2026-09.csv"
+  ],
+  "george_still_needs_to_do": [
+    "Upload posts from whop-posts-2026-09.md into Whop",
+    "Attach the three CSV files inside the Whop member area",
+    "Pin the start-here post",
+    "Run the $12 Whop test transaction",
+    "Confirm the checkout URL still resolves to the correct product"
+  ],
+  "scope_boundary": "Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support."
+}
