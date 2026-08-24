@@ -1,0 +1,9 @@
+AIToolsEssentials
+
+Site: https://aitoolsessentials.com
+Contact: contact@aitoolsessentials.com
+Purpose: Evidence-first AI tools directory, pricing research, comparisons, and workflow guides.
+Editorial policy: https://aitoolsessentials.com/legal/editorial-methodology.html
+Corrections: https://aitoolsessentials.com/legal/corrections.html
+
+Built and maintained as a static, performance-focused buyer resource.

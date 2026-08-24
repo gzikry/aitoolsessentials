@@ -480,3 +480,22 @@ img { max-width: 100%; height: auto; }
   text-decoration: none;
 }
 .shortlist-empty { border: 1px dashed rgba(94,106,210,.35); border-radius: 18px; padding: 28px; background: rgba(94,106,210,.06); }
+
+
+/* Auto table of contents */
+.auto-toc {
+  max-width: 980px;
+  margin: 0 auto 28px;
+  padding: 14px 16px;
+  border: 1px solid rgba(94,106,210,.16);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 18px 40px rgba(8,9,10,.06);
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.auto-toc span { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: rgba(0,0,0,.48); font-weight: 700; margin-right: 6px; }
+.auto-toc a { color: #4c56b8; text-decoration: none; font-size: 13px; font-weight: 650; padding: 7px 9px; border-radius: 999px; background: rgba(94,106,210,.07); }
+.auto-toc a:hover { background: rgba(94,106,210,.14); }

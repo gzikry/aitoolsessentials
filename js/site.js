@@ -87,3 +87,34 @@
   }
   document.addEventListener('DOMContentLoaded', function () { addButtons(); renderWidget(); });
 })();
+
+
+/* Auto table-of-contents for long guides/comparisons. */
+(function () {
+  function slugify(text) {
+    return text.toLowerCase().replace(/<[^>]+>/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'section';
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var path = location.pathname;
+    var eligible = /\/(articles|comparisons|research|alternatives)\//.test(path) || /free-ai-tools\.html$/.test(path);
+    if (!eligible || document.querySelector('.auto-toc')) return;
+    var headings = Array.prototype.slice.call(document.querySelectorAll('main h2')).filter(function (h) {
+      return h.textContent.trim().length > 3 && !h.closest('.content-hub-card,.directory-card,.footer');
+    }).slice(0, 12);
+    if (headings.length < 4) return;
+    var seen = {};
+    headings.forEach(function (h) {
+      var id = h.id || slugify(h.textContent);
+      if (seen[id]) id += '-' + (++seen[id]); else seen[id] = 1;
+      h.id = id;
+    });
+    var toc = document.createElement('nav');
+    toc.className = 'auto-toc';
+    toc.setAttribute('aria-label', 'Page sections');
+    toc.innerHTML = '<span>On this page</span>' + headings.map(function (h) {
+      return '<a href="#' + h.id + '">' + h.textContent.trim() + '</a>';
+    }).join('');
+    var firstSection = document.querySelector('main > section:nth-of-type(2)') || document.querySelector('main > section');
+    if (firstSection) firstSection.insertBefore(toc, firstSection.firstChild);
+  });
+})();
