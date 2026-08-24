@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import zipfile
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -307,6 +308,28 @@ Premium is research and strategy only. Do not promise implementation, setup, int
     readiness_md = "# Whop Launch Readiness\n\n" + "## Site-ready public pages\n" + "\n".join(f"- [x] {x}" for x in readiness["public_pages"]) + "\n\n## Whop assets ready\n" + "\n".join(f"- [x] {x}" for x in readiness["whop_assets_ready"]) + "\n\n## George still needs to do in Whop\n" + "\n".join(f"- [ ] {x}" for x in readiness["george_still_needs_to_do"]) + "\n\n## Scope boundary\n" + readiness["scope_boundary"] + "\n"
     (admin / "whop-launch-readiness.md").write_text(readiness_md)
 
+    # Deterministic upload bundle for Whop: fixed timestamps keep repeated builds stable.
+    bundle_path = admin / "aitools-premium-whop-upload-pack-2026-09.zip"
+    bundle_members = [
+        (admin / "whop-posts-2026-09.md", "whop-posts-2026-09.md"),
+        (admin / "whop-setup-checklist.md", "whop-setup-checklist.md"),
+        (admin / "whop-launch-readiness.md", "whop-launch-readiness.md"),
+        (admin / "whop-launch-readiness.json", "whop-launch-readiness.json"),
+        (download_dir / "premium-tool-decision-matrix-2026-09.csv", "files/premium-tool-decision-matrix-2026-09.csv"),
+        (download_dir / "general-ai-assistant-shortlist-2026-09.csv", "files/general-ai-assistant-shortlist-2026-09.csv"),
+        (download_dir / "automation-pricing-model-decoder-2026-09.csv", "files/automation-pricing-model-decoder-2026-09.csv"),
+    ]
+    with zipfile.ZipFile(bundle_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
+        for src, arc in bundle_members:
+            info = zipfile.ZipInfo(arc, date_time=(2026, 9, 1, 12, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(info, src.read_bytes())
+    (admin / "whop-upload-pack-manifest.json").write_text(json.dumps({
+        "bundle": bundle_path.name,
+        "files": [arc for _, arc in bundle_members],
+        "note": "Upload the Markdown posts/checklists as Whop posts and attach the CSV files to the member area.",
+    }, indent=2))
+
 
 def update_checkout(root: Path) -> None:
     p = root / "checkout" / "complete" / "index.html"
@@ -334,7 +357,7 @@ def inject_before_main_end(html: str, module: str) -> str:
 
 
 def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
-    targets = [
+    base_targets = [
         'stack-builder.html',
         'cost-calculator.html',
         'compare-shortlist.html',
@@ -345,6 +368,11 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         'weekly/index.html',
         'start-here/index.html',
     ]
+    dynamic_targets = []
+    dynamic_targets.extend(str(p.relative_to(root)) for p in sorted((root / 'tools').glob('*/index.html')))
+    dynamic_targets.extend(str(p.relative_to(root)) for p in sorted((root / 'comparisons').glob('*.html')))
+    # Keep admin/noindex/checkout/legal pages out of the conversion injection path.
+    targets = list(dict.fromkeys(base_targets + dynamic_targets))
     module = premium_upsell_module()
     changed = 0
     for rel in targets:
@@ -352,6 +380,8 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         if not p.exists():
             continue
         old = p.read_text()
+        if 'name="robots" content="noindex' in old:
+            continue
         new = inject_before_main_end(old, module)
         if new != old:
             p.write_text(new)

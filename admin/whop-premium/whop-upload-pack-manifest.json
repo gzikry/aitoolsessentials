@@ -1,0 +1,13 @@
+{
+  "bundle": "aitools-premium-whop-upload-pack-2026-09.zip",
+  "files": [
+    "whop-posts-2026-09.md",
+    "whop-setup-checklist.md",
+    "whop-launch-readiness.md",
+    "whop-launch-readiness.json",
+    "files/premium-tool-decision-matrix-2026-09.csv",
+    "files/general-ai-assistant-shortlist-2026-09.csv",
+    "files/automation-pricing-model-decoder-2026-09.csv"
+  ],
+  "note": "Upload the Markdown posts/checklists as Whop posts and attach the CSV files to the member area."
+}
