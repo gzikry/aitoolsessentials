@@ -66,6 +66,10 @@ generate_learn_hub(root)
 from generate_growth_hubs import generate as generate_growth_hubs
 generate_growth_hubs(root)
 
+from generate_viral_growth import generate as generate_viral_growth
+generate_viral_growth(root, tools, today)
+print('Generated viral growth utilities')
+
 from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')

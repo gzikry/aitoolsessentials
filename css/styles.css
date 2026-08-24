@@ -499,3 +499,43 @@ img { max-width: 100%; height: auto; }
 .auto-toc span { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: rgba(0,0,0,.48); font-weight: 700; margin-right: 6px; }
 .auto-toc a { color: #4c56b8; text-decoration: none; font-size: 13px; font-weight: 650; padding: 7px 9px; border-radius: 999px; background: rgba(94,106,210,.07); }
 .auto-toc a:hover { background: rgba(94,106,210,.14); }
+
+
+/* Viral/share utility surfaces */
+.viral-controls { display:grid; grid-template-columns:repeat(3,minmax(180px,1fr)); gap:14px; margin-top:14px; }
+.viral-controls label, .viral-control label { display:flex; flex-direction:column; gap:7px; font-size:13px; font-weight:700; color:rgba(0,0,0,.62); }
+.viral-controls select, .viral-control input { border:1px solid rgba(94,106,210,.22); border-radius:10px; padding:12px; font:inherit; background:#fff; }
+.viral-result-card { margin-top:28px; padding:28px; border-radius:22px; border:1px solid rgba(94,106,210,.18); background:linear-gradient(180deg,#fff,rgba(94,106,210,.06)); box-shadow:0 24px 70px rgba(8,9,10,.08); }
+.viral-result-card > span, .stack-gallery-block > div > p:first-child { text-transform:uppercase; letter-spacing:.12em; font-size:12px; font-weight:800; color:#5e6ad2; }
+.stack-gallery-block { display:grid; grid-template-columns:minmax(240px,.55fr) 1fr; gap:28px; align-items:start; margin:58px 0; }
+.vendor-badge-preview { display:inline-flex; flex-direction:column; gap:2px; border:1px solid rgba(94,106,210,.28); border-radius:14px; padding:12px 14px; background:linear-gradient(135deg,#08090a,#151626); color:#fff; box-shadow:0 18px 42px rgba(94,106,210,.18); }
+.vendor-badge-preview small { color:rgba(255,255,255,.72); }
+.content-hub-card textarea { width:100%; min-height:84px; border:1px solid rgba(0,0,0,.12); border-radius:10px; padding:10px; font-size:12px; background:#f8f8fb; }
+@media (max-width: 800px) { .viral-controls, .stack-gallery-block { grid-template-columns:1fr; } }
+
+
+/* Stronger shortlist contrast */
+.shortlist-btn { color:#343a8f; border-color:rgba(76,86,184,.42); background:rgba(94,106,210,.12); }
+.shortlist-btn:hover { color:#20276f; border-color:rgba(76,86,184,.72); background:rgba(94,106,210,.20); }
+.content-hub-card label { font-weight:650; color:rgba(0,0,0,.72); }
+.content-hub-card input[type="checkbox"] { accent-color:#5e6ad2; margin-right:7px; }
+
+
+/* Final shortlist contrast hardening */
+button.shortlist-btn, .card-actions button.shortlist-btn {
+  color:#25308f !important;
+  border:1px solid rgba(37,48,143,.55) !important;
+  background:#eef0ff !important;
+  opacity:1 !important;
+}
+button.shortlist-btn:hover, .card-actions button.shortlist-btn:hover { color:#12195f !important; background:#e0e4ff !important; }
+button.shortlist-btn[aria-pressed="true"] { color:#065f46 !important; background:#dcfce7 !important; border-color:rgba(6,95,70,.45) !important; }
+
+
+/* Viral shortlist final visual prominence */
+button.shortlist-btn, .card-actions button.shortlist-btn {
+  color:#1e2a8a !important;
+  border-color:#5e6ad2 !important;
+  background:#e1e6ff !important;
+  box-shadow:0 8px 18px rgba(94,106,210,.13) !important;
+}
