@@ -126,14 +126,18 @@ def software_schema_for_tool(rel: Path, tool: dict):
 def inject(p: Path, schemas: list[dict[str, Any] | None]) -> bool:
     h = p.read_text()
     orig = h
-    h = re.sub(r'\s*<!-- AIT STRUCTURED DATA START -->.*?<!-- AIT STRUCTURED DATA END -->\s*', '\n', h, flags=re.S)
+    # Remove only our previous block, not the whitespace/newline before it.
+    # Earlier this used leading/trailing \s*, which consumed the preceding newline
+    # and caused daily_content_update.py to dirty dozens of generated files with
+    # `<meta...><!-- AIT STRUCTURED DATA START -->` formatting.
+    h = re.sub(r'<!-- AIT STRUCTURED DATA START -->.*?<!-- AIT STRUCTURED DATA END -->\s*', '', h, flags=re.S)
     schemas = [s for s in schemas if s]
     if schemas:
         block = MARKER_START + '\n' + '\n'.join(
             '<script type="application/ld+json">' + json.dumps(s, ensure_ascii=False, separators=(',', ':')) + '</script>'
             for s in schemas
         ) + '\n' + MARKER_END + '\n'
-        h = h.replace('</head>', block + '</head>', 1)
+        h = re.sub(r'\s*</head>', '\n' + block + '</head>', h, count=1)
     if h != orig:
         p.write_text(h)
         return True
