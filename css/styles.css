@@ -413,3 +413,6 @@ a, button { transition: color .15s ease, opacity .15s ease; }
 ::selection { background: rgba(113,112,255,.35); }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .directory-card:hover, .content-hub-card:hover, .button-blue:hover { transform: none; } }
+
+/* Masterpiece pass v2: dark-scene readability */
+.scene-dark p, .scene-dark li { color: rgba(240,242,247,.82); }
