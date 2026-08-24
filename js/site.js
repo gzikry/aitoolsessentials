@@ -18,3 +18,72 @@
     });
   }
 })();
+
+/* No-login shortlist: visitors can save tools while browsing. */
+(function () {
+  var KEY = 'aitoolsessentials.shortlist.v1';
+  function getList() {
+    try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; }
+  }
+  function setList(list) { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 24))); }
+  function slugFromHref(href) {
+    var m = href && href.match(/\/tools\/([^\/]+)\/?(?:[#?].*)?$/);
+    if (!m) m = href && href.match(/(?:^|\/)tools\/([^\/]+)\/?(?:[#?].*)?$/);
+    return m ? m[1] : null;
+  }
+  function nameFromAnchor(a) {
+    var card = a.closest('article, .review-hero, .score-card');
+    var h = card && card.querySelector('h1,h2,h3');
+    return (h ? h.textContent : a.textContent).replace(/\s*review\s*$/i, '').trim();
+  }
+  function isSaved(slug) { return getList().some(function (x) { return x.slug === slug; }); }
+  function save(slug, name, url) {
+    var list = getList().filter(function (x) { return x.slug !== slug; });
+    list.unshift({ slug: slug, name: name, url: url, savedAt: Date.now() });
+    setList(list);
+  }
+  function remove(slug) { setList(getList().filter(function (x) { return x.slug !== slug; })); }
+  function updateButton(btn, slug) {
+    var saved = isSaved(slug);
+    btn.textContent = saved ? 'Saved ✓' : 'Add to shortlist';
+    btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+  }
+  function addButtons() {
+    var anchors = document.querySelectorAll('a[href*="/tools/"], a[href^="tools/"]');
+    var seenCards = new WeakSet();
+    anchors.forEach(function (a) {
+      var slug = slugFromHref(a.getAttribute('href') || a.href);
+      if (!slug || slug === 'index.html') return;
+      var card = a.closest('article');
+      if (!card || seenCards.has(card) || card.querySelector('.shortlist-btn')) return;
+      seenCards.add(card);
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'shortlist-btn';
+      btn.dataset.slug = slug;
+      btn.dataset.url = a.href;
+      btn.dataset.name = nameFromAnchor(a);
+      updateButton(btn, slug);
+      btn.addEventListener('click', function () {
+        if (isSaved(slug)) remove(slug); else save(slug, btn.dataset.name, btn.dataset.url);
+        updateButton(btn, slug);
+        renderWidget();
+      });
+      var actions = card.querySelector('.card-actions') || card;
+      actions.appendChild(btn);
+    });
+  }
+  function renderWidget() {
+    var list = getList();
+    var w = document.getElementById('shortlist-widget');
+    if (!w) {
+      w = document.createElement('a');
+      w.id = 'shortlist-widget';
+      w.href = '/shortlist.html';
+      document.body.appendChild(w);
+    }
+    w.hidden = !list.length;
+    w.textContent = list.length + ' saved tool' + (list.length === 1 ? '' : 's') + ' →';
+  }
+  document.addEventListener('DOMContentLoaded', function () { addButtons(); renderWidget(); });
+})();

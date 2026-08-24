@@ -162,6 +162,7 @@ def ping_indexnow(root):
 generate_media_kit(root)
 ping_indexnow(root)
 
+subprocess.run(['python3', str(root / 'scripts' / 'enhance_structured_data.py')], check=False, capture_output=True, text=True)
 # Apply approved affiliate tracking URLs last so regeneration cannot wipe them
 import subprocess as _sp
 _r=_sp.run(['python3','scripts/wire_affiliate_links.py'],capture_output=True,text=True,cwd=str(root))
