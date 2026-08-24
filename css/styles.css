@@ -45,7 +45,7 @@ a:hover { text-decoration: underline; }
   padding: 72px 28px 86px;
 }
 .hero-copy { text-align: center; justify-self: end; max-width: 600px; }
-.kicker { margin: 0 0 12px; color: #86868b; font-size: 21px; line-height: 1.19; font-weight: 400; letter-spacing: .231px; }
+.kicker { margin: 0 0 12px; color: #8a8f98; font-size: 21px; line-height: 1.19; font-weight: 400; letter-spacing: .231px; }
 .kicker.light { color: #6e6e73; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { margin-bottom: 12px; font-size: clamp(48px, 7vw, 78px); line-height: 1.02; font-weight: 600; letter-spacing: -1.1px; }
@@ -404,3 +404,12 @@ code { background: #fff; border-radius: 5px; padding: 2px 5px; }
 .footer a{color:rgba(0,0,0,.72)}
 .benchmark-policy p,.benchmark-policy li{font-size:15px;line-height:1.7}
 .pricing-flag.live{position:static;display:inline-block;margin-bottom:8px}
+
+/* Masterpiece pass: interaction polish */
+a, button { transition: color .15s ease, opacity .15s ease; }
+:focus-visible { outline: 2px solid var(--violet); outline-offset: 2px; border-radius: 4px; }
+.text-link { font-weight: 500; }
+.text-link:hover { color: var(--violet); }
+::selection { background: rgba(113,112,255,.35); }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .directory-card:hover, .content-hub-card:hover, .button-blue:hover { transform: none; } }
