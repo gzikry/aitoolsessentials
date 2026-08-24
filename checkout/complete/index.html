@@ -42,8 +42,7 @@
     </section>
 
     <section class="scene scene-light intro-strip" id="next-steps" hidden>
-      <p><strong>What happens next:</strong> your Whop receipt arrives by email within a minute, and your Premium access is tied to that same email. Bookmark
-      <a href="/pricing/">aitoolsessentials.com/pricing</a> — member links ship from there.</p>
+      <p><strong>What happens next:</strong> your Whop receipt arrives by email within a minute, and your Premium access is tied to that same email. Open your Whop account for the member library, then bookmark <a href="/premium/">aitoolsessentials.com/premium</a> for previews and monthly context.</p>
     </section>
   </main>
 
@@ -74,8 +73,8 @@
     next.hidden = false;
     if (window.aitTrack) window.aitTrack("checkout_complete", { plan: params.get("planId") || "premium-monthly" });
     actions.innerHTML =
-      '<a class="button button-blue" href="../../tools/index.html">Explore the tools database</a>' +
-      '<a class="button button-ghost-dark" href="../../articles/index.html">Browse guides</a>';
+      '<a class="button button-blue" href="https://whop.com/hub" rel="external noopener">Open Whop member hub</a>' +
+      '<a class="button button-ghost-dark" href="../../premium/">Preview Premium library</a>';
   } else if (params.get("status") === "error") {
     kicker.textContent = "Checkout didn't complete";
     heading.textContent = "No charge was made.";

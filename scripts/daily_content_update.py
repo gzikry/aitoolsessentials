@@ -82,6 +82,10 @@ from generate_resource_library import generate as generate_resource_library
 generate_resource_library(root, tools, today)
 print('Generated resource library')
 
+from generate_premium_membership import generate as generate_premium_membership
+generate_premium_membership(root, tools, today)
+print('Generated premium membership pages and Whop pack')
+
 from generate_site_discovery import generate as generate_site_discovery
 generate_site_discovery(root, tools, today)
 print('Generated site discovery utilities')
