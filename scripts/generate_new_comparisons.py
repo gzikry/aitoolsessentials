@@ -83,6 +83,12 @@ NEW_COMPARISONS = {
         'subhead': 'Long-document reasoning and careful drafting against Google-ecosystem integration and multimodal breadth.',
         'bench_keys': ['arena_text_snapshot'],
     },
+    'jasper-vs-copy-ai.html': {
+        'kicker': 'Marketing comparison',
+        'a': 'jasper', 'b': 'copy-ai',
+        'subhead': 'Enterprise-focused marketing drafting against a template-first copy generator — pricing models, brand voice, and workflow fit compared.',
+        'bench_keys': [],
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
