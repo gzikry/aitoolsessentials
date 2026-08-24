@@ -63,6 +63,8 @@ generate_faq_articles(root)
 
 from generate_learn_hub import generate as generate_learn_hub
 generate_learn_hub(root)
+from generate_growth_hubs import generate as generate_growth_hubs
+generate_growth_hubs(root)
 
 from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
