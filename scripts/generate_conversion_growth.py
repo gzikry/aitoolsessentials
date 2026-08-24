@@ -15,12 +15,22 @@ FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href=
 
 ALT_DEFS = {
     "chatgpt": ["claude", "gemini", "perplexity", "deepseek", "mistral-le-chat"],
+    "claude": ["chatgpt", "gemini", "perplexity", "mistral-le-chat", "deepseek"],
+    "gemini": ["chatgpt", "claude", "perplexity", "microsoft-copilot"],
     "jasper": ["copy-ai", "chatgpt", "claude", "grammarly", "canva-ai"],
     "zapier-ai": ["make", "n8n", "airtable-ai", "slack-ai"],
+    "make": ["zapier-ai", "n8n", "airtable-ai", "slack-ai"],
     "midjourney": ["leonardo-ai", "adobe-firefly", "canva-ai"],
+    "canva-ai": ["adobe-firefly", "leonardo-ai", "midjourney"],
     "perplexity": ["you-com", "claude", "chatgpt", "gemini"],
     "notion-ai": ["airtable-ai", "slack-ai", "microsoft-copilot", "chatgpt"],
     "elevenlabs": ["descript", "heygen", "synthesia", "allvideoai"],
+    "descript": ["elevenlabs", "allvideoai", "heygen", "synthesia"],
+    "github-copilot": ["cursor", "replit-ai", "v0", "bolt-new", "lovable"],
+    "replit-ai": ["cursor", "github-copilot", "bolt-new", "v0"],
+    "grammarly": ["chatgpt", "claude", "jasper", "copy-ai"],
+    "runway": ["allvideoai", "heygen", "synthesia", "descript"],
+    "synthesia": ["heygen", "allvideoai", "descript", "elevenlabs"],
     "cursor": ["github-copilot", "replit-ai", "v0", "bolt-new", "lovable"],
 }
 
@@ -84,6 +94,93 @@ def generate_changelog(root: Path, tools: list[dict[str, Any]], today: str) -> N
     out.parent.mkdir(exist_ok=True)
     out.write_text(page)
 
+
+USE_CASE_DEFS = [
+    ("best-ai-tools-for-content-creators", "Best AI tools for content creators", ["Creative", "Audio", "Video", "Marketing"], "Plan, create, edit, voice, and repurpose content with a practical AI creator stack."),
+    ("best-ai-tools-for-research", "Best AI tools for research", ["Research", "General AI Assistant"], "Find source-backed AI tools for research, synthesis, citations, and document analysis."),
+    ("best-ai-tools-for-meetings", "Best AI tools for meetings", ["Meetings", "Audio"], "Compare AI meeting tools for transcription, summaries, action items, and follow-up."),
+    ("best-ai-tools-for-automation", "Best AI tools for automation", ["Automation"], "Build workflows, lead routing, internal operations, and AI-assisted automations."),
+    ("best-ai-tools-for-coding", "Best AI tools for coding", ["Development"], "Compare AI coding assistants, app builders, IDE copilots, and prototyping tools."),
+    ("best-ai-tools-for-students", "Best AI tools for students", ["General AI Assistant", "Research", "Creative"], "Free-first AI tools for studying, research, presentations, notes, and responsible drafting."),
+    ("best-ai-tools-for-marketers", "Best AI tools for marketers", ["Creative", "Marketing", "Writing", "Automation"], "AI tools for campaigns, copy, creative assets, research, and workflow automation."),
+    ("best-ai-tools-for-sales-teams", "Best AI tools for sales teams", ["Automation", "Meetings", "Productivity"], "AI tools for call notes, lead follow-up, CRM workflows, and sales enablement."),
+]
+
+PROMOTION_TARGETS = [
+    ("Product Hunt", "Launch as a free AI stack builder and AI tools directory."),
+    ("Indie Hackers", "Share the build story and revenue-site angle."),
+    ("r/artificial", "Soft-share the stack builder; avoid spammy affiliate framing."),
+    ("r/Entrepreneur", "Position as a free AI stack/cost calculator for small businesses."),
+    ("r/freelance", "Share the free AI stack for freelancers page."),
+    ("LinkedIn", "Founder/operator post about reducing AI subscription sprawl."),
+    ("X/Twitter", "Thread: the practical free-first AI stack by role."),
+    ("AI newsletters", "Pitch the Stack Builder + cost calculator as a free utility."),
+]
+
+def generate_use_case_pages(root: Path, tools: list[dict[str, Any]]) -> None:
+    out = root / "use-cases"
+    out.mkdir(exist_ok=True)
+    index_cards = []
+    for slug, title, needles, desc in USE_CASE_DEFS:
+        selected = []
+        for t in tools:
+            hay = (t.get("category", "") + " " + t.get("best_for", "") + " " + t.get("summary", "")).lower()
+            if any(n.lower() in hay for n in needles):
+                selected.append(t)
+        selected = sorted(selected, key=lambda t: float(t.get("rating", 0) or 0), reverse=True)[:10]
+        cards = "".join(tool_card(t) for t in selected)
+        page = f'<!doctype html><html lang="en">{head(title+" | AIToolsEssentials", desc, DOMAIN+"/use-cases/"+slug+".html")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Use-case guide</p><h1>{esc(title)}</h1><p class="subhead">{esc(desc)}</p><p><a class="button button-blue" href="/stack-builder.html">Generate a stack</a><a class="button button-blue" href="/cost-calculator.html" style="margin-left:8px">Estimate cost</a></p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Decision framework</span><p>Start with a workflow you do every week, then compare cost, privacy posture, collaboration needs, and export limits before paying annually.</p></div><div class="content-hub-grid">{cards}</div><h2>Next steps</h2><div class="content-hub-grid"><article class="content-hub-card"><h3>Build a full stack</h3><p>Use the Stack Builder to combine tools across categories.</p><a class="button button-blue small" href="/stack-builder.html">Open Stack Builder</a></article><article class="content-hub-card"><h3>Compare cost</h3><p>Estimate the monthly cost before your tool stack sprawls.</p><a class="button button-blue small" href="/cost-calculator.html">Open calculator</a></article></div></div></section></main>{FOOTER}{scripts()}</body></html>'
+        (out / f"{slug}.html").write_text(page)
+        index_cards.append(f'<article class="content-hub-card"><span>Use case</span><h3><a href="/use-cases/{slug}.html">{esc(title)}</a></h3><p>{esc(desc)}</p><a class="button button-blue small" href="/use-cases/{slug}.html">Open guide</a></article>')
+    index = f'<!doctype html><html lang="en">{head("AI Tool Use-Case Guides", "Browse AI tools by job to be done: content, research, meetings, automation, coding, students, marketing, and sales.", DOMAIN+"/use-cases/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Use cases</p><h1>Find AI tools by job, not hype.</h1><p class="subhead">Role and workflow-specific guides that route you to reviews, stacks, and cost checks.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="content-hub-grid">{"".join(index_cards)}</div></div></section></main>{FOOTER}{scripts()}</body></html>'
+    (out / "index.html").write_text(index)
+
+def generate_launch_kit(root: Path) -> None:
+    posts = {
+        "Product Hunt tagline": "Find your practical AI stack by role, budget, and workflow.",
+        "Product Hunt short description": "AIToolsEssentials helps people compare AI tools, generate shareable AI stacks, estimate subscription cost, and avoid paying for the wrong tools.",
+        "Maker comment": "I built AIToolsEssentials because AI tool discovery is noisy. The site now includes reviewed tools, alternatives guides, a free-first stack builder, cost calculator, shortlist comparison, and transparent editorial policies.",
+        "X thread opener": "Most people do not need more AI tools. They need the right stack for their actual workflow. I built a free AI Stack Builder to help with that:",
+        "LinkedIn post": "AI subscription sprawl is real. AIToolsEssentials now lets you generate a role-specific AI stack, download a share card, estimate monthly cost, and compare alternatives before paying.",
+        "Reddit post": "I made a free AI stack generator that suggests tools by role, budget, and workflow style. Would love feedback on what you would swap in the stacks.",
+        "HN title": "Show HN: A free AI stack builder and cost calculator for choosing AI tools",
+    }
+    cards = "".join(f'<article class="content-hub-card"><span>Launch copy</span><h3>{esc(k)}</h3><textarea readonly>{esc(v)}</textarea></article>' for k,v in posts.items())
+    targets = "".join(f'<article class="content-hub-card"><h3>{esc(name)}</h3><p>{esc(note)}</p></article>' for name,note in PROMOTION_TARGETS)
+    page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Launch Kit", "Ready-to-use launch copy, channel positioning, and promotion targets for AIToolsEssentials.", DOMAIN+"/launch-kit/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Launch kit</p><h1>Promote the Stack Builder without starting from blank copy.</h1><p class="subhead">Ready-to-use Product Hunt, X, LinkedIn, Reddit, and newsletter copy for distribution.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><h2>Copy-ready launch assets</h2><div class="content-hub-grid">{cards}</div><h2>Promotion targets</h2><div class="content-hub-grid">{targets}</div><div class="score-card"><span>Recommended launch route</span><ol><li>Post the Stack Builder and free freelancer stack first.</li><li>Ask for swaps/feedback, not clicks.</li><li>Use traffic data to expand the winning stack/use-case pages.</li></ol></div></div></section></main>{FOOTER}{scripts()}</body></html>'
+    out = root / "launch-kit" / "index.html"
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(page)
+
+def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
+    items = [
+        ("AI Stack Builder", "/stack-builder.html", "Generate a shareable AI stack by role, budget, and workflow."),
+        ("AI Tool Cost Calculator", "/cost-calculator.html", "Estimate monthly AI stack cost and find lower-cost swaps."),
+        ("AI tools worth testing this week", "/weekly/", "Weekly public shortlist of tools worth testing."),
+        ("Editorial changelog", "/changelog/", "Transparent update log for site and review improvements."),
+        ("Get reviewed", "/get-reviewed/", "Vendor submission and editorial-boundary guide."),
+    ]
+    def feed(title, link, desc, feed_items):
+        rows = []
+        for name, path, summary in feed_items:
+            rows.append(f'<item><title>{esc(name)}</title><link>{DOMAIN}{path}</link><guid>{DOMAIN}{path}</guid><pubDate>{today} 12:00:00 -0700</pubDate><description>{esc(summary)}</description></item>')
+        return f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{esc(title)}</title><link>{DOMAIN}{link}</link><description>{esc(desc)}</description>{"".join(rows)}</channel></rss>\n'
+    (root / "feed.xml").write_text(feed("AIToolsEssentials updates", "/", "AI tools directory updates, stack utilities, and buyer guides.", items))
+    (root / "weekly" / "feed.xml").write_text(feed("AIToolsEssentials weekly shortlist", "/weekly/", "Weekly AI tools worth testing.", [items[2]]))
+    (root / "changelog" / "feed.xml").write_text(feed("AIToolsEssentials changelog", "/changelog/", "Editorial and product update log.", [items[3]]))
+
+def postprocess_related_next_steps(root: Path) -> None:
+    marker = "<!-- AIT RELATED NEXT STEPS START -->"
+    targets = list((root / "alternatives").glob("*-alternatives.html")) + list((root / "use-cases").glob("*.html")) + list((root / "stacks").glob("*.html"))
+    for p in targets:
+        if p.name == "index.html":
+            continue
+        html = p.read_text()
+        if marker in html:
+            continue
+        block = f'\n{marker}\n<section class="score-card related-next-steps"><span>Related next steps</span><h2>Turn this page into a decision.</h2><p><a class="button button-blue" href="/stack-builder.html">Generate stack</a><a class="button button-blue" href="/cost-calculator.html" style="margin-left:8px">Estimate cost</a><a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p></section>\n<!-- AIT RELATED NEXT STEPS END -->\n'
+        html = html.replace("</main>", block + "</main>", 1)
+        p.write_text(html)
 
 def generate_js(root: Path) -> None:
     js = r'''
@@ -171,15 +268,20 @@ def postprocess(root: Path, tools: list[dict[str, Any]]) -> None:
         p.write_text(html)
 
 
+    postprocess_related_next_steps(root)
+
 def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
     tools = tools or json.loads((root / "data/tools.json").read_text())
     today = today or datetime.today().strftime("%Y-%m-%d")
     generate_alternative_pages(root, tools)
+    generate_use_case_pages(root, tools)
+    generate_launch_kit(root)
     generate_get_reviewed(root)
     generate_changelog(root, tools, today)
+    generate_feeds(root, tools, today)
     generate_js(root)
     generate_css(root)
-    return 11
+    return 30
 
 
 if __name__ == "__main__":

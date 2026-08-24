@@ -23,6 +23,17 @@ STACK_PAGE_DEFS = [
     ("ai-stack-for-researchers", "AI stack for researchers", "researcher", "free", "technical", "A source-first AI stack for research, synthesis, note capture, and writing support."),
     ("ai-stack-for-students", "AI stack for students", "teacher", "free", "low-friction", "A free-first student AI stack for studying, research, notes, presentations, and responsible drafting."),
     ("ai-stack-for-real-estate-agents", "AI stack for real estate agents", "small-business", "balanced", "low-friction", "A practical AI stack for listing copy, lead routing, follow-up reminders, visuals, and client communications."),
+
+    ("ai-stack-for-marketers", "AI stack for marketers", "agency", "balanced", "creative", "A practical AI stack for campaign research, content production, creative assets, and marketing automation."),
+    ("ai-stack-for-sales-teams", "AI stack for sales teams", "small-business", "balanced", "low-friction", "A sales-team AI stack for meeting notes, lead follow-up, prospect research, and lightweight automation."),
+    ("ai-stack-for-recruiters", "AI stack for recruiters", "small-business", "balanced", "low-friction", "An AI stack for recruiters handling research, candidate notes, outreach drafts, scheduling summaries, and internal workflows."),
+    ("ai-stack-for-lawyers", "AI stack for lawyers", "researcher", "balanced", "technical", "A careful AI stack for legal research support, document review, notes, and drafting workflows with human verification."),
+    ("ai-stack-for-accountants", "AI stack for accountants", "small-business", "balanced", "technical", "An AI stack for accountants working with client notes, spreadsheet analysis, document drafting, and operations automation."),
+    ("ai-stack-for-coaches", "AI stack for coaches", "freelancer", "balanced", "low-friction", "A coach-friendly AI stack for session notes, content, client follow-up, presentations, and lightweight automation."),
+    ("ai-stack-for-podcasters", "AI stack for podcasters", "creator", "balanced", "creative", "An AI stack for podcasters handling recording notes, transcript editing, voice assets, clips, and repurposed content."),
+    ("ai-stack-for-ecommerce-stores", "AI stack for ecommerce stores", "small-business", "balanced", "low-friction", "An ecommerce AI stack for product copy, support workflows, marketing assets, and operational automation."),
+    ("ai-stack-for-startup-founders", "AI stack for startup founders", "small-business", "balanced", "technical", "A founder AI stack for research, prototypes, pitch assets, operations, and customer follow-up."),
+    ("ai-stack-for-nonprofits", "AI stack for nonprofits", "freelancer", "free", "low-friction", "A free-first AI stack for nonprofits handling grant drafts, outreach, design, research, and meeting summaries."),
 ]
 
 
