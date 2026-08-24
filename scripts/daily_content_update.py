@@ -74,6 +74,10 @@ from generate_conversion_growth import generate as generate_conversion_growth
 generate_conversion_growth(root, tools, today)
 print('Generated conversion growth utilities')
 
+from generate_site_discovery import generate as generate_site_discovery
+generate_site_discovery(root, tools, today)
+print('Generated site discovery utilities')
+
 from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')
@@ -184,3 +188,7 @@ print('Injected review-page stack modules')
 from generate_conversion_growth import postprocess as _conversion_postprocess
 _conversion_postprocess(root, tools)
 print('Injected conversion growth post-process modules')
+
+from generate_site_discovery import postprocess as _site_discovery_postprocess
+_site_discovery_postprocess(root, tools, today)
+print('Injected site discovery head/status modules')

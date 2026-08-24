@@ -1,0 +1,19 @@
+{
+  "site": "AIToolsEssentials",
+  "domain": "https://aitoolsessentials.com",
+  "last_generated": "2026-08-24",
+  "tools_tracked": 40,
+  "html_pages": 222,
+  "feeds": [
+    "/feed.xml",
+    "/weekly/feed.xml",
+    "/changelog/feed.xml"
+  ],
+  "core_utilities": [
+    "/stack-builder.html",
+    "/tool-finder.html",
+    "/cost-calculator.html",
+    "/compare-shortlist.html"
+  ],
+  "editorial_boundaries": "Affiliate/sponsor relationships do not change editorial scoring; corrections are verified against official sources before publication."
+}

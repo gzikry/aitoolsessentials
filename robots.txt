@@ -3,3 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /checkout/
 Sitemap: https://aitoolsessentials.com/sitemap.xml
+Sitemap: https://aitoolsessentials.com/feed.xml

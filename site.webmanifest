@@ -1,0 +1,50 @@
+{
+  "name": "AIToolsEssentials",
+  "short_name": "AI Tools",
+  "description": "Find, compare, shortlist, and estimate the cost of practical AI tools.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#08090a",
+  "theme_color": "#5e6ad2",
+  "categories": [
+    "productivity",
+    "business",
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "/assets/aitools-bot-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Stack Builder",
+      "url": "/stack-builder.html",
+      "description": "Generate a practical AI stack."
+    },
+    {
+      "name": "Tool Finder",
+      "url": "/tool-finder.html",
+      "description": "Filter AI tools by job, budget, and buyer."
+    },
+    {
+      "name": "Cost Calculator",
+      "url": "/cost-calculator.html",
+      "description": "Estimate monthly AI stack cost."
+    },
+    {
+      "name": "Free AI Tools",
+      "url": "/free-ai-tools.html",
+      "description": "Browse free and freemium AI tools."
+    }
+  ]
+}
