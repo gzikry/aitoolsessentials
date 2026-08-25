@@ -241,5 +241,57 @@
   "notes": [
    "n8n gives maximum control: your servers, your model keys, no per-task markup."
   ]
+ },
+ "midjourney": {
+  "as_of": "2026-08-25",
+  "models": [
+   {
+    "model": "Midjourney web + Discord generation",
+    "role": "Aesthetic image generation and style exploration",
+    "context": "image prompt workflow",
+    "pricing": "Basic/Standard/Pro/Mega tiers; GPU-time based"
+   },
+   {
+    "model": "V7 generation pipeline",
+    "role": "Default high-aesthetic image model family",
+    "context": "image generation",
+    "pricing": "Plan-limited fast/relaxed GPU usage"
+   },
+   {
+    "model": "Personalization/style references",
+    "role": "Maintain visual direction across campaigns",
+    "context": "style refs + image refs",
+    "pricing": "included by plan limits"
+   }
+  ],
+  "notes": [
+   "Midjourney is strongest when visual taste matters more than design-suite editing, templates, or team publishing."
+  ]
+ },
+ "canva-ai": {
+  "as_of": "2026-08-25",
+  "models": [
+   {
+    "model": "Magic Studio / Magic Media",
+    "role": "Image/video generation inside Canva projects",
+    "context": "design documents",
+    "pricing": "Free limited; Pro/Teams unlock higher usage"
+   },
+   {
+    "model": "Magic Design + Brand Kit",
+    "role": "Turn prompts/assets into editable social posts, slides, documents",
+    "context": "Canva templates",
+    "pricing": "Pro/Teams feature set"
+   },
+   {
+    "model": "Canva Teams workflows",
+    "role": "Brand approvals, collaboration, publishing",
+    "context": "workspace",
+    "pricing": "Per-seat team pricing"
+   }
+  ],
+  "notes": [
+   "Canva AI is strongest when the output must become editable, on-brand collateral rather than a standalone generated image."
+  ]
  }
 }

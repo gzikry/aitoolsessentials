@@ -98,6 +98,10 @@ from generate_pricing_watch import generate as generate_pricing_watch
 generate_pricing_watch(root, tools, today)
 print('Generated pricing watch page')
 
+from generate_verified_deals import generate as generate_verified_deals
+generate_verified_deals(root)
+print('Generated verified deals section')
+
 
 from generate_site_discovery import generate as generate_site_discovery
 generate_site_discovery(root, tools, today)

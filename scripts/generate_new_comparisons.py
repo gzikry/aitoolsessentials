@@ -83,6 +83,24 @@ NEW_COMPARISONS = {
         'subhead': 'Long-document reasoning and careful drafting against Google-ecosystem integration and multimodal breadth.',
         'bench_keys': ['arena_text_snapshot'],
     },
+    'claude-vs-cursor.html': {
+        'kicker': 'Coding comparison',
+        'a': 'claude', 'b': 'cursor',
+        'subhead': 'A frontier assistant for coding and documents against an AI-native editor with Grok 4.6, Composer 2.5, agents, and Bugbot.',
+        'bench_keys': ['arena_text_snapshot', 'coding_agent_snapshot'],
+    },
+    'midjourney-vs-canva-ai.html': {
+        'kicker': 'Design comparison',
+        'a': 'midjourney', 'b': 'canva-ai',
+        'subhead': 'Aesthetic image generation against a full design suite with Magic Studio, templates, brand kits, and team publishing.',
+        'bench_keys': [],
+    },
+    'chatgpt-vs-perplexity.html': {
+        'kicker': 'Research comparison',
+        'a': 'chatgpt', 'b': 'perplexity',
+        'subhead': 'Broad assistant capability against citation-first web research and answer search.',
+        'bench_keys': ['arena_text_snapshot'],
+    },
     'jasper-vs-copy-ai.html': {
         'kicker': 'Marketing comparison',
         'a': 'jasper', 'b': 'copy-ai',
@@ -141,7 +159,7 @@ def generate(root: Path) -> int:
     bench = json.loads((root/'data/benchmarks.json').read_text())
     made = 0
     for fname, spec in NEW_COMPARISONS.items():
-        slugs = [spec['a']] + ([spec['c']] if spec.get('c') else [])
+        slugs = [spec['a'], spec['b']] + ([spec['c']] if spec.get('c') else [])
         names = [tools[s]['name'] for s in slugs]
         title = fname.replace('.html','').replace('-', ' ').title().replace('Vs','vs').replace('N8N','n8n')
         rows = ''

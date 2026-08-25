@@ -124,6 +124,38 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         if new_s != s:
             t.write_text(new_s)
             stats["affiliate_modules"] += 1
+
+
+    # ---- lead magnet module on homepage + high-intent utilities ----
+    L_MARK_S = "<!-- AIT LEAD MAGNET START -->"
+    L_MARK_E = "<!-- AIT LEAD MAGNET END -->"
+    L_RE = re.compile(re.escape(L_MARK_S) + r".*?" + re.escape(L_MARK_E) + r"\n?", re.S)
+    lead_module = (
+        f"{L_MARK_S}<section class=\"newsletter-panel\"><div><span>Free buyer checklist</span>"
+        "<h2>Download the AI Stack Decision Checklist</h2>"
+        "<p>Print this one-page worksheet before buying another AI subscription. It helps you score overlap, cost, trial results, and cancellation risk.</p>"
+        "<p class=\"affiliate-inline\">No signup wall yet — use it now, then come back to Premium for monthly decision matrices and price alerts.</p></div>"
+        "<div class=\"newsletter-actions\"><a class=\"button button-blue\" href=\"/downloads/ai-stack-decision-checklist.pdf\">Download PDF</a>"
+        "<a class=\"button button-dark\" href=\"/downloads/ai-stack-decision-checklist.html\">Open HTML</a></div></section>"
+        f"{L_MARK_E}"
+    )
+    lead_targets = [root / "index.html", root / "tool-finder.html", root / "stack-builder.html", root / "cost-calculator.html"]
+    for t in lead_targets:
+        if not t.exists():
+            continue
+        s = t.read_text()
+        if L_MARK_S in s:
+            new_s = L_RE.sub(lambda _m: lead_module, s)
+        else:
+            i = s.rfind("</main>")
+            if i == -1:
+                continue
+            new_s = s[:i] + lead_module + "\n" + s[i:]
+        if new_s != s:
+            t.write_text(new_s)
+            stats.setdefault("lead_modules", 0)
+            stats["lead_modules"] += 1
+
     return stats
 
 

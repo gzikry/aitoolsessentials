@@ -9,6 +9,9 @@ COMPARISONS = {
     'claude-vs-grok.html': ['claude', 'grok'],
     'cursor-vs-github-copilot.html': ['cursor', 'github-copilot'],
     'perplexity-vs-chatgpt.html': ['perplexity', 'chatgpt'],
+    'chatgpt-vs-perplexity.html': ['chatgpt', 'perplexity'],
+    'claude-vs-cursor.html': ['claude', 'cursor'],
+    'midjourney-vs-canva-ai.html': ['midjourney', 'canva-ai'],
     'zapier-vs-make-vs-n8n.html': ['zapier-ai', 'make', 'n8n'],
 }
 

@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-08-19",
-  "reviewed_date": "2026-08-24",
+  "reviewed_date": "2026-08-25",
   "policy": {
     "title": "Benchmark evidence policy",
     "summary": "Benchmarks are supporting evidence, not our final ranking. We identify the exact model/version, source, snapshot date and harness. Product scores are not treated as model scores, and results from different harness versions are not compared directly.",
@@ -187,6 +187,19 @@
       1,
       4,
       5
+    ],
+    "Design": [
+      7,
+      5
+    ],
+    "Productivity": [
+      1,
+      4,
+      5
+    ],
+    "Meetings": [
+      9,
+      5
     ]
   },
   "coding_agent_snapshot": [
@@ -216,6 +229,38 @@
       "reason": "No trustworthy independent public cross-vendor benchmark currently evaluates Synthesia as an end-user product under matched conditions.",
       "method_source_ids": [
         8
+      ]
+    },
+    {
+      "tool_slug": "midjourney",
+      "reason": "No trustworthy independent public benchmark should be treated as a full-product score for Midjourney; image arenas evaluate exact model outputs under matched prompts only.",
+      "method_source_ids": [
+        7,
+        5
+      ]
+    },
+    {
+      "tool_slug": "canva-ai",
+      "reason": "No trustworthy independent benchmark evaluates Canva AI as a full end-to-end design-suite product with templates, brand kit, collaboration, and publishing workflow.",
+      "method_source_ids": [
+        7,
+        5
+      ]
+    },
+    {
+      "tool_slug": "otter-ai",
+      "reason": "No trustworthy independent public cross-vendor benchmark evaluates Otter.ai as an end-user meeting recorder under matched audio, accent, consent, and summary conditions.",
+      "method_source_ids": [
+        9,
+        5
+      ]
+    },
+    {
+      "tool_slug": "fireflies",
+      "reason": "No trustworthy independent public cross-vendor benchmark evaluates Fireflies.ai as an end-user meeting recorder under matched audio, accent, CRM, and team-collaboration conditions.",
+      "method_source_ids": [
+        9,
+        5
       ]
     }
   ]
