@@ -110,3 +110,53 @@ prioritizing conversion quality over raw clicks. Plausible analytics available f
 > promotion. We never fabricate test results.
 
 ---
+
+
+## 4. Grammarly application outcome (2026-08-25)
+
+**Result: denied.** Grammarly's affiliate program routes through Impact, and our Impact publisher account was already rejected — so the Grammarly denial is a downstream effect of the same early-traffic gate, not a problem with our answers.
+
+**Implication:** the prepared answers were not wasted. They are reusable verbatim for:
+1. The **Impact reapplication** once we hit ~20–30 visits/day (which would unlock Grammarly + every other Impact-hosted program at once: ClickUp, Notion partners, and more).
+2. Any direct or PartnerStack-hosted programs.
+
+**Current approved monetization remains:**
+- ElevenLabs (direct): https://try.elevenlabs.io/xs6witq7izqe
+- Make.com (partner link): https://www.make.com/en/register?pc=aitoolsessentials
+
+**Next direct-program targets (no Impact dependency):**
+- Descript — PartnerStack
+- Jasper — FirstPromoter (check current host)
+- Other vendors with in-house/PartnerStack/FirstPromoter/Tapfiliate programs
+
+Priority order: prepare Jasper and Descript application packs next.
+
+
+## 5. Jasper application pack (FirstPromoter) — ready to submit
+
+**Where:** https://jasper.ai — affiliate application (FirstPromoter-hosted; no Impact dependency)
+**Commission:** ~25% recurring for first 12 months of a referred subscription, rising to 30% at volume (verify in portal).
+
+**Paste-ready answers:**
+
+- **Promotion method:** Editorial review page with verified pricing and honest pros/cons (aitoolsessentials.com/tools/jasper/), plus comparison pages vs alternatives, buyer guides for marketers and agencies, and an AI cost calculator that routes budget-conscious readers to the right plan.
+- **Audience:** Early-stage audience of founders, freelancers, marketing operators, and small teams researching which AI tools to pay for. Traffic skews toward decision-stage searches ("Jasper vs Copy.ai", "best AI writing tools").
+- **Why we convert:** Our readers arrive already comparing paid plans. We publish cons and cancellation-risk notes, which builds the trust that drives trial signups.
+- **Traffic stage:** New site, growing organic traffic. Happy to share Plausible/GSC screenshots on request.
+- **FTC compliance:** All affiliate links carry rel="sponsored nofollow" and sitewide disclosure.
+
+---
+
+## 6. Descript application pack (PartnerStack) — ready to submit
+
+**Where:** https://www.descript.com/affiliate → PartnerStack application form (dash.partnerstack.com, company "descriptinc")
+**Commission:** $25 flat per new subscriber (per public listings; verify in portal). Review can take up to 30 days.
+**Note:** PartnerStack is NOT Impact — our Impact rejection does not affect this.
+
+**Paste-ready answers:**
+
+- **Channel/business name:** AIToolsEssentials (aitoolsessentials.com)
+- **Primary platform:** Website — AI tool directory with 270+ pages of reviews, comparisons, and migration guides.
+- **How you plan to promote Descript:** Dedicated editorial review (/tools/descript/), voice-vs-editing workflow comparisons (ElevenLabs vs Descript switch guide), audio/video production buyer guides, and meeting/content workflow recommendations where transcript-based editing fits. Links are contextual, FTC-disclosed, and never alter rankings.
+- **Audience:** Creators, podcasters, freelancers, and small content teams choosing AI content tools at decision stage.
+- **Country:** United States
