@@ -226,3 +226,7 @@ print('Injected decision brief entry links')
 from generate_premium_membership import postprocess as _premium_postprocess
 _premium_postprocess(root, tools, today)
 print('Injected premium conversion modules')
+
+from generate_switch_guides import postprocess as _switch_postprocess
+_switch_postprocess(root, tools, today)
+print('Re-injected switch guide modules')
