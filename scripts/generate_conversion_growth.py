@@ -144,6 +144,10 @@ def generate_launch_kit(root: Path) -> None:
         "LinkedIn post": "AI subscription sprawl is real. AIToolsEssentials now lets you generate a role-specific AI stack, download a share card, estimate monthly cost, and compare alternatives before paying.",
         "Reddit post": "I made a free AI stack generator that suggests tools by role, budget, and workflow style. Would love feedback on what you would swap in the stacks.",
         "HN title": "Show HN: A free AI stack builder and cost calculator for choosing AI tools",
+        "Pricing Watch — X post": "AI tools change prices quietly. We built a public tracker: every price tied to its official source with a checked date, changes logged as they happen. 40 tools, zero guesses. https://aitoolsessentials.com/pricing-watch/",
+        "Pricing Watch — LinkedIn post": "Most teams discover AI price increases at renewal. AIToolsEssentials now publishes verified pricing snapshots for 40 AI tools, each traced to the vendor's official page with a checked date, plus a public change log when prices move. Free: https://aitoolsessentials.com/pricing-watch/",
+        "Switch Guides — X post": "Thinking of switching from ChatGPT to Claude? Don't cancel anything yet. Our migration guides cover what transfers, what breaks, and a first-week test plan. 12 tool pairs: https://aitoolsessentials.com/guides/switch-guides/",
+        "Switch Guides — Reddit post": "I wrote migration guides for switching between AI tools (ChatGPT→Claude, Zapier→Make, Midjourney→Leonardo, etc.) — what transfers vs what breaks, real cost math, and structured first-week test plans. Feedback welcome: https://aitoolsessentials.com/guides/switch-guides/",
     }
     cards = "".join(f'<article class="content-hub-card"><span>Launch copy</span><h3>{esc(k)}</h3><textarea readonly>{esc(v)}</textarea></article>' for k,v in posts.items())
     targets = "".join(f'<article class="content-hub-card"><h3>{esc(name)}</h3><p>{esc(note)}</p></article>' for name,note in PROMOTION_TARGETS)

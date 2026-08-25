@@ -148,6 +148,19 @@ def generate_whop_pack(root: Path, tools: list[dict[str, Any]], today: str) -> N
     assistant = [t for t in tools if "assistant" in str(t.get("category", "")).lower() or t.get("slug") in {"chatgpt", "claude", "gemini", "perplexity", "you-com", "mistral-le-chat", "deepseek"}]
     write_csv(download_dir / "general-ai-assistant-shortlist-2026-09.csv", ["tool", "slug", "pricing", "best_for", "member_note"], [[t.get("name"), t.get("slug"), t.get("price"), t.get("best_for"), "Run the same real task in each shortlisted assistant; compare editing burden and verification effort."] for t in assistant])
 
+    # ---- October member pack (next month's drop, prepared ahead) ----
+    write_csv(download_dir / "premium-tool-decision-matrix-2026-10.csv", ["name", "slug", "category", "pricing", "editorial_score", "pricing_pressure", "best_for", "summary"], matrix_rows)
+
+    video = [t for t in tools if any(k in str(t.get("category", "")).lower() for k in ("video", "image")) or t.get("slug") in {"heygen", "synthesia", "midjourney", "leonardo-ai", "gamma"}]
+    write_csv(download_dir / "visual-ai-tool-shortlist-2026-10.csv", ["tool", "slug", "pricing", "best_for", "member_note"], [[t.get("name"), t.get("slug"), t.get("price"), t.get("best_for"), "Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."] for t in video])
+
+    meeting = [t for t in tools if t.get("slug") in {"fireflies", "otter-ai"} or "meeting" in str(t.get("category", "")).lower() or "transcript" in str(t.get("summary", "")).lower()]
+    if meeting:
+        write_csv(download_dir / "meeting-notes-decision-sheet-2026-10.csv", ["tool", "slug", "pricing", "best_for", "decision_question"], [[t.get("name"), t.get("slug"), t.get("price"), t.get("best_for"), "Does it handle your industry vocabulary and accents? Grade on real meetings only."] for t in meeting])
+
+    oct_posts = "# AIToolsEssentials Premium - Whop Upload Pack - OCTOBER (" + today + ")\n\nPrepared ahead so the next monthly drop is upload-ready. Create these as Whop posts when October begins; attach CSVs from admin/whop-premium/files/.\n\n---\n\n## POST O1 - October drop: what changed since September\n\nWelcome to month two. This month focuses on visual/meeting tool decisions and the new public pricing tracker.\n\n**New files this month:**\n1. premium-tool-decision-matrix-2026-10.csv - refreshed decision matrix (40 tools).\n2. visual-ai-tool-shortlist-2026-10.csv - image/video generation shortlist.\n3. meeting-notes-decision-sheet-2026-10.csv - Fireflies vs Otter style decision sheet.\n\n**Also new on the public site:** AI Pricing Watch (https://aitoolsessentials.com/pricing-watch/) tracks verified price changes across all 40 tools. Members get flagged summaries here first.\n\n---\n\n## POST O2 - October playbook: pick ONE visual AI and stop paying for three\n\nMost teams overlap Midjourney/Leonardo/HeyGen/Synthesia subscriptions. Use the visual shortlist CSV:\n1. List every visual AI you currently pay for.\n2. Score each against your actual monthly output volume.\n3. Cancel down to the single best fit; keep a free tier of a second only if genuinely used.\n\nReply with your current visual stack for a specific recommendation.\n\n---\n\n## POST O3 - October request thread\n\nPost the workflow you want researched next: role, current tools, weekly task volume, budget ceiling. October research slots fill in order of request.\n"
+    (admin / "whop-posts-2026-10.md").write_text(oct_posts)
+
     posts = f'''# AIToolsEssentials Premium — Whop Upload Pack ({today})
 
 Use this file to populate the Whop member area. Create each section below as a Whop post, then attach the CSV files from `admin/whop-premium/files/`.
