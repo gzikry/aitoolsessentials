@@ -263,5 +263,8 @@ print('Injected model lineup panels')
 from generate_seo_monetization_sweep import postprocess as _sweep_postprocess
 print('SEO/monetization sweep:', _sweep_postprocess(root, tools, today))
 
+from generate_evidence_ledger import postprocess_reviews as _evidence_review_postprocess
+print('Injected exact evidence links:', _evidence_review_postprocess(root))
+
 from generate_bestfor_and_report import postprocess_refresh as _bestfor_refresh
 print('Best-for deals strip refreshed:', _bestfor_refresh(root))

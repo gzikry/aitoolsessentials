@@ -807,3 +807,7 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   .methodology-hero h1, .evidence-hero h1 { max-width: 100%; overflow-wrap: break-word; word-break: normal; }
   .methodology-hero .button, .evidence-hero .button { margin: 4px 2px; }
 }
+
+.evidence-link { margin: 28px 0 0; padding: 14px 18px; border-left: 3px solid #5663d6; background: #f4f5ff; border-radius: 0 12px 12px 0; }
+.evidence-link a { color: #35419e; font-weight: 600; text-decoration: none; }
+.evidence-link a:hover { text-decoration: underline; }

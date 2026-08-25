@@ -27,7 +27,7 @@ def generate(root: Path, today: str | None = None) -> Path:
         unresolved_text = "; ".join(str(x) for x in unresolved) if unresolved else "None recorded"
         notes = rec.get("verification_notes") or "Official source links recorded in the site data ledger."
         rows.append(
-            f'<tr><td><strong><a href="/tools/{esc(slug)}/">{esc(tool.get("name", slug))}</a></strong><br><span class="muted">{esc(tool.get("category", ""))}</span></td>'
+            f'<tr id="evidence-{esc(slug)}"><td><strong><a href="/tools/{esc(slug)}/">{esc(tool.get("name", slug))}</a></strong><br><span class="muted">{esc(tool.get("category", ""))}</span></td>'
             f'<td><strong>{esc(rec.get("pricing_checked_date", "—"))}</strong><br>{source_link(rec.get("pricing_url", ""), "Pricing")}</td>'
             f'<td>{source_link(rec.get("docs_url", ""), "Docs")}<br>{source_link(rec.get("privacy_url", ""), "Privacy")}<br>{source_link(rec.get("rights_url", ""), "Rights")}</td>'
             f'<td>{esc(notes)}<br><span class="muted">Unresolved: {esc(unresolved_text)}</span></td></tr>'
@@ -41,6 +41,25 @@ def generate(root: Path, today: str | None = None) -> Path:
     out.parent.mkdir(exist_ok=True)
     out.write_text(page)
     return out
+
+
+def postprocess_reviews(root: Path) -> int:
+    """Add an exact source-ledger anchor to every generated review page."""
+    marker = "<!-- AIT EVIDENCE LINK START -->"
+    block_template = '\n{marker}<p class="evidence-link"><a href="/evidence/#evidence-{slug}">Trace this review\'s pricing, policy, and rights sources in the public Evidence Ledger →</a></p><!-- AIT EVIDENCE LINK END -->\n'
+    changed = 0
+    for page in sorted((root / "tools").glob("*/index.html")):
+        slug = page.parent.name
+        html_text = page.read_text()
+        import re
+        html_text = re.sub(re.escape(marker) + r".*?<!-- AIT EVIDENCE LINK END -->\n?", "\n", html_text, flags=re.S)
+        block = block_template.format(marker=marker, slug=slug)
+        if "</main>" in html_text:
+            html_text = html_text.replace("</main>", block + "</main>", 1)
+            page.write_text(html_text)
+            changed += 1
+    return changed
+
 
 if __name__ == "__main__":
     root = Path(__file__).resolve().parent.parent
