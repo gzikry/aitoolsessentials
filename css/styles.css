@@ -639,7 +639,8 @@ td, th { padding: 12px 14px; vertical-align: top; }
   .hero-copy { justify-self: center; }
   .actions { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 360px; margin: 0 auto; }
   .actions .button { width: 100%; }
-  h1 { font-size: clamp(38px, 11vw, 48px); }
+  h1 { font-size: clamp(30px, 8.5vw, 48px); letter-spacing: -1.2px; padding-right: 4px; }
+  .hero-copy { padding-left: 2px; padding-right: 2px; }
   .subhead { font-size: 18px; }
 }
 @media (max-width: 640px) {
@@ -691,4 +692,68 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   h3{font-size:13pt!important;break-after:avoid}
   .toc,.on-this-page,.actions,.card-actions,.nav-links,.nav-cta,.global-nav,.footer,.button,.social-sharing,.share-row,script{display:none!important}
   a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#444}
+}
+
+
+/* ============================================================
+   SPACING NORMALIZATION PASS — consistent vertical rhythm
+   Scale: 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 86
+   ============================================================ */
+
+/* 1. Unified section padding: every scene section breathes the same */
+.scene { padding: 0; }
+.content-hub, .scene-light:not(.hero) { }
+.article-shell > h2:first-child, .article-shell > p:first-child { margin-top: 0; }
+
+/* 2. Consistent gaps between stacked cards inside content sections
+   (fixes Premium scope->benefit collapse and similar tight pairs) */
+.content-hub .score-card + .score-card,
+.content-hub section.score-card,
+.article-shell > .score-card { margin-top: 32px; }
+.content-hub-grid + section.score-card,
+.content-hub-grid ~ section.score-card { margin-top: 28px; }
+
+/* 3. Buying-decision grid was densest block on reviews — give it room */
+.decision-grid { gap: 16px; margin: 28px 0 36px; }
+.decision-grid > div { padding: 20px; line-height: 1.5; }
+
+/* 4. Footer breathing room (was compressed vs airy page bodies) */
+.footer { margin-top: 56px; padding-top: 44px; padding-bottom: 56px; }
+
+/* 5. Normalize hero paddings to one scale step (86px family) */
+.hero { padding-top: 86px; padding-bottom: 86px; min-height: auto; }
+.compact-hero { min-height: auto; padding-top: 72px; padding-bottom: 72px; }
+
+/* 6. Table + disclaimer spacing at guide bottoms (was cramped) */
+.table-wrap { margin-bottom: 32px; }
+.article-shell > p.benchmark-caveat,
+.benchmark-caveat { margin-top: 8px; margin-bottom: 40px; }
+
+/* 7. Card grid gutters unified at 20px */
+.content-hub-grid, .directory-grid, .decision-grid { gap: 20px; }
+
+/* 8. FAQ list rhythm */
+.faq-list details { padding: 14px 0; }
+.faq-list { margin-bottom: 48px; }
+
+/* 9. Section heading rhythm: consistent space above/below h2 blocks */
+.article-shell h2 { margin-bottom: 16px; }
+.article-shell h3 { margin-top: 28px; margin-bottom: 10px; }
+
+/* 10. Newsletter/CTA panels: consistent standoff from neighbors */
+.newsletter-panel { margin-top: 56px; margin-bottom: 96px; }
+
+@media (max-width: 640px) {
+  .hero { padding-top: 56px; padding-bottom: 56px; }
+  .compact-hero { padding-top: 48px; padding-bottom: 48px; }
+  .footer { margin-top: 40px; padding-top: 32px; padding-bottom: 40px; }
+  .decision-grid { gap: 12px; margin: 20px 0 28px; }
+  .newsletter-panel { margin-top: 40px; margin-bottom: 64px; padding: 28px 22px; }
+}
+
+@media (max-width: 640px) {
+  .hero-visual, .hero-mockup { max-width: 100%; overflow: hidden; }
+  .hero-visual *, .hero-mockup * { max-width: 100%; }
+  /* category pill rows were over-gapped on mobile */
+  .scene .pill-row, .category-pills { gap: 8px !important; }
 }
