@@ -1,23 +1,34 @@
 # AIToolsEssentials
 
-> Evidence-first AI tools directory: 40+ independently reviewed tools with pricing verified from official vendor pages (dated), buyer guides by audience and workflow, head-to-head comparisons, and versioned benchmark evidence.
+> Evidence-first AI tools directory: 40+ independently reviewed tools with pricing verified from official vendor pages (dated), buyer guides by audience and workflow, head-to-head comparisons with current model lineups, a public price-change tracker, migration ("switching") guides, and versioned benchmark evidence.
 
-The site is designed for people choosing which AI tools to pay for. Editorial scores are independent ratings; hands-on test results are labeled as such; benchmark data includes exact model versions and snapshot dates.
+The site is designed for people choosing which AI tools to pay for — and deciding when to switch. Editorial scores are independent ratings; hands-on test results are labeled as such; benchmark data includes exact model versions and snapshot dates.
 
 ## Main sections
-- /tools/: individual tool reviews with verified pricing
-- /comparisons/: head-to-head comparisons (e.g., chatgpt-vs-claude, zapier-vs-make-vs-n8n)
+- /tools/: individual tool reviews with verified pricing and current model details (e.g., /tools/grok/ covers Grok 4.6, Grok Build, Grok Bot)
+- /comparisons/: head-to-head comparisons with "current model lineup" panels (e.g., chatgpt-vs-claude, claude-vs-cursor, zapier-vs-make-vs-n8n)
+- /guides/switch-guides/: 12 migration guides for switching between AI tools (ChatGPT→Claude, Zapier→Make, Midjourney→Leonardo, etc.) with transfer/break/cost/test-plan structure
+- /pricing-watch/: public AI pricing tracker — verified snapshots for all 40 tools, each dated, plus an automatic change log
 - /articles/: buyer guides by audience (agencies, freelancers, developers) and question-intent answers
 - /benchmarks/: versioned external benchmark evidence hub
-- /pricing/: free directory vs $12/mo premium research membership
+- /decision-brief.html/: interactive tool — pick 2–3 tools and generate a shareable decision brief (/decision-brief.html?vs=chatgpt,claude)
+- /stack-builder.html/: role-based AI stack generator with shareable stack cards
+- /cost-calculator.html/: subscription cost estimator
+- /resources/: printable buyer worksheets and checklists (including the free AI Stack Decision Checklist PDF at /downloads/ai-stack-decision-checklist.pdf)
+- /deals/: verified live deals auto-generated from pricing verification runs
+- /premium/: $12/mo research membership via Whop (monthly briefs, CSV decision matrices, price-change alerts)
 - /advertise/: sponsorship information
 
 ## Data access
 - sitemap.xml lists all pages
 - data/tools.json is the structured review dataset
+- data/pricing_snapshots.json holds dated pricing snapshots per tool
+- data/model_lineups.json holds current per-vendor model lineups with checked dates
 
 ## Policies
-- Pricing claims are verified against official vendor pages and re-checked monthly; verification dates shown on-page.
-- Reviews include cons and tradeoffs. Sponsored content is labeled per FTC rules in legal/affiliate-disclosure.html.
+- Pricing claims are verified against official vendor pages and re-checked regularly; verification dates shown on-page.
+- Model/version claims name exact shipping versions (e.g., Grok 4.6, Composer 2.5) with checked dates.
+- Reviews include cons and tradeoffs. Sponsored content and affiliate links are labeled per FTC rules in legal/affiliate-disclosure.html.
+- Community results publish only after verification; no fabricated vote or traffic counts.
 
 Contact: contact@aitoolsessentials.com

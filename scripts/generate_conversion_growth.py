@@ -163,6 +163,21 @@ def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
         ("AI tools worth testing this week", "/weekly/", "Weekly public shortlist of tools worth testing."),
         ("Editorial changelog", "/changelog/", "Transparent update log for site and review improvements."),
         ("Get reviewed", "/get-reviewed/", "Vendor submission and editorial-boundary guide."),
+        ("AI Pricing Watch", "/pricing-watch/", "Public tracker of verified AI pricing snapshots for 40 tools, with an automatic change log."),
+        ("Switch Guides hub", "/guides/switch-guides/", "12 honest migration guides for switching between AI tools — what transfers, what breaks, cost math, test plans."),
+        ("Switching from ChatGPT to Claude", "/guides/switch-guides/switch-from-chatgpt-to-claude.html", "Migration guide: what carries over, what breaks, and a first-week test plan."),
+        ("Switching from Zapier to Make", "/guides/switch-guides/switch-from-zapier-to-make.html", "Task-based vs operation-based pricing, migration steps, and when the switch pays off."),
+        ("ChatGPT vs Grok comparison", "/comparisons/chatgpt-vs-grok.html", "Head-to-head with current model lineups: GPT-5.4 family vs Grok 4.6/4.5/4.3/Build 0.1."),
+        ("Claude vs Cursor comparison", "/comparisons/claude-vs-cursor.html", "Frontier assistant vs AI-native editor with Cursor Grok 4.6 and Composer 2.5."),
+        ("Decision Brief generator", "/decision-brief.html", "Pick 2–3 tools and generate a shareable decision brief with overlap warnings and trial script."),
+        ("Verified live deals", "/deals/", "Deals auto-verified from official vendor pricing pages with checked dates."),
+        ("Free AI Stack Decision Checklist (PDF)", "/downloads/ai-stack-decision-checklist.html", "Printable worksheet for scoring overlap, cost, trial results, and cancellation risk before buying."),
+        ("Grok review", "/tools/grok/", "Full review covering Grok 4.6, Grok Bot always-on agents, Grok Build, Imagine, Voice, and verified pricing."),
+        ("Cursor review", "/tools/cursor/", "Review of Cursor's own model stack (Cursor Grok 4.6, Composer 2.5), agent modes, cloud agents, and Bugbot."),
+        ("Premium research membership", "/premium/", "$12/mo decision briefs, CSV matrices, playbooks, and price-change alerts via Whop."),
+        ("Benchmarks evidence hub", "/benchmarks/", "Versioned external benchmark snapshots with exact models, configurations, and dates."),
+        ("Tool Finder", "/tool-finder.html", "Find AI tools by category, use case, budget, and free-tier availability."),
+        ("Best AI tools hub", "/comparisons/best-ai-tools.html", "Editorial shortlist across categories with verified pricing."),
     ]
     def feed(title, link, desc, feed_items):
         rows = []

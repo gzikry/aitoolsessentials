@@ -247,6 +247,21 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
                 p.write_text(s)
                 changed += 1
 
+    # Tool review pages: contextual decision-brief CTA (skip pages that already link one)
+    tools_dir = root / "tools"
+    if tools_dir.exists():
+        for p in sorted(tools_dir.glob("*/index.html")):
+            s = p.read_text()
+            if "decision-brief" in s:
+                continue
+            slug = p.parent.name
+            link = ('<p style="text-align:center;margin-top:14px"><a class="button button-ghost-dark" '
+                    f'href="/decision-brief.html?vs={slug}">Compare this tool against its top rivals — get a decision brief →</a></p>')
+            if "</main>" in s:
+                s = s.replace("</main>", link + "</main>", 1)
+                p.write_text(s)
+                changed += 1
+
     # Start-here hero link
     sh = root / "start-here/index.html"
     if sh.exists():
