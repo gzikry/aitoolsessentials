@@ -218,7 +218,7 @@ def postprocess_related_next_steps(root: Path) -> None:
                + list((root / "comparisons").glob("*.html"))
                + [p for p in (root / "categories").glob("*/index.html")])
     for p in targets:
-        if p.name == "index.html":
+        if p == root / "categories" / "index.html":
             continue
         html = p.read_text()
         if marker in html:
