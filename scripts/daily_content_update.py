@@ -94,6 +94,10 @@ from generate_switch_guides import generate as generate_switch_guides
 generate_switch_guides(root, tools, today)
 print('Generated switch-from migration guides')
 
+from generate_pricing_watch import generate as generate_pricing_watch
+generate_pricing_watch(root, tools, today)
+print('Generated pricing watch page')
+
 
 from generate_site_discovery import generate as generate_site_discovery
 generate_site_discovery(root, tools, today)
@@ -230,3 +234,7 @@ print('Injected premium conversion modules')
 from generate_switch_guides import postprocess as _switch_postprocess
 _switch_postprocess(root, tools, today)
 print('Re-injected switch guide modules')
+
+from generate_pricing_watch import postprocess as _pricing_watch_postprocess
+_pricing_watch_postprocess(root, tools, today)
+print('Re-injected pricing watch links')
