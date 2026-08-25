@@ -110,7 +110,7 @@
       "name": "Cursor",
       "slug": "cursor",
       "category": "Development",
-      "price": "Free + paid plans",
+      "price": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
       "url": "https://aitoolsessentials.com/tools/cursor/"
     },
     {
@@ -173,7 +173,7 @@
       "name": "Grok",
       "slug": "grok",
       "category": "General AI Assistant",
-      "price": "Free + paid plans / X plan availability varies",
+      "price": "Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo; API from $1\u2013$6 per 1M tokens",
       "url": "https://aitoolsessentials.com/tools/grok/"
     },
     {

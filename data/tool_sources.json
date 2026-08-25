@@ -51,7 +51,7 @@
   {
    "slug": "canva-ai",
    "pricing_checked_date": "2026-08-21",
-   "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free\u2014up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education\u2014up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise\u2014up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
+   "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free—up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education—up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise—up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
    "pricing_url": "https://www.canva.com/pricing/",
    "docs_url": "https://www.canva.com/help/ai-access/",
    "privacy_url": "https://www.canva.com/trust/privacy/",
@@ -81,7 +81,7 @@
   {
    "slug": "claude",
    "pricing_checked_date": "2026-08-21",
-   "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2\u2013150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
+   "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2–150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
    "pricing_url": "https://www.anthropic.com/pricing",
    "docs_url": "https://support.anthropic.com/en/collections/4078534-claude-ai",
    "privacy_url": "https://privacy.anthropic.com/en/articles/10023555-how-do-you-use-personal-data-in-model-training",
@@ -110,8 +110,8 @@
   },
   {
    "slug": "cursor",
-   "pricing_checked_date": "2026-08-21",
-   "pricing_summary": "Monthly pricing: Hobby free; Pro $20; Pro+ $60 with 3x Pro usage on OpenAI, Claude, and Gemini models; Ultra $200 with 20x Pro usage and priority access to new features; Teams Standard $40/user; Enterprise custom. Plans include model usage, with optional on-demand usage billed in arrears after the included amount is consumed.",
+   "pricing_checked_date": "2026-08-25",
+   "pricing_summary": "Cursor Free includes limited agent requests and Composer access. Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom (cursor.com/pricing, checked 2026-08-25). Cursor Models pool: Grok 4.6 $2/$6, Composer 2.5 $0.50/$2.50 per 1M tokens.",
    "pricing_url": "https://cursor.com/pricing",
    "docs_url": "https://docs.cursor.com/models-and-pricing",
    "privacy_url": "https://cursor.com/privacy",
@@ -120,7 +120,8 @@
    "unresolved_claims": [
     "The pricing UI exposes a Teams Premium option with 5x Standard Agent limits, but its price was not reliably exposed in the official page's static content, so no price is reported.",
     "The public Terms assign Anysphere's rights in Suggestions but do not provide a blanket warranty that generated code is non-infringing or expressly guarantee commercial suitability."
-   ]
+   ],
+   "checked_at": "2026-08-25"
   },
   {
    "slug": "deepseek",
@@ -255,8 +256,8 @@
   },
   {
    "slug": "grok",
-   "pricing_checked_date": "2026-08-21",
-   "pricing_summary": "Grok Free is $0 per month, SuperGrok is $30 per month, and SuperGrok Plus is $100 per month. Enterprise offers custom rate limits, dedicated infrastructure, SSO/SCIM, compliance options, data residency, support, and volume pricing through sales.",
+   "pricing_checked_date": "2026-08-25",
+   "pricing_summary": "Grok Free is $0. SuperGrok is $30/month, SuperGrok Plus is $100/month, with higher tiers above. API (docs.x.ai, checked 2026-08-25): Grok 4.6 $2.00 input / $6.00 output per 1M tokens (500K context); prior Grok 4.3 $1.25/$2.50 per 1M. Voice API from $0.05/min; TTS $15/1M chars.",
    "pricing_url": "https://x.ai/pricing",
    "docs_url": "https://x.ai/grok",
    "privacy_url": "https://x.ai/legal/privacy-policy",
@@ -266,7 +267,8 @@
     "Enterprise prices are not published and require a sales quote.",
     "Pricing or entitlements for Grok accessed through an X subscription were not treated as equivalent to standalone SuperGrok plans.",
     "The consumer terms require attribution under xAI's Brand Guidelines when using Output or xAI brand elements; applicability to a specific commercial use requires case-specific review."
-   ]
+   ],
+   "checked_at": "2026-08-25"
   },
   {
    "slug": "heygen",
@@ -408,7 +410,7 @@
   {
    "slug": "n8n",
    "pricing_checked_date": "2026-08-21",
-   "pricing_summary": "Starter: \u20ac20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: \u20ac50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: \u20ac667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
+   "pricing_summary": "Starter: €20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: €50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: €667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
    "pricing_url": "https://n8n.io/pricing/",
    "docs_url": "https://docs.n8n.io/build/integrate-ai",
    "privacy_url": "https://n8n.io/legal/privacy/",
@@ -591,7 +593,7 @@
    "docs_url": "",
    "privacy_url": "https://allvideoai.com/privacy",
    "rights_url": "",
-   "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published \u2014 commercial-use terms should be confirmed in ToS before client delivery.",
+   "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published — commercial-use terms should be confirmed in ToS before client delivery.",
    "unresolved_claims": [
     "Output ownership/commercial rights not documented on a dedicated page"
    ]

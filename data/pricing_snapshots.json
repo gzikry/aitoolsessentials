@@ -29,8 +29,8 @@
       "digest": "Official pricing page lists Chat at US$29/month or US$24/month billed US$288 annually, with 5 seats and unlimited words and projects in Chat. Growth is US$1,000/month billed annually with 75 seats and"
     },
     "cursor": {
-      "date": "2026-08-21",
-      "digest": "Monthly pricing: Hobby free; Pro $20; Pro+ $60 with 3x Pro usage on OpenAI, Claude, and Gemini models; Ultra $200 with 20x Pro usage and priority access to new features; Teams Standard $40/user; Enter"
+      "date": "2026-08-25",
+      "digest": "Cursor Free includes limited agent requests and Composer access. Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom (cursor.com/pricing, checked 2026-08-25). Cursor Model"
     },
     "deepseek": {
       "date": "2026-08-21",
@@ -69,8 +69,8 @@
       "digest": "Free: $0/month and 100 generative-AI prompts per month. Pro: displayed at $12 USD and includes 2,000 AI prompts per member per month, unlimited personalized suggestions, full-sentence rewrites, tone c"
     },
     "grok": {
-      "date": "2026-08-21",
-      "digest": "Grok Free is $0 per month, SuperGrok is $30 per month, and SuperGrok Plus is $100 per month. Enterprise offers custom rate limits, dedicated infrastructure, SSO/SCIM, compliance options, data residenc"
+      "date": "2026-08-25",
+      "digest": "Grok Free is $0. SuperGrok is $30/month, SuperGrok Plus is $100/month, with higher tiers above. API (docs.x.ai, checked 2026-08-25): Grok 4.6 $2.00 input / $6.00 output per 1M tokens (500K context); p"
     },
     "heygen": {
       "date": "2026-08-21",
@@ -161,6 +161,21 @@
       "digest": "Free tier plus credit-based plans: Starter $17/month (billed annually, $204/year), Plus $39/month (annual $468), Max $59/month (annual $708), Ultra $159/month (annual $1,908). Promotional countdown ti"
     }
   },
-  "changes": [],
+  "changes": [
+    {
+      "slug": "cursor",
+      "detected": "2026-08-25",
+      "previous_check": "2026-08-21",
+      "new_check": "2026-08-25",
+      "note": "Cursor: official pricing page changed since 2026-08-21 check. Re-verified 2026-08-25."
+    },
+    {
+      "slug": "grok",
+      "detected": "2026-08-25",
+      "previous_check": "2026-08-21",
+      "new_check": "2026-08-25",
+      "note": "Grok: official pricing page changed since 2026-08-21 check. Re-verified 2026-08-25."
+    }
+  ],
   "updated": "2026-08-25"
 }
