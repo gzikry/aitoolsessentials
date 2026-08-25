@@ -757,3 +757,20 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   /* category pill rows were over-gapped on mobile */
   .scene .pill-row, .category-pills { gap: 8px !important; }
 }
+
+
+/* Category hub lateral navigation */
+.category-related-section { padding: 0 24px 48px; }
+.category-related { max-width: 1040px; margin: 0 auto; padding: 24px 0 0; border-top: 1px solid rgba(0,0,0,.08); }
+.category-related .kicker { margin-bottom: 12px; }
+.guide-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.guide-pill { display: inline-flex; align-items: center; min-height: 36px; padding: 8px 14px; border: 1px solid rgba(79,92,200,.22); border-radius: 999px; color: #3f4aa8; background: #f5f6ff; text-decoration: none; font-size: 14px; }
+.guide-pill:hover { background: #e9ebff; border-color: rgba(79,92,200,.42); }
+@media (max-width: 640px) { .category-related-section { padding: 0 18px 36px; } }
+
+@media (max-width: 620px) {
+  .directory-card .card-actions { flex-wrap: wrap; justify-content: flex-start; gap: 8px; }
+  .directory-card .card-actions .text-link,
+  .directory-card .card-actions .button,
+  .directory-card .card-actions button { min-width: 0; }
+}

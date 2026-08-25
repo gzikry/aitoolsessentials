@@ -43,9 +43,10 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
           </div>
         </article>'''
 
-    # Related categories (share at least one tool slug overlap or sibling naming)
+    from urllib.parse import quote
     other_cats = sorted({t2['category'] for t2 in tools if t2['category'] != cat})
-    pills = ''.join(f'<a class="guide-pill" href="../articles/best-ai-tools.html">{c}</a>' for c in other_cats[:8])
+    pills = ''.join(f'<a class="guide-pill" href="../{quote(c, safe="")}/">{c}</a>' for c in other_cats[:8])
+    related_categories = f'<div class="category-related"><p class="kicker light">Explore related categories</p><div class="guide-pills">{pills}</div></div>'
 
     html = f'''<!doctype html>
 <html lang="en">
@@ -82,6 +83,10 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 <div class="directory-grid">
 {cards_html}
 </div>
+</section>
+
+<section class="scene scene-light category-related-section">
+<div class="article-shell wide">{related_categories}</div>
 </section>
 
 <section class="scene scene-light guide-strip">

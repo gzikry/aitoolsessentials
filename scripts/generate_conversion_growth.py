@@ -215,7 +215,8 @@ def postprocess_related_next_steps(root: Path) -> None:
     targets = (list((root / "alternatives").glob("*-alternatives.html"))
                + list((root / "use-cases").glob("*.html"))
                + list((root / "stacks").glob("*.html"))
-               + list((root / "comparisons").glob("*.html")))
+               + list((root / "comparisons").glob("*.html"))
+               + [p for p in (root / "categories").glob("*/index.html")])
     for p in targets:
         if p.name == "index.html":
             continue
