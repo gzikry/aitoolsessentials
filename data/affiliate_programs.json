@@ -1,169 +1,170 @@
 {
- "checked_at": "2026-08-23",
- "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
- "affiliate_programs": [
-  {
-   "tool_slug": "chatgpt",
-   "availability": "available_non_affiliate_partner",
-   "program_type": "solution/co-sell partner network",
-   "network": "OpenAI",
-   "official_program_url": "https://openai.com/business/partners",
-   "application_status": "not_applicable_for_publisher_affiliate",
-   "commission_note": null,
-   "notes": "No public commission-paying ChatGPT publisher affiliate program verified."
-  },
-  {
-   "tool_slug": "claude",
-   "availability": "available_non_affiliate_partner",
-   "program_type": "solution partner network",
-   "network": "Anthropic",
-   "official_program_url": "https://claude.com/partners",
-   "application_status": "not_applicable_for_publisher_affiliate",
-   "commission_note": null,
-   "notes": "No public publisher commission program verified."
-  },
-  {
-   "tool_slug": "gemini",
-   "availability": "available_indirect",
-   "program_type": "Google Cloud affiliate",
-   "network": "CJ Affiliate",
-   "official_program_url": "https://cloud.google.com/affiliate-program",
-   "application_status": "not_applied",
-   "commission_note": null,
-   "notes": "Applies to eligible Google Cloud referrals; no direct consumer Gemini subscription affiliate program verified."
-  },
-  {
-   "tool_slug": "perplexity",
-   "availability": "unavailable_ended",
-   "program_type": "former referral programs",
-   "network": "Dub (historical)",
-   "official_program_url": "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs",
-   "application_status": "unavailable",
-   "commission_note": null,
-   "notes": "Official help says Comet and Give-a-month/Get-a-month referral programs ended in 2025."
-  },
-  {
-   "tool_slug": "cursor",
-   "availability": "limited_account_dependent",
-   "program_type": "limited referral program",
-   "network": "Cursor",
-   "official_program_url": "https://forum.cursor.com/t/maxed-out-referrals-what-to-do-now/165017",
-   "application_status": "eligibility_check_required",
-   "commission_note": "Official staff described a 10 rewarded referrals/month and $250 cap for eligible accounts.",
-   "notes": "Not an unlimited public publisher affiliate program."
-  },
-  {
-   "tool_slug": "github-copilot",
-   "availability": "available_non_affiliate_partner",
-   "program_type": "technology/integration partner program",
-   "network": "GitHub",
-   "official_program_url": "https://github.com/features/preview/copilot-partner-program",
-   "application_status": "not_applicable_for_publisher_affiliate",
-   "commission_note": null,
-   "notes": "Not a commission-paying subscription referral program."
-  },
-  {
-   "tool_slug": "canva-ai",
-   "availability": "closed",
-   "program_type": "Canvassador/affiliate",
-   "network": "Impact (existing participants)",
-   "official_program_url": "https://www.canva.com/help/canva-affiliate-marketing-program",
-   "application_status": "applications_closed",
-   "commission_note": null,
-   "notes": "Official guidance says Canvassador applications are currently closed."
-  },
-  {
-   "tool_slug": "midjourney",
-   "availability": "not_found",
-   "program_type": null,
-   "network": null,
-   "official_program_url": "https://docs.midjourney.com/docs/terms-of-service",
-   "application_status": "no_verified_program",
-   "commission_note": null,
-   "notes": "No official affiliate/referral application page verified."
-  },
-  {
-   "tool_slug": "zapier-ai",
-   "availability": "available_partner_only",
-   "program_type": "ambassador/solution partner referral",
-   "network": "Zapier",
-   "official_program_url": "https://zapier.com/legal/ambassador-affiliate-terms",
-   "application_status": "partner_eligibility_required",
-   "commission_note": null,
-   "notes": "Referral rewards are limited to eligible Zapier partners; use the Solution Partner route."
-  },
-  {
-   "tool_slug": "make",
-   "availability": "approved_publisher_affiliate",
-   "program_type": "affiliate",
-   "network": "Make direct",
-   "official_program_url": "https://www.make.com/en/affiliate",
-   "application_status": "approved",
-   "commission_note": null,
-   "notes": "Approved 2026-08-23. Partner code aitoolsessentials via make.com register URL.",
-   "affiliate_url": "https://www.make.com/en/register?pc=aitoolsessentials"
-  },
-  {
-   "tool_slug": "notion-ai",
-   "availability": "closed_to_new_applicants",
-   "program_type": "affiliate program",
-   "network": "PartnerStack",
-   "official_program_url": "https://www.notion.com/affiliates",
-   "application_status": "applications_closed",
-   "commission_note": null,
-   "notes": "Official page says new affiliates are not currently accepted."
-  },
-  {
-   "tool_slug": "grammarly",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "CJ Affiliate / PartnerStack / ShareASale or designated platform",
-   "official_program_url": "https://www.grammarly.com/affiliates",
-   "application_status": "not_applied",
-   "commission_note": null,
-   "notes": "Public application advertised; placement depends on offer/application route."
-  },
-  {
-   "tool_slug": "jasper",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "FirstPromoter or Jasper-designated platform",
-   "official_program_url": "https://help.jasper.ai/hc/en-us/articles/18618713810203-Affiliate-Program",
-   "application_status": "not_applied",
-   "commission_note": null,
-   "notes": "Applications are manually reviewed."
-  },
-  {
-   "tool_slug": "elevenlabs",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "direct (try.elevenlabs.io)",
-   "official_program_url": "https://elevenlabs.io/affiliates",
-   "application_status": "approved",
-   "commission_note": "22% of qualifying subscriptions for 12 months",
-   "notes": "Approved 2026-08-23. Tracking URL verified (redirects to elevenlabs.io with partner params).",
-   "status": "approved",
-   "approved_tracking_url": "https://try.elevenlabs.io/xs6witq7izqe",
-   "approved_date": "2026-08-23",
-   "affiliate_url": "https://try.elevenlabs.io/xs6witq7izqe"
-  },
-  {
-   "tool_slug": "descript",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "PartnerStack",
-   "official_program_url": "https://www.descript.com/affiliate",
-   "application_status": "not_applied",
-   "commission_note": "Official page advertises $25 per new subscriber.",
-   "notes": "Application asks for platform, audience, and promotion plan."
-  }
- ],
- "priority_application_queue": [
-  "make",
-  "grammarly",
-  "jasper",
-  "elevenlabs",
-  "descript",
-  "gemini"
- ]
+  "checked_at": "2026-08-23",
+  "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
+  "affiliate_programs": [
+    {
+      "tool_slug": "chatgpt",
+      "availability": "available_non_affiliate_partner",
+      "program_type": "solution/co-sell partner network",
+      "network": "OpenAI",
+      "official_program_url": "https://openai.com/business/partners",
+      "application_status": "not_applicable_for_publisher_affiliate",
+      "commission_note": null,
+      "notes": "No public commission-paying ChatGPT publisher affiliate program verified."
+    },
+    {
+      "tool_slug": "claude",
+      "availability": "available_non_affiliate_partner",
+      "program_type": "solution partner network",
+      "network": "Anthropic",
+      "official_program_url": "https://claude.com/partners",
+      "application_status": "not_applicable_for_publisher_affiliate",
+      "commission_note": null,
+      "notes": "No public publisher commission program verified."
+    },
+    {
+      "tool_slug": "gemini",
+      "availability": "available_indirect",
+      "program_type": "Google Cloud affiliate",
+      "network": "CJ Affiliate",
+      "official_program_url": "https://cloud.google.com/affiliate-program",
+      "application_status": "not_applied",
+      "commission_note": null,
+      "notes": "Applies to eligible Google Cloud referrals; no direct consumer Gemini subscription affiliate program verified."
+    },
+    {
+      "tool_slug": "perplexity",
+      "availability": "unavailable_ended",
+      "program_type": "former referral programs",
+      "network": "Dub (historical)",
+      "official_program_url": "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs",
+      "application_status": "unavailable",
+      "commission_note": null,
+      "notes": "Official help says Comet and Give-a-month/Get-a-month referral programs ended in 2025."
+    },
+    {
+      "tool_slug": "cursor",
+      "availability": "limited_account_dependent",
+      "program_type": "limited referral program",
+      "network": "Cursor",
+      "official_program_url": "https://forum.cursor.com/t/maxed-out-referrals-what-to-do-now/165017",
+      "application_status": "eligibility_check_required",
+      "commission_note": "Official staff described a 10 rewarded referrals/month and $250 cap for eligible accounts.",
+      "notes": "Not an unlimited public publisher affiliate program."
+    },
+    {
+      "tool_slug": "github-copilot",
+      "availability": "available_non_affiliate_partner",
+      "program_type": "technology/integration partner program",
+      "network": "GitHub",
+      "official_program_url": "https://github.com/features/preview/copilot-partner-program",
+      "application_status": "not_applicable_for_publisher_affiliate",
+      "commission_note": null,
+      "notes": "Not a commission-paying subscription referral program."
+    },
+    {
+      "tool_slug": "canva-ai",
+      "availability": "closed",
+      "program_type": "Canvassador/affiliate",
+      "network": "Impact (existing participants)",
+      "official_program_url": "https://www.canva.com/help/canva-affiliate-marketing-program",
+      "application_status": "applications_closed",
+      "commission_note": null,
+      "notes": "Official guidance says Canvassador applications are currently closed."
+    },
+    {
+      "tool_slug": "midjourney",
+      "availability": "not_found",
+      "program_type": null,
+      "network": null,
+      "official_program_url": "https://docs.midjourney.com/docs/terms-of-service",
+      "application_status": "no_verified_program",
+      "commission_note": null,
+      "notes": "No official affiliate/referral application page verified."
+    },
+    {
+      "tool_slug": "zapier-ai",
+      "availability": "available_partner_only",
+      "program_type": "ambassador/solution partner referral",
+      "network": "Zapier",
+      "official_program_url": "https://zapier.com/legal/ambassador-affiliate-terms",
+      "application_status": "partner_eligibility_required",
+      "commission_note": null,
+      "notes": "Referral rewards are limited to eligible Zapier partners; use the Solution Partner route."
+    },
+    {
+      "tool_slug": "make",
+      "availability": "approved_publisher_affiliate",
+      "program_type": "affiliate",
+      "network": "Make direct",
+      "official_program_url": "https://www.make.com/en/affiliate",
+      "application_status": "approved",
+      "commission_note": null,
+      "notes": "Approved 2026-08-23. Partner code aitoolsessentials via make.com register URL.",
+      "affiliate_url": "https://www.make.com/en/register?pc=aitoolsessentials"
+    },
+    {
+      "tool_slug": "notion-ai",
+      "availability": "closed_to_new_applicants",
+      "program_type": "affiliate program",
+      "network": "PartnerStack",
+      "official_program_url": "https://www.notion.com/affiliates",
+      "application_status": "applications_closed",
+      "commission_note": null,
+      "notes": "Official page says new affiliates are not currently accepted."
+    },
+    {
+      "tool_slug": "grammarly",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "CJ Affiliate / PartnerStack / ShareASale or designated platform",
+      "official_program_url": "https://www.grammarly.com/affiliates",
+      "application_status": "applied",
+      "commission_note": null,
+      "notes": "Application answers ready in admin/affiliate-applications-ready.md; George submits at grammarly.com/affiliates.",
+      "application_date": "2026-08-24"
+    },
+    {
+      "tool_slug": "jasper",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "FirstPromoter or Jasper-designated platform",
+      "official_program_url": "https://help.jasper.ai/hc/en-us/articles/18618713810203-Affiliate-Program",
+      "application_status": "not_applied",
+      "commission_note": null,
+      "notes": "Applications are manually reviewed."
+    },
+    {
+      "tool_slug": "elevenlabs",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "direct (try.elevenlabs.io)",
+      "official_program_url": "https://elevenlabs.io/affiliates",
+      "application_status": "approved",
+      "commission_note": "22% of qualifying subscriptions for 12 months",
+      "notes": "Approved 2026-08-23. Tracking URL verified (redirects to elevenlabs.io with partner params).",
+      "status": "approved",
+      "approved_tracking_url": "https://try.elevenlabs.io/xs6witq7izqe",
+      "approved_date": "2026-08-23",
+      "affiliate_url": "https://try.elevenlabs.io/xs6witq7izqe"
+    },
+    {
+      "tool_slug": "descript",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "PartnerStack",
+      "official_program_url": "https://www.descript.com/affiliate",
+      "application_status": "not_applied",
+      "commission_note": "Official page advertises $25 per new subscriber.",
+      "notes": "Application asks for platform, audience, and promotion plan."
+    }
+  ],
+  "priority_application_queue": [
+    "make",
+    "grammarly",
+    "jasper",
+    "elevenlabs",
+    "descript",
+    "gemini"
+  ]
 }

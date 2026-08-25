@@ -65,3 +65,48 @@ pricing-comparison searches.
 ## Rejection playbook
 If declined for low traffic: reply asking for early-partner consideration and reapply
 in 30 days. Track reapplication dates here.
+
+
+---
+
+## 3) Grammarly — https://www.grammarly.com/affiliates
+
+Apply at the URL above (Grammarly runs its own affiliate signup; placement may route
+through CJ Affiliate/PartnerStack — follow whichever their form directs to).
+Commission is reportedly ~$0.20–$20 per lead depending on plan; confirm in the portal.
+
+**Website:** https://aitoolsessentials.com
+
+**How will you promote Grammarly? (paste):**
+
+> AIToolsEssentials is an evidence-first AI tools directory. Our Grammarly review
+> (https://aitoolsessentials.com/tools/grammarly/) gives Grammarly a 4.4/5 editorial
+> score with verified pricing from your official pages (checked and dated), honest
+> tradeoffs, and a before-you-pay trial checklist.
+>
+> Beyond the review, Grammarly appears across 15+ high-intent pages: our best-free-AI-
+> writing-tools guide, best-ai-writing-tools, best-ai-tools-for-students, freelancer and
+> small-business guides, and our free-ai-tools hub. These pages target buyers at the exact
+> moment they choose a writing assistant — including "Grammarly alternatives" search intent
+> we capture with honest comparisons.
+>
+> Promotion is contextual only: links appear inside relevant reviews/guides with FTC-compliant
+> disclosure. No display ads, no popups, no email blasts.
+
+**Audience description (paste):**
+
+> Students, freelancers, agency owners, recruiters, and small-business operators choosing
+> which AI writing assistant to pay for. They arrive via high-intent searches ("best AI
+> writing tools", "Grammarly vs alternatives", "free AI writing tools") and use our
+> evaluation scorecards before purchasing.
+
+**Traffic:** Early-growth site launched August 2026, 250+ original pages actively indexed;
+prioritizing conversion quality over raw clicks. Plausible analytics available for transparency.
+
+**Why we're a good fit:**
+
+> Our editorial honesty is the draw: we list cons on every review, including Grammarly's.
+> Readers trust recommendations that admit tradeoffs — which converts better than blanket
+> promotion. We never fabricate test results.
+
+---
