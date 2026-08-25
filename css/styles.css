@@ -790,3 +790,20 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
 
 .evidence-table-hint { display: none; }
 @media (max-width: 700px) { .evidence-table-hint { display: block; margin: 0 0 10px; color: #5f6475; font-size: 13px; font-style: italic; } }
+
+
+/* Editorial methodology page */
+.methodology-hero { max-width: 960px; margin: 0 auto; padding: 88px 28px 72px; text-align: center; }
+.methodology-block { max-width: 1040px; margin: 0 auto 64px; }
+.methodology-block > .kicker { margin-bottom: 12px; }
+.methodology-block h2 { margin: 0 0 16px; }
+.methodology-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 24px; }
+.methodology-grid .score-card { min-height: 150px; }
+.methodology-list { display: grid; gap: 14px; padding-left: 24px; line-height: 1.55; }
+.methodology-next { margin-top: 12px; }
+@media (max-width: 760px) { .methodology-grid { grid-template-columns: 1fr; } .methodology-hero { padding: 56px 20px 48px; } .methodology-block { margin-bottom: 48px; } }
+
+@media (max-width: 640px) {
+  .methodology-hero h1, .evidence-hero h1 { max-width: 100%; overflow-wrap: break-word; word-break: normal; }
+  .methodology-hero .button, .evidence-hero .button { margin: 4px 2px; }
+}
