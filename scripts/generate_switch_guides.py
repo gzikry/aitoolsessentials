@@ -95,6 +95,46 @@ GUIDES = [
         "cost_note": "Otter Pro runs well below Fireflies' business tiers for individuals. Teams relying on revenue-intelligence features should price the cost of losing them, not just the subscription delta.",
         "test_plan": ["Run Otter alongside Fireflies on one week of real meetings — never switch blind.", "Grade transcript accuracy on your industry vocabulary and accents specifically.", "Export anything you must keep from Fireflies before cancelling."],
     },
+    {
+        "slug": "switch-from-deepseek-to-chatgpt",
+        "from_slug": "deepseek", "to_slug": "chatgpt",
+        "title": "Switching from DeepSeek to ChatGPT: capability vs cost guide",
+        "why": "DeepSeek wins on price for bulk reasoning tasks; ChatGPT wins on polish, multimodal features, integrations, and enterprise trust. Switch when reliability and tooling matter more than raw token cost.",
+        "carries": ["Prompt habits transfer directly", "Both handle file upload and code workflows", "API users can run both in parallel during evaluation"],
+        "doesnt": ["DeepSeek conversation history stays put — export what you need", "Open-source model deployment has no ChatGPT equivalent", "Pricing models differ fundamentally (credits vs subscription)"],
+        "cost_note": "DeepSeek API is dramatically cheaper per token; ChatGPT Plus is ~$20/mo. If you are a light chat user the switch costs little; heavy API users should model monthly volume first.",
+        "test_plan": ["Re-run your 10 hardest real prompts on both.", "Grade factuality and formatting, not vibes.", "Check data-handling requirements — some orgs cannot use either interchangeably."],
+    },
+    {
+        "slug": "switch-from-gemini-to-claude",
+        "from_slug": "gemini", "to_slug": "claude",
+        "title": "Switching from Gemini to Claude: writing-quality migration guide",
+        "why": "Claude's long-form drafting, careful tone, and document analysis consistently outperform for writers and analysts. Gemini keeps the edge on Google Workspace integration and multimodal breadth.",
+        "carries": ["Prompt libraries carry over", "File/document analysis works in both", "Mobile apps are comparable"],
+        "doesnt": ["Gemini's Gmail/Docs/Sheets integration has no Claude equivalent", "YouTube/video understanding stays Gemini-only", "Google One storage bundle does not transfer"],
+        "cost_note": "Claude Pro is $17/mo annual ($20 monthly); Gemini Advanced pricing sits near it but bundles Google One. Price the bundle, not just the AI.",
+        "test_plan": ["Run one week of real drafting work through Claude.", "Compare editing time on identical briefs.", "Keep Gemini if Workspace integration saves more time than Claude saves in quality."],
+    },
+    {
+        "slug": "switch-from-heygen-to-synthesia",
+        "from_slug": "heygen", "to_slug": "synthesia",
+        "title": "Switching from HeyGen to Synthesia: avatar video migration guide",
+        "why": "Synthesia leads for corporate training/enterprise video with stronger compliance posture and templates; HeyGen often wins on avatar realism and social-content speed. Switch when your use case is internal comms at scale.",
+        "carries": ["Scripts import as text", "Brand colors/fonts re-create quickly", "Both support 100+ languages"],
+        "doesnt": ["Custom avatars must be re-recorded on Synthesia", "HeyGen's viral-style templates have no direct equivalent", "Video projects do not export between platforms"],
+        "cost_note": "Synthesia's starter plan targets individual creators; enterprise seats cost more. Compare minutes-per-month against both official pricing pages before cancelling either.",
+        "test_plan": ["Rebuild one real training video in Synthesia end to end.", "Get stakeholder sign-off on avatar quality before migrating a library.", "Export source scripts from HeyGen before cancelling."],
+    },
+    {
+        "slug": "switch-from-gamma-to-canva-ai",
+        "from_slug": "gamma", "to_slug": "canva-ai",
+        "title": "Switching from Gamma to Canva AI: presentations migration guide",
+        "why": "Gamma generates decks fast from prompts; Canva AI wraps generation inside a full design suite your team may already use. Switch when design assets beyond slides matter more than deck-generation speed.",
+        "carries": ["Deck outlines/text export cleanly (PPTX/PDF)", "Brand kits re-create in Canva", "Sharing/link workflows similar"],
+        "doesnt": ["Gamma's card-based deck structure converts imperfectly to Canva layouts", "Auto-generated layouts need manual touch-up", "Analytics on deck views stay behind"],
+        "cost_note": "Canva Pro often already exists in your stack (check!) — adding Gamma on top duplicates spend. Verify whether Canva Magic Design covers your needs before paying for both.",
+        "test_plan": ["Regenerate one recent Gamma deck with Canva Magic Design.", "Time the cleanup edits honestly — this is where Gamma usually wins.", "Cancel only the one that loses the two-week trial."],
+    },
 ]
 
 
@@ -169,7 +209,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 </tbody></table></div>
 
 <p class="affiliate-inline" style="margin-top:18px">Pricing changes often — every figure traces to the official vendor page dated on each linked review. Editorial scores are ours, not benchmarks.</p>
-<p style="margin-top:14px;text-align:center"><a class="button button-ghost-dark" href="/alternatives/">Browse all alternatives guides →</a></p>
+<p style="margin-top:14px;text-align:center"><a class="button button-blue" href="/alternatives/">Browse all alternatives guides →</a></p>
 </div></section>
 </main>
 <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/about.html">About</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a><a href="/legal/corrections.html">Corrections</a><a href="mailto:contact@aitoolsessentials.com">Contact</a></footer>
@@ -213,6 +253,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     import re as _re
     if tools is None:
         tools = json.loads((root / "data/tools.json").read_text())
+    n = 0
     pairs = {
         "chatgpt": ("claude", "Switching from ChatGPT to Claude?", "Read our honest migration guide — what transfers, cost math, first-week test plan.", "/guides/switch-guides/switch-from-chatgpt-to-claude.html"),
         "claude": ("chatgpt", "Thinking of switching from ChatGPT?", "See what carries over, what breaks, and how to test before cancelling anything.", "/guides/switch-guides/switch-from-chatgpt-to-claude.html"),
@@ -223,7 +264,29 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         "elevenlabs": ("descript", "Evaluating Descript for editing?", "Voice stays ours; editing may belong elsewhere — see the ElevenLabs → Descript switch guide.", "/guides/switch-guides/switch-from-elevenlabs-to-descript.html"),
         "fireflies": ("otter-ai", "Considering Otter.ai?", "Cheaper for individuals, weaker for sales teams — read the Fireflies → Otter switch guide first.", "/guides/switch-guides/switch-from-fireflies-to-otter-ai.html"),
     }
-    n = 0
+    # Sitewide nav entry: insert "Switching" after the Alternatives nav link on every page.
+    for page in root.rglob("*.html"):
+        if "admin" in str(page):
+            continue
+        ps = page.read_text()
+        mquick = _re.search(r'<nav class="nav-links">(.*?)</nav>', ps, _re.S)
+        if 'class="nav-links"' not in ps or (mquick and "guides/switch-guides" in mquick.group(1)):
+            continue  # no nav or already has switch link
+        m = _re.search(r'(<nav class="nav-links">)(.*?)(</nav>)', ps, _re.S)
+        if not m:
+            continue
+        inner = m.group(2)
+        rel = "../" * (len(page.relative_to(root).parts) - 1)
+        href = f"{rel}guides/switch-guides/"
+        link = f'<a href="{href}">Switching</a>'
+        am = _re.search(r'<a href="[^"]*alternatives[^"]*">Alternatives</a>', inner)
+        if am:
+            inner = inner[:am.end()] + link + inner[am.end():]
+        else:
+            inner = inner + link
+        ps = ps[:m.start(2)] + inner + ps[m.end(2):]
+        page.write_text(ps)
+        n += 1
     for slug, (other, h, txt, url) in pairs.items():
         rp = root / f"tools/{slug}/index.html"
         if not rp.exists():
