@@ -909,6 +909,14 @@
    [
     "How good is DeepSeek vs ChatGPT?",
     "Close on math/coding benchmarks, weaker on some general tasks — at a fraction of the price. See our comparisons."
+   ],
+   [
+    "Is DeepSeek free?",
+    "DeepSeek's chat app is free to use, and its API uses low per-token pricing that undercuts most frontier rivals. Verify current API rates on DeepSeek's official pricing page — they change occasionally."
+   ],
+   [
+    "What are DeepSeek's main tradeoffs?",
+    "Cost and open availability are strengths. Tradeoffs include fewer integrations than US assistants, and data-governance considerations some organizations need to review before adoption."
    ]
   ],
   "trial_checklist": "Use a real task involving coding—not a demo prompt. Verify whether frontier-level reasoning at a fraction of rival cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to teams need data and compliance review. Repeat the same task in at least one alternative before deciding.",
@@ -1075,6 +1083,10 @@
    [
     "How does it compare to ChatGPT?",
     "Great casual assistant; below top models on hard reasoning. See our AI assistants guide."
+   ],
+   [
+    "How does Meta AI compare with ChatGPT?",
+    "Meta AI wins on convenience inside apps people already use. ChatGPT remains stronger for long-form work, file analysis, and advanced agent features. Choose based on where your work happens."
    ]
   ],
   "trial_checklist": "Use a real task involving consumer assistant tasks—not a demo prompt. Verify whether embedded in whatsapp, instagram, messenger, and ray-ban glasses materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to business workflows are less mature so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
@@ -1126,6 +1138,14 @@
    [
     "Are Mistral models open source?",
     "Many weights are openly licensed — unusual among frontier labs."
+   ],
+   [
+    "Is Mistral Le Chat free to use?",
+    "Yes — Le Chat has a free tier. Paid tiers unlock higher usage limits and the newest Mistral models; check Mistral's official pricing page for current amounts before subscribing."
+   ],
+   [
+    "How does Le Chat compare with ChatGPT?",
+    "Le Chat is strong on European data-residency expectations and fast responses from Mistral's own models. ChatGPT has a broader ecosystem (plugins, voice modes, wider integrations). Our comparison page breaks down the tradeoffs."
    ]
   ],
   "trial_checklist": "Use a real task involving general chat—not a demo prompt. Verify whether fastest response streaming in category testing materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to ecosystem smaller than incumbents so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
@@ -1177,6 +1197,14 @@
    [
     "Can Copy.ai automate sales outreach?",
     "Yes — that's its core focus now, with sequence workflows and CRM integrations."
+   ],
+   [
+    "What does Copy.ai cost?",
+    "Copy.ai uses subscription plans with a free tier for testing and paid tiers for higher volumes and workflow automation. Confirm current prices on Copy.ai's official pricing page before buying."
+   ],
+   [
+    "Copy.ai vs Jasper — which is better?",
+    "Jasper fits brand-voice marketing at team scale; Copy.ai competes on price and go-to-market workflow templates. Our head-to-head comparison walks through which fits which team."
    ]
   ],
   "trial_checklist": "Use a real task involving sales copy—not a demo prompt. Verify whether gtm-focused: sales email sequences, prospecting workflows materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality depends on inputs so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
@@ -1432,6 +1460,14 @@
    [
     "Can I make my own bot?",
     "Yes — custom bots with custom prompts are shareable via link."
+   ],
+   [
+    "What is Poe?",
+    "Poe is Quora's multi-model chat app: one subscription gives access to many AI models (including OpenAI, Anthropic, Google, and others) in a single interface."
+   ],
+   [
+    "Is Poe cheaper than paying for separate AI subscriptions?",
+    "For casual multi-model exploration, often yes — Poe bundles access that would otherwise require several $20/month plans. Heavy users of one specific frontier model may still prefer that vendor's native app for full features."
    ]
   ],
   "trial_checklist": "Use a real task involving model comparison—not a demo prompt. Verify whether access dozens of models in one app materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to not a dedicated workflow system so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
@@ -1789,6 +1825,14 @@
    [
     "Is there a free tier?",
     "Yes, with limited Pro searches daily."
+   ],
+   [
+    "What is You.com best for?",
+    "You.com focuses on AI-assisted search with source visibility, plus writing and coding assistance on paid plans. It suits users who want search-first answers instead of a general chat assistant."
+   ],
+   [
+    "Does You.com have a free plan?",
+    "Yes. A free tier covers basic searches and limited AI chats; Pro unlocks premium models and higher limits. Check you.com's pricing page for current limits."
    ]
   ],
   "trial_checklist": "Use a real task involving ai search—not a demo prompt. Verify whether ai search with citations like perplexity materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs source verification so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
