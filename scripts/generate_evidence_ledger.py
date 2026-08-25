@@ -46,14 +46,15 @@ def generate(root: Path, today: str | None = None) -> Path:
 def postprocess_reviews(root: Path) -> int:
     """Add an exact source-ledger anchor to every generated review page."""
     marker = "<!-- AIT EVIDENCE LINK START -->"
-    block_template = '\n{marker}<p class="evidence-link"><a href="/evidence/#evidence-{slug}">Trace this review\'s pricing, policy, and rights sources in the public Evidence Ledger →</a></p><!-- AIT EVIDENCE LINK END -->\n'
+    records = {r["slug"]: r for r in json.loads((root / "data" / "tool_sources.json").read_text()).get("tools", [])}
+    block_template = '\n{marker}<p class="evidence-link"><span class="evidence-badge">Source check: {checked}</span><a href="/evidence/#evidence-{slug}">Trace this review\'s pricing, policy, and rights sources in the public Evidence Ledger →</a></p><!-- AIT EVIDENCE LINK END -->\n'
     changed = 0
     for page in sorted((root / "tools").glob("*/index.html")):
         slug = page.parent.name
         html_text = page.read_text()
         import re
         html_text = re.sub(re.escape(marker) + r".*?<!-- AIT EVIDENCE LINK END -->\n?", "\n", html_text, flags=re.S)
-        block = block_template.format(marker=marker, slug=slug)
+        block = block_template.format(marker=marker, slug=slug, checked=records.get(slug, {}).get("pricing_checked_date", "date unavailable"))
         if "</main>" in html_text:
             html_text = html_text.replace("</main>", block + "</main>", 1)
             page.write_text(html_text)
