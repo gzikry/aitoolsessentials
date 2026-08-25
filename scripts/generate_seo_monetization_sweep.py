@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""Sitewide SEO/monetization sweep:
+
+1. FAQPage schema on content pages missing it — derived from the page's real
+   question-style H3s where present, otherwise a generic evidence-based FAQ.
+   Only applies to articles/use-cases/guides/comparisons content pages (not hubs).
+2. Affiliate coverage: inject approved ElevenLabs + Make links into the deals hub
+   and top buyer guides via a dedicated module (FTC-compliant, sponsored attrs
+   handled by wire_affiliate_links.py which runs later in the pipeline).
+"""
+from __future__ import annotations
+
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+from typing import Any
+
+DOMAIN = "https://aitoolsessentials.com"
+MARK_START = "<!-- AIT SWEEP FAQ START -->"
+MARK_END = "<!-- AIT SWEEP FAQ END -->"
+
+
+def _questions_from_page(s: str) -> list[tuple[str, str]]:
+    """Extract real Q&A pairs: H3 phrased as a question + following paragraph."""
+    qa: list[tuple[str, str]] = []
+    for m in re.finditer(r"<h3>([^<]{8,140}\?)</h3>\s*<p>(.{40,600}?)</p>", s, re.S):
+        q = re.sub(r"<[^>]+>", "", m.group(1)).strip()
+        a = re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        if q.endswith("?") and not any(x in a.lower() for x in ("<a", "http")):
+            qa.append((q, a[:400]))
+        if len(qa) >= 4:
+            break
+    return qa
+
+
+FAQ_SCHEMA_RE = re.compile(
+    r'<!-- AIT SWEEP FAQ START -->.*?<!-- AIT SWEEP FAQ END -->\n?', re.S
+)
+
+
+def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> dict[str, int]:
+    tools_list: list[dict[str, Any]] = tools if tools is not None else json.loads((root / "data/tools.json").read_text())
+    today = today or datetime.today().strftime("%Y-%m-%d")
+    stats = {"faq_added": 0, "affiliate_modules": 0}
+
+    content_dirs = ["articles", "use-cases", "comparisons", "guides"]
+    for d in content_dirs:
+        dd = root / d
+        if not dd.exists():
+            continue
+        for p in dd.rglob("*.html"):
+            s = p.read_text()
+            # Skip hubs/index pages. If this sweep previously added FAQ schema,
+            # strip the old block and re-add it so the pass is idempotent.
+            if p.name == "index.html":
+                continue
+            had_sweep_block = MARK_START in s
+            if had_sweep_block:
+                s = FAQ_SCHEMA_RE.sub("", s)
+            # If another generator already provides FAQPage schema, leave it alone.
+            if "FAQPage" in s:
+                if had_sweep_block:
+                    p.write_text(s)
+                continue
+            qa = _questions_from_page(s)
+            generic = [
+                ("How were these recommendations verified?",
+                 "Pricing and claims trace to each vendor's official page with a checked date; editorial scores are independent of sponsorships and affiliate relationships."),
+                ("Are the affiliate links on this page paid placements?",
+                 "Some outbound tool links are affiliate links. They never change rankings or scores, and every page carries an FTC-compliant disclosure."),
+            ]
+            use = qa if len(qa) >= 2 else generic
+            faq_schema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                    for q, a in use
+                ],
+            }
+            block = (
+                f"{MARK_START}<script type=\"application/ld+json\">"
+                f"{json.dumps(faq_schema, separators=(',', ':'))}</script>{MARK_END}\n</head>"
+            )
+            if "</head>" in s:
+                s = FAQ_SCHEMA_RE.sub("", s)  # remove stale first
+                s = s.replace("</head>", block, 1)
+                p.write_text(s)
+                stats["faq_added"] += 1
+
+    # ---- affiliate coverage module on deals hub + top buyer guides ----
+    targets = [
+        root / "deals/index.html",
+        root / "articles/best-ai-writing-tools.html",
+        root / "articles/best-free-ai-writing-tools.html",
+        root / "articles/best-ai-productivity-tools.html",
+        root / "articles/transcript-to-newsletter-pipeline.html",
+        root / "articles/jasper-alternatives.html",
+    ]
+    A_MARK_S = "<!-- AIT AFFILIATE MODULE START -->"
+    A_MARK_E = "<!-- AIT AFFILIATE MODULE END -->"
+    A_RE = re.compile(re.escape(A_MARK_S) + r".*?" + re.escape(A_MARK_E) + r"\n?", re.S)
+    module = (
+        f"{A_MARK_S}<section class=\"score-card\" style=\"margin:26px auto 0;max-width:880px\">"
+        "<span>Verified picks</span><h3>Tools we recommend with confidence</h3>"
+        "<p>Two of our highest-scored tools have partner programs we're enrolled in. "
+        "Links below are affiliate links — they never influence our rankings.</p>"
+        '<p><a href="https://try.elevenlabs.io/xs6witq7izqe" target="_blank" rel="sponsored nofollow noopener">Try ElevenLabs (editorial 4.6/5) →</a>'
+        ' &nbsp;·&nbsp; <a href="https://www.make.com/en/register?pc=aitoolsessentials" target="_blank" rel="sponsored nofollow noopener">Try Make.com (automation pick) →</a></p>'
+        f"</section>{A_MARK_E}"
+    )
+    for t in targets:
+        if not t.exists():
+            continue
+        s = t.read_text()
+        if A_MARK_S in s:
+            new_s = A_RE.sub(lambda _m: module, s)
+        else:
+            i = s.rfind("</main>")
+            if i == -1:
+                continue
+            new_s = s[:i] + module + "\n" + s[i:]
+        if new_s != s:
+            t.write_text(new_s)
+            stats["affiliate_modules"] += 1
+    return stats
+
+
+if __name__ == "__main__":
+    root0 = Path(__file__).resolve().parent.parent
+    print(postprocess(root0))

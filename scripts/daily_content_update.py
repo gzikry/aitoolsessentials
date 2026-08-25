@@ -238,3 +238,6 @@ print('Re-injected switch guide modules')
 from generate_pricing_watch import postprocess as _pricing_watch_postprocess
 _pricing_watch_postprocess(root, tools, today)
 print('Re-injected pricing watch links')
+
+from generate_seo_monetization_sweep import postprocess as _sweep_postprocess
+print('SEO/monetization sweep:', _sweep_postprocess(root, tools, today))
