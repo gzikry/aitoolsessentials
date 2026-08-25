@@ -212,7 +212,10 @@ def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
 
 def postprocess_related_next_steps(root: Path) -> None:
     marker = "<!-- AIT RELATED NEXT STEPS START -->"
-    targets = list((root / "alternatives").glob("*-alternatives.html")) + list((root / "use-cases").glob("*.html")) + list((root / "stacks").glob("*.html"))
+    targets = (list((root / "alternatives").glob("*-alternatives.html"))
+               + list((root / "use-cases").glob("*.html"))
+               + list((root / "stacks").glob("*.html"))
+               + list((root / "comparisons").glob("*.html")))
     for p in targets:
         if p.name == "index.html":
             continue
