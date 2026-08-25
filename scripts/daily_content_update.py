@@ -90,6 +90,10 @@ from generate_decision_brief import generate as generate_decision_brief
 generate_decision_brief(root, tools, today)
 print('Generated decision brief generator')
 
+from generate_switch_guides import generate as generate_switch_guides
+generate_switch_guides(root, tools, today)
+print('Generated switch-from migration guides')
+
 
 from generate_site_discovery import generate as generate_site_discovery
 generate_site_discovery(root, tools, today)

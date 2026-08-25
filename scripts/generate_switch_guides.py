@@ -81,6 +81,14 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
                   f'<p>{esc(g["why"][:150])}…</p>'
                   f'<p><a href="/guides/switch-guides/{g["slug"]}.html">Read the switch guide →</a></p></article>')
         li = lambda items: "".join(f"<li>{esc(x)}</li>" for x in items)
+        faq_schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": "What transfers when switching?", "acceptedAnswer": {"@type": "Answer", "text": ". ".join(g["carries"])}},
+                {"@type": "Question", "name": "What does not transfer?", "acceptedAnswer": {"@type": "Answer", "text": ". ".join(g["doesnt"])}},
+            ],
+        }
         html = f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(g['title'])} — what transfers, what doesn't, cost math, and a first-week test plan.">
@@ -127,6 +135,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/about.html">About</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a><a href="/legal/corrections.html">Corrections</a><a href="mailto:contact@aitoolsessentials.com">Contact</a></footer>
 <script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script>
 </body></html>'''
+        html = html.replace("__FAQ_SCHEMA__", json.dumps(faq_schema, separators=(",", ":")))
         p = out / f"{g['slug']}.html"
         p.write_text(html)
         pages.append(p)
