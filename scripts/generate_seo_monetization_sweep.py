@@ -156,6 +156,40 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
             stats.setdefault("lead_modules", 0)
             stats["lead_modules"] += 1
 
+
+
+    # ---- pricing page explore module (top entry page cross-links) ----
+    PE_S = "<!-- AIT PRICING EXPLORE START -->"
+    PE_E = "<!-- AIT PRICING EXPLORE END -->"
+    PE_RE = re.compile(re.escape(PE_S) + r".*?" + re.escape(PE_E) + r"\n?", re.S)
+    pe_module = (
+        f"{PE_S}<section class=\"scene scene-light content-hub\"><div class=\"article-shell wide\">"
+        "<h2>Try the free research tools first</h2>"
+        "<p>Not ready to subscribe? These public utilities use the same verification data our members get:</p>"
+        '<div class="content-hub-grid">'
+        '<article class="content-hub-card"><span>Free tracker</span><h3><a href="/pricing-watch/">AI Pricing Watch</a></h3>'
+        "<p>Verified official-pricing snapshots for all 40 tracked tools, each with a checked date.</p></article>"
+        '<article class="content-hub-card"><span>Free report</span><h3><a href="/pricing-report/">State of AI Pricing</a></h3>'
+        "<p>The quarterly evidence-based summary: coverage stats, live promotions, confirmed changes.</p></article>"
+        '<article class="content-hub-card"><span>Free utility</span><h3><a href="/decision-brief.html">Decision Brief</a></h3>'
+        "<p>Pick 2–3 tools and generate a shareable decision brief with overlap warnings.</p></article>"
+        '<article class="content-hub-card"><span>Free download</span><h3><a href="/downloads/ai-stack-decision-checklist.html">Decision Checklist</a></h3>'
+        "<p>Printable worksheet to score overlap, cost, and trial results before paying for anything.</p></article>"
+        "</div></div></section>" + PE_E
+    )
+    pricing_page = root / "pricing" / "index.html"
+    if pricing_page.exists():
+        s2 = pricing_page.read_text()
+        if PE_S in s2:
+            new = PE_RE.sub(lambda _m: pe_module, s2)
+        else:
+            i = s2.rfind("</main>")
+            new = s2[:i] + pe_module + "\n" + s2[i:] if i != -1 else s2
+        if new != s2:
+            pricing_page.write_text(new)
+            stats.setdefault("pricing_explore", 0)
+            stats["pricing_explore"] += 1
+
     return stats
 
 
