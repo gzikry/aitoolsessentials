@@ -584,3 +584,86 @@ button.shortlist-btn, .card-actions button.shortlist-btn { color:#1e2a8a !import
 .premium-conversion-panel span { color: #4f46e5; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
 .premium-conversion-panel .newsletter-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
 @media (max-width: 760px) { .premium-conversion-panel .newsletter-actions { justify-content: flex-start; } }
+
+
+/* ============================================================
+   UI polish pass 2026-08-24 — depth, rhythm, mobile hardening
+   ============================================================ */
+
+/* Hero atmosphere: spotlight gradient instead of flat black */
+.scene-dark { position: relative; }
+.scene-dark::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(720px 340px at 50% -8%, rgba(113,112,255,.14), transparent 70%); }
+.scene-dark > * { position: relative; z-index: 1; }
+
+/* Typography breathing room */
+h1 { line-height: 1.06; letter-spacing: -2px; }
+.subhead { line-height: 1.5; color: rgba(255,255,255,.88); }
+.kicker.light { font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; }
+.kicker:not(.light) { font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 13px; }
+
+/* Card polish: crisp borders + tighter directional shadows */
+.content-hub-card, .score-card, .pricing-card {
+  border: 1px solid rgba(15,20,40,.08);
+  box-shadow: 0 1px 2px rgba(10,15,35,.05), 0 12px 32px -18px rgba(10,15,35,.18);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.content-hub-card:hover, .score-card:hover { transform: translateY(-3px);
+  box-shadow: 0 2px 4px rgba(10,15,35,.06), 0 20px 44px -18px rgba(60,60,180,.28); }
+
+/* Buttons: stronger presence */
+.button { padding: 12px 24px; border-radius: 10px; }
+.button-blue { box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 8px 22px -10px rgba(94,106,210,.55); }
+.button-blue:hover { transform: translateY(-1px); box-shadow: 0 10px 26px -8px rgba(113,112,255,.6); }
+.button-ghost-dark { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.28); color: #e6e9ff; }
+
+/* Tables: decision-matrix look with sticky header + hover rows */
+.table-wrap { border-radius: 14px; border: 1px solid rgba(15,20,40,.1); overflow: auto;
+  box-shadow: 0 1px 2px rgba(10,15,35,.05), 0 16px 36px -24px rgba(10,15,35,.25); background: #fff; }
+.table-wrap table { min-width: 560px; }
+thead th, tr:first-child th, tr:first-child td { position: sticky; top: 0; background: #f7f8fb; backdrop-filter: blur(8px); }
+tbody tr, table tr:not(:first-child) { transition: background .15s ease; }
+table tbody tr:hover { background: #f7f8fd; }
+td, th { padding: 12px 14px; vertical-align: top; }
+
+/* Review sidebar scorecard lift */
+.score-card { border-radius: 14px; }
+.score-card span { text-transform: uppercase; letter-spacing: .1em; font-size: 12px; font-weight: 700; color: #4c56b8; }
+
+/* Evidence/source pill links on review pages larger tap targets */
+.review-hero .last-updated, p.last-updated { font-size: 14px; opacity: .85; }
+
+/* Mobile hero button stacking to prevent overflow */
+@media (max-width: 480px) {
+  .hero { grid-template-columns: 1fr; padding: 56px 18px 64px; }
+  .hero-copy { justify-self: center; }
+  .actions { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 360px; margin: 0 auto; }
+  .actions .button { width: 100%; }
+  h1 { font-size: clamp(38px, 11vw, 48px); }
+  .subhead { font-size: 18px; }
+}
+@media (max-width: 640px) {
+  .content-hub-grid, .workflow-cards, .product-grid { grid-template-columns: 1fr !important; }
+  .featured-guide { grid-template-columns: 1fr; gap: 34px; }
+  body { font-size: 16.5px; }
+}
+
+/* Focus visibility for keyboard users */
+a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 2px; border-radius: 10px; }
+
+/* Smooth micro-interaction baseline */
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+
+/* Mobile hardening round 2 */
+@media (max-width: 640px) {
+  .intro-strip p { font-size: clamp(20px, 5.6vw, 28px) !important; padding: 0 4px; }
+  html, body { max-width: 100%; overflow-x: hidden; }
+}
+
+
+/* Mobile hardening round 3 — authoritative stacking */
+@media (max-width: 640px) {
+  .actions { flex-direction: column !important; align-items: stretch !important; width: 100% !important; max-width: 380px !important; margin-left: auto !important; margin-right: auto !important; }
+  .actions .button { width: 100%; }
+}

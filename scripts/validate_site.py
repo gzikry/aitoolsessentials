@@ -158,6 +158,9 @@ def main():
             from urllib.parse import unquote
             href_dec = unquote(href)
             url, frag = urldefrag(href_dec)
+            # Query strings are valid on static pages (e.g., ?vs=slug1,slug2); strip before resolving.
+            if '?' in url:
+                url = url.split('?', 1)[0]
             if href.startswith('/'):
                 target = ROOT / url.lstrip('/')
             else:

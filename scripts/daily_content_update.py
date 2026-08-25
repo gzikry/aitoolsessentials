@@ -86,6 +86,11 @@ from generate_premium_membership import generate as generate_premium_membership
 generate_premium_membership(root, tools, today)
 print('Generated premium membership pages and Whop pack')
 
+from generate_decision_brief import generate as generate_decision_brief
+generate_decision_brief(root, tools, today)
+print('Generated decision brief generator')
+
+
 from generate_site_discovery import generate as generate_site_discovery
 generate_site_discovery(root, tools, today)
 print('Generated site discovery utilities')
@@ -208,6 +213,11 @@ print('Injected site discovery head/status modules')
 from generate_knowledge_growth import postprocess as _knowledge_postprocess
 _knowledge_postprocess(root, tools, today)
 print('Injected knowledge schema modules')
+
+from generate_decision_brief import postprocess as _decision_brief_postprocess
+_decision_brief_postprocess(root, tools, today)
+print('Injected decision brief entry links')
+
 
 from generate_premium_membership import postprocess as _premium_postprocess
 _premium_postprocess(root, tools, today)
