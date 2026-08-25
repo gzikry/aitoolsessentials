@@ -9,6 +9,7 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /comparisons/: head-to-head comparisons with "current model lineup" panels (e.g., chatgpt-vs-claude, claude-vs-cursor, zapier-vs-make-vs-n8n)
 - /guides/switch-guides/: 12 migration guides for switching between AI tools (ChatGPT→Claude, Zapier→Make, Midjourney→Leonardo, etc.) with transfer/break/cost/test-plan structure
 - /pricing-watch/: public AI pricing tracker — verified snapshots for all 40 tools, each dated, plus an automatic change log
+- /evidence/: public source ledger with official pricing, docs, privacy, rights links, checked dates, verification notes, and unresolved claims
 - /articles/: buyer guides by audience (agencies, freelancers, developers) and question-intent answers
 - /benchmarks/: versioned external benchmark evidence hub
 - /decision-brief.html/: interactive tool — pick 2–3 tools and generate a shareable decision brief (/decision-brief.html?vs=chatgpt,claude)

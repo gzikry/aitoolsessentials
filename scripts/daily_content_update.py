@@ -24,6 +24,10 @@ benchmark_age = (datetime.today().date() - datetime.fromisoformat(benchmark_data
 tool_source_age = (datetime.today().date() - datetime.fromisoformat(tool_source_data['checked_at']).date()).days
 print(f'Loaded {len(tools)} tools')
 
+from generate_evidence_ledger import generate as generate_evidence_ledger
+generate_evidence_ledger(root, today)
+print('Generated public evidence ledger')
+
 # Generate enriched tool review pages
 from generate_reviews import generate_all
 generate_all(root, tools, today)

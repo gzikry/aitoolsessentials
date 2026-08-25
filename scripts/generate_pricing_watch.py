@@ -96,7 +96,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="/css/share.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"AI Pricing Watch","description":"Verified AI tool pricing snapshots and public change log.","dateModified":"{today}","publisher":{{"@type":"Organization","name":"AIToolsEssentials"}}}}</script>
 </head><body>
-<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/guides/switch-guides/">Switching</a><a href="/pricing-index/">Pricing index</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
+<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/guides/switch-guides/">Switching</a><a href="/pricing-index/">Pricing index</a><a href="/evidence/">Evidence ledger</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
 <main>
 <section class="scene scene-dark"><div style="max-width:900px;margin:0 auto;padding:88px 28px 64px;text-align:center">
 <p class="kicker">Pricing watch · Baseline verified {checked_at}</p>

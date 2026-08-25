@@ -774,3 +774,19 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   .directory-card .card-actions .button,
   .directory-card .card-actions button { min-width: 0; }
 }
+
+
+/* Public evidence ledger */
+.evidence-hero { max-width: 960px; margin: 0 auto; padding: 88px 28px 72px; text-align: center; }
+.evidence-principles { max-width: 1040px; margin: 0 auto 28px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.evidence-principles > div { padding: 20px; border: 1px solid rgba(79,92,200,.16); border-radius: 16px; background: #f8f9ff; }
+.evidence-principles strong, .evidence-principles span { display: block; }
+.evidence-principles strong { color: #28358f; margin-bottom: 7px; }
+.evidence-principles span { color: #5f6475; font-size: 14px; line-height: 1.45; }
+.evidence-table td { vertical-align: top; line-height: 1.45; }
+.evidence-table .muted { font-size: 13px; }
+.evidence-next { margin-top: 40px; }
+@media (max-width: 700px) { .evidence-principles { grid-template-columns: 1fr; } .evidence-hero { padding: 56px 20px 48px; } }
+
+.evidence-table-hint { display: none; }
+@media (max-width: 700px) { .evidence-table-hint { display: block; margin: 0 0 10px; color: #5f6475; font-size: 13px; font-style: italic; } }
