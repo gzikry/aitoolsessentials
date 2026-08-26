@@ -219,6 +219,14 @@
     "grantable": {
       "date": "2026-08-26",
       "digest": "Grantable's official pricing page lists Free at $0 with 5 chat messages/day and file imports up to 10 MB; Starter at $50/month; and Pro at $150/month. Qualifying 501(c)(3) organizations with annual op"
+    },
+    "riverside": {
+      "date": "2026-08-26",
+      "digest": "Riverside's official pricing page lists Free at $0/month with 2 hours of one-off multi-track recording, 720p, a watermark, 44.1 kHz audio, and unlimited single-track recording. Official compare/FAQ co"
+    },
+    "adobe-podcast": {
+      "date": "2026-08-26",
+      "digest": "Adobe Podcast's official plans page lists a Free plan and a Premium plan with a 30-day free trial. Free Enhance Speech is audio-only, 30 minutes / 500 MB per file, 1 hour per day. Free Studio allows 3"
     }
   },
   "changes": [

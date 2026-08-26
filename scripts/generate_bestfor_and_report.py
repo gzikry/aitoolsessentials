@@ -97,6 +97,12 @@ ROLES = [
       ("claude", "Long-document narrative drafts after a data-handling review"),
       ("canva-ai", "Impact reports, one-pagers, and deck visuals")],
      "articles/best-ai-tools-for-nonprofits.html"),
+    ("podcasters", "Podcasters & show producers", "Record, enhance, edit, and clip a weekly show with published free or trial paths, and no implied music-rights certification.",
+     [("riverside", "Official $0 remote studio plus published Pro prices"),
+      ("adobe-podcast", "Official free speech enhancement with published daily limits"),
+      ("descript", "Transcript-first edit and clip workflow"),
+      ("elevenlabs", "Voiceover and clone checks after rights review")],
+     "articles/best-ai-tools-for-podcasters.html"),
 ]
 
 

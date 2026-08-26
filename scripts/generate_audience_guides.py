@@ -105,6 +105,18 @@ GUIDES = {
                   '14-day free trial. Vendor win-rate and revenue-uplift claims are marketing. Keep eligibility, '
                   'budgets, and authorized submissions with a human grant lead.'),
     },
+    'best-ai-tools-for-podcasters.html': {
+        'kicker': 'Audience guide', 'audience': 'podcasters and show producers',
+        'title': 'Best AI tools for podcasters',
+        'subhead': 'Record, enhance, edit, clip, and voice a weekly show — with published free or trial paths and no implied music-rights or likeness certification.',
+        'slugs':['riverside','adobe-podcast','descript','elevenlabs','canva-ai','chatgpt'],
+        'angle': ('Start on official free recording and cleanup tiers before stacking Descript plus a voice lab. '
+                  'Riverside publishes Free at $0 with a 2-hour one-off multi-track allowance, then Pro at $24/month '
+                  'billed annually or $29 monthly. Adobe Podcast publishes Free Enhance Speech and Studio limits and '
+                  'a 30-day Premium trial, but no official USD Premium price on the plans page. Descript and ElevenLabs '
+                  'stay in the stack for transcript editing and voiceover. Check guest consent, voice-clone rights, '
+                  'and watermarks before you publish.'),
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

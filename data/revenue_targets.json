@@ -1318,5 +1318,51 @@
     "status": "not_started",
     "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "riverside",
+    "tool_name": "Riverside",
+    "priority": "high",
+    "category": "Podcast",
+    "recommended_networks_to_check": [
+      "Direct affiliate program at riverside.com/affiliate-program"
+    ],
+    "search_queries": [
+      "Riverside affiliate program",
+      "Riverside.fm affiliate program"
+    ],
+    "target_pages": [
+      "tools/riverside/",
+      "articles/best-ai-tools-for-podcasters.html"
+    ],
+    "best_audiences": [
+      "Podcasters",
+      "Video creators"
+    ],
+    "status": "not_started",
+    "next_action": "Check official affiliate program page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Official site lists an affiliate program; use official URL until approved."
+  },
+  {
+    "tool_slug": "adobe-podcast",
+    "tool_name": "Adobe Podcast",
+    "priority": "medium",
+    "category": "Podcast",
+    "recommended_networks_to_check": [
+      "Adobe Podcast affiliate program page"
+    ],
+    "search_queries": [
+      "Adobe Podcast affiliate program"
+    ],
+    "target_pages": [
+      "tools/adobe-podcast/",
+      "articles/best-ai-tools-for-podcasters.html"
+    ],
+    "best_audiences": [
+      "Podcasters"
+    ],
+    "status": "not_started",
+    "next_action": "Check official Adobe Podcast affiliate page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
   }
 ]

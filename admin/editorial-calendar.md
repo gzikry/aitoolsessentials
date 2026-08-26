@@ -17,7 +17,7 @@
 1. Best AI tools for lawyers (confidentiality-first) ✅ shipped 2026-08-26 — article + workflow + Harvey / Spellbook / CoCounsel reviews
 2. Best AI tools for teachers (free-tier focus) ✅ shipped 2026-08-26 — article + workflow + MagicSchool / Khanmigo reviews
 3. Best AI tools for nonprofits (grant-writing angle) ✅ shipped 2026-08-26 — article + workflow + Grantable / Instrumentl reviews
-4. Best AI tools for podcasters
+4. Best AI tools for podcasters ✅ shipped 2026-08-26 — article + workflow + Riverside / Adobe Podcast reviews
 5. Best AI tools for property managers
 6. Best AI tools for healthcare admin (HIPAA-aware) ✅ shipped 2026-08-26 — article + use-case + Heidi Health / OpenEvidence / Dragon Copilot reviews
 

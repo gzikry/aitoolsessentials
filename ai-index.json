@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-26",
-  "tools_count": 55,
+  "tools_count": 57,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -420,6 +420,20 @@
       "category": "Nonprofit",
       "price": "Free $0 with 5 chat messages/day; Starter $50/mo; Pro $150/mo; qualifying 501(c)(3)s under ~$500K get 50% off for 1 year ($25/$75)",
       "url": "https://aitoolsessentials.com/tools/grantable/"
+    },
+    {
+      "name": "Riverside",
+      "slug": "riverside",
+      "category": "Podcast",
+      "price": "Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom",
+      "url": "https://aitoolsessentials.com/tools/riverside/"
+    },
+    {
+      "name": "Adobe Podcast",
+      "slug": "adobe-podcast",
+      "category": "Podcast",
+      "price": "Free plan with published daily limits; Premium via official 30-day trial \u2014 no public USD list price on the plans page during this check",
+      "url": "https://aitoolsessentials.com/tools/adobe-podcast/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

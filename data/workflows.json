@@ -2,23 +2,31 @@
   {
     "slug": "podcast-editing",
     "title": "AI tools for podcast editing",
-    "description": "Compare AI tools for transcript editing, cleanup, clips, voiceovers, and publishing checks before upgrading a creator workflow.",
+    "description": "Compare record, enhance, edit, clip, and voice tools for a weekly podcast. Check voice rights and watermarks before you publish.",
     "audience": "Podcasters and video creators",
     "primary_tools": [
+      "riverside",
+      "adobe-podcast",
       "descript",
       "elevenlabs",
-      "allvideoai",
       "canva-ai"
     ],
     "decision_steps": [
-      "Start with a real episode, not a sample clip.",
-      "Measure transcript cleanup time, filler-word removal, sound cleanup, and export review work.",
-      "Check voice-rights, music, and avatar policies before using synthetic media publicly."
+      "Start on Riverside Free or Adobe Podcast Free with one real episode, not a sample clip.",
+      "Measure record quality, transcript cleanup time, filler-word removal, clip export, and watermark or branding limits.",
+      "Check voice-rights, music, and clone policies before publishing synthetic audio.",
+      "Do not pay annual Riverside or Descript until the tool owns a weekly production step."
     ],
     "search_queries": [
       "ai tools for podcast editing",
       "best ai podcast editing workflow",
       "ai tools for podcast clips"
+    ],
+    "guardrails": [
+      "Not a music-rights, likeness, or FTC endorsement certification.",
+      "Guest consent and voice-clone rights are the publisher's responsibility.",
+      "Riverside Free multi-track hours are one-off, not a monthly reset.",
+      "Adobe Podcast Premium has no official USD price recorded here because it was missing from the plans page."
     ]
   },
   {

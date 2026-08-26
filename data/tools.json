@@ -2831,5 +2831,103 @@
     "trial_checklist": "Start on Free. Load one sanitized past proposal and one public RFP. Record whether 5 messages/day is enough for a weekly cycle, whether exports remain editable, and whether you actually qualify for the 50% nonprofit price before budgeting Starter or Pro.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high"
+  },
+  {
+    "slug": "riverside",
+    "name": "Riverside",
+    "category": "Podcast",
+    "best_for": "remote podcast recording, AI editing, clips, and hosting with a published free plan",
+    "price": "Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom",
+    "rating": 4.3,
+    "official": "https://riverside.com/",
+    "summary": "A remote recording studio for podcasts and video shows. Official pricing lists a $0 Free plan with a 2-hour one-off multi-track allowance, then Pro, Grow, and Webinar self-serve tiers and custom Business. Official FAQ states annual billing saves up to 20%. Recording itself is described as unlimited; separate-track download hours are the billed cap.",
+    "use_cases": [
+      "Remote multi-track podcast recording",
+      "Text-based edit and filler-word cleanup",
+      "Magic Clips and show-notes drafts",
+      "Publishing to YouTube, Spotify, and Apple"
+    ],
+    "pros": [
+      "Official Free plan is published at $0",
+      "Official Pro, Grow, and Webinar dollar amounts are public",
+      "Official pages describe AI editing, clips, and podcast hosting on paid plans"
+    ],
+    "cons": [
+      "Free multi-track recording is a one-off 2-hour allowance, not a monthly reset",
+      "Free exports carry a Riverside watermark and max out at 720p",
+      "Some AI features consume AI Credits after a published starter allotment"
+    ],
+    "key_features": [
+      "Official Free: $0, 2 hours one-off multi-track, 720p, watermark, unlimited single-track recording",
+      "Official Pro: $24/month billed annually or $29 monthly ($288/year), 14-day trial, 1 studio, 15 hours separate-track downloads",
+      "Official Grow: $34/month annually or $39 monthly ($408/year); Webinar $79/$99; Business custom",
+      "Official FAQ: recording is unlimited; download-hour caps pause new separate-track downloads"
+    ],
+    "faq": [
+      [
+        "How much does Riverside cost?",
+        "Official pricing and FAQ checked 2026-08-26 list Free at $0; Pro at $24/month billed annually or $29 monthly; Grow at $34/$39; Webinar at $79/$99; Business by quote. Older third-party Standard $19 figures are not treated as current official list prices."
+      ],
+      [
+        "Is the Free plan enough to publish?",
+        "Official Free includes 2 hours of one-off multi-track recording, unlimited single-track recording, 720p video, and a Riverside watermark. Test whether watermarked 720p exports are acceptable before paying."
+      ],
+      [
+        "Does recording count against the hours?",
+        "Official FAQ language says recording itself is unlimited. The published hour caps are for downloading separate per-participant tracks. Confirm the current FAQ if your workflow depends on isolated stems."
+      ]
+    ],
+    "trial_checklist": "Record one real remote interview on Free first. Measure whether the 2-hour one-off multi-track allowance covers a typical episode, whether watermarked 720p is publishable, and whether Pro's 15 download hours and 14-day trial actually change edit time.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "adobe-podcast",
+    "name": "Adobe Podcast",
+    "category": "Podcast",
+    "best_for": "browser speech enhancement and short studio sessions with a published free plan",
+    "price": "Free plan with published daily limits; Premium via official 30-day trial — no public USD list price on the plans page during this check",
+    "rating": 4.2,
+    "official": "https://podcast.adobe.com/en/plans",
+    "summary": "Adobe's browser podcast tools for Enhance Speech cleanup and Studio recording. The official plans page publishes a Free plan and a Premium plan with a 30-day free trial. Exact Premium US-dollar pricing was not listed on that page during this check, so no unofficial third-party dollar figure is recorded.",
+    "use_cases": [
+      "Cleaning noisy voice recordings after the fact",
+      "Browser-based studio recording and transcript edits",
+      "Short audiogram exports",
+      "Trying speech enhancement before paying Descript or Riverside"
+    ],
+    "pros": [
+      "Official Free plan publishes usable Enhance Speech and Studio limits",
+      "Official Premium trial is 30 days",
+      "Useful as a cleanup step rather than a full show OS"
+    ],
+    "cons": [
+      "Official plans page did not publish a Premium USD price during this check",
+      "Free Enhance Speech is audio-only, 30 minutes per file, 1 hour per day",
+      "Free Studio downloads are capped at 2 projects per day with branded audiograms"
+    ],
+    "key_features": [
+      "Official Free Enhance Speech: audio only, 30 minutes / 500 MB, 1 hour per day, no bulk or strength adjustment",
+      "Official Free Studio: 30-minute projects, 2 downloads per day, no original-recording download, branded audiograms",
+      "Official Premium: video support, bulk upload, strength adjustment, 4 hours/day, files up to 1 GB / 2 hours, unlimited Studio downloads",
+      "Official page offers a 30-day Premium trial"
+    ],
+    "faq": [
+      [
+        "How much is Adobe Podcast Premium?",
+        "The official plans page checked 2026-08-26 describes Free and Premium feature limits and a 30-day trial. It did not publish a self-serve USD price on that page, so third-party $9.99 figures are not treated as official list prices here."
+      ],
+      [
+        "Is Adobe Podcast free?",
+        "Yes. Official Free includes Enhance Speech with a 30-minute file / 1-hour daily cap and Studio downloads of 2 projects per day. Those limits are the real constraint, not a missing free plan."
+      ],
+      [
+        "Can it replace Descript or Riverside?",
+        "Official positioning is speech enhancement and a browser studio. It is a cleanup and short-session tool. Compare one real episode against Descript or Riverside before cancelling an editor or recorder."
+      ]
+    ],
+    "trial_checklist": "Run one noisy 20-minute voice file through Free Enhance Speech. Record whether the 30-minute / 1-hour daily caps block a weekly show, whether branded audiograms are acceptable, and whether Premium's 30-day trial is required for video or bulk work.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
   }
 ]
