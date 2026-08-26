@@ -84,13 +84,29 @@
     shareEl.innerHTML =
       '<a class="button button-blue" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '">Share on X</a>' +
       '<a class="button button-dark" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url) + '">Share on LinkedIn</a>' +
-      '<button class="button button-ghost-dark" id="copy-brief-link">Copy link</button>';
+      '<button class="button button-ghost-dark" id="copy-brief-link">Copy link</button>' +
+      '<button class="button button-ghost-dark" id="print-brief">Print / save PDF</button>' +
+      '<button class="button button-ghost-dark" id="download-brief">Download text brief</button>';
     var copyBtn = document.getElementById('copy-brief-link');
     if (copyBtn) copyBtn.addEventListener('click', function () {
       (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () {
         copyBtn.textContent = 'Copied!';
         setTimeout(function () { copyBtn.textContent = 'Copy link'; }, 1600);
       }, function () { window.prompt('Copy this link:', url); });
+    });
+    var printBtn = document.getElementById('print-brief');
+    if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+    var downloadBtn = document.getElementById('download-brief');
+    if (downloadBtn) downloadBtn.addEventListener('click', function () {
+      var lines = ['AIToolsEssentials decision brief', 'Tools: ' + names.join(' vs '), 'URL: ' + url, '',
+        document.getElementById('brief-verdict').innerText, '',
+        document.getElementById('brief-table').innerText, '',
+        document.getElementById('brief-trials').innerText, '',
+        'Evidence and full reviews: https://aitoolsessentials.com'];
+      var blob = new Blob([lines.join('\n')], {type:'text/plain;charset=utf-8'});
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+      a.download = 'ai-decision-brief-' + slugs.join('-') + '.txt'; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
     });
 
     out.hidden = false;
