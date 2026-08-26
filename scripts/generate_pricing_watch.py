@@ -89,7 +89,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 
     html = f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Verified AI tool pricing snapshots with checked dates across 40 tools, a public change log of confirmed price-page changes, and Premium member price alerts.">
+<meta name="description" content="Verified AI tool pricing snapshots with checked dates across {len(tools_list)} tools, a public change log of confirmed price-page changes, and Premium member price alerts.">
 <title>AI Pricing Watch — Verified Price Snapshots &amp; Changes — AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/pricing-watch/">
 <meta property="og:title" content="AI Pricing Watch — AIToolsEssentials"><meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">

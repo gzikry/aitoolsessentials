@@ -98,7 +98,7 @@ def generate_best_for(root: Path) -> Path:
                   "/best-for/")
             + '<section class="scene scene-dark hero compact-hero"><div class="hero-copy"><p class="kicker">By profession</p>'
               '<h1>The right AI stack for how you actually work.</h1>'
-              '<p class="subhead">Curated picks per role, each verified against official pricing. Start here instead of guessing from a 40-tool list.</p></div></section>'
+              '<p class="subhead">Curated picks per role, each verified against official pricing. Start here instead of guessing from the current directory.</p></div></section>'
               '<section class="scene scene-light content-hub"><div class="article-shell wide">'
               f'<div class="content-hub-grid">{cards}</div>{deals}'
               '<section class="score-card"><span>Cross-role rules</span><h2>Pick by workflow, not hype.</h2>'

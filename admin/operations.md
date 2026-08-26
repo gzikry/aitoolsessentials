@@ -12,10 +12,10 @@
 
 ## 🚀 Site Overview
 
-**39 AI tools** reviewed  
-**19 category buyer guides**  
-**145 public pages** + 4 admin pages  
-**Sitemap:** 145 URLs  
+**45 AI tools** reviewed
+**19 category buyer guides**
+**318 public pages** + 4 admin pages
+**Sitemap:** 318 URLs
 
 ### Revenue Infrastructure
 - ✅ 16 high-priority affiliate programs configured

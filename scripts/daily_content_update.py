@@ -295,3 +295,30 @@ print('Injected test protocols:', _test_protocol_postprocess(root, tools))
 
 from generate_bestfor_and_report import postprocess_refresh as _bestfor_refresh
 print('Best-for deals strip refreshed:', _bestfor_refresh(root))
+
+# Keep inventory claims accurate after adding or removing tools. Historical pricing
+# research retains its original 40-tool snapshot language; current-directory copy is dynamic.
+_current_count = len(tools)
+_inventory_replacements = {
+    '39 AI tools': f'{_current_count} AI tools',
+    '39 AI tools reviewed': f'{_current_count} AI tools reviewed',
+    '40 tools. Pricing verified': f'{_current_count} tools. Pricing verified',
+    'for all 40 tools': 'for the 40-tool pricing snapshot',
+    'across all 40 tools': 'across the 40-tool pricing snapshot',
+    'across 40 tools': 'across the 40-tool pricing snapshot',
+}
+for _path in root.rglob('*'):
+    if not _path.is_file() or _path.suffix not in {'.html', '.txt', '.md', '.xml'}:
+        continue
+    if '.git' in _path.parts or '.hermes' in _path.parts:
+        continue
+    try:
+        _text = _path.read_text()
+        _new = _text
+        for _old, _replacement in _inventory_replacements.items():
+            _new = _new.replace(_old, _replacement)
+        if _new != _text:
+            _path.write_text(_new)
+    except (UnicodeDecodeError, OSError):
+        continue
+print(f'Refreshed inventory copy for {_current_count} tools')

@@ -8,7 +8,7 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /tools/: individual tool reviews with verified pricing and current model details (e.g., /tools/grok/ covers Grok 4.6, Grok Build, Grok Bot)
 - /comparisons/: head-to-head comparisons with "current model lineup" panels (e.g., chatgpt-vs-claude, claude-vs-cursor, zapier-vs-make-vs-n8n)
 - /guides/switch-guides/: 12 migration guides for switching between AI tools (ChatGPT→Claude, Zapier→Make, Midjourney→Leonardo, etc.) with transfer/break/cost/test-plan structure
-- /pricing-watch/: public AI pricing tracker — verified snapshots for all 40 tools, each dated, plus an automatic change log
+- /pricing-watch/: public AI pricing tracker — verified snapshots for the 40-tool pricing snapshot, each dated, plus an automatic change log
 - /fit-interview/: explainable AI tool fit interview using workflow, budget, priorities, complexity tolerance, and risk preference
 - /change-radar/: return-use public tracker showing the latest recorded pricing and model-lineup checks, attention status, unresolved claims, and exact evidence/review links
 - /how-to/: source-linked practical setup guides for Hermes Agent, OpenClaw, Ollama, Open WebUI, and self-hosted AI security boundaries
