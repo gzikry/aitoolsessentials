@@ -815,3 +815,9 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
 .evidence-link { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .evidence-badge { display: inline-block; padding: 4px 9px; border-radius: 999px; background: #e2e5ff; color: #35419e; font-size: 12px; font-weight: 700; white-space: nowrap; }
 @media (max-width: 620px) { .evidence-link { align-items: flex-start; gap: 8px; } .evidence-link a { flex-basis: 100%; } }
+
+.review-benchmark-score { display: grid; justify-items: end; gap: 2px; line-height: 1.05; text-align: right; }
+.review-benchmark-score strong { font-size: 30px; }
+.review-benchmark-score span { font-size: 24px; font-weight: 700; }
+.review-benchmark-score small, .review-benchmark-score em { color: #6e6e73; font-size: 11px; font-style: normal; font-weight: 600; letter-spacing: .01em; }
+@media (max-width: 620px) { .review-benchmark-head { align-items: flex-start; gap: 14px; } .review-benchmark-score { min-width: 92px; } .review-benchmark-score strong { font-size: 25px; } .review-benchmark-score span { font-size: 20px; } }

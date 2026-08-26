@@ -63,7 +63,7 @@ def _benchmark_html(root: Path, slug: str, category: str) -> str:
     if snapshot:
         source = sources[snapshot['source_id']]
         return f'''<div class="review-benchmark">
-<div class="review-benchmark-head"><div><span class="evidence-label">External benchmark snapshot</span><h3>Arena Text · {snapshot['model']}</h3><span class="benchmark-meta">Snapshot {data['snapshot_date']} · {snapshot['votes']:,} votes · exact model version shown</span></div><div class="review-benchmark-score">#{snapshot['rank']}<small> · {snapshot['score']}</small></div></div>
+<div class="review-benchmark-head"><div><span class="evidence-label">External benchmark snapshot</span><h3>Arena Text · {snapshot['model']}</h3><span class="benchmark-meta">Snapshot {data['snapshot_date']} · {snapshot['votes']:,} preference votes · exact model version shown</span></div><div class="review-benchmark-score"><strong>#{snapshot['rank']}</strong><small>Arena rank</small><span>{snapshot['score']}</span><em>rating ± 95% CI</em></div></div>
 <p>{snapshot['note']} This is supporting context—not the AIToolsEssentials product score. <a href="{source['url']}" target="_blank" rel="external noopener">Source [{source['id']}] ↗</a></p>
 </div>'''
     coding_snapshot = next((x for x in data.get('coding_agent_snapshot', []) if x['tool_slug'] == slug), None)
