@@ -11,6 +11,7 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /pricing-watch/: public AI pricing tracker — verified snapshots for 45 tools, each dated, plus an automatic change log
 - /fit-interview/: explainable AI tool fit interview using workflow, budget, priorities, complexity tolerance, and risk preference
 - /change-radar/: return-use public tracker showing the latest recorded pricing and model-lineup checks, attention status, unresolved claims, and exact evidence/review links
+- /model-lineups/: source-dated ledger of the current model or product lineup for each covered tool, feeding the comparison-page lineup panels
 - /how-to/: source-linked practical setup guides for Hermes Agent, OpenClaw, Ollama, Open WebUI, and self-hosted AI security boundaries
 - /local-ai-planner/: explainable browser-only planner that estimates memory headroom and routes local-AI workloads to hardware and service evidence
 - /hardware/: compatibility, memory, thermals, local-vs-gateway fit, and official purchase links for local AI hardware, including Apple's August 25, 2026 Mac mini announcement

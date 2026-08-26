@@ -68,7 +68,7 @@ def generate_human_sitemap(root: Path, tools: list[dict[str, Any]]) -> None:
     groups = [
         ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Fit Interview", "/fit-interview/"), ("Local AI Planner", "/local-ai-planner/"), ("Confidence Check", "/confidence-check/"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html")]),
         ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/")]),
-        ("Trust", [("Changelog", "/changelog/"), ("Change Radar", "/change-radar/"), ("How-to library", "/how-to/"), ("Hardware guide", "/hardware/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
+        ("Trust", [("Changelog", "/changelog/"), ("Change Radar", "/change-radar/"), ("Model lineups", "/model-lineups/"), ("How-to library", "/how-to/"), ("Hardware guide", "/hardware/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
         ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Weekly", "/weekly/"), ("RSS feed", "/feed.xml")]),
     ]
     cards = "".join(f'<article class="content-hub-card"><h3>{esc(title)}</h3><ul>' + "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for label, href in links) + "</ul></article>" for title, links in groups)
@@ -142,7 +142,7 @@ def generate_status(root: Path, tools: list[dict[str, Any]], today: str) -> None
         },
         "hardware_records": hardware_records,
         "feeds": ["/feed.xml", "/weekly/feed.xml", "/changelog/feed.xml"],
-        "core_utilities": ["/stack-builder.html", "/tool-finder.html", "/fit-interview/", "/local-ai-planner/", "/confidence-check/", "/change-radar/", "/how-to/", "/hardware/", "/cost-calculator.html", "/compare-shortlist.html"],
+        "core_utilities": ["/stack-builder.html", "/tool-finder.html", "/fit-interview/", "/local-ai-planner/", "/confidence-check/", "/change-radar/", "/model-lineups/", "/how-to/", "/hardware/", "/cost-calculator.html", "/compare-shortlist.html"],
         "editorial_boundaries": "Affiliate/sponsor relationships do not change editorial scoring; corrections are verified against official sources before publication.",
     }
     (root / "site-status.json").write_text(json.dumps(data, indent=2) + "\n")

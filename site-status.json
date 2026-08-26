@@ -3,7 +3,7 @@
   "domain": "https://aitoolsessentials.com",
   "last_generated": "2026-08-26",
   "tools_tracked": 45,
-  "html_pages": 318,
+  "html_pages": 319,
   "evidence_freshness": {
     "pricing_records": 45,
     "latest_pricing_checked": "2026-08-26",
@@ -24,6 +24,7 @@
     "/local-ai-planner/",
     "/confidence-check/",
     "/change-radar/",
+    "/model-lineups/",
     "/how-to/",
     "/hardware/",
     "/cost-calculator.html",

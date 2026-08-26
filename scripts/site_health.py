@@ -11,7 +11,7 @@ from pathlib import Path
 
 REQUIRED = [
     "fit-interview", "confidence-check", "change-radar", "evidence", "methodology",
-    "pricing-watch", "guides/switch-guides", "decision-brief.html", "stack-builder.html",
+    "pricing-watch", "guides/switch-guides", "model-lineups", "decision-brief.html", "stack-builder.html",
     "cost-calculator.html", "compare-shortlist.html",
 ]
 SECRET_PATTERNS = [

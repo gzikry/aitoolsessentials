@@ -281,6 +281,9 @@ from generate_model_lineups import generate as generate_model_lineups
 generate_model_lineups(root)
 print('Injected model lineup panels')
 
+from generate_lineup_hub import generate as generate_lineup_hub
+print('Generated model lineups hub:', generate_lineup_hub(root))
+
 from generate_seo_monetization_sweep import postprocess as _sweep_postprocess
 print('SEO/monetization sweep:', _sweep_postprocess(root, tools, today))
 
