@@ -91,6 +91,12 @@ ROLES = [
       ("canva-ai", "Slides, worksheets, and classroom visuals"),
       ("gamma", "Fast lesson or parent-night decks from an outline")],
      "articles/best-ai-tools-for-teachers.html"),
+    ("nonprofits", "Nonprofits & grant writers", "Grant research and proposal drafts with published free or trial paths, and no implied fundraising certification.",
+     [("grantable", "Official free plan plus published 50% small-nonprofit discount"),
+      ("instrumentl", "Official paid grant OS starting at $299/month billed annually"),
+      ("claude", "Long-document narrative drafts after a data-handling review"),
+      ("canva-ai", "Impact reports, one-pagers, and deck visuals")],
+     "articles/best-ai-tools-for-nonprofits.html"),
 ]
 
 

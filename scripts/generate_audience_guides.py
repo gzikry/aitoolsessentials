@@ -93,6 +93,18 @@ GUIDES = {
                   'access is a district implementation, not a teacher-account toggle. Vendor FERPA/COPPA marks are '
                   'claims to verify with your school. Do not paste identifiable student records into a personal chat.'),
     },
+    'best-ai-tools-for-nonprofits.html': {
+        'kicker': 'Audience guide', 'audience': 'nonprofit staff and grant writers',
+        'title': 'Best AI tools for nonprofits',
+        'subhead': 'Grant-writing and development tools with published free or trial paths — and no implied fundraising, tax, or award certification.',
+        'slugs':['grantable','instrumentl','chatgpt','claude','notion-ai','canva-ai'],
+        'angle': ('Small nonprofits should not start on a $299/month grant database. Grantable publishes a real '
+                  'free plan (5 messages/day) plus Starter at $50/month and Pro at $150/month, with a one-year 50% '
+                  'discount to $25/$75 for qualifying 501(c)(3)s under about $500K. Instrumentl is the paid discovery '
+                  'and lifecycle platform: official Discover is $299/month billed annually or $349 monthly, with a '
+                  '14-day free trial. Vendor win-rate and revenue-uplift claims are marketing. Keep eligibility, '
+                  'budgets, and authorized submissions with a human grant lead.'),
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

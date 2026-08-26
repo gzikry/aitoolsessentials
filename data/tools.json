@@ -2733,5 +2733,103 @@
     "trial_checklist": "Create a teacher account through the official Khanmigo teachers page. Generate one lesson plan, one quiz with an answer key, and one family newsletter from de-identified class context. Confirm whether your students would need a paid family plan or a district implementation.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high"
+  },
+  {
+    "slug": "instrumentl",
+    "name": "Instrumentl",
+    "category": "Nonprofit",
+    "best_for": "nonprofit grant discovery, proposal collaboration, and post-award tracking on a published paid plan",
+    "price": "Discover $299/mo billed annually ($349 monthly); Pre-Award $499/$579; Full Lifecycle $999/$1,159; Enterprise custom; 14-day free trial",
+    "rating": 4.2,
+    "official": "https://www.instrumentl.com/",
+    "summary": "A grant operating system for finding, drafting, and managing awards. Official pricing starts at $299/month when paid annually for Discover, with higher Pre-Award and Full Lifecycle tiers. A 14-day free trial is advertised. Vendor ROI marketing figures are not independently verified here.",
+    "use_cases": [
+      "Funder matching against programs and eligibility",
+      "Grant pipeline and deadline tracking",
+      "Collaborative proposal drafting on Pre-Award and above",
+      "Post-award spend tracking on Full Lifecycle"
+    ],
+    "pros": [
+      "Official pricing page publishes dollar amounts for three self-serve tiers",
+      "Official 14-day trial requires no credit card",
+      "Pre-Award and above include AI-assisted proposal drafting language on the official page"
+    ],
+    "cons": [
+      "No forever-free plan; the cheapest official path is a paid Discover subscription after the trial",
+      "Annual rates are paid upfront, not monthly installments",
+      "Homepage revenue and hours-saved claims are vendor marketing, not audited here"
+    ],
+    "key_features": [
+      "Official Discover: $299/month paid upfront annually, or $349 paid monthly, up to 3 users",
+      "Official Pre-Award: $499/month annually or $579 monthly, up to 5 users",
+      "Official Full Lifecycle: $999/month annually or $1,159 monthly, up to 15 users",
+      "Enterprise is custom pricing; 14-day free trial advertised on all self-serve plans"
+    ],
+    "faq": [
+      [
+        "How much does Instrumentl cost?",
+        "The official pricing page checked 2026-08-26 lists Discover at $299/month paid annually or $349 monthly; Pre-Award at $499/$579; Full Lifecycle at $999/$1,159. Enterprise is custom. Third-party archives with older $179 or $149 figures are not current official list prices."
+      ],
+      [
+        "Is there a free Instrumentl plan?",
+        "Official pages advertise a 14-day free trial with no credit card, not a forever-free production plan."
+      ],
+      [
+        "Does Instrumentl write the grant for us?",
+        "Official Pre-Award copy describes using AI plus your past content to write faster. That is a drafting aid. A human still owns eligibility, budget accuracy, and anything submitted under an authorized signature."
+      ]
+    ],
+    "trial_checklist": "Use the official 14-day trial on one real program, not a demo funder. Record match quality, whether AI drafting uses only your uploaded past proposals, export ownership, and the actual billed annual-upfront total versus the advertised monthly equivalent.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "grantable",
+    "name": "Grantable",
+    "category": "Nonprofit",
+    "best_for": "free-first AI grant writing and funder research for small nonprofits",
+    "price": "Free $0 with 5 chat messages/day; Starter $50/mo; Pro $150/mo; qualifying 501(c)(3)s under ~$500K get 50% off for 1 year ($25/$75)",
+    "rating": 4.3,
+    "official": "https://www.grantable.co/",
+    "summary": "An AI grant-writing workspace with a real free plan. Official pricing lists Starter at $50/month and Pro at $150/month, plus a one-year 50% nonprofit discount for qualifying 501(c)(3) organizations under about $500K operating budget. Docs also describe a Pro+ tier whose public dollar price was not listed on the main pricing page during this check.",
+    "use_cases": [
+      "First-draft proposal narratives from org documents",
+      "Funder research inside one workspace",
+      "Small-team grant collaboration without per-seat fees",
+      "Trying AI grant help before buying Instrumentl-class software"
+    ],
+    "pros": [
+      "Official pricing page publishes a real free plan, not only a trial",
+      "Official 50% nonprofit discount amounts are public for Starter and Pro",
+      "Official page states no per-seat fees"
+    ],
+    "cons": [
+      "Free plan is limited to 5 chat messages per day and 10 MB file imports",
+      "Nonprofit discount is eligibility-gated and lasts one year unless renewed",
+      "Docs mention Pro+ while the public pricing page emphasizes Free, Starter, and Pro"
+    ],
+    "key_features": [
+      "Official Free: 5 chat messages/day, file imports up to 10 MB, no per-seat fees",
+      "Official Starter $50/month and Pro $150/month",
+      "Official nonprofit discount: $25/month Starter and $75/month Pro for 1 year for 501(c)(3)s under about $500K",
+      "Official docs: canceling moves the account to Free and keeps workspaces"
+    ],
+    "faq": [
+      [
+        "Is Grantable free?",
+        "Yes. Official pricing and docs describe a real Free plan with 5 AI messages per day. It is not only a time-limited trial."
+      ],
+      [
+        "How much is the nonprofit discount?",
+        "Official pricing and docs checked 2026-08-26 list 50% off Starter and Pro for one year: $25/month and $75/month. Eligibility is 501(c)(3) organizations with annual operating budgets under approximately $500,000, verified with a Form 990."
+      ],
+      [
+        "Does Grantable replace Instrumentl?",
+        "Grantable's own pricing page compares itself with Instrumentl and general chat tools. That is vendor positioning. Compare one real RFP in both before cancelling a discovery database."
+      ]
+    ],
+    "trial_checklist": "Start on Free. Load one sanitized past proposal and one public RFP. Record whether 5 messages/day is enough for a weekly cycle, whether exports remain editable, and whether you actually qualify for the 50% nonprofit price before budgeting Starter or Pro.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
   }
 ]

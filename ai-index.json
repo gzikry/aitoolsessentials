@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-26",
-  "tools_count": 53,
+  "tools_count": 55,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -406,6 +406,20 @@
       "category": "Education",
       "price": "Teacher tools officially free in supported locales; learners/families $4/month or $44/year; district tools by quote",
       "url": "https://aitoolsessentials.com/tools/khanmigo/"
+    },
+    {
+      "name": "Instrumentl",
+      "slug": "instrumentl",
+      "category": "Nonprofit",
+      "price": "Discover $299/mo billed annually ($349 monthly); Pre-Award $499/$579; Full Lifecycle $999/$1,159; Enterprise custom; 14-day free trial",
+      "url": "https://aitoolsessentials.com/tools/instrumentl/"
+    },
+    {
+      "name": "Grantable",
+      "slug": "grantable",
+      "category": "Nonprofit",
+      "price": "Free $0 with 5 chat messages/day; Starter $50/mo; Pro $150/mo; qualifying 501(c)(3)s under ~$500K get 50% off for 1 year ($25/$75)",
+      "url": "https://aitoolsessentials.com/tools/grantable/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

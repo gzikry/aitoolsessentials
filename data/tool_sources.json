@@ -787,6 +787,36 @@
         "District Tools pricing is quote-specific.",
         "The number of children covered by a family subscription should be confirmed on the current official parent/pricing pages at purchase time."
       ]
+    },
+    {
+      "slug": "instrumentl",
+      "pricing_checked_date": "2026-08-26",
+      "pricing_summary": "Instrumentl's official pricing page lists Discover at $299/month paid upfront annually or $349 paid monthly (up to 3 users); Pre-Award at $499/month annually or $579 monthly (up to 5 users); Full Lifecycle at $999/month annually or $1,159 monthly (up to 15 users); and Enterprise as custom pricing. A 14-day free trial with no credit card is advertised on self-serve plans.",
+      "pricing_url": "https://www.instrumentl.com/pricing",
+      "docs_url": "https://www.instrumentl.com/",
+      "privacy_url": "https://www.instrumentl.com/privacy-policy",
+      "rights_url": "https://www.instrumentl.com/pricing",
+      "verification_notes": "Official pricing and homepage checked 2026-08-26. Pre-Award copy describes using AI plus past content to write faster. Homepage and FAQ marketing figures such as average grant-revenue increase and hours saved are vendor claims and are not treated as independently verified results.",
+      "unresolved_claims": [
+        "Vendor ROI, hours-saved, and customer-count marketing figures are not independently audited here.",
+        "Overage pricing for extra users beyond published seat caps is not listed as a public dollar rate.",
+        "Which exact AI drafting features sit on Discover versus Pre-Award can change and should be confirmed in the current trial."
+      ]
+    },
+    {
+      "slug": "grantable",
+      "pricing_checked_date": "2026-08-26",
+      "pricing_summary": "Grantable's official pricing page lists Free at $0 with 5 chat messages/day and file imports up to 10 MB; Starter at $50/month; and Pro at $150/month. Qualifying 501(c)(3) organizations with annual operating budgets under approximately $500,000 get 50% off Starter and Pro for one year ($25/month and $75/month). Official docs also describe a Pro+ tier; a public dollar price for Pro+ was not listed on the main pricing page during this check. An Agency Hub add-on is listed at $300/month.",
+      "pricing_url": "https://www.grantable.co/pricing",
+      "docs_url": "https://grantable.co/docs/billing/plans",
+      "privacy_url": "https://grantable.co/privacy",
+      "rights_url": "https://grantable.co/docs/billing/plans",
+      "verification_notes": "Official pricing page and billing docs checked 2026-08-26. Docs last updated July 30, 2026 describe Free as a real plan and state that canceling moves the account to Free while keeping workspaces. Annual billing is advertised as a savings versus monthly; the public pricing page showed a Save 17% annual toggle, while older docs mentioned 10%. Use the live pricing page at purchase time.",
+      "unresolved_claims": [
+        "Public dollar price for Pro+ was not listed on the main pricing page during this check.",
+        "Annual versus monthly savings percentage should be read from the live pricing toggle, not archived copy.",
+        "Nonprofit-discount eligibility and Form 990 review are completed by the vendor and may change."
+      ]
     }
   ]
 }

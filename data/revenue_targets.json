@@ -1270,5 +1270,53 @@
     "status": "not_started",
     "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "instrumentl",
+    "tool_name": "Instrumentl",
+    "priority": "medium",
+    "category": "Nonprofit",
+    "recommended_networks_to_check": [
+      "Direct partner/affiliate inquiry"
+    ],
+    "search_queries": [
+      "Instrumentl affiliate program",
+      "Instrumentl partner program"
+    ],
+    "target_pages": [
+      "tools/instrumentl/",
+      "articles/best-ai-tools-for-nonprofits.html"
+    ],
+    "best_audiences": [
+      "Nonprofits",
+      "Grant writers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "grantable",
+    "tool_name": "Grantable",
+    "priority": "medium",
+    "category": "Nonprofit",
+    "recommended_networks_to_check": [
+      "Direct partner/affiliate inquiry"
+    ],
+    "search_queries": [
+      "Grantable affiliate program",
+      "Grantable partner program"
+    ],
+    "target_pages": [
+      "tools/grantable/",
+      "articles/best-ai-tools-for-nonprofits.html"
+    ],
+    "best_audiences": [
+      "Nonprofits",
+      "Grant writers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
   }
 ]

@@ -407,5 +407,37 @@
       "magicschool vs khanmigo",
       "best free ai tools for classroom planning"
     ]
+  },
+  {
+    "slug": "nonprofit-grant-writing",
+    "title": "AI tools for nonprofit grant writing",
+    "description": "Compare free-first and paid grant-writing tools for funder research, proposal drafts, and award tracking. Not a substitute for eligibility review, budget accuracy, or an authorized submission.",
+    "audience": "Nonprofit staff, grant writers, and development directors",
+    "primary_tools": [
+      "grantable",
+      "instrumentl",
+      "chatgpt",
+      "claude",
+      "notion-ai",
+      "canva-ai"
+    ],
+    "decision_steps": [
+      "Start on Grantable Free or an Instrumentl 14-day trial before paying annual-upfront software.",
+      "Use one real program and sanitized org documents, not a generic charity prompt.",
+      "Compare funder-match quality, draft edit time, export ownership, and the actual cash outlay including annual-upfront billing.",
+      "Keep eligibility, budgets, and anything under an authorized signature with a human grant lead."
+    ],
+    "guardrails": [
+      "Not fundraising, tax, or grant-award advice.",
+      "Vendor ROI, win-rate, and hours-saved figures are marketing claims unless independently verified.",
+      "Do not paste donor, beneficiary, or Social Security data into a personal chatbot.",
+      "Grantable's 50% nonprofit price is eligibility-gated; Instrumentl's cheapest official path after the trial is a paid plan."
+    ],
+    "search_queries": [
+      "ai tools for nonprofit grant writing",
+      "best ai grant writing software",
+      "instrumentl vs grantable",
+      "free ai tools for nonprofits"
+    ]
   }
 ]
