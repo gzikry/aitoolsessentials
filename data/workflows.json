@@ -1,0 +1,158 @@
+[
+  {
+    "slug": "podcast-editing",
+    "title": "AI tools for podcast editing",
+    "description": "Compare AI tools for transcript editing, cleanup, clips, voiceovers, and publishing checks before upgrading a creator workflow.",
+    "audience": "Podcasters and video creators",
+    "primary_tools": ["descript", "elevenlabs", "allvideoai", "canva-ai"],
+    "decision_steps": [
+      "Start with a real episode, not a sample clip.",
+      "Measure transcript cleanup time, filler-word removal, sound cleanup, and export review work.",
+      "Check voice-rights, music, and avatar policies before using synthetic media publicly."
+    ],
+    "search_queries": ["ai tools for podcast editing", "best ai podcast editing workflow", "ai tools for podcast clips"]
+  },
+  {
+    "slug": "youtube-video-production",
+    "title": "AI tools for YouTube video production",
+    "description": "Plan a YouTube workflow for scripts, thumbnails, voice, editing, clips, and AI video generation without stacking unnecessary subscriptions.",
+    "audience": "YouTubers and solo creators",
+    "primary_tools": ["chatgpt", "claude", "canva-ai", "descript", "elevenlabs", "runway"],
+    "decision_steps": [
+      "Choose one repeated video format first: tutorial, talking-head, short, or product demo.",
+      "Test script quality, edit time, thumbnail iteration, and publishable output quality on the same brief.",
+      "Avoid paid annual plans until the tool owns a weekly production step."
+    ],
+    "search_queries": ["ai tools for youtube videos", "best ai tools for youtubers", "youtube ai workflow"]
+  },
+  {
+    "slug": "sales-call-follow-up",
+    "title": "AI tools for sales call notes and CRM follow-up",
+    "description": "Compare meeting, automation, and writing tools for turning sales calls into summaries, follow-up emails, CRM updates, and next actions.",
+    "audience": "Sales teams and founders",
+    "primary_tools": ["fathom", "fireflies", "otter-ai", "zapier-ai", "make", "copy-ai"],
+    "decision_steps": [
+      "Run the same recorded call through each finalist and compare action-item accuracy.",
+      "Map which CRM fields can be updated automatically and which require human approval.",
+      "Check retention, consent, and admin controls before recording customer calls."
+    ],
+    "search_queries": ["ai tools for sales call notes", "ai crm follow up workflow", "best ai meeting notes for sales"]
+  },
+  {
+    "slug": "client-onboarding-automation",
+    "title": "AI tools for client onboarding automation",
+    "description": "Build a safer client-onboarding workflow for intake forms, summaries, routing, task creation, and human approval points.",
+    "audience": "Agencies, consultants, and service businesses",
+    "primary_tools": ["airtable-ai", "make", "zapier-ai", "n8n", "notion-ai", "chatgpt"],
+    "decision_steps": [
+      "List every client input, document, internal task, and approval point.",
+      "Keep credentials, payments, contracts, and account changes behind human review.",
+      "Compare task/operation pricing before scaling a multi-step automation."
+    ],
+    "search_queries": ["ai client onboarding automation", "ai tools for client onboarding", "agency onboarding automation ai"]
+  },
+  {
+    "slug": "local-private-ai-workbench",
+    "title": "AI tools for a local private AI workbench",
+    "description": "Compare local AI tools for running models on your own machine, adding a browser UI, and deciding when hardware upgrades are justified.",
+    "audience": "Privacy-conscious users, developers, and operators",
+    "primary_tools": ["ollama", "lm-studio", "open-webui", "hermes-agent", "openclaw"],
+    "decision_steps": [
+      "Decide whether the workload is local inference, a gateway, or a hybrid hosted/local setup.",
+      "Use the Local AI Planner to estimate memory headroom before buying hardware.",
+      "Keep API keys and sensitive documents out of early tests until boundaries are proven."
+    ],
+    "search_queries": ["local private ai tools", "local ai workbench", "ollama lm studio open webui comparison"]
+  },
+  {
+    "slug": "ai-agent-automation",
+    "title": "AI tools for agent automation",
+    "description": "Compare AI agent and automation platforms for recurring work, multi-step actions, approvals, and safe operational boundaries.",
+    "audience": "Operators and technical teams",
+    "primary_tools": ["hermes-agent", "openclaw", "n8n", "make", "zapier-ai", "grok"],
+    "decision_steps": [
+      "Start with read-only monitoring or draft generation before allowing tools to write externally.",
+      "Define approval gates for messages, purchases, account access, and customer-facing actions.",
+      "Log failures, retries, and handoffs so the automation can be audited."
+    ],
+    "search_queries": ["ai agent automation tools", "best ai agents for automation", "self hosted ai agent workflow"]
+  },
+  {
+    "slug": "marketing-campaign-content",
+    "title": "AI tools for marketing campaign content",
+    "description": "Compare AI tools for campaign briefs, brand voice, landing-page copy, graphics, repurposing, and marketing operations.",
+    "audience": "Marketers and growth teams",
+    "primary_tools": ["jasper", "copy-ai", "canva-ai", "chatgpt", "claude", "midjourney"],
+    "decision_steps": [
+      "Use one campaign brief across every tool and compare review effort, consistency, and brand fit.",
+      "Separate first-draft generation from final claims, legal review, and performance measurement.",
+      "Check whether the tool supports reusable brand voice or only one-off prompting."
+    ],
+    "search_queries": ["ai tools for marketing campaigns", "best ai marketing content workflow", "ai tools for campaign copy"]
+  },
+  {
+    "slug": "research-and-citation-workflow",
+    "title": "AI tools for research and citation workflows",
+    "description": "Compare source-backed search and assistant tools for research briefs, market scans, citations, and human verification.",
+    "audience": "Researchers, consultants, students, and analysts",
+    "primary_tools": ["perplexity", "you-com", "chatgpt", "claude", "notion-ai"],
+    "decision_steps": [
+      "Ask each tool for sources, then verify the source pages directly.",
+      "Separate discovery, synthesis, citation checking, and final writing into different steps.",
+      "Do not treat confident prose as evidence; require links, dates, and repeatable checks."
+    ],
+    "search_queries": ["ai tools for research citations", "best ai research workflow", "source backed ai search tools"]
+  },
+  {
+    "slug": "app-prototyping",
+    "title": "AI tools for app prototyping",
+    "description": "Compare prompt-to-app, code editor, UI generation, and browser development tools for turning ideas into testable prototypes.",
+    "audience": "Founders, product teams, and developers",
+    "primary_tools": ["cursor", "bolt-new", "lovable", "v0", "replit-ai", "github-copilot"],
+    "decision_steps": [
+      "Define whether you need UI mockups, production code, deployment, or ongoing engineering support.",
+      "Run the same feature request in each tool and inspect generated code before trusting it.",
+      "Track bug-fix time, deployment friction, and export ownership before subscribing."
+    ],
+    "search_queries": ["ai app prototyping tools", "best ai app builder workflow", "prompt to app tools comparison"]
+  },
+  {
+    "slug": "business-writing-review",
+    "title": "AI tools for business writing and review",
+    "description": "Compare AI writing assistants for emails, docs, tone checks, policies, proposals, and careful review before sending.",
+    "audience": "Business teams, consultants, and knowledge workers",
+    "primary_tools": ["grammarly", "claude", "chatgpt", "microsoft-copilot", "notion-ai"],
+    "decision_steps": [
+      "Test with real emails, proposals, and internal docs that match your review standards.",
+      "Compare edit quality, tone control, privacy boundaries, and where the tool appears in your workflow.",
+      "Keep final customer, legal, HR, and financial language under human review."
+    ],
+    "search_queries": ["ai tools for business writing", "best ai writing review tools", "ai email and proposal writing"]
+  },
+  {
+    "slug": "training-video-creation",
+    "title": "AI tools for training video creation",
+    "description": "Compare avatar, presentation, voice, and video-generation tools for internal training content and repeatable knowledge transfer.",
+    "audience": "Operations, HR, and enablement teams",
+    "primary_tools": ["synthesia", "heygen", "gamma", "elevenlabs", "canva-ai"],
+    "decision_steps": [
+      "Start with one training module and define what must be editable later.",
+      "Check avatar disclosure, voice rights, localization quality, and export ownership.",
+      "Use human review for policy, safety, legal, and customer-facing training content."
+    ],
+    "search_queries": ["ai tools for training videos", "best ai avatar training video tools", "ai training content workflow"]
+  },
+  {
+    "slug": "support-knowledge-base",
+    "title": "AI tools for support knowledge bases",
+    "description": "Compare AI tools for summarizing tickets, drafting help articles, searching internal knowledge, and routing support work.",
+    "audience": "Support and customer success teams",
+    "primary_tools": ["notion-ai", "slack-ai", "airtable-ai", "chatgpt", "claude", "make"],
+    "decision_steps": [
+      "Map where customer data enters the workflow and who approves external replies.",
+      "Use AI for drafts, clustering, and retrieval before automating support outcomes.",
+      "Measure deflection, edit time, and escalation errors before expanding access."
+    ],
+    "search_queries": ["ai tools for support knowledge base", "ai customer support knowledge workflow", "ai tools for help docs"]
+  }
+]

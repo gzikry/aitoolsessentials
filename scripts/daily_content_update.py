@@ -90,6 +90,9 @@ from generate_conversion_growth import generate as generate_conversion_growth
 generate_conversion_growth(root, tools, today)
 print('Generated conversion growth utilities')
 
+from generate_workflow_pages import generate as generate_workflow_pages
+print('Generated workflow SEO pages:', generate_workflow_pages(root))
+
 from generate_knowledge_growth import generate as generate_knowledge_growth
 generate_knowledge_growth(root, tools, today)
 print('Generated knowledge growth utilities')
