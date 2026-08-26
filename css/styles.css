@@ -882,3 +882,15 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   .confidence-hero h1, .confidence-hero .subhead, .confidence-explainer span, .confidence-note, .confidence-card, .confidence-card li { word-break: break-word !important; overflow-wrap: break-word !important; white-space: normal !important; }
   .confidence-explainer > div { overflow: hidden; }
 }
+
+@media (max-width: 760px) {
+  .confidence-hero, .confidence-explainer, .confidence-note, .confidence-search, .confidence-grid, .confidence-next { width: 358px !important; max-width: calc(100% - 32px) !important; }
+}
+
+@media (max-width: 760px) {
+  .confidence-hero, .confidence-explainer, .confidence-note, .confidence-search, .confidence-grid, .confidence-next { width: 300px !important; max-width: calc(100% - 32px) !important; }
+}
+
+@media (max-width: 760px) {
+  .confidence-hero, .confidence-explainer, .confidence-note, .confidence-search, .confidence-grid, .confidence-next { width: 260px !important; max-width: calc(100% - 32px) !important; }
+}
