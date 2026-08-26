@@ -24,6 +24,10 @@ benchmark_age = (datetime.today().date() - datetime.fromisoformat(benchmark_data
 tool_source_age = (datetime.today().date() - datetime.fromisoformat(tool_source_data['checked_at']).date()).days
 print(f'Loaded {len(tools)} tools')
 
+from generate_confidence_check import generate as generate_confidence_check
+generate_confidence_check(root, today)
+print('Generated decision confidence check')
+
 from generate_methodology import generate as generate_methodology
 generate_methodology(root, today)
 print('Generated editorial methodology page')
