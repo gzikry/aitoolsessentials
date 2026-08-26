@@ -37,4 +37,4 @@ def generate(root: Path) -> int:
     print(f'Enhanced buyer-guide evidence on {changed} pages')
     return changed
 
-if __name__=='__main__':generate(Path('/Users/georgezikry/aitoolessentials/site'))
+if __name__=='__main__':generate(Path(__file__).resolve().parents[1])

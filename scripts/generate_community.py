@@ -27,7 +27,7 @@ def generate(root: Path, tools: list, today: str) -> Path:
 
 
 if __name__ == '__main__':
-    root = Path('/Users/georgezikry/aitoolessentials/site')
+    root = Path(__file__).resolve().parents[1]
     tools = json.loads((root/'data/tools.json').read_text())
     from datetime import date
     generate(root, tools, date.today().isoformat())

@@ -57,4 +57,4 @@ def generate(root: Path) -> int:
 
 
 if __name__ == '__main__':
-    generate(Path('/Users/georgezikry/aitoolessentials/site'))
+    generate(Path(__file__).resolve().parents[1])

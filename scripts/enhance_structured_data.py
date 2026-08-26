@@ -13,7 +13,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-ROOT = Path('/Users/georgezikry/aitoolessentials/site')
+ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = 'https://aitoolsessentials.com'
 MARKER_START = '<!-- AIT STRUCTURED DATA START -->'
 MARKER_END = '<!-- AIT STRUCTURED DATA END -->'

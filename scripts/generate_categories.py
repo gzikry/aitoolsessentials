@@ -130,6 +130,6 @@ def generate_all(root: Path, tools: list, today: str) -> int:
 
 if __name__ == '__main__':
     from datetime import datetime
-    root = Path('/Users/georgezikry/aitoolessentials/site')
+    root = Path(__file__).resolve().parents[1]
     tools = json.loads((root / 'data/tools.json').read_text())
     generate_all(root, tools, datetime.today().strftime('%Y-%m-%d'))

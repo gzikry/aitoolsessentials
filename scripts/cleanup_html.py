@@ -5,7 +5,7 @@ asset path depths, CTA labels/links, category slugs, share-row mount, contact em
 import re
 from pathlib import Path
 
-ROOT = Path('/Users/georgezikry/aitoolessentials/site')
+ROOT = Path(__file__).resolve().parents[1]
 EMAIL = 'contact@aitoolsessentials.com'
 SLUG_MAP = {'writing-productivity': 'Writing & Productivity', 'creative-marketing': 'Creative & Marketing',
             'audio-video': 'Audio & Video', 'general-ai-assistant': 'General AI Assistant'}
