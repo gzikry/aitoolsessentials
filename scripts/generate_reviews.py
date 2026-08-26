@@ -207,6 +207,8 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links">
 <a href="../tools/index.html">Tools</a>
+<a href="../../fit-interview/">Fit interview</a>
+<a href="../../confidence-check/">Confidence check</a>
 <a href="../comparisons/best-ai-tools.html">Best AI tools</a>
 <a href="../categories/index.html">Categories</a>
 <a href="../articles/index.html">Guides</a>
