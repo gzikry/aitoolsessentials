@@ -4,6 +4,14 @@
   "last_generated": "2026-08-25",
   "tools_tracked": 45,
   "html_pages": 318,
+  "evidence_freshness": {
+    "pricing_records": 45,
+    "latest_pricing_checked": "2026-08-26",
+    "pricing_checked_on_latest_date": 5,
+    "pricing_older_than_latest": 40,
+    "pricing_undated_or_invalid": 0
+  },
+  "hardware_records": 5,
   "feeds": [
     "/feed.xml",
     "/weekly/feed.xml",

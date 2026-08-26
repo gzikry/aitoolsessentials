@@ -96,19 +96,66 @@ def generate_start_here(root: Path) -> None:
 
 def generate_status(root: Path, tools: list[dict[str, Any]], today: str) -> None:
     html_count = len(list(root.rglob("*.html")))
+    source_data = json.loads((root / "data/tool_sources.json").read_text())
+    source_records = source_data.get("tools", [])
+    if not isinstance(source_records, list):
+        raise ValueError("data/tool_sources.json tools must be a list")
+    valid_pricing_dates = []
+    undated_or_invalid = 0
+    for record in source_records:
+        if not isinstance(record, dict):
+            raise ValueError("data/tool_sources.json tools entries must be objects")
+        value = str(record.get("pricing_checked_date", ""))
+        try:
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+                raise ValueError
+            datetime.strptime(value, "%Y-%m-%d")
+            valid_pricing_dates.append(value)
+        except ValueError:
+            undated_or_invalid += 1
+    pricing_dates = sorted(set(valid_pricing_dates))
+    latest_pricing = pricing_dates[-1] if pricing_dates else None
+    pricing_checked = sum(1 for x in source_records if x.get("pricing_checked_date") == latest_pricing) if latest_pricing else 0
+    hardware_data = root / "data/hardware.json"
+    if hardware_data.exists():
+        hardware_payload = json.loads(hardware_data.read_text())
+        if isinstance(hardware_payload, list):
+            hardware_records = len(hardware_payload)
+        elif isinstance(hardware_payload, dict) and isinstance(hardware_payload.get("hardware"), list):
+            hardware_records = len(hardware_payload["hardware"])
+        else:
+            raise ValueError("data/hardware.json must be a list or an object with a hardware list")
+    else:
+        hardware_records = 0
     data = {
         "site": "AIToolsEssentials",
         "domain": DOMAIN,
         "last_generated": today,
         "tools_tracked": len(tools),
         "html_pages": html_count,
+        "evidence_freshness": {
+            "pricing_records": len(source_records),
+            "latest_pricing_checked": latest_pricing,
+            "pricing_checked_on_latest_date": pricing_checked,
+            "pricing_older_than_latest": max(0, len(source_records) - pricing_checked - undated_or_invalid),
+            "pricing_undated_or_invalid": undated_or_invalid,
+        },
+        "hardware_records": hardware_records,
         "feeds": ["/feed.xml", "/weekly/feed.xml", "/changelog/feed.xml"],
         "core_utilities": ["/stack-builder.html", "/tool-finder.html", "/fit-interview/", "/local-ai-planner/", "/confidence-check/", "/change-radar/", "/how-to/", "/hardware/", "/cost-calculator.html", "/compare-shortlist.html"],
         "editorial_boundaries": "Affiliate/sponsor relationships do not change editorial scoring; corrections are verified against official sources before publication.",
     }
     (root / "site-status.json").write_text(json.dumps(data, indent=2) + "\n")
-    page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Site Status", "Machine-readable and human-readable status snapshot for AIToolsEssentials coverage, feeds, utilities, and editorial boundaries.", DOMAIN+"/status/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Site status</p><h1>Coverage and freshness snapshot.</h1><p class="subhead">A transparent status page for what the site tracks and how to verify updates.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell"><div class="score-card"><span>Generated {esc(today)}</span><h2>{len(tools)} tools · {html_count} HTML pages</h2><p>Feeds, sitemap, stack utilities, alternatives pages, and correction modules are generated through the static pipeline.</p><p><a class="button button-blue" href="/site-status.json">View JSON status</a><a class="button button-blue" href="/changelog/" style="margin-left:8px">View changelog</a></p></div></div></section></main>{FOOTER}{scripts()}</body></html>'
-    out = root / "status" / "index.html"
+    latest_label = latest_pricing or "no recorded date"
+    status_path = root / "status" / "index.html"
+    existing_status = status_path.read_text() if status_path.exists() else ""
+    preserved_head_blocks = []
+    for pattern in (r'<!-- AIT DISCOVERY LINKS -->.*?<script src="/js/discovery\.js" defer></script>', r'<!-- AIT KNOWLEDGE SCHEMA START -->.*?<!-- AIT KNOWLEDGE SCHEMA END -->', r'<!-- AIT STRUCTURED DATA START -->.*?<!-- AIT STRUCTURED DATA END -->'):
+        preserved_head_blocks.extend(re.findall(pattern, existing_status, flags=re.S))
+    page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Site Status", "Machine-readable and human-readable status snapshot for AIToolsEssentials coverage, feeds, utilities, and editorial boundaries.", DOMAIN+"/status/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Site status</p><h1>Coverage and freshness snapshot.</h1><p class="subhead">A transparent status page for what the site tracks and how to verify updates.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell"><div class="score-card"><span>Generated {esc(today)}</span><h2>{len(tools)} tools · {html_count} HTML pages</h2><p>Feeds, sitemap, stack utilities, alternatives pages, and correction modules are generated through the static pipeline.</p><p><span style="font-weight:700">Evidence freshness:</span> {pricing_checked}/{len(source_records)} pricing records checked on {esc(latest_label)} · {max(0, len(source_records) - pricing_checked - undated_or_invalid)} older records · {undated_or_invalid} undated/invalid · {hardware_records} hardware records.</p><p><a class="button button-blue" href="/site-status.json">View JSON status</a><a class="button button-blue" href="/changelog/" style="margin-left:8px">View changelog</a></p></div></div></section></main>{FOOTER}{scripts()}</body></html>'
+    if preserved_head_blocks:
+        page = page.replace('</head>', '\n'.join(preserved_head_blocks) + '</head>', 1)
+    out = status_path
     out.parent.mkdir(exist_ok=True)
     out.write_text(page)
 
