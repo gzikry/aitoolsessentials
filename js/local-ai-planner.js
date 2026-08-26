@@ -23,7 +23,8 @@
     let tier, rec;
     if (gatewayOnly && priority === 'budget') { tier = 'Gateway tier'; rec = recommendations.gateway; }
     else if (estimated >= 70 || (model >= 70 && concurrency > 1)) { tier = 'High-memory tier'; rec = recommendations.studio; }
-    else if (priority === 'cuda' || priority === 'privacy' && model >= 32) { tier = 'Discrete-GPU tier'; rec = recommendations.cuda; }
+    else if (priority === 'cuda') { tier = 'Discrete-GPU tier'; rec = recommendations.cuda; }
+    else if (priority === 'privacy' && model >= 32) { tier = 'High-memory unified-memory tier'; rec = recommendations.studio; }
     else { tier = 'Compact local tier'; rec = recommendations.apple; }
     const modelLine = gatewayOnly ? 'Cloud-model or gateway-first plan' : `${model}B-class model at ${bits}-bit precision`;
     const services = gatewayOnly ? 'OpenClaw or Hermes Agent as the control plane; use a cloud provider or remote inference backend.' : 'Ollama or LM Studio for the model runtime; Open WebUI for a browser workspace; Hermes Agent or OpenClaw only after permissions and network boundaries are reviewed.';
