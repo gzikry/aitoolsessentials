@@ -894,3 +894,33 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
 @media (max-width: 760px) {
   .confidence-hero, .confidence-explainer, .confidence-note, .confidence-search, .confidence-grid, .confidence-next { width: 260px !important; max-width: calc(100% - 32px) !important; }
 }
+
+
+/* AI Tool Fit Interview */
+.fit-hero { max-width: 960px; margin: 0 auto; padding: 88px 28px 72px; text-align: center; }
+.fit-form { max-width: 760px; margin: 0 auto; }
+.fit-progress { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 28px; color: #6e7180; font-size: 13px; }
+.fit-form fieldset { margin: 0 0 20px; padding: 22px; border: 1px solid #e2e3eb; border-radius: 16px; background: #fff; }
+.fit-form legend { margin-bottom: 14px; font-size: 20px; font-weight: 600; letter-spacing: -.3px; }
+.fit-form label { display: block; padding: 11px 12px; border-radius: 10px; cursor: pointer; color: #3f4250; }
+.fit-form label:hover { background: #f4f5ff; }
+.fit-form input { margin-right: 9px; accent-color: #5663d6; }
+.fit-results { max-width: 960px; margin: 0 auto; }
+.fit-results-head { margin-bottom: 26px; }
+.fit-results-head h2 { margin-top: 10px; }
+.fit-cards { display: grid; gap: 14px; }
+.fit-card { display: grid; grid-template-columns: 62px 1fr; gap: 18px; padding: 22px; border: 1px solid #e2e3eb; border-radius: 18px; background: #fff; }
+.fit-rank { color: #5663d6; font-size: 28px; font-weight: 700; }
+.fit-card h3 { margin: 5px 0 8px; }
+.fit-card p { color: #5f6475; line-height: 1.5; }
+.fit-card ul { margin: 12px 0; padding-left: 20px; color: #464958; line-height: 1.55; }
+.fit-links { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 0; }
+.fit-links a { color: #35419e; font-weight: 650; text-decoration: none; }
+.fit-disclaimer { margin: 26px 0; padding: 16px 18px; border-left: 3px solid #5663d6; background: #f4f5ff; border-radius: 0 12px 12px 0; }
+@media (max-width: 760px) { .fit-hero { padding: 56px 20px 48px; } .fit-form fieldset { padding: 18px; } .fit-form legend { font-size: 18px; } .fit-progress { flex-direction: column; gap: 4px; } .fit-card { grid-template-columns: 1fr; gap: 5px; } .fit-rank { font-size: 22px; } .fit-links { flex-direction: column; gap: 9px; } }
+
+@media (max-width: 760px) {
+  .fit-hero, .fit-form, .fit-results { width: 300px !important; max-width: calc(100% - 32px) !important; box-sizing: border-box; margin-left: auto !important; margin-right: auto !important; }
+  .fit-hero h1, .fit-hero .subhead, .fit-form legend, .fit-form label { white-space: normal !important; overflow-wrap: break-word; word-break: break-word; }
+  .fit-form .button { width: 100%; box-sizing: border-box; white-space: normal; }
+}

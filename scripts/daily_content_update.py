@@ -24,6 +24,10 @@ benchmark_age = (datetime.today().date() - datetime.fromisoformat(benchmark_data
 tool_source_age = (datetime.today().date() - datetime.fromisoformat(tool_source_data['checked_at']).date()).days
 print(f'Loaded {len(tools)} tools')
 
+from generate_fit_interview import generate as generate_fit_interview
+generate_fit_interview(root, today)
+print('Generated AI Tool Fit Interview')
+
 from generate_confidence_check import generate as generate_confidence_check
 generate_confidence_check(root, today)
 print('Generated decision confidence check')
