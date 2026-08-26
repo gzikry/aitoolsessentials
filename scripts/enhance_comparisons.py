@@ -39,7 +39,7 @@ def generate(root: Path) -> int:
             )
             cards += f'''<div><strong>{tool['name']}</strong><p>{src.get('pricing_summary') or 'No stable public pricing verified.'}</p><span>Official sources checked {src.get('pricing_checked_date')}</span><div class="official-source-links">{links}</div></div>'''
             if slug in arena:
-                b=arena[slug]; benchmark_notes.append(f"{tool['name']}: Arena Text {b['model']} — rank #{b['rank']}, {b['score']} ({b['votes']:,} votes; snapshot {benchmarks['snapshot_date']}).")
+                b=arena[slug]; benchmark_notes.append(f"{tool['name']}: Arena Text {b['model']} — Arena rank #{b['rank']}, Arena rating {b['score']} (95% confidence interval; {b['votes']:,} preference votes; snapshot {benchmarks['snapshot_date']}).")
             if slug in coding:
                 b=coding[slug]; benchmark_notes.append(f"{tool['name']}: {b['benchmark']} — {b['configuration']}, {b['score']}, {b['trials']} trials; reward-hack disqualifications {b['reward_hack_disqualification']}.")
         bench_html = '<ul>'+''.join(f'<li>{x}</li>' for x in benchmark_notes)+'</ul>' if benchmark_notes else '<p>No directly comparable exact-version numeric snapshot is published for every product in this comparison.</p>'

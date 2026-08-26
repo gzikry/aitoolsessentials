@@ -17,7 +17,7 @@ def generate(root: Path) -> Path:
         source = sources[row["source_id"]]
         snapshot_rows += f'''<tr>
 <td><a href="../tools/{row['tool_slug']}/">{tool_names.get(row['tool_slug'], row['tool_slug'].replace('-', ' ').title())}</a></td>
-<td><code>{row['model']}</code></td><td>#{row['rank']}</td><td>{row['score']}</td>
+<td><code>{row['model']}</code></td><td>#{row['rank']}</td><td>{row['score']} <small>(95% CI)</small></td>
 <td>{row['votes']:,}</td><td>{row['note']} <a href="{source['url']}" rel="external noopener">[{source['id']}]</a></td>
 </tr>'''
 
@@ -67,9 +67,9 @@ def generate(root: Path) -> Path:
 </div></section>
 
 <section class="benchmark-section"><div class="section-title"><p class="kicker light">Current snapshot</p><h2>Arena Text: representative model listings</h2>
-<p>These rows provide model-family context for selected products. They do not claim that the listed model is the product's current default.</p></div>
-<div class="table-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th><button type="button" data-col="0">Product family</button></th><th><button type="button" data-col="1">Exact model</button></th><th><button type="button" data-col="2">Rank</button></th><th><button type="button" data-col="3">Arena score</button></th><th><button type="button" data-col="4">Votes</button></th><th>Interpretation</th></tr></thead><tbody>{snapshot_rows}</tbody></table></div>
-<p class="benchmark-caveat"><strong>Read this correctly:</strong> Arena scores human preference in anonymous pairwise battles. A higher rank does not prove better factuality, lower cost, stronger privacy, or a better end-user product. <a href="{sources[2]['url']}" target="_blank" rel="external noopener">Methodology [2] ↗</a></p></section>
+<p>Arena Text is a public leaderboard built from anonymous, pairwise human preference battles. <strong>Rank</strong> is the model's position in that snapshot; <strong>Arena rating</strong> is the statistical preference score; <strong>± value</strong> is the approximate 95% confidence interval around that rating; and <strong>preference votes</strong> are the recorded battle outcomes contributing to the snapshot—not votes for the product alone.</p></div>
+<div class="table-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th><button type="button" data-col="0">Product family</button></th><th><button type="button" data-col="1">Exact model</button></th><th><button type="button" data-col="2">Arena rank</button></th><th><button type="button" data-col="3">Arena rating ± CI</button></th><th><button type="button" data-col="4">Preference votes</button></th><th>Interpretation</th></tr></thead><tbody>{snapshot_rows}</tbody></table></div>
+<p class="benchmark-caveat"><strong>Read this correctly:</strong> Arena ratings summarize human preference in anonymous pairwise battles. A higher rank does not prove better factuality, lower cost, stronger privacy, or a better end-user product. <a href="{sources[2]['url']}" target="_blank" rel="external noopener">Methodology [2] ↗</a></p></section>
 
 <section class="benchmark-section scene scene-light"><div class="section-title"><p class="kicker light">Coding-agent evidence</p><h2>Keep the full configuration attached.</h2><p>A coding score belongs to the agent, exact model, reasoning effort, harness version, trial policy, and integrity checks—not to one product name.</p></div><div class="benchmark-source-grid">{coding_cards}</div></section>
 

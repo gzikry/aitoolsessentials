@@ -30,33 +30,33 @@
 </div></section>
 
 <section class="benchmark-section"><div class="section-title"><p class="kicker light">Current snapshot</p><h2>Arena Text: representative model listings</h2>
-<p>These rows provide model-family context for selected products. They do not claim that the listed model is the product's current default.</p></div>
-<div class="table-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th><button type="button" data-col="0">Product family</button></th><th><button type="button" data-col="1">Exact model</button></th><th><button type="button" data-col="2">Rank</button></th><th><button type="button" data-col="3">Arena score</button></th><th><button type="button" data-col="4">Votes</button></th><th>Interpretation</th></tr></thead><tbody><tr>
+<p>Arena Text is a public leaderboard built from anonymous, pairwise human preference battles. <strong>Rank</strong> is the model's position in that snapshot; <strong>Arena rating</strong> is the statistical preference score; <strong>± value</strong> is the approximate 95% confidence interval around that rating; and <strong>preference votes</strong> are the recorded battle outcomes contributing to the snapshot—not votes for the product alone.</p></div>
+<div class="table-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th><button type="button" data-col="0">Product family</button></th><th><button type="button" data-col="1">Exact model</button></th><th><button type="button" data-col="2">Arena rank</button></th><th><button type="button" data-col="3">Arena rating ± CI</button></th><th><button type="button" data-col="4">Preference votes</button></th><th>Interpretation</th></tr></thead><tbody><tr>
 <td><a href="../tools/grok/">Grok</a></td>
-<td><code>grok-4.1</code></td><td>#50</td><td>1459±3</td>
+<td><code>grok-4.1</code></td><td>#50</td><td>1459±3 <small>(95% CI)</small></td>
 <td>67,784</td><td>Representative public xAI model listing; not necessarily the product's current default. <a href="https://arena.ai/leaderboard/text" rel="external noopener">[1]</a></td>
 </tr><tr>
 <td><a href="../tools/deepseek/">DeepSeek</a></td>
-<td><code>deepseek-v4-pro</code></td><td>#53</td><td>1458±4</td>
+<td><code>deepseek-v4-pro</code></td><td>#53</td><td>1458±4 <small>(95% CI)</small></td>
 <td>54,307</td><td>Representative public DeepSeek model listing. <a href="https://arena.ai/leaderboard/text" rel="external noopener">[1]</a></td>
 </tr><tr>
 <td><a href="../tools/claude/">Claude</a></td>
-<td><code>claude-sonnet-4-5-20250929</code></td><td>#60</td><td>1455±3</td>
+<td><code>claude-sonnet-4-5-20250929</code></td><td>#60</td><td>1455±3 <small>(95% CI)</small></td>
 <td>80,871</td><td>Older public Claude listing retained for reproducible snapshot context; newer variants may rank differently. <a href="https://arena.ai/leaderboard/text" rel="external noopener">[1]</a></td>
 </tr><tr>
 <td><a href="../tools/gemini/">Gemini</a></td>
-<td><code>gemini-2.5-pro</code></td><td>#72</td><td>1445±2</td>
+<td><code>gemini-2.5-pro</code></td><td>#72</td><td>1445±2 <small>(95% CI)</small></td>
 <td>124,829</td><td>Specific Gemini model version, not the whole Gemini product. <a href="https://arena.ai/leaderboard/text" rel="external noopener">[1]</a></td>
 </tr><tr>
 <td><a href="../tools/chatgpt/">ChatGPT</a></td>
-<td><code>chatgpt-4o-latest-20250326</code></td><td>#75</td><td>1443±3</td>
+<td><code>chatgpt-4o-latest-20250326</code></td><td>#75</td><td>1443±3 <small>(95% CI)</small></td>
 <td>82,766</td><td>Historical public ChatGPT model listing; do not interpret as the current default model's rank. <a href="https://arena.ai/leaderboard/text" rel="external noopener">[1]</a></td>
 </tr><tr>
 <td><a href="../tools/mistral-le-chat/">Mistral Le Chat</a></td>
-<td><code>mistral-medium-3.5</code></td><td>#98</td><td>1427±7</td>
+<td><code>mistral-medium-3.5</code></td><td>#98</td><td>1427±7 <small>(95% CI)</small></td>
 <td>11,016</td><td>Representative Mistral model listing with a wider confidence interval. <a href="https://arena.ai/leaderboard/text" rel="external noopener">[1]</a></td>
 </tr></tbody></table></div>
-<p class="benchmark-caveat"><strong>Read this correctly:</strong> Arena scores human preference in anonymous pairwise battles. A higher rank does not prove better factuality, lower cost, stronger privacy, or a better end-user product. <a href="https://arena.ai/blog/arena-rank/" target="_blank" rel="external noopener">Methodology [2] ↗</a></p></section>
+<p class="benchmark-caveat"><strong>Read this correctly:</strong> Arena ratings summarize human preference in anonymous pairwise battles. A higher rank does not prove better factuality, lower cost, stronger privacy, or a better end-user product. <a href="https://arena.ai/blog/arena-rank/" target="_blank" rel="external noopener">Methodology [2] ↗</a></p></section>
 
 <section class="benchmark-section scene scene-light"><div class="section-title"><p class="kicker light">Coding-agent evidence</p><h2>Keep the full configuration attached.</h2><p>A coding score belongs to the agent, exact model, reasoning effort, harness version, trial policy, and integrity checks—not to one product name.</p></div><div class="benchmark-source-grid"><article class="benchmark-source-card">
 <span class="evidence-label">Verified agent configuration</span>
