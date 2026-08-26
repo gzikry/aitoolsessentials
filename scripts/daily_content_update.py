@@ -123,6 +123,10 @@ print('Generated how-to library:', generate_how_tos(root))
 from generate_hardware import generate as generate_hardware
 print('Generated hardware guide:', generate_hardware(root))
 
+from generate_local_ai_planner import generate as generate_local_ai_planner
+generate_local_ai_planner(root)
+print('Generated local AI planner')
+
 from generate_bestfor_and_report import generate_best_for, generate_pricing_report
 generate_best_for(root)
 generate_pricing_report(root, today)
