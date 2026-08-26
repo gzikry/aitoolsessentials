@@ -1055,7 +1055,7 @@
       "Social media marketers"
     ],
     "status": "not_started",
-    "next_action": "Vendor submitted directly \u2014 email support@allvideoai.com asking about affiliate/partner terms; update data/affiliate_programs.json only after approval.",
+    "next_action": "Vendor submitted directly — email support@allvideoai.com asking about affiliate/partner terms; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
   },
   {
@@ -1217,6 +1217,55 @@
     "best_audiences": [
       "Lawyers",
       "In-house counsel"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "magicschool",
+    "tool_name": "MagicSchool",
+    "priority": "medium",
+    "category": "Education",
+    "recommended_networks_to_check": [
+      "Direct partner/affiliate inquiry"
+    ],
+    "search_queries": [
+      "MagicSchool affiliate program",
+      "MagicSchool partner program"
+    ],
+    "target_pages": [
+      "tools/magicschool/",
+      "articles/best-ai-tools-for-teachers.html"
+    ],
+    "best_audiences": [
+      "Teachers",
+      "School administrators"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "khanmigo",
+    "tool_name": "Khanmigo",
+    "priority": "medium",
+    "category": "Education",
+    "recommended_networks_to_check": [
+      "Direct partner/affiliate inquiry"
+    ],
+    "search_queries": [
+      "Khanmigo affiliate program",
+      "Khan Academy affiliate program"
+    ],
+    "target_pages": [
+      "tools/khanmigo/",
+      "articles/best-ai-tools-for-teachers.html"
+    ],
+    "best_audiences": [
+      "Teachers",
+      "Parents",
+      "School administrators"
     ],
     "status": "not_started",
     "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",

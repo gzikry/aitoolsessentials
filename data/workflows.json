@@ -367,13 +367,45 @@
       "Not legal advice and not a substitute for a licensed attorney.",
       "No privilege, confidentiality, or bar-compliance certification is implied by listing a tool.",
       "Consumer chat tiers are the wrong place for client-identifiable or privileged material.",
-      "Harvey and Spellbook are quote-based; the only official dollar figure recorded here is Thomson Reuters\u2019 starting-at Westlaw Advantage with CoCounsel Essentials price."
+      "Harvey and Spellbook are quote-based; the only official dollar figure recorded here is Thomson Reuters’ starting-at Westlaw Advantage with CoCounsel Essentials price."
     ],
     "search_queries": [
       "ai tools for lawyers",
       "best ai for legal research",
       "ai contract review in word",
       "confidential ai tools for law firms"
+    ]
+  },
+  {
+    "slug": "classroom-lesson-planning",
+    "title": "AI tools for classroom lesson planning",
+    "description": "Compare free-first teacher tools for lesson plans, rubrics, family emails, and quiz drafts. Not a substitute for professional judgment, grading policy, or an approved student-data workflow.",
+    "audience": "K-12 teachers, instructional coaches, and school administrators",
+    "primary_tools": [
+      "magicschool",
+      "khanmigo",
+      "canva-ai",
+      "gamma",
+      "chatgpt",
+      "perplexity"
+    ],
+    "decision_steps": [
+      "Start on official free teacher tiers before paying for Plus or a general chatbot subscription.",
+      "Use de-identified class context until your school reviews student-data, retention, and DPA terms.",
+      "Compare one lesson plan, one rubric, and one family email across MagicSchool, Khanmigo, and a general assistant.",
+      "Keep grades, IEP decisions, and identifiable student records under a licensed educator and approved district systems."
+    ],
+    "guardrails": [
+      "Not a grading, IEP, or special-education certification.",
+      "No FERPA, COPPA, or SOC 2 certification is implied by listing a tool.",
+      "Khanmigo teacher-free access is not classroom student access.",
+      "Do not paste identifiable student records into a personal ChatGPT or similar consumer account during a trial."
+    ],
+    "search_queries": [
+      "ai tools for teachers",
+      "free ai lesson planner for teachers",
+      "magicschool vs khanmigo",
+      "best free ai tools for classroom planning"
     ]
   }
 ]

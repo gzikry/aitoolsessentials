@@ -85,6 +85,12 @@ ROLES = [
       ("cocounsel", "Westlaw- and Practical Law-grounded research and drafting"),
       ("claude", "Long-document analysis on a business tier after ethics review")],
      "articles/best-ai-tools-for-lawyers.html"),
+    ("teachers", "Teachers & instructional coaches", "Free-first lesson planning, rubrics, and family communication, with no implied FERPA or grading certification.",
+     [("magicschool", "Official $0 individual teacher plan plus published Plus prices"),
+      ("khanmigo", "Official teacher-free prep tools from Khan Academy"),
+      ("canva-ai", "Slides, worksheets, and classroom visuals"),
+      ("gamma", "Fast lesson or parent-night decks from an outline")],
+     "articles/best-ai-tools-for-teachers.html"),
 ]
 
 

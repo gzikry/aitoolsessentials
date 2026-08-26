@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-26",
-  "tools_count": 51,
+  "tools_count": 53,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -392,6 +392,20 @@
       "category": "Legal",
       "price": "Sales-quoted; official Westlaw Advantage with CoCounsel Essentials starts at $415.35/month",
       "url": "https://aitoolsessentials.com/tools/cocounsel/"
+    },
+    {
+      "name": "MagicSchool",
+      "slug": "magicschool",
+      "category": "Education",
+      "price": "Free $0 for individual teachers; Plus $12.99/mo or $8.33/mo billed annually ($99.96/year); Enterprise custom",
+      "url": "https://aitoolsessentials.com/tools/magicschool/"
+    },
+    {
+      "name": "Khanmigo",
+      "slug": "khanmigo",
+      "category": "Education",
+      "price": "Teacher tools officially free in supported locales; learners/families $4/month or $44/year; district tools by quote",
+      "url": "https://aitoolsessentials.com/tools/khanmigo/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

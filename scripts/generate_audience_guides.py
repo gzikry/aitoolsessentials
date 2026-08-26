@@ -81,6 +81,18 @@ GUIDES = {
                   'at $415.35/month. Consumer chat tiers are the wrong place for client-identifiable files. '
                   'Verify every citation in a primary research product before advice or filing.'),
     },
+    'best-ai-tools-for-teachers.html': {
+        'kicker': 'Audience guide', 'audience': 'teachers and instructional coaches',
+        'title': 'Best AI tools for teachers',
+        'subhead': 'Free-first tools for lesson plans, rubrics, slides, and family emails — with no implied FERPA, grading, or student-data certification.',
+        'slugs':['magicschool','khanmigo','canva-ai','gamma','chatgpt','perplexity'],
+        'angle': ('Teachers should start on official free education tiers, not a $20 chatbot, unless a general '
+                  'assistant already owns a weekly task. MagicSchool publishes a $0 individual teacher plan and '
+                  'Plus at $12.99/month or $8.33/month billed annually. Khanmigo’s official teacher page states '
+                  'teacher tools are free; learner and family plans are $4/month or $44/year, and classroom student '
+                  'access is a district implementation, not a teacher-account toggle. Vendor FERPA/COPPA marks are '
+                  'claims to verify with your school. Do not paste identifiable student records into a personal chat.'),
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
