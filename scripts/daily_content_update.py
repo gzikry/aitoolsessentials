@@ -11,7 +11,7 @@ from pathlib import Path
 from datetime import datetime
 import json
 
-root = Path('/Users/georgezikry/aitoolessentials/site')
+root = Path(__file__).resolve().parents[1]
 today = datetime.today().strftime('%Y-%m-%d')
 brief_file = root / 'content_briefs' / f'{today}-daily-content-brief.md'
 brief_file.parent.mkdir(exist_ok=True)
