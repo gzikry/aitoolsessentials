@@ -988,3 +988,38 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
 .radar-links a { color:#35419e; font-weight:650; text-decoration:none; }
 .radar-next { margin-top:28px; }
 @media (max-width:700px) { .radar-principles { grid-template-columns:1fr; } .radar-controls input[type=search] { width:100%; min-width:0; } #radar-count { margin-left:0; } .radar-main { flex-direction:column; } .radar-status { white-space:normal; } .radar-row { padding:18px; } }
+
+
+/* Source-linked how-to library */
+.howto-hero { max-width: 920px; margin:0 auto; padding:86px 28px 68px; text-align:center; }
+.howto-hero h1 { max-width:850px; margin:12px auto 18px; }
+.howto-hero .subhead { max-width:760px; margin:0 auto; }
+.howto-disclaimer { max-width:720px; margin:22px auto 0; color:#c9cce2; font-size:14px; line-height:1.5; }
+.howto-article { max-width:820px; margin:0 auto; padding:72px 28px; }
+.howto-callout { padding:20px 22px; margin-bottom:34px; border:1px solid #d8dced; border-radius:16px; background:#f2f3ff; }
+.howto-callout strong { display:block; margin-bottom:7px; }
+.howto-callout p { margin:0; color:#5f6475; line-height:1.55; }
+.howto-steps { margin:0; padding-left:28px; }
+.howto-steps li { padding:0 0 26px 10px; }
+.howto-steps li::marker { color:#35419e; font-weight:800; }
+.howto-steps h2 { margin:0 0 8px; font-size:23px; }
+.howto-steps p { margin:0; color:#5f6475; line-height:1.65; }
+.howto-check, .howto-sources { margin-top:26px; padding:24px; border:1px solid #e1e3ee; border-radius:18px; background:#fff; }
+.howto-check h2, .howto-sources h2 { margin-top:0; }
+.howto-check ul, .howto-sources ul { margin:0; padding-left:22px; color:#5f6475; line-height:1.8; }
+.howto-sources a { color:#35419e; font-weight:650; }
+.howto-next { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+@media (max-width:620px) { .howto-hero, .howto-article { padding-left:20px; padding-right:20px; } .howto-next { flex-direction:column; } .howto-next .button { text-align:center; } }
+
+@media (max-width: 640px) {
+  .review-hero { padding: 64px 18px 38px !important; overflow-wrap: anywhere; }
+  .review-hero h1 { max-width: 340px; margin-left:auto; margin-right:auto; font-size: clamp(30px, 8vw, 42px); line-height:1.06; letter-spacing:-1px; }
+  .review-hero > p:not(.kicker):not(.affiliate-inline) { max-width: 340px; font-size:17px; }
+}
+
+@media (max-width: 620px) {
+  .review-layout { padding: 18px 12px 64px !important; width:100%; box-sizing:border-box; }
+  .review-content { width:100%; max-width:100%; box-sizing:border-box; padding:22px 18px !important; overflow-wrap:anywhere; }
+  .review-content p, .review-content li { font-size:16px; }
+  .review-content h2 { font-size:28px; }
+}

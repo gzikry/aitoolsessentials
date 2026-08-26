@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-25",
-  "tools_count": 40,
+  "tools_count": 45,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -315,6 +315,41 @@
       "category": "Video",
       "price": "Free tier + credit plans from $17/month",
       "url": "https://aitoolsessentials.com/tools/allvideoai/"
+    },
+    {
+      "name": "Hermes Agent",
+      "slug": "hermes-agent",
+      "category": "AI Agents",
+      "price": "Open source + model/provider costs",
+      "url": "https://aitoolsessentials.com/tools/hermes-agent/"
+    },
+    {
+      "name": "OpenClaw",
+      "slug": "openclaw",
+      "category": "AI Agents",
+      "price": "Open source + model/provider and hosting costs",
+      "url": "https://aitoolsessentials.com/tools/openclaw/"
+    },
+    {
+      "name": "Ollama",
+      "slug": "ollama",
+      "category": "Local AI",
+      "price": "Free local runtime + optional cloud plans",
+      "url": "https://aitoolsessentials.com/tools/ollama/"
+    },
+    {
+      "name": "LM Studio",
+      "slug": "lm-studio",
+      "category": "Local AI",
+      "price": "Free local use + optional pay-as-you-go cloud models",
+      "url": "https://aitoolsessentials.com/tools/lm-studio/"
+    },
+    {
+      "name": "Open WebUI",
+      "slug": "open-webui",
+      "category": "Local AI",
+      "price": "Open source + optional enterprise/support considerations",
+      "url": "https://aitoolsessentials.com/tools/open-webui/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -102,6 +102,7 @@
   <url><loc>https://aitoolsessentials.com/badges/</loc></url>
   <url><loc>https://aitoolsessentials.com/benchmarks/</loc></url>
   <url><loc>https://aitoolsessentials.com/best-for/</loc></url>
+  <url><loc>https://aitoolsessentials.com/categories/AI Agents/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Audio/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Audio & Video/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Automation/</loc></url>
@@ -109,6 +110,7 @@
   <url><loc>https://aitoolsessentials.com/categories/Creative & Marketing/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Development/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/General AI Assistant/</loc></url>
+  <url><loc>https://aitoolsessentials.com/categories/Local AI/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Marketing/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Meetings/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Model Hub/</loc></url>
@@ -181,6 +183,12 @@
   <url><loc>https://aitoolsessentials.com/guides/switch-guides/switch-from-notion-ai-to-microsoft-copilot.html</loc></url>
   <url><loc>https://aitoolsessentials.com/guides/switch-guides/switch-from-perplexity-to-you-com.html</loc></url>
   <url><loc>https://aitoolsessentials.com/guides/switch-guides/switch-from-zapier-to-make.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/how-to/connect-open-webui-to-ollama.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/how-to/</loc></url>
+  <url><loc>https://aitoolsessentials.com/how-to/install-hermes-agent.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/how-to/install-ollama-and-run-a-model.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/how-to/run-openclaw-locally.html</loc></url>
+  <url><loc>https://aitoolsessentials.com/how-to/secure-a-self-hosted-ai-agent.html</loc></url>
   <url><loc>https://aitoolsessentials.com/./</loc></url>
   <url><loc>https://aitoolsessentials.com/launch-kit/</loc></url>
   <url><loc>https://aitoolsessentials.com/leaderboard.html</loc></url>
@@ -258,10 +266,12 @@
   <url><loc>https://aitoolsessentials.com/tools/github-copilot/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/grammarly/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/grok/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/hermes-agent/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/heygen/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/jasper/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/leonardo-ai/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/lm-studio/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/lovable/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/make/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/meta-ai/</loc></url>
@@ -270,6 +280,9 @@
   <url><loc>https://aitoolsessentials.com/tools/mistral-le-chat/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/n8n/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/notion-ai/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/ollama/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/open-webui/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/openclaw/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/otter-ai/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/perplexity/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/poe/</loc></url>

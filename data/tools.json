@@ -1,2095 +1,2345 @@
 [
- {
-  "slug": "elevenlabs",
-  "name": "ElevenLabs",
-  "category": "Audio",
-  "best_for": "AI voice generation, dubbing, narration, and voice agents",
-  "price": "Free + paid plans",
-  "rating": 4.6,
-  "official": "https://elevenlabs.io/",
-  "summary": "A leading AI voice platform for realistic speech, narration, dubbing, and voice product experiences.",
-  "use_cases": [
-   "Voiceovers",
-   "Dubbing",
-   "Audiobook narration",
-   "Voice agents",
-   "Narrating YouTube videos without recording booth time",
-   "Localizing e-learning content into multiple languages"
-  ],
-  "pros": [
-   "High-quality voices",
-   "Broad audio toolkit",
-   "Strong creator and developer use"
-  ],
-  "cons": [
-   "Voice rights and consent matter",
-   "Costs scale with usage"
-  ],
-  "key_features": [
-   "Realistic TTS voice generation",
-   "Instant voice clone from ~1 minute of audio",
-   "Professional cloning for studio-grade replicas",
-   "Dubbing preserves original speaker's voice across languages",
-   "Sound effects generation and voice changer"
-  ],
-  "faq": [
-   [
-    "Is ElevenLabs free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Can I clone my own voice legally?",
-    "Yes — instant cloning requires confirming you have rights to the voice sample."
-   ],
-   [
-    "ElevenLabs vs Murf/Speechify?",
-    "ElevenLabs leads on realism by a wide margin. See our best AI voice tools guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving voiceovers—not a demo prompt. Verify whether realistic tts voice generation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to voice rights and consent matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "descript",
-  "name": "Descript",
-  "category": "Audio & Video",
-  "best_for": "Podcast and video editing with transcript-based workflows",
-  "price": "Free + paid plans",
-  "rating": 4.3,
-  "official": "https://www.descript.com/",
-  "summary": "An editor that lets creators edit audio and video by editing text, with AI cleanup and production features.",
-  "use_cases": [
-   "Podcast editing",
-   "Short clips",
-   "Webinars",
-   "Transcript cleanup"
-  ],
-  "pros": [
-   "Fast editing workflow",
-   "Good creator features",
-   "Text-based editing is intuitive"
-  ],
-  "cons": [
-   "Advanced video work may need dedicated tools",
-   "Review exports carefully"
-  ],
-  "key_features": [
-   "Edit video/audio by editing the transcript text",
-   "Studio Sound removes background noise dramatically",
-   "Overdub voice clone fixes flubbed lines by typing",
-   "Filler word removal in one click",
-   "Screen recording with auto-transcription"
-  ],
-  "faq": [
-   [
-    "Is Descript free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "What makes Descript different?",
-    "You edit media like a document — delete words to cut footage."
-   ],
-   [
-    "Can it remove filler words?",
-    "Yes — one click removes all 'um's and 'uh's, and it works well."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving podcast editing—not a demo prompt. Verify whether edit video/audio by editing the transcript text materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced video work may need dedicated tools. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "make",
-  "name": "Make",
-  "category": "Automation",
-  "best_for": "Visual automation scenarios and multi-step operational workflows",
-  "price": "Free + paid plans",
-  "rating": 4.3,
-  "official": "https://www.make.com/",
-  "summary": "A visual automation platform for building app-to-app workflows, including AI steps and operational routing.",
-  "use_cases": [
-   "Operations automation",
-   "Data syncing",
-   "AI workflow steps",
-   "Notifications",
-   "Syncing form responses into a CRM automatically",
-   "Routing support tickets by topic and urgency"
-  ],
-  "pros": [
-   "Flexible visual builder",
-   "Good multi-step control",
-   "Large integration set"
-  ],
-  "cons": [
-   "More complex than simple zaps",
-   "Requires testing and monitoring"
-  ],
-  "key_features": [
-   "Visual scenario builder with branching logic",
-   "Operations are far cheaper than Zapier tasks",
-   "Iterators/aggregators handle arrays natively",
-   "AI modules from OpenAI, Anthropic, and more",
-   "Error handlers with retries and fallbacks"
-  ],
-  "faq": [
-   [
-    "Make vs Zapier?",
-    "Make is cheaper and more powerful for complex logic; Zapier is easier with a bigger app catalog. Our Zapier vs Make vs n8n comparison has task-by-task costs."
-   ],
-   [
-    "What's an operation?",
-    "Each module execution. One scenario run can be many operations."
-   ],
-   [
-    "Is Make hard to learn?",
-    "Moderately — expect a few days to feel fluent vs hours for Zapier."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving operations automation—not a demo prompt. Verify whether visual scenario builder with branching logic materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more complex than simple zaps so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "zapier-ai",
-  "name": "Zapier AI",
-  "category": "Automation",
-  "best_for": "Automating business workflows across apps",
-  "price": "Free + paid plans",
-  "rating": 4.4,
-  "official": "https://zapier.com/ai",
-  "summary": "AI-assisted automation builder for connecting apps, triggering workflows, and reducing manual operational tasks.",
-  "use_cases": [
-   "Lead routing",
-   "Email summaries",
-   "CRM updates",
-   "Notification workflows",
-   "Syncing form responses into a CRM automatically",
-   "Routing support tickets by topic and urgency"
-  ],
-  "pros": [
-   "Huge app ecosystem",
-   "Practical business workflows",
-   "Low-code setup"
-  ],
-  "cons": [
-   "Complex workflows need testing",
-   "Costs scale with task volume"
-  ],
-  "key_features": [
-   "AI actions: GPT/Claude steps inside any automation",
-   "Zap builder from natural-language description",
-   "8,000+ app integrations — a broad integration catalog",
-   "Tables, Interfaces, and Chatbots round out the no-code suite",
-   "Reliable trigger/filter logic with error retry"
-  ],
-  "faq": [
-   [
-    "Zapier vs Make — which is cheaper?",
-    "Make is typically 3-5x cheaper at high task volumes but has a steeper learning curve. See our Zapier vs Make vs n8n comparison."
-   ],
-   [
-    "What counts as a task?",
-    "Each action execution in a Zap. Filters that stop a Zap don't count."
-   ],
-   [
-    "Can Zapier use AI?",
-    "Yes — GPT, Claude, and other AI steps drop into any Zap, plus AI-built workflow drafts."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving lead routing—not a demo prompt. Verify whether ai actions: gpt/claude steps inside any automation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex workflows need testing so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "n8n",
-  "name": "n8n",
-  "category": "Automation",
-  "best_for": "Technical workflow automation with self-hosting and AI agent options",
-  "price": "Free self-hosted + paid cloud",
-  "rating": 4.3,
-  "official": "https://n8n.io/",
-  "summary": "A flexible automation platform for technical teams that want deeper workflow control and self-hosting options.",
-  "use_cases": [
-   "Internal automations",
-   "AI agents",
-   "Data workflows",
-   "Self-hosted workflows",
-   "Syncing form responses into a CRM automatically",
-   "Routing support tickets by topic and urgency"
-  ],
-  "pros": [
-   "Highly flexible",
-   "Self-host option",
-   "Developer-friendly"
-  ],
-  "cons": [
-   "More technical setup",
-   "Governance and maintenance required"
-  ],
-  "key_features": [
-   "Open source — self-host for unlimited runs at zero cost",
-   "Code steps in JavaScript/Python when nodes aren't enough",
-   "Advanced logic: loops, error branches, sub-workflows",
-   "400+ integrations plus generic HTTP node",
-   "AI agent nodes with LangChain support"
-  ],
-  "faq": [
-   [
-    "Is n8n really free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "n8n vs Make?",
-    "n8n for technical control and self-hosting; Make for easier visual building. See our automation tools comparison."
-   ],
-   [
-    "Can n8n run AI agents?",
-    "Yes — native LangChain-powered agent nodes with tool calling."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving internal automations—not a demo prompt. Verify whether open source — self-host for unlimited runs at zero cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more technical setup so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "adobe-firefly",
-  "name": "Adobe Firefly",
-  "category": "Creative",
-  "best_for": "Commercially oriented generative images and design assets inside Adobe workflows",
-  "price": "Free + paid plans / Adobe plans",
-  "rating": 4.4,
-  "official": "https://www.adobe.com/products/firefly.html",
-  "summary": "Adobe’s generative AI suite for images, text effects, edits, and creative production within the Adobe ecosystem.",
-  "use_cases": [
-   "Commercial creative",
-   "Image edits",
-   "Design assets",
-   "Adobe workflows",
-   "Producing concept art variations for client pitches",
-   "Creating on-brand social visuals without a designer"
-  ],
-  "pros": [
-   "Adobe ecosystem fit",
-   "Commercial creative orientation",
-   "Designer-friendly"
-  ],
-  "cons": [
-   "Best value for Adobe users",
-   "Creative review still required"
-  ],
-  "key_features": [
-   "Trained on licensed Adobe Stock — commercially safest output",
-   "Generative Fill and Expand inside Photoshop",
-   "Text-to-image with strong style controls",
-   "Structure reference matches composition of a sample image",
-   "IP indemnification for enterprise customers"
-  ],
-  "faq": [
-   [
-    "Is Firefly commercially safe?",
-    "Yes — trained on licensed content, and Adobe offers IP indemnification on enterprise terms. That's its core differentiator."
-   ],
-   [
-    "Firefly vs Midjourney?",
-    "Midjourney for aesthetics, Firefly for legal safety and Photoshop integration. See our AI image tools guide."
-   ],
-   [
-    "Do Firefly credits roll over?",
-    "No — monthly credits expire."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving commercial creative—not a demo prompt. Verify whether trained on licensed adobe stock — commercially safest output materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for adobe users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "leonardo-ai",
-  "name": "Leonardo AI",
-  "category": "Creative",
-  "best_for": "Game assets, concept art, product mockups, and controlled image generation",
-  "price": "Free + paid plans",
-  "rating": 4.3,
-  "official": "https://leonardo.ai/",
-  "summary": "A creative AI platform for image generation, asset production, style control, and visual experimentation.",
-  "use_cases": [
-   "Concept art",
-   "Game assets",
-   "Product visuals",
-   "Style exploration",
-   "Producing concept art variations for client pitches",
-   "Creating on-brand social visuals without a designer"
-  ],
-  "pros": [
-   "Strong creative controls",
-   "Good for asset workflows",
-   "Useful presets"
-  ],
-  "cons": [
-   "Requires visual direction",
-   "Advanced workflows take practice"
-  ],
-  "key_features": [
-   "Fine-tune custom models on your own image sets",
-   "Realtime canvas with live generation while drawing",
-   "Strong game-asset and product-shot pipelines",
-   "Elements: mixable style modifiers",
-   "Motion: short image-to-video clips"
-  ],
-  "faq": [
-   [
-    "Is Leonardo AI free?",
-    "Yes — 150 daily tokens refresh every day, enough for light use."
-   ],
-   [
-    "Can I train custom models?",
-    "Yes — upload your own images to fine-tune a private model."
-   ],
-   [
-    "Leonardo vs Midjourney?",
-    "Leonardo for consistency via trained models and API access; Midjourney for peak aesthetics. See our AI image tools guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving concept art—not a demo prompt. Verify whether fine-tune custom models on your own image sets materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires visual direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "midjourney",
-  "name": "Midjourney",
-  "category": "Creative",
-  "best_for": "High-quality image generation and concept visuals",
-  "price": "Paid plans",
-  "rating": 4.5,
-  "official": "https://www.midjourney.com/",
-  "summary": "A premium image-generation tool for brand visuals, concept art, moodboards, and campaign creative.",
-  "use_cases": [
-   "Ad concepts",
-   "Moodboards",
-   "Product visual exploration",
-   "Social imagery",
-   "Producing concept art variations for client pitches",
-   "Creating on-brand social visuals without a designer"
-  ],
-  "pros": [
-   "Beautiful default aesthetics",
-   "Great exploration speed",
-   "Strong community prompts"
-  ],
-  "cons": [
-   "Workflow differs from standard design tools",
-   "Requires human art direction"
-  ],
-  "key_features": [
-   "Strong aesthetic controls for stylized and concept imagery",
-   "Style references and character references for consistency",
-   "Web editor with inpainting and outpainting",
-   "Strong prompt adherence improvements in v6+",
-   "Commercial rights on all paid plans"
-  ],
-  "faq": [
-   [
-    "Can I use Midjourney images commercially?",
-    "Yes on any paid plan; free-trial images are not commercially usable."
-   ],
-   [
-    "Are my images public?",
-    "On Basic and Standard, yes — generations are visible in the community gallery. Pro adds stealth mode."
-   ],
-   [
-    "Midjourney vs DALL-E/Firefly?",
-    "Midjourney leads on aesthetics and concept art; Firefly integrates with Photoshop and is commercially safer for enterprise."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving ad concepts—not a demo prompt. Verify whether strong aesthetic controls for stylized and concept imagery materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to workflow differs from standard design tools. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "canva-ai",
-  "name": "Canva AI",
-  "category": "Creative & Marketing",
-  "best_for": "Non-designers making social, presentation, and marketing assets",
-  "price": "Free + paid plans",
-  "rating": 4.4,
-  "official": "https://www.canva.com/ai/",
-  "summary": "AI-assisted design inside Canva’s familiar editor for quick branded assets and marketing production.",
-  "use_cases": [
-   "Social posts",
-   "Presentations",
-   "Brand kits",
-   "Simple image edits"
-  ],
-  "pros": [
-   "Accessible editor",
-   "Useful templates",
-   "Good team handoff"
-  ],
-  "cons": [
-   "Advanced control is limited",
-   "Outputs can feel templated"
-  ],
-  "key_features": [
-   "Magic Design generates full layouts from a prompt",
-   "Magic Write drafts copy inside any design",
-   "Magic Media (image/video gen) built into the editor",
-   "Brand Kit enforces fonts/colors across AI output",
-   "One-click resize across formats (IG post to presentation)"
-  ],
-  "faq": [
-   [
-    "Is Canva AI free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Can Canva AI generate images?",
-    "Yes — Magic Media creates images and short videos inside the editor."
-   ],
-   [
-    "Canva vs Adobe Firefly?",
-    "Canva for speed and templates; Firefly for professional image control in Photoshop. See our AI image tools guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving social posts—not a demo prompt. Verify whether magic design generates full layouts from a prompt materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced control is limited so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "bolt-new",
-  "name": "Bolt.new",
-  "category": "Development",
-  "best_for": "Prompt-to-app prototyping in the browser",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://bolt.new/",
-  "summary": "A browser-based AI development environment for quickly creating and iterating on web apps from prompts.",
-  "use_cases": [
-   "Rapid prototypes",
-   "Frontend apps",
-   "Demo builds",
-   "Idea validation",
-   "Scaffolding new features across multiple files",
-   "Writing tests for legacy code before refactoring"
-  ],
-  "pros": [
-   "Very fast start",
-   "Browser-native building",
-   "Good for demos"
-  ],
-  "cons": [
-   "Production hardening required",
-   "Prompting skill matters"
-  ],
-  "key_features": [
-   "Prompt-to-full-stack app in browser (no local setup)",
-   "Runs real Node/DB environment via WebContainers",
-   "Deploy straight from the builder",
-   "Supports React, Next.js, Astro, Svelte stacks",
-   "Error-aware AI fixes its own runtime errors"
-  ],
-  "faq": [
-   [
-    "Is Bolt.new free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Does Bolt host my app?",
-    "It deploys via integrated partners (Netlify etc.) right from the builder."
-   ],
-   [
-    "Bolt vs Lovable vs v0?",
-    "Bolt for full-stack control in-browser; v0 for UI polish; Lovable for simplicity. See our AI app builders guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving rapid prototypes—not a demo prompt. Verify whether prompt-to-full-stack app in browser (no local setup) materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to production hardening required so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "cursor",
-  "name": "Cursor",
-  "category": "Development",
-  "best_for": "AI-assisted coding in an editor with agent modes, cloud agents, and Cursor's own Grok/Composer models",
-  "price": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
-  "rating": 4.6,
-  "official": "https://cursor.com/",
-  "summary": "Developer-focused AI editor with its own frontier models (Grok 4.6 jointly trained with xAI, Composer 2.5), agent requests, cloud agents, and Bugbot code review.",
-  "use_cases": [
-   "Feature prototypes",
-   "Refactors",
-   "Debugging",
-   "Test generation",
-   "Scaffolding new features across multiple files",
-   "Writing tests for legacy code before refactoring"
-  ],
-  "pros": [
-   "Own-model stack: Grok 4.6 + Composer 2.5 give generous included usage at low cost",
-   "Full agentic loop: editor agents, cloud agents, Bugbot review, team marketplace",
-   "Frontier third-party models also available in a separate usage pool"
-  ],
-  "cons": [
-   "Best features (effort levels, Fast mode, Bugbot) sit above the free plan",
-   "Third-party models incur a Cursor Token Rate surcharge on team plans",
-   "Usage-based overages can add up for heavy agent users"
-  ],
-  "key_features": [
-   "Cursor Grok 4.6 — jointly trained by Cursor and xAI; flagship coding model in-editor",
-   "Composer 2.5 — price-efficient agentic model ($0.50/$2.50 per 1M tokens standard)",
-   "Agent requests with extended limits; effort levels and Fast mode on Pro and up",
-   "Cloud agents, automations, MCPs, skills, hooks",
-   "Bugbot agentic code reviews (usage-based on Pro, included on Teams)",
-   "Grok Bot access on Teams plans"
-  ],
-  "faq": [
-   [
-    "What models does Cursor offer?",
-    "Cursor's own pool includes Grok 4.6 and Grok 4.5 (jointly trained with xAI) plus Composer 2.5, its price-efficient agentic model. Frontier models from OpenAI, Anthropic, Google, and xAI are available in a separate pool billed near API rates."
-   ],
-   [
-    "How much is Cursor?",
-    "Free tier with limited agent requests and Composer access; Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom."
-   ],
-   [
-    "What is Composer 2.5?",
-    "Cursor's own agentic coding model, tuned for long-horizon tasks via reinforcement learning. Standard pricing is $0.50 input / $2.50 output per million tokens; Fast mode is $3 / $15."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving feature prototypes—not a demo prompt. Verify whether tab completion that predicts multi-line edits across files materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires engineering review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "github-copilot",
-  "name": "GitHub Copilot",
-  "category": "Development",
-  "best_for": "Autocomplete, code chat, and developer productivity in popular IDEs",
-  "price": "Paid plans",
-  "rating": 4.5,
-  "official": "https://github.com/features/copilot",
-  "summary": "A mature coding assistant integrated into GitHub and major IDE workflows.",
-  "use_cases": [
-   "Code completion",
-   "Boilerplate",
-   "Tests",
-   "Docs",
-   "Scaffolding new features across multiple files",
-   "Writing tests for legacy code before refactoring"
-  ],
-  "pros": [
-   "Broad IDE support",
-   "Enterprise options",
-   "Low-friction adoption"
-  ],
-  "cons": [
-   "Quality varies by task",
-   "Can reinforce existing code issues"
-  ],
-  "key_features": [
-   "Lives natively in VS Code, JetBrains, Xcode, and more",
-   "Multi-line completions matching your code style",
-   "Copilot Chat with workspace awareness",
-   "Agent mode for multi-file tasks",
-   "Enterprise IP indemnification"
-  ],
-  "faq": [
-   [
-    "Is GitHub Copilot free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Copilot vs Cursor?",
-    "Copilot for price and editor coverage; Cursor for advanced agents. See our head-to-head comparison."
-   ],
-   [
-    "Does Copilot train on my code?",
-    "Business/Enterprise plans contractually exclude that; business code never trains models."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving code completion—not a demo prompt. Verify whether lives natively in vs code, jetbrains, xcode, and more materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality varies by task so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "lovable",
-  "name": "Lovable",
-  "category": "Development",
-  "best_for": "AI app generation for product prototypes and front-end experiences",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://lovable.dev/",
-  "summary": "An AI app builder focused on turning prompts into working web app prototypes and product interfaces.",
-  "use_cases": [
-   "MVP prototypes",
-   "Landing pages",
-   "Internal tools",
-   "Frontend iteration",
-   "Scaffolding new features across multiple files",
-   "Writing tests for legacy code before refactoring"
-  ],
-  "pros": [
-   "Fast product ideation",
-   "Good for nontraditional builders",
-   "Visual app output"
-  ],
-  "cons": [
-   "Generated apps need technical review",
-   "Scaling requires engineering discipline"
-  ],
-  "key_features": [
-   "Chat-to-app with instant visual preview",
-   "GitHub sync two-way — own your code",
-   "Supabase integration gives real auth/database",
-   "Edit with chat or direct visual selection",
-   "One-click publish to lovable.app subdomain"
-  ],
-  "faq": [
-   [
-    "Do I own Lovable-generated code?",
-    "Yes — two-way GitHub sync means the code is yours."
-   ],
-   [
-    "Can it build apps with logins?",
-    "Yes — Supabase auth integration is built in."
-   ],
-   [
-    "Lovable vs Bolt?",
-    "Lovable for guided simplicity with real backend; Bolt for finer stack control. See our AI app builders guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving mvp prototypes—not a demo prompt. Verify whether chat-to-app with instant visual preview materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to generated apps need technical review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "replit-ai",
-  "name": "Replit AI",
-  "category": "Development",
-  "best_for": "Building and deploying apps from a browser-based development environment",
-  "price": "Free + paid plans",
-  "rating": 4.3,
-  "official": "https://replit.com/ai",
-  "summary": "AI coding assistance inside Replit for prototyping, explaining, debugging, and shipping browser-based projects.",
-  "use_cases": [
-   "Web prototypes",
-   "Learning to code",
-   "Debugging",
-   "Small app deployment",
-   "Scaffolding new features across multiple files",
-   "Writing tests for legacy code before refactoring"
-  ],
-  "pros": [
-   "Browser-based workflow",
-   "Good for prototypes",
-   "Accessible to beginners"
-  ],
-  "cons": [
-   "Complex production work needs engineering review",
-   "Platform fit matters"
-  ],
-  "key_features": [
-   "Full IDE + hosting + database in one platform",
-   "AI Agent builds entire apps from descriptions",
-   "Deploys without any DevOps configuration",
-   "Real collaborative editing like Google Docs",
-   "Mobile apps let you build from anywhere"
-  ],
-  "faq": [
-   [
-    "What does Replit cost?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Is Replit good for beginners?",
-    "Yes — it's the most complete no-DevOps path from idea to deployed app."
-   ],
-   [
-    "Replit vs Lovable/Bolt?",
-    "Replit owns the whole lifecycle including deployment; others focus on generation. See our AI app builders guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving web prototypes—not a demo prompt. Verify whether full ide + hosting + database in one platform materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex production work needs engineering review. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "v0",
-  "name": "v0",
-  "category": "Development",
-  "best_for": "Generating React/UI components and product interfaces",
-  "price": "Free + paid plans",
-  "rating": 4.3,
-  "official": "https://v0.dev/",
-  "summary": "Vercel’s AI interface generator for UI components, React patterns, and rapid frontend iteration.",
-  "use_cases": [
-   "UI components",
-   "Landing sections",
-   "Design-to-code ideas",
-   "React prototypes",
-   "Scaffolding new features across multiple files",
-   "Writing tests for legacy code before refactoring"
-  ],
-  "pros": [
-   "Strong UI generation",
-   "Modern frontend focus",
-   "Good iteration loop"
-  ],
-  "cons": [
-   "Needs integration into real codebase",
-   "Not a full product process alone"
-  ],
-  "key_features": [
-   "Generates production-grade React/Tailwind/shadcn UI",
-   "Iterate by chatting or clicking elements directly",
-   "Figma import to code conversion",
-   "Deploy to Vercel in one click",
-   "Output is clean, readable, maintainable code"
-  ],
-  "faq": [
-   [
-    "What is v0 for?",
-    "Generating polished React/Tailwind interfaces fast — a front-end accelerator."
-   ],
-   [
-    "Can v0 build backends?",
-    "It focuses on UI; pair with your own API or Vercel functions."
-   ],
-   [
-    "v0 vs Cursor?",
-    "Different jobs: v0 generates UI from prompts; Cursor edits whole codebases. Many devs use both."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving ui components—not a demo prompt. Verify whether generates production-grade react/tailwind/shadcn ui materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs integration into real codebase so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "chatgpt",
-  "name": "ChatGPT",
-  "category": "General AI Assistant",
-  "best_for": "General-purpose writing, research, analysis, and multimodal help",
-  "price": "Free + paid plans",
-  "rating": 4.8,
-  "official": "https://chatgpt.com/",
-  "summary": "A flexible AI assistant for drafting, analysis, brainstorming, coding help, and everyday knowledge work.",
-  "use_cases": [
-   "Content drafts",
-   "Research summaries",
-   "Spreadsheet analysis",
-   "Code explanations",
-   "Drafting and replying to professional email",
-   "Explaining complex documents to non-experts"
-  ],
-  "pros": [
-   "Broad capability",
-   "Fast iteration",
-   "Strong ecosystem"
-  ],
-  "cons": [
-   "Needs review for factual claims",
-   "Team governance depends on plan"
-  ],
-  "key_features": [
-   "Multimodal input: text, images, files, and voice in one conversation",
-   "Custom GPTs for reusable role-specific assistants",
-   "Memory that carries preferences across chats",
-   "Deep Research mode for multi-source reports with citations",
-   "Canvas for iterative long-form drafting and code editing"
-  ],
-  "faq": [
-   [
-    "Is ChatGPT free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Is my data used for training?",
-    "On paid Team and Enterprise plans, no. On free and Plus, conversations may be used for training unless you opt out in settings."
-   ],
-   [
-    "ChatGPT vs Claude — which is better?",
-    "ChatGPT wins on multimodal features and ecosystem; Claude tends to produce more natural long-form writing and handles very long documents well. Our ChatGPT vs Claude comparison breaks down task-by-task results."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving content drafts—not a demo prompt. Verify whether multimodal input: text, images, files, and voice in one conversation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs review for factual claims so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "claude",
-  "name": "Claude",
-  "category": "General AI Assistant",
-  "best_for": "Long-form writing, careful analysis, document review, and coding assistance",
-  "price": "Free + paid plans",
-  "rating": 4.7,
-  "official": "https://claude.ai/",
-  "summary": "A thoughtful assistant especially useful for editing, long-context analysis, and turning messy notes into structured outputs.",
-  "use_cases": [
-   "Document analysis",
-   "Editorial review",
-   "Planning",
-   "Code reasoning",
-   "Drafting and replying to professional email",
-   "Explaining complex documents to non-experts"
-  ],
-  "pros": [
-   "Excellent writing quality",
-   "Strong long-context work",
-   "Careful tone"
-  ],
-  "cons": [
-   "Can still miss details",
-   "External integrations vary"
-  ],
-  "key_features": [
-   "Projects that keep context, files, and instructions organized per workstream",
-   "Artifacts for live-rendering documents, code, and prototypes beside the chat",
-   "200K-token context handles entire books or codebases",
-   "Computer Use for operating a browser and desktop apps",
-   "Consistently strong long-form writing tone"
-  ],
-  "faq": [
-   [
-    "What makes Claude different from ChatGPT?",
-    "Claude emphasizes long documents and natural writing; ChatGPT emphasizes a broader product ecosystem. Many teams run both. See our ChatGPT vs Claude comparison."
-   ],
-   [
-    "Does Claude have a free plan?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Can Claude read my whole codebase?",
-    "With Projects and API use, yes — 200K tokens fits most small-to-mid repos in one context."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving document analysis—not a demo prompt. Verify whether projects that keep context, files, and instructions organized per workstream materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to can still miss details so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "deepseek",
-  "name": "DeepSeek",
-  "category": "General AI Assistant",
-  "best_for": "Reasoning, coding, and cost-conscious model evaluation",
-  "price": "Free + API pricing",
-  "rating": 4.3,
-  "official": "https://www.deepseek.com/",
-  "summary": "An AI assistant and model provider known for reasoning and coding capabilities with strong price-performance interest.",
-  "use_cases": [
-   "Coding",
-   "Reasoning",
-   "Model comparison",
-   "API experiments",
-   "Drafting and replying to professional email",
-   "Explaining complex documents to non-experts"
-  ],
-  "pros": [
-   "Strong technical interest",
-   "Good for model evaluation",
-   "Cost-conscious appeal"
-  ],
-  "cons": [
-   "Teams need data and compliance review",
-   "Availability/performance can vary"
-  ],
-  "key_features": [
-   "Frontier-level reasoning at a fraction of rival cost",
-   "R1 reasoning model shows its chain of thought",
-   "Open-weight models you can self-host",
-   "Strong math and coding performance",
-   "Web/app chat completely free"
-  ],
-  "faq": [
-   [
-    "Is DeepSeek really free?",
-    "The chat app is fully free. The API is paid but extremely cheap vs rivals."
-   ],
-   [
-    "Is DeepSeek safe for business use?",
-    "Consider data residency and censorship policies carefully; many firms self-host the open weights instead."
-   ],
-   [
-    "How good is DeepSeek vs ChatGPT?",
-    "Close on math/coding benchmarks, weaker on some general tasks — at a fraction of the price. See our comparisons."
-   ],
-   [
-    "Is DeepSeek free?",
-    "DeepSeek's chat app is free to use, and its API uses low per-token pricing that undercuts most frontier rivals. Verify current API rates on DeepSeek's official pricing page — they change occasionally."
-   ],
-   [
-    "What are DeepSeek's main tradeoffs?",
-    "Cost and open availability are strengths. Tradeoffs include fewer integrations than US assistants, and data-governance considerations some organizations need to review before adoption."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving coding—not a demo prompt. Verify whether frontier-level reasoning at a fraction of rival cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to teams need data and compliance review. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "gemini",
-  "name": "Gemini",
-  "category": "General AI Assistant",
-  "best_for": "Google-native AI assistance across search, docs, Gmail, Android, and multimodal tasks",
-  "price": "Free + paid plans",
-  "rating": 4.6,
-  "official": "https://gemini.google.com/",
-  "summary": "Google’s AI assistant with strong multimodal capabilities and a natural fit for people already working in Google products.",
-  "use_cases": [
-   "Google Workspace drafting",
-   "Image understanding",
-   "Research support",
-   "Everyday assistant tasks",
-   "Drafting and replying to professional email",
-   "Explaining complex documents to non-experts"
-  ],
-  "pros": [
-   "Google ecosystem integration",
-   "Strong multimodal direction",
-   "Good consumer accessibility"
-  ],
-  "cons": [
-   "Best features depend on account/plan",
-   "Workspace controls matter for teams"
-  ],
-  "key_features": [
-   "Deep integration with Gmail, Docs, Sheets, and Drive",
-   "Huge context window handles very long documents and video",
-   "Deep Research generates multi-step cited reports",
-   "Native image and video understanding",
-   "Bundled storage makes the Pro plan a double value"
-  ],
-  "faq": [
-   [
-    "Is Gemini included with Google Workspace?",
-    "Basic features yes; the full model access requires the AI Pro plan or Workspace add-on."
-   ],
-   [
-    "Gemini vs ChatGPT?",
-    "Gemini wins on Google ecosystem integration and long-context; ChatGPT on ecosystem breadth beyond Google. See our comparisons for task-level results."
-   ],
-   [
-    "Is there a free tier?",
-    "Yes, and it's one of the more generous free tiers — multimodal input included."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving google workspace drafting—not a demo prompt. Verify whether deep integration with gmail, docs, sheets, and drive materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best features depend on account/plan so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "grok",
-  "name": "Grok",
-  "category": "General AI Assistant",
-  "best_for": "Coding and agentic work on the newest models, real-time X data answers, always-on Grok Bot agents, and building apps/sites in Build Mode",
-  "price": "Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo; API from $1–$6 per 1M tokens",
-  "rating": 4.5,
-  "official": "https://grok.com/",
-  "summary": "xAI’s assistant family: flagship Grok 4.6 model for coding and agents, Grok Bot always-on agents, Grok Build coding agent with Build Mode apps, Grok Imagine image/video, Grok Voice, and real-time X data.",
-  "use_cases": [
-   "Agentic coding sessions with Grok Build or inside GitHub Copilot/Warp/Kilo Code",
-   "Delegating recurring jobs to always-on Grok Bot agents",
-   "Building shareable websites, apps, and dashboards with Build Mode",
-   "Current-event and social trend research using live X data",
-   "Image/video generation via Grok Imagine for social content",
-   "Voice agents via the Voice Agent Builder without code"
-  ],
-  "pros": [
-   "Newest-model velocity: Grok 4.5/4.6 shipped within weeks of each other in mid-2026",
-   "Unique product breadth: coding agent, app builder, always-on bots, voice, image/video in one subscription",
-   "Real-time X data still unmatched for breaking-news and social-sentiment work",
-   "Competitive API pricing ($2/$6 per 1M tokens on Grok 4.6; cheaper Grok 4.3 at $1.25/$2.50)"
-  ],
-  "cons": [
-   "500K context on Grok 4.5/4.6 is smaller than some rivals' windows",
-   "Build Mode is early beta and gated to top SuperGrok tiers at launch",
-   "Enterprise workflows still need policy review",
-   "Outputs still require source checking"
-  ],
-  "key_features": [
-   "Grok 4.6 flagship model (Aug 2026): agentic tool calling, configurable reasoning, 500K context",
-   "Grok Bot (Aug 2026): team of always-on 24/7 agents working inside your tools",
-   "Grok Build: terminal coding agent plus Build Mode for creating websites, apps, games, dashboards",
-   "Workflows and /goal for long-running autonomous multi-agent task execution",
-   "Grok Imagine Image 2.0 + Video 1.5 (up to 1080p) and Voice Think Fast 2.0 speech-to-speech",
-   "Office add-ins for Word, Excel, PowerPoint, Outlook, and Google Workspace",
-   "Automations, Skills, and Connectors across web, iOS, Android, and X"
-  ],
-  "faq": [
-   [
-    "What is the current Grok model?",
-    "The flagship is Grok 4.6 (August 2026), focused on long-running agents and visual work, at $2 input / $6 output per million tokens. Prior flagships Grok 4.5 (July 2026) and Grok 4.3 remain available, with Grok 4.3 cheaper at $1.25 / $2.50."
-   ],
-   [
-    "What is Grok Build?",
-    "Grok Build is xAI's coding agent: a terminal harness (now open source) with Workflows that fan tasks out across parallel agents, /goal for long-running autonomous execution, an Agent Dashboard for many simultaneous sessions, and a plugin marketplace. Build Mode extends it to creating and sharing full websites, apps, games, and interactive dashboards."
-   ],
-   [
-    "What are Grok Bots?",
-    "Grok Bot, introduced August 2026, is a team of always-on agents with their own computer that work inside your tools and apps around the clock — you assign jobs and they keep executing."
-   ],
-   [
-    "How much does Grok cost?",
-    "There's a free tier. SuperGrok is $30/month, SuperGrok Plus $100/month, with higher tiers for heavy use. API access starts around $1–$2 per million input tokens depending on model."
-   ],
-   [
-    "Can I use Grok inside other coding tools?",
-    "Yes. Grok 4.5/4.6 are available in GitHub Copilot, and SuperGrok/X Premium subscriptions work inside Warp, Kilo Code, OpenCode, Kilo Code, and Hermes Agent."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving current-event research—not a demo prompt. Verify whether real-time x (twitter) data in answers materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to enterprise workflows still need policy review. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "meta-ai",
-  "name": "Meta AI",
-  "category": "General AI Assistant",
-  "best_for": "Consumer AI assistance inside Meta apps and open-model ecosystem discovery",
-  "price": "Free",
-  "rating": 4.1,
-  "official": "https://www.meta.ai/",
-  "summary": "Meta’s assistant for consumer chat, image generation, social contexts, and broad AI access across Meta surfaces.",
-  "use_cases": [
-   "Consumer assistant tasks",
-   "Social content ideas",
-   "Image generation",
-   "Quick answers",
-   "Drafting and replying to professional email",
-   "Explaining complex documents to non-experts"
-  ],
-  "pros": [
-   "Wide consumer reach",
-   "Free access",
-   "Meta ecosystem fit"
-  ],
-  "cons": [
-   "Business workflows are less mature",
-   "Privacy review needed for sensitive work"
-  ],
-  "key_features": [
-   "Embedded in WhatsApp, Instagram, Messenger, and Ray-Ban glasses",
-   "Llama-powered with image generation",
-   "Real-time web search built in",
-   "No subscription or caps currently enforced",
-   "Imagine feature for image creation inside chats"
-  ],
-  "faq": [
-   [
-    "Is Meta AI free?",
-    "Completely — it's funded by the ecosystem, not subscriptions."
-   ],
-   [
-    "Where can I use Meta AI?",
-    "WhatsApp, Instagram, Messenger, meta.ai web, and Ray-Ban Meta glasses."
-   ],
-   [
-    "How does it compare to ChatGPT?",
-    "Great casual assistant; below top models on hard reasoning. See our AI assistants guide."
-   ],
-   [
-    "How does Meta AI compare with ChatGPT?",
-    "Meta AI wins on convenience inside apps people already use. ChatGPT remains stronger for long-form work, file analysis, and advanced agent features. Choose based on where your work happens."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving consumer assistant tasks—not a demo prompt. Verify whether embedded in whatsapp, instagram, messenger, and ray-ban glasses materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to business workflows are less mature so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "mistral-le-chat",
-  "name": "Mistral Le Chat",
-  "category": "General AI Assistant",
-  "best_for": "Fast AI chat from Mistral with European AI ecosystem appeal",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://chat.mistral.ai/",
-  "summary": "Mistral’s assistant for general chat, reasoning, writing, coding help, and working with Mistral’s model family.",
-  "use_cases": [
-   "General chat",
-   "Coding help",
-   "Writing",
-   "Model evaluation",
-   "Drafting and replying to professional email",
-   "Explaining complex documents to non-experts"
-  ],
-  "pros": [
-   "Fast model family",
-   "European AI option",
-   "Developer-friendly ecosystem"
-  ],
-  "cons": [
-   "Ecosystem smaller than incumbents",
-   "Workflow integrations vary"
-  ],
-  "key_features": [
-   "Fastest response streaming in category testing",
-   "EU-based alternative with European data hosting",
-   "Code interpreter, image generation, web search built in",
-   "Canvas-style editing interface",
-   "Open-model company — Mistral weights available for self-hosting"
-  ],
-  "faq": [
-   [
-    "Is Le Chat free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Why choose Mistral over ChatGPT?",
-    "Speed, price, and EU data hosting for GDPR-sensitive work."
-   ],
-   [
-    "Are Mistral models open source?",
-    "Many weights are openly licensed — unusual among frontier labs."
-   ],
-   [
-    "Is Mistral Le Chat free to use?",
-    "Yes — Le Chat has a free tier. Paid tiers unlock higher usage limits and the newest Mistral models; check Mistral's official pricing page for current amounts before subscribing."
-   ],
-   [
-    "How does Le Chat compare with ChatGPT?",
-    "Le Chat is strong on European data-residency expectations and fast responses from Mistral's own models. ChatGPT has a broader ecosystem (plugins, voice modes, wider integrations). Our comparison page breaks down the tradeoffs."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving general chat—not a demo prompt. Verify whether fastest response streaming in category testing materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to ecosystem smaller than incumbents so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "copy-ai",
-  "name": "Copy.ai",
-  "category": "Marketing",
-  "best_for": "Go-to-market workflows, sales copy, and repeatable marketing content systems",
-  "price": "Free + paid plans",
-  "rating": 4.1,
-  "official": "https://www.copy.ai/",
-  "summary": "An AI platform for marketing and sales content workflows, from copy generation to GTM process support.",
-  "use_cases": [
-   "Sales copy",
-   "Marketing workflows",
-   "Outbound drafts",
-   "Content repurposing",
-   "Generating landing page copy variants for testing",
-   "Personalizing outreach at scale with research"
-  ],
-  "pros": [
-   "GTM workflow positioning",
-   "Useful templates",
-   "Business-focused"
-  ],
-  "cons": [
-   "Quality depends on inputs",
-   "Needs brand review"
-  ],
-  "key_features": [
-   "GTM-focused: sales email sequences, prospecting workflows",
-   "Workflow builder chains AI steps into repeatable processes",
-   "Infobase stores company facts for consistent output",
-   "Unlimited words even on the entry paid plan",
-   "Strong short-form marketing copy templates"
-  ],
-  "faq": [
-   [
-    "Copy.ai vs Jasper?",
-    "Copy.ai is cheaper with unlimited words; Jasper has stronger brand voice and enterprise features. See our full comparison coverage."
-   ],
-   [
-    "Is the free plan really free?",
-    "Yes — 2,000 words monthly, no card required, though it's limited for real use."
-   ],
-   [
-    "Can Copy.ai automate sales outreach?",
-    "Yes — that's its core focus now, with sequence workflows and CRM integrations."
-   ],
-   [
-    "What does Copy.ai cost?",
-    "Copy.ai uses subscription plans with a free tier for testing and paid tiers for higher volumes and workflow automation. Confirm current prices on Copy.ai's official pricing page before buying."
-   ],
-   [
-    "Copy.ai vs Jasper — which is better?",
-    "Jasper fits brand-voice marketing at team scale; Copy.ai competes on price and go-to-market workflow templates. Our head-to-head comparison walks through which fits which team."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving sales copy—not a demo prompt. Verify whether gtm-focused: sales email sequences, prospecting workflows materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality depends on inputs so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "jasper",
-  "name": "Jasper",
-  "category": "Marketing",
-  "best_for": "Marketing content workflows, brand voice, and campaign production",
-  "price": "Paid plans",
-  "rating": 4.2,
-  "official": "https://www.jasper.ai/",
-  "summary": "A marketing-focused AI writing platform for brand voice, campaign assets, and content operations.",
-  "use_cases": [
-   "Marketing copy",
-   "Campaign content",
-   "Brand voice",
-   "Content operations",
-   "Generating landing page copy variants for testing",
-   "Personalizing outreach at scale with research"
-  ],
-  "pros": [
-   "Marketing workflow focus",
-   "Brand controls",
-   "Team-oriented"
-  ],
-  "cons": [
-   "Best value for active content teams",
-   "Outputs still need editors"
-  ],
-  "key_features": [
-   "Brand voice trained on your existing content",
-   "Campaign workflows: brief to multi-channel assets in one run",
-   "50+ templates for ads, emails, blogs, product copy",
-   "Knowledge base grounds output in your facts",
-   "Team collaboration with approval flows"
-  ],
-  "faq": [
-   [
-    "Is Jasper worth it vs ChatGPT?",
-    "For teams needing consistent brand voice and campaign workflows, yes. For individuals, ChatGPT Plus costs half as much. See our Jasper alternatives guide."
-   ],
-   [
-    "Does Jasper plagiarize?",
-    "It has a built-in plagiarism checker via Copyscape integration on higher plans."
-   ],
-   [
-    "Can Jasper match my brand voice?",
-    "Jasper can build a voice profile from existing content. Verify it against your style guide and measure the edits required before rolling it out to a team."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving marketing copy—not a demo prompt. Verify whether brand voice trained on your existing content materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for active content teams. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "fathom",
-  "name": "Fathom",
-  "category": "Meetings",
-  "best_for": "Meeting notes, call summaries, and CRM-friendly follow-up workflows",
-  "price": "Free + paid team plans",
-  "rating": 4.3,
-  "official": "https://fathom.video/",
-  "summary": "An AI meeting assistant for recording calls, generating summaries, and sharing highlights with teams.",
-  "use_cases": [
-   "Sales calls",
-   "Customer interviews",
-   "Follow-up emails",
-   "Meeting highlights",
-   "Reviewing decisions from calls you missed",
-   "Extracting action items without manual note-taking"
-  ],
-  "pros": [
-   "Fast meeting summaries",
-   "Good sharing workflow",
-   "Useful for calls"
-  ],
-  "cons": [
-   "Consent and privacy policies matter",
-   "Integrations should be checked"
-  ],
-  "key_features": [
-   "Unlimited free meeting recording + transcription",
-   "5-second clip creation for sharing key moments",
-   "Auto-generated call summaries organized by section",
-   "Real-time transcription during calls",
-   "CRM auto-sync on paid plans"
-  ],
-  "faq": [
-   [
-    "Is Fathom really free?",
-    "Yes — unlimited recordings, transcripts, and AI summaries at no cost. Paid adds team/sales features."
-   ],
-   [
-    "Fathom vs Otter?",
-    "Fathom emphasizes a generous free recording-and-summary workflow; Otter emphasizes live transcription and collaborative notes. Try both with the same meeting format."
-   ],
-   [
-    "Which platforms does it support?",
-    "Zoom, Google Meet, Microsoft Teams, and RingCentral."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether unlimited free meeting recording + transcription materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to consent and privacy policies matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "fireflies",
-  "name": "Fireflies.ai",
-  "category": "Meetings",
-  "best_for": "Meeting transcription, searchable call records, and conversation intelligence",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://fireflies.ai/",
-  "summary": "A meeting intelligence tool for recording, transcribing, searching, and summarizing team conversations.",
-  "use_cases": [
-   "Meeting archive",
-   "Transcripts",
-   "Conversation search",
-   "Team notes",
-   "Reviewing decisions from calls you missed",
-   "Extracting action items without manual note-taking"
-  ],
-  "pros": [
-   "Searchable meeting history",
-   "Broad meeting support",
-   "Team-oriented"
-  ],
-  "cons": [
-   "Needs clear recording policy",
-   "Transcript quality varies by audio"
-  ],
-  "key_features": [
-   "Auto-joins Zoom, Meet, and Teams calls",
-   "Action items and keyword tracking after each meeting",
-   "Ask Fireflies: search across all your past meetings",
-   "Soundbites for sharing key moments",
-   "CRM sync pushes notes to HubSpot/Salesforce"
-  ],
-  "faq": [
-   [
-    "Is Fireflies free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Which meeting apps does it join?",
-    "Zoom, Google Meet, Microsoft Teams, Webex, and dialers via integrations."
-   ],
-   [
-    "Is recording legal?",
-    "Participants should consent — Fireflies announces itself, but check your local two-party consent laws."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving meeting archive—not a demo prompt. Verify whether auto-joins zoom, meet, and teams calls materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs clear recording policy so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "otter-ai",
-  "name": "Otter.ai",
-  "category": "Meetings",
-  "best_for": "Meeting transcription, summaries, and action items",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://otter.ai/",
-  "summary": "A meeting assistant for recording, transcribing, summarizing, and extracting follow-up items.",
-  "use_cases": [
-   "Sales calls",
-   "Team meetings",
-   "Interviews",
-   "Action items",
-   "Reviewing decisions from calls you missed",
-   "Extracting action items without manual note-taking"
-  ],
-  "pros": [
-   "Easy meeting capture",
-   "Useful summaries",
-   "Shareable notes"
-  ],
-  "cons": [
-   "Sensitive meetings need policy review",
-   "Transcript accuracy depends on audio"
-  ],
-  "key_features": [
-   "Live transcription during meetings with highlighting",
-   "OtterPilot auto-joins and records meetings",
-   "AI meeting summaries with action items",
-   "Live notes visible to teammates in real time",
-   "Integrates with Zoom, Meet, Teams calendars"
-  ],
-  "faq": [
-   [
-    "Otter vs Fireflies?",
-    "Otter leads on live in-meeting transcription; Fireflies on post-meeting intelligence and CRM sync. Both have free tiers worth trying."
-   ],
-   [
-    "How accurate is Otter?",
-    "Accuracy varies with microphones, accents, crosstalk, and room noise. Test it on a real team call before relying on transcripts."
-   ],
-   [
-    "Does Otter work with Zoom?",
-    "Yes — OtterPilot joins and transcribes Zoom, Meet, and Teams automatically."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether live transcription during meetings with highlighting materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sensitive meetings need policy review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "poe",
-  "name": "Poe",
-  "category": "Model Hub",
-  "best_for": "Trying multiple AI models and bots from one interface",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://poe.com/",
-  "summary": "A multi-model chat platform for comparing assistants, using specialized bots, and testing different model behaviors.",
-  "use_cases": [
-   "Model comparison",
-   "Specialized bots",
-   "Prompt testing",
-   "Multi-assistant workflows",
-   "Comparing model answers side-by-side",
-   "Accessing premium models under one budget"
-  ],
-  "pros": [
-   "Many models in one place",
-   "Easy experimentation",
-   "Good for comparison"
-  ],
-  "cons": [
-   "Not a dedicated workflow system",
-   "Availability depends on provider access"
-  ],
-  "key_features": [
-   "Access dozens of models in one app",
-   "Compare answers side-by-side across models",
-   "Custom bots with system prompts you create/share",
-   "Image and video generation models included",
-   "One subscription replaces several AI subscriptions"
-  ],
-  "faq": [
-   [
-    "Is Poe worth it?",
-    "If you switch between GPT-4o, Claude, and image models, yes — it consolidates subscriptions."
-   ],
-   [
-    "What are compute points?",
-    "Per-model usage currency; bigger models cost more points per message."
-   ],
-   [
-    "Can I make my own bot?",
-    "Yes — custom bots with custom prompts are shareable via link."
-   ],
-   [
-    "What is Poe?",
-    "Poe is Quora's multi-model chat app: one subscription gives access to many AI models (including OpenAI, Anthropic, Google, and others) in a single interface."
-   ],
-   [
-    "Is Poe cheaper than paying for separate AI subscriptions?",
-    "For casual multi-model exploration, often yes — Poe bundles access that would otherwise require several $20/month plans. Heavy users of one specific frontier model may still prefer that vendor's native app for full features."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving model comparison—not a demo prompt. Verify whether access dozens of models in one app materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to not a dedicated workflow system so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "gamma",
-  "name": "Gamma",
-  "category": "Presentations",
-  "best_for": "AI-generated presentations, decks, microsites, and narrative documents",
-  "price": "Free + paid plans",
-  "rating": 4.3,
-  "official": "https://gamma.app/",
-  "summary": "A fast AI presentation and document builder for turning ideas into polished decks and shareable pages.",
-  "use_cases": [
-   "Pitch decks",
-   "Reports",
-   "Lesson materials",
-   "Microsites",
-   "Turning rough outlines into client-ready decks",
-   "Building webinar slides with consistent branding"
-  ],
-  "pros": [
-   "Fast deck creation",
-   "Modern layouts",
-   "Good for first drafts"
-  ],
-  "cons": [
-   "Important decks still need design review",
-   "Brand control may require paid plans"
-  ],
-  "key_features": [
-   "Prompt-to-deck in under a minute with real design",
-   "Cards-based editing — no fighting with slide layout",
-   "Web publishing with analytics built in",
-   "Import PowerPoint/PDF and restyle automatically",
-   "Presentations, docs, and micro-sites in one format"
-  ],
-  "faq": [
-   [
-    "Is Gamma free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Can I export to PowerPoint?",
-    "Yes, PDF and PPTX export on paid plans."
-   ],
-   [
-    "Gamma vs Tome vs Beautiful.ai?",
-    "Gamma leads on generation quality and web publishing. See our best AI presentation tools guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving pitch decks—not a demo prompt. Verify whether prompt-to-deck in under a minute with real design materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to important decks still need design review. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "airtable-ai",
-  "name": "Airtable AI",
-  "category": "Productivity",
-  "best_for": "Adding AI to structured business databases and operational apps",
-  "price": "Paid plan availability varies",
-  "rating": 4.2,
-  "official": "https://www.airtable.com/platform/ai",
-  "summary": "AI capabilities inside Airtable for summarizing records, categorizing data, drafting text, and powering operational workflows.",
-  "use_cases": [
-   "CRM enrichment",
-   "Content ops",
-   "Data categorization",
-   "Operational apps",
-   "Summarizing long threads into briefings",
-   "Automating recurring document formatting"
-  ],
-  "pros": [
-   "Works with structured data",
-   "Good for operations teams",
-   "No-code app context"
-  ],
-  "cons": [
-   "Best for Airtable users",
-   "Requires careful field design"
-  ],
-  "key_features": [
-   "AI fields generate/enrich data per record automatically",
-   "Ask across your base: natural-language queries of records",
-   "Summarize and categorize records in bulk",
-   "Cobuilder: describe an app, get a working base",
-   "AI stays inside your permission boundaries"
-  ],
-  "faq": [
-   [
-    "How is Airtable AI priced?",
-    "Via credits included with paid plans; heavy usage may need credit top-ups."
-   ],
-   [
-    "Can it enrich existing data?",
-    "Yes — AI columns categorize, summarize, or draft per record in bulk."
-   ],
-   [
-    "Does it respect my base permissions?",
-    "Yes — AI operates within existing field/record permissions."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving crm enrichment—not a demo prompt. Verify whether ai fields generate/enrich data per record automatically materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best for airtable users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "microsoft-copilot",
-  "name": "Microsoft Copilot",
-  "category": "Productivity",
-  "best_for": "AI assistance across Microsoft 365, Windows, Edge, and enterprise productivity workflows",
-  "price": "Free + paid plans",
-  "rating": 4.5,
-  "official": "https://copilot.microsoft.com/",
-  "summary": "Microsoft’s AI assistant for workplace productivity, search, writing, meetings, and enterprise software workflows.",
-  "use_cases": [
-   "Office documents",
-   "Workplace search",
-   "Meeting prep",
-   "Enterprise productivity",
-   "Summarizing long threads into briefings",
-   "Automating recurring document formatting"
-  ],
-  "pros": [
-   "Microsoft 365 fit",
-   "Enterprise controls",
-   "Familiar interface"
-  ],
-  "cons": [
-   "Value depends on Microsoft stack adoption",
-   "Licensing can be complex"
-  ],
-  "key_features": [
-   "Drafts and rewrites inside Word with document context",
-   "Excel analysis: formulas, trends, pivot suggestions",
-   "Outlook email triage and draft replies in your voice",
-   "Teams meeting recaps with action items",
-   "Enterprise Data Protection — prompts not used to train"
-  ],
-  "faq": [
-   [
-    "Is Copilot included in Microsoft 365?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Is my company data safe?",
-    "Microsoft states tenant data isn't used to train models, with Enterprise Data Protection."
-   ],
-   [
-    "Worth $30/user/month?",
-    "For heavy Word/Excel/Outlook users, productivity gains justify it. Light Office users won't see ROI. See our review."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving office documents—not a demo prompt. Verify whether drafts and rewrites inside word with document context materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on microsoft stack adoption. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "notion-ai",
-  "name": "Notion AI",
-  "category": "Productivity",
-  "best_for": "Knowledge-base writing, summaries, and team docs",
-  "price": "Paid add-on / included in some plans",
-  "rating": 4.3,
-  "official": "https://www.notion.com/product/ai",
-  "summary": "AI features inside Notion for summarizing docs, drafting pages, searching knowledge, and turning notes into plans.",
-  "use_cases": [
-   "Meeting notes",
-   "Knowledge base",
-   "Project briefs",
-   "Team summaries",
-   "Summarizing long threads into briefings",
-   "Automating recurring document formatting"
-  ],
-  "pros": [
-   "Works where docs live",
-   "Good for teams already in Notion",
-   "Simple adoption"
-  ],
-  "cons": [
-   "Best if Notion is already your workspace",
-   "Not a full research system alone"
-  ],
-  "key_features": [
-   "Writing, summarizing, and translating inside your docs",
-   "Q&A searches your entire workspace and answers with sources",
-   "Auto-fill databases with AI-generated properties",
-   "Meeting notes transcription and summaries",
-   "No separate app — lives where your work already is"
-  ],
-  "faq": [
-   [
-    "Is Notion AI worth $10/month?",
-    "If your team documents in Notion, yes — workspace Q&A alone saves regular search time. See our Notion AI review coverage."
-   ],
-   [
-    "Does Notion AI train on my data?",
-    "Notion states customer data is not used to train models."
-   ],
-   [
-    "Can it search connected tools?",
-    "Yes — Slack, Google Drive, and Jira connectors extend Q&A beyond Notion itself."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving meeting notes—not a demo prompt. Verify whether writing, summarizing, and translating inside your docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best if notion is already your workspace. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "slack-ai",
-  "name": "Slack AI",
-  "category": "Productivity",
-  "best_for": "Team conversation summaries, channel catch-up, and workplace knowledge retrieval",
-  "price": "Paid add-on / plan availability varies",
-  "rating": 4.1,
-  "official": "https://slack.com/features/ai",
-  "summary": "AI features inside Slack for summarizing channels, catching up on threads, and finding workplace context.",
-  "use_cases": [
-   "Channel summaries",
-   "Thread catch-up",
-   "Workplace search",
-   "Team updates",
-   "Summarizing long threads into briefings",
-   "Automating recurring document formatting"
-  ],
-  "pros": [
-   "Works in team chat",
-   "Good catch-up use case",
-   "Reduces information overload"
-  ],
-  "cons": [
-   "Value depends on Slack adoption",
-   "Knowledge quality depends on team habits"
-  ],
-  "key_features": [
-   "Channel and thread summaries catch you up instantly",
-   "Huddle transcriptions with action items",
-   "Search answers questions using your Slack history with citations",
-   "Daily recap of what you missed",
-   "Stays within Slack's existing security model"
-  ],
-  "faq": [
-   [
-    "How much is Slack AI?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Can it read DMs?",
-    "It respects existing access permissions — you can summarize only what you can already see."
-   ],
-   [
-    "Slack AI vs Notion AI?",
-    "Different homes: Slack for conversation catch-up, Notion for docs. Teams often run both. See our reviews."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving channel summaries—not a demo prompt. Verify whether channel and thread summaries catch you up instantly materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on slack adoption so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "perplexity",
-  "name": "Perplexity",
-  "category": "Research",
-  "best_for": "Source-backed web research and quick market scans",
-  "price": "Free + paid plans",
-  "rating": 4.6,
-  "official": "https://www.perplexity.ai/",
-  "summary": "A research-first AI search engine that keeps sources visible while answering questions.",
-  "use_cases": [
-   "Competitor scans",
-   "Source discovery",
-   "Market questions",
-   "Briefing prep",
-   "Vetting sources with citations for reports",
-   "Tracking competitor moves across the web"
-  ],
-  "pros": [
-   "Citations are central",
-   "Good for discovery",
-   "Fast current research"
-  ],
-  "cons": [
-   "Sources still need checking",
-   "Less suited to complex workflows alone"
-  ],
-  "key_features": [
-   "Every answer includes numbered source citations",
-   "Pro Search runs multi-step research instead of one-shot answers",
-   "Focus modes: academic, Reddit, YouTube, news",
-   "Spaces for organizing research threads by project",
-   "Model switching inside a single product"
-  ],
-  "faq": [
-   [
-    "Is Perplexity better than Google?",
-    "For research questions where you need sources, yes — it synthesizes instead of listing links. For local searches and shopping, Google still wins."
-   ],
-   [
-    "Does Perplexity use ChatGPT?",
-    "It offers multiple models including GPT-4o and Claude alongside its own Sonar models — you choose per search."
-   ],
-   [
-    "Can I trust the citations?",
-    "Mostly. Every claim links to a source so you can verify, but we found it occasionally picks low-authority pages on obscure topics."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving competitor scans—not a demo prompt. Verify whether every answer includes numbered source citations materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sources still need checking so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "high"
- },
- {
-  "slug": "you-com",
-  "name": "You.com",
-  "category": "Research",
-  "best_for": "AI search, research agents, and productivity-oriented web answers",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://you.com/",
-  "summary": "An AI search and assistant platform for web answers, research, productivity, and agent-style tasks.",
-  "use_cases": [
-   "AI search",
-   "Research summaries",
-   "Web Q&A",
-   "Productivity prompts",
-   "Vetting sources with citations for reports",
-   "Tracking competitor moves across the web"
-  ],
-  "pros": [
-   "Search-first workflow",
-   "Useful for discovery",
-   "Multiple assistant modes"
-  ],
-  "cons": [
-   "Needs source verification",
-   "Differentiation depends on workflow"
-  ],
-  "key_features": [
-   "AI search with citations like Perplexity",
-   "Model choice: GPT, Claude, Gemini, Llama in one UI",
-   "Research mode for deep multi-step reports",
-   "File upload analysis",
-   "Custom assistant creation"
-  ],
-  "faq": [
-   [
-    "You.com vs Perplexity?",
-    "They combine cited AI search with chat. Perplexity is more search-first; You.com emphasizes model choice in one subscription. Compare both on the same research question."
-   ],
-   [
-    "Which models does You.com include?",
-    "GPT-4o, Claude, Gemini, Llama and others depending on plan."
-   ],
-   [
-    "Is there a free tier?",
-    "Yes, with limited Pro searches daily."
-   ],
-   [
-    "What is You.com best for?",
-    "You.com focuses on AI-assisted search with source visibility, plus writing and coding assistance on paid plans. It suits users who want search-first answers instead of a general chat assistant."
-   ],
-   [
-    "Does You.com have a free plan?",
-    "Yes. A free tier covers basic searches and limited AI chats; Pro unlocks premium models and higher limits. Check you.com's pricing page for current limits."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving ai search—not a demo prompt. Verify whether ai search with citations like perplexity materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs source verification so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "heygen",
-  "name": "HeyGen",
-  "category": "Video",
-  "best_for": "AI avatars, video localization, and presenter-style business videos",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://www.heygen.com/",
-  "summary": "A business video platform for AI avatars, translation, personalized videos, and presenter-led content.",
-  "use_cases": [
-   "Sales videos",
-   "Training content",
-   "Localization",
-   "Avatar presenters",
-   "Creating talking-head content without filming",
-   "Producing localized video variants per market"
-  ],
-  "pros": [
-   "Business-friendly video workflows",
-   "Avatar and translation features",
-   "Good for scalable content"
-  ],
-  "cons": [
-   "Avatar content can feel synthetic",
-   "Brand review is important"
-  ],
-  "key_features": [
-   "500+ stock avatars, 175+ languages",
-   "Instant avatar clone from webcam footage",
-   "Video translate with lip-sync into new languages",
-   "Templates for sales, training, and social formats",
-   "API for programmatic video at scale"
-  ],
-  "faq": [
-   [
-    "Is HeyGen free?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "HeyGen vs Synthesia?",
-    "HeyGen for social-first avatar video and translation; Synthesia for enterprise training. Both offer avatar clones."
-   ],
-   [
-    "Does HeyGen support my language?",
-    "175+ languages with lip-synced translation on paid plans."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving sales videos—not a demo prompt. Verify whether 500+ stock avatars, 175+ languages materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to avatar content can feel synthetic so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "runway",
-  "name": "Runway",
-  "category": "Video",
-  "best_for": "AI video generation and creative production experiments",
-  "price": "Free + paid plans",
-  "rating": 4.2,
-  "official": "https://runwayml.com/",
-  "summary": "A creative video platform for generative video, editing, and motion experiments.",
-  "use_cases": [
-   "Concept videos",
-   "Motion assets",
-   "Storyboards",
-   "Campaign experiments",
-   "Creating talking-head content without filming",
-   "Producing localized video variants per market"
-  ],
-  "pros": [
-   "Strong creative capabilities",
-   "Rapid ideation",
-   "Video-first toolkit"
-  ],
-  "cons": [
-   "Outputs need art direction",
-   "Commercial workflows require testing"
-  ],
-  "key_features": [
-   "Gen-3 text-to-video with strong motion quality",
-   "Image-to-video animates stills",
-   "Motion Brush directs movement in specific regions",
-   "Camera controls (pan, zoom, dolly) on generations",
-   "Full editing suite: green screen, inpainting, upscale"
-  ],
-  "faq": [
-   [
-    "How much does Runway cost?",
-    "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
-   ],
-   [
-    "Can Runway replace videographers?",
-    "No — it excels at b-roll, concept shots, and augmentation, not narrative filming."
-   ],
-   [
-    "Runway vs Pika vs Sora?",
-    "Runway leads on directorial control. See our best AI video tools guide for the full comparison."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving concept videos—not a demo prompt. Verify whether gen-3 text-to-video with strong motion quality materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to outputs need art direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "synthesia",
-  "name": "Synthesia",
-  "category": "Video",
-  "best_for": "Enterprise training videos and AI avatar presentations",
-  "price": "Paid plans",
-  "rating": 4.2,
-  "official": "https://www.synthesia.io/",
-  "summary": "An AI video platform for creating training, enablement, and explainer videos with avatars and templates.",
-  "use_cases": [
-   "Training videos",
-   "Internal enablement",
-   "Explainers",
-   "Localization",
-   "Creating talking-head content without filming",
-   "Producing localized video variants per market"
-  ],
-  "pros": [
-   "Enterprise-friendly",
-   "Good training workflows",
-   "Repeatable templates"
-  ],
-  "cons": [
-   "Less suited to cinematic creative",
-   "Needs governance for avatar use"
-  ],
-  "key_features": [
-   "230+ AI avatars with natural gestures",
-   "140+ languages from one script",
-   "Custom avatar clones of yourself",
-   "PPT-to-video and doc-to-video conversion",
-   "1-click translation of finished videos"
-  ],
-  "faq": [
-   [
-    "Is Synthesia free?",
-    "There's a free plan with 3 min/month — enough to evaluate, not to produce."
-   ],
-   [
-    "Can I clone myself?",
-    "Yes on Starter and above — a short webcam recording creates your avatar."
-   ],
-   [
-    "Synthesia vs HeyGen?",
-    "Synthesia leads on enterprise features and language coverage; HeyGen on avatar realism for social content. See our AI video tools guide."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving training videos—not a demo prompt. Verify whether 230+ ai avatars with natural gestures materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less suited to cinematic creative so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "grammarly",
-  "name": "Grammarly",
-  "category": "Writing & Productivity",
-  "best_for": "Business writing, grammar, tone, and communication quality across apps",
-  "price": "Free + paid plans",
-  "rating": 4.4,
-  "official": "https://www.grammarly.com/",
-  "summary": "A writing assistant for grammar, tone, clarity, rewriting, and communication support across everyday business apps.",
-  "use_cases": [
-   "Email polishing",
-   "Tone edits",
-   "Grammar checks",
-   "Business writing",
-   "Editing tone and clarity before hitting send",
-   "Maintaining brand voice across a writing team"
-  ],
-  "pros": [
-   "Works across many apps",
-   "Low-friction adoption",
-   "Clear writing focus"
-  ],
-  "cons": [
-   "Less powerful for deep research",
-   "Can over-standardize voice"
-  ],
-  "key_features": [
-   "Works everywhere: browser, desktop, Office, Google Docs",
-   "Tone detection and adjustment suggestions",
-   "Full-sentence rewrites, not just error flags",
-   "Plagiarism checker on Pro",
-   "Generative AI for drafting and shortening"
-  ],
-  "faq": [
-   [
-    "Is Grammarly Pro worth it?",
-    "For daily professional writing, yes — tone control and full rewrites are the real value. Occasional writers can stay free."
-   ],
-   [
-    "Does Grammarly work in Google Docs?",
-    "Yes, fully integrated including the sidebar and generative features."
-   ],
-   [
-    "Is my text private?",
-    "Grammarly states text is not sold; Enterprise adds contractual controls. Free users' text may be processed to provide the service."
-   ]
-  ],
-  "trial_checklist": "Use a real task involving email polishing—not a demo prompt. Verify whether works everywhere: browser, desktop, office, google docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less powerful for deep research so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
-  "hands_on_status": "protocol_ready_not_published",
-  "hands_on_priority": "standard"
- },
- {
-  "slug": "allvideoai",
-  "name": "AllVideoAI",
-  "category": "Video",
-  "best_for": "Multi-model AI video generation from text prompts, images, and source footage in one workspace",
-  "price": "Free tier + credit plans from $17/month",
-  "rating": 4.2,
-  "official": "https://allvideoai.com/",
-  "summary": "A browser-based AI video workspace that generates video from prompts or reference images and lets you work across multiple generation models without separate subscriptions.",
-  "use_cases": [
-   "Text-to-video drafts for social content",
-   "Animating still images for ads and promos",
-   "Transforming existing footage with AI models",
-   "Comparing outputs across generation models in one place"
-  ],
-  "pros": [
-   "Multiple generation models in one workspace",
-   "Credit system shared across models instead of per-tool subscriptions",
-   "Free tier to test before paying"
-  ],
-  "cons": [
-   "Credit pricing makes monthly costs usage-dependent",
-   "Newer entrant — less community tooling than established generators",
-   "Annual billing pushed via countdown offers; check monthly price first"
-  ],
-  "key_features": [
-   "Text-to-video and image-to-video generation",
-   "Source footage transformation",
-   "Multiple generation models in a single private workspace",
-   "Shared credit pool (Starter $17/mo annual, Plus $39, Max $59, Ultra $159)"
-  ],
-  "faq": [
-   [
-    "Is AllVideoAI free?",
-    "There is a free tier. Paid plans are credit-based: Starter ($17/month billed annually), Plus ($39), Max ($59), and Ultra ($159). Verify current prices on the official pricing page — promotional countdowns appear frequently."
-   ],
-   [
-    "How does credit pricing compare to flat subscriptions?",
-    "Credits make light users cheaper and heavy users more expensive than flat plans. Model your expected generations per month before choosing."
-   ],
-   [
-    "AllVideoAI vs Runway or Pika?",
-    "It differentiates on multi-model access under one subscription rather than one proprietary model. See our best AI video tools guide."
-   ]
-  ],
-  "trial_checklist": "Generate the same prompt on two different models inside the workspace and compare quality. Check how many credits your typical video actually consumes, then compute real monthly cost at that volume before picking a plan.",
-  "hands_on_status": "not_tested",
-  "hands_on_priority": "medium"
- }
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "Audio",
+    "best_for": "AI voice generation, dubbing, narration, and voice agents",
+    "price": "Free + paid plans",
+    "rating": 4.6,
+    "official": "https://elevenlabs.io/",
+    "summary": "A leading AI voice platform for realistic speech, narration, dubbing, and voice product experiences.",
+    "use_cases": [
+      "Voiceovers",
+      "Dubbing",
+      "Audiobook narration",
+      "Voice agents",
+      "Narrating YouTube videos without recording booth time",
+      "Localizing e-learning content into multiple languages"
+    ],
+    "pros": [
+      "High-quality voices",
+      "Broad audio toolkit",
+      "Strong creator and developer use"
+    ],
+    "cons": [
+      "Voice rights and consent matter",
+      "Costs scale with usage"
+    ],
+    "key_features": [
+      "Realistic TTS voice generation",
+      "Instant voice clone from ~1 minute of audio",
+      "Professional cloning for studio-grade replicas",
+      "Dubbing preserves original speaker's voice across languages",
+      "Sound effects generation and voice changer"
+    ],
+    "faq": [
+      [
+        "Is ElevenLabs free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Can I clone my own voice legally?",
+        "Yes — instant cloning requires confirming you have rights to the voice sample."
+      ],
+      [
+        "ElevenLabs vs Murf/Speechify?",
+        "ElevenLabs leads on realism by a wide margin. See our best AI voice tools guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving voiceovers—not a demo prompt. Verify whether realistic tts voice generation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to voice rights and consent matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "category": "Audio & Video",
+    "best_for": "Podcast and video editing with transcript-based workflows",
+    "price": "Free + paid plans",
+    "rating": 4.3,
+    "official": "https://www.descript.com/",
+    "summary": "An editor that lets creators edit audio and video by editing text, with AI cleanup and production features.",
+    "use_cases": [
+      "Podcast editing",
+      "Short clips",
+      "Webinars",
+      "Transcript cleanup"
+    ],
+    "pros": [
+      "Fast editing workflow",
+      "Good creator features",
+      "Text-based editing is intuitive"
+    ],
+    "cons": [
+      "Advanced video work may need dedicated tools",
+      "Review exports carefully"
+    ],
+    "key_features": [
+      "Edit video/audio by editing the transcript text",
+      "Studio Sound removes background noise dramatically",
+      "Overdub voice clone fixes flubbed lines by typing",
+      "Filler word removal in one click",
+      "Screen recording with auto-transcription"
+    ],
+    "faq": [
+      [
+        "Is Descript free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "What makes Descript different?",
+        "You edit media like a document — delete words to cut footage."
+      ],
+      [
+        "Can it remove filler words?",
+        "Yes — one click removes all 'um's and 'uh's, and it works well."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving podcast editing—not a demo prompt. Verify whether edit video/audio by editing the transcript text materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced video work may need dedicated tools. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "make",
+    "name": "Make",
+    "category": "Automation",
+    "best_for": "Visual automation scenarios and multi-step operational workflows",
+    "price": "Free + paid plans",
+    "rating": 4.3,
+    "official": "https://www.make.com/",
+    "summary": "A visual automation platform for building app-to-app workflows, including AI steps and operational routing.",
+    "use_cases": [
+      "Operations automation",
+      "Data syncing",
+      "AI workflow steps",
+      "Notifications",
+      "Syncing form responses into a CRM automatically",
+      "Routing support tickets by topic and urgency"
+    ],
+    "pros": [
+      "Flexible visual builder",
+      "Good multi-step control",
+      "Large integration set"
+    ],
+    "cons": [
+      "More complex than simple zaps",
+      "Requires testing and monitoring"
+    ],
+    "key_features": [
+      "Visual scenario builder with branching logic",
+      "Operations are far cheaper than Zapier tasks",
+      "Iterators/aggregators handle arrays natively",
+      "AI modules from OpenAI, Anthropic, and more",
+      "Error handlers with retries and fallbacks"
+    ],
+    "faq": [
+      [
+        "Make vs Zapier?",
+        "Make is cheaper and more powerful for complex logic; Zapier is easier with a bigger app catalog. Our Zapier vs Make vs n8n comparison has task-by-task costs."
+      ],
+      [
+        "What's an operation?",
+        "Each module execution. One scenario run can be many operations."
+      ],
+      [
+        "Is Make hard to learn?",
+        "Moderately — expect a few days to feel fluent vs hours for Zapier."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving operations automation—not a demo prompt. Verify whether visual scenario builder with branching logic materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more complex than simple zaps so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "zapier-ai",
+    "name": "Zapier AI",
+    "category": "Automation",
+    "best_for": "Automating business workflows across apps",
+    "price": "Free + paid plans",
+    "rating": 4.4,
+    "official": "https://zapier.com/ai",
+    "summary": "AI-assisted automation builder for connecting apps, triggering workflows, and reducing manual operational tasks.",
+    "use_cases": [
+      "Lead routing",
+      "Email summaries",
+      "CRM updates",
+      "Notification workflows",
+      "Syncing form responses into a CRM automatically",
+      "Routing support tickets by topic and urgency"
+    ],
+    "pros": [
+      "Huge app ecosystem",
+      "Practical business workflows",
+      "Low-code setup"
+    ],
+    "cons": [
+      "Complex workflows need testing",
+      "Costs scale with task volume"
+    ],
+    "key_features": [
+      "AI actions: GPT/Claude steps inside any automation",
+      "Zap builder from natural-language description",
+      "8,000+ app integrations — a broad integration catalog",
+      "Tables, Interfaces, and Chatbots round out the no-code suite",
+      "Reliable trigger/filter logic with error retry"
+    ],
+    "faq": [
+      [
+        "Zapier vs Make — which is cheaper?",
+        "Make is typically 3-5x cheaper at high task volumes but has a steeper learning curve. See our Zapier vs Make vs n8n comparison."
+      ],
+      [
+        "What counts as a task?",
+        "Each action execution in a Zap. Filters that stop a Zap don't count."
+      ],
+      [
+        "Can Zapier use AI?",
+        "Yes — GPT, Claude, and other AI steps drop into any Zap, plus AI-built workflow drafts."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving lead routing—not a demo prompt. Verify whether ai actions: gpt/claude steps inside any automation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex workflows need testing so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "category": "Automation",
+    "best_for": "Technical workflow automation with self-hosting and AI agent options",
+    "price": "Free self-hosted + paid cloud",
+    "rating": 4.3,
+    "official": "https://n8n.io/",
+    "summary": "A flexible automation platform for technical teams that want deeper workflow control and self-hosting options.",
+    "use_cases": [
+      "Internal automations",
+      "AI agents",
+      "Data workflows",
+      "Self-hosted workflows",
+      "Syncing form responses into a CRM automatically",
+      "Routing support tickets by topic and urgency"
+    ],
+    "pros": [
+      "Highly flexible",
+      "Self-host option",
+      "Developer-friendly"
+    ],
+    "cons": [
+      "More technical setup",
+      "Governance and maintenance required"
+    ],
+    "key_features": [
+      "Open source — self-host for unlimited runs at zero cost",
+      "Code steps in JavaScript/Python when nodes aren't enough",
+      "Advanced logic: loops, error branches, sub-workflows",
+      "400+ integrations plus generic HTTP node",
+      "AI agent nodes with LangChain support"
+    ],
+    "faq": [
+      [
+        "Is n8n really free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "n8n vs Make?",
+        "n8n for technical control and self-hosting; Make for easier visual building. See our automation tools comparison."
+      ],
+      [
+        "Can n8n run AI agents?",
+        "Yes — native LangChain-powered agent nodes with tool calling."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving internal automations—not a demo prompt. Verify whether open source — self-host for unlimited runs at zero cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more technical setup so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "category": "Creative",
+    "best_for": "Commercially oriented generative images and design assets inside Adobe workflows",
+    "price": "Free + paid plans / Adobe plans",
+    "rating": 4.4,
+    "official": "https://www.adobe.com/products/firefly.html",
+    "summary": "Adobe’s generative AI suite for images, text effects, edits, and creative production within the Adobe ecosystem.",
+    "use_cases": [
+      "Commercial creative",
+      "Image edits",
+      "Design assets",
+      "Adobe workflows",
+      "Producing concept art variations for client pitches",
+      "Creating on-brand social visuals without a designer"
+    ],
+    "pros": [
+      "Adobe ecosystem fit",
+      "Commercial creative orientation",
+      "Designer-friendly"
+    ],
+    "cons": [
+      "Best value for Adobe users",
+      "Creative review still required"
+    ],
+    "key_features": [
+      "Trained on licensed Adobe Stock — commercially safest output",
+      "Generative Fill and Expand inside Photoshop",
+      "Text-to-image with strong style controls",
+      "Structure reference matches composition of a sample image",
+      "IP indemnification for enterprise customers"
+    ],
+    "faq": [
+      [
+        "Is Firefly commercially safe?",
+        "Yes — trained on licensed content, and Adobe offers IP indemnification on enterprise terms. That's its core differentiator."
+      ],
+      [
+        "Firefly vs Midjourney?",
+        "Midjourney for aesthetics, Firefly for legal safety and Photoshop integration. See our AI image tools guide."
+      ],
+      [
+        "Do Firefly credits roll over?",
+        "No — monthly credits expire."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving commercial creative—not a demo prompt. Verify whether trained on licensed adobe stock — commercially safest output materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for adobe users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "leonardo-ai",
+    "name": "Leonardo AI",
+    "category": "Creative",
+    "best_for": "Game assets, concept art, product mockups, and controlled image generation",
+    "price": "Free + paid plans",
+    "rating": 4.3,
+    "official": "https://leonardo.ai/",
+    "summary": "A creative AI platform for image generation, asset production, style control, and visual experimentation.",
+    "use_cases": [
+      "Concept art",
+      "Game assets",
+      "Product visuals",
+      "Style exploration",
+      "Producing concept art variations for client pitches",
+      "Creating on-brand social visuals without a designer"
+    ],
+    "pros": [
+      "Strong creative controls",
+      "Good for asset workflows",
+      "Useful presets"
+    ],
+    "cons": [
+      "Requires visual direction",
+      "Advanced workflows take practice"
+    ],
+    "key_features": [
+      "Fine-tune custom models on your own image sets",
+      "Realtime canvas with live generation while drawing",
+      "Strong game-asset and product-shot pipelines",
+      "Elements: mixable style modifiers",
+      "Motion: short image-to-video clips"
+    ],
+    "faq": [
+      [
+        "Is Leonardo AI free?",
+        "Yes — 150 daily tokens refresh every day, enough for light use."
+      ],
+      [
+        "Can I train custom models?",
+        "Yes — upload your own images to fine-tune a private model."
+      ],
+      [
+        "Leonardo vs Midjourney?",
+        "Leonardo for consistency via trained models and API access; Midjourney for peak aesthetics. See our AI image tools guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving concept art—not a demo prompt. Verify whether fine-tune custom models on your own image sets materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires visual direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "category": "Creative",
+    "best_for": "High-quality image generation and concept visuals",
+    "price": "Paid plans",
+    "rating": 4.5,
+    "official": "https://www.midjourney.com/",
+    "summary": "A premium image-generation tool for brand visuals, concept art, moodboards, and campaign creative.",
+    "use_cases": [
+      "Ad concepts",
+      "Moodboards",
+      "Product visual exploration",
+      "Social imagery",
+      "Producing concept art variations for client pitches",
+      "Creating on-brand social visuals without a designer"
+    ],
+    "pros": [
+      "Beautiful default aesthetics",
+      "Great exploration speed",
+      "Strong community prompts"
+    ],
+    "cons": [
+      "Workflow differs from standard design tools",
+      "Requires human art direction"
+    ],
+    "key_features": [
+      "Strong aesthetic controls for stylized and concept imagery",
+      "Style references and character references for consistency",
+      "Web editor with inpainting and outpainting",
+      "Strong prompt adherence improvements in v6+",
+      "Commercial rights on all paid plans"
+    ],
+    "faq": [
+      [
+        "Can I use Midjourney images commercially?",
+        "Yes on any paid plan; free-trial images are not commercially usable."
+      ],
+      [
+        "Are my images public?",
+        "On Basic and Standard, yes — generations are visible in the community gallery. Pro adds stealth mode."
+      ],
+      [
+        "Midjourney vs DALL-E/Firefly?",
+        "Midjourney leads on aesthetics and concept art; Firefly integrates with Photoshop and is commercially safer for enterprise."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving ad concepts—not a demo prompt. Verify whether strong aesthetic controls for stylized and concept imagery materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to workflow differs from standard design tools. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "canva-ai",
+    "name": "Canva AI",
+    "category": "Creative & Marketing",
+    "best_for": "Non-designers making social, presentation, and marketing assets",
+    "price": "Free + paid plans",
+    "rating": 4.4,
+    "official": "https://www.canva.com/ai/",
+    "summary": "AI-assisted design inside Canva’s familiar editor for quick branded assets and marketing production.",
+    "use_cases": [
+      "Social posts",
+      "Presentations",
+      "Brand kits",
+      "Simple image edits"
+    ],
+    "pros": [
+      "Accessible editor",
+      "Useful templates",
+      "Good team handoff"
+    ],
+    "cons": [
+      "Advanced control is limited",
+      "Outputs can feel templated"
+    ],
+    "key_features": [
+      "Magic Design generates full layouts from a prompt",
+      "Magic Write drafts copy inside any design",
+      "Magic Media (image/video gen) built into the editor",
+      "Brand Kit enforces fonts/colors across AI output",
+      "One-click resize across formats (IG post to presentation)"
+    ],
+    "faq": [
+      [
+        "Is Canva AI free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Can Canva AI generate images?",
+        "Yes — Magic Media creates images and short videos inside the editor."
+      ],
+      [
+        "Canva vs Adobe Firefly?",
+        "Canva for speed and templates; Firefly for professional image control in Photoshop. See our AI image tools guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving social posts—not a demo prompt. Verify whether magic design generates full layouts from a prompt materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced control is limited so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "bolt-new",
+    "name": "Bolt.new",
+    "category": "Development",
+    "best_for": "Prompt-to-app prototyping in the browser",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://bolt.new/",
+    "summary": "A browser-based AI development environment for quickly creating and iterating on web apps from prompts.",
+    "use_cases": [
+      "Rapid prototypes",
+      "Frontend apps",
+      "Demo builds",
+      "Idea validation",
+      "Scaffolding new features across multiple files",
+      "Writing tests for legacy code before refactoring"
+    ],
+    "pros": [
+      "Very fast start",
+      "Browser-native building",
+      "Good for demos"
+    ],
+    "cons": [
+      "Production hardening required",
+      "Prompting skill matters"
+    ],
+    "key_features": [
+      "Prompt-to-full-stack app in browser (no local setup)",
+      "Runs real Node/DB environment via WebContainers",
+      "Deploy straight from the builder",
+      "Supports React, Next.js, Astro, Svelte stacks",
+      "Error-aware AI fixes its own runtime errors"
+    ],
+    "faq": [
+      [
+        "Is Bolt.new free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Does Bolt host my app?",
+        "It deploys via integrated partners (Netlify etc.) right from the builder."
+      ],
+      [
+        "Bolt vs Lovable vs v0?",
+        "Bolt for full-stack control in-browser; v0 for UI polish; Lovable for simplicity. See our AI app builders guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving rapid prototypes—not a demo prompt. Verify whether prompt-to-full-stack app in browser (no local setup) materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to production hardening required so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "category": "Development",
+    "best_for": "AI-assisted coding in an editor with agent modes, cloud agents, and Cursor's own Grok/Composer models",
+    "price": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
+    "rating": 4.6,
+    "official": "https://cursor.com/",
+    "summary": "Developer-focused AI editor with its own frontier models (Grok 4.6 jointly trained with xAI, Composer 2.5), agent requests, cloud agents, and Bugbot code review.",
+    "use_cases": [
+      "Feature prototypes",
+      "Refactors",
+      "Debugging",
+      "Test generation",
+      "Scaffolding new features across multiple files",
+      "Writing tests for legacy code before refactoring"
+    ],
+    "pros": [
+      "Own-model stack: Grok 4.6 + Composer 2.5 give generous included usage at low cost",
+      "Full agentic loop: editor agents, cloud agents, Bugbot review, team marketplace",
+      "Frontier third-party models also available in a separate usage pool"
+    ],
+    "cons": [
+      "Best features (effort levels, Fast mode, Bugbot) sit above the free plan",
+      "Third-party models incur a Cursor Token Rate surcharge on team plans",
+      "Usage-based overages can add up for heavy agent users"
+    ],
+    "key_features": [
+      "Cursor Grok 4.6 — jointly trained by Cursor and xAI; flagship coding model in-editor",
+      "Composer 2.5 — price-efficient agentic model ($0.50/$2.50 per 1M tokens standard)",
+      "Agent requests with extended limits; effort levels and Fast mode on Pro and up",
+      "Cloud agents, automations, MCPs, skills, hooks",
+      "Bugbot agentic code reviews (usage-based on Pro, included on Teams)",
+      "Grok Bot access on Teams plans"
+    ],
+    "faq": [
+      [
+        "What models does Cursor offer?",
+        "Cursor's own pool includes Grok 4.6 and Grok 4.5 (jointly trained with xAI) plus Composer 2.5, its price-efficient agentic model. Frontier models from OpenAI, Anthropic, Google, and xAI are available in a separate pool billed near API rates."
+      ],
+      [
+        "How much is Cursor?",
+        "Free tier with limited agent requests and Composer access; Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom."
+      ],
+      [
+        "What is Composer 2.5?",
+        "Cursor's own agentic coding model, tuned for long-horizon tasks via reinforcement learning. Standard pricing is $0.50 input / $2.50 output per million tokens; Fast mode is $3 / $15."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving feature prototypes—not a demo prompt. Verify whether tab completion that predicts multi-line edits across files materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires engineering review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "Development",
+    "best_for": "Autocomplete, code chat, and developer productivity in popular IDEs",
+    "price": "Paid plans",
+    "rating": 4.5,
+    "official": "https://github.com/features/copilot",
+    "summary": "A mature coding assistant integrated into GitHub and major IDE workflows.",
+    "use_cases": [
+      "Code completion",
+      "Boilerplate",
+      "Tests",
+      "Docs",
+      "Scaffolding new features across multiple files",
+      "Writing tests for legacy code before refactoring"
+    ],
+    "pros": [
+      "Broad IDE support",
+      "Enterprise options",
+      "Low-friction adoption"
+    ],
+    "cons": [
+      "Quality varies by task",
+      "Can reinforce existing code issues"
+    ],
+    "key_features": [
+      "Lives natively in VS Code, JetBrains, Xcode, and more",
+      "Multi-line completions matching your code style",
+      "Copilot Chat with workspace awareness",
+      "Agent mode for multi-file tasks",
+      "Enterprise IP indemnification"
+    ],
+    "faq": [
+      [
+        "Is GitHub Copilot free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Copilot vs Cursor?",
+        "Copilot for price and editor coverage; Cursor for advanced agents. See our head-to-head comparison."
+      ],
+      [
+        "Does Copilot train on my code?",
+        "Business/Enterprise plans contractually exclude that; business code never trains models."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving code completion—not a demo prompt. Verify whether lives natively in vs code, jetbrains, xcode, and more materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality varies by task so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "lovable",
+    "name": "Lovable",
+    "category": "Development",
+    "best_for": "AI app generation for product prototypes and front-end experiences",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://lovable.dev/",
+    "summary": "An AI app builder focused on turning prompts into working web app prototypes and product interfaces.",
+    "use_cases": [
+      "MVP prototypes",
+      "Landing pages",
+      "Internal tools",
+      "Frontend iteration",
+      "Scaffolding new features across multiple files",
+      "Writing tests for legacy code before refactoring"
+    ],
+    "pros": [
+      "Fast product ideation",
+      "Good for nontraditional builders",
+      "Visual app output"
+    ],
+    "cons": [
+      "Generated apps need technical review",
+      "Scaling requires engineering discipline"
+    ],
+    "key_features": [
+      "Chat-to-app with instant visual preview",
+      "GitHub sync two-way — own your code",
+      "Supabase integration gives real auth/database",
+      "Edit with chat or direct visual selection",
+      "One-click publish to lovable.app subdomain"
+    ],
+    "faq": [
+      [
+        "Do I own Lovable-generated code?",
+        "Yes — two-way GitHub sync means the code is yours."
+      ],
+      [
+        "Can it build apps with logins?",
+        "Yes — Supabase auth integration is built in."
+      ],
+      [
+        "Lovable vs Bolt?",
+        "Lovable for guided simplicity with real backend; Bolt for finer stack control. See our AI app builders guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving mvp prototypes—not a demo prompt. Verify whether chat-to-app with instant visual preview materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to generated apps need technical review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "replit-ai",
+    "name": "Replit AI",
+    "category": "Development",
+    "best_for": "Building and deploying apps from a browser-based development environment",
+    "price": "Free + paid plans",
+    "rating": 4.3,
+    "official": "https://replit.com/ai",
+    "summary": "AI coding assistance inside Replit for prototyping, explaining, debugging, and shipping browser-based projects.",
+    "use_cases": [
+      "Web prototypes",
+      "Learning to code",
+      "Debugging",
+      "Small app deployment",
+      "Scaffolding new features across multiple files",
+      "Writing tests for legacy code before refactoring"
+    ],
+    "pros": [
+      "Browser-based workflow",
+      "Good for prototypes",
+      "Accessible to beginners"
+    ],
+    "cons": [
+      "Complex production work needs engineering review",
+      "Platform fit matters"
+    ],
+    "key_features": [
+      "Full IDE + hosting + database in one platform",
+      "AI Agent builds entire apps from descriptions",
+      "Deploys without any DevOps configuration",
+      "Real collaborative editing like Google Docs",
+      "Mobile apps let you build from anywhere"
+    ],
+    "faq": [
+      [
+        "What does Replit cost?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Is Replit good for beginners?",
+        "Yes — it's the most complete no-DevOps path from idea to deployed app."
+      ],
+      [
+        "Replit vs Lovable/Bolt?",
+        "Replit owns the whole lifecycle including deployment; others focus on generation. See our AI app builders guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving web prototypes—not a demo prompt. Verify whether full ide + hosting + database in one platform materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex production work needs engineering review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "v0",
+    "name": "v0",
+    "category": "Development",
+    "best_for": "Generating React/UI components and product interfaces",
+    "price": "Free + paid plans",
+    "rating": 4.3,
+    "official": "https://v0.dev/",
+    "summary": "Vercel’s AI interface generator for UI components, React patterns, and rapid frontend iteration.",
+    "use_cases": [
+      "UI components",
+      "Landing sections",
+      "Design-to-code ideas",
+      "React prototypes",
+      "Scaffolding new features across multiple files",
+      "Writing tests for legacy code before refactoring"
+    ],
+    "pros": [
+      "Strong UI generation",
+      "Modern frontend focus",
+      "Good iteration loop"
+    ],
+    "cons": [
+      "Needs integration into real codebase",
+      "Not a full product process alone"
+    ],
+    "key_features": [
+      "Generates production-grade React/Tailwind/shadcn UI",
+      "Iterate by chatting or clicking elements directly",
+      "Figma import to code conversion",
+      "Deploy to Vercel in one click",
+      "Output is clean, readable, maintainable code"
+    ],
+    "faq": [
+      [
+        "What is v0 for?",
+        "Generating polished React/Tailwind interfaces fast — a front-end accelerator."
+      ],
+      [
+        "Can v0 build backends?",
+        "It focuses on UI; pair with your own API or Vercel functions."
+      ],
+      [
+        "v0 vs Cursor?",
+        "Different jobs: v0 generates UI from prompts; Cursor edits whole codebases. Many devs use both."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving ui components—not a demo prompt. Verify whether generates production-grade react/tailwind/shadcn ui materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs integration into real codebase so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "category": "General AI Assistant",
+    "best_for": "General-purpose writing, research, analysis, and multimodal help",
+    "price": "Free + paid plans",
+    "rating": 4.8,
+    "official": "https://chatgpt.com/",
+    "summary": "A flexible AI assistant for drafting, analysis, brainstorming, coding help, and everyday knowledge work.",
+    "use_cases": [
+      "Content drafts",
+      "Research summaries",
+      "Spreadsheet analysis",
+      "Code explanations",
+      "Drafting and replying to professional email",
+      "Explaining complex documents to non-experts"
+    ],
+    "pros": [
+      "Broad capability",
+      "Fast iteration",
+      "Strong ecosystem"
+    ],
+    "cons": [
+      "Needs review for factual claims",
+      "Team governance depends on plan"
+    ],
+    "key_features": [
+      "Multimodal input: text, images, files, and voice in one conversation",
+      "Custom GPTs for reusable role-specific assistants",
+      "Memory that carries preferences across chats",
+      "Deep Research mode for multi-source reports with citations",
+      "Canvas for iterative long-form drafting and code editing"
+    ],
+    "faq": [
+      [
+        "Is ChatGPT free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Is my data used for training?",
+        "On paid Team and Enterprise plans, no. On free and Plus, conversations may be used for training unless you opt out in settings."
+      ],
+      [
+        "ChatGPT vs Claude — which is better?",
+        "ChatGPT wins on multimodal features and ecosystem; Claude tends to produce more natural long-form writing and handles very long documents well. Our ChatGPT vs Claude comparison breaks down task-by-task results."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving content drafts—not a demo prompt. Verify whether multimodal input: text, images, files, and voice in one conversation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs review for factual claims so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "claude",
+    "name": "Claude",
+    "category": "General AI Assistant",
+    "best_for": "Long-form writing, careful analysis, document review, and coding assistance",
+    "price": "Free + paid plans",
+    "rating": 4.7,
+    "official": "https://claude.ai/",
+    "summary": "A thoughtful assistant especially useful for editing, long-context analysis, and turning messy notes into structured outputs.",
+    "use_cases": [
+      "Document analysis",
+      "Editorial review",
+      "Planning",
+      "Code reasoning",
+      "Drafting and replying to professional email",
+      "Explaining complex documents to non-experts"
+    ],
+    "pros": [
+      "Excellent writing quality",
+      "Strong long-context work",
+      "Careful tone"
+    ],
+    "cons": [
+      "Can still miss details",
+      "External integrations vary"
+    ],
+    "key_features": [
+      "Projects that keep context, files, and instructions organized per workstream",
+      "Artifacts for live-rendering documents, code, and prototypes beside the chat",
+      "200K-token context handles entire books or codebases",
+      "Computer Use for operating a browser and desktop apps",
+      "Consistently strong long-form writing tone"
+    ],
+    "faq": [
+      [
+        "What makes Claude different from ChatGPT?",
+        "Claude emphasizes long documents and natural writing; ChatGPT emphasizes a broader product ecosystem. Many teams run both. See our ChatGPT vs Claude comparison."
+      ],
+      [
+        "Does Claude have a free plan?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Can Claude read my whole codebase?",
+        "With Projects and API use, yes — 200K tokens fits most small-to-mid repos in one context."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving document analysis—not a demo prompt. Verify whether projects that keep context, files, and instructions organized per workstream materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to can still miss details so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "category": "General AI Assistant",
+    "best_for": "Reasoning, coding, and cost-conscious model evaluation",
+    "price": "Free + API pricing",
+    "rating": 4.3,
+    "official": "https://www.deepseek.com/",
+    "summary": "An AI assistant and model provider known for reasoning and coding capabilities with strong price-performance interest.",
+    "use_cases": [
+      "Coding",
+      "Reasoning",
+      "Model comparison",
+      "API experiments",
+      "Drafting and replying to professional email",
+      "Explaining complex documents to non-experts"
+    ],
+    "pros": [
+      "Strong technical interest",
+      "Good for model evaluation",
+      "Cost-conscious appeal"
+    ],
+    "cons": [
+      "Teams need data and compliance review",
+      "Availability/performance can vary"
+    ],
+    "key_features": [
+      "Frontier-level reasoning at a fraction of rival cost",
+      "R1 reasoning model shows its chain of thought",
+      "Open-weight models you can self-host",
+      "Strong math and coding performance",
+      "Web/app chat completely free"
+    ],
+    "faq": [
+      [
+        "Is DeepSeek really free?",
+        "The chat app is fully free. The API is paid but extremely cheap vs rivals."
+      ],
+      [
+        "Is DeepSeek safe for business use?",
+        "Consider data residency and censorship policies carefully; many firms self-host the open weights instead."
+      ],
+      [
+        "How good is DeepSeek vs ChatGPT?",
+        "Close on math/coding benchmarks, weaker on some general tasks — at a fraction of the price. See our comparisons."
+      ],
+      [
+        "Is DeepSeek free?",
+        "DeepSeek's chat app is free to use, and its API uses low per-token pricing that undercuts most frontier rivals. Verify current API rates on DeepSeek's official pricing page — they change occasionally."
+      ],
+      [
+        "What are DeepSeek's main tradeoffs?",
+        "Cost and open availability are strengths. Tradeoffs include fewer integrations than US assistants, and data-governance considerations some organizations need to review before adoption."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving coding—not a demo prompt. Verify whether frontier-level reasoning at a fraction of rival cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to teams need data and compliance review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "gemini",
+    "name": "Gemini",
+    "category": "General AI Assistant",
+    "best_for": "Google-native AI assistance across search, docs, Gmail, Android, and multimodal tasks",
+    "price": "Free + paid plans",
+    "rating": 4.6,
+    "official": "https://gemini.google.com/",
+    "summary": "Google’s AI assistant with strong multimodal capabilities and a natural fit for people already working in Google products.",
+    "use_cases": [
+      "Google Workspace drafting",
+      "Image understanding",
+      "Research support",
+      "Everyday assistant tasks",
+      "Drafting and replying to professional email",
+      "Explaining complex documents to non-experts"
+    ],
+    "pros": [
+      "Google ecosystem integration",
+      "Strong multimodal direction",
+      "Good consumer accessibility"
+    ],
+    "cons": [
+      "Best features depend on account/plan",
+      "Workspace controls matter for teams"
+    ],
+    "key_features": [
+      "Deep integration with Gmail, Docs, Sheets, and Drive",
+      "Huge context window handles very long documents and video",
+      "Deep Research generates multi-step cited reports",
+      "Native image and video understanding",
+      "Bundled storage makes the Pro plan a double value"
+    ],
+    "faq": [
+      [
+        "Is Gemini included with Google Workspace?",
+        "Basic features yes; the full model access requires the AI Pro plan or Workspace add-on."
+      ],
+      [
+        "Gemini vs ChatGPT?",
+        "Gemini wins on Google ecosystem integration and long-context; ChatGPT on ecosystem breadth beyond Google. See our comparisons for task-level results."
+      ],
+      [
+        "Is there a free tier?",
+        "Yes, and it's one of the more generous free tiers — multimodal input included."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving google workspace drafting—not a demo prompt. Verify whether deep integration with gmail, docs, sheets, and drive materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best features depend on account/plan so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "grok",
+    "name": "Grok",
+    "category": "General AI Assistant",
+    "best_for": "Coding and agentic work on the newest models, real-time X data answers, always-on Grok Bot agents, and building apps/sites in Build Mode",
+    "price": "Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo; API from $1–$6 per 1M tokens",
+    "rating": 4.5,
+    "official": "https://grok.com/",
+    "summary": "xAI’s assistant family: flagship Grok 4.6 model for coding and agents, Grok Bot always-on agents, Grok Build coding agent with Build Mode apps, Grok Imagine image/video, Grok Voice, and real-time X data.",
+    "use_cases": [
+      "Agentic coding sessions with Grok Build or inside GitHub Copilot/Warp/Kilo Code",
+      "Delegating recurring jobs to always-on Grok Bot agents",
+      "Building shareable websites, apps, and dashboards with Build Mode",
+      "Current-event and social trend research using live X data",
+      "Image/video generation via Grok Imagine for social content",
+      "Voice agents via the Voice Agent Builder without code"
+    ],
+    "pros": [
+      "Newest-model velocity: Grok 4.5/4.6 shipped within weeks of each other in mid-2026",
+      "Unique product breadth: coding agent, app builder, always-on bots, voice, image/video in one subscription",
+      "Real-time X data still unmatched for breaking-news and social-sentiment work",
+      "Competitive API pricing ($2/$6 per 1M tokens on Grok 4.6; cheaper Grok 4.3 at $1.25/$2.50)"
+    ],
+    "cons": [
+      "500K context on Grok 4.5/4.6 is smaller than some rivals' windows",
+      "Build Mode is early beta and gated to top SuperGrok tiers at launch",
+      "Enterprise workflows still need policy review",
+      "Outputs still require source checking"
+    ],
+    "key_features": [
+      "Grok 4.6 flagship model (Aug 2026): agentic tool calling, configurable reasoning, 500K context",
+      "Grok Bot (Aug 2026): team of always-on 24/7 agents working inside your tools",
+      "Grok Build: terminal coding agent plus Build Mode for creating websites, apps, games, dashboards",
+      "Workflows and /goal for long-running autonomous multi-agent task execution",
+      "Grok Imagine Image 2.0 + Video 1.5 (up to 1080p) and Voice Think Fast 2.0 speech-to-speech",
+      "Office add-ins for Word, Excel, PowerPoint, Outlook, and Google Workspace",
+      "Automations, Skills, and Connectors across web, iOS, Android, and X"
+    ],
+    "faq": [
+      [
+        "What is the current Grok model?",
+        "The flagship is Grok 4.6 (August 2026), focused on long-running agents and visual work, at $2 input / $6 output per million tokens. Prior flagships Grok 4.5 (July 2026) and Grok 4.3 remain available, with Grok 4.3 cheaper at $1.25 / $2.50."
+      ],
+      [
+        "What is Grok Build?",
+        "Grok Build is xAI's coding agent: a terminal harness (now open source) with Workflows that fan tasks out across parallel agents, /goal for long-running autonomous execution, an Agent Dashboard for many simultaneous sessions, and a plugin marketplace. Build Mode extends it to creating and sharing full websites, apps, games, and interactive dashboards."
+      ],
+      [
+        "What are Grok Bots?",
+        "Grok Bot, introduced August 2026, is a team of always-on agents with their own computer that work inside your tools and apps around the clock — you assign jobs and they keep executing."
+      ],
+      [
+        "How much does Grok cost?",
+        "There's a free tier. SuperGrok is $30/month, SuperGrok Plus $100/month, with higher tiers for heavy use. API access starts around $1–$2 per million input tokens depending on model."
+      ],
+      [
+        "Can I use Grok inside other coding tools?",
+        "Yes. Grok 4.5/4.6 are available in GitHub Copilot, and SuperGrok/X Premium subscriptions work inside Warp, Kilo Code, OpenCode, Kilo Code, and Hermes Agent."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving current-event research—not a demo prompt. Verify whether real-time x (twitter) data in answers materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to enterprise workflows still need policy review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "meta-ai",
+    "name": "Meta AI",
+    "category": "General AI Assistant",
+    "best_for": "Consumer AI assistance inside Meta apps and open-model ecosystem discovery",
+    "price": "Free",
+    "rating": 4.1,
+    "official": "https://www.meta.ai/",
+    "summary": "Meta’s assistant for consumer chat, image generation, social contexts, and broad AI access across Meta surfaces.",
+    "use_cases": [
+      "Consumer assistant tasks",
+      "Social content ideas",
+      "Image generation",
+      "Quick answers",
+      "Drafting and replying to professional email",
+      "Explaining complex documents to non-experts"
+    ],
+    "pros": [
+      "Wide consumer reach",
+      "Free access",
+      "Meta ecosystem fit"
+    ],
+    "cons": [
+      "Business workflows are less mature",
+      "Privacy review needed for sensitive work"
+    ],
+    "key_features": [
+      "Embedded in WhatsApp, Instagram, Messenger, and Ray-Ban glasses",
+      "Llama-powered with image generation",
+      "Real-time web search built in",
+      "No subscription or caps currently enforced",
+      "Imagine feature for image creation inside chats"
+    ],
+    "faq": [
+      [
+        "Is Meta AI free?",
+        "Completely — it's funded by the ecosystem, not subscriptions."
+      ],
+      [
+        "Where can I use Meta AI?",
+        "WhatsApp, Instagram, Messenger, meta.ai web, and Ray-Ban Meta glasses."
+      ],
+      [
+        "How does it compare to ChatGPT?",
+        "Great casual assistant; below top models on hard reasoning. See our AI assistants guide."
+      ],
+      [
+        "How does Meta AI compare with ChatGPT?",
+        "Meta AI wins on convenience inside apps people already use. ChatGPT remains stronger for long-form work, file analysis, and advanced agent features. Choose based on where your work happens."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving consumer assistant tasks—not a demo prompt. Verify whether embedded in whatsapp, instagram, messenger, and ray-ban glasses materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to business workflows are less mature so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "mistral-le-chat",
+    "name": "Mistral Le Chat",
+    "category": "General AI Assistant",
+    "best_for": "Fast AI chat from Mistral with European AI ecosystem appeal",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://chat.mistral.ai/",
+    "summary": "Mistral’s assistant for general chat, reasoning, writing, coding help, and working with Mistral’s model family.",
+    "use_cases": [
+      "General chat",
+      "Coding help",
+      "Writing",
+      "Model evaluation",
+      "Drafting and replying to professional email",
+      "Explaining complex documents to non-experts"
+    ],
+    "pros": [
+      "Fast model family",
+      "European AI option",
+      "Developer-friendly ecosystem"
+    ],
+    "cons": [
+      "Ecosystem smaller than incumbents",
+      "Workflow integrations vary"
+    ],
+    "key_features": [
+      "Fastest response streaming in category testing",
+      "EU-based alternative with European data hosting",
+      "Code interpreter, image generation, web search built in",
+      "Canvas-style editing interface",
+      "Open-model company — Mistral weights available for self-hosting"
+    ],
+    "faq": [
+      [
+        "Is Le Chat free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Why choose Mistral over ChatGPT?",
+        "Speed, price, and EU data hosting for GDPR-sensitive work."
+      ],
+      [
+        "Are Mistral models open source?",
+        "Many weights are openly licensed — unusual among frontier labs."
+      ],
+      [
+        "Is Mistral Le Chat free to use?",
+        "Yes — Le Chat has a free tier. Paid tiers unlock higher usage limits and the newest Mistral models; check Mistral's official pricing page for current amounts before subscribing."
+      ],
+      [
+        "How does Le Chat compare with ChatGPT?",
+        "Le Chat is strong on European data-residency expectations and fast responses from Mistral's own models. ChatGPT has a broader ecosystem (plugins, voice modes, wider integrations). Our comparison page breaks down the tradeoffs."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving general chat—not a demo prompt. Verify whether fastest response streaming in category testing materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to ecosystem smaller than incumbents so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "category": "Marketing",
+    "best_for": "Go-to-market workflows, sales copy, and repeatable marketing content systems",
+    "price": "Free + paid plans",
+    "rating": 4.1,
+    "official": "https://www.copy.ai/",
+    "summary": "An AI platform for marketing and sales content workflows, from copy generation to GTM process support.",
+    "use_cases": [
+      "Sales copy",
+      "Marketing workflows",
+      "Outbound drafts",
+      "Content repurposing",
+      "Generating landing page copy variants for testing",
+      "Personalizing outreach at scale with research"
+    ],
+    "pros": [
+      "GTM workflow positioning",
+      "Useful templates",
+      "Business-focused"
+    ],
+    "cons": [
+      "Quality depends on inputs",
+      "Needs brand review"
+    ],
+    "key_features": [
+      "GTM-focused: sales email sequences, prospecting workflows",
+      "Workflow builder chains AI steps into repeatable processes",
+      "Infobase stores company facts for consistent output",
+      "Unlimited words even on the entry paid plan",
+      "Strong short-form marketing copy templates"
+    ],
+    "faq": [
+      [
+        "Copy.ai vs Jasper?",
+        "Copy.ai is cheaper with unlimited words; Jasper has stronger brand voice and enterprise features. See our full comparison coverage."
+      ],
+      [
+        "Is the free plan really free?",
+        "Yes — 2,000 words monthly, no card required, though it's limited for real use."
+      ],
+      [
+        "Can Copy.ai automate sales outreach?",
+        "Yes — that's its core focus now, with sequence workflows and CRM integrations."
+      ],
+      [
+        "What does Copy.ai cost?",
+        "Copy.ai uses subscription plans with a free tier for testing and paid tiers for higher volumes and workflow automation. Confirm current prices on Copy.ai's official pricing page before buying."
+      ],
+      [
+        "Copy.ai vs Jasper — which is better?",
+        "Jasper fits brand-voice marketing at team scale; Copy.ai competes on price and go-to-market workflow templates. Our head-to-head comparison walks through which fits which team."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving sales copy—not a demo prompt. Verify whether gtm-focused: sales email sequences, prospecting workflows materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality depends on inputs so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "jasper",
+    "name": "Jasper",
+    "category": "Marketing",
+    "best_for": "Marketing content workflows, brand voice, and campaign production",
+    "price": "Paid plans",
+    "rating": 4.2,
+    "official": "https://www.jasper.ai/",
+    "summary": "A marketing-focused AI writing platform for brand voice, campaign assets, and content operations.",
+    "use_cases": [
+      "Marketing copy",
+      "Campaign content",
+      "Brand voice",
+      "Content operations",
+      "Generating landing page copy variants for testing",
+      "Personalizing outreach at scale with research"
+    ],
+    "pros": [
+      "Marketing workflow focus",
+      "Brand controls",
+      "Team-oriented"
+    ],
+    "cons": [
+      "Best value for active content teams",
+      "Outputs still need editors"
+    ],
+    "key_features": [
+      "Brand voice trained on your existing content",
+      "Campaign workflows: brief to multi-channel assets in one run",
+      "50+ templates for ads, emails, blogs, product copy",
+      "Knowledge base grounds output in your facts",
+      "Team collaboration with approval flows"
+    ],
+    "faq": [
+      [
+        "Is Jasper worth it vs ChatGPT?",
+        "For teams needing consistent brand voice and campaign workflows, yes. For individuals, ChatGPT Plus costs half as much. See our Jasper alternatives guide."
+      ],
+      [
+        "Does Jasper plagiarize?",
+        "It has a built-in plagiarism checker via Copyscape integration on higher plans."
+      ],
+      [
+        "Can Jasper match my brand voice?",
+        "Jasper can build a voice profile from existing content. Verify it against your style guide and measure the edits required before rolling it out to a team."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving marketing copy—not a demo prompt. Verify whether brand voice trained on your existing content materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for active content teams. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "fathom",
+    "name": "Fathom",
+    "category": "Meetings",
+    "best_for": "Meeting notes, call summaries, and CRM-friendly follow-up workflows",
+    "price": "Free + paid team plans",
+    "rating": 4.3,
+    "official": "https://fathom.video/",
+    "summary": "An AI meeting assistant for recording calls, generating summaries, and sharing highlights with teams.",
+    "use_cases": [
+      "Sales calls",
+      "Customer interviews",
+      "Follow-up emails",
+      "Meeting highlights",
+      "Reviewing decisions from calls you missed",
+      "Extracting action items without manual note-taking"
+    ],
+    "pros": [
+      "Fast meeting summaries",
+      "Good sharing workflow",
+      "Useful for calls"
+    ],
+    "cons": [
+      "Consent and privacy policies matter",
+      "Integrations should be checked"
+    ],
+    "key_features": [
+      "Unlimited free meeting recording + transcription",
+      "5-second clip creation for sharing key moments",
+      "Auto-generated call summaries organized by section",
+      "Real-time transcription during calls",
+      "CRM auto-sync on paid plans"
+    ],
+    "faq": [
+      [
+        "Is Fathom really free?",
+        "Yes — unlimited recordings, transcripts, and AI summaries at no cost. Paid adds team/sales features."
+      ],
+      [
+        "Fathom vs Otter?",
+        "Fathom emphasizes a generous free recording-and-summary workflow; Otter emphasizes live transcription and collaborative notes. Try both with the same meeting format."
+      ],
+      [
+        "Which platforms does it support?",
+        "Zoom, Google Meet, Microsoft Teams, and RingCentral."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether unlimited free meeting recording + transcription materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to consent and privacy policies matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "category": "Meetings",
+    "best_for": "Meeting transcription, searchable call records, and conversation intelligence",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://fireflies.ai/",
+    "summary": "A meeting intelligence tool for recording, transcribing, searching, and summarizing team conversations.",
+    "use_cases": [
+      "Meeting archive",
+      "Transcripts",
+      "Conversation search",
+      "Team notes",
+      "Reviewing decisions from calls you missed",
+      "Extracting action items without manual note-taking"
+    ],
+    "pros": [
+      "Searchable meeting history",
+      "Broad meeting support",
+      "Team-oriented"
+    ],
+    "cons": [
+      "Needs clear recording policy",
+      "Transcript quality varies by audio"
+    ],
+    "key_features": [
+      "Auto-joins Zoom, Meet, and Teams calls",
+      "Action items and keyword tracking after each meeting",
+      "Ask Fireflies: search across all your past meetings",
+      "Soundbites for sharing key moments",
+      "CRM sync pushes notes to HubSpot/Salesforce"
+    ],
+    "faq": [
+      [
+        "Is Fireflies free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Which meeting apps does it join?",
+        "Zoom, Google Meet, Microsoft Teams, Webex, and dialers via integrations."
+      ],
+      [
+        "Is recording legal?",
+        "Participants should consent — Fireflies announces itself, but check your local two-party consent laws."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving meeting archive—not a demo prompt. Verify whether auto-joins zoom, meet, and teams calls materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs clear recording policy so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "category": "Meetings",
+    "best_for": "Meeting transcription, summaries, and action items",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://otter.ai/",
+    "summary": "A meeting assistant for recording, transcribing, summarizing, and extracting follow-up items.",
+    "use_cases": [
+      "Sales calls",
+      "Team meetings",
+      "Interviews",
+      "Action items",
+      "Reviewing decisions from calls you missed",
+      "Extracting action items without manual note-taking"
+    ],
+    "pros": [
+      "Easy meeting capture",
+      "Useful summaries",
+      "Shareable notes"
+    ],
+    "cons": [
+      "Sensitive meetings need policy review",
+      "Transcript accuracy depends on audio"
+    ],
+    "key_features": [
+      "Live transcription during meetings with highlighting",
+      "OtterPilot auto-joins and records meetings",
+      "AI meeting summaries with action items",
+      "Live notes visible to teammates in real time",
+      "Integrates with Zoom, Meet, Teams calendars"
+    ],
+    "faq": [
+      [
+        "Otter vs Fireflies?",
+        "Otter leads on live in-meeting transcription; Fireflies on post-meeting intelligence and CRM sync. Both have free tiers worth trying."
+      ],
+      [
+        "How accurate is Otter?",
+        "Accuracy varies with microphones, accents, crosstalk, and room noise. Test it on a real team call before relying on transcripts."
+      ],
+      [
+        "Does Otter work with Zoom?",
+        "Yes — OtterPilot joins and transcribes Zoom, Meet, and Teams automatically."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether live transcription during meetings with highlighting materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sensitive meetings need policy review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "poe",
+    "name": "Poe",
+    "category": "Model Hub",
+    "best_for": "Trying multiple AI models and bots from one interface",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://poe.com/",
+    "summary": "A multi-model chat platform for comparing assistants, using specialized bots, and testing different model behaviors.",
+    "use_cases": [
+      "Model comparison",
+      "Specialized bots",
+      "Prompt testing",
+      "Multi-assistant workflows",
+      "Comparing model answers side-by-side",
+      "Accessing premium models under one budget"
+    ],
+    "pros": [
+      "Many models in one place",
+      "Easy experimentation",
+      "Good for comparison"
+    ],
+    "cons": [
+      "Not a dedicated workflow system",
+      "Availability depends on provider access"
+    ],
+    "key_features": [
+      "Access dozens of models in one app",
+      "Compare answers side-by-side across models",
+      "Custom bots with system prompts you create/share",
+      "Image and video generation models included",
+      "One subscription replaces several AI subscriptions"
+    ],
+    "faq": [
+      [
+        "Is Poe worth it?",
+        "If you switch between GPT-4o, Claude, and image models, yes — it consolidates subscriptions."
+      ],
+      [
+        "What are compute points?",
+        "Per-model usage currency; bigger models cost more points per message."
+      ],
+      [
+        "Can I make my own bot?",
+        "Yes — custom bots with custom prompts are shareable via link."
+      ],
+      [
+        "What is Poe?",
+        "Poe is Quora's multi-model chat app: one subscription gives access to many AI models (including OpenAI, Anthropic, Google, and others) in a single interface."
+      ],
+      [
+        "Is Poe cheaper than paying for separate AI subscriptions?",
+        "For casual multi-model exploration, often yes — Poe bundles access that would otherwise require several $20/month plans. Heavy users of one specific frontier model may still prefer that vendor's native app for full features."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving model comparison—not a demo prompt. Verify whether access dozens of models in one app materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to not a dedicated workflow system so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "category": "Presentations",
+    "best_for": "AI-generated presentations, decks, microsites, and narrative documents",
+    "price": "Free + paid plans",
+    "rating": 4.3,
+    "official": "https://gamma.app/",
+    "summary": "A fast AI presentation and document builder for turning ideas into polished decks and shareable pages.",
+    "use_cases": [
+      "Pitch decks",
+      "Reports",
+      "Lesson materials",
+      "Microsites",
+      "Turning rough outlines into client-ready decks",
+      "Building webinar slides with consistent branding"
+    ],
+    "pros": [
+      "Fast deck creation",
+      "Modern layouts",
+      "Good for first drafts"
+    ],
+    "cons": [
+      "Important decks still need design review",
+      "Brand control may require paid plans"
+    ],
+    "key_features": [
+      "Prompt-to-deck in under a minute with real design",
+      "Cards-based editing — no fighting with slide layout",
+      "Web publishing with analytics built in",
+      "Import PowerPoint/PDF and restyle automatically",
+      "Presentations, docs, and micro-sites in one format"
+    ],
+    "faq": [
+      [
+        "Is Gamma free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Can I export to PowerPoint?",
+        "Yes, PDF and PPTX export on paid plans."
+      ],
+      [
+        "Gamma vs Tome vs Beautiful.ai?",
+        "Gamma leads on generation quality and web publishing. See our best AI presentation tools guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving pitch decks—not a demo prompt. Verify whether prompt-to-deck in under a minute with real design materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to important decks still need design review. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "airtable-ai",
+    "name": "Airtable AI",
+    "category": "Productivity",
+    "best_for": "Adding AI to structured business databases and operational apps",
+    "price": "Paid plan availability varies",
+    "rating": 4.2,
+    "official": "https://www.airtable.com/platform/ai",
+    "summary": "AI capabilities inside Airtable for summarizing records, categorizing data, drafting text, and powering operational workflows.",
+    "use_cases": [
+      "CRM enrichment",
+      "Content ops",
+      "Data categorization",
+      "Operational apps",
+      "Summarizing long threads into briefings",
+      "Automating recurring document formatting"
+    ],
+    "pros": [
+      "Works with structured data",
+      "Good for operations teams",
+      "No-code app context"
+    ],
+    "cons": [
+      "Best for Airtable users",
+      "Requires careful field design"
+    ],
+    "key_features": [
+      "AI fields generate/enrich data per record automatically",
+      "Ask across your base: natural-language queries of records",
+      "Summarize and categorize records in bulk",
+      "Cobuilder: describe an app, get a working base",
+      "AI stays inside your permission boundaries"
+    ],
+    "faq": [
+      [
+        "How is Airtable AI priced?",
+        "Via credits included with paid plans; heavy usage may need credit top-ups."
+      ],
+      [
+        "Can it enrich existing data?",
+        "Yes — AI columns categorize, summarize, or draft per record in bulk."
+      ],
+      [
+        "Does it respect my base permissions?",
+        "Yes — AI operates within existing field/record permissions."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving crm enrichment—not a demo prompt. Verify whether ai fields generate/enrich data per record automatically materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best for airtable users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "microsoft-copilot",
+    "name": "Microsoft Copilot",
+    "category": "Productivity",
+    "best_for": "AI assistance across Microsoft 365, Windows, Edge, and enterprise productivity workflows",
+    "price": "Free + paid plans",
+    "rating": 4.5,
+    "official": "https://copilot.microsoft.com/",
+    "summary": "Microsoft’s AI assistant for workplace productivity, search, writing, meetings, and enterprise software workflows.",
+    "use_cases": [
+      "Office documents",
+      "Workplace search",
+      "Meeting prep",
+      "Enterprise productivity",
+      "Summarizing long threads into briefings",
+      "Automating recurring document formatting"
+    ],
+    "pros": [
+      "Microsoft 365 fit",
+      "Enterprise controls",
+      "Familiar interface"
+    ],
+    "cons": [
+      "Value depends on Microsoft stack adoption",
+      "Licensing can be complex"
+    ],
+    "key_features": [
+      "Drafts and rewrites inside Word with document context",
+      "Excel analysis: formulas, trends, pivot suggestions",
+      "Outlook email triage and draft replies in your voice",
+      "Teams meeting recaps with action items",
+      "Enterprise Data Protection — prompts not used to train"
+    ],
+    "faq": [
+      [
+        "Is Copilot included in Microsoft 365?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Is my company data safe?",
+        "Microsoft states tenant data isn't used to train models, with Enterprise Data Protection."
+      ],
+      [
+        "Worth $30/user/month?",
+        "For heavy Word/Excel/Outlook users, productivity gains justify it. Light Office users won't see ROI. See our review."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving office documents—not a demo prompt. Verify whether drafts and rewrites inside word with document context materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on microsoft stack adoption. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "category": "Productivity",
+    "best_for": "Knowledge-base writing, summaries, and team docs",
+    "price": "Paid add-on / included in some plans",
+    "rating": 4.3,
+    "official": "https://www.notion.com/product/ai",
+    "summary": "AI features inside Notion for summarizing docs, drafting pages, searching knowledge, and turning notes into plans.",
+    "use_cases": [
+      "Meeting notes",
+      "Knowledge base",
+      "Project briefs",
+      "Team summaries",
+      "Summarizing long threads into briefings",
+      "Automating recurring document formatting"
+    ],
+    "pros": [
+      "Works where docs live",
+      "Good for teams already in Notion",
+      "Simple adoption"
+    ],
+    "cons": [
+      "Best if Notion is already your workspace",
+      "Not a full research system alone"
+    ],
+    "key_features": [
+      "Writing, summarizing, and translating inside your docs",
+      "Q&A searches your entire workspace and answers with sources",
+      "Auto-fill databases with AI-generated properties",
+      "Meeting notes transcription and summaries",
+      "No separate app — lives where your work already is"
+    ],
+    "faq": [
+      [
+        "Is Notion AI worth $10/month?",
+        "If your team documents in Notion, yes — workspace Q&A alone saves regular search time. See our Notion AI review coverage."
+      ],
+      [
+        "Does Notion AI train on my data?",
+        "Notion states customer data is not used to train models."
+      ],
+      [
+        "Can it search connected tools?",
+        "Yes — Slack, Google Drive, and Jira connectors extend Q&A beyond Notion itself."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving meeting notes—not a demo prompt. Verify whether writing, summarizing, and translating inside your docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best if notion is already your workspace. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "slack-ai",
+    "name": "Slack AI",
+    "category": "Productivity",
+    "best_for": "Team conversation summaries, channel catch-up, and workplace knowledge retrieval",
+    "price": "Paid add-on / plan availability varies",
+    "rating": 4.1,
+    "official": "https://slack.com/features/ai",
+    "summary": "AI features inside Slack for summarizing channels, catching up on threads, and finding workplace context.",
+    "use_cases": [
+      "Channel summaries",
+      "Thread catch-up",
+      "Workplace search",
+      "Team updates",
+      "Summarizing long threads into briefings",
+      "Automating recurring document formatting"
+    ],
+    "pros": [
+      "Works in team chat",
+      "Good catch-up use case",
+      "Reduces information overload"
+    ],
+    "cons": [
+      "Value depends on Slack adoption",
+      "Knowledge quality depends on team habits"
+    ],
+    "key_features": [
+      "Channel and thread summaries catch you up instantly",
+      "Huddle transcriptions with action items",
+      "Search answers questions using your Slack history with citations",
+      "Daily recap of what you missed",
+      "Stays within Slack's existing security model"
+    ],
+    "faq": [
+      [
+        "How much is Slack AI?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Can it read DMs?",
+        "It respects existing access permissions — you can summarize only what you can already see."
+      ],
+      [
+        "Slack AI vs Notion AI?",
+        "Different homes: Slack for conversation catch-up, Notion for docs. Teams often run both. See our reviews."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving channel summaries—not a demo prompt. Verify whether channel and thread summaries catch you up instantly materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on slack adoption so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "perplexity",
+    "name": "Perplexity",
+    "category": "Research",
+    "best_for": "Source-backed web research and quick market scans",
+    "price": "Free + paid plans",
+    "rating": 4.6,
+    "official": "https://www.perplexity.ai/",
+    "summary": "A research-first AI search engine that keeps sources visible while answering questions.",
+    "use_cases": [
+      "Competitor scans",
+      "Source discovery",
+      "Market questions",
+      "Briefing prep",
+      "Vetting sources with citations for reports",
+      "Tracking competitor moves across the web"
+    ],
+    "pros": [
+      "Citations are central",
+      "Good for discovery",
+      "Fast current research"
+    ],
+    "cons": [
+      "Sources still need checking",
+      "Less suited to complex workflows alone"
+    ],
+    "key_features": [
+      "Every answer includes numbered source citations",
+      "Pro Search runs multi-step research instead of one-shot answers",
+      "Focus modes: academic, Reddit, YouTube, news",
+      "Spaces for organizing research threads by project",
+      "Model switching inside a single product"
+    ],
+    "faq": [
+      [
+        "Is Perplexity better than Google?",
+        "For research questions where you need sources, yes — it synthesizes instead of listing links. For local searches and shopping, Google still wins."
+      ],
+      [
+        "Does Perplexity use ChatGPT?",
+        "It offers multiple models including GPT-4o and Claude alongside its own Sonar models — you choose per search."
+      ],
+      [
+        "Can I trust the citations?",
+        "Mostly. Every claim links to a source so you can verify, but we found it occasionally picks low-authority pages on obscure topics."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving competitor scans—not a demo prompt. Verify whether every answer includes numbered source citations materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sources still need checking so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "you-com",
+    "name": "You.com",
+    "category": "Research",
+    "best_for": "AI search, research agents, and productivity-oriented web answers",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://you.com/",
+    "summary": "An AI search and assistant platform for web answers, research, productivity, and agent-style tasks.",
+    "use_cases": [
+      "AI search",
+      "Research summaries",
+      "Web Q&A",
+      "Productivity prompts",
+      "Vetting sources with citations for reports",
+      "Tracking competitor moves across the web"
+    ],
+    "pros": [
+      "Search-first workflow",
+      "Useful for discovery",
+      "Multiple assistant modes"
+    ],
+    "cons": [
+      "Needs source verification",
+      "Differentiation depends on workflow"
+    ],
+    "key_features": [
+      "AI search with citations like Perplexity",
+      "Model choice: GPT, Claude, Gemini, Llama in one UI",
+      "Research mode for deep multi-step reports",
+      "File upload analysis",
+      "Custom assistant creation"
+    ],
+    "faq": [
+      [
+        "You.com vs Perplexity?",
+        "They combine cited AI search with chat. Perplexity is more search-first; You.com emphasizes model choice in one subscription. Compare both on the same research question."
+      ],
+      [
+        "Which models does You.com include?",
+        "GPT-4o, Claude, Gemini, Llama and others depending on plan."
+      ],
+      [
+        "Is there a free tier?",
+        "Yes, with limited Pro searches daily."
+      ],
+      [
+        "What is You.com best for?",
+        "You.com focuses on AI-assisted search with source visibility, plus writing and coding assistance on paid plans. It suits users who want search-first answers instead of a general chat assistant."
+      ],
+      [
+        "Does You.com have a free plan?",
+        "Yes. A free tier covers basic searches and limited AI chats; Pro unlocks premium models and higher limits. Check you.com's pricing page for current limits."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving ai search—not a demo prompt. Verify whether ai search with citations like perplexity materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs source verification so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "category": "Video",
+    "best_for": "AI avatars, video localization, and presenter-style business videos",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://www.heygen.com/",
+    "summary": "A business video platform for AI avatars, translation, personalized videos, and presenter-led content.",
+    "use_cases": [
+      "Sales videos",
+      "Training content",
+      "Localization",
+      "Avatar presenters",
+      "Creating talking-head content without filming",
+      "Producing localized video variants per market"
+    ],
+    "pros": [
+      "Business-friendly video workflows",
+      "Avatar and translation features",
+      "Good for scalable content"
+    ],
+    "cons": [
+      "Avatar content can feel synthetic",
+      "Brand review is important"
+    ],
+    "key_features": [
+      "500+ stock avatars, 175+ languages",
+      "Instant avatar clone from webcam footage",
+      "Video translate with lip-sync into new languages",
+      "Templates for sales, training, and social formats",
+      "API for programmatic video at scale"
+    ],
+    "faq": [
+      [
+        "Is HeyGen free?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "HeyGen vs Synthesia?",
+        "HeyGen for social-first avatar video and translation; Synthesia for enterprise training. Both offer avatar clones."
+      ],
+      [
+        "Does HeyGen support my language?",
+        "175+ languages with lip-synced translation on paid plans."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving sales videos—not a demo prompt. Verify whether 500+ stock avatars, 175+ languages materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to avatar content can feel synthetic so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "category": "Video",
+    "best_for": "AI video generation and creative production experiments",
+    "price": "Free + paid plans",
+    "rating": 4.2,
+    "official": "https://runwayml.com/",
+    "summary": "A creative video platform for generative video, editing, and motion experiments.",
+    "use_cases": [
+      "Concept videos",
+      "Motion assets",
+      "Storyboards",
+      "Campaign experiments",
+      "Creating talking-head content without filming",
+      "Producing localized video variants per market"
+    ],
+    "pros": [
+      "Strong creative capabilities",
+      "Rapid ideation",
+      "Video-first toolkit"
+    ],
+    "cons": [
+      "Outputs need art direction",
+      "Commercial workflows require testing"
+    ],
+    "key_features": [
+      "Gen-3 text-to-video with strong motion quality",
+      "Image-to-video animates stills",
+      "Motion Brush directs movement in specific regions",
+      "Camera controls (pan, zoom, dolly) on generations",
+      "Full editing suite: green screen, inpainting, upscale"
+    ],
+    "faq": [
+      [
+        "How much does Runway cost?",
+        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+      ],
+      [
+        "Can Runway replace videographers?",
+        "No — it excels at b-roll, concept shots, and augmentation, not narrative filming."
+      ],
+      [
+        "Runway vs Pika vs Sora?",
+        "Runway leads on directorial control. See our best AI video tools guide for the full comparison."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving concept videos—not a demo prompt. Verify whether gen-3 text-to-video with strong motion quality materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to outputs need art direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "category": "Video",
+    "best_for": "Enterprise training videos and AI avatar presentations",
+    "price": "Paid plans",
+    "rating": 4.2,
+    "official": "https://www.synthesia.io/",
+    "summary": "An AI video platform for creating training, enablement, and explainer videos with avatars and templates.",
+    "use_cases": [
+      "Training videos",
+      "Internal enablement",
+      "Explainers",
+      "Localization",
+      "Creating talking-head content without filming",
+      "Producing localized video variants per market"
+    ],
+    "pros": [
+      "Enterprise-friendly",
+      "Good training workflows",
+      "Repeatable templates"
+    ],
+    "cons": [
+      "Less suited to cinematic creative",
+      "Needs governance for avatar use"
+    ],
+    "key_features": [
+      "230+ AI avatars with natural gestures",
+      "140+ languages from one script",
+      "Custom avatar clones of yourself",
+      "PPT-to-video and doc-to-video conversion",
+      "1-click translation of finished videos"
+    ],
+    "faq": [
+      [
+        "Is Synthesia free?",
+        "There's a free plan with 3 min/month — enough to evaluate, not to produce."
+      ],
+      [
+        "Can I clone myself?",
+        "Yes on Starter and above — a short webcam recording creates your avatar."
+      ],
+      [
+        "Synthesia vs HeyGen?",
+        "Synthesia leads on enterprise features and language coverage; HeyGen on avatar realism for social content. See our AI video tools guide."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving training videos—not a demo prompt. Verify whether 230+ ai avatars with natural gestures materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less suited to cinematic creative so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "category": "Writing & Productivity",
+    "best_for": "Business writing, grammar, tone, and communication quality across apps",
+    "price": "Free + paid plans",
+    "rating": 4.4,
+    "official": "https://www.grammarly.com/",
+    "summary": "A writing assistant for grammar, tone, clarity, rewriting, and communication support across everyday business apps.",
+    "use_cases": [
+      "Email polishing",
+      "Tone edits",
+      "Grammar checks",
+      "Business writing",
+      "Editing tone and clarity before hitting send",
+      "Maintaining brand voice across a writing team"
+    ],
+    "pros": [
+      "Works across many apps",
+      "Low-friction adoption",
+      "Clear writing focus"
+    ],
+    "cons": [
+      "Less powerful for deep research",
+      "Can over-standardize voice"
+    ],
+    "key_features": [
+      "Works everywhere: browser, desktop, Office, Google Docs",
+      "Tone detection and adjustment suggestions",
+      "Full-sentence rewrites, not just error flags",
+      "Plagiarism checker on Pro",
+      "Generative AI for drafting and shortening"
+    ],
+    "faq": [
+      [
+        "Is Grammarly Pro worth it?",
+        "For daily professional writing, yes — tone control and full rewrites are the real value. Occasional writers can stay free."
+      ],
+      [
+        "Does Grammarly work in Google Docs?",
+        "Yes, fully integrated including the sidebar and generative features."
+      ],
+      [
+        "Is my text private?",
+        "Grammarly states text is not sold; Enterprise adds contractual controls. Free users' text may be processed to provide the service."
+      ]
+    ],
+    "trial_checklist": "Use a real task involving email polishing—not a demo prompt. Verify whether works everywhere: browser, desktop, office, google docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less powerful for deep research so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "allvideoai",
+    "name": "AllVideoAI",
+    "category": "Video",
+    "best_for": "Multi-model AI video generation from text prompts, images, and source footage in one workspace",
+    "price": "Free tier + credit plans from $17/month",
+    "rating": 4.2,
+    "official": "https://allvideoai.com/",
+    "summary": "A browser-based AI video workspace that generates video from prompts or reference images and lets you work across multiple generation models without separate subscriptions.",
+    "use_cases": [
+      "Text-to-video drafts for social content",
+      "Animating still images for ads and promos",
+      "Transforming existing footage with AI models",
+      "Comparing outputs across generation models in one place"
+    ],
+    "pros": [
+      "Multiple generation models in one workspace",
+      "Credit system shared across models instead of per-tool subscriptions",
+      "Free tier to test before paying"
+    ],
+    "cons": [
+      "Credit pricing makes monthly costs usage-dependent",
+      "Newer entrant — less community tooling than established generators",
+      "Annual billing pushed via countdown offers; check monthly price first"
+    ],
+    "key_features": [
+      "Text-to-video and image-to-video generation",
+      "Source footage transformation",
+      "Multiple generation models in a single private workspace",
+      "Shared credit pool (Starter $17/mo annual, Plus $39, Max $59, Ultra $159)"
+    ],
+    "faq": [
+      [
+        "Is AllVideoAI free?",
+        "There is a free tier. Paid plans are credit-based: Starter ($17/month billed annually), Plus ($39), Max ($59), and Ultra ($159). Verify current prices on the official pricing page — promotional countdowns appear frequently."
+      ],
+      [
+        "How does credit pricing compare to flat subscriptions?",
+        "Credits make light users cheaper and heavy users more expensive than flat plans. Model your expected generations per month before choosing."
+      ],
+      [
+        "AllVideoAI vs Runway or Pika?",
+        "It differentiates on multi-model access under one subscription rather than one proprietary model. See our best AI video tools guide."
+      ]
+    ],
+    "trial_checklist": "Generate the same prompt on two different models inside the workspace and compare quality. Check how many credits your typical video actually consumes, then compute real monthly cost at that volume before picking a plan.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "medium"
+  },
+  {
+    "slug": "hermes-agent",
+    "name": "Hermes Agent",
+    "category": "AI Agents",
+    "best_for": "autonomous multi-tool agents, persistent memory, skills, and messaging workflows",
+    "price": "Open source + model/provider costs",
+    "official": "https://hermes-agent.nousresearch.com/docs/",
+    "summary": "An open-source autonomous agent framework from Nous Research with tools, skills, memory, profiles, messaging gateways, delegation, MCP, and scheduled routines.",
+    "use_cases": [
+      "Research and browser workflows",
+      "Coding with terminal and file tools",
+      "Telegram or Discord agent workflows",
+      "Reusable skills and persistent memory",
+      "Multi-agent delegation and scheduled routines"
+    ],
+    "pros": [
+      "Broad built-in tool and gateway surface",
+      "Skills and memory create a reusable operating loop",
+      "Model/provider flexibility and profile isolation"
+    ],
+    "cons": [
+      "Power comes with configuration and security responsibility",
+      "Model, hosting, and tool costs are separate",
+      "Fast-moving project requires version-aware documentation"
+    ],
+    "key_features": [
+      "CLI, desktop, and messaging gateway surfaces",
+      "Skills system and persistent memory",
+      "Profiles, delegation, MCP, cron, and webhooks",
+      "Multiple terminal backends and provider options",
+      "Command approval and container-isolation controls"
+    ],
+    "faq": [
+      [
+        "Is Hermes Agent free?",
+        "The software is open source under the MIT license; model access, hosting, and optional provider services can create separate costs."
+      ],
+      [
+        "What makes Hermes different from a coding copilot?",
+        "It combines tools, memory, skills, messaging, scheduling, and multi-agent delegation rather than living only inside an editor."
+      ],
+      [
+        "Is Hermes safe by default?",
+        "Treat tool access as powerful automation. Start with least privilege, review command approvals, isolate risky workloads, and never store secrets in project files."
+      ]
+    ],
+    "trial_checklist": "Install it in an isolated profile and run three repeatable tasks: one research task, one file/terminal task, and one scheduled or messaging task. Record setup friction, approval prompts, model cost, tool errors, memory usefulness, and how easy it is to reset or remove the profile.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "openclaw",
+    "name": "OpenClaw",
+    "category": "AI Agents",
+    "best_for": "self-hosted multi-channel AI agents and personal automation gateways",
+    "price": "Open source + model/provider and hosting costs",
+    "official": "https://docs.openclaw.ai/",
+    "summary": "An open-source multi-channel gateway for AI agents that can run on your own infrastructure and connect conversations, tools, and model providers.",
+    "use_cases": [
+      "Personal assistant workflows",
+      "Multi-channel messaging agents",
+      "Self-hosted automation",
+      "Tool and skill integrations",
+      "Remote or home-server agent access"
+    ],
+    "pros": [
+      "Self-hosted gateway architecture",
+      "Multi-channel agent orientation",
+      "Open source and provider-cost transparency"
+    ],
+    "cons": [
+      "Security depends heavily on deployment and extension choices",
+      "API, hosting, and maintenance costs are separate",
+      "Operational complexity is higher than a hosted chatbot"
+    ],
+    "key_features": [
+      "Gateway architecture for multiple channels",
+      "Self-hosted deployment model",
+      "Provider/model configuration",
+      "Skills and tool integrations",
+      "Token-use and cost awareness"
+    ],
+    "faq": [
+      [
+        "Is OpenClaw free?",
+        "The official project is open source and MIT-licensed; model API usage, hosting, and optional managed services can still cost money."
+      ],
+      [
+        "What should I secure first?",
+        "Protect the gateway, restrict network exposure, use least-privilege credentials, review extensions, and separate personal data from experiments."
+      ],
+      [
+        "Who should avoid it?",
+        "Teams that need a managed, compliance-ready service without owning deployment, updates, monitoring, and incident response should evaluate hosted alternatives first."
+      ]
+    ],
+    "trial_checklist": "Run a contained pilot with one channel, one provider, and one low-risk tool. Measure setup time, token cost, message reliability, extension review effort, restart/recovery behavior, and whether you can export or remove the deployment cleanly.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "ollama",
+    "name": "Ollama",
+    "category": "Local AI",
+    "best_for": "running open models locally with a simple CLI and local API",
+    "price": "Free local runtime + optional cloud plans",
+    "official": "https://ollama.com/",
+    "summary": "A local model runtime and API that makes it straightforward to download, run, and integrate open models on a computer, with optional cloud access.",
+    "use_cases": [
+      "Local model experiments",
+      "Private document workflows",
+      "Developer API prototypes",
+      "Offline or low-connectivity tasks",
+      "Connecting local models to UIs and agents"
+    ],
+    "pros": [
+      "Simple local installation and CLI",
+      "Local API is easy to integrate",
+      "Runs models on hardware you control"
+    ],
+    "cons": [
+      "Quality and speed depend on hardware and model choice",
+      "Model licenses remain separate from Ollama",
+      "Cloud features and usage have different cost/privacy considerations"
+    ],
+    "key_features": [
+      "Local HTTP API at localhost:11434 by default",
+      "CLI model management",
+      "Official Python and JavaScript libraries",
+      "Local and cloud model paths",
+      "Model metadata and capability inspection"
+    ],
+    "faq": [
+      [
+        "Does Ollama send local prompts to the cloud?",
+        "Ollama's FAQ distinguishes local runs from cloud-hosted models; verify the current mode, model path, and account settings for the workflow you are using."
+      ],
+      [
+        "Is Ollama completely free?",
+        "Running models on your own hardware is not subscription-metered, but hardware, electricity, model licenses, and optional cloud usage are separate considerations."
+      ],
+      [
+        "What should I test first?",
+        "Test the exact model, context length, latency, RAM/VRAM use, and output quality on one real task rather than assuming a model name predicts performance."
+      ]
+    ],
+    "trial_checklist": "Install Ollama, pull one model whose license and hardware needs you understand, call the local API with a fixed prompt, and record cold-start time, tokens per second, memory use, context behavior, and output quality. Repeat with one smaller model before choosing hardware or a cloud plan.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "high"
+  },
+  {
+    "slug": "lm-studio",
+    "name": "LM Studio",
+    "category": "Local AI",
+    "best_for": "desktop-first local model discovery, chat, and developer API testing",
+    "price": "Free local use + optional pay-as-you-go cloud models",
+    "official": "https://lmstudio.ai/",
+    "summary": "A desktop application for discovering and running local LLMs with a polished chat experience and developer-facing APIs, plus optional cloud model access.",
+    "use_cases": [
+      "Desktop local model testing",
+      "Comparing quantized models",
+      "Local chat and document workflows",
+      "OpenAI-compatible API prototypes",
+      "Evaluating hardware fit before deployment"
+    ],
+    "pros": [
+      "Friendly desktop workflow",
+      "Useful model discovery and local testing",
+      "Local and API-oriented workflows in one product"
+    ],
+    "cons": [
+      "Large models can require substantial hardware",
+      "Model files carry their own licenses and risks",
+      "Desktop convenience does not replace deployment monitoring"
+    ],
+    "key_features": [
+      "Local model execution through supported backends",
+      "Chat and model management UI",
+      "Developer SDK/API options",
+      "Server deployment path without the GUI",
+      "Optional cloud model billing"
+    ],
+    "faq": [
+      [
+        "Is LM Studio free?",
+        "The official pricing page lists free local use; optional cloud models and future commercial features should be checked separately."
+      ],
+      [
+        "Is LM Studio suitable for a team server?",
+        "The official site documents server-oriented usage, but evaluate authentication, monitoring, concurrency, and data handling before treating a desktop workflow as production infrastructure."
+      ],
+      [
+        "How should I compare it with Ollama?",
+        "Use the same model and prompt, then compare setup friction, API behavior, hardware utilization, observability, and how easily another operator can reproduce the setup."
+      ]
+    ],
+    "trial_checklist": "Run the same model through LM Studio and one alternative runtime. Measure download/setup time, time to first token, sustained speed, memory use, API compatibility, model switching, and whether the workflow remains usable when the desktop UI is closed.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  },
+  {
+    "slug": "open-webui",
+    "name": "Open WebUI",
+    "category": "Local AI",
+    "best_for": "a self-hosted ChatGPT-style interface over local and compatible model backends",
+    "price": "Open source + optional enterprise/support considerations",
+    "official": "https://docs.openwebui.com/",
+    "summary": "A self-hosted web interface for interacting with local and compatible model providers, with document, RAG, tool, and multi-user workflows.",
+    "use_cases": [
+      "Team self-hosted chat",
+      "Ollama front end",
+      "Document and knowledge workflows",
+      "Private model experimentation",
+      "Browser-based access to local inference"
+    ],
+    "pros": [
+      "Polished browser experience over local backends",
+      "Supports multiple provider patterns",
+      "Useful bridge between local models and everyday users"
+    ],
+    "cons": [
+      "Deployment and upgrades become your responsibility",
+      "License/branding terms must be read for larger deployments",
+      "Backend quality and security still determine the overall system"
+    ],
+    "key_features": [
+      "Docker, Python, and Kubernetes deployment paths",
+      "Ollama and compatible provider connections",
+      "RAG and document workflows",
+      "Tool calling and plugins",
+      "Multi-user and enterprise-oriented options"
+    ],
+    "faq": [
+      [
+        "Is Open WebUI free?",
+        "The project remains available as self-hosted software, but its current license and branding terms should be checked before redistributing or operating larger deployments."
+      ],
+      [
+        "Does Open WebUI include a model?",
+        "No. It is primarily an interface and orchestration layer; connect it to Ollama or another supported backend and evaluate that backend separately."
+      ],
+      [
+        "Is it private?",
+        "Self-hosting can keep the application and connected data on infrastructure you control, but provider connections, logs, uploads, extensions, and network exposure still need review."
+      ]
+    ],
+    "trial_checklist": "Connect Open WebUI to one local backend, create a test user, upload a non-sensitive sample document, and run the same question through two models. Record setup time, indexing behavior, retrieval quality, user separation, backup/restore steps, and exposure of the admin surface.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard"
+  }
 ]

@@ -159,6 +159,26 @@
     "allvideoai": {
       "date": "2026-08-23",
       "digest": "Free tier plus credit-based plans: Starter $17/month (billed annually, $204/year), Plus $39/month (annual $468), Max $59/month (annual $708), Ultra $159/month (annual $1,908). Promotional countdown ti"
+    },
+    "hermes-agent": {
+      "date": "2026-08-26",
+      "digest": "Open-source Hermes Agent software is available under the MIT license. Model access, Nous Portal or third-party provider usage, hosting, and infrastructure are separate cost considerations; no single u"
+    },
+    "openclaw": {
+      "date": "2026-08-26",
+      "digest": "Official OpenClaw materials describe the project as open-source and MIT-licensed. Self-hosted software cost is distinct from model API usage, hosting, maintenance, and any optional managed service."
+    },
+    "ollama": {
+      "date": "2026-08-26",
+      "digest": "Ollama supports running models on your own hardware and also offers optional cloud plans. Local runtime cost is separate from hardware, electricity, model licenses, and any cloud usage; the official p"
+    },
+    "lm-studio": {
+      "date": "2026-08-26",
+      "digest": "LM Studio's official pricing page lists free local use and optional pay-as-you-go cloud models. Local hardware and model-license costs remain separate."
+    },
+    "open-webui": {
+      "date": "2026-08-26",
+      "digest": "Open WebUI is self-hosted software; its official license documentation describes the current licensing and branding requirements, including distinctions for larger deployments. Optional enterprise/sup"
     }
   },
   "changes": [
