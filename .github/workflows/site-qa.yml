@@ -1,0 +1,40 @@
+name: AIToolsEssentials site QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  site-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile generators
+        run: python3 -m py_compile scripts/*.py
+      - name: Generate site (first pass)
+        run: python3 scripts/daily_content_update.py
+      - name: Validate first pass
+        run: python3 scripts/validate_site.py
+      - name: Generate site (idempotency pass)
+        run: python3 scripts/daily_content_update.py
+      - name: Validate second pass
+        run: python3 scripts/validate_site.py
+      - name: Fail on generator drift
+        run: git diff --exit-code
+      - name: Run operational health check
+        run: python3 scripts/site_health.py --markdown /tmp/site-health.md
+      - name: Publish health summary
+        if: always()
+        run: cat /tmp/site-health.md >> "$GITHUB_STEP_SUMMARY"
