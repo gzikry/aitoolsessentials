@@ -114,6 +114,9 @@ from generate_pricing_watch import generate as generate_pricing_watch
 generate_pricing_watch(root, tools, today)
 print('Generated pricing watch page')
 
+from generate_change_radar import generate as generate_change_radar
+print('Generated change radar:', generate_change_radar(root))
+
 from generate_bestfor_and_report import generate_best_for, generate_pricing_report
 generate_best_for(root)
 generate_pricing_report(root, today)

@@ -3,7 +3,7 @@
   "domain": "https://aitoolsessentials.com",
   "last_generated": "2026-08-25",
   "tools_tracked": 40,
-  "html_pages": 297,
+  "html_pages": 298,
   "feeds": [
     "/feed.xml",
     "/weekly/feed.xml",
@@ -14,6 +14,7 @@
     "/tool-finder.html",
     "/fit-interview/",
     "/confidence-check/",
+    "/change-radar/",
     "/cost-calculator.html",
     "/compare-shortlist.html"
   ],
