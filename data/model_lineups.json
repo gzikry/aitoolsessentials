@@ -1,297 +1,297 @@
 {
- "chatgpt": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "GPT-5.4",
-    "role": "Flagship reasoning + everyday assistant",
-    "context": "~400K",
-    "pricing": "Included in Plus $20/mo; API per-token"
-   },
-   {
-    "model": "GPT-5.4 Pro",
-    "role": "Maximum-effort reasoning",
-    "context": "~400K",
-    "pricing": "Pro $200/mo"
-   },
-   {
-    "model": "GPT-5 mini / nano",
-    "role": "Fast, cheap high-volume tasks",
-    "context": "~200K",
-    "pricing": "API from ~$0.20/1M input"
-   }
-  ],
-  "notes": [
-   "Verify current names at openai.com — OpenAI iterates point releases frequently."
-  ]
- },
- "claude": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "Claude Opus 4.x",
-    "role": "Deepest reasoning, long documents",
-    "context": "1M (beta)",
-    "pricing": "API premium tier; included in Max plans"
-   },
-   {
-    "model": "Claude Sonnet 4.6",
-    "role": "Daily driver: writing, code, agents",
-    "context": "200K-1M",
-    "pricing": "Pro $20/mo; API ~$3/$15 per 1M"
-   },
-   {
-    "model": "Claude Haiku",
-    "role": "Fast lightweight responses",
-    "context": "200K",
-    "pricing": "API budget tier"
-   }
-  ],
-  "notes": [
-   "Sonnet 4.6 is the default for most paid users; check anthropic.com for current versions."
-  ]
- },
- "grok": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "Grok 4.6",
-    "role": "Flagship: code, long-running agents, visual work",
-    "context": "500K",
-    "pricing": "$2 in / $6 out per 1M tokens"
-   },
-   {
-    "model": "Grok 4.5",
-    "role": "Prior flagship: coding + agentic work",
-    "context": "500K",
-    "pricing": "$2 / $6 per 1M tokens"
-   },
-   {
-    "model": "Grok 4.3",
-    "role": "Cost-efficient reasoning",
-    "context": "1M",
-    "pricing": "$1.25 / $2.50 per 1M tokens"
-   },
-   {
-    "model": "Grok Build 0.1",
-    "role": "Fastest coding model (also inside Grok Build agent)",
-    "context": "-",
-    "pricing": "$1 / $2 per 1M tokens"
-   }
-  ],
-  "notes": [
-   "Consumer plans: Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo.",
-   "Products beyond the model: Grok Bot always-on agents, Grok Build coding agent with Build Mode apps, Grok Imagine image/video, Grok Voice.",
-   "Grok 4.5/4.6 also available inside GitHub Copilot; subscriptions work in Warp, Kilo Code, OpenCode."
-  ]
- },
- "cursor": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "Cursor Grok 4.6",
-    "role": "Co-developed flagship coding model in-editor",
-    "context": "500K",
-    "pricing": "$2 / $6 per 1M tokens (Cursor Models pool)"
-   },
-   {
-    "model": "Cursor Grok 4.5",
-    "role": "Prior joint flagship",
-    "context": "500K",
-    "pricing": "$2 / $6 per 1M tokens"
-   },
-   {
-    "model": "Composer 2.5",
-    "role": "Price-efficient agentic model",
-    "context": "-",
-    "pricing": "$0.50 / $2.50 per 1M standard; Fast $3 / $15"
-   },
-   {
-    "model": "Third-party frontier models",
-    "role": "OpenAI, Anthropic, Google, xAI via Other Models pool",
-    "context": "varies",
-    "pricing": "Near API rates (+ Cursor Token Rate on teams)"
-   }
-  ],
-  "notes": [
-   "Plans: Free (limited agent requests); Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo.",
-   "Teams adds Grok Bot access and Bugbot agentic code review."
-  ]
- },
- "github-copilot": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "GPT-5-class models",
-    "role": "Default completion + chat",
-    "context": "varies",
-    "pricing": "Included in Copilot Pro $10/mo"
-   },
-   {
-    "model": "Claude Sonnet 4.6",
-    "role": "Selectable model for agent mode",
-    "context": "varies",
-    "pricing": "Included with premium request multiplier"
-   },
-   {
-    "model": "Grok 4.5 / 4.6",
-    "role": "xAI models added to Copilot model picker",
-    "context": "varies",
-    "pricing": "Premium requests"
-   }
-  ],
-  "notes": [
-   "Model availability varies by plan; check GitHub's Copilot model docs for current multipliers."
-  ]
- },
- "perplexity": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "Sonar (in-house)",
-    "role": "Fast cited search answers",
-    "context": "-",
-    "pricing": "Included in all plans"
-   },
-   {
-    "model": "Frontier models (GPT/Claude/Grok)",
-    "role": "Selectable reasoning models behind search",
-    "context": "varies",
-    "pricing": "Pro $20/mo includes limited frontier queries"
-   }
-  ],
-  "notes": [
-   "Perplexity routes to whichever underlying model you pick; its own Sonar handles most searches."
-  ]
- },
- "zapier-ai": {
-  "as_of": "2026-08-25",
-  "products": true,
-  "models": [
-   {
-    "model": "Zapier Agents",
-    "role": "AI agents that act across 8,000+ app integrations",
-    "context": "-",
-    "pricing": "Agent usage billed by plan"
-   },
-   {
-    "model": "Chatbots + Tables + Interfaces",
-    "role": "No-code AI surfaces on Zapier data",
-    "context": "-",
-    "pricing": "Included per plan tier"
-   },
-   {
-    "model": "Plans",
-    "role": "Free → Professional ~$19.99/mo → Team → Enterprise",
-    "context": "-",
-    "pricing": "Task-based billing"
-   }
-  ],
-  "notes": [
-   "Zapier sells automation outcomes (tasks), not model tokens — AI features ride on partner models."
-  ]
- },
- "make": {
-  "as_of": "2026-08-25",
-  "products": true,
-  "models": [
-   {
-    "model": "Make AI Agents",
-    "role": "Autonomous agents inside scenario workflows",
-    "context": "-"
-   },
-   {
-    "model": "Make.com platform",
-    "role": "Visual scenario builder, 2,000+ app integrations",
-    "context": "-"
-   },
-   {
-    "model": "Plans",
-    "role": "Free 1,000 ops/mo → Core ~$9/mo → Pro → Enterprise",
-    "context": "-",
-    "pricing": "Operation-based billing"
-   }
-  ],
-  "notes": [
-   "Make charges by operations executed, not tasks — usually cheaper at scale than Zapier."
-  ]
- },
- "n8n": {
-  "as_of": "2026-08-25",
-  "products": true,
-  "models": [
-   {
-    "model": "n8n AI Agent nodes + LangChain integration",
-    "role": "Self-hosted or cloud agentic workflows, bring your own LLM keys",
-    "context": "-"
-   },
-   {
-    "model": "n8n Cloud",
-    "role": "Hosted option",
-    "context": "-",
-    "pricing": "From ~$20/mo (starter)"
-   },
-   {
-    "model": "Self-hosted (fair-code)",
-    "role": "Free to run on your infrastructure",
-    "context": "-",
-    "pricing": "$0 license cost; pay your own compute"
-   }
-  ],
-  "notes": [
-   "n8n gives maximum control: your servers, your model keys, no per-task markup."
-  ]
- },
- "midjourney": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "Midjourney web + Discord generation",
-    "role": "Aesthetic image generation and style exploration",
-    "context": "image prompt workflow",
-    "pricing": "Basic/Standard/Pro/Mega tiers; GPU-time based"
-   },
-   {
-    "model": "V7 generation pipeline",
-    "role": "Default high-aesthetic image model family",
-    "context": "image generation",
-    "pricing": "Plan-limited fast/relaxed GPU usage"
-   },
-   {
-    "model": "Personalization/style references",
-    "role": "Maintain visual direction across campaigns",
-    "context": "style refs + image refs",
-    "pricing": "included by plan limits"
-   }
-  ],
-  "notes": [
-   "Midjourney is strongest when visual taste matters more than design-suite editing, templates, or team publishing."
-  ]
- },
- "canva-ai": {
-  "as_of": "2026-08-25",
-  "models": [
-   {
-    "model": "Magic Studio / Magic Media",
-    "role": "Image/video generation inside Canva projects",
-    "context": "design documents",
-    "pricing": "Free limited; Pro/Teams unlock higher usage"
-   },
-   {
-    "model": "Magic Design + Brand Kit",
-    "role": "Turn prompts/assets into editable social posts, slides, documents",
-    "context": "Canva templates",
-    "pricing": "Pro/Teams feature set"
-   },
-   {
-    "model": "Canva Teams workflows",
-    "role": "Brand approvals, collaboration, publishing",
-    "context": "workspace",
-    "pricing": "Per-seat team pricing"
-   }
-  ],
-  "notes": [
-   "Canva AI is strongest when the output must become editable, on-brand collateral rather than a standalone generated image."
-  ]
- }
+  "chatgpt": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "GPT-5.4",
+        "role": "Flagship reasoning + everyday assistant",
+        "context": "~400K",
+        "pricing": "Included in Plus $20/mo; API per-token"
+      },
+      {
+        "model": "GPT-5.4 Pro",
+        "role": "Maximum-effort reasoning",
+        "context": "~400K",
+        "pricing": "Pro $200/mo"
+      },
+      {
+        "model": "GPT-5 mini / nano",
+        "role": "Fast, cheap high-volume tasks",
+        "context": "~200K",
+        "pricing": "API from ~$0.20/1M input"
+      }
+    ],
+    "notes": [
+      "Verify current names at openai.com \u2014 OpenAI iterates point releases frequently."
+    ]
+  },
+  "claude": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "Claude Opus 4.x",
+        "role": "Deepest reasoning, long documents",
+        "context": "1M (beta)",
+        "pricing": "API premium tier; included in Max plans"
+      },
+      {
+        "model": "Claude Sonnet 4.6",
+        "role": "Daily driver: writing, code, agents",
+        "context": "200K-1M",
+        "pricing": "Pro $20/mo; API ~$3/$15 per 1M"
+      },
+      {
+        "model": "Claude Haiku",
+        "role": "Fast lightweight responses",
+        "context": "200K",
+        "pricing": "API budget tier"
+      }
+    ],
+    "notes": [
+      "Sonnet 4.6 is the default for most paid users; check anthropic.com for current versions."
+    ]
+  },
+  "grok": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "Grok 4.6",
+        "role": "Flagship: code, long-running agents, visual work",
+        "context": "500K",
+        "pricing": "$2 in / $6 out per 1M tokens"
+      },
+      {
+        "model": "Grok 4.5",
+        "role": "Prior flagship: coding + agentic work",
+        "context": "500K",
+        "pricing": "$2 / $6 per 1M tokens"
+      },
+      {
+        "model": "Grok 4.3",
+        "role": "Cost-efficient reasoning",
+        "context": "1M",
+        "pricing": "$1.25 / $2.50 per 1M tokens"
+      },
+      {
+        "model": "Grok Build 0.1",
+        "role": "Fastest coding model (also inside Grok Build agent)",
+        "context": "-",
+        "pricing": "$1 / $2 per 1M tokens"
+      }
+    ],
+    "notes": [
+      "Consumer plans: Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo.",
+      "Products beyond the model: Grok Bot always-on agents, Grok Build coding agent with Build Mode apps, Grok Imagine image/video, Grok Voice.",
+      "Grok 4.5/4.6 also available inside GitHub Copilot; subscriptions work in Warp, Kilo Code, OpenCode."
+    ]
+  },
+  "cursor": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "Cursor Grok 4.6",
+        "role": "Co-developed flagship coding model in-editor",
+        "context": "500K",
+        "pricing": "$2 / $6 per 1M tokens (Cursor Models pool)"
+      },
+      {
+        "model": "Cursor Grok 4.5",
+        "role": "Prior joint flagship",
+        "context": "500K",
+        "pricing": "$2 / $6 per 1M tokens"
+      },
+      {
+        "model": "Composer 2.5",
+        "role": "Price-efficient agentic model",
+        "context": "-",
+        "pricing": "$0.50 / $2.50 per 1M standard; Fast $3 / $15"
+      },
+      {
+        "model": "Third-party frontier models",
+        "role": "OpenAI, Anthropic, Google, xAI via Other Models pool",
+        "context": "varies",
+        "pricing": "Near API rates (+ Cursor Token Rate on teams)"
+      }
+    ],
+    "notes": [
+      "Plans: Free (limited agent requests); Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo.",
+      "Teams adds Grok Bot access and Bugbot agentic code review."
+    ]
+  },
+  "github-copilot": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "GPT-5-class models",
+        "role": "Default completion + chat",
+        "context": "varies",
+        "pricing": "Included in Copilot Pro $10/mo"
+      },
+      {
+        "model": "Claude Sonnet 4.6",
+        "role": "Selectable model for agent mode",
+        "context": "varies",
+        "pricing": "Included with premium request multiplier"
+      },
+      {
+        "model": "Grok 4.5 / 4.6",
+        "role": "xAI models added to Copilot model picker",
+        "context": "varies",
+        "pricing": "Premium requests"
+      }
+    ],
+    "notes": [
+      "Model availability varies by plan; check GitHub's Copilot model docs for current multipliers."
+    ]
+  },
+  "perplexity": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "Sonar (in-house)",
+        "role": "Fast cited search answers",
+        "context": "-",
+        "pricing": "Included in all plans"
+      },
+      {
+        "model": "Frontier models (GPT/Claude/Grok)",
+        "role": "Selectable reasoning models behind search",
+        "context": "varies",
+        "pricing": "Pro $20/mo includes limited frontier queries"
+      }
+    ],
+    "notes": [
+      "Perplexity routes to whichever underlying model you pick; its own Sonar handles most searches."
+    ]
+  },
+  "zapier-ai": {
+    "as_of": "2026-08-26",
+    "products": true,
+    "models": [
+      {
+        "model": "Zapier Agents",
+        "role": "AI agents that act across 8,000+ app integrations",
+        "context": "-",
+        "pricing": "Agent usage billed by plan"
+      },
+      {
+        "model": "Chatbots + Tables + Interfaces",
+        "role": "No-code AI surfaces on Zapier data",
+        "context": "-",
+        "pricing": "Included per plan tier"
+      },
+      {
+        "model": "Plans",
+        "role": "Free \u2192 Professional ~$19.99/mo \u2192 Team \u2192 Enterprise",
+        "context": "-",
+        "pricing": "Task-based billing"
+      }
+    ],
+    "notes": [
+      "Zapier sells automation outcomes (tasks), not model tokens \u2014 AI features ride on partner models."
+    ]
+  },
+  "make": {
+    "as_of": "2026-08-26",
+    "products": true,
+    "models": [
+      {
+        "model": "Make AI Agents",
+        "role": "Autonomous agents inside scenario workflows",
+        "context": "-"
+      },
+      {
+        "model": "Make.com platform",
+        "role": "Visual scenario builder, 2,000+ app integrations",
+        "context": "-"
+      },
+      {
+        "model": "Plans",
+        "role": "Free 1,000 ops/mo \u2192 Core ~$9/mo \u2192 Pro \u2192 Enterprise",
+        "context": "-",
+        "pricing": "Operation-based billing"
+      }
+    ],
+    "notes": [
+      "Make charges by operations executed, not tasks \u2014 usually cheaper at scale than Zapier."
+    ]
+  },
+  "n8n": {
+    "as_of": "2026-08-26",
+    "products": true,
+    "models": [
+      {
+        "model": "n8n AI Agent nodes + LangChain integration",
+        "role": "Self-hosted or cloud agentic workflows, bring your own LLM keys",
+        "context": "-"
+      },
+      {
+        "model": "n8n Cloud",
+        "role": "Hosted option",
+        "context": "-",
+        "pricing": "From ~$20/mo (starter)"
+      },
+      {
+        "model": "Self-hosted (fair-code)",
+        "role": "Free to run on your infrastructure",
+        "context": "-",
+        "pricing": "$0 license cost; pay your own compute"
+      }
+    ],
+    "notes": [
+      "n8n gives maximum control: your servers, your model keys, no per-task markup."
+    ]
+  },
+  "midjourney": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "Midjourney web + Discord generation",
+        "role": "Aesthetic image generation and style exploration",
+        "context": "image prompt workflow",
+        "pricing": "Basic/Standard/Pro/Mega tiers; GPU-time based"
+      },
+      {
+        "model": "V7 generation pipeline",
+        "role": "Default high-aesthetic image model family",
+        "context": "image generation",
+        "pricing": "Plan-limited fast/relaxed GPU usage"
+      },
+      {
+        "model": "Personalization/style references",
+        "role": "Maintain visual direction across campaigns",
+        "context": "style refs + image refs",
+        "pricing": "included by plan limits"
+      }
+    ],
+    "notes": [
+      "Midjourney is strongest when visual taste matters more than design-suite editing, templates, or team publishing."
+    ]
+  },
+  "canva-ai": {
+    "as_of": "2026-08-26",
+    "models": [
+      {
+        "model": "Magic Studio / Magic Media",
+        "role": "Image/video generation inside Canva projects",
+        "context": "design documents",
+        "pricing": "Free limited; Pro/Teams unlock higher usage"
+      },
+      {
+        "model": "Magic Design + Brand Kit",
+        "role": "Turn prompts/assets into editable social posts, slides, documents",
+        "context": "Canva templates",
+        "pricing": "Pro/Teams feature set"
+      },
+      {
+        "model": "Canva Teams workflows",
+        "role": "Brand approvals, collaboration, publishing",
+        "context": "workspace",
+        "pricing": "Per-seat team pricing"
+      }
+    ],
+    "notes": [
+      "Canva AI is strongest when the output must become editable, on-brand collateral rather than a standalone generated image."
+    ]
+  }
 }
