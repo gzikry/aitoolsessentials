@@ -66,7 +66,7 @@ def generate_opensearch(root: Path) -> None:
 
 def generate_human_sitemap(root: Path, tools: list[dict[str, Any]]) -> None:
     groups = [
-        ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html")]),
+        ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Fit Interview", "/fit-interview/"), ("Confidence Check", "/confidence-check/"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html")]),
         ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/")]),
         ("Trust", [("Changelog", "/changelog/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
         ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Weekly", "/weekly/"), ("RSS feed", "/feed.xml")]),
@@ -103,7 +103,7 @@ def generate_status(root: Path, tools: list[dict[str, Any]], today: str) -> None
         "tools_tracked": len(tools),
         "html_pages": html_count,
         "feeds": ["/feed.xml", "/weekly/feed.xml", "/changelog/feed.xml"],
-        "core_utilities": ["/stack-builder.html", "/tool-finder.html", "/cost-calculator.html", "/compare-shortlist.html"],
+        "core_utilities": ["/stack-builder.html", "/tool-finder.html", "/fit-interview/", "/confidence-check/", "/cost-calculator.html", "/compare-shortlist.html"],
         "editorial_boundaries": "Affiliate/sponsor relationships do not change editorial scoring; corrections are verified against official sources before publication.",
     }
     (root / "site-status.json").write_text(json.dumps(data, indent=2) + "\n")

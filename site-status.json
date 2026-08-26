@@ -12,6 +12,8 @@
   "core_utilities": [
     "/stack-builder.html",
     "/tool-finder.html",
+    "/fit-interview/",
+    "/confidence-check/",
     "/cost-calculator.html",
     "/compare-shortlist.html"
   ],
