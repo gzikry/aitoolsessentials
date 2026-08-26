@@ -306,6 +306,8 @@ _inventory_replacements = {
     'for all 40 tools': 'for the 40-tool pricing snapshot',
     'across all 40 tools': 'across the 40-tool pricing snapshot',
     'across 40 tools': 'across the 40-tool pricing snapshot',
+    "can't personally test all 40 tools": f"can't personally test all {_current_count} tools",
+    'verified snapshots for the 40-tool pricing snapshot': f'verified snapshots for {_current_count} tools',
 }
 for _path in root.rglob('*'):
     if not _path.is_file() or _path.suffix not in {'.html', '.txt', '.md', '.xml'}:
@@ -322,3 +324,30 @@ for _path in root.rglob('*'):
     except (UnicodeDecodeError, OSError):
         continue
 print(f'Refreshed inventory copy for {_current_count} tools')
+
+# Final metadata pass: downstream generators can rewrite head sections, so restore
+# structured data, discovery links, and knowledge schema after every other pass.
+subprocess.run(['python3', str(root / 'scripts' / 'enhance_structured_data.py')], check=True)
+_site_discovery_postprocess(root, tools, today)
+_knowledge_postprocess(root, tools, today)
+
+_expected_count = len(tools)
+_metadata_targets = {
+    root / 'change-radar/index.html': ('<article class="radar-row"', 'radar rows'),
+    root / 'confidence-check/index.html': ('<article class="confidence-card"', 'confidence cards'),
+    root / 'evidence/index.html': ('<tr id="evidence-', 'evidence rows'),
+}
+for _page, (_needle, _label) in _metadata_targets.items():
+    _html = _page.read_text()
+    _actual = _html.count(_needle)
+    if _actual != _expected_count:
+        raise RuntimeError(f'{_page}: expected {_expected_count} {_label}, found {_actual}')
+    for _start, _end in [('AIT STRUCTURED DATA START', 'AIT STRUCTURED DATA END'), ('AIT KNOWLEDGE SCHEMA START', 'AIT KNOWLEDGE SCHEMA END')]:
+        if _html.count(_start) != 1 or _html.count(_end) != 1:
+            raise RuntimeError(f'{_page}: metadata marker pair is not exactly once')
+    if _html.count('AIT DISCOVERY LINKS') != 1:
+        raise RuntimeError(f'{_page}: discovery metadata marker is not exactly once')
+if f'Search {_expected_count} tools' not in (root / 'confidence-check/index.html').read_text():
+    raise RuntimeError('confidence-check: current tool-count search prompt missing')
+print(f'Verified dynamic metadata coverage for {_expected_count} tools')
+print('Re-injected final metadata layers')
