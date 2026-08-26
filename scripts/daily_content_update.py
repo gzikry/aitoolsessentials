@@ -24,6 +24,31 @@ benchmark_age = (datetime.today().date() - datetime.fromisoformat(benchmark_data
 tool_source_age = (datetime.today().date() - datetime.fromisoformat(tool_source_data['checked_at']).date()).days
 print(f'Loaded {len(tools)} tools')
 
+
+def refresh_sitemap(root: Path) -> list[str]:
+    sitemap_urls = []
+    for p in sorted(root.rglob('*.html')):
+        if '.hermes' in p.parts:
+            continue
+        rel = p.relative_to(root)
+        html_text = p.read_text()
+        # Exclude internal, error, checkout-return, redirect, and noindex pages.
+        if 'admin' in rel.parts or p.name == '404.html' or 'name="robots" content="noindex' in html_text:
+            continue
+        if p.name == 'index.html':
+            url = f'/{rel.parent}/'
+        else:
+            url = f'/{rel}'
+        sitemap_urls.append(url)
+
+    sitemap = '''<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'''
+    for url in sitemap_urls:
+        sitemap += f'  <url><loc>https://aitoolsessentials.com{url}</loc></url>\n'
+    sitemap += '</urlset>\n'
+    (root / 'sitemap.xml').write_text(sitemap)
+    return sitemap_urls
+
+
 from generate_fit_interview import generate as generate_fit_interview
 generate_fit_interview(root, today)
 print('Generated AI Tool Fit Interview')
@@ -149,31 +174,7 @@ generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')
 
 # Generate sitemap
-sitemap_urls = []
-for p in sorted(root.rglob('*.html')):
-    if '.hermes' in p.parts:
-        continue
-    rel = p.relative_to(root)
-    html_text = p.read_text()
-    # Exclude internal, error, checkout-return, redirect, and noindex pages.
-    if 'admin' in str(rel) or p.name == '404.html' or 'name="robots" content="noindex' in html_text:
-        continue
-    if p.name == 'index.html':
-        url = f'/{rel.parent}/'
-    else:
-        url = f'/{rel}'
-    # Exclude admin pages from sitemap
-    if 'admin' in str(rel):
-        continue
-    sitemap_urls.append(url)
-
-sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-'''
-for url in sitemap_urls:
-    sitemap += f'  <url><loc>https://aitoolsessentials.com{url}</loc></url>\n'
-sitemap += '</urlset>\n'
-(root / 'sitemap.xml').write_text(sitemap)
+sitemap_urls = refresh_sitemap(root)
 print(f'Generated sitemap with {len(sitemap_urls)} URLs')
 
 # Write daily brief
@@ -356,4 +357,6 @@ for _page, (_needle, _label) in _metadata_targets.items():
 if f'Search {_expected_count} tools' not in (root / 'confidence-check/index.html').read_text():
     raise RuntimeError('confidence-check: current tool-count search prompt missing')
 print(f'Verified dynamic metadata coverage for {_expected_count} tools')
+_sitemap_urls_final = refresh_sitemap(root)
+print(f'Refreshed final sitemap with {len(_sitemap_urls_final)} URLs')
 print('Re-injected final metadata layers')

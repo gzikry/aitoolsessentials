@@ -183,7 +183,7 @@ def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
         ("AI Stack Builder", "/stack-builder.html", "Generate a shareable AI stack by role, budget, and workflow."),
         ("AI Tool Cost Calculator", "/cost-calculator.html", "Estimate monthly AI stack cost and find lower-cost swaps."),
         ("AI tools worth testing this week", "/weekly/", "Weekly public shortlist of tools worth testing."),
-        ("AI Workflow Guides", "/workflows/", "Long-tail workflow guides for podcast editing, YouTube production, sales call follow-up, local AI, agents, marketing, research, and app prototyping."),
+        ("AI Workflow Guides", "/workflows/", "Long-tail workflow guides for medical practice admin, podcast editing, YouTube production, sales call follow-up, local AI, agents, marketing, research, and app prototyping."),
         ("Editorial changelog", "/changelog/", "Transparent update log for site and review improvements."),
         ("Get reviewed", "/get-reviewed/", "Vendor submission and editorial-boundary guide."),
         ("AI Pricing Watch", "/pricing-watch/", "Public tracker of verified AI pricing snapshots across the current directory, with an automatic change log."),

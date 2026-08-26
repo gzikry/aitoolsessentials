@@ -187,7 +187,7 @@ def main():
     if sitemap.exists():
         html_count = len([
             p for p in ROOT.rglob('*.html')
-            if 'admin' not in str(p.relative_to(ROOT))
+            if 'admin' not in p.relative_to(ROOT).parts
             and p.name != '404.html'
             and 'name="robots" content="noindex' not in p.read_text()
         ])
