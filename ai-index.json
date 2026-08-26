@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-26",
-  "tools_count": 57,
+  "tools_count": 59,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -434,6 +434,20 @@
       "category": "Podcast",
       "price": "Free plan with published daily limits; Premium via official 30-day trial \u2014 no public USD list price on the plans page during this check",
       "url": "https://aitoolsessentials.com/tools/adobe-podcast/"
+    },
+    {
+      "name": "TenantCloud",
+      "slug": "tenantcloud",
+      "category": "Property Management",
+      "price": "Starter $25/mo or $180/year ($15/mo); Growth $35/$350 ($29/mo); Pro $60/$600 ($50/mo); Business from $100/mo custom; 14-day trial",
+      "url": "https://aitoolsessentials.com/tools/tenantcloud/"
+    },
+    {
+      "name": "Landlord Studio",
+      "slug": "landlord-studio",
+      "category": "Property Management",
+      "price": "Go Free for up to 3 units; Pro $12/mo or $144/year; Pro Plus $28/mo or $366/year; 14-day Pro trial",
+      "url": "https://aitoolsessentials.com/tools/landlord-studio/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

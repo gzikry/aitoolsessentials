@@ -227,6 +227,14 @@
     "adobe-podcast": {
       "date": "2026-08-26",
       "digest": "Adobe Podcast's official plans page lists a Free plan and a Premium plan with a 30-day free trial. Free Enhance Speech is audio-only, 30 minutes / 500 MB per file, 1 hour per day. Free Studio allows 3"
+    },
+    "tenantcloud": {
+      "date": "2026-08-26",
+      "digest": "TenantCloud's official pricing page lists Starter at $25/month or $180/year billed annually ($15/month, advertised as 40% off); Growth at $35/month or $350/year ($29/month); Pro at $60/month or $600/y"
+    },
+    "landlord-studio": {
+      "date": "2026-08-26",
+      "digest": "Landlord Studio's official pricing page lists Go as Free for up to 3 units; Pro at $12.00/month or $144 annually; and Pro Plus at $28.00/month or $366 annually. Official FAQ copy says annual billing s"
     }
   },
   "changes": [

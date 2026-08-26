@@ -1364,5 +1364,53 @@
     "status": "not_started",
     "next_action": "Check official Adobe Podcast affiliate page; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "tenantcloud",
+    "tool_name": "TenantCloud",
+    "priority": "medium",
+    "category": "Property Management",
+    "recommended_networks_to_check": [
+      "Direct partner/affiliate inquiry"
+    ],
+    "search_queries": [
+      "TenantCloud affiliate program",
+      "TenantCloud partner program"
+    ],
+    "target_pages": [
+      "tools/tenantcloud/",
+      "articles/best-ai-tools-for-property-managers.html"
+    ],
+    "best_audiences": [
+      "Property managers",
+      "Landlords"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "landlord-studio",
+    "tool_name": "Landlord Studio",
+    "priority": "medium",
+    "category": "Property Management",
+    "recommended_networks_to_check": [
+      "Direct partner/affiliate inquiry"
+    ],
+    "search_queries": [
+      "Landlord Studio affiliate program",
+      "Landlord Studio partner program"
+    ],
+    "target_pages": [
+      "tools/landlord-studio/",
+      "articles/best-ai-tools-for-property-managers.html"
+    ],
+    "best_audiences": [
+      "Landlords",
+      "Property managers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
+    "notes": "Do not invent affiliate URLs. Use official URL until approved."
   }
 ]

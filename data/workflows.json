@@ -447,5 +447,197 @@
       "instrumentl vs grantable",
       "free ai tools for nonprofits"
     ]
+  },
+  {
+    "slug": "property-manager-operations",
+    "title": "AI tools for property manager operations",
+    "description": "Compare landlord software and writing assistants for listings, rent follow-up, and maintenance notes. Not a substitute for fair-housing review or licensed property-management advice.",
+    "audience": "Property managers, independent landlords, and small rental operators",
+    "primary_tools": [
+      "landlord-studio",
+      "tenantcloud",
+      "chatgpt",
+      "canva-ai",
+      "notion-ai",
+      "otter-ai"
+    ],
+    "decision_steps": [
+      "Start on Landlord Studio Go or a TenantCloud 14-day trial with one sanitized unit.",
+      "Keep tenant identifiers, screening reports, and Social Security numbers out of consumer chat tools.",
+      "Compare listing publish time, rent-reminder setup, maintenance ticket flow, and export ownership.",
+      "Have a human review every listing and screening decision for fair-housing and local-law issues."
+    ],
+    "guardrails": [
+      "Not legal, fair-housing, or tenant-screening certification.",
+      "Do not paste applicant Social Security numbers, bank details, or eviction files into a personal chatbot.",
+      "Vendor ROI calculators are marketing, not audited results.",
+      "Listing copy that mentions families, disability, or protected classes needs a human compliance check."
+    ],
+    "search_queries": [
+      "ai tools for property managers",
+      "best landlord software with ai",
+      "ai for rental property management",
+      "tenantcloud vs landlord studio"
+    ]
+  },
+  {
+    "slug": "rental-listing-copy",
+    "title": "AI tools for rental listing copy",
+    "description": "Draft rental listings and social posts from amenity lists, then run a fair-housing check before you syndicate. Not a listing-compliance certification.",
+    "audience": "Landlords, leasing agents, and small property managers",
+    "primary_tools": [
+      "chatgpt",
+      "claude",
+      "canva-ai",
+      "landlord-studio",
+      "tenantcloud"
+    ],
+    "decision_steps": [
+      "Start from a feature list and photos, not a competitor's listing.",
+      "Generate two drafts, then remove any language that could steer protected classes.",
+      "Compare Canva or Landlord Studio syndication against a manual Zillow/Apartments post.",
+      "Do not publish until a human reads the listing for fair-housing issues."
+    ],
+    "guardrails": [
+      "Not a fair-housing or advertising-law certification.",
+      "Do not include applicant criteria that could discriminate.",
+      "Keep unit photos and tenant faces out of consumer image generators unless you have rights."
+    ],
+    "search_queries": [
+      "ai rental listing description generator",
+      "ai tools for apartment listings",
+      "fair housing ai listing copy"
+    ]
+  },
+  {
+    "slug": "consultant-invoicing-admin",
+    "title": "AI tools for consultant invoicing and admin",
+    "description": "Build a lean admin stack for invoices, follow-ups, and client notes without putting client financials into a consumer chatbot.",
+    "audience": "Solo consultants and independent operators",
+    "primary_tools": [
+      "notion-ai",
+      "chatgpt",
+      "claude",
+      "zapier-ai",
+      "make",
+      "microsoft-copilot"
+    ],
+    "decision_steps": [
+      "List the weekly admin jobs: invoice, reminder, notes, proposal.",
+      "Keep client bank details and tax IDs out of consumer chat.",
+      "Test one invoice follow-up and one proposal draft on sanitized data.",
+      "Pay for automation only after it removes a weekly task."
+    ],
+    "search_queries": [
+      "ai tools for consultant invoicing",
+      "ai admin stack for freelancers",
+      "best ai for solo consultant admin"
+    ]
+  },
+  {
+    "slug": "personal-knowledge-base",
+    "title": "AI tools for a personal knowledge base",
+    "description": "Compare note and research tools for a private knowledge base you can search later. Prefer exportable notes over a locked chat history.",
+    "audience": "Researchers, consultants, and operators building a second brain",
+    "primary_tools": [
+      "notion-ai",
+      "perplexity",
+      "claude",
+      "chatgpt",
+      "microsoft-copilot"
+    ],
+    "decision_steps": [
+      "Pick one source of truth: notes app or local files, not five chat threads.",
+      "Test export of a 10-note cluster before paying annually.",
+      "Check whether your plan trains on uploaded files.",
+      "Do not store client-identifiable files in a consumer workspace."
+    ],
+    "search_queries": [
+      "ai personal knowledge base",
+      "best ai notes app for research",
+      "notion ai vs chatgpt for knowledge base"
+    ]
+  },
+  {
+    "slug": "transcript-to-newsletter",
+    "title": "AI tools for transcript-to-newsletter publishing",
+    "description": "Turn a podcast or meeting transcript into an edited newsletter draft, then fact-check names and quotes before you send.",
+    "audience": "Podcasters, newsletter writers, and community operators",
+    "primary_tools": [
+      "descript",
+      "otter-ai",
+      "chatgpt",
+      "claude",
+      "canva-ai"
+    ],
+    "decision_steps": [
+      "Start with one real episode or meeting, not a sample file.",
+      "Compare cleanup time in Descript or Otter, then drafting time in Claude or ChatGPT.",
+      "Verify every quote and proper name against the transcript.",
+      "Check guest consent before publishing a recap."
+    ],
+    "search_queries": [
+      "ai transcript to newsletter",
+      "turn podcast transcript into newsletter",
+      "descript to newsletter workflow"
+    ]
+  },
+  {
+    "slug": "coding-assistant-security-review",
+    "title": "AI tools for a coding-assistant security review",
+    "description": "Evaluate coding assistants for a team rollout by training policy, repo access, and a repeatable security checklist. Not a penetration-test certification.",
+    "audience": "Engineering managers and security-minded developers",
+    "primary_tools": [
+      "cursor",
+      "github-copilot",
+      "claude",
+      "chatgpt",
+      "hermes-agent"
+    ],
+    "decision_steps": [
+      "Write down whether code may leave your network.",
+      "Compare current training and retention terms on the plan you would actually buy.",
+      "Run the same internal coding task in two assistants and record suggested-secret leaks.",
+      "Do not paste production secrets into any cloud assistant during the trial."
+    ],
+    "guardrails": [
+      "Not a security audit, SOC 2, or penetration-test certification.",
+      "Never paste live credentials, keys, or customer data into a trial prompt.",
+      "Vendor no-training claims are plan-specific and should be confirmed in writing."
+    ],
+    "search_queries": [
+      "ai coding assistant security review",
+      "cursor vs copilot data training",
+      "evaluate ai coding tools for a team"
+    ]
+  },
+  {
+    "slug": "commercial-image-rights",
+    "title": "AI tools for commercial image rights checks",
+    "description": "Compare image generators before you use output in ads or client work. Record the official commercial-use terms, not a forum claim.",
+    "audience": "Marketers, agencies, and solo designers",
+    "primary_tools": [
+      "adobe-firefly",
+      "canva-ai",
+      "midjourney",
+      "leonardo-ai",
+      "chatgpt"
+    ],
+    "decision_steps": [
+      "Read the official commercial-use and licensed-content terms for the exact plan.",
+      "Generate the same brief in two tools and compare editability and stock-content mixing.",
+      "Do not assume output is unique, trademark-clear, or yours to register.",
+      "Keep a dated screenshot of the terms you relied on."
+    ],
+    "guardrails": [
+      "Not legal advice and not a copyright or trademark clearance.",
+      "Plan-specific stock licenses can restrict commercial use even when the model output is otherwise allowed.",
+      "Do not treat community posts as the current license."
+    ],
+    "search_queries": [
+      "can i use midjourney images commercially",
+      "adobe firefly commercial use",
+      "ai image rights for client work"
+    ]
   }
 ]

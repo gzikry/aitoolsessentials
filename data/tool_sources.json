@@ -847,6 +847,36 @@
         "Whether Premium is bundled into specific Creative Cloud or Express seats should be confirmed in the Adobe checkout flow.",
         "Daily enhancement caps can change and should be re-read on the live plans page."
       ]
+    },
+    {
+      "slug": "tenantcloud",
+      "pricing_checked_date": "2026-08-26",
+      "pricing_summary": "TenantCloud's official pricing page lists Starter at $25/month or $180/year billed annually ($15/month, advertised as 40% off); Growth at $35/month or $350/year ($29/month); Pro at $60/month or $600/year ($50/month); and Business starting at $100/month as a custom plan. A 14-day trial is advertised. Prices exclude applicable taxes.",
+      "pricing_url": "https://www.tenantcloud.com/pricing",
+      "docs_url": "https://www.tenantcloud.com/",
+      "privacy_url": "https://www.tenantcloud.com/privacy",
+      "rights_url": "https://www.tenantcloud.com/pricing",
+      "verification_notes": "Official pricing page checked 2026-08-26. Some older third-party pages still show Starter at $18/month; the official page now lists $25/month monthly. Business is customized above the published $100/month starting point.",
+      "unresolved_claims": [
+        "Exact Business extras above the $100/month starting point are quote-specific.",
+        "Unit caps per self-serve plan were not enumerated as a single public table on the pricing page during this check.",
+        "Marketing customer-count figures are vendor claims."
+      ]
+    },
+    {
+      "slug": "landlord-studio",
+      "pricing_checked_date": "2026-08-26",
+      "pricing_summary": "Landlord Studio's official pricing page lists Go as Free for up to 3 units; Pro at $12.00/month or $144 annually; and Pro Plus at $28.00/month or $366 annually. Official FAQ copy says annual billing saves up to 20% and that a 14-day Pro trial requires no credit card. Official page states plans start from $0/month.",
+      "pricing_url": "https://www.landlordstudio.com/pricing",
+      "docs_url": "https://www.landlordstudio.com/pricing",
+      "privacy_url": "https://www.landlordstudio.com/privacy",
+      "rights_url": "https://www.landlordstudio.com/pricing",
+      "verification_notes": "Official pricing page checked 2026-08-26. Vendor savings calculator and review-count marketing are not treated as independently verified results. Per-extra-unit overage dollars were not published as a single public rate on the pricing cards during this check.",
+      "unresolved_claims": [
+        "Exact extra-unit pricing above the Go 3-unit cap is not a single public dollar rate on the pricing cards.",
+        "Vendor annual-savings calculator outputs are marketing estimates.",
+        "Whether a given bookkeeping feature is branded AI versus rules/OCR should be confirmed in the current product UI."
+      ]
     }
   ]
 }

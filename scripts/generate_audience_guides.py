@@ -117,6 +117,17 @@ GUIDES = {
                   'stay in the stack for transcript editing and voiceover. Check guest consent, voice-clone rights, '
                   'and watermarks before you publish.'),
     },
+    'best-ai-tools-for-property-managers.html': {
+        'kicker': 'Audience guide', 'audience': 'property managers and independent landlords',
+        'title': 'Best AI tools for property managers',
+        'subhead': 'Listings, rent follow-up, and maintenance notes with published free or trial paths — and no implied fair-housing or tenant-screening certification.',
+        'slugs':['landlord-studio','tenantcloud','chatgpt','canva-ai','notion-ai','otter-ai'],
+        'angle': ('Small portfolios should not start on a quote-only enterprise PMS. Landlord Studio publishes a '
+                  'Go plan at $0 for up to 3 units, then Pro at $12/month or $144/year. TenantCloud publishes Starter '
+                  'at $25/month or $180/year, with Growth and Pro self-serve tiers and Business from $100/month. '
+                  'Use ChatGPT or Canva only on de-identified amenity lists. Keep applicant Social Security numbers, '
+                  'screening reports, and bank details out of consumer chat. A human still owns fair-housing review.'),
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

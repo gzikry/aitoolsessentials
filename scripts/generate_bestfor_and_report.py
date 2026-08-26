@@ -103,6 +103,12 @@ ROLES = [
       ("descript", "Transcript-first edit and clip workflow"),
       ("elevenlabs", "Voiceover and clone checks after rights review")],
      "articles/best-ai-tools-for-podcasters.html"),
+    ("property-managers", "Property managers & landlords", "Listings, rent follow-up, and maintenance notes with published free or trial paths, and no implied fair-housing certification.",
+     [("landlord-studio", "Official $0 Go plan for up to 3 units"),
+      ("tenantcloud", "Official self-serve landlord OS with a 14-day trial"),
+      ("chatgpt", "Listing drafts from amenity lists after a fair-housing check"),
+      ("canva-ai", "Listing graphics and owner-update one-pagers")],
+     "articles/best-ai-tools-for-property-managers.html"),
 ]
 
 

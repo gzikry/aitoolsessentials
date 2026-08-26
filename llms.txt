@@ -16,6 +16,7 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /articles/best-ai-tools-for-teachers.html: free-tier teacher buyer guide for MagicSchool and Khanmigo without implying FERPA, grading, or student-data certification
 - /articles/best-ai-tools-for-nonprofits.html: grant-writing nonprofit buyer guide for Grantable and Instrumentl without implying fundraising or award certification
 - /articles/best-ai-tools-for-podcasters.html: podcaster buyer guide for Riverside, Adobe Podcast, Descript, and ElevenLabs without implying music-rights or likeness certification
+- /articles/best-ai-tools-for-property-managers.html: property-manager buyer guide for Landlord Studio and TenantCloud without implying fair-housing or tenant-screening certification
 - /change-radar/: return-use public tracker showing the latest recorded pricing and model-lineup checks, attention status, unresolved claims, and exact evidence/review links
 - /model-lineups/: source-dated ledger of the current model or product lineup for each covered tool, feeding the comparison-page lineup panels
 - /how-to/: source-linked practical setup guides for Hermes Agent, OpenClaw, Ollama, Open WebUI, and self-hosted AI security boundaries
