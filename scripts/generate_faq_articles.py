@@ -128,5 +128,37 @@ ARTICLES['ai-tools-for-real-estate-listings.html'] = {
 <p>This stays human. Contract review carries liability no current tool absorbs. Use <a href="../tools/otter-ai/">Otter</a> for meeting notes with consent; keep document review and execution manual.</p>
 <p>Full picks in the <a href="best-ai-tools-for-real-estate-agents.html">real estate agents guide</a>.</p>'''}
 
+ARTICLES['chatgpt-free-vs-plus.html'] = {
+ 'title':'ChatGPT free vs Plus: what the limits actually are','kicker':'Question guide','desc':'What OpenAI officially publishes about ChatGPT plan structure — without treating unofficial dollar figures as list prices.',
+ 'body':'''
+<p><strong>Short answer:</strong> start on Free. Upgrade only if a published limit interrupts real work more than once a week. Exact localized Plus prices were not consistently exposed on OpenAI’s official pricing page during the last check, so verify <a href="https://openai.com/chatgpt/pricing/" rel="sponsored noopener nofollow" target="_blank">openai.com/chatgpt/pricing</a> before you pay.</p>
+<h2>What is official</h2>
+<p>OpenAI lists ChatGPT Free, Go, Plus, Pro, Business, and Enterprise. Free is $0. Paid self-service plans are billed per user per month. Enterprise is sales-assisted. Our last official-source check (2026-08-25) did not treat unofficial third-party dollar amounts as list prices.</p>
+<h2>What paying is for</h2>
+<ul><li>Higher usage limits when Free interrupts a weekly workflow</li><li>Priority access to newer models and advanced features</li><li>Business or Enterprise terms when client files cannot sit on a consumer chat plan</li></ul>
+<h2>A one-week test</h2>
+<p>Use Free on your three real tasks. Write down every limit hit. If it happens five or more times, open the official pricing page and compare that cost to an hour of your time. See also <a href="is-chatgpt-worth-it.html">Is ChatGPT worth it?</a> and the <a href="../tools/chatgpt/">ChatGPT review</a>.</p>
+<p class="monetization-note">Plan structure checked against official OpenAI sources. Confirm current prices on the vendor page before purchasing.</p>'''}
 
+ARTICLES['perplexity-vs-google.html'] = {
+ 'title':'Is Perplexity better than Google?','kicker':'Question guide','desc':'When a cited research assistant is the better first stop than a general search page — without a fake winner.',
+ 'body':'''
+<p><strong>Short answer:</strong> Perplexity is better as a first draft of sources for a research question. Google is still the better place to open the actual page, check freshness, and run navigational searches. They are not substitutes.</p>
+<h2>Use Perplexity first when</h2>
+<ul><li>You need a cited starting set of pages for a specific question</li><li>You want a synthesis you will then verify in the linked sources</li><li>You are comparing two documented product claims</li></ul>
+<h2>Stay in Google when</h2>
+<ul><li>You already know the site you want</li><li>You need local results, shopping, or a login page</li><li>The answer depends on a page that was updated today</li></ul>
+<h2>Official pricing stance</h2>
+<p>Perplexity publishes free access plus paid individual and organization plans. The last official consumer-plan check did not expose current Pro or Max dollar prices on the reviewed public pages. An official organization-onboarding article listed Enterprise Pro at $40/seat monthly or $400/seat annually. Verify <a href="../tools/perplexity/">the Perplexity review</a> and Perplexity’s current pricing page before buying.</p>
+<p>Never treat a cited answer as the primary source. Open the link.</p>'''}
 
+ARTICLES['can-i-cancel-ai-subscriptions.html'] = {
+ 'title':'Can I cancel AI subscriptions anytime?','kicker':'Question guide','desc':'How to read cancel, downgrade, and annual-prepay terms before you lock a stack.',
+ 'body':'''
+<p><strong>Short answer:</strong> many tools let you cancel or downgrade, but annual prepay is not the same as month-to-month. Read the official billing page for the exact plan. Do not assume a forum post is current.</p>
+<h2>What to verify on the official page</h2>
+<ol><li>Is the advertised monthly price billed monthly, or is it an annual equivalent paid upfront?</li><li>Does canceling stop future charges or only stop auto-renew at period end?</li><li>Do unused credits expire at cancel?</li><li>Can you export your files after you leave?</li></ol>
+<h2>Examples already recorded on this site</h2>
+<ul><li>Landlord Studio’s official FAQ says you can cancel or downgrade anytime and keep access to your data.</li><li>Grantable’s official docs say canceling moves the account to Free and keeps workspaces.</li><li>Instrumentl’s official Discover rate is paid upfront annually, with a higher month-to-month alternative.</li><li>Riverside’s official FAQ says annual billing saves up to 20% versus monthly.</li></ul>
+<h2>Practical rule</h2>
+<p>Stay on monthly until the tool owns a weekly job. Annual discounts are real only if you would have paid all twelve months. Use the <a href="../pricing-watch/">pricing watch</a> and each tool’s official billing URL before you prepay.</p>'''}

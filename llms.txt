@@ -15,8 +15,11 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /articles/best-ai-tools-for-lawyers.html: confidentiality-first lawyer buyer guide for Harvey, Spellbook, and CoCounsel Legal without implying privilege or legal-advice certification
 - /articles/best-ai-tools-for-teachers.html: free-tier teacher buyer guide for MagicSchool and Khanmigo without implying FERPA, grading, or student-data certification
 - /articles/best-ai-tools-for-nonprofits.html: grant-writing nonprofit buyer guide for Grantable and Instrumentl without implying fundraising or award certification
-- /articles/best-ai-tools-for-podcasters.html: podcaster buyer guide for Riverside, Adobe Podcast, Descript, and ElevenLabs without implying music-rights or likeness certification
+- /articles/best-ai-tools-for-podcast-shows.html: podcaster buyer guide for Riverside, Adobe Podcast, Descript, and ElevenLabs without implying music-rights or likeness certification
 - /articles/best-ai-tools-for-property-managers.html: property-manager buyer guide for Landlord Studio and TenantCloud without implying fair-housing or tenant-screening certification
+- /articles/chatgpt-free-vs-plus.html: official-plan-structure answer for ChatGPT Free vs paid, without unofficial list prices
+- /articles/perplexity-vs-google.html: when to start in Perplexity versus Google, with citations still requiring a source click
+- /articles/can-i-cancel-ai-subscriptions.html: how to read cancel versus annual-prepay terms from official billing pages
 - /change-radar/: return-use public tracker showing the latest recorded pricing and model-lineup checks, attention status, unresolved claims, and exact evidence/review links
 - /model-lineups/: source-dated ledger of the current model or product lineup for each covered tool, feeding the comparison-page lineup panels
 - /how-to/: source-linked practical setup guides for Hermes Agent, OpenClaw, Ollama, Open WebUI, and self-hosted AI security boundaries

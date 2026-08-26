@@ -5,8 +5,8 @@
     "description": "Compare record, enhance, edit, clip, and voice tools for a weekly podcast. Check voice rights and watermarks before you publish.",
     "audience": "Podcasters and video creators",
     "primary_tools": [
-      "riverside",
-      "adobe-podcast",
+      "riverside-fm",
+      "adobe-enhance-speech",
       "descript",
       "elevenlabs",
       "canva-ai"

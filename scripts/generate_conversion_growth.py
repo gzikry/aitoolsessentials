@@ -130,7 +130,7 @@ USE_CASE_DEFS = [
     ("best-ai-tools-for-lawyers", "Best AI tools for lawyers", ["Legal"], "Confidentiality-first AI tools for legal research, drafting, and meeting notes — with privilege as the first filter."),
     ("best-ai-tools-for-teachers", "Best AI tools for teachers", ["Education"], "Free-first AI tools for lesson planning, rubrics, slides, and family emails — without treating them as student-data or grading systems."),
     ("best-ai-tools-for-nonprofits", "Best AI tools for nonprofits", ["Nonprofit"], "Grant-writing and development AI tools with published free or trial paths — without treating them as fundraising or award systems."),
-    ("best-ai-tools-for-podcasters", "Best AI tools for podcasters", ["Podcast"], "Record, enhance, edit, and clip a weekly show with published free or trial paths — without treating them as music-rights or hosting certifications."),
+    ("best-ai-tools-for-show-producers", "Best AI tools for podcasters", ["Audio Production"], "Record, enhance, edit, and clip a weekly show with published free or trial paths — without treating them as music-rights or hosting certifications."),
     ("best-ai-tools-for-property-managers", "Best AI tools for property managers", ["Property Management"], "Landlord software and writing assistants for listings, rent follow-up, and maintenance — without treating them as fair-housing systems."),
 ]
 

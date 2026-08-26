@@ -13,6 +13,14 @@ GitHub cannot provision its own cert while the Porkbun proxy terminates TLS firs
 ("The certificate does not exist yet"). This is cosmetic — real visitors get valid
 HTTPS end-to-end via the proxy cert.
 
+## If some new URLs 403 on the live domain
+Porkbun/pixie-sh (openresty) sits in front of GitHub Pages. It has returned
+403 for `/tools/riverside/` and `/categories/Podcast/` even when the files
+exist in git. Serve those reviews under unblocked slugs
+(`/tools/riverside-fm/`, `/tools/adobe-enhance-speech/`,
+`/articles/best-ai-tools-for-podcast-shows.html`, category `Audio Production`)
+instead of inventing a proxy bypass.
+
 ## If you ever switch DNS directly to GitHub Pages
 Point A records to 185.199.108-111.153 and www CNAME to gzikry.github.io,
 then wait for cert provisioning and flip Enforce HTTPS.

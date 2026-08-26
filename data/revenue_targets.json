@@ -1320,7 +1320,7 @@
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
   },
   {
-    "tool_slug": "riverside",
+    "tool_slug": "riverside-fm",
     "tool_name": "Riverside",
     "priority": "high",
     "category": "Podcast",
@@ -1332,8 +1332,8 @@
       "Riverside.fm affiliate program"
     ],
     "target_pages": [
-      "tools/riverside/",
-      "articles/best-ai-tools-for-podcasters.html"
+      "tools/riverside-fm/",
+      "articles/best-ai-tools-for-podcast-shows.html"
     ],
     "best_audiences": [
       "Podcasters",
@@ -1344,7 +1344,7 @@
     "notes": "Do not invent affiliate URLs. Official site lists an affiliate program; use official URL until approved."
   },
   {
-    "tool_slug": "adobe-podcast",
+    "tool_slug": "adobe-enhance-speech",
     "tool_name": "Adobe Podcast",
     "priority": "medium",
     "category": "Podcast",
@@ -1355,8 +1355,8 @@
       "Adobe Podcast affiliate program"
     ],
     "target_pages": [
-      "tools/adobe-podcast/",
-      "articles/best-ai-tools-for-podcasters.html"
+      "tools/adobe-enhance-speech/",
+      "articles/best-ai-tools-for-podcast-shows.html"
     ],
     "best_audiences": [
       "Podcasters"

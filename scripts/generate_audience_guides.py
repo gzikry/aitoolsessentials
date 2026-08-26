@@ -105,11 +105,11 @@ GUIDES = {
                   '14-day free trial. Vendor win-rate and revenue-uplift claims are marketing. Keep eligibility, '
                   'budgets, and authorized submissions with a human grant lead.'),
     },
-    'best-ai-tools-for-podcasters.html': {
+    'best-ai-tools-for-podcast-shows.html': {
         'kicker': 'Audience guide', 'audience': 'podcasters and show producers',
         'title': 'Best AI tools for podcasters',
         'subhead': 'Record, enhance, edit, clip, and voice a weekly show — with published free or trial paths and no implied music-rights or likeness certification.',
-        'slugs':['riverside','adobe-podcast','descript','elevenlabs','canva-ai','chatgpt'],
+        'slugs':['riverside-fm','adobe-enhance-speech','descript','elevenlabs','canva-ai','chatgpt'],
         'angle': ('Start on official free recording and cleanup tiers before stacking Descript plus a voice lab. '
                   'Riverside publishes Free at $0 with a 2-hour one-off multi-track allowance, then Pro at $24/month '
                   'billed annually or $29 monthly. Adobe Podcast publishes Free Enhance Speech and Studio limits and '

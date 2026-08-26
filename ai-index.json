@@ -423,17 +423,17 @@
     },
     {
       "name": "Riverside",
-      "slug": "riverside",
-      "category": "Podcast",
+      "slug": "riverside-fm",
+      "category": "Audio Production",
       "price": "Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom",
-      "url": "https://aitoolsessentials.com/tools/riverside/"
+      "url": "https://aitoolsessentials.com/tools/riverside-fm/"
     },
     {
       "name": "Adobe Podcast",
-      "slug": "adobe-podcast",
-      "category": "Podcast",
+      "slug": "adobe-enhance-speech",
+      "category": "Audio Production",
       "price": "Free plan with published daily limits; Premium via official 30-day trial \u2014 no public USD list price on the plans page during this check",
-      "url": "https://aitoolsessentials.com/tools/adobe-podcast/"
+      "url": "https://aitoolsessentials.com/tools/adobe-enhance-speech/"
     },
     {
       "name": "TenantCloud",

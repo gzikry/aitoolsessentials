@@ -22,10 +22,10 @@
 6. Best AI tools for healthcare admin (HIPAA-aware) ✅ shipped 2026-08-26 — article + use-case + Heidi Health / OpenEvidence / Dragon Copilot reviews
 
 ## Backlog: question-intent (interleave)
-- ChatGPT free vs Plus: what the limits actually are
-- Is Perplexity better than Google?
+- ChatGPT free vs Plus: what the limits actually are ✅ shipped 2026-08-26
+- Is Perplexity better than Google? ✅ shipped 2026-08-26
+- Can I cancel anytime? Subscription terms compared ✅ shipped 2026-08-26
 - Which AI tool writes best in [language]?
-- Can I cancel anytime? Subscription terms compared
 - Do AI tools work offline?
 - What happens to my data when I delete my account?
 
