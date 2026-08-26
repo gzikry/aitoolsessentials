@@ -73,6 +73,12 @@ ROLES = [
       ("microsoft-copilot", "Already in your M365 seat — check before buying anything"),
       ("notion-ai", "Docs, wikis, and light project tracking in one place")],
      "articles/best-ai-tools-for-small-business.html"),
+    ("healthcare-admin", "Healthcare admin & medical teams", "Documentation drafts and literature lookup for medical professionals, with no implied HIPAA or clinical-decision certification.",
+     [("heidi-health", "Self-serve clinical documentation drafts with a published free plan"),
+      ("openevidence", "Official-homepage-free cited literature lookup for healthcare professionals"),
+      ("dragon-copilot", "Microsoft quote-based enterprise clinical assistant"),
+      ("microsoft-copilot", "Practice-admin drafting inside an existing Microsoft 365 tenant")],
+     "articles/best-ai-tools-for-healthcare-admin.html"),
 ]
 
 

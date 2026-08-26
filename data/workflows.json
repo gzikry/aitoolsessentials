@@ -263,13 +263,13 @@
     "description": "Compare AI tools for de-identified meeting notes, policy drafts, staff training, task routing, and research prep in medical-office operations without treating them as clinical decision systems.",
     "audience": "Medical professionals, practice managers, clinic operators, and healthcare administrators",
     "primary_tools": [
+      "heidi-health",
+      "openevidence",
+      "dragon-copilot",
       "microsoft-copilot",
+      "perplexity",
       "notion-ai",
-      "slack-ai",
-      "fathom",
-      "otter-ai",
-      "fireflies",
-      "perplexity"
+      "otter-ai"
     ],
     "decision_steps": [
       "Start with de-identified administrative material: staff meeting notes, SOP drafts, scheduling handoffs, or training outlines.",
@@ -311,6 +311,37 @@
       "ai tools for support knowledge base",
       "ai customer support knowledge workflow",
       "ai tools for help docs"
+    ]
+  },
+  {
+    "slug": "clinical-documentation",
+    "title": "AI tools for clinical documentation drafts",
+    "description": "Compare ambient-scribe and medical-knowledge tools for clinician-reviewed documentation drafts and literature lookup. Not a substitute for clinical judgment, coding sign-off, or an approved EHR workflow.",
+    "audience": "Clinicians, medical scribes, and health-system documentation leads",
+    "primary_tools": [
+      "heidi-health",
+      "dragon-copilot",
+      "openevidence",
+      "microsoft-copilot",
+      "otter-ai"
+    ],
+    "decision_steps": [
+      "Use only de-identified or organization-approved encounters until legal, privacy, and IT review is complete.",
+      "Compare draft-note edit time, specialty template fit, and whether the note can be placed into the official record without copy-paste risk.",
+      "Ask each vendor for current BAA, retention, audit-log, and EHR integration terms in writing. Do not infer those terms from a homepage badge.",
+      "Keep diagnosis, treatment, prescribing, billing codes, and the signed medical record under a licensed professional."
+    ],
+    "guardrails": [
+      "Not medical advice and not a clinical-decision device certification.",
+      "No HIPAA, FDA, or EHR-certification claim is implied by listing a tool here.",
+      "Enterprise ambient tools such as Dragon Copilot are quote-based; do not treat third-party street prices as official.",
+      "If a tool cannot show contracts and admin controls your organization requires, keep it out of live patient workflows."
+    ],
+    "search_queries": [
+      "ai medical scribe tools",
+      "ai tools for clinical documentation",
+      "ambient ai documentation for clinicians",
+      "heidi vs dragon copilot"
     ]
   }
 ]

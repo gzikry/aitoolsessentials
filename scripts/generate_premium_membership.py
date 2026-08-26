@@ -122,8 +122,8 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
 
 def write_csv(path: Path, headers: list[str], rows: list[list[Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="") as f:
-        w = csv.writer(f)
+    with path.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(headers)
         w.writerows(rows)
 

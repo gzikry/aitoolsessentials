@@ -10,7 +10,8 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /guides/switch-guides/: 12 migration guides for switching between AI tools (ChatGPT→Claude, Zapier→Make, Midjourney→Leonardo, etc.) with transfer/break/cost/test-plan structure
 - /pricing-watch/: public AI pricing tracker — verified snapshots for 45 tools, each dated, plus an automatic change log
 - /fit-interview/: explainable AI tool fit interview using workflow, budget, priorities, complexity tolerance, and risk preference
-- /workflows/: long-tail workflow guides for medical practice admin, podcast editing, YouTube production, sales follow-up, client onboarding, local AI, agent automation, marketing campaigns, research, app prototyping, business writing, training videos, and support knowledge bases
+- /workflows/: long-tail workflow guides for medical practice admin, clinical documentation, podcast editing, YouTube production, sales follow-up, client onboarding, local AI, agent automation, marketing campaigns, research, app prototyping, business writing, training videos, and support knowledge bases
+- /articles/best-ai-tools-for-healthcare-admin.html: HIPAA-aware healthcare admin buyer guide that routes to Heidi Health, OpenEvidence, and Microsoft Dragon Copilot without implying clinical or compliance certification
 - /change-radar/: return-use public tracker showing the latest recorded pricing and model-lineup checks, attention status, unresolved claims, and exact evidence/review links
 - /model-lineups/: source-dated ledger of the current model or product lineup for each covered tool, feeding the comparison-page lineup panels
 - /how-to/: source-linked practical setup guides for Hermes Agent, OpenClaw, Ollama, Open WebUI, and self-hosted AI security boundaries

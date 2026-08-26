@@ -19,7 +19,7 @@
 3. Best AI tools for nonprofits (grant-writing angle)
 4. Best AI tools for podcasters
 5. Best AI tools for property managers
-6. Best AI tools for healthcare admin (HIPAA-aware)
+6. Best AI tools for healthcare admin (HIPAA-aware) ✅ shipped 2026-08-26 — article + use-case + Heidi Health / OpenEvidence / Dragon Copilot reviews
 
 ## Backlog: question-intent (interleave)
 - ChatGPT free vs Plus: what the limits actually are

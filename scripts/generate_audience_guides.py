@@ -2,6 +2,7 @@
 """Generate audience-based buyer guides (freelancers, students, agencies, developers, small business)."""
 import html as H
 import json
+from datetime import datetime
 from pathlib import Path
 
 GUIDES = {
@@ -55,6 +56,19 @@ GUIDES = {
                   'may be used for training unless opted out; business tiers differ. Prefer tools with '
                   'explicit no-training commitments on your plan tier.'),
     },
+    'best-ai-tools-for-healthcare-admin.html': {
+        'kicker': 'Audience guide', 'audience': 'healthcare administrators and medical professionals',
+        'title': 'Best AI tools for healthcare admin',
+        'subhead': 'Documentation drafts, literature lookup, and practice-admin workflows for medical teams — with no implied HIPAA, FDA, or clinical-decision certification.',
+        'slugs':['heidi-health','openevidence','dragon-copilot','microsoft-copilot','perplexity','otter-ai'],
+        'angle': ('Healthcare buyers need a different filter than consumer AI shoppers. Separate '
+                  'administrative drafting from anything that touches identifiable patient data, billing, '
+                  'or the signed medical record. Heidi Health is the public self-serve documentation '
+                  'starting point; OpenEvidence is official-homepage-free literature lookup for healthcare '
+                  'professionals; Dragon Copilot is Microsoft quote-based enterprise documentation. '
+                  'Vendor HIPAA marks are claims to verify in contract review, not certifications by this site. '
+                  'Do not paste PHI into a general tool during a trial.'),
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
@@ -75,6 +89,7 @@ def _e(x): return H.escape(str(x))
 def generate(root: Path) -> int:
     tools = {t['slug']: t for t in json.loads((root/'data/tools.json').read_text())}
     srcs = {x['slug']: x for x in json.loads((root/'data/tool_sources.json').read_text())['tools']}
+    today = datetime.today().strftime('%B %d, %Y')
     made = 0
     articles_dir = root/'articles'
     for fname, spec in GUIDES.items():
@@ -105,7 +120,7 @@ def generate(root: Path) -> int:
   <link rel="icon" href="../assets/aitools-bot-mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/aitools-bot-logo-256.png">
   <!-- AIT FAVICON END -->
-</head><body>{HEADER}<main><section class="scene scene-light article-hero"><p class="kicker light">{_e(spec['kicker'])}</p><h1>{_e(spec['title'])}</h1><p>{_e(spec['subhead'])}</p><p class="last-updated">Official sources checked August 21, 2026 · Editorial scores are AIToolsEssentials ratings, not benchmarks · Independent hands-on results not yet published</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse all tools</a><a class="button button-dark" href="../downloads/premium/aitools-premium-comparison-archive-2026-09.csv">Download comparison archive</a></div></section>
+</head><body>{HEADER}<main><section class="scene scene-light article-hero"><p class="kicker light">{_e(spec['kicker'])}</p><h1>{_e(spec['title'])}</h1><p>{_e(spec['subhead'])}</p><p class="last-updated">Official sources checked {today} · Editorial scores are AIToolsEssentials ratings, not benchmarks · Independent hands-on results not yet published</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse all tools</a><a class="button button-dark" href="../downloads/premium/aitools-premium-comparison-archive-2026-09.csv">Download comparison archive</a></div></section>
 <section class="scene scene-light"><article class="article-shell">
 <h2>How this stack is chosen</h2><p>{_e(spec['angle'])}</p>
 <h2>The shortlist</h2>

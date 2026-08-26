@@ -179,6 +179,18 @@
     "open-webui": {
       "date": "2026-08-26",
       "digest": "Open WebUI is self-hosted software; its official license documentation describes the current licensing and branding requirements, including distinctions for larger deployments. Optional enterprise/sup"
+    },
+    "heidi-health": {
+      "date": "2026-08-26",
+      "digest": "Heidi's official pricing page lists Free, Clinician, and Teams plans and a feature comparison covering transcription, templates, Ask Heidi, evidence features, team controls, EHR integration, SSO, and "
+    },
+    "openevidence": {
+      "date": "2026-08-26",
+      "digest": "The official OpenEvidence homepage states the product is free and unlimited for healthcare professionals. No self-serve paid consumer price list was published on that page during verification."
+    },
+    "dragon-copilot": {
+      "date": "2026-08-26",
+      "digest": "Microsoft's official Dragon Copilot product page does not publish a self-serve consumer price list; next steps route to a Microsoft representative. Microsoft Learn documents Physician Per User and Phy"
     }
   },
   "changes": [
