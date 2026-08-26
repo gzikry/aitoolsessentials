@@ -106,18 +106,6 @@ def generate(root: Path) -> int:
         p.write_text(page);made+=1
     return made
 
-ARTICLES['best-ai-tools-for-lawyers.html'] = {
- 'title':'Best AI tools for lawyers','kicker':'Audience guide','desc':'Research, drafting, and document review tools for legal work — with confidentiality as the first filter.',
- 'body':'''
-<p>Legal work adds a constraint most professions don't have: privilege. Before any tool enters your practice, confirm its business-tier data terms (no training on inputs, defined retention) and check your bar's guidance on AI use — several state bars have published opinions.</p>
-<h2>The confidentiality filter</h2>
-<p>Consumer chat tiers are not appropriate for client-identifiable material. Prefer business tiers with explicit no-training commitments, and never paste anything covered by privilege into a tool whose data terms you haven't read. See <a href="are-ai-tools-safe-for-business-data.html">our data-safety guide</a>.</p>
-<h2>Where tools fit</h2>
-<ul><li><strong>Claude</strong>: long contract and case-file analysis with careful instruction adherence</li><li><strong>Perplexity</strong>: fast statutory and case research — verify every citation in Westlaw or Lexis before relying on it (fabricated citations are a documented failure mode)</li><li><strong>ChatGPT</strong>: first-draft client letters, demand letters, and summarization</li><li><strong>Otter AI</strong>: meeting capture where all parties consent to recording</li><li><strong>Microsoft Copilot</strong>: if your practice runs on Microsoft 365, it keeps AI inside your tenant</li></ul>
-<h2>What stays human</h2>
-<p>Legal judgment, filing, and anything under signature. AI drafts; you own every word that goes to a court or client.</p>
-<p class="monetization-note">Pricing verified against official sources August 21, 2026. Verify current plans before purchasing.</p>'''}
-
 ARTICLES['does-google-index-ai-content.html'] = {
  'title':'Does Google penalize AI content?','kicker':'Straight answer','desc':'What Google actually says about AI-generated content, and what it means for publishers.',
  'body':'''

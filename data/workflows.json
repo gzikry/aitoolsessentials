@@ -343,5 +343,37 @@
       "ambient ai documentation for clinicians",
       "heidi vs dragon copilot"
     ]
+  },
+  {
+    "slug": "confidential-legal-drafting",
+    "title": "AI tools for confidential legal drafting",
+    "description": "Compare legal-specific and general AI tools for contract review, research memos, and drafting without treating them as a substitute for licensed legal judgment or a privilege-safe deployment.",
+    "audience": "Lawyers, in-house counsel, and legal operations teams",
+    "primary_tools": [
+      "harvey",
+      "spellbook",
+      "cocounsel",
+      "claude",
+      "perplexity",
+      "microsoft-copilot"
+    ],
+    "decision_steps": [
+      "Start with de-identified or fully sanitized matter files until ethics, conflicts, and IT have approved the vendor.",
+      "Prefer tools with written no-training, retention, access-control, and audit terms that match your bar guidance.",
+      "Verify every citation and authority in Westlaw, Lexis, or the primary source before a filing or client advice.",
+      "Keep legal judgment, privilege calls, and anything under signature with a licensed professional."
+    ],
+    "guardrails": [
+      "Not legal advice and not a substitute for a licensed attorney.",
+      "No privilege, confidentiality, or bar-compliance certification is implied by listing a tool.",
+      "Consumer chat tiers are the wrong place for client-identifiable or privileged material.",
+      "Harvey and Spellbook are quote-based; the only official dollar figure recorded here is Thomson Reuters\u2019 starting-at Westlaw Advantage with CoCounsel Essentials price."
+    ],
+    "search_queries": [
+      "ai tools for lawyers",
+      "best ai for legal research",
+      "ai contract review in word",
+      "confidential ai tools for law firms"
+    ]
   }
 ]

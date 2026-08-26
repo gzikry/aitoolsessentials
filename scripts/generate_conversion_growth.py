@@ -127,7 +127,7 @@ USE_CASE_DEFS = [
     ("best-ai-tools-for-marketers", "Best AI tools for marketers", ["Creative", "Marketing", "Writing", "Automation"], "AI tools for campaigns, copy, creative assets, research, and workflow automation."),
     ("best-ai-tools-for-sales-teams", "Best AI tools for sales teams", ["Automation", "Meetings", "Productivity"], "AI tools for call notes, lead follow-up, CRM workflows, and sales enablement."),
     ("best-ai-tools-for-healthcare-admin", "Best AI tools for healthcare admin", ["Healthcare"], "Compare medical documentation, literature lookup, and practice-admin AI tools without treating them as clinical-decision systems."),
-    ("best-ai-tools-for-lawyers", "Best AI tools for lawyers", ["Research", "Writing"], "Confidentiality-first AI tools for legal research, drafting, and meeting notes — with privilege as the first filter."),
+    ("best-ai-tools-for-lawyers", "Best AI tools for lawyers", ["Legal"], "Confidentiality-first AI tools for legal research, drafting, and meeting notes — with privilege as the first filter."),
 ]
 
 PROMOTION_TARGETS = [

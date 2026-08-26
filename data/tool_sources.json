@@ -712,6 +712,51 @@
         "Consumption-unit rates and included Flex sessions can change and should be read from current Microsoft licensing guidance.",
         "Availability by country and care setting is not fully enumerated on the marketing page."
       ]
+    },
+    {
+      "slug": "harvey",
+      "pricing_checked_date": "2026-08-26",
+      "pricing_summary": "Harvey\u2019s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
+      "pricing_url": "https://www.harvey.ai/",
+      "docs_url": "https://www.harvey.ai/",
+      "privacy_url": "https://www.harvey.ai/en-US/security",
+      "rights_url": "https://www.harvey.ai/",
+      "verification_notes": "Official homepage copy describes Harvey as AI software for legal and professional services, introduces Harvey II, and states enterprise default controls including SAML SSO, audit logs, IP allow-listing, and data lifecycle management. Official customer-count marketing figures are vendor claims, not independently audited here.",
+      "unresolved_claims": [
+        "No official public list price was published on the homepage during this check.",
+        "Data-processing, training, and privilege-safe deployment terms are contract-specific.",
+        "Marketing counts of organizations, professionals, and AmLaw 100 usage are vendor claims."
+      ]
+    },
+    {
+      "slug": "spellbook",
+      "pricing_checked_date": "2026-08-26",
+      "pricing_summary": "Spellbook\u2019s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
+      "pricing_url": "https://spellbook.com/",
+      "docs_url": "https://help.spellbook.legal/en/articles/9926203-getting-started-with-spellbook",
+      "privacy_url": "https://spellbook.com/security",
+      "rights_url": "https://spellbook.com/",
+      "verification_notes": "Official homepage describes Word-native contract review and drafting, intake-to-signed-contract search, and a zero-retention statement that LLM providers do not train on or store customer data. A public trust center lists SOC 2 Type II and other vendor compliance resources. Treat those as vendor claims to verify in contract review.",
+      "unresolved_claims": [
+        "Exact per-seat USD pricing is quote-specific and was not listed on the official homepage.",
+        "Zero-retention and training statements should be confirmed in the current DPA/contract, not only marketing copy.",
+        "HIPAA/SOC/GDPR resources on the trust center are vendor-published, not independently certified here."
+      ]
+    },
+    {
+      "slug": "cocounsel",
+      "pricing_checked_date": "2026-08-26",
+      "pricing_summary": "Thomson Reuters\u2019 official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
+      "pricing_url": "https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing",
+      "docs_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
+      "privacy_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
+      "rights_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
+      "verification_notes": "Official CoCounsel Legal product page describes Westlaw- and Practical Law-grounded research, analysis, and drafting, plus Word/Outlook/Teams integrations and a statement that customer data is not used to train underlying models. The $415.35/month figure is the official starting-at price for the named Westlaw Advantage with CoCounsel Essentials bundle observed on 2026-08-26, not a complete firmwide quote.",
+      "unresolved_claims": [
+        "Standalone CoCounsel Legal seat pricing remains sales-configured.",
+        "Starting-at Westlaw bundle prices can be personalized by jurisdiction, attorney count, and term.",
+        "Vendor SOC 2 / ISO 42001 and no-training statements should be confirmed in the current customer agreement."
+      ]
     }
   ]
 }

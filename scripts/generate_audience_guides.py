@@ -69,6 +69,18 @@ GUIDES = {
                   'Vendor HIPAA marks are claims to verify in contract review, not certifications by this site. '
                   'Do not paste PHI into a general tool during a trial.'),
     },
+    'best-ai-tools-for-lawyers.html': {
+        'kicker': 'Audience guide', 'audience': 'lawyers and in-house counsel',
+        'title': 'Best AI tools for lawyers',
+        'subhead': 'Confidentiality-first tools for legal research, contract review, and drafting — with no implied privilege, bar, or legal-advice certification.',
+        'slugs':['harvey','spellbook','cocounsel','claude','perplexity','microsoft-copilot'],
+        'angle': ('Legal buyers start with privilege, not features. Harvey is the quote-based enterprise '
+                  'platform for firms and in-house teams. Spellbook is Word-native contract review and drafting. '
+                  'CoCounsel Legal is Thomson Reuters’ Westlaw- and Practical Law-grounded assistant; the only '
+                  'official dollar figure recorded here is Westlaw Advantage with CoCounsel Essentials starting '
+                  'at $415.35/month. Consumer chat tiers are the wrong place for client-identifiable files. '
+                  'Verify every citation in a primary research product before advice or filing.'),
+    },
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

@@ -14,7 +14,7 @@
 6. Automating client onboarding with Zapier or Make
 
 ## Backlog: audience guides (weeks 7–12)
-1. Best AI tools for lawyers (confidentiality-first)
+1. Best AI tools for lawyers (confidentiality-first) ✅ shipped 2026-08-26 — article + workflow + Harvey / Spellbook / CoCounsel reviews
 2. Best AI tools for teachers (free-tier focus)
 3. Best AI tools for nonprofits (grant-writing angle)
 4. Best AI tools for podcasters

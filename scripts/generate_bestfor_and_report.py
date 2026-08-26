@@ -79,6 +79,12 @@ ROLES = [
       ("dragon-copilot", "Microsoft quote-based enterprise clinical assistant"),
       ("microsoft-copilot", "Practice-admin drafting inside an existing Microsoft 365 tenant")],
      "articles/best-ai-tools-for-healthcare-admin.html"),
+    ("lawyers", "Lawyers & in-house counsel", "Confidentiality-first legal research, contract review, and drafting, with no implied privilege or legal-advice certification.",
+     [("harvey", "Quote-based enterprise legal platform for firms and in-house teams"),
+      ("spellbook", "Word-native contract review and drafting"),
+      ("cocounsel", "Westlaw- and Practical Law-grounded research and drafting"),
+      ("claude", "Long-document analysis on a business tier after ethics review")],
+     "articles/best-ai-tools-for-lawyers.html"),
 ]
 
 

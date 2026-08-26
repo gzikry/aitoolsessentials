@@ -191,6 +191,18 @@
     "dragon-copilot": {
       "date": "2026-08-26",
       "digest": "Microsoft's official Dragon Copilot product page does not publish a self-serve consumer price list; next steps route to a Microsoft representative. Microsoft Learn documents Physician Per User and Phy"
+    },
+    "harvey": {
+      "date": "2026-08-26",
+      "digest": "Harvey\u2019s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported."
+    },
+    "spellbook": {
+      "date": "2026-08-26",
+      "digest": "Spellbook\u2019s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as"
+    },
+    "cocounsel": {
+      "date": "2026-08-26",
+      "digest": "Thomson Reuters\u2019 official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by juri"
     }
   },
   "changes": [
