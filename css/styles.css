@@ -1023,3 +1023,24 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   .review-content p, .review-content li { font-size:16px; }
   .review-content h2 { font-size:28px; }
 }
+
+
+/* Hardware compatibility and purchase guide */
+.hardware-hero { max-width: 980px; margin:0 auto; padding:88px 28px 68px; text-align:center; }
+.hardware-hero h1 { max-width:900px; margin:12px auto 18px; }
+.hardware-hero .subhead { max-width:780px; margin:0 auto; }
+.hardware-badge { display:inline-block; margin-top:22px; padding:8px 14px; border:1px solid rgba(255,255,255,.22); border-radius:999px; color:#d7d9e8; font-size:13px; }
+.hardware-page { max-width:1120px; margin:0 auto; padding:72px 28px; }
+.hardware-alert { padding:22px 24px; margin-bottom:32px; border:1px solid #e8c97d; border-radius:18px; background:#fff8e6; }
+.hardware-alert strong { display:block; margin-bottom:7px; }
+.hardware-alert p { margin:0; color:#66562b; line-height:1.6; }
+.hardware-card { padding:28px; margin:24px 0; border:1px solid #e1e3ee; border-radius:20px; background:#fff; box-shadow:0 14px 34px -28px rgba(12,18,55,.35); }
+.hardware-card h2 { margin-top:0; }
+.hardware-card p, .hardware-card li { color:#5f6475; line-height:1.65; }
+.hardware-specs { padding-left:22px; }
+.hardware-card table { width:100%; border-collapse:collapse; }
+.hardware-card th { text-align:left; color:#252b49; font-size:14px; }
+.hardware-card td { color:#5f6475; line-height:1.55; }
+.hardware-card a { color:#35419e; font-weight:650; }
+.hardware-next { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+@media (max-width:640px) { .hardware-hero,.hardware-page{padding-left:18px;padding-right:18px}.hardware-hero{padding-top:64px}.hardware-card{padding:20px 18px}.hardware-next{flex-direction:column}.hardware-next .button{text-align:center}.hardware-card .table-wrap{margin-left:-2px;margin-right:-2px} }

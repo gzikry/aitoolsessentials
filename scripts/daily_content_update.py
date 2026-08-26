@@ -120,6 +120,9 @@ print('Generated change radar:', generate_change_radar(root))
 from generate_how_tos import generate as generate_how_tos
 print('Generated how-to library:', generate_how_tos(root))
 
+from generate_hardware import generate as generate_hardware
+print('Generated hardware guide:', generate_hardware(root))
+
 from generate_bestfor_and_report import generate_best_for, generate_pricing_report
 generate_best_for(root)
 generate_pricing_report(root, today)
