@@ -277,5 +277,8 @@ print('Injected exact evidence links:', _evidence_review_postprocess(root))
 from generate_exit_plan import postprocess as _exit_plan_postprocess
 print('Injected exit plans:', _exit_plan_postprocess(root, tools))
 
+from generate_test_protocol import postprocess as _test_protocol_postprocess
+print('Injected test protocols:', _test_protocol_postprocess(root, tools))
+
 from generate_bestfor_and_report import postprocess_refresh as _bestfor_refresh
 print('Best-for deals strip refreshed:', _bestfor_refresh(root))
