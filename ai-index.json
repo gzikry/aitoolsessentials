@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-27",
-  "tools_count": 59,
+  "tools_count": 60,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -448,6 +448,13 @@
       "category": "Property Management",
       "price": "Go Free for up to 3 units; Pro $12/mo or $144/year; Pro Plus $28/mo or $366/year; 14-day Pro trial",
       "url": "https://aitoolsessentials.com/tools/landlord-studio/"
+    },
+    {
+      "name": "HtmlSlides",
+      "slug": "htmlslides",
+      "category": "Presentations",
+      "price": "Free + Pro $9.90/mo (launch offer) + credit packs from $1",
+      "url": "https://aitoolsessentials.com/tools/htmlslides/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

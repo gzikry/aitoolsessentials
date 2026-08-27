@@ -877,6 +877,15 @@
         "Vendor annual-savings calculator outputs are marketing estimates.",
         "Whether a given bookkeeping feature is branded AI versus rules/OCR should be confirmed in the current product UI."
       ]
+    },
+    {
+      "slug": "htmlslides",
+      "pricing_checked_date": "2026-08-27",
+      "pricing_summary": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5/60 credits, $10/150 credits. Credits non-refundable, may expire.",
+      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change — launch offer price noted.",
+      "pricing_url": "https://www.htmlslides.ai/pricing",
+      "docs_url": "https://www.htmlslides.ai/terms",
+      "privacy_url": "https://www.htmlslides.ai/privacy"
     }
   ]
 }

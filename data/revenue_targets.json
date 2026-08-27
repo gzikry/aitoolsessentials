@@ -1412,5 +1412,28 @@
     "status": "not_started",
     "next_action": "Check direct affiliate/partner page; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "htmlslides",
+    "tool_name": "HtmlSlides",
+    "priority": "low",
+    "category": "Presentations",
+    "recommended_networks_to_check": [
+      "Direct affiliate/partner inquiry"
+    ],
+    "search_queries": [
+      "HtmlSlides affiliate program",
+      "htmlslides.ai partner program"
+    ],
+    "target_pages": [
+      "tools/htmlslides/"
+    ],
+    "best_audiences": [
+      "Presentations",
+      "Content creators"
+    ],
+    "status": "not_started",
+    "next_action": "Email vendor about affiliate or partner terms",
+    "notes": "Vendor submitted via form. Launch offer pricing suggests early-stage product. No affiliate program visible on site. Revisit when traffic grows."
   }
 ]

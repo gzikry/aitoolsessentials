@@ -3027,5 +3027,63 @@
     "trial_checklist": "Create a Go account with one sanitized unit. Test listing, rent reminder, and expense entry. If you need bank feeds, use the official 14-day Pro trial and compare export quality before paying $144/year.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high"
+  },
+  {
+    "slug": "htmlslides",
+    "name": "HtmlSlides",
+    "category": "Presentations",
+    "best_for": "Creating, playing, sharing, and embedding interactive HTML slide decks from a topic or brief",
+    "price": "Free + Pro $9.90/mo (launch offer) + credit packs from $1",
+    "rating": 3.9,
+    "official": "https://www.htmlslides.ai",
+    "summary": "An AI HTML presentation maker that turns prompts into interactive, browser-playable slide decks you can share, embed, and export as video.",
+    "use_cases": [
+      "Interactive pitch decks that play in any browser",
+      "Embeddable presentations for websites and portfolios",
+      "AI-generated decks from a topic or brief using Claude Code, Cursor, or Codex",
+      "Sharing presentation links instead of sending PowerPoint files"
+    ],
+    "pros": [
+      "Decks are real HTML — animations, interactions, and live content beyond static slides",
+      "Plays in the browser with no install required",
+      "Share via link, embed, or local file upload",
+      "Free tier includes 10 templates and 50MB storage",
+      "One-click video export on Pro",
+      "Terms clearly state users retain ownership of their content"
+    ],
+    "cons": [
+      "Newer product with a smaller template marketplace than Gamma or Canva",
+      "Pro is a launch offer price — may increase",
+      "Credits are non-refundable and may expire",
+      "No offline mode — requires a browser and account for most features",
+      "Editing text and speaker notes in saved presentations requires Pro"
+    ],
+    "key_features": [
+      "Prompt-to-deck: copy the create-page prompt and hand it to any AI agent to generate the full deck",
+      "Browser-based player with slide navigator, presenter display, and fullscreen mode",
+      "Template marketplace with free and premium templates",
+      "Share via signed-in links, embed code, or local .html/.hslides file upload",
+      "One-click video export (Pro)",
+      "Speaker Mode with dual-screen view: current slide, next-slide preview, and editable notes (Pro)",
+      "GitHub and Google sign-in",
+      "Stripe-processed payments"
+    ],
+    "faq": [
+      [
+        "Is HtmlSlides free?",
+        "Yes — a signed-in Free account can upload, play, and share, with 10 official templates and 50MB of storage. Pro is $9.90/month at launch and adds unlimited templates, 1GB storage, text editing, Speaker Mode, and video export."
+      ],
+      [
+        "How is HtmlSlides different from Gamma or Canva?",
+        "HtmlSlides outputs real interactive HTML rather than static slide images. Decks play in the browser with animations and live content. Gamma leads on generation polish and Canva on design breadth — see our best AI presentation tools guide."
+      ],
+      [
+        "Do I own my presentations?",
+        "Per the Terms of Service (last updated July 11, 2026), you retain ownership of your content and grant htmlslides a limited license to host and display it solely to operate the service."
+      ]
+    ],
+    "trial_checklist": "Use a real presentation task — not a demo prompt. Generate a deck from your actual topic using the create-page prompt with an AI agent. Verify whether the HTML deck format (animations, interactions, shareability) materially improves on your current slide workflow. Test sharing via link and embed. Check whether the free tier's 50MB storage and 10 templates are sufficient or if Pro features (video export, Speaker Mode, text editing) are needed. Compare output quality and sharing experience against Gamma or Canva for the same task.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard"
   }
 ]
