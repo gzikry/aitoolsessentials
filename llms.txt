@@ -30,6 +30,7 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /articles/is-gemini-worth-it.html: who benefits from a paid Google Gemini plan inside Workspace
 - /articles/is-notion-ai-worth-it.html: when AI inside your knowledge base earns its cost vs a separate assistant
 - /articles/best-ai-tools-for-beginners.html: free-first starter AI stack for beginners, with upgrade triggers and scorecard workflow
+- /articles/launch-ai-business-whop-blueprints.html: deploy a working digital product business with Whop CLI Blueprints
 - /change-radar/: return-use public tracker showing the latest recorded pricing and model-lineup checks, attention status, unresolved claims, and exact evidence/review links
 - /model-lineups/: source-dated ledger of the current model or product lineup for each covered tool, feeding the comparison-page lineup panels
 - /how-to/: source-linked practical setup guides for Hermes Agent, OpenClaw, Ollama, Open WebUI, and self-hosted AI security boundaries

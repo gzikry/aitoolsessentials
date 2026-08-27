@@ -247,6 +247,10 @@
     "htmlslides": {
       "date": "2026-08-27",
       "digest": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5"
+    },
+    "whop-cli": {
+      "date": "2026-08-27",
+      "digest": "Free CLI install. Whop platform fees apply on sales (standard Whop transaction fees). No separate CLI subscription."
     }
   },
   "changes": [

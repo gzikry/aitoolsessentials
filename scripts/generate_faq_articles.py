@@ -292,3 +292,27 @@ ARTICLES['best-ai-tools-for-beginners.html'] = {
 <h2>One-week beginner test</h2>
 <ol><li>Pick three real tasks you already do every week.</li><li>Run each task through the same assistant for five workdays.</li><li>Record where the output saved time and where you had to correct it.</li><li>Use <a href="../downloads/ai-tool-evaluation-scorecard.html">the free scorecard</a> to decide what stays.</li></ol>
 <p><strong>Rule:</strong> one useful workflow beats ten installed tools. If a tool does not save time in a real task during week one, remove it from the stack.</p>'''}
+
+ARTICLES['launch-ai-business-whop-blueprints.html'] = {
+ 'title':'How to launch an AI business with Whop Blueprints','kicker':'How-to guide','desc':'Deploy a working digital product business — products, pricing, website, and checkout — in one command with the Whop CLI and Blueprints.',
+ 'body':'''
+<p><strong>Short answer:</strong> Whop Blueprints let you deploy a complete business — products, pricing, a live website, and payment wiring — in one step, either from the gallery or the CLI. You can then manage everything from the terminal or hand it to an AI agent.</p>
+<h2>What a Blueprint deploys</h2>
+<ul><li><strong>Products:</strong> copied from the blueprint with pricing plans, images, and store-page styling</li><li><strong>Website:</strong> live at your own whop.site address</li><li><strong>Payment wiring:</strong> the site can take payments from the moment it is up</li></ul>
+<h2>Step 1: Pick a Blueprint</h2>
+<p>Browse the gallery at <a href="https://whop.com/blueprints" rel="sponsored noopener nofollow" target="_blank">whop.com/blueprints</a>. Categories include ecommerce stores, agencies, gyms, marketplaces, and more. Each blueprint is a real running business — deploying it gives you your own copy.</p>
+<h2>Step 2: Deploy</h2>
+<p>Click deploy on the blueprint detail page. Whop creates your business if you do not have one, copies the products and site over, and serves it at your route. Nothing builds on your machine.</p>
+<p>Or from the CLI:</p>
+<p><code>whop apps init --template app_xxxxxxxx --name "My Store" --route my-store</code></p>
+<h2>Step 3: Manage from the terminal</h2>
+<p>Install the <a href="../tools/whop-cli/">Whop CLI</a> and run <code>whop</code> to sign in. Then:</p>
+<ul><li><code>whop products list</code> — see what you are selling</li><li><code>whop plans create</code> — add or change pricing</li><li><code>whop checkout-configurations create --plan_id plan_xxx</code> — get a shareable checkout link</li><li><code>whop stats time_series</code> — pull your numbers</li></ul>
+<h2>Step 4: Hand it to an AI agent</h2>
+<p>The CLI is self-describing and works with AI agents (Claude, Cursor, Codex):</p>
+<ul><li><code>whop --llms</code> — machine-readable manifest of all commands</li><li><code>whop mcp add</code> — register with supported coding agents</li><li><code>whop skills add</code> — install the Whop agent skill</li></ul>
+<p>You can ask your agent to create products, set pricing, pull stats, or run ad campaigns — all from natural language.</p>
+<h2>Where this fits</h2>
+<p>If you are building an AI-powered business, the Whop CLI + Blueprints combination removes the setup friction. You bring the product idea; Whop handles hosting, payments, and the infrastructure. For non-technical founders, the dashboard works. For developers and agent-driven workflows, the CLI is faster.</p>
+<p>See our <a href="../tools/whop-cli/">Whop CLI review</a> and the <a href="best-ai-automation-tools.html">best AI automation tools</a> guide for more.</p>'''}
+

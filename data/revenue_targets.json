@@ -1435,5 +1435,29 @@
     "status": "not_started",
     "next_action": "Email vendor about affiliate or partner terms",
     "notes": "Vendor submitted via form. Launch offer pricing suggests early-stage product. No affiliate program visible on site. Revisit when traffic grows."
+  },
+  {
+    "tool_slug": "whop-cli",
+    "tool_name": "Whop CLI",
+    "priority": "medium",
+    "category": "Automation",
+    "recommended_networks_to_check": [
+      "Whop affiliate/referral program"
+    ],
+    "search_queries": [
+      "Whop CLI affiliate",
+      "Whop referral program"
+    ],
+    "target_pages": [
+      "tools/whop-cli/"
+    ],
+    "best_audiences": [
+      "Automation",
+      "Developers",
+      "Founders"
+    ],
+    "status": "not_started",
+    "next_action": "Check Whop referral/affiliate terms — Whop already has a referral program (10% of Whop's profit on referred businesses)",
+    "notes": "Whop has a built-in referral program (10% of Whop profit). Could be relevant for affiliate linking. George already uses Whop for Premium."
   }
 ]

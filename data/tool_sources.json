@@ -886,6 +886,15 @@
       "pricing_url": "https://www.htmlslides.ai/pricing",
       "docs_url": "https://www.htmlslides.ai/terms",
       "privacy_url": "https://www.htmlslides.ai/privacy"
+    },
+    {
+      "slug": "whop-cli",
+      "pricing_checked_date": "2026-08-27",
+      "pricing_summary": "Free CLI install. Whop platform fees apply on sales (standard Whop transaction fees). No separate CLI subscription.",
+      "verification_notes": "Independently verified 2026-08-27 from official Whop docs (docs.whop.com/developer/cli) and Whop blog (whop.com/blog/cli). CLI launched August 2026. Blueprints launched same period.",
+      "pricing_url": "https://whop.com/",
+      "docs_url": "https://docs.whop.com/developer/cli",
+      "privacy_url": "https://whop.com/privacy"
     }
   ]
 }

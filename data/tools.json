@@ -3085,5 +3085,62 @@
     "trial_checklist": "Use a real presentation task — not a demo prompt. Generate a deck from your actual topic using the create-page prompt with an AI agent. Verify whether the HTML deck format (animations, interactions, shareability) materially improves on your current slide workflow. Test sharing via link and embed. Check whether the free tier's 50MB storage and 10 templates are sufficient or if Pro features (video export, Speaker Mode, text editing) are needed. Compare output quality and sharing experience against Gamma or Canva for the same task.",
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard"
+  },
+  {
+    "slug": "whop-cli",
+    "name": "Whop CLI",
+    "category": "Automation",
+    "best_for": "Building and running a Whop business programmatically from the terminal or via AI agents",
+    "price": "Free (Whop platform fees apply on sales)",
+    "rating": 4.0,
+    "official": "https://whop.com/",
+    "summary": "A command-line interface that exposes Whop's end-to-end business API — deploy apps, create products, set pricing, run ads, pull stats, and move money from the terminal or through AI agents.",
+    "use_cases": [
+      "Launching a digital product business with one-click Blueprints",
+      "Managing products, pricing, and checkout links from the terminal",
+      "Running AI-agent-driven business operations (Claude, Cursor, Codex)",
+      "Automating repetitive admin: stats, payouts, ad campaigns",
+      "Deploying hosted web apps to *.whop.app"
+    ],
+    "pros": [
+      "Full Whop API access from the terminal — no dashboard clicking",
+      "Self-describing CLI works with AI agents via --llms and MCP",
+      "Blueprints deploy a working business in one step",
+      "Every command supports --format json for scripting",
+      "Free to install; Whop fees only apply on actual sales"
+    ],
+    "cons": [
+      "Requires a Whop account and business to manage",
+      "Terminal-first; no GUI for users who prefer dashboards",
+      "New product — command surface and features may change",
+      "Blueprints are pre-built templates; custom apps need Vite/React knowledge"
+    ],
+    "key_features": [
+      "Products, plans, and checkout configurations from the CLI",
+      "One-click Blueprints: deploy a working store, products, and pricing",
+      "Apps deploy: build, upload, and promote to *.whop.app",
+      "Stats and exports: financial time series and CSV dumps",
+      "Ads management: campaigns, ad groups, and paid acquisition",
+      "Payouts and transfers: move money programmatically",
+      "App secrets: encrypted environment variables for hosted runtime",
+      "AI agent integration: --llms manifest, MCP registration, and skills add"
+    ],
+    "faq": [
+      [
+        "Is the Whop CLI free?",
+        "Yes — the CLI is free to install and use. Whop's platform fees apply only on sales processed through your Whop business."
+      ],
+      [
+        "Can AI agents use the Whop CLI?",
+        "Yes — the CLI is self-describing with a --llms manifest, supports MCP registration via whop mcp add, and installs a Whop agent skill via whop skills add. It works with Claude, Cursor, Codex, and other agent tools."
+      ],
+      [
+        "What are Whop Blueprints?",
+        "Blueprints are pre-built business templates that deploy a working store with products, pricing, and a live website in one step. Browse them at whop.com/blueprints."
+      ]
+    ],
+    "trial_checklist": "Install the CLI and run whop --help to see the full command surface. Use whop products list to verify your existing Whop business. Try deploying a Blueprint from whop.com/blueprints to see the one-click flow. If you use AI agents, run whop --llms and whop mcp add to test agent integration. Compare the CLI workflow against your current dashboard routine for a real admin task.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard"
   }
 ]

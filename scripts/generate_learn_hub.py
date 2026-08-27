@@ -29,6 +29,7 @@ LEARN = [
     ('is-gemini-worth-it.html', 'Is Gemini worth it?', 'Who benefits from a paid Google Gemini plan inside Workspace.'),
     ('is-notion-ai-worth-it.html', 'Is Notion AI worth it?', 'When AI inside your knowledge base earns its cost vs a separate assistant.'),
     ('best-ai-tools-for-beginners.html', 'Best AI tools for beginners', 'A free-first starter stack for practical AI results without buying five subscriptions.'),
+    ('launch-ai-business-whop-blueprints.html', 'How to launch an AI business with Whop Blueprints', 'Deploy a working business with products, pricing, website, and checkout in one command.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
