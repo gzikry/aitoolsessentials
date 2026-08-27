@@ -16,6 +16,12 @@ LEARN = [
     ('can-ai-write-my-blog-posts.html', 'Can AI write my blog posts?', 'What AI drafting does well, what it fails at, and the review work that remains yours.'),
     ('do-i-need-paid-ai-plans.html', 'Do I need paid AI plans?', 'When free tiers are enough and when limits start costing more than subscriptions.'),
     ('what-is-a-good-ai-tool-starter-stack.html', 'A good starter AI stack', 'The minimal first three tools for most knowledge workers, with upgrade triggers.'),
+    ('chatgpt-free-vs-plus.html', 'ChatGPT free vs Plus: what the limits actually are', 'What OpenAI officially publishes about plan structure — without unofficial dollar figures.'),
+    ('perplexity-vs-google.html', 'Is Perplexity better than Google?', 'When a cited research assistant is the better first stop than a general search page.'),
+    ('can-i-cancel-ai-subscriptions.html', 'Can I cancel AI subscriptions anytime?', 'How to read cancel, downgrade, and annual-prepay terms before you lock a stack.'),
+    ('do-ai-tools-work-offline.html', 'Do AI tools work offline?', 'Which AI tools run locally, which need the cloud, and how to choose offline-first AI.'),
+    ('what-happens-to-my-data-when-i-delete-ai-account.html', 'What happens to my data when I delete an AI account?', 'Deletion, retention, training, and export questions to ask before canceling.'),
+    ('which-ai-tool-writes-best-in-another-language.html', 'Which AI tool writes best in another language?', 'How to compare multilingual writing tools without trusting a mismatched benchmark.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

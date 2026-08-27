@@ -162,3 +162,35 @@ ARTICLES['can-i-cancel-ai-subscriptions.html'] = {
 <ul><li>Landlord Studio’s official FAQ says you can cancel or downgrade anytime and keep access to your data.</li><li>Grantable’s official docs say canceling moves the account to Free and keeps workspaces.</li><li>Instrumentl’s official Discover rate is paid upfront annually, with a higher month-to-month alternative.</li><li>Riverside’s official FAQ says annual billing saves up to 20% versus monthly.</li></ul>
 <h2>Practical rule</h2>
 <p>Stay on monthly until the tool owns a weekly job. Annual discounts are real only if you would have paid all twelve months. Use the <a href="../pricing-watch/">pricing watch</a> and each tool’s official billing URL before you prepay.</p>'''}
+
+ARTICLES['do-ai-tools-work-offline.html'] = {
+ 'title':'Do AI tools work offline?','kicker':'Question guide','desc':'Which AI tools can run locally, which need the cloud, and how to choose offline-first AI without buying the wrong hardware.',
+ 'body':'''
+<p><strong>Short answer:</strong> most popular AI tools need the cloud. Offline AI is possible with local runtimes such as Ollama, LM Studio, and Open WebUI, but you trade convenience for hardware, model setup, and slower updates.</p>
+<h2>Cloud-first tools</h2>
+<p>ChatGPT, Claude, Perplexity, Canva, Riverside, and most SaaS assistants require an internet connection for the core AI features. They are easier to start, but your inputs leave the device under that plan’s terms.</p>
+<h2>Local-first tools</h2>
+<p><a href="../tools/ollama/">Ollama</a>, <a href="../tools/lm-studio/">LM Studio</a>, and <a href="../tools/open-webui/">Open WebUI</a> can run models on your own hardware. Use the <a href="../local-ai-planner/">Local AI Workbench Planner</a> before buying a Mac, GPU workstation, or mini PC.</p>
+<h2>The practical test</h2>
+<ol><li>Pick the exact workflow: private notes, coding help, summarization, or chat.</li><li>Choose one model size you can actually run.</li><li>Measure response speed on your hardware.</li><li>Only then decide if offline is worth the maintenance.</li></ol>'''}
+
+ARTICLES['what-happens-to-my-data-when-i-delete-ai-account.html'] = {
+ 'title':'What happens to my data when I delete an AI account?','kicker':'Data guide','desc':'Deletion, retention, training, and export questions to ask before canceling an AI subscription.',
+ 'body':'''
+<p><strong>Short answer:</strong> deletion is not always instant erasure. Vendors may keep backups, abuse logs, billing records, or de-identified analytics under their published policy. The exact answer depends on the tool and plan.</p>
+<h2>Read these four sections first</h2>
+<ol><li>Account deletion policy</li><li>Data retention and backup windows</li><li>Training or product-improvement controls</li><li>Export/download rules after cancellation</li></ol>
+<h2>Why plan tier matters</h2>
+<p>Consumer and business plans often have different training and retention terms. A team or enterprise plan may include no-training commitments that a free consumer account does not. Every AIToolsEssentials review links to the vendor privacy or rights page where available.</p>
+<h2>Practical rule</h2>
+<p>Export important files before canceling. For client, student, patient, tenant, donor, or legal matter data, do not rely on a delete button as your only control — keep sensitive material out of unapproved consumer AI tools in the first place.</p>'''}
+
+ARTICLES['which-ai-tool-writes-best-in-another-language.html'] = {
+ 'title':'Which AI tool writes best in another language?','kicker':'Question guide','desc':'How to compare multilingual writing tools without trusting a benchmark that does not match your audience.',
+ 'body':'''
+<p><strong>Short answer:</strong> test the language you actually publish in. The best tool for English sales copy may not be the best for Spanish support emails, Arabic summaries, or French legal-style prose.</p>
+<h2>A repeatable language test</h2>
+<ol><li>Write one source brief in your native language.</li><li>Ask ChatGPT, Claude, Gemini, and Perplexity for the same output.</li><li>Have a fluent human mark tone, accuracy, idioms, formality, and hallucinated facts.</li><li>Count edits required to publish.</li></ol>
+<h2>What to watch for</h2>
+<ul><li>Overly literal translations</li><li>Wrong level of formality</li><li>Invented local facts, laws, or prices</li><li>Region mismatch: Latin America vs Spain, Canadian French vs France, etc.</li></ul>
+<p>Use the <a href="../compare-shortlist.html">Compare Shortlist</a> and <a href="../downloads/ai-tool-evaluation-scorecard.html">scorecard</a> to record the winner for your language and workflow.</p>'''}

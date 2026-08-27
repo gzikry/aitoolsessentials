@@ -1,4 +1,4 @@
-# AIToolsEssentials Premium — Whop Upload Pack (2026-08-26)
+# AIToolsEssentials Premium — Whop Upload Pack (2026-08-27)
 
 Use this file to populate the Whop member area. Create each section below as a Whop post, then attach the CSV files from `admin/whop-premium/files/`.
 

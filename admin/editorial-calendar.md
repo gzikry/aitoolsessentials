@@ -25,9 +25,9 @@
 - ChatGPT free vs Plus: what the limits actually are ✅ shipped 2026-08-26
 - Is Perplexity better than Google? ✅ shipped 2026-08-26
 - Can I cancel anytime? Subscription terms compared ✅ shipped 2026-08-26
-- Which AI tool writes best in [language]?
-- Do AI tools work offline?
-- What happens to my data when I delete my account?
+- Which AI tool writes best in [language]? ✅ shipped 2026-08-27
+- Do AI tools work offline? ✅ shipped 2026-08-27
+- What happens to my data when I delete my account? ✅ shipped 2026-08-27
 
 ## Premium member drops (monthly)
 - Month 1 (Sept): comparison archive + coding assistant spec ✅ built
