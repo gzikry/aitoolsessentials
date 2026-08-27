@@ -1,31 +1,22 @@
-# Beehiiv setup — AIToolsEssentials Keep/Cut Digest
+# Beehiiv — AIToolsEssentials Keep/Cut Digest
 
-The site already captures emails on `/subscribe/` via FormSubmit to `aitoolsessentials@gmail.com`. Swap in Beehiiv when the embed is ready.
+Live publication (verified 2026-08-27):
 
-## Create the publication (George)
+- Publication ID: `pub_6019c431-f531-4041-b2b8-674214bc2a90`
+- Site: https://aitoolsessentials.beehiiv.com/
+- Signup: https://aitoolsessentials.beehiiv.com/subscribe
+- MCP: https://mcp.beehiiv.com/mcp
 
-1. Sign up at https://www.beehiiv.com with `aitoolsessentials@gmail.com` (or your usual login).
-2. Publication name: **AIToolsEssentials Keep/Cut Digest**
-3. Promise: weekly/as-needed notes when recorded AI tool prices, plans, or models change enough to affect a keep/cut decision. No daily spam.
-4. Website / About: https://aitoolsessentials.com
-5. Create a subscribe form: **Settings → Subscribe Forms → New**
-   - Inline / slim
-   - Fields: email only
-   - Thank-you: "Check your inbox to confirm."
-6. Click **Get embed code**. Copy the iframe/script.
+`/subscribe/` on aitoolsessentials.com points at that official Beehiiv signup (button + iframe). Optional slim embed: paste `embed_html` into `data/newsletter.json` and regenerate.
 
-## Wire it into the site
+## MCP (Hermes)
 
-Paste the embed HTML into `data/newsletter.json` as `embed_html` (one string). Set `"status": "beehiiv_live"`.
-
-Then run:
+OAuth cannot finish in this non-interactive session. In a local Terminal:
 
 ```bash
-python3 scripts/generate_subscribe.py
-python3 scripts/daily_content_update.py
-python3 scripts/validate_site.py
+hermes mcp add beehiiv --url https://mcp.beehiiv.com/mcp --auth oauth
 ```
 
-The subscribe page uses Beehiiv when `embed_html` is non-empty; otherwise it keeps FormSubmit.
+Complete the browser login, then we can list forms, draft posts, and pull the native embed code.
 
-Do not paste a placeholder iframe. An empty `embed_html` is correct until the real code exists.
+Do not invent `embeds.beehiiv.com` form UUIDs. The publication signup URL is the verified capture path until a real embed script exists.

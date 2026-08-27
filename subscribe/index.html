@@ -12,28 +12,10 @@
 <section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Free email</p><h1>The keep/cut digest.</h1><p class="subhead">Weekly keep/cut notes when AI tools change price, plans, or models. Free. No spam.</p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Keep/Cut digest</span><h2>Get the free digest.</h2>
 <p>We email when recorded pricing, plans, or model lineups change enough to affect a keep/cut decision. Unsubscribe anytime.</p>
-<form id="digest-form" action="https://formsubmit.co/ajax/eb3d1bf5a35125c06383cafa247af931" method="POST">
-<input type="hidden" name="_subject" value="Keep/Cut digest signup">
-<input type="hidden" name="_template" value="table">
-<label>Email <input type="email" name="email" required autocomplete="email" style="width:100%;margin:8px 0 16px;padding:12px;border-radius:10px;border:1px solid #ccc"></label>
-<button class="button button-blue" type="submit">Subscribe</button>
-<p class="affiliate-inline" id="digest-status"></p>
-</form>
-<script>
-document.getElementById('digest-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var btn = this.querySelector('button');
-  var st = document.getElementById('digest-status');
-  btn.disabled = true;
-  fetch(this.action, {method:'POST', body: new FormData(this), headers: {Accept:'application/json'}})
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      if (data.success === true || data.success === 'true') { st.textContent = 'Check your inbox to confirm.'; }
-      else { throw new Error(data.message || 'Could not subscribe'); }
-    })
-    .catch(function(err) { st.textContent = err.message; btn.disabled = false; });
-});
-</script></div>
+<p><a class="button button-blue" href="https://aitoolsessentials.beehiiv.com/subscribe" rel="noopener sponsored nofollow">Subscribe on Beehiiv</a></p>
+<iframe src="https://aitoolsessentials.beehiiv.com/subscribe" title="Keep/Cut digest signup" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;min-height:520px;border:0;border-radius:12px;background:#fff;margin-top:16px"></iframe>
+<p class="affiliate-inline">If the form does not load, use the button above. Hosted by Beehiiv at aitoolsessentials.beehiiv.com.</p>
+</div>
 <p>Latest public digest: <a href="/updates/2026-08.html">August 2026</a>. Paid <a href="/premium/">Premium</a> is a separate Whop membership (7-day trial, code LAUNCH50).</p>
 </div></section>
 </main><div id="share-row" hidden></div>

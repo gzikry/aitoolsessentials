@@ -1,7 +1,11 @@
 {
   "provider": "beehiiv",
-  "publication_name": "AIToolsEssentials Keep/Cut Digest",
-  "status": "formsubmit_until_embed",
+  "publication_name": "Aitoolsessentials",
+  "publication_id": "pub_6019c431-f531-4041-b2b8-674214bc2a90",
+  "signup_url": "https://aitoolsessentials.beehiiv.com/subscribe",
+  "publication_url": "https://aitoolsessentials.beehiiv.com/",
+  "mcp_url": "https://mcp.beehiiv.com/mcp",
+  "status": "beehiiv_live",
   "embed_html": "",
   "formsubmit_ajax": "https://formsubmit.co/ajax/eb3d1bf5a35125c06383cafa247af931",
   "subject": "Keep/Cut digest signup",

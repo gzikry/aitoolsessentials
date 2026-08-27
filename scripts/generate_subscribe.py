@@ -17,8 +17,17 @@ def esc(s: object) -> str:
 
 def capture_block(cfg: dict) -> str:
     embed = (cfg.get("embed_html") or "").strip()
+    signup = (cfg.get("signup_url") or "").strip()
     if embed:
         return f'<div class="score-card"><span>Keep/Cut digest</span><h2>Get the free digest.</h2>{embed}</div>'
+    if signup:
+        src = esc(signup)
+        return f'''<div class="score-card"><span>Keep/Cut digest</span><h2>Get the free digest.</h2>
+<p>We email when recorded pricing, plans, or model lineups change enough to affect a keep/cut decision. Unsubscribe anytime.</p>
+<p><a class="button button-blue" href="{src}" rel="noopener sponsored nofollow">Subscribe on Beehiiv</a></p>
+<iframe src="{src}" title="Keep/Cut digest signup" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;min-height:520px;border:0;border-radius:12px;background:#fff;margin-top:16px"></iframe>
+<p class="affiliate-inline">If the form does not load, use the button above. Hosted by Beehiiv at aitoolsessentials.beehiiv.com.</p>
+</div>'''
     action = esc(cfg.get("formsubmit_ajax") or "https://formsubmit.co/ajax/eb3d1bf5a35125c06383cafa247af931")
     subject = esc(cfg.get("subject") or "Keep/Cut digest signup")
     return f'''<div class="score-card"><span>Keep/Cut digest</span><h2>Get the free digest.</h2>
