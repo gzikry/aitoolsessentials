@@ -12,7 +12,7 @@ Use this before turning on promotion for the $12/month Premium membership.
   - `automation-pricing-model-decoder-2026-09.csv`
 - [ ] Create posts from `whop-posts-2026-09.md`.
 - [ ] Pin POST 1 as the start-here post.
-- [ ] Confirm checkout URL still matches: https://whop.com/checkout/plan_FNXWs3suBFwDN
+- [ ] Confirm checkout URL still matches: https://whop.com/checkout/ch_DKm5yxA1OBXoDru/
 - [ ] Run George's $12 test transaction before public launch.
 
 ## Scope reminder
