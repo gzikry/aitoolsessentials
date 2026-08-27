@@ -761,6 +761,25 @@ def enhance_homepage(root: Path) -> None:
             html = html.replace(intro.group(1), intro.group(1) + "\n" + band, 1)
         elif "<main>" in html:
             html = html.replace("<main>", "<main>\n" + band, 1)
+    if "AIT HOMEPAGE JOB TILES START" not in html:
+        tiles = '''<!-- AIT HOMEPAGE JOB TILES START -->
+<section class="scene scene-light product-grid-section" style="padding:56px 28px">
+<div class="section-title"><p class="kicker light">Start with the job</p><h2>Three paths. Pick one.</h2></div>
+<div class="product-grid" style="max-width:1040px;margin:0 auto">
+<article class="product-tile"><div class="tile-text"><p class="eyebrow">Overlap</p><h3>I am paying for too many AI tools</h3><p>Keep one tool per weekly job. Cut the rest before renewal.</p><p><a class="button button-blue" href="articles/how-to-cut-ai-tool-subscriptions.html">Cut overlapping tools</a></p></div></article>
+<article class="product-tile"><div class="tile-text"><p class="eyebrow">First paid seat</p><h3>I need my first paid AI tool</h3><p>Start free. Upgrade only after a real-task limit hits more than once a week.</p><p><a class="button button-blue" href="articles/best-ai-tools-for-beginners.html">Beginner stack</a></p></div></article>
+<article class="product-tile"><div class="tile-text"><p class="eyebrow">Renewal</p><h3>I need to cancel before I am charged</h3><p>Export, test a replacement on one real job, then cancel 48 hours early.</p><p><a class="button button-blue" href="articles/how-to-cancel-ai-tools-before-renewal.html">Cancel before renewal</a></p></div></article>
+</div>
+<p style="text-align:center;margin-top:24px"><a href="start-here/">More start-here paths</a> · <a href="subscribe/">Free keep/cut digest</a> · <a href="updates/">What changed this month</a></p>
+</section>
+<!-- AIT HOMEPAGE JOB TILES END -->
+'''
+        if "AIT HOMEPAGE PREMIUM BAND END" in html:
+            html = html.replace("<!-- AIT HOMEPAGE PREMIUM BAND END -->", "<!-- AIT HOMEPAGE PREMIUM BAND END -->\n" + tiles, 1)
+        else:
+            intro = re.search(r'(<section class="scene scene-light intro-strip">.*?</section>)', html, flags=re.S)
+            if intro:
+                html = html.replace(intro.group(1), intro.group(1) + "\n" + tiles, 1)
     home.write_text(html)
 
 

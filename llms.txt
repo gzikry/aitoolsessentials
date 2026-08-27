@@ -78,3 +78,6 @@ Contact: contact@aitoolsessentials.com
 - [HeyGen vs Synthesia: which to pay for](https://aitoolsessentials.com/articles/heygen-vs-synthesia-which-to-pay-for.html): keep one avatar video tool
 - [Perplexity vs ChatGPT for research](https://aitoolsessentials.com/articles/perplexity-vs-chatgpt-for-research.html): sources vs drafting
 - [ElevenLabs vs Descript: which for audio](https://aitoolsessentials.com/articles/elevenlabs-vs-descript-which-for-audio.html): voice generation vs transcript editing
+- [Claude Code vs Cursor vs Copilot](https://aitoolsessentials.com/articles/claude-code-vs-cursor-vs-copilot.html): keep one paid coding surface
+- [What changed in AI tools — August 2026](https://aitoolsessentials.com/updates/2026-08.html): public keep/cut digest
+- [Keep/Cut digest subscribe](https://aitoolsessentials.com/subscribe/): free email when recorded prices or models change

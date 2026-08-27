@@ -145,6 +145,12 @@ print('Generated pricing watch page')
 from generate_change_radar import generate as generate_change_radar
 print('Generated change radar:', generate_change_radar(root))
 
+from generate_monthly_digest import generate as generate_monthly_digest
+print('Generated monthly digests:', generate_monthly_digest(root))
+
+from generate_subscribe import generate as generate_subscribe
+print('Generated subscribe page:', generate_subscribe(root))
+
 from generate_how_tos import generate as generate_how_tos
 print('Generated how-to library:', generate_how_tos(root))
 

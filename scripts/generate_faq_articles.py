@@ -614,3 +614,26 @@ ARTICLES['elevenlabs-vs-descript-which-for-audio.html'] = {
 <p>See <a href="../comparisons/elevenlabs-vs-descript.html">ElevenLabs vs Descript</a> and <a href="../workflows/podcast-editing.html">podcast editing workflow</a>.</p>
 <p>Two audio seats you barely use: cut with <a href="how-to-cancel-ai-tools-before-renewal.html">cancel before renewal</a> or <a href="../premium/">Premium</a>. 7-day trial; <strong>LAUNCH50</strong> for 50% off first paid month (new users).</p>
 '''}
+
+ARTICLES['claude-code-vs-cursor-vs-copilot.html'] = {
+ 'title':'Claude Code vs Cursor vs Copilot','kicker':'Straight answer',
+ 'desc':'Keep one paid coding surface. Test Copilot, Cursor, and Claude Code on the same real bugfix before you stack seats.',
+ 'body':'''
+<p><strong>Short answer:</strong> keep one paid coding surface as the default. Copilot if you want inline completions in the editor you already use. Cursor if you want an AI-native IDE. Claude Code if the job is terminal/agent work on a repo. Paying for two or three for the same weekly job is overlap.</p>
+<h2>The split</h2>
+<ul>
+<li><a href="../tools/github-copilot/">GitHub Copilot</a>: completions and chat inside VS Code / JetBrains / GitHub.</li>
+<li><a href="../tools/cursor/">Cursor</a>: AI-first editor. Test Composer on a real multi-file change.</li>
+<li><a href="../tools/claude/">Claude</a> (Claude Code): terminal agent for repo-scale tasks. Confirm current bundling on Anthropic plan pages. Claude Code is a workflow, not a separate directory listing.</li>
+</ul>
+<h2>45-minute protocol</h2>
+<ol>
+<li>Pick one real bugfix or small feature from your repo.</li>
+<li>Run it in Copilot, Cursor, and Claude Code on the plan you actually pay for (or trial).</li>
+<li>Score first-output acceptance, edit burden, and whether you needed extra repo access.</li>
+<li>Read training and retention terms before annual billing.</li>
+<li>Keep one primary. Add a second only if it owns a different weekly job.</li>
+</ol>
+<p>Related: <a href="cursor-vs-copilot-which-to-pay-for.html">Cursor vs Copilot</a>, <a href="evaluating-ai-coding-tools-team-rollout.html">team rollout checklist</a>, <a href="../comparisons/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot</a>.</p>
+<p>If you already pay for two coding seats, use <a href="../premium/">Premium</a> coding shortlist and stack audit. 7-day trial; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+'''}

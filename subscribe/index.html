@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta name="google-site-verification" content="OzzGs2QF4v6zSBd9uO95NGgSPH5B598E6DPtcjRNn_4"><meta name="impact-site-verification" content="972313e6-cecc-47f0-aea2-c99b4364ee09"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Weekly keep/cut notes when AI tools change price, plans, or models. Free. No spam."><title>Subscribe — Keep/Cut digest | AIToolsEssentials</title><link rel="canonical" href="https://aitoolsessentials.com/subscribe/"><link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="../css/share.css">
+<meta property="og:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg">
+<!-- AIT STRUCTURED DATA START -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aitoolsessentials.com/"},{"@type":"ListItem","position":2,"name":"The keep/cut digest.","item":"https://aitoolsessentials.com/subscribe/"}]}</script>
+<!-- AIT STRUCTURED DATA END -->
+<!-- AIT DISCOVERY LINKS --><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>
+<!-- AIT KNOWLEDGE SCHEMA START -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aitoolsessentials.com/#organization","name":"AIToolsEssentials","url":"https://aitoolsessentials.com","email":"contact@aitoolsessentials.com","logo":"https://aitoolsessentials.com/assets/aitools-bot-mark.svg"},{"@type":"WebSite","@id":"https://aitoolsessentials.com/#website","url":"https://aitoolsessentials.com","name":"AIToolsEssentials","publisher":{"@id":"https://aitoolsessentials.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://aitoolsessentials.com/tools/index.html?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
+<!-- AIT KNOWLEDGE SCHEMA END -->
+</head><body><header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/updates/">Digests</a><a href="/articles/index.html">Guides</a><a href="/premium/">Premium</a><a href="../articles/learn.html">Learn</a><a href="../benchmarks/">Benchmarks</a>
+<a href="../guides/switch-guides/">Switching</a></nav><a class="nav-cta" href="/premium/">Premium</a></header><main>
+<section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Free email</p><h1>The keep/cut digest.</h1><p class="subhead">Weekly keep/cut notes when AI tools change price, plans, or models. Free. No spam.</p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Keep/Cut digest</span><h2>Get the free digest.</h2>
+<p>We email when recorded pricing, plans, or model lineups change enough to affect a keep/cut decision. Unsubscribe anytime.</p>
+<form id="digest-form" action="https://formsubmit.co/ajax/eb3d1bf5a35125c06383cafa247af931" method="POST">
+<input type="hidden" name="_subject" value="Keep/Cut digest signup">
+<input type="hidden" name="_template" value="table">
+<label>Email <input type="email" name="email" required autocomplete="email" style="width:100%;margin:8px 0 16px;padding:12px;border-radius:10px;border:1px solid #ccc"></label>
+<button class="button button-blue" type="submit">Subscribe</button>
+<p class="affiliate-inline" id="digest-status"></p>
+</form>
+<script>
+document.getElementById('digest-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = this.querySelector('button');
+  var st = document.getElementById('digest-status');
+  btn.disabled = true;
+  fetch(this.action, {method:'POST', body: new FormData(this), headers: {Accept:'application/json'}})
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success === true || data.success === 'true') { st.textContent = 'Check your inbox to confirm.'; }
+      else { throw new Error(data.message || 'Could not subscribe'); }
+    })
+    .catch(function(err) { st.textContent = err.message; btn.disabled = false; });
+});
+</script></div>
+<p>Latest public digest: <a href="/updates/2026-08.html">August 2026</a>. Paid <a href="/premium/">Premium</a> is a separate Whop membership (7-day trial, code LAUNCH50).</p>
+</div></section>
+</main><div id="share-row" hidden></div>
+  <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:contact@aitoolsessentials.com">Contact</a><a href="/legal/privacy.html">Privacy</a><a href="../legal/about.html">About</a><a href="../legal/terms.html">Terms</a><a href="../legal/corrections.html">Corrections</a></footer><script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>

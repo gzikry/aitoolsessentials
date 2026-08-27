@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "2026-08",
+    "title": "What changed in AI tools — August 2026",
+    "month_label": "August 2026",
+    "checked_at": "2026-08-27",
+    "summary": "A public keep/cut digest of recorded directory changes this month: new listings, model-lineup notes, and what to re-check before you renew.",
+    "new_listings": [
+      {"name": "HtmlSlides", "slug": "htmlslides", "note": "Vendor submission. Interactive HTML decks. Test against Gamma before adding a paid seat."},
+      {"name": "Whop CLI", "slug": "whop-cli", "note": "Terminal/agent control for Whop products, plans, and checkout. Relevant if you sell on Whop."}
+    ],
+    "watch_list": [
+      {"name": "Grok", "slug": "grok", "note": "Model lineup panel last checked 2026-08-26. Confirm current Grok 4.6 / Grok Build names on X before you pay for SuperGrok as a second assistant."},
+      {"name": "Cursor", "slug": "cursor", "note": "Composer / model options move quickly. Re-run one real coding task before renewing Pro if you also pay Copilot or Claude."},
+      {"name": "ChatGPT", "slug": "chatgpt", "note": "Lineup recorded as GPT-5.4 family as of 2026-08-26. Verify openai.com/pricing before annual."},
+      {"name": "Claude", "slug": "claude", "note": "Sonnet/Opus point releases plus Claude Code as a coding surface. Do not assume the chat plan and the coding workflow are the same job."}
+    ],
+    "keep_cut_rule": "If two paid tools own the same weekly job, keep one. Use a real task test, then cancel the extra seat before renewal.",
+    "sources": [
+      "/change-radar/",
+      "/pricing-watch/",
+      "/model-lineups/"
+    ]
+  }
+]

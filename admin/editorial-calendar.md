@@ -67,3 +67,7 @@
 - HeyGen vs Synthesia which to pay for ✅ shipped 2026-08-27
 - Perplexity vs ChatGPT for research ✅ shipped 2026-08-27
 - ElevenLabs vs Descript which for audio ✅ shipped 2026-08-27
+
+- Claude Code vs Cursor vs Copilot keep-one ✅ shipped 2026-08-27
+- August 2026 keep/cut digest + /subscribe/ ✅ shipped 2026-08-27
+- Homepage job tiles (overlap / first paid / cancel) ✅ 2026-08-27
