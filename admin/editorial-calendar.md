@@ -57,3 +57,8 @@
 - Evaluating AI coding tools for a team rollout ✅ shipped 2026-08-27
 - AI image rights commercial use ✅ shipped 2026-08-27
 - How to cancel AI tools before renewal ✅ shipped 2026-08-27
+
+- Cursor vs Copilot which to pay for ✅ shipped 2026-08-27
+- Make vs Zapier which to pay for ✅ shipped 2026-08-27
+- Pick one AI meeting notes tool ✅ shipped 2026-08-27
+- Homepage Premium checkout copy updated (was "not active yet") ✅ 2026-08-27

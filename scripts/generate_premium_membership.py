@@ -696,12 +696,25 @@ Premium is research and strategy only. Do not promise implementation, setup, int
 
 def update_checkout(root: Path) -> None:
     p = root / "checkout" / "complete" / "index.html"
-    if not p.exists():
-        return
-    html = p.read_text()
-    html = html.replace("Bookmark\n      <a href=\"/pricing/\">aitoolsessentials.com/pricing</a> — member links ship from there.", "Open your Whop account for the member library, then bookmark <a href=\"/premium/\">aitoolsessentials.com/premium</a> for previews and monthly context.")
-    html = html.replace("'<a class=\"button button-blue\" href=\"../../tools/index.html\">Explore the tools database</a>' +\n      '<a class=\"button button-ghost-dark\" href=\"../../articles/index.html\">Browse guides</a>';", "'<a class=\"button button-blue\" href=\"https://whop.com/hub\" rel=\"external noopener\">Open Whop member hub</a>' +\n      '<a class=\"button button-ghost-dark\" href=\"../../premium/\">Preview Premium library</a>';")
-    p.write_text(html)
+    if p.exists():
+        html = p.read_text()
+        html = html.replace("Bookmark\n      <a href=\"/pricing/\">aitoolsessentials.com/pricing</a> — member links ship from there.", "Open your Whop account for the member library, then bookmark <a href=\"/premium/\">aitoolsessentials.com/premium</a> for previews and monthly context.")
+        html = html.replace("'<a class=\"button button-blue\" href=\"../../tools/index.html\">Explore the tools database</a>' +\n      '<a class=\"button button-ghost-dark\" href=\"../../articles/index.html\">Browse guides</a>';", "'<a class=\"button button-blue\" href=\"https://whop.com/hub\" rel=\"external noopener\">Open Whop member hub</a>' +\n      '<a class=\"button button-ghost-dark\" href=\"../../premium/\">Preview Premium library</a>';")
+        p.write_text(html)
+    home = root / "index.html"
+    if home.exists():
+        html = home.read_text()
+        html = html.replace(
+            "<p>Premium membership is being prepared and checkout is not active yet. The public directory stays free; the $497 AI Stack Audit is available as a strategy-only report.</p>",
+            "<p>Premium is live: 7-day free trial, then $12/month. Use code <strong>LAUNCH50</strong> for 50% off the first paid month (new users). The public directory stays free. Research and strategy only.</p>",
+        )
+        html = html.replace("See planned Premium", "Start 7-day free trial")
+        html = html.replace('href="pricing/index.html"', f'href="{WHOP_CHECKOUT}" rel="external noopener"')
+        html = html.replace(
+            "<p>Monthly comparison archives, workflow deep-dives, and CSV exports — $12/month via Whop, cancel anytime.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"pricing/\">See pricing</a></div>",
+            "<p>Stack audits, weekly checklists, tool-change alerts, hands-on protocols, and a 61-tool decision matrix. 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">Premium library</a><a class=\"guide-pill\" href=\"pricing/\">Pricing</a><a class=\"guide-pill\" href=\"" + WHOP_CHECKOUT + "\" rel=\"external noopener\">Start free trial</a></div>",
+        )
+        home.write_text(html)
 
 
 
@@ -730,6 +743,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         'pricing-index/index.html',
         'weekly/index.html',
         'start-here/index.html',
+        'index.html',
     ]
     dynamic_targets = []
     dynamic_targets.extend(str(p.relative_to(root)) for p in sorted((root / 'tools').glob('*/index.html')))

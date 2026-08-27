@@ -511,3 +511,49 @@ ARTICLES['how-to-cancel-ai-tools-before-renewal.html'] = {
 <h2>When the free process is not enough</h2>
 <p>If you have five-plus paid tools, mixed annual contracts, or no owner for the spend, use <a href="../premium/">Premium</a>: 30-day renewal calendar, cancel-savings tracker, and stack-audit template. Research and strategy only. 7-day free trial, then $12/month; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
 '''}
+
+ARTICLES['cursor-vs-copilot-which-to-pay-for.html'] = {
+ 'title':'Cursor vs Copilot: which one should you pay for?','kicker':'Straight answer','desc':'A practical way to pick one paid coding assistant. Run the same real bugfix in Cursor and GitHub Copilot before you keep both.',
+ 'body':'''
+<p><strong>Short answer:</strong> pay for one primary coding assistant. Keep Cursor if the agent/editor workflow saves more than 30 minutes a week on real tasks. Keep Copilot if you already live in VS Code/GitHub and completions are enough. Paying for both is usually overlap.</p>
+<h2>How to decide in 45 minutes</h2>
+<ol>
+<li>Pick one real bugfix or small feature from your repo, not a demo app.</li>
+<li>Run it in <a href="../tools/cursor/">Cursor</a> and <a href="../tools/github-copilot/">GitHub Copilot</a> on the plan you actually have (or trial).</li>
+<li>Score first-output acceptance rate, edit burden, and whether secrets or repos need extra controls.</li>
+<li>Read training/retention terms on each vendor page before annual billing.</li>
+</ol>
+<p>See the full comparison: <a href="../comparisons/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot</a>. Team rollout: <a href="evaluating-ai-coding-tools-team-rollout.html">security checklist</a>.</p>
+<p>If you already pay for both, use the <a href="../premium/">Premium</a> coding shortlist and stack audit. Research only. 7-day free trial; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+'''}
+
+ARTICLES['make-vs-zapier-which-to-pay-for.html'] = {
+ 'title':'Make vs Zapier: which automation plan should you pay for?','kicker':'Straight answer','desc':'Do not compare sticker prices. Map one real workflow, count tasks vs operations, then pick Make or Zapier (or n8n) before annual billing.',
+ 'body':'''
+<p><strong>Short answer:</strong> Zapier is usually simpler for linear app-to-app jobs. Make is usually better when you need visual branching. n8n belongs in the mix if you can self-host. Sticker price is meaningless until you know the billing unit.</p>
+<h2>The test</h2>
+<ol>
+<li>Map one real workflow you already do weekly.</li>
+<li>Estimate monthly volume (emails, form submits, CRM updates).</li>
+<li>Build the same workflow in <a href="../tools/zapier-ai/">Zapier AI</a> and <a href="../tools/make/">Make</a> on free or trial tiers.</li>
+<li>Count tasks vs operations vs executions before you compare plan pages.</li>
+</ol>
+<p>Related: <a href="../comparisons/zapier-vs-make-vs-n8n.html">Zapier vs Make vs n8n</a>, <a href="zapier-alternatives.html">Zapier alternatives</a>, <a href="automating-client-onboarding-zapier-make.html">client onboarding automation</a>.</p>
+<p>If you pay for Zapier and Make, that is overlap until proven otherwise. <a href="../premium/">Premium</a> includes an automation pricing decoder CSV. 7-day trial; <strong>LAUNCH50</strong> for 50% off first paid month (new users).</p>
+'''}
+
+ARTICLES['pick-one-ai-meeting-notes-tool.html'] = {
+ 'title':'Pick one AI meeting notes tool: Fireflies vs Otter vs Fathom','kicker':'Straight answer','desc':'Grade meeting tools on real calls only. Keep one paid notes tool unless a second owns a different weekly job such as CRM writeback.',
+ 'body':'''
+<p><strong>Short answer:</strong> most teams should pay for one meeting notes tool. Test Fireflies, Otter, and Fathom on the same real meeting. Score action-item quality, vocabulary, and whether CRM handoff actually happens.</p>
+<h2>30-minute protocol</h2>
+<ol>
+<li>Use one real meeting recording (with consent).</li>
+<li>Run it through <a href="../tools/fireflies/">Fireflies</a>, <a href="../tools/otter-ai/">Otter</a>, and <a href="../tools/fathom/">Fathom</a> on current plans.</li>
+<li>Grade action items, speaker labels, and industry vocabulary. Demos do not count.</li>
+<li>Keep the winner. Keep a free tier of a second only if it is used weekly.</li>
+</ol>
+<p>Related: <a href="best-ai-meeting-tools.html">best AI meeting tools</a>, <a href="../comparisons/fireflies-vs-otter-ai.html">Fireflies vs Otter</a>, <a href="../workflows/sales-call-follow-up.html">sales call follow-up workflow</a>.</p>
+<p>If you already pay for two meeting tools, cut with the <a href="how-to-cut-ai-tool-subscriptions.html">cut subscriptions guide</a> or <a href="../premium/">Premium</a> meeting-notes decision sheet. 7-day trial; <strong>LAUNCH50</strong> for 50% off first paid month (new users).</p>
+'''}
+

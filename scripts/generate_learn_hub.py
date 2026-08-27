@@ -38,6 +38,9 @@ LEARN = [
     ('evaluating-ai-coding-tools-team-rollout.html', 'Evaluating AI coding tools for a team', 'Security-first rollout checklist so you do not buy two IDEs.'),
     ('ai-image-rights-commercial-use.html', 'AI image rights for commercial use', 'What to check before using Midjourney or Leonardo output in client work.'),
     ('how-to-cancel-ai-tools-before-renewal.html', 'How to cancel AI tools before renewal', '14-day process to cancel unused seats without losing the weekly workflow.'),
+    ('cursor-vs-copilot-which-to-pay-for.html', 'Cursor vs Copilot: which to pay for', 'Pick one paid coding assistant with a real bugfix, not two overlapping seats.'),
+    ('make-vs-zapier-which-to-pay-for.html', 'Make vs Zapier: which to pay for', 'Map one workflow and count tasks vs operations before annual billing.'),
+    ('pick-one-ai-meeting-notes-tool.html', 'Pick one AI meeting notes tool', 'Grade Fireflies, Otter, and Fathom on a real meeting, then keep one.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

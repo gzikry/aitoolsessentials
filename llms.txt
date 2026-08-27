@@ -71,3 +71,6 @@ Contact: contact@aitoolsessentials.com
 - [Evaluating AI coding tools for a team](https://aitoolsessentials.com/articles/evaluating-ai-coding-tools-team-rollout.html): security-first coding assistant rollout
 - [AI image rights for commercial use](https://aitoolsessentials.com/articles/ai-image-rights-commercial-use.html): Midjourney/Leonardo commercial-use checks
 - [How to cancel AI tools before renewal](https://aitoolsessentials.com/articles/how-to-cancel-ai-tools-before-renewal.html): 14-day cancel process before the next charge
+- [Cursor vs Copilot: which to pay for](https://aitoolsessentials.com/articles/cursor-vs-copilot-which-to-pay-for.html): pick one paid coding assistant
+- [Make vs Zapier: which to pay for](https://aitoolsessentials.com/articles/make-vs-zapier-which-to-pay-for.html): compare billing units on one real workflow
+- [Pick one AI meeting notes tool](https://aitoolsessentials.com/articles/pick-one-ai-meeting-notes-tool.html): Fireflies vs Otter vs Fathom on a real meeting
