@@ -18,7 +18,14 @@
     "files/weekly-ai-stack-checklist.csv",
     "files/tool-change-alert-feed-2026-11.csv",
     "files/assistant-hands-on-comparison-2026-11.csv",
-    "files/ai-roi-calculator-template.csv"
+    "files/ai-roi-calculator-template.csv",
+    "files/vendor-security-questions-pack.csv",
+    "files/30-day-renewal-cancel-calendar.csv",
+    "files/free-vs-premium-value-matrix.csv",
+    "files/member-first-15-minutes.csv",
+    "files/cancel-savings-tracker.csv",
+    "files/sample-filled-stack-audit-example.csv",
+    "files/coding-assistant-shortlist-2026-11.csv"
   ],
   "note": "Upload the Markdown posts/checklists as Whop posts and attach the CSV files to the member area."
 }

@@ -57,6 +57,11 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         ("Hands-On Comparison Protocol", "Fillable comparison CSV for running identical tasks across ChatGPT, Claude, Grok, and Gemini. Stop reading reviews — test the tools yourself in 30 minutes."),
         ("AI ROI Calculator", "Template that measures whether your AI spend is actually paying for itself: time saved x hourly rate minus monthly tool costs."),
         ("Priority research slots", "First 5 members each month get their specific workflow researched and delivered as a CSV + brief in the next monthly drop."),
+        ("30-day renewal/cancel calendar", "Day-by-day operating system for the trial week and first month so Premium is used, not collected."),
+        ("Free vs Premium value matrix", "Honest table of what stays free vs what $12 buys, so members can judge payback in one page."),
+        ("Cancel-savings tracker", "Log cancelled or downgraded seats. If monthly saves exceed $12, Premium has paid for itself."),
+        ("Vendor/security questions pack", "Structured procurement questions before client data touches a new tool."),
+        ("Coding assistant shortlist", "Force a single primary coding tool instead of paying for Cursor plus Copilot plus chat coding seats."),
     ]
     cards = "".join(f'<article class="content-hub-card"><span>Premium deliverable</span><h3>{esc(title)}</h3><p>{esc(text)}</p></article>' for title, text in library_cards)
     deliverables = [
@@ -70,6 +75,9 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         "Priority research slots (first 5 member requests each month)",
         "September–November archive: cost-cutting, visual/meeting stacks, assistant protocols",
         "Vendor/security questions pack and automation pricing decoder",
+        "30-day renewal/cancel calendar + first-15-minutes onboarding sheet",
+        "Free vs Premium value matrix and cancel-savings tracker",
+        "Coding assistant shortlist and sample filled stack-audit example",
     ]
     deliverable_list = "".join(f"<li>{esc(x)}</li>" for x in deliverables)
     desc = "AIToolsEssentials Premium is a $12/month Whop membership with a 7-day free trial, monthly AI tool research briefs, stack-audit templates, weekly checklists, tool-change alerts, hands-on comparison protocols, ROI calculators, and priority research slots."
@@ -105,9 +113,9 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
 
     archive_desc = "AIToolsEssentials Premium archive preview for monthly AI tool research drops."
     archive_rows = "".join([
-        '<tr><td>2026-09</td><td>AI stack cost-cutting brief</td><td>Decision matrix CSV, assistant shortlist, automation decoder, vendor questions</td><td>Ready for Whop upload</td></tr>',
-        '<tr><td>2026-10</td><td>Visual and meeting stacks</td><td>Refreshed matrix, visual shortlist, meeting-notes decision sheet</td><td>Ready for Whop upload</td></tr>',
-        '<tr><td>2026-11</td><td>Premium content engine</td><td>Stack audit, weekly checklist, alert feed, hands-on protocol, ROI calculator, priority slots</td><td>Ready for Whop upload</td></tr>',
+        '<tr><td>2026-09</td><td>AI stack cost-cutting brief</td><td>Decision matrix CSV, assistant shortlist, automation decoder, vendor questions</td><td>Live in Whop archive</td></tr>',
+        '<tr><td>2026-10</td><td>Visual and meeting stacks</td><td>Refreshed matrix, visual shortlist, meeting-notes decision sheet</td><td>Live in Whop archive</td></tr>',
+        '<tr><td>2026-11</td><td>Premium content engine</td><td>Stack audit, weekly checklist, alert feed, hands-on protocol, ROI calculator, 30-day calendar, value matrix, priority slots</td><td>Live in Whop (pinned welcome)</td></tr>',
         '<tr><td>2026-12</td><td>Content production stack</td><td>Writing/design/video workflow playbook and CSV archive</td><td>Planned</td></tr>',
     ])
     archive = f'''<!doctype html><html lang="en">{head("Premium Research Archive Preview", archive_desc, DOMAIN+"/premium/archive.html")}<body>{HEADER}<main>
@@ -125,6 +133,8 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         ("Are refunds offered?", "No. The current Premium terms state all sales are final and there are no refunds. Use the 7-day free trial, sample report, roadmap, archive preview, and terms before subscribing."),
         ("How do member requests work?", "Members can post the workflows they want compared next. Good requests include role, current stack, weekly task, candidate tools, budget, and data constraints. The first 5 complete requests each month become priority research slots delivered as a CSV + brief in the next drop."),
         ("What is the AI Stack Audit?", "Download the fillable CSV, list every AI tool you pay for with cost and weekly usage, then reply with your completed audit. Within 48 hours you get a strategy-only keep/cut/trial/switch recommendation. No account access required."),
+        ("Is Premium worth $12/month?", "Yes if you already spend on multiple AI tools, have overlap, or have a renewal coming up, and you will use the audit and checklist in week one. No if you only use one free assistant occasionally. One cancelled unused seat usually covers months of Premium. Use the 7-day trial: if you have not made a keep/cut decision by day 7, cancel."),
+        ("What should I do in the first 15 minutes?", "Open the pinned welcome post, download the stack audit and weekly checklist, list every paid AI tool, and put days 0-7 from the renewal/cancel calendar on your calendar. Premium is a research operating system - it only pays off if you use it."),
     ]
     faq_items = "".join(f'<article class="content-hub-card"><h3>{esc(q)}</h3><p>{esc(a)}</p></article>' for q, a in faqs)
     faq_schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]}
@@ -271,6 +281,64 @@ def generate_whop_pack(root: Path, tools: list[dict[str, Any]], today: str) -> N
         ["Overlap cost (duplicate tools)", "", "", "Sum of tools that do the same job"],
         ["Recommended action", "", "", "Cut, keep, or trial"],
     ])
+
+    write_csv(download_dir / "vendor-security-questions-pack.csv", ["Question", "Why it matters", "What good looks like", "Red flag", "Your notes"], [
+        ["Is customer data used for model training by default?", "Training defaults decide whether client text becomes model fuel.", "Clear opt-out or never-train on business/enterprise tiers.", "Vague blog language, no admin control.", ""],
+        ["Can admins disable retention/training or set workspace controls?", "You need org-level control, not per-user hope.", "Admin toggles + audit log + role permissions.", "Only individual chat settings.", ""],
+        ["Is there a DPA, subprocessors list, security page, or SOC report?", "Procurement and client contracts often require this.", "Public security page + DPA request path.", "No security page; sales-only answers.", ""],
+        ["Can exports, sharing, and user access be revoked?", "Offboarding depends on this.", "Admin can revoke seats and export first.", "No export or revoke path documented.", ""],
+        ["What happens when a seat leaves the company?", "Licenses and data must not travel with departed users.", "Seat transfer + content reassignment documented.", "Silent retention of ex-user workspaces.", ""],
+        ["Which plan includes the controls you actually need?", "Controls often sit behind Team/Business tiers.", "Named plan with the exact control you need.", "Marketing implies controls the free tier lacks.", ""],
+        ["Is there an exit plan (export formats)?", "Switching cost is a hidden lock-in tax.", "Standard exports (CSV/MD/JSON/PDF).", "Proprietary-only export or none.", ""],
+    ])
+    write_csv(download_dir / "30-day-renewal-cancel-calendar.csv", ["Day", "Action", "Owner", "Done?", "Notes"], [
+        ["Day 0 (join)", "Download stack audit + weekly checklist; list every paid AI tool", "Member", "", ""],
+        ["Day 1", "Fill stack audit; note monthly cost and weekly hours", "Member", "", ""],
+        ["Day 2", "Mark keep/trial/replace/cancel for each tool", "Member", "", ""],
+        ["Day 3", "Run one real task in primary assistant; log friction", "Member", "", ""],
+        ["Day 7 (trial decision)", "Keep Premium only if audit/matrix saved a decision; else cancel trial", "Member", "", ""],
+        ["Day 10", "Cancel or pause any tool tagged cancel before next charge", "Member", "", ""],
+        ["Day 14", "Reply in request thread if you need a priority research slot", "Member", "", ""],
+        ["Day 30", "File one cancel/keep decision with dollar amount saved or kept", "Member", "", ""],
+    ])
+    write_csv(download_dir / "free-vs-premium-value-matrix.csv", ["Capability", "Free site", "Premium members", "Why it matters"], [
+        ["Tool reviews + comparisons", "Yes", "Yes + full decision matrix CSV", "Public is enough for browsing"],
+        ["Scorecards / cost calculator / decision brief", "Yes", "Yes", "Free utilities stay free"],
+        ["Full 61-tool decision matrix CSV", "No", "Yes, refreshed monthly", "Monthly stack decisions"],
+        ["AI Stack Audit Template + 48h strategy reply", "No", "Yes", "Turns inventory into keep/cut"],
+        ["Weekly checklist + 30-day calendar", "No", "Yes", "Habit beats one-off cleanup"],
+        ["Hands-on protocol + ROI calculator", "Partial", "Yes", "Identical-task testing"],
+        ["Priority research slots", "No", "First 5 complete requests/month", "Without a $497 audit"],
+        ["Implementation / account access", "Never", "Never", "Scope boundary on purpose"],
+    ])
+    write_csv(download_dir / "member-first-15-minutes.csv", ["Step", "Minutes", "Action", "Done?"], [
+        ["1", "2", "Open pinned Welcome post; bookmark Whop hub", ""],
+        ["2", "3", "Download stack audit + weekly checklist", ""],
+        ["3", "5", "List every paid AI tool (name, cost, last use)", ""],
+        ["4", "3", "Read free-vs-premium-value-matrix.csv", ""],
+        ["5", "2", "Skim tool-change alert feed for tools you pay for", ""],
+    ])
+    write_csv(download_dir / "cancel-savings-tracker.csv", ["Tool cancelled or downgraded", "Monthly $ saved", "Annual $ saved", "Date", "Replaced by", "Notes"], [
+        ["(example) unused image tool", "10", "120", "", "Free-tier visual tool", "Was under 1 hr/week"],
+        ["TOTAL", "", "", "", "", "Premium pays for itself if monthly saves exceed $12"],
+    ])
+    write_csv(download_dir / "sample-filled-stack-audit-example.csv", ["Field", "Example Answer", "Editor note"], [
+        ["Role/team size", "Solo consultant, 1 person", "Be specific"],
+        ["Monthly AI spend", "$97", "Sum everything"],
+        ["Biggest overlap", "ChatGPT + Claude both used for drafting", "Pick one primary"],
+        ["Most expensive rarely used", "Image generator at 0.5 hrs/week", "Cancel candidate"],
+        ["Strategy reply example", "Keep one research tool; pick ONE primary assistant after 3 identical tasks; cancel unused image seat. Est. save $30-50/mo.", "Premium audit reply style - strategy only"],
+    ])
+    coding = [t for t in tools if t.get("slug") in {"cursor", "github-copilot", "replit-ai", "bolt-new", "lovable", "v0", "claude", "chatgpt", "grok", "windsurf"} or "code" in str(t.get("category", "")).lower() or "coding" in str(t.get("best_for", "")).lower()]
+    seen_c: set[str] = set()
+    coding_rows = []
+    for t in coding:
+        slug = str(t.get("slug") or "")
+        if not slug or slug in seen_c:
+            continue
+        seen_c.add(slug)
+        coding_rows.append([t.get("name"), slug, t.get("price"), t.get("best_for"), "Run the same real coding task. Compare first-output acceptance rate, not demos."])
+    write_csv(download_dir / "coding-assistant-shortlist-2026-11.csv", ["tool", "slug", "pricing", "best_for", "member_test"], coding_rows)
 
     nov_posts = f"""# AIToolsEssentials Premium — Whop Upload Pack — NOVEMBER ({today})
 
@@ -610,6 +678,13 @@ Premium is research and strategy only. Do not promise implementation, setup, int
         (download_dir / "tool-change-alert-feed-2026-11.csv", "files/tool-change-alert-feed-2026-11.csv"),
         (download_dir / "assistant-hands-on-comparison-2026-11.csv", "files/assistant-hands-on-comparison-2026-11.csv"),
         (download_dir / "ai-roi-calculator-template.csv", "files/ai-roi-calculator-template.csv"),
+        (download_dir / "vendor-security-questions-pack.csv", "files/vendor-security-questions-pack.csv"),
+        (download_dir / "30-day-renewal-cancel-calendar.csv", "files/30-day-renewal-cancel-calendar.csv"),
+        (download_dir / "free-vs-premium-value-matrix.csv", "files/free-vs-premium-value-matrix.csv"),
+        (download_dir / "member-first-15-minutes.csv", "files/member-first-15-minutes.csv"),
+        (download_dir / "cancel-savings-tracker.csv", "files/cancel-savings-tracker.csv"),
+        (download_dir / "sample-filled-stack-audit-example.csv", "files/sample-filled-stack-audit-example.csv"),
+        (download_dir / "coding-assistant-shortlist-2026-11.csv", "files/coding-assistant-shortlist-2026-11.csv"),
     ]
     with zipfile.ZipFile(bundle_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
         for src, arc in bundle_members:

@@ -1,0 +1,11 @@
+tool,slug,pricing,best_for,member_test
+Bolt.new,bolt-new,Free + paid plans,Prompt-to-app prototyping in the browser,"Run the same real coding task. Compare first-output acceptance rate, not demos."
+Cursor,cursor,Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo,"AI-assisted coding in an editor with agent modes, cloud agents, and Cursor's own Grok/Composer models","Run the same real coding task. Compare first-output acceptance rate, not demos."
+GitHub Copilot,github-copilot,Paid plans,"Autocomplete, code chat, and developer productivity in popular IDEs","Run the same real coding task. Compare first-output acceptance rate, not demos."
+Lovable,lovable,Free + paid plans,AI app generation for product prototypes and front-end experiences,"Run the same real coding task. Compare first-output acceptance rate, not demos."
+Replit AI,replit-ai,Free + paid plans,Building and deploying apps from a browser-based development environment,"Run the same real coding task. Compare first-output acceptance rate, not demos."
+v0,v0,Free + paid plans,Generating React/UI components and product interfaces,"Run the same real coding task. Compare first-output acceptance rate, not demos."
+ChatGPT,chatgpt,Free + paid plans,"General-purpose writing, research, analysis, and multimodal help","Run the same real coding task. Compare first-output acceptance rate, not demos."
+Claude,claude,Free + paid plans,"Long-form writing, careful analysis, document review, and coding assistance","Run the same real coding task. Compare first-output acceptance rate, not demos."
+DeepSeek,deepseek,Free + API pricing,"Reasoning, coding, and cost-conscious model evaluation","Run the same real coding task. Compare first-output acceptance rate, not demos."
+Grok,grok,Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo; API from $1–$6 per 1M tokens,"Coding and agentic work on the newest models, real-time X data answers, always-on Grok Bot agents, and building apps/sites in Build Mode","Run the same real coding task. Compare first-output acceptance rate, not demos."

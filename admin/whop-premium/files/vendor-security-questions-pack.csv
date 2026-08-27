@@ -1,0 +1,8 @@
+Question,Why it matters,What good looks like,Red flag,Your notes
+Is customer data used for model training by default?,Training defaults decide whether client text becomes model fuel.,Clear opt-out or never-train on business/enterprise tiers.,"Vague blog language, no admin control.",
+Can admins disable retention/training or set workspace controls?,"You need org-level control, not per-user hope.",Admin toggles + audit log + role permissions.,Only individual chat settings.,
+"Is there a DPA, subprocessors list, security page, or SOC report?",Procurement and client contracts often require this.,Public security page + DPA request path.,No security page; sales-only answers.,
+"Can exports, sharing, and user access be revoked?",Offboarding depends on this.,Admin can revoke seats and export first.,No export or revoke path documented.,
+What happens when a seat leaves the company?,Licenses and data must not travel with departed users.,Seat transfer + content reassignment documented.,Silent retention of ex-user workspaces.,
+Which plan includes the controls you actually need?,Controls often sit behind Team/Business tiers.,Named plan with the exact control you need.,Marketing implies controls the free tier lacks.,
+Is there an exit plan (export formats)?,Switching cost is a hidden lock-in tax.,Standard exports (CSV/MD/JSON/PDF).,Proprietary-only export or none.,

@@ -37,15 +37,3 @@
 
 ## Scope boundary
 Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support. Stack-audit replies are strategy-only written recommendations.
-
-
-## November forum posts (live 2026-08-27)
-- [x] N1: Pinned: Welcome to Premium (updated for November) (`post_1CeTt8AoUELAP52ufNYh2Y`)
-- [x] N2: November brief: Stop paying for AI tools you don't use (`None`)
-- [x] N3: Weekly AI Stack Checklist: your 7-day rhythm (`post_1CeTt8CvKNzSS3Nd36EfzB`)
-- [x] N4: November alert feed: what changed across tracked tools (`post_1CeTt8E2xvHPuRkTo2LKKV`)
-- [x] N5: Hands-on comparison: ChatGPT vs Claude vs Grok vs Gemini (`post_1CeTt8FD6LzQoBAcS6K9Aq`)
-- [x] N6: November request thread + priority research slots (`post_1CeTt8GGjm6Rf4Ewa3GBK5`)
-- [x] N2: November brief: Stop paying for AI tools you don't use (`post_1CeTtAnUuVwb829KUf6qXP`)
-
-Pinned welcome post is live in experience `exp_h66R9eZyc2jI4D`.
