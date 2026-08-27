@@ -23,6 +23,12 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /articles/do-ai-tools-work-offline.html: cloud versus local AI guide that routes to Ollama, LM Studio, Open WebUI, hardware, and the Local AI Planner
 - /articles/what-happens-to-my-data-when-i-delete-ai-account.html: deletion, retention, export, and training-control guide
 - /articles/which-ai-tool-writes-best-in-another-language.html: multilingual writing test protocol for comparing AI assistants
+- /articles/is-claude-worth-it.html: who benefits from a paid Claude plan, based on verified plan structure
+- /articles/is-perplexity-worth-it.html: when the free tier is enough for cited research and when paid is rational
+- /articles/is-cursor-worth-it.html: who benefits from a paid Cursor plan for AI-assisted coding
+- /articles/is-grok-worth-it.html: when paid Grok through X earns its keep for real-time AI and agents
+- /articles/is-gemini-worth-it.html: who benefits from a paid Google Gemini plan inside Workspace
+- /articles/is-notion-ai-worth-it.html: when AI inside your knowledge base earns its cost vs a separate assistant
 - /change-radar/: return-use public tracker showing the latest recorded pricing and model-lineup checks, attention status, unresolved claims, and exact evidence/review links
 - /model-lineups/: source-dated ledger of the current model or product lineup for each covered tool, feeding the comparison-page lineup panels
 - /how-to/: source-linked practical setup guides for Hermes Agent, OpenClaw, Ollama, Open WebUI, and self-hosted AI security boundaries

@@ -194,3 +194,87 @@ ARTICLES['which-ai-tool-writes-best-in-another-language.html'] = {
 <h2>What to watch for</h2>
 <ul><li>Overly literal translations</li><li>Wrong level of formality</li><li>Invented local facts, laws, or prices</li><li>Region mismatch: Latin America vs Spain, Canadian French vs France, etc.</li></ul>
 <p>Use the <a href="../compare-shortlist.html">Compare Shortlist</a> and <a href="../downloads/ai-tool-evaluation-scorecard.html">scorecard</a> to record the winner for your language and workflow.</p>'''}
+
+ARTICLES['is-claude-worth-it.html'] = {
+ 'title':'Is Claude worth it?','kicker':'Straight answer','desc':'Who benefits from a paid Claude plan, based on verified plan structure and real workflow fit — not hype.',
+ 'body':'''
+<p><strong>Short answer:</strong> worth it if your work involves long documents, careful prose, or instruction-heavy drafting. Not worth it for quick questions or image generation.</p>
+<h2>What paying actually buys</h2>
+<p>Anthropic offers Claude Free, Pro, Max, Team, and Enterprise. Paid tiers buy higher message limits, priority access during peak hours, and access to extended thinking and deeper research modes. Exact prices change — check Anthropic's official pricing page before deciding.</p>
+<h2>You probably don't need paid if…</h2>
+<ul><li>You ask short questions and free-tier limits don't interrupt you</li><li>Your tasks are quick summaries or brief explanations</li><li>You need images, voice, or file analysis more than long-form writing</li></ul>
+<h2>Paid starts earning its keep when…</h2>
+<ul><li>You routinely work with documents over 30 pages</li><li>A free-tier limit interrupts real work more than once a week</li><li>You need consistent access during peak hours for deadlines</li><li>Instruction adherence on style or format matters to your output</li></ul>
+<h2>How to decide in one week</h2>
+<p>Use the free tier on your three most common real tasks. Note every time you hit a limit. If it happens five-plus times, compare that cost to an hour of your time. See our <a href="how-to-test-ai-tools-free-trials.html">free-trial testing guide</a> and the <a href="../tools/claude/">Claude review</a>.</p>
+<p class="monetization-note">Plan structure checked against official Anthropic sources. Confirm current prices on the vendor page before purchasing.</p>'''}
+
+ARTICLES['is-perplexity-worth-it.html'] = {
+ 'title':'Is Perplexity worth it?','kicker':'Straight answer','desc':'Who benefits from a paid Perplexity plan, and when the free tier is genuinely enough for cited research.',
+ 'body':'''
+<p><strong>Short answer:</strong> worth it if you do cited research daily and hit the free tier's search limit. Not worth it if you only look up a few things per week.</p>
+<h2>What paying actually buys</h2>
+<p>Perplexity offers Free, Pro, and Max plans. Pro buys more searches per day, file uploads, and access to more powerful models for synthesis. Max adds higher limits and priority access. Exact prices change — check Perplexity's official pricing page before deciding.</p>
+<h2>You probably don't need paid if…</h2>
+<ul><li>You do a handful of research lookups per day</li><li>You use it as a secondary check, not a primary research tool</li><li>You're fine opening the cited sources yourself</li></ul>
+<h2>Paid starts earning its keep when…</h2>
+<ul><li>The daily search limit interrupts a real research workflow</li><li>You need deeper model access for complex synthesis</li><li>You rely on cited answers for client or team deliverables</li></ul>
+<h2>How to decide in one week</h2>
+<p>Use the free tier for your actual research tasks. Count every time you hit the search limit. If it happens daily, the paid plan is rational. See the <a href="../tools/perplexity/">Perplexity review</a> and our <a href="perplexity-vs-google.html">Perplexity vs Google guide</a>.</p>
+<p class="monetization-note">Plan structure checked against official Perplexity sources. Confirm current prices on the vendor page before purchasing.</p>'''}
+
+ARTICLES['is-cursor-worth-it.html'] = {
+ 'title':'Is Cursor worth it?','kicker':'Straight answer','desc':'Who benefits from a paid Cursor plan, and when the free tier or VS Code is enough for AI-assisted coding.',
+ 'body':'''
+<p><strong>Short answer:</strong> worth it if you code daily and the AI completions save you more than 30 minutes a week. Not worth it for occasional edits or non-developers.</p>
+<h2>What paying actually buys</h2>
+<p>Cursor offers a Free tier with limited completions and a Pro tier with higher limits, agent mode, and access to frontier models. Cursor also ships its own model stack including Cursor Grok 4.6 and Composer 2.5. Exact prices change — check Cursor's official pricing page before deciding.</p>
+<h2>You probably don't need paid if…</h2>
+<ul><li>You edit code a few times a week, not daily</li><li>GitHub Copilot or free VS Code extensions cover your needs</li><li>You're learning to code and need to build fundamentals first</li></ul>
+<h2>Paid starts earning its keep when…</h2>
+<ul><li>You code daily and AI completions are part of your flow</li><li>Agent mode (multi-file edits, autonomous fixes) saves real time</li><li>You want frontier model access inside the editor without switching tools</li></ul>
+<h2>How to decide in one week</h2>
+<p>Use the free tier for your actual coding tasks. Track every time a completion or agent run saves you meaningful time. See the <a href="../tools/cursor/">Cursor review</a> and our <a href="../comparisons/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot comparison</a>.</p>
+<p class="monetization-note">Plan structure checked against official Cursor sources. Confirm current prices on the vendor page before purchasing.</p>'''}
+
+ARTICLES['is-grok-worth-it.html'] = {
+ 'title':'Is Grok worth it?','kicker':'Straight answer','desc':'Who benefits from a paid Grok plan through X, and when the free tier is enough for real-time AI assistance.',
+ 'body':'''
+<p><strong>Short answer:</strong> worth it if you want real-time AI with live web and X data, or use Grok Bot always-on agents. Not worth it if you only need a general chat assistant.</p>
+<h2>What paying actually buys</h2>
+<p>Grok is available through X with free and paid tiers. Paid access buys higher usage limits, access to newer models like Grok 4.6, and features like Grok Build and Imagine. Grok Bot offers always-on agents for automated workflows. Exact prices change — check X's official pricing or Grok's official page before deciding.</p>
+<h2>You probably don't need paid if…</h2>
+<ul><li>You use a general assistant for quick questions</li><li>You don't need real-time X/web data in your AI responses</li><li>You already have ChatGPT or Claude and don't need a third assistant</li></ul>
+<h2>Paid starts earning its keep when…</h2>
+<ul><li>Real-time information from X and the web is part of your workflow</li><li>You use Grok Bot agents for repeatable tasks</li><li>You want image generation (Imagine) and model building (Grok Build) in one place</li></ul>
+<h2>How to decide in one week</h2>
+<p>Use the free tier on your real tasks. If real-time data or agent automation is part of your daily work, paid is rational. See the <a href="../tools/grok/">Grok review</a> and our <a href="../comparisons/chatgpt-vs-grok.html">ChatGPT vs Grok comparison</a>.</p>
+<p class="monetization-note">Plan structure checked against official X/Grok sources. Confirm current prices on the vendor page before purchasing.</p>'''}
+
+ARTICLES['is-gemini-worth-it.html'] = {
+ 'title':'Is Gemini worth it?','kicker':'Straight answer','desc':'Who benefits from a paid Google Gemini plan, and when the free tier or Google AI tools are enough.',
+ 'body':'''
+<p><strong>Short answer:</strong> worth it if you live in Google Workspace and want AI integrated into Docs, Gmail, and Drive. Not worth it if you don't use Google's ecosystem.</p>
+<h2>What paying actually buys</h2>
+<p>Google offers Gemini Free and paid tiers including Google AI Pro and Ultra. Paid plans buy higher usage limits, deeper Google Workspace integration, and access to more powerful models. Exact prices change — check Google's official pricing page before deciding.</p>
+<h2>You probably don't need paid if…</h2>
+<ul><li>You don't use Google Workspace daily</li><li>Your tasks are quick questions a free assistant handles</li><li>You prefer ChatGPT or Claude for your primary assistant</li></ul>
+<h2>Paid starts earning its keep when…</h2>
+<ul><li>You live in Google Docs, Sheets, Gmail, and Drive</li><li>You want AI integrated directly into your documents and email</li><li>You need Gemini's multimodal capabilities (images, video understanding) for work</li></ul>
+<h2>How to decide in one week</h2>
+<p>Use the free tier inside your actual Google workflow. If the integration saves you a switch to another tool, paid is rational. See our <a href="../comparisons/chatgpt-vs-gemini.html">ChatGPT vs Gemini comparison</a> and <a href="../comparisons/claude-vs-gemini.html">Claude vs Gemini comparison</a>.</p>
+<p class="monetization-note">Plan structure checked against official Google sources. Confirm current prices on the vendor page before purchasing.</p>'''}
+
+ARTICLES['is-notion-ai-worth-it.html'] = {
+ 'title':'Is Notion AI worth it?','kicker':'Straight answer','desc':'Who benefits from Notion AI, and when a separate AI assistant plus your existing notes is the better choice.',
+ 'body':'''
+<p><strong>Short answer:</strong> worth it if your team lives in Notion and wants AI inside the knowledge base. Not worth it if you only need a general chat assistant.</p>
+<h2>What paying actually buys</h2>
+<p>Notion AI is available as an add-on to Notion plans. It buys AI-assisted writing, summarization, database queries, and search inside your Notion workspace. Exact prices change — check Notion's official pricing page before deciding.</p>
+<h2>You probably don't need paid if…</h2>
+<ul><li>You don't use Notion as your primary workspace</li><li>You're fine copying text into ChatGPT or Claude when needed</li><li>Your notes are simple and don't benefit from in-context AI</li></ul>
+<h2>Paid starts earning its keep when…</h2>
+<ul><li>Your team's knowledge base lives in Notion and AI search saves time finding things</li><li>You want AI to summarize pages, draft from database entries, or fill templates</li><li>Switching between Notion and a separate assistant breaks your flow</li></ul>
+<h2>How to decide in one week</h2>
+<p>Try the free Notion AI trial on your actual workspace. Count times the in-context AI saves you a tool switch. See our <a href="personal-knowledge-base-notion-ai.html">Notion AI knowledge base guide</a> and the <a href="../comparisons/notion-ai-vs-microsoft-copilot.html">Notion AI vs Copilot comparison</a>.</p>
+<p class="monetization-note">Plan structure checked against official Notion sources. Confirm current prices on the vendor page before purchasing.</p>'''}

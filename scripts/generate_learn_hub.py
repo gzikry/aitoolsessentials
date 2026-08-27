@@ -22,6 +22,12 @@ LEARN = [
     ('do-ai-tools-work-offline.html', 'Do AI tools work offline?', 'Which AI tools run locally, which need the cloud, and how to choose offline-first AI.'),
     ('what-happens-to-my-data-when-i-delete-ai-account.html', 'What happens to my data when I delete an AI account?', 'Deletion, retention, training, and export questions to ask before canceling.'),
     ('which-ai-tool-writes-best-in-another-language.html', 'Which AI tool writes best in another language?', 'How to compare multilingual writing tools without trusting a mismatched benchmark.'),
+    ('is-claude-worth-it.html', 'Is Claude worth it?', 'Who benefits from a paid Claude plan — based on verified plan structure, not hype.'),
+    ('is-perplexity-worth-it.html', 'Is Perplexity worth it?', 'When the free tier is enough for cited research and when paid is rational.'),
+    ('is-cursor-worth-it.html', 'Is Cursor worth it?', 'Who benefits from a paid Cursor plan for AI-assisted coding.'),
+    ('is-grok-worth-it.html', 'Is Grok worth it?', 'When paid Grok through X earns its keep for real-time AI and agents.'),
+    ('is-gemini-worth-it.html', 'Is Gemini worth it?', 'Who benefits from a paid Google Gemini plan inside Workspace.'),
+    ('is-notion-ai-worth-it.html', 'Is Notion AI worth it?', 'When AI inside your knowledge base earns its cost vs a separate assistant.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
