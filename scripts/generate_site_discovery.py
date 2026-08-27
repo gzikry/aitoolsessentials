@@ -84,7 +84,9 @@ def generate_start_here(root: Path) -> None:
         ("I need a tool now", "Use Tool Finder to narrow the list by workflow, budget, and buyer type.", "/tool-finder.html", "Open Tool Finder"),
         ("I need a full stack", "Use Stack Builder to generate a shareable role-specific stack.", "/stack-builder.html", "Build my stack"),
         ("I need to control cost", "Use the Cost Calculator before subscriptions sprawl.", "/cost-calculator.html", "Estimate cost"),
+        ("I am paying for overlapping AI tools", "Use the cut-subscriptions guide, then cancel before renewal.", "/articles/how-to-cut-ai-tool-subscriptions.html", "Cut overlapping tools"),
         ("I am replacing a tool", "Open the Alternatives hub and compare before switching.", "/alternatives/", "Compare alternatives"),
+        ("I want the research membership", "Premium is live: 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.", "/premium/", "See Premium"),
         ("I am a vendor", "Use Get Reviewed for editorial submission and correction rules.", "/get-reviewed/", "Get reviewed"),
     ]
     cards = "".join(f'<article class="content-hub-card"><span>Start here</span><h3>{esc(title)}</h3><p>{esc(text)}</p><a class="button button-blue small" href="{href}">{esc(cta)}</a></article>' for title, text, href, cta in steps)

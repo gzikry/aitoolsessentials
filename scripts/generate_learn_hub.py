@@ -41,6 +41,10 @@ LEARN = [
     ('cursor-vs-copilot-which-to-pay-for.html', 'Cursor vs Copilot: which to pay for', 'Pick one paid coding assistant with a real bugfix, not two overlapping seats.'),
     ('make-vs-zapier-which-to-pay-for.html', 'Make vs Zapier: which to pay for', 'Map one workflow and count tasks vs operations before annual billing.'),
     ('pick-one-ai-meeting-notes-tool.html', 'Pick one AI meeting notes tool', 'Grade Fireflies, Otter, and Fathom on a real meeting, then keep one.'),
+    ('gamma-vs-canva-which-for-decks.html', 'Gamma vs Canva: which for decks', 'Pick one paid deck tool with the same real brief.'),
+    ('heygen-vs-synthesia-which-to-pay-for.html', 'HeyGen vs Synthesia: which to pay for', 'Keep one avatar video tool after the same 60-second script.'),
+    ('perplexity-vs-chatgpt-for-research.html', 'Perplexity vs ChatGPT for research', 'Pay for sources or for drafting, not both by default.'),
+    ('elevenlabs-vs-descript-which-for-audio.html', 'ElevenLabs vs Descript: which for audio', 'Voice generation vs transcript editing. Pick the weekly job.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

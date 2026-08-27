@@ -557,3 +557,60 @@ ARTICLES['pick-one-ai-meeting-notes-tool.html'] = {
 <p>If you already pay for two meeting tools, cut with the <a href="how-to-cut-ai-tool-subscriptions.html">cut subscriptions guide</a> or <a href="../premium/">Premium</a> meeting-notes decision sheet. 7-day trial; <strong>LAUNCH50</strong> for 50% off first paid month (new users).</p>
 '''}
 
+ARTICLES['gamma-vs-canva-which-for-decks.html'] = {
+ 'title':'Gamma vs Canva: which should you pay for decks?','kicker':'Straight answer','desc':'Pick one paid deck tool. Test Gamma and Canva AI on the same real presentation brief before you keep both.',
+ 'body':'''
+<p><strong>Short answer:</strong> pay for one deck tool. Use Gamma if you need a narrative deck from a brief. Use Canva if design templates and brand kits are the weekly job. Paying for both is usually overlap.</p>
+<h2>The test</h2>
+<ol>
+<li>Write one real deck brief (client update, internal review, or workshop).</li>
+<li>Build it in <a href="../tools/gamma/">Gamma</a> and <a href="../tools/canva-ai/">Canva AI</a> on the plan you actually have.</li>
+<li>Score time-to-usable-slides, brand match, and how much you still rebuilt by hand.</li>
+<li>Keep the winner. Keep a free tier of the other only if you use it weekly.</li>
+</ol>
+<p>See <a href="../comparisons/gamma-vs-canva-ai.html">Gamma vs Canva AI</a>.</p>
+<p>If you already pay for two visual tools, use the <a href="../premium/">Premium</a> visual shortlist. 7-day trial; <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+'''}
+
+ARTICLES['heygen-vs-synthesia-which-to-pay-for.html'] = {
+ 'title':'HeyGen vs Synthesia: which AI video tool should you pay for?','kicker':'Straight answer','desc':'Keep one paid avatar/video tool. Test HeyGen and Synthesia on the same real script before annual billing.',
+ 'body':'''
+<p><strong>Short answer:</strong> most teams should pay for one avatar video tool. Run the same 60-second script in both. Score usable takes, voice/likeness controls, and whether you still need a human edit.</p>
+<h2>Protocol</h2>
+<ol>
+<li>Use one real script you would actually publish.</li>
+<li>Generate it in <a href="../tools/heygen/">HeyGen</a> and <a href="../tools/synthesia/">Synthesia</a>.</li>
+<li>Compare first-take acceptance, export limits, and commercial-use terms on official plan pages.</li>
+<li>Do not buy annual until one tool owns a weekly video job.</li>
+</ol>
+<p>See <a href="../comparisons/heygen-vs-synthesia.html">HeyGen vs Synthesia</a>.</p>
+<p>Overlapping video seats: <a href="how-to-cut-ai-tool-subscriptions.html">cut subscriptions guide</a> or <a href="../premium/">Premium</a>. 7-day trial; <strong>LAUNCH50</strong> for 50% off first paid month (new users).</p>
+'''}
+
+ARTICLES['perplexity-vs-chatgpt-for-research.html'] = {
+ 'title':'Perplexity vs ChatGPT for research: which should you pay for?','kicker':'Straight answer','desc':'Use Perplexity when you need sources you can open. Use ChatGPT when the job is drafting after research. Paying for both is optional, not default.',
+ 'body':'''
+<p><strong>Short answer:</strong> pay for Perplexity if cited research is a daily job and the free search limit gets in the way. Pay for ChatGPT if drafting and files are the weekly job. Keep both only if they own different weekly workflows.</p>
+<h2>The split</h2>
+<ul>
+<li><a href="../tools/perplexity/">Perplexity</a>: first stop for source-backed questions.</li>
+<li><a href="../tools/chatgpt/">ChatGPT</a>: drafting, files, and multimodal work after you have sources.</li>
+</ul>
+<p>Run the same research question in both. Count how many citations you actually opened and verified. That number beats a generic benchmark.</p>
+<p>Related: <a href="../comparisons/chatgpt-vs-perplexity.html">ChatGPT vs Perplexity</a>, <a href="is-perplexity-worth-it.html">Is Perplexity worth it?</a>, <a href="perplexity-vs-google.html">Perplexity vs Google</a>.</p>
+<p>If you pay for both plus Claude for the same research, that is overlap. <a href="../premium/">Premium</a> hands-on protocol helps you pick a primary. 7-day trial; <strong>LAUNCH50</strong> for 50% off first paid month (new users).</p>
+'''}
+
+ARTICLES['elevenlabs-vs-descript-which-for-audio.html'] = {
+ 'title':'ElevenLabs vs Descript: which should you pay for audio?','kicker':'Straight answer','desc':'ElevenLabs is for generating voice. Descript is for editing real recordings. Pay for the job you actually do weekly, not both by default.',
+ 'body':'''
+<p><strong>Short answer:</strong> pay for ElevenLabs if you need generated or cloned voice as a weekly output. Pay for Descript if you edit podcasts or video by editing text. They overlap only if you force them to.</p>
+<h2>Pick by job</h2>
+<ul>
+<li><a href="../tools/elevenlabs/">ElevenLabs</a>: narration, dubbing, voice agents.</li>
+<li><a href="../tools/descript/">Descript</a>: transcript-based edit of real recordings.</li>
+</ul>
+<p>Test one real episode or one real narration brief. Keep the tool that owns that weekly job. Confirm commercial voice-rights on the vendor plan page before client work.</p>
+<p>See <a href="../comparisons/elevenlabs-vs-descript.html">ElevenLabs vs Descript</a> and <a href="../workflows/podcast-editing.html">podcast editing workflow</a>.</p>
+<p>Two audio seats you barely use: cut with <a href="how-to-cancel-ai-tools-before-renewal.html">cancel before renewal</a> or <a href="../premium/">Premium</a>. 7-day trial; <strong>LAUNCH50</strong> for 50% off first paid month (new users).</p>
+'''}

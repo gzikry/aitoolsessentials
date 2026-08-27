@@ -62,3 +62,8 @@
 - Make vs Zapier which to pay for ✅ shipped 2026-08-27
 - Pick one AI meeting notes tool ✅ shipped 2026-08-27
 - Homepage Premium checkout copy updated (was "not active yet") ✅ 2026-08-27
+
+- Gamma vs Canva which for decks ✅ shipped 2026-08-27
+- HeyGen vs Synthesia which to pay for ✅ shipped 2026-08-27
+- Perplexity vs ChatGPT for research ✅ shipped 2026-08-27
+- ElevenLabs vs Descript which for audio ✅ shipped 2026-08-27

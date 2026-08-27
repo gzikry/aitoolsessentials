@@ -74,3 +74,7 @@ Contact: contact@aitoolsessentials.com
 - [Cursor vs Copilot: which to pay for](https://aitoolsessentials.com/articles/cursor-vs-copilot-which-to-pay-for.html): pick one paid coding assistant
 - [Make vs Zapier: which to pay for](https://aitoolsessentials.com/articles/make-vs-zapier-which-to-pay-for.html): compare billing units on one real workflow
 - [Pick one AI meeting notes tool](https://aitoolsessentials.com/articles/pick-one-ai-meeting-notes-tool.html): Fireflies vs Otter vs Fathom on a real meeting
+- [Gamma vs Canva: which for decks](https://aitoolsessentials.com/articles/gamma-vs-canva-which-for-decks.html): pick one paid deck tool
+- [HeyGen vs Synthesia: which to pay for](https://aitoolsessentials.com/articles/heygen-vs-synthesia-which-to-pay-for.html): keep one avatar video tool
+- [Perplexity vs ChatGPT for research](https://aitoolsessentials.com/articles/perplexity-vs-chatgpt-for-research.html): sources vs drafting
+- [ElevenLabs vs Descript: which for audio](https://aitoolsessentials.com/articles/elevenlabs-vs-descript-which-for-audio.html): voice generation vs transcript editing
