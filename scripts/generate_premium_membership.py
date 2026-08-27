@@ -740,7 +740,8 @@ def enhance_homepage(root: Path) -> None:
             + WHOP_CHECKOUT
             + '" rel="external noopener">Start 7-day Premium trial</a>',
         )
-    band = f'''<!-- AIT HOMEPAGE PREMIUM BAND START -->
+    if "AIT HOMEPAGE PREMIUM BAND START" not in html:
+        band = f'''<!-- AIT HOMEPAGE PREMIUM BAND START -->
 <section class="scene scene-dark" style="padding:64px 28px">
 <div style="max-width:1040px;margin:0 auto">
 <p class="kicker light">Premium membership — live now</p>
@@ -755,17 +756,11 @@ def enhance_homepage(root: Path) -> None:
 </div></section>
 <!-- AIT HOMEPAGE PREMIUM BAND END -->
 '''
-    html = re.sub(
-        r"\n?<!-- AIT HOMEPAGE PREMIUM BAND START -->.*?<!-- AIT HOMEPAGE PREMIUM BAND END -->\n?",
-        "\n",
-        html,
-        flags=re.S,
-    )
-    intro = re.search(r'(<section class="scene scene-light intro-strip">.*?</section>)', html, flags=re.S)
-    if intro:
-        html = html.replace(intro.group(1), intro.group(1) + "\n" + band, 1)
-    elif "<main>" in html:
-        html = html.replace("<main>", "<main>\n" + band, 1)
+        intro = re.search(r'(<section class="scene scene-light intro-strip">.*?</section>)', html, flags=re.S)
+        if intro:
+            html = html.replace(intro.group(1), intro.group(1) + "\n" + band, 1)
+        elif "<main>" in html:
+            html = html.replace("<main>", "<main>\n" + band, 1)
     home.write_text(html)
 
 
@@ -823,7 +818,6 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
     generate_public_pages(root, tools_list, today)
     generate_whop_pack(root, tools_list, today)
     update_checkout(root)
-    enhance_homepage(root)
     return 9
 
 
