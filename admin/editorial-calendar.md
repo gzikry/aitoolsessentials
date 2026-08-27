@@ -46,3 +46,9 @@
 - Every price claim dated + linked to official source
 - Editorial scores never presented as benchmarks
 - CTA ladder: scorecard → review → Premium/audit
+
+- How to cut AI tool subscriptions ✅ shipped 2026-08-27
+- AI stack audit checklist ✅ shipped 2026-08-27
+- ChatGPT vs Claude vs Grok vs Gemini choose guide ✅ shipped 2026-08-27
+- Is an AI tool research membership worth it? ✅ shipped 2026-08-27
+- Premium content engine (Nov pack) ✅ built 2026-08-27

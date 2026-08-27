@@ -375,7 +375,7 @@
       "Not legal advice and not a substitute for a licensed attorney.",
       "No privilege, confidentiality, or bar-compliance certification is implied by listing a tool.",
       "Consumer chat tiers are the wrong place for client-identifiable or privileged material.",
-      "Harvey and Spellbook are quote-based; the only official dollar figure recorded here is Thomson Reuters’ starting-at Westlaw Advantage with CoCounsel Essentials price."
+      "Harvey and Spellbook are quote-based; the only official dollar figure recorded here is Thomson Reuters\u2019 starting-at Westlaw Advantage with CoCounsel Essentials price."
     ],
     "search_queries": [
       "ai tools for lawyers",
@@ -638,6 +638,38 @@
       "can i use midjourney images commercially",
       "adobe firefly commercial use",
       "ai image rights for client work"
+    ]
+  },
+  {
+    "slug": "cut-ai-subscription-sprawl",
+    "title": "Cut AI subscription sprawl",
+    "description": "Run a keep/cut/trial review across every paid AI tool so overlapping drafting, research, meeting, coding, and automation seats do not renew on autopilot.",
+    "audience": "Founders, operators, and team leads managing AI spend",
+    "primary_tools": [
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "make",
+      "zapier-ai",
+      "notion-ai"
+    ],
+    "decision_steps": [
+      "Inventory every AI subscription with owner, monthly cost, and last real use.",
+      "Group tools by job (drafting, research, meetings, coding, visuals, automation) and mark overlaps.",
+      "Run one real weekly task in each contender; demos do not count.",
+      "Tag keep / trial / replace / cancel before the next renewal date.",
+      "Prefer free trials and monthly billing until one tool clearly owns the job."
+    ],
+    "search_queries": [
+      "how to cut ai tool subscriptions",
+      "ai stack audit checklist",
+      "reduce ai saas spend",
+      "cancel overlapping ai tools"
+    ],
+    "guardrails": [
+      "Not financial, procurement, or legal advice.",
+      "Confirm current prices and cancel terms on vendor pages before acting.",
+      "Do not paste client secrets into tools during evaluation without policy review."
     ]
   }
 ]

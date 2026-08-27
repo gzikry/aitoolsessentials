@@ -30,6 +30,10 @@ LEARN = [
     ('is-notion-ai-worth-it.html', 'Is Notion AI worth it?', 'When AI inside your knowledge base earns its cost vs a separate assistant.'),
     ('best-ai-tools-for-beginners.html', 'Best AI tools for beginners', 'A free-first starter stack for practical AI results without buying five subscriptions.'),
     ('launch-ai-business-whop-blueprints.html', 'How to launch an AI business with Whop Blueprints', 'Deploy a working business with products, pricing, website, and checkout in one command.'),
+    ('how-to-cut-ai-tool-subscriptions.html', 'How to cut AI tool subscriptions', 'Keep/cut/trial framework for overlapping AI stacks — free first, full matrix when needed.'),
+    ('ai-stack-audit-checklist.html', 'AI stack audit checklist', 'Map every paid tool, spot overlap, and decide keep/cut/trial before renewal.'),
+    ('chatgpt-vs-claude-vs-grok-vs-gemini.html', 'ChatGPT vs Claude vs Grok vs Gemini', 'Choose a primary assistant with identical real tasks, not brand preference.'),
+    ('is-an-ai-tool-membership-worth-it.html', 'Is an AI tool research membership worth it?', 'When $12/month research beats another SaaS seat — and when free is enough.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

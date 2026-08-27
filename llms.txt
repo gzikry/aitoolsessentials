@@ -62,3 +62,8 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - Community results publish only after verification; no fabricated vote or traffic counts.
 
 Contact: contact@aitoolsessentials.com
+- [How to cut AI tool subscriptions](https://aitoolsessentials.com/articles/how-to-cut-ai-tool-subscriptions.html): keep/cut/trial framework for AI stack sprawl
+- [AI stack audit checklist](https://aitoolsessentials.com/articles/ai-stack-audit-checklist.html): free audit path plus Premium template upgrade
+- [ChatGPT vs Claude vs Grok vs Gemini](https://aitoolsessentials.com/articles/chatgpt-vs-claude-vs-grok-vs-gemini.html): hands-on protocol for choosing a primary assistant
+- [Is an AI tool research membership worth it?](https://aitoolsessentials.com/articles/is-an-ai-tool-membership-worth-it.html): when Premium research beats another SaaS seat
+- [Cut AI subscription sprawl workflow](https://aitoolsessentials.com/workflows/cut-ai-subscription-sprawl.html): keep/cut/trial review for overlapping AI seats

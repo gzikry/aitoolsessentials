@@ -316,3 +316,117 @@ ARTICLES['launch-ai-business-whop-blueprints.html'] = {
 <p>If you are building an AI-powered business, the Whop CLI + Blueprints combination removes the setup friction. You bring the product idea; Whop handles hosting, payments, and the infrastructure. For non-technical founders, the dashboard works. For developers and agent-driven workflows, the CLI is faster.</p>
 <p>See our <a href="../tools/whop-cli/">Whop CLI review</a> and the <a href="best-ai-automation-tools.html">best AI automation tools</a> guide for more.</p>'''}
 
+ARTICLES['how-to-cut-ai-tool-subscriptions.html'] = {
+ 'title':'How to cut AI tool subscriptions without losing work','kicker':'Cost-cutting guide','desc':'A practical keep/cut/trial framework for AI stacks that overlap — free scorecard first, Premium matrix when you need the full archive.',
+ 'body':'''
+<p><strong>Short answer:</strong> most teams do not need more AI tools. They need a keep/cut/trial process that forces every subscription to own a weekly workflow. Start free, then use a full decision matrix only if the stack is still messy after one honest review.</p>
+<h2>The 30-minute cut process</h2>
+<ol>
+<li><strong>List every AI subscription</strong> with monthly cost, owner, and last real use.</li>
+<li><strong>Group by job</strong> — drafting, research, meetings, coding, visuals, automation. Overlap lives inside a job, not across the whole stack.</li>
+<li><strong>Run one real task</strong> in each contender for the same job. Demos do not count.</li>
+<li><strong>Tag keep / trial / replace / cancel</strong>. Keep only tools used weekly with a clear owner.</li>
+<li><strong>Cancel or pause</strong> anything without a weekly workflow before the next renewal.</li>
+</ol>
+<h2>Free tools that help right now</h2>
+<ul>
+<li><a href="../downloads/ai-tool-evaluation-scorecard.html">AI Tool Evaluation Scorecard</a> — score one real task before paying.</li>
+<li><a href="../cost-calculator.html">Cost calculator</a> — estimate stack spend before annual lock-in.</li>
+<li><a href="../pricing-watch/">AI Pricing Watch</a> — verified pricing snapshots with checked dates.</li>
+<li><a href="../decision-brief.html">Decision Brief</a> — pick 2–3 tools and generate a shareable brief with overlap warnings.</li>
+</ul>
+<h2>When a free review is not enough</h2>
+<p>If you have five or more paid AI tools, multiple owners, or annual prepays on the calendar, a one-page scorecard is not enough. You need a full matrix, a stack-audit template, a weekly checklist, and a change-alert feed so renewals are not decided from memory.</p>
+<p>That is what <a href="../premium/">AIToolsEssentials Premium</a> is for: a $12/month research membership with a 7-day free trial, stack-audit template, weekly checklist, tool-change alerts, hands-on comparison protocols, ROI calculator, and priority research slots. Research and strategy only — no implementation or account access.</p>
+<p>Use code <strong>LAUNCH50</strong> for 50% off the first paid month after the trial (new users). Start from the <a href="../premium/">Premium page</a> or <a href="../pricing/">pricing</a>.</p>
+<h2>Decision rule</h2>
+<p>If a tool does not save measurable time on a weekly workflow, it is a cancel candidate. "Just in case" is not a workflow. Prefer free trials and monthly billing until one tool clearly owns the job.</p>
+'''}
+
+ARTICLES['ai-stack-audit-checklist.html'] = {
+ 'title':'AI stack audit checklist: keep, cut, or trial','kicker':'Audit checklist','desc':'A free AI stack audit checklist for mapping every paid tool, spotting overlap, and deciding keep/cut/trial before the next renewal.',
+ 'body':'''
+<p><strong>Short answer:</strong> an AI stack audit is a structured inventory of every paid AI tool, what job it owns, how often it is used, and what it costs. The goal is not a prettier spreadsheet — it is fewer overlapping subscriptions.</p>
+<h2>What to capture for every tool</h2>
+<ul>
+<li>Name and plan tier</li>
+<li>Monthly or annual cost</li>
+<li>Owner (person accountable for the spend)</li>
+<li>Weekly use hours (honest estimate)</li>
+<li>Primary job it owns</li>
+<li>Whether another paid tool already does that job</li>
+<li>Privacy or client-data constraints</li>
+<li>Cancellation risk (annual prepay, seats, contracts)</li>
+</ul>
+<h2>Free path</h2>
+<ol>
+<li>Download the <a href="../downloads/ai-tool-evaluation-scorecard.html">evaluation scorecard</a> and score one real task per contender.</li>
+<li>Use the <a href="../cost-calculator.html">cost calculator</a> to total monthly spend.</li>
+<li>Run a <a href="../decision-brief.html">decision brief</a> for any 2–3 tool shortlist.</li>
+<li>Check <a href="../pricing-watch/">Pricing Watch</a> before renewing anything annual.</li>
+</ol>
+<h2>When to use the Premium audit pack</h2>
+<p><a href="../premium/">Premium members</a> get a fillable <strong>AI Stack Audit Template</strong>, a weekly checklist, an ROI calculator, and a full 61-tool decision matrix. Reply with a completed audit for a strategy-only keep/cut/trial recommendation within 48 hours. No account access required. 7-day free trial, then $12/month; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+<h2>Red flags</h2>
+<ul>
+<li>Two paid tools own the same weekly job</li>
+<li>A tool has no owner</li>
+<li>No real task test in the last 30 days</li>
+<li>Annual prepay before a 2-week real-work trial</li>
+<li>Client data pasted into a tool with unclear training defaults</li>
+</ul>
+'''}
+
+ARTICLES['chatgpt-vs-claude-vs-grok-vs-gemini.html'] = {
+ 'title':'ChatGPT vs Claude vs Grok vs Gemini: how to choose','kicker':'Comparison guide','desc':'A practical way to choose between ChatGPT, Claude, Grok, and Gemini using identical real tasks — not brand preference or generic benchmarks.',
+ 'body':'''
+<p><strong>Short answer:</strong> do not pick a general AI assistant by brand. Run the same drafting, research, and coding tasks in each finalist and keep the one that reduces review time without raising verification risk.</p>
+<h2>What each assistant is usually best for</h2>
+<ul>
+<li><strong><a href="../tools/chatgpt/">ChatGPT</a>:</strong> broad everyday work — drafting, files, browsing, and multimodal tasks in one place.</li>
+<li><strong><a href="../tools/claude/">Claude</a>:</strong> long documents, careful prose, instruction-heavy drafting, and document review.</li>
+<li><strong><a href="../tools/grok/">Grok</a>:</strong> real-time X/web context, always-on agent features, and image generation where available.</li>
+<li><strong><a href="../tools/gemini/">Gemini</a>:</strong> Google Workspace-native work across Docs, Gmail, Drive, and multimodal tasks.</li>
+</ul>
+<p>Confirm current model names and plan limits on each vendor page — lineups change. See also our model lineup notes and the individual <a href="is-chatgpt-worth-it.html">worth-it guides</a>.</p>
+<h2>30-minute hands-on protocol</h2>
+<ol>
+<li>Write one brief for drafting, one for research, one for coding/debugging.</li>
+<li>Run the identical brief in ChatGPT, Claude, Grok, and Gemini on the plan you actually pay for (or free).</li>
+<li>Score editing burden, factual verification effort, and whether the output is usable without heavy rewrite.</li>
+<li>Keep one primary assistant. Keep a second only if it owns a different weekly job.</li>
+</ol>
+<h2>Free vs Premium</h2>
+<p>Public pages give you the comparison framework and tool reviews. <a href="../premium/">Premium</a> members get a fillable hands-on comparison CSV, the full decision matrix, tool-change alerts when model lineups shift, and priority research slots. 7-day free trial · $12/month · code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+<p>Related: <a href="claude-vs-chatgpt-for-writing.html">Claude vs ChatGPT for writing</a>, <a href="../comparisons/chatgpt-vs-claude.html">ChatGPT vs Claude</a>, <a href="../comparisons/chatgpt-vs-gemini.html">ChatGPT vs Gemini</a>, <a href="../comparisons/chatgpt-vs-grok.html">ChatGPT vs Grok</a>.</p>
+'''}
+
+ARTICLES['is-an-ai-tool-membership-worth-it.html'] = {
+ 'title':'Is an AI tool research membership worth it?','kicker':'Straight answer','desc':'When a $12/month AI research membership beats another SaaS subscription — and when free directories and scorecards are enough.',
+ 'body':'''
+<p><strong>Short answer:</strong> a research membership is worth it if you already pay for multiple AI tools, renewals are coming up, and you need dated decision archives more than another generative app. It is not worth it if you only need one free assistant and have no stack to manage.</p>
+<h2>When free is enough</h2>
+<ul>
+<li>You use one general assistant a few times a week</li>
+<li>You can finish a decision with a free scorecard and one trial</li>
+<li>No annual prepays or multi-seat tools are on the calendar</li>
+</ul>
+<p>Start with the <a href="../downloads/ai-tool-evaluation-scorecard.html">scorecard</a>, <a href="best-ai-tools-for-beginners.html">beginner guide</a>, and free <a href="../tools/index.html">tool reviews</a>.</p>
+<h2>When a membership earns its keep</h2>
+<ul>
+<li>You have 3+ paid AI tools and unclear ownership</li>
+<li>Pricing, models, or plan names change faster than you track them</li>
+<li>You need a reusable audit, weekly checklist, and comparison protocol</li>
+<li>You want priority research on a specific workflow without hiring a consultant</li>
+</ul>
+<p><a href="../premium/">AIToolsEssentials Premium</a> is built for that case: monthly decision matrix, stack-audit template, weekly checklist, tool-change alert feed, hands-on protocols, ROI calculator, and priority research slots. It is research and strategy only — not implementation, setup, integrations, or account access.</p>
+<p><strong>Price:</strong> 7-day free trial, then $12/month via Whop. Code <strong>LAUNCH50</strong> = 50% off the first paid month for new users. Cancel anytime from Whop. All sales final — no refunds.</p>
+<h2>How to evaluate any research membership</h2>
+<ol>
+<li>Does it give dated sources, not undated opinions?</li>
+<li>Can you download CSVs or templates you will reuse monthly?</li>
+<li>Is the scope clearly research-only, so you are not buying vague "support"?</li>
+<li>Is there a trial before the first charge?</li>
+</ol>
+<p>If those fail, stay on the free site. If they pass and your stack is already expensive, $12/month is usually cheaper than one unused AI seat.</p>
+'''}

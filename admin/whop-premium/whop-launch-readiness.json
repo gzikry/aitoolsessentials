@@ -37,12 +37,211 @@
     "files/ai-roi-calculator-template.csv"
   ],
   "george_still_needs_to_do": [
-    "Upload posts from whop-posts-2026-09.md, whop-posts-2026-10.md, and whop-posts-2026-11.md into Whop",
-    "Attach all CSV files inside the Whop member area",
-    "Pin the November welcome/start-here post",
-    "Run a Whop test transaction through the 7-day trial path",
-    "Confirm LAUNCH50 applies 50% off the first paid month",
-    "Confirm the branded checkout URL still resolves to the correct product"
+    "Run a Whop test transaction through the 7-day trial path (checkout ch_DKm5yxA1OBXoDru)",
+    "Confirm LAUNCH50 applies 50% off the first paid month on first charge after trial",
+    "Optionally backfill September/October archive posts from whop-posts-2026-09.md / 2026-10.md"
   ],
-  "scope_boundary": "Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support. Stack-audit replies are strategy-only written recommendations."
+  "scope_boundary": "Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support. Stack-audit replies are strategy-only written recommendations.",
+  "whop_files_uploaded": [
+    {
+      "file": "ai-roi-calculator-template.csv",
+      "id": "file_67rB0MGhyzApX",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "ai-stack-audit-template.csv",
+      "id": "file_8fqpHOsiO82Y5",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "assistant-hands-on-comparison-2026-11.csv",
+      "id": "file_eqEG8PXJt4E8I",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "automation-pricing-model-decoder-2026-09.csv",
+      "id": "file_qSPMKaaxApDIL",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "general-ai-assistant-shortlist-2026-09.csv",
+      "id": "file_nujVy0ZJ7LH7F",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "meeting-notes-decision-sheet-2026-10.csv",
+      "id": "file_qGqGXtWaMP4iz",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "premium-tool-decision-matrix-2026-09.csv",
+      "id": "file_CIsC5EUluef0t",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "premium-tool-decision-matrix-2026-10.csv",
+      "id": "file_azmsgju39OCPr",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "premium-tool-decision-matrix-2026-11.csv",
+      "id": "file_aXvNSSknOyEjG",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "tool-change-alert-feed-2026-11.csv",
+      "id": "file_q8BjGnYW9IrNV",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "visual-ai-tool-shortlist-2026-10.csv",
+      "id": "file_vAe0NRnDIwdyD",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "weekly-ai-stack-checklist.csv",
+      "id": "file_EIbCA1CmJ545x",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "whop-posts-2026-09.md",
+      "id": "file_92NuKoqYkW465",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "whop-posts-2026-10.md",
+      "id": "file_yjjOfNxgt5CmH",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "whop-posts-2026-11.md",
+      "id": "file_8AMCangsibglX",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "whop-setup-checklist.md",
+      "id": "file_Vxys8WtyYTbbH",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "whop-launch-readiness.md",
+      "id": "file_UgEkkGaYP0UxT",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    },
+    {
+      "file": "aitools-premium-whop-upload-pack.zip",
+      "id": "file_MWeq9j0r9IDaH",
+      "put": 200,
+      "status": "ready",
+      "has_url": true
+    }
+  ],
+  "forum_posts_status": "november_pack_live_pinned",
+  "experience_ids_detected_on_product_page": [
+    "exp_ZJqq0ue981QYGR",
+    "exp_h66R9eZyc2jI4D",
+    "exp_qTmc1r7eMCgu5k"
+  ],
+  "forum_experience_id": "exp_h66R9eZyc2jI4D",
+  "forum_posts_created": [
+    {
+      "code": "N1",
+      "title": "Pinned: Welcome to Premium (updated for November)",
+      "http": 200,
+      "id": "post_1CeTt8AoUELAP52ufNYh2Y",
+      "attachments": [
+        "file_aXvNSSknOyEjG"
+      ]
+    },
+    {
+      "code": "N2",
+      "title": "November brief: Stop paying for AI tools you don't use",
+      "http": 400,
+      "id": null,
+      "attachments": [
+        "file_8fqpHOsiO82Y5",
+        "file_67rB0MGhyzApX",
+        "file_aXvNSSknOyEjG"
+      ]
+    },
+    {
+      "code": "N3",
+      "title": "Weekly AI Stack Checklist: your 7-day rhythm",
+      "http": 200,
+      "id": "post_1CeTt8CvKNzSS3Nd36EfzB",
+      "attachments": [
+        "file_EIbCA1CmJ545x"
+      ]
+    },
+    {
+      "code": "N4",
+      "title": "November alert feed: what changed across tracked tools",
+      "http": 200,
+      "id": "post_1CeTt8E2xvHPuRkTo2LKKV",
+      "attachments": [
+        "file_q8BjGnYW9IrNV"
+      ]
+    },
+    {
+      "code": "N5",
+      "title": "Hands-on comparison: ChatGPT vs Claude vs Grok vs Gemini",
+      "http": 200,
+      "id": "post_1CeTt8FD6LzQoBAcS6K9Aq",
+      "attachments": [
+        "file_eqEG8PXJt4E8I"
+      ]
+    },
+    {
+      "code": "N6",
+      "title": "November request thread + priority research slots",
+      "http": 200,
+      "id": "post_1CeTt8GGjm6Rf4Ewa3GBK5",
+      "attachments": []
+    },
+    {
+      "code": "N2",
+      "title": "November brief: Stop paying for AI tools you don't use",
+      "http": 200,
+      "id": "post_1CeTtAnUuVwb829KUf6qXP",
+      "attachments": [
+        "file_iUkLTTTCdB0wv",
+        "file_rbf9gaySoP87k",
+        "file_gkmW936jhMNOo"
+      ]
+    }
+  ]
 }

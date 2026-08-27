@@ -1,0 +1,128 @@
+[
+  {
+    "file": "ai-roi-calculator-template.csv",
+    "id": "file_67rB0MGhyzApX",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "ai-stack-audit-template.csv",
+    "id": "file_8fqpHOsiO82Y5",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "assistant-hands-on-comparison-2026-11.csv",
+    "id": "file_eqEG8PXJt4E8I",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "automation-pricing-model-decoder-2026-09.csv",
+    "id": "file_qSPMKaaxApDIL",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "general-ai-assistant-shortlist-2026-09.csv",
+    "id": "file_nujVy0ZJ7LH7F",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "meeting-notes-decision-sheet-2026-10.csv",
+    "id": "file_qGqGXtWaMP4iz",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "premium-tool-decision-matrix-2026-09.csv",
+    "id": "file_CIsC5EUluef0t",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "premium-tool-decision-matrix-2026-10.csv",
+    "id": "file_azmsgju39OCPr",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "premium-tool-decision-matrix-2026-11.csv",
+    "id": "file_aXvNSSknOyEjG",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "tool-change-alert-feed-2026-11.csv",
+    "id": "file_q8BjGnYW9IrNV",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "visual-ai-tool-shortlist-2026-10.csv",
+    "id": "file_vAe0NRnDIwdyD",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "weekly-ai-stack-checklist.csv",
+    "id": "file_EIbCA1CmJ545x",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "whop-posts-2026-09.md",
+    "id": "file_92NuKoqYkW465",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "whop-posts-2026-10.md",
+    "id": "file_yjjOfNxgt5CmH",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "whop-posts-2026-11.md",
+    "id": "file_8AMCangsibglX",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "whop-setup-checklist.md",
+    "id": "file_Vxys8WtyYTbbH",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "whop-launch-readiness.md",
+    "id": "file_UgEkkGaYP0UxT",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  },
+  {
+    "file": "aitools-premium-whop-upload-pack.zip",
+    "id": "file_MWeq9j0r9IDaH",
+    "put": 200,
+    "status": "ready",
+    "has_url": true
+  }
+]
