@@ -1,0 +1,11 @@
+Metric,Formula,Your Value,Notes
+Monthly AI spend,,,Sum of all subscriptions
+Hours saved per week (estimated),,,Be honest — compare to pre-AI baseline
+Your hourly rate,,,What your time is worth
+Monthly time value saved,Hours saved/week x 4.3 x hourly rate,,Auto-calculate
+Net ROI,Monthly time value saved - monthly AI spend,,Positive = worth keeping
+ROI %,(Net ROI / Monthly AI spend) x 100,,>100% means tools pay for themselves multiple times over
+Most expensive unused tool,,,Candidate for cancellation
+Most used tool,,,Core of your stack
+Overlap cost (duplicate tools),,,Sum of tools that do the same job
+Recommended action,,,"Cut, keep, or trial"

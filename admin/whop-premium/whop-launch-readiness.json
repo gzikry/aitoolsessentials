@@ -1,8 +1,17 @@
 {
   "updated_at": "2026-08-27",
   "site_ready": true,
+  "whop_commerce_ready": {
+    "plan_id": "plan_FNXWs3suBFwDN",
+    "checkout": "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/",
+    "checkout_promo": "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50",
+    "trial_days": 7,
+    "promo_code": "LAUNCH50",
+    "price_usd_month": 12
+  },
   "public_pages": [
     "/premium/",
+    "/premium/welcome/",
     "/premium/sample-report.html",
     "/premium/roadmap.html",
     "/premium/archive.html",
@@ -12,16 +21,28 @@
   ],
   "whop_assets_ready": [
     "whop-posts-2026-09.md",
+    "whop-posts-2026-10.md",
+    "whop-posts-2026-11.md",
     "files/premium-tool-decision-matrix-2026-09.csv",
+    "files/premium-tool-decision-matrix-2026-10.csv",
+    "files/premium-tool-decision-matrix-2026-11.csv",
     "files/general-ai-assistant-shortlist-2026-09.csv",
-    "files/automation-pricing-model-decoder-2026-09.csv"
+    "files/automation-pricing-model-decoder-2026-09.csv",
+    "files/visual-ai-tool-shortlist-2026-10.csv",
+    "files/meeting-notes-decision-sheet-2026-10.csv",
+    "files/ai-stack-audit-template.csv",
+    "files/weekly-ai-stack-checklist.csv",
+    "files/tool-change-alert-feed-2026-11.csv",
+    "files/assistant-hands-on-comparison-2026-11.csv",
+    "files/ai-roi-calculator-template.csv"
   ],
   "george_still_needs_to_do": [
-    "Upload posts from whop-posts-2026-09.md into Whop",
-    "Attach the three CSV files inside the Whop member area",
-    "Pin the start-here post",
-    "Run the $12 Whop test transaction",
-    "Confirm the checkout URL still resolves to the correct product"
+    "Upload posts from whop-posts-2026-09.md, whop-posts-2026-10.md, and whop-posts-2026-11.md into Whop",
+    "Attach all CSV files inside the Whop member area",
+    "Pin the November welcome/start-here post",
+    "Run a Whop test transaction through the 7-day trial path",
+    "Confirm LAUNCH50 applies 50% off the first paid month",
+    "Confirm the branded checkout URL still resolves to the correct product"
   ],
-  "scope_boundary": "Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support."
+  "scope_boundary": "Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support. Stack-audit replies are strategy-only written recommendations."
 }

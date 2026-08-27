@@ -1,0 +1,34 @@
+Field,Your Answer,Guidance
+Your role/team size,,"e.g. Solo consultant, 5-person agency, 20-person sales team"
+Monthly AI spend (all tools),,Sum all AI subscription costs
+Tool 1: Name,,e.g. ChatGPT Plus
+Tool 1: Monthly cost,,$/month
+Tool 1: Weekly use hours,,Estimate
+Tool 1: What it does for you,,One sentence
+Tool 1: Could it be replaced?,,By what? Or 'no'
+Tool 2: Name,,
+Tool 2: Monthly cost,,
+Tool 2: Weekly use hours,,
+Tool 2: What it does for you,,
+Tool 2: Could it be replaced?,,
+Tool 3: Name,,
+Tool 3: Monthly cost,,
+Tool 3: Weekly use hours,,
+Tool 3: What it does for you,,
+Tool 3: Could it be replaced?,,
+Tool 4: Name,,
+Tool 4: Monthly cost,,
+Tool 4: Weekly use hours,,
+Tool 4: What it does for you,,
+Tool 4: Could it be replaced?,,
+Tool 5: Name,,
+Tool 5: Monthly cost,,
+Tool 5: Weekly use hours,,
+Tool 5: What it does for you,,
+Tool 5: Could it be replaced?,,
+Biggest overlap (which tools do the same job?),,
+Most expensive tool you rarely use,,
+One workflow you wish AI handled better,,Describe the task
+Privacy/data constraints,,"Client data, HIPAA, NDA, etc."
+Budget ceiling for AI tools,,$/month total you're willing to spend
+Cancellation risk (annual prepay?),,Which tools lock you in annually?

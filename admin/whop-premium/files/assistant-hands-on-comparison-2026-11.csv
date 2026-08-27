@@ -1,0 +1,13 @@
+Criterion,ChatGPT,Claude,Grok,Gemini
+Plan checked,Free/Plus/Pro (verify current),Free/Pro/Max (verify current),Free/Paid via X (verify current),Free/AI Pro/Ultra (verify current)
+Best for,"Breadth: images, files, voice, browsing in one place","Long documents, careful prose, instruction adherence","Real-time X/web data, always-on agents, image gen","Google Workspace integration, multimodal"
+File upload,"Yes — images, PDFs, spreadsheets","Yes — documents, PDFs, code",Limited (check official),"Yes — docs, images, sheets"
+Web access,Yes (Plus+),Limited,Yes — real-time X + web,Yes — Google search integration
+Image generation,Yes (native / DALL-E lineage),No or limited (check current),Yes (Imagine),Yes (Imagen)
+Code execution,Yes (advanced data analysis),Yes (artifacts),Yes (Grok Build),Yes (code execution)
+Data training opt-out,Available on Business/Enterprise,Available on Team/Enterprise,Check X/Grok privacy,Available on paid tiers
+Offline mode,No,No,No,No
+Member test result (drafting),TBD — run identical prompt,TBD — run identical prompt,TBD — run identical prompt,TBD — run identical prompt
+Member test result (research),TBD — run identical query,TBD — run identical query,TBD — run identical query,TBD — run identical query
+Member test result (coding),TBD — run identical task,TBD — run identical task,TBD — run identical task,TBD — run identical task
+Verdict per workflow,Fill after testing,Fill after testing,Fill after testing,Fill after testing

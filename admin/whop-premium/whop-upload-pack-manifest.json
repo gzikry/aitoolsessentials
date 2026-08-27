@@ -1,13 +1,24 @@
 {
-  "bundle": "aitools-premium-whop-upload-pack-2026-09.zip",
+  "bundle": "aitools-premium-whop-upload-pack.zip",
   "files": [
     "whop-posts-2026-09.md",
+    "whop-posts-2026-10.md",
+    "whop-posts-2026-11.md",
     "whop-setup-checklist.md",
     "whop-launch-readiness.md",
     "whop-launch-readiness.json",
     "files/premium-tool-decision-matrix-2026-09.csv",
+    "files/premium-tool-decision-matrix-2026-10.csv",
+    "files/premium-tool-decision-matrix-2026-11.csv",
     "files/general-ai-assistant-shortlist-2026-09.csv",
-    "files/automation-pricing-model-decoder-2026-09.csv"
+    "files/automation-pricing-model-decoder-2026-09.csv",
+    "files/visual-ai-tool-shortlist-2026-10.csv",
+    "files/meeting-notes-decision-sheet-2026-10.csv",
+    "files/ai-stack-audit-template.csv",
+    "files/weekly-ai-stack-checklist.csv",
+    "files/tool-change-alert-feed-2026-11.csv",
+    "files/assistant-hands-on-comparison-2026-11.csv",
+    "files/ai-roi-calculator-template.csv"
   ],
   "note": "Upload the Markdown posts/checklists as Whop posts and attach the CSV files to the member area."
 }

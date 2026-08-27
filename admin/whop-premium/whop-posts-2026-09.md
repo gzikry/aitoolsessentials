@@ -14,13 +14,16 @@ Welcome to AIToolsEssentials Premium. This is a research membership for choosing
 3. Pick one workflow you want tested next and reply in the request thread.
 
 **What Premium includes:**
-- Monthly decision matrix CSV.
+- Monthly decision matrix CSV (all tracked tools).
+- AI Stack Audit Template + strategy-only personalized reply.
+- Weekly AI Stack Checklist and Tool-Change Alert Feed.
+- Hands-On Comparison Protocol and AI ROI Calculator.
 - One workflow deep-dive or playbook each month.
+- Priority research slots (first 5 member requests).
 - Source-dated pricing/policy notes when available.
-- Member request thread for upcoming research.
 - Strategy-only recommendations — no account access, implementation, integrations, or ongoing support.
 
-**Billing:** $12/month via Whop, auto-renews until cancelled from the Whop account. All sales final — no refunds.
+**Billing:** 7-day free trial, then $12/month via Whop. Use code LAUNCH50 for 50% off your first paid month (new users only). Auto-renews until cancelled from the Whop account. All sales final — no refunds.
 
 ---
 

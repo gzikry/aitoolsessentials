@@ -28,12 +28,16 @@
     "status": "active_verified",
     "checkout_active": true,
     "plan_id": "plan_FNXWs3suBFwDN",
+    "checkout_configuration_id": "ch_DKm5yxA1OBXoDru",
     "product_url": "https://whop.com/aitoolsessentials/aitoolsessentials-premium/",
-    "checkout_url": "https://whop.com/checkout/plan_FNXWs3suBFwDN",
+    "checkout_url": "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/",
+    "checkout_promo_url": "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50",
+    "promo_code": "LAUNCH50",
+    "trial_period_days": 7,
     "price_usd_month": 12,
     "refund_policy": "no_refunds",
-    "verified_at": "2026-08-22",
-    "notes": "Checkout URL verified rendering $12/month Premium. Wired into /pricing/."
+    "verified_at": "2026-08-27",
+    "notes": "Branded checkout + 7-day trial + LAUNCH50 (50% first paid month, new users). Wired into /premium/ and /pricing/. George still needs to upload member posts/CSVs into Whop and run a test transaction."
   },
   "official_source_url_check": {
     "checked_at": "2026-08-22",
