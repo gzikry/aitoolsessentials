@@ -717,6 +717,57 @@ def update_checkout(root: Path) -> None:
         home.write_text(html)
 
 
+def enhance_homepage(root: Path) -> None:
+    import re
+    home = root / "index.html"
+    if not home.exists():
+        return
+    html = home.read_text()
+    html = re.sub(
+        r'<a class="nav-cta" href="[^"]*legal/affiliate-disclosure\.html">Disclosure</a>',
+        '<a class="nav-cta" href="premium/">Premium</a>',
+        html,
+        count=1,
+    )
+    header_end = html.find("</header>")
+    header = html[:header_end] if header_end != -1 else html[:4000]
+    if 'href="premium/"' not in header and 'href="/premium/"' not in header:
+        html = html.replace("</nav>", '<a href="premium/">Premium</a></nav>', 1)
+    if "Start 7-day Premium trial" not in html:
+        html = html.replace(
+            '<a class="button button-ghost-dark" href="articles/top-ai-tools-2026.html">Read the guide</a>',
+            '<a class="button button-ghost-dark" href="articles/top-ai-tools-2026.html">Read the guide</a>\n          <a class="button button-blue" href="'
+            + WHOP_CHECKOUT
+            + '" rel="external noopener">Start 7-day Premium trial</a>',
+        )
+    band = f'''<!-- AIT HOMEPAGE PREMIUM BAND START -->
+<section class="scene scene-dark" style="padding:64px 28px">
+<div style="max-width:1040px;margin:0 auto">
+<p class="kicker light">Premium membership — live now</p>
+<h2 style="font-size:clamp(28px,4vw,42px)">Stop paying for AI tools you don't use.</h2>
+<p class="subhead">The directory stays free. Premium is the $12/month research membership for overlapping stacks: AI stack audit, weekly checklist, tool-change alerts, hands-on protocols, ROI calculator, and a 61-tool decision matrix.</p>
+<ul style="max-width:740px;margin:20px 0 28px;line-height:1.6">
+<li>7-day free trial, then $12/month. Code <strong>LAUNCH50</strong> = 50% off the first paid month (new users).</li>
+<li>Reply with a completed audit for a strategy-only keep/cut/trial recommendation within 48 hours.</li>
+<li>Cancel anytime from Whop. Research and strategy only — no implementation or account access.</li>
+</ul>
+<p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Start 7-day free trial</a><a class="button button-ghost-dark" href="premium/" style="margin-left:8px">See everything included</a><a class="button button-ghost-dark" href="pricing/" style="margin-left:8px">Compare plans</a></p>
+</div></section>
+<!-- AIT HOMEPAGE PREMIUM BAND END -->
+'''
+    html = re.sub(
+        r"\n?<!-- AIT HOMEPAGE PREMIUM BAND START -->.*?<!-- AIT HOMEPAGE PREMIUM BAND END -->\n?",
+        "\n",
+        html,
+        flags=re.S,
+    )
+    intro = re.search(r'(<section class="scene scene-light intro-strip">.*?</section>)', html, flags=re.S)
+    if intro:
+        html = html.replace(intro.group(1), intro.group(1) + "\n" + band, 1)
+    elif "<main>" in html:
+        html = html.replace("<main>", "<main>\n" + band, 1)
+    home.write_text(html)
+
 
 def premium_upsell_module() -> str:
     return f'''<!-- AIT PREMIUM MODULE START -->
@@ -763,6 +814,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         if new != old:
             p.write_text(new)
             changed += 1
+    enhance_homepage(root)
     return changed
 
 def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
@@ -771,6 +823,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
     generate_public_pages(root, tools_list, today)
     generate_whop_pack(root, tools_list, today)
     update_checkout(root)
+    enhance_homepage(root)
     return 9
 
 
