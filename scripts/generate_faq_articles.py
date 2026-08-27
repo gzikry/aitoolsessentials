@@ -278,3 +278,17 @@ ARTICLES['is-notion-ai-worth-it.html'] = {
 <h2>How to decide in one week</h2>
 <p>Try the free Notion AI trial on your actual workspace. Count times the in-context AI saves you a tool switch. See our <a href="personal-knowledge-base-notion-ai.html">Notion AI knowledge base guide</a> and the <a href="../comparisons/notion-ai-vs-microsoft-copilot.html">Notion AI vs Copilot comparison</a>.</p>
 <p class="monetization-note">Plan structure checked against official Notion sources. Confirm current prices on the vendor page before purchasing.</p>'''}
+
+ARTICLES['best-ai-tools-for-beginners.html'] = {
+ 'title':'Best AI tools for beginners','kicker':'Beginner guide','desc':'A free-first starter stack for people who want practical AI results without buying five subscriptions.',
+ 'body':'''
+<p><strong>Short answer:</strong> beginners should start with three tools: one general assistant, one cited research tool, and one production tool that matches the work they actually do. Do not buy a large AI stack on day one.</p>
+<h2>The beginner stack</h2>
+<ol><li><strong>General assistant:</strong> start with <a href="../tools/chatgpt/">ChatGPT</a>, <a href="../tools/claude/">Claude</a>, or <a href="../tools/gemini/">Gemini</a>. Use one for drafting, summaries, brainstorming, and everyday questions.</li><li><strong>Cited research:</strong> use <a href="../tools/perplexity/">Perplexity</a> when the answer depends on sources you need to open and verify.</li><li><strong>One production tool:</strong> choose <a href="../tools/canva-ai/">Canva AI</a> for visuals, <a href="../tools/gamma/">Gamma</a> for decks, <a href="../tools/otter-ai/">Otter</a> for meetings, or <a href="../tools/notion-ai/">Notion AI</a> if your notes already live in Notion.</li></ol>
+<h2>Best free-first picks</h2>
+<ul><li><strong>ChatGPT:</strong> easiest starting point for general help and everyday prompts.</li><li><strong>Claude:</strong> strong for long documents, careful writing, and instruction-heavy drafts.</li><li><strong>Gemini:</strong> most useful if your work already lives in Google apps.</li><li><strong>Perplexity:</strong> better first stop for source-backed research than asking a chatbot to remember facts.</li><li><strong>Canva AI:</strong> practical for non-designers making social graphics, simple decks, and marketing visuals.</li><li><strong>Otter:</strong> good entry point when meetings are the recurring time sink.</li></ul>
+<h2>When to upgrade</h2>
+<p>Upgrade only after a free limit interrupts real work more than once a week, or when a paid-only feature is required for a deliverable. Start with <a href="is-chatgpt-worth-it.html">Is ChatGPT worth it?</a>, <a href="is-claude-worth-it.html">Is Claude worth it?</a>, and <a href="do-i-need-paid-ai-plans.html">Do I need paid AI plans?</a> before adding subscriptions.</p>
+<h2>One-week beginner test</h2>
+<ol><li>Pick three real tasks you already do every week.</li><li>Run each task through the same assistant for five workdays.</li><li>Record where the output saved time and where you had to correct it.</li><li>Use <a href="../downloads/ai-tool-evaluation-scorecard.html">the free scorecard</a> to decide what stays.</li></ol>
+<p><strong>Rule:</strong> one useful workflow beats ten installed tools. If a tool does not save time in a real task during week one, remove it from the stack.</p>'''}

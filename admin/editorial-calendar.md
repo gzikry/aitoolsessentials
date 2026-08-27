@@ -34,6 +34,7 @@
 - Is Grok worth it? ✅ shipped 2026-08-27
 - Is Gemini worth it? ✅ shipped 2026-08-27
 - Is Notion AI worth it? ✅ shipped 2026-08-27
+- Best AI tools for beginners ✅ shipped 2026-08-27
 
 ## Premium member drops (monthly)
 - Month 1 (Sept): comparison archive + coding assistant spec ✅ built
