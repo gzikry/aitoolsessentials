@@ -52,3 +52,8 @@
 - ChatGPT vs Claude vs Grok vs Gemini choose guide ✅ shipped 2026-08-27
 - Is an AI tool research membership worth it? ✅ shipped 2026-08-27
 - Premium content engine (Nov pack) ✅ built 2026-08-27
+
+- AI invoicing and admin stack for solo consultants ✅ shipped 2026-08-27
+- Evaluating AI coding tools for a team rollout ✅ shipped 2026-08-27
+- AI image rights commercial use ✅ shipped 2026-08-27
+- How to cancel AI tools before renewal ✅ shipped 2026-08-27

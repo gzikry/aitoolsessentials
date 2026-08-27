@@ -34,6 +34,10 @@ LEARN = [
     ('ai-stack-audit-checklist.html', 'AI stack audit checklist', 'Map every paid tool, spot overlap, and decide keep/cut/trial before renewal.'),
     ('chatgpt-vs-claude-vs-grok-vs-gemini.html', 'ChatGPT vs Claude vs Grok vs Gemini', 'Choose a primary assistant with identical real tasks, not brand preference.'),
     ('is-an-ai-tool-membership-worth-it.html', 'Is an AI tool research membership worth it?', 'When $12/month research beats another SaaS seat — and when free is enough.'),
+    ('ai-invoicing-admin-stack-consultants.html', 'AI invoicing stack for consultants', 'Free-first invoices, reminders, and weekly admin without five overlapping tools.'),
+    ('evaluating-ai-coding-tools-team-rollout.html', 'Evaluating AI coding tools for a team', 'Security-first rollout checklist so you do not buy two IDEs.'),
+    ('ai-image-rights-commercial-use.html', 'AI image rights for commercial use', 'What to check before using Midjourney or Leonardo output in client work.'),
+    ('how-to-cancel-ai-tools-before-renewal.html', 'How to cancel AI tools before renewal', '14-day process to cancel unused seats without losing the weekly workflow.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

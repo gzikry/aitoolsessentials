@@ -37,12 +37,8 @@
     "files/ai-roi-calculator-template.csv"
   ],
   "george_still_needs_to_do": [
-    "Upload posts from whop-posts-2026-09.md, whop-posts-2026-10.md, and whop-posts-2026-11.md into Whop",
-    "Attach all CSV files inside the Whop member area",
-    "Pin the November welcome/start-here post",
     "Run a Whop test transaction through the 7-day trial path",
-    "Confirm LAUNCH50 applies 50% off the first paid month",
-    "Confirm the branded checkout URL still resolves to the correct product"
+    "Confirm LAUNCH50 applies 50% off the first paid month"
   ],
   "scope_boundary": "Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support. Stack-audit replies are strategy-only written recommendations."
 }

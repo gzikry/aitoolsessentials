@@ -28,12 +28,8 @@
 - [x] files/ai-roi-calculator-template.csv
 
 ## George still needs to do in Whop
-- [x] Upload posts from Sept/Oct/Nov packs into Whop Forums (16 posts live, November welcome pinned)
-- [x] Attach CSV files to matching posts
-- [x] Pin the November welcome/start-here post
 - [ ] Run a Whop test transaction through the 7-day trial path
 - [ ] Confirm LAUNCH50 applies 50% off the first paid month
-- [x] Confirm the branded checkout URL still resolves to the correct product
 
 ## Scope boundary
 Research and strategy only; no implementation, setup, integrations, account access, credentials, or ongoing support. Stack-audit replies are strategy-only written recommendations.

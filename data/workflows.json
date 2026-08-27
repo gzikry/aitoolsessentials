@@ -671,5 +671,35 @@
       "Confirm current prices and cancel terms on vendor pages before acting.",
       "Do not paste client secrets into tools during evaluation without policy review."
     ]
+  },
+  {
+    "slug": "cancel-ai-tools-before-renewal",
+    "title": "Cancel AI tools before renewal",
+    "description": "Export what you need, test a replacement on one real weekly job, then cancel unused AI seats at least 48 hours before the next charge.",
+    "audience": "Operators and founders with overlapping AI subscriptions",
+    "primary_tools": [
+      "chatgpt",
+      "claude",
+      "cursor",
+      "make",
+      "notion-ai"
+    ],
+    "decision_steps": [
+      "List every AI subscription with renewal date and monthly vs annual billing.",
+      "Tag keep / trial / cancel using a real weekly job, not a demo.",
+      "Export chats or files you still need before you lose access.",
+      "Run the weekly job once on the replacement, then cancel in the vendor portal.",
+      "Confirm the next statement; some tools bill through app stores."
+    ],
+    "search_queries": [
+      "how to cancel chatgpt plus",
+      "cancel unused ai subscriptions",
+      "cancel ai tools before renewal"
+    ],
+    "guardrails": [
+      "Not financial or legal advice.",
+      "Confirm cancel terms on the vendor billing page.",
+      "Do not cancel the only tool that owns a weekly workflow until a replacement has passed one real task."
+    ]
   }
 ]

@@ -430,3 +430,84 @@ ARTICLES['is-an-ai-tool-membership-worth-it.html'] = {
 </ol>
 <p>If those fail, stay on the free site. If they pass and your stack is already expensive, $12/month is usually cheaper than one unused AI seat.</p>
 '''}
+
+ARTICLES['ai-invoicing-admin-stack-consultants.html'] = {
+ 'title':'AI invoicing and admin stack for solo consultants','kicker':'How-to workflow','desc':'A free-first admin stack for invoices, follow-up, and weekly bookkeeping so consultants do not buy five overlapping AI tools.',
+ 'body':'''
+<p><strong>Short answer:</strong> solo consultants should keep one general assistant for drafts, one notes or CRM-adjacent tool for follow-up, and a real invoicing system. Do not add an AI billing product until invoices are late every month.</p>
+<h2>The job</h2>
+<p>Weekly admin: write invoices, chase unpaid work, log expenses, and turn call notes into next actions. AI helps the writing. It does not replace your books.</p>
+<h2>Free-first stack</h2>
+<ol>
+<li><strong>Drafting:</strong> <a href="../tools/chatgpt/">ChatGPT</a> or <a href="../tools/claude/">Claude</a> free tier for invoice language, reminder emails, and scope notes.</li>
+<li><strong>Notes:</strong> <a href="../tools/notion-ai/">Notion AI</a> only if your notes already live in Notion. Otherwise keep a plain notes app.</li>
+<li><strong>Follow-up automation:</strong> test <a href="../tools/make/">Make</a> or <a href="../tools/zapier-ai/">Zapier AI</a> on one real unpaid-invoice reminder before paying.</li>
+</ol>
+<p>See the workflow page: <a href="../workflows/consultant-invoicing-admin.html">consultant invoicing admin</a>.</p>
+<h2>What to test in one week</h2>
+<ul>
+<li>Write two real invoices with the same brief in your primary assistant.</li>
+<li>Send one reminder email you would actually send.</li>
+<li>Count minutes saved vs minutes spent editing.</li>
+<li>Do not connect bank or client financial data to a consumer AI plan.</li>
+</ul>
+<p>Use the <a href="../downloads/ai-tool-evaluation-scorecard.html">scorecard</a> and <a href="../cost-calculator.html">cost calculator</a>. If you already pay for overlapping admin tools, the <a href="ai-stack-audit-checklist.html">stack audit checklist</a> and <a href="../premium/">Premium</a> audit template help you cut before renewal. 7-day trial; code LAUNCH50 for 50% off the first paid month (new users).</p>
+'''}
+
+ARTICLES['evaluating-ai-coding-tools-team-rollout.html'] = {
+ 'title':'Evaluating AI coding tools for a team rollout','kicker':'Security checklist','desc':'A security-first checklist for rolling out Cursor, Copilot, or chat coding assistants to a team without leaking source or buying two IDEs.',
+ 'body':'''
+<p><strong>Short answer:</strong> pick one primary coding assistant. Run the same real bugfix on each finalist. Check training defaults, repo access, and offboarding before any annual plan.</p>
+<h2>Do not skip these questions</h2>
+<ol>
+<li>Does this plan train on your code by default?</li>
+<li>Can admins disable sharing, retention, or repo plugins?</li>
+<li>What happens when a seat leaves?</li>
+<li>Can you export or revoke access to indexed code?</li>
+</ol>
+<p>Walk the same list in <a href="../workflows/coding-assistant-security-review.html">coding assistant security review</a>.</p>
+<h2>Hands-on protocol</h2>
+<ol>
+<li>Choose one real bugfix or small feature, not a demo todo app.</li>
+<li>Run it in <a href="../tools/cursor/">Cursor</a>, <a href="../tools/github-copilot/">GitHub Copilot</a>, and your current chat assistant on the plan you actually pay for.</li>
+<li>Score first-output acceptance rate and edit burden.</li>
+<li>Keep one primary. Keep a second only if it owns a different weekly job.</li>
+</ol>
+<p>Related: <a href="is-cursor-worth-it.html">Is Cursor worth it?</a> and <a href="../comparisons/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot</a>.</p>
+<p>If the team already pays for two coding seats, use the <a href="../premium/">Premium</a> coding shortlist and stack audit. Research only; no implementation or account access. 7-day free trial; LAUNCH50 for 50% off the first paid month (new users).</p>
+'''}
+
+ARTICLES['ai-image-rights-commercial-use.html'] = {
+ 'title':'AI image rights: using Midjourney or Leonardo output commercially','kicker':'Rights guide','desc':'What to check before using AI image output in client work: plan terms, likeness, trademarks, and when you still need a human designer.',
+ 'body':'''
+<p><strong>Short answer:</strong> commercial use depends on the vendor plan and the content of the image. Output that looks like a real person, brand, or copyrighted character is still your legal problem even if the tool allowed the prompt.</p>
+<h2>Check before you publish</h2>
+<ul>
+<li>Current commercial-use terms on the official <a href="https://www.midjourney.com/" rel="sponsored noopener nofollow" target="_blank">Midjourney</a> and <a href="https://leonardo.ai/" rel="sponsored noopener nofollow" target="_blank">Leonardo</a> plan pages.</li>
+<li>Whether the paid plan you have actually includes commercial rights.</li>
+<li>Likeness, celebrity, and trademark risk in the prompt and the output.</li>
+<li>Client contract language: some NDAs forbid AI-generated creative without disclosure.</li>
+</ul>
+<p>This is not legal advice. Confirm current terms on vendor pages. See <a href="../workflows/commercial-image-rights.html">commercial image rights workflow</a>.</p>
+<h2>Practical test</h2>
+<p>Generate one real asset you would actually deliver. Compare acceptance rate, edit time, and whether a designer still has to rebuild it. Reviews: <a href="../tools/midjourney/">Midjourney</a>, <a href="../tools/leonardo-ai/">Leonardo AI</a>, <a href="../tools/canva-ai/">Canva AI</a>.</p>
+<p>If you pay for two image tools you barely use, cut with the <a href="how-to-cut-ai-tool-subscriptions.html">cut subscriptions guide</a> or the <a href="../premium/">Premium</a> visual shortlist. 7-day trial; LAUNCH50 for 50% off first paid month (new users).</p>
+'''}
+
+ARTICLES['how-to-cancel-ai-tools-before-renewal.html'] = {
+ 'title':'How to cancel AI tools before renewal without losing work','kicker':'Renewal guide','desc':'A 14-day process for canceling unused AI subscriptions before the next charge while keeping the one tool that owns a weekly job.',
+ 'body':'''
+<p><strong>Short answer:</strong> export anything you need, run one real task on the replacement, then cancel at least 48 hours before renewal. Do not cancel the only tool that owns a weekly workflow.</p>
+<h2>14-day cancel process</h2>
+<ol>
+<li>List every AI subscription, renewal date, and annual vs monthly billing.</li>
+<li>Mark keep / trial / cancel using the <a href="ai-stack-audit-checklist.html">stack audit checklist</a>.</li>
+<li>Export chats, files, or project history you still need.</li>
+<li>Run the weekly job once on the replacement (free tier first).</li>
+<li>Cancel in the vendor billing portal. Screenshot confirmation.</li>
+<li>Watch the next statement. Some tools bill through app stores.</li>
+</ol>
+<p>Related: <a href="can-i-cancel-ai-subscriptions.html">Can I cancel AI subscriptions anytime?</a> and <a href="how-to-cut-ai-tool-subscriptions.html">How to cut AI tool subscriptions</a>.</p>
+<h2>When the free process is not enough</h2>
+<p>If you have five-plus paid tools, mixed annual contracts, or no owner for the spend, use <a href="../premium/">Premium</a>: 30-day renewal calendar, cancel-savings tracker, and stack-audit template. Research and strategy only. 7-day free trial, then $12/month; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+'''}
