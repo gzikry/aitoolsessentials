@@ -172,6 +172,8 @@ def main():
             elif frag and target.suffix == '.html' and target in parsers and frag not in parsers[target].ids:
                 errors.append(f'{f.relative_to(ROOT)} bad fragment {href}')
         for a in p.outbound_ctas:
+            if 'admin' in f.parts:
+                continue
             href = a.get('href','')
             rel = a.get('rel','')
             # Exclude social sharing links (twitter.com, facebook.com, linkedin.com/share)

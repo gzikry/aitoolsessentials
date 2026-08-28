@@ -1,13 +1,19 @@
 {
   "provider": "beehiiv",
-  "publication_name": "Aitoolsessentials",
+  "publication_name": "Keep/Cut Weekly",
   "publication_id": "pub_6019c431-f531-4041-b2b8-674214bc2a90",
   "signup_url": "https://aitoolsessentials.beehiiv.com/subscribe",
   "publication_url": "https://aitoolsessentials.beehiiv.com/",
   "mcp_url": "https://mcp.beehiiv.com/mcp",
   "status": "beehiiv_live",
+  "cadence": "weekly",
+  "purpose": "weekly_newsletter_only",
+  "logo_url": "https://aitoolsessentials.com/assets/aitools-bot-logo-256.png",
+  "mark_url": "https://aitoolsessentials.com/assets/aitools-bot-mark.svg",
+  "og_url": "https://aitoolsessentials.com/assets/og-ai-tools.jpg",
   "embed_html": "",
   "formsubmit_ajax": "https://formsubmit.co/ajax/eb3d1bf5a35125c06383cafa247af931",
-  "subject": "Keep/Cut digest signup",
-  "description": "Weekly keep/cut notes when AI tools change price, plans, or models. Free. No spam."
+  "formsubmit_note": "Not used for the newsletter. FormSubmit remains for submit-tool, test-report, and services intake only.",
+  "subject": "Keep/Cut Weekly signup",
+  "description": "One email a week. What changed, what to keep, what to cut. Jarvis-dry. No daily drip."
 }

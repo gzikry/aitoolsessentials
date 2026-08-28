@@ -81,3 +81,5 @@ Contact: contact@aitoolsessentials.com
 - [Claude Code vs Cursor vs Copilot](https://aitoolsessentials.com/articles/claude-code-vs-cursor-vs-copilot.html): keep one paid coding surface
 - [What changed in AI tools — August 2026](https://aitoolsessentials.com/updates/2026-08.html): public keep/cut digest
 - [Keep/Cut digest subscribe](https://aitoolsessentials.com/subscribe/): free email when recorded prices or models change
+- [Keep/Cut Weekly](https://aitoolsessentials.com/newsletter/): free weekly keep/cut newsletter (Beehiiv)
+- [Keep/Cut Weekly #1](https://aitoolsessentials.com/newsletter/2026-w35.html): two new listings, coding overlap, cancel before renewal

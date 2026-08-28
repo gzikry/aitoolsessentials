@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "2026-w35",
+    "issue": 1,
+    "week_label": "Week of 25 Aug 2026",
+    "send_date": "2026-08-31",
+    "checked_at": "2026-08-27",
+    "subject": "Keep/Cut Weekly #1: two new listings, one coding overlap, and a polite suggestion to cancel something",
+    "preview": "Sir, you appear to be paying twice for the same job. Shall I proceed?",
+    "lede": "Good evening. I have reviewed the directory. Two tools arrived. Four paid stacks deserve a second look before renewal. And if you are still running Copilot and Cursor and Claude Code on the same weekly bugfix, I must inform you that this is not a stack. It is a roundabout.",
+    "signoff": "J. — on behalf of AIToolsEssentials. I am here to keep the useful tools and cut the sentimental ones.",
+    "new_listings": [
+      {"name": "HtmlSlides", "slug": "htmlslides", "note": "Interactive HTML decks. Test against Gamma on one real presentation before you add a seat. Novelty is not a job."},
+      {"name": "Whop CLI", "slug": "whop-cli", "note": "Terminal control for Whop products and checkout. Relevant if you sell on Whop. Irrelevant if you merely enjoy collecting CLIs like stamps."}
+    ],
+    "watch_list": [
+      {"name": "Grok", "slug": "grok", "note": "Lineup last checked 2026-08-26. Confirm current Grok 4.6 / Grok Build names on X before SuperGrok becomes your second assistant."},
+      {"name": "Cursor", "slug": "cursor", "note": "Composer moves. Re-run one real multi-file change before you renew Pro if Copilot or Claude already lives in the same repo."},
+      {"name": "ChatGPT", "slug": "chatgpt", "note": "Recorded as the GPT-5.4 family as of 2026-08-26. Verify openai.com/pricing before you gift them an annual."},
+      {"name": "Claude", "slug": "claude", "note": "Chat plan and Claude Code are not the same job. Do not assume one invoice covers both personalities."}
+    ],
+    "keep_one": {
+      "title": "Claude Code vs Cursor vs Copilot",
+      "url": "/articles/claude-code-vs-cursor-vs-copilot.html",
+      "rule": "Keep one paid coding surface. Copilot for inline completions in the editor you already have. Cursor if you want an AI-native IDE. Claude Code if the job is a terminal agent on a repo. Paying for two is overlap. Paying for three is a hobby I will not finance."
+    },
+    "protocol": "Forty-five minutes. One real bugfix. Run it in each seat you actually pay for. Score first-output acceptance and edit burden. Keep the winner. Cancel the rest 48 hours before renewal — sentiment is not a billing argument.",
+    "keep_cut_rule": "One weekly job. One paid tool. If two invoices own the same Friday, one of them is leaving."
+  }
+]

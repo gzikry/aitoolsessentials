@@ -22,11 +22,14 @@ def capture_block(cfg: dict) -> str:
         return f'<div class="score-card"><span>Keep/Cut digest</span><h2>Get the free digest.</h2>{embed}</div>'
     if signup:
         src = esc(signup)
-        return f'''<div class="score-card"><span>Keep/Cut digest</span><h2>Get the free digest.</h2>
-<p>We email when recorded pricing, plans, or model lineups change enough to affect a keep/cut decision. Unsubscribe anytime.</p>
+        logo = esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")
+        return f'''<div class="score-card"><span>Keep/Cut Weekly</span>
+<p style="text-align:center"><img src="{logo}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"></p>
+<h2>One email. One week. One cut, if you are lucky.</h2>
+<p>I will not drip on you. I will not sell you a second coding seat. I will tell you what changed, what to keep, and what to cancel before renewal. Jarvis-dry. Weekly only. Hosted on Beehiiv — not FormSubmit.</p>
 <p><a class="button button-blue" href="{src}" rel="noopener sponsored nofollow">Subscribe on Beehiiv</a></p>
-<iframe src="{src}" title="Keep/Cut digest signup" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;min-height:520px;border:0;border-radius:12px;background:#fff;margin-top:16px"></iframe>
-<p class="affiliate-inline">If the form does not load, use the button above. Hosted by Beehiiv at aitoolsessentials.beehiiv.com.</p>
+<iframe src="{src}" title="Keep/Cut Weekly signup" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;min-height:520px;border:0;border-radius:12px;background:#fff;margin-top:16px"></iframe>
+<p class="affiliate-inline">If the form does not load, use the button. Publication: aitoolsessentials.beehiiv.com.</p>
 </div>'''
     action = esc(cfg.get("formsubmit_ajax") or "https://formsubmit.co/ajax/eb3d1bf5a35125c06383cafa247af931")
     subject = esc(cfg.get("subject") or "Keep/Cut digest signup")
@@ -60,10 +63,10 @@ def generate(root: Path) -> int:
     cfg = json.loads((root / "data/newsletter.json").read_text())
     desc = cfg.get("description") or "Free keep/cut digest for AI tool pricing and model changes."
     block = capture_block(cfg)
-    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Subscribe — Keep/Cut digest | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/subscribe/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Free email</p><h1>The keep/cut digest.</h1><p class="subhead">{esc(desc)}</p></div></section>
+    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Subscribe — Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/subscribe/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
+<section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><img src="{esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"><p class="kicker light">Weekly newsletter · Beehiiv</p><h1>Keep/Cut Weekly.</h1><p class="subhead">{esc(desc)}</p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">{block}
-<p>Latest public digest: <a href="/updates/2026-08.html">August 2026</a>. Paid <a href="/premium/">Premium</a> is a separate Whop membership (7-day trial, code LAUNCH50).</p>
+<p>Issue 1 is live on the site: <a href="/newsletter/2026-w35.html">Sir, the invoices are talking</a>. Paid <a href="/premium/">Premium</a> is a separate Whop membership. FormSubmit is only for tool submissions and intake — not this list.</p>
 </div></section>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
     out = root / "subscribe"

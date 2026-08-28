@@ -1,22 +1,45 @@
-# Beehiiv — AIToolsEssentials Keep/Cut Digest
+# Keep/Cut Weekly — Beehiiv publication settings (paste)
 
-Live publication (verified 2026-08-27):
+Beehiiv is **weekly newsletter only**. FormSubmit stays for submit-tool / test-report / intake.
 
-- Publication ID: `pub_6019c431-f531-4041-b2b8-674214bc2a90`
-- Site: https://aitoolsessentials.beehiiv.com/
-- Signup: https://aitoolsessentials.beehiiv.com/subscribe
-- MCP: https://mcp.beehiiv.com/mcp
+## Brand
 
-`/subscribe/` on aitoolsessentials.com points at that official Beehiiv signup (button + iframe). Optional slim embed: paste `embed_html` into `data/newsletter.json` and regenerate.
+- Display name: **Keep/Cut Weekly**
+- Website: https://aitoolsessentials.com
+- Logo PNG: https://aitoolsessentials.com/assets/aitools-bot-logo-256.png
+- Square mark: https://aitoolsessentials.com/assets/aitools-bot-mark.svg
+- OG image: https://aitoolsessentials.com/assets/og-ai-tools.jpg
+- Accent: `#0071E3` on black `#121214`
+- Voice: informative, witty, a sprinkle of Jarvis. Dry butler. Useful. Not a hype machine.
 
-## MCP (Hermes)
+## About / promise
 
-OAuth cannot finish in this non-interactive session. In a local Terminal:
+One email a week. What changed in the AI tools people actually pay for. What to keep. What to cut before renewal. I will not drip on you.
+
+## Welcome email
+
+Subject: You are on Keep/Cut Weekly. Try not to add a second Copilot.
+
+Good evening. I am J., writing on behalf of AIToolsEssentials.
+
+You will hear from me once a week. I review recorded directory checks — listings, model lineups, overlapping seats — and I tell you which invoice still earns its keep.
+
+I am not FormSubmit. I am not Premium. I am not a daily digest of “10 AI tools that will change everything.” Those already exist. They are exhausting.
+
+Issue 1: https://aitoolsessentials.com/newsletter/2026-w35.html
+
+If two tools own the same weekly job, keep one. Sentiment is not a billing argument.
+
+J.
+
+## Issue 1
+
+Send Sun 31 Aug 2026 or Mon 1 Sep. Paste `admin/newsletter/2026-w35-beehiiv.html`. Subject/preview in `admin/newsletter/2026-w35-subject.txt`. Upload the logo in Beehiiv Settings → Publication → Branding first.
+
+## MCP
+
+Interactive Terminal only:
 
 ```bash
 hermes mcp add beehiiv --url https://mcp.beehiiv.com/mcp --auth oauth
 ```
-
-Complete the browser login, then we can list forms, draft posts, and pull the native embed code.
-
-Do not invent `embeds.beehiiv.com` form UUIDs. The publication signup URL is the verified capture path until a real embed script exists.

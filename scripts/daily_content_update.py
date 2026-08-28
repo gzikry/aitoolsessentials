@@ -151,6 +151,9 @@ print('Generated monthly digests:', generate_monthly_digest(root))
 from generate_subscribe import generate as generate_subscribe
 print('Generated subscribe page:', generate_subscribe(root))
 
+from generate_weekly_newsletter import generate as generate_weekly_newsletter
+print('Generated weekly newsletter:', generate_weekly_newsletter(root))
+
 from generate_how_tos import generate as generate_how_tos
 print('Generated how-to library:', generate_how_tos(root))
 
