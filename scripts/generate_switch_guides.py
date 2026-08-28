@@ -135,11 +135,46 @@ GUIDES = [
         "cost_note": "Canva Pro often already exists in your stack (check!) — adding Gamma on top duplicates spend. Verify whether Canva Magic Design covers your needs before paying for both.",
         "test_plan": ["Regenerate one recent Gamma deck with Canva Magic Design.", "Time the cleanup edits honestly — this is where Gamma usually wins.", "Cancel only the one that loses the two-week trial."],
     },
+    {
+        "slug": "switch-from-midjourney-to-ideogram",
+        "from_slug": "midjourney", "to_slug": "ideogram",
+        "title": "Switching from Midjourney to Ideogram: text-first image workflow guide",
+        "why": "Ideogram is the stronger test when readable text, posters, ads, and social graphics matter more than Midjourney's signature aesthetic. Do not migrate on a feature list: run the same brand brief through both.",
+        "carries": ["Prompt libraries transfer with modest syntax cleanup", "Reference images and finished exports can be reused", "Upscaling and variation habits are similar"],
+        "doesnt": ["Midjourney parameters and style-reference codes do not translate", "Generation history and personalization stay in Midjourney", "Private-generation settings and rights terms must be rechecked on the chosen Ideogram plan"],
+        "cost_note": "Ideogram's verified free tier includes 10 slow credits per week. Its annual-billing page listed Plus at $15/month and Pro at $42/month when checked 2026-08-28; compare this with your current Midjourney plan and actual monthly image volume.",
+        "test_plan": ["Choose 10 real prompts containing logos, labels, headlines, or packaging text.", "Blind-score text accuracy, brand fit, and cleanup minutes.", "Keep Midjourney unless Ideogram wins the work you actually publish, not merely the typography demo."],
+    },
+    {
+        "slug": "switch-from-runway-to-pika",
+        "from_slug": "runway", "to_slug": "pika",
+        "title": "Switching from Runway to Pika: short-form video migration guide",
+        "why": "Pika is worth testing for quick, effect-heavy social clips; Runway remains the broader production workspace. The switch makes sense only when speed on short clips matters more than timeline depth and production controls.",
+        "carries": ["Source images, video clips, and prompt briefs can be reused", "Short-form aspect-ratio workflows translate", "Finished exports remain portable files"],
+        "doesnt": ["Projects, timelines, masks, and generation history do not transfer", "Runway-specific models and editing controls have no one-click Pika equivalent", "Team permissions and asset libraries need rebuilding"],
+        "cost_note": "Pika did not publish a self-serve USD price list on the official pricing page during our 2026-08-28 verification. Compare only after the checkout screen shows your real plan, credits, renewal cadence, and commercial-use terms.",
+        "test_plan": ["Rebuild three clips you published recently: one image-to-video, one effect, and one edit-heavy sequence.", "Track credits, failed generations, and cleanup time — not just the best output.", "Keep Runway if you still need it to finish the clips Pika starts."],
+    },
+    {
+        "slug": "switch-from-suno-to-udio",
+        "from_slug": "suno", "to_slug": "udio",
+        "title": "Switching from Suno to Udio: music workflow and credit guide",
+        "why": "Udio deserves a trial when editing, stems, and controlled iteration matter more than Suno's rapid song-generation flow. Rights, attribution, and platform terms matter as much as sound quality for anything commercial.",
+        "carries": ["Lyrics, song briefs, genre notes, and reference descriptions transfer", "Exported audio remains usable under the terms that applied when generated", "Prompt-testing habits are similar"],
+        "doesnt": ["Songs, generation history, custom personas, and credits do not transfer", "Model-specific prompt behavior must be relearned", "Commercial-use rights do not become broader merely because a file is uploaded elsewhere"],
+        "cost_note": "Udio listed Standard at $10/month with 1,200 monthly credits and Pro at $30/month with 4,800 when checked 2026-08-28. Compare that with the live Suno checkout and the number of usable tracks—not raw generations—you produce each month.",
+        "test_plan": ["Generate the same five briefs in both tools without reusing copyrighted lyrics or artist impersonations.", "Score arrangement control, vocals, editability, and usable-output rate.", "Download permitted masters and document the applicable terms before cancelling either subscription."],
+    },
 ]
 
 
 def esc(s: Any) -> str:
     return str(s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
+def rating_label(tool: dict[str, Any]) -> str:
+    rating = tool.get("rating")
+    return f"{esc(rating)}/5" if rating not in (None, "") else "Not yet scored"
 
 
 def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
@@ -202,7 +237,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 
 <div class="table-wrap" style="margin-top:30px"><table>
 <thead><tr><th></th><th>{esc(frm.get("name", g["from_slug"]))}</th><th>{esc(to.get("name", g["to_slug"]))}</th></tr></thead><tbody>
-<tr><td><strong>Editorial score</strong></td><td>{esc(frm.get("rating", "—"))}/5</td><td>{esc(to.get("rating", "—"))}/5</td></tr>
+<tr><td><strong>Editorial score</strong></td><td>{rating_label(frm)}</td><td>{rating_label(to)}</td></tr>
 <tr><td><strong>Pricing model</strong></td><td>{esc(frm.get("price") or frm.get("pricing") or "See review")}</td><td>{esc(to.get("price") or to.get("pricing") or "See review")}</td></tr>
 <tr><td><strong>Best fit</strong></td><td>{esc(frm.get("best_for", ""))}</td><td>{esc(to.get("best_for", ""))}</td></tr>
 <tr><td><strong>Full review</strong></td><td><a href="/tools/{g["from_slug"]}/">Read →</a></td><td><a href="/tools/{g["to_slug"]}/">Read →</a></td></tr>
@@ -263,6 +298,12 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         "make": ("zapier-ai", "Migrating from Zapier?", "What imports, what you rebuild, and a one-Zap-first test plan in our switch guide.", "/guides/switch-guides/switch-from-zapier-to-make.html"),
         "elevenlabs": ("descript", "Evaluating Descript for editing?", "Voice stays ours; editing may belong elsewhere — see the ElevenLabs → Descript switch guide.", "/guides/switch-guides/switch-from-elevenlabs-to-descript.html"),
         "fireflies": ("otter-ai", "Considering Otter.ai?", "Cheaper for individuals, weaker for sales teams — read the Fireflies → Otter switch guide first.", "/guides/switch-guides/switch-from-fireflies-to-otter-ai.html"),
+        "midjourney": ("ideogram", "Need better text inside images?", "Test the same real brand brief before moving from Midjourney to Ideogram.", "/guides/switch-guides/switch-from-midjourney-to-ideogram.html"),
+        "ideogram": ("midjourney", "Coming from Midjourney?", "See what transfers, what stays behind, and how to test typography-heavy work.", "/guides/switch-guides/switch-from-midjourney-to-ideogram.html"),
+        "runway": ("pika", "Considering Pika for short clips?", "Compare credits, failed generations, and finishing time before cancelling Runway.", "/guides/switch-guides/switch-from-runway-to-pika.html"),
+        "pika": ("runway", "Coming from Runway?", "Check which production controls you lose before moving an entire video workflow.", "/guides/switch-guides/switch-from-runway-to-pika.html"),
+        "suno": ("udio", "Considering Udio?", "Compare usable tracks, editability, credits, and rights—not just first-listen quality.", "/guides/switch-guides/switch-from-suno-to-udio.html"),
+        "udio": ("suno", "Coming from Suno?", "See what transfers and run the same five music briefs before switching.", "/guides/switch-guides/switch-from-suno-to-udio.html"),
     }
     # Sitewide nav entry: insert "Switching" after the Alternatives nav link on every page.
     for page in root.rglob("*.html"):

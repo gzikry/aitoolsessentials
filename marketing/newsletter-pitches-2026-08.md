@@ -36,7 +36,7 @@ I help small operators audit their AI stacks. Most are paying for 3–5 tools an
 
 I'd love to come on [podcast name] to talk about:
 - The keep/cut/trial framework
-- Why the $497 audit market didn't work
+- How a personalized stack audit turns overlapping subscriptions into decisions
 - How to run a 45-minute coding-assistant test before renewing
 
 I can share a real audit example (anonymized) or walk through the free decision checklist if that's more useful for your audience.

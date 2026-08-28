@@ -54,6 +54,11 @@ ALT_DEFS = {
     "you-com": ["perplexity", "chatgpt", "poe", "claude"],
     "heygen": ["synthesia", "runway", "allvideoai"],
     "allvideoai": ["runway", "descript", "synthesia", "heygen"],
+    "ideogram": ["midjourney", "adobe-firefly", "leonardo-ai", "canva-ai"],
+    "luma-ai": ["runway", "pika", "allvideoai"],
+    "pika": ["runway", "luma-ai", "allvideoai", "heygen"],
+    "suno": ["udio", "elevenlabs", "descript"],
+    "udio": ["suno", "elevenlabs", "descript"],
 }
 
 
@@ -94,12 +99,16 @@ def generate_alternative_pages(root: Path, tools: list[dict[str, Any]]) -> None:
         page = f'<!doctype html><html lang="en">{head(title+" | AIToolsEssentials", desc, DOMAIN+"/alternatives/"+primary_slug+"-alternatives.html")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Alternatives guide</p><h1>{esc(title)}</h1><p class="subhead">{esc(desc)}</p><p><a class="button button-blue" href="/tools/{primary_slug}/">Read {esc(primary["name"])} review</a><a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Quick verdict</span><p>If {esc(primary["name"])} is not the right fit, start by comparing cost, data policy, workflow depth, and whether you need a specialist tool or a general assistant.</p></div><div class="content-hub-grid">{cards}</div><h2>How to choose</h2><div class="content-hub-grid"><article class="content-hub-card"><h3>Choose by workflow</h3><p>Pick the tool that matches the job you do weekly, not the tool with the longest feature list.</p></article><article class="content-hub-card"><h3>Compare upgrade pressure</h3><p>Free tiers are useful for testing, but team features, limits, and exports often determine the real cost.</p></article></div></div></section></main>{FOOTER}{scripts()}</body></html>'
         (out / f"{primary_slug}-alternatives.html").write_text(page)
         index_links.append(f'<article class="content-hub-card"><span>Alternatives</span><h3><a href="/alternatives/{primary_slug}-alternatives.html">{esc(title)}</a></h3><p>{esc(desc)}</p><a class="button button-blue small" href="/alternatives/{primary_slug}-alternatives.html">Compare alternatives</a></article>')
-    # Add an index section to the existing alternatives hub without replacing the generated hub.
+    # Refresh the marker-delimited index section without replacing the generated hub.
     hub = out / "index.html"
-    if hub.exists() and "AIT INDIVIDUAL ALTERNATIVES START" not in hub.read_text():
+    if hub.exists():
         html = hub.read_text()
         block = f'\n<!-- AIT INDIVIDUAL ALTERNATIVES START -->\n<section style="margin:54px 0"><h2>Individual alternatives guides</h2><div class="content-hub-grid">{"".join(index_links)}</div></section>\n<!-- AIT INDIVIDUAL ALTERNATIVES END -->\n'
-        html = html.replace("</main>", block + "</main>", 1)
+        pattern = r'\n?<!-- AIT INDIVIDUAL ALTERNATIVES START -->.*?<!-- AIT INDIVIDUAL ALTERNATIVES END -->\n?'
+        if re.search(pattern, html, flags=re.S):
+            html = re.sub(pattern, block, html, count=1, flags=re.S)
+        else:
+            html = html.replace("</main>", block + "</main>", 1)
         hub.write_text(html)
 
 

@@ -70,7 +70,7 @@ Voice generation vs transcript editing are different jobs. Pick one weekly audio
 
 ## 7. Audit sample
 **X/LinkedIn:**
-The $497 audit is dead. Long live the $12 membership that includes it. Here's what a real audit looks like — 9 pages, keep/cut/trial decisions, printable front-desk sheet, 30-day roadmap:
+AIToolsEssentials Premium includes a personalized 9-page AI stack audit: keep/cut/trial decisions, a printable brief, and a 30-day roadmap. See the sample before starting the trial:
 
 → https://aitoolsessentials.com/premium/sample-audit.html
 
@@ -134,3 +134,33 @@ CRM with AI is only valuable if your team actually uses it. Compare HubSpot and 
 → https://aitoolsessentials.com/articles/hubspot-vs-zoho-crm-ai.html
 
 #AI #CRM #HubSpot #Zoho
+
+---
+
+## 14. Switching from Midjourney to Ideogram
+**X/LinkedIn:**
+Readable text inside images is a workflow requirement, not a demo trick. Before switching from Midjourney to Ideogram, test 10 real posters, labels, or ad briefs and count cleanup minutes.
+
+→ https://aitoolsessentials.com/guides/switch-guides/switch-from-midjourney-to-ideogram.html
+
+#AI #ImageGeneration #Midjourney #Ideogram
+
+---
+
+## 15. Switching from Runway to Pika
+**X/LinkedIn:**
+Pika can be faster for short, effect-heavy clips. Runway is the broader production workspace. Rebuild three clips and count credits, failed generations, and finishing time before cancelling either.
+
+→ https://aitoolsessentials.com/guides/switch-guides/switch-from-runway-to-pika.html
+
+#AI #VideoGeneration #Runway #Pika
+
+---
+
+## 16. Switching from Suno to Udio
+**X/LinkedIn:**
+Do not compare AI music tools by the best first listen. Compare usable-track rate, stems, editability, credits, and the rights that apply to your output.
+
+→ https://aitoolsessentials.com/guides/switch-guides/switch-from-suno-to-udio.html
+
+#AI #MusicAI #Suno #Udio
