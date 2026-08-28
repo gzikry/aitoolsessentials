@@ -210,7 +210,7 @@ git push
 **Revenue Streams:**
 1. Affiliate commissions (16+ high-priority tools)
 2. Sponsor placements (5 placement types)
-3. AI Stack Audit consulting ($497)
+3. AI Stack Audit (included with Premium)
 
 ---
 

@@ -4,7 +4,6 @@ import html as H
 from pathlib import Path
 
 LEARN = [
-    ('why-we-moved-the-497-audit-into-premium.html', 'Why we moved the $497 audit into Premium', 'One buyer at $497; we folded it into the $12/mo membership. Same audit, realistic price.'),
     ('how-to-choose-an-ai-tool.html', 'How to choose an AI tool', 'A repeatable decision framework: workflow fit, evidence, cost at volume, and policy terms.'),
     ('ai-tools-for-content-creation-workflow.html', 'The AI content creation workflow', 'From brief to publish: where AI tools fit in a blog pipeline, and where humans stay in the loop.'),
     ('ai-meeting-notes-workflow.html', 'Meeting notes to CRM, automatically', 'Capture calls, extract action items, and sync to your tools without manual admin.'),

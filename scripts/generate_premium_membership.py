@@ -310,7 +310,7 @@ def generate_whop_pack(root: Path, tools: list[dict[str, Any]], today: str) -> N
         ["AI Stack Audit Template + 48h strategy reply", "No", "Yes", "Turns inventory into keep/cut"],
         ["Weekly checklist + 30-day calendar", "No", "Yes", "Habit beats one-off cleanup"],
         ["Hands-on protocol + ROI calculator", "Partial", "Yes", "Identical-task testing"],
-        ["Priority research slots", "No", "First 5 complete requests/month", "Without a $497 audit"],
+        ["Priority research slots", "No", "First 5 complete requests/month", "Without the member audit"],
         ["Implementation / account access", "Never", "Never", "Scope boundary on purpose"],
     ])
     write_csv(download_dir / "member-first-15-minutes.csv", ["Step", "Minutes", "Action", "Done?"], [
@@ -707,7 +707,7 @@ def update_checkout(root: Path) -> None:
     if home.exists():
         html = home.read_text()
         html = html.replace(
-            "<p>Premium membership is being prepared and checkout is not active yet. The public directory stays free; the $497 AI Stack Audit is available as a strategy-only report.</p>",
+            "<p>Premium membership is being prepared and checkout is not active yet. The public directory stays free; Premium members get the AI Stack Audit as a member deliverable.</p>",
             "<p>Premium is live: 7-day free trial, then $12/month. Use code <strong>LAUNCH50</strong> for 50% off the first paid month (new users). The public directory stays free. Research and strategy only.</p>",
         )
         html = html.replace("See planned Premium", "Start 7-day free trial")

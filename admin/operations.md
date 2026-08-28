@@ -21,7 +21,7 @@
 - ✅ 16 high-priority affiliate programs configured
 - ✅ 5 sponsorship placement types defined
 - ✅ Scorecard download (lead magnet)
-- ✅ AI Stack Audit consulting ($497)
+- ✅ AI Stack Audit (included with Premium)
 
 ### Viral Growth Features
 - ✅ `/leaderboard.html` — Weekly rankings with FOMO
