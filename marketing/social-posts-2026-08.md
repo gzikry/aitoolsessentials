@@ -28,7 +28,7 @@ The test plan:
 
 ## 3. The $12 research membership
 **X/LinkedIn:**
-A personalized AI stack audit is included with membership — not a separate add-on. Weekly pricing alerts, decision checklists, and the 61-tool matrix.
+A personalized AI stack audit is included with membership — not a separate add-on. Weekly pricing alerts, decision checklists, and the 67-tool matrix.
 
 7-day free trial. Code LAUNCH50 = 50% off first month.
 → https://aitoolsessentials.com/pricing/

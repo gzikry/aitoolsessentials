@@ -366,7 +366,7 @@ ARTICLES['ai-stack-audit-checklist.html'] = {
 <li>Check <a href="../pricing-watch/">Pricing Watch</a> before renewing anything annual.</li>
 </ol>
 <h2>When to use the Premium audit pack</h2>
-<p><a href="../premium/">Premium members</a> get a fillable <strong>AI Stack Audit Template</strong>, a weekly checklist, an ROI calculator, and a full 61-tool decision matrix. Reply with a completed audit for a strategy-only keep/cut/trial recommendation within 48 hours. No account access required. 7-day free trial, then $12/month; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+<p><a href="../premium/">Premium members</a> get a fillable <strong>AI Stack Audit Template</strong>, a weekly checklist, an ROI calculator, and a full 67-tool decision matrix. Reply with a completed audit for a strategy-only keep/cut/trial recommendation within 48 hours. No account access required. 7-day free trial, then $12/month; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
 <h2>Red flags</h2>
 <ul>
 <li>Two paid tools own the same weekly job</li>

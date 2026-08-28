@@ -45,7 +45,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     out.mkdir(exist_ok=True)
     library_cards = [
         ("Monthly research briefing", "A dated, source-led briefing on tool changes, pricing shifts, and what to watch before renewing subscriptions."),
-        ("Monthly decision matrix", "Downloadable CSV comparing all 61 tracked AI tools by category, pricing, use cases, and trial priority. Refreshed monthly."),
+        ("Monthly decision matrix", "Downloadable CSV comparing all 67 tracked AI tools by category, pricing, use cases, and trial priority. Refreshed monthly."),
         ("Deep-dive workflow report", "One practical workflow per month compared across tools with testing plan, decision matrix, and cost notes."),
         ("CSV decision archive", "Downloadable scorecards for sorting tools by workflow, pricing pressure, policy risk, and trial priority."),
         ("Member request thread", "Subscribers vote on the next workflow to test. Requests shape future premium research."),
@@ -53,7 +53,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         ("Update notes", "Source-dated alerts when pricing, policies, or plan names change across tracked tools."),
         ("AI Stack Audit Template", "Fillable CSV that maps every tool you pay for, weekly usage, overlap, and cancellation risk. Reply with your audit for a personalized stack recommendation within 48 hours."),
         ("Weekly AI Stack Checklist", "A 7-day rhythm for keeping your stack lean: check alerts, test tools, log friction, and make data-driven cut/keep decisions in 15 minutes per week."),
-        ("Tool-Change Alert Feed", "Curated monthly feed of pricing, model, and feature changes across all 61 tracked tools — delivered to members before the public change-radar page."),
+        ("Tool-Change Alert Feed", "Curated monthly feed of pricing, model, and feature changes across all 67 tracked tools — delivered to members before the public change-radar page."),
         ("Hands-On Comparison Protocol", "Fillable comparison CSV for running identical tasks across ChatGPT, Claude, Grok, and Gemini. Stop reading reviews — test the tools yourself in 30 minutes."),
         ("AI ROI Calculator", "Template that measures whether your AI spend is actually paying for itself: time saved x hourly rate minus monthly tool costs."),
         ("Priority research slots", "First 5 members each month get their specific workflow researched and delivered as a CSV + brief in the next monthly drop."),
@@ -67,7 +67,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     deliverables = [
         "Personalized AI Stack Audit (intake → strategy PDF) — the headline deliverable",
         "Welcome/start-here post with 7-day free trial and LAUNCH50 first-month discount",
-        "Full 61-tool decision matrix CSV (refreshed monthly)",
+        "Full 67-tool decision matrix CSV (refreshed monthly)",
         "AI Stack Audit Template + 48-hour personalized recommendation",
         "Decision brief, printable: keep / cut / trial one-pager + PHI fence",
         "Weekly AI Stack Checklist (15-minute lean-stack rhythm)",
@@ -94,7 +94,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     sample_desc = "Sample AIToolsEssentials Premium report showing the structure of monthly member briefings, decision matrices, and source-led recommendations."
     sample = f'''<!doctype html><html lang="en">{head("Sample Premium AI Tool Report", sample_desc, DOMAIN+"/premium/sample-report.html")}<body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Sample member report</p><h1>General AI assistant decision brief.</h1><p class="subhead">This public sample shows the format. Paid Whop members get the full monthly archive, CSV files, stack-audit templates, weekly checklists, tool-change alerts, hands-on protocols, and priority research slots.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-blue" href="/pricing/" style="margin-left:8px">Compare plans</a></p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Sample recommendation</span><h2>Pick by workflow, not by brand.</h2><p>For general AI assistants, the member report separates everyday drafting, source-backed research, long-context document work, coding help, and organization controls. The public sample is intentionally partial; members get the full source-dated matrix and CSV.</p></div><div class="table-wrap"><table><thead><tr><th>Tool</th><th>Pricing model</th><th>Best fit</th><th>Sample note</th></tr></thead><tbody>{rows}</tbody></table></div><h2>What full members receive</h2><div class="content-hub-grid"><article class="content-hub-card"><h3>Full matrix</h3><p>All 61 tracked tools scored across workflow fit, pricing pressure, data controls, and trial priority — refreshed monthly.</p></article><article class="content-hub-card"><h3>Stack audit + ROI tools</h3><p>Fillable audit template, weekly checklist, and ROI calculator so members cut overlap with a defensible process.</p></article><article class="content-hub-card"><h3>Hands-on protocols</h3><p>Identical-task comparison sheets for assistants, plus tool-change alerts before public pages catch up.</p></article><article class="content-hub-card"><h3>Priority research</h3><p>First 5 member requests each month become the next CSV + brief drop.</p></article></div></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Sample recommendation</span><h2>Pick by workflow, not by brand.</h2><p>For general AI assistants, the member report separates everyday drafting, source-backed research, long-context document work, coding help, and organization controls. The public sample is intentionally partial; members get the full source-dated matrix and CSV.</p></div><div class="table-wrap"><table><thead><tr><th>Tool</th><th>Pricing model</th><th>Best fit</th><th>Sample note</th></tr></thead><tbody>{rows}</tbody></table></div><h2>What full members receive</h2><div class="content-hub-grid"><article class="content-hub-card"><h3>Full matrix</h3><p>All 67 tracked tools scored across workflow fit, pricing pressure, data controls, and trial priority — refreshed monthly.</p></article><article class="content-hub-card"><h3>Stack audit + ROI tools</h3><p>Fillable audit template, weekly checklist, and ROI calculator so members cut overlap with a defensible process.</p></article><article class="content-hub-card"><h3>Hands-on protocols</h3><p>Identical-task comparison sheets for assistants, plus tool-change alerts before public pages catch up.</p></article><article class="content-hub-card"><h3>Priority research</h3><p>First 5 member requests each month become the next CSV + brief drop.</p></article></div></div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "sample-report.html").write_text(sample)
 
@@ -128,7 +128,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
 
     faq_desc = "Premium membership FAQ for AIToolsEssentials Whop subscribers."
     faqs = [
-        ("What do I get immediately after subscribing?", "Access is handled through Whop. Day one includes the start-here post, full 61-tool decision matrix, AI Stack Audit Template, Weekly AI Stack Checklist, Tool-Change Alert Feed, Hands-On Comparison Protocol, AI ROI Calculator, September–November archive packs, vendor/security questions, and the member request thread with priority research slots."),
+        ("What do I get immediately after subscribing?", "Access is handled through Whop. Day one includes the start-here post, full 67-tool decision matrix, AI Stack Audit Template, Weekly AI Stack Checklist, Tool-Change Alert Feed, Hands-On Comparison Protocol, AI ROI Calculator, September–November archive packs, vendor/security questions, and the member request thread with priority research slots."),
         ("Is Premium a course, community, or consulting service?", "It is a research membership. Premium gives you decision briefs, CSVs, stack-audit templates, weekly checklists, hands-on protocols, playbooks, and request threads. It does not include implementation, setup, integrations, account access, credential handling, or ongoing technical support. Personalized stack recommendations from the audit template are strategy-only written replies — not hands-on implementation."),
         ("Can Premium vendors pay to change rankings?", "No. Premium does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores. Paid visibility and editorial scoring remain separate."),
         ("How does billing and cancellation work?", "Billing, login, member access, and cancellation are handled by Whop. New members get a 7-day free trial, then $12/month. Use code LAUNCH50 for 50% off the first paid month (new users only). Cancel anytime from your Whop account."),
@@ -306,7 +306,7 @@ def generate_whop_pack(root: Path, tools: list[dict[str, Any]], today: str) -> N
     write_csv(download_dir / "free-vs-premium-value-matrix.csv", ["Capability", "Free site", "Premium members", "Why it matters"], [
         ["Tool reviews + comparisons", "Yes", "Yes + full decision matrix CSV", "Public is enough for browsing"],
         ["Scorecards / cost calculator / decision brief", "Yes", "Yes", "Free utilities stay free"],
-        ["Full 61-tool decision matrix CSV", "No", "Yes, refreshed monthly", "Monthly stack decisions"],
+        ["Full 67-tool decision matrix CSV", "No", "Yes, refreshed monthly", "Monthly stack decisions"],
         ["AI Stack Audit Template + 48h strategy reply", "No", "Yes", "Turns inventory into keep/cut"],
         ["Weekly checklist + 30-day calendar", "No", "Yes", "Habit beats one-off cleanup"],
         ["Hands-on protocol + ROI calculator", "Partial", "Yes", "Identical-task testing"],
@@ -714,7 +714,7 @@ def update_checkout(root: Path) -> None:
         html = html.replace('href="pricing/index.html"', f'href="{WHOP_CHECKOUT}" rel="external noopener"')
         html = html.replace(
             "<p>Monthly comparison archives, workflow deep-dives, and CSV exports — $12/month via Whop, cancel anytime.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"pricing/\">See pricing</a></div>",
-            "<p>Stack audits, weekly checklists, tool-change alerts, hands-on protocols, and a 61-tool decision matrix. 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">Premium library</a><a class=\"guide-pill\" href=\"pricing/\">Pricing</a><a class=\"guide-pill\" href=\"" + WHOP_CHECKOUT + "\" rel=\"external noopener\">Start free trial</a></div>",
+            "<p>Stack audits, weekly checklists, tool-change alerts, hands-on protocols, and a 67-tool decision matrix. 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">Premium library</a><a class=\"guide-pill\" href=\"pricing/\">Pricing</a><a class=\"guide-pill\" href=\"" + WHOP_CHECKOUT + "\" rel=\"external noopener\">Start free trial</a></div>",
         )
         home.write_text(html)
 
@@ -748,7 +748,7 @@ def enhance_homepage(root: Path) -> None:
 <div style="max-width:1040px;margin:0 auto">
 <p class="kicker light">Premium membership — live now</p>
 <h2 style="font-size:clamp(28px,4vw,42px)">Stop paying for AI tools you don't use.</h2>
-<p class="subhead">The directory stays free. Premium is the $12/month research membership for overlapping stacks: AI stack audit, weekly checklist, tool-change alerts, hands-on protocols, ROI calculator, and a 61-tool decision matrix.</p>
+<p class="subhead">The directory stays free. Premium is the $12/month research membership for overlapping stacks: AI stack audit, weekly checklist, tool-change alerts, hands-on protocols, ROI calculator, and a 67-tool decision matrix.</p>
 <ul style="max-width:740px;margin:20px 0 28px;line-height:1.6">
 <li>7-day free trial, then $12/month. Code <strong>LAUNCH50</strong> = 50% off the first paid month (new users).</li>
 <li>Reply with a completed audit for a strategy-only keep/cut/trial recommendation within 48 hours.</li>
