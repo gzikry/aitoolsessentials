@@ -580,7 +580,7 @@
     ],
     "status": "affiliate_program_live",
     "next_action": "Sign up for AIBase affiliate program at https://aibase.art/affiliate-program (30% recurring first year, PayPal NET-15). Use official aibase.art URL with affiliate link once approved. Surface alongside Midjourney/Leonardo in Creative comparisons.",
-    "notes": "Vendor submitted 2026-08-28; editorial entry written independently. Affiliate terms found on vendor's public page — high priority because the program already exists and is recurring first-year."
+    "notes": "Vendor submitted 2026-08-28; editorial entry written independently. Affiliate terms found on vendor's public page \u2014 high priority because the program already exists and is recurring first-year."
   },
   {
     "tool_slug": "lovable",
@@ -1080,7 +1080,7 @@
       "Social media marketers"
     ],
     "status": "not_started",
-    "next_action": "Vendor submitted directly — email support@allvideoai.com asking about affiliate/partner terms; update data/affiliate_programs.json only after approval.",
+    "next_action": "Vendor submitted directly \u2014 email support@allvideoai.com asking about affiliate/partner terms; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
   },
   {
@@ -1482,7 +1482,137 @@
       "Founders"
     ],
     "status": "not_started",
-    "next_action": "Check Whop referral/affiliate terms — Whop already has a referral program (10% of Whop's profit on referred businesses)",
+    "next_action": "Check Whop referral/affiliate terms \u2014 Whop already has a referral program (10% of Whop's profit on referred businesses)",
     "notes": "Whop has a built-in referral program (10% of Whop profit). Could be relevant for affiliate linking. George already uses Whop for Premium."
+  },
+  {
+    "tool_slug": "ideogram",
+    "tool_name": "Ideogram",
+    "priority": "medium",
+    "category": "Image Generation",
+    "recommended_networks_to_check": [
+      "Direct vendor partner program",
+      "PartnerStack",
+      "Impact"
+    ],
+    "search_queries": [
+      "Ideogram affiliate program",
+      "Ideogram partner program"
+    ],
+    "target_pages": [
+      "tools/ideogram/index.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "Marketing visuals, Social media graphics, Concept art"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update affiliate_programs.json only after approval.",
+    "notes": "Use the official URL until approved; never invent tracking links."
+  },
+  {
+    "tool_slug": "luma-ai",
+    "tool_name": "Luma AI",
+    "priority": "medium",
+    "category": "Video & 3D",
+    "recommended_networks_to_check": [
+      "Direct vendor partner program",
+      "PartnerStack",
+      "Impact"
+    ],
+    "search_queries": [
+      "Luma AI affiliate program",
+      "Luma AI partner program"
+    ],
+    "target_pages": [
+      "tools/luma-ai/index.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "Product demos, Social video, 3D prototyping"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update affiliate_programs.json only after approval.",
+    "notes": "Use the official URL until approved; never invent tracking links."
+  },
+  {
+    "tool_slug": "pika",
+    "tool_name": "Pika",
+    "priority": "medium",
+    "category": "Video Generation",
+    "recommended_networks_to_check": [
+      "Direct vendor partner program",
+      "PartnerStack",
+      "Impact"
+    ],
+    "search_queries": [
+      "Pika affiliate program",
+      "Pika partner program"
+    ],
+    "target_pages": [
+      "tools/pika/index.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "Short-form video, Marketing clips, Creative experiments"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update affiliate_programs.json only after approval.",
+    "notes": "Use the official URL until approved; never invent tracking links."
+  },
+  {
+    "tool_slug": "suno",
+    "tool_name": "Suno",
+    "priority": "medium",
+    "category": "Music & Audio",
+    "recommended_networks_to_check": [
+      "Direct vendor partner program",
+      "PartnerStack",
+      "Impact"
+    ],
+    "search_queries": [
+      "Suno affiliate program",
+      "Suno partner program"
+    ],
+    "target_pages": [
+      "tools/suno/index.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "Content creators, Podcast intros, Marketing music"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update affiliate_programs.json only after approval.",
+    "notes": "Use the official URL until approved; never invent tracking links."
+  },
+  {
+    "tool_slug": "udio",
+    "tool_name": "Udio",
+    "priority": "medium",
+    "category": "Music & Audio",
+    "recommended_networks_to_check": [
+      "Direct vendor partner program",
+      "PartnerStack",
+      "Impact"
+    ],
+    "search_queries": [
+      "Udio affiliate program",
+      "Udio partner program"
+    ],
+    "target_pages": [
+      "tools/udio/index.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "Background music, Content scoring, Audio prototyping"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks; update affiliate_programs.json only after approval.",
+    "notes": "Use the official URL until approved; never invent tracking links."
   }
 ]

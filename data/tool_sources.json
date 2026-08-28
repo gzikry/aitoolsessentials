@@ -51,7 +51,7 @@
     {
       "slug": "canva-ai",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free—up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education—up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise—up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
+      "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free\u2014up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education\u2014up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise\u2014up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
       "pricing_url": "https://www.canva.com/pricing/",
       "docs_url": "https://www.canva.com/help/ai-access/",
       "privacy_url": "https://www.canva.com/trust/privacy/",
@@ -81,7 +81,7 @@
     {
       "slug": "claude",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2–150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
+      "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2\u2013150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
       "pricing_url": "https://www.anthropic.com/pricing",
       "docs_url": "https://support.anthropic.com/en/collections/4078534-claude-ai",
       "privacy_url": "https://privacy.anthropic.com/en/articles/10023555-how-do-you-use-personal-data-in-model-training",
@@ -319,15 +319,15 @@
     {
       "slug": "aibase",
       "pricing_checked_date": "2026-08-28",
-      "pricing_summary": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respectively. Yearly billing is 20–40% off (Basic yearly ~$180; Pro yearly equivalent ~$29.9 × 12 × 0.6 ≈ $215; Ultimate $99.9 × 12 with 40% off ≈ $720, saving $238.8 on the Pro tier). Pay-as-you-go credit packs available. Per the public Credits Cost Table, text-to-image runs 12–46 credits (~$0.05–$0.18) and 5-second video runs 150–380 credits (~$0.60–$1.52). Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, and Veo 3.1 Fast run on monthly; Veo 3.1 Pro, Seedance 2.0, and HappyHorse 1.0 require yearly or credit packs.",
+      "pricing_summary": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respectively. Yearly billing is 20\u201340% off (Basic yearly ~$180; Pro yearly equivalent ~$29.9 \u00d7 12 \u00d7 0.6 \u2248 $215; Ultimate $99.9 \u00d7 12 with 40% off \u2248 $720, saving $238.8 on the Pro tier). Pay-as-you-go credit packs available. Per the public Credits Cost Table, text-to-image runs 12\u201346 credits (~$0.05\u2013$0.18) and 5-second video runs 150\u2013380 credits (~$0.60\u2013$1.52). Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, and Veo 3.1 Fast run on monthly; Veo 3.1 Pro, Seedance 2.0, and HappyHorse 1.0 require yearly or credit packs.",
       "pricing_url": "https://aibase.art/pricing",
       "docs_url": "https://aibase.art/",
       "privacy_url": "https://aibase.art/privacy-policy",
       "rights_url": "https://aibase.art/terms-of-service",
-      "verification_notes": "Submitted via the site form by the vendor on 2026-08-28; editorial entry written independently. AIBase explicitly states it is 'an independent platform … not affiliated with, endorsed by, or an official product of' the underlying model providers (Nano Banana, GPT Image, Seedream, Seedance, Veo, Wan, HappyHorse). Terms of Service §4 (User Content and Generated Content): 'You may use Generated Content for lawful personal or commercial purposes' subject to compliance; user grants AIBase a limited, worldwide, non-exclusive, royalty-free license to host/process content as needed to operate. Outputs are not guaranteed unique, copyrightable, or free of third-party rights. Acceptable Use Policy and Privacy Policy both live and dated. Free trial credits available; ongoing work is credit-based paid.",
+      "verification_notes": "Submitted via the site form by the vendor on 2026-08-28; editorial entry written independently. AIBase explicitly states it is 'an independent platform \u2026 not affiliated with, endorsed by, or an official product of' the underlying model providers (Nano Banana, GPT Image, Seedream, Seedance, Veo, Wan, HappyHorse). Terms of Service \u00a74 (User Content and Generated Content): 'You may use Generated Content for lawful personal or commercial purposes' subject to compliance; user grants AIBase a limited, worldwide, non-exclusive, royalty-free license to host/process content as needed to operate. Outputs are not guaranteed unique, copyrightable, or free of third-party rights. Acceptable Use Policy and Privacy Policy both live and dated. Free trial credits available; ongoing work is credit-based paid.",
       "unresolved_claims": [
         "Credits-as-cost model makes monthly spend harder to forecast than flat-rate plans; users should run a real task before subscribing.",
-        "Veo 3.1 Pro and Seedance 2.0 are gated to yearly plans / credit packs — Basic and Pro monthly cannot access them.",
+        "Veo 3.1 Pro and Seedance 2.0 are gated to yearly plans / credit packs \u2014 Basic and Pro monthly cannot access them.",
         "Because AIBase routes to third-party models, each model's provider's terms and safety layers apply on top of AIBase's own.",
         "No explicit SOC 2 / security claims located on the public site.",
         "Affiliate program live: 30% recurring for the first year, PayPal NET-15 payouts."
@@ -427,7 +427,7 @@
     {
       "slug": "n8n",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "Starter: €20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: €50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: €667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
+      "pricing_summary": "Starter: \u20ac20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: \u20ac50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: \u20ac667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
       "pricing_url": "https://n8n.io/pricing/",
       "docs_url": "https://docs.n8n.io/build/integrate-ai",
       "privacy_url": "https://n8n.io/legal/privacy/",
@@ -610,7 +610,7 @@
       "docs_url": "",
       "privacy_url": "https://allvideoai.com/privacy",
       "rights_url": "",
-      "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published — commercial-use terms should be confirmed in ToS before client delivery.",
+      "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published \u2014 commercial-use terms should be confirmed in ToS before client delivery.",
       "unresolved_claims": [
         "Output ownership/commercial rights not documented on a dedicated page"
       ]
@@ -733,7 +733,7 @@
     {
       "slug": "harvey",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Harvey’s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
+      "pricing_summary": "Harvey\u2019s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
       "pricing_url": "https://www.harvey.ai/",
       "docs_url": "https://www.harvey.ai/",
       "privacy_url": "https://www.harvey.ai/en-US/security",
@@ -748,7 +748,7 @@
     {
       "slug": "spellbook",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Spellbook’s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
+      "pricing_summary": "Spellbook\u2019s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
       "pricing_url": "https://spellbook.com/",
       "docs_url": "https://help.spellbook.legal/en/articles/9926203-getting-started-with-spellbook",
       "privacy_url": "https://spellbook.com/security",
@@ -763,7 +763,7 @@
     {
       "slug": "cocounsel",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Thomson Reuters’ official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
+      "pricing_summary": "Thomson Reuters\u2019 official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
       "pricing_url": "https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing",
       "docs_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
       "privacy_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
@@ -899,7 +899,7 @@
       "slug": "htmlslides",
       "pricing_checked_date": "2026-08-27",
       "pricing_summary": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5/60 credits, $10/150 credits. Credits non-refundable, may expire.",
-      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change — launch offer price noted.",
+      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change \u2014 launch offer price noted.",
       "pricing_url": "https://www.htmlslides.ai/pricing",
       "docs_url": "https://www.htmlslides.ai/terms",
       "privacy_url": "https://www.htmlslides.ai/privacy"
@@ -912,6 +912,61 @@
       "pricing_url": "https://whop.com/",
       "docs_url": "https://docs.whop.com/developer/cli",
       "privacy_url": "https://whop.com/privacy"
+    },
+    {
+      "slug": "ideogram",
+      "pricing_checked_date": "2026-08-28",
+      "pricing_summary": "Free includes 10 slow credits weekly. Plus is $15/month billed annually with 1,000 priority credits; Pro is $42/month billed annually with 3,500 priority credits; Team is $20/user/month billed annually with 1,500 priority credits per user; Enterprise is custom.",
+      "pricing_url": "https://ideogram.ai/pricing",
+      "docs_url": "https://docs.ideogram.ai",
+      "privacy_url": "https://ideogram.ai/legal/privacy-policy",
+      "rights_url": "https://ideogram.ai/legal/tos",
+      "verification_notes": "Official pricing and terms checked 2026-08-28. Paid plans add private generation; Ideogram says it does not claim ownership of generated images and permits commercial use subject to its terms.",
+      "unresolved_claims": []
+    },
+    {
+      "slug": "luma-ai",
+      "pricing_checked_date": "2026-08-28",
+      "pricing_summary": "Plus is $30/month or $300/year with 10,000 credits; Pro is $90/month or $900/year with 40,000 credits; Ultra is $300/month or $3,000/year with 150,000 credits. Team and Enterprise are sales-assisted.",
+      "pricing_url": "https://lumalabs.ai/pricing",
+      "docs_url": "https://docs.lumalabs.ai",
+      "privacy_url": "https://lumalabs.ai/privacy",
+      "rights_url": "https://lumalabs.ai/terms",
+      "verification_notes": "Official pricing checked 2026-08-28. Credit costs vary by model and utility; commercial use is listed for paid individual plans.",
+      "unresolved_claims": []
+    },
+    {
+      "slug": "pika",
+      "pricing_checked_date": "2026-08-28",
+      "pricing_summary": "The official public pricing route did not expose a self-service plan table during verification. No unverified prices are stated.",
+      "pricing_url": "https://pika.art/pricing",
+      "docs_url": "https://pika.art",
+      "privacy_url": "https://pika.art/privacy-policy",
+      "rights_url": "https://pika.art/terms-of-service",
+      "verification_notes": "Official pricing route checked 2026-08-28. Recheck before purchase because plan details were not exposed in the retrieved public page.",
+      "unresolved_claims": []
+    },
+    {
+      "slug": "suno",
+      "pricing_checked_date": "2026-08-28",
+      "pricing_summary": "Suno offers a free plan plus Pro and Premier subscriptions. The official public pricing page exposed plan features but did not expose reliable dollar prices in the retrieved content, so no unverified amount is stated.",
+      "pricing_url": "https://suno.com/pricing",
+      "docs_url": "https://help.suno.com",
+      "privacy_url": "https://suno.com/legal/privacy",
+      "rights_url": "https://suno.com/legal/terms",
+      "verification_notes": "Official pricing checked 2026-08-28. Subscription credits do not carry over; purchased top-up credits do not expire but require an active subscription. Commercial-rights limits depend on plan and terms.",
+      "unresolved_claims": []
+    },
+    {
+      "slug": "udio",
+      "pricing_checked_date": "2026-08-28",
+      "pricing_summary": "Free includes 100 monthly credits and a 10-credit daily limit. Standard is $10/month with 1,200 monthly credits; Pro is $30/month with 4,800 monthly credits. Top-ups are $3 for 100 credits or $25 for 1,000 credits.",
+      "pricing_url": "https://udio.com/pricing",
+      "docs_url": "https://help.udio.com",
+      "privacy_url": "https://www.udio.com/privacy",
+      "rights_url": "https://www.udio.com/terms-of-service",
+      "verification_notes": "Official pricing checked 2026-08-28. Paid plans add editing, audio upload, stem download, and higher concurrent-generation limits.",
+      "unresolved_claims": []
     }
   ]
 }

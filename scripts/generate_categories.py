@@ -26,20 +26,22 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 
     # Cards for each tool in this category (ranked by rating)
     cards_html = ''
+    compact_card = ' style="min-height:260px"' if len(cat_tools) < 3 else ''
     for i, t in enumerate(sorted(cat_tools, key=lambda x: -x.get('rating', 0))[:12], start=1):
         stars = '★' * int(round(t.get('rating', 0)))
+        score_label = f"{t['rating']}/5" if t.get('rating') else 'Editorial score in review'
         best = ', '.join(t.get('best_for', t.get('summary', ''))) if isinstance(t.get('best_for', t.get('summary', '')), list) else t.get('best_for', t.get('summary', ''))
         best = best[:110].rstrip()
         cards_html += f'''
-        <article class="directory-card">
+        <article class="directory-card"{compact_card}>
           <div>
-            <span class="category-pill">#{i} · {t.get('rating','')}/5</span>
-            <h3><a href="../tools/{t['slug']}/">{t['name']}</a></h3>
+            <span class="category-pill">#{i} · {score_label}</span>
+            <h3><a href="../../tools/{t['slug']}/">{t['name']}</a></h3>
             <p>{best}</p>
             <span style="color:#f5a623;letter-spacing:2px">{stars}</span>
           </div>
           <div class="card-actions">
-            <a class="text-link" href="../tools/{t['slug']}/">Read review</a>
+            <a class="text-link" href="../../tools/{t['slug']}/">Read review</a>
             <a class="button button-blue small" href="{t.get('official','')}" rel="sponsored noopener nofollow" target="_blank">Visit site</a>
           </div>
         </article>'''
@@ -57,21 +59,23 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 <meta name="description" content="The {n} best {cat} AI tools, ranked and reviewed: pricing notes, strengths, trade-offs, and who each tool is actually for.">
 <title>Best {cat} AI Tools ({today[:4]}) — Ranked &amp; Reviewed | AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/categories/{cat}/">
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="../css/share.css">
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/share.css">
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
 <header class="global-nav">
-<a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<a class="brand" href="../../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links">
-<a href="../tools/index.html">Tools</a>
-<a href="../comparisons/best-ai-tools.html">Best AI tools</a>
-<a href="../categories/index.html">Categories</a>
-<a href="../articles/index.html">Guides</a>
+<a href="../../tools/index.html">Tools</a>
+<a href="../../comparisons/best-ai-tools.html">Best AI tools</a>
+<a href="../../categories/index.html">Categories</a>
+<a href="../../articles/index.html">Guides</a>
 </nav>
-<a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a>
+<a class="nav-cta" href="../../legal/affiliate-disclosure.html">Disclosure</a>
 </header>
+
+<main>
 
 <section class="review-hero scene scene-light">
 <p class="kicker light">{cat}</p>
@@ -81,7 +85,7 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 </section>
 
 <section class="directory-section scene scene-light">
-<div class="directory-grid">
+<div class="directory-grid"{' style="max-width:760px"' if n < 3 else ''}>
 {cards_html}
 </div>
 </section>
@@ -96,21 +100,23 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 <h2>Compare before you commit.</h2>
 <p>Run any two or three candidates through the free evaluation scorecard — real tasks, scored side by side, in under an hour.</p>
 <div class="actions" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px">
-<a class="button button-blue" href="../downloads/ai-tool-evaluation-scorecard.html">Get the free scorecard</a>
-<a class="button button-dark" href="../comparisons/index.html">Browse comparisons</a>
+<a class="button button-blue" href="../../downloads/ai-tool-evaluation-scorecard.html">Get the free scorecard</a>
+<a class="button button-dark" href="../../comparisons/index.html">Browse comparisons</a>
 </div>
 </div>
 </section>
 
+</main>
+
 <footer class="footer">
 <span>© {today[:4]} AIToolsEssentials</span>
-<a href="../advertise/index.html" rel="nofollow">Advertise</a>
-<a href="../submit-tool.html" rel="nofollow">Submit a tool</a>
-<a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
+<a href="../../advertise/index.html" rel="nofollow">Advertise</a>
+<a href="../../submit-tool.html" rel="nofollow">Submit a tool</a>
+<a href="../../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
 <a href="mailto:{EMAIL}">Contact</a>
 </footer>
-<script src="../js/site.js" defer></script>
-<script src="../js/analytics.js" defer></script>
+<script src="../../js/site.js" defer></script>
+<script src="../../js/analytics.js" defer></script>
 </body>
 </html>'''
 

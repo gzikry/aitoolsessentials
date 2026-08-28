@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-28",
-  "tools_count": 62,
+  "tools_count": 67,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -469,6 +469,41 @@
       "category": "Automation",
       "price": "Free (Whop platform fees apply on sales)",
       "url": "https://aitoolsessentials.com/tools/whop-cli/"
+    },
+    {
+      "name": "Ideogram",
+      "slug": "ideogram",
+      "category": "Image Generation",
+      "price": null,
+      "url": "https://aitoolsessentials.com/tools/ideogram/"
+    },
+    {
+      "name": "Luma AI",
+      "slug": "luma-ai",
+      "category": "Video & 3D",
+      "price": null,
+      "url": "https://aitoolsessentials.com/tools/luma-ai/"
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "category": "Video Generation",
+      "price": null,
+      "url": "https://aitoolsessentials.com/tools/pika/"
+    },
+    {
+      "name": "Suno",
+      "slug": "suno",
+      "category": "Music & Audio",
+      "price": null,
+      "url": "https://aitoolsessentials.com/tools/suno/"
+    },
+    {
+      "name": "Udio",
+      "slug": "udio",
+      "category": "Music & Audio",
+      "price": null,
+      "url": "https://aitoolsessentials.com/tools/udio/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
