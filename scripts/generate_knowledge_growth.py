@@ -109,7 +109,7 @@ def generate_pricing_index(root: Path, tools: list[dict[str, Any]]) -> None:
     groups = {
         "Free or free-tier AI tools": [t for t in tools if "free" in t.get("price", "").lower()],
         "Paid-only AI tools": [t for t in tools if "paid" in t.get("price", "").lower() and "free" not in t.get("price", "").lower()],
-        "Open/self-hostable or low-control-risk tools": [t for t in tools if any(x in (t.get("summary", "") + t.get("best_for", "") + t.get("price", "")).lower() for x in ["self-host", "open", "technical"])],
+        "Open/self-hostable or low-control-risk tools": [t for t in tools if any(x in " ".join(t.get("summary", "") if isinstance(t.get("summary", ""), str) else t.get("summary", [])).lower() + " " + " ".join(t.get("best_for", "") if isinstance(t.get("best_for", ""), str) else t.get("best_for", [])).lower() + " " + t.get("price", "").lower() for x in ["self-host", "open", "technical"])],
     }
     sections = []
     for name, items in groups.items():

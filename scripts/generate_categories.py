@@ -28,7 +28,8 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
     cards_html = ''
     for i, t in enumerate(sorted(cat_tools, key=lambda x: -x.get('rating', 0))[:12], start=1):
         stars = '★' * int(round(t.get('rating', 0)))
-        best = t.get('best_for', t.get('summary', ''))[:110].rstrip()
+        best = ', '.join(t.get('best_for', t.get('summary', ''))) if isinstance(t.get('best_for', t.get('summary', '')), list) else t.get('best_for', t.get('summary', ''))
+        best = best[:110].rstrip()
         cards_html += f'''
         <article class="directory-card">
           <div>

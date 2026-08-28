@@ -13,7 +13,7 @@ Welcome to month two. This month focuses on visual/meeting tool decisions and th
 2. visual-ai-tool-shortlist-2026-10.csv - image/video generation shortlist.
 3. meeting-notes-decision-sheet-2026-10.csv - Fireflies vs Otter style decision sheet.
 
-**Also new on the public site:** AI Pricing Watch (https://aitoolsessentials.com/pricing-watch/) tracks verified price changes across the 40-tool pricing snapshot. Members get flagged summaries here first.
+**Also new on the public site:** AI Pricing Watch (https://aitoolsessentials.com/pricing-watch/) tracks verified price changes across all 40 tools. Members get flagged summaries here first.
 
 ---
 

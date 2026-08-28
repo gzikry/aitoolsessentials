@@ -11,7 +11,7 @@ Welcome to AIToolsEssentials Premium. This is a research membership for choosing
 **New this month (November):**
 1. **AI Stack Audit Template** — fill it out and reply with your answers for a personalized stack recommendation within 48 hours.
 2. **Weekly AI Stack Checklist** — a 7-day rhythm for keeping your stack lean.
-3. **Tool-Change Alert Feed** — curated pricing, model, and feature changes across all 62 tracked tools.
+3. **Tool-Change Alert Feed** — curated pricing, model, and feature changes across all 67 tracked tools.
 4. **Assistant Hands-On Comparison** — ChatGPT vs Claude vs Grok vs Gemini test protocol with fillable results.
 5. **AI ROI Calculator** — measure whether your AI spend is actually paying for itself.
 6. **Refreshed decision matrix** — `premium-tool-decision-matrix-2026-11.csv`.
@@ -77,7 +77,7 @@ Curated changes for members. Public change-radar catches up later; members get t
 - **Grok:** Grok 4.6 shipping; Grok Build and Grok Bot features expanded
 - **HtmlSlides:** New tool added (vendor submission) — interactive HTML presentation maker
 - **Whop CLI:** Business CLI launched — programmatically manage products, pricing, ads, payouts
-- **All tools:** Monthly pricing snapshot refreshed across 62 tracked tools
+- **All tools:** Monthly pricing snapshot refreshed across 67 tracked tools
 
 **Action:** Review the full alert feed CSV. If any change affects a tool in your stack, note it in your weekly checklist.
 
