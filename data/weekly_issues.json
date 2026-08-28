@@ -6,9 +6,14 @@
     "send_date": "2026-08-31",
     "checked_at": "2026-08-27",
     "subject": "Keep/Cut Weekly #1: two new listings, one coding overlap, and a polite suggestion to cancel something",
+    "subject_line": "Keep/Cut Weekly #1: two new listings, one coding overlap, and a polite suggestion to cancel something",
     "preview": "Sir, you appear to be paying twice for the same job. Shall I proceed?",
     "lede": "Good evening. I have reviewed the directory. Two tools arrived. Four paid stacks deserve a second look before renewal. And if you are still running Copilot and Cursor and Claude Code on the same weekly bugfix, I must inform you that this is not a stack. It is a roundabout.",
     "signoff": "J. — on behalf of AIToolsEssentials. I am here to keep the useful tools and cut the sentimental ones.",
+    "pricing_changes": [
+      {"name": "Grok", "slug": "grok", "change": "Pricing page changed since 2026-08-21. Re-verified 2026-08-25."},
+      {"name": "Cursor", "slug": "cursor", "change": "Pricing page changed since 2026-08-21. Re-verified 2026-08-25."}
+    ],
     "new_listings": [
       {"name": "HtmlSlides", "slug": "htmlslides", "note": "Interactive HTML decks. Test against Gamma on one real presentation before you add a seat. Novelty is not a job."},
       {"name": "Whop CLI", "slug": "whop-cli", "note": "Terminal control for Whop products and checkout. Relevant if you sell on Whop. Irrelevant if you merely enjoy collecting CLIs like stamps."}
