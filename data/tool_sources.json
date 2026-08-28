@@ -317,6 +317,23 @@
       ]
     },
     {
+      "slug": "aibase",
+      "pricing_checked_date": "2026-08-28",
+      "pricing_summary": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respectively. Yearly billing is 20–40% off (Basic yearly ~$180; Pro yearly equivalent ~$29.9 × 12 × 0.6 ≈ $215; Ultimate $99.9 × 12 with 40% off ≈ $720, saving $238.8 on the Pro tier). Pay-as-you-go credit packs available. Per the public Credits Cost Table, text-to-image runs 12–46 credits (~$0.05–$0.18) and 5-second video runs 150–380 credits (~$0.60–$1.52). Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, and Veo 3.1 Fast run on monthly; Veo 3.1 Pro, Seedance 2.0, and HappyHorse 1.0 require yearly or credit packs.",
+      "pricing_url": "https://aibase.art/pricing",
+      "docs_url": "https://aibase.art/",
+      "privacy_url": "https://aibase.art/privacy-policy",
+      "rights_url": "https://aibase.art/terms-of-service",
+      "verification_notes": "Submitted via the site form by the vendor on 2026-08-28; editorial entry written independently. AIBase explicitly states it is 'an independent platform … not affiliated with, endorsed by, or an official product of' the underlying model providers (Nano Banana, GPT Image, Seedream, Seedance, Veo, Wan, HappyHorse). Terms of Service §4 (User Content and Generated Content): 'You may use Generated Content for lawful personal or commercial purposes' subject to compliance; user grants AIBase a limited, worldwide, non-exclusive, royalty-free license to host/process content as needed to operate. Outputs are not guaranteed unique, copyrightable, or free of third-party rights. Acceptable Use Policy and Privacy Policy both live and dated. Free trial credits available; ongoing work is credit-based paid.",
+      "unresolved_claims": [
+        "Credits-as-cost model makes monthly spend harder to forecast than flat-rate plans; users should run a real task before subscribing.",
+        "Veo 3.1 Pro and Seedance 2.0 are gated to yearly plans / credit packs — Basic and Pro monthly cannot access them.",
+        "Because AIBase routes to third-party models, each model's provider's terms and safety layers apply on top of AIBase's own.",
+        "No explicit SOC 2 / security claims located on the public site.",
+        "Affiliate program live: 30% recurring for the first year, PayPal NET-15 payouts."
+      ]
+    },
+    {
       "slug": "lovable",
       "pricing_checked_date": "2026-08-25",
       "pricing_summary": "Free includes 5 daily build credits, capped at 30 per month, plus monthly grants of 20 Cloud credits and 4 credits for AI features in user-built apps. Pro is $25/month per workspace, shared across unlimited users, with 100 monthly credits and additional daily grants. Business is $50/month per workspace, shared across unlimited users, with 100 monthly credits and added SSO, roles, internal publishing, security, and workspace controls. Enterprise uses a company-size-based platform fee and volume-based credit pricing. Credit use varies by feature and task complexity; monthly plan credits expire two months after issue, while daily grants do not roll over.",

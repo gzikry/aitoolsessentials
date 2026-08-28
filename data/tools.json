@@ -355,6 +355,71 @@
     "hands_on_priority": "standard"
   },
   {
+    "slug": "aibase",
+    "name": "AIBase",
+    "category": "Creative",
+    "best_for": "Indie creators who want one credit-based workspace for AI images and short AI video without juggling multiple subscriptions",
+    "price": "Free trial credits + paid plans ($29.9/mo Basic, $49.9/mo Pro, $99.9/mo Ultimate; yearly 20–40% off; pay-as-you-go credit packs available)",
+    "rating": 4.0,
+    "official": "https://aibase.art/",
+    "summary": "A credit-based subscription platform that wraps multiple third-party image and video models (Nano Banana 2, GPT Image 2, Seedream, Seedance, Veo 3.1 Fast/Pro, Wan 2.7, HappyHorse 1.0) behind one workspace with pay-as-you-go or monthly plans.",
+    "use_cases": [
+      "Social and marketing images without committing to Midjourney",
+      "Short AI video tests (5-second clips, image-to-video)",
+      "One-off experiments across multiple image models in one account",
+      "Cheap low-stakes AI generation for prototypes",
+      "Trying newer video models (Veo 3.1, Seedance) without an enterprise contract"
+    ],
+    "pros": [
+      "Free starter credits to try before paying",
+      "Transparent per-task credit pricing — image ~12–46 credits ($0.05–$0.18), 5s video 150–380 credits ($0.60–$1.52)",
+      "Yearly plans show real discounts (20–40% off)",
+      "Affiliate program: 30% recurring for the first year via PayPal NET-15",
+      "Clear acceptable-use, privacy, and terms pages"
+    ],
+    "cons": [
+      "AIBase is not affiliated with the underlying model providers — it's a wrapper, not a model",
+      "Credits-based pricing makes total monthly cost harder to predict than flat plans",
+      "Veo 3.1 Pro and Seedance 2.0 only unlock on yearly plans or credit packs, not base monthly",
+      "Outputs may be similar to other users — no uniqueness guarantee",
+      "Free tier limited; commercial use requires the paid plans",
+      "Third-party safety and moderation layers vary by which model actually runs"
+    ],
+    "key_features": [
+      "Credit-based pricing across image and video",
+      "Multi-model access: Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, Veo 3.1 Fast/Pro, Wan 2.7, HappyHorse 1.0",
+      "Per-task credit cost table (publicly listed, no surprise bills)",
+      "Real-time affiliate dashboard (30% first-year recurring)",
+      "API access for programmatic use",
+      "Built-in unlimited image compression tool"
+    ],
+    "faq": [
+      [
+        "Is AIBase affiliated with Midjourney, OpenAI, or any model maker?",
+        "No — AIBase is an independent platform that routes to third-party models. The brand names appear only to identify which supported model is running."
+      ],
+      [
+        "Do I own what I generate?",
+        "Yes, subject to the underlying model/provider terms. AIBase's ToS section 4 says you may use Generated Content for personal or commercial purposes. Outputs are not guaranteed unique."
+      ],
+      [
+        "What's the real cost per task?",
+        "Their pricing page is explicit: text-to-image runs ~12–46 credits (~$0.05–$0.18), 5s video runs 150–380 credits (~$0.60–$1.52). At 800 credits/mo Basic, that's ~25 standard images or ~2–5 short videos."
+      ],
+      [
+        "Is there a real free tier?",
+        "Yes — free trial credits to test the workspace. Ongoing work costs money; it's not a 'free forever' tool."
+      ],
+      [
+        "Does AIBase have an affiliate program?",
+        "Yes — 30% on all subscription payments during the first year, including renewals and upgrades. PayPal payouts NET-15. Sign-up on /affiliate-program."
+      ]
+    ],
+    "trial_checklist": "Start with the free credits and run one real task from your own content calendar — an image you'd actually publish plus one short video. Count credits consumed: if your typical work burns through the Basic plan in a week, do the math against Pro/Ultimate before subscribing. Confirm the model picker shows you which underlying provider is running (Nano Banana vs Veo vs Seedance) so you know whose terms actually apply. Cross-check output ownership and acceptable-use against your client's brand rules before going commercial.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "medium"
+  },
+  {
     "slug": "midjourney",
     "name": "Midjourney",
     "category": "Creative",

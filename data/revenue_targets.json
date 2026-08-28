@@ -558,6 +558,31 @@
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
   },
   {
+    "tool_slug": "aibase",
+    "tool_name": "AIBase",
+    "priority": "high",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct affiliate program (vendor-published on site)"
+    ],
+    "search_queries": [
+      "AIBase affiliate program"
+    ],
+    "target_pages": [
+      "tools/aibase.html",
+      "comparisons/best-ai-tools.html",
+      "articles/index.html"
+    ],
+    "best_audiences": [
+      "Indie creators",
+      "Small marketing teams",
+      "Prototypers"
+    ],
+    "status": "affiliate_program_live",
+    "next_action": "Sign up for AIBase affiliate program at https://aibase.art/affiliate-program (30% recurring first year, PayPal NET-15). Use official aibase.art URL with affiliate link once approved. Surface alongside Midjourney/Leonardo in Creative comparisons.",
+    "notes": "Vendor submitted 2026-08-28; editorial entry written independently. Affiliate terms found on vendor's public page — high priority because the program already exists and is recurring first-year."
+  },
+  {
     "tool_slug": "lovable",
     "tool_name": "Lovable",
     "priority": "medium",

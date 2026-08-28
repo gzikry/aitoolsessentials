@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-27",
-  "tools_count": 61,
+  "tools_count": 62,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -84,6 +84,13 @@
       "category": "Creative",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/leonardo-ai/"
+    },
+    {
+      "name": "AIBase",
+      "slug": "aibase",
+      "category": "Creative",
+      "price": "Free trial credits + paid plans ($29.9/mo Basic, $49.9/mo Pro, $99.9/mo Ultimate; yearly 20\u201340% off; pay-as-you-go credit packs available)",
+      "url": "https://aitoolsessentials.com/tools/aibase/"
     },
     {
       "name": "Midjourney",

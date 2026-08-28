@@ -251,6 +251,10 @@
     "whop-cli": {
       "date": "2026-08-27",
       "digest": "Free CLI install. Whop platform fees apply on sales (standard Whop transaction fees). No separate CLI subscription."
+    },
+    "aibase": {
+      "date": "2026-08-28",
+      "digest": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respecti"
     }
   },
   "changes": [
