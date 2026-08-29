@@ -12,7 +12,7 @@
 
 ## 🚀 Site Overview
 
-**45 AI tools** reviewed
+**73 AI tools** reviewed
 **19 category buyer guides**
 **318 public pages** + 4 admin pages
 **Sitemap:** 318 URLs

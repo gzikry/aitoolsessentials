@@ -10,7 +10,7 @@
 
 ### Site Structure
 - ✅ 149 HTML pages generated (145 public + 4 admin)
-- ✅ 45 AI tools reviewed with full content
+- ✅ 73 AI tools reviewed with full content
 - ✅ 19 category buyer guides
 - ✅ 30 articles (best-of lists, alternatives)
 - ✅ 8 comparison pages
