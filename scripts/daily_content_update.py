@@ -92,7 +92,9 @@ from enhance_guides import generate as enhance_buyer_guides
 enhance_buyer_guides(root)
 
 from generate_new_comparisons import generate as generate_new_comparison_pages
+from generate_static_comparisons import generate_all as generate_static_comparisons
 generate_new_comparison_pages(root)
+print('Generated static comparisons:', generate_static_comparisons(root))
 
 from generate_audience_guides import generate as generate_audience_guide_pages
 generate_audience_guide_pages(root)
