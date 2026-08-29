@@ -191,6 +191,11 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     pro1 = tool.get('pros', ['It delivers on its core promise'])[0]
     con1 = tool.get('cons', ['Costs can grow with usage'])[0].lower().rstrip('.')
 
+    automation_decoder_categories = {'Automation', 'Browser Automation', 'Productivity', 'AI Agents'}
+    automation_decoder_block = ''
+    if category in automation_decoder_categories:
+        automation_decoder_block = f'''<section class="score-card"><span>Automation billing decoder</span><h2>Translate this workflow into billing units.</h2><p>Estimate Zapier tasks, Make credits, and n8n executions for the same monthly run volume before comparing plan prices.</p><p><a class="button button-blue" href="/automation-cost-decoder/">Open the free decoder</a></p></section>\n'''
+
     html = f'''<!doctype html>
 <html lang="en">
 <head>
@@ -294,6 +299,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 
 <section class="newsletter-cta"><div class="cta-grid"><div class="cta-content"><h3>Choose with evidence, not hype.</h3><p>Use the free scorecard for your own trial, then check the benchmark hub for versioned external evidence.</p><div class="cta-actions"><a class="cta-button" href="../../downloads/ai-tool-evaluation-scorecard.html">Download the free scorecard</a><a class="cta-secondary" href="../../benchmarks/">Open benchmarks</a></div></div><div class="cta-actions" style="margin-top:12px"><a class="cta-button" href="../../newsletter/">Read Keep/Cut Weekly</a><a class="cta-secondary" href="../../premium/">Premium research membership</a></div></div></section>
 
+{automation_decoder_block}
 </main>
 <footer class="footer">
 <span>© 2026 AIToolsEssentials</span>
