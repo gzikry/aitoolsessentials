@@ -142,7 +142,14 @@ def main():
 
     parsers = {}
     for f in ROOT.rglob('*.html'):
-        p = Parser(); p.feed(f.read_text()); parsers[f.resolve()] = p
+        raw_html = f.read_text()
+        p = Parser(); p.feed(raw_html); parsers[f.resolve()] = p
+        if 'admin' not in f.relative_to(ROOT).parts and '<main' in raw_html and '<footer' in raw_html:
+            main_close = raw_html.find('</main>')
+            footer_open = raw_html.find('<footer')
+            footer_close = raw_html.find('</footer>')
+            if not (main_close >= 0 and footer_open > main_close and footer_close > footer_open):
+                errors.append(f'{f.relative_to(ROOT)} has malformed main/footer order')
     for f,p in parsers.items():
         page_text = ' '.join(p.text).lower()
         if 'admin' not in f.parts:

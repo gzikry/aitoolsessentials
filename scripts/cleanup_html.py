@@ -32,14 +32,21 @@ def fix_page(p: Path) -> bool:
     if '<main' in h:
         n = h.count('</main>')
         if n == 0:
-            # Insert </main> BEFORE the footer close, not inside it
-            if '</footer>' in h:
-                h = h.replace('</footer>', '</main></footer>', 1)
+            # Close main before the footer opens, never inside the footer.
+            if '<footer' in h:
+                h = h.replace('<footer', '</main>\n<footer', 1)
             else:
                 h = h.replace('</body>', '</main>\n</body>', 1)
         elif n > 1:
             first = h.find('</main>')
             h = h[:first + 7] + h[first + 7:].replace('</main>', '')
+        # Repair legacy pages where </main> was inserted inside/after the footer.
+        footer_open = h.find('<footer')
+        main_close = h.find('</main>')
+        if footer_open >= 0 and main_close > footer_open:
+            h = h[:main_close] + h[main_close + len('</main>'):]
+            footer_open = h.find('<footer')
+            h = h[:footer_open] + '</main>\n' + h[footer_open:]
     elif '</main>' in h:
         h = h.replace('</main>', '', 1)
 
@@ -130,6 +137,9 @@ def fix_page(p: Path) -> bool:
     # GSC verification on every page
     if '<meta name="google-site-verification"' not in h:
         h = h.replace('<head>', '<head><meta name="google-site-verification" content="OzzGs2QF4v6zSBd9uO95NGgSPH5B598E6DPtcjRNn_4">', 1)
+    # Normalize trailing horizontal whitespace so generated diffs stay clean.
+    h = re.sub(r'[ \t]+(?=\r?$)', '', h, flags=re.M)
+
     if h != orig:
         p.write_text(h)
         return True
