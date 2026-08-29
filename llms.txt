@@ -73,6 +73,7 @@ Contact: contact@aitoolsessentials.com
 - [How to cancel AI tools before renewal](https://aitoolsessentials.com/articles/how-to-cancel-ai-tools-before-renewal.html): 14-day cancel process before the next charge
 - [Cursor vs Copilot: which to pay for](https://aitoolsessentials.com/articles/cursor-vs-copilot-which-to-pay-for.html): pick one paid coding assistant
 - [Make vs Zapier: which to pay for](https://aitoolsessentials.com/articles/make-vs-zapier-which-to-pay-for.html): compare billing units on one real workflow
+- [Automation Billing Decoder](https://aitoolsessentials.com/automation-cost-decoder/): estimate Zapier tasks, Make credits, and n8n executions for the same workflow shape
 - [Pick one AI meeting notes tool](https://aitoolsessentials.com/articles/pick-one-ai-meeting-notes-tool.html): Fireflies vs Otter vs Fathom on a real meeting
 - [Gamma vs Canva: which for decks](https://aitoolsessentials.com/articles/gamma-vs-canva-which-for-decks.html): pick one paid deck tool
 - [HeyGen vs Synthesia: which to pay for](https://aitoolsessentials.com/articles/heygen-vs-synthesia-which-to-pay-for.html): keep one avatar video tool

@@ -13,12 +13,23 @@ PUBLIC_PREFIXES = ('tools', 'categories', 'articles', 'comparisons', 'legal', 's
                    'advertise', 'downloads', 'benchmarks')
 
 
+def normalize_home_links(html: str) -> str:
+    """Point every homepage link at the canonical root URL."""
+    html = re.sub(r'href="(?:/|(?:\.\./)*)index\.html([#?][^"]*)?"',
+                  lambda m: 'href="/' + (m.group(1) or '') + '"', html)
+    return html
+
+
 def fix_page(p: Path) -> bool:
     rel_parts = p.relative_to(ROOT).parts
     depth = len(rel_parts) - 1
     prefix = '../' * depth
     h = p.read_text()
     orig = h
+
+    # Canonical homepage path: avoid splitting analytics and crawl signals
+    # between / and /index.html.
+    h = normalize_home_links(h)
 
     # 1. Domain typo
     h = h.replace('aitoolsessentials.com', 'aitoolsessentials.com')

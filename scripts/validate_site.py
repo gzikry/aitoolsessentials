@@ -140,10 +140,28 @@ def main():
     key_pages = ['leaderboard.html','submit-tool.html','downloads/ai-tool-evaluation-scorecard.html',
                  'legal/privacy.html','legal/terms.html','legal/about.html','legal/corrections.html',
                  'legal/testing-protocol.html','downloads/ai-tool-test-log.csv',
-                 'benchmarks/index.html','research/ai-tool-pricing-2026.html']
+                 'benchmarks/index.html','research/ai-tool-pricing-2026.html',
+                 'automation-cost-decoder/index.html']
     missing_keys = [p for p in key_pages if not (ROOT / p).exists()]
     if missing_keys:
         errors.append(f'Missing key pages: {missing_keys}')
+    duplicate_home_links = []
+    for page in ROOT.rglob('*.html'):
+        if re.search(r'href="(?:/|(?:\.\./)*)index\.html(?:[#?][^"]*)?"', page.read_text()):
+            duplicate_home_links.append(str(page.relative_to(ROOT)))
+    if duplicate_home_links:
+        errors.append(f'Pages link to duplicate homepage path /index.html: {duplicate_home_links[:10]}')
+    analytics_text = (ROOT/'js/analytics.js').read_text()
+    if 'window.plausibleQueue.add(n)' in analytics_text or '(function sendQueue()' in analytics_text:
+        errors.append('Analytics pre-fires conversion events without a user click')
+    decoder_targets = [
+        ROOT/'tools/zapier-ai/index.html', ROOT/'tools/make/index.html', ROOT/'tools/n8n/index.html',
+        ROOT/'comparisons/zapier-vs-make-vs-n8n.html', ROOT/'categories/Automation/index.html',
+        ROOT/'articles/make-vs-zapier-which-to-pay-for.html', ROOT/'workflows/client-onboarding-automation.html',
+    ]
+    for target in decoder_targets:
+        if target.exists() and target.read_text().count('AIT AUTOMATION DECODER START') != 1:
+            errors.append(f'{target.relative_to(ROOT)} missing automation decoder cross-link')
     pricing_research = ROOT/'research/ai-tool-pricing-2026.html'
     if pricing_research.exists():
         pricing_text = pricing_research.read_text()

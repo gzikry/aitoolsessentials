@@ -67,7 +67,7 @@ def generate_opensearch(root: Path) -> None:
 def generate_human_sitemap(root: Path, tools: list[dict[str, Any]]) -> None:
     groups = [
         ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Fit Interview", "/fit-interview/"), ("Workflow guides", "/workflows/"), ("Local AI Planner", "/local-ai-planner/"), ("Confidence Check", "/confidence-check/"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html")]),
-        ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/")]),
+        ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Automation Billing Decoder", "/automation-cost-decoder/"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/")]),
         ("Trust", [("Changelog", "/changelog/"), ("Change Radar", "/change-radar/"), ("Model lineups", "/model-lineups/"), ("How-to library", "/how-to/"), ("Hardware guide", "/hardware/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
         ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Weekly", "/weekly/"), ("RSS feed", "/feed.xml")]),
     ]
@@ -83,7 +83,7 @@ def generate_start_here(root: Path) -> None:
     steps = [
         ("I need a tool now", "Use Tool Finder to narrow the list by workflow, budget, and buyer type.", "/tool-finder.html", "Open Tool Finder"),
         ("I need a full stack", "Use Stack Builder to generate a shareable role-specific stack.", "/stack-builder.html", "Build my stack"),
-        ("I need to control cost", "Use the Cost Calculator before subscriptions sprawl.", "/cost-calculator.html", "Estimate cost"),
+        ("I need to control cost", "Use the Cost Calculator before subscriptions sprawl, or decode automation billing units for Zapier, Make, and n8n.", "/automation-cost-decoder/", "Decode automation cost"),
         ("I am paying for overlapping AI tools", "Use the cut-subscriptions guide, then cancel before renewal.", "/articles/how-to-cut-ai-tool-subscriptions.html", "Cut overlapping tools"),
         ("I am replacing a tool", "Open the Alternatives hub and compare before switching.", "/alternatives/", "Compare alternatives"),
         ("I want the research membership", "Premium is live: 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.", "/premium/", "See Premium"),

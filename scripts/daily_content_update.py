@@ -10,6 +10,7 @@ Runs once per day to:
 from pathlib import Path
 from datetime import datetime
 import json
+import re
 
 root = Path(__file__).resolve().parents[1]
 today = datetime.today().strftime('%Y-%m-%d')
@@ -145,6 +146,10 @@ print('Generated pricing watch page')
 from generate_pricing_research import generate as generate_pricing_research
 generate_pricing_research(root, tools, today)
 print('Generated current pricing research')
+
+from generate_automation_cost_decoder import generate as generate_automation_cost_decoder
+generate_automation_cost_decoder(root, tools, today)
+print('Generated automation billing decoder')
 
 from generate_change_radar import generate as generate_change_radar
 print('Generated change radar:', generate_change_radar(root))
@@ -338,6 +343,12 @@ for _path in root.rglob('*'):
         _new = _text
         for _old, _replacement in _inventory_replacements.items():
             _new = _new.replace(_old, _replacement)
+        if _path.suffix == '.html':
+            _new = re.sub(
+                r'href="(?:/|(?:\.\./)*)index\.html([#?][^"]*)?"',
+                lambda m: 'href="/' + (m.group(1) or '') + '"',
+                _new,
+            )
         if _new != _text:
             _path.write_text(_new)
     except (UnicodeDecodeError, OSError):
@@ -349,6 +360,18 @@ print(f'Refreshed inventory copy for {_current_count} tools')
 subprocess.run(['python3', str(root / 'scripts' / 'enhance_structured_data.py')], check=True)
 _site_discovery_postprocess(root, tools, today)
 _knowledge_postprocess(root, tools, today)
+
+# Final postprocessors can rewrite status and discovery pages after the cleanup pass.
+# Normalize homepage links once more so analytics and crawl signals stay on `/`.
+for _html_path in root.rglob('*.html'):
+    _html = _html_path.read_text()
+    _normalized = re.sub(
+        r'href="(?:/|(?:\.\./)*)index\.html([#?][^"]*)?"',
+        lambda m: 'href="/' + (m.group(1) or '') + '"',
+        _html,
+    )
+    if _normalized != _html:
+        _html_path.write_text(_normalized)
 
 _expected_count = len(tools)
 _metadata_targets = {
