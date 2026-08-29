@@ -107,7 +107,7 @@ python3 scripts/validate_site.py
 ```
 aitoolessentials/site/
 ├── data/
-│   ├── tools.json                    # Tool inventory (39 tools)
+│   ├── tools.json                    # Tool inventory (67 tools)
 │   ├── affiliate_programs.json       # Affiliate network details
 │   ├── revenue_targets.json          # Approval tracking
 │   ├── sponsors.json                 # Sponsor placements

@@ -142,6 +142,10 @@ from generate_pricing_watch import generate as generate_pricing_watch
 generate_pricing_watch(root, tools, today)
 print('Generated pricing watch page')
 
+from generate_pricing_research import generate as generate_pricing_research
+generate_pricing_research(root, tools, today)
+print('Generated current pricing research')
+
 from generate_change_radar import generate as generate_change_radar
 print('Generated change radar:', generate_change_radar(root))
 

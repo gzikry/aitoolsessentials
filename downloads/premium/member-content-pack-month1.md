@@ -33,7 +33,7 @@ into Whop as separate posts in the order listed.
 Attached: `aitools-premium-comparison-archive-2026-09.csv` (in the site repo at
 `downloads/premium/`, also attached here for members).
 
-**What's inside:** all 39 tracked tools × these fields:
+**What's inside:** all 67 tracked tools × these fields:
 
 | Field | What it tells you |
 |---|---|

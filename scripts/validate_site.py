@@ -4,6 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urldefrag
 import json
+import re
 import sys
 from datetime import date
 
@@ -41,7 +42,7 @@ def load_json(path):
 
 def main():
     errors = []
-    for rel in ['data/tools.json','data/tool_sources.json','data/test_cases.json','data/affiliate_programs.json','data/sponsors.json','data/revenue_targets.json','data/sponsor_inventory.json','data/benchmarks.json','data/integrations.json']:
+    for rel in ['data/tools.json','data/tool_sources.json','data/test_cases.json','data/affiliate_programs.json','data/sponsors.json','data/revenue_targets.json','data/sponsor_inventory.json','data/benchmarks.json','data/integrations.json','data/pricing_snapshots.json']:
         result = load_json(ROOT / rel)
         if isinstance(result, str):
             errors.append(result)
@@ -86,6 +87,10 @@ def main():
     tool_slugs_for_targets = {t['slug'] for t in tools}
     if target_slugs != tool_slugs_for_targets:
         errors.append('Revenue targets do not match tools.json slugs')
+    pricing_data = json.loads((ROOT/'data/pricing_snapshots.json').read_text())
+    pricing_slugs = set(pricing_data.get('snapshots', {}))
+    if pricing_slugs != tool_slugs:
+        errors.append('Pricing snapshots do not match tools.json slugs')
     sponsor_inv = json.loads((ROOT/'data/sponsor_inventory.json').read_text())
     if not isinstance(sponsor_inv, dict) or 'placements' not in sponsor_inv or len(sponsor_inv.get('placements', [])) == 0:
         errors.append('Sponsor inventory is empty')
@@ -135,15 +140,28 @@ def main():
     key_pages = ['leaderboard.html','submit-tool.html','downloads/ai-tool-evaluation-scorecard.html',
                  'legal/privacy.html','legal/terms.html','legal/about.html','legal/corrections.html',
                  'legal/testing-protocol.html','downloads/ai-tool-test-log.csv',
-                 'benchmarks/index.html']
+                 'benchmarks/index.html','research/ai-tool-pricing-2026.html']
     missing_keys = [p for p in key_pages if not (ROOT / p).exists()]
     if missing_keys:
         errors.append(f'Missing key pages: {missing_keys}')
+    pricing_research = ROOT/'research/ai-tool-pricing-2026.html'
+    if pricing_research.exists():
+        pricing_text = pricing_research.read_text()
+        expected_title = f'{len(tools)} Tools Tracked'
+        if expected_title not in pricing_text:
+            errors.append(f'Pricing research inventory claim is stale; expected {expected_title}')
+        if pricing_text.count('<tbody>') != 1 or pricing_text.count('<tr>') - 1 != len(tools):
+            errors.append('Pricing research table does not match current tool inventory')
 
     parsers = {}
     for f in ROOT.rglob('*.html'):
         raw_html = f.read_text()
         p = Parser(); p.feed(raw_html); parsers[f.resolve()] = p
+        for raw_schema in re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', raw_html, flags=re.S | re.I):
+            try:
+                json.loads(raw_schema)
+            except Exception as exc:
+                errors.append(f'{f.relative_to(ROOT)} JSON-LD parse failed: {exc}')
         if 'admin' not in f.relative_to(ROOT).parts and '<main' in raw_html and '<footer' in raw_html:
             main_close = raw_html.find('</main>')
             footer_open = raw_html.find('<footer')
