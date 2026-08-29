@@ -164,3 +164,14 @@ Do not compare AI music tools by the best first listen. Compare usable-track rat
 → https://aitoolsessentials.com/guides/switch-guides/switch-from-suno-to-udio.html
 
 #AI #MusicAI #Suno #Udio
+
+---
+
+## 17. Newsletter: one keep/cut email a week
+**X/LinkedIn:**
+One email a week. Verified pricing changes, overlap warnings, and one job to test before renewal. Issue 1 already covers coding-assistant overlap, pricing-page changes, and new listings.
+
+Subscribe free:
+→ https://aitoolsessentials.com/newsletter/
+
+#AI #Newsletter

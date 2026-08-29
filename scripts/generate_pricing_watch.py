@@ -102,7 +102,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <p class="kicker">Pricing watch · Baseline verified {checked_at}</p>
 <h1>Know when AI prices move.</h1>
 <p class="subhead">Every AI tool's pricing below traces to its official vendor page with a checked date — no scraped guesses. Future re-checks that detect changes land in the public change log. Premium members get alerted first.</p>
-<p><a class="button button-blue" href="/premium/">Get price alerts with Premium</a></p>
+<p><a class="button button-blue" href="/premium/">Get price alerts with Premium</a><a class="button button-ghost-dark" href="/newsletter/" style="margin-left:8px">Keep/Cut Weekly</a></p>
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
 <div class="table-wrap"><table>

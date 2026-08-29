@@ -218,6 +218,7 @@ def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
         ("Grok review", "/tools/grok/", "Full review covering Grok 4.6, Grok Bot always-on agents, Grok Build, Imagine, Voice, and verified pricing."),
         ("Cursor review", "/tools/cursor/", "Review of Cursor's own model stack (Cursor Grok 4.6, Composer 2.5), agent modes, cloud agents, and Bugbot."),
         ("Premium research membership", "/premium/", "$12/mo decision briefs, CSV matrices, playbooks, and price-change alerts via Whop."),
+        ("Keep/Cut Weekly newsletter", "/newsletter/", "Free weekly keep/cut digest: verified pricing changes, overlap warnings, and one job to test before renewal."),
         ("Benchmarks evidence hub", "/benchmarks/", "Versioned external benchmark snapshots with exact models, configurations, and dates."),
         ("Tool Finder", "/tool-finder.html", "Find AI tools by category, use case, budget, and free-tier availability."),
         ("Best AI tools hub", "/comparisons/best-ai-tools.html", "Editorial shortlist across categories with verified pricing."),
@@ -227,9 +228,14 @@ def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
         for name, path, summary in feed_items:
             rows.append(f'<item><title>{esc(name)}</title><link>{DOMAIN}{path}</link><guid>{DOMAIN}{path}</guid><pubDate>{today} 12:00:00 -0700</pubDate><description>{esc(summary)}</description></item>')
         return f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{esc(title)}</title><link>{DOMAIN}{link}</link><description>{esc(desc)}</description>{"".join(rows)}</channel></rss>\n'
+    def item_by_path(path):
+        matches = [i for i in items if i[1] == path]
+        if len(matches) != 1:
+            raise ValueError(f"feed path {path!r} matched {len(matches)} items")
+        return matches[0]
     (root / "feed.xml").write_text(feed("AIToolsEssentials updates", "/", "AI tools directory updates, stack utilities, and buyer guides.", items))
-    (root / "weekly" / "feed.xml").write_text(feed("AIToolsEssentials weekly shortlist", "/weekly/", "Weekly AI tools worth testing.", [items[2]]))
-    (root / "changelog" / "feed.xml").write_text(feed("AIToolsEssentials changelog", "/changelog/", "Editorial and product update log.", [items[3]]))
+    (root / "weekly" / "feed.xml").write_text(feed("AIToolsEssentials weekly shortlist", "/weekly/", "Weekly AI tools worth testing.", [item_by_path("/weekly/"), item_by_path("/newsletter/")]))
+    (root / "changelog" / "feed.xml").write_text(feed("AIToolsEssentials changelog", "/changelog/", "Editorial and product update log.", [item_by_path("/workflows/")]))
 
 def postprocess_related_next_steps(root: Path) -> None:
     marker = "<!-- AIT RELATED NEXT STEPS START -->"

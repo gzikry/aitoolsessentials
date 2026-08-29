@@ -247,7 +247,6 @@ def ping_indexnow(root):
         print(f'IndexNow ping skipped: {e}')
 
 # Auto-ping IndexNow with the fresh sitemap so search engines index new pages same-day
-generate_media_kit(root)
 ping_indexnow(root)
 
 subprocess.run(['python3', str(root / 'scripts' / 'enhance_structured_data.py')], check=False, capture_output=True, text=True)

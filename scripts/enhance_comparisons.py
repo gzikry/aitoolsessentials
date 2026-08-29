@@ -50,6 +50,12 @@ def generate(root: Path) -> int:
             html = html[:idx] + panel + html[idx:]
         else:
             html = html.replace('</div></section>', panel+'</div></section>', 1)
+        html = re.sub(r'<!-- AIT RELATED LINKS START -->.*?<!-- AIT RELATED LINKS END -->\s*', '', html, flags=re.S)
+        html = re.sub(r'<section class="score-card related-next-steps"><span>Related</span><h3>Next reads</h3>.*?</section>\s*', '', html, flags=re.S)
+        newsletter_panel = '<!-- AIT RELATED LINKS START --><section class="score-card related-next-steps"><span>Related</span><h3>Next reads</h3><p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/change-radar/">Change Radar</a> · <a href="/premium/">Premium</a> · <a href="/newsletter/">Newsletter</a></p></section><!-- AIT RELATED LINKS END -->\n'
+        close_main = html.find('</main>')
+        if close_main >= 0:
+            html = html[:close_main] + newsletter_panel + html[close_main:]
         if html != original:
             path.write_text(html); changed += 1
     print(f'Enhanced comparison evidence on {changed} pages')

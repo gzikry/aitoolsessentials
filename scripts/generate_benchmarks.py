@@ -83,7 +83,7 @@ def generate(root: Path) -> Path:
 <article><span>03</span><h3>Image, video &amp; audio</h3><p>Use modality-specific quality and latency methods. Product outputs, rights, editing control, and consistency matter more than text benchmarks.</p></article>
 </div></section>
 
-<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="../advertise/index.html" rel="nofollow">Advertise</a><a href="../submit-tool.html" rel="nofollow">Submit a tool</a><a href="../legal/editorial-methodology.html">Methodology</a><a href="mailto:{EMAIL}">Contact</a></footer>
+<p style="text-align:center;margin-top:14px"><a class="button button-blue" href="/newsletter/">Keep/Cut Weekly</a></p><footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="../advertise/index.html" rel="nofollow">Advertise</a><a href="../submit-tool.html" rel="nofollow">Submit a tool</a><a href="../legal/editorial-methodology.html">Methodology</a><a href="mailto:{EMAIL}">Contact</a></footer>
 <script src="../js/site.js" defer></script><script src="../js/analytics.js" defer></script><script src="../js/benchmark-table.js" defer></script>
 </body></html>'''
     out = root / "benchmarks" / "index.html"

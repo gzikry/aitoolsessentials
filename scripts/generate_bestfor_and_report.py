@@ -145,7 +145,8 @@ def generate_best_for(root: Path) -> Path:
               '</div></section><section class="newsletter-panel"><div><span>Not sure where to start?</span>'
               "<h2>Use the free Decision Checklist</h2><p>A printable worksheet to score overlap, cost, and trial results before paying.</p></div>"
               '<div class="newsletter-actions"><a class="button button-blue" href="/downloads/ai-stack-decision-checklist.pdf">Download PDF</a>'
-              '<a class="button button-dark" href="/decision-brief.html">Get a decision brief</a></div></section>'
+              '<a class="button button-dark" href="/decision-brief.html">Get a decision brief</a>'
+              '<a class="button button-dark" href="/newsletter/">Keep/Cut Weekly</a></div></section>'
             + "</main>" + FOOTER + '</body></html>')
     out = root / "best-for" / "index.html"
     out.parent.mkdir(exist_ok=True)
@@ -175,8 +176,8 @@ def _deals_strip(root: Path) -> str:
 def generate_pricing_report(root: Path, today: str) -> Path:
     tools = {t["slug"]: t for t in json.loads((root / "data/tools.json").read_text())}
     snaps = json.loads((root / "data/pricing_snapshots.json").read_text())
-    snapshots = snaps.get("snapshots", {})
-    changes = snaps.get("changes", [])
+    snapshots = {slug: rec for slug, rec in snaps.get("snapshots", {}).items() if slug in tools}
+    changes = [change for change in snaps.get("changes", []) if change.get("slug") in tools]
     records = {r["slug"]: r for r in json.loads((root / "data/tool_sources.json").read_text())["tools"]}
     checked_dates = sorted({r.get("date") for r in snapshots.values() if r.get("date")})
     baseline = checked_dates[0] if checked_dates else today
@@ -201,8 +202,8 @@ def generate_pricing_report(root: Path, today: str) -> Path:
     changes_html = ("<p>No confirmed price changes detected since the baseline was established. "
                     "When a vendor changes official pricing, the dated entry appears here automatically.</p>")
     if changes:
-        rows = "".join(f'<tr><td>{_esc(c.get("date",""))}</td><td><a href="/tools/{c.get("slug","")}/">{_esc(tools.get(c.get("slug",{}),{}).get("name", c.get("slug","")))}</a></td>'
-                       f'<td>{_esc(str(c.get("summary",""))[:220])}</td></tr>' for c in changes)
+        rows = "".join(f'<tr><td>{_esc(c.get("detected") or c.get("date", ""))}</td><td><a href="/tools/{c.get("slug","")}/">{_esc(tools.get(c.get("slug",{}),{}).get("name", c.get("slug","")))}</a></td>'
+                       f'<td>{_esc(str(c.get("note") or c.get("summary", ""))[:220])}</td></tr>' for c in changes)
         changes_html = ('<div class="table-wrap"><table><thead><tr><th>Date</th><th>Tool</th><th>Change</th></tr></thead>'
                         f'<tbody>{rows}</tbody></table></div>')
 
@@ -227,7 +228,8 @@ def generate_pricing_report(root: Path, today: str) -> Path:
               '<section class="score-card"><span>Stay ahead of renewals</span><h2>Premium members get price-change alerts.</h2>'
               '<p>When our verification runs detect an official price change, Premium members hear about it first — before it hits their renewal.</p>'
               '<p><a class="button button-blue" href="/premium/">See Premium</a> '
-              '<a class="button button-dark" href="/pricing-watch/">Open the live Pricing Watch</a></p></section>'
+              '<a class="button button-dark" href="/pricing-watch/">Open the live Pricing Watch</a> '
+              '<a class="button button-ghost-dark" href="/newsletter/">Keep/Cut Weekly</a></p></section>'
               '<p class="benchmark-caveat">Methodology: every figure traces to the vendor\'s official pricing page with a checked date shown in '
               '<a href="/pricing-watch/">AI Pricing Watch</a>. Prices change often — verify on the vendor page before purchase. This report is research, not purchasing advice.</p>'
               '</div></section>'

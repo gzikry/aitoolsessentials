@@ -54,9 +54,25 @@ AIToolsEssentials publishes Keep/Cut Weekly — a free newsletter that flags AI 
 
 It's Jarvis-dry, no hype, and the kind of resource your subscribers might appreciate in a "useful tools" or "Saves this week" section.
 
-Subscribe/read:
-https://aitoolsessentials.com/newsletter/
+Read archive: https://aitoolsessentials.com/newsletter/
+Subscribe: https://aitoolsessentials.com/newsletter/
 
 Happy to swap mentions if that's useful.
+
+AIToolsEssentials
+
+## Email 4 — Newsletter pitch
+**Subject:** Free AI keep/cut newsletter — useful for readers who choose tools
+
+Hi [name],
+
+AIToolsEssentials publishes Keep/Cut Weekly: one email a week on AI tool pricing changes, model updates, and overlap warnings. No hype, no daily drip.
+
+Issue 1 is live and covers coding-assistant overlap, verified pricing changes, and new directory listings. If your audience buys AI tools by workflow, this is a linkable resource.
+
+Read archive: https://aitoolsessentials.com/newsletter/
+Subscribe: https://aitoolsessentials.com/newsletter/
+
+If you run mentions or resource links, I’m happy to send the next issue in advance.
 
 AIToolsEssentials
