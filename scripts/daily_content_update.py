@@ -327,6 +327,8 @@ _inventory_replacements = {
     '39 AI tools': f'{_current_count} AI tools',
     '39 AI tools reviewed': f'{_current_count} AI tools reviewed',
     '40 tools. Pricing verified': f'{_current_count} tools. Pricing verified',
+    '45 AI tools': f'{_current_count} AI tools',
+    '45 AI tools organized by real workflows': f'{_current_count} AI tools organized by real workflows',
     'for all 40 tools': 'for the 40-tool pricing snapshot',
     'across all 40 tools': 'across the 40-tool pricing snapshot',
     'across 40 tools': 'across the 40-tool pricing snapshot',
