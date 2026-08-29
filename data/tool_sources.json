@@ -967,6 +967,90 @@
       "rights_url": "https://www.udio.com/terms-of-service",
       "verification_notes": "Official pricing checked 2026-08-28. Paid plans add editing, audio upload, stem download, and higher concurrent-generation limits.",
       "unresolved_claims": []
+    },
+    {
+      "slug": "shortwave",
+      "pricing_checked_date": "2026-08-29",
+      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
+      "pricing_url": "https://www.shortwave.com/",
+      "docs_url": "https://www.shortwave.com//docs/",
+      "privacy_url": "https://www.shortwave.com//privacy/",
+      "rights_url": "https://www.shortwave.com//terms/",
+      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "unresolved_claims": [
+        "Official pricing, rights, and privacy statements have not been verified.",
+        "Affiliate program status and revenue terms are unknown until checked against official sources."
+      ]
+    },
+    {
+      "slug": "browse-ai",
+      "pricing_checked_date": "2026-08-29",
+      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
+      "pricing_url": "https://www.browse.ai/",
+      "docs_url": "https://www.browse.ai//docs/",
+      "privacy_url": "https://www.browse.ai//privacy/",
+      "rights_url": "https://www.browse.ai//terms/",
+      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "unresolved_claims": [
+        "Official pricing, rights, and privacy statements have not been verified.",
+        "Affiliate program status and revenue terms are unknown until checked against official sources."
+      ]
+    },
+    {
+      "slug": "rows",
+      "pricing_checked_date": "2026-08-29",
+      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
+      "pricing_url": "https://rows.com/",
+      "docs_url": "https://rows.com//docs/",
+      "privacy_url": "https://rows.com//privacy/",
+      "rights_url": "https://rows.com//terms/",
+      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "unresolved_claims": [
+        "Official pricing, rights, and privacy statements have not been verified.",
+        "Affiliate program status and revenue terms are unknown until checked against official sources."
+      ]
+    },
+    {
+      "slug": "notebooklm",
+      "pricing_checked_date": "2026-08-29",
+      "pricing_summary": "Free \u2014 official pricing page should be verified before publication.",
+      "pricing_url": "https://notebooklm.google.com/",
+      "docs_url": "https://notebooklm.google.com//docs/",
+      "privacy_url": "https://notebooklm.google.com//privacy/",
+      "rights_url": "https://notebooklm.google.com//terms/",
+      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "unresolved_claims": [
+        "Official pricing, rights, and privacy statements have not been verified.",
+        "Affiliate program status and revenue terms are unknown until checked against official sources."
+      ]
+    },
+    {
+      "slug": "typingmind",
+      "pricing_checked_date": "2026-08-29",
+      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
+      "pricing_url": "https://www.typingmind.com/",
+      "docs_url": "https://www.typingmind.com//docs/",
+      "privacy_url": "https://www.typingmind.com//privacy/",
+      "rights_url": "https://www.typingmind.com//terms/",
+      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "unresolved_claims": [
+        "Official pricing, rights, and privacy statements have not been verified.",
+        "Affiliate program status and revenue terms are unknown until checked against official sources."
+      ]
+    },
+    {
+      "slug": "speechify",
+      "pricing_checked_date": "2026-08-29",
+      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
+      "pricing_url": "https://speechify.com/",
+      "docs_url": "https://speechify.com//docs/",
+      "privacy_url": "https://speechify.com//privacy/",
+      "rights_url": "https://speechify.com//terms/",
+      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "unresolved_claims": [
+        "Official pricing, rights, and privacy statements have not been verified.",
+        "Affiliate program status and revenue terms are unknown until checked against official sources."
+      ]
     }
   ]
 }

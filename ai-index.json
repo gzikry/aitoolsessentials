@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-08-29",
-  "tools_count": 67,
+  "tools_count": 73,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -504,6 +504,48 @@
       "category": "Music & Audio",
       "price": null,
       "url": "https://aitoolsessentials.com/tools/udio/"
+    },
+    {
+      "name": "Shortwave",
+      "slug": "shortwave",
+      "category": "Email AI",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/shortwave/"
+    },
+    {
+      "name": "Browse AI",
+      "slug": "browse-ai",
+      "category": "Browser Automation",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/browse-ai/"
+    },
+    {
+      "name": "Rows",
+      "slug": "rows",
+      "category": "Productivity",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/rows/"
+    },
+    {
+      "name": "NotebookLM",
+      "slug": "notebooklm",
+      "category": "Research",
+      "price": "Free",
+      "url": "https://aitoolsessentials.com/tools/notebooklm/"
+    },
+    {
+      "name": "TypingMind",
+      "slug": "typingmind",
+      "category": "AI Agents",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/typingmind/"
+    },
+    {
+      "name": "Speechify",
+      "slug": "speechify",
+      "category": "Audio Production",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/speechify/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

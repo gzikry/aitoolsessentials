@@ -168,10 +168,12 @@
   <url><loc>https://aitoolsessentials.com/categories/Audio & Video/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Audio Production/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Automation/</loc></url>
+  <url><loc>https://aitoolsessentials.com/categories/Browser Automation/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Creative/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Creative & Marketing/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Development/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Education/</loc></url>
+  <url><loc>https://aitoolsessentials.com/categories/Email AI/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/General AI Assistant/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Healthcare/</loc></url>
   <url><loc>https://aitoolsessentials.com/categories/Image Generation/</loc></url>
@@ -357,6 +359,7 @@
   <url><loc>https://aitoolsessentials.com/tools/airtable-ai/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/allvideoai/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/bolt-new/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/browse-ai/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/canva-ai/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/chatgpt/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/claude/</loc></url>
@@ -397,6 +400,7 @@
   <url><loc>https://aitoolsessentials.com/tools/midjourney/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/mistral-le-chat/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/n8n/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/notebooklm/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/notion-ai/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/ollama/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/open-webui/</loc></url>
@@ -408,12 +412,16 @@
   <url><loc>https://aitoolsessentials.com/tools/poe/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/replit-ai/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/riverside-fm/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/rows/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/runway/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/shortwave/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/slack-ai/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/speechify/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/spellbook/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/suno/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/synthesia/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/tenantcloud/</loc></url>
+  <url><loc>https://aitoolsessentials.com/tools/typingmind/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/udio/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/v0/</loc></url>
   <url><loc>https://aitoolsessentials.com/tools/whop-cli/</loc></url>
