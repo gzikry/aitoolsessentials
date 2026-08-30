@@ -145,6 +145,23 @@ def main():
     missing_keys = [p for p in key_pages if not (ROOT / p).exists()]
     if missing_keys:
         errors.append(f'Missing key pages: {missing_keys}')
+    comparison_hub = ROOT/'comparisons/index.html'
+    comparison_pages = {
+        p.name for p in (ROOT/'comparisons').glob('*.html')
+        if p.name != 'index.html'
+    }
+    if comparison_hub.exists():
+        hub_text = comparison_hub.read_text()
+        hub_links = set(re.findall(r'href=["\']([^"\']+\.html)', hub_text))
+        hub_link_names = {Path(link).name for link in hub_links}
+        missing_from_hub = sorted(comparison_pages - hub_link_names)
+        if missing_from_hub:
+            errors.append(f'Comparison pages missing from comparison hub: {missing_from_hub}')
+        expected_comparison_count = f'Showing all {len(comparison_pages)} comparisons.'
+        if expected_comparison_count not in hub_text:
+            errors.append(f'Comparison hub count is stale; expected {len(comparison_pages)}')
+    else:
+        errors.append('Missing comparison hub')
     duplicate_home_links = []
     for page in ROOT.rglob('*.html'):
         if re.search(r'href="(?:/|(?:\.\./)*)index\.html(?:[#?][^"]*)?"', page.read_text()):
