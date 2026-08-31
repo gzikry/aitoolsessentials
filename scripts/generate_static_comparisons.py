@@ -328,6 +328,18 @@ def generate_all(root: Path):
         'perplexity-vs-chatgpt.html': ('perplexity', 'chatgpt'),
         'perplexity-vs-gemini.html': ('perplexity', 'gemini'),
         'runway-vs-pika.html': ('runway', 'pika'),
+        'gemini-vs-grok.html': ('gemini', 'grok'),
+        'grok-vs-deepseek.html': ('grok', 'deepseek'),
+        'claude-vs-deepseek.html': ('claude', 'deepseek'),
+        'v0-vs-lovable.html': ('v0', 'lovable'),
+        'bolt-new-vs-lovable.html': ('bolt-new', 'lovable'),
+        'v0-vs-bolt-new.html': ('v0', 'bolt-new'),
+        'fathom-vs-otter-ai.html': ('fathom', 'otter-ai'),
+        'midjourney-vs-ideogram.html': ('midjourney', 'ideogram'),
+        'descript-vs-riverside-fm.html': ('descript', 'riverside-fm'),
+        'perplexity-vs-notebooklm.html': ('perplexity', 'notebooklm'),
+        'ollama-vs-lm-studio.html': ('ollama', 'lm-studio'),
+        'suno-vs-udio.html': ('suno', 'udio'),
     }
     for fname, (a, b) in versus.items():
         if a in TOOLS and b in TOOLS:
