@@ -981,6 +981,257 @@ ARTICLES["zapier-vs-make-deep-comparison.html"] = {
 """,
 }
 
+# ---------------------------------------------------------------------------
+# Tier-4 deep comparisons — remaining high-intent matchups with real search
+# demand and existing comparison table pages. Same honesty rules.
+# ---------------------------------------------------------------------------
+
+ARTICLES["claude-vs-gemini-deep-comparison.html"] = {
+    "pair": ("claude", "gemini"),
+    "comparison": "gemini-vs-claude.html",
+    "title": "Claude vs Gemini: which paid assistant belongs in your week?",
+    "kicker": "Deep comparison",
+    "desc": "Claude or Gemini for daily work? A weekly-workflow test across writing, Workspace grounding, and code — with a keep-one decision path.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/claude/">Claude</a> if your week is words and code review — long documents, careful editing, diffs that need to stay coherent. <a href="../tools/gemini/">Gemini</a> if you already live in Google Workspace and want the assistant that can see Gmail, Docs, and Sheets without a second paste step. Most people should pay for one, not both. Run the weekly-workflow test on the free tiers before you upgrade either.</p>
+<h2>The weekly-workflow test</h2>
+<ol>
+<li><strong>Long document edit:</strong> paste a 3,000-word draft with real problems. Score first-output acceptance and whether your voice survived.</li>
+<li><strong>Workspace task:</strong> ask each tool to summarize last week's mail or a live Doc. Gemini's grounding is the point of this step — Claude will ask you to paste.</li>
+<li><strong>Code review:</strong> a real pull-request diff. Score correctness flags vs generic style notes.</li>
+<li><strong>Messy admin:</strong> a spreadsheet formula, an awkward email, a trip plan. Whichever finishes with less rework wins this slot.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Claude</h3>
+<ul>
+<li>Long-context writing and editing that stays coherent past a few thousand words.</li>
+<li>Careful, structured code review — the better default when the job is "find what is wrong."</li>
+<li>Less sycophantic on weak arguments; useful when you need a second reader, not a cheerleader.</li>
+</ul>
+<h3>Gemini</h3>
+<ul>
+<li>Workspace grounding: your actual Gmail, Docs, and Sheets as context.</li>
+<li>Strong research-and-summarize performance with a generous free tier.</li>
+<li>Best if you already pay for Workspace — the AI tier is an incremental upgrade, not a second subscription.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Paying for Claude and Gemini at the same time is the expensive version of "I like both chat boxes." If you are a Workspace shop, try Gemini inside the tools you already pay for before adding Claude. If you are not in Google's ecosystem, Claude's writing and review usually earn the single paid slot. For ChatGPT in the mix, see <a href="../articles/chatgpt-vs-claude-which-is-better.html">ChatGPT vs Claude</a> and <a href="../articles/chatgpt-vs-gemini-which-is-better.html">ChatGPT vs Gemini</a>.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Claude</strong> for writing, editing, and code review as the main job. <strong>Pick Gemini</strong> if Workspace is already the operating system of your week. <strong>Already paying for both?</strong> Cut the one you used less in the test — see <a href="../pricing-watch/">Pricing Watch</a> for current verified tiers.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is Gemini free enough?</h3>
+<p>For many Workspace users, yes — test the free tier on last week's real mail before you pay. Paid is for higher limits and the models Google gates behind the AI plan; check <a href="../pricing-watch/">Pricing Watch</a>.</p>
+<h3>Can Claude see my Google Drive?</h3>
+<p>Not the way Gemini can. Claude works with what you paste or attach. That is a feature if you want a hard boundary; it is friction if your files already live in Drive.</p>
+""",
+}
+
+ARTICLES["chatgpt-vs-grok-deep-comparison.html"] = {
+    "pair": ("chatgpt", "grok"),
+    "comparison": "chatgpt-vs-grok.html",
+    "title": "ChatGPT vs Grok: which one for daily work, and which for X?",
+    "kicker": "Deep comparison",
+    "desc": "ChatGPT or Grok for 2026? A weekly-workflow test across research, drafting, and real-time X — plus when paying for both is a waste.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/chatgpt/">ChatGPT</a> if you need a general assistant — files, images, data, custom GPTs, the widest weekly job list. <a href="../tools/grok/">Grok</a> if you already live on X and the job is real-time social, trend monitoring, or the Grok-native agent surface. Most people should not pay for both. Test Grok on the X path you already have before you add a second assistant bill.</p>
+<h2>The weekly-workflow test</h2>
+<ol>
+<li><strong>Research with sources:</strong> the same five questions in both. Score citations, completeness, and whether you would send the answer to a colleague.</li>
+<li><strong>Drafting:</strong> a real email, a real outline, a real rewrite. Score edit burden.</li>
+<li><strong>Real-time / social:</strong> a question that only makes sense with today's X firehose. This is Grok's home turf — ChatGPT will browse, not sit in the stream.</li>
+<li><strong>Files and tools:</strong> a spreadsheet or PDF. ChatGPT's ecosystem usually wins this slot.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>ChatGPT</h3>
+<ul>
+<li>Breadth: files, images, voice, data analysis, custom GPTs.</li>
+<li>The default for "several different jobs this week."</li>
+<li>Plans scale from free to business — see <a href="../pricing-watch/">Pricing Watch</a> for the verified ladder.</li>
+</ul>
+<h3>Grok</h3>
+<ul>
+<li>Real-time X data — trend monitoring and social listening the others fake with a search step.</li>
+<li>The right pick if X is already a work surface and you would use Grok inside it.</li>
+<li>Agent and image surfaces that ship on X's cadence, not OpenAI's.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Grok is not a second ChatGPT. If you do not open X for work, a paid Grok plan is a hobby. If you do, ChatGPT still usually wins drafting and files — paying for both only makes sense when the X-native job is daily, not occasional. Check current tiers on <a href="../pricing-watch/">Pricing Watch</a> before stacking bills.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick ChatGPT</strong> as the general assistant. <strong>Pick Grok</strong> only if real-time X is a real weekly job. <strong>Already on X Premium?</strong> Test Grok there for a week before you add ChatGPT Plus — or the reverse. One paid assistant is the default.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is Grok included with X?</h3>
+<p>Access and limits move with X's plans — verify on <a href="../pricing-watch/">Pricing Watch</a> and the Grok review rather than assuming the feature you saw in a screenshot is still in your tier.</p>
+<h3>Which is better for coding?</h3>
+<p>Neither is a dedicated coding IDE. For that job see <a href="../articles/cursor-vs-github-copilot-deep-comparison.html">Cursor vs GitHub Copilot</a>. As chat assistants, run the same pull-request diff through both and keep the one that flags real bugs.</p>
+""",
+}
+
+ARTICLES["midjourney-vs-leonardo-ai-deep-comparison.html"] = {
+    "pair": ("midjourney", "leonardo-ai"),
+    "comparison": "midjourney-vs-leonardo-ai.html",
+    "title": "Midjourney vs Leonardo AI: which image generator should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "Midjourney or Leonardo for stills? A one-evening board test — consistency, commercial terms, and the credit math that decides it.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/midjourney/">Midjourney</a> if still quality and aesthetic control are the job — the default for "this has to look expensive." <a href="../tools/leonardo-ai/">Leonardo AI</a> if you need more knobs on one canvas — canvas editor, motion, model choice, and a workflow that is closer to a studio than a Discord prompt box. Run one real board on both free/trial credits before you pay.</p>
+<h2>The one-evening board test</h2>
+<ol>
+<li>Pick a real brief: a product hero, a character sheet, or a campaign still. Same prompt bones in both.</li>
+<li>Score first-generation quality cold, tomorrow morning — not in the dopamine of the generate button.</li>
+<li>Score consistency: can you get four images that belong in the same set?</li>
+<li>Read commercial terms on the official pages and price your monthly volume on <a href="../pricing-watch/">Pricing Watch</a>. Credit burn, not the sticker, is the real bill.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Midjourney</h3>
+<ul>
+<li>Still quality that other generators still chase — especially atmospheric and product work.</li>
+<li>A mature personalization and style system once you are past the first week.</li>
+<li>The safer "this has to look like a campaign" default when you will spend time in the tool.</li>
+</ul>
+<h3>Leonardo AI</h3>
+<ul>
+<li>More of a studio: canvas, motion, and multiple models without leaving the product.</li>
+<li>Faster for teams that want UI knobs instead of Discord slash commands.</li>
+<li>Often the better volume play once you are generating boards all week — verify current credits on <a href="../pricing-watch/">Pricing Watch</a>.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Paying for Midjourney and Leonardo for the same stills job is how people double their image bill. If Ideogram is in the mix for text-in-image, see <a href="../articles/midjourney-vs-ideogram-deep-comparison.html">Midjourney vs Ideogram</a> — that is a different job than Leonardo's studio surface. Keep one paid stills tool unless you have two distinct jobs (campaign stills vs high-volume UI mockups).</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Midjourney</strong> for still quality and campaign work. <strong>Pick Leonardo</strong> for a studio workflow and volume. <strong>Test first:</strong> one real board, same brief, cold score in the morning. Confirm commercial terms on each review page before you ship a client asset.</p>
+<h2>Frequently asked questions</h2>
+<h3>Which is cheaper?</h3>
+<p>Sticker prices lie — credit burn on your real board volume is the bill. Price it on <a href="../pricing-watch/">Pricing Watch</a> after the one-evening test, not before.</p>
+<h3>Can I use the outputs commercially?</h3>
+<p>Plan terms differ and change. Read the current license on each vendor's official page (linked from the <a href="../tools/midjourney/">Midjourney</a> and <a href="../tools/leonardo-ai/">Leonardo</a> reviews) before a client deliverable. Do not trust a tweet.</p>
+""",
+}
+
+ARTICLES["bolt-new-vs-lovable-deep-comparison.html"] = {
+    "pair": ("bolt-new", "lovable"),
+    "comparison": "bolt-new-vs-lovable.html",
+    "title": "Bolt.new vs Lovable: which AI app builder for a one-evening prototype?",
+    "kicker": "Deep comparison",
+    "desc": "Bolt.new or Lovable for a working web app in one evening? A real-build test — what ships, what you own, and when v0 is the better third option.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/bolt-new/">Bolt.new</a> if you want an in-browser full-stack prototype you can poke, export, and keep iterating without a local setup. <a href="../tools/lovable/">Lovable</a> if the job is a designed, shareable product surface — landing-to-app with less "developer IDE" feel. Neither replaces a real codebase for production. Build the same one-evening app in both before you pay. If the job is UI-from-prompt into a Next.js repo, see <a href="../articles/v0-vs-lovable-deep-comparison.html">v0 vs Lovable</a>.</p>
+<h2>The one-evening build test</h2>
+<ol>
+<li>Pick a real tiny product: a waitlist with a dashboard, a CRUD admin, a personal tracker. Same spec in both.</li>
+<li>Time-to-first-working-URL. Score how much you had to fight the tool.</li>
+<li>Change one real thing (a field, a style, an auth rule). Score whether the second pass held together.</li>
+<li>Export / Git / ownership: could you leave with the code? Price the paid tier you would actually need on <a href="../pricing-watch/">Pricing Watch</a>.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Bolt.new</h3>
+<ul>
+<li>In-browser full-stack: closer to "an IDE that runs" than a design canvas.</li>
+<li>Better when you will keep editing code the tool wrote.</li>
+<li>The right default if you already think in components and want the prototype to become a repo.</li>
+</ul>
+<h3>Lovable</h3>
+<ul>
+<li>Faster to a designed, shareable surface — the "show someone a URL tonight" path.</li>
+<li>Less IDE, more product: good when the audience is a founder, not a staff engineer.</li>
+<li>Pairs with the v0 conversation: Lovable for the whole app story, v0 when the job is UI into an existing Next.js tree.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Bolt, Lovable, and v0 all sell "ship an app with prompts." Paying for two is usually overlap. Pick the surface you will live in (browser IDE vs designed product vs UI-into-repo) and cut the others. For Bolt vs v0 specifically, use the <a href="../comparisons/v0-vs-bolt-new.html">v0 vs Bolt.new table</a> after this test, not instead of it.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Bolt.new</strong> if you want to keep the code. <strong>Pick Lovable</strong> if you want a designed URL tonight. <strong>Pick neither paid</strong> until the one-evening app actually runs — free/trial credits exist to answer that. Production still needs you to own auth, data, and the bill.</p>
+<h2>Frequently asked questions</h2>
+<h3>Can these replace a developer?</h3>
+<p>For a prototype, they can replace a blank repo. For production — auth, data, abuse, billing — you still need someone who can read the code. Treat the output as a first draft.</p>
+<h3>Which is cheaper for a weekend project?</h3>
+<p>Credit and seat models differ. Build the app first, then price the tier you actually hit on <a href="../pricing-watch/">Pricing Watch</a>.</p>
+""",
+}
+
+ARTICLES["gamma-vs-canva-ai-deep-comparison.html"] = {
+    "pair": ("gamma", "canva-ai"),
+    "comparison": "gamma-vs-canva-ai.html",
+    "title": "Gamma vs Canva AI: which one for decks, and which for everything else?",
+    "kicker": "Deep comparison",
+    "desc": "Gamma or Canva for AI-assisted decks? A one-deck test — generation vs a full design suite — and when paying for both is overlap.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/gamma/">Gamma</a> if the job is "turn this outline into a deck tonight" — generation-first slides, docs, and web-style pages from a prompt. <a href="../tools/canva-ai/">Canva AI</a> if design is already your home and AI is one more tool inside a full suite (social, print, video, brand kit). Most people should not pay for both for decks. Run one real deck through each before you add a second bill.</p>
+<h2>The one-deck test</h2>
+<ol>
+<li>Take a real outline you actually need (a sales deck, a class lecture, a project update).</li>
+<li>Generate it in Gamma from the outline. Recreate it in Canva with Magic Studio / AI features you already have.</li>
+<li>Score: first-pass acceptance, how much you fought layout, whether you would send it to a client or a class.</li>
+<li>Check whether you already pay for Canva — if yes, the honest test is "does Gamma beat the suite I already have?" Price any upgrade on <a href="../pricing-watch/">Pricing Watch</a>.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Gamma</h3>
+<ul>
+<li>Generation-first: outline to a complete deck faster than a blank Canva page.</li>
+<li>Better when slides are the product, not one format among twenty.</li>
+<li>The right pick if you do not already live in Canva and you will make decks weekly.</li>
+</ul>
+<h3>Canva AI</h3>
+<ul>
+<li>A full design suite: social, print, video, brand kits — decks are one surface.</li>
+<li>Better when the team already has Canva and the job is "on brand everywhere," not "one great slide story."</li>
+<li>AI features that help inside a workflow you already paid for — often the cheaper path.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>If Canva is already in the stack, Gamma has to beat it on the one-deck test or it is a second subscription for the same job. If you only make decks, Canva's extra surfaces are cost you will not use. Keep one paid design seat for slides unless you have two distinct jobs (weekly generated decks vs brand-kit social).</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Gamma</strong> for generation-first decks as the main job. <strong>Pick Canva AI</strong> if the suite is already home. <strong>Already paying for Canva?</strong> Do not add Gamma until the one-deck test loses on Canva. Verify current plans on <a href="../pricing-watch/">Pricing Watch</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is Gamma just ChatGPT plus slides?</h3>
+<p>No — the product is the layout and the share surface, not the prose. You can draft in ChatGPT and still lose an hour in PowerPoint. Gamma's job is skipping that hour. Test with your outline, not a feature list.</p>
+<h3>Does Canva Magic Studio replace Gamma?</h3>
+<p>For many Canva shops, yes. That is why the one-deck test exists. If Magic Studio already ships a deck you would send, you do not need Gamma.</p>
+""",
+}
+
+ARTICLES["hermes-agent-vs-openclaw-deep-comparison.html"] = {
+    "pair": ("hermes-agent", "openclaw"),
+    "comparison": "hermes-agent-vs-openclaw.html",
+    "title": "Hermes Agent vs OpenClaw: which local agent should you actually run?",
+    "kicker": "Deep comparison",
+    "desc": "Hermes or OpenClaw for a local AI agent? A one-evening install test — what each is for, where they overlap, and when neither should be your production bot.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/hermes-agent/">Hermes Agent</a> if you want a batteries-included local agent you can run from terminal, desktop, or chat — skills, memory, cron, multi-platform. <a href="../tools/openclaw/">OpenClaw</a> if you want the more hackable, self-hosted agent runtime and you are comfortable assembling the pieces. Neither is a hosted SaaS with a support desk. Run the one-evening install test on a throwaway machine before you point either at real mail or files.</p>
+<h2>The one-evening install test</h2>
+<ol>
+<li>Install each on a machine you would not mind wiping. Follow the official docs linked from each <a href="../tools/hermes-agent/">Hermes</a> and <a href="../tools/openclaw/">OpenClaw</a> review.</li>
+<li>Give each one boring job: summarize a local folder, or draft a reply you will not send.</li>
+<li>Score time-to-first-useful-output, how much you understood the config, and whether you would leave it running overnight.</li>
+<li>Read the security boundaries on <a href="/how-to/">the how-to library</a> before you connect email, calendars, or anything with secrets.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Hermes Agent</h3>
+<ul>
+<li>Productized local agent: terminal, desktop, messaging gateways, skills, memory, cron — less assembly.</li>
+<li>Better when you want an operator tool, not a framework to fork.</li>
+<li>The right default if you will actually run it daily and need the extras (scheduled jobs, multi-platform) without wiring them yourself.</li>
+</ul>
+<h3>OpenClaw</h3>
+<ul>
+<li>More of a runtime to shape — better when you want to own the loop and the prompts.</li>
+<li>Self-hosted control: your machine, your data path, your threat model.</li>
+<li>The right pick if Hermes feels like too much product and you would rather assemble.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>These two occupy the same "local agent" slot. Running both is hobby overlap unless one is production and the other is an experiment you will delete. Do not point either at production credentials on night one. For local models underneath, see <a href="../articles/ollama-vs-lm-studio-which-local-ai.html">Ollama vs LM Studio</a> — that is the inference layer, not the agent.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Hermes</strong> for a productized local agent you will run. <strong>Pick OpenClaw</strong> if you want to assemble and own the runtime. <strong>Pick neither as production</strong> until the one-evening test is boring and the security how-to is actually read. Official setup guides: <a href="/how-to/">how-to library</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>Do I need a GPU?</h3>
+<p>Depends whether the agent talks to a local model or a hosted API. Local inference is a hardware question — use the <a href="/local-ai-planner/">Local AI Planner</a> and the <a href="/hardware/">hardware guide</a>. The agent layer is separate from the model layer.</p>
+<h3>Is this safe to connect to my email?</h3>
+<p>Not on night one. Read the self-hosted AI security guide in the <a href="/how-to/">how-to library</a>, use a dedicated account, and assume any agent with tools can do what those tools allow.</p>
+""",
+}
+
 
 def _build_page(fname: str, article: dict) -> str:
     title = article["title"]
