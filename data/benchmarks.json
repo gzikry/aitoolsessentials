@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-08-19",
-  "reviewed_date": "2026-08-25",
+  "snapshot_date": "2026-08-31",
+  "reviewed_date": "2026-08-31",
   "policy": {
     "title": "Benchmark evidence policy",
     "summary": "Benchmarks are supporting evidence, not our final ranking. We identify the exact model/version, source, snapshot date and harness. Product scores are not treated as model scores, and results from different harness versions are not compared directly.",
@@ -92,54 +92,54 @@
     {
       "tool_slug": "grok",
       "model": "grok-4.1",
-      "rank": 50,
+      "rank": 51,
       "score": "1459±3",
-      "votes": 67784,
+      "votes": 66374,
       "source_id": 1,
       "note": "Representative public xAI model listing; not necessarily the product's current default."
     },
     {
       "tool_slug": "deepseek",
       "model": "deepseek-v4-pro",
-      "rank": 53,
+      "rank": 54,
       "score": "1458±4",
-      "votes": 54307,
+      "votes": 54214,
       "source_id": 1,
       "note": "Representative public DeepSeek model listing."
     },
     {
       "tool_slug": "claude",
       "model": "claude-sonnet-4-5-20250929",
-      "rank": 60,
+      "rank": 62,
       "score": "1455±3",
-      "votes": 80871,
+      "votes": 79687,
       "source_id": 1,
       "note": "Older public Claude listing retained for reproducible snapshot context; newer variants may rank differently."
     },
     {
       "tool_slug": "gemini",
       "model": "gemini-2.5-pro",
-      "rank": 72,
-      "score": "1445±2",
-      "votes": 124829,
+      "rank": 73,
+      "score": "1446±2",
+      "votes": 122589,
       "source_id": 1,
       "note": "Specific Gemini model version, not the whole Gemini product."
     },
     {
       "tool_slug": "chatgpt",
       "model": "chatgpt-4o-latest-20250326",
-      "rank": 75,
+      "rank": 76,
       "score": "1443±3",
-      "votes": 82766,
+      "votes": 80687,
       "source_id": 1,
       "note": "Historical public ChatGPT model listing; do not interpret as the current default model's rank."
     },
     {
       "tool_slug": "mistral-le-chat",
       "model": "mistral-medium-3.5",
-      "rank": 98,
+      "rank": 100,
       "score": "1427±7",
-      "votes": 11016,
+      "votes": 11006,
       "source_id": 1,
       "note": "Representative Mistral model listing with a wider confidence interval."
     }
