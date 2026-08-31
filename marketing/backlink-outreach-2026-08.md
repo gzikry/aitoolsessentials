@@ -96,8 +96,12 @@ AIToolsEssentials
 - **support@therundown.ai** — resource for Trending Tools / daily. Sent 17:08 UTC.
 - **cndls@georgetown.edu** — resource suggestion for CNDLS + library AI tools pages, next to the Ithaka tracker they already link. Sent 17:08 UTC.
 - **asklib@duke.edu** — resource suggestion for the Literature Reviews AI tools LibGuide. Sent 17:08 UTC.
+- **claire.baytas@ithaka.org** — GenAI Product Tracker companion (pricing/overlap, not a ChatGPT listing). Sent 17:11 UTC.
+- **teaching&learning@library.ucsb.edu** — UCSB Generative AI & Academic Use LibGuide. Sent 17:11 UTC.
+- **lu59@purdue.edu** — Purdue Libraries AI research guide. Sent 17:11 UTC.
+- **efruehauf@usf.edu** — USF Libraries AI Hub. Sent 17:11 UTC.
 
-Skipped: Mindstream (no public contact), CU Boulder `oithelp@` (campus-vetted ICT list — not a fit), paid directories, account-gated AlternativeTo/Uneed until George signs up.
+Skipped: Mindstream (no public contact), CU Boulder `oithelp@` (campus-vetted ICT list — not a fit), Fazier (account + homepage backlink required), paid directories, account-gated AlternativeTo/Uneed until George signs up. Solo queue for public-email resource pitches is now empty — remaining distribution needs accounts (Uneed, AlternativeTo, SaaSHub claim) or xurl auth.
 - "Best AI tools" roundups from credible productivity/dev blogs (search: "best AI tools 2026" — pitch the list authors)
 - Newsletter directories: Beehiiv discovery, NewsletterStack-style communities (for Keep/Cut Weekly)
 - Indie hacker / build-in-public communities for the automation-cost-decoder and stack-builder pages (genuinely useful free tools — natural linkbait)
