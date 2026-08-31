@@ -89,6 +89,15 @@ AIToolsEssentials
 - **Futurepedia — SKIPPED, $247+.** Held until traction.
 - **AlternativeTo — BLOCKED on account.** Suggest-new-application is behind Sign In + verified email (`/manage-item/`). No anonymous form.
 - **Uneed — BLOCKED on account.** Preview succeeded (scraped our homepage tagline). Saving requires signup at uneed.best/signup?redirectTo=/submit-a-tool. Resume there after George creates the account.
+
+## Email outreach log (2026-08-31, SMTP confirmed, one delivery each)
+
+- **dan@tldr.tech** — resource tip for TLDR AI (Pricing Watch as a source, not a list swap). Sent 17:08 UTC.
+- **support@therundown.ai** — resource for Trending Tools / daily. Sent 17:08 UTC.
+- **cndls@georgetown.edu** — resource suggestion for CNDLS + library AI tools pages, next to the Ithaka tracker they already link. Sent 17:08 UTC.
+- **asklib@duke.edu** — resource suggestion for the Literature Reviews AI tools LibGuide. Sent 17:08 UTC.
+
+Skipped: Mindstream (no public contact), CU Boulder `oithelp@` (campus-vetted ICT list — not a fit), paid directories, account-gated AlternativeTo/Uneed until George signs up.
 - "Best AI tools" roundups from credible productivity/dev blogs (search: "best AI tools 2026" — pitch the list authors)
 - Newsletter directories: Beehiiv discovery, NewsletterStack-style communities (for Keep/Cut Weekly)
 - Indie hacker / build-in-public communities for the automation-cost-decoder and stack-builder pages (genuinely useful free tools — natural linkbait)
