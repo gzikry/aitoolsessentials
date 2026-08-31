@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generator-driven static comparison pages from tools.json/tool_sources.json."""
+import itertools
 import json
 import re
 from pathlib import Path
@@ -313,6 +314,23 @@ def _wrap(title, description, kicker, body, canonical_name):
 </body></html>'''
 
 
+def _covered_pairs(root: Path) -> set:
+    """Collect tool pairs already covered by any existing comparison page."""
+    alias = {'zapier': 'zapier-ai', 'otter': 'otter-ai', 'copilot': 'github-copilot'}
+    covered = set()
+    for p in (root / 'comparisons').glob('*.html'):
+        parts = p.stem.split('-vs-')
+        if len(parts) < 2:
+            continue
+        slugs = [alias.get(s, s) for s in parts]
+        if not all(s in TOOLS for s in slugs):
+            continue
+        for i in range(len(slugs)):
+            for j in range(i + 1, len(slugs)):
+                covered.add(frozenset((slugs[i], slugs[j])))
+    return covered
+
+
 def generate_all(root: Path):
     made = []
     made.append(generate_best_ai_tools(root))
@@ -341,9 +359,23 @@ def generate_all(root: Path):
         'ollama-vs-lm-studio.html': ('ollama', 'lm-studio'),
         'suno-vs-udio.html': ('suno', 'udio'),
     }
+    covered = _covered_pairs(root)
+    for pair in versus.values():
+        covered.add(frozenset(pair))
+    by_cat = {}
+    for slug, tool in TOOLS.items():
+        by_cat.setdefault(tool.get('category', 'Other'), []).append(slug)
+    auto_added = 0
+    for cat, slugs in sorted(by_cat.items()):
+        for a, b in itertools.combinations(sorted(slugs), 2):
+            if frozenset((a, b)) in covered:
+                continue
+            versus[f'{a}-vs-{b}.html'] = (a, b)
+            auto_added += 1
     for fname, (a, b) in versus.items():
         if a in TOOLS and b in TOOLS:
             made.append(generate_versus(root, fname, a, b))
+    print(f'Auto-derived {auto_added} additional same-category matchups')
     return made
 
 
