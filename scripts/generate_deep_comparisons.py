@@ -687,6 +687,300 @@ ARTICLES["heygen-vs-synthesia-deep-comparison.html"] = {
 """,
 }
 
+# ---------------------------------------------------------------------------
+# Tier-3 deep comparisons - next-in-line high-intent matchups. Same template,
+# same honesty rules, same pricing-snapshot grounding as tier 1/2.
+# ---------------------------------------------------------------------------
+
+ARTICLES["runway-vs-pika-deep-comparison.html"] = {
+    "pair": ("runway", "pika"),
+    "comparison": "runway-vs-pika.html",
+    "title": "Runway vs Pika: which AI video tool should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "Runway or Pika for AI video? A one-project test across generation quality, editing depth, and credit burn - with a priced decision path.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/runway/">Runway</a> if you need a real production pipeline - multi-clip projects, frame-level editing, motion brush, and a toolset that goes beyond text-to-video. <a href="../tools/pika/">Pika</a> if you want faster, playful generation with less setup and lower commitment. Both have free credits; run one real project on each before paying.</p>
+<h2>The one-project test (do this before paying)</h2>
+<ol>
+<li>Pick a real 20-second video you actually need - a product teaser, a scene mock, an intro.</li>
+<li>Generate it in both tools on free credits. Same prompt, same aspect ratio.</li>
+<li>Score first-generation quality, how much control you have to fix defects, and total credits burned to get an acceptable cut.</li>
+<li>Check the paid tier math on <a href="../pricing-watch/">Pricing Watch</a> before committing - credit burn, not monthly price, is what differs.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Runway</h3>
+<ul>
+<li>Deeper editing: motion brush, camera control, frame-level control - the closest thing to a video editor built for AI generation.</li>
+<li>Consistency features (references, seeds) that help multi-shot work hold together.</li>
+<li>Better when output quality is non-negotiable and you will spend time in the tool.</li>
+</ul>
+<h3>Pika</h3>
+<ul>
+<li>Faster iteration: quick generations, simple controls, immediate feedback.</li>
+<li>Lower learning curve - the better pick for first-time AI video work.</li>
+<li>Strong social-format output (short vertical clips) with less fiddling.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Both are text-to-video at the core, and for a single short clip the quality gap is smaller than pricing pages suggest. If your need is one-off clips for social, the cheaper plan with the interface you enjoy using wins. If you are building repeatable video workflows, Runway's depth pays for itself.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Runway</strong> if you produce video regularly and need editing depth and consistency. <strong>Pick Pika</strong> if you want low-commitment generation for short clips. <strong>Test first:</strong> both offer free credits - see <a href="../pricing-watch/">Pricing Watch</a> for the current verified tiers.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is Pika easier than Runway?</h3>
+<p>Generally yes for first projects - Pika's controls are simpler, while Runway exposes more knobs. That trade works in Runway's favor once you know what you are doing.</p>
+<h3>Do credits carry over between months?</h3>
+<p>Policies differ by tier and change often - verify on <a href="../pricing-watch/">Pricing Watch</a> and the vendor page before relying on rollover.</p>
+""",
+}
+
+ARTICLES["make-vs-n8n-deep-comparison.html"] = {
+    "pair": ("make", "n8n"),
+    "comparison": "zapier-vs-make-vs-n8n.html",
+    "title": "Make vs n8n: which automation platform fits you?",
+    "kicker": "Deep comparison",
+    "desc": "Make or n8n for automation? A one-evening build test across the same three workflows - with the hosting, pricing, and learning-curve differences that actually decide it.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/make/">Make</a> if you want visual workflow building with fast time-to-first-automation and a huge app library - no servers to think about. <a href="../tools/n8n/">n8n</a> if you want code-level control, self-hosting, and per-workflow scale without per-operation pricing anxiety. Both have free tiers; build the same three workflows in each before choosing.</p>
+<h2>The one-evening build test</h2>
+<ol>
+<li><strong>Webhook to notify:</strong> receive a webhook and send a notification to email/Slack. Baseline - both should nail this in minutes.</li>
+<li><strong>Sheet sync:</strong> watch a row in a spreadsheet, enrich it, write results somewhere. Tests branching, error handling, and app connectors.</li>
+<li><strong>Scheduled report:</strong> pull data weekly and email a digest. Tests cron jobs, loops, and formatting.</li>
+<li>Score time-to-working, how well you understood what the tool did, and how the free tier metered usage.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Make</h3>
+<ul>
+<li>Visual scenario builder with a gentle learning curve - the fastest path from idea to running automation for non-developers.</li>
+<li>Huge connector library across mainstream SaaS apps.</li>
+<li>Cloud-managed: nothing to host, patch, or monitor.</li>
+</ul>
+<h3>n8n</h3>
+<ul>
+<li>Code nodes and full JavaScript when visual nodes are not enough - real escape hatches, not afterthoughts.</li>
+<li>Self-hosting option: your data stays on your infrastructure; useful for privacy-sensitive or volume-heavy work.</li>
+<li>Execution-based pricing that scales differently - compare with your operation volume on <a href="../pricing-watch/">Pricing Watch</a>.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Both cover the same 80% of automation jobs. The real difference is the last 20%: Make hides the complexity; n8n lets you own it. If you have never automated anything, Make gets you there faster. If you are a developer or data-sensitivity matters, n8n's control wins.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Make</strong> for speed, connectors, and zero-ops. <strong>Pick n8n</strong> for control, self-hosting, and scale. <strong>Cost the stack before you pick:</strong> run your real scenario volumes through the <a href="../automation-cost-decoder/">automation cost decoder</a>, then check <a href="../pricing-watch/">Pricing Watch</a> for current verified tiers.</p>
+<h2>Frequently asked questions</h2>
+<h3>Can n8n replace Zapier and Make entirely?</h3>
+<p>For most workflows, yes - but the connector count and hand-holding differ. The one-evening test above reveals which fits your team faster than any feature matrix.</p>
+<h3>Which is cheaper at volume?</h3>
+<p>It depends entirely on your operation count and hosting choice - the <a href="../automation-cost-decoder/">automation cost decoder</a> prices your real stack; <a href="../pricing-watch/">Pricing Watch</a> holds the verified current prices.</p>
+""",
+}
+
+ARTICLES["fireflies-vs-otter-deep-comparison.html"] = {
+    "pair": ("fireflies", "otter-ai"),
+    "comparison": "fireflies-vs-otter-ai.html",
+    "title": "Fireflies vs Otter: which meeting recorder for your stack?",
+    "kicker": "Deep comparison",
+    "desc": "Fireflies or Otter for meeting notes? A one-week test protocol - transcription quality, integrations, and the search/CRM differences that decide it.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/fireflies/">Fireflies</a> if meetings roll into CRM and team workflows - its integrations and conversation analytics are built for that. <a href="../tools/otter-ai/">Otter</a> if you want the best standalone transcript experience for individuals and small teams. Both have free tiers; run the one-week test before paying.</p>
+<h2>The one-week test</h2>
+<ol>
+<li>Install both. Let each record your real meetings for one week (check local recording-consent rules first).</li>
+<li>Score raw transcript accuracy on your domain vocabulary (names, jargon, product terms).</li>
+<li>Test the summary quality on the same two meetings - which one do you actually read?</li>
+<li>Test search: find "the deadline Dana mentioned" three days later. Test the CRM/calendar sync your team depends on.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Fireflies</h3>
+<ul>
+<li>Deeper integration surface: CRM, video platforms, collaboration suites - built for team and revenue workflows.</li>
+<li>Conversation analytics (talk time, topic tracking) that teams actually use.</li>
+<li>Strong find-that-moment search across an archive of meetings.</li>
+</ul>
+<h3>Otter</h3>
+<ul>
+<li>Best-in-class live transcript experience - fast, readable, easy to correct inline.</li>
+<li>Simplest setup for individuals and small teams.</li>
+<li>In-meeting assistance features that keep improving.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Both transcribe, summarize, and sync to calendars. For individual note-taking the choice is mostly taste; the decision gets real when you need CRM pipelines, analytics, or a shared team archive - that is Fireflies' home turf. For recording-consent principles, see the consent guidance in our <a href="../tools/heygen/">HeyGen review</a> - the same rules apply to any recorder.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Fireflies</strong> for teams, CRM workflows, and searchable archives. <strong>Pick Otter</strong> for the best individual transcript experience. <strong>Test both free tiers for one week</strong> - check <a href="../pricing-watch/">Pricing Watch</a> for current verified limits.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is it legal to record meetings with AI notetakers?</h3>
+<p>Consent rules vary by jurisdiction and platform - always announce recording and check local law. Our <a href="../tools/heygen/">HeyGen review</a> covers the consent principles that apply here too.</p>
+<h3>Which has better transcript accuracy?</h3>
+<p>Both are strong on clear audio; the difference shows on jargon and accents - run your domain vocabulary through the one-week test and judge on your meetings, not marketing claims.</p>
+""",
+}
+
+ARTICLES["elevenlabs-vs-descript-deep-comparison.html"] = {
+    "pair": ("elevenlabs", "descript"),
+    "comparison": "elevenlabs-vs-descript.html",
+    "title": "ElevenLabs vs Descript: which one for voice, and which for video?",
+    "kicker": "Deep comparison",
+    "desc": "ElevenLabs or Descript for voice work? A 10-minute blind test across narration and dubbing - plus when Descript is the better home for the whole edit.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/elevenlabs/">ElevenLabs</a> if voice is the job - the most natural, expressive text-to-speech on the market, dubbing, and cloning for narration-heavy work. <a href="../tools/descript/">Descript</a> if voice is one part of a bigger edit - it wraps TTS inside a full audio/video editor with transcription, so you fix the timeline and the words together. Run the 10-minute blind test before paying.</p>
+<h2>The 10-minute blind test</h2>
+<ol>
+<li>Take one 150-word script you actually need (a narration, an ad, an explainer).</li>
+<li>Generate it in both tools with comparable voices. Do not label which is which.</li>
+<li>Listen back tomorrow, cold. Score naturalness, pacing, and whether you would ship it.</li>
+<li>Check the pricing math on <a href="../pricing-watch/">Pricing Watch</a> for your monthly volume.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>ElevenLabs</h3>
+<ul>
+<li>Widely regarded as the most natural TTS output - especially on longer narration where others flatten.</li>
+<li>Voice cloning and a large voice library; strong multilingual support.</li>
+<li>API-first: the default for developers embedding voice into products.</li>
+</ul>
+<h3>Descript</h3>
+<ul>
+<li>A full editor: transcription, timeline editing, and TTS in one workflow - fix words and audio together.</li>
+<li>Overdub-style voice correction inside the project you are already editing.</li>
+<li>Better when the deliverable is a finished video or podcast, not a voice file.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Both make voices from text. The difference is the job: ElevenLabs is a voice engine; Descript is an editor with voice inside. If you embed voice in an app or need the most human-sounding narration, ElevenLabs wins. If the deliverable is a finished video or podcast, Descript's all-in-one workflow wins.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick ElevenLabs</strong> for naturalness, cloning, dubbing, and API work. <strong>Pick Descript</strong> when the finished edit matters as much as the voice. <strong>Blind-test first:</strong> both have free tiers - and verify current limits on <a href="../pricing-watch/">Pricing Watch</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>Which is more natural, ElevenLabs or Descript?</h3>
+<p>For pure TTS quality, ElevenLabs' top voices generally lead - Descript's strength is the edit workflow, not beating a dedicated voice engine. Run the 10-minute blind test on your own script before deciding.</p>
+<h3>Which is cheaper for a weekly podcast?</h3>
+<p>They meter different things (characters vs editor seats/hours), so the crossover moves with your mix of generation vs editing - check the verified current prices on <a href="../pricing-watch/">Pricing Watch</a>.</p>
+""",
+}
+
+ARTICLES["perplexity-vs-chatgpt-deep-comparison.html"] = {
+    "pair": ("perplexity", "chatgpt"),
+    "comparison": "perplexity-vs-chatgpt.html",
+    "title": "Perplexity vs ChatGPT: which one belongs in your week?",
+    "kicker": "Deep comparison",
+    "desc": "Perplexity or ChatGPT for research? A blind answer-quality test - citations, hallucination risk, and when each tool is the wrong choice.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/perplexity/">Perplexity</a> when you need sourced answers fast - research, fact-finding, anything where "where did that come from" matters. <a href="../tools/chatgpt/">ChatGPT</a> when you need an assistant that works with your material - drafting, analysis, files, images, and anything that is not a lookup. Most people are better served by one free account on each than a paid plan on either. Test both on the same five real questions before paying for anything.</p>
+<h2>The blind answer test (15 minutes)</h2>
+<ol>
+<li>Pick five real questions from your week - one factual, one research-heavy, one where you already know the answer (to catch hallucinations), one drafting task, one analysis task.</li>
+<li>Run all five in both tools on the free tier. Save the outputs without labels.</li>
+<li>Score each answer on: correct? sourced? complete? did you trust it without checking?</li>
+<li>Score which answers you would have shipped or sent to a colleague.</li>
+</ol>
+<h2>Answer engine vs assistant</h2>
+<p>Perplexity is an <em>answer engine</em>: ask, get a sourced answer. ChatGPT is an <em>assistant</em>: hand it material, it works with it. When the job is "find out and cite", use the answer engine. When the job is "work with my stuff", use the assistant. The common mistake is using the answer engine to draft and the assistant to fact-lookup - both tools are weaker at the other's job.</p>
+<h2>Where each one wins</h2>
+<h3>Perplexity</h3>
+<ul>
+<li>Source-first answers with citations on every claim - the right shape for research and fact-checking.</li>
+<li>Fast: results land closer to search-engine speed than chat speed.</li>
+<li>Focus modes (academic, social) that sharpen retrieval for specific research jobs.</li>
+</ul>
+<h3>ChatGPT</h3>
+<ul>
+<li>Works with your files, images, and data - analysis, transformation, generation.</li>
+<li>Deep reasoning and the widest ecosystem (custom GPTs, connectors, apps).</li>
+<li>Better when the tool is creation, not retrieval.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Both answer questions and both now cite sources. But Perplexity's answers are only as good as the sources it retrieves - it can surface confident nonsense from a weak page. And ChatGPT's browsing answers are only as good as its retrieval. Neither replaces verification for high-stakes decisions. For our independently verified comparison table, see <a href="../comparisons/perplexity-vs-chatgpt.html">Perplexity vs ChatGPT</a>.</p>
+<h2>Decision summary</h2>
+<p><strong>For sourced fact-finding and research, use Perplexity.</strong> <strong>For everything else - drafting, analysis, working with your files - use ChatGPT.</strong> Both have capable free tiers; pay only after the blind test tells you which one you actually use more.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is Perplexity accurate?</h3>
+<p>It is as accurate as the sources it cites - strong on mainstream topics, weaker on niche research where sourcing is thin. The blind test above (question 3: the one you already know the answer to) is the fastest way to judge on your topics.</p>
+<h3>Can ChatGPT replace Google for research?</h3>
+<p>Not for high-stakes fact-finding - it is an assistant, not a sourced answer engine. Perplexity sits closer to that job, though it still inherits the quality of its sources. For a structured comparison, see <a href="../comparisons/perplexity-vs-chatgpt.html">our comparison table</a>.</p>
+""",
+}
+
+ARTICLES["chatgpt-vs-jasper-deep-comparison.html"] = {
+    "pair": ("chatgpt", "jasper"),
+    "comparison": "jasper-vs-copy-ai.html",
+    "title": "ChatGPT vs Jasper: do you need a copywriting tool at all?",
+    "kicker": "Deep comparison",
+    "desc": "ChatGPT or Jasper for marketing copy? A real-campaign test - brand voice, template depth, and the pricing math that says one is the cheaper starting point.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/chatgpt/">ChatGPT</a> if you write occasionally and want one assistant for every job - copy included. <a href="../tools/jasper/">Jasper</a> if marketing copy is your main job and you want a studio built for it: brand voice, campaign templates, and workflows that keep a team consistent. Run the real-campaign test before paying for either.</p>
+<h2>The real-campaign test</h2>
+<ol>
+<li>Pick one real campaign asset you need this week (an email, a landing page hero, an ad set).</li>
+<li>Draft it in ChatGPT with your brand context pasted in. Draft the same asset in Jasper with your brand voice configured once.</li>
+<li>Score voice consistency, edit burden, and speed to a usable draft - not creativity alone.</li>
+<li>Price your monthly asset volume against both ladders on <a href="../pricing-watch/">Pricing Watch</a> before choosing a plan.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>ChatGPT</h3>
+<ul>
+<li>One assistant for every job - copy is one of dozens of things it does well.</li>
+<li>Cheaper entry point for occasional copy needs.</li>
+<li>The widest ecosystem of add-ons, custom GPTs, and integrations.</li>
+</ul>
+<h3>Jasper</h3>
+<ul>
+<li>Purpose-built for marketing: brand voice profiles, campaign templates, SEO briefs.</li>
+<li>Team workflows - shared campaigns, roles, approvals - that a general assistant lacks.</li>
+<li>Consistency at volume: issue 40 sounds like issue 1 when the voice is configured once.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>The uncomfortable question is whether you need a dedicated copy tool when a general assistant writes well. If copy is occasional, you probably do not. The case for Jasper is frequency and team scale - when many assets a week must sound like one brand, a configured studio beats pasting context every time.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick ChatGPT</strong> if copy is one of many jobs and volume is low. <strong>Pick Jasper</strong> if marketing copy is the main job, volume is high, or a team must stay on-brand. <strong>Test first:</strong> run one real campaign asset through both - and check <a href="../pricing-watch/">Pricing Watch</a> for current verified pricing.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is Jasper better than ChatGPT at copywriting?</h3>
+<p>On raw writing quality the gap is small; on voice consistency, templates, and team workflow, Jasper earns its keep. The real-campaign test shows which difference you actually pay for.</p>
+<h3>Can ChatGPT do brand voice?</h3>
+<p>Yes, with pasted context and custom instructions - but you supply the discipline. Jasper bakes it into the workflow, which matters most when volume and team size grow.</p>
+""",
+}
+
+ARTICLES["zapier-vs-make-deep-comparison.html"] = {
+    "pair": ("zapier-ai", "make"),
+    "comparison": "zapier-vs-make-vs-n8n.html",
+    "title": "Zapier vs Make: which automation platform should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "Zapier or Make for automation? The connector-count trap, the pricing-model difference that decides cost at volume, and a one-evening build test.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> <a href="../tools/zapier-ai/">Zapier</a> if you want the safest, most connector-dense choice - the tool that almost certainly supports your exact app pair, with the gentlest onboarding. <a href="../tools/make/">Make</a> if you want visual power at a lower price point - complex branching and iteration without paying per-app-connector premiums. Both have free tiers; run the one-evening test and price your real volume before paying.</p>
+<h2>The one-evening build test</h2>
+<ol>
+<li><strong>Webhook to notify:</strong> receive a webhook, send a notification. Both should nail this in minutes.</li>
+<li><strong>Sheet sync with branching:</strong> watch a row, branch on a value, write results to two places. Tests visual logic.</li>
+<li><strong>Recurring report:</strong> weekly digest email. Tests scheduling, loops, formatting.</li>
+<li>Score time-to-working and price your real monthly volume through the <a href="../automation-cost-decoder/">automation cost decoder</a>.</li>
+</ol>
+<h2>Where each one wins</h2>
+<h3>Zapier</h3>
+<ul>
+<li>Connector density: the highest probability your exact pair is supported and maintained.</li>
+<li>Onboarding and polish: the shortest path from zero to first automation for non-technical users.</li>
+<li>Ecosystem: templates, partner integrations, enterprise features.</li>
+</ul>
+<h3>Make</h3>
+<ul>
+<li>Visual scenario builder with real branching and iteration - complex logic without code.</li>
+<li>Typically cheaper at equivalent volume - see the <a href="../automation-cost-decoder/">automation cost decoder</a> for your stack's math.</li>
+<li>Granular operation pricing that rewards efficient scenario design.</li>
+</ul>
+<h2>Overlap warning</h2>
+<p>Both cover the same core jobs. The trap is paying for connector count you do not use: if your stack is mainstream apps, both support everything you need and price becomes the decider. The expensive mistake is the opposite - building on the cheaper tool only to find your niche app is supported by neither and you are re-platforming mid-project.</p>
+<h2>Decision summary</h2>
+<p><strong>Pick Zapier</strong> for connector safety and polish. <strong>Pick Make</strong> for visual power and better volume pricing. <strong>Before paying:</strong> run your real volumes through the <a href="../automation-cost-decoder/">automation cost decoder</a> and check <a href="../pricing-watch/">Pricing Watch</a> for current verified prices.</p>
+<h2>Frequently asked questions</h2>
+<h3>Which is cheaper, Zapier or Make?</h3>
+<p>At low volume Zapier is often fine on a cheap tier; as task volume grows, Make's operation pricing usually wins. Price your real stack through the <a href="../automation-cost-decoder/">automation cost decoder</a> - guesswork is how people end up overpaying.</p>
+<h3>Should I consider n8n too?</h3>
+<p>Yes if you are a developer or want self-hosting - see our <a href="../articles/make-vs-n8n-deep-comparison.html">Make vs n8n deep comparison</a> and the <a href="../comparisons/zapier-vs-make-vs-n8n.html">Zapier vs Make vs n8n three-way table</a>.</p>
+""",
+}
+
 
 def _build_page(fname: str, article: dict) -> str:
     title = article["title"]
