@@ -118,8 +118,11 @@ generate_article_hub(root)
 from generate_deep_comparisons import generate as generate_deep_comparisons, cross_link_comparisons as cross_link_deep_comparisons
 generate_deep_comparisons(root)
 cross_link_deep_comparisons(root)
+
+from generate_worth_it_articles import generate as generate_worth_it_articles
+generate_worth_it_articles(root)
 generate_article_hub(root)
-print('Generated deep comparison editorials, cross-links, and refreshed article hub')
+print('Generated deep comparison editorials, worth-it articles, and refreshed article hub')
 
 from generate_viral_growth import generate as generate_viral_growth
 generate_viral_growth(root, tools, today)
