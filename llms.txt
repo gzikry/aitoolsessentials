@@ -48,6 +48,7 @@ The site is designed for people choosing which AI tools to pay for — and decid
 - /deals/: verified live deals auto-generated from pricing verification runs
 - /premium/: $12/mo research membership via Whop (monthly briefs, CSV decision matrices, price-change alerts)
 - /advertise/: sponsorship information
+- /press/: journalist/editor cite-us page — boilerplate, Pricing Watch, methodology, evidence ledger, badges. Rankings cannot be bought.
 
 ## Data access
 - sitemap.xml lists all pages

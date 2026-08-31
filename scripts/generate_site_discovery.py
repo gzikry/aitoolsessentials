@@ -69,7 +69,7 @@ def generate_human_sitemap(root: Path, tools: list[dict[str, Any]]) -> None:
         ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Fit Interview", "/fit-interview/"), ("Workflow guides", "/workflows/"), ("Local AI Planner", "/local-ai-planner/"), ("Confidence Check", "/confidence-check/"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html")]),
         ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Automation Billing Decoder", "/automation-cost-decoder/"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/")]),
         ("Trust", [("Changelog", "/changelog/"), ("Change Radar", "/change-radar/"), ("Model lineups", "/model-lineups/"), ("How-to library", "/how-to/"), ("Hardware guide", "/hardware/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
-        ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Weekly", "/weekly/"), ("RSS feed", "/feed.xml")]),
+        ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Press / cite us", "/press/"), ("Weekly", "/weekly/"), ("RSS feed", "/feed.xml")]),
     ]
     cards = "".join(f'<article class="content-hub-card"><h3>{esc(title)}</h3><ul>' + "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for label, href in links) + "</ul></article>" for title, links in groups)
     top_tools = "".join(f'<li><a href="/tools/{esc(t["slug"])}/">{esc(t["name"])}</a></li>' for t in tools[:40])
