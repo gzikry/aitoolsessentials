@@ -34,8 +34,8 @@ I read [Their newsletter] — [specific recent issue/observation]. We publish Ke
 
 Up for a swap in an upcoming issue? We'd run your blurb to our list; you run ours. Our readers are people actively deciding which AI subscriptions to pay for — a good match for [their audience type].
 
-— George
-AIToolsEssentials
+— AIToolsEssentials
+https://aitoolsessentials.com
 
 ---
 
@@ -51,8 +51,8 @@ You maintain [their page] — solid list. Suggesting a resource addition: AITool
 
 Might fit alongside [related item on their list]. Happy to answer anything about how we verify.
 
-— George
-AIToolsEssentials
+— AIToolsEssentials
+https://aitoolsessentials.com
 
 ## Target resource lists (researched 2026-08-31 — tiered by fit)
 
@@ -118,8 +118,8 @@ Quick guest pitch for [podcast/community]: most teams now pay for 2+ overlapping
 
 Audience walks away able to cut at least one subscription. Happy to prep a one-pager in advance.
 
-— George
-AIToolsEssentials
+— AIToolsEssentials
+https://aitoolsessentials.com
 
 ---
 
