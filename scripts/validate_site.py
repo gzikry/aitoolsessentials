@@ -162,6 +162,23 @@ def main():
             errors.append(f'Comparison hub count is stale; expected {len(comparison_pages)}')
     else:
         errors.append('Missing comparison hub')
+    article_hub = ROOT/'articles/index.html'
+    article_pages = {
+        p.name for p in (ROOT/'articles').glob('*.html')
+        if p.name != 'index.html'
+    }
+    if article_hub.exists():
+        article_hub_text = article_hub.read_text()
+        article_hub_links = set(re.findall(r'href=["\']([^"\']+\.html)', article_hub_text))
+        article_hub_link_names = {Path(link).name for link in article_hub_links}
+        missing_articles = sorted(article_pages - article_hub_link_names)
+        if missing_articles:
+            errors.append(f'Article pages missing from article hub: {missing_articles}')
+        expected_article_count = f'Showing all {len(article_pages)} guides.'
+        if expected_article_count not in article_hub_text:
+            errors.append(f'Article hub count is stale; expected {len(article_pages)}')
+    else:
+        errors.append('Missing article hub')
     duplicate_home_links = []
     for page in ROOT.rglob('*.html'):
         if re.search(r'href="(?:/|(?:\.\./)*)index\.html(?:[#?][^"]*)?"', page.read_text()):

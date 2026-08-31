@@ -112,6 +112,9 @@ generate_learn_hub(root)
 from generate_growth_hubs import generate as generate_growth_hubs
 generate_growth_hubs(root)
 
+from generate_article_hub import generate as generate_article_hub
+generate_article_hub(root)
+
 from generate_viral_growth import generate as generate_viral_growth
 generate_viral_growth(root, tools, today)
 print('Generated viral growth utilities')
