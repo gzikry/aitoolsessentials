@@ -104,8 +104,10 @@ https://aitoolsessentials.com
 - **zhangw94@mcmaster.ca** — McMaster A Guide to AI Tools for Research (Wei Zhang). Sent 17:16 UTC. Signed AIToolsEssentials.
 - **scpub@library.illinois.edu** — Illinois Introduction to Generative AI LibGuide. Sent 17:16 UTC. Signed AIToolsEssentials.
 - **dschreck@ashland.edu** — Ashland GenAI library guide (Diane Schrecker). Sent 17:16 UTC. Signed AIToolsEssentials.
+- **gprice@gmail.com** — infoDOCKET / Library Journal (Gary Price; Ithaka credits him on the tracker). Sent 17:22 UTC. Signed AIToolsEssentials.
+- **contact@lastweekinai.com** — Last Week in AI podcast: resource + optional guest on overlapping subscriptions. Sent 17:22 UTC. Signed AIToolsEssentials.
 
-Skipped: Mindstream (no public contact), Future Tools / Matt Wolfe (FAQ: don't email; use their form), CU Boulder `oithelp@` (campus-vetted ICT list), Fazier (account + homepage backlink), paid directories, account-gated AlternativeTo/Uneed until George signs up. Public-email resource pitches are now 12 sent. Further librarian emails would be the same pitch to more LibGuides — diminishing returns until replies come in.
+Skipped: Mindstream (no public contact), Future Tools / Matt Wolfe (FAQ: don't email; use their form), The Batch / DeepLearning.AI (contact form only), CU Boulder `oithelp@`, Fazier, paid directories, account-gated AlternativeTo/Uneed. Public-email pitches now 14. Remaining distribution needs accounts, paid fees, or xurl — not more cold emails of the same type.
 - "Best AI tools" roundups from credible productivity/dev blogs (search: "best AI tools 2026" — pitch the list authors)
 - Newsletter directories: Beehiiv discovery, NewsletterStack-style communities (for Keep/Cut Weekly)
 - Indie hacker / build-in-public communities for the automation-cost-decoder and stack-builder pages (genuinely useful free tools — natural linkbait)
