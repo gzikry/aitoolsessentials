@@ -106,8 +106,11 @@ https://aitoolsessentials.com
 - **dschreck@ashland.edu** — Ashland GenAI library guide (Diane Schrecker). Sent 17:16 UTC. Signed AIToolsEssentials.
 - **gprice@gmail.com** — infoDOCKET / Library Journal (Gary Price; Ithaka credits him on the tracker). Sent 17:22 UTC. Signed AIToolsEssentials.
 - **contact@lastweekinai.com** — Last Week in AI podcast: resource + optional guest on overlapping subscriptions. Sent 17:22 UTC. Signed AIToolsEssentials.
+- **editors@changelog.com** — Practical AI / Changelog: resource + optional Fully Connected guest. Sent 17:27 UTC. Signed AIToolsEssentials.
+- **team@theneurondaily.com** — The Neuron: Pricing Watch as a source for tool roundups. Sent 17:27 UTC. Signed AIToolsEssentials.
+- **team@bensbites.com** — Ben's Bites: resource for launch roundups (not a sponsor ask). Sent 17:27 UTC. Signed AIToolsEssentials.
 
-Skipped: Mindstream (no public contact), Future Tools / Matt Wolfe (FAQ: don't email; use their form), The Batch / DeepLearning.AI (contact form only), CU Boulder `oithelp@`, Fazier, paid directories, account-gated AlternativeTo/Uneed. Public-email pitches now 14. Remaining distribution needs accounts, paid fees, or xurl — not more cold emails of the same type.
+Non-librarian public-email pitches now: TLDR, Rundown, infoDOCKET, Last Week in AI, Changelog/Practical AI, The Neuron, Ben's Bites (7). Skipped: Mindstream (no public contact), Future Tools (FAQ: don't email), The Batch (form only), Import AI (research not tools), Lenny (sponsorship inbox), Latent Space (no published email). Remaining distribution needs accounts, paid fees, or xurl.
 - "Best AI tools" roundups from credible productivity/dev blogs (search: "best AI tools 2026" — pitch the list authors)
 - Newsletter directories: Beehiiv discovery, NewsletterStack-style communities (for Keep/Cut Weekly)
 - Indie hacker / build-in-public communities for the automation-cost-decoder and stack-builder pages (genuinely useful free tools — natural linkbait)
