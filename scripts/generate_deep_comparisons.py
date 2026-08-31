@@ -1326,12 +1326,17 @@ def cross_link_comparisons(root: Path = ROOT) -> int:
             continue
         a_name, b_name = _name(article["pair"][0]), _name(article["pair"][1])
         block = (
-            f"\n{MARKER_START}\n"
+            f"{MARKER_START}\n"
             f'<p style="text-align:center;margin-top:18px"><a class="button button-ghost-dark" href="/articles/{fname}">Read the editorial deep-dive: {esc(a_name)} vs {esc(b_name)} →</a></p>\n'
             f"{MARKER_END}\n"
         )
         current = comp_path.read_text()
-        stripped = re.sub(re.escape(MARKER_START) + r".*?" + re.escape(MARKER_END) + r"\n?", "", current, flags=re.S)
+        stripped = re.sub(
+            r"\n*" + re.escape(MARKER_START) + r".*?" + re.escape(MARKER_END) + r"\n?",
+            "\n",
+            current,
+            flags=re.S,
+        )
         updated = stripped.replace("</main>", block + "</main>", 1)
         if updated != current:
             comp_path.write_text(updated)

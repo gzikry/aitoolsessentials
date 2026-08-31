@@ -207,6 +207,10 @@ from generate_affiliate_tracker import generate as generate_affiliate_tracker
 generate_affiliate_tracker(root)
 print('Generated verified affiliate tracker')
 
+from generate_press import generate as generate_press
+generate_press(root)
+print('Generated press / cite-us page')
+
 # Generate sitemap
 sitemap_urls = refresh_sitemap(root)
 print(f'Generated sitemap with {len(sitemap_urls)} URLs')
@@ -247,10 +251,6 @@ print('Daily content maintenance complete:', today)
 
 from generate_media_kit import generate as generate_media_kit
 generate_media_kit(root)
-
-from generate_press import generate as generate_press
-generate_press(root)
-print('Generated press / cite-us page')
 
 # Run post-generation cleanup (idempotent: fixes paths, structure, share rows, emails)
 import subprocess
