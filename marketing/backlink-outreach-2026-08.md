@@ -78,6 +78,17 @@ AIToolsEssentials
 15. Mindstream — creator/small-biz angle; our "honest NOT-worth-it sections" pitch fits their voice.
 
 **Pitch angle that fits all resource lists:** the only independently-verified AI pricing tracker (weekly snapshots, checked dates, vendor-change alerts) + honest worth-it guides. No fabricated test scores, no pay-to-rank.
+
+## Submission log (browser, 2026-08-31)
+
+- **SaaSHub — SUBMITTED.** Confirmation: https://www.saashub.com/aitoolsessentials/added — "AIToolsEssentials was submitted successfully. It will appear online once it is approved." Categories: AI, AI Tools, Software Directory. Competitors: FutureTools.io, OpenTools, AIToolIntel. Contact: aitoolsessentials@gmail.com. Free queue (up to 32 days). Claim/verify needs a SaaSHub account — George can register later to speed approval.
+- **Toolify — SKIPPED, paid-only.** Live form is $99 express; no free-queue option on the current submit page.
+- **TopAI.tools — SKIPPED, $47 Fast Track.** No free tier.
+- **AIXploria — SKIPPED, $79 Fast Listing.** FAQ still claims a free option but the live page is paid CTAs only.
+- **TAAFT — SKIPPED, $49+.** Held as planned.
+- **Futurepedia — SKIPPED, $247+.** Held until traction.
+- **AlternativeTo — BLOCKED on account.** Suggest-new-application is behind Sign In + verified email (`/manage-item/`). No anonymous form.
+- **Uneed — BLOCKED on account.** Preview succeeded (scraped our homepage tagline). Saving requires signup at uneed.best/signup?redirectTo=/submit-a-tool. Resume there after George creates the account.
 - "Best AI tools" roundups from credible productivity/dev blogs (search: "best AI tools 2026" — pitch the list authors)
 - Newsletter directories: Beehiiv discovery, NewsletterStack-style communities (for Keep/Cut Weekly)
 - Indie hacker / build-in-public communities for the automation-cost-decoder and stack-builder pages (genuinely useful free tools — natural linkbait)
