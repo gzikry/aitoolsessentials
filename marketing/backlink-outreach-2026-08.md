@@ -54,7 +54,30 @@ Might fit alongside [related item on their list]. Happy to answer anything about
 — George
 AIToolsEssentials
 
-## Target resource lists (research, then pitch)
+## Target resource lists (researched 2026-08-31 — tiered by fit)
+
+**Tier A — AI-tool directories with dofollow backlinks (submit the site itself, free):**
+1. Toolify.ai — /submit, free queue 2–4 weeks, dofollow on free tier. Category: AI tool directory/review site.
+2. SaaSHub — free listing, strong DR, dofollow. Position as "AI tools comparison + pricing intelligence."
+3. AlternativeTo — alternative/comparison listing; good for "AIToolsEssentials as an AI research resource."
+4. TopAI.tools — free listing, AI-specific audience.
+5. AIXploria — free community listing, 4,000+ tools, clear pricing labels (matches our verified-pricing angle).
+6. Futurepedia — paid ($247+), curated, DR 62. **Hold until we have traction** per their own guidance (wait for 5K+ monthly visits).
+7. There's An AI For That (TAAFT) — nofollow but massive AI-buyer traffic; free.
+8. Product Hunt — launch later (needs assets + a plan; links nofollow, maker profile dofollow).
+
+**Tier B — university library / research-guide resource pages (email the librarian):**
+9. Georgetown CNDLS AI tools list (guides.library.georgetown.edu/ai/tools) — lists "additional AI tools" pages; contact via guide feedback.
+10. Duke LibGuides AI tools for literature reviews (guides.library.duke.edu/litreviews/AI) — contact form on guide.
+11. CU Boulder AI Tools List (colorado.edu/ai/ai-tools-list) — campus-vetted list; pitch via ICT review contact.
+12. Ithaka S+R Generative AI Product Tracker — research-institution tracker; pitch as pricing-intelligence resource.
+
+**Tier C — AI newsletters for cross-promotion (Pitch 2):**
+13. TLDR AI — tldr.tech/ai, sponsorships + tips line; our pricing-snapshot angle fits their audience.
+14. The Rundown AI — therundown.ai, covers practical tools; pitch the pricing-verifier story.
+15. Mindstream — creator/small-biz angle; our "honest NOT-worth-it sections" pitch fits their voice.
+
+**Pitch angle that fits all resource lists:** the only independently-verified AI pricing tracker (weekly snapshots, checked dates, vendor-change alerts) + honest worth-it guides. No fabricated test scores, no pay-to-rank.
 - "Best AI tools" roundups from credible productivity/dev blogs (search: "best AI tools 2026" — pitch the list authors)
 - Newsletter directories: Beehiiv discovery, NewsletterStack-style communities (for Keep/Cut Weekly)
 - Indie hacker / build-in-public communities for the automation-cost-decoder and stack-builder pages (genuinely useful free tools — natural linkbait)
