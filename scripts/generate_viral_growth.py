@@ -132,9 +132,28 @@ def generate_stack_gallery(root: Path, tools: list[dict[str, Any]]) -> None:
 
 
 def generate_badges(root: Path, tools: list[dict[str, Any]]) -> None:
+    # Emit an embeddable SVG badge for every listed tool so vendors can link back.
+    badge_dir = root / "badges"
+    badge_dir.mkdir(exist_ok=True)
+    accent = "#0071E3"
+    for t in tools:
+        slug = t["slug"]
+        rating = t.get("rating", "")
+        label = esc(t["name"])
+        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="200" height="54" role="img" aria-label="Reviewed on AIToolsEssentials">
+  <rect width="200" height="54" rx="8" fill="#ffffff"/>
+  <rect width="200" height="54" rx="8" fill="none" stroke="{accent}" stroke-width="1.5"/>
+  <rect width="6" height="54" fill="{accent}"/>
+  <text x="16" y="22" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#111111">Reviewed on</text>
+  <text x="16" y="37" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="{accent}">AIToolsEssentials</text>
+  <text x="184" y="37" text-anchor="end" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#555555">{esc(rating)}/5</text>
+  <title>{label} review on AIToolsEssentials</title>
+</svg>'''
+        (badge_dir / f"{slug}.svg").write_text(svg)
     top = sorted(tools, key=lambda t: float(t.get("rating", 0) or 0), reverse=True)[:12]
     badges = "".join(f'<article class="content-hub-card"><span>{esc(t["category"])}</span><h3>{esc(t["name"])}</h3><div class="vendor-badge-preview"><strong>Reviewed on AIToolsEssentials</strong><small>{esc(t.get("rating"))}/5 editorial score</small></div><textarea readonly>&lt;a href="{DOMAIN}/tools/{t["slug"]}/" rel="noopener"&gt;&lt;img alt="Reviewed on AIToolsEssentials" src="{DOMAIN}/badges/{t["slug"]}.svg"&gt;&lt;/a&gt;</textarea><a class="button button-blue small" href="/tools/{t["slug"]}/">Review page</a></article>' for t in top)
-    page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Vendor Badges — Reviewed AI Tool Badges", "Vendors can link to their AIToolsEssentials review with transparent, editorially-labeled badges.", DOMAIN+"/badges/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:880px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Vendor badges</p><h1>Give reviewed tools a reason to link back.</h1><p class="subhead">Transparent badges for vendors who want to point buyers to independent review pages. No paid ranking implied.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Editorial rules</span><p>Badges link to review pages and may not imply endorsement beyond the exact text shown. Sponsored placements remain separately labeled.</p></div><div class="content-hub-grid">{badges}</div></div></section></main>{FOOTER}{scripts()}</body></html>'
+    all_note = '<p class="muted-small">Every listed tool has a badge. Ask us for yours if it is not shown: <a href="mailto:' + EMAIL + '">' + EMAIL + '</a></p>'
+    page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Vendor Badges — Reviewed AI Tool Badges", "Vendors can link to their AIToolsEssentials review with transparent, editorially-labeled badges.", DOMAIN+"/badges/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:880px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Vendor badges</p><h1>Give reviewed tools a reason to link back.</h1><p class="subhead">Transparent badges for vendors who want to point buyers to independent review pages. No paid ranking implied.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Editorial rules</span><p>Badges link to review pages and may not imply endorsement beyond the exact text shown. Sponsored placements remain separately labeled.</p></div>{all_note}<div class="content-hub-grid">{badges}</div></div></section></main>{FOOTER}{scripts()}</body></html>'
     out = root / "badges" / "index.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(page)
