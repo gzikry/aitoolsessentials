@@ -179,6 +179,247 @@ ARTICLES["is-suno-worth-it.html"] = {
 }
 
 
+ARTICLES["is-runway-worth-it.html"] = {
+    "title": "Is Runway worth it?",
+    "desc": "Whether a paid Runway plan pays off for AI video work — with the credit math and use cases that decide.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you produce AI video regularly — ads, social clips, concept work — and need its breadth of image-to-video and editing tools in one place. The free tier's one-time credits are a demo, not a workspace. Not worth it if you render occasionally or need mostly talking-head content — a simpler tool with a free monthly allowance wins.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Recurring monthly credits vs the free tier's one-time allowance</li><li>Higher-resolution exports and removal of free-tier limits</li><li>The full toolkit: image-to-video, motion brush, editing modes</li></ul>
+<p>Verified tiers: <a href="../tools/runway/">Runway review</a> · see also <a href="../comparisons/runway-vs-pika.html">Runway vs Pika</a>.</p>
+<h2>A one-week test</h2>
+<p>Count the video clips you actually shipped last month. Multiply by your typical credits-per-clip (check the vendor's credit chart for the models you use). If that monthly count fits a paid tier's allowance with headroom, it's arithmetic; if you'd burn the tier in a week, you need a different workflow or a bigger plan — decide before the renewal trap.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>One-off videos — free credits or a freelancer cost less</li><li>Talking-head/avatar content — HeyGen or Synthesia fit better</li><li>You need frame-accurate editing — a timeline editor wins</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-synthesia-worth-it.html"] = {
+    "title": "Is Synthesia worth it?",
+    "desc": "Whether Synthesia's plans are worth it for avatar video — training libraries, language coverage, and per-seat math.",
+    "body": """
+<p><strong>Short answer:</strong> worth it for teams building a recurring training or internal-communications video library — that's what the credit tiers and brand templates are built for. Not worth it for one-off marketing videos or personal-brand content (HeyGen fits that better). Budget by monthly video count and check whether your L&D volume actually justifies an annual plan.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Monthly video credits and higher-resolution exports vs the free tier</li><li>Stock avatars, brand kits, and team review workflows</li><li>Enterprise integrations on top tiers</li></ul>
+<p>Verified tiers: <a href="../tools/synthesia/">Synthesia review</a> · the head-to-head in <a href="heygen-vs-synthesia-deep-comparison.html">HeyGen vs Synthesia</a>.</p>
+<h2>A one-week test</h2>
+<p>List the training videos your team actually needs this quarter. If that count exceeds a year's worth of a mid-tier credit allowance, the subscription pays for itself; if it's a handful, produce them one-off and skip the plan.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>One-off explainers — render-to-order is cheaper</li><li>Personal avatars for social content — HeyGen is the better fit</li><li>No documented consent for on-screen people — no tier makes that right</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-ideogram-worth-it.html"] = {
+    "title": "Is Ideogram worth it?",
+    "desc": "Whether Ideogram's paid tiers are worth it — text-in-images quality, credit economics, and who should stay free.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if your images contain words — social graphics, thumbnails, posters — because legible rendered text is Ideogram's signature strength and it pays for itself the first time a client asks for a poster. Not worth it for pure illustration (Midjourney usually wins) or casual generation (the free tier covers it).</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Priority credits per month with faster generation</li><li>Higher-resolution downloads and additional features vs free</li><li>Team seats on team tiers</li></ul>
+<p>Verified tiers: <a href="../tools/ideogram/">Ideogram review</a> · the taste test in <a href="midjourney-vs-ideogram-deep-comparison.html">Midjourney vs Ideogram</a>.</p>
+<h2>A one-week test</h2>
+<p>Run your real text-in-image briefs (a menu board, an ad headline, a thumbnail) on free first. If the lettering quality is there but credits run out mid-week, the entry paid tier is the obvious buy; if outputs are unusable on your briefs, no tier fixes that.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Pure art and concept work — a style-first tool wins</li><li>Casual or one-image-a-month usage</li><li>Client work before verifying current commercial terms</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-leonardo-ai-worth-it.html"] = {
+    "title": "Is Leonardo AI worth it?",
+    "desc": "Whether a paid Leonardo plan is worth it — token economics, fine-tuned models, and who stays free.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you generate daily and lean on its fine-tuned models and asset pipelines — the daily free tokens cover casual use, and heavy users feel the cap within days. The entry paid tier is the natural upgrade when the free daily allowance interrupts real work. Check whether its model quality still wins on your style before committing to annual.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>A larger monthly fast-token pool vs the daily free allowance</li><li>Access to premium models and higher concurrency</li><li>Image guidance and fine-tuning features on paid tiers</li></ul>
+<p>Verified tiers: <a href="../tools/leonardo-ai/">Leonardo AI review</a>.</p>
+<h2>A one-week test</h2>
+<p>Track token consumption on your real briefs for a week. If you hit the daily free cap on most working days, the paid tier is arithmetic. If you didn't hit it once, stay free and revisit next quarter — models change fast in this category.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Casual generation — the free daily tokens cover it</li><li>Text-heavy images — a text-strong tool fits better</li><li>You need video, not stills — your budget belongs elsewhere</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-fireflies-worth-it.html"] = {
+    "title": "Is Fireflies worth it?",
+    "desc": "Whether a paid Fireflies plan beats the free tier — storage minutes, team features, and the one-meeting test.",
+    "body": """
+<p><strong>Short answer:</strong> worth it for teams that need meeting search, CRM sync, and shared knowledge across many calls — the free tier is generous on transcription but caps storage and team features. Not worth it for solo users recording a few calls a week; free or a lighter tool covers that. And never record client or regulated calls without a consent workflow.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>More storage minutes and longer recordings vs the free caps</li><li>Conversation analytics, CRM integrations, and team workspaces</li><li>Custom vocabulary for jargon-heavy teams</li></ul>
+<p>Verified tiers: <a href="../tools/fireflies/">Fireflies review</a> · alternatives in <a href="pick-one-ai-meeting-notes-tool.html">pick one meeting notes tool</a>.</p>
+<h2>A one-week test</h2>
+<p>Record your real meetings for a week on free. Count storage-minute and recording-length cap hits, plus whether the summary alone lets you reconstruct action items. If caps never bit, stay free; if they did and the team relies on search, the pro tier is arithmetic.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Solo, few meetings — free tiers from any vendor cover it</li><li>Notes nobody opens — the tool isn't the problem</li><li>Regulated conversations without consent and policy checks</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-otter-worth-it.html"] = {
+    "title": "Is Otter worth it?",
+    "desc": "Whether a paid Otter plan is worth it — minute caps, meeting volume features, and who stays on free.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you're in enough meetings weekly to hit the free minute caps — the paid tier's real value is volume: more minutes, longer conversations, and search across everything. Not worth it for a few calls a week; the free tier covers light use, and one meeting-notes tool per team is the rule (two bots on one call is a privacy and money problem).</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Substantially more monthly minutes and longer per-conversation limits</li><li>Advanced search, vocab, and team workspace features</li><li>CRM/calendar integrations on business tiers</li></ul>
+<p>Verified tiers: <a href="../tools/otter-ai/">Otter review</a> · the head-to-head in <a href="fathom-vs-otter-ai-which-meeting-tool.html">Fathom vs Otter</a>.</p>
+<h2>A one-week test</h2>
+<p>Log your real meeting minutes for a week × 4.3 for the monthly count. If that exceeds the free cap, price it against the paid tier and confirm the summaries actually shorten your follow-up work — if not, the tool is automating something nobody reads.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Few meetings — free covers it</li><li>Team already pays for another notes tool — one per team</li><li>Client calls without consent — policy first, tooling second</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-make-worth-it.html"] = {
+    "title": "Is Make worth it?",
+    "desc": "Whether a paid Make plan is worth it — credit metering vs task metering, and the volume math that decides.",
+    "body": """
+<p><strong>Short answer:</strong> worth it when your automation volume is real but you don't want code — Make's operation-based metering is friendlier than task metering at moderate volume, and the visual builder is its genuine edge. Not worth it at high volume (n8n self-hosted gets cheaper fast) or for a couple of weekly flows (free tiers cover it). Run your actual workflow through the <a href="../automation-cost-decoder/">cost decoder</a> before committing.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>More monthly operations vs the free credit allowance</li><li>Unlimited active scenarios and premium app access</li><li>Data stores, error handling, and scheduling control</li></ul>
+<p>Verified tiers: <a href="../tools/make/">Make review</a> · the pricing battle in <a href="make-vs-zapier-which-to-pay-for.html">Make vs Zapier</a>.</p>
+<h2>A one-week test</h2>
+<p>Build your one real workflow on the free tier. Count weekly operations, multiply by 4.3, and price that against the plan ladder. The trap is scenarios that loop or retry — one bad loop can consume a tier. Fix logic before upgrading capacity.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>High execution volume — self-hosted n8n costs less at scale</li><li>One or two simple weekly flows — free tiers cover it</li><li>You have a developer — code is unmetered</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-n8n-worth-it.html"] = {
+    "title": "Is n8n worth it?",
+    "desc": "Whether a paid n8n plan is worth it — self-hosted vs cloud pricing, execution limits, and when code wins outright.",
+    "body": """
+<p><strong>Short answer:</strong> self-hosted n8n is the cheapest serious automation at volume — one server runs unlimited workflows, so the real cost is your time maintaining it. The cloud plan is worth it for teams that want n8n's power without the ops burden. Not worth it if you'd rather not touch a server and your volume is low — a hosted visual tool fits better, and the free cloud tier covers trialing.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Cloud hosting with execution allowances vs self-hosting everything</li><li>Collaboration features and versioning on higher tiers</li><li>Removal of single-user limits for team workflows</li></ul>
+<p>Verified tiers: <a href="../tools/n8n/">n8n review</a> · see the 3-way in <a href="../comparisons/zapier-vs-make-vs-n8n.html">Zapier vs Make vs n8n</a>.</p>
+<h2>A one-week test</h2>
+<p>Try the free cloud tier with one real workflow. If building it felt like programming with extra steps and you didn't enjoy it, that's your answer — pay for a visual tool instead. If it felt powerful, price your monthly execution count against the cloud ladder or budget a small server for self-hosted.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>No one willing to own a server — hosted visual tools fit</li><li>Low volume — simpler tools cost less effort</li><li>Team needs non-technical editing — the canvas is developer-friendly, not marketer-friendly</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-copy-ai-worth-it.html"] = {
+    "title": "Is Copy.ai worth it?",
+    "desc": "Whether Copy.ai's workspace plans beat a general assistant for marketing content — seats, workflows, and honest limits.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if a non-technical marketing team needs repeatable content workflows — the workspaces and templates are the product, not raw writing quality. Not worth it for individuals: a general AI assistant plus a prompt library produces comparable one-off drafts for far less. Evaluate against Jasper on team fit, and against plain assistants on price.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Multi-seat workspaces and workflow templates</li><li>Unlimited-ish generation vs free-tier caps</li><li>Brand voice and team content operations</li></ul>
+<p>Verified pricing: <a href="../tools/copy-ai/">Copy.ai review</a> · alternatives in <a href="../comparisons/jasper-vs-copy-ai.html">Jasper vs Copy.ai</a>.</p>
+<h2>A one-week test</h2>
+<p>Run your three real campaign briefs through the free/trial tier and the same briefs through a general assistant. Score edit burden and brand-voice consistency blind. If only the workflow layer differs — not the output — buy for the team workflow or not at all.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Solo writers — assistant + prompt library wins on cost</li><li>One-off pieces rather than recurring campaigns</li><li>Teams that already pay for Jasper-class governance — don't pay twice</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-replit-worth-it.html"] = {
+    "title": "Is Replit worth it?",
+    "desc": "Whether a paid Replit plan is worth it — agent credits, deployment, and when it beats a local editor.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you build and host small apps in the browser and want the agent to handle boilerplate — the paid tier's agent credits and always-on deployments are the value. Not worth it as your only development environment if you already have a local setup: serious coding still belongs in a real editor, and agent credits burn fast on complex work.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Daily agent credits beyond the free allowance</li><li>Always-on deployments and more compute for hosted apps</li><li>Privacy controls and collaboration on higher tiers</li></ul>
+<p>Verified tiers: <a href="../tools/replit-ai/">Replit review</a> · the builder battle in <a href="v0-vs-lovable-deep-comparison.html">v0 vs Lovable</a>.</p>
+<h2>A one-week test</h2>
+<p>Ship one real small project (a tool, a microsite) with the agent. Count credits burned and how much worked on first run. If you shipped and still had credits left, the tier fits your rhythm; if you burned the allowance mid-build, price the bigger tier against a freelancer before upgrading twice.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>You have a local dev setup and ship rarely — the free tier covers experiments</li><li>Complex, long-lived codebases — a real editor wins</li><li>The agent's output needs constant fixing — credits pay for rework you shouldn't</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-lovable-worth-it.html"] = {
+    "title": "Is Lovable worth it?",
+    "desc": "Whether Lovable's paid tiers are worth it for AI app building — build credits, full-stack speed, and the lock-in question.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you're a non-developer shipping a real MVP or internal tool fast — build credits translate directly to working features with auth, database, and hosting wired. Not worth it for developers (component-grade tools fit better), for throwaway experiments (free credits cover them), or before you've checked what export and data ownership look like when you stop paying.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Monthly build credits beyond the small free allowance</li><li>Higher limits on AI features in the apps you build</li><li>Priority processing on paid tiers</li></ul>
+<p>Verified tiers: <a href="../tools/lovable/">Lovable review</a> · the honest comparison in <a href="v0-vs-lovable-deep-comparison.html">v0 vs Lovable</a>.</p>
+<h2>A one-week test</h2>
+<p>Build your real small app on free credits. Count credits to working-feature (not to prompt) — that's your true unit cost. Price your monthly feature count against the tiers, and export the code before paying to confirm your exit path works.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>You're a developer — cleaner output belongs in a codebase you own</li><li>Experiments only — the free tier covers them</li><li>Client deliverables before verifying export and rights terms</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-v0-worth-it.html"] = {
+    "title": "Is v0 worth it?",
+    "desc": "Whether v0's credit plans are worth it for front-end generation — component quality, developer fit, and free-tier reality.",
+    "body": """
+<p><strong>Short answer:</strong> worth it for developers who want production-grade UI components generated quickly and dropped into a real codebase — v0's output quality is its edge. Not worth it for whole-app no-code dreams (Lovable fits that) or casual one-off experiments (free credits cover them). Note the plan landscape has been changing — check the current tier structure on our review page before budgeting.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>More monthly credits and message allowance vs the free tier's tight caps</li><li>Access to newer models and priority features on paid tiers</li><li>Higher limits for iterating on a component</li></ul>
+<p>Verified tiers: <a href="../tools/v0/">v0 review</a> · the builder decision in <a href="v0-vs-lovable-deep-comparison.html">v0 vs Lovable</a>.</p>
+<h2>A one-week test</h2>
+<p>Generate your real UI component (a settings page, a pricing table) on free credits. Score: how close is first output to shippable, and how many credits did it cost? If first outputs need real rework, the tool isn't buying you time; if they're near-keeper, price your weekly component count against the tiers.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>You want whole apps wired for you — that's a different tool</li><li>Occasional experiments — free credits cover it</li><li>Your stack isn't React/Tailwind — output fit matters</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-fathom-worth-it.html"] = {
+    "title": "Is Fathom worth it?",
+    "desc": "Whether Fathom's paid tier is worth it — the free tier is unusually generous, so who actually needs to pay?",
+    "body": """
+<p><strong>Short answer:</strong> Fathom's free tier is the best deal in meeting notes — unlimited recordings, transcription, and instant summaries without paying. The paid tier is worth it only for the advanced summaries, CRM handoffs, and team features once your sales or customer workflow depends on them. Most solo users should never pay; teams doing sales calls with a CRM should test the paid handoff for a week.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Advanced AI summaries and custom summary types</li><li>CRM integrations and call-handoff workflows</li><li>Team admin and shared features</li></ul>
+<p>Verified tiers: <a href="../tools/fathom/">Fathom review</a> · the head-to-head in <a href="fathom-vs-otter-ai-which-meeting-tool.html">Fathom vs Otter</a>.</p>
+<h2>A one-week test</h2>
+<p>Run your real meetings on the free tier and note what's actually missing — not what the pricing page advertises. If summaries already capture decisions and action items, you're done. If the CRM handoff is the gap, price the paid tier against the minutes it saves your sales team.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Solo use — the free tier genuinely covers it</li><li>Meeting notes nobody reads after the call</li><li>Regulated calls without consent and policy checks</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-adobe-firefly-worth-it.html"] = {
+    "title": "Is Adobe Firefly worth it?",
+    "desc": "Whether Adobe Firefly's credits are worth it — commercial-safety positioning, Creative Cloud bundles, and who should pay.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if commercial safety is your gating requirement — Firefly's trained-on-licensed-data positioning is the point for client and corporate work — or if you're already in Creative Cloud and the bundled credits cover you. Not worth it as your only image generator for art-directed work: raw quality and style range usually favor Midjourney-class tools. Pay for the safety story, not the style.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Monthly generative credits at entry-level standalone pricing</li><li>More credits bundled with Creative Cloud plans</li><li>The commercially-safe training-data positioning</li></ul>
+<p>Verified tiers: <a href="../tools/adobe-firefly/">Firefly review</a>.</p>
+<h2>A one-week test</h2>
+<p>Run the same client-safe briefs through Firefly and your current tool. Score output quality first, then honestly check whether the safety positioning matters for your actual contracts — if your clients don't ask, you're paying for assurance you may not need. If you're on Creative Cloud, check your existing credit allowance before buying standalone.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Art-first work where style range matters more</li><li>You're on Creative Cloud with unused credits already</li><li>Text-in-images is the job — a text-strong tool fits</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-slack-ai-worth-it.html"] = {
+    "title": "Is Slack AI worth it?",
+    "desc": "Whether Slack AI's per-user pricing is worth it — summaries and search inside Slack, versus a general assistant.",
+    "body": """
+<p><strong>Short answer:</strong> worth it for busy Slack-native teams where channel recaps genuinely save a workday hour — the value is summaries of conversations you can't read anyway. The per-user pricing is the catch: it only pencils for teams that will actually use it weekly. Not worth it as a blanket add-on; pilot with the heaviest channel users first, and note that most Slack plans already bundle a limited AI allowance now.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>Channel/thread summaries and recaps on demand</li><li>AI search answers grounded in your workspace</li><li>Meeting summaries surfaced where work happens</li></ul>
+<p>Verified structure: <a href="../tools/slack-ai/">Slack AI review</a>.</p>
+<h2>A one-week test</h2>
+<p>Give it to your three noisiest-channel users for a week. Measure: did recaps replace channel skimming, and did search answers beat scrolling? If yes from the heaviest users only, buy for them — not the org. If nobody used it after day two, the answer is no at any price.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>Small teams who already read everything</li><li>Teams whose real knowledge lives outside Slack</li><li>Anyone paying before checking their existing plan's bundled AI allowance</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+ARTICLES["is-poe-worth-it.html"] = {
+    "title": "Is Poe worth it?",
+    "desc": "Whether a paid Poe subscription is worth it — one subscription for many models, versus paying each vendor.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you genuinely use several frontier models a week and want one bill and one interface instead of multiple $20 subscriptions — the arithmetic can favor Poe outright. Not worth it if you live in one model (pay that vendor) or use chat lightly (the free daily points cover it). Check the current points-per-model economics before committing: the value flips with vendor pricing changes.</p>
+<h2>What the paid plan actually buys</h2>
+<ul><li>A large daily points allowance vs the free daily grant</li><li>Access to multiple frontier models under one subscription</li><li>Higher tiers multiply points for heavy users</li></ul>
+<p>Verified structure: <a href="../tools/poe/">Poe review</a>.</p>
+<h2>A one-week test</h2>
+<p>Track which models you actually used and roughly how many messages. Price that same usage à la carte at vendor prices. If Poe's subscription is cheaper than your à-la-carte bill, it wins; if you only ever use one model, the vendor's own plan is the better buy.</p>
+<h2>When it is NOT worth it</h2>
+<ul><li>One-model users — pay the vendor directly</li><li>Light chat usage — free points cover it</li><li>Heavy image/video generation — points economics differ from chat; check per-model costs first</li></ul>
+<p class="monetization-note">Plan structure checked against official sources. Confirm current prices on the vendor page before purchasing.</p>""",
+}
+
+
 def generate(root: Path = ROOT) -> list[str]:
     import html as H
     import json
