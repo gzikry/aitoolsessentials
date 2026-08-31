@@ -115,6 +115,12 @@ generate_growth_hubs(root)
 from generate_article_hub import generate as generate_article_hub
 generate_article_hub(root)
 
+from generate_deep_comparisons import generate as generate_deep_comparisons, cross_link_comparisons as cross_link_deep_comparisons
+generate_deep_comparisons(root)
+cross_link_deep_comparisons(root)
+generate_article_hub(root)
+print('Generated deep comparison editorials, cross-links, and refreshed article hub')
+
 from generate_viral_growth import generate as generate_viral_growth
 generate_viral_growth(root, tools, today)
 print('Generated viral growth utilities')
