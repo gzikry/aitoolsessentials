@@ -369,6 +369,325 @@ ARTICLES["fathom-vs-otter-ai-which-meeting-tool.html"] = {
 }
 
 
+ARTICLES["perplexity-vs-notebooklm-deep-comparison.html"] = {
+    "pair": ("perplexity", "notebooklm"),
+    "comparison": "perplexity-vs-notebooklm.html",
+    "title": "Perplexity vs NotebookLM: which research tool should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "Perplexity or NotebookLM for research? A source-backed web research vs grounded source-workspace comparison — with a weekly-workflow test and priced decision paths.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> these do opposite halves of the research job, which is why people get confused about "which is better." <a href="../tools/perplexity/">Perplexity</a> finds and synthesizes <em>new</em> information from the live web with citations. <a href="../tools/notebooklm/">NotebookLM</a> grounds every answer <em>only</em> in the sources you upload — your PDFs, docs, and links. Keep Perplexity paid if your bottleneck is discovery; keep NotebookLM (which has a generous free tier) if your bottleneck is wrangling material you already have. Most researchers get full value from NotebookLM free plus one paid discovery tool.</p>
+
+<h2>The weekly-workflow test</h2>
+<ol>
+<li><strong>Unknown-territory brief:</strong> "What changed in EU AI Act enforcement this quarter?" Perplexity answers with live citations; NotebookLM can't — it only knows your sources.</li>
+<li><strong>Pile-of-sources brief:</strong> upload the same 10 PDFs to NotebookLM and ask for a synthesis with per-claim source links. This is NotebookLM's home turf — check how reliably each claim maps to a specific passage.</li>
+<li><strong>Grounding audit:</strong> ask both for the same fact and count how many statements you can trace to a specific citation. Tools that guess inside your sources are worse than tools that say nothing.</li>
+<li><strong>Output job:</strong> turn the research into the deliverable you actually make weekly — a brief, a podcast-style summary, a doc — and score cleanup time.</li>
+</ol>
+
+<h2>Where each one wins</h2>
+<h3>Perplexity</h3>
+<ul>
+<li>Live web research with source panels — the fastest path from question to cited answer on current events and markets.</li>
+<li>Strong at comparative shopping questions ("best X for Y") where freshness matters.</li>
+<li>Paid tiers add model choice and higher limits; the free tier is already useful — see <a href="../tools/perplexity/">the review</a> for the current verified ladder.</li>
+</ul>
+<h3>NotebookLM</h3>
+<ul>
+<li>Upload your own corpus and every answer is grounded in it — dramatically fewer invented facts, because it won't wander outside your sources.</li>
+<li>Audio overviews and study materials from your documents are genuinely useful outputs, not gimmicks.</li>
+<li>Generous free tier; most solo researchers never need to pay — verify current limits on <a href="../pricing-watch/">Pricing Watch</a>.</li>
+</ul>
+
+<h2>What overlaps</h2>
+<p>Both answer questions with citations, so they feel substitutable — but their inputs differ (live web vs your files). The real overlap trap is paying for Perplexity while also paying for a general assistant that now cites sources too (ChatGPT search, Gemini grounded answers). One paid research surface plus one paid assistant is usually one too many; run the <a href="how-to-cut-ai-tool-subscriptions.html">subscription-cut process</a> if you're carrying three.</p>
+
+<h2>Decision summary</h2>
+<ul>
+<li><strong>Weekly discovery work (markets, news, competitors):</strong> Perplexity paid.</li>
+<li><strong>Weekly source-synthesis work (reports, papers, filings, transcripts):</strong> NotebookLM, free tier first.</li>
+<li><strong>Both jobs weekly:</strong> Perplexity paid + NotebookLM free — they pair well and barely overlap.</li>
+<li><strong>Academic integrity contexts:</strong> NotebookLM's source grounding plus our <a href="../workflows/research-and-citation-workflow.html">citation workflow</a> is the defensible combo.</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>Can NotebookLM search the web?</h3>
+<p>It works from the sources you give it; web-found sources have to be added by you. That limitation is the feature — grounding is why it invents less. Check the vendor's current docs before relying on any specific behavior.</p>
+<h3>Does Perplexity hallucinate?</h3>
+<p>Less than assistants without citations, but it still misreads sources. Spot-check three citations per research session — that's the habit that keeps you honest.</p>
+<h3>Is NotebookLM really free?</h3>
+<p>The free tier has been generous; limits can change. Our <a href="../tools/notebooklm/">review page</a> links the official pricing source with a checked date — don't trust cached answers.</p>
+""",
+}
+
+ARTICLES["suno-vs-udio-deep-comparison.html"] = {
+    "pair": ("suno", "udio"),
+    "comparison": "suno-vs-udio.html",
+    "title": "Suno vs Udio: which AI music tool should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "Suno or Udio for AI-generated music? A real-song test across vocal quality, control, stems, commercial rights, and credit economics.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> generate the same song idea in both on free credits before paying — the difference in <em>vocal character</em> is the fastest decider, and it's a matter of taste, not a spec sheet. Broadly: <a href="../tools/suno/">Suno</a> leans toward polished, radio-ready full productions with a huge style range. <a href="../tools/udio/">Udio</a> leans toward finer control and editing — trimming sections, remixing parts, and iterating one song longer. One paid music tool is enough; two is a hobby budget problem.</p>
+
+<h2>The weekly-workflow test (one real song)</h2>
+<ol>
+<li><strong>Same brief to both:</strong> genre, mood, structure, and one specific lyric hook. Use a song you actually need — a podcast intro, a client jingle draft, a demo.</li>
+<li><strong>Score first-output quality:</strong> of the first four generations, how many are keepers? That ratio — not the best single output — is the honest metric.</li>
+<li><strong>Test the edit loop:</strong> take the near-miss and fix one thing (a verse, a bridge, the outro). Whichever tool gets you to "fixed" faster wins the iteration category.</li>
+<li><strong>Check the deliverable:</strong> stems, length, download options — does the output actually fit your use (background track, sync, social)?</li>
+</ol>
+
+<h2>Where each one wins</h2>
+<h3>Suno</h3>
+<ul>
+<li>Fast, polished full arrangements across a very wide style range.</li>
+<li>Strong vocal realism on first generations; good for quick, usable songs.</li>
+<li>Credit economy is friendly to "generate lots, keep few" — current verified tiers on <a href="../tools/suno/">the review</a>.</li>
+</ul>
+<h3>Udio</h3>
+<ul>
+<li>Deeper editing: section-level control, remixes, and longer iteration on one track.</li>
+<li>Appeals to people who want to shape the song, not just audition outputs.</li>
+<li>Credit tiers scale with monthly volume; verified plan numbers on <a href="../tools/udio/">the review</a>.</li>
+</ul>
+
+<h2>What overlaps (and the rights question)</h2>
+<p>Both occupy the same "make me a song" slot, so paying for both needs a weekly job that genuinely requires both styles. The more serious issue is <strong>commercial rights</strong>: what you can publish, monetize, or use in client work differs by tier and changes often. Read the current official terms — linked with checked dates on both review pages — <em>before</em> selling anything made with either. See our <a href="ai-image-rights-commercial-use.html">commercial-use rights guide</a> for the general checklist.</p>
+
+<h2>Decision summary</h2>
+<ul>
+<li><strong>Need finished songs fast:</strong> Suno.</li>
+<li><strong>Want to craft one song longer:</strong> Udio.</li>
+<li><strong>Background/podcast music only:</strong> free tiers first; upgrade only when you hit limits weekly.</li>
+<li><strong>Client/commercial work:</strong> whichever tier grants the rights you need at your volume — verify current terms, not blog summaries.</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>Can I sell AI-generated songs?</h3>
+<p>It depends on the tier's commercial terms at the time you publish — both vendors have changed these policies. Check the official terms via our review pages before anything commercial.</p>
+<h3>Which has better vocals?</h3>
+<p>Taste. Generate the same hook in both and pick with your ears; reviewers disagree and models update constantly.</p>
+<h3>Do I still own my lyrics?</h3>
+<p>Lyrics you wrote remain yours; what the generated audio is worth commercially is what tier terms govern. Don't conflate the two.</p>
+""",
+}
+
+ARTICLES["notion-ai-vs-microsoft-copilot-deep-comparison.html"] = {
+    "pair": ("notion-ai", "microsoft-copilot"),
+    "comparison": "notion-ai-vs-microsoft-copilot.html",
+    "title": "Notion AI vs Microsoft 365 Copilot: which workspace AI is worth it?",
+    "kicker": "Deep comparison",
+    "desc": "Notion AI or Microsoft Copilot for workspace AI? A knowledge-base-vs-Office comparison on grounding, meeting notes, admin, and the real per-seat math.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> this is a platform decision, not a tool decision. <a href="../tools/notion-ai/">Notion AI</a> is worth it if your team's knowledge actually lives in Notion — its answers are only as good as what's in your workspace. <a href="../tools/microsoft-copilot/">Microsoft 365 Copilot</a> is worth it if your work lives in Outlook, Teams, Word, and Excel — it reads the email threads and meeting transcripts the rest of your company already uses. Buying the one whose context isn't your real system of record is how teams waste a per-seat subscription for a year.</p>
+
+<h2>The weekly-workflow test</h2>
+<ol>
+<li><strong>Grounding audit:</strong> ask each "summarize where we left off on [real project]." The tool that can actually see your project's content wins immediately; the other one will sound confident anyway — that's the trap.</li>
+<li><strong>Meeting notes job:</strong> run one real recurring meeting through each ecosystem's notes feature. Score: decisions captured, action items extracted, and whether notes land where the team works.</li>
+<li><strong>Document draft job:</strong> draft the same real document (a spec, a policy, a proposal) from each tool's grounded context.</li>
+<li><strong>Admin job:</strong> a spreadsheet or table task on real data — cleanup, categorization, a formula. Score correctness, not cleverness.</li>
+</ol>
+
+<h2>Where each one wins</h2>
+<h3>Notion AI</h3>
+<ul>
+<li>Answers grounded in your wiki, docs, and databases — strong for teams whose knowledge base is genuinely in Notion.</li>
+<li>Database-aware workflows: summarize page collections, draft from templates, fill properties.</li>
+<li>Priced per member on top of Notion plans; verified current structure on <a href="../tools/notion-ai/">the review</a>.</li>
+</ul>
+<h3>Microsoft 365 Copilot</h3>
+<ul>
+<li>Sits on the email, calendar, meeting, and file flow that most companies already run on.</li>
+<li>Meeting recaps and Excel work where the data already lives in the M365 tenant.</li>
+<li>Enterprise-grade admin and data-handling controls matter for regulated teams; current licensing notes on <a href="../tools/microsoft-copilot/">the review</a>.</li>
+</ul>
+
+<h2>What overlaps</h2>
+<p>Both promise "AI that knows your work." The failure mode is paying per-seat for a tool grounded in a workspace your team only half uses — half-populated Notion pages or stale SharePoint folders produce confident nonsense. The honest test is the grounding audit above: whichever tool can see real project state is the only one worth paying for. And if your knowledge is split across both platforms, that's a consolidation problem AI subscriptions won't fix — see our <a href="../workflows/support-knowledge-base.html">knowledge-base workflow</a>.</p>
+
+<h2>Decision summary</h2>
+<ul>
+<li><strong>Notion-native team:</strong> Notion AI.</li>
+<li><strong>Outlook/Teams/Excel company:</strong> Microsoft 365 Copilot.</li>
+<li><strong>Split across both:</strong> fix the knowledge-location problem first; a second AI seat won't solve it.</li>
+<li><strong>Solo operator:</strong> neither may beat a general assistant plus your existing tools — test before per-seat commitments.</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>Can they work together?</h3>
+<p>Not deeply — each is grounded in its own platform. Don't buy both expecting them to share context; they won't.</p>
+<h3>Is Copilot included in Microsoft 365 now?</h3>
+<p>There's a free chat tier and paid add-on licensing, and the structure changes; see the verified, dated summary on our <a href="../tools/microsoft-copilot/">Copilot page</a> before budgeting.</p>
+<h3>Which is better for meeting notes?</h3>
+<p>Whichever ecosystem the meeting recording, transcript, and follow-up already live in. The notes you never open are worthless regardless of quality.</p>
+""",
+}
+
+ARTICLES["v0-vs-lovable-deep-comparison.html"] = {
+    "pair": ("v0", "lovable"),
+    "comparison": "v0-vs-lovable.html",
+    "title": "v0 vs Lovable: which AI app builder should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "v0 or Lovable for building apps with AI? A component-vs-full-app comparison with a one-evening build test, plan economics, and lock-in honesty.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> it comes down to how much app you want AI to own. <a href="../tools/v0/">v0</a> is strongest when you want production-grade <em>front-end components and interfaces</em> — drop into your own codebase with clean React/Tailwind output. <a href="../tools/lovable/">Lovable</a> is strongest when you want a <em>whole working app</em> — database, auth, deployment — running from a prompt without you wiring the pieces. Keep one paid builder; the overlap is total because both consume the same "build me this" budget.</p>
+
+<h2>The one-evening build test</h2>
+<ol>
+<li><strong>Build the same real small app in each</strong> — internal tool, client microsite, or MVP prototype. Same spec, same evening.</li>
+<li><strong>Score first-run success:</strong> does it work end-to-end without you editing code? Lovable usually wins here by wiring more for you.</li>
+<li><strong>Score the exit:</strong> export the code, open it locally, deploy it elsewhere. v0's component output is typically cleaner to hand to a developer; whole-app platforms need a real look at what you actually own.</li>
+<li><strong>Check the plan math:</strong> both are credit-metered — count your credits burned per working feature, not per prompt. Verified current plans: <a href="../tools/v0/">v0</a> · <a href="../tools/lovable/">Lovable</a>.</li>
+</ol>
+
+<h2>Where each one wins</h2>
+<h3>v0</h3>
+<ul>
+<li>Front-end interfaces and design-system-grade components — output you can drop into a real codebase without shame.</li>
+<li>Better fit when a developer will own the code after the AI bootstraps it.</li>
+<li>Iterates tightly on a single component without regenerating the whole app.</li>
+</ul>
+<h3>Lovable</h3>
+<ul>
+<li>Full-stack velocity: auth, database, hosting, and a deployed URL from a prompt.</li>
+<li>Better fit for non-developers shipping a usable product quickly.</li>
+<li>Integrations and backend glue handled for you — that's the whole value proposition.</li>
+</ul>
+
+<h2>What overlaps — and the honest lock-in talk</h2>
+<p>Both sell the same dream, so pick by ownership plan, not by demo. If you (or a hire) will maintain the codebase, v0-style component output travels better. If the app is genuinely throwaway or internal, Lovable's speed wins and lock-in matters less. Before either: ask what happens to your app if you stop paying — export, data, hosting. Then read the current official terms (dated links on both reviews). Our <a href="../workflows/app-prototyping.html">app-prototyping workflow</a> has the full checklist.</p>
+
+<h2>Decision summary</h2>
+<ul>
+<li><strong>Developer owns the code afterward:</strong> v0.</li>
+<li><strong>Non-developer shipping an MVP:</strong> Lovable.</li>
+<li><strong>One component, not an app:</strong> v0, and probably not paid for long.</li>
+<li><strong>Client deliverable:</strong> whichever output you can legally and practically hand over — verify export terms first.</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>Can these replace a developer?</h3>
+<p>For prototypes and internal tools, increasingly yes. For anything with real users, security, or money flowing through them, no — plan for a developer to review, harden, and own the result.</p>
+<h3>Do I own the generated code?</h3>
+<p>Both allow export; what "owning" means for hosting, data, and continuity differs. Check the current terms via the review pages before client work.</p>
+<h3>Which is cheaper?</h3>
+<p>Credits meter differently — cost per <em>working feature</em> is the only comparison that matters, and only your build test will show it. Verified plan prices are on <a href="../pricing-watch/">Pricing Watch</a>.</p>
+""",
+}
+
+ARTICLES["descript-vs-riverside-deep-comparison.html"] = {
+    "pair": ("descript", "riverside-fm"),
+    "comparison": "descript-vs-riverside-fm.html",
+    "title": "Descript vs Riverside: which audio/video tool should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "Descript or Riverside for podcasts and video? An edit-vs-record comparison with a one-episode test, plan-limit honesty, and workflow-based decision paths.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> they bookend the production process, and the "which is better" question dissolves once you notice that. <a href="../tools/riverside-fm/">Riverside</a> is a <em>recording</em> tool — studio-quality capture of remote guests, local tracks, and sync handled up front. <a href="../tools/descript/">Descript</a> is an <em>editing</em> tool — edit audio and video like a document, cut filler words, clone your voice for fixes. If remote recording is your bottleneck, Riverside paid first. If editing time is your bottleneck, Descript paid first. Many shows genuinely need one of each — that's the rare defensible overlap.</p>
+
+<h2>The one-episode test</h2>
+<ol>
+<li><strong>Record one real episode's worth of audio in Riverside</strong> with a remote guest: check local-track quality, sync, and failure recovery (guest drops, re-joins).</li>
+<li><strong>Edit the same material in Descript free:</strong> transcribe, cut filler, fix a flub with the voice tool if you need it. Score minutes-to-published.</li>
+<li><strong>Check the format wall:</strong> video episodes push both tools' limits — check export options and quality caps against your actual distribution channel (YouTube vs podcast audio).</li>
+<li><strong>Price your real volume:</strong> hours recorded and hours edited per month determine which paid tier; verified limits are on <a href="../pricing-watch/">Pricing Watch</a>.</li>
+</ol>
+
+<h2>Where each one wins</h2>
+<h3>Riverside</h3>
+<ul>
+<li>Remote capture quality — each side recorded locally, so internet hiccups don't ruin the take.</li>
+<li>Separate tracks per speaker make downstream editing (in anything) much easier.</li>
+<li>Free tier covers short-form needs; studio features scale by tier — current verified numbers on <a href="../tools/riverside-fm/">the review</a>.</li>
+</ul>
+<h3>Descript</h3>
+<ul>
+<li>Text-based editing — delete a sentence from the transcript, it's gone from the audio. The single biggest time-saver in spoken-word production.</li>
+<li>Filler-word removal, transcription, screen recording, and voice correction in one place.</li>
+<li>Media-hour metering means heavy editors should check the tier that fits their monthly volume — <a href="../tools/descript/">review here</a>.</li>
+</ul>
+
+<h2>What overlaps</h2>
+<p>Riverside added editing; Descript added recording — so both now claim the whole pipeline. In practice each is still best at its native job, and the mistake is paying top-tier for both when a free recording tier plus one paid editor (or vice versa) covers a weekly show. Budget by bottleneck, not by feature list.</p>
+
+<h2>Decision summary</h2>
+<ul>
+<li><strong>Remote-guest show:</strong> Riverside for capture; edit wherever you already edit.</li>
+<li><strong>Edit-heavy production:</strong> Descript paid; record with whatever you own.</li>
+<li><strong>Video podcast on YouTube:</strong> check both tools' video export paths against your quality bar before committing to either annual plan.</li>
+<li><strong>Weekly solo audio newsletter:</strong> Descript alone is often the whole stack.</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>Can Descript record remote interviews well?</h3>
+<p>It records, but Riverside's local-track approach is built for remote capture quality. If guests and sound quality are your show's core, test both on a real call before deciding.</p>
+<h3>Does Riverside edit enough to skip Descript?</h3>
+<p>For light trims, often yes. For transcript-driven editing, filler removal, and fixes, Descript saves hours Riverside's editor doesn't. Run the one-episode test and count your minutes.</p>
+<h3>What about transcripts for SEO?</h3>
+<p>Both transcribe; publish them yourself — see our <a href="../workflows/transcript-to-newsletter.html">transcript workflow</a> for turning episodes into indexable content.</p>
+""",
+}
+
+ARTICLES["heygen-vs-synthesia-deep-comparison.html"] = {
+    "pair": ("heygen", "synthesia"),
+    "comparison": "heygen-vs-synthesia.html",
+    "title": "HeyGen vs Synthesia: which AI avatar video tool should you pay for?",
+    "kicker": "Deep comparison",
+    "desc": "HeyGen or Synthesia for AI avatar video? A consent-and-credits comparison across avatar quality, languages, team training use, and commercial rights.",
+    "updated": "2026-08-31",
+    "body": """
+<p><strong>Short answer:</strong> both turn a script into a talking-head video, and the paid decision hinges on <em>who the avatar is</em>. <a href="../tools/synthesia/">Synthesia</a> leans toward polished stock avatars, brand kits, and corporate training at scale. <a href="../tools/heygen/">HeyGen</a> leans toward avatar <em>cloning</em> — you or your spokesperson, plus strong translation/dubbing of real footage. Pick Synthesia for standardized training content across a company; pick HeyGen when the person on screen needs to be a specific human. Credits meter both, so budget by video count, not by month.</p>
+
+<h2>The weekly-workflow test</h2>
+<ol>
+<li><strong>Same 60-second script in both</strong> — a real onboarding snippet or product explainer, not a demo script.</li>
+<li><strong>Score first-render acceptance:</strong> of four avatars/styles per tool, how many look acceptable to show a customer?</li>
+<li><strong>Test your face (if that's the plan):</strong> consented cloning in HeyGen vs stock-avatar polish in Synthesia — score realism honestly, with a viewer who isn't you.</li>
+<li><strong>Test the localization job:</strong> render the same script in one other language you actually need; score lip-sync and accent acceptability.</li>
+</ol>
+
+<h2>Where each one wins</h2>
+<h3>Synthesia</h3>
+<ul>
+<li>Corporate training machine: templates, brand consistency, and review workflows for teams.</li>
+<li>Large stock-avatar and language library — coverage first.</li>
+<li>Enterprise controls and integrations for L&D departments; verified tiers on <a href="../tools/synthesia/">the review</a>.</li>
+</ul>
+<h3>HeyGen</h3>
+<ul>
+<li>Personal avatars and translation that keeps the original speaker on screen.</li>
+<li>Better for "the founder says it in six languages" content and repurposing real footage.</li>
+<li>Free tier is testable; credit tiers scale with output volume — current numbers on <a href="../tools/heygen/">the review</a>.</li>
+</ul>
+
+<h2>What overlaps — and the consent question that isn't optional</h2>
+<p>The slots are identical (script → avatar video), so paying for both needs a real split job: standardized training (Synthesia) vs personal-brand output (HeyGen). The bigger issue is <strong>consent</strong>: cloning a person's likeness requires that person's explicit, documented permission — employee, spokesperson, or client. Vendors provide consent flows; use them, keep records, and never clone someone from found footage. For commercial output, verify each vendor's current rights terms via our review pages before publishing.</p>
+
+<h2>Decision summary</h2>
+<ul>
+<li><strong>Company-wide training library:</strong> Synthesia.</li>
+<li><strong>A specific human's face and voice, in many languages:</strong> HeyGen.</li>
+<li><strong>Marketing localized at scale:</strong> whichever localization test you scored higher — run it before the annual plan.</li>
+<li><strong>Anyone's likeness without their signed consent:</strong> neither. Full stop.</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>Do these look real enough for customers?</h3>
+<p>For training and explainer content, yes — uncanny valley is mostly behind us in these tools. For hero marketing, test with real viewers; scores differ by avatar and voice.</p>
+<h3>Can I legally clone a colleague?</h3>
+<p>Only with their explicit consent, documented through the vendor's consent flow. Treat likeness like personal data — because it is.</p>
+<h3>Which is cheaper for 10 videos a month?</h3>
+<p>Credit structures differ; the only honest answer is to price your real monthly video count against the verified current tiers on <a href="../pricing-watch/">Pricing Watch</a>.</p>
+""",
+}
+
+
 def _build_page(fname: str, article: dict) -> str:
     title = article["title"]
     desc = article["desc"]
