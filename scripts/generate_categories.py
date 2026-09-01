@@ -206,10 +206,10 @@ def generate_category_hub(root: Path, tools: list, today: str) -> Path:
 </div></section>
 <section class="scene scene-light product-grid-section"><div class="product-grid">{''.join(tiles)}</div></section>
 <section class="scene scene-light content-hub"><h2>Browse by category</h2><div class="content-hub-grid">{''.join(cards)}</div></section>
-<section class="score-card related-next-steps"><span>Cite and verify</span>
+<!-- AIT SOURCE CITE START --><section class="score-card related-next-steps"><span>Cite and verify</span>
 <h2>Source pages Google can quote.</h2>
 <p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/newsletter/">Keep/Cut Weekly</a> · <a href="/press/">Press / cite us</a> · <a href="/evidence/">Evidence ledger</a> · <a href="/methodology/">Methodology</a></p>
-</section>
+</section><!-- AIT SOURCE CITE END -->
 </main>
 <div id="share-row" hidden></div>
 <footer class="footer"><span>© {today[:4]} AIToolsEssentials</span><a href="../advertise/" rel="nofollow">Advertise</a><a href="../submit-tool.html" rel="nofollow">Submit a tool</a><a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="../legal/about.html">About</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a></footer>
