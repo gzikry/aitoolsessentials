@@ -257,6 +257,10 @@ import subprocess
 r = subprocess.run(['python3', 'scripts/cleanup_html.py'], capture_output=True, text=True, cwd=str(root))
 print(r.stdout.strip() or r.stderr.strip())
 
+# Inject Article schema into any article pages missing it (idempotent)
+from inject_article_schema import inject_article_schema
+inject_article_schema(root)
+
 def ping_indexnow(root):
     """Ping IndexNow with the full sitemap URL set after each successful deploy."""
     import json as _json, subprocess

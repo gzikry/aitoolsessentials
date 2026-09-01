@@ -91,11 +91,13 @@ def generate(root: Path) -> int:
         if p.exists(): continue
         faq_schema=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
             {"@type":"Question","name":a['title'],"acceptedAnswer":{"@type":"Answer","text":"See article for the complete evidence-based answer."}}]})
+        article_schema=json.dumps({"@context":"https://schema.org","@type":"Article","headline":a['title'],"description":a['desc'],"url":f"https://aitoolsessentials.com/articles/{fname}","author":{"@type":"Organization","name":"AIToolsEssentials"},"publisher":{"@type":"Organization","name":"AIToolsEssentials","url":"https://aitoolsessentials.com"}})
         page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{H.escape(a['desc'])}"><title>{H.escape(a['title'])} — AIToolsEssentials</title><link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/share.css">
 <link rel="canonical" href="https://aitoolsessentials.com/articles/{fname}">
 <meta property="og:title" content="{H.escape(a['title'])} — AIToolsEssentials"><meta property="og:description" content="{H.escape(a['desc'])}"><meta property="og:url" content="https://aitoolsessentials.com/articles/{fname}">
 <script type="application/ld+json">{faq_schema}</script>
+<script type="application/ld+json">{article_schema}</script>
 <link rel="icon" href="../assets/aitools-bot-mark.svg" type="image/svg+xml"></head><body>{HEADER}
 <main><section class="scene scene-light article-hero"><p class="kicker light">{H.escape(a['kicker'])}</p><h1>{H.escape(a['title'])}</h1><p>{H.escape(a['desc'])}</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse tools</a><a class="button button-dark" href="learn.html">More guides</a></div></section>
 <section class="scene scene-light"><article class="article-shell">{a['body']}</article></section>
