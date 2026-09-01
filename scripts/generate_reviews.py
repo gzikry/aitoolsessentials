@@ -282,7 +282,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 
 <h2>Pricing</h2>
 {price_html}
-<p class="affiliate-inline">Pricing changes often — verify current plans on the official site before buying.</p>
+<p class="affiliate-inline">Pricing changes often — verify current plans on the official site before buying. Dated snapshots: <a href="../../pricing-watch/">Pricing Watch</a>.</p>
 
 <h2>Use cases</h2>
 <ul>
@@ -309,7 +309,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <h2>How {name} compares</h2>
 <p>{compare_para}</p>
 <h2>How we evaluated</h2>
-<p>The AIToolsEssentials rating is an editorial score—not an external benchmark. It summarizes job fit, likely output quality, ease of adoption, and operational cost using published product information, benchmark context where the exact model is identifiable, and the repeatable trial checklist above. Benchmarks never determine the final product rating by themselves. See our <a href="../../legal/editorial-methodology.html">full methodology</a> and <a href="../../benchmarks/">benchmark evidence policy</a>.</p>
+<p>The AIToolsEssentials rating is an editorial score—not an external benchmark. It summarizes job fit, likely output quality, ease of adoption, and operational cost using published product information, benchmark context where the exact model is identifiable, and the repeatable trial checklist above. Benchmarks never determine the final product rating by themselves. See our <a href="../../methodology/">editorial methodology</a>, <a href="../../evidence/">evidence ledger</a>, and <a href="../../benchmarks/">benchmark evidence policy</a>.</p>
 {best_plan_html}<h2>Frequently asked questions</h2>
 <div class="faq-list">
 {faq_html}</div>
@@ -337,7 +337,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 </aside>
 </div>
 
-<section class="newsletter-cta"><div class="cta-grid"><div class="cta-content"><h3>Choose with evidence, not hype.</h3><p>Use the free scorecard for your own trial, then check the benchmark hub for versioned external evidence.</p><div class="cta-actions"><a class="cta-button" href="../../downloads/ai-tool-evaluation-scorecard.html">Download the free scorecard</a><a class="cta-secondary" href="../../benchmarks/">Open benchmarks</a></div></div><div class="cta-actions" style="margin-top:12px"><a class="cta-button" href="../../newsletter/">Read Keep/Cut Weekly</a><a class="cta-secondary" href="../../premium/">Premium research membership</a></div></div></section>
+<section class="newsletter-cta"><div class="cta-grid"><div class="cta-content"><h3>Choose with evidence, not hype.</h3><p>Use the free scorecard for your own trial, then check the benchmark hub for versioned external evidence.</p><div class="cta-actions"><a class="cta-button" href="../../downloads/ai-tool-evaluation-scorecard.html">Download the free scorecard</a><a class="cta-secondary" href="../../benchmarks/">Open benchmarks</a></div></div><div class="cta-actions" style="margin-top:12px"><a class="cta-button" href="../../newsletter/">Read Keep/Cut Weekly</a><a class="cta-secondary" href="../../premium/">Premium research membership</a><a class="cta-secondary" href="../../press/">Press / cite us</a></div></div></section>
 
 {automation_decoder_block}
 </main>

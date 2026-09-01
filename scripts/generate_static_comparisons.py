@@ -231,7 +231,7 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         '<a class="button button-blue" href="/cost-calculator.html" style="margin-left:8px">Estimate cost</a>'
         '<a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p></section>'
         '<section class="score-card related-next-steps"><span>Related</span><h3>Next reads</h3>'
-        '<p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/change-radar/">Change Radar</a> · <a href="/premium/">Premium</a> · <a href="/newsletter/">Newsletter</a></p></section>'
+        '<p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/evidence/">Evidence ledger</a> · <a href="/methodology/">Methodology</a> · <a href="/press/">Press / cite us</a> · <a href="/newsletter/">Keep/Cut Weekly</a></p></section>'
         f'{_premium_module()}'
     )
     page = _wrap(f'{title} — AIToolsEssentials', subhead, kicker, body, fname)

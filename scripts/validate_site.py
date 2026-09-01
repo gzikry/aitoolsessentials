@@ -262,6 +262,45 @@ def main():
             if 'sponsored' not in rel or 'nofollow' not in rel:
                 errors.append(f'{f.relative_to(ROOT)} outbound link missing sponsored nofollow: {a.get("href")}')
 
+    old_slugs = ('/riverside', '/adobe-podcast', '/categories/Podcast', '/best-ai-tools-for-podcasters')
+    for html_path in ROOT.rglob('*.html'):
+        rel = html_path.relative_to(ROOT)
+        if 'admin' in rel.parts:
+            continue
+        raw = html_path.read_text()
+        if '.html.html' in raw:
+            errors.append(f'{rel} still contains doubled .html.html URL')
+        if '</html>' not in raw.lower():
+            errors.append(f'{rel} is truncated (missing </html>)')
+        canons = re.findall(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', raw, flags=re.I)
+        canons += re.findall(r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']', raw, flags=re.I)
+        for href in canons:
+            if href.endswith('.html.html'):
+                errors.append(f'{rel} canonical is doubled: {href}')
+        for raw_schema in re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', raw, flags=re.S | re.I):
+            try:
+                schema = json.loads(raw_schema)
+            except Exception:
+                continue
+            schemas = schema if isinstance(schema, list) else [schema]
+            for item in schemas:
+                if not isinstance(item, dict):
+                    continue
+                if str(rel).startswith('hardware/') and rel.name != 'index.html' and item.get('@type') == 'Product':
+                    if not item.get('image'):
+                        errors.append(f'{rel} Product JSON-LD missing image')
+                    if 'offers' in item:
+                        errors.append(f'{rel} hardware Product schema must not include merchant Offer fields')
+                if str(rel) == 'premium/faq.html' and item.get('@type') == 'Product':
+                    if not item.get('image'):
+                        errors.append('premium/faq.html Product JSON-LD missing image')
+                    offer = item.get('offers') or {}
+                    if not offer.get('hasMerchantReturnPolicy'):
+                        errors.append('premium/faq.html Offer missing hasMerchantReturnPolicy')
+                    shipping = offer.get('shippingDetails') or {}
+                    if not shipping or not shipping.get('deliveryTime'):
+                        errors.append('premium/faq.html Offer missing digital-goods shippingDetails')
+
     sitemap = ROOT/'sitemap.xml'
     if sitemap.exists():
         html_count = len([
@@ -270,9 +309,17 @@ def main():
             and p.name != '404.html'
             and 'name="robots" content="noindex' not in p.read_text()
         ])
-        url_count = sitemap.read_text().count('<url>')
+        sitemap_text = sitemap.read_text()
+        url_count = sitemap_text.count('<url>')
         if html_count != url_count:
             errors.append(f'Sitemap URL count {url_count} != HTML count {html_count}')
+        for slug in old_slugs:
+            if f'https://aitoolsessentials.com{slug}' in sitemap_text and 'riverside-fm' not in slug:
+                errors.append(f'Sitemap still lists retired path {slug}')
+        retired_hits = re.findall(r'<loc>(https://aitoolsessentials\.com[^<]*(?:/riverside|/adobe-podcast|/categories/Podcast|/best-ai-tools-for-podcasters)[^<]*)</loc>', sitemap_text)
+        retired_hits = [u for u in retired_hits if '/riverside-fm' not in u and '/adobe-enhance-speech' not in u and 'podcast-shows' not in u]
+        if retired_hits:
+            errors.append(f'Sitemap still lists retired paths: {retired_hits}')
     else:
         errors.append('Missing sitemap.xml')
 
