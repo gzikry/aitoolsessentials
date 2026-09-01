@@ -200,6 +200,9 @@ print('Generated weekly newsletter:', generate_weekly_newsletter(root))
 from generate_how_tos import generate as generate_how_tos
 print('Generated how-to library:', generate_how_tos(root))
 
+from generate_saas_how_tos import generate as generate_saas_how_tos
+print('Generated SaaS how-to guides:', generate_saas_how_tos(root))
+
 from generate_hardware import generate as generate_hardware
 print('Generated hardware guide:', generate_hardware(root))
 
