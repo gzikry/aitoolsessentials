@@ -26,6 +26,23 @@ tool_source_age = (datetime.today().date() - datetime.fromisoformat(tool_source_
 print(f'Loaded {len(tools)} tools')
 
 
+def _sitemap_priority_changefreq(rel_path: str) -> tuple[str, str]:
+    """Return (priority, changefreq) for a sitemap URL based on page type."""
+    if rel_path in ('/', 'index.html'):
+        return '1.0', 'daily'
+    if rel_path.startswith('tools/') and rel_path != 'tools/index.html':
+        return '0.9', 'weekly'
+    if rel_path.startswith('comparisons/') and rel_path != 'comparisons/index.html':
+        return '0.9', 'weekly'
+    if rel_path.startswith('categories/') and rel_path != 'categories/index.html':
+        return '0.8', 'weekly'
+    if rel_path.startswith('articles/') and rel_path != 'articles/index.html':
+        return '0.7', 'weekly'
+    if rel_path.endswith('index.html'):
+        return '0.8', 'weekly'
+    return '0.5', 'monthly'
+
+
 def refresh_sitemap(root: Path) -> list[str]:
     sitemap_urls = []
     for p in sorted(root.rglob('*.html')):
@@ -44,7 +61,8 @@ def refresh_sitemap(root: Path) -> list[str]:
 
     sitemap = '''<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'''
     for url in sitemap_urls:
-        sitemap += f'  <url><loc>https://aitoolsessentials.com{url}</loc></url>\n'
+        priority, changefreq = _sitemap_priority_changefreq(url.lstrip('/'))
+        sitemap += f'  <url><loc>https://aitoolsessentials.com{url}</loc><lastmod>{today}</lastmod><changefreq>{changefreq}</changefreq><priority>{priority}</priority></url>\n'
     sitemap += '</urlset>\n'
     (root / 'sitemap.xml').write_text(sitemap)
     return sitemap_urls
@@ -257,9 +275,9 @@ import subprocess
 r = subprocess.run(['python3', 'scripts/cleanup_html.py'], capture_output=True, text=True, cwd=str(root))
 print(r.stdout.strip() or r.stderr.strip())
 
-# Inject Article schema into any article pages missing it (idempotent)
-from inject_article_schema import inject_article_schema
-inject_article_schema(root)
+# Inject/enhance Article schema on all article pages (idempotent)
+from inject_article_schema import enhance_article_schema
+enhance_article_schema(root)
 
 def ping_indexnow(root):
     """Ping IndexNow with the full sitemap URL set after each successful deploy."""

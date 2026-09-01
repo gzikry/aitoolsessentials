@@ -91,7 +91,7 @@ def generate(root: Path) -> int:
         if p.exists(): continue
         faq_schema=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
             {"@type":"Question","name":a['title'],"acceptedAnswer":{"@type":"Answer","text":"See article for the complete evidence-based answer."}}]})
-        article_schema=json.dumps({"@context":"https://schema.org","@type":"Article","headline":a['title'],"description":a['desc'],"url":f"https://aitoolsessentials.com/articles/{fname}","author":{"@type":"Organization","name":"AIToolsEssentials"},"publisher":{"@type":"Organization","name":"AIToolsEssentials","url":"https://aitoolsessentials.com"}})
+        article_schema=json.dumps({"@context":"https://schema.org","@type":"Article","headline":a['title'],"description":a['desc'],"image":"https://aitoolsessentials.com/assets/og-ai-tools.jpg","datePublished":"2026-08-25","dateModified":today,"url":f"https://aitoolsessentials.com/articles/{fname}","author":{"@type":"Organization","name":"AIToolsEssentials"},"publisher":{"@type":"Organization","name":"AIToolsEssentials","url":"https://aitoolsessentials.com"}})
         page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{H.escape(a['desc'])}"><title>{H.escape(a['title'])} — AIToolsEssentials</title><link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/share.css">
 <link rel="canonical" href="https://aitoolsessentials.com/articles/{fname}">
