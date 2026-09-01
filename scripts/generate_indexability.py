@@ -102,17 +102,20 @@ def fix_canonicals_and_titles(root: Path) -> dict[str, int]:
 
         rel_s = str(rel)
         if rel_s in LEFTOVER_TITLE_SUFFIX:
+            before_title = html
             html = _set_title(html, LEFTOVER_TITLE_SUFFIX[rel_s])
-            stats["titles"] += 1
+            if html != before_title:
+                stats["titles"] += 1
         elif rel.parts[0] == "articles" and rel.stem in comparison_titles:
             current = re.search(r"<title>(.*?)</title>", html, flags=re.S | re.I)
             current_title = re.sub(r"\s+", " ", current.group(1)).strip() if current else ""
-            base = re.sub(r"\s+[—|-]\s+AIToolsEssentials.*$", "", current_title).strip()
-            comp_base = re.sub(r"\s+[—|-]\s+AIToolsEssentials.*$", "", comparison_titles[rel.stem]).strip()
-            comp_base = re.sub(r"\s+comparison$", "", comp_base, flags=re.I)
-            if base.lower() == comp_base.lower() or current_title == comparison_titles[rel.stem]:
-                html = _set_title(html, f"{base} — same-task pick | AIToolsEssentials")
-                stats["titles"] += 1
+            if "same-task pick" not in current_title.lower():
+                base = re.sub(r"\s+[—|-]\s+AIToolsEssentials.*$", "", current_title).strip()
+                comp_base = re.sub(r"\s+[—|-]\s+AIToolsEssentials.*$", "", comparison_titles[rel.stem]).strip()
+                comp_base = re.sub(r"\s+comparison$", "", comp_base, flags=re.I)
+                if base.lower() == comp_base.lower() or current_title == comparison_titles[rel.stem]:
+                    html = _set_title(html, f"{base} — same-task pick | AIToolsEssentials")
+                    stats["titles"] += 1
 
         if rel_s in CITE_TARGETS and CITE_START not in html and "</main>" in html:
             html = html.replace("</main>", CITE_MODULE + "\n</main>", 1)

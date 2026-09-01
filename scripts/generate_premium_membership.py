@@ -798,21 +798,29 @@ def enhance_homepage(root: Path) -> None:
             html = html.replace(intro.group(1), intro.group(1) + "\n" + band, 1)
         elif "<main>" in html:
             html = html.replace("<main>", "<main>\n" + band, 1)
-    if "AIT HOMEPAGE CITE STRIP START" not in html:
-        cite = '''<!-- AIT HOMEPAGE CITE STRIP START -->
+    cite = '''<!-- AIT HOMEPAGE CITE STRIP START -->
 <section class="scene scene-light" style="padding:40px 28px 8px">
 <div style="max-width:1040px;margin:0 auto;text-align:center">
 <p class="kicker light">Cite and verify</p>
 <h2>Source pages, not a homepage screenshot.</h2>
 <p class="subhead">Use dated pricing, keep/cut notes, and the public evidence rules. No invented traffic or rankings.</p>
-<p><a class="button button-blue" href="pricing-watch/">Pricing Watch</a>
-<a class="button button-ghost-dark" href="newsletter/" style="margin-left:8px">Keep/Cut Weekly</a>
-<a class="button button-ghost-dark" href="press/" style="margin-left:8px">Press / cite us</a>
-<a class="button button-ghost-dark" href="evidence/" style="margin-left:8px">Evidence ledger</a>
-<a class="button button-ghost-dark" href="methodology/" style="margin-left:8px">Methodology</a></p>
+<p><a class="button button-blue" href="/pricing-watch/">Pricing Watch</a>
+<a class="button button-ghost-dark" href="/newsletter/" style="margin-left:8px">Keep/Cut Weekly</a>
+<a class="button button-ghost-dark" href="/press/" style="margin-left:8px">Press / cite us</a>
+<a class="button button-ghost-dark" href="/evidence/" style="margin-left:8px">Evidence ledger</a>
+<a class="button button-ghost-dark" href="/methodology/" style="margin-left:8px">Methodology</a></p>
 </div></section>
 <!-- AIT HOMEPAGE CITE STRIP END -->
 '''
+    if "AIT HOMEPAGE CITE STRIP START" in html:
+        html = re.sub(
+            r"<!-- AIT HOMEPAGE CITE STRIP START -->.*?<!-- AIT HOMEPAGE CITE STRIP END -->",
+            cite.strip(),
+            html,
+            count=1,
+            flags=re.S,
+        )
+    else:
         if "AIT HOMEPAGE JOB TILES END" in html:
             html = html.replace("<!-- AIT HOMEPAGE JOB TILES END -->", "<!-- AIT HOMEPAGE JOB TILES END -->\n" + cite, 1)
         elif "AIT HOMEPAGE PREMIUM BAND END" in html:
