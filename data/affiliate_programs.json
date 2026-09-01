@@ -1,170 +1,203 @@
 {
- "checked_at": "2026-08-23",
- "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
- "affiliate_programs": [
-  {
-   "tool_slug": "chatgpt",
-   "availability": "available_non_affiliate_partner",
-   "program_type": "solution/co-sell partner network",
-   "network": "OpenAI",
-   "official_program_url": "https://openai.com/business/partners",
-   "application_status": "not_applicable_for_publisher_affiliate",
-   "commission_note": null,
-   "notes": "No public commission-paying ChatGPT publisher affiliate program verified."
-  },
-  {
-   "tool_slug": "claude",
-   "availability": "available_non_affiliate_partner",
-   "program_type": "solution partner network",
-   "network": "Anthropic",
-   "official_program_url": "https://claude.com/partners",
-   "application_status": "not_applicable_for_publisher_affiliate",
-   "commission_note": null,
-   "notes": "No public publisher commission program verified."
-  },
-  {
-   "tool_slug": "gemini",
-   "availability": "available_indirect",
-   "program_type": "Google Cloud affiliate",
-   "network": "CJ Affiliate",
-   "official_program_url": "https://cloud.google.com/affiliate-program",
-   "application_status": "not_applied",
-   "commission_note": null,
-   "notes": "Applies to eligible Google Cloud referrals; no direct consumer Gemini subscription affiliate program verified."
-  },
-  {
-   "tool_slug": "perplexity",
-   "availability": "unavailable_ended",
-   "program_type": "former referral programs",
-   "network": "Dub (historical)",
-   "official_program_url": "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs",
-   "application_status": "unavailable",
-   "commission_note": null,
-   "notes": "Official help says Comet and Give-a-month/Get-a-month referral programs ended in 2025."
-  },
-  {
-   "tool_slug": "cursor",
-   "availability": "limited_account_dependent",
-   "program_type": "limited referral program",
-   "network": "Cursor",
-   "official_program_url": "https://forum.cursor.com/t/maxed-out-referrals-what-to-do-now/165017",
-   "application_status": "eligibility_check_required",
-   "commission_note": "Official staff described a 10 rewarded referrals/month and $250 cap for eligible accounts.",
-   "notes": "Not an unlimited public publisher affiliate program."
-  },
-  {
-   "tool_slug": "github-copilot",
-   "availability": "available_non_affiliate_partner",
-   "program_type": "technology/integration partner program",
-   "network": "GitHub",
-   "official_program_url": "https://github.com/features/preview/copilot-partner-program",
-   "application_status": "not_applicable_for_publisher_affiliate",
-   "commission_note": null,
-   "notes": "Not a commission-paying subscription referral program."
-  },
-  {
-   "tool_slug": "canva-ai",
-   "availability": "closed",
-   "program_type": "Canvassador/affiliate",
-   "network": "Impact (existing participants)",
-   "official_program_url": "https://www.canva.com/help/canva-affiliate-marketing-program",
-   "application_status": "applications_closed",
-   "commission_note": null,
-   "notes": "Official guidance says Canvassador applications are currently closed."
-  },
-  {
-   "tool_slug": "midjourney",
-   "availability": "not_found",
-   "program_type": null,
-   "network": null,
-   "official_program_url": "https://docs.midjourney.com/docs/terms-of-service",
-   "application_status": "no_verified_program",
-   "commission_note": null,
-   "notes": "No official affiliate/referral application page verified."
-  },
-  {
-   "tool_slug": "zapier-ai",
-   "availability": "available_partner_only",
-   "program_type": "ambassador/solution partner referral",
-   "network": "Zapier",
-   "official_program_url": "https://zapier.com/legal/ambassador-affiliate-terms",
-   "application_status": "partner_eligibility_required",
-   "commission_note": null,
-   "notes": "Referral rewards are limited to eligible Zapier partners; use the Solution Partner route."
-  },
-  {
-   "tool_slug": "make",
-   "availability": "approved_publisher_affiliate",
-   "program_type": "affiliate",
-   "network": "Make direct",
-   "official_program_url": "https://www.make.com/en/affiliate",
-   "application_status": "approved",
-   "commission_note": null,
-   "notes": "Approved 2026-08-23. Partner code aitoolsessentials via make.com register URL.",
-   "affiliate_url": "https://www.make.com/en/register?pc=aitoolsessentials"
-  },
-  {
-   "tool_slug": "notion-ai",
-   "availability": "closed_to_new_applicants",
-   "program_type": "affiliate program",
-   "network": "PartnerStack",
-   "official_program_url": "https://www.notion.com/affiliates",
-   "application_status": "applications_closed",
-   "commission_note": null,
-   "notes": "Official page says new affiliates are not currently accepted."
-  },
-  {
-   "tool_slug": "grammarly",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "CJ Affiliate / PartnerStack / ShareASale or designated platform",
-   "official_program_url": "https://www.grammarly.com/affiliates",
-   "application_status": "rejected_via_impact",
-   "commission_note": null,
-   "notes": "Application answers ready in admin/affiliate-applications-ready.md; George submits at grammarly.com/affiliates. Grammarly affiliate application denied (2026-08-25): program routes through Impact, and our Impact publisher account was rejected earlier. Revisit after reapplying to Impact with traffic evidence.",
-   "application_date": "2026-08-24"
-  },
-  {
-   "tool_slug": "jasper",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "FirstPromoter or Jasper-designated platform",
-   "official_program_url": "https://help.jasper.ai/hc/en-us/articles/18618713810203-Affiliate-Program",
-   "application_status": "ready_to_apply",
-   "commission_note": null,
-   "notes": "Application pack ready in admin/affiliate-applications-ready.md §5. ~25% recurring first 12 months via FirstPromoter. No Impact dependency."
-  },
-  {
-   "tool_slug": "elevenlabs",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "direct (try.elevenlabs.io)",
-   "official_program_url": "https://elevenlabs.io/affiliates",
-   "application_status": "approved",
-   "commission_note": "22% of qualifying subscriptions for 12 months",
-   "notes": "Approved 2026-08-23. Tracking URL verified (redirects to elevenlabs.io with partner params).",
-   "status": "approved",
-   "approved_tracking_url": "https://try.elevenlabs.io/xs6witq7izqe",
-   "approved_date": "2026-08-23",
-   "affiliate_url": "https://try.elevenlabs.io/xs6witq7izqe"
-  },
-  {
-   "tool_slug": "descript",
-   "availability": "available",
-   "program_type": "public affiliate program",
-   "network": "PartnerStack",
-   "official_program_url": "https://www.descript.com/affiliate",
-   "application_status": "ready_to_apply",
-   "commission_note": "Official page advertises $25 per new subscriber.",
-   "notes": "Application pack ready in admin/affiliate-applications-ready.md §6. $25 flat per new subscriber via PartnerStack (not Impact). Review up to 30 days."
-  }
- ],
- "priority_application_queue": [
-  "make",
-  "grammarly",
-  "jasper",
-  "elevenlabs",
-  "descript",
-  "gemini"
- ]
+  "checked_at": "2026-09-01",
+  "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
+  "affiliate_programs": [
+    {
+      "tool_slug": "chatgpt",
+      "availability": "available_non_affiliate_partner",
+      "program_type": "solution/co-sell partner network",
+      "network": "OpenAI",
+      "official_program_url": "https://openai.com/business/partners",
+      "application_status": "not_applicable_for_publisher_affiliate",
+      "commission_note": null,
+      "notes": "No public commission-paying ChatGPT publisher affiliate program verified."
+    },
+    {
+      "tool_slug": "claude",
+      "availability": "available_non_affiliate_partner",
+      "program_type": "solution partner network",
+      "network": "Anthropic",
+      "official_program_url": "https://claude.com/partners",
+      "application_status": "not_applicable_for_publisher_affiliate",
+      "commission_note": null,
+      "notes": "No public publisher commission program verified."
+    },
+    {
+      "tool_slug": "gemini",
+      "availability": "available_indirect",
+      "program_type": "Google Cloud affiliate",
+      "network": "CJ Affiliate",
+      "official_program_url": "https://cloud.google.com/affiliate-program",
+      "application_status": "not_applied",
+      "commission_note": null,
+      "notes": "Applies to eligible Google Cloud referrals; no direct consumer Gemini subscription affiliate program verified."
+    },
+    {
+      "tool_slug": "perplexity",
+      "availability": "unavailable_ended",
+      "program_type": "former referral programs",
+      "network": "Dub (historical)",
+      "official_program_url": "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs",
+      "application_status": "unavailable",
+      "commission_note": null,
+      "notes": "Official help says Comet and Give-a-month/Get-a-month referral programs ended in 2025."
+    },
+    {
+      "tool_slug": "cursor",
+      "availability": "limited_account_dependent",
+      "program_type": "limited referral program",
+      "network": "Cursor",
+      "official_program_url": "https://forum.cursor.com/t/maxed-out-referrals-what-to-do-now/165017",
+      "application_status": "eligibility_check_required",
+      "commission_note": "Official staff described a 10 rewarded referrals/month and $250 cap for eligible accounts.",
+      "notes": "Not an unlimited public publisher affiliate program."
+    },
+    {
+      "tool_slug": "github-copilot",
+      "availability": "available_non_affiliate_partner",
+      "program_type": "technology/integration partner program",
+      "network": "GitHub",
+      "official_program_url": "https://github.com/features/preview/copilot-partner-program",
+      "application_status": "not_applicable_for_publisher_affiliate",
+      "commission_note": null,
+      "notes": "Not a commission-paying subscription referral program."
+    },
+    {
+      "tool_slug": "canva-ai",
+      "availability": "closed",
+      "program_type": "Canvassador/affiliate",
+      "network": "Impact (existing participants)",
+      "official_program_url": "https://www.canva.com/help/canva-affiliate-marketing-program",
+      "application_status": "applications_closed",
+      "commission_note": null,
+      "notes": "Official guidance says Canvassador applications are currently closed."
+    },
+    {
+      "tool_slug": "midjourney",
+      "availability": "not_found",
+      "program_type": null,
+      "network": null,
+      "official_program_url": "https://docs.midjourney.com/docs/terms-of-service",
+      "application_status": "no_verified_program",
+      "commission_note": null,
+      "notes": "No official affiliate/referral application page verified."
+    },
+    {
+      "tool_slug": "zapier-ai",
+      "availability": "available_partner_only",
+      "program_type": "ambassador/solution partner referral",
+      "network": "Zapier",
+      "official_program_url": "https://zapier.com/legal/ambassador-affiliate-terms",
+      "application_status": "partner_eligibility_required",
+      "commission_note": null,
+      "notes": "Referral rewards are limited to eligible Zapier partners; use the Solution Partner route."
+    },
+    {
+      "tool_slug": "make",
+      "availability": "approved_publisher_affiliate",
+      "program_type": "affiliate",
+      "network": "Make direct",
+      "official_program_url": "https://www.make.com/en/affiliate",
+      "application_status": "approved",
+      "commission_note": "35% commission on all referrals for 12 months (official affiliate page).",
+      "notes": "Approved 2026-08-23. Partner code aitoolsessentials via make.com register URL. Official page now advertises 35% for 12 months.",
+      "affiliate_url": "https://www.make.com/en/register?pc=aitoolsessentials"
+    },
+    {
+      "tool_slug": "notion-ai",
+      "availability": "closed_to_new_applicants",
+      "program_type": "affiliate program",
+      "network": "PartnerStack",
+      "official_program_url": "https://www.notion.com/affiliates",
+      "application_status": "applications_closed",
+      "commission_note": "Up to $50 per activated signup plus 20% of year-one revenue for each referral (per official page).",
+      "notes": "Official page (notion.com/affiliates) says program is currently not accepting new affiliates. Existing affiliates log in via PartnerStack (dash.partnerstack.com/notion)."
+    },
+    {
+      "tool_slug": "grammarly",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "CJ Affiliate / PartnerStack / ShareASale or designated platform",
+      "official_program_url": "https://www.grammarly.com/affiliates",
+      "application_status": "rejected_via_impact",
+      "commission_note": null,
+      "notes": "Application answers ready in admin/affiliate-applications-ready.md; George submits at grammarly.com/affiliates. Grammarly affiliate application denied (2026-08-25): program routes through Impact (app.impact.com/advertiser-advertiser-info/Grammarly.brand), and our Impact publisher account was rejected earlier. Revisit after reapplying to Impact with traffic evidence.",
+      "application_date": "2026-08-24"
+    },
+    {
+      "tool_slug": "jasper",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "Impact",
+      "official_program_url": "https://www.jasper.ai/legal/affiliates",
+      "application_status": "ready_to_apply",
+      "commission_note": "25% recurring for 12 months (up to 30% at 100+ conversions/year); 45-day cookie; $25 min payout via PayPal/Impact.",
+      "notes": "Application pack ready in admin/affiliate-applications-ready.md §5. Jasper now runs its affiliate program through Impact (not FirstPromoter). Note: our Impact publisher account was rejected; revisit after reapplying to Impact with traffic evidence, same as Grammarly."
+    },
+    {
+      "tool_slug": "elevenlabs",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "direct (try.elevenlabs.io)",
+      "official_program_url": "https://elevenlabs.io/affiliates",
+      "application_status": "approved",
+      "commission_note": "22% of qualifying subscriptions for 12 months",
+      "notes": "Approved 2026-08-23. Tracking URL verified (redirects to elevenlabs.io with partner params).",
+      "status": "approved",
+      "approved_tracking_url": "https://try.elevenlabs.io/xs6witq7izqe",
+      "approved_date": "2026-08-23",
+      "affiliate_url": "https://try.elevenlabs.io/xs6witq7izqe"
+    },
+    {
+      "tool_slug": "descript",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "PartnerStack",
+      "official_program_url": "https://www.descript.com/affiliate",
+      "application_status": "ready_to_apply",
+      "commission_note": "$25 one-time flat fee per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; PartnerStack; monthly PayPal payouts, no minimum threshold.",
+      "notes": "Application pack ready in admin/affiliate-applications-ready.md §6. PartnerStack (not Impact). Approvals may take up to 30 days. Official help: help.descript.com/connect-with-us/affiliates."
+    },
+    {
+      "tool_slug": "copy-ai",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "PartnerStack",
+      "official_program_url": "https://copyai.partnerstack.com/",
+      "application_status": "ready_to_apply",
+      "commission_note": "45% recurring commission for the first 12 months per referral; 60-day cookie; $50 minimum payout; monthly via PayPal or Stripe.",
+      "notes": "Program runs on PartnerStack (copyai.partnerstack.com). No Impact dependency. Application pack not yet prepared."
+    },
+    {
+      "tool_slug": "gamma",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "PartnerStack",
+      "official_program_url": "https://gammaapp.partnerstack.com/?group=affiliates",
+      "application_status": "ready_to_apply",
+      "commission_note": "Commission rate not exposed on the public help page; confirmed via PartnerStack program. 30% recurring per third-party aggregator; verify exact rate on the PartnerStack application page.",
+      "notes": "Program managed via PartnerStack (gammaapp.partnerstack.com). Official help article: help.gamma.app/en/articles/11048092. Partner Program Terms effective August 4, 2025 at gamma-partners-y9y8f3m.gamma.site. Paid advertising requires prior written approval."
+    },
+    {
+      "tool_slug": "browse-ai",
+      "availability": "available",
+      "program_type": "public affiliate program",
+      "network": "PartnerStack",
+      "official_program_url": "https://www.browse.ai/affiliate-program",
+      "application_status": "ready_to_apply",
+      "commission_note": "20% recurring commission on every payment by referrals, lifetime; 30-day cookie; monthly payouts via Wise (PayPal on request, $200 minimum).",
+      "notes": "Program transitioning to PartnerStack (browseai.partnerstack.com). Official terms at browse.ai/legal/affiliate-program-terms. No Impact dependency. No cap on commissions."
+    }
+  ],
+  "priority_application_queue": [
+    "copy-ai",
+    "browse-ai",
+    "make",
+    "grammarly",
+    "jasper",
+    "elevenlabs",
+    "descript",
+    "gemini",
+    "gamma"
+  ]
 }

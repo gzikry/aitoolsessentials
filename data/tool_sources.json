@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-26",
+  "checked_at": "2026-09-01",
   "source_policy": "Official vendor sources only. Missing values remain null or unresolved; no inference.",
   "tools": [
     {
@@ -51,7 +51,7 @@
     {
       "slug": "canva-ai",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free\u2014up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education\u2014up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise\u2014up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
+      "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free—up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education—up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise—up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
       "pricing_url": "https://www.canva.com/pricing/",
       "docs_url": "https://www.canva.com/help/ai-access/",
       "privacy_url": "https://www.canva.com/trust/privacy/",
@@ -81,7 +81,7 @@
     {
       "slug": "claude",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2\u2013150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
+      "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2–150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
       "pricing_url": "https://www.anthropic.com/pricing",
       "docs_url": "https://support.anthropic.com/en/collections/4078534-claude-ai",
       "privacy_url": "https://privacy.anthropic.com/en/articles/10023555-how-do-you-use-personal-data-in-model-training",
@@ -319,15 +319,15 @@
     {
       "slug": "aibase",
       "pricing_checked_date": "2026-08-28",
-      "pricing_summary": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respectively. Yearly billing is 20\u201340% off (Basic yearly ~$180; Pro yearly equivalent ~$29.9 \u00d7 12 \u00d7 0.6 \u2248 $215; Ultimate $99.9 \u00d7 12 with 40% off \u2248 $720, saving $238.8 on the Pro tier). Pay-as-you-go credit packs available. Per the public Credits Cost Table, text-to-image runs 12\u201346 credits (~$0.05\u2013$0.18) and 5-second video runs 150\u2013380 credits (~$0.60\u2013$1.52). Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, and Veo 3.1 Fast run on monthly; Veo 3.1 Pro, Seedance 2.0, and HappyHorse 1.0 require yearly or credit packs.",
+      "pricing_summary": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respectively. Yearly billing is 20–40% off (Basic yearly ~$180; Pro yearly equivalent ~$29.9 × 12 × 0.6 ≈ $215; Ultimate $99.9 × 12 with 40% off ≈ $720, saving $238.8 on the Pro tier). Pay-as-you-go credit packs available. Per the public Credits Cost Table, text-to-image runs 12–46 credits (~$0.05–$0.18) and 5-second video runs 150–380 credits (~$0.60–$1.52). Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, and Veo 3.1 Fast run on monthly; Veo 3.1 Pro, Seedance 2.0, and HappyHorse 1.0 require yearly or credit packs.",
       "pricing_url": "https://aibase.art/pricing",
       "docs_url": "https://aibase.art/",
       "privacy_url": "https://aibase.art/privacy-policy",
       "rights_url": "https://aibase.art/terms-of-service",
-      "verification_notes": "Submitted via the site form by the vendor on 2026-08-28; editorial entry written independently. AIBase explicitly states it is 'an independent platform \u2026 not affiliated with, endorsed by, or an official product of' the underlying model providers (Nano Banana, GPT Image, Seedream, Seedance, Veo, Wan, HappyHorse). Terms of Service \u00a74 (User Content and Generated Content): 'You may use Generated Content for lawful personal or commercial purposes' subject to compliance; user grants AIBase a limited, worldwide, non-exclusive, royalty-free license to host/process content as needed to operate. Outputs are not guaranteed unique, copyrightable, or free of third-party rights. Acceptable Use Policy and Privacy Policy both live and dated. Free trial credits available; ongoing work is credit-based paid.",
+      "verification_notes": "Submitted via the site form by the vendor on 2026-08-28; editorial entry written independently. AIBase explicitly states it is 'an independent platform … not affiliated with, endorsed by, or an official product of' the underlying model providers (Nano Banana, GPT Image, Seedream, Seedance, Veo, Wan, HappyHorse). Terms of Service §4 (User Content and Generated Content): 'You may use Generated Content for lawful personal or commercial purposes' subject to compliance; user grants AIBase a limited, worldwide, non-exclusive, royalty-free license to host/process content as needed to operate. Outputs are not guaranteed unique, copyrightable, or free of third-party rights. Acceptable Use Policy and Privacy Policy both live and dated. Free trial credits available; ongoing work is credit-based paid.",
       "unresolved_claims": [
         "Credits-as-cost model makes monthly spend harder to forecast than flat-rate plans; users should run a real task before subscribing.",
-        "Veo 3.1 Pro and Seedance 2.0 are gated to yearly plans / credit packs \u2014 Basic and Pro monthly cannot access them.",
+        "Veo 3.1 Pro and Seedance 2.0 are gated to yearly plans / credit packs — Basic and Pro monthly cannot access them.",
         "Because AIBase routes to third-party models, each model's provider's terms and safety layers apply on top of AIBase's own.",
         "No explicit SOC 2 / security claims located on the public site.",
         "Affiliate program live: 30% recurring for the first year, PayPal NET-15 payouts."
@@ -427,7 +427,7 @@
     {
       "slug": "n8n",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "Starter: \u20ac20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: \u20ac50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: \u20ac667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
+      "pricing_summary": "Starter: €20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: €50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: €667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
       "pricing_url": "https://n8n.io/pricing/",
       "docs_url": "https://docs.n8n.io/build/integrate-ai",
       "privacy_url": "https://n8n.io/legal/privacy/",
@@ -610,7 +610,7 @@
       "docs_url": "",
       "privacy_url": "https://allvideoai.com/privacy",
       "rights_url": "",
-      "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published \u2014 commercial-use terms should be confirmed in ToS before client delivery.",
+      "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published — commercial-use terms should be confirmed in ToS before client delivery.",
       "unresolved_claims": [
         "Output ownership/commercial rights not documented on a dedicated page"
       ]
@@ -733,7 +733,7 @@
     {
       "slug": "harvey",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Harvey\u2019s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
+      "pricing_summary": "Harvey’s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
       "pricing_url": "https://www.harvey.ai/",
       "docs_url": "https://www.harvey.ai/",
       "privacy_url": "https://www.harvey.ai/en-US/security",
@@ -748,7 +748,7 @@
     {
       "slug": "spellbook",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Spellbook\u2019s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
+      "pricing_summary": "Spellbook’s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
       "pricing_url": "https://spellbook.com/",
       "docs_url": "https://help.spellbook.legal/en/articles/9926203-getting-started-with-spellbook",
       "privacy_url": "https://spellbook.com/security",
@@ -763,7 +763,7 @@
     {
       "slug": "cocounsel",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Thomson Reuters\u2019 official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
+      "pricing_summary": "Thomson Reuters’ official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
       "pricing_url": "https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing",
       "docs_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
       "privacy_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
@@ -899,7 +899,7 @@
       "slug": "htmlslides",
       "pricing_checked_date": "2026-08-27",
       "pricing_summary": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5/60 credits, $10/150 credits. Credits non-refundable, may expire.",
-      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change \u2014 launch offer price noted.",
+      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change — launch offer price noted.",
       "pricing_url": "https://www.htmlslides.ai/pricing",
       "docs_url": "https://www.htmlslides.ai/terms",
       "privacy_url": "https://www.htmlslides.ai/privacy"
@@ -970,86 +970,92 @@
     },
     {
       "slug": "shortwave",
-      "pricing_checked_date": "2026-08-29",
-      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
-      "pricing_url": "https://www.shortwave.com/",
-      "docs_url": "https://www.shortwave.com//docs/",
-      "privacy_url": "https://www.shortwave.com//privacy/",
-      "rights_url": "https://www.shortwave.com//terms/",
-      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "pricing_checked_date": "2026-09-01",
+      "pricing_summary": "Business is $30/seat/month, Premier is $45/seat/month, and Max is $120/seat/month. Business includes standard intelligence (Claude Sonnet 4.6), roughly 150-300 AI requests/day, 5 years AI search history, 50 threads per AI search, 3 AI filters, and AI integrations. Premier adds advanced intelligence, 2x AI usage, unlimited AI search history, 100 threads per search, and 10 AI filters. Max adds expert intelligence (Claude Opus 4.6), 6x AI usage, 150 threads per search, and 50 AI filters. A 14-day free trial is advertised; no permanent free plan is listed on the pricing page.",
+      "pricing_url": "https://www.shortwave.com/pricing/",
+      "docs_url": "https://www.shortwave.com/",
+      "privacy_url": "https://www.shortwave.com/policies/privacy-policy/",
+      "rights_url": "https://www.shortwave.com/terms",
+      "verification_notes": "Official pricing page checked 2026-09-01. Terms of Service last updated January 26, 2023; Privacy Policy last updated July 10, 2025. Terms state users own their User Content and grant Shortwave operational rights. Shortwave integrates with a sister product, Tasklet, for 24/7 workflow automation. The pricing page does not list a permanent free plan; only a 14-day free trial is advertised.",
       "unresolved_claims": [
-        "Official pricing, rights, and privacy statements have not been verified.",
-        "Affiliate program status and revenue terms are unknown until checked against official sources."
+        "The Terms of Service are dated January 2023 and may not reflect current AI-feature-specific data-use practices.",
+        "The pricing page does not publish exact API rate limits or team-plan entitlements beyond the listed AI usage tiers.",
+        "No explicit AI-output ownership or commercial-use license clause was found in the retrieved Terms; users retain rights in User Content but commercial use of AI-generated output is not separately addressed."
       ]
     },
     {
       "slug": "browse-ai",
-      "pricing_checked_date": "2026-08-29",
-      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
-      "pricing_url": "https://www.browse.ai/",
-      "docs_url": "https://www.browse.ai//docs/",
-      "privacy_url": "https://www.browse.ai//privacy/",
-      "rights_url": "https://www.browse.ai//terms/",
-      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "pricing_checked_date": "2026-09-01",
+      "pricing_summary": "Free: $0 forever, unlimited robots, 2 websites, 3 users. Personal: $48/month or $19/month billed annually, 5 websites, 3 users. Professional: $87/month or $69/month billed annually, 10 websites, 10 users, priority support. Premium: starting at $500/month billed annually, custom websites and users, fully managed onboarding, ongoing data management, and a dedicated account manager. Credits are consumed per task (10 rows per credit); unused credits reset at billing cycle end. Prices are in USD.",
+      "pricing_url": "https://www.browse.ai/pricing",
+      "docs_url": "https://www.browse.ai/",
+      "privacy_url": "https://www.browse.ai/about/privacy",
+      "rights_url": "https://www.browse.ai/legal/terms",
+      "verification_notes": "Official pricing page checked 2026-09-01. Browse AI is based in British Columbia, Canada; uses AWS US datacenters and Auth0 for authentication. The Terms of Service provide services on an 'as is' basis without warranties of fitness for a particular purpose. A Trust Center lists SOC 2 Type II, GDPR, and CCPA compliance resources (vendor claims). Credits reset at the end of each billing cycle and do not carry over unless the plan is upgraded mid-cycle. Annual billing provides a 20% discount.",
       "unresolved_claims": [
-        "Official pricing, rights, and privacy statements have not been verified.",
-        "Affiliate program status and revenue terms are unknown until checked against official sources."
+        "SOC 2 Type II, GDPR, and CCPA marks are vendor-published, not independently certified by AIToolsEssentials.",
+        "The Terms of Service do not provide an explicit AI-output ownership or commercial-use clause; extracted data ownership depends on the user's right to access the source website.",
+        "Premium plan pricing above the $500/month starting point is quote-specific."
       ]
     },
     {
       "slug": "rows",
-      "pricing_checked_date": "2026-08-29",
-      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
-      "pricing_url": "https://rows.com/",
-      "docs_url": "https://rows.com//docs/",
-      "privacy_url": "https://rows.com//privacy/",
-      "rights_url": "https://rows.com//terms/",
-      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "pricing_checked_date": "2026-09-01",
+      "pricing_summary": "Free: $0 forever, 5 AI tasks/month, manual data import, 10 integration accounts, 3 guests. Plus: $8/month per user billed monthly or $6/month billed annually, 200 AI tasks/month, daily data automation, 10 integration accounts, 10 guests. Pro: $79/month + $8/month per user billed monthly or $59/month + $6/month per user billed annually, 1,000 AI tasks/month, per-minute data automation, 100 integration accounts, 200 guests, video support. Enterprise: custom pricing with custom AI models, advanced API endpoints, SAML SSO, and a dedicated CS manager. Prices are net, exclusive of applicable sales tax or VAT.",
+      "pricing_url": "https://rows.com/pricing",
+      "docs_url": "https://rows.com/",
+      "privacy_url": "https://rows.com/privacy",
+      "rights_url": "https://rows.com/terms",
+      "verification_notes": "Official pricing page checked 2026-09-01. Rows is operated by Rows GmbH, Berlin, Germany. Terms of use dated June 5, 2023 note that services are offered to entrepreneurs or businesses. Rows joined Superhuman; the terms page footer references superhuman.com/legal/terms. The Terms grant Rows a royalty-free, worldwide, transferable, perpetual license to use user feedback. The Privacy Policy (February 3, 2025) describes processing of Customer Account Data, Customer Spreadsheet Data, Partner API Integration Data, and Stored Integration Data under GDPR.",
       "unresolved_claims": [
-        "Official pricing, rights, and privacy statements have not been verified.",
-        "Affiliate program status and revenue terms are unknown until checked against official sources."
+        "The Terms of use are dated June 2023 and the Privacy Policy February 2025; current AI-feature-specific data-use practices may differ.",
+        "The Terms do not provide an explicit AI-output ownership or commercial-use clause.",
+        "Enterprise pricing above the published tiers is quote-specific."
       ]
     },
     {
       "slug": "notebooklm",
-      "pricing_checked_date": "2026-08-29",
-      "pricing_summary": "Free \u2014 official pricing page should be verified before publication.",
-      "pricing_url": "https://notebooklm.google.com/",
-      "docs_url": "https://notebooklm.google.com//docs/",
-      "privacy_url": "https://notebooklm.google.com//privacy/",
-      "rights_url": "https://notebooklm.google.com//terms/",
-      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "pricing_checked_date": "2026-09-01",
+      "pricing_summary": "NotebookLM has been renamed to Gemini Notebook. The official about page states it is free to use for individuals. The page advertises uploading PDFs, websites, YouTube videos, audio files, Google Docs, and Google Slides; summarization with citations; and an Audio Overview feature. No paid consumer subscription price was published on the about page during verification.",
+      "pricing_url": "https://notebooklm.google.com/about/",
+      "docs_url": "https://notebooklm.google.com/",
+      "privacy_url": "https://policies.google.com/",
+      "rights_url": "https://policies.google.com/",
+      "verification_notes": "Official about page checked 2026-09-01. The page states: 'We value your privacy and never use your organization's data to train Gemini Notebook.' When used as an individual, data is not used for training unless the user shares feedback. The product is powered by Gemini's multimodal capabilities. A support page (support.google.com/gemininotebook/answer/16179536) provides additional privacy details. Privacy and Terms are governed by Google's policies at policies.google.com.",
       "unresolved_claims": [
-        "Official pricing, rights, and privacy statements have not been verified.",
-        "Affiliate program status and revenue terms are unknown until checked against official sources."
+        "The about page does not publish paid plan prices; if a premium tier exists, it was not exposed on the retrieved page.",
+        "Google's general terms and policies govern use; no product-specific commercial-use or output-ownership clause was found on the NotebookLM page.",
+        "The rename from NotebookLM to Gemini Notebook may not be fully reflected across all Google surfaces."
       ]
     },
     {
       "slug": "typingmind",
-      "pricing_checked_date": "2026-08-29",
-      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
-      "pricing_url": "https://www.typingmind.com/",
-      "docs_url": "https://www.typingmind.com//docs/",
-      "privacy_url": "https://www.typingmind.com//privacy/",
-      "rights_url": "https://www.typingmind.com//terms/",
-      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "pricing_checked_date": "2026-09-01",
+      "pricing_summary": "TypingMind offers one-time lifetime licenses: Standard at $39 (basic chat, AI agents, voice input, chat sharing), Extended at $79 (adds image generation, web search, text-to-speech, vision/images, document upload), and Premium at $99 (discounted from $198, adds multi-model chats, unlimited plugins, projects and folders, artifacts, free updates). A Bulk License for up to 10 users on 50 devices is $395 (discounted from $790). TypingMind for Teams is available as a separate custom portal. All plans are one-time payments; price does not include API costs (users supply their own API keys) or additional cloud storage. A 14-day money-back guarantee is offered.",
+      "pricing_url": "https://typingmind.com/buy",
+      "docs_url": "https://www.typingmind.com/",
+      "privacy_url": "https://www.typingmind.com/",
+      "rights_url": "https://www.typingmind.com/",
+      "verification_notes": "Official pricing page (typingmind.com/buy) checked 2026-09-01. TypingMind is a BYOK (bring-your-own-key) LLM frontend; users connect their own OpenAI, Anthropic, Google, or local Ollama API keys and pay providers directly for usage. The app is not open-source; self-hosting is available with a license key but only the compiled code is provided. The homepage states data is stored locally by default and conversations are not used for AI training. The Premium tier was advertised at 50% off ($99 from $198) as a limited-time offer.",
       "unresolved_claims": [
-        "Official pricing, rights, and privacy statements have not been verified.",
-        "Affiliate program status and revenue terms are unknown until checked against official sources."
+        "The $99 Premium price is a limited-time 50% off discount; the regular price is $198 and may revert.",
+        "API costs are separate and depend on the user's chosen model provider and usage; TypingMind does not publish or control those rates.",
+        "The self-hosted version provides compiled code only, not source code; modification rights are not granted."
       ]
     },
     {
       "slug": "speechify",
-      "pricing_checked_date": "2026-08-29",
-      "pricing_summary": "Free + paid plans \u2014 official pricing page should be verified before publication.",
-      "pricing_url": "https://speechify.com/",
-      "docs_url": "https://speechify.com//docs/",
-      "privacy_url": "https://speechify.com//privacy/",
-      "rights_url": "https://speechify.com//terms/",
-      "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
+      "pricing_checked_date": "2026-09-01",
+      "pricing_summary": "Free: $0, listen at up to 1.5x speed, 10 robotic-sounding voices, text-to-speech features only. Premium: $29/month, includes 1000+ natural voices, 60+ languages, 5x speed, scan and listen, AI summaries and chats, Google Drive/Dropbox/OneDrive integrations, voice typing, AI podcasts, and a voice AI assistant. The pricing page did not expose an annual billing option or a team/enterprise price during verification.",
+      "pricing_url": "https://speechify.com/pricing/",
+      "docs_url": "https://speechify.com/",
+      "privacy_url": "https://speechify.com/privacy/",
+      "rights_url": "https://speechify.com/terms",
+      "verification_notes": "Official pricing page checked 2026-09-01. Terms of Service state that Speechify Voice Over Studio AI voice overs may be used for commercial purposes. The Terms grant a non-exclusive, non-transferable, revocable license for personal use of the app on one registered account on one device. The Privacy Policy (updated July 22, 2026) states Speechify does not sell user information and offers both free and paid services. An AI Voice API is available under supplementary terms at speechify.com/terms-ai-voice-api.",
       "unresolved_claims": [
-        "Official pricing, rights, and privacy statements have not been verified.",
-        "Affiliate program status and revenue terms are unknown until checked against official sources."
+        "The pricing page displayed only a monthly Premium price ($29/month); no annual or multi-seat plan price was exposed.",
+        "Commercial use is permitted for Voice Over Studio output, but the general app license is for personal use on one device; broader commercial deployment may require additional terms.",
+        "The Privacy Policy does not explicitly state whether user content (uploaded text) is used to train Speechify's AI models."
       ]
     }
   ]

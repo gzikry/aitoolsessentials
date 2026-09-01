@@ -269,28 +269,28 @@
       "digest": "Udio official pricing lists Standard at $10/month with 1,200 monthly credits, no daily limit, up to 6 concurrent songs, editing tools, stems, and custom cover art. Pro at $30/month with 4,800 monthly credits and up to 8 concurrent songs. Free plan at $0 with 100 credits/month and 10 credit daily limit. Top-ups: 100 credits $3.00, 1,000 credits $25.00. udio.com/pricing checked 2026-08-28."
     },
     "shortwave": {
-      "date": "2026-08-29",
-      "digest": "Free + paid plans \u2014 official pricing digest should be verified before publication."
+      "date": "2026-09-01",
+      "digest": "Business is $30/seat/month, Premier is $45/seat/month, and Max is $120/seat/month. Business includes standard intelligence (Claude Sonnet 4.6), roughly 150-300 AI requests/day, 5 years AI search histo"
     },
     "browse-ai": {
-      "date": "2026-08-29",
-      "digest": "Free + paid plans \u2014 official pricing digest should be verified before publication."
+      "date": "2026-09-01",
+      "digest": "Free: $0 forever, unlimited robots, 2 websites, 3 users. Personal: $48/month or $19/month billed annually, 5 websites, 3 users. Professional: $87/month or $69/month billed annually, 10 websites, 10 us"
     },
     "rows": {
-      "date": "2026-08-29",
-      "digest": "Free + paid plans \u2014 official pricing digest should be verified before publication."
+      "date": "2026-09-01",
+      "digest": "Free: $0 forever, 5 AI tasks/month, manual data import, 10 integration accounts, 3 guests. Plus: $8/month per user billed monthly or $6/month billed annually, 200 AI tasks/month, daily data automation"
     },
     "notebooklm": {
-      "date": "2026-08-29",
-      "digest": "Free \u2014 official pricing digest should be verified before publication."
+      "date": "2026-09-01",
+      "digest": "NotebookLM has been renamed to Gemini Notebook. The official about page states it is free to use for individuals. The page advertises uploading PDFs, websites, YouTube videos, audio files, Google Docs"
     },
     "typingmind": {
-      "date": "2026-08-29",
-      "digest": "Free + paid plans \u2014 official pricing digest should be verified before publication."
+      "date": "2026-09-01",
+      "digest": "TypingMind offers one-time lifetime licenses: Standard at $39 (basic chat, AI agents, voice input, chat sharing), Extended at $79 (adds image generation, web search, text-to-speech, vision/images, doc"
     },
     "speechify": {
-      "date": "2026-08-29",
-      "digest": "Free + paid plans \u2014 official pricing digest should be verified before publication."
+      "date": "2026-09-01",
+      "digest": "Free: $0, listen at up to 1.5x speed, 10 robotic-sounding voices, text-to-speech features only. Premium: $29/month, includes 1000+ natural voices, 60+ languages, 5x speed, scan and listen, AI summarie"
     }
   },
   "changes": [
@@ -307,6 +307,48 @@
       "previous_check": "2026-08-21",
       "new_check": "2026-08-25",
       "note": "Grok: official pricing page changed since 2026-08-21 check. Re-verified 2026-08-25."
+    },
+    {
+      "slug": "shortwave",
+      "detected": "2026-09-01",
+      "previous_check": "2026-08-29",
+      "new_check": "2026-09-01",
+      "note": "Shortwave: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+    },
+    {
+      "slug": "browse-ai",
+      "detected": "2026-09-01",
+      "previous_check": "2026-08-29",
+      "new_check": "2026-09-01",
+      "note": "Browse AI: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+    },
+    {
+      "slug": "rows",
+      "detected": "2026-09-01",
+      "previous_check": "2026-08-29",
+      "new_check": "2026-09-01",
+      "note": "Rows: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+    },
+    {
+      "slug": "notebooklm",
+      "detected": "2026-09-01",
+      "previous_check": "2026-08-29",
+      "new_check": "2026-09-01",
+      "note": "NotebookLM: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+    },
+    {
+      "slug": "typingmind",
+      "detected": "2026-09-01",
+      "previous_check": "2026-08-29",
+      "new_check": "2026-09-01",
+      "note": "TypingMind: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+    },
+    {
+      "slug": "speechify",
+      "detected": "2026-09-01",
+      "previous_check": "2026-08-29",
+      "new_check": "2026-09-01",
+      "note": "Speechify: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
     }
   ],
   "updated": "2026-09-01"
