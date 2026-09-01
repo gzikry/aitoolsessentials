@@ -39,7 +39,7 @@
     {
       "name": "ElevenLabs",
       "slug": "elevenlabs",
-      "category": "Audio",
+      "category": "Audio & Video",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/elevenlabs/"
     },
@@ -102,7 +102,7 @@
     {
       "name": "Canva AI",
       "slug": "canva-ai",
-      "category": "Creative & Marketing",
+      "category": "Creative",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/canva-ai/"
     },
@@ -200,14 +200,14 @@
     {
       "name": "Copy.ai",
       "slug": "copy-ai",
-      "category": "Marketing",
+      "category": "Creative",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/copy-ai/"
     },
     {
       "name": "Jasper",
       "slug": "jasper",
-      "category": "Marketing",
+      "category": "Creative",
       "price": "Paid plans",
       "url": "https://aitoolsessentials.com/tools/jasper/"
     },
@@ -235,14 +235,14 @@
     {
       "name": "Poe",
       "slug": "poe",
-      "category": "Model Hub",
+      "category": "General AI Assistant",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/poe/"
     },
     {
       "name": "Gamma",
       "slug": "gamma",
-      "category": "Presentations",
+      "category": "Productivity",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/gamma/"
     },
@@ -312,7 +312,7 @@
     {
       "name": "Grammarly",
       "slug": "grammarly",
-      "category": "Writing & Productivity",
+      "category": "Productivity",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/grammarly/"
     },
@@ -431,14 +431,14 @@
     {
       "name": "Riverside",
       "slug": "riverside-fm",
-      "category": "Audio Production",
+      "category": "Audio & Video",
       "price": "Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom",
       "url": "https://aitoolsessentials.com/tools/riverside-fm/"
     },
     {
       "name": "Adobe Podcast",
       "slug": "adobe-enhance-speech",
-      "category": "Audio Production",
+      "category": "Audio & Video",
       "price": "Free plan with published daily limits; Premium via official 30-day trial \u2014 no public USD list price on the plans page during this check",
       "url": "https://aitoolsessentials.com/tools/adobe-enhance-speech/"
     },
@@ -459,7 +459,7 @@
     {
       "name": "HtmlSlides",
       "slug": "htmlslides",
-      "category": "Presentations",
+      "category": "Productivity",
       "price": "Free + Pro $9.90/mo (launch offer) + credit packs from $1",
       "url": "https://aitoolsessentials.com/tools/htmlslides/"
     },
@@ -473,49 +473,49 @@
     {
       "name": "Ideogram",
       "slug": "ideogram",
-      "category": "Image Generation",
+      "category": "Creative",
       "price": null,
       "url": "https://aitoolsessentials.com/tools/ideogram/"
     },
     {
       "name": "Luma AI",
       "slug": "luma-ai",
-      "category": "Video & 3D",
+      "category": "Video",
       "price": null,
       "url": "https://aitoolsessentials.com/tools/luma-ai/"
     },
     {
       "name": "Pika",
       "slug": "pika",
-      "category": "Video Generation",
+      "category": "Video",
       "price": null,
       "url": "https://aitoolsessentials.com/tools/pika/"
     },
     {
       "name": "Suno",
       "slug": "suno",
-      "category": "Music & Audio",
+      "category": "Audio & Video",
       "price": null,
       "url": "https://aitoolsessentials.com/tools/suno/"
     },
     {
       "name": "Udio",
       "slug": "udio",
-      "category": "Music & Audio",
+      "category": "Audio & Video",
       "price": null,
       "url": "https://aitoolsessentials.com/tools/udio/"
     },
     {
       "name": "Shortwave",
       "slug": "shortwave",
-      "category": "Email AI",
+      "category": "Productivity",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/shortwave/"
     },
     {
       "name": "Browse AI",
       "slug": "browse-ai",
-      "category": "Browser Automation",
+      "category": "Automation",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/browse-ai/"
     },
@@ -543,7 +543,7 @@
     {
       "name": "Speechify",
       "slug": "speechify",
-      "category": "Audio Production",
+      "category": "Audio & Video",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/speechify/"
     }

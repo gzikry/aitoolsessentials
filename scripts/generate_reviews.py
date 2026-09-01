@@ -114,7 +114,20 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
             parts = re.split('-vs-', c.stem)
             if any(p == slug or p == name_key or p in name_key for p in parts):
                 comp_links.append((c.name, c.stem.replace('-', ' ').title()))
-    comp_links = comp_links[:3]
+    comp_links = comp_links[:5]
+
+    # Find related articles (worth-it guides, deep comparisons, audience guides)
+    article_links = []
+    articles_dir = root / 'articles'
+    if articles_dir.exists():
+        name_key = name.lower().replace(' ', '-')
+        for a in sorted(articles_dir.glob('*.html')):
+            a_html = a.read_text()
+            if f'/tools/{slug}/' in a_html or f'/{slug}' in a_html:
+                title_match = re.search(r'<title>(.*?)</title>', a_html)
+                title = title_match.group(1).replace(' | AIToolsEssentials', '') if title_match else a.stem.replace('-', ' ').title()
+                article_links.append((a.name, title))
+    article_links = article_links[:5]
 
     related_html = ''
     for r in related:
@@ -126,6 +139,11 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
         comp_html += f'<a class="text-link" href="../../comparisons/{fname}">{label}</a><br>\n'
     if not comp_html:
         comp_html = '<a class="text-link" href="../../comparisons/best-ai-tools.html">All AI tool comparisons</a>\n'
+
+    article_aside_html = ''
+    if article_links:
+        items = ''.join(f'<li><a href="../../articles/{fname}">{title[:80]}</a></li>' for fname, title in article_links)
+        article_aside_html = f'<div class="score-card"><span>Guides &amp; deep dives</span><ul style="margin:0;padding-left:0;list-style:none;display:grid;gap:10px">{items}</ul></div>'
 
     if source_record:
         price_html = official_source_html
@@ -167,6 +185,26 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     faq_html = ''
     for q, a in faq:
         faq_html += f'<details><summary>{q}</summary><p>{a}</p></details>\n'
+
+    # FAQPage JSON-LD schema for rich results
+    faq_schema = ''
+    if faq:
+        faq_entities = []
+        for q, a in faq:
+            import html as _html
+            faq_entities.append({
+                "@type": "Question",
+                "name": q,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": _html.unescape(re.sub(r'<[^>]+>', '', a))
+                }
+            })
+        faq_schema = json.dumps({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faq_entities
+        })
     same_cat_n = len([x for x in tools if x['slug'] != slug and category in x.get('category', '')])
     compare_names = ', '.join(r['name'] for r in related[:3])
     compare_para = (
@@ -206,6 +244,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <link rel="canonical" href="{DOMAIN}/tools/{slug}/">
 <link rel="stylesheet" href="../css/styles.css">
 <script type="application/ld+json">{schema}</script>
+{f'<script type="application/ld+json">{faq_schema}</script>' if faq_schema else ''}
 </head>
 <body>
 <header class="global-nav">
@@ -294,6 +333,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <span>Comparisons</span>
 {comp_html}
 </div>
+{article_aside_html}
 </aside>
 </div>
 

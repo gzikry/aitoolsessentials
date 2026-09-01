@@ -1,4 +1,5 @@
 tool,slug,pricing,best_for,member_note
+ElevenLabs,elevenlabs,Free + paid plans,"AI voice generation, dubbing, narration, and voice agents","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
 Descript,descript,Free + paid plans,Podcast and video editing with transcript-based workflows,"Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
 Leonardo AI,leonardo-ai,Free + paid plans,"Game assets, concept art, product mockups, and controlled image generation","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
 Midjourney,midjourney,Paid plans,High-quality image generation and concept visuals,"Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
@@ -7,6 +8,10 @@ HeyGen,heygen,Free + paid plans,"AI avatars, video localization, and presenter-s
 Runway,runway,Free + paid plans,AI video generation and creative production experiments,"Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
 Synthesia,synthesia,Paid plans,Enterprise training videos and AI avatar presentations,"Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
 AllVideoAI,allvideoai,Free tier + credit plans from $17/month,"Multi-model AI video generation from text prompts, images, and source footage in one workspace","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
-Ideogram,ideogram,,"Marketing visuals, Social media graphics, Concept art","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
+Riverside,riverside-fm,"Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom","remote podcast recording, AI editing, clips, and hosting with a published free plan","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
+Adobe Podcast,adobe-enhance-speech,Free plan with published daily limits; Premium via official 30-day trial — no public USD list price on the plans page during this check,browser speech enhancement and short studio sessions with a published free plan,"Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
 Luma AI,luma-ai,,"Product demos, Social video, 3D prototyping","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
 Pika,pika,,"Short-form video, Marketing clips, Creative experiments","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
+Suno,suno,,"Content creators, Podcast intros, Marketing music","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
+Udio,udio,,"Background music, Content scoring, Audio prototyping","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
+Speechify,speechify,Free + paid plans,"Text-to-speech reading assistant for documents, web, and learning","Test with one real brand-styled asset before committing; compare output acceptance rate, not just samples."
