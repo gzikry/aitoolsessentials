@@ -270,6 +270,8 @@ def main():
         raw = html_path.read_text()
         if '.html.html' in raw:
             errors.append(f'{rel} still contains doubled .html.html URL')
+        if '</html>' not in raw.lower():
+            errors.append(f'{rel} is truncated (missing </html>)')
         canons = re.findall(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', raw, flags=re.I)
         canons += re.findall(r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']', raw, flags=re.I)
         for href in canons:

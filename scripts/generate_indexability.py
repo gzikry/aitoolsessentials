@@ -56,6 +56,31 @@ def _expected_url(rel: Path) -> str:
     return f"{DOMAIN}/" + "/".join(rel.parts)
 
 
+def _close_truncated_document(html: str) -> str:
+    """Close leftover sitemap pages that were cut off mid-tag. Does not invent copy."""
+    html = re.sub(r"<li>[^<]*\Z", "", html)
+    html = re.sub(r"<se\Z", "", html)
+    html = re.sub(r"<[a-zA-Z][^>]*\Z", "", html)
+    for tag in ("ul", "ol", "article", "div", "section", "main"):
+        opens = len(re.findall(rf"<{tag}(?:\s|>)", html, flags=re.I))
+        closes = len(re.findall(rf"</{tag}>", html, flags=re.I))
+        if opens > closes:
+            html += "".join(f"</{tag}>" for _ in range(opens - closes))
+    if not re.search(r"<footer\b", html, flags=re.I):
+        html += (
+            '<footer class="footer"><span>© 2026 AIToolsEssentials</span>'
+            '<a href="/advertise/" rel="nofollow">Advertise</a>'
+            '<a href="/submit-tool.html" rel="nofollow">Submit a tool</a>'
+            '<a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>'
+            "</footer>"
+        )
+    if not re.search(r"</body\s*>", html, flags=re.I):
+        html += '<script src="/js/site.js" defer></script></body>'
+    if not re.search(r"</html\s*>", html, flags=re.I):
+        html += "</html>"
+    return html
+
+
 def _set_title(html: str, title: str) -> str:
     html = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", html, count=1, flags=re.S | re.I)
     html = re.sub(
@@ -117,9 +142,17 @@ def fix_canonicals_and_titles(root: Path) -> dict[str, int]:
                     html = _set_title(html, f"{base} — same-task pick | AIToolsEssentials")
                     stats["titles"] += 1
 
-        if rel_s in CITE_TARGETS and CITE_START not in html and "</main>" in html:
-            html = html.replace("</main>", CITE_MODULE + "\n</main>", 1)
-            stats["cite"] += 1
+        if rel_s in CITE_TARGETS and CITE_START not in html:
+            if "</main>" in html:
+                html = html.replace("</main>", CITE_MODULE + "\n</main>", 1)
+                stats["cite"] += 1
+            elif re.search(r"<footer\b", html, flags=re.I):
+                html = re.sub(r"<footer\b", CITE_MODULE + r"\n<footer", html, count=1, flags=re.I)
+                stats["cite"] += 1
+
+        if not re.search(r"</html\s*>", html, flags=re.I):
+            html = _close_truncated_document(html)
+            stats["canonicals"] += 1
 
         if html != orig:
             p.write_text(html)
