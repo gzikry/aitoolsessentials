@@ -420,6 +420,143 @@ ARTICLES["is-poe-worth-it.html"] = {
 }
 
 
+ARTICLES["is-aibase-worth-it.html"] = {
+    "title": "Is AIBase worth it?",
+    "desc": "Whether AIBase's credit-based workspace for AI images and video is worth paying for over subscribing to individual tools.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you regularly use multiple AI image and video models and want one credit pool instead of separate subscriptions. Not worth it if you only need one model (subscribe directly) or if you barely generate (free tiers may suffice).</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>One credit-based workspace wrapping multiple third-party image and video models</li><li>Basic $29.9/mo, Pro $49.9/mo, Ultimate $99.9/mo (yearly 20-40% off)</li><li>Pay-as-you-go credit packs available</li></ul>
+<p>Current pricing on the <a href="https://aibase.art/pricing" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When AIBase is worth it</h2>
+<ul><li>You generate images or video several times a week across multiple models</li><li>You want to compare model output without separate subscriptions</li><li>You value a single credit pool over managing multiple vendor relationships</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You use one model almost exclusively — pay that vendor directly for better rates</li><li>You generate fewer than 20-30 assets a month — the free trial or individual free tiers may cover you</li><li>You need production rights — verify the commercial terms for your specific use case</li></ul>
+<p>See the <a href="../tools/aibase/">AIBase review</a> and <a href="../pricing-watch/">Pricing Watch</a> for current plan structure and evidence dates.</p>
+"""}
+
+ARTICLES["is-allvideoai-worth-it.html"] = {
+    "title": "Is AllVideoAI worth it?",
+    "desc": "Whether AllVideoAI's multi-model video workspace earns its subscription over single-tool alternatives.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you produce AI video regularly and want multiple models (text-to-video, image-to-video, face swap) in one place. Not worth it for occasional clips or if one model does everything you need.</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Free tier with limited generations</li><li>Starter $17/month (billed annually, $204/year)</li><li>Higher tiers with more credits and faster generation</li></ul>
+<p>Current pricing on the <a href="https://allvideoai.com/pricing" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When AllVideoAI is worth it</h2>
+<ul><li>You generate video from multiple source types (text, image, reference footage)</li><li>You want to compare output across models without separate subscriptions</li><li>You produce video at least weekly for real work</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You only need text-to-video — a dedicated tool may be cheaper</li><li>You produce fewer than 10-20 clips a month — the free tier may suffice</li><li>You need commercial rights — verify the license terms before selling output</li></ul>
+<p>Compare with dedicated alternatives in our <a href="../comparisons/best-ai-tools.html">best AI tools comparison</a>.</p>
+"""}
+
+ARTICLES["is-htmlslides-worth-it.html"] = {
+    "title": "Is HtmlSlides worth it?",
+    "desc": "Whether HtmlSlides' AI HTML presentation maker is worth paying for over traditional slide tools.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you create presentations from briefs regularly and want them interactive and web-shareable. Not worth it if you only make slides occasionally or need heavy collaboration features.</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Free: 10 templates, 50MB storage</li><li>Pro $9.90/month (launch offer): all official templates, more storage</li><li>Credit packs available for additional generations</li></ul>
+<p>Current pricing on the <a href="https://www.htmlslides.ai/pricing" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When HtmlSlides is worth it</h2>
+<ul><li>You create presentations from topic briefs or outlines</li><li>You want slides that play in any browser without software</li><li>You need to share or embed decks without requiring sign-in</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You collaborate heavily in real-time — traditional tools have stronger co-editing</li><li>You only make slides monthly — the free tier may suffice</li><li>You need advanced animations — interactive HTML has limits compared to dedicated presentation software</li></ul>
+<p>See our full <a href="../tools/htmlslides/">HtmlSlides review</a> for scoring and evidence dates.</p>
+"""}
+
+ARTICLES["is-luma-ai-worth-it.html"] = {
+    "title": "Is Luma AI worth it?",
+    "desc": "Whether Luma AI's 3D and video generation platform is worth its subscription for product demos, social video, or 3D prototyping.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you need photorealistic 3D models or AI-generated video from text prompts for real work. Not worth it for casual use or if you only need one output type (a dedicated tool may be cheaper).</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Plus $30/month or $300/year with 10,000 credits</li><li>Pro $90/month or $900/year with 40,000 credits</li><li>Ultra $300/month or $3,000/year with 150,000 credits</li><li>Team and Enterprise are sales-assisted</li></ul>
+<p>Current pricing on the <a href="https://lumalabs.ai/pricing" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When Luma AI is worth it</h2>
+<ul><li>You create 3D product prototypes from text or images</li><li>You generate social video content from reference footage</li><li>You need both 3D and video output in one workflow</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You only need 2D images — dedicated image generators are cheaper</li><li>You produce fewer than 20-30 assets a month — the credit cost may not justify a subscription</li><li>You need production-use rights — verify the commercial license before selling output</li></ul>
+<p>Compare with <a href="../tools/runway/">Runway</a> and <a href="../tools/pika/">Pika</a> in our video tool comparisons.</p>
+"""}
+
+ARTICLES["is-shortwave-worth-it.html"] = {
+    "title": "Is Shortwave worth it?",
+    "desc": "Whether Shortwave's AI email client is worth paying for over Gmail's built-in features plus a separate AI assistant.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you live in Gmail and want AI triage, summaries, reminders, and scheduled send without switching tools. Not worth it if you barely process email or if Gmail's built-in AI covers your needs.</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Free tier with limited AI features</li><li>Business $30/seat/month, Premier $45/seat/month, Max $120/seat/month</li></ul>
+<p>Current pricing on the <a href="https://www.shortwave.com/pricing/" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When Shortwave is worth it</h2>
+<ul><li>You process 50+ emails daily and want AI triage built into Gmail</li><li>You need AI-powered search across your entire email history</li><li>You want scheduled send and reminders without a separate tool</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You process fewer than 20 emails a day — Gmail's built-in features may suffice</li><li>You use Outlook or Apple Mail — Shortwave is Gmail-only</li><li>You need heavy team collaboration — dedicated email platforms have stronger shared inbox features</li></ul>
+<p>See the <a href="../tools/shortwave/">Shortwave review</a> for full scoring and evidence.</p>
+"""}
+
+ARTICLES["is-browse-ai-worth-it.html"] = {
+    "title": "Is Browse AI worth it?",
+    "desc": "Whether Browse AI's visual web automation platform is worth paying for over coding your own scrapers or using simpler tools.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you need to monitor or extract data from websites regularly and want a no-code interface. Not worth it for one-time scraping or if you have developers who can build custom scrapers.</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Free: unlimited robots, 2 websites, 3 users</li><li>Personal $48/month or $480/year</li><li>Team and Enterprise tiers for more websites and users</li></ul>
+<p>Current pricing on the <a href="https://www.browse.ai/pricing" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When Browse AI is worth it</h2>
+<ul><li>You monitor websites for changes (pricing, availability, content) regularly</li><li>You need to extract structured data without writing code</li><li>You want scheduled robot runs with notifications</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You scrape once or rarely — a manual tool or one-time service is cheaper</li><li>You need to scrape JavaScript-heavy sites — verify compatibility first</li><li>You have engineering resources — custom scrapers give more control</li></ul>
+<p>See our <a href="../tools/browse-ai/">Browse AI review</a> for detailed evaluation and evidence dates.</p>
+"""}
+
+ARTICLES["is-rows-worth-it.html"] = {
+    "title": "Is Rows worth it?",
+    "desc": "Whether Rows' AI-native spreadsheet with integrated data connections is worth paying for over traditional spreadsheets plus separate AI tools.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you regularly import data from external sources and want AI transformations built into the spreadsheet. Not worth it if you mostly do manual data entry or if your current spreadsheet + AI add-on covers your needs.</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Free: 5 AI tasks/month, manual data import, 10 integration accounts</li><li>Paid tiers with more AI tasks, automation, and integrations</li></ul>
+<p>Current pricing on the <a href="https://rows.com/pricing" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When Rows is worth it</h2>
+<ul><li>You pull data from APIs or integrations regularly</li><li>You want AI-powered transformations without leaving the spreadsheet</li><li>You collaborate with teammates on data-driven projects</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You mostly do manual data entry — traditional spreadsheets are sufficient</li><li>You need heavy scripting — a full database or BI tool is more appropriate</li><li>You are deeply invested in Google Sheets or Excel — migration has a cost</li></ul>
+<p>Compare with <a href="../tools/airtable-ai/">Airtable AI</a> and <a href="../tools/gamma/">Gamma</a> in our productivity tool comparisons.</p>
+"""}
+
+ARTICLES["is-typingmind-worth-it.html"] = {
+    "title": "Is TypingMind worth it?",
+    "desc": "Whether TypingMind's self-hosted multi-model chat interface is worth paying for over using individual model interfaces directly.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you use multiple LLM providers regularly and want one interface with prompt library and model routing. Not worth it if you use one model or prefer official interfaces.</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Free tier with basic features</li><li>Standard $39 one-time (basic chat, AI agent)</li><li>Higher tiers with more features and priority support</li></ul>
+<p>Current pricing on the <a href="https://typingmind.com/buy" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When TypingMind is worth it</h2>
+<ul><li>You switch between multiple LLM providers regularly</li><li>You want a self-hosted interface that keeps your data local</li><li>You need prompt library and usage tracking across models</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You use one model — pay that vendor directly for the best experience</li><li>You do not self-host — the free cloud version may suffice</li><li>You need advanced agent features — dedicated agent platforms offer more</li></ul>
+<p>See the <a href="../tools/typingmind/">TypingMind review</a> for detailed evaluation.</p>
+"""}
+
+ARTICLES["is-speechify-worth-it.html"] = {
+    "title": "Is Speechify worth it?",
+    "desc": "Whether Speechify's text-to-speech reading assistant is worth paying for over built-in OS screen readers or free TTS tools.",
+    "body": """
+<p><strong>Short answer:</strong> worth it if you regularly convert documents, web pages, or PDFs to audio and want natural-sounding voices with speed control. Not worth it if you only occasionally need TTS or if built-in OS features cover your needs.</p>
+<h2>What the paid plans actually buy</h2>
+<ul><li>Free: up to 1.5x speed, 10 robotic-sounding voices, basic TTS</li><li>Premium: natural voices, higher speed limits, scanning, skipping</li></ul>
+<p>Current pricing on the <a href="https://speechify.com/pricing/" target="_blank" rel="external noopener">official pricing page</a>.</p>
+<h2>When Speechify is worth it</h2>
+<ul><li>You listen to documents, articles, or PDFs regularly</li><li>You want natural-sounding voices over robotic TTS</li><li>You need speed control above 2x or the ability to skip headers/footnotes</li></ul>
+<h2>When it is not worth it</h2>
+<ul><li>You only occasionally need TTS — built-in OS screen readers may suffice</li><li>You need audio for commercial distribution — verify the commercial license terms</li><li>You want multi-speaker narration — dedicated audio production tools are more appropriate</li></ul>
+<p>Compare with <a href="../tools/elevenlabs/">ElevenLabs</a> and <a href="../tools/descript/">Descript</a> in our audio tool comparisons.</p>
+"""}
+
+
+
 def generate(root: Path = ROOT) -> list[str]:
     import html as H
     import json

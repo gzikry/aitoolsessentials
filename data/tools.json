@@ -3276,7 +3276,9 @@
         "Can I use Luma AI output commercially?",
         "Verify commercial use terms on the official pricing page before using output in paid work."
       ]
-    ]
+    ],
+    "price": "Plus $30/month, Pro $90/month, Ultra $300/month",
+    "summary": "Luma AI is a 3D and video generation platform that creates photorealistic 3D models and AI-generated video from text prompts or reference images, targeting product demos, social video, and 3D prototyping workflows."
   },
   {
     "slug": "pika",
