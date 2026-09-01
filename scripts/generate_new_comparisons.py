@@ -161,7 +161,7 @@ def generate(root: Path) -> int:
     for fname, spec in NEW_COMPARISONS.items():
         slugs = [spec['a'], spec['b']] + ([spec['c']] if spec.get('c') else [])
         names = [tools[s]['name'] for s in slugs]
-        title = fname.replace('.html','').replace('-', ' ').title().replace('Vs','vs').replace('N8N','n8n')
+        title = fname.replace('.html','').replace('-', ' ').title().replace('Vs','vs').replace('N8N','n8n') + ' comparison'
         rows = ''
         labels = ['Best for'] + ['Category']
         header_cells = ''.join(f'<th>{_e(n)}</th>' for n in names)

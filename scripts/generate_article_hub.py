@@ -162,7 +162,7 @@ def generate(root: Path = ROOT) -> Path:
 <section class="scene scene-dark hero compact-hero"><div class="hero-copy"><p class="kicker">Practical AI buyer guides</p>
 <h1>Find the guide for the decision in front of you.</h1>
 <p class="subhead">Search {len(pages)} guides covering tool overlap, pricing, real workflows, role-specific stacks, cancellation decisions, and evaluation methods.</p>
-<div class="actions"><a class="button button-blue" href="learn.html">Start with the learning path</a><a class="button button-dark" href="../tool-finder.html">Find a tool</a></div>
+<div class="actions"><a class="button button-blue" href="learn.html">Start with the learning path</a><a class="button button-dark" href="../tool-finder.html">Find a tool</a><a class="button button-dark" href="../pricing-watch/" style="margin-left:8px">Pricing Watch</a></div>
 </div></section>
 <section class="scene scene-light"><div class="article-shell wide">
 <p class="kicker light">Search the library</p><h2>What are you deciding?</h2>
@@ -172,7 +172,8 @@ def generate(root: Path = ROOT) -> Path:
 </div></section>
 {''.join(sections)}
 <section class="score-card related-next-steps"><span>Free decision tools</span><h2>Turn a guide into a repeatable evaluation.</h2>
-<p><a class="button button-blue" href="../compare-shortlist.html">Compare shortlist</a><a class="button button-blue" href="../cost-calculator.html" style="margin-left:8px">Estimate cost</a><a class="button button-dark" href="../downloads/ai-tool-evaluation-scorecard.html" style="margin-left:8px">Open scorecard</a></p></section>
+<p><a class="button button-blue" href="../compare-shortlist.html">Compare shortlist</a><a class="button button-blue" href="../cost-calculator.html" style="margin-left:8px">Estimate cost</a><a class="button button-dark" href="../downloads/ai-tool-evaluation-scorecard.html" style="margin-left:8px">Open scorecard</a></p>
+<p><a href="../press/">Press / cite us</a> · <a href="../methodology/">Methodology</a> · <a href="../evidence/">Evidence ledger</a> · <a href="../newsletter/">Keep/Cut Weekly</a></p></section>
 <section class="newsletter-panel"><div><span>Keep/Cut Weekly</span><h2>One tool to keep. One to cut. One worth testing.</h2>
 <p>Get a concise weekly decision brief with pricing changes, overlap warnings, and one practical job to test.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../newsletter/">Read the newsletter</a><a class="button button-dark" href="../premium/">Explore Premium</a></div></section>
 <p class="affiliate-inline">Editorial recommendations are independent. Affiliate participation and paid placement never change rankings or conclusions. <a href="../legal/affiliate-disclosure.html">Disclosure</a>.</p>

@@ -66,10 +66,10 @@ def generate_opensearch(root: Path) -> None:
 
 def generate_human_sitemap(root: Path, tools: list[dict[str, Any]]) -> None:
     groups = [
-        ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Fit Interview", "/fit-interview/"), ("Workflow guides", "/workflows/"), ("Local AI Planner", "/local-ai-planner/"), ("Confidence Check", "/confidence-check/"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html")]),
-        ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Automation Billing Decoder", "/automation-cost-decoder/"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/")]),
-        ("Trust", [("Changelog", "/changelog/"), ("Change Radar", "/change-radar/"), ("Model lineups", "/model-lineups/"), ("How-to library", "/how-to/"), ("Hardware guide", "/hardware/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
-        ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Press / cite us", "/press/"), ("Weekly", "/weekly/"), ("RSS feed", "/feed.xml")]),
+        ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Fit Interview", "/fit-interview/"), ("Workflow guides", "/workflows/"), ("Local AI Planner", "/local-ai-planner/"), ("Confidence Check", "/confidence-check/"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html"), ("Best-for roles", "/best-for/"), ("Stack gallery", "/stacks/"), ("Glossary", "/glossary/")]),
+        ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Automation Billing Decoder", "/automation-cost-decoder/"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/"), ("Pricing Watch", "/pricing-watch/"), ("Keep/Cut Weekly", "/newsletter/")]),
+        ("Trust", [("Changelog", "/changelog/"), ("Change Radar", "/change-radar/"), ("Model lineups", "/model-lineups/"), ("How-to library", "/how-to/"), ("Hardware guide", "/hardware/"), ("Evidence ledger", "/evidence/"), ("Methodology", "/methodology/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
+        ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Press / cite us", "/press/"), ("Weekly", "/weekly/"), ("Site status", "/status/"), ("RSS feed", "/feed.xml")]),
     ]
     cards = "".join(f'<article class="content-hub-card"><h3>{esc(title)}</h3><ul>' + "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for label, href in links) + "</ul></article>" for title, links in groups)
     top_tools = "".join(f'<li><a href="/tools/{esc(t["slug"])}/">{esc(t["name"])}</a></li>' for t in tools[:40])
@@ -87,6 +87,8 @@ def generate_start_here(root: Path) -> None:
         ("I am paying for overlapping AI tools", "Use the cut-subscriptions guide, then cancel before renewal.", "/articles/how-to-cut-ai-tool-subscriptions.html", "Cut overlapping tools"),
         ("I am replacing a tool", "Open the Alternatives hub and compare before switching.", "/alternatives/", "Compare alternatives"),
         ("I want the research membership", "Premium is live: 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.", "/premium/", "See Premium"),
+        ("I need dated prices", "Open Pricing Watch for official snapshots with checked dates. No invented history.", "/pricing-watch/", "Open Pricing Watch"),
+        ("I want to cite this site", "Use the press page, methodology, and evidence ledger. Do not invent traffic or rankings.", "/press/", "Press / cite us"),
         ("I am a vendor", "Use Get Reviewed for editorial submission and correction rules.", "/get-reviewed/", "Get reviewed"),
     ]
     cards = "".join(f'<article class="content-hub-card"><span>Start here</span><h3>{esc(title)}</h3><p>{esc(text)}</p><a class="button button-blue small" href="{href}">{esc(cta)}</a></article>' for title, text, href, cta in steps)

@@ -73,7 +73,7 @@ ARTICLES = {
 <p>Full evaluation criteria live in <a href="how-to-choose-an-ai-tool.html">our choosing framework</a>.</p>'''},
 }
 
-HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../pricing-watch/">Pricing Watch</a>\n</nav><a class="nav-cta" href="../newsletter/">Keep/Cut Weekly</a></header>'
 FOOTER = '''<footer class="footer">
     <span>© 2026 AIToolsEssentials</span>
     <a href="../advertise/index.html" rel="nofollow">Advertise</a>
@@ -99,7 +99,7 @@ def generate(root: Path) -> int:
 <script type="application/ld+json">{faq_schema}</script>
 <script type="application/ld+json">{article_schema}</script>
 <link rel="icon" href="../assets/aitools-bot-mark.svg" type="image/svg+xml"></head><body>{HEADER}
-<main><section class="scene scene-light article-hero"><p class="kicker light">{H.escape(a['kicker'])}</p><h1>{H.escape(a['title'])}</h1><p>{H.escape(a['desc'])}</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse tools</a><a class="button button-dark" href="learn.html">More guides</a></div></section>
+<main><section class="scene scene-light article-hero"><p class="kicker light">{H.escape(a['kicker'])}</p><h1>{H.escape(a['title'])}</h1><p>{H.escape(a['desc'])}</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse tools</a><a class="button button-dark" href="learn.html">More guides</a><a class="button button-dark" href="../pricing-watch/">Pricing Watch</a></div></section>
 <section class="scene scene-light"><article class="article-shell">{a['body']}</article></section>
 <section class="newsletter-panel"><div><span>AI Tool Evaluation Scorecard</span><h2>Decide with evidence, not demos</h2><p>Compare candidates on workflow fit, quality, review time, privacy, collaboration, cost, and ROI.</p><p class="affiliate-inline">No email required.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../downloads/ai-tool-evaluation-scorecard.html">Open scorecard</a><a class="button button-dark" href="../pricing/">Premium research</a></div></section>
 

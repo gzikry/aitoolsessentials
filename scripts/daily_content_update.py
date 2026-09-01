@@ -232,6 +232,9 @@ from generate_press import generate as generate_press
 generate_press(root)
 print('Generated press / cite-us page')
 
+from generate_indexability import generate as generate_indexability
+print('Indexability pass:', generate_indexability(root))
+
 # Generate sitemap
 sitemap_urls = refresh_sitemap(root)
 print(f'Generated sitemap with {len(sitemap_urls)} URLs')
@@ -439,6 +442,7 @@ for _page, (_needle, _label) in _metadata_targets.items():
 if f'Search {_expected_count} tools' not in (root / 'confidence-check/index.html').read_text():
     raise RuntimeError('confidence-check: current tool-count search prompt missing')
 print(f'Verified dynamic metadata coverage for {_expected_count} tools')
+print('Final indexability pass:', generate_indexability(root))
 _sitemap_urls_final = refresh_sitemap(root)
 print(f'Refreshed final sitemap with {len(_sitemap_urls_final)} URLs')
 print('Re-injected final metadata layers')

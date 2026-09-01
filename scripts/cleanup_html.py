@@ -31,6 +31,10 @@ def fix_page(p: Path) -> bool:
     # between / and /index.html.
     h = normalize_home_links(h)
 
+    # Leftover pick-one pages once appended ".html" onto filenames that already
+    # included the suffix, producing crawl-breaking /page.html.html canonicals.
+    h = h.replace(".html.html", ".html")
+
     # 1. Domain typo
     h = h.replace('aitoolsessentials.com', 'aitoolsessentials.com')
 

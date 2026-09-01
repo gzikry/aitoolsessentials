@@ -57,7 +57,7 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="The {n} best {cat} AI tools, ranked and reviewed: pricing notes, strengths, trade-offs, and who each tool is actually for.">
-<title>Best {cat} AI Tools ({today[:4]}) — Ranked &amp; Reviewed | AIToolsEssentials</title>
+<title>Best {cat} AI tools ({today[:4]}) | AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/categories/{cat}/">
 <link rel="stylesheet" href="../../css/styles.css">
 <link rel="stylesheet" href="../../css/share.css">
@@ -103,6 +103,8 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 <a class="button button-blue" href="../../downloads/ai-tool-evaluation-scorecard.html">Get the free scorecard</a>
 <a class="button button-dark" href="../../comparisons/index.html">Browse comparisons</a>
 <a class="button button-blue" href="../../newsletter/" style="margin-left:8px">Read the newsletter</a>
+<a class="button button-dark" href="../../pricing-watch/" style="margin-left:8px">Pricing Watch</a>
+<a class="button button-dark" href="../../methodology/" style="margin-left:8px">Methodology</a>
 <a class="button button-dark" href="../../premium/" style="margin-left:8px">Premium research membership</a>
 </div>
 </div>

@@ -207,7 +207,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
         html = f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(g['title'])} — what transfers, what doesn't, cost math, and a first-week test plan.">
-<title>{esc(g["title"])} — AIToolsEssentials</title>
+<title>Switch {esc(frm.get("name", g["from_slug"]))} to {esc(to.get("name", g["to_slug"]))} | AIToolsEssentials</title>
 <link rel="canonical" href="{url}">
 <meta property="og:title" content="{esc(g["title"])}"><meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
 <meta name="twitter:card" content="summary_large_image">

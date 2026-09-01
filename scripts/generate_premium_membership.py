@@ -140,7 +140,42 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     ]
     faq_items = "".join(f'<article class="content-hub-card"><h3>{esc(q)}</h3><p>{esc(a)}</p></article>' for q, a in faqs)
     faq_schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]}
-    product_schema = {"@context":"https://schema.org","@type":"Product","name":"AIToolsEssentials Premium","description":"Monthly AI tool research membership with briefings, CSV decision archives, stack audits, weekly checklists, tool-change alerts, hands-on protocols, ROI calculators, and member-requested deep dives.","brand":{"@type":"Brand","name":"AIToolsEssentials"},"image": DOMAIN+"/assets/og-ai-tools.jpg","offers":{"@type":"Offer","price":"12","priceCurrency":"USD","availability":"https://schema.org/InStock","url":WHOP_CHECKOUT,"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"US","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":7,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"USD"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"US"}}},"category":"Research membership"}
+    product_schema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "AIToolsEssentials Premium",
+        "description": "Monthly AI tool research membership with briefings, CSV decision archives, stack audits, weekly checklists, tool-change alerts, hands-on protocols, ROI calculators, and member-requested deep dives.",
+        "brand": {"@type": "Brand", "name": "AIToolsEssentials"},
+        "image": DOMAIN + "/assets/og-ai-tools.jpg",
+        "category": "Digital research membership",
+        "offers": {
+            "@type": "Offer",
+            "price": "12",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": WHOP_CHECKOUT,
+            "category": "https://schema.org/DigitalDocument",
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "US",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 7,
+                "returnFees": "https://schema.org/FreeReturn",
+                "refundType": "https://schema.org/FullRefund",
+                "merchantReturnLink": DOMAIN + "/premium/faq.html",
+            },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "USD"},
+                "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"},
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"},
+                    "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"},
+                },
+            },
+        },
+    }
     faq = f'''<!doctype html><html lang="en">{head("Premium Membership FAQ", faq_desc, DOMAIN+"/premium/faq.html")}<body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium FAQ</p><h1>Know exactly what the Whop membership includes.</h1><p class="subhead">Clear answers on deliverables, billing, cancellations, refunds, editorial independence, and scope boundaries before anyone subscribes.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">Subscribe on Whop</a><a class="button button-blue" href="/premium/sample-audit.html" style="margin-left:8px">See sample audit</a><a class="button button-blue" href="/newsletter/" style="margin-left:8px">Read the newsletter</a></p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide"><div class="content-hub-grid">{faq_items}</div><section class="score-card"><span>Before launch</span><h2>Whop still needs the member posts uploaded.</h2><p>The site and November content engine pack are ready. George still needs to upload the prepared posts and CSV files to Whop (including the November pack) and run a Whop test transaction before promoting the checkout heavily.</p></section></div></section>
@@ -763,6 +798,25 @@ def enhance_homepage(root: Path) -> None:
             html = html.replace(intro.group(1), intro.group(1) + "\n" + band, 1)
         elif "<main>" in html:
             html = html.replace("<main>", "<main>\n" + band, 1)
+    if "AIT HOMEPAGE CITE STRIP START" not in html:
+        cite = '''<!-- AIT HOMEPAGE CITE STRIP START -->
+<section class="scene scene-light" style="padding:40px 28px 8px">
+<div style="max-width:1040px;margin:0 auto;text-align:center">
+<p class="kicker light">Cite and verify</p>
+<h2>Source pages, not a homepage screenshot.</h2>
+<p class="subhead">Use dated pricing, keep/cut notes, and the public evidence rules. No invented traffic or rankings.</p>
+<p><a class="button button-blue" href="pricing-watch/">Pricing Watch</a>
+<a class="button button-ghost-dark" href="newsletter/" style="margin-left:8px">Keep/Cut Weekly</a>
+<a class="button button-ghost-dark" href="press/" style="margin-left:8px">Press / cite us</a>
+<a class="button button-ghost-dark" href="evidence/" style="margin-left:8px">Evidence ledger</a>
+<a class="button button-ghost-dark" href="methodology/" style="margin-left:8px">Methodology</a></p>
+</div></section>
+<!-- AIT HOMEPAGE CITE STRIP END -->
+'''
+        if "AIT HOMEPAGE JOB TILES END" in html:
+            html = html.replace("<!-- AIT HOMEPAGE JOB TILES END -->", "<!-- AIT HOMEPAGE JOB TILES END -->\n" + cite, 1)
+        elif "AIT HOMEPAGE PREMIUM BAND END" in html:
+            html = html.replace("<!-- AIT HOMEPAGE PREMIUM BAND END -->", "<!-- AIT HOMEPAGE PREMIUM BAND END -->\n" + cite, 1)
     if "AIT HOMEPAGE JOB TILES START" not in html:
         tiles = '''<!-- AIT HOMEPAGE JOB TILES START -->
 <section class="scene scene-light product-grid-section" style="padding:56px 28px">
