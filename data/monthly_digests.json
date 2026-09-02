@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-09",
+    "title": "What changed in AI tools — September 2026",
+    "month_label": "September 2026",
+    "checked_at": "2026-09-01",
+    "summary": "A public keep/cut digest of recorded vendor launches and directory checks this month. World Labs published Atlas on 2026-09-01 as an early-access omni world model with no public self-serve pricing, so it is a watch item rather than a directory listing.",
+    "new_listings": [],
+    "vendor_launches": [
+      {
+        "name": "Atlas (World Labs)",
+        "note": "Official blog (checked 2026-09-01): next-gen omni world model pretrained from scratch on text, images, video, and 3D. Multimodal autoregressive diffusion transformer with spatial context. Camera-controlled generation up to 1 minute at 1440p; spatial reconstruction from 1–dozens of images with explicit 3D (point clouds, 3D Gaussian splats); space-time simulation including video reframing and Real-to-Sim for robotics; also text-to-image and 360 panoramas. Will power future versions of Marble. Early access with select partners — request access on the blog. No public self-serve plan prices published.",
+        "source_url": "https://www.worldlabs.ai/blog/atlas",
+        "checked_at": "2026-09-01",
+        "pricing_status": "early_access_no_public_pricing"
+      }
+    ],
+    "watch_list": [],
+    "keep_cut_rule": "If a launch has no public pricing, do not treat it as a buy decision. Watch the official source until self-serve plans exist, then re-check before adding a seat.",
+    "sources": [
+      "https://www.worldlabs.ai/blog/atlas",
+      "/change-radar/",
+      "/pricing-watch/",
+      "/model-lineups/"
+    ]
+  },
+  {
     "slug": "2026-08",
     "title": "What changed in AI tools — August 2026",
     "month_label": "August 2026",

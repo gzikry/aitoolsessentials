@@ -15,6 +15,30 @@ def esc(s: object) -> str:
     return str(s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
+def source_item(url: str) -> str:
+    href = esc(url)
+    if url.startswith("http://") or url.startswith("https://"):
+        return f'<li><a href="{href}" rel="external nofollow" target="_blank">{href}</a></li>'
+    return f'<li><a href="{href}">{href}</a></li>'
+
+
+def listing_item(x: dict) -> str:
+    name = esc(x.get("name"))
+    note = esc(x.get("note"))
+    slug = x.get("slug")
+    source = x.get("source_url") or ""
+    checked = x.get("checked_at") or ""
+    if slug:
+        link = f'<a href="/tools/{esc(slug)}/">{name}</a>'
+    elif source:
+        rel = ' rel="external nofollow" target="_blank"' if source.startswith("http") else ""
+        link = f'<a href="{esc(source)}"{rel}>{name}</a>'
+    else:
+        link = name
+    extra = f' Source checked {esc(checked)}.' if checked else ""
+    return f"<li>{link} — {note}{extra}</li>"
+
+
 def generate(root: Path) -> int:
     data = json.loads((root / "data/monthly_digests.json").read_text())
     out = root / "updates"
@@ -22,21 +46,27 @@ def generate(root: Path) -> int:
     cards = []
     for d in data:
         slug = d["slug"]
-        listings = "".join(
-            f'<li><a href="/tools/{esc(x["slug"])}/">{esc(x["name"])}</a> — {esc(x["note"])}</li>'
-            for x in d.get("new_listings", [])
-        )
-        watch = "".join(
-            f'<li><a href="/tools/{esc(x["slug"])}/">{esc(x["name"])}</a> — {esc(x["note"])}</li>'
-            for x in d.get("watch_list", [])
-        )
+        listings = "".join(listing_item(x) for x in d.get("new_listings", []))
+        launches = "".join(listing_item(x) for x in d.get("vendor_launches", []))
+        watch = "".join(listing_item(x) for x in d.get("watch_list", []))
+        sources = "".join(source_item(s) for s in d.get("sources", []))
         desc = d.get("summary", "")
+        launches_block = (
+            f"<h2>Vendor launches (not directory listings)</h2><ul>{launches}</ul>"
+            if launches else ""
+        )
+        sources_block = (
+            f"<h2>Sources</h2><ul>{sources}</ul>"
+            if sources else ""
+        )
         page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>{esc(d["title"])} | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/updates/{esc(slug)}.html"><link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="/css/share.css"></head><body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Keep/cut digest · checked {esc(d.get("checked_at"))}</p><h1>{esc(d["title"])}</h1><p class="subhead">{esc(desc)}</p><p><a class="button button-blue" href="/subscribe/">Get the digest</a><a class="button button-blue" href="/change-radar/" style="margin-left:8px">Open Change Radar</a></p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
 <div class="score-card"><span>Rule</span><h2>Keep one tool per weekly job.</h2><p>{esc(d.get("keep_cut_rule"))}</p></div>
 <h2>New listings this month</h2><ul>{listings or "<li>None recorded.</li>"}</ul>
+{launches_block}
 <h2>Re-check before you renew</h2><ul>{watch or "<li>None recorded.</li>"}</ul>
+{sources_block}
 <p>These notes are from recorded directory checks, not a live vendor API. Confirm prices and model names on official pages. Public digest is the headline list. <a href="/premium/">Premium</a> members get the curated alert feed, stack-audit template, and 7-day free trial (code LAUNCH50 for 50% off the first paid month, new users).</p>
 <p>Related: <a href="/pricing-watch/">Pricing Watch</a> · <a href="/model-lineups/">Model lineups</a> · <a href="/articles/how-to-cut-ai-tool-subscriptions.html">Cut overlapping subscriptions</a></p>
 </div></section>

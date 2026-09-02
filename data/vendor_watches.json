@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-09-01",
+  "source_policy": "Official vendor sources only. These are unlisted launches, not directory SKUs. No inferred prices, ratings, lab tests, or traffic.",
+  "watches": [
+    {
+      "name": "Atlas (World Labs)",
+      "vendor": "World Labs",
+      "kind": "model_launch",
+      "status": "early_access",
+      "pricing_status": "no_public_pricing",
+      "checked_at": "2026-09-01",
+      "source_url": "https://www.worldlabs.ai/blog/atlas",
+      "source_title": "Atlas: A World Model for Spatial Intelligence",
+      "company_url": "https://www.worldlabs.ai/",
+      "summary": "World Labs' next-generation omni world model, pretrained from scratch on text, images, video, and 3D. A multimodal autoregressive diffusion transformer with spatial context. Camera-controlled image/video generation (up to 1 minute at 1440p), spatial reconstruction from 1–dozens of images with explicit 3D (point clouds, 3D Gaussian splats), space-time simulation including video reframing and Real-to-Sim for robotics, plus text-to-image and 360 panoramas. Will power future versions of Marble and other World Labs products.",
+      "pricing_note": "Early access with select partners. Request access on the official blog. Not a public self-serve product; no published plan prices as of 2026-09-01."
+    }
+  ]
+}

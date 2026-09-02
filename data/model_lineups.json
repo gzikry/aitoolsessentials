@@ -1,4 +1,24 @@
 {
+  "world-labs-atlas": {
+    "listed": false,
+    "name": "Atlas (World Labs)",
+    "category": "World models",
+    "official": "https://www.worldlabs.ai/blog/atlas",
+    "as_of": "2026-09-01",
+    "models": [
+      {
+        "model": "Atlas",
+        "role": "Omni world model: camera-controlled generation, spatial reconstruction, and space-time simulation",
+        "context": "Shared spatial context over text, images, video, and 3D",
+        "pricing": "Early access with select partners. No public self-serve plan prices published as of 2026-09-01."
+      }
+    ],
+    "notes": [
+      "Source: World Labs blog post “Atlas: A World Model for Spatial Intelligence” (https://www.worldlabs.ai/blog/atlas), checked 2026-09-01.",
+      "Pretrained from scratch as a multimodal autoregressive diffusion transformer. Camera-controlled images/videos up to 1 minute at 1440p; reconstruction from 1–dozens of images with explicit 3D (point clouds, 3D Gaussian splats); video reframing and Real-to-Sim for robotics; also generates images and 360 panoramas from text.",
+      "Will power future versions of Marble and other World Labs products. Not a public self-serve SKU; request access on the official blog."
+    ]
+  },
   "chatgpt": {
     "as_of": "2026-08-26",
     "models": [
