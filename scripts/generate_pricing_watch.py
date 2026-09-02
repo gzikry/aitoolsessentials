@@ -86,10 +86,18 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
         for w in watch_data.get("watches", []):
             src = w.get("source_url") or "#"
             note = escape((w.get("pricing_note") or w.get("summary") or "")[:220], quote=True)
+            status = str(w.get("status") or "")
+            pricing_status = str(w.get("pricing_status") or "")
+            if w.get("status_label"):
+                pill = str(w.get("status_label"))
+            elif status == "open_source" or pricing_status == "open_source_no_sku":
+                pill = "Open source · not a directory SKU"
+            else:
+                pill = "Early access · no public pricing"
             watch_items.append(
                 f'<tr><td><strong>{escape(str(w.get("name") or ""), quote=True)}</strong></td>'
                 f'<td>{escape(str(w.get("checked_at") or "—"), quote=True)}</td>'
-                f'<td><span class="pill">Early access · no public pricing</span></td>'
+                f'<td><span class="pill">{escape(pill, quote=True)}</span></td>'
                 f'<td style="max-width:520px"><span class="muted">{note}</span></td>'
                 f'<td><a href="{escape(src, quote=True)}" rel="external nofollow" target="_blank">Official source ↗</a></td></tr>'
             )
@@ -97,8 +105,8 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
             watch_html = (
                 '<section class="score-card" style="margin-top:28px;border-left:4px solid #d97706">'
                 '<span>Unlisted launches</span>'
-                '<h3>Early access / no public self-serve pricing</h3>'
-                '<p>These vendor launches were checked against official posts. They are not directory listings and have no invented SKU prices.</p>'
+                '<h3>Watches without directory SKUs</h3>'
+                '<p>These vendor launches were checked against official posts. They are not directory listings and have no invented SKU prices. Open-source engines can appear here without a paid plan.</p>'
                 '<div class="table-wrap"><table><thead><tr><th>Launch</th><th>Checked</th><th>Status</th><th>Snapshot</th><th>Source</th></tr></thead>'
                 f'<tbody>{"".join(watch_items)}</tbody></table></div></section>'
             )

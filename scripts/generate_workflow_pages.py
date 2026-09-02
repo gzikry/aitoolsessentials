@@ -81,6 +81,28 @@ def generate(root: Path) -> int:
             guardrail_items = "".join(f"<li>{esc(item)}</li>" for item in guardrails)
             guardrail_block = f'<h2>Safety and compliance guardrails</h2><div class="score-card"><ul>{guardrail_items}</ul></div>'
         query_items = "".join(f"<li>{esc(q)}</li>" for q in query_list)
+        watch_notes = wf.get("watch_notes") or []
+        if watch_notes is not None and not isinstance(watch_notes, list):
+            raise ValueError(f"Workflow {slug} watch_notes must be a list")
+        watch_block = ""
+        if watch_notes:
+            watch_items_html = []
+            for item in watch_notes:
+                if not isinstance(item, dict) or not item.get("name") or not item.get("note"):
+                    raise ValueError(f"Workflow {slug} watch_notes entries need name and note")
+                src = item.get("source_url") or ""
+                if src:
+                    watch_items_html.append(
+                        f'<li><a href="{esc(src)}" rel="external nofollow" target="_blank">{esc(item["name"])}</a> — {esc(item["note"])}</li>'
+                    )
+                else:
+                    watch_items_html.append(f'<li><strong>{esc(item["name"])}</strong> — {esc(item["note"])}</li>')
+            watch_block = (
+                '<h2>Local-engine watches (not directory SKUs)</h2>'
+                '<div class="score-card"><ul>'
+                + "".join(watch_items_html)
+                + '</ul><p class="benchmark-caveat">Watches are dated official-source notes. They are not product ratings and do not add a tools.json listing.</p></div>'
+            )
         schema = {
             "@context": "https://schema.org",
             "@type": "ItemList",
@@ -95,7 +117,7 @@ def generate(root: Path) -> int:
         }
         page = f'''<!doctype html><html lang="en">{head(title + " | AIToolsEssentials", desc, DOMAIN + "/workflows/" + slug + ".html", schema)}<body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:960px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Workflow guide · updated {esc(today)}</p><h1>{esc(title)}</h1><p class="subhead">{esc(desc)}</p><p><a class="button button-blue" href="/fit-interview/">Find your fit</a><a class="button button-blue" href="/stack-builder.html" style="margin-left:8px">Build a stack</a><a class="button button-ghost-dark" href="/newsletter/" style="margin-left:8px">Keep/Cut Weekly</a></p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Who this helps</span><h2>{esc(audience)}</h2><p>This page is built for searchers who already know the workflow they need to improve. It does not claim a universal winner; it routes you to evidence, pricing checks, and a repeatable trial.</p></div><h2>Recommended tools for this workflow</h2><div class="content-hub-grid">{cards}</div><h2>How to test before paying</h2><div class="score-card"><ol>{step_items}</ol></div>{guardrail_block}<h2>Search intents this page covers</h2><div class="score-card"><ul>{query_items}</ul><p class="benchmark-caveat">These are editorial targeting notes, not traffic or ranking claims.</p></div><div class="content-hub-grid"><article class="content-hub-card"><h3>Compare finalists</h3><p>Put 2–3 tools into a shortlist and compare cost, overlap, and trial criteria.</p><a class="button button-blue small" href="/compare-shortlist.html">Compare shortlist</a></article><article class="content-hub-card"><h3>Inspect evidence</h3><p>Open source links, pricing dates, unresolved claims, and methodology before buying.</p><a class="button button-blue small" href="/evidence/">Open Evidence Ledger</a></article><article class="content-hub-card"><h3>Save the decision</h3><p>Generate a decision brief you can share with a client, manager, or team.</p><a class="button button-blue small" href="/decision-brief.html">Create brief</a></article></div></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Who this helps</span><h2>{esc(audience)}</h2><p>This page is built for searchers who already know the workflow they need to improve. It does not claim a universal winner; it routes you to evidence, pricing checks, and a repeatable trial.</p></div><h2>Recommended tools for this workflow</h2><div class="content-hub-grid">{cards}</div>{watch_block}<h2>How to test before paying</h2><div class="score-card"><ol>{step_items}</ol></div>{guardrail_block}<h2>Search intents this page covers</h2><div class="score-card"><ul>{query_items}</ul><p class="benchmark-caveat">These are editorial targeting notes, not traffic or ranking claims.</p></div><div class="content-hub-grid"><article class="content-hub-card"><h3>Compare finalists</h3><p>Put 2–3 tools into a shortlist and compare cost, overlap, and trial criteria.</p><a class="button button-blue small" href="/compare-shortlist.html">Compare shortlist</a></article><article class="content-hub-card"><h3>Inspect evidence</h3><p>Open source links, pricing dates, unresolved claims, and methodology before buying.</p><a class="button button-blue small" href="/evidence/">Open Evidence Ledger</a></article><article class="content-hub-card"><h3>Save the decision</h3><p>Generate a decision brief you can share with a client, manager, or team.</p><a class="button button-blue small" href="/decision-brief.html">Create brief</a></article></div></div></section>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
         (out / f"{slug}.html").write_text(page)
         index_cards.append(f'<article class="content-hub-card"><span>{esc(audience)}</span><h3><a href="/workflows/{esc(slug)}.html">{esc(title)}</a></h3><p>{esc(desc)}</p><a class="button button-blue small" href="/workflows/{esc(slug)}.html">Open workflow</a></article>')

@@ -14,6 +14,20 @@
       "company_url": "https://www.worldlabs.ai/",
       "summary": "World Labs' next-generation omni world model, pretrained from scratch on text, images, video, and 3D. A multimodal autoregressive diffusion transformer with spatial context. Camera-controlled image/video generation (up to 1 minute at 1440p), spatial reconstruction from 1–dozens of images with explicit 3D (point clouds, 3D Gaussian splats), space-time simulation including video reframing and Real-to-Sim for robotics, plus text-to-image and 360 panoramas. Will power future versions of Marble and other World Labs products.",
       "pricing_note": "Early access with select partners. Request access on the official blog. Not a public self-serve product; no published plan prices as of 2026-09-01."
+    },
+    {
+      "name": "Lily (Perplexity)",
+      "vendor": "Perplexity",
+      "kind": "local_engine",
+      "status": "open_source",
+      "pricing_status": "open_source_no_sku",
+      "checked_at": "2026-09-02",
+      "source_url": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon",
+      "source_title": "Optimizing On-Device Inference for Apple Silicon",
+      "company_url": "https://www.perplexity.ai/",
+      "demo_url": "https://github.com/perplexityai/pplx-garden",
+      "summary": "Official Perplexity blog (checked 2026-09-02): Lily is a lightweight local inference engine built specifically for Apple silicon and Qwen3.6-35B-A3B, with separate prefill and decode optimizations, so on-device compute does not bottleneck Hybrid Compute tasks in Perplexity Computer. A Rust runtime loads the checkpoint and runs the generation loop; an OpenAI-compatible chat-completions API accepts requests; custom Metal kernels execute Qwen-specific operations. Neither PyTorch nor MLX is in the execution path. A standalone demo is on GitHub. The official pplx-garden README names that demo at github.com/perplexityai/pplx-garden (lily/): Apache-2.0 Metal inference server, greedy generation, Qwen3.6-35B-A3B MLX affine 4-bit checkpoint format, Apple GPU family 10 or later (M5 and newer), macOS 26 or later. The garden README describes a minimal OpenAI-compatible HTTP API; the lily README as of this check documents POST /v1/chat/completions, GET /v1/models, and GET /health, and says streaming, sampling, tools, and multimodal requests are rejected. Vendor-published throughput figures were not independently reproduced.",
+      "pricing_note": "Open-source Apache-2.0 demo in perplexityai/pplx-garden (lily/). Not a Perplexity Pro/Max/Enterprise SKU. No public Lily plan price. Hardware, model weights, and any Perplexity Computer subscription are separate and were not priced on this check."
     }
   ]
 }

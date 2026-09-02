@@ -1,4 +1,25 @@
 {
+  "perplexity-lily": {
+    "listed": false,
+    "name": "Lily (Perplexity)",
+    "category": "Local AI",
+    "official": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon",
+    "as_of": "2026-09-02",
+    "models": [
+      {
+        "model": "Lily",
+        "role": "Local inference engine for Apple silicon + Qwen3.6-35B-A3B (Perplexity Computer hybrid compute)",
+        "context": "Specialized for one architecture; official demo uses the Qwen3.6-35B-A3B MLX affine 4-bit checkpoint format",
+        "pricing": "Open-source Apache-2.0 demo in perplexityai/pplx-garden (lily/). Not a Perplexity plan SKU. No public Lily price as of 2026-09-02."
+      }
+    ],
+    "notes": [
+      "Source: official Perplexity blog “Optimizing On-Device Inference for Apple Silicon” (https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon), checked 2026-09-02. Standalone demo named on that post; official pplx-garden README points to github.com/perplexityai/pplx-garden (lily/) and the same blog.",
+      "Official blog: Rust runtime; OpenAI-compatible chat-completions API; custom Metal kernels; neither PyTorch nor MLX in the execution path. MLX affine 4-bit in the demo README is the weight-file format, not MLX as the runtime.",
+      "Official lily README (checked 2026-09-02): Apple GPU family 10 or later (M5 and newer), macOS 26 or later, greedy decode, POST /v1/chat/completions plus GET /v1/models and GET /health. Streaming, sampling, tools, and multimodal requests are rejected in that demo surface.",
+      "Local-engine watch only. Not a directory SKU and not a product rating. Vendor-published throughput figures were not independently reproduced."
+    ]
+  },
   "world-labs-atlas": {
     "listed": false,
     "name": "Atlas (World Labs)",
@@ -181,7 +202,8 @@
       }
     ],
     "notes": [
-      "Perplexity routes to whichever underlying model you pick; its own Sonar handles most searches."
+      "Perplexity routes to whichever underlying model you pick; its own Sonar handles most searches.",
+      "2026-09-02 official blog: Lily is an open-source local engine for Apple silicon and Qwen3.6-35B-A3B used in Perplexity Computer hybrid compute. It is not a new Pro/Max SKU and is tracked as a separate Local AI research watch, not as a 4.5 product rating."
     ]
   },
   "zapier-ai": {
