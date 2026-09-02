@@ -4,7 +4,9 @@
 Idempotent post-generation pass:
 - BreadcrumbList schema for public HTML pages.
 - ItemList schema for discovery/growth hubs that list tools.
-- Standalone SoftwareApplication schema for tool reviews (in addition to Review schema).
+- SoftwareApplication schema for tool reviews when the page does not already
+  have one. Review / AggregateRating is omitted unless a hands-on result is
+  published — editorial scores are not Google Review snippets.
 """
 from __future__ import annotations
 
@@ -17,6 +19,41 @@ ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = 'https://aitoolsessentials.com'
 MARKER_START = '<!-- AIT STRUCTURED DATA START -->'
 MARKER_END = '<!-- AIT STRUCTURED DATA END -->'
+
+# Only these statuses mean a retained hands-on test log exists and may be marked up.
+HANDS_ON_PUBLISHED = frozenset({
+    'published',
+    'hands_on_published',
+    'tested',
+    'hands_on_tested',
+})
+
+
+def is_hands_on_published(tool: dict) -> bool:
+    return str(tool.get('hands_on_status') or '').strip().lower() in HANDS_ON_PUBLISHED
+
+
+def valid_rating_value(tool: dict) -> float | None:
+    """Return a 0-exclusive..5 rating, or None when missing/invalid.
+
+    A missing rating must not default to 4 or 0 — Google rejects ratingValue 0,
+    and inventing a score pretends we tested a product we have not tested.
+    """
+    raw = tool.get('rating')
+    try:
+        value = float(raw)
+    except (TypeError, ValueError):
+        return None
+    if value <= 0 or value > 5:
+        return None
+    return value
+
+
+def page_has_schema_type(html: str, schema_type: str) -> bool:
+    return (
+        f'"@type": "{schema_type}"' in html
+        or f'"@type":"{schema_type}"' in html
+    )
 
 
 def load_tools():
@@ -107,20 +144,48 @@ def itemlist_for_page(rel: Path, tools: list, by_slug: dict):
     }
 
 
-def software_schema_for_tool(rel: Path, tool: dict):
-    if len(rel.parts) == 3 and rel.parts[0] == 'tools' and rel.parts[2] == 'index.html':
-        return {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": tool.get('name'),
-            "applicationCategory": tool.get('category'),
-            "description": tool.get('summary'),
-            "url": f"{DOMAIN}/tools/{tool['slug']}/",
-            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": tool.get('price', 'See official pricing')},
-            "aggregateRating": {"@type": "AggregateRating", "ratingValue": str(tool.get('rating', 0)), "bestRating": "5", "ratingCount": "1"},
-            "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": f"{DOMAIN}/"}
+def software_schema_for_tool(tool: dict) -> dict[str, Any]:
+    """Honest SoftwareApplication markup. No Review/AggregateRating unless tested.
+
+    Google Search Console flags Review snippets when a page emits both a
+    standalone Review and a SoftwareApplication AggregateRating (two items),
+    or when ratingValue is 0 / ratingCount is a fake 1-review aggregate.
+    """
+    schema: dict[str, Any] = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": tool.get('name'),
+        "applicationCategory": tool.get('category'),
+        "description": tool.get('summary'),
+        "url": f"{DOMAIN}/tools/{tool['slug']}/",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": tool.get('price', 'See official pricing'),
+        },
+        "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": f"{DOMAIN}/"},
+    }
+    official = tool.get('official')
+    if official:
+        schema['sameAs'] = official
+    rating = valid_rating_value(tool)
+    # A single editorial score is not an aggregate of reviews. Nest one critic
+    # Review only after a hands-on result is published — never alongside
+    # AggregateRating, and never with a Person author on public pages.
+    if is_hands_on_published(tool) and rating is not None:
+        schema['review'] = {
+            "@type": "Review",
+            "author": {"@type": "Organization", "name": "AIToolsEssentials", "url": f"{DOMAIN}/"},
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": str(rating),
+                "bestRating": "5",
+                "worstRating": "1",
+            },
+            "reviewBody": tool.get('summary') or '',
         }
-    return None
+    return schema
 
 
 def inject(p: Path, schemas: list[dict[str, Any] | None]) -> bool:
@@ -153,8 +218,16 @@ def main():
         schemas = [breadcrumb_schema(rel, html), itemlist_for_page(rel, tools, by_slug)]
         if len(rel.parts) == 3 and rel.parts[0] == 'tools' and rel.parts[2] == 'index.html':
             slug = rel.parts[1]
-            if slug in by_slug:
-                schemas.append(software_schema_for_tool(rel, by_slug[slug]))
+            # Ignore the AIT block we are about to replace. Only skip if
+            # generate_reviews.py already emitted SoftwareApplication outside it.
+            html_without_ait = re.sub(
+                r'<!-- AIT STRUCTURED DATA START -->.*?<!-- AIT STRUCTURED DATA END -->\s*',
+                '',
+                html,
+                flags=re.S,
+            )
+            if slug in by_slug and not page_has_schema_type(html_without_ait, 'SoftwareApplication'):
+                schemas.append(software_schema_for_tool(by_slug[slug]))
         if inject(p, schemas):
             changed += 1
     print(f'Structured data enhanced on {changed} pages')

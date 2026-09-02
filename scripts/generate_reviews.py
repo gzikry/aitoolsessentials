@@ -10,6 +10,7 @@ DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
 
 from affiliate_util import approved_programs, public_affiliate_href, NOUS_OFFER
+from enhance_structured_data import software_schema_for_tool, valid_rating_value
 
 
 def _source_record(root: Path, slug: str):
@@ -96,7 +97,7 @@ def _benchmark_html(root: Path, slug: str, category: str) -> str:
 def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> None:
     slug = tool['slug']
     name = tool.get('name', '')
-    rating = tool.get('rating', 4)
+    rating = valid_rating_value(tool)
     official = tool.get('official', '')
     summary = tool.get('summary', '')
     category = tool.get('category', '')
@@ -157,28 +158,21 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
         price_html += '</tbody></table>\n'
 
     who_for = _who_for(tool)
-    score_percent = max(0, min(100, rating / 5 * 100))
+    score_percent = max(0, min(100, (rating or 0) / 5 * 100))
+    if rating is not None:
+        score_heading = (
+            f'<strong>{rating}<small style="font-size:20px;color:#6e6e73">/5</small></strong>\n'
+            f'<div class="score-meter" aria-label="Editorial score {rating} out of 5"><i style="width:{score_percent}%"></i></div>'
+        )
+    else:
+        score_heading = (
+            '<strong>Not yet scored</strong>\n'
+            '<span>No published hands-on result, so this page does not claim a star rating.</span>'
+        )
 
-    schema = json.dumps({
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": {"@type": "SoftwareApplication", "name": name,
-                          "applicationCategory": category, "url": official},
-        "reviewRating": {"@type": "Rating", "ratingValue": str(rating), "bestRating": "5"},
-        "reviewBody": summary,
-        "dateModified": today,
-        "positiveNotes": {"@type": "ItemList", "itemListElement": [
-            {"@type": "ListItem", "position": i + 1, "name": note}
-            for i, note in enumerate(tool.get('pros', []))
-        ]},
-        "negativeNotes": {"@type": "ItemList", "itemListElement": [
-            {"@type": "ListItem", "position": i + 1, "name": note}
-            for i, note in enumerate(tool.get('cons', []))
-        ]},
-        "author": {"@type": "Organization", "name": "AIToolsEssentials"},
-        "publisher": {"@type": "Organization", "name": "AIToolsEssentials"},
-        "url": f"{DOMAIN}/tools/{slug}/"
-    })
+    # SoftwareApplication only unless a hands-on result is published.
+    # A standalone Review plus AggregateRating is what GSC flagged as 2 invalid items.
+    schema = json.dumps(software_schema_for_tool(tool))
 
     features_html = ''.join(f'<li>{f}</li>\n' for f in tool.get('key_features', []))
     trial_checklist = tool.get('trial_checklist', '')
@@ -230,6 +224,16 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 
     pro1 = tool.get('pros', ['It delivers on its core promise'])[0]
     con1 = tool.get('cons', ['Costs can grow with usage'])[0].lower().rstrip('.')
+    if rating is not None:
+        verdict_html = (
+            f'<p><strong>Bottom line:</strong> {name} has an AIToolsEssentials editorial score of {rating}/5. '
+            f'{pro1}. The main trade-off to weigh: {con1}.</p>'
+        )
+    else:
+        verdict_html = (
+            f'<p><strong>Bottom line:</strong> {name} does not yet have a published AIToolsEssentials editorial score. '
+            f'{pro1}. The main trade-off to weigh: {con1}.</p>'
+        )
 
     automation_decoder_categories = {'Automation', 'Browser Automation', 'Productivity', 'AI Agents'}
     automation_decoder_block = ''
@@ -332,7 +336,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 {buying_decision_html}
 
 <h2>Verdict</h2>
-<p><strong>Bottom line:</strong> {name} has an AIToolsEssentials editorial score of {rating}/5. {pro1}. The main trade-off to weigh: {con1}.</p>
+{verdict_html}
 <p>Test it against one real task from your workflow this week — that tells you more than any review.</p>
 <h2>How {name} compares</h2>
 <p>{compare_para}</p>
@@ -346,8 +350,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <aside class="review-aside">
 <div class="score-card">
 <span>AIToolsEssentials editorial score</span>
-<strong>{rating}<small style="font-size:20px;color:#6e6e73">/5</small></strong>
-<div class="score-meter" aria-label="Editorial score {rating} out of 5"><i style="width:{score_percent}%"></i></div>
+{score_heading}
 <span>Evidence: editorial assessment + sourced benchmarks where the exact model is identifiable.</span>
 <a class="button button-blue small" style="margin-top:8px" href="{visit_href}" rel="{visit_rel}"{visit_target}>{visit_label}</a>{visit_fineprint}
 {visit_offer}<span>{visit_note}</span>
