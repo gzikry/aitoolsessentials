@@ -8,6 +8,8 @@ import re
 import sys
 from datetime import date
 
+from enhance_structured_data import is_hands_on_published, valid_rating_value
+
 ROOT = Path(__file__).resolve().parents[1]
 
 class Parser(HTMLParser):
@@ -31,6 +33,39 @@ class Parser(HTMLParser):
             self.refs.append(('script', d['src']))
     def handle_data(self, data):
         self.text.append(data)
+
+
+def iter_jsonld_nodes(obj):
+    if isinstance(obj, dict):
+        yield obj
+        for key, value in obj.items():
+            if key == '@context':
+                continue
+            yield from iter_jsonld_nodes(value)
+    elif isinstance(obj, list):
+        for item in obj:
+            yield from iter_jsonld_nodes(item)
+
+
+def schema_types(node):
+    raw = node.get('@type') if isinstance(node, dict) else None
+    if isinstance(raw, str):
+        return {raw}
+    if isinstance(raw, list):
+        return {str(x) for x in raw}
+    return set()
+
+
+def author_names(node):
+    author = node.get('author')
+    authors = author if isinstance(author, list) else [author]
+    names = []
+    for item in authors:
+        if isinstance(item, dict) and item.get('name'):
+            names.append(str(item['name']))
+        elif isinstance(item, str) and item.strip():
+            names.append(item)
+    return names
 
 
 def load_json(path):
@@ -135,6 +170,63 @@ def main():
             for required in ['Trial checklist', 'How we evaluated', 'editorial score', 'Official sources checked', 'Hands-on result not yet published']:
                 if required.lower() not in text:
                     errors.append(f"{review.relative_to(ROOT)} missing review evidence label: {required}")
+            rel = review.relative_to(ROOT)
+            raw_html = review.read_text()
+            snippet_items = []
+            has_software_application = False
+            for raw_schema in re.findall(
+                r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+                raw_html,
+                flags=re.S | re.I,
+            ):
+                try:
+                    data = json.loads(raw_schema)
+                except Exception:
+                    continue
+                for node in iter_jsonld_nodes(data):
+                    types = schema_types(node)
+                    if 'SoftwareApplication' in types or 'Product' in types:
+                        has_software_application = True
+                    if 'Review' in types:
+                        snippet_items.append(('Review', node))
+                    if 'AggregateRating' in types:
+                        snippet_items.append(('AggregateRating', node))
+                    if node.get('ratingValue') is not None:
+                        try:
+                            rating_value = float(node['ratingValue'])
+                        except (TypeError, ValueError):
+                            errors.append(f'{rel} JSON-LD ratingValue is not numeric: {node.get("ratingValue")}')
+                            continue
+                        if rating_value <= 0 or rating_value > 5:
+                            errors.append(f'{rel} JSON-LD ratingValue out of range: {node.get("ratingValue")}')
+            if not has_software_application:
+                errors.append(f'{rel} missing SoftwareApplication JSON-LD')
+            if not is_hands_on_published(tool):
+                for kind, _node in snippet_items:
+                    errors.append(
+                        f'{rel} emits {kind} JSON-LD without a published hands-on result'
+                    )
+            if len(snippet_items) > 1:
+                kinds = ', '.join(kind for kind, _node in snippet_items)
+                errors.append(
+                    f'{rel} has {len(snippet_items)} Review snippet items ({kinds}); '
+                    'do not combine Review and AggregateRating'
+                )
+            for kind, node in snippet_items:
+                if kind == 'Review':
+                    names = author_names(node)
+                    if not names:
+                        errors.append(f'{rel} Review JSON-LD missing author name')
+                    if any('george' in name.lower() for name in names):
+                        errors.append(f'{rel} Review JSON-LD must not name a person on public pages')
+                    review_rating = node.get('reviewRating') if isinstance(node.get('reviewRating'), dict) else {}
+                    if review_rating.get('ratingValue') in (None, '', '0'):
+                        errors.append(f'{rel} Review JSON-LD missing valid reviewRating.ratingValue')
+                elif kind == 'AggregateRating':
+                    if not (node.get('reviewCount') or node.get('ratingCount')):
+                        errors.append(f'{rel} AggregateRating JSON-LD missing reviewCount/ratingCount')
+                    if valid_rating_value(tool) is None:
+                        errors.append(f'{rel} AggregateRating JSON-LD without a valid tool rating')
     
     # Check for key viral pages
     key_pages = ['leaderboard.html','submit-tool.html','downloads/ai-tool-evaluation-scorecard.html',
