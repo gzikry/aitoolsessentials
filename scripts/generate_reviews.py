@@ -256,8 +256,11 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
         if offer:
             visit_label = prog.get('cta_label') or 'Claim the $15 first-month referral'
             visit_offer = f'<p class="affiliate-inline">{offer}</p>'
-        visit_note = 'Affiliate / referral link — labeled because this is a partner offer.'
-        visit_fineprint = '<p class="pricing-fineprint">Affiliate / referral link — we may earn a commission at no cost to you. See our <a href="../../legal/affiliate-disclosure.html">disclosure</a>.</p>'
+            visit_note = 'Affiliate / referral link — labeled because this is a partner offer.'
+            visit_fineprint = '<p class="pricing-fineprint">Affiliate / referral link — we may earn a commission at no cost to you. See our <a href="../../legal/affiliate-disclosure.html">disclosure</a>.</p>'
+        else:
+            visit_note = 'Affiliate link — supports editorial maintenance at no cost to you.'
+            visit_fineprint = '<p class="pricing-fineprint">Affiliate link — we may earn a commission at no cost to you. See our <a href="../../legal/affiliate-disclosure.html">disclosure</a>.</p>'
 
     html = f'''<!doctype html>
 <html lang="en">
