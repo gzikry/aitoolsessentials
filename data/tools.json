@@ -3654,5 +3654,59 @@
     "trial_checklist": "Use one real long document and one web reading session. Verify voice quality, speed control, and offline behavior. Compare cost and output quality against ElevenLabs or Murf for any narration use case. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard"
+  },
+  {
+    "slug": "catch-ai",
+    "name": "Catch",
+    "category": "AI Agents",
+    "best_for": "Busy executives who want an AI admin to schedule meetings, triage email, book travel, and make calls",
+    "features": "Email triage and drafting, calendar scheduling and conflict resolution, travel booking, outbound phone calls, Slack/Messages/email chat, calendar protection, tasks and reminders",
+    "price": "$99/month billed monthly (10-day free trial; cancel anytime)",
+    "rating": 4.0,
+    "official": "https://www.catchagent.ai/",
+    "summary": "An AI admin assistant that schedules meetings, drafts email, books travel, and places phone calls over Slack, Messages, email, or voice — positioned as action-taking rather than suggest-or-summarize.",
+    "use_cases": [
+      "Scheduling meetings and resolving calendar conflicts",
+      "Inbox triage, follow-ups, and drafts in the user's voice",
+      "Booking flights and hotels",
+      "Outbound phone calls to reschedule or follow up",
+      "CC schedule@ea.catchagent.ai on a thread so Catch takes over scheduling"
+    ],
+    "pros": [
+      "Official site positions Catch as an action-taking admin for email, scheduling, travel, and calls rather than a summarize-only assistant",
+      "Homepage and /security name a flat $99/month price with cancel anytime and a 10-day free trial",
+      "Vendor security page claims SOC 2 Type II, CASA Tier-2, and Google Verified, with encryption in transit and at rest"
+    ],
+    "cons": [
+      "The same official homepage currently mixes Closed Beta — Limited Spots waitlist copy with a public $99/month cancel-anytime module, so availability is not a clean self-serve SKU",
+      "The product is described as acting on mailbox, calendar, and phone access; that is a real data-access risk even with vendor security claims",
+      "Named testimonials on the marketing site are vendor-supplied and are not independently corroborated here"
+    ],
+    "key_features": [
+      "Schedules meetings and resolves calendar conflicts across calendars",
+      "Drafts and triages email, including follow-ups",
+      "Books flights and hotels",
+      "Places outbound phone calls",
+      "Chat via Slack, Messages, email, or a call",
+      "CC schedule@ea.catchagent.ai to hand off a scheduling thread",
+      "Focus-time / calendar protection, tasks, reminders, and claimed unlimited integrations"
+    ],
+    "faq": [
+      [
+        "How much does Catch cost?",
+        "On 2026-09-02 the official homepage and /security page advertised $99/month, billed monthly, cancel anytime, with a 10-day free trial. There is no live /pricing page (404). Confirm the current module on catchagent.ai before paying."
+      ],
+      [
+        "Is Catch generally available or still closed beta?",
+        "The same official homepage shows both a Closed Beta — Limited Spots waitlist questionnaire and a public $99/month hire-your-admin module. Treat availability as mixed until you can actually start the advertised trial."
+      ],
+      [
+        "Does Catch need access to email, calendar, or phone?",
+        "Vendor copy describes Catch acting on email, calendars, and outbound calls, including CC-to-schedule. That is a mailbox/calendar/phone access decision. Marketing-host /privacy and /terms 404; app.catchagent.ai/privacy and /terms return an SPA shell. Read the live app policies before connecting accounts."
+      ]
+    ],
+    "trial_checklist": "Do not buy from the homepage headline alone. Attempt the advertised 10-day free trial with one real scheduling thread, one real inbox follow-up, and one calendar conflict. Confirm whether signup is open or waitlist-gated. Record what mailbox, calendar, and phone permissions Catch requests. Compare the same three tasks against your current assistant (human EA, Shortwave, or a general chat tool) before paying $99/month. Named testimonials on the site are vendor-supplied — do not treat them as independent proof.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard"
   }
 ]
