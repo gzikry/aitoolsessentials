@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 from datetime import datetime
 from pathlib import Path
+from html import escape
 from typing import Any
 
 DOMAIN = "https://aitoolsessentials.com"
@@ -74,6 +75,34 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
             f'<td><a href="{url}" rel="external nofollow" target="_blank">Official pricing ↗</a></td></tr>'
         )
 
+    watch_html = ""
+    watches_path = root / "data/vendor_watches.json"
+    if watches_path.exists():
+        try:
+            watch_data = json.loads(watches_path.read_text())
+        except Exception:
+            watch_data = {}
+        watch_items = []
+        for w in watch_data.get("watches", []):
+            src = w.get("source_url") or "#"
+            note = escape((w.get("pricing_note") or w.get("summary") or "")[:220], quote=True)
+            watch_items.append(
+                f'<tr><td><strong>{escape(str(w.get("name") or ""), quote=True)}</strong></td>'
+                f'<td>{escape(str(w.get("checked_at") or "—"), quote=True)}</td>'
+                f'<td><span class="pill">Early access · no public pricing</span></td>'
+                f'<td style="max-width:520px"><span class="muted">{note}</span></td>'
+                f'<td><a href="{escape(src, quote=True)}" rel="external nofollow" target="_blank">Official source ↗</a></td></tr>'
+            )
+        if watch_items:
+            watch_html = (
+                '<section class="score-card" style="margin-top:28px;border-left:4px solid #d97706">'
+                '<span>Unlisted launches</span>'
+                '<h3>Early access / no public self-serve pricing</h3>'
+                '<p>These vendor launches were checked against official posts. They are not directory listings and have no invented SKU prices.</p>'
+                '<div class="table-wrap"><table><thead><tr><th>Launch</th><th>Checked</th><th>Status</th><th>Snapshot</th><th>Source</th></tr></thead>'
+                f'<tbody>{"".join(watch_items)}</tbody></table></div></section>'
+            )
+
     change_html = ""
     if changelog:
         items = "".join(
@@ -108,6 +137,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <div class="table-wrap"><table>
 <thead><tr><th>Tool</th><th>Pricing verified</th><th>Status</th><th>Snapshot</th><th>Source</th></tr></thead>
 <tbody>{rows}</tbody></table></div>
+{watch_html}
 {change_html}
 <p class="affiliate-inline" style="margin-top:16px">Methodology: snapshots come from each vendor's official pricing page on the date shown; we never infer or estimate missing values. This page is informational — always confirm final pricing with the vendor before purchasing.</p>
 </div></section>
