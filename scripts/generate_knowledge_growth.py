@@ -163,7 +163,8 @@ def inject_site_schema(root: Path, tools: list[dict[str, Any]] | None = None) ->
     }
     block = f'\n{marker_start}\n<script type="application/ld+json">{json.dumps(schema, separators=(",", ":"))}</script>\n{marker_end}\n'
     for p in root.rglob("*.html"):
-        if any(part.startswith(".") for part in p.relative_to(root).parts):
+        rel_parts = p.relative_to(root).parts
+        if any(part.startswith(".") for part in rel_parts) or "go" in rel_parts:
             continue
         html = p.read_text()
         html = re.sub(r"\s*<!-- AIT KNOWLEDGE SCHEMA START -->.*?<!-- AIT KNOWLEDGE SCHEMA END -->\s*", "\n", html, flags=re.S)

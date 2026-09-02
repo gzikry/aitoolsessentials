@@ -27,7 +27,7 @@ def load_tools():
 def public_pages():
     for p in ROOT.rglob('*.html'):
         rel = p.relative_to(ROOT)
-        if 'admin' in rel.parts:
+        if 'admin' in rel.parts or 'go' in rel.parts:
             continue
         yield p
 

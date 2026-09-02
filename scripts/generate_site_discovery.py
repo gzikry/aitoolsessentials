@@ -8,6 +8,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from affiliate_util import inject_nous_referral_module
+
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
 HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/stack-builder.html">Stack builder</a><a href="/tool-finder.html">Tool finder</a><a href="/free-ai-tools.html">Free AI tools</a><a href="/alternatives/">Alternatives</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/articles/index.html">Guides</a><a href="/deals/">Deals</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>'
@@ -93,6 +95,7 @@ def generate_start_here(root: Path) -> None:
     ]
     cards = "".join(f'<article class="content-hub-card"><span>Start here</span><h3>{esc(title)}</h3><p>{esc(text)}</p><a class="button button-blue small" href="{href}">{esc(cta)}</a></article>' for title, text, href, cta in steps)
     page = f'<!doctype html><html lang="en">{head("Start Here | AIToolsEssentials", "A guided first-visit page for choosing AI tools, building stacks, estimating cost, comparing alternatives, or submitting a vendor review.", DOMAIN+"/start-here/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Start here</p><h1>Choose the shortest path to a better AI stack.</h1><p class="subhead">Skip the directory maze. Pick the job you need done and jump to the right utility.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="content-hub-grid">{cards}</div></div></section></main>{FOOTER}{scripts()}</body></html>'
+    page = inject_nous_referral_module(page)
     out = root / "start-here" / "index.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(page)
@@ -191,7 +194,8 @@ def postprocess_head_links(root: Path) -> None:
     marker = "<!-- AIT DISCOVERY LINKS -->"
     links = marker + '<link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>'
     for p in root.rglob("*.html"):
-        if any(part.startswith(".") for part in p.relative_to(root).parts):
+        rel_parts = p.relative_to(root).parts
+        if any(part.startswith(".") for part in rel_parts) or "go" in rel_parts:
             continue
         html = p.read_text()
         html = re.sub(r"\s*<!-- AIT DISCOVERY LINKS -->.*?<script src=\"/js/discovery\.js\" defer></script>", "", html, flags=re.S)

@@ -667,9 +667,9 @@
       "AI tool buyers",
       "workflow-specific buyers"
     ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+    "status": "approved",
+    "next_action": "Keep public CTAs on /go/nous/; tracking URL stays in affiliate_programs.json.",
+    "notes": "Approved Nous Research referral. $15 off first month on the Nous API and Hermes Agent. Public pages use the /go/nous/ hop."
   },
   {
     "tool_slug": "openclaw",

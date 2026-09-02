@@ -187,6 +187,23 @@
       "application_status": "ready_to_apply",
       "commission_note": "20% recurring commission on every payment by referrals, lifetime; 30-day cookie; monthly payouts via Wise (PayPal on request, $200 minimum).",
       "notes": "Program transitioning to PartnerStack (browseai.partnerstack.com). Official terms at browse.ai/legal/affiliate-program-terms. No Impact dependency. No cap on commissions."
+    },
+    {
+      "tool_slug": "hermes-agent",
+      "availability": "available",
+      "program_type": "referral",
+      "network": "Nous Research direct",
+      "official_program_url": "https://portal.nousresearch.com/",
+      "application_status": "approved",
+      "commission_note": "$15 off first month on the Nous API and Hermes Agent (referral offer as provided).",
+      "notes": "Approved 2026-09-02. Public pages must link to /go/nous/ (noindex hop). Do not print the tracking slug in public hrefs, titles, or visible copy.",
+      "status": "approved",
+      "approved_date": "2026-09-02",
+      "affiliate_url": "https://portal.nousresearch.com/r/george-zikry",
+      "public_href": "/go/nous/",
+      "offer_copy": "Nous Research gives you $15 off your first month on the Nous API and Hermes Agent.",
+      "hop_title": "Continuing to Nous Research",
+      "cta_label": "Claim the $15 first-month referral"
     }
   ],
   "priority_application_queue": [

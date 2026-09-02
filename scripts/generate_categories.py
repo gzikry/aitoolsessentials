@@ -6,6 +6,8 @@ from html import escape as htmlesc
 from pathlib import Path
 from urllib.parse import quote
 
+from affiliate_util import nous_referral_module
+
 DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
 
@@ -91,7 +93,7 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 {cards_html}
 </div>
 </section>
-
+{nous_referral_module() if cat == "AI Agents" else ""}
 <section class="scene scene-light category-related-section">
 <div class="article-shell wide">{related_categories}</div>
 </section>

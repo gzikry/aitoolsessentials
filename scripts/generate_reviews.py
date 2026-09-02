@@ -9,6 +9,8 @@ from pathlib import Path
 DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
 
+from affiliate_util import approved_programs, public_affiliate_href, NOUS_OFFER
+
 
 def _source_record(root: Path, slug: str):
     path = root / 'data/tool_sources.json'
@@ -234,6 +236,29 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     if category in automation_decoder_categories:
         automation_decoder_block = f'''<section class="score-card"><span>Automation billing decoder</span><h2>Translate this workflow into billing units.</h2><p>Estimate Zapier tasks, Make credits, and n8n executions for the same monthly run volume before comparing plan prices.</p><p><a class="button button-blue" href="/automation-cost-decoder/">Open the free decoder</a></p></section>\n'''
 
+    visit_href = official
+    visit_rel = 'sponsored noopener nofollow'
+    visit_target = ' target="_blank"'
+    visit_label = f'Visit {name}'
+    visit_note = 'Affiliate link — supports editorial maintenance at no cost to you.'
+    visit_offer = ''
+    visit_fineprint = ''
+    try:
+        prog = approved_programs(root).get(slug)
+    except Exception:
+        prog = None
+    if prog:
+        visit_href = public_affiliate_href(prog)
+        is_internal = visit_href.startswith('/')
+        visit_rel = 'sponsored nofollow' if is_internal else 'sponsored noopener nofollow'
+        visit_target = '' if is_internal else ' target="_blank"'
+        offer = prog.get('offer_copy') or (NOUS_OFFER if slug == 'hermes-agent' else '')
+        if offer:
+            visit_label = prog.get('cta_label') or 'Claim the $15 first-month referral'
+            visit_offer = f'<p class="affiliate-inline">{offer}</p>'
+        visit_note = 'Affiliate / referral link — labeled because this is a partner offer.'
+        visit_fineprint = '<p class="pricing-fineprint">Affiliate / referral link — we may earn a commission at no cost to you. See our <a href="../../legal/affiliate-disclosure.html">disclosure</a>.</p>'
+
     html = f'''<!doctype html>
 <html lang="en">
 <head>
@@ -321,8 +346,8 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <strong>{rating}<small style="font-size:20px;color:#6e6e73">/5</small></strong>
 <div class="score-meter" aria-label="Editorial score {rating} out of 5"><i style="width:{score_percent}%"></i></div>
 <span>Evidence: editorial assessment + sourced benchmarks where the exact model is identifiable.</span>
-<a class="button button-blue small" style="margin-top:8px" href="{official}" rel="sponsored noopener nofollow" target="_blank">Visit {name}</a>
-<span>Affiliate link — supports editorial maintenance at no cost to you.</span>
+<a class="button button-blue small" style="margin-top:8px" href="{visit_href}" rel="{visit_rel}"{visit_target}>{visit_label}</a>{visit_fineprint}
+{visit_offer}<span>{visit_note}</span>
 </div>
 <div class="score-card">
 <span>Related tools</span>
