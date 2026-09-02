@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-09-02",
-  "tools_count": 73,
+  "tools_count": 74,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -546,6 +546,13 @@
       "category": "Audio & Video",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/speechify/"
+    },
+    {
+      "name": "Catch",
+      "slug": "catch-ai",
+      "category": "AI Agents",
+      "price": "$99/month billed monthly (10-day free trial; cancel anytime)",
+      "url": "https://aitoolsessentials.com/tools/catch-ai/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -3,4 +3,4 @@ Date,Tool,Change Type,Summary,Action for Members,Source
 2026-11-01,Grok,Model lineup,Grok 4.6 shipping; Grok Build and Grok Bot features expanded,Evaluate if real-time X/web data adds value to your workflow vs existing assistants,X/Grok official
 2026-11-01,HtmlSlides,New tool,Interactive HTML presentation maker added to directory (vendor submission),Test as alternative to Gamma for browser-playable decks,AIToolsEssentials review
 2026-11-01,Whop CLI,New tool,"Business CLI launched — programmatically manage products, pricing, ads, payouts","If you sell on Whop, install and test the CLI for automated business management",Whop blog
-2026-11-01,All tools,Pricing watch,Monthly pricing snapshot refreshed across 73 tools,Review premium-tool-decision-matrix-2026-11.csv for any changes affecting your stack,AIToolsEssentials pricing-watch
+2026-11-01,All tools,Pricing watch,Monthly pricing snapshot refreshed across 74 tools,Review premium-tool-decision-matrix-2026-11.csv for any changes affecting your stack,AIToolsEssentials pricing-watch
