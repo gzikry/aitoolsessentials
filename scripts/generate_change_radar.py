@@ -48,7 +48,7 @@ def generate(root: Path) -> Path:
                 if src else "Official source not recorded"
             )
             watch_cards.append(f'''<article class="score-card vendor-watch">
-<span class="evidence-label">Unlisted launch · {esc(w.get("status", "watch"))}</span>
+<span class="evidence-label">Unlisted launch · {esc(str(w.get("status") or "watch").replace("_", " "))}</span>
 <h2>{esc(w.get("name"))}</h2>
 <p>Checked <strong>{esc(w.get("checked_at"))}</strong> against {src_link}.</p>
 <p>{esc(w.get("summary"))}</p>
