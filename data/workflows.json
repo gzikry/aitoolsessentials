@@ -122,6 +122,13 @@
       "local private ai tools",
       "local ai workbench",
       "ollama lm studio open webui comparison"
+    ],
+    "watch_notes": [
+      {
+        "name": "Lily (Perplexity)",
+        "note": "Official 2026-09-02 blog: specialized Apple silicon engine for Qwen3.6-35B-A3B in Perplexity Computer hybrid compute. Open-source demo, not a directory SKU and not a substitute for Ollama or LM Studio on other models or chips.",
+        "source_url": "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon"
+      }
     ]
   },
   {

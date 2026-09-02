@@ -47,21 +47,27 @@ def generate(root: Path) -> Path:
                 f'<a href="{esc(src)}" rel="external nofollow" target="_blank">{esc(w.get("source_title") or src)}</a>'
                 if src else "Official source not recorded"
             )
+            extra_links = ""
+            demo = w.get("demo_url") or ""
+            if demo:
+                extra_links = (
+                    f'<a href="{esc(demo)}" rel="external nofollow" target="_blank">Official demo →</a>'
+                )
             watch_cards.append(f'''<article class="score-card vendor-watch">
 <span class="evidence-label">Unlisted launch · {esc(str(w.get("status") or "watch").replace("_", " "))}</span>
 <h2>{esc(w.get("name"))}</h2>
 <p>Checked <strong>{esc(w.get("checked_at"))}</strong> against {src_link}.</p>
 <p>{esc(w.get("summary"))}</p>
 <p><strong>Pricing:</strong> {esc(w.get("pricing_note") or "No public self-serve pricing recorded.")}</p>
-<p class="radar-links"><a href="/updates/">Monthly digest →</a><a href="/model-lineups/">Model lineups →</a><a href="/pricing-watch/">Pricing Watch →</a></p>
+<p class="radar-links"><a href="/updates/">Monthly digest →</a><a href="/model-lineups/">Model lineups →</a><a href="/pricing-watch/">Pricing Watch →</a>{extra_links}<a href="/local-ai-planner/">Local AI planner →</a></p>
 </article>''')
     watch_section = ""
     if watch_cards:
         watch_section = (
             '<section class="score-card" style="margin:0 0 28px;border-left:4px solid #d97706">'
             '<span>Vendor launches · not directory SKUs</span>'
-            '<h2>Recorded launches without public self-serve pricing.</h2>'
-            '<p>These are dated official-source watches. They are not tools.json listings, have no invented plan prices, and do not get a review page until public pricing exists.</p>'
+            '<h2>Recorded launches that are not directory SKUs.</h2>'
+            '<p>These are dated official-source watches. They are not tools.json listings and have no invented plan prices. Early-access launches stay here until public self-serve pricing exists. Open-source engines stay here unless they meet the directory listing bar.</p>'
             f'{"".join(watch_cards)}</section>'
         )
     cards=[]
