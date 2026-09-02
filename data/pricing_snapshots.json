@@ -291,6 +291,10 @@
     "speechify": {
       "date": "2026-09-01",
       "digest": "Free: $0, listen at up to 1.5x speed, 10 robotic-sounding voices, text-to-speech features only. Premium: $29/month, includes 1000+ natural voices, 60+ languages, 5x speed, scan and listen, AI summarie"
+    },
+    "catch-ai": {
+      "date": "2026-09-02",
+      "digest": "Official homepage and /security (checked 2026-09-02) advertise one public plan: $99/month, billed monthly, cancel anytime, with a 10-day free trial. catchagent.ai/pricing returned 404. The same homepa"
     }
   },
   "changes": [

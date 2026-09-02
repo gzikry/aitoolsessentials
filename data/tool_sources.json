@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-01",
+  "checked_at": "2026-09-02",
   "source_policy": "Official vendor sources only. Missing values remain null or unresolved; no inference.",
   "tools": [
     {
@@ -1056,6 +1056,22 @@
         "The pricing page displayed only a monthly Premium price ($29/month); no annual or multi-seat plan price was exposed.",
         "Commercial use is permitted for Voice Over Studio output, but the general app license is for personal use on one device; broader commercial deployment may require additional terms.",
         "The Privacy Policy does not explicitly state whether user content (uploaded text) is used to train Speechify's AI models."
+      ]
+    },
+    {
+      "slug": "catch-ai",
+      "pricing_checked_date": "2026-09-02",
+      "pricing_summary": "Official homepage and /security (checked 2026-09-02) advertise one public plan: $99/month, billed monthly, cancel anytime, with a 10-day free trial. catchagent.ai/pricing returned 404. The same homepage also shows a Closed Beta — Limited Spots waitlist questionnaire.",
+      "pricing_url": "https://www.catchagent.ai/",
+      "docs_url": "https://www.catchagent.ai/security",
+      "privacy_url": "https://app.catchagent.ai/privacy",
+      "rights_url": "https://app.catchagent.ai/terms",
+      "verification_notes": "Independently fetched with a browser user-agent on 2026-09-02. Homepage (200) and /security (200) both render a pricing module: “Hire your admin for $99/month”, “$99/month. Billed monthly. Cancel anytime.”, and “Start with a 10-day free trial.” /pricing, /docs, /rights, /privacy, and /terms on www.catchagent.ai returned 404. Footer links Privacy Policy and Terms of Service to app.catchagent.ai/privacy and app.catchagent.ai/terms (HTTP 200 SPA shells without readable policy text in the static HTML). Announcement tweet https://x.com/therealnirs/status/2095134650431586686 was not used for prices.",
+      "unresolved_claims": [
+        "Closed-beta waitlist copy and a public $99/month module appear on the same homepage; it is unclear whether checkout is open to anyone or gated.",
+        "Marketing-host /privacy, /terms, /docs, and /rights 404. app.catchagent.ai/privacy and /terms are JavaScript SPA shells, so the full policy text was not independently readable in static HTML.",
+        "SOC 2 Type II, CASA Tier-2, and Google Verified claims are vendor statements; the security page says full audit reports are available upon request.",
+        "Named testimonials on the marketing site are vendor-supplied and were not independently corroborated."
       ]
     }
   ]

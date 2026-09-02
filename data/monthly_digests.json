@@ -3,9 +3,17 @@
     "slug": "2026-09",
     "title": "What changed in AI tools — September 2026",
     "month_label": "September 2026",
-    "checked_at": "2026-09-01",
-    "summary": "A public keep/cut digest of recorded vendor launches and directory checks this month. World Labs published Atlas on 2026-09-01 as an early-access omni world model with no public self-serve pricing, so it is a watch item rather than a directory listing.",
-    "new_listings": [],
+    "checked_at": "2026-09-02",
+    "summary": "A public keep/cut digest of recorded vendor launches and directory checks this month. Catch (catchagent.ai) was listed on 2026-09-02 after the official homepage and /security page advertised $99/month billed monthly (cancel anytime, 10-day free trial); /pricing 404s and the same homepage still shows Closed Beta — Limited Spots. World Labs Atlas remains an early-access watch with no public self-serve pricing.",
+    "new_listings": [
+      {
+        "name": "Catch",
+        "slug": "catch-ai",
+        "note": "Official homepage and /security (checked 2026-09-02) advertise $99/month billed monthly, cancel anytime, 10-day free trial. Same homepage still shows Closed Beta — Limited Spots. /pricing 404. Mailbox/calendar/phone access is required for the advertised jobs. Named testimonials are vendor-supplied.",
+        "source_url": "https://www.catchagent.ai/",
+        "checked_at": "2026-09-02"
+      }
+    ],
     "vendor_launches": [
       {
         "name": "Atlas (World Labs)",
@@ -16,12 +24,15 @@
       }
     ],
     "watch_list": [],
-    "keep_cut_rule": "If a launch has no public pricing, do not treat it as a buy decision. Watch the official source until self-serve plans exist, then re-check before adding a seat.",
+    "keep_cut_rule": "If a launch has no public pricing, do not treat it as a buy decision. If a public price is mixed with closed-beta waitlist copy, treat availability as unresolved until you can actually start a trial. Watch official sources, then re-check before adding a seat.",
     "sources": [
       "https://www.worldlabs.ai/blog/atlas",
       "/change-radar/",
       "/pricing-watch/",
-      "/model-lineups/"
+      "/model-lineups/",
+      "https://www.catchagent.ai/",
+      "https://www.catchagent.ai/security",
+      "https://x.com/therealnirs/status/2095134650431586686"
     ]
   },
   {
