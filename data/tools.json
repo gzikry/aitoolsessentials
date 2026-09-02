@@ -2204,6 +2204,7 @@
       ]
     ],
     "trial_checklist": "Install it in an isolated profile and run three repeatable tasks: one research task, one file/terminal task, and one scheduled or messaging task. Record setup friction, approval prompts, model cost, tool errors, memory usefulness, and how easy it is to reset or remove the profile.",
+    "affiliate_url": "/go/nous/",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high"
   },

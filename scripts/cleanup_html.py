@@ -164,7 +164,8 @@ def fix_page(p: Path) -> bool:
 def main():
     changed = 0
     for p in ROOT.rglob('*.html'):
-        if 'admin' in p.relative_to(ROOT).parts:
+        rel = p.relative_to(ROOT)
+        if 'admin' in rel.parts or 'go' in rel.parts:
             continue
         if fix_page(p):
             changed += 1

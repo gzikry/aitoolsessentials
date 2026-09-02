@@ -307,7 +307,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     }
     # Sitewide nav entry: insert "Switching" after the Alternatives nav link on every page.
     for page in root.rglob("*.html"):
-        if "admin" in str(page):
+        if "admin" in str(page) or "/go/" in str(page) or page.parent.name == "go":
             continue
         ps = page.read_text()
         mquick = _re.search(r'<nav class="nav-links">(.*?)</nav>', ps, _re.S)

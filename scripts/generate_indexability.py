@@ -43,7 +43,7 @@ LEFTOVER_TITLE_SUFFIX = {
 def _public_html(root: Path):
     for p in root.rglob("*.html"):
         rel = p.relative_to(root)
-        if "admin" in rel.parts or any(part.startswith(".") for part in rel.parts):
+        if "admin" in rel.parts or any(part.startswith(".") for part in rel.parts) or "go" in rel.parts:
             continue
         yield p, rel
 

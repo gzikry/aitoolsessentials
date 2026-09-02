@@ -16,6 +16,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from affiliate_util import inject_nous_referral_module
+
 DOMAIN = "https://aitoolsessentials.com"
 MARK_START = "<!-- AIT SWEEP FAQ START -->"
 MARK_END = "<!-- AIT SWEEP FAQ END -->"
@@ -121,6 +123,19 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
             if i == -1:
                 continue
             new_s = s[:i] + module + "\n" + s[i:]
+        if new_s != s:
+            t.write_text(new_s)
+            stats["affiliate_modules"] += 1
+
+    nous_targets = [
+        root / "categories" / "AI Agents" / "index.html",
+        root / "start-here" / "index.html",
+    ]
+    for t in nous_targets:
+        if not t.exists():
+            continue
+        s = t.read_text()
+        new_s = inject_nous_referral_module(s)
         if new_s != s:
             t.write_text(new_s)
             stats["affiliate_modules"] += 1
