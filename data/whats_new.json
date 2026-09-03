@@ -1,0 +1,72 @@
+[
+  {
+    "type": "pricing",
+    "date": "2026-09-01",
+    "tool": "Shortwave",
+    "slug": "shortwave",
+    "desc": "Shortwave: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+  },
+  {
+    "type": "pricing",
+    "date": "2026-09-01",
+    "tool": "Browse AI",
+    "slug": "browse-ai",
+    "desc": "Browse AI: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+  },
+  {
+    "type": "pricing",
+    "date": "2026-09-01",
+    "tool": "Rows",
+    "slug": "rows",
+    "desc": "Rows: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+  },
+  {
+    "type": "pricing",
+    "date": "2026-09-01",
+    "tool": "NotebookLM",
+    "slug": "notebooklm",
+    "desc": "NotebookLM: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+  },
+  {
+    "type": "listing",
+    "date": "2026-08-28",
+    "tool": "Ideogram",
+    "slug": "ideogram",
+    "desc": "Added to directory — Creative"
+  },
+  {
+    "type": "listing",
+    "date": "2026-08-28",
+    "tool": "Luma AI",
+    "slug": "luma-ai",
+    "desc": "Added to directory — Video"
+  },
+  {
+    "type": "listing",
+    "date": "2026-08-28",
+    "tool": "Pika",
+    "slug": "pika",
+    "desc": "Added to directory — Video"
+  },
+  {
+    "type": "listing",
+    "date": "2026-08-28",
+    "tool": "Suno",
+    "slug": "suno",
+    "desc": "Added to directory — Audio & Video"
+  },
+  {
+    "type": "pricing",
+    "date": "2026-08-25",
+    "tool": "Cursor",
+    "slug": "cursor",
+    "desc": "Cursor: official pricing page changed since 2026-08-21 check. Re-verified 2026-08-25."
+  },
+  {
+    "type": "pricing",
+    "date": "2026-08-25",
+    "tool": "Grok",
+    "slug": "grok",
+    "desc": "Grok: official pricing page changed since 2026-08-21 check. Re-verified 2026-08-25."
+  }
+]
