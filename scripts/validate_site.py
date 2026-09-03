@@ -420,8 +420,8 @@ def main():
     issue1 = ROOT / 'newsletter/2026-w35.html'
     if issue1.exists():
         issue_html = issue1.read_text()
-        if '$130 for the same coding job' not in issue_html:
-            errors.append('Issue 1 public copy must use the $130 subject')
+        if 'The $130 coding stack' not in issue_html:
+            errors.append('Issue 1 public copy must use the $130 coding stack subject')
         if 'Sir, you appear' in issue_html or 'J. —' in issue_html or 'Good evening. I have reviewed' in issue_html:
             errors.append('Issue 1 public copy still has butler/J teaser language')
         if 'AIToolsEssentials' not in issue_html:
