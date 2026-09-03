@@ -172,12 +172,14 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
           <button class="button button-dark" type="button" id="sa-load-local">Load local save</button>
         </div>
       </section>
-      <section class="score-card sa-teaser">
-        <span>Later</span>
-        <h3>Detailed replacement plan</h3>
-        <p>A step-by-step replacement sequence is not part of this free audit. The result above is complete for keep/cut decisions.</p>
-        <p><button class="button button-dark sa-disabled" type="button" disabled aria-disabled="true">Coming soon</button></p>
+      <section class="score-card sa-premium-upsell">
+        <span>Included with Premium</span>
+        <h3>Want the full replacement plan?</h3>
+        <p>Premium gets you a step-by-step replacement sequence: what to switch to, migration steps, a 30-day roadmap, and a branded strategy PDF you can hand to your team. Plus weekly checklists, tool-change alerts, and a 67-tool decision matrix.</p>
+        <p><a class="button button-blue" data-sa-cta href="/premium/">See what $12 buys</a> <a class="button button-ghost-dark" data-sa-cta href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener">Start 7-day free trial</a></p>
+        <p class="sa-note">7-day free trial, then $12/month. Code <strong>LAUNCH50</strong> for 50% off the first paid month. Cancel anytime. Research and strategy only — no implementation or account access.</p>
       </section>
+      <div id="sa-premium-panel"></div>
       <div class="sa-actions">
         <button class="button button-dark" type="button" id="sa-back-2">Edit answers</button>
         <button class="button button-blue" type="button" id="sa-restart">Start over</button>
