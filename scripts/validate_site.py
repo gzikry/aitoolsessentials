@@ -432,6 +432,31 @@ def main():
         errors.append('Homepage must label the paid Whop CTA as Join Premium on Whop ($12/mo)')
     if '/stack-audit.html' not in home_html:
         errors.append('Homepage must link the free Stack Audit')
+    home_head = home_html.split('</head>', 1)[0]
+    if 'operationalize' in home_html.lower():
+        errors.append('Homepage still says operationalize (meta/OG/Twitter/JSON-LD must use second-person voice)')
+    if 'The essential AI tools directory' in home_html:
+        errors.append('Homepage still uses The essential AI tools directory')
+    if 'Stop paying for tools you do not use' not in home_head:
+        errors.append('Homepage head missing second-person title')
+    if 'See which subscriptions you should keep' not in home_head:
+        errors.append('Homepage head missing second-person description')
+    for needle, label in (
+        ('property="og:title" content="AIToolsEssentials — Stop paying for tools you do not use"', 'og:title'),
+        ('property="og:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', 'og:description'),
+        ('name="twitter:title" content="AIToolsEssentials — Stop paying for tools you do not use"', 'twitter:title'),
+        ('name="twitter:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', 'twitter:description'),
+        ('"name": "AIToolsEssentials — Stop paying for tools you do not use"', 'JSON-LD name'),
+        ('"description": "See which subscriptions you should keep, which you can cancel, and what to test this week."', 'JSON-LD description'),
+    ):
+        if needle not in home_head:
+            errors.append(f'Homepage head missing {label} second-person voice')
+    for p in ROOT.rglob('*.html'):
+        rel = p.relative_to(ROOT)
+        if 'admin' in rel.parts or any(part.startswith('.') for part in rel.parts) or 'go' in rel.parts:
+            continue
+        if 'operationalize' in p.read_text().lower():
+            errors.append(f'{rel} still says operationalize')
     checkout_html = (ROOT / 'checkout/complete/index.html').read_text()
     if 'Payment confirmed' in checkout_html:
         errors.append('checkout/complete must not claim Payment confirmed from a client query')

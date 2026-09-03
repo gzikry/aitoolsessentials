@@ -147,7 +147,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     L_RE = re.compile(re.escape(L_MARK_S) + r".*?" + re.escape(L_MARK_E) + r"\n?", re.S)
     lead_module = (
         f"{L_MARK_S}<section class=\"newsletter-panel\"><div><span>Free buyer checklist</span>"
-        "<h2>Download the AI Stack Decision Checklist</h2>"
+        "<h2>Print this before you buy another subscription.</h2>"
         "<p>Print this one-page worksheet before buying another AI subscription. It helps you score overlap, cost, trial results, and cancellation risk.</p>"
         "<p class=\"affiliate-inline\">No signup wall yet — use it now, then come back to Premium for monthly decision matrices and price alerts.</p></div>"
         "<div class=\"newsletter-actions\"><a class=\"button button-blue\" href=\"/downloads/ai-stack-decision-checklist.pdf\">Download PDF</a>"
