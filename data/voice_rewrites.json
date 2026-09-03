@@ -1,0 +1,226 @@
+{
+  "purpose": "Canonical inventory of AI-speak / product-first copy rewritten into second-person human voice. Apply via generators and data files, not one-off HTML.",
+  "rules": [
+    "Speak to the reader, not the tool.",
+    "Say what they keep, cancel, or pay — not operationalize, research layer, or operating model.",
+    "Keep free Keep/Cut Weekly and free Stack Audit clearly free and separate from $12/mo Premium.",
+    "Do not invent Whop plan IDs, prices, or checkout URLs."
+  ],
+  "rewrites": [
+    {
+      "phrase": "operationalize the best AI tools",
+      "rewrite": "See which subscriptions you should keep, which you can cancel, and what to test this week.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "The essential AI tools directory",
+      "rewrite": "Stop paying for tools you do not use",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "AI tools. Curated for outcomes.",
+      "rewrite": "You are paying for tools. Which ones earn it?",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "The clean way to choose your AI stack.",
+      "rewrite": "See what you actually use — and what you can cancel.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "Discover the tools worth testing, understand where they fit, and turn them into repeatable workflows",
+      "rewrite": "Pick the tools you will use this week. Then keep one. Cancel the rest before renewal.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "Generate your AI stack",
+      "rewrite": "Build a starter list",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "living category page with rankings, use cases, pricing notes, and tested workflows",
+      "rewrite": "Start with the job you do. Then open the category and read the keep / cut note.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "better human review loops",
+      "rewrite": "Draft, edit, and publish — then you decide what stays.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "Choose tools like products, not toys.",
+      "rewrite": "Do not buy a tool because the demo looked clever.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "A simple operating model for moving from AI curiosity to adopted workflow.",
+      "rewrite": "Write down the job. Test one tool. Keep one.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "How to choose AI tools without getting buried in hype.",
+      "rewrite": "How to choose without getting buried in hype.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "More ways to choose the right AI tool.",
+      "rewrite": "More ways to choose before you renew.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "Get in front of AI tool buyers.",
+      "rewrite": "If you sell a tool, submit evidence. Rankings stay unpaid.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "Go deeper with the member research layer.",
+      "rewrite": "Want dated keep / cut notes before you renew?",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "New: AI tools by job-to-be-done.",
+      "rewrite": "Start with the job you do this week.",
+      "files": ["index.html", "scripts/generate_premium_membership.py", "scripts/generate_workflow_pages.py"]
+    },
+    {
+      "phrase": "Built for visitors searching for concrete workflows",
+      "rewrite": "…written for you, not for the tool.",
+      "files": ["index.html", "scripts/generate_premium_membership.py", "scripts/generate_workflow_pages.py"]
+    },
+    {
+      "phrase": "Download the AI Stack Decision Checklist",
+      "rewrite": "Print this before you buy another subscription.",
+      "files": ["index.html", "scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "Pay for the research layer. Not the newsletter.",
+      "rewrite": "Pay for the worksheets. Not the newsletter.",
+      "files": ["scripts/generate_premium_membership.py", "premium/index.html"]
+    },
+    {
+      "phrase": "The research membership. Not the newsletter.",
+      "rewrite": "Pay for the worksheets. Not the newsletter.",
+      "files": ["scripts/generate_premium_membership.py", "index.html"]
+    },
+    {
+      "phrase": "Join the research membership — not the free email.",
+      "rewrite": "This is the $12/month membership. The weekly email is free.",
+      "files": ["scripts/generate_premium_membership.py", "scripts/generate_static_comparisons.py"]
+    },
+    {
+      "phrase": "The member library keeps compounding.",
+      "rewrite": "New dated notes each month. Not one PDF.",
+      "files": ["scripts/generate_premium_membership.py", "premium/roadmap.html"]
+    },
+    {
+      "phrase": "compounding research engine",
+      "rewrite": "dated notes that accumulate (rewritten as dated briefs, CSVs, worksheets)",
+      "files": ["scripts/generate_premium_membership.py", "premium/roadmap.html"]
+    },
+    {
+      "phrase": "public member research layer",
+      "rewrite": "These pages are readable here — this static site cannot hide them behind a login.",
+      "files": ["scripts/generate_premium_library.py"]
+    },
+    {
+      "phrase": "HTML/CSV research layer",
+      "rewrite": "HTML and CSV you can open here",
+      "files": ["scripts/generate_premium_membership.py", "scripts/generate_premium_library.py"]
+    },
+    {
+      "phrase": "Premium is a research membership",
+      "rewrite": "Premium is dated notes and worksheets",
+      "files": ["scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "Whop research membership",
+      "rewrite": "Whop membership / $12/month on Whop",
+      "files": ["scripts/generate_premium_membership.py", "scripts/generate_premium_library.py"]
+    },
+    {
+      "phrase": "Member research layer (pricing card)",
+      "rewrite": "Worksheets + written reply",
+      "files": ["scripts/generate_premium_membership.py", "pricing/index.html"]
+    },
+    {
+      "phrase": "research operating system",
+      "rewrite": "Premium only pays off if you use the worksheets.",
+      "files": ["scripts/generate_premium_membership.py"]
+    },
+    {
+      "phrase": "I want the research membership",
+      "rewrite": "I want the $12/month membership",
+      "files": ["scripts/generate_site_discovery.py", "start-here/index.html"]
+    },
+    {
+      "phrase": "Choose the shortest path to a better AI stack.",
+      "rewrite": "Pick the job. Then open the page that does it.",
+      "files": ["scripts/generate_site_discovery.py", "start-here/index.html"]
+    },
+    {
+      "phrase": "Jarvis-dry. No daily drip.",
+      "rewrite": "Straight. No daily drip.",
+      "files": ["data/newsletter.json", "newsletter/index.html", "subscribe/index.html"]
+    },
+    {
+      "phrase": "The archive.",
+      "rewrite": "Past issues.",
+      "files": ["scripts/generate_weekly_newsletter.py", "newsletter/index.html"]
+    },
+    {
+      "phrase": "Subscribe on Beehiiv",
+      "rewrite": "Get the free email",
+      "files": ["scripts/generate_weekly_newsletter.py", "scripts/generate_subscribe.py"]
+    },
+    {
+      "phrase": "Nav label: Subscribe (next to Premium)",
+      "rewrite": "Free email / Paid Premium so the two are not confused",
+      "files": ["scripts/generate_subscribe.py", "scripts/generate_weekly_newsletter.py", "scripts/generate_premium_membership.py", "index.html"]
+    },
+    {
+      "phrase": "Nav CTA: Subscribe / Premium",
+      "rewrite": "Get the free email / Paid Premium",
+      "files": ["scripts/generate_subscribe.py", "scripts/generate_weekly_newsletter.py", "scripts/generate_stack_audit.py", "index.html"]
+    },
+    {
+      "phrase": "strategy services",
+      "rewrite": "written keep/cut replies",
+      "files": ["legal/terms.html"]
+    },
+    {
+      "phrase": "Premium membership is delivered through Whop as a $12/month research membership… member-only research briefings…",
+      "rewrite": "Name free vs paid; mention public library with no login wall; keep $12/Whop facts",
+      "files": ["legal/terms.html"]
+    },
+    {
+      "phrase": "If Premium membership is activated through Whop…",
+      "rewrite": "Keep/Cut Weekly is a separate free Beehiiv list. The instant Stack Audit stays on your device. If you join Paid Premium through Whop…",
+      "files": ["legal/privacy.html"]
+    },
+    {
+      "phrase": "strategy-only AI Stack Audits",
+      "rewrite": "written keep/cut replies included with Premium. The weekly email and instant Stack Audit stay free.",
+      "files": ["legal/about.html"]
+    },
+    {
+      "phrase": "overlap clusters",
+      "rewrite": "tools that do the same job",
+      "files": ["scripts/generate_stack_audit.py", "stack-audit.html"]
+    },
+    {
+      "phrase": "a personal Stack Efficiency Score",
+      "rewrite": "how efficiently you spend",
+      "files": ["scripts/generate_stack_audit.py", "stack-audit.html"]
+    },
+    {
+      "phrase": "Premium research membership (review/category CTAs)",
+      "rewrite": "Paid Premium · $12/mo",
+      "files": ["scripts/generate_reviews.py", "scripts/generate_categories.py", "scripts/generate_conversion_growth.py"]
+    },
+    {
+      "phrase": "Is an AI tool research membership worth it?",
+      "rewrite": "Is the $12/month membership worth it?",
+      "files": ["scripts/generate_faq_articles.py", "scripts/generate_learn_hub.py"]
+    }
+  ]
+}

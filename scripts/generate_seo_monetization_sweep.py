@@ -186,6 +186,8 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         "<p>Verified official-pricing snapshots for all 40 tracked tools, each with a checked date.</p></article>"
         '<article class="content-hub-card"><span>Free report</span><h3><a href="/pricing-report/">State of AI Pricing</a></h3>'
         "<p>The quarterly evidence-based summary: coverage stats, live promotions, confirmed changes.</p></article>"
+        '<article class="content-hub-card"><span>Free utility</span><h3><a href="/stack-audit.html">Instant Stack Audit</a></h3>'
+        "<p>No-login keep/cut scorecard. Stays on your device. Not a Whop charge.</p></article>"
         '<article class="content-hub-card"><span>Free utility</span><h3><a href="/decision-brief.html">Decision Brief</a></h3>'
         "<p>Pick 2–3 tools and generate a shareable decision brief with overlap warnings.</p></article>"
         '<article class="content-hub-card"><span>Free download</span><h3><a href="/downloads/ai-stack-decision-checklist.html">Decision Checklist</a></h3>'

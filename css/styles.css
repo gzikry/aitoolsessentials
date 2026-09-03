@@ -264,6 +264,7 @@ code { background: #fff; border-radius: 5px; padding: 2px 5px; }
 
 /* Premium pricing page */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1080px;margin:0 auto;align-items:stretch}
+.pricing-grid.lanes-4{grid-template-columns:repeat(2,1fr);max-width:1100px}
 .pricing-card{background:#fff;border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;gap:14px;border:1px solid #e8e8ed}
 .pricing-card.featured{border:2px solid var(--blue);position:relative;box-shadow:0 12px 40px rgba(0,113,227,.12)}
 .pricing-flag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 14px;border-radius:999px;margin:0}

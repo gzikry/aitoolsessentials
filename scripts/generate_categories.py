@@ -111,7 +111,7 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 <a class="button button-dark" href="../../methodology/" style="margin-left:8px">Methodology</a>
 <a class="button button-dark" href="../../press/" style="margin-left:8px">Press / cite us</a>
 <a class="button button-dark" href="../../evidence/" style="margin-left:8px">Evidence ledger</a>
-<a class="button button-dark" href="../../premium/" style="margin-left:8px">Premium research membership</a>
+<a class="button button-dark" href="../../premium/" style="margin-left:8px">Paid Premium · $12/mo</a>
 </div>
 </div>
 </section>

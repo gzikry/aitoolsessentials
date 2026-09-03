@@ -42,7 +42,7 @@
     </section>
 
     <section class="scene scene-light intro-strip" id="next-steps" hidden>
-      <p><strong>What happens next:</strong> your Whop receipt arrives by email within a minute, and your Premium access is tied to that same email. Open your Whop account for the member library, then bookmark <a href="/premium/">aitoolsessentials.com/premium</a> for previews and monthly context.</p>
+      <p><strong>What happens next:</strong> this page only reads a return parameter. It cannot verify a charge. If Whop shows the trial or payment succeeded, the receipt should arrive by email. Open the Whop hub with that email, then the <a href="/premium/library/">member library</a>.</p>
     </section>
   </main>
 
@@ -67,14 +67,14 @@
   var next = document.getElementById("next-steps");
 
   if (ok) {
-    kicker.textContent = "Payment confirmed 🎉";
-    heading.textContent = "Welcome to Premium.";
-    detail.textContent = "You're in. Your receipt is on its way by email — check your inbox for your Whop login so you can manage your membership anytime.";
+    kicker.textContent = "If Whop shows payment succeeded";
+    heading.textContent = "Open Premium in Whop.";
+    detail.textContent = "This page cannot confirm a charge from the URL alone. If Whop shows the 7-day trial or payment succeeded, use that same email in the Whop hub. Your receipt — not this page — is the source of truth.";
     next.hidden = false;
     if (window.aitTrack) window.aitTrack("checkout_complete", { plan: params.get("planId") || "premium-monthly" });
     actions.innerHTML =
       '<a class="button button-blue" href="https://whop.com/hub" rel="external noopener">Open Whop member hub</a>' +
-      '<a class="button button-ghost-dark" href="../../premium/">Preview Premium library</a>';
+      '<a class="button button-ghost-dark" href="../../premium/library/">Open member library</a>';
   } else if (params.get("status") === "error") {
     kicker.textContent = "Checkout didn't complete";
     heading.textContent = "No charge was made.";

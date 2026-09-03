@@ -108,17 +108,21 @@ def _decision_brief_link(slugs):
 
 
 def _premium_module():
-    return (
-        '<section class="newsletter-panel premium-conversion-panel"><div><span>Premium research layer</span>'
-        '<h2>Want the member-only decision archive?</h2>'
-        '<p>Premium adds monthly research briefs, stack-audit templates, weekly checklists, tool-change alerts, hands-on protocols, ROI calculators, and member-requested deep dives through Whop.</p>'
-        '<p class="affiliate-inline">7-day free trial · then $12/month · code LAUNCH50 for 50% off first paid month · Whop handles billing and access · research and strategy only.</p>'
-        '</div><div class="newsletter-actions">'
-        '<a class="button button-blue" href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener">Subscribe on Whop</a>'
-        '<a class="button button-dark" href="/premium/">See Premium library</a>'
-        '<a class="button button-dark" href="/premium/faq.html">FAQ</a>'
-        '</div></section>'
-    )
+    try:
+        from generate_premium_membership import premium_upsell_module
+        return premium_upsell_module().replace("<!-- AIT PREMIUM MODULE START -->", "").replace("<!-- AIT PREMIUM MODULE END -->", "").strip()
+    except Exception:
+        return (
+            '<section class="newsletter-panel premium-conversion-panel"><div><span>Paid Premium · $12/mo via Whop</span>'
+            '<h2>This is the $12/month membership. The weekly email is free.</h2>'
+            '<p>Premium is AIToolsEssentials Premium on Whop. Keep/Cut Weekly and the instant Stack Audit stay free.</p>'
+            '<p class="affiliate-inline">7-day free trial · then $12/month · code LAUNCH50 for 50% off first paid month · Whop handles billing · research and strategy only.</p>'
+            '</div><div class="newsletter-actions">'
+            '<a class="button button-blue" href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener">Join Premium on Whop ($12/mo)</a>'
+            '<a class="button button-dark" href="/premium/library/">Member library</a>'
+            '<a class="button button-dark" href="/premium/faq.html">FAQ</a>'
+            '</div></section>'
+        )
 
 
 def generate_best_ai_tools(root: Path):

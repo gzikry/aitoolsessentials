@@ -42,6 +42,11 @@
       "description": "Estimate monthly AI stack cost."
     },
     {
+      "name": "Stack Audit",
+      "url": "/stack-audit.html",
+      "description": "Audit the tools you already pay for."
+    },
+    {
       "name": "Free AI Tools",
       "url": "/free-ai-tools.html",
       "description": "Browse free and freemium AI tools."

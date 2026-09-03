@@ -16,7 +16,7 @@ HEADER = (
     '<span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a>'
     '<a href="/stack-builder.html">Stack builder</a><a href="/cost-calculator.html">Cost calculator</a>'
     '<a href="/decision-brief.html">Decision brief</a><a href="/stack-audit.html" aria-current="page">Stack audit</a>'
-    '</nav><a class="nav-cta" href="/pricing/">Premium</a></header>'
+    '</nav><a class="nav-cta" href="/pricing/">Paid Premium</a></header>'
 )
 FOOTER = (
     '<footer class="footer"><span>© 2026 AIToolsEssentials</span>'
@@ -105,9 +105,10 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
   <div style="max-width:920px;margin:0 auto;padding:88px 28px 64px;text-align:center">
     <p class="kicker">Free stack audit · no login · stays on your device</p>
     <h1>See what you actually pay for.</h1>
-    <p class="subhead">Pick the AI tools you already use. Enter what you pay — or mark spend unknown. Get keep/cut advice, overlap clusters, and a personal Stack Efficiency Score. Affiliate status never changes the result.</p>
-    <p><a class="button button-blue" href="#sa-app">Start the audit</a>
-       <a class="button button-ghost-dark" href="/stack-builder.html" style="margin-left:8px">Need a starter stack instead?</a></p>
+    <p class="subhead">This is the free instant scorecard — not Keep/Cut Weekly and not paid Premium. Pick the tools you already use. Enter what you pay — or mark spend unknown. See keep/cut advice, tools that do the same job, and how efficiently you spend. Affiliate status never changes the result.</p>
+    <p><a class="button button-blue" href="#sa-app">Start the free audit</a>
+       <a class="button button-ghost-dark" href="/stack-builder.html" style="margin-left:8px">Need a starter stack instead?</a>
+       <a class="button button-ghost-dark" href="/premium/library/" style="margin-left:8px">Paid Premium library</a></p>
   </div>
 </section>
 <section class="scene scene-light content-hub" id="sa-app">
@@ -154,7 +155,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
       <section class="score-card sa-policy">
         <span>Editorial policy</span>
         <h3>Money and affiliation do not buy a recommendation.</h3>
-        <p>Affiliate or sponsor status never changes the score, inclusion, overlap clusters, badges, or Keep / Cut / Replace / Review / Trial first advice.</p>
+        <p>Affiliate or sponsor status never changes the score, inclusion, tools that do the same job, badges, or Keep / Cut / Replace / Review / Trial first advice.</p>
       </section>
       <section class="score-card">
         <span>Share &amp; export</span>
@@ -180,8 +181,8 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
       <div class="sa-actions">
         <button class="button button-dark" type="button" id="sa-back-2">Edit answers</button>
         <button class="button button-blue" type="button" id="sa-restart">Start over</button>
-        <a class="button button-ghost-dark" data-sa-cta href="/newsletter/">Keep/Cut Weekly</a>
-        <a class="button button-ghost-dark" data-sa-cta href="/premium/">Human strategy report (existing Premium)</a>
+        <a class="button button-ghost-dark" data-sa-cta href="/newsletter/">Free Keep/Cut Weekly</a>
+        <a class="button button-ghost-dark" data-sa-cta href="/premium/">Paid Premium · human strategy reply ($12/mo)</a>
       </div>
     </section>
   </div>

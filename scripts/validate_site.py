@@ -426,6 +426,43 @@ def main():
             errors.append('Homepage #subscribe must link to /subscribe/ or Beehiiv')
         if 'keep/cut' not in subscribe_block.lower() and 'weekly' not in subscribe_block.lower():
             errors.append('Homepage #subscribe must be labeled as the free Keep/Cut Weekly email')
+        if 'join premium on whop' in subscribe_block.lower() or 'start 7-day' in subscribe_block.lower():
+            errors.append('Homepage #subscribe must not look like the paid Premium CTA')
+    if 'Join Premium on Whop ($12/mo)' not in home_html:
+        errors.append('Homepage must label the paid Whop CTA as Join Premium on Whop ($12/mo)')
+    if '/stack-audit.html' not in home_html:
+        errors.append('Homepage must link the free Stack Audit')
+    checkout_html = (ROOT / 'checkout/complete/index.html').read_text()
+    if 'Payment confirmed' in checkout_html:
+        errors.append('checkout/complete must not claim Payment confirmed from a client query')
+    if 'If Whop shows payment succeeded' not in checkout_html:
+        errors.append('checkout/complete must be honest that Whop is the source of truth')
+    pricing_html = (ROOT / 'pricing/index.html').read_text()
+    if '/stack-audit.html' not in pricing_html:
+        errors.append('Pricing page must link the free Stack Audit')
+    if 'Join Premium on Whop ($12/mo)' not in pricing_html:
+        errors.append('Pricing page must label the Whop CTA as paid Premium')
+    if 'second product' not in pricing_html.lower() and 'not a second' not in pricing_html.lower():
+        errors.append('Pricing page must say the human audit is not a second paid product')
+    services_audit = ROOT / 'services/ai-stack-audit.html'
+    if services_audit.exists():
+        services_html = services_audit.read_text()
+        if '/stack-audit.html' not in services_html:
+            errors.append('services/ai-stack-audit.html must distinguish the free instant Stack Audit')
+    library_hub = ROOT / 'premium/library/index.html'
+    if not library_hub.exists():
+        errors.append('Missing premium/library/index.html member library hub')
+    else:
+        library_html = library_hub.read_text()
+        if 'no server-side gate' not in library_html.lower() and 'not a login wall' not in library_html.lower() and 'does not pretend' not in library_html.lower():
+            errors.append('Member library must say there is no login wall')
+        if 'whop.com/checkout/ch_DKm5yxA1OBXoDru' not in library_html:
+            errors.append('Member library must keep the existing Whop Premium checkout URL')
+    conversion_hits = list((ROOT).glob('tools/*/index.html'))[:3]
+    for sample in conversion_hits:
+        text = sample.read_text()
+        if 'premium-conversion-panel' in text and 'Subscribe on Whop' in text:
+            errors.append(f'{sample.relative_to(ROOT)} Premium CTA still says Subscribe on Whop')
     header = home_html.split('</header>', 1)[0]
     if '/subscribe/' not in header and 'href="subscribe/"' not in header:
         errors.append('Homepage nav must include Subscribe → /subscribe/')
