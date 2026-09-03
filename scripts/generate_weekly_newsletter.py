@@ -92,21 +92,22 @@ Beehiiv adds the unsubscribe link in the footer. We do not send daily mail. Form
 
 def public_page(issue: dict, cfg: dict) -> str:
     keep = issue.get("keep_one") or {}
-    logo = esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")
-    if logo.startswith("http"):
-        logo_src = logo
-    else:
-        logo_src = logo
     desc = issue.get("preview") or issue.get("lede") or ""
-    
-    # Pricing changes section for public page
+    dek = issue.get("preview") or issue.get("lede") or ""
+    pub_name = esc(cfg.get("publication_name") or "Keep/Cut Weekly")
+
     pricing_items = issue.get("pricing_changes") or []
     if pricing_items:
         pricing_rows = "\n".join(
             f'<li><a href="/tools/{esc(p.get("slug"))}/">{esc(p.get("name"))}</a> — {esc(p.get("change"))}</li>'
             for p in pricing_items
         )
-        pricing_section = f'<h2>Pricing Watch — confirmed changes</h2><ul>{pricing_rows}</ul><p style="color:#6e6e73;font-size:14px;">Verified from official pricing pages on {esc(issue.get("checked_at"))}. <a href="/pricing-watch/">Full tracker</a>. Premium members get alerts first.</p>'
+        pricing_section = (
+            f'<section class="newsletter-segment newsletter-segment--renew">'
+            f'<h2>Pricing Watch — confirmed changes</h2><ul>{pricing_rows}</ul>'
+            f'<p>Verified from official pricing pages on {esc(issue.get("checked_at"))}. '
+            f'<a href="/pricing-watch/">Full tracker</a>. Premium members get alerts first.</p></section>'
+        )
     else:
         pricing_section = ""
 
@@ -121,26 +122,36 @@ def public_page(issue: dict, cfg: dict) -> str:
             if omit_related
             else '<p>Related: <a href="/updates/2026-08.html">August digest</a> · <a href="/subscribe/">Subscribe (Beehiiv, weekly only)</a> · <a href="/premium/">Premium research membership</a></p>'
         )
-        body_html = f'''<div class="score-card"><span>Standing order</span><h2>{esc(issue.get("keep_cut_rule"))}</h2></div>
+        body_html = f'''<section class="newsletter-segment"><p><strong>Standing order.</strong> {esc(issue.get("keep_cut_rule"))}</p></section>
 {pricing_section}
-<h2>New on the directory</h2>{listings_html(issue.get("new_listings") or [], public=True)}
-<h2>Re-check before you renew</h2>{listings_html(issue.get("watch_list") or [], public=True)}
-<h2>Keep-one of the week</h2>
+<section class="newsletter-segment newsletter-segment--look"><h2>New on the directory</h2>{listings_html(issue.get("new_listings") or [], public=True)}</section>
+<section class="newsletter-segment newsletter-segment--renew"><h2>Re-check before you renew</h2>{listings_html(issue.get("watch_list") or [], public=True)}</section>
+<section class="newsletter-segment newsletter-segment--keep"><h2>Keep-one of the week</h2>
 <p><a href="{esc(keep.get("url"))}">{esc(keep.get("title"))}</a>. {esc(keep.get("rule"))}</p>
-<p><strong>Protocol.</strong> {esc(issue.get("protocol"))}</p>
-<p>{esc(issue.get("signoff"))}</p>
+<p><strong>Protocol.</strong> {esc(issue.get("protocol"))}</p></section>
+<div class="newsletter-close"><p>{esc(issue.get("signoff"))}</p></div>
 {related_html}'''
 
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>{esc(issue.get("subject"))} | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/{esc(issue["slug"])}.html"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center">
-<img src="{logo_src}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px">
-<p class="kicker light">Keep/Cut Weekly · Issue {esc(issue.get("issue"))} · checked {esc(issue.get("checked_at"))}</p>
-<h1>{esc(issue.get("subject_line"))}</h1>
-<p class="subhead">{esc(issue.get("lede"))}</p>
-{f'<p class="affiliate-inline">{esc(issue.get("verification"))}</p>' if issue.get("verification") else ""}
-<p><a class="button button-blue" href="/subscribe/">Get next week</a></p>
-</div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide">{body_html}</div></section>
+    verification = (
+        f'<p>{esc(issue.get("verification"))} <a href="/premium/" rel="nofollow">Premium $12/month</a> gets early alerts when prices move.</p>'
+        if issue.get("verification")
+        else ""
+    )
+
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>{esc(issue.get("subject"))} | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/{esc(issue["slug"])}.html"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main class="newsletter-issue">
+<article class="newsletter-sheet">
+<header class="newsletter-masthead">
+<p class="newsletter-name">{pub_name}</p>
+<p class="newsletter-issue-line">Issue {esc(issue.get("issue"))} · {esc(issue.get("week_label"))} · checked {esc(issue.get("checked_at"))}</p>
+</header>
+<h1 class="newsletter-subject">{esc(issue.get("subject_line"))}</h1>
+<p class="newsletter-dek">{esc(dek)}</p>
+<div class="newsletter-body">{body_html}</div>
+<div class="newsletter-colophon">
+{verification}
+<p>One email a week. Not a drip. <a href="/subscribe/">Get next week</a> · <a href="/newsletter/">Archive</a>. <a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>.</p>
+</div>
+</article>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
 
 
@@ -163,19 +174,18 @@ def generate(root: Path) -> int:
                 f"{issue.get('subject')}\nPREVIEW: {issue.get('preview')}\n"
             )
         cards.append(
-            f'<article class="content-hub-card"><span>Issue {esc(issue.get("issue"))}</span><h3><a href="/newsletter/{esc(slug)}.html">{esc(issue.get("week_label"))}</a></h3><p>{esc(issue.get("preview"))}</p></article>'
+            f'<article class="newsletter-issue-card"><p class="newsletter-issue-card-meta">Issue {esc(issue.get("issue"))} · {esc(issue.get("week_label"))}</p><h3><a href="/newsletter/{esc(slug)}.html">{esc(issue.get("subject") or issue.get("week_label"))}</a></h3><p>{esc(issue.get("preview"))}</p></article>'
         )
     desc = cfg.get("description") or "Weekly keep/cut newsletter."
-    logo = esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")
-    hub = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center">
-<img src="{logo}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px">
-<p class="kicker light">Weekly newsletter</p>
-<h1>Keep/Cut Weekly.</h1>
-<p class="subhead">{esc(desc)}</p>
+    pub_name = esc(cfg.get("publication_name") or "Keep/Cut Weekly")
+    hub = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main class="newsletter-archive">
+<div class="newsletter-archive-intro">
+<p class="newsletter-name">{pub_name}</p>
+<h1>The archive.</h1>
+<p>{esc(desc)}</p>
 <p><a class="button button-blue" href="/subscribe/">Subscribe on Beehiiv</a></p>
-</div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="content-hub-grid">{"".join(cards)}</div></div></section>
+</div>
+<div class="newsletter-issue-list">{"".join(cards)}</div>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
     (out / "index.html").write_text(hub)
     return len(issues) + 1

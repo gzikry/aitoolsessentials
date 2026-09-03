@@ -10,22 +10,54 @@
     "preview": "You might be paying $130 a month so three different tools can fix the same bug. This week: which coding subscription to keep, and which to cancel before renewal.",
     "lede": "You might be paying $130 a month so three different tools can fix the same bug. Copilot Pro is $10. Cursor Pro is $20. Claude Max starts at $100. Grok SuperGrok is another $30 if it is sitting open in a second tab.",
     "verification": "Prices verified from official pages, rechecked 2026-08-25. ChatGPT US-dollar amounts were not reliably exposed on the official pricing page, so they are not listed here. Verify before buying.",
-    "signoff": "— AIToolsEssentials",
+    "signoff": "\u2014 AIToolsEssentials",
     "omit_related": true,
-    "public_editorial_html": "<p>Morning.</p><p>I keep seeing the same pattern in people's tool invoices: Copilot Pro, Cursor Pro, and Claude Max all running at once, each doing a version of the same job. That's $130 a month — and the math isn't the problem. The problem is that most of it is overlap. You're not getting three times the output. You're getting three billing cycles and a context-switching tax.</p><p>This week I checked the official pricing pages for the main coding AI subscriptions (verified 2026-08-25) and the conclusion is pretty simple: pick a lane. The good news is the lanes are actually distinct, and one of them is probably enough.</p><h2>The bill</h2><p>Copilot Pro is $10/month. Cursor Pro is $20/month (Hobby free, Pro+ $60, Ultra $200, Teams $40/seat). Claude Max starts at $100/month — Claude Pro is $20/month or $200/year, but Max is what you need for terminal-agent work. Add them up and you're at $130 for the same coding job. Grok SuperGrok is another $30, Plus is $100.</p><h2>Keep</h2><p>Copilot Pro ($10) if you want inline completions in the editor you already use. Cursor Pro ($20) if you want an AI-native editor with multi-file context. Claude Max ($100+) only if your workflow genuinely involves long terminal agent sessions on a real repo. Not for chat. Not for occasional questions.</p><h2>Cut</h2><p>The overlapping surface. If you have Cursor, you probably don't need Copilot. If you have Copilot and it's working, Cursor is a bigger commitment than an upgrade. Protocol: 45 minutes, one real bugfix, score edit burden, keep the winner, cancel the rest 48 hours before renewal.</p><h2>Before you renew</h2><p>Grok SuperGrok ($30) / Plus ($100) — verify current tier names on X before committing. ChatGPT GPT-5.4 recorded 2026-08-26: no reliable US-dollar Plus/Pro price was exposed on the official page — don't guess a number, verify openai.com/pricing before you lock in an annual. Claude: chat plan and Claude Code are not the same invoice.</p><h2>Worth a look</h2><p>HtmlSlides — $9.90/month at launch. Test against your actual presentation workflow before adding a seat. Skip for now unless slides are a real recurring pain point. Whop CLI — free to install, transaction fees only if selling. Keep if you're already on Whop, skip otherwise.</p><p>What are you paying for that you stopped using?</p><p>See you next week.</p><p>— AIToolsEssentials</p>",
+    "public_editorial_html": "<p class=\"newsletter-greeting\">Morning.</p>\n<p>I keep seeing the same pattern in people's tool invoices: Copilot Pro, Cursor Pro, and Claude Max all running at once, each doing a version of the same job. That's $130 a month \u2014 and the math isn't the problem. The problem is that most of it is overlap. You're not getting three times the output. You're getting three billing cycles and a context-switching tax.</p>\n<p>This week I checked the official pricing pages for the main coding AI subscriptions (verified 2026-08-25) and the conclusion is pretty simple: pick a lane. The good news is the lanes are actually distinct, and one of them is probably enough.</p>\n<section class=\"newsletter-segment newsletter-segment--bill\">\n<h2>The bill</h2>\n<p>Here's what you're looking at if you're subscribed to all three coding surfaces:</p>\n<ul>\n<li><strong>Copilot Pro</strong> \u2014 $10/month. Inline completions inside whatever editor you already use. Does one thing, does it quietly, stays out of the way.</li>\n<li><strong>Cursor Pro</strong> \u2014 $20/month. An entire AI-native IDE. Composer, multi-file edits, the works. (Hobby tier is free. Pro+ is $60. Ultra is $200. Teams is $40/seat.)</li>\n<li><strong>Claude Max</strong> \u2014 starts at $100/month. The Pro plan is $20/month or $200/year, but Max \u2014 which is what you'd want for genuine terminal-agent work via Claude Code \u2014 starts at $100.</li>\n</ul>\n<p>Add them up and you're at $130 for the same coding job, which is the phrase you'll hear from anyone who's audited their stack. Grok SuperGrok is another $30 if it's sitting open in a second tab, and Grok Plus runs $100 \u2014 though at this point you have to ask what job that's doing that Claude or Copilot isn't already doing.</p>\n</section>\n<section class=\"newsletter-segment newsletter-segment--keep\">\n<h2>Keep</h2>\n<p>These are meaningfully different tools \u2014 the problem is paying for more than one of them:</p>\n<p><strong>Copilot Pro ($10)</strong> if you want to stay in VS Code or JetBrains and just get better completions. It's the cheap inline layer. No context switching, no new IDE to learn.</p>\n<p><strong>Cursor Pro ($20)</strong> if you actually want an AI-native editor. Composer is genuinely different from an autocomplete tab \u2014 it understands multi-file context and rewrites chunks on request. Worth the upgrade from Copilot if you're doing serious editing work. Not worth it if you already have Copilot and rarely use anything beyond Tab.</p>\n<p><strong>Claude Max ($100+)</strong> only if your actual workflow involves long terminal agent sessions on a real repo. Not for chat. Not for occasional questions. For the people running Claude Code autonomously on large codebases, this tier earns its cost. For everyone else, Claude Pro at $20 is the same thing with usage limits you'll probably never hit.</p>\n</section>\n<section class=\"newsletter-segment newsletter-segment--cut\">\n<h2>Cut</h2>\n<p>The overlapping surface. If you have Cursor, you probably don't need Copilot \u2014 Cursor's completions cover the same ground, and paying for both is paying for the same tab twice. If you have Copilot and it's working, Cursor Pro is a bigger commitment than an upgrade: it's a new IDE, and the switching cost is real.</p>\n<p>The protocol: take 45 minutes, run one real bugfix through each subscription you're paying for. Score how much you edited the output. Keep the winner. Cancel the rest 48 hours before renewal so you don't get charged for inertia.</p>\n</section>\n<section class=\"newsletter-segment newsletter-segment--renew\">\n<h2>Before you renew</h2>\n<p><strong>Grok SuperGrok ($30) / Plus ($100).</strong> Lineup last confirmed 2026-08-26 \u2014 verify current Grok 4.6 / Grok Build tier names on X before you commit. SuperGrok at $30 is easy to forget about when Copilot or Claude is already handling the same questions.</p>\n<p><strong>ChatGPT (GPT-5.4).</strong> Recorded as the GPT-5.4 family as of 2026-08-26. Don't buy a plan based on a model name bump \u2014 there's no reliable US-dollar Plus/Pro price to quote here because it wasn't clearly exposed on the pricing page when we checked. Verify openai.com/pricing before you gift them an annual subscription.</p>\n<p><strong>Claude.</strong> Chat plan and Claude Code are not the same invoice. Make sure you know which one you're paying for.</p>\n</section>\n<section class=\"newsletter-segment newsletter-segment--look\">\n<h2>Worth a look</h2>\n<p><strong><a href=\"/tools/htmlslides/\" rel=\"nofollow sponsored\">HtmlSlides</a> \u2014 $9.90/month at launch.</strong> Interactive HTML decks. It's interesting if you're already frustrated with PowerPoint and don't want to pay Gamma prices. That said: novelty is not a job. Test it against your actual presentation workflow before you add a seat. <em>Verdict: keep an eye on it, skip for now unless slide-building is a real recurring pain point.</em></p>\n<p><strong><a href=\"/tools/whop-cli/\" rel=\"nofollow sponsored\">Whop CLI</a> \u2014 free to install.</strong> Terminal control for Whop products and checkout flows. If you sell on Whop, this is a genuine quality-of-life tool \u2014 no extra subscription, just transaction fees on what you're already selling. If you don't sell on Whop, this is not a reason to start. <em>Verdict: keep if you're already on Whop, skip otherwise.</em></p>\n</section>\n<div class=\"newsletter-close\">\n<p>What are you paying for that you stopped using?</p>\n<p>See you next week.</p>\n<p class=\"newsletter-signoff\">\u2014 AIToolsEssentials</p>\n</div>",
     "pricing_changes": [
-      {"name": "Grok", "slug": "grok", "change": "Pricing page changed since 2026-08-21. Re-verified 2026-08-25."},
-      {"name": "Cursor", "slug": "cursor", "change": "Pricing page changed since 2026-08-21. Re-verified 2026-08-25."}
+      {
+        "name": "Grok",
+        "slug": "grok",
+        "change": "Pricing page changed since 2026-08-21. Re-verified 2026-08-25."
+      },
+      {
+        "name": "Cursor",
+        "slug": "cursor",
+        "change": "Pricing page changed since 2026-08-21. Re-verified 2026-08-25."
+      }
     ],
     "new_listings": [
-      {"name": "HtmlSlides", "slug": "htmlslides", "note": "Pro is $9.90/month at launch. Interactive HTML decks. Test against Gamma on one real presentation before you add a seat. Novelty is not a job."},
-      {"name": "Whop CLI", "slug": "whop-cli", "note": "$0 to install. Terminal control for Whop products and checkout. Relevant if you sell on Whop. Not a second subscription if you do not sell there."}
+      {
+        "name": "HtmlSlides",
+        "slug": "htmlslides",
+        "note": "Pro is $9.90/month at launch. Interactive HTML decks. Test against Gamma on one real presentation before you add a seat. Novelty is not a job."
+      },
+      {
+        "name": "Whop CLI",
+        "slug": "whop-cli",
+        "note": "$0 to install. Terminal control for Whop products and checkout. Relevant if you sell on Whop. Not a second subscription if you do not sell there."
+      }
     ],
     "watch_list": [
-      {"name": "Grok", "slug": "grok", "note": "Lineup last checked 2026-08-26. Confirm current Grok 4.6 / Grok Build names on X before SuperGrok becomes your second assistant."},
-      {"name": "Cursor", "slug": "cursor", "note": "Composer moves. Re-run one real multi-file change before you renew Pro if Copilot or Claude already lives in the same repo."},
-      {"name": "ChatGPT", "slug": "chatgpt", "note": "Recorded as the GPT-5.4 family as of 2026-08-26. Verify openai.com/pricing before you gift them an annual. No US-dollar Plus/Pro amount is listed here because it was not reliably exposed."},
-      {"name": "Claude", "slug": "claude", "note": "Chat plan and Claude Code are not the same job. Do not assume one invoice covers both personalities."}
+      {
+        "name": "Grok",
+        "slug": "grok",
+        "note": "Lineup last checked 2026-08-26. Confirm current Grok 4.6 / Grok Build names on X before SuperGrok becomes your second assistant."
+      },
+      {
+        "name": "Cursor",
+        "slug": "cursor",
+        "note": "Composer moves. Re-run one real multi-file change before you renew Pro if Copilot or Claude already lives in the same repo."
+      },
+      {
+        "name": "ChatGPT",
+        "slug": "chatgpt",
+        "note": "Recorded as the GPT-5.4 family as of 2026-08-26. Verify openai.com/pricing before you gift them an annual. No US-dollar Plus/Pro amount is listed here because it was not reliably exposed."
+      },
+      {
+        "name": "Claude",
+        "slug": "claude",
+        "note": "Chat plan and Claude Code are not the same job. Do not assume one invoice covers both personalities."
+      }
     ],
     "keep_one": {
       "title": "Claude Code vs Cursor vs Copilot",
