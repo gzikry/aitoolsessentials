@@ -145,18 +145,36 @@ https://aitoolsessentials.com
 - **cndls@georgetown.edu** — follow-up to Aug 17 resource suggestion. Sent 15:10 PT.
 - **claire.baytas@ithaka.org** — follow-up to Aug 31 tracker companion pitch. Sent 15:10 PT.
 
-## Directory submission status
+## Directory submission log 2026-09-03
 
-- **SaaSHub** — submitted 2026-08-31, pending approval. URL: https://www.saashub.com/aitoolsessentials/added
-- **AIToolsDirectory.com** — Paperform submission attempted; needs "NO" to ad space question to complete.
-- **ToolScout** — requires account (Sign in to continue).
-- **PoweredByAI** — form requires category/subcategory selection (React select).
-- **Dofollow.Tools** — AI auto-fill didn't work; form incomplete.
+### Submitted (free, no account required)
+- **The Next AI** — SUBMITTED, approved (dofollow backlink, 120k monthly visitors, free listing). Form: thenextai.com/submit-ai-tool/
+- **AIAI.Tools** — SUBMITTED, confirmation shown ("Thanks for contribution"). Tally form: tally.so/r/3NADy0
+
+### Blocked on payment/account
+- **AIToolsDirectory.com** — Paperform needs "NO" to ad space question; form UI hard to drive
+- **SEOFAI** — paid only ($29 one-time basic)
+- **AIToolSync** — paid only ($29 one-time basic)
+- **Futuretools.io** — submit page 404
+- **ToolScout** — requires account (Sign in to continue)
+- **AIXploria** — Cloudflare challenge, form blocked
+
+### Still viable (free, need to retry)
+- **SaaSHub** — pending approval (submitted Aug 31)
+- **AlternativeTo** — needs account
+- **Uneed** — needs account
+- **AIXploria** — free queue, need to bypass Cloudflare
+- **Dofollow.Tools** — 1 free slot/day, need to fill manually
+
+### Paid skip (held)
+- Futurepedia ($247+), TopAI.tools ($47), AIXploria ($79)
 
 ## Remaining distribution work
 
 1. Complete AIToolsDirectory Paperform submission (answer NO to ad space).
-2. Submit to directories that require accounts: ToolScout, AlternativeTo, Uneed, AIXploria, Futurepedia.
-3. Pitch "Best AI tools" roundup authors from credible productivity/dev blogs.
-4. Newsletter directories for Keep/Cut Weekly (Beehiiv discovery, NewsletterStack).
+2. Create accounts for: ToolScout, AlternativeTo, Uneed, AIXploria, Futurepedia.
+3. Pitch "Best AI tools" roundup authors from credible productivity/dev blogs (search: "best AI tools 2026" — pitch the list authors).
+4. Newsletter directories: Beehiiv discovery, NewsletterStack-style communities (for Keep/Cut Weekly).
 5. Indie hacker / build-in-public communities for automation-cost-decoder and stack-builder pages.
+6. HARO/Connectively journalist requests — "AI tool pricing" and "overlapping subscriptions" are timely topics.
+7. Guest posts: pitch podcasts/newsletters on "how to stop paying for overlapping AI tools".

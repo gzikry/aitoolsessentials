@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Which coding assistant should you keep? — AIToolsEssentials</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f7f8ff; color: #1d1d1f; line-height: 1.6; }
+.container { max-width: 680px; margin: 0 auto; padding: 40px 24px; }
+.card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,.08); margin-bottom: 24px; }
+h1 { font-size: 28px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8px; }
+.subhead { color: #5c6070; margin-bottom: 24px; }
+.question { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+.options { display: grid; gap: 12px; }
+.option { padding: 14px 18px; border: 2px solid #e4e5ee; border-radius: 12px; cursor: pointer; transition: all .2s; font-weight: 600; }
+.option:hover { border-color: #5e6ad2; background: #f4f5ff; }
+.option.selected { border-color: #5e6ad2; background: #5e6ad2; color: #fff; }
+.result { display: none; padding: 24px; background: #f4f5ff; border-radius: 12px; margin-top: 24px; }
+.result.show { display: block; }
+.result h3 { font-size: 20px; margin-bottom: 8px; }
+.result p { margin-bottom: 12px; }
+.cta { display: inline-block; padding: 12px 24px; background: #5e6ad2; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px; }
+.cta:hover { background: #3d46a8; }
+.badge { display: inline-block; padding: 4px 10px; background: #eef0ff; color: #3d46a8; border-radius: 999px; font-size: 12px; font-weight: 700; margin-bottom: 12px; }
+.source { font-size: 12px; color: #888; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <span class="badge">Interactive Quiz</span>
+    <h1>Which coding assistant should you keep?</h1>
+    <p class="subhead">Answer 3 questions. Get a keep/cut verdict for your stack.</p>
+    
+    <div id="quiz">
+      <div class="question" id="q1">1. What's your primary coding workflow?</div>
+      <div class="options" id="opts1">
+        <div class="option" data-val="vscode">VS Code / JetBrains — I want better completions</div>
+        <div class="option" data-val="agent">Terminal agent — I want Claude Code / Codex</div>
+        <div class="option" data-val="native">AI-native editor — I want Cursor / Windsurf</div>
+      </div>
+      
+      <div class="question" id="q2" style="display:none;margin-top:24px;">2. How many hours/week do you code?</div>
+      <div class="options" id="opts2" style="display:none;">
+        <div class="option" data-val="light">Under 10 hours — occasional coding</div>
+        <div class="option" data-val="medium">10-30 hours — regular development</div>
+        <div class="option" data-val="heavy">30+ hours — full-time coding</div>
+      </div>
+      
+      <div class="question" id="q3" style="display:none;margin-top:24px;">3. What's your monthly AI tool budget?</div>
+      <div class="options" id="opts3" style="display:none;">
+        <div class="option" data-val="tight">Under $30/month</div>
+        <div class="option" data-val="moderate">$30-$100/month</div>
+        <div class="option" data-val="flexible">$100+/month</div>
+      </div>
+    </div>
+    
+    <div class="result" id="result">
+      <h3 id="verdict"></h3>
+      <p id="explanation"></p>
+      <p><strong>Estimated savings:</strong> <span id="savings"></span></p>
+      <a class="cta" href="https://aitoolsessentials.com/stack-audit.html" target="_blank">Run the free full audit →</a>
+    </div>
+  </div>
+  <p class="source">Built by <a href="https://aitoolsessentials.com" target="_blank">AIToolsEssentials</a> · Verified pricing from official pages · <a href="https://aitoolsessentials.com/stack-audit.html" target="_blank">Free Stack Audit</a></p>
+</div>
+<script>
+const q1 = document.getElementById('q1');
+const q2 = document.getElementById('q2');
+const q3 = document.getElementById('q3');
+const opts1 = document.getElementById('opts1');
+const opts2 = document.getElementById('opts2');
+const opts3 = document.getElementById('opts3');
+const result = document.getElementById('result');
+const verdict = document.getElementById('verdict');
+const explanation = document.getElementById('explanation');
+const savings = document.getElementById('savings');
+
+let answers = {};
+
+function handleSelect(qNum, val, text) {
+  answers[qNum] = val;
+  
+  // Clear other selections in this group
+  const parent = document.getElementById('opts' + qNum);
+  parent.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  event.target.classList.add('selected');
+  
+  // Show next question or result
+  if (qNum === 1) {
+    q2.style.display = 'block';
+    opts2.style.display = 'grid';
+  } else if (qNum === 2) {
+    q3.style.display = 'block';
+    opts3.style.display = 'grid';
+  } else if (qNum === 3) {
+    showResult();
+  }
+}
+
+function showResult() {
+  const workflow = answers[1];
+  const hours = answers[2];
+  const budget = answers[3];
+  
+  let v, e, s;
+  
+  if (workflow === 'vscode') {
+    v = "Keep Copilot Pro ($10/month)";
+    e = "If you're primarily in VS Code or JetBrains and want better completions without switching editors, Copilot Pro does the job. You likely don't need Cursor on top of it.";
+    s = "$20-$120/month (drop Cursor Pro, drop Claude Max)";
+  } else if (workflow === 'agent') {
+    v = "Keep Claude Pro ($20/month) or Max ($100/month)";
+    e = "For terminal agent work (Claude Code, Codex), the Claude API or Max tier is purpose-built. Copilot and Cursor overlap here — they're completions tools, not agent tools.";
+    s = "$10-$30/month (drop Copilot Pro, consider if you need Cursor)";
+  } else if (workflow === 'native') {
+    v = "Keep Cursor Pro ($20/month)";
+    e = "If you want an AI-native editor with multi-file context and agent modes, Cursor is the clear choice. Copilot becomes redundant — Cursor's completions cover the same ground.";
+    s = "$10-$100/month (drop Copilot Pro, drop Claude Max if not doing terminal agents)";
+  }
+  
+  if (budget === 'tight') {
+    e += " Given your budget, pick one tool per job and cancel the rest.";
+  } else if (budget === 'flexible') {
+    e += " With your budget, you could keep 2 tools if they serve meaningfully different jobs — but only if you use both weekly.";
+  }
+  
+  verdict.textContent = v;
+  explanation.textContent = e;
+  savings.textContent = s;
+  
+  document.getElementById('quiz').style.display = 'none';
+  result.classList.add('show');
+}
+
+// Attach handlers
+opts1.querySelectorAll('.option').forEach(o => o.addEventListener('click', () => handleSelect(1, o.dataset.val)));
+opts2.querySelectorAll('.option').forEach(o => o.addEventListener('click', () => handleSelect(2, o.dataset.val)));
+opts3.querySelectorAll('.option').forEach(o => o.addEventListener('click', () => handleSelect(3, o.dataset.val)));
+</script>
+</body>
+</html>
