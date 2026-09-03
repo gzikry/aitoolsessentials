@@ -1209,3 +1209,63 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   .newsletter-issue-card { margin: 0 16px; }
   .newsletter-archive-intro { padding: 28px 20px 8px; }
 }
+
+/* Exit-intent overlay */
+#exit-intent-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+#exit-intent-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.exit-intent-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 48px 40px;
+  max-width: 480px;
+  width: calc(100% - 40px);
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+#exit-intent-overlay.visible .exit-intent-box {
+  transform: translateY(0);
+}
+.exit-intent-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #5c6070;
+  line-height: 1;
+  padding: 4px 8px;
+}
+.exit-intent-close:hover { color: #1d1d1f; }
+.exit-intent-box h2 {
+  margin: 8px 0 12px;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+.exit-intent-box p {
+  color: #5c6070;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.exit-intent-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}

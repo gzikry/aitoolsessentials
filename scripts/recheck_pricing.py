@@ -61,19 +61,22 @@ def detect_changes(snapshots: dict, pages: dict[str, str]) -> list[dict]:
         new_text = extract_text(new_html)
         new_hash = compute_hash(new_text)
         
+        previous_date = snapshot.get('date', today)
+        
+        # Always update the checked date and snapshot
+        snapshot['date'] = today
+        snapshot['hash'] = new_hash
+        snapshot['digest'] = new_text[:500]
+        
         if old_hash and old_hash != new_hash:
             # Change detected
             changes.append({
                 'slug': slug,
                 'detected': today,
-                'previous_check': snapshot.get('date', today),
+                'previous_check': previous_date,
                 'new_check': today,
-                'note': f"{slug.replace('-', ' ').title()}: official pricing page changed since {snapshot.get('date', 'unknown')} check. Re-verified {today}."
+                "note": f"{slug.replace('-', ' ').title()}: official pricing page changed since {previous_date} check. Re-verified {today}."
             })
-            # Update snapshot
-            snapshot['date'] = today
-            snapshot['hash'] = new_hash
-            snapshot['digest'] = new_text[:500]
     
     return changes
 

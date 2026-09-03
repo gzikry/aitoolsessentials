@@ -118,3 +118,55 @@
     if (firstSection) firstSection.insertBefore(toc, firstSection.firstChild);
   });
 })();
+
+/* Exit-intent email capture: offer free Stack Audit or Keep/Cut Weekly. */
+(function () {
+  var STORAGE_KEY = 'aitoolsessentials.exit_prompt.v1';
+  function hasSeen() {
+    try { return localStorage.getItem(STORAGE_KEY) || sessionStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+  function markSeen() {
+    try {
+      localStorage.setItem(STORAGE_KEY, Date.now());
+      sessionStorage.setItem(STORAGE_KEY, '1');
+    } catch (e) {}
+  }
+  function shouldShow() {
+    if (hasSeen()) return false;
+    var path = location.pathname;
+    if (/\/subscribe\/|\/premium\/|\/stack-audit\.html/.test(path)) return false;
+    return true;
+  }
+  function buildOverlay() {
+    var overlay = document.createElement('div');
+    overlay.id = 'exit-intent-overlay';
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('role', 'dialog');
+    overlay.innerHTML = '<div class="exit-intent-box">' +
+      '<button class="exit-intent-close" aria-label="Close">&times;</button>' +
+      '<p class="kicker light">Free before you go</p>' +
+      '<h2>Stop paying for overlapping AI tools.</h2>' +
+      '<p>Get the free instant Stack Audit scorecard — no login, stays on your device. Or subscribe to Keep/Cut Weekly for one email a week on what changed, what to keep, what to cut.</p>' +
+      '<div class="exit-intent-actions">' +
+      '<a class="button button-blue" href="/stack-audit.html">Run free audit</a> ' +
+      '<a class="button button-ghost-dark" href="/subscribe/">Get the free email</a>' +
+      '</div></div>';
+    return overlay;
+  }
+  function show() {
+    if (!shouldShow()) return;
+    var overlay = buildOverlay();
+    document.body.appendChild(overlay);
+    markSeen();
+    setTimeout(function () { overlay.classList.add('visible'); }, 10);
+    overlay.querySelector('.exit-intent-close').addEventListener('click', hide);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) hide(); });
+    function hide() {
+      overlay.classList.remove('visible');
+      setTimeout(function () { overlay.remove(); }, 300);
+    }
+  }
+  document.addEventListener('mouseout', function (e) {
+    if (!e.toElement && !e.relatedTarget && e.clientY < 10) show();
+  });
+})();
