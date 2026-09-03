@@ -2,13 +2,14 @@
 
 ## Site-ready public pages
 - [x] /premium/
+- [x] /premium/library/
 - [x] /premium/welcome/
 - [x] /premium/sample-report.html
 - [x] /premium/roadmap.html
 - [x] /premium/archive.html
 - [x] /premium/faq.html
 - [x] /pricing/
-- [x] /checkout/complete/?status=success
+- [x] /checkout/complete/
 
 ## Whop assets ready
 - [x] whop-posts-2026-09.md

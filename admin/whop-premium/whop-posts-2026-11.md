@@ -6,7 +6,7 @@ This is the November member drop. Upload each section as a Whop post and attach 
 
 ## POST N1 — Pinned: Welcome to Premium (updated for November)
 
-Welcome to AIToolsEssentials Premium. This is a research membership for choosing better AI tools without paying for overlapping subscriptions.
+Welcome to AIToolsEssentials Premium. This is the $12/month membership for deciding which subscriptions you keep — not another folder of unused tools.
 
 **New this month (November):**
 1. **AI Stack Audit Template** — fill it out and reply with your answers for a personalized stack recommendation within 48 hours.

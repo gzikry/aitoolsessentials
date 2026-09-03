@@ -9,7 +9,7 @@ from pathlib import Path
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
 LOGO = f"{DOMAIN}/assets/aitools-bot-logo-256.png"
-HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep/Cut Weekly</a><a href="/subscribe/">Subscribe</a><a href="/premium/">Premium</a></nav><a class="nav-cta" href="/subscribe/">Subscribe</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep/Cut Weekly</a><a href="/subscribe/">Free email</a><a href="/premium/">Paid Premium</a></nav><a class="nav-cta" href="/subscribe/">Get the free email</a></header>'
 FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="/legal/privacy.html">Privacy</a></footer>'
 
 
@@ -77,7 +77,7 @@ def beehiiv_html(issue: dict, cfg: dict) -> str:
 <h2 style="margin:28px 0 10px;font-size:18px;color:#f5f5f7;">Keep-one of the week</h2>
 <p style="margin:0 0 8px;font-size:16px;line-height:1.55;color:#d2d2d7;"><a href="{esc(keep_url)}" style="color:#64b5ff;text-decoration:none;">{esc(keep.get("title"))}</a>. {esc(keep.get("rule"))}</p>
 <p style="margin:0 0 8px;font-size:15px;line-height:1.55;color:#d2d2d7;"><strong style="color:#f5f5f7;">Protocol.</strong> {esc(issue.get("protocol"))}</p>
-<p style="margin:24px 0 8px;font-size:15px;line-height:1.55;color:#d2d2d7;">Public archive: <a href="{DOMAIN}/newsletter/" style="color:#64b5ff;">Newsletter archive</a>. Free tools stay free. <a href="{DOMAIN}/premium/" style="color:#64b5ff;">Premium</a> is a separate $12 research membership — 7-day trial, code LAUNCH50 — not this newsletter.</p>
+<p style="margin:24px 0 8px;font-size:15px;line-height:1.55;color:#d2d2d7;">Public archive: <a href="{DOMAIN}/newsletter/" style="color:#64b5ff;">Newsletter archive</a>. Free tools stay free. <a href="{DOMAIN}/premium/" style="color:#64b5ff;">Premium</a> is a separate $12/month membership — 7-day trial, code LAUNCH50 — not this newsletter.</p>
 <p style="margin:0 0 28px;font-size:15px;line-height:1.55;color:#d2d2d7;">{esc(issue.get("signoff"))}</p>
 </td></tr>
 <tr><td style="padding:24px 8px 0;text-align:center;font-size:12px;line-height:1.6;color:#8e8e93;border-top:1px solid #1c1c1e;">
@@ -120,7 +120,7 @@ def public_page(issue: dict, cfg: dict) -> str:
         related_html = (
             ""
             if omit_related
-            else '<p>Related: <a href="/updates/2026-08.html">August digest</a> · <a href="/subscribe/">Subscribe (Beehiiv, weekly only)</a> · <a href="/premium/">Premium research membership</a></p>'
+            else '<p>Related: <a href="/updates/2026-08.html">August digest</a> · <a href="/subscribe/">Get the free email (Beehiiv, weekly only)</a> · <a href="/premium/">Paid Premium</a></p>'
         )
         body_html = f'''<section class="newsletter-segment"><p><strong>Standing order.</strong> {esc(issue.get("keep_cut_rule"))}</p></section>
 {pricing_section}
@@ -181,9 +181,9 @@ def generate(root: Path) -> int:
     hub = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main class="newsletter-archive">
 <div class="newsletter-archive-intro">
 <p class="newsletter-name">{pub_name}</p>
-<h1>The archive.</h1>
+<h1>Past issues.</h1>
 <p>{esc(desc)}</p>
-<p><a class="button button-blue" href="/subscribe/">Subscribe on Beehiiv</a></p>
+<p><a class="button button-blue" href="/subscribe/">Get the free email</a></p>
 </div>
 <div class="newsletter-issue-list">{"".join(cards)}</div>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''

@@ -11,13 +11,14 @@
   },
   "public_pages": [
     "/premium/",
+    "/premium/library/",
     "/premium/welcome/",
     "/premium/sample-report.html",
     "/premium/roadmap.html",
     "/premium/archive.html",
     "/premium/faq.html",
     "/pricing/",
-    "/checkout/complete/?status=success"
+    "/checkout/complete/"
   ],
   "whop_assets_ready": [
     "whop-posts-2026-09.md",

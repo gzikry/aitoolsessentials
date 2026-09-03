@@ -3,7 +3,7 @@
   "domain": "https://aitoolsessentials.com",
   "last_generated": "2026-09-03",
   "tools_tracked": 74,
-  "html_pages": 700,
+  "html_pages": 709,
   "evidence_freshness": {
     "pricing_records": 74,
     "latest_pricing_checked": "2026-09-02",
@@ -29,7 +29,8 @@
     "/how-to/",
     "/hardware/",
     "/cost-calculator.html",
-    "/compare-shortlist.html"
+    "/compare-shortlist.html",
+    "/stack-audit.html"
   ],
   "editorial_boundaries": "Affiliate/sponsor relationships do not change editorial scoring; corrections are verified against official sources before publication."
 }

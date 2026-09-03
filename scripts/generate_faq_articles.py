@@ -339,7 +339,7 @@ ARTICLES['how-to-cut-ai-tool-subscriptions.html'] = {
 </ul>
 <h2>When a free review is not enough</h2>
 <p>If you have five or more paid AI tools, multiple owners, or annual prepays on the calendar, a one-page scorecard is not enough. You need a full matrix, a stack-audit template, a weekly checklist, and a change-alert feed so renewals are not decided from memory.</p>
-<p>That is what <a href="../premium/">AIToolsEssentials Premium</a> is for: a $12/month research membership with a 7-day free trial, stack-audit template, weekly checklist, tool-change alerts, hands-on comparison protocols, ROI calculator, and priority research slots. Research and strategy only — no implementation or account access.</p>
+<p>That is what <a href="../premium/">AIToolsEssentials Premium</a> is for: a $12/month membership with a 7-day free trial, stack-audit template, weekly checklist, tool-change alerts, hands-on comparison protocols, ROI calculator, and priority research slots. Worksheets and a written reply only — no implementation or account access.</p>
 <p>Use code <strong>LAUNCH50</strong> for 50% off the first paid month after the trial (new users). Start from the <a href="../premium/">Premium page</a> or <a href="../pricing/">pricing</a>.</p>
 <h2>Decision rule</h2>
 <p>If a tool does not save measurable time on a weekly workflow, it is a cancel candidate. "Just in case" is not a workflow. Prefer free trials and monthly billing until one tool clearly owns the job.</p>
@@ -404,9 +404,9 @@ ARTICLES['chatgpt-vs-claude-vs-grok-vs-gemini.html'] = {
 '''}
 
 ARTICLES['is-an-ai-tool-membership-worth-it.html'] = {
- 'title':'Is an AI tool research membership worth it?','kicker':'Straight answer','desc':'When a $12/month AI research membership beats another SaaS subscription — and when free directories and scorecards are enough.',
+ 'title':'Is the $12/month membership worth it?','kicker':'Straight answer','desc':'When $12/month of dated keep/cut notes beats another SaaS subscription — and when the free email and scorecard are enough.',
  'body':'''
-<p><strong>Short answer:</strong> a research membership is worth it if you already pay for multiple AI tools, renewals are coming up, and you need dated decision archives more than another generative app. It is not worth it if you only need one free assistant and have no stack to manage.</p>
+<p><strong>Short answer:</strong> the $12/month membership is worth it if you already pay for multiple tools, renewals are coming up, and you need dated keep/cut notes more than another app. It is not worth it if you only need one free assistant and have no stack to manage.</p>
 <h2>When free is enough</h2>
 <ul>
 <li>You use one general assistant a few times a week</li>
@@ -423,7 +423,7 @@ ARTICLES['is-an-ai-tool-membership-worth-it.html'] = {
 </ul>
 <p><a href="../premium/">AIToolsEssentials Premium</a> is built for that case: monthly decision matrix, stack-audit template, weekly checklist, tool-change alert feed, hands-on protocols, ROI calculator, and priority research slots. It is research and strategy only — not implementation, setup, integrations, or account access.</p>
 <p><strong>Price:</strong> 7-day free trial, then $12/month via Whop. Code <strong>LAUNCH50</strong> = 50% off the first paid month for new users. Cancel anytime from Whop. All sales final — no refunds.</p>
-<h2>How to evaluate any research membership</h2>
+<h2>How to evaluate any paid membership</h2>
 <ol>
 <li>Does it give dated sources, not undated opinions?</li>
 <li>Can you download CSVs or templates you will reuse monthly?</li>

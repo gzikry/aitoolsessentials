@@ -217,7 +217,7 @@ def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
         ("Free AI Stack Decision Checklist (PDF)", "/downloads/ai-stack-decision-checklist.html", "Printable worksheet for scoring overlap, cost, trial results, and cancellation risk before buying."),
         ("Grok review", "/tools/grok/", "Full review covering Grok 4.6, Grok Bot always-on agents, Grok Build, Imagine, Voice, and verified pricing."),
         ("Cursor review", "/tools/cursor/", "Review of Cursor's own model stack (Cursor Grok 4.6, Composer 2.5), agent modes, cloud agents, and Bugbot."),
-        ("Premium research membership", "/premium/", "$12/mo decision briefs, CSV matrices, playbooks, and price-change alerts via Whop."),
+        ("Paid Premium · $12/mo", "/premium/", "$12/mo dated notes, CSV matrices, playbooks, and price-change alerts via Whop."),
         ("Keep/Cut Weekly newsletter", "/newsletter/", "Free weekly keep/cut digest: verified pricing changes, overlap warnings, and one job to test before renewal."),
         ("Benchmarks evidence hub", "/benchmarks/", "Versioned external benchmark snapshots with exact models, configurations, and dates."),
         ("Tool Finder", "/tool-finder.html", "Find AI tools by category, use case, budget, and free-tier availability."),

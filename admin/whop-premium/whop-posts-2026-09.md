@@ -6,7 +6,7 @@ Use this file to populate the Whop member area. Create each section below as a W
 
 ## POST 1 — Pinned start here: Welcome to Premium
 
-Welcome to AIToolsEssentials Premium. This is a research membership for choosing better AI tools without paying for overlapping subscriptions.
+Welcome to AIToolsEssentials Premium. This is the $12/month membership for deciding which subscriptions you keep — not another folder of unused tools.
 
 **Start here:**
 1. Download `premium-tool-decision-matrix-2026-09.csv`.
