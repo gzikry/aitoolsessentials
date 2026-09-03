@@ -1,4 +1,4 @@
-# AIToolsEssentials Premium — Whop Upload Pack — NOVEMBER (2026-09-02)
+# AIToolsEssentials Premium — Whop Upload Pack — NOVEMBER (2026-09-03)
 
 This is the November member drop. Upload each section as a Whop post and attach the matching CSV from `admin/whop-premium/files/`.
 
