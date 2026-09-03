@@ -92,6 +92,8 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
                 pill = str(w.get("status_label"))
             elif status == "open_source" or pricing_status == "open_source_no_sku":
                 pill = "Open source · not a directory SKU"
+            elif status == "limited_rollout" or pricing_status == "existing_plans_rollout":
+                pill = "Limited rollout · existing plans"
             else:
                 pill = "Early access · no public pricing"
             watch_items.append(

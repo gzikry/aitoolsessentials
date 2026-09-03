@@ -1,7 +1,21 @@
 {
-  "checked_at": "2026-09-01",
+  "checked_at": "2026-09-03",
   "source_policy": "Official vendor sources only. These are unlisted launches, not directory SKUs. No inferred prices, ratings, lab tests, or traffic.",
   "watches": [
+    {
+      "name": "GPT-6 Astra (OpenAI)",
+      "vendor": "OpenAI",
+      "kind": "model_launch",
+      "status": "limited_rollout",
+      "pricing_status": "existing_plans_rollout",
+      "status_label": "Limited rollout · existing plans",
+      "checked_at": "2026-09-03",
+      "source_url": "https://openai.com/index/path-to-astra/",
+      "source_title": "Path to Astra: critical capabilities and frontier safeguards",
+      "company_url": "https://openai.com/",
+      "summary": "OpenAI released GPT-6 Astra on 2026-09-03. The official Path to Astra post (2026-09-01) is still the primary openai.com page for the model as of this check: Astra is OpenAI's first model designated at Critical cybersecurity capability under the Preparedness Framework. Advanced cyber workflows are limited at launch to trusted testers / Daybreak Blue. Axios reports initial access for limited Daybreak organizations, then ChatGPT Plus / Pro / Business / Enterprise and API developers in the coming days. OpenAI customer stories dated 2026-09-03 use the name GPT-6 Astra. Greg Brockman called it a generational leap. This watch does not treat AGI remarks as fact.",
+      "pricing_note": "Roll-out onto existing ChatGPT paid tiers (Plus, Pro, Business, Enterprise) and the API was announced for the coming days. Sources checked 2026-09-03 did not confirm a Plus/Pro plan price change or a new Astra-only SKU. Advanced cybersecurity access is gated separately to trusted testers / Daybreak Blue. ChatGPT dollar prices were not re-verified on this date."
+    },
     {
       "name": "Atlas (World Labs)",
       "vendor": "World Labs",
