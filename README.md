@@ -75,7 +75,7 @@ Priorities:
 3. Clearly labeled sponsored placements that never alter rankings
 4. Whop Premium membership after the live plan ID is supplied
 
-No newsletter is currently part of the operating strategy.
+Keep/Cut Weekly is the free Beehiiv newsletter (`/subscribe/`). Premium is a separate $12/month Whop membership. Do not wire FormSubmit to the newsletter.
 
 ## Security
 

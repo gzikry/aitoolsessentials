@@ -8,7 +8,7 @@ from pathlib import Path
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
 LOGO = f"{DOMAIN}/assets/aitools-bot-logo-256.png"
-HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep/Cut Weekly</a><a href="/subscribe/">Subscribe</a><a href="/premium/">Premium</a></nav><a class="nav-cta" href="/subscribe/">Subscribe</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep/Cut Weekly</a><a href="/subscribe/">Subscribe</a><a href="/premium/">Premium</a></nav><a class="nav-cta" href="/subscribe/">Subscribe</a></header>'
 FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="/legal/privacy.html">Privacy</a></footer>'
 
 
@@ -64,6 +64,7 @@ def beehiiv_html(issue: dict, cfg: dict) -> str:
 <tr><td style="background:#121214;border-radius:20px;padding:32px 32px 8px;">
 <h1 style="margin:0 0 14px;font-size:28px;line-height:1.2;color:#f5f5f7;font-weight:700;">{esc(issue.get("subject_line"))}</h1>
 <p style="margin:0 0 18px;font-size:16px;line-height:1.6;color:#d2d2d7;">{esc(issue.get("lede"))}</p>
+{f'<p style="margin:0 0 18px;font-size:13px;line-height:1.55;color:#8e8e93;">{esc(issue.get("verification"))}</p>' if issue.get("verification") else ""}
 <div style="background:#0d1b2a;border-left:3px solid #0071E3;border-radius:0 10px 10px 0;padding:14px 16px;margin-bottom:24px;">
 <p style="margin:0;font-size:15px;line-height:1.55;color:#f5f5f7;"><strong style="color:#64b5ff;">Standing order.</strong> {esc(issue.get("keep_cut_rule"))}</p>
 </div>
@@ -75,7 +76,7 @@ def beehiiv_html(issue: dict, cfg: dict) -> str:
 <h2 style="margin:28px 0 10px;font-size:18px;color:#f5f5f7;">Keep-one of the week</h2>
 <p style="margin:0 0 8px;font-size:16px;line-height:1.55;color:#d2d2d7;"><a href="{esc(keep_url)}" style="color:#64b5ff;text-decoration:none;">{esc(keep.get("title"))}</a>. {esc(keep.get("rule"))}</p>
 <p style="margin:0 0 8px;font-size:15px;line-height:1.55;color:#d2d2d7;"><strong style="color:#f5f5f7;">Protocol.</strong> {esc(issue.get("protocol"))}</p>
-<p style="margin:24px 0 8px;font-size:15px;line-height:1.55;color:#d2d2d7;">Public archive: <a href="{DOMAIN}/newsletter/" style="color:#64b5ff;">Newsletter archive</a>. Free tools stay free. <a href="{DOMAIN}/premium/" style="color:#64b5ff;">Premium</a> is a separate $12 research membership — 7-day trial, code LAUNCH50 — not this newsletter in a hat.</p>
+<p style="margin:24px 0 8px;font-size:15px;line-height:1.55;color:#d2d2d7;">Public archive: <a href="{DOMAIN}/newsletter/" style="color:#64b5ff;">Newsletter archive</a>. Free tools stay free. <a href="{DOMAIN}/premium/" style="color:#64b5ff;">Premium</a> is a separate $12 research membership — 7-day trial, code LAUNCH50 — not this newsletter.</p>
 <p style="margin:0 0 28px;font-size:15px;line-height:1.55;color:#d2d2d7;">{esc(issue.get("signoff"))}</p>
 </td></tr>
 <tr><td style="padding:24px 8px 0;text-align:center;font-size:12px;line-height:1.6;color:#8e8e93;border-top:1px solid #1c1c1e;">
@@ -114,6 +115,7 @@ def public_page(issue: dict, cfg: dict) -> str:
 <p class="kicker light">Keep/Cut Weekly · Issue {esc(issue.get("issue"))} · checked {esc(issue.get("checked_at"))}</p>
 <h1>{esc(issue.get("subject_line"))}</h1>
 <p class="subhead">{esc(issue.get("lede"))}</p>
+{f'<p class="affiliate-inline">{esc(issue.get("verification"))}</p>' if issue.get("verification") else ""}
 <p><a class="button button-blue" href="/subscribe/">Get next week</a></p>
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
