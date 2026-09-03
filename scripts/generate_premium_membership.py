@@ -1271,8 +1271,10 @@ def update_pricing_page(root: Path, tools: list[dict[str, Any]]) -> None:
         count=1,
         flags=re.S,
     )
+    # Consume whitespace before Scope so a second generate does not keep
+    # inserting the trailing space (site-qa idempotency).
     html = re.sub(
-        r'<strong>Delivery:</strong>.*?(?=\s*<strong>Scope:)',
+        r"<strong>Delivery:</strong>.*?(?=<strong>Scope:)",
         "<strong>Delivery:</strong> Premium is delivered in Whop. The <a href=\"/premium/library/\">/premium/library/</a> pages on this site are a public preview of the format and are not gated. Free Keep/Cut Weekly and free Stack Audit are not this membership. ",
         html,
         count=1,

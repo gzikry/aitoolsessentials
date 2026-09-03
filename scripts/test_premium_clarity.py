@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -86,6 +88,23 @@ def main() -> None:
         errors.append("Pricing must say the written reply is not a second product")
     if WHOP not in pricing:
         errors.append("Pricing missing existing Whop checkout URL")
+
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from generate_premium_membership import update_pricing_page
+
+    tools = json.loads((ROOT / "data/tools.json").read_text())
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_root = Path(tmp)
+        (tmp_root / "pricing").mkdir()
+        (tmp_root / "pricing" / "index.html").write_text(pricing)
+        update_pricing_page(tmp_root, tools)
+        first = (tmp_root / "pricing" / "index.html").read_text()
+        update_pricing_page(tmp_root, tools)
+        second = (tmp_root / "pricing" / "index.html").read_text()
+        if first != second:
+            errors.append("update_pricing_page is not idempotent (Delivery/Scope spacing drifted)")
+        if first.count("<strong>Scope:") != 1:
+            errors.append("pricing page Scope label was lost or duplicated")
 
     premium = (ROOT / "premium/index.html").read_text()
     for heading in (
