@@ -487,7 +487,11 @@
   }
   function renderResults() {
     var result = evaluate(state.selected);
-    var costNote = result.cost.unknown_count ? result.cost.unknown_count + " tool" + (result.cost.unknown_count === 1 ? "" : "s") + " have unknown spend and are excluded from the dollar total." : "Every selected tool has known spend.";
+    var costNote = result.cost.unknown_count
+      ? (result.cost.unknown_count === 1
+        ? "1 tool has unknown spend and is excluded from the dollar total."
+        : result.cost.unknown_count + " tools have unknown spend and are excluded from the dollar total.")
+      : "Every selected tool has known spend.";
     var badgeHtml = result.badges.length ? result.badges.map(function (b) { return '<span class="sa-badge" title="' + esc(b.why) + '">' + esc(b.label) + "</span>"; }).join("") : '<p class="sa-note">No personal badges from this input set.</p>';
     var clusterHtml = result.clusters.length ? result.clusters.map(function (c) {
       return '<article class="score-card"><span>Overlap cluster</span><h3>' + esc(c.names.join(" · ")) + "</h3><p>Shared use cases: " + esc(c.shared.map(labelOf).join(", ") || "none named") + ".</p>" + (c.uncertain ? "<p class=\"sa-note\">Uncertainty: at least one tool is missing catalog capability data, so this overlap is based only on the use cases you selected.</p>" : "<p class=\"sa-note\">Overlap is based on normalized shared use cases, not directory category alone.</p>") + "</article>";
