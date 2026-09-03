@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 DOMAIN = "https://aitoolsessentials.com"
@@ -108,7 +109,28 @@ def public_page(issue: dict, cfg: dict) -> str:
         pricing_section = f'<h2>Pricing Watch — confirmed changes</h2><ul>{pricing_rows}</ul><p style="color:#6e6e73;font-size:14px;">Verified from official pricing pages on {esc(issue.get("checked_at"))}. <a href="/pricing-watch/">Full tracker</a>. Premium members get alerts first.</p>'
     else:
         pricing_section = ""
-    
+
+    editorial_html = issue.get("public_editorial_html")
+    omit_related = bool(issue.get("omit_related"))
+
+    if editorial_html:
+        body_html = editorial_html
+    else:
+        related_html = (
+            ""
+            if omit_related
+            else '<p>Related: <a href="/updates/2026-08.html">August digest</a> · <a href="/subscribe/">Subscribe (Beehiiv, weekly only)</a> · <a href="/premium/">Premium research membership</a></p>'
+        )
+        body_html = f'''<div class="score-card"><span>Standing order</span><h2>{esc(issue.get("keep_cut_rule"))}</h2></div>
+{pricing_section}
+<h2>New on the directory</h2>{listings_html(issue.get("new_listings") or [], public=True)}
+<h2>Re-check before you renew</h2>{listings_html(issue.get("watch_list") or [], public=True)}
+<h2>Keep-one of the week</h2>
+<p><a href="{esc(keep.get("url"))}">{esc(keep.get("title"))}</a>. {esc(keep.get("rule"))}</p>
+<p><strong>Protocol.</strong> {esc(issue.get("protocol"))}</p>
+<p>{esc(issue.get("signoff"))}</p>
+{related_html}'''
+
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>{esc(issue.get("subject"))} | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/{esc(issue["slug"])}.html"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center">
 <img src="{logo_src}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px">
@@ -118,17 +140,7 @@ def public_page(issue: dict, cfg: dict) -> str:
 {f'<p class="affiliate-inline">{esc(issue.get("verification"))}</p>' if issue.get("verification") else ""}
 <p><a class="button button-blue" href="/subscribe/">Get next week</a></p>
 </div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide">
-<div class="score-card"><span>Standing order</span><h2>{esc(issue.get("keep_cut_rule"))}</h2></div>
-{pricing_section}
-<h2>New on the directory</h2>{listings_html(issue.get("new_listings") or [], public=True)}
-<h2>Re-check before you renew</h2>{listings_html(issue.get("watch_list") or [], public=True)}
-<h2>Keep-one of the week</h2>
-<p><a href="{esc(keep.get("url"))}">{esc(keep.get("title"))}</a>. {esc(keep.get("rule"))}</p>
-<p><strong>Protocol.</strong> {esc(issue.get("protocol"))}</p>
-<p>{esc(issue.get("signoff"))}</p>
-<p>Related: <a href="/updates/2026-08.html">August digest</a> · <a href="/subscribe/">Subscribe (Beehiiv, weekly only)</a> · <a href="/premium/">Premium research membership</a></p>
-</div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide">{body_html}</div></section>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
 
 
@@ -137,16 +149,19 @@ def generate(root: Path) -> int:
     cfg = json.loads((root / "data/newsletter.json").read_text())
     out = root / "newsletter"
     out.mkdir(exist_ok=True)
+    skip_beehiiv = bool(os.getenv("SKIP_BEEHIIV"))
     pack = root / "admin/newsletter"
-    pack.mkdir(parents=True, exist_ok=True)
+    if not skip_beehiiv:
+        pack.mkdir(parents=True, exist_ok=True)
     cards = []
     for issue in issues:
         slug = issue["slug"]
         (out / f"{slug}.html").write_text(public_page(issue, cfg))
-        (pack / f"{slug}-beehiiv.html").write_text(beehiiv_html(issue, cfg))
-        (pack / f"{slug}-subject.txt").write_text(
-            f"{issue.get('subject')}\nPREVIEW: {issue.get('preview')}\n"
-        )
+        if not skip_beehiiv:
+            (pack / f"{slug}-beehiiv.html").write_text(beehiiv_html(issue, cfg))
+            (pack / f"{slug}-subject.txt").write_text(
+                f"{issue.get('subject')}\nPREVIEW: {issue.get('preview')}\n"
+            )
         cards.append(
             f'<article class="content-hub-card"><span>Issue {esc(issue.get("issue"))}</span><h3><a href="/newsletter/{esc(slug)}.html">{esc(issue.get("week_label"))}</a></h3><p>{esc(issue.get("preview"))}</p></article>'
         )
