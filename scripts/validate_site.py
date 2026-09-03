@@ -77,7 +77,7 @@ def load_json(path):
 
 def main():
     errors = []
-    for rel in ['data/tools.json','data/tool_sources.json','data/test_cases.json','data/affiliate_programs.json','data/sponsors.json','data/revenue_targets.json','data/sponsor_inventory.json','data/benchmarks.json','data/integrations.json','data/pricing_snapshots.json']:
+    for rel in ['data/tools.json','data/tool_sources.json','data/test_cases.json','data/affiliate_programs.json','data/sponsors.json','data/revenue_targets.json','data/sponsor_inventory.json','data/benchmarks.json','data/integrations.json','data/pricing_snapshots.json','data/stack_audit_rules.json','data/stack_audit_catalog.json']:
         result = load_json(ROOT / rel)
         if isinstance(result, str):
             errors.append(result)
@@ -233,10 +233,31 @@ def main():
                  'legal/privacy.html','legal/terms.html','legal/about.html','legal/corrections.html',
                  'legal/testing-protocol.html','downloads/ai-tool-test-log.csv',
                  'benchmarks/index.html','research/ai-tool-pricing-2026.html',
-                 'automation-cost-decoder/index.html']
+                 'automation-cost-decoder/index.html','stack-audit.html']
     missing_keys = [p for p in key_pages if not (ROOT / p).exists()]
     if missing_keys:
         errors.append(f'Missing key pages: {missing_keys}')
+    for rel in ['js/stack-audit.js', 'css/stack-audit.css']:
+        if not (ROOT / rel).exists():
+            errors.append(f'Missing Stack Audit asset: {rel}')
+    catalog_path = ROOT / 'data/stack_audit_catalog.json'
+    if catalog_path.exists():
+        catalog = json.loads(catalog_path.read_text())
+        catalog_slugs = {item.get('slug') for item in catalog.get('tools', [])}
+        if catalog_slugs != tool_slugs:
+            errors.append('Stack Audit catalog slugs do not match tools.json')
+        for item in catalog.get('tools', []):
+            if item.get('numeric_list_price_usd') not in (None,):
+                errors.append(f'Stack Audit catalog invented a numeric price for {item.get("slug")}')
+            if '20' == str(item.get('numeric_list_price_usd')) or item.get('numeric_list_price_usd') == 35:
+                errors.append(f'Stack Audit catalog reused viral heuristic for {item.get("slug")}')
+        page = (ROOT / 'stack-audit.html').read_text() if (ROOT / 'stack-audit.html').exists() else ''
+        if 'Coming soon' not in page:
+            errors.append('Stack Audit page missing Coming soon teaser')
+        if 'whop.com/checkout' in page:
+            errors.append('Stack Audit page must not add a Whop checkout')
+        if 'Never changes' not in page and 'never changes' not in page:
+            errors.append('Stack Audit page missing affiliate/sponsor editorial policy')
     comparison_hub = ROOT/'comparisons/index.html'
     comparison_pages = {
         p.name for p in (ROOT/'comparisons').glob('*.html')

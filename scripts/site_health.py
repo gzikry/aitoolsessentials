@@ -12,7 +12,7 @@ from pathlib import Path
 REQUIRED = [
     "fit-interview", "confidence-check", "change-radar", "evidence", "methodology",
     "pricing-watch", "guides/switch-guides", "model-lineups", "workflows", "decision-brief.html", "stack-builder.html",
-    "cost-calculator.html", "compare-shortlist.html",
+    "cost-calculator.html", "compare-shortlist.html", "stack-audit.html",
 ]
 SECRET_PATTERNS = [
     re.compile(r"(?:sk|rk|pk)-[A-Za-z0-9_-]{20,}"),

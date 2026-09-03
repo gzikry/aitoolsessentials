@@ -99,6 +99,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <li><strong>Trial script:</strong> the exact same task to run in each tool before spending money.</li>
 <li><strong>Shareable verdict:</strong> copy a summary your team can read in 20 seconds.</li>
 </ul>
+<p><a href="/stack-audit.html">Auditing a whole stack you already pay for? Use the free Stack Audit →</a></p>
 <p><a href="/premium/">Want deeper workflow-level research? See Premium →</a></p>
 </section>
 </div></section>

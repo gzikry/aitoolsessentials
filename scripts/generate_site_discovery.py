@@ -47,6 +47,7 @@ def generate_manifest(root: Path) -> None:
             {"name": "Stack Builder", "url": "/stack-builder.html", "description": "Generate a practical AI stack."},
             {"name": "Tool Finder", "url": "/tool-finder.html", "description": "Filter AI tools by job, budget, and buyer."},
             {"name": "Cost Calculator", "url": "/cost-calculator.html", "description": "Estimate monthly AI stack cost."},
+            {"name": "Stack Audit", "url": "/stack-audit.html", "description": "Audit the tools you already pay for."},
             {"name": "Free AI Tools", "url": "/free-ai-tools.html", "description": "Browse free and freemium AI tools."},
         ],
     }
@@ -69,7 +70,7 @@ def generate_opensearch(root: Path) -> None:
 def generate_human_sitemap(root: Path, tools: list[dict[str, Any]]) -> None:
     groups = [
         ("Find tools", [("All tools", "/tools/index.html"), ("Tool Finder", "/tool-finder.html"), ("Fit Interview", "/fit-interview/"), ("Workflow guides", "/workflows/"), ("Local AI Planner", "/local-ai-planner/"), ("Confidence Check", "/confidence-check/"), ("Free AI tools", "/free-ai-tools.html"), ("Best AI tools", "/comparisons/best-ai-tools.html"), ("Best-for roles", "/best-for/"), ("Stack gallery", "/stacks/"), ("Glossary", "/glossary/")]),
-        ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Automation Billing Decoder", "/automation-cost-decoder/"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/"), ("Pricing Watch", "/pricing-watch/"), ("Keep/Cut Weekly", "/newsletter/")]),
+        ("Decide", [("Stack Builder", "/stack-builder.html"), ("Cost Calculator", "/cost-calculator.html"), ("Stack Audit", "/stack-audit.html"), ("Automation Billing Decoder", "/automation-cost-decoder/"), ("Compare Shortlist", "/compare-shortlist.html"), ("Alternatives", "/alternatives/"), ("Pricing Watch", "/pricing-watch/"), ("Keep/Cut Weekly", "/newsletter/")]),
         ("Trust", [("Changelog", "/changelog/"), ("Change Radar", "/change-radar/"), ("Model lineups", "/model-lineups/"), ("How-to library", "/how-to/"), ("Hardware guide", "/hardware/"), ("Evidence ledger", "/evidence/"), ("Methodology", "/methodology/"), ("Community reports", "/community/test-report.html"), ("Get reviewed", "/get-reviewed/"), ("Affiliate disclosure", "/legal/affiliate-disclosure.html")]),
         ("Distribution", [("Launch Kit", "/launch-kit/"), ("Vendor Badges", "/badges/"), ("Press / cite us", "/press/"), ("Weekly", "/weekly/"), ("Site status", "/status/"), ("RSS feed", "/feed.xml")]),
     ]
@@ -149,7 +150,7 @@ def generate_status(root: Path, tools: list[dict[str, Any]], today: str) -> None
         },
         "hardware_records": hardware_records,
         "feeds": ["/feed.xml", "/weekly/feed.xml", "/changelog/feed.xml"],
-        "core_utilities": ["/stack-builder.html", "/tool-finder.html", "/fit-interview/", "/workflows/", "/local-ai-planner/", "/confidence-check/", "/change-radar/", "/model-lineups/", "/how-to/", "/hardware/", "/cost-calculator.html", "/compare-shortlist.html"],
+        "core_utilities": ["/stack-builder.html", "/tool-finder.html", "/fit-interview/", "/workflows/", "/local-ai-planner/", "/confidence-check/", "/change-radar/", "/model-lineups/", "/how-to/", "/hardware/", "/cost-calculator.html", "/compare-shortlist.html", "/stack-audit.html"],
         "editorial_boundaries": "Affiliate/sponsor relationships do not change editorial scoring; corrections are verified against official sources before publication.",
     }
     (root / "site-status.json").write_text(json.dumps(data, indent=2) + "\n")

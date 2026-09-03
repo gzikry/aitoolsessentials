@@ -169,6 +169,10 @@ from generate_decision_brief import generate as generate_decision_brief
 generate_decision_brief(root, tools, today)
 print('Generated decision brief generator')
 
+from generate_stack_audit import generate as generate_stack_audit
+generate_stack_audit(root, today)
+print('Generated stack audit')
+
 from generate_switch_guides import generate as generate_switch_guides
 generate_switch_guides(root, tools, today)
 print('Generated switch-from migration guides')
@@ -332,6 +336,9 @@ print('Injected knowledge schema modules')
 from generate_decision_brief import postprocess as _decision_brief_postprocess
 _decision_brief_postprocess(root, tools, today)
 print('Injected decision brief entry links')
+
+from generate_stack_audit import postprocess as _stack_audit_postprocess
+print('Injected stack audit entry links:', _stack_audit_postprocess(root))
 
 
 from generate_premium_membership import postprocess as _premium_postprocess

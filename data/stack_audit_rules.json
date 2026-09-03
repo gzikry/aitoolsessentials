@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "max_tools": 16,
+  "max_use_cases": 5,
+  "max_custom_name": 40,
+  "max_fragment_chars": 1800,
+  "max_amount": 100000,
+  "max_seats": 1000,
+  "session_key": "ait.stackAudit.v1",
+  "local_key": "ait.stackAudit.saved.v1",
+  "fragment_prefix": "sa1.",
+  "use_cases": [
+    {"id": "writing", "label": "General writing"},
+    {"id": "research", "label": "Research"},
+    {"id": "coding", "label": "Coding"},
+    {"id": "design", "label": "Design / images"},
+    {"id": "video", "label": "Video"},
+    {"id": "audio", "label": "Audio / voice"},
+    {"id": "meetings", "label": "Meetings / transcription"},
+    {"id": "marketing", "label": "Marketing / content"},
+    {"id": "automation", "label": "Automation"},
+    {"id": "email", "label": "Email / productivity"},
+    {"id": "presentations", "label": "Presentations"},
+    {"id": "data", "label": "Data / spreadsheets"},
+    {"id": "local", "label": "Local / self-hosted AI"}
+  ],
+  "spend_kinds": ["monthly", "annual", "seats", "usage", "custom", "promo", "free", "unknown"],
+  "score": {
+    "start": 100,
+    "unused_paid": -12,
+    "overlap_pair": -8,
+    "overlap_pair_cap": -40,
+    "unknown_spend": -5,
+    "stack_size_over": 5,
+    "stack_size_each": -3,
+    "stack_size_cap": -15,
+    "unowned_overlap": -6,
+    "weekly_unique_each": 4,
+    "weekly_unique_cap": 16,
+    "free_first": 6,
+    "spend_complete": 4
+  }
+}
