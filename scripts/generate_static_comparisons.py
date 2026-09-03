@@ -114,12 +114,12 @@ def _premium_module():
     except Exception:
         return (
             '<section class="newsletter-panel premium-conversion-panel"><div><span>Paid Premium · $12/mo via Whop</span>'
-            '<h2>This is the $12/month membership. The weekly email is free.</h2>'
-            '<p>Premium is AIToolsEssentials Premium on Whop. Keep/Cut Weekly and the instant Stack Audit stay free.</p>'
-            '<p class="affiliate-inline">7-day free trial · then $12/month · code LAUNCH50 for 50% off first paid month · Whop handles billing · research and strategy only.</p>'
+            '<h2>Paying for two tools that do the same job?</h2>'
+            '<p>Premium is $12/month on Whop. Dated keep/cut research, monthly CSV, weekly checklist, alerts, and a written reply — delivered in Whop. Keep/Cut Weekly and the instant Stack Audit stay free.</p>'
+            '<p class="affiliate-inline">7-day free trial · then $12/month · code LAUNCH50 for 50% off first paid month · delivered in Whop · research and strategy only.</p>'
             '</div><div class="newsletter-actions">'
             '<a class="button button-blue" href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener">Join Premium on Whop ($12/mo)</a>'
-            '<a class="button button-dark" href="/premium/library/">Member library</a>'
+            '<a class="button button-dark" href="/premium/">See what $12 buys</a>'
             '<a class="button button-dark" href="/premium/faq.html">FAQ</a>'
             '</div></section>'
         )

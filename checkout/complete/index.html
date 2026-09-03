@@ -42,7 +42,7 @@
     </section>
 
     <section class="scene scene-light intro-strip" id="next-steps" hidden>
-      <p><strong>What happens next:</strong> this page only reads a return parameter. It cannot verify a charge. If Whop shows the trial or payment succeeded, the receipt should arrive by email. Open the Whop hub with that email, then the <a href="/premium/library/">member library</a>.</p>
+      <p><strong>What happens next:</strong> this page only reads a return parameter. It cannot verify a charge. If Whop shows the trial or payment succeeded, the receipt should arrive by email. Open the Whop hub with that email. That is where Premium is delivered.</p>
     </section>
   </main>
 
@@ -74,7 +74,7 @@
     if (window.aitTrack) window.aitTrack("checkout_complete", { plan: params.get("planId") || "premium-monthly" });
     actions.innerHTML =
       '<a class="button button-blue" href="https://whop.com/hub" rel="external noopener">Open Whop member hub</a>' +
-      '<a class="button button-ghost-dark" href="../../premium/library/">Open member library</a>';
+      '<a class="button button-ghost-dark" href="../../premium/">See what $12 buys</a>';
   } else if (params.get("status") === "error") {
     kicker.textContent = "Checkout didn't complete";
     heading.textContent = "No charge was made.";

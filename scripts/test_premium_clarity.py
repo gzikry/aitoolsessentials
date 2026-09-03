@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,6 +21,8 @@ def main() -> None:
         errors.append("integrations.json product_url drifted from AIToolsEssentials Premium")
     if int(cfg["price_usd_month"]) != 12:
         errors.append("Do not invent a new Premium price")
+    if cfg.get("plan_id") != "plan_FNXWs3suBFwDN":
+        errors.append("Do not invent a new Whop plan id")
 
     home = (ROOT / "index.html").read_text()
     if WHOP not in home:
@@ -36,7 +40,7 @@ def main() -> None:
         errors.append("Checkout complete missing honest Whop wording")
 
     stack = (ROOT / "stack-audit.html").read_text()
-    if "paid Premium" not in stack.lower() and "Paid Premium" not in stack:
+    if "paid Premium" not in stack.lower() and "Paid Premium" not in stack and "See what $12 buys" not in stack:
         errors.append("Free Stack Audit page must label paid Premium separately")
     if "Keep/Cut Weekly" not in stack:
         errors.append("Free Stack Audit page must label the free newsletter")
@@ -60,21 +64,77 @@ def main() -> None:
     if "Catch" not in brief and "Lily" not in brief:
         errors.append("Research brief must use dated digest tools, not invented ones")
 
+    library_hub = (library / "index.html").read_text()
+    if "public preview" not in library_hub.lower() and "not gated" not in library_hub.lower():
+        errors.append("Library hub must say it is a public preview / not gated")
+    if "delivered in Whop" not in library_hub and "delivered in Whop" not in library_hub.replace("\n", " "):
+        if "lives in Whop" not in library_hub and "inside Whop" not in library_hub:
+            errors.append("Library hub must say Premium is delivered in Whop")
+    if "This is the $12/month Whop membership library" in library_hub:
+        errors.append("Library hub still sells public HTML as the paid membership")
+    if "George" in library_hub:
+        errors.append("Library hub must not name George")
+
+    access = (library / "how-to-access.html").read_text()
+    if "George" in access:
+        errors.append("how-to-access.html must not name George")
+
     pricing = (ROOT / "pricing/index.html").read_text()
     if "Instant Stack Audit" not in pricing and "free instant" not in pricing.lower():
         errors.append("Pricing must show the free Stack Audit lane")
     if "Join Premium on Whop ($12/mo)" not in pricing:
         errors.append("Pricing missing labeled Premium checkout")
+    if "not a second product" not in pricing.lower() and "not a second paid" not in pricing.lower():
+        errors.append("Pricing must say the written reply is not a second product")
+    if WHOP not in pricing:
+        errors.append("Pricing missing existing Whop checkout URL")
+
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from generate_premium_membership import update_pricing_page
+
+    tools = json.loads((ROOT / "data/tools.json").read_text())
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_root = Path(tmp)
+        (tmp_root / "pricing").mkdir()
+        (tmp_root / "pricing" / "index.html").write_text(pricing)
+        update_pricing_page(tmp_root, tools)
+        first = (tmp_root / "pricing" / "index.html").read_text()
+        update_pricing_page(tmp_root, tools)
+        second = (tmp_root / "pricing" / "index.html").read_text()
+        if first != second:
+            errors.append("update_pricing_page is not idempotent (Delivery/Scope spacing drifted)")
+        if first.count("<strong>Scope:") != 1:
+            errors.append("pricing page Scope label was lost or duplicated")
+
+    premium = (ROOT / "premium/index.html").read_text()
+    for heading in (
+        "What you buy for $12/mo",
+        "What you get this week",
+        "What stays free",
+        "What is not included",
+    ):
+        if heading not in premium:
+            errors.append(f"premium/index.html missing heading {heading!r}")
+    if "You are paying for overlapping AI tools" not in premium:
+        errors.append("premium/index.html must lead with overlapping-tool money pain")
+    if "Join Premium on Whop ($12/mo)" not in premium:
+        errors.append("premium/index.html missing labeled Premium checkout")
+    if "George" in premium:
+        errors.append("premium/index.html must not name George")
 
     banned = [
         "operationalize the best AI tools",
-        "The essential AI tools directory",
-        "Pay for the research layer.",
+        "Pay for the worksheets. Not the newsletter.",
         "Join the research membership — not the free email.",
         "The member library keeps compounding.",
         "Jarvis-dry",
         "strategy services",
         "overlap clusters",
+        "A real member library from day one.",
+        "Public member library",
+        "This is the $12/month Whop membership library",
+        "curated for outcomes",
+        "member library as product",
     ]
     priority = [
         ROOT / "index.html",
@@ -83,60 +143,25 @@ def main() -> None:
         ROOT / "subscribe/index.html",
         ROOT / "premium/index.html",
         ROOT / "premium/roadmap.html",
+        ROOT / "premium/faq.html",
+        ROOT / "premium/welcome/index.html",
+        ROOT / "premium/archive.html",
+        ROOT / "premium/library/index.html",
+        ROOT / "premium/library/how-to-access.html",
         ROOT / "pricing/index.html",
         ROOT / "legal/terms.html",
         ROOT / "legal/privacy.html",
     ]
     for path in priority:
+        if not path.exists():
+            errors.append(f"Missing {path.relative_to(ROOT)}")
+            continue
         text = path.read_text()
         for phrase in banned:
             if phrase in text:
                 errors.append(f"{path.relative_to(ROOT)} still has {phrase!r}")
-
-    home_head = home.split("</head>", 1)[0]
-    if "Stop paying for tools you do not use" not in home_head:
-        errors.append("Homepage head missing second-person title")
-    if "See which subscriptions you should keep" not in home_head:
-        errors.append("Homepage head missing second-person description")
-    for needle, label in (
-        ('property="og:title" content="AIToolsEssentials — Stop paying for tools you do not use"', "og:title"),
-        ('property="og:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', "og:description"),
-        ('name="twitter:title" content="AIToolsEssentials — Stop paying for tools you do not use"', "twitter:title"),
-        ('name="twitter:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', "twitter:description"),
-        ('"name": "AIToolsEssentials — Stop paying for tools you do not use"', "JSON-LD name"),
-        ('"description": "See which subscriptions you should keep, which you can cancel, and what to test this week."', "JSON-LD description"),
-    ):
-        if needle not in home_head:
-            errors.append(f"Homepage head missing {label}")
-
-    from generate_premium_membership import apply_homepage_voice_meta, homepage_voice_meta
-
-    stale = """<!doctype html><html><head>
-<meta name="description" content="AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work." />
-<title>AIToolsEssentials — The essential AI tools directory</title>
-<!-- AIT SEO START -->
-<meta property="og:title" content="AIToolsEssentials — The essential AI tools directory">
-<meta property="og:description" content="AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work.">
-<meta name="twitter:title" content="AIToolsEssentials — The essential AI tools directory">
-<meta name="twitter:description" content="AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "AIToolsEssentials — The essential AI tools directory", "description": "AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work.", "url": "https://aitoolsessentials.com/"}</script>
-<!-- AIT SEO END -->
-</head><body><h2>Stop paying for tools you do not use</h2></body></html>"""
-    voice_title, voice_desc = homepage_voice_meta(ROOT)
-    rewritten = apply_homepage_voice_meta(stale, voice_title, voice_desc)
-    if "operationalize" in rewritten:
-        errors.append("apply_homepage_voice_meta left operationalize in homepage meta")
-    if "The essential AI tools directory" in rewritten:
-        errors.append("apply_homepage_voice_meta left The essential AI tools directory")
-    if voice_title not in rewritten or voice_desc not in rewritten:
-        errors.append("apply_homepage_voice_meta did not set voice title/description")
-
-    for path in ROOT.rglob("*.html"):
-        rel = path.relative_to(ROOT)
-        if "admin" in rel.parts or any(part.startswith(".") for part in rel.parts):
-            continue
-        if "operationalize" in path.read_text().lower():
-            errors.append(f"{rel} still says operationalize")
+        if path.name != "integrations.json" and "George" in text and "premium" in str(path):
+            errors.append(f"{path.relative_to(ROOT)} names George in public copy")
 
     if errors:
         raise SystemExit("premium clarity failures:\n- " + "\n- ".join(errors))

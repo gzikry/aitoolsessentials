@@ -10,6 +10,23 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from premium_copy import (
+    BUY_PAGE_LABEL,
+    PREVIEW_LABEL,
+    billing_fine_print,
+    buy_story_cards_html,
+    checkout_buttons,
+    deliverable_cards_html,
+    homepage_band_html,
+    join_label,
+    lanes_note,
+    not_included_phrase,
+    premium_nav_header,
+    this_week_items,
+    upsell_module_html,
+    what_you_buy_items,
+)
+
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
 # Existing Whop Premium checkout only — do not invent new plan IDs or URLs.
@@ -21,7 +38,7 @@ WHOP_PROMO_CODE = "LAUNCH50"
 WHOP_TRIAL_DAYS = 7
 WHOP_PRICE = 12
 JOIN_PREMIUM_LABEL = f"Join Premium on Whop (${WHOP_PRICE}/mo)"
-HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/stack-audit.html">Free Stack Audit</a><a href="/newsletter/">Keep/Cut Weekly</a><a href="/premium/library/">Member library</a><a href="/premium/">Premium</a></nav><a class="nav-cta" href="/pricing/">Paid Premium $12/mo</a></header>'
+HEADER = premium_nav_header()
 FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/advertise/index.html" rel="nofollow">Advertise</a><a href="/submit-tool.html" rel="nofollow">Submit a tool</a><a href="/community/test-report.html" rel="nofollow">Report your results</a><a href="/badges/">Badges</a><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="/legal/about.html">About</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a></footer>'
 
 
@@ -148,54 +165,42 @@ def category_top_tools(tools: list[dict[str, Any]], category: str, limit: int = 
     return sorted([t for t in tools if category.lower() in str(t.get("category", "")).lower()], key=lambda t: float(t.get("rating", 0) or 0), reverse=True)[:limit]
 
 
+def _whop_dict() -> dict[str, Any]:
+    return {
+        "checkout_url": WHOP_CHECKOUT,
+        "checkout_promo_url": WHOP_CHECKOUT_PROMO,
+        "product_url": WHOP_PRODUCT_URL,
+        "plan_id": WHOP_PLAN_ID,
+        "promo_code": WHOP_PROMO_CODE,
+        "trial_period_days": WHOP_TRIAL_DAYS,
+        "price_usd_month": WHOP_PRICE,
+        "hub_url": "https://whop.com/hub",
+    }
+
+
 def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -> None:
     out = root / "premium"
     out.mkdir(exist_ok=True)
-    library_cards = [
-        ("Monthly research briefing", "A dated, source-led briefing on tool changes, pricing shifts, and what to watch before renewing subscriptions."),
-        ("Monthly decision matrix", "Downloadable CSV comparing all 67 tracked AI tools by category, pricing, use cases, and trial priority. Refreshed monthly."),
-        ("Deep-dive workflow report", "One practical workflow per month compared across tools with testing plan, decision matrix, and cost notes."),
-        ("CSV decision archive", "Downloadable scorecards for sorting tools by workflow, pricing pressure, policy risk, and trial priority."),
-        ("Member request thread", "Subscribers vote on the next workflow to test. Requests shape future premium research."),
-        ("Audit-style playbooks", "Strategy-only templates for cutting tool sprawl, choosing alternatives, and preparing vendor/security questions."),
-        ("Update notes", "Source-dated alerts when pricing, policies, or plan names change across tracked tools."),
-        ("AI Stack Audit Template", "Fillable CSV that maps every tool you pay for, weekly usage, overlap, and cancellation risk. Reply with your audit for a personalized stack recommendation within 48 hours."),
-        ("Weekly AI Stack Checklist", "A 7-day rhythm for keeping your stack lean: check alerts, test tools, log friction, and make data-driven cut/keep decisions in 15 minutes per week."),
-        ("Tool-Change Alert Feed", "Curated monthly feed of pricing, model, and feature changes across all 67 tracked tools — delivered to members before the public change-radar page."),
-        ("Hands-On Comparison Protocol", "Fillable comparison CSV for running identical tasks across ChatGPT, Claude, Grok, and Gemini. Stop reading reviews — test the tools yourself in 30 minutes."),
-        ("AI ROI Calculator", "Template that measures whether your AI spend is actually paying for itself: time saved x hourly rate minus monthly tool costs."),
-        ("Priority research slots", "First 5 members each month get their specific workflow researched and delivered as a CSV + brief in the next monthly drop."),
-        ("30-day renewal/cancel calendar", "Day-by-day operating system for the trial week and first month so Premium is used, not collected."),
-        ("Free vs Premium value matrix", "Honest table of what stays free (directory, Keep/Cut Weekly, instant Stack Audit) vs what $12 buys."),
-        ("Cancel-savings tracker", "Log cancelled or downgraded seats from your own invoices. If those saves exceed $12, you can judge Premium yourself."),
-        ("Vendor/security questions pack", "Structured procurement questions before client data touches a new tool."),
-        ("Coding assistant shortlist", "Force a single primary coding tool instead of paying for Cursor plus Copilot plus chat coding seats."),
-        ("Public member library", "Dated HTML briefs, decision matrix, worksheets, and alert feed on this site — plus Whop posts when uploaded. No fake login wall."),
-    ]
-    cards = "".join(f'<article class="content-hub-card"><span>Premium deliverable</span><h3>{esc(title)}</h3><p>{esc(text)}</p></article>' for title, text in library_cards)
     n_tools = len(tools)
-    deliverables = [
-        f"Public member library: dated research brief, {n_tools}-tool decision matrix, weekly checklist, alert feed, ROI worksheet",
-        "Deeper stack-audit template + strategy-only written reply (not the free instant scorecard)",
-        "Welcome/start-here post with 7-day free trial and LAUNCH50 first-month discount",
-        f"Full {n_tools}-tool decision matrix CSV (refreshed from official directory labels)",
-        "Decision brief format: keep / cut / trial one-pager + data-hygiene fence",
-        "Weekly AI Stack Checklist (15-minute lean-stack rhythm)",
-        "Tool-change alert feed formatted from dated monthly digests",
-        "Hands-On Comparison Protocol (ChatGPT vs Claude vs Grok vs Gemini)",
-        "AI ROI worksheet — your invoices and hours only; no invented savings",
-        "Priority research slots (first 5 member requests each month)",
-        "September–November archive packs for Whop upload (CSVs + posts)",
-        "Vendor/security questions pack and automation pricing decoder",
-        "30-day renewal/cancel calendar + first-15-minutes onboarding sheet",
-        "Free vs Premium value matrix and cancel-savings tracker you fill yourself",
-        "Coding assistant shortlist from directory price labels",
-    ]
-    deliverable_list = "".join(f"<li>{esc(x)}</li>" for x in deliverables)
-    desc = f"AIToolsEssentials Premium is the paid ${WHOP_PRICE}/month Whop membership (7-day free trial). Not the free Keep/Cut Weekly email and not the free instant Stack Audit. You get dated notes, worksheets, and a written keep/cut reply on your stack."
-    page = f'''<!doctype html><html lang="en">{head("Premium — worksheets, not the newsletter", desc, DOMAIN+"/premium/")}<body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Paid Premium · $12/month on Whop</p><h1>Pay for the worksheets. Not the newsletter.</h1><p class="subhead">AIToolsEssentials Premium is ${WHOP_PRICE}/month via Whop after a {WHOP_TRIAL_DAYS}-day free trial. You get the member library: dated briefs, the {n_tools}-tool decision matrix, weekly checklist, tool-change alerts, ROI worksheet, and a strategy-only stack-audit reply. The <a href="/newsletter/">Keep/Cut Weekly</a> email and the <a href="/stack-audit.html">instant Stack Audit</a> stay free.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener" data-whop-checkout="{WHOP_PLAN_ID}">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="{WHOP_CHECKOUT_PROMO}" rel="external noopener" style="margin-left:8px">Use code {WHOP_PROMO_CODE} — 50% off first paid month</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">Open member library</a><a class="button button-blue" href="/premium/sample-audit.html" style="margin-left:8px">See sample audit</a></p><p class="affiliate-inline">{WHOP_TRIAL_DAYS}-day free trial, then ${WHOP_PRICE}/month on the existing AIToolsEssentials Premium checkout. Code <strong>{WHOP_PROMO_CODE}</strong> is 50% off the first paid month for new users. Cancel anytime in Whop. This site has no login wall. Research and strategy only — no implementation, setup, account access, credentials, or ongoing support. Affiliate/sponsor status never changes recommendations.</p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>What members get immediately</span><h2>A real member library from day one.</h2><ul>{deliverable_list}</ul><p><a class="button button-blue" href="/premium/library/">Open the library</a><a class="button button-blue" href="/premium/roadmap.html" style="margin-left:8px">View roadmap</a><a class="button button-blue" href="/premium/archive.html" style="margin-left:8px">Archive preview</a><a class="button button-blue" href="/premium/faq.html" style="margin-left:8px">Premium FAQ</a></p></div><h2>Premium content library</h2><div class="content-hub-grid">{cards}</div><section class="score-card"><span>Scope boundary</span><h2>Premium does not buy rankings or implementation help.</h2><p>Premium is dated notes and worksheets. It does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores. It does not include setup, integrations, credential handling, or technical support.</p></section></div></section>
+    whop = _whop_dict()
+    buy_list = "".join(f"<li>{esc(x)}</li>" for x in what_you_buy_items(n_tools))
+    week_list = "".join(f"<li>{esc(x)}</li>" for x in this_week_items())
+    desc = (
+        f"You are paying for overlapping AI tools. Premium is ${WHOP_PRICE}/month on Whop to decide which ones to keep. "
+        "Dated keep/cut research, monthly decision matrix CSV, weekly checklist, tool-change alerts, "
+        "a written keep/cut reply, and priority research slots — delivered in Whop. "
+        "The directory, Keep/Cut Weekly, and instant Stack Audit stay free."
+    )
+    page = f'''<!doctype html><html lang="en">{head("Premium — $12/month to decide which AI tools to keep", desc, DOMAIN+"/premium/")}<body>{HEADER}<main>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Paid Premium · ${WHOP_PRICE}/month on Whop</p><h1>You are paying for overlapping AI tools. Premium is ${WHOP_PRICE}/month to decide which ones to keep.</h1><p class="subhead">Join on Whop. You get dated keep/cut research, a monthly decision matrix CSV, a weekly checklist, tool-change alerts, a stack-audit template with a written keep/cut reply within 48 hours, an ROI worksheet, and priority research slots. The <a href="/newsletter/">Keep/Cut Weekly</a> email and the <a href="/stack-audit.html">instant Stack Audit</a> stay free.</p><p>{checkout_buttons(whop, preview=True, free_audit=True)}</p>{billing_fine_print(whop)}{lanes_note()}</div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide">
+<h2>The purchase, in four boxes</h2>
+{buy_story_cards_html(n_tools)}
+<div class="score-card"><span>Delivered in Whop</span><h2>What $12/month is, without the jargon.</h2><ul>{buy_list}</ul><p>This week: </p><ul>{week_list}</ul><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">{PREVIEW_LABEL}</a><a class="button button-blue" href="/premium/faq.html" style="margin-left:8px">Premium FAQ</a><a class="button button-blue" href="/premium/roadmap.html" style="margin-left:8px">What shows up each month</a></p></div>
+<h2>Inside the Whop pack</h2>
+<div class="content-hub-grid">{deliverable_cards_html(n_tools)}</div>
+<section class="score-card"><span>What is not included</span><h2>Premium does not buy setup, logins, or rankings.</h2><p>You are buying dated research and a written keep/cut reply. Premium does not include {not_included_phrase()}. It does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores. The pages at <a href="/premium/library/">/premium/library/</a> are a public preview of the format. They are not gated.</p></section>
+</div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "index.html").write_text(page)
 
@@ -203,8 +208,8 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     rows = "".join(f'<tr><td><a href="/tools/{esc(t["slug"])}/">{esc(t["name"])}</a></td><td>{esc(t.get("price"))}</td><td>{esc(t.get("best_for"))}</td><td>{esc(t.get("summary"))}</td></tr>' for t in sample_tools)
     sample_desc = "Sample AIToolsEssentials Premium report showing the structure of monthly member briefings, decision matrices, and source-led recommendations."
     sample = f'''<!doctype html><html lang="en">{head("Sample Premium AI Tool Report", sample_desc, DOMAIN+"/premium/sample-report.html")}<body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Sample member report</p><h1>General AI assistant decision brief.</h1><p class="subhead">This public sample shows the format. Paid Whop members get the full monthly archive, CSV files, stack-audit templates, weekly checklists, tool-change alerts, hands-on protocols, and priority research slots.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/pricing/" style="margin-left:8px">Compare free vs paid</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">Member library</a></p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Sample recommendation</span><h2>Pick by workflow, not by brand.</h2><p>For general AI assistants, the member report separates everyday drafting, source-backed research, long-context document work, coding help, and organization controls. The public sample is intentionally partial; members get the full source-dated matrix and CSV.</p></div><div class="table-wrap"><table><thead><tr><th>Tool</th><th>Pricing model</th><th>Best fit</th><th>Sample note</th></tr></thead><tbody>{rows}</tbody></table></div><h2>What full members receive</h2><div class="content-hub-grid"><article class="content-hub-card"><h3>Full matrix</h3><p>All 67 tracked tools scored across workflow fit, pricing pressure, data controls, and trial priority — refreshed monthly.</p></article><article class="content-hub-card"><h3>Stack audit + ROI tools</h3><p>Fillable audit template, weekly checklist, and ROI calculator so members cut overlap with a defensible process.</p></article><article class="content-hub-card"><h3>Hands-on protocols</h3><p>Identical-task comparison sheets for assistants, plus tool-change alerts before public pages catch up.</p></article><article class="content-hub-card"><h3>Priority research</h3><p>First 5 member requests each month become the next CSV + brief drop.</p></article></div></div></section>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Public sample · keep/cut brief</p><h1>General AI assistant decision brief.</h1><p class="subhead">This public sample shows the format. If you join Premium for ${WHOP_PRICE}/month, you get the monthly pack, CSV files, stack-audit template, weekly checklist, tool-change alerts, and priority research slots in Whop.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/pricing/" style="margin-left:8px">Compare free vs paid</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">{PREVIEW_LABEL}</a></p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Sample recommendation</span><h2>Pick by workflow, not by brand.</h2><p>For general AI assistants, the member report separates everyday drafting, source-backed research, long-context document work, coding help, and organization controls. The public sample is intentionally partial; members get the full source-dated matrix and CSV.</p></div><div class="table-wrap"><table><thead><tr><th>Tool</th><th>Pricing model</th><th>Best fit</th><th>Sample note</th></tr></thead><tbody>{rows}</tbody></table></div><h2>What full members receive</h2><div class="content-hub-grid"><article class="content-hub-card"><h3>Full matrix</h3><p>All {len(tools)} tracked tools scored across workflow fit, pricing pressure, data controls, and trial priority — refreshed monthly.</p></article><article class="content-hub-card"><h3>Stack audit + ROI tools</h3><p>Fillable audit template, weekly checklist, and ROI calculator so members cut overlap with a defensible process.</p></article><article class="content-hub-card"><h3>Hands-on protocols</h3><p>Identical-task comparison sheets for assistants, plus tool-change alerts before public pages catch up.</p></article><article class="content-hub-card"><h3>Priority research</h3><p>First 5 member requests each month become the next CSV + brief drop.</p></article></div></div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "sample-report.html").write_text(sample)
 
@@ -212,13 +217,13 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     roadmap_items = [
         ("September", "Cut AI subscription sprawl", "Decision matrix, general assistant shortlist, automation pricing decoder, vendor security questions."),
         ("October", "Visual and meeting stacks", "Refreshed decision matrix, visual AI shortlist, meeting-notes decision sheet, and pricing-watch handoff."),
-        ("November", "Premium content engine", "Stack audit template, weekly checklist, tool-change alert feed, hands-on assistant protocol, ROI calculator, and priority research slots."),
+        ("November", "Audit template, checklist, and alerts", "Stack-audit template, weekly checklist, tool-change alerts, ROI worksheet, and priority research slots."),
         ("December", "Content production stack", "ChatGPT, Claude, Jasper, Copy.ai, Canva AI, Descript, and distribution workflow playbook."),
         ("Ongoing", "Member-driven deep dives", "First 5 member requests each month become the next CSV + brief. Weekly checklist and alert feed refresh every month."),
     ]
     roadmap_cards = "".join(f'<article class="content-hub-card"><span>{esc(month)}</span><h3>{esc(title)}</h3><p>{esc(text)}</p></article>' for month, title, text in roadmap_items)
     roadmap = f'''<!doctype html><html lang="en">{head("Premium Research Roadmap", roadmap_desc, DOMAIN+"/premium/roadmap.html")}<body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium roadmap</p><h1>New dated notes each month. Not one PDF.</h1><p class="subhead">Premium is not a single download. You get dated briefs, CSV archives, stack-audit worksheets, weekly checklists, tool-change alerts, hands-on protocols, and member-requested deep dives.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/premium/" style="margin-left:8px">Premium overview</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">Member library</a></p></div></section>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium roadmap</p><h1>What shows up in Whop each month.</h1><p class="subhead">Premium is not one PDF. Each month you get dated keep/cut notes, a refreshed decision matrix CSV, the weekly checklist, and tool-change alerts — delivered in Whop.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">{PREVIEW_LABEL}</a></p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide"><h2>Research calendar</h2><div class="content-hub-grid">{roadmap_cards}</div><section class="score-card"><span>Member-driven</span><h2>Requests shape the calendar.</h2><p>Whop members can request workflows to compare. Good requests include your role, current stack, weekly task, budget, data constraints, and tools you are deciding between.</p></section></div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "roadmap.html").write_text(roadmap)
@@ -231,23 +236,23 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         '<tr><td>2026-12</td><td>Content production stack</td><td>Writing/design/video workflow playbook and CSV archive</td><td>Planned</td></tr>',
     ])
     archive = f'''<!doctype html><html lang="en">{head("Premium Research Archive Preview", archive_desc, DOMAIN+"/premium/archive.html")}<body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium archive</p><h1>Monthly research drops, organized for members.</h1><p class="subhead">A public preview of the member archive structure. Full posts, CSVs, and request threads live inside Whop.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">Open member library</a><a class="button button-blue" href="/premium/sample-audit.html" style="margin-left:8px">See sample audit</a></p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="table-wrap"><table><thead><tr><th>Month</th><th>Drop</th><th>Member files</th><th>Status</th></tr></thead><tbody>{archive_rows}</tbody></table></div><section class="score-card"><span>Access note</span><h2>Whop holds posts. This site holds the dated library.</h2><p>Billing and the upload-pack posts live in Whop. The public <a href="/premium/library/">member library</a> is HTML and CSV you can open here. There is no server-side gate on this static site.</p></section></div></section>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium archive</p><h1>Monthly drops, delivered in Whop.</h1><p class="subhead">A public preview of the monthly pack list. The files, posts, and request threads live inside Whop.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">{PREVIEW_LABEL}</a><a class="button button-blue" href="/premium/sample-audit.html" style="margin-left:8px">See sample audit</a></p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="table-wrap"><table><thead><tr><th>Month</th><th>Drop</th><th>Member files</th><th>Status</th></tr></thead><tbody>{archive_rows}</tbody></table></div><section class="score-card"><span>Public preview</span><h2>This table is a preview. The files live in Whop.</h2><p>Billing and the monthly pack live in Whop. The pages at <a href="/premium/library/">/premium/library/</a> show the format. They are not gated. This static site cannot hide HTML.</p></section></div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (out / "archive.html").write_text(archive)
 
     faq_desc = "Premium membership FAQ for AIToolsEssentials Whop subscribers."
     faqs = [
-        ("What do I get immediately after subscribing?", "Access is handled through Whop. Day one includes the start-here post, full 67-tool decision matrix, AI Stack Audit Template, Weekly AI Stack Checklist, Tool-Change Alert Feed, Hands-On Comparison Protocol, AI ROI Calculator, September–November archive packs, vendor/security questions, and the member request thread with priority research slots."),
-        ("Is Premium a course, community, or consulting service?", "It is dated notes, worksheets, and a written reply. You get decision briefs, CSVs, stack-audit templates, weekly checklists, hands-on protocols, playbooks, and request threads. It does not include implementation, setup, integrations, account access, credential handling, or ongoing technical support. Personalized stack recommendations from the audit template are strategy-only written replies — not hands-on implementation."),
-        ("Can Premium vendors pay to change rankings?", "No. Premium does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores. Paid visibility and editorial scoring remain separate."),
+        ("What do I buy for $12/month?", "Premium is delivered in Whop. You get dated keep/cut research, a monthly decision matrix CSV, a weekly checklist, tool-change alerts, a stack-audit template with a strategy-only written reply within 48 hours, an ROI worksheet, and priority research slots (first 5 complete requests each month)."),
+        ("What do I get this week?", "Open the Whop hub. Download this week's keep/cut notes and the decision matrix CSV. Run the 15-minute checklist on the tools you already pay for. Fill the stack-audit template if you want a written keep/cut reply. Reply in the request thread if you want a priority research slot."),
+        ("What stays free?", "The public directory, Keep/Cut Weekly (the Beehiiv email), and the instant Stack Audit at /stack-audit.html. Do not use the Whop checkout for those."),
+        ("What is not included?", "Implementation, setup, integrations, account access, credentials, or ongoing technical support. Premium does not change public rankings, sponsor labels, or review scores. The /premium/library/ pages on this site are a public preview of the format. They are not gated."),
+        ("Is Premium a course, community, or consulting service?", "No. You are buying dated research and a written keep/cut reply. Personalized stack recommendations from the audit template are strategy-only written replies — not hands-on implementation."),
+        ("Can vendors pay to change rankings?", "No. Premium does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores."),
         ("How does billing and cancellation work?", "Billing, login, member access, and cancellation are handled by Whop. New members get a 7-day free trial, then $12/month. Use code LAUNCH50 for 50% off the first paid month (new users only). Cancel anytime from your Whop account."),
-        ("Are refunds offered?", "No. The current Premium terms state all sales are final and there are no refunds. Use the 7-day free trial, sample report, roadmap, archive preview, and terms before subscribing."),
-        ("How do member requests work?", "Members can post the workflows they want compared next. Good requests include role, current stack, weekly task, candidate tools, budget, and data constraints. The first 5 complete requests each month become priority research slots delivered as a CSV + brief in the next drop."),
-        ("What is free vs what is paid Premium?", "Keep/Cut Weekly is the free Beehiiv email. The instant Stack Audit at /stack-audit.html is a free, no-login scorecard. Premium is the paid $12/month Whop membership: member library, worksheets, dated matrix, alert format, and a strategy-only written audit reply. Do not use the Whop checkout for the newsletter or the free scorecard."),
-        ("What is the Premium AI Stack Audit?", "Different from the free instant scorecard. Download the fillable template, list every AI tool you pay for with cost and weekly usage, then reply with your completed inventory. Within 48 hours you get a strategy-only keep/cut/trial/switch recommendation. No account access required."),
-        ("Is Premium worth $12/month?", "Only you can decide. It is useful if you already pay for multiple AI tools, have overlap, or have a renewal coming up, and you will use the audit and checklist in week one. It is not useful if you only use one free assistant occasionally. Use the 7-day trial: if you have not made a keep/cut decision by day 7, cancel. We do not invent savings figures."),
-        ("What should I do in the first 15 minutes?", "Open the pinned welcome post, download the stack audit and weekly checklist, list every paid AI tool, and put days 0-7 from the renewal/cancel calendar on your calendar. Premium only pays off if you use the worksheets."),
+        ("Are refunds offered?", "No. All sales are final and there are no refunds. Use the 7-day free trial, the public preview, and the terms before you join."),
+        ("How do member requests work?", "Post the workflow you want compared next. Include your role, current tools, weekly task, candidate tools, budget, and data constraints. The first 5 complete requests each month become priority research slots delivered as a CSV + brief in the next drop."),
+        ("Is Premium worth $12/month?", "Only you can decide. It is useful if you already pay for multiple AI tools, have overlap, or have a renewal coming up, and you will use the checklist in week one. It is not useful if you only use one free assistant occasionally. Use the 7-day trial: if you have not made a keep/cut decision by day 7, cancel. We do not invent savings figures."),
     ]
     faq_items = "".join(f'<article class="content-hub-card"><h3>{esc(q)}</h3><p>{esc(a)}</p></article>' for q, a in faqs)
     faq_schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]}
@@ -255,7 +260,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "AIToolsEssentials Premium",
-        "description": "Paid monthly membership (not the free newsletter or free Stack Audit) with briefings, CSV decision archives, stack-audit templates, weekly checklists, tool-change alerts, hands-on protocols, ROI worksheets, and member-requested deep dives.",
+        "description": "Paid $12/month Whop membership. Dated keep/cut research, monthly decision matrix CSV, weekly checklist, tool-change alerts, stack-audit template with a strategy-only written reply, ROI worksheet, and priority research slots. Delivered in Whop. Directory, Keep/Cut Weekly, and instant Stack Audit stay free.",
         "brand": {"@type": "Brand", "name": "AIToolsEssentials"},
         "image": DOMAIN + "/assets/og-ai-tools.jpg",
         "category": "Digital membership",
@@ -288,17 +293,17 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         },
     }
     faq = f'''<!doctype html><html lang="en">{head("Premium Membership FAQ", faq_desc, DOMAIN+"/premium/faq.html")}<body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium FAQ</p><h1>Know exactly what the Whop membership includes.</h1><p class="subhead">Clear answers on deliverables, billing, cancellations, refunds, editorial independence, and what stays free before anyone pays.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">Member library</a><a class="button button-blue" href="/stack-audit.html" style="margin-left:8px">Free Stack Audit</a></p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="content-hub-grid">{faq_items}</div><section class="score-card"><span>Access</span><h2>Whop is billing. The library is on this site too.</h2><p>Join through the existing AIToolsEssentials Premium checkout. Open <a href="https://whop.com/hub" rel="external noopener">whop.com/hub</a> with that email for posts. Use the public <a href="/premium/library/">member library</a> for dated HTML and CSVs. This static site does not check membership. Upload-pack posts still need to be published in the Whop dashboard.</p></section></div></section>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Premium FAQ</p><h1>What you buy, what stays free, what is not included.</h1><p class="subhead">Plain answers on the $12/month Whop membership before anyone pays.</p><p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a><a class="button button-blue" href="/stack-audit.html" style="margin-left:8px">Free Stack Audit</a></p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="content-hub-grid">{faq_items}</div><section class="score-card"><span>Access</span><h2>Premium is delivered in Whop. These pages are a public preview.</h2><p>Join through the existing AIToolsEssentials Premium checkout. Open <a href="https://whop.com/hub" rel="external noopener">whop.com/hub</a> with that email for the pack, alerts, written reply, and request thread. The pages at <a href="/premium/library/">/premium/library/</a> show the format. They are not gated. This static site cannot hide HTML.</p></section></div></section>
 </main>{FOOTER}{jsonld(faq_schema)}{jsonld(product_schema)}{scripts()}</body></html>'''
     (out / "faq.html").write_text(faq)
 
     welcome_dir = out / "welcome"
     welcome_dir.mkdir(exist_ok=True)
-    welcome_desc = "Welcome to AIToolsEssentials Premium. Open your Whop member hub for the full research library."
+    welcome_desc = "Welcome to AIToolsEssentials Premium. Open your Whop member hub — that is where Premium is delivered."
     welcome = f'''<!doctype html><html lang="en">{head("Welcome to Premium", welcome_desc, DOMAIN+"/premium/welcome/")}<body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Welcome</p><h1>If Whop shows you are in, open the library.</h1><p class="subhead">This page cannot verify a charge. If Whop shows the trial or payment succeeded, your Premium membership is on that email. Start with the public member library, then the Whop hub for posts.</p><p><a class="button button-blue" href="https://whop.com/hub" rel="external noopener">Open Whop member hub</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">Member library</a><a class="button button-blue" href="/premium/" style="margin-left:8px">Premium overview</a></p><p class="affiliate-inline">Billing, login, cancellation, and member access are handled by Whop. Research and strategy only — no implementation, setup, account access, credentials, or ongoing support.</p></div></section>
-<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Start here</span><h2>What to do in the first 15 minutes</h2><ol><li>Open the Whop member hub and the <a href="/premium/library/">member library</a>.</li><li>Run the free instant <a href="/stack-audit.html">Stack Audit</a>, then fill the Premium template if you want a written strategy reply.</li><li>Open the weekly checklist so next week's review is automatic.</li><li>Reply in the request thread if you want a priority research slot this month.</li></ol></div></div></section>
+<section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">Welcome</p><h1>If Whop shows you are in, open the Whop hub.</h1><p class="subhead">This page cannot verify a charge. If Whop shows the trial or payment succeeded, your Premium membership is on that email. Premium is delivered in Whop. The pages on this site are a public preview of the format.</p><p><a class="button button-blue" href="https://whop.com/hub" rel="external noopener">Open Whop member hub</a><a class="button button-blue" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">{PREVIEW_LABEL}</a></p><p class="affiliate-inline">Billing, login, cancellation, and member access are handled by Whop. Research and strategy only — no {not_included_phrase()}.</p></div></section>
+<section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Start here</span><h2>What to do in the first 15 minutes</h2><ol><li>Open the <a href="https://whop.com/hub" rel="external noopener">Whop member hub</a>. That is where Premium is delivered.</li><li>Download this week's keep/cut notes and the decision matrix CSV.</li><li>Run the free instant <a href="/stack-audit.html">Stack Audit</a>, then fill the stack-audit template if you want a written keep/cut reply.</li><li>Reply in the request thread if you want a priority research slot this month.</li></ol></div></div></section>
 </main>{FOOTER}{scripts()}</body></html>'''
     (welcome_dir / "index.html").write_text(welcome)
 
@@ -850,7 +855,7 @@ def update_checkout(root: Path) -> None:
         html = p.read_text()
         html = html.replace(
             "What happens next:</strong> your Whop receipt arrives by email within a minute, and your Premium access is tied to that same email. Open your Whop account for the member library, then bookmark <a href=\"/premium/\">aitoolsessentials.com/premium</a> for previews and monthly context.",
-            "What happens next:</strong> this page only reads a return parameter. It cannot verify a charge. If Whop shows the trial or payment succeeded, the receipt should arrive by email. Open the Whop hub with that email, then the <a href=\"/premium/library/\">member library</a>.",
+            "What happens next:</strong> this page only reads a return parameter. It cannot verify a charge. If Whop shows the trial or payment succeeded, the receipt should arrive by email. Open the Whop hub with that email. That is where Premium is delivered.",
         )
         html = html.replace(
             'kicker.textContent = "Payment confirmed 🎉";\n    heading.textContent = "Welcome to Premium.";\n    detail.textContent = "You\'re in. Your receipt is on its way by email — check your inbox for your Whop login so you can manage your membership anytime.";',
@@ -858,7 +863,15 @@ def update_checkout(root: Path) -> None:
         )
         html = html.replace(
             "'<a class=\"button button-ghost-dark\" href=\"../../premium/\">Preview Premium library</a>';",
+            "'<a class=\"button button-ghost-dark\" href=\"../../premium/\">See what $12 buys</a>';",
+        )
+        html = html.replace(
+            "Open the Whop hub with that email, then the <a href=\"/premium/library/\">member library</a>.",
+            "Open the Whop hub with that email. That is where Premium is delivered.",
+        )
+        html = html.replace(
             "'<a class=\"button button-ghost-dark\" href=\"../../premium/library/\">Open member library</a>';",
+            "'<a class=\"button button-ghost-dark\" href=\"../../premium/\">See what $12 buys</a>';",
         )
         p.write_text(html)
     home = root / "index.html"
@@ -1054,21 +1067,7 @@ def enhance_homepage(root: Path) -> None:
         '<p>Keep one tool per weekly job. Cut the rest before renewal.</p><p><a class="button button-blue" href="articles/how-to-cut-ai-tool-subscriptions.html">Cut overlapping tools</a></p>',
         '<p>Keep one tool per weekly job. Cut the rest before renewal. Start with the free instant scorecard.</p><p><a class="button button-blue" href="/stack-audit.html">Free Stack Audit</a></p>',
     )
-    band = f'''<!-- AIT HOMEPAGE PREMIUM BAND START -->
-<section class="scene scene-dark" style="padding:64px 28px">
-<div style="max-width:1040px;margin:0 auto">
-<p class="kicker light">Paid Premium · $12/month via Whop</p>
-<h2 style="font-size:clamp(28px,4vw,42px)">Pay for the worksheets. Not the newsletter.</h2>
-<p class="subhead">Keep/Cut Weekly is free email. The instant Stack Audit is a free scorecard. Premium is the paid Whop membership: dated member library, decision matrix, weekly checklist, tool-change alerts, ROI worksheet, and a written keep/cut reply on your stack.</p>
-<ul style="max-width:740px;margin:20px 0 28px;line-height:1.6">
-<li>{WHOP_TRIAL_DAYS}-day free trial, then ${WHOP_PRICE}/month on the existing AIToolsEssentials Premium checkout. Code <strong>{WHOP_PROMO_CODE}</strong> = 50% off the first paid month (new users).</li>
-<li>Free first: <a href="/stack-audit.html">run the instant Stack Audit</a> or <a href="/subscribe/">subscribe to Keep/Cut Weekly</a>.</li>
-<li>Cancel anytime from Whop. Research and strategy only — no implementation or account access. Affiliate status never changes recommendations.</li>
-</ul>
-<p><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-ghost-dark" href="premium/library/" style="margin-left:8px">Member library</a><a class="button button-ghost-dark" href="pricing/" style="margin-left:8px">Free vs paid</a><a class="button button-ghost-dark" href="/stack-audit.html" style="margin-left:8px">Free Stack Audit</a></p>
-</div></section>
-<!-- AIT HOMEPAGE PREMIUM BAND END -->
-'''
+    band = homepage_band_html(_whop_dict())
     if "AIT HOMEPAGE PREMIUM BAND START" in html:
         html = re.sub(
             r"<!-- AIT HOMEPAGE PREMIUM BAND START -->.*?<!-- AIT HOMEPAGE PREMIUM BAND END -->",
@@ -1087,9 +1086,17 @@ def enhance_homepage(root: Path) -> None:
         "<p>Stack audits, weekly checklists, tool-change alerts, hands-on protocols, and a 67-tool decision matrix. 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">Premium library</a><a class=\"guide-pill\" href=\"pricing/\">Pricing</a><a class=\"guide-pill\" href=\""
         + WHOP_CHECKOUT
         + "\" rel=\"external noopener\">Start free trial</a></div>",
-        "<p>Paid Premium is $12/month on Whop. Keep/Cut Weekly and the instant Stack Audit stay free.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/library/\">Member library</a><a class=\"guide-pill\" href=\"pricing/\">Free vs paid</a><a class=\"guide-pill\" href=\""
+        "<p>Paid Premium is $12/month on Whop. Keep/Cut Weekly and the instant Stack Audit stay free.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">See what $12 buys</a><a class=\"guide-pill\" href=\"pricing/\">Free vs paid</a><a class=\"guide-pill\" href=\""
         + WHOP_CHECKOUT
         + f"\" rel=\"external noopener\">{JOIN_PREMIUM_LABEL}</a></div>",
+    )
+    html = html.replace(
+        '<a class="guide-pill" href="premium/library/">Member library</a>',
+        '<a class="guide-pill" href="premium/">See what $12 buys</a>',
+    )
+    html = html.replace(
+        '<a class="guide-pill" href="/premium/library/">Member library</a>',
+        '<a class="guide-pill" href="/premium/">See what $12 buys</a>',
     )
     cite = '''<!-- AIT HOMEPAGE CITE STRIP START -->
 <section class="scene scene-light" style="padding:40px 28px 8px">
@@ -1143,14 +1150,18 @@ def enhance_homepage(root: Path) -> None:
 
 
 def premium_upsell_module() -> str:
-    return f'''<!-- AIT PREMIUM MODULE START -->
-<section class="newsletter-panel premium-conversion-panel"><div><span>Paid Premium · ${WHOP_PRICE}/mo via Whop</span><h2>This is the $12/month membership. The weekly email is free.</h2><p>Premium is AIToolsEssentials Premium on Whop: dated member library, decision matrix, weekly checklist, tool-change alerts, ROI worksheet, and a written keep/cut reply. Keep/Cut Weekly and the instant Stack Audit stay free.</p><p class="affiliate-inline">{WHOP_TRIAL_DAYS}-day free trial · then ${WHOP_PRICE}/month · code {WHOP_PROMO_CODE} for 50% off first paid month · Whop handles billing · this site has no login wall · research and strategy only · affiliate status never changes recommendations.</p></div><div class="newsletter-actions"><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a><a class="button button-dark" href="/premium/library/">Member library</a><a class="button button-dark" href="/premium/faq.html">FAQ</a></div></section>
-<!-- AIT PREMIUM MODULE END -->'''
+    return upsell_module_html(_whop_dict())
 
 
 def inject_before_main_end(html: str, module: str) -> str:
     import re
     html = re.sub(r'\n?<!-- AIT PREMIUM MODULE START -->.*?<!-- AIT PREMIUM MODULE END -->\n?', '\n', html, flags=re.S)
+    html = re.sub(
+        r'\n?<section class="newsletter-panel premium-conversion-panel">.*?</section>\n?',
+        '\n',
+        html,
+        flags=re.S,
+    )
     if '</main>' not in html:
         return html
     return html.replace('</main>', module + '\n</main>', 1)
@@ -1192,42 +1203,82 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     return changed
 
 def update_pricing_page(root: Path, tools: list[dict[str, Any]]) -> None:
+    import re
     path = root / "pricing" / "index.html"
     if not path.exists():
         return
     html = path.read_text()
-    html = html.replace(
-        'content="AIToolsEssentials pricing. Free public directory and reviews, plus Premium research membership on Whop ($12/mo, 7-day free trial) with the personalized AI Stack Audit included."',
-        f'content="AIToolsEssentials pricing. Free directory, free Keep/Cut Weekly, and free instant Stack Audit. Paid Premium is ${WHOP_PRICE}/mo via Whop — the worksheets, not the newsletter."',
+    n = len(tools)
+    meta = (
+        f'content="You are paying for overlapping AI tools. The directory, Keep/Cut Weekly, '
+        f'and instant Stack Audit stay free. Premium is ${WHOP_PRICE}/month on Whop: dated '
+        f'keep/cut research, monthly CSV, weekly checklist, alerts, and a written keep/cut reply."'
     )
-    html = html.replace(
-        'content="AIToolsEssentials pricing. Free directory, free Keep/Cut Weekly, and free instant Stack Audit. Paid Premium is $12/mo via Whop — the research membership, not the newsletter."',
-        f'content="AIToolsEssentials pricing. Free directory, free Keep/Cut Weekly, and free instant Stack Audit. Paid Premium is ${WHOP_PRICE}/mo via Whop — the worksheets, not the newsletter."',
+    html = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" {meta}>', html, count=1)
+    hero = (
+        f'<p class="kicker light">Pricing</p>'
+        f'<h1>You are paying for overlapping AI tools. Here is what is free, and what ${WHOP_PRICE}/month buys.</h1>'
+        f'<p>The directory, <a href="/newsletter/">Keep/Cut Weekly</a>, and the '
+        f'<a href="/stack-audit.html">instant Stack Audit</a> stay free. Premium is ${WHOP_PRICE}/month on Whop: '
+        f'dated keep/cut research, a monthly decision matrix CSV, a weekly checklist, tool-change alerts, '
+        f'a stack-audit template with a written keep/cut reply within 48 hours, an ROI worksheet, and '
+        f'priority research slots — delivered in Whop. The written reply is included — not a second product.</p>'
+        f'<p class="last-updated">{WHOP_TRIAL_DAYS}-day free trial · then ${WHOP_PRICE}/month · code {WHOP_PROMO_CODE} '
+        f'for 50% off first paid month · Cancel in Whop · All sales final — no refunds</p>'
     )
-    html = html.replace(
-        "<h1>Free directory. Premium research membership.</h1><p>The public directory, reviews, buyer guides, benchmarks, and scorecards remain available without payment. Premium is the paid Whop member library: monthly research briefings, stack-audit templates, weekly checklists, tool-change alerts, hands-on protocols, ROI calculators, and request-driven deep dives.</p>",
-        "<h1>Free tools stay free. Premium is the paid Whop membership.</h1><p>Three different offers: the public directory and <a href=\"/newsletter/\">Keep/Cut Weekly</a> email are free. The <a href=\"/stack-audit.html\">instant Stack Audit</a> is a free, no-login scorecard. Premium is the paid AIToolsEssentials Premium membership on Whop — dated library, worksheets, and a written keep/cut reply.</p>",
+    html = re.sub(
+        r'(<section class="review-hero scene scene-light">).*?(</section>)',
+        r'\1' + hero + r'\2',
+        html,
+        count=1,
+        flags=re.S,
     )
-    html = html.replace(
-        "Premium is the paid AIToolsEssentials Premium research membership on Whop — dated library, worksheets, and a strategy-only audit reply.",
-        "Premium is the paid AIToolsEssentials Premium membership on Whop — dated library, worksheets, and a written keep/cut reply.",
+    new_grid = (
+        f'<div class="pricing-grid">'
+        f'<article class="pricing-card"><p class="eyebrow">Free</p><h3>Directory + Keep/Cut Weekly</h3>'
+        f'<p class="pricing-price">$0<span>/forever</span></p><ul class="pricing-features">'
+        f'<li>Tool reviews, comparisons, and dated evidence</li>'
+        f'<li>Free Beehiiv email — not a Whop charge</li>'
+        f'<li>Buyer guides, benchmarks, and scorecards</li>'
+        f'<li>This is not Premium</li></ul>'
+        f'<a class="button button-blue" href="../tools/index.html">Browse free</a>'
+        f'<a class="button button-dark" href="/subscribe/" style="margin-left:8px">Subscribe free</a></article>'
+        f'<article class="pricing-card"><p class="eyebrow">Free</p><h3>Instant Stack Audit</h3>'
+        f'<p class="pricing-price">$0<span>/no login</span></p><ul class="pricing-features">'
+        f'<li>Keep / cut / overlap scorecard on your device</li>'
+        f'<li>All {n} directory tools selectable</li>'
+        f'<li>Share and export locally — nothing is posted to us</li>'
+        f'<li>Not a Whop product and not a second paid product</li></ul>'
+        f'<a class="button button-blue" href="/stack-audit.html">Run free Stack Audit</a></article>'
+        f'<article class="pricing-card featured"><p class="pricing-flag">Paid · Whop</p>'
+        f'<p class="eyebrow">Premium</p><h3>Keep/cut research on Whop</h3>'
+        f'<p class="pricing-price">${WHOP_PRICE}<span>/month</span></p><ul class="pricing-features">'
+        f'<li>{WHOP_TRIAL_DAYS}-day free trial, then ${WHOP_PRICE}/month — code {WHOP_PROMO_CODE} for 50% off the first paid month (new users)</li>'
+        f'<li>Dated keep/cut research, monthly {n}-tool decision matrix CSV, weekly checklist</li>'
+        f'<li>Tool-change alerts, ROI worksheet, priority research slots</li>'
+        f'<li>Stack-audit template + strategy-only written reply within 48 hours — not a second product</li>'
+        f'<li>Delivered in Whop. Public /premium/library/ pages are a preview of the format</li></ul>'
+        f'<a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener" data-whop-checkout="{WHOP_PLAN_ID}">{JOIN_PREMIUM_LABEL}</a>'
+        f'<a class="button button-blue" href="{WHOP_CHECKOUT_PROMO}" rel="external noopener" style="margin-left:8px">Use {WHOP_PROMO_CODE}</a>'
+        f'<a class="button button-blue" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a>'
+        f'<p class="affiliate-inline">{WHOP_TRIAL_DAYS}-day free trial · then ${WHOP_PRICE}/month · {WHOP_PROMO_CODE} = 50% off first paid month (new users) · cancel in Whop. All sales final — no refunds. Research and strategy only. Affiliate status never changes recommendations.</p></article>'
+        f'</div>'
     )
-    old_grid = '''<div class="pricing-grid">
-<article class="pricing-card"><p class="eyebrow">Available now</p><h3>Public directory</h3><p class="pricing-price">$0<span>/forever</span></p><ul class="pricing-features"><li>Tool reviews and comparisons</li><li>Category and audience buyer guides</li><li>Dated benchmark evidence hub</li><li>AI Tool Evaluation Scorecard and test log</li></ul><a class="button button-blue" href="../tools/index.html">Browse free</a></article>
-<article class="pricing-card featured"><p class="pricing-flag">Live</p><p class="eyebrow">Premium</p><h3>Member research layer</h3><p class="pricing-price">$12<span>/month</span></p><ul class="pricing-features"><li>7-day free trial, then $12/month — use code LAUNCH50 for 50% off the first paid month</li><li>Immediate member library: decision matrix, AI Stack Audit Template, weekly checklist, tool-change alert feed, hands-on comparison protocol, ROI calculator</li><li>Monthly research briefings with verified pricing/policy notes and buyer implications</li><li>Priority research slots: first 5 complete member requests each month become the next CSV + brief</li><li>Workflow playbooks, vendor/security questions, and request-driven deep dives</li></ul><a class="button button-blue" href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener" data-whop-checkout="plan_FNXWs3suBFwDN">Start 7-day free trial</a><a class="button button-blue" href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50" rel="external noopener" style="margin-left:8px">Use LAUNCH50</a><a class="button button-blue" href="../premium/" style="margin-left:8px">See Premium library</a><a class="button button-blue" href="/newsletter/" style="margin-left:8px">Read the newsletter</a><p class="affiliate-inline">7-day free trial · then $12/month · LAUNCH50 = 50% off first paid month (new users) · cancel anytime from your Whop account. All sales final — no refunds. Delivery is via the members-only Whop area. Research and strategy only.</p></article>
-<article class="pricing-card"><p class="eyebrow">Included with Premium</p><h3>AI Stack Audit</h3><p class="pricing-price">$12<span>/month</span></p><ul class="pricing-features"><li>Personalized strategy report built from your intake</li><li>Current-stack review: keep / cut / trial per tool</li><li>Printable one-page decision brief, PHI/data-hygiene rules</li><li>30-day adoption roadmap</li><li>No setup, implementation, integrations, credentials, or ongoing support</li></ul><a class="button button-blue" href="../services/ai-stack-audit.html">About the audit</a><a class="button button-blue" href="../premium/sample-audit.html" style="margin-left:8px">See sample</a></article>
-</div>'''
-    new_grid = f'''<div class="pricing-grid lanes-4">
-<article class="pricing-card"><p class="eyebrow">Free</p><h3>Public directory + Keep/Cut Weekly</h3><p class="pricing-price">$0<span>/forever</span></p><ul class="pricing-features"><li>Tool reviews, comparisons, and dated evidence</li><li>Free Beehiiv email — not a Whop charge</li><li>Buyer guides, benchmarks, and scorecards</li><li>This is not Premium</li></ul><a class="button button-blue" href="../tools/index.html">Browse free</a><a class="button button-dark" href="/subscribe/" style="margin-left:8px">Subscribe free</a></article>
-<article class="pricing-card"><p class="eyebrow">Free</p><h3>Instant Stack Audit</h3><p class="pricing-price">$0<span>/no login</span></p><ul class="pricing-features"><li>Keep / cut / overlap scorecard on your device</li><li>All {len(tools)} directory tools selectable</li><li>Share and export locally — nothing is posted to us</li><li>Not a Whop product and not a second paid audit SKU</li></ul><a class="button button-blue" href="/stack-audit.html">Run free Stack Audit</a></article>
-<article class="pricing-card featured"><p class="pricing-flag">Paid · Whop</p><p class="eyebrow">Premium</p><h3>Worksheets + written reply</h3><p class="pricing-price">${WHOP_PRICE}<span>/month</span></p><ul class="pricing-features"><li>{WHOP_TRIAL_DAYS}-day free trial, then ${WHOP_PRICE}/month — code {WHOP_PROMO_CODE} for 50% off the first paid month (new users)</li><li>Existing checkout: AIToolsEssentials Premium on Whop</li><li>Member library: dated brief, {len(tools)}-tool matrix, weekly checklist, alert feed, ROI worksheet</li><li>Deeper stack-audit template + strategy-only written reply</li><li>This site has no login wall — Whop is billing and posts</li></ul><a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener" data-whop-checkout="{WHOP_PLAN_ID}">{JOIN_PREMIUM_LABEL}</a><a class="button button-blue" href="{WHOP_CHECKOUT_PROMO}" rel="external noopener" style="margin-left:8px">Use {WHOP_PROMO_CODE}</a><a class="button button-blue" href="/premium/library/" style="margin-left:8px">Member library</a><p class="affiliate-inline">{WHOP_TRIAL_DAYS}-day free trial · then ${WHOP_PRICE}/month · {WHOP_PROMO_CODE} = 50% off first paid month (new users) · cancel in Whop. All sales final — no refunds. Research and strategy only. Affiliate status never changes recommendations.</p></article>
-<article class="pricing-card"><p class="eyebrow">Included with Premium — not a second product</p><h3>Human strategy audit</h3><p class="pricing-price">$0<span> extra</span></p><ul class="pricing-features"><li>Deeper than the free instant scorecard</li><li>Strategy-only keep / cut / trial reply from your inventory</li><li>Printable decision brief and 30-day roadmap format</li><li>No setup, credentials, or ongoing support</li></ul><a class="button button-blue" href="../services/ai-stack-audit.html">Free vs paid audit</a><a class="button button-blue" href="../premium/sample-audit.html" style="margin-left:8px">See sample</a></article>
-</div>'''
-    if old_grid in html:
-        html = html.replace(old_grid, new_grid)
-    html = html.replace(
-        "<strong>Delivery:</strong> members-only area on Whop with a start-here post, monthly research briefings, stack-audit template, weekly checklist, tool-change alert feed, hands-on protocols, ROI calculator, workflow playbooks, CSV/scorecard exports, priority research slots, and update notes. Public previews live at <a href=\"../premium/\">/premium/</a>.",
-        "<strong>Delivery:</strong> Whop member hub for posts, plus the public <a href=\"/premium/library/\">member library</a> on this static site (no login wall). Free Keep/Cut Weekly and free Stack Audit are not this membership.",
+    html = re.sub(
+        r'<div class="pricing-grid[^"]*">.*?</div>(?=\s*</section>)',
+        new_grid,
+        html,
+        count=1,
+        flags=re.S,
+    )
+    # Consume whitespace before Scope so a second generate does not keep
+    # inserting the trailing space (site-qa idempotency).
+    html = re.sub(
+        r"<strong>Delivery:</strong>.*?(?=<strong>Scope:)",
+        "<strong>Delivery:</strong> Premium is delivered in Whop. The <a href=\"/premium/library/\">/premium/library/</a> pages on this site are a public preview of the format and are not gated. Free Keep/Cut Weekly and free Stack Audit are not this membership. ",
+        html,
+        count=1,
+        flags=re.S,
     )
     if 'href="/stack-audit.html"' not in html:
         html = html.replace(
@@ -1276,7 +1327,7 @@ def update_sample_audit_page(root: Path) -> None:
     html = path.read_text()
     html = html.replace(
         '<a class="button button-blue" href="../services/intake-questionnaire.html">Get your audit — start intake</a>\n<a class="button button-ghost-dark" href="../premium/">Premium pricing &amp; trial</a>',
-        f'<a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a>\n<a class="button button-ghost-dark" href="/stack-audit.html">Free instant Stack Audit</a>\n<a class="button button-ghost-dark" href="/premium/library/">Member library</a>',
+        f'<a class="button button-blue" href="{WHOP_CHECKOUT}" rel="external noopener">{JOIN_PREMIUM_LABEL}</a>\n<a class="button button-ghost-dark" href="/stack-audit.html">Free instant Stack Audit</a>\n<a class="button button-ghost-dark" href="/premium/">{BUY_PAGE_LABEL}</a>',
     )
     html = html.replace(
         '<p><a class="button button-blue" href="../services/intake-questionnaire.html">Submit intake (Premium member)</a> <a class="button button-dark" href="../premium/">Subscribe on Whop</a></p>',
@@ -1286,6 +1337,11 @@ def update_sample_audit_page(root: Path) -> None:
         '<p class="subhead">This is the headline Premium deliverable. Below is the structure and tone of a real audit. Names and client details have been changed.</p>',
         '<p class="subhead">This is the paid Premium written-audit format — deeper than the free instant scorecard. Structure and tone only. No invented client savings. Names in the sample are illustrative, not a case study.</p>',
     )
+    html = html.replace(
+        '<a class="button button-ghost-dark" href="/premium/library/">Member library</a>',
+        f'<a class="button button-ghost-dark" href="/premium/">{BUY_PAGE_LABEL}</a>',
+    )
+    html = html.replace("the headline Premium deliverable", "the written keep/cut reply included with Premium")
     path.write_text(html)
 
 
