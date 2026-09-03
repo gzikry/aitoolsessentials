@@ -11,7 +11,7 @@
     window.plausibleQueue = window.plausibleQueue || new Set();
     window._aitools_plausible_init = window._aitools_plausible_init || false;
     window._aitools_plausible_pre = window._aitools_plausible_pre || function () {
-      var names = ['pricing','premium','subscribe','stack_builder','cost_calculator','automation_cost_decoder','compare_shortlist','newsletter'];
+      var names = ['pricing','premium','subscribe','stack_builder','cost_calculator','automation_cost_decoder','compare_shortlist','newsletter','stack_audit'];
       names.forEach(function (n, i) {
         document.documentElement.classList.add('plausible-event-name=' + n);
       });

@@ -252,10 +252,10 @@ def main():
             if '20' == str(item.get('numeric_list_price_usd')) or item.get('numeric_list_price_usd') == 35:
                 errors.append(f'Stack Audit catalog reused viral heuristic for {item.get("slug")}')
         page = (ROOT / 'stack-audit.html').read_text() if (ROOT / 'stack-audit.html').exists() else ''
-        if 'Coming soon' not in page:
-            errors.append('Stack Audit page missing Coming soon teaser')
-        if 'whop.com/checkout' in page:
-            errors.append('Stack Audit page must not add a Whop checkout')
+        if 'sa-premium-upsell' not in page:
+            errors.append('Stack Audit page missing Premium upsell section')
+        if 'Detailed replacement plan' not in page and 'replacement plan' not in page:
+            errors.append('Stack Audit page missing replacement plan section')
         if 'Never changes' not in page and 'never changes' not in page:
             errors.append('Stack Audit page missing affiliate/sponsor editorial policy')
     comparison_hub = ROOT/'comparisons/index.html'

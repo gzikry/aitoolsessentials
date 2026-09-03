@@ -502,11 +502,21 @@
     document.getElementById("sa-result-body").innerHTML =
       '<div class="sa-metrics"><div class="sa-metric"><span>Current monthly cost</span><strong>' + money(result.cost.monthly) + '</strong><p class="sa-note">' + esc(costNote) + '</p></div>' +
       '<div class="sa-metric"><span>Conservative monthly savings</span><strong>' + money(result.savings.monthly) + '</strong><p class="sa-note">Annual: ' + money(result.savings.annual) + '. Only Cut tools with entered spend. Unknown spend is not guessed.</p></div>' +
-      '<div class="sa-metric"><span>Stack Efficiency Score</span><strong>' + result.score.score + '</strong><p class="sa-note">' + esc(result.score.disclaimer) + "</p></div></div>" +
-      '<section class="score-card"><span>Score factors</span><h3>Exactly what changed the score</h3><ol class="sa-factors">' + factorHtml + "</ol></section>" +
+      '<div class="sa-metric"><span>Stack Efficiency Score</span><strong>' + result.score.score + '</strong><p class="sa-note">' + esc(result.score.disclaimer) + '</p></div></div>' +
+      '<section class="score-card"><span>Score factors</span><h3>Exactly what changed the score</h3><ol class="sa-factors">' + factorHtml + '</ol></section>' +
       '<section class="score-card"><span>Personal badges</span><h3>From this audit only</h3><div class="sa-badges">' + badgeHtml + '</div><p class="sa-note">No community totals or rankings.</p></section>' +
       "<h3>Overlap</h3>" + clusterHtml + "<h3>Keep / Cut / Replace / Review</h3>" + recHtml;
     announce("Audit complete. Score " + result.score.score + ".");
+
+    // Dynamic Premium panel: show savings callout when cuts with known spend exist
+    var premiumPanel = document.getElementById("sa-premium-panel");
+    if (premiumPanel) {
+      if (result.savings.monthly > 0) {
+        premiumPanel.innerHTML = '<section class="score-card sa-premium-savings"><span>You could save ' + money(result.savings.monthly) + '/month</span><h3>Get the replacement plan to do it.</h3><p>Premium gives you a step-by-step replacement sequence for ' + esc(result.savings.from_tools.join(", ")) + ': what to switch to, migration steps, a 30-day roadmap, and a branded strategy PDF you can hand to your team.</p><p><a class="button button-blue" data-sa-cta href="/premium/">See what $12 buys</a> <a class="button button-ghost-dark" data-sa-cta href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener">Start 7-day free trial</a></p><p class="sa-note">7-day free trial, then $12/month. Code <strong>LAUNCH50</strong> for 50% off the first paid month. Cancel anytime.</p></section>';
+      } else {
+        premiumPanel.innerHTML = "";
+      }
+    }
   }
   function shareUrl(includeSpend) {
     var url = new URL(location.href);
