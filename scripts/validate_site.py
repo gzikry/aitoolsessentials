@@ -393,6 +393,45 @@ def main():
                     if not shipping or not shipping.get('deliveryTime'):
                         errors.append('premium/faq.html Offer missing digital-goods shippingDetails')
 
+    home_html = (ROOT / 'index.html').read_text()
+    subscribe_match = re.search(r'<section[^>]*id="subscribe"[^>]*>.*?</section>', home_html, flags=re.S)
+    if not subscribe_match:
+        errors.append('Homepage missing #subscribe Keep/Cut Weekly panel')
+    else:
+        subscribe_block = subscribe_match.group(0)
+        if 'whop.com/checkout' in subscribe_block.lower():
+            errors.append('Homepage #subscribe must not be the Whop Premium checkout')
+        if '/subscribe/' not in subscribe_block and 'beehiiv.com/subscribe' not in subscribe_block:
+            errors.append('Homepage #subscribe must link to /subscribe/ or Beehiiv')
+        if 'keep/cut' not in subscribe_block.lower() and 'weekly' not in subscribe_block.lower():
+            errors.append('Homepage #subscribe must be labeled as the free Keep/Cut Weekly email')
+    header = home_html.split('</header>', 1)[0]
+    if '/subscribe/' not in header and 'href="subscribe/"' not in header:
+        errors.append('Homepage nav must include Subscribe → /subscribe/')
+    subscribe_page = ROOT / 'subscribe/index.html'
+    if subscribe_page.exists():
+        subscribe_html = subscribe_page.read_text()
+        if 'aitoolsessentials.beehiiv.com/subscribe' not in subscribe_html:
+            errors.append('Subscribe page missing Beehiiv signup URL')
+        if 'id="digest-form"' in subscribe_html or 'formsubmit.co/ajax' in subscribe_html:
+            errors.append('Subscribe page must not wire FormSubmit to the newsletter')
+    else:
+        errors.append('Missing subscribe/index.html')
+    issue1 = ROOT / 'newsletter/2026-w35.html'
+    if issue1.exists():
+        issue_html = issue1.read_text()
+        if '$130 for the same coding job' not in issue_html:
+            errors.append('Issue 1 public copy must use the $130 subject')
+        if 'Sir, you appear' in issue_html or 'J. —' in issue_html or 'Good evening. I have reviewed' in issue_html:
+            errors.append('Issue 1 public copy still has butler/J teaser language')
+        if 'AIToolsEssentials' not in issue_html:
+            errors.append('Issue 1 public copy missing AIToolsEssentials sign-off')
+    else:
+        errors.append('Missing newsletter/2026-w35.html')
+    newsletter_hub = ROOT / 'newsletter/index.html'
+    if newsletter_hub.exists() and 'Sir, you appear' in newsletter_hub.read_text():
+        errors.append('Newsletter index still uses the butler Issue 1 teaser')
+
     sitemap = ROOT/'sitemap.xml'
     if sitemap.exists():
         html_count = len([

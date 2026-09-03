@@ -754,6 +754,31 @@ def update_checkout(root: Path) -> None:
         home.write_text(html)
 
 
+def homepage_newsletter_panel(root: Path) -> str:
+    cfg = {}
+    cfg_path = root / "data/newsletter.json"
+    if cfg_path.exists():
+        cfg = json.loads(cfg_path.read_text())
+    signup = esc(cfg.get("signup_url") or "https://aitoolsessentials.beehiiv.com/subscribe")
+    kicker = esc(cfg.get("homepage_kicker") or "Keep/Cut Weekly · free email")
+    headline = esc(cfg.get("homepage_headline") or "Get the free weekly keep/cut email.")
+    body = esc(cfg.get("homepage_body") or "One email a week on Beehiiv. Premium is a separate paid membership — not this list.")
+    return f'''<!-- AIT HOMEPAGE NEWSLETTER START -->
+<section id="subscribe" class="newsletter-panel">
+<div>
+<span>{kicker}</span>
+<h2>{headline}</h2>
+<p>{body}</p>
+</div>
+<div class="newsletter-actions">
+<a class="button button-blue" href="/subscribe/">Subscribe free</a>
+<a class="button button-dark" href="{signup}" rel="noopener sponsored nofollow">Beehiiv form</a>
+<a class="button button-dark" href="/newsletter/">Read Issue 1</a>
+</div>
+</section>
+<!-- AIT HOMEPAGE NEWSLETTER END -->'''
+
+
 def enhance_homepage(root: Path) -> None:
     import re
     home = root / "index.html"
@@ -770,6 +795,35 @@ def enhance_homepage(root: Path) -> None:
     header = html[:header_end] if header_end != -1 else html[:4000]
     if 'href="premium/"' not in header and 'href="/premium/"' not in header:
         html = html.replace("</nav>", '<a href="premium/">Premium</a></nav>', 1)
+    if "subscribe/" not in header and "/subscribe/" not in header:
+        html = html.replace("</nav>", '<a href="/subscribe/">Subscribe</a></nav>', 1)
+        header_end = html.find("</header>")
+        header = html[:header_end] if header_end != -1 else header
+    html = re.sub(
+        r'<a class="button button-ghost-dark" href="[^"]*(?:newsletter/|subscribe/)">Free newsletter</a>',
+        '<a class="button button-ghost-dark" href="/subscribe/">Free weekly email</a>',
+        html,
+        count=1,
+    )
+    newsletter = homepage_newsletter_panel(root)
+    if "AIT HOMEPAGE NEWSLETTER START" in html:
+        html = re.sub(
+            r"<!-- AIT HOMEPAGE NEWSLETTER START -->.*?<!-- AIT HOMEPAGE NEWSLETTER END -->",
+            newsletter.strip(),
+            html,
+            count=1,
+            flags=re.S,
+        )
+    elif re.search(r'<section[^>]*id="subscribe"', html):
+        html = re.sub(
+            r'<section[^>]*id="subscribe"[^>]*>.*?</section>',
+            newsletter,
+            html,
+            count=1,
+            flags=re.S,
+        )
+    else:
+        html = html.replace("</main>", newsletter + "\n</main>", 1)
     if "Start 7-day Premium trial" not in html:
         html = html.replace(
             '<a class="button button-ghost-dark" href="articles/top-ai-tools-2026.html">Read the guide</a>',
