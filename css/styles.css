@@ -1071,3 +1071,140 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
 .planner-links { display:flex; flex-wrap:wrap; gap:14px 24px; }
 .planner-links a { color:#35419e; font-weight:700; }
 @media (max-width:640px) { .planner-hero,.planner-shell{padding-left:18px;padding-right:18px}.planner-form,.planner-result{padding:20px}.planner-form,.planner-result-grid{grid-template-columns:1fr}.planner-submit{width:100%;text-align:center}.planner-method{padding:20px} }
+
+/* Keep/Cut Weekly — public newsletter composition (not a generic article shell) */
+.newsletter-issue,
+.newsletter-archive {
+  background: #f3efe8;
+  color: var(--ink);
+  padding: 36px 16px 80px;
+}
+.newsletter-sheet {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 31, .08);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 28px 56px -36px rgba(8,9,10,.28);
+  padding: 44px 48px 52px;
+}
+.newsletter-masthead {
+  text-align: center;
+  margin: 0 0 28px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--ink);
+}
+.newsletter-name {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.newsletter-issue-line {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: .02em;
+}
+.newsletter-subject {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 5.2vw, 40px);
+  line-height: 1.18;
+  letter-spacing: -0.9px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.newsletter-dek {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: none;
+}
+.newsletter-body {
+  margin-top: 28px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.newsletter-body p { margin: 0 0 1.35em; }
+.newsletter-body ul { margin: 0 0 1.35em; padding-left: 1.2em; }
+.newsletter-body li { margin: 0 0 .7em; }
+.newsletter-body a { color: var(--blue-dark); text-decoration: underline; text-underline-offset: 2px; }
+.newsletter-greeting { font-size: 18px; }
+.newsletter-segment {
+  margin: 28px 0;
+  padding: 20px 20px 6px;
+  border-radius: 10px;
+  background: rgba(94, 106, 210, .05);
+  border: 1px solid rgba(94, 106, 210, .12);
+  border-left: 3px solid var(--blue);
+}
+.newsletter-segment h2 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 650;
+  color: var(--blue-dark);
+}
+.newsletter-segment--keep { background: rgba(94, 106, 210, .07); border-left-color: var(--blue); }
+.newsletter-segment--cut { background: #f7f4ef; border-color: rgba(0,0,0,.06); border-left-color: var(--ink); }
+.newsletter-segment--renew { background: rgba(113, 112, 255, .06); border-color: rgba(113, 112, 255, .14); border-left-color: var(--violet); }
+.newsletter-segment--look { background: var(--light); border-color: rgba(0,0,0,.06); border-left-color: var(--blue-light); }
+.newsletter-close { margin-top: 8px; padding-top: 8px; }
+.newsletter-signoff { font-weight: 600; }
+.newsletter-colophon {
+  margin-top: 12px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(29, 29, 31, .12);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.newsletter-colophon p { margin: 0 0 10px; }
+.newsletter-colophon a { color: var(--blue-dark); }
+.newsletter-archive-intro {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+.newsletter-archive-intro .newsletter-name { margin-bottom: 10px; }
+.newsletter-archive-intro h1 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: -1.1px;
+  line-height: 1.1;
+}
+.newsletter-archive-intro p { margin: 0 auto 18px; color: var(--muted); max-width: 520px; line-height: 1.5; }
+.newsletter-issue-list { max-width: 640px; margin: 0 auto; display: grid; gap: 16px; }
+.newsletter-issue-card {
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 31, .08);
+  border-left: 3px solid var(--blue);
+  border-radius: 4px;
+  padding: 24px 26px 22px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  min-height: 0;
+}
+.newsletter-issue-card:hover { transform: none; box-shadow: 0 8px 24px -16px rgba(8,9,10,.25); }
+.newsletter-issue-card-meta {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 650;
+}
+.newsletter-issue-card h3 { margin: 0 0 8px; font-size: 22px; letter-spacing: -.4px; line-height: 1.25; }
+.newsletter-issue-card p { margin: 0; color: var(--muted); line-height: 1.5; }
+@media (max-width: 640px) {
+  .newsletter-issue, .newsletter-archive { padding: 8px 0 56px; }
+  .newsletter-sheet { padding: 28px 20px 36px; border-radius: 0; box-shadow: none; border-left: none; border-right: none; }
+  .newsletter-segment { padding: 16px 14px 2px; }
+  .newsletter-issue-card { margin: 0 16px; }
+  .newsletter-archive-intro { padding: 28px 20px 8px; }
+}

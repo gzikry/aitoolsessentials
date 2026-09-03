@@ -426,6 +426,12 @@ def main():
             errors.append('Issue 1 public copy still has butler/J teaser language')
         if 'AIToolsEssentials' not in issue_html:
             errors.append('Issue 1 public copy missing AIToolsEssentials sign-off')
+        if 'newsletter-sheet' not in issue_html or 'newsletter-masthead' not in issue_html:
+            errors.append('Issue 1 public page must use newsletter composition, not a generic article shell')
+        if 'class="scene scene-dark"' in issue_html:
+            errors.append('Issue 1 public page still uses the dark article hero shell')
+        if 'Morning.' not in issue_html:
+            errors.append('Issue 1 public copy missing Morning. opening')
     else:
         errors.append('Missing newsletter/2026-w35.html')
     newsletter_hub = ROOT / 'newsletter/index.html'
