@@ -68,6 +68,7 @@ def main() -> None:
 
     banned = [
         "operationalize the best AI tools",
+        "The essential AI tools directory",
         "Pay for the research layer.",
         "Join the research membership — not the free email.",
         "The member library keeps compounding.",
@@ -91,6 +92,51 @@ def main() -> None:
         for phrase in banned:
             if phrase in text:
                 errors.append(f"{path.relative_to(ROOT)} still has {phrase!r}")
+
+    home_head = home.split("</head>", 1)[0]
+    if "Stop paying for tools you do not use" not in home_head:
+        errors.append("Homepage head missing second-person title")
+    if "See which subscriptions you should keep" not in home_head:
+        errors.append("Homepage head missing second-person description")
+    for needle, label in (
+        ('property="og:title" content="AIToolsEssentials — Stop paying for tools you do not use"', "og:title"),
+        ('property="og:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', "og:description"),
+        ('name="twitter:title" content="AIToolsEssentials — Stop paying for tools you do not use"', "twitter:title"),
+        ('name="twitter:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', "twitter:description"),
+        ('"name": "AIToolsEssentials — Stop paying for tools you do not use"', "JSON-LD name"),
+        ('"description": "See which subscriptions you should keep, which you can cancel, and what to test this week."', "JSON-LD description"),
+    ):
+        if needle not in home_head:
+            errors.append(f"Homepage head missing {label}")
+
+    from generate_premium_membership import apply_homepage_voice_meta, homepage_voice_meta
+
+    stale = """<!doctype html><html><head>
+<meta name="description" content="AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work." />
+<title>AIToolsEssentials — The essential AI tools directory</title>
+<!-- AIT SEO START -->
+<meta property="og:title" content="AIToolsEssentials — The essential AI tools directory">
+<meta property="og:description" content="AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work.">
+<meta name="twitter:title" content="AIToolsEssentials — The essential AI tools directory">
+<meta name="twitter:description" content="AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "AIToolsEssentials — The essential AI tools directory", "description": "AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work.", "url": "https://aitoolsessentials.com/"}</script>
+<!-- AIT SEO END -->
+</head><body><h2>Stop paying for tools you do not use</h2></body></html>"""
+    voice_title, voice_desc = homepage_voice_meta(ROOT)
+    rewritten = apply_homepage_voice_meta(stale, voice_title, voice_desc)
+    if "operationalize" in rewritten:
+        errors.append("apply_homepage_voice_meta left operationalize in homepage meta")
+    if "The essential AI tools directory" in rewritten:
+        errors.append("apply_homepage_voice_meta left The essential AI tools directory")
+    if voice_title not in rewritten or voice_desc not in rewritten:
+        errors.append("apply_homepage_voice_meta did not set voice title/description")
+
+    for path in ROOT.rglob("*.html"):
+        rel = path.relative_to(ROOT)
+        if "admin" in rel.parts or any(part.startswith(".") for part in rel.parts):
+            continue
+        if "operationalize" in path.read_text().lower():
+            errors.append(f"{rel} still says operationalize")
 
     if errors:
         raise SystemExit("premium clarity failures:\n- " + "\n- ".join(errors))

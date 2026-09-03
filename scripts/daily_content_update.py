@@ -450,6 +450,11 @@ if f'Search {_expected_count} tools' not in (root / 'confidence-check/index.html
     raise RuntimeError('confidence-check: current tool-count search prompt missing')
 print(f'Verified dynamic metadata coverage for {_expected_count} tools')
 print('Final indexability pass:', generate_indexability(root))
+# Downstream head rewrites can restore leftover homepage title/description/JSON-LD.
+# SET second-person voice from data/voice_rewrites.json after every other pass.
+from generate_premium_membership import enhance_homepage as _enhance_homepage
+_enhance_homepage(root)
+print('Re-applied homepage voice meta after final metadata pass')
 _sitemap_urls_final = refresh_sitemap(root)
 print(f'Refreshed final sitemap with {len(_sitemap_urls_final)} URLs')
 print('Re-injected final metadata layers')

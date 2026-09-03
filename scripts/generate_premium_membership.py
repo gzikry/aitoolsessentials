@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import zipfile
 from datetime import datetime
 from pathlib import Path
@@ -50,6 +51,84 @@ def load_whop_from_integrations(root: Path) -> None:
 
 def esc(s: Any) -> str:
     return str(s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
+def homepage_voice_meta(root: Path | None = None) -> tuple[str, str]:
+    """Homepage title/description from data/voice_rewrites.json (second-person voice)."""
+    root = root or Path(__file__).resolve().parent.parent
+    title_tail = "Stop paying for tools you do not use"
+    desc = "See which subscriptions you should keep, which you can cancel, and what to test this week."
+    path = root / "data" / "voice_rewrites.json"
+    if path.exists():
+        data = json.loads(path.read_text())
+        by_phrase = {item["phrase"]: item["rewrite"] for item in data.get("rewrites", [])}
+        title_tail = by_phrase.get("The essential AI tools directory", title_tail)
+        desc = by_phrase.get("operationalize the best AI tools", desc)
+    return f"AIToolsEssentials — {title_tail}", desc
+
+
+def apply_homepage_voice_meta(html: str, title: str | None = None, desc: str | None = None, root: Path | None = None) -> str:
+    """Always SET homepage title/description/OG/Twitter/JSON-LD. Do not depend on leftover phrases."""
+    if title is None or desc is None:
+        title, desc = homepage_voice_meta(root)
+    title_e = esc(title)
+    desc_e = esc(desc)
+    html = re.sub(r"(<title>)(.*?)(</title>)", rf"\1{title_e}\3", html, count=1, flags=re.S | re.I)
+    html = re.sub(
+        r'(<meta\b[^>]*\bname=["\']description["\'][^>]*\bcontent=")[^"]*(")',
+        rf"\1{desc_e}\2",
+        html,
+        count=1,
+        flags=re.I,
+    )
+    for attr, value in (
+        ('property="og:title"', title_e),
+        ('property="og:description"', desc_e),
+        ('name="twitter:title"', title_e),
+        ('name="twitter:description"', desc_e),
+    ):
+        html = re.sub(
+            rf'(<meta\b[^>]*\b{re.escape(attr)}[^>]*\bcontent=")[^"]*(")',
+            rf"\1{value}\2",
+            html,
+            flags=re.I,
+        )
+        html = re.sub(
+            rf'(<meta\b[^>]*\bcontent=")[^"]*("[^>]*\b{re.escape(attr)})',
+            rf"\1{value}\2",
+            html,
+            flags=re.I,
+        )
+
+    def rewrite_seo_block(match: re.Match[str]) -> str:
+        block = match.group(0)
+
+        def rewrite_script(sm: re.Match[str]) -> str:
+            raw = sm.group(1)
+            try:
+                data = json.loads(raw)
+            except json.JSONDecodeError:
+                return sm.group(0)
+            if isinstance(data, dict) and data.get("@type") == "WebPage":
+                data["name"] = title
+                data["description"] = desc
+                return f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
+            return sm.group(0)
+
+        return re.sub(
+            r'<script type="application/ld\+json">(.*?)</script>',
+            rewrite_script,
+            block,
+            flags=re.S,
+        )
+
+    return re.sub(
+        r"<!-- AIT SEO START -->.*?<!-- AIT SEO END -->",
+        rewrite_seo_block,
+        html,
+        count=1,
+        flags=re.S,
+    )
 
 
 def head(title: str, desc: str, canonical: str, noindex: bool = False) -> str:
@@ -1059,6 +1138,7 @@ def enhance_homepage(root: Path) -> None:
             intro = re.search(r'(<section class="scene scene-light intro-strip">.*?</section>)', html, flags=re.S)
             if intro:
                 html = html.replace(intro.group(1), intro.group(1) + "\n" + tiles, 1)
+    html = apply_homepage_voice_meta(html, root=root)
     home.write_text(html)
 
 
@@ -1224,6 +1304,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
     update_sample_audit_page(root)
     generate_human_sitemap(root, tools_list)
     generate_start_here(root)
+    enhance_homepage(root)
     return 12
 
 

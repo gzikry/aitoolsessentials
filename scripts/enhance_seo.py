@@ -84,9 +84,18 @@ def strip_existing(content: str) -> str:
 
 def enhance(path: Path):
     content = strip_existing(path.read_text())
+    if path.resolve() == (ROOT / 'index.html').resolve():
+        from generate_premium_membership import apply_homepage_voice_meta
+        content = apply_homepage_voice_meta(content, root=ROOT)
     parser = MetaParser(); parser.feed(content)
     title = parser.title or parser.h1 or SITE_NAME
-    desc = parser.description or 'AIToolsEssentials helps readers compare AI tools by workflow fit, pricing, and practical business value.'
+    if path.resolve() == (ROOT / 'index.html').resolve():
+        from generate_premium_membership import homepage_voice_meta
+        _voice_title, voice_desc = homepage_voice_meta(ROOT)
+        title = parser.title or _voice_title
+        desc = parser.description or voice_desc
+    else:
+        desc = parser.description or 'AIToolsEssentials helps readers compare AI tools by workflow fit, pricing, and practical business value.'
     url = url_for(path)
     block = f'''\n  {MARKER_START}
   <link rel="canonical" href="{html.escape(url, quote=True)}">
