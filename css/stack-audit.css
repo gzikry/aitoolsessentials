@@ -19,6 +19,25 @@
 .sa-custom { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 14px; }
 .sa-custom input { padding: 12px 14px; border-radius: 10px; border: 1px solid #d5d7e2; font: inherit; }
 .sa-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.scene-light .sa-wrap .button-dark,
+.scene-light .sa-wrap .button-ghost-dark {
+  background: #fff;
+  color: #1d1d1f;
+  border: 1px solid #c5c8d6;
+}
+.scene-light .sa-wrap .button-dark:hover,
+.scene-light .sa-wrap .button-ghost-dark:hover {
+  background: #f4f5ff;
+  color: #3d46a8;
+  text-decoration: none;
+}
+.scene-light .sa-wrap .button-dark:disabled,
+.scene-light .sa-wrap .sa-disabled {
+  background: #f3f3f6;
+  color: #6e6e73;
+  border-color: #d9dbe3;
+  opacity: 1;
+}
 .sa-tool-card { margin-top: 16px; }
 .sa-tool-card h3 { font-size: 22px; }
 .sa-field { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; font-size: 14px; font-weight: 600; color: #3f4250; }

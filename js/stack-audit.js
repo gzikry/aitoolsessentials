@@ -565,7 +565,7 @@
       renderGrid();
       renderChips();
     });
-    if (els.addCustom) els.addCustom.addEventListener("click", function () {
+    function addCustomTool() {
       var name = sanitizeName(els.customName && els.customName.value);
       if (!name) return showError("Enter a custom tool name.");
       markStarted();
@@ -574,6 +574,14 @@
       showError("");
       renderGrid();
       renderChips();
+      announce(name + " added.");
+    }
+    if (els.addCustom) els.addCustom.addEventListener("click", addCustomTool);
+    if (els.customName) els.customName.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        addCustomTool();
+      }
     });
     document.getElementById("sa-to-step-2").addEventListener("click", function () {
       if (!state.selected.length) return showError("Select at least one tool.");

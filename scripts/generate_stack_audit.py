@@ -131,7 +131,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
       <div class="sa-custom">
         <label class="vis-hidden" for="sa-custom-name">Custom tool name</label>
         <input id="sa-custom-name" type="text" maxlength="40" placeholder="Custom tool name">
-        <button class="button button-dark" type="button" id="sa-add-custom">Add custom tool</button>
+        <button class="button button-blue" type="button" id="sa-add-custom">Add custom tool</button>
       </div>
       <div class="sa-actions">
         <button class="button button-blue" type="button" id="sa-to-step-2">Continue to spend &amp; use cases</button>
