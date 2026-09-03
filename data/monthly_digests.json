@@ -3,8 +3,8 @@
     "slug": "2026-09",
     "title": "What changed in AI tools — September 2026",
     "month_label": "September 2026",
-    "checked_at": "2026-09-02",
-    "summary": "A public keep/cut digest of recorded vendor launches and directory checks this month. Perplexity open-sourced Lily (2026-09-02 official blog) as a lightweight local inference engine for Apple silicon and Qwen3.6-35B-A3B, tied to Perplexity Computer hybrid compute — not a new paid SKU. Catch (catchagent.ai) was listed on 2026-09-02 after the official homepage and /security page advertised $99/month billed monthly (cancel anytime, 10-day free trial); /pricing 404s and the same homepage still shows Closed Beta — Limited Spots. World Labs Atlas remains an early-access watch with no public self-serve pricing.",
+    "checked_at": "2026-09-03",
+    "summary": "A public keep/cut digest of recorded vendor launches and directory checks this month. OpenAI released GPT-6 Astra on 2026-09-03: official Path to Astra post designates it at Critical cybersecurity capability, with advanced cyber access gated to trusted testers / Daybreak Blue; Axios reports limited Daybreak Access first, then ChatGPT Plus / Pro / Business / Enterprise and API in the coming days — not a new SKU and not a confirmed Plus/Pro price change. Perplexity open-sourced Lily (2026-09-02 official blog) as a lightweight local inference engine for Apple silicon and Qwen3.6-35B-A3B, tied to Perplexity Computer hybrid compute — not a new paid SKU. Catch (catchagent.ai) was listed on 2026-09-02 after the official homepage and /security page advertised $99/month billed monthly (cancel anytime, 10-day free trial); /pricing 404s and the same homepage still shows Closed Beta — Limited Spots. World Labs Atlas remains an early-access watch with no public self-serve pricing.",
     "new_listings": [
       {
         "name": "Catch",
@@ -15,6 +15,13 @@
       }
     ],
     "vendor_launches": [
+      {
+        "name": "GPT-6 Astra (OpenAI)",
+        "note": "Official Path to Astra post (2026-09-01, still the primary openai.com page on this 2026-09-03 check): first model designated at Critical cybersecurity capability under the Preparedness Framework. Advanced cyber workflows limited at launch to trusted testers / Daybreak Blue. Axios: initial access for limited Daybreak organizations, then ChatGPT Plus / Pro / Business / Enterprise and API developers in the coming days. OpenAI customer stories dated 2026-09-03 use the name GPT-6 Astra. Greg Brockman called it a generational leap. AGI remarks are not treated as fact. Plus/Pro plan prices were not confirmed as changed; not a new ChatGPT SKU.",
+        "source_url": "https://openai.com/index/path-to-astra/",
+        "checked_at": "2026-09-03",
+        "pricing_status": "existing_plans_rollout"
+      },
       {
         "name": "Lily (Perplexity)",
         "note": "Official blog (checked 2026-09-02): lightweight local inference engine built specifically for Apple silicon and Qwen3.6-35B-A3B so on-device compute does not bottleneck Hybrid Compute / Perplexity Computer tasks. Rust runtime; OpenAI-compatible chat-completions API; custom Metal kernels; neither PyTorch nor MLX in the execution path; standalone demo on GitHub. Official pplx-garden README names the demo at github.com/perplexityai/pplx-garden (lily/), Apache-2.0, greedy generation for the Qwen3.6-35B-A3B MLX affine 4-bit checkpoint, Apple GPU family 10+ (M5 and newer). Not a Perplexity paid plan SKU. Vendor-published throughput figures were not independently reproduced. Perplexity consumer plan dollar prices were not re-verified on this date.",
@@ -32,6 +39,13 @@
     ],
     "watch_list": [
       {
+        "name": "ChatGPT",
+        "slug": "chatgpt",
+        "note": "GPT-6 Astra is a limited roll-out onto existing ChatGPT paid tiers and the API, not a new SKU and not a confirmed price change. Do not add a ChatGPT seat because Astra shipped. Re-check openai.com/chatgpt/pricing before renewing; Plus/Pro dollar prices were not re-verified as changed on 2026-09-03. Advanced cyber access is gated separately.",
+        "source_url": "https://openai.com/index/path-to-astra/",
+        "checked_at": "2026-09-03"
+      },
+      {
         "name": "Perplexity",
         "slug": "perplexity",
         "note": "Lily is an open-source local engine for Computer hybrid compute, not a new Pro/Max SKU. Do not add a paid Perplexity seat because Lily shipped. Re-check official plan pages before renewing; consumer dollar prices were not re-verified on 2026-09-02.",
@@ -39,8 +53,11 @@
         "checked_at": "2026-09-02"
       }
     ],
-    "keep_cut_rule": "If a launch has no public pricing, do not treat it as a buy decision. An open-source local engine is not a reason to add a paid seat. If a public price is mixed with closed-beta waitlist copy, treat availability as unresolved until you can actually start a trial. Watch official sources, then re-check before adding a seat.",
+    "keep_cut_rule": "If a launch has no public pricing, do not treat it as a buy decision. A model rolling onto existing ChatGPT paid tiers is not a reason to add a seat or assume a price change. An open-source local engine is not a reason to add a paid seat. If a public price is mixed with closed-beta waitlist copy, treat availability as unresolved until you can actually start a trial. Watch official sources, then re-check before adding a seat.",
     "sources": [
+      "https://openai.com/index/path-to-astra/",
+      "https://openai.com/",
+      "https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman",
       "https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon",
       "https://github.com/perplexityai/pplx-garden",
       "https://www.worldlabs.ai/blog/atlas",

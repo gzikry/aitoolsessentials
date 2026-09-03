@@ -1,4 +1,25 @@
 {
+  "openai-astra": {
+    "listed": false,
+    "name": "GPT-6 Astra (OpenAI)",
+    "category": "Frontier models",
+    "official": "https://openai.com/index/path-to-astra/",
+    "as_of": "2026-09-03",
+    "models": [
+      {
+        "model": "GPT-6 Astra",
+        "role": "New OpenAI frontier model; limited Daybreak Access first, then announced ChatGPT and API roll-out",
+        "context": "No public context-window figure on the official Path to Astra post as of this check",
+        "pricing": "Announced onto existing ChatGPT Plus / Pro / Business / Enterprise and the API in the coming days. No Plus/Pro price change confirmed as of 2026-09-03. Advanced cyber access gated separately."
+      }
+    ],
+    "notes": [
+      "Source: official OpenAI post “Path to Astra: critical capabilities and frontier safeguards” (https://openai.com/index/path-to-astra/), dated 2026-09-01 and used as the primary official page on this 2026-09-03 check. No separate system-card URL was found on openai.com during this check.",
+      "Official post: first model designated at Critical cybersecurity capability under the Preparedness Framework. Advanced cybersecurity workflows limited at launch to trusted testers, with Daybreak Blue expansion for defensive use.",
+      "Launch-day access timing (limited Daybreak organizations first; ChatGPT Plus / Pro / Business / Enterprise and API developers in the coming days) is from Axios, corroborated by TechCrunch. OpenAI customer stories dated 2026-09-03 use the name GPT-6 Astra. Those stories’ task-specific scores were not copied as site benchmarks.",
+      "Research watch only. Not a new ChatGPT SKU page and not a product rating. Plus/Pro plan prices were not changed in sources checked 2026-09-03. AGI remarks and third-party market comparisons were not used as facts."
+    ]
+  },
   "perplexity-lily": {
     "listed": false,
     "name": "Lily (Perplexity)",
@@ -63,7 +84,8 @@
       }
     ],
     "notes": [
-      "Verify current names at openai.com \u2014 OpenAI iterates point releases frequently."
+      "Verify current names at openai.com \u2014 OpenAI iterates point releases frequently.",
+      "2026-09-03: OpenAI released GPT-6 Astra. Official Path to Astra post designates it at Critical cybersecurity capability, with advanced cyber access gated to trusted testers / Daybreak Blue. Axios: limited Daybreak Access first, then ChatGPT Plus / Pro / Business / Enterprise and API in the coming days. It is not a new ChatGPT SKU and is tracked as a separate research watch. Plus/Pro plan prices were not confirmed as changed on this check."
     ]
   },
   "claude": {

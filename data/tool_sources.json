@@ -72,10 +72,11 @@
       "docs_url": "https://help.openai.com/en/collections/3742473-chatgpt",
       "privacy_url": "https://openai.com/policies/privacy-policy/",
       "rights_url": "https://openai.com/policies/terms-of-use/",
-      "verification_notes": "Official OpenAI sources confirm consumer and business plan availability. OpenAI's terms state that, as between the user and OpenAI and to the extent permitted by applicable law, users retain Input ownership and own Output. OpenAI's data controls documentation should be consulted for consumer training controls; business products and the API are covered by separate business-data commitments.",
+      "verification_notes": "Official OpenAI sources confirm consumer and business plan availability. OpenAI's terms state that, as between the user and OpenAI and to the extent permitted by applicable law, users retain Input ownership and own Output. OpenAI's data controls documentation should be consulted for consumer training controls; business products and the API are covered by separate business-data commitments. 2026-09-03 watch: OpenAI released GPT-6 Astra. Official Path to Astra post (https://openai.com/index/path-to-astra/, 2026-09-01) designates Astra as the first model at Critical cybersecurity capability; advanced cyber workflows are limited at launch to trusted testers / Daybreak Blue. Axios reports limited Daybreak Access first, then ChatGPT Plus / Pro / Business / Enterprise and API developers in the coming days. This is not a new ChatGPT SKU. Plus/Pro plan prices were not confirmed as changed on 2026-09-03 and were not re-verified as dollar amounts on this date.",
       "unresolved_claims": [
         "Exact US-dollar prices for Go, Plus, Pro, and Business were not reliably retrievable from the official dynamic pricing page during this check.",
-        "Enterprise pricing requires contacting OpenAI sales."
+        "Enterprise pricing requires contacting OpenAI sales.",
+        "Astra ChatGPT/API availability timing, any Astra-specific API token prices, and a public system-card URL were not confirmed as a published SKU on the official pricing page during the 2026-09-03 watch."
       ]
     },
     {
