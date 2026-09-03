@@ -108,7 +108,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     <p class="subhead">This is the free instant scorecard — not Keep/Cut Weekly and not paid Premium. Pick the tools you already use. Enter what you pay — or mark spend unknown. See keep/cut advice, tools that do the same job, and how efficiently you spend. Affiliate status never changes the result.</p>
     <p><a class="button button-blue" href="#sa-app">Start the free audit</a>
        <a class="button button-ghost-dark" href="/stack-builder.html" style="margin-left:8px">Need a starter stack instead?</a>
-       <a class="button button-ghost-dark" href="/premium/library/" style="margin-left:8px">Paid Premium library</a></p>
+       <a class="button button-ghost-dark" href="/premium/" style="margin-left:8px">See what $12 buys</a></p>
   </div>
 </section>
 <section class="scene scene-light content-hub" id="sa-app">
@@ -182,7 +182,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
         <button class="button button-dark" type="button" id="sa-back-2">Edit answers</button>
         <button class="button button-blue" type="button" id="sa-restart">Start over</button>
         <a class="button button-ghost-dark" data-sa-cta href="/newsletter/">Free Keep/Cut Weekly</a>
-        <a class="button button-ghost-dark" data-sa-cta href="/premium/">Paid Premium · human strategy reply ($12/mo)</a>
+        <a class="button button-ghost-dark" data-sa-cta href="/premium/">See what $12 buys</a>
       </div>
     </section>
   </div>

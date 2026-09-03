@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Generate the public Premium member library from dated directory data.
+"""Generate the public Premium preview pages from dated directory data.
 
-These pages are intentionally not login-gated: the site is static. Copy must
-say that Whop handles billing/access and that this library is the worksheets
-members pay $12/month for. No invented savings, case studies, or prices.
+These pages are a public preview of the Premium format. They are not gated.
+What you buy for $12/month is delivered in Whop. No invented savings,
+case studies, or prices. No claim that this HTML is a members-only library.
 """
 from __future__ import annotations
 
@@ -13,18 +13,17 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from premium_copy import (
+    checkout_buttons,
+    esc,
+    join_label,
+    lanes_note,
+    premium_nav_header,
+    preview_access_note,
+)
+
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
-
-
-def esc(s: Any) -> str:
-    return (
-        str(s or "")
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
 
 
 def load_whop(root: Path) -> dict[str, Any]:
@@ -44,17 +43,7 @@ def load_whop(root: Path) -> dict[str, Any]:
 
 
 def header() -> str:
-    return (
-        '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span>'
-        "<span>AIToolsEssentials</span></a><nav class=\"nav-links\">"
-        '<a href="/tools/index.html">Tools</a>'
-        '<a href="/stack-audit.html">Free Stack Audit</a>'
-        '<a href="/newsletter/">Keep/Cut Weekly</a>'
-        '<a href="/premium/">Premium</a>'
-        '<a href="/premium/library/">Member library</a>'
-        "</nav>"
-        '<a class="nav-cta" href="/pricing/">Paid Premium $12/mo</a></header>'
-    )
+    return premium_nav_header()
 
 
 def footer() -> str:
@@ -87,33 +76,7 @@ def scripts() -> str:
 
 
 def access_note(whop: dict[str, Any]) -> str:
-    return (
-        '<section class="score-card"><span>How access works</span>'
-        "<h2>Whop bills the membership. This static site is not a login wall.</h2>"
-        f"<p>AIToolsEssentials Premium is the paid membership: "
-        f"{whop['trial_period_days']}-day free trial, then ${whop['price_usd_month']}/month via Whop. "
-        f"Code <strong>{esc(whop['promo_code'])}</strong> is 50% off the first paid month for new users. "
-        "Open the <a href=\"https://whop.com/hub\" rel=\"external noopener\">Whop member hub</a> "
-        "with the email you used at checkout. These pages are readable here — this static site "
-        "cannot hide them behind a login. Affiliate or sponsor status never "
-        "changes keep/cut advice.</p>"
-        f'<p><a class="button button-blue" href="{esc(whop["checkout_url"])}" rel="external noopener">'
-        f'Join Premium on Whop (${whop["price_usd_month"]}/mo)</a>'
-        f'<a class="button button-dark" href="{esc(whop["checkout_promo_url"])}" rel="external noopener" style="margin-left:8px">'
-        f'Use code {esc(whop["promo_code"])}</a>'
-        '<a class="button button-dark" href="/subscribe/" style="margin-left:8px">Free Keep/Cut Weekly</a>'
-        '<a class="button button-dark" href="/stack-audit.html" style="margin-left:8px">Free Stack Audit</a></p>'
-        "</section>"
-    )
-
-
-def lanes_note() -> str:
-    return (
-        '<p class="affiliate-inline">Three different things: '
-        "<strong>Keep/Cut Weekly</strong> is the free Beehiiv email. "
-        "<strong>Stack Audit</strong> is the free, no-login scorecard. "
-        "<strong>Premium</strong> is the paid Whop membership.</p>"
-    )
+    return preview_access_note(whop)
 
 
 def write_csv(path: Path, headers: list[str], rows: list[list[Any]]) -> None:
@@ -188,34 +151,36 @@ def generate_hub(root: Path, tools: list[dict[str, Any]], today: str, whop: dict
     out.mkdir(parents=True, exist_ok=True)
     n = len(tools)
     cards = [
-        ("Research brief", "Dated keep/cut notes from the recorded September and August 2026 directory checks — official prices only.", "research-brief.html"),
-        ("Decision matrix", f"All {n} tracked tools with official pricing labels, category, and best-for notes. CSV download included.", "decision-matrix.html"),
-        ("Stack-audit template", "The paid worksheet that sits on top of the free instant scorecard: inventory, overlap, and a strategy-reply format.", "stack-audit-template.html"),
-        ("Weekly checklist", "A 15-minute weekly rhythm so Premium is used, not collected.", "weekly-checklist.html"),
-        ("Tool-change alerts", "Member-format feed built from the dated monthly digest — no invented launches.", "tool-change-alerts.html"),
-        ("ROI worksheet", "Fill in your own hours and bills. The page does not invent savings.", "roi-worksheet.html"),
-        ("How to access", "Whop hub, checkout, promo code, and what stays free.", "how-to-access.html"),
+        ("Research brief", "A public sample of dated keep/cut notes from recorded directory checks — official prices only.", "research-brief.html"),
+        ("Decision matrix", f"A public sample of the {n}-tool matrix: official pricing labels, category, and what each tool is for.", "decision-matrix.html"),
+        ("Stack-audit template", "A public sample of the inventory you send for a written keep/cut reply. The free instant scorecard stays free.", "stack-audit-template.html"),
+        ("Weekly checklist", "A public sample of the 15-minute weekly review of tools you already pay for.", "weekly-checklist.html"),
+        ("Tool-change alerts", "A public sample of the alert format built from dated monthly digests — no invented launches.", "tool-change-alerts.html"),
+        ("ROI worksheet", "A public sample. Fill in your own hours and bills. The page does not invent savings.", "roi-worksheet.html"),
+        ("How to join", "Whop checkout, the member hub, promo code, and what stays free.", "how-to-access.html"),
     ]
     grid = "".join(
-        f'<article class="content-hub-card"><span>Member library</span><h3><a href="{href}">{esc(title)}</a></h3><p>{esc(text)}</p></article>'
+        f'<article class="content-hub-card"><span>Public preview</span><h3><a href="{href}">{esc(title)}</a></h3><p>{esc(text)}</p></article>'
         for title, text, href in cards
     )
     desc = (
-        f"Public Premium member library: dated research brief, {n}-tool decision matrix, "
+        f"Public preview of the Premium format: dated research brief, {n}-tool decision matrix, "
         "stack-audit template, weekly checklist, tool-change alerts, and ROI worksheet. "
-        f"${whop['price_usd_month']}/month via Whop. Free Keep/Cut Weekly and free Stack Audit stay free."
+        f"What you buy for ${whop['price_usd_month']}/month is delivered in Whop. "
+        "Keep/Cut Weekly and the instant Stack Audit stay free."
     )
-    page = f'''<!doctype html><html lang="en">{head("Premium member library", desc, DOMAIN + "/premium/library/")}
+    page = f'''<!doctype html><html lang="en">{head("Premium preview — see the format", desc, DOMAIN + "/premium/library/")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Paid Premium · member library</p>
-<h1>Research you can run this week.</h1>
-<p class="subhead">This is the $12/month Whop membership library — not the free newsletter and not the free instant Stack Audit. Open a brief, fill a worksheet, or download the matrix. Whop handles billing. This site does not pretend to check your login.</p>
+<p class="kicker light">Public preview · not gated</p>
+<h1>This is a preview of the Premium format.</h1>
+<p class="subhead">You can read these pages without paying. This site cannot hide them. If you join Premium for ${whop["price_usd_month"]}/month, you get the dated pack, alerts, written keep/cut reply, and priority research slots inside Whop — not a login on this site.</p>
 {lanes_note()}
+<p>{checkout_buttons(whop, buy_page=True, free_audit=True)}</p>
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
 {access_note(whop)}
-<h2>Library contents · generated {esc(today)}</h2>
+<h2>Preview pages · generated {esc(today)}</h2>
 <div class="content-hub-grid">{grid}</div>
 <section class="score-card"><span>Editorial independence</span>
 <h2>Paying never buys a ranking.</h2>
@@ -268,15 +233,15 @@ def generate_research_brief(root: Path, tools: list[dict[str, Any]], today: str,
         + "</tbody></table></div>"
     )
     desc = (
-        "September 2026 Premium research brief: dated directory checks, official price labels "
-        "for common overlap pairs, and keep/cut rules. No invented savings."
+        "Public preview of the September 2026 keep/cut brief: dated directory checks, "
+        "official price labels for common overlap pairs, and keep/cut rules. No invented savings."
     )
-    page = f'''<!doctype html><html lang="en">{head("Premium research brief — September 2026", desc, DOMAIN + "/premium/library/research-brief.html")}
+    page = f'''<!doctype html><html lang="en">{head("Premium preview — keep/cut research brief", desc, DOMAIN + "/premium/library/research-brief.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Member research brief · generated {esc(today)}</p>
+<p class="kicker light">Public preview · keep/cut brief · {esc(today)}</p>
 <h1>What changed, and which overlap to test.</h1>
-<p class="subhead">Built from the recorded monthly digests and official price labels already on this site. No case studies. No invented dollar savings. If a launch has no public price, it is not a buy decision.</p>
+<p class="subhead">A public sample of the dated brief members get in Whop. Built from recorded monthly digests and official price labels. No case studies. No invented dollar savings. If a launch has no public price, it is not a buy decision.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
@@ -322,15 +287,15 @@ def generate_decision_matrix(root: Path, tools: list[dict[str, Any]], today: str
         csv_rows,
     )
     desc = (
-        f"Premium decision matrix for {len(tools)} tracked AI tools. Official pricing labels, "
-        "category, and best-for notes from the directory. Refreshed from data/tools.json."
+        f"Public preview of the Premium decision matrix for {len(tools)} tracked AI tools. "
+        "Official pricing labels, category, and best-for notes from the directory."
     )
-    page = f'''<!doctype html><html lang="en">{head("Premium decision matrix", desc, DOMAIN + "/premium/library/decision-matrix.html")}
+    page = f'''<!doctype html><html lang="en">{head("Premium preview — decision matrix", desc, DOMAIN + "/premium/library/decision-matrix.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Member decision matrix · {esc(today)}</p>
+<p class="kicker light">Public preview · decision matrix · {esc(today)}</p>
 <h1>{len(tools)} tools. Official labels. Sort before you renew.</h1>
-<p class="subhead">This is the monthly Premium matrix as an HTML table plus CSV. Editorial scores are not benchmarks. Pricing text is the directory label — confirm the vendor page before you pay.</p>
+<p class="subhead">A public sample of the monthly matrix members get as a CSV in Whop. Editorial scores are not benchmarks. Pricing text is the directory label — confirm the vendor page before you pay.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
@@ -362,15 +327,15 @@ def generate_stack_audit_template(root: Path, today: str, whop: dict[str, Any]) 
         for label, hint in fields
     )
     desc = (
-        "Premium stack-audit template: inventory, overlap, and strategy-reply format. "
-        "The free instant Stack Audit stays free at /stack-audit.html."
+        "Public preview of the Premium stack-audit template: inventory, overlap, and "
+        "strategy-reply format. The free instant Stack Audit stays free at /stack-audit.html."
     )
-    page = f'''<!doctype html><html lang="en">{head("Premium stack-audit template", desc, DOMAIN + "/premium/library/stack-audit-template.html")}
+    page = f'''<!doctype html><html lang="en">{head("Premium preview — stack-audit template", desc, DOMAIN + "/premium/library/stack-audit-template.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Member stack-audit template · {esc(today)}</p>
-<h1>Free scorecard first. Premium worksheet second.</h1>
-<p class="subhead">The free <a href="/stack-audit.html">Stack Audit</a> is an instant, no-login scorecard. This Premium template is the deeper inventory you send for a strategy-only keep/cut/trial reply. It is not a second paid product.</p>
+<p class="kicker light">Public preview · stack-audit template · {esc(today)}</p>
+<h1>Free scorecard first. Written reply in Whop.</h1>
+<p class="subhead">The free <a href="/stack-audit.html">Stack Audit</a> is an instant, no-login scorecard. This page is a public sample of the deeper inventory you send after you join Premium for a strategy-only keep/cut/trial reply. It is not a second paid product.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
@@ -379,7 +344,7 @@ def generate_stack_audit_template(root: Path, today: str, whop: dict[str, Any]) 
 <ul>
 <li><strong>Free Stack Audit</strong> — instant keep/cut/overlap score on your device. No account.</li>
 <li><strong>Free Keep/Cut Weekly</strong> — one Beehiiv email a week.</li>
-<li><strong>Paid Premium</strong> — this worksheet, the matrix, alerts, and a written strategy reply after you send the completed inventory. Research only. No logins taken.</li>
+<li><strong>Paid Premium</strong> — in Whop: this inventory format, the matrix, alerts, and a written strategy reply after you send the completed inventory. Research only. No logins taken.</li>
 </ul>
 <p><a class="button button-dark" href="/stack-audit.html">Run the free instant audit</a></p>
 </div>
@@ -410,13 +375,13 @@ def generate_weekly_checklist(root: Path, today: str, whop: dict[str, Any]) -> N
         f"<tr><td>{esc(day)}</td><td>{esc(task)}</td><td>{esc(why)}</td><td><input type=\"checkbox\" aria-label=\"Done {esc(day)}\"></td></tr>"
         for day, task, why in days
     )
-    desc = "Premium weekly AI stack checklist: 15-minute keep/cut rhythm. Free newsletter and free Stack Audit stay free."
-    page = f'''<!doctype html><html lang="en">{head("Premium weekly stack checklist", desc, DOMAIN + "/premium/library/weekly-checklist.html")}
+    desc = "Public preview of the Premium weekly checklist: 15 minutes, one keep/cut decision. Free newsletter and free Stack Audit stay free."
+    page = f'''<!doctype html><html lang="en">{head("Premium preview — weekly checklist", desc, DOMAIN + "/premium/library/weekly-checklist.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Member weekly checklist · {esc(today)}</p>
+<p class="kicker light">Public preview · weekly checklist · {esc(today)}</p>
 <h1>Fifteen minutes. One decision.</h1>
-<p class="subhead">Print this. Check boxes locally. Nothing is uploaded. Premium is an operating rhythm, not a PDF collection.</p>
+<p class="subhead">A public sample of the weekly checklist members use in Whop. Print this. Check boxes on your device. Nothing is uploaded.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
@@ -451,15 +416,15 @@ def generate_alerts(root: Path, today: str, whop: dict[str, Any]) -> None:
         csv_rows,
     )
     desc = (
-        "Premium tool-change alert feed formatted from dated monthly digests. "
+        "Public preview of the Premium tool-change alert format, built from dated monthly digests. "
         "No invented launches or prices."
     )
-    page = f'''<!doctype html><html lang="en">{head("Premium tool-change alerts", desc, DOMAIN + "/premium/library/tool-change-alerts.html")}
+    page = f'''<!doctype html><html lang="en">{head("Premium preview — tool-change alerts", desc, DOMAIN + "/premium/library/tool-change-alerts.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Member alert feed · {esc(today)}</p>
-<h1>Recorded changes, member format.</h1>
-<p class="subhead">{len(alerts)} dated rows from the public monthly digest. This page is the Premium layout — same facts, sorted for people who already pay for a stack. If a source is missing a dollar price, this feed will not invent one.</p>
+<p class="kicker light">Public preview · tool-change alerts · {esc(today)}</p>
+<h1>Recorded changes. Same facts, member sort.</h1>
+<p class="subhead">{len(alerts)} dated rows from the public monthly digest. This page shows the format members get in Whop — same facts, sorted for people who already pay for a stack. If a source is missing a dollar price, this feed will not invent one.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
@@ -475,15 +440,15 @@ def generate_alerts(root: Path, today: str, whop: dict[str, Any]) -> None:
 
 def generate_roi(root: Path, today: str, whop: dict[str, Any]) -> None:
     desc = (
-        "Premium ROI worksheet. Enter your own hours and invoices. "
+        "Public preview of the Premium ROI worksheet. Enter your own hours and invoices. "
         "The page does not invent time saved or dollar payback."
     )
-    page = f'''<!doctype html><html lang="en">{head("Premium ROI worksheet", desc, DOMAIN + "/premium/library/roi-worksheet.html")}
+    page = f'''<!doctype html><html lang="en">{head("Premium preview — ROI worksheet", desc, DOMAIN + "/premium/library/roi-worksheet.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Member ROI worksheet · {esc(today)}</p>
+<p class="kicker light">Public preview · ROI worksheet · {esc(today)}</p>
 <h1>Your numbers. Not ours.</h1>
-<p class="subhead">Fill the fields. Arithmetic stays in your browser. This worksheet will not claim that Premium saved you money. Premium costs ${whop["price_usd_month"]}/month after the trial. If your own cancelled seats exceed that, you can write it down.</p>
+<p class="subhead">A public sample of the ROI worksheet members use in Whop. Fill the fields. Arithmetic stays in your browser. This page will not claim that Premium saved you money. Premium costs ${whop["price_usd_month"]}/month after the trial. If your own cancelled seats exceed that, you can write it down.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
@@ -554,25 +519,25 @@ def generate_access(root: Path, today: str, whop: dict[str, Any]) -> None:
         "How to join AIToolsEssentials Premium on Whop, open the member hub, "
         "and keep the free newsletter and free Stack Audit separate."
     )
-    page = f'''<!doctype html><html lang="en">{head("How to access Premium", desc, DOMAIN + "/premium/library/how-to-access.html")}
+    page = f'''<!doctype html><html lang="en">{head("How to join Premium on Whop", desc, DOMAIN + "/premium/library/how-to-access.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Paid Premium · access</p>
-<h1>Whop is checkout. These pages are the library.</h1>
-<p class="subhead">Use the existing Premium checkout. Do not pay for the free newsletter or the free Stack Audit — those stay free.</p>
+<p class="kicker light">Paid Premium · how to join</p>
+<h1>Whop is checkout. These pages are a public preview.</h1>
+<p class="subhead">Use the existing Premium checkout. Do not pay for the free newsletter or the free Stack Audit — those stay free. The pack, alerts, written reply, and priority research slots are delivered in Whop.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
 <div class="content-hub-grid">
 <article class="content-hub-card"><span>Free</span><h3>Keep/Cut Weekly</h3><p>Beehiiv email. No Whop charge.</p><p><a href="/subscribe/">Subscribe free</a></p></article>
 <article class="content-hub-card"><span>Free</span><h3>Stack Audit</h3><p>Instant scorecard. Stays on your device.</p><p><a href="/stack-audit.html">Run it free</a></p></article>
-<article class="content-hub-card"><span>Paid</span><h3>Premium membership</h3><p>{whop["trial_period_days"]}-day trial, then ${whop["price_usd_month"]}/month. Code {esc(whop["promo_code"])} for 50% off the first paid month (new users).</p><p><a href="{esc(whop["checkout_url"])}" rel="external noopener">Join Premium on Whop (${whop["price_usd_month"]}/mo)</a></p></article>
+<article class="content-hub-card"><span>Paid</span><h3>Premium on Whop</h3><p>{whop["trial_period_days"]}-day trial, then ${whop["price_usd_month"]}/month. Code {esc(whop["promo_code"])} for 50% off the first paid month (new users).</p><p><a href="{esc(whop["checkout_url"])}" rel="external noopener">{esc(join_label(whop["price_usd_month"]))}</a></p></article>
 </div>
 <ol>
 <li>Open the Whop checkout for <strong>AIToolsEssentials Premium</strong>. Product page: <a href="{esc(whop["product_url"])}" rel="external noopener">{esc(whop["product_url"])}</a>.</li>
 <li>Complete the {whop["trial_period_days"]}-day trial or apply <strong>{esc(whop["promo_code"])}</strong> on the first paid month if you are a new user.</li>
-<li>Open <a href="{esc(whop["hub_url"])}" rel="external noopener">whop.com/hub</a> with that email. Posts and upload-pack CSVs live there when George has published them.</li>
-<li>Use this public library for the dated HTML and CSV files. There is no login cookie on aitoolsessentials.com that unlocks extra HTML.</li>
+<li>Open <a href="{esc(whop["hub_url"])}" rel="external noopener">whop.com/hub</a> with that email. That is where the monthly pack, alerts, written reply, and request thread are delivered.</li>
+<li>Use these public preview pages to see the format. There is no login cookie on aitoolsessentials.com that unlocks extra HTML.</li>
 <li>Cancel from your Whop account. All sales are final — no refunds. Research and strategy only.</li>
 </ol>
 <p>Return URL after checkout: <a href="/checkout/complete/">/checkout/complete/</a>. That page cannot verify a charge by itself. Trust the Whop receipt.</p>

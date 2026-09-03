@@ -476,13 +476,17 @@ def main():
             errors.append('services/ai-stack-audit.html must distinguish the free instant Stack Audit')
     library_hub = ROOT / 'premium/library/index.html'
     if not library_hub.exists():
-        errors.append('Missing premium/library/index.html member library hub')
+        errors.append('Missing premium/library/index.html preview hub')
     else:
         library_html = library_hub.read_text()
-        if 'no server-side gate' not in library_html.lower() and 'not a login wall' not in library_html.lower() and 'does not pretend' not in library_html.lower():
-            errors.append('Member library must say there is no login wall')
+        preview_ok = any(
+            phrase in library_html.lower()
+            for phrase in ('public preview', 'not gated', 'no server-side gate', 'not a login wall', 'cannot hide')
+        )
+        if not preview_ok:
+            errors.append('Premium library hub must say the pages are a public preview and not gated')
         if 'whop.com/checkout/ch_DKm5yxA1OBXoDru' not in library_html:
-            errors.append('Member library must keep the existing Whop Premium checkout URL')
+            errors.append('Premium library hub must keep the existing Whop Premium checkout URL')
     conversion_hits = list((ROOT).glob('tools/*/index.html'))[:3]
     for sample in conversion_hits:
         text = sample.read_text()
