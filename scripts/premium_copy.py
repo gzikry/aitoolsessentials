@@ -326,35 +326,78 @@ def homepage_hero_actions_html(whop: dict[str, Any]) -> str:
     return (
         '<div class="actions">'
         f'<a class="button button-blue" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a>'
-        f'<a class="button button-ghost-dark" href="/premium/">{BUY_PAGE_LABEL}</a>'
         "</div>"
-        '<p class="affiliate-inline">Free: find the waste on your device. Premium is optional — '
-        "a keep/cut pack and a 48-hour written reply when you want help before renewals.</p>"
         '<p class="hero-secondary-links">'
-        '<a href="stack-builder.html">Build a starter list</a> · '
-        '<a href="articles/top-ai-tools-2026.html">Read the guide</a> · '
-        f'<a href="/subscribe/">{FREE_EMAIL_LABEL}</a>'
+        f'Optional: <a href="/premium/">{BUY_PAGE_LABEL}</a> when you want help before renewals.'
         "</p>"
     )
 
 
+def homepage_hero_html(whop: dict[str, Any]) -> str:
+    """Homepage hero only: overlap/cancel H1, Stack Audit primary, Premium secondary line."""
+    actions = homepage_hero_actions_html(whop)
+    return f'''    <section class="hero scene scene-dark">
+      <div class="hero-copy">
+        <p class="kicker">You are paying for overlapping AI tools.</p>
+        <h1>Find overlapping AI subscriptions — and what to cancel.</h1>
+        <p class="subhead">Run a free Stack Audit on this device. Keep one tool per job. Cancel the rest before renewal.</p>
+        {actions}
+      </div>
+      <div class="hero-device" aria-hidden="true">
+        <div class="device-window">
+          <div class="window-bar"><span></span><span></span><span></span></div>
+          <div class="search-line">Find overlapping subscriptions</div>
+          <div class="result-card active"><b>Keep one</b><span>The seat that does this week&apos;s job</span><em>Free audit</em></div>
+          <div class="result-card"><b>Cut overlap</b><span>Same job, second subscription</span><em>Cancel before renewal</em></div>
+          <div class="result-card"><b>Optional pack</b><span>Keep/cut notes + 48-hour reply</span><em>Premium</em></div>
+        </div>
+      </div>
+    </section>'''
+
+
+def homepage_header_html() -> str:
+    """Slim homepage header. Inner pages keep their own nav."""
+    return (
+        '<header class="global-nav" aria-label="Primary navigation" data-nav="slim">'
+        '<a class="brand" href="/" aria-label="AIToolsEssentials home"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>'
+        '<nav class="nav-links">'
+        '<a href="/stack-audit.html">Stack Audit</a>'
+        '<a href="/premium/">Premium</a>'
+        '<a href="/subscribe/">Subscribe</a>'
+        '<a href="/tools/index.html">Tools</a>'
+        "</nav>"
+        f'<a class="nav-cta" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a>'
+        "</header>"
+    )
+
+
+def homepage_footer_html() -> str:
+    """Short homepage utility footer. Inner pages keep their own footers."""
+    return (
+        '<footer class="footer" data-footer="slim">'
+        "<span>© 2026 AIToolsEssentials</span>"
+        '<a href="/tools/index.html">Tools</a>'
+        '<a href="/pricing-watch/">Pricing Watch</a>'
+        '<a href="/legal/about.html">About</a>'
+        f'<a href="mailto:{EMAIL}">Contact</a>'
+        '<a href="/legal/privacy.html">Privacy</a>'
+        '<a href="/legal/terms.html">Terms</a>'
+        "</footer>"
+    )
+
+
 def homepage_band_html(whop: dict[str, Any]) -> str:
+    """One short Premium line — not a second sales page."""
     price = int(whop["price_usd_month"])
     trial = int(whop["trial_period_days"])
-    promo = esc(whop["promo_code"])
     return f"""<!-- AIT HOMEPAGE PREMIUM BAND START -->
-<section class="scene scene-dark" style="padding:64px 28px">
-<div style="max-width:1040px;margin:0 auto">
-<p class="kicker light">Free first · optional Premium</p>
-<h2 style="font-size:clamp(28px,4vw,42px)">Find the waste for free. Pay only if you want a keep/cut pack before renewals.</h2>
-<p class="subhead">The instant Stack Audit stays free. Premium is optional: dated keep/cut notes, alerts, and a 48-hour written reply in Whop when you want someone to decide with you. ${price}/month — cheaper than one overlapping seat, not another AI subscription.</p>
-<ul style="max-width:740px;margin:20px 0 28px;line-height:1.6">
-<li>Free first: <a href="/stack-audit.html">run the instant Stack Audit</a> or <a href="/subscribe/">subscribe to Keep/Cut Weekly</a>.</li>
-<li>If you want the pack: {trial}-day free trial, then ${price}/month. Code <strong>{promo}</strong> = 50% off the first paid month (new users).</li>
-<li>Cancel in Whop. Research and strategy only — no {not_included_phrase()}. Affiliate status never changes recommendations.</li>
-</ul>
-<p><a class="button button-blue" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a><a class="button button-ghost-dark" href="premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a></p>
-<p class="muted-small">Upgrade checkout · then ${price}/mo · {plain_checkout_link(whop)} · <a href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
-</div></section>
+<section class="scene scene-light home-premium-band">
+<div>
+<p class="kicker light">Optional Premium</p>
+<p>Need a keep/cut pack and a 48-hour written reply before renewals? ${price}/month — cheaper than one overlapping seat, not another AI subscription.</p>
+<p><a class="button button-blue" href="/premium/">{BUY_PAGE_LABEL}</a>
+<a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
+</div>
+</section>
 <!-- AIT HOMEPAGE PREMIUM BAND END -->
 """

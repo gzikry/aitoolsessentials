@@ -523,6 +523,50 @@ def main():
     header = home_html.split('</header>', 1)[0]
     if '/subscribe/' not in header and 'href="subscribe/"' not in header:
         errors.append('Homepage nav must include Subscribe → /subscribe/')
+    if '/stack-audit.html' not in header:
+        errors.append('Homepage nav must include Stack Audit')
+    if '/premium/' not in header and 'href="premium/"' not in header:
+        errors.append('Homepage nav must include Premium')
+    if '/tools/' not in header:
+        errors.append('Homepage nav must include Tools')
+    for junk in ('Cost calc', 'Shortlist', 'Coding quiz', 'Best AI tools', 'Switching'):
+        if junk in header:
+            errors.append(f'Homepage nav still has fat-nav junk: {junk}')
+    main_html = home_html[home_html.find('<main>'): home_html.find('</main>')] if '<main>' in home_html and '</main>' in home_html else ''
+    if 'Three paths' in main_html:
+        errors.append('Homepage still has the Three paths section')
+    if 'Essential categories' in main_html:
+        errors.append('Homepage still has the Essential categories grid')
+    if 'Do not buy a tool because the demo looked clever' in main_html:
+        errors.append('Homepage still has the how-to-choose workflow section')
+    if 'State of AI Tool Pricing' in main_html:
+        errors.append('Homepage still has the State of AI Pricing deep section')
+    if 'AIT LEAD MAGNET' in home_html or 'Print this before you buy another subscription' in main_html:
+        errors.append('Homepage still has the PDF checklist / lead magnet')
+    if 'AIT HOMEPAGE JOB TILES' in home_html:
+        errors.append('Homepage still has the three-paths job tiles')
+    if 'AIT HOMEPAGE CITE STRIP' in home_html:
+        errors.append('Homepage still has the cite-strip mega CTA row')
+    if 'AIT WORKFLOW LIBRARY PROMO' in home_html:
+        errors.append('Homepage still has the workflow library promo')
+    if 'AIT PREMIUM MODULE' in home_html:
+        errors.append('Homepage still has a duplicate Premium closer module')
+    if 'If you sell a tool, submit evidence' in main_html:
+        errors.append('Homepage still has the vendor submit pitch')
+    if home_html.count('AIT HOMEPAGE PREMIUM BAND START') != 1:
+        errors.append('Homepage must have exactly one Premium band')
+    stack_audit_buttons = home_html.count('href="/stack-audit.html">Free Stack Audit')
+    if stack_audit_buttons > 2:
+        errors.append(f'Homepage repeats Free Stack Audit too many times ({stack_audit_buttons})')
+    if 'Find overlapping AI subscriptions' not in hero_html and 'what to cancel' not in hero_html.lower():
+        errors.append('Homepage H1 must be about overlapping subscriptions / what to cancel')
+    if 'pay $12 to stop paying' in home_html.lower():
+        errors.append('Homepage still says pay $12 to stop paying for AI')
+    footer = home_html[home_html.find('<footer'): home_html.find('</footer>')] if '<footer' in home_html else ''
+    if '/pricing-watch/' not in footer:
+        errors.append('Homepage footer must link Pricing Watch')
+    if '/tools/' not in footer:
+        errors.append('Homepage footer must link the Tools directory')
     subscribe_page = ROOT / 'subscribe/index.html'
     if subscribe_page.exists():
         subscribe_html = subscribe_page.read_text()

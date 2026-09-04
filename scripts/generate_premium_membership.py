@@ -21,7 +21,10 @@ from premium_copy import (
     checkout_buttons,
     deliverable_cards_html,
     homepage_band_html,
+    homepage_footer_html,
+    homepage_header_html,
     homepage_hero_actions_html,
+    homepage_hero_html,
     hub_url,
     join_label,
     lanes_note,
@@ -913,20 +916,7 @@ def update_checkout(root: Path) -> None:
 </html>
 '''
     )
-    home = root / "index.html"
-    if home.exists():
-        html = home.read_text()
-        html = html.replace(
-            "<p>Premium membership is being prepared and checkout is not active yet. The public directory stays free; Premium members get the AI Stack Audit as a member deliverable.</p>",
-            "<p>Premium is live: 7-day free trial, then $12/month. Use code <strong>LAUNCH50</strong> for 50% off the first paid month (new users). The public directory stays free. Research and strategy only.</p>",
-        )
-        html = html.replace("See planned Premium", "Start 7-day free trial")
-        html = html.replace('href="pricing/index.html"', f'href="{WHOP_CHECKOUT}" rel="external noopener"')
-        html = html.replace(
-            "<p>Monthly comparison archives, workflow deep-dives, and CSV exports — $12/month via Whop, cancel anytime.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"pricing/\">See pricing</a></div>",
-            "<p>Stack audits, weekly checklists, tool-change alerts, hands-on protocols, and a 67-tool decision matrix. 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">Premium library</a><a class=\"guide-pill\" href=\"pricing/\">Pricing</a><a class=\"guide-pill\" href=\"" + WHOP_CHECKOUT + "\" rel=\"external noopener\">Start free trial</a></div>",
-        )
-        home.write_text(html)
+    # Homepage chrome is owned by enhance_homepage. Do not re-inflate it here.
 
 
 def rewrite_homepage_hero_actions(html: str) -> str:
@@ -961,239 +951,57 @@ def homepage_newsletter_panel(root: Path) -> str:
 <div class="newsletter-actions">
 <a class="button button-dark" href="/subscribe/">Subscribe free</a>
 <a class="button button-dark" href="{signup}" rel="noopener sponsored nofollow">Beehiiv form</a>
-<a class="button button-dark" href="/newsletter/">Read Issue 1</a>
 </div>
 </section>
 <!-- AIT HOMEPAGE NEWSLETTER END -->'''
 
 
+def _homepage_scripts(_html: str) -> str:
+    """Stable script block so a second enhance_homepage pass is a no-diff."""
+    return (
+        '<script src="js/site.js" defer></script>'
+        '<script src="/js/cookie-consent.js" defer></script>'
+        '<script src="js/analytics.js" defer></script>'
+    )
+
+
+def slim_homepage_html(html: str, root: Path) -> str:
+    """Rebuild homepage body to hero + one Premium band + subscribe + slim chrome."""
+    load_whop_from_integrations(root)
+    html = apply_homepage_voice_meta(html, root=root)
+    head_end = html.find("</head>")
+    if head_end == -1:
+        return html
+    head = html[: head_end + len("</head>")]
+    scripts = _homepage_scripts(html)
+    body = (
+        "\n<body>\n  "
+        + homepage_header_html()
+        + "\n\n  <main>\n"
+        + homepage_hero_html(_whop_dict())
+        + "\n"
+        + homepage_band_html(_whop_dict()).rstrip()
+        + "\n"
+        + homepage_newsletter_panel(root)
+        + "\n</main>\n\n"
+        + '  <div id="share-row" hidden></div>\n  '
+        + homepage_footer_html()
+        + "\n"
+        + scripts
+        + "\n</body>\n</html>\n"
+    )
+    return head + body
+
+
 def enhance_homepage(root: Path) -> None:
-    import re
+    """Own the homepage. Daily generators must not restore the fat page."""
     load_whop_from_integrations(root)
     home = root / "index.html"
     if not home.exists():
         return
-    html = home.read_text()
-    voice = [
-        (
-            'content="AIToolsEssentials helps you discover, compare, and operationalize the best AI tools for real work."',
-            'content="See which subscriptions you should keep, which you can cancel, and what to test this week."',
-        ),
-        (
-            "AIToolsEssentials — The essential AI tools directory",
-            "AIToolsEssentials — Stop paying for tools you do not use",
-        ),
-        (
-            '<p class="kicker">AI tools. Curated for outcomes.</p>',
-            '<p class="kicker">You are paying for tools. Which ones earn it?</p>',
-        ),
-        (
-            "<h1>The clean way to choose your AI stack.</h1>",
-            "<h1>See what you actually use — and what you can cancel.</h1>",
-        ),
-        (
-            "<p class=\"subhead\">Discover the tools worth testing, understand where they fit, and turn them into repeatable workflows—not another folder of unused subscriptions.</p>",
-            "<p class=\"subhead\">Pick the tools you will use this week. Then keep one. Cancel the rest before renewal.</p>",
-        ),
-        (
-            'href="stack-builder.html">Generate your AI stack</a>',
-            'href="stack-builder.html">Build a starter list</a>',
-        ),
-        (
-            "<p>Each card is designed to become a living category page with rankings, use cases, pricing notes, and tested workflows.</p>",
-            "<p>Start with the job you do. Then open the category and read the keep / cut note.</p>",
-        ),
-        (
-            "<p>Draft, edit, repurpose, optimize, and publish with better human review loops.</p>",
-            "<p>Draft, edit, and publish — then you decide what stays.</p>",
-        ),
-        (
-            "<h2>Choose tools like products, not toys.</h2>",
-            "<h2>Do not buy a tool because the demo looked clever.</h2>",
-        ),
-        (
-            "<p>A simple operating model for moving from AI curiosity to adopted workflow.</p>",
-            "<p>Write down the job. Test one tool. Keep one.</p>",
-        ),
-        (
-            "<h2>How to choose AI tools without getting buried in hype.</h2>",
-            "<h2>How to choose without getting buried in hype.</h2>",
-        ),
-        (
-            "<h2>More ways to choose the right AI tool.</h2>",
-            "<h2>More ways to choose before you renew.</h2>",
-        ),
-        (
-            "<h2>Get in front of AI tool buyers.</h2>",
-            "<h2>If you sell a tool, submit evidence. Rankings stay unpaid.</h2>",
-        ),
-        (
-            "<h2>Go deeper with the member research layer.</h2>",
-            "<h2>Want dated keep / cut notes before you renew?</h2>",
-        ),
-        (
-            "Paid Premium is the $12/month Whop research membership. Keep/Cut Weekly and the instant Stack Audit stay free.",
-            "Paid Premium is $12/month on Whop. Keep/Cut Weekly and the instant Stack Audit stay free.",
-        ),
-        (
-            "<h2>New: AI tools by job-to-be-done.</h2>",
-            "<h2>Start with the job you do this week.</h2>",
-        ),
-        (
-            "<p>Built for visitors searching for concrete workflows — property manager operations, rental listings, podcast editing, nonprofit grants, consultant admin, and more.</p>",
-            "<p>Property-manager operations, rental listings, podcast editing, nonprofit grants, consultant admin, and more — written for you, not for the tool.</p>",
-        ),
-        (
-            "<h2>Download the AI Stack Decision Checklist</h2>",
-            "<h2>Print this before you buy another subscription.</h2>",
-        ),
-        (
-            '<a href="/subscribe/">Subscribe</a>',
-            '<a href="/subscribe/">Free email</a>',
-        ),
-        (
-            '<a class="nav-cta" href="premium/">Premium</a>',
-            '<a class="nav-cta" href="premium/">Paid Premium</a>',
-        ),
-    ]
-    for old, new in voice:
-        html = html.replace(old, new)
-    html = re.sub(
-        r'<a class="nav-cta" href="[^"]*legal/affiliate-disclosure\.html">Disclosure</a>',
-        '<a class="nav-cta" href="premium/">Paid Premium</a>',
-        html,
-        count=1,
-    )
-    header_end = html.find("</header>")
-    header = html[:header_end] if header_end != -1 else html[:4000]
-    if 'href="premium/"' not in header and 'href="/premium/"' not in header:
-        html = html.replace("</nav>", '<a href="premium/">Paid Premium</a></nav>', 1)
-    if "subscribe/" not in header and "/subscribe/" not in header:
-        html = html.replace("</nav>", '<a href="/subscribe/">Free email</a></nav>', 1)
-        header_end = html.find("</header>")
-        header = html[:header_end] if header_end != -1 else header
-    html = re.sub(
-        r'<a class="button button-ghost-dark" href="[^"]*(?:newsletter/|subscribe/)">Free newsletter</a>',
-        '<a class="button button-ghost-dark" href="/subscribe/">Free weekly email</a>',
-        html,
-        count=1,
-    )
-    newsletter = homepage_newsletter_panel(root)
-    if "AIT HOMEPAGE NEWSLETTER START" in html:
-        html = re.sub(
-            r"<!-- AIT HOMEPAGE NEWSLETTER START -->.*?<!-- AIT HOMEPAGE NEWSLETTER END -->",
-            newsletter.strip(),
-            html,
-            count=1,
-            flags=re.S,
-        )
-    elif re.search(r'<section[^>]*id="subscribe"', html):
-        html = re.sub(
-            r'<section[^>]*id="subscribe"[^>]*>.*?</section>',
-            newsletter,
-            html,
-            count=1,
-            flags=re.S,
-        )
-    else:
-        html = html.replace("</main>", newsletter + "\n</main>", 1)
-    html = rewrite_homepage_hero_actions(html)
-    html = html.replace(
-        '<p>Keep one tool per weekly job. Cut the rest before renewal.</p><p><a class="button button-blue" href="articles/how-to-cut-ai-tool-subscriptions.html">Cut overlapping tools</a></p>',
-        '<p>Keep one tool per weekly job. Cut the rest before renewal. Start with the free instant scorecard.</p><p><a class="button button-blue" href="/stack-audit.html">Free Stack Audit</a></p>',
-    )
-    band = homepage_band_html(_whop_dict())
-    if "AIT HOMEPAGE PREMIUM BAND START" in html:
-        html = re.sub(
-            r"<!-- AIT HOMEPAGE PREMIUM BAND START -->.*?<!-- AIT HOMEPAGE PREMIUM BAND END -->",
-            band.strip(),
-            html,
-            count=1,
-            flags=re.S,
-        )
-    else:
-        intro = re.search(r'(<section class="scene scene-light intro-strip">.*?</section>)', html, flags=re.S)
-        if intro:
-            html = html.replace(intro.group(1), intro.group(1) + "\n" + band, 1)
-        elif "<main>" in html:
-            html = html.replace("<main>", "<main>\n" + band, 1)
-    html = re.sub(
-        r'<section class="scene scene-light guide-strip"><div><p class="kicker light">Premium</p><h2>Want dated keep / cut notes before you renew\?</h2><p>.*?</p><div class="guide-pill-grid">.*?</div></div></section>',
-        '<section class="scene scene-light guide-strip"><div><p class="kicker light">Premium</p><h2>Want dated keep / cut notes before you renew?</h2><p>Find the waste with the free Stack Audit. Premium is an optional keep/cut pack — cheaper than one overlapping seat, not another AI subscription.</p><div class="guide-pill-grid"><a class="guide-pill" href="premium/">See Premium keep/cut pack</a><a class="guide-pill" href="pricing/">Free vs paid</a></div></div></section>',
-        html,
-        count=1,
-        flags=re.S,
-    )
-    html = html.replace(
-        "<p>Stack audits, weekly checklists, tool-change alerts, hands-on protocols, and a 67-tool decision matrix. 7-day free trial, then $12/month. Code LAUNCH50 for 50% off the first paid month.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">Premium library</a><a class=\"guide-pill\" href=\"pricing/\">Pricing</a><a class=\"guide-pill\" href=\""
-        + WHOP_CHECKOUT
-        + "\" rel=\"external noopener\">Start free trial</a></div>",
-        "<p>Find the waste with the free Stack Audit. Premium is an optional keep/cut pack — cheaper than one overlapping seat.</p><div class=\"guide-pill-grid\"><a class=\"guide-pill\" href=\"premium/\">See Premium keep/cut pack</a><a class=\"guide-pill\" href=\"pricing/\">Free vs paid</a></div>",
-    )
-    html = html.replace(
-        '<a class="guide-pill" href="premium/library/">Member library</a>',
-        '<a class="guide-pill" href="premium/">See Premium keep/cut pack</a>',
-    )
-    html = html.replace(
-        '<a class="guide-pill" href="/premium/library/">Member library</a>',
-        '<a class="guide-pill" href="/premium/">See Premium keep/cut pack</a>',
-    )
-    html = html.replace(
-        '<a class="guide-pill" href="premium/">See what $12 buys</a>',
-        '<a class="guide-pill" href="premium/">See Premium keep/cut pack</a>',
-    )
-    html = html.replace(
-        '<a class="guide-pill" href="/premium/">See what $12 buys</a>',
-        '<a class="guide-pill" href="/premium/">See Premium keep/cut pack</a>',
-    )
-    cite = '''<!-- AIT HOMEPAGE CITE STRIP START -->
-<section class="scene scene-light" style="padding:40px 28px 8px">
-<div style="max-width:1040px;margin:0 auto;text-align:center">
-<p class="kicker light">Cite and verify</p>
-<h2>Source pages, not a homepage screenshot.</h2>
-<p class="subhead">Use dated pricing, keep/cut notes, and the public evidence rules. No invented traffic or rankings.</p>
-<p><a class="button button-blue" href="/pricing-watch/">Pricing Watch</a>
-<a class="button button-ghost-dark" href="/stack-audit.html" style="margin-left:8px">Free Stack Audit</a>
-<a class="button button-ghost-dark" href="/newsletter/" style="margin-left:8px">Keep/Cut Weekly</a>
-<a class="button button-ghost-dark" href="/press/" style="margin-left:8px">Press / cite us</a>
-<a class="button button-ghost-dark" href="/evidence/" style="margin-left:8px">Evidence ledger</a>
-<a class="button button-ghost-dark" href="/methodology/" style="margin-left:8px">Methodology</a></p>
-</div></section>
-<!-- AIT HOMEPAGE CITE STRIP END -->
-'''
-    if "AIT HOMEPAGE CITE STRIP START" in html:
-        html = re.sub(
-            r"<!-- AIT HOMEPAGE CITE STRIP START -->.*?<!-- AIT HOMEPAGE CITE STRIP END -->",
-            cite.strip(),
-            html,
-            count=1,
-            flags=re.S,
-        )
-    else:
-        if "AIT HOMEPAGE JOB TILES END" in html:
-            html = html.replace("<!-- AIT HOMEPAGE JOB TILES END -->", "<!-- AIT HOMEPAGE JOB TILES END -->\n" + cite, 1)
-        elif "AIT HOMEPAGE PREMIUM BAND END" in html:
-            html = html.replace("<!-- AIT HOMEPAGE PREMIUM BAND END -->", "<!-- AIT HOMEPAGE PREMIUM BAND END -->\n" + cite, 1)
-    if "AIT HOMEPAGE JOB TILES START" not in html:
-        tiles = '''<!-- AIT HOMEPAGE JOB TILES START -->
-<section class="scene scene-light product-grid-section" style="padding:56px 28px">
-<div class="section-title"><p class="kicker light">Start with the job</p><h2>Three paths. Pick one.</h2></div>
-<div class="product-grid" style="max-width:1040px;margin:0 auto">
-<article class="product-tile"><div class="tile-text"><p class="eyebrow">Overlap</p><h3>I am paying for too many AI tools</h3><p>Keep one tool per weekly job. Cut the rest before renewal.</p><p><a class="button button-blue" href="articles/how-to-cut-ai-tool-subscriptions.html">Cut overlapping tools</a></p></div></article>
-<article class="product-tile"><div class="tile-text"><p class="eyebrow">First paid seat</p><h3>I need my first paid AI tool</h3><p>Start free. Upgrade only after a real-task limit hits more than once a week.</p><p><a class="button button-blue" href="articles/best-ai-tools-for-beginners.html">Beginner stack</a></p></div></article>
-<article class="product-tile"><div class="tile-text"><p class="eyebrow">Renewal</p><h3>I need to cancel before I am charged</h3><p>Export, test a replacement on one real job, then cancel 48 hours early.</p><p><a class="button button-blue" href="articles/how-to-cancel-ai-tools-before-renewal.html">Cancel before renewal</a></p></div></article>
-</div>
-<p style="text-align:center;margin-top:24px"><a href="start-here/">More start-here paths</a> · <a href="subscribe/">Free keep/cut digest</a> · <a href="updates/">What changed this month</a></p>
-</section>
-<!-- AIT HOMEPAGE JOB TILES END -->
-'''
-        if "AIT HOMEPAGE PREMIUM BAND END" in html:
-            html = html.replace("<!-- AIT HOMEPAGE PREMIUM BAND END -->", "<!-- AIT HOMEPAGE PREMIUM BAND END -->\n" + tiles, 1)
-        else:
-            intro = re.search(r'(<section class="scene scene-light intro-strip">.*?</section>)', html, flags=re.S)
-            if intro:
-                html = html.replace(intro.group(1), intro.group(1) + "\n" + tiles, 1)
-    html = apply_homepage_voice_meta(html, root=root)
+    html = slim_homepage_html(home.read_text(), root)
+    if not html.endswith("\n"):
+        html += "\n"
     home.write_text(html)
 
 
@@ -1227,7 +1035,6 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         'pricing-index/index.html',
         'weekly/index.html',
         'start-here/index.html',
-        'index.html',
     ]
     dynamic_targets = []
     dynamic_targets.extend(str(p.relative_to(root)) for p in sorted((root / 'tools').glob('*/index.html')))
