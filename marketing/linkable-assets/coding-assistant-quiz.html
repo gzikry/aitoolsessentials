@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><meta name="google-site-verification" content="OzzGs2QF4v6zSBd9uO95NGgSPH5B598E6DPtcjRNn_4"><meta name="impact-site-verification" content="972313e6-cecc-47f0-aea2-c99b4364ee09">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Which coding assistant should you keep? — AIToolsEssentials</title>
@@ -25,6 +25,15 @@ h1 { font-size: 28px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8p
 .badge { display: inline-block; padding: 4px 10px; background: #eef0ff; color: #3d46a8; border-radius: 999px; font-size: 12px; font-weight: 700; margin-bottom: 12px; }
 .source { font-size: 12px; color: #888; margin-top: 16px; }
 </style>
+<link rel="stylesheet" href="../../css/share.css">
+<meta property="og:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg">
+<!-- AIT STRUCTURED DATA START -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aitoolsessentials.com/"},{"@type":"ListItem","position":2,"name":"Marketing","item":"https://aitoolsessentials.com/marketing/"},{"@type":"ListItem","position":3,"name":"Linkable Assets","item":"https://aitoolsessentials.com/marketing/linkable-assets/"},{"@type":"ListItem","position":4,"name":"Which coding assistant should you keep?","item":"https://aitoolsessentials.com/marketing/linkable-assets/coding-assistant-quiz"}]}</script>
+<!-- AIT STRUCTURED DATA END -->
+<!-- AIT DISCOVERY LINKS --><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>
+<!-- AIT KNOWLEDGE SCHEMA START -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aitoolsessentials.com/#organization","name":"AIToolsEssentials","url":"https://aitoolsessentials.com","email":"contact@aitoolsessentials.com","logo":"https://aitoolsessentials.com/assets/aitools-bot-mark.svg"},{"@type":"WebSite","@id":"https://aitoolsessentials.com/#website","url":"https://aitoolsessentials.com","name":"AIToolsEssentials","publisher":{"@id":"https://aitoolsessentials.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://aitoolsessentials.com/tools/index.html?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
+<!-- AIT KNOWLEDGE SCHEMA END -->
 </head>
 <body>
 <div class="container">
@@ -32,7 +41,7 @@ h1 { font-size: 28px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8p
     <span class="badge">Interactive Quiz</span>
     <h1>Which coding assistant should you keep?</h1>
     <p class="subhead">Answer 3 questions. Get a keep/cut verdict for your stack.</p>
-    
+
     <div id="quiz">
       <div class="question" id="q1">1. What's your primary coding workflow?</div>
       <div class="options" id="opts1">
@@ -40,14 +49,14 @@ h1 { font-size: 28px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8p
         <div class="option" data-val="agent">Terminal agent — I want Claude Code / Codex</div>
         <div class="option" data-val="native">AI-native editor — I want Cursor / Windsurf</div>
       </div>
-      
+
       <div class="question" id="q2" style="display:none;margin-top:24px;">2. How many hours/week do you code?</div>
       <div class="options" id="opts2" style="display:none;">
         <div class="option" data-val="light">Under 10 hours — occasional coding</div>
         <div class="option" data-val="medium">10-30 hours — regular development</div>
         <div class="option" data-val="heavy">30+ hours — full-time coding</div>
       </div>
-      
+
       <div class="question" id="q3" style="display:none;margin-top:24px;">3. What's your monthly AI tool budget?</div>
       <div class="options" id="opts3" style="display:none;">
         <div class="option" data-val="tight">Under $30/month</div>
@@ -55,15 +64,15 @@ h1 { font-size: 28px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8p
         <div class="option" data-val="flexible">$100+/month</div>
       </div>
     </div>
-    
+
     <div class="result" id="result">
       <h3 id="verdict"></h3>
       <p id="explanation"></p>
       <p><strong>Estimated savings:</strong> <span id="savings"></span></p>
-      <a class="cta" href="https://aitoolsessentials.com/stack-audit.html" target="_blank">Run the free full audit →</a>
+      <a class="cta" href="https://aitoolsessentials.com/stack-audit.html" target="_blank" rel="sponsored nofollow">Run the free full audit →</a>
     </div>
   </div>
-  <p class="source">Built by <a href="https://aitoolsessentials.com" target="_blank">AIToolsEssentials</a> · Verified pricing from official pages · <a href="https://aitoolsessentials.com/stack-audit.html" target="_blank">Free Stack Audit</a></p>
+  <p class="source">Built by <a href="https://aitoolsessentials.com" target="_blank" rel="sponsored nofollow">AIToolsEssentials</a> · Verified pricing from official pages · <a href="https://aitoolsessentials.com/stack-audit.html" target="_blank" rel="sponsored nofollow">Free Stack Audit</a></p>
 </div>
 <script>
 const q1 = document.getElementById('q1');
@@ -81,12 +90,12 @@ let answers = {};
 
 function handleSelect(qNum, val, text) {
   answers[qNum] = val;
-  
+
   // Clear other selections in this group
   const parent = document.getElementById('opts' + qNum);
   parent.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
   event.target.classList.add('selected');
-  
+
   // Show next question or result
   if (qNum === 1) {
     q2.style.display = 'block';
@@ -103,9 +112,9 @@ function showResult() {
   const workflow = answers[1];
   const hours = answers[2];
   const budget = answers[3];
-  
+
   let v, e, s;
-  
+
   if (workflow === 'vscode') {
     v = "Keep Copilot Pro ($10/month)";
     e = "If you're primarily in VS Code or JetBrains and want better completions without switching editors, Copilot Pro does the job. You likely don't need Cursor on top of it.";
@@ -119,17 +128,17 @@ function showResult() {
     e = "If you want an AI-native editor with multi-file context and agent modes, Cursor is the clear choice. Copilot becomes redundant — Cursor's completions cover the same ground.";
     s = "$10-$100/month (drop Copilot Pro, drop Claude Max if not doing terminal agents)";
   }
-  
+
   if (budget === 'tight') {
     e += " Given your budget, pick one tool per job and cancel the rest.";
   } else if (budget === 'flexible') {
     e += " With your budget, you could keep 2 tools if they serve meaningfully different jobs — but only if you use both weekly.";
   }
-  
+
   verdict.textContent = v;
   explanation.textContent = e;
   savings.textContent = s;
-  
+
   document.getElementById('quiz').style.display = 'none';
   result.classList.add('show');
 }
@@ -139,5 +148,6 @@ opts1.querySelectorAll('.option').forEach(o => o.addEventListener('click', () =>
 opts2.querySelectorAll('.option').forEach(o => o.addEventListener('click', () => handleSelect(2, o.dataset.val)));
 opts3.querySelectorAll('.option').forEach(o => o.addEventListener('click', () => handleSelect(3, o.dataset.val)));
 </script>
+<script src="../../js/site.js"></script><script src="/js/cookie-consent.js" defer"></script><script src="/js/cookie-consent.js" defer" defer></script>
 </body>
 </html>

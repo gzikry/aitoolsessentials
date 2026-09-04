@@ -1269,3 +1269,39 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--blue-light); o
   gap: 12px;
   flex-wrap: wrap;
 }
+
+/* Cookie consent banner */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  border-top: 1px solid #e8e8ed;
+  padding: 16px 24px;
+  box-shadow: 0 -8px 30px rgba(0,0,0,.12);
+}
+.cookie-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cookie-text {
+  color: #5c6070;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cookie-text a {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
