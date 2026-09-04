@@ -14,12 +14,16 @@ from pathlib import Path
 from typing import Any
 
 from premium_copy import (
+    DEFAULT_HUB_URL,
+    WELCOME_PATH,
     checkout_buttons,
     esc,
     join_label,
     lanes_note,
     premium_nav_header,
     preview_access_note,
+    preview_vs_paid_note,
+    primary_checkout_url,
 )
 
 DOMAIN = "https://aitoolsessentials.com"
@@ -38,7 +42,7 @@ def load_whop(root: Path) -> dict[str, Any]:
         "promo_code": cfg.get("promo_code") or "LAUNCH50",
         "trial_period_days": int(cfg.get("trial_period_days") or 7),
         "price_usd_month": int(cfg.get("price_usd_month") or 12),
-        "hub_url": "https://whop.com/hub",
+        "hub_url": cfg.get("hub_url") or DEFAULT_HUB_URL,
     }
 
 
@@ -169,16 +173,17 @@ def generate_hub(root: Path, tools: list[dict[str, Any]], today: str, whop: dict
         f"What you buy for ${whop['price_usd_month']}/month is delivered in Whop. "
         "Keep/Cut Weekly and the instant Stack Audit stay free."
     )
-    page = f'''<!doctype html><html lang="en">{head("Premium preview — see the format", desc, DOMAIN + "/premium/library/")}
+    page = f'''<!doctype html><html lang="en">{head("Public Premium preview — see the format", desc, DOMAIN + "/premium/library/")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
-<p class="kicker light">Public preview · not gated</p>
-<h1>This is a preview of the Premium format.</h1>
-<p class="subhead">You can read these pages without paying. This site cannot hide them. If you join Premium for ${whop["price_usd_month"]}/month, you get the dated pack, alerts, written keep/cut reply, and priority research slots inside Whop — not a login on this site.</p>
+<p class="kicker light">Public Premium preview · not gated</p>
+<h1>Public Premium preview.</h1>
+<p class="subhead">Preview = format only. Paid in Whop = dated pack, alerts, written keep/cut reply, priority research slots. You can read these pages without paying. This site cannot hide them.</p>
 {lanes_note()}
 <p>{checkout_buttons(whop, buy_page=True, free_audit=True)}</p>
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
+{preview_vs_paid_note()}
 {access_note(whop)}
 <h2>Preview pages · generated {esc(today)}</h2>
 <div class="content-hub-grid">{grid}</div>
@@ -531,16 +536,16 @@ def generate_access(root: Path, today: str, whop: dict[str, Any]) -> None:
 <div class="content-hub-grid">
 <article class="content-hub-card"><span>Free</span><h3>Keep/Cut Weekly</h3><p>Beehiiv email. No Whop charge.</p><p><a href="/subscribe/">Subscribe free</a></p></article>
 <article class="content-hub-card"><span>Free</span><h3>Stack Audit</h3><p>Instant scorecard. Stays on your device.</p><p><a href="/stack-audit.html">Run it free</a></p></article>
-<article class="content-hub-card"><span>Paid</span><h3>Premium on Whop</h3><p>{whop["trial_period_days"]}-day trial, then ${whop["price_usd_month"]}/month. Code {esc(whop["promo_code"])} for 50% off the first paid month (new users).</p><p><a href="{esc(whop["checkout_url"])}" rel="external noopener">{esc(join_label(whop["price_usd_month"]))}</a></p></article>
+<article class="content-hub-card"><span>Paid</span><h3>Premium on Whop</h3><p>{whop["trial_period_days"]}-day trial, then ${whop["price_usd_month"]}/month. Code {esc(whop["promo_code"])} for 50% off the first paid month (new users).</p><p><a href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(whop["price_usd_month"], trial_days=int(whop["trial_period_days"]), promo=str(whop["promo_code"])))}</a></p></article>
 </div>
 <ol>
 <li>Open the Whop checkout for <strong>AIToolsEssentials Premium</strong>. Product page: <a href="{esc(whop["product_url"])}" rel="external noopener">{esc(whop["product_url"])}</a>.</li>
 <li>Complete the {whop["trial_period_days"]}-day trial or apply <strong>{esc(whop["promo_code"])}</strong> on the first paid month if you are a new user.</li>
-<li>Open <a href="{esc(whop["hub_url"])}" rel="external noopener">whop.com/hub</a> with that email. That is where the monthly pack, alerts, written reply, and request thread are delivered.</li>
+<li>Open the <a href="{esc(whop["hub_url"])}" rel="external noopener">AIToolsEssentials Premium hub</a> with that email. That is where the monthly pack, alerts, written reply, and request thread are delivered.</li>
 <li>Use these public preview pages to see the format. There is no login cookie on aitoolsessentials.com that unlocks extra HTML.</li>
 <li>Cancel from your Whop account. All sales are final — no refunds. Research and strategy only.</li>
 </ol>
-<p>Return URL after checkout: <a href="/checkout/complete/">/checkout/complete/</a>. That page cannot verify a charge by itself. Trust the Whop receipt.</p>
+<p>After checkout, Whop returns you to <a href="{WELCOME_PATH}">{WELCOME_PATH}</a>. This site cannot verify a charge. Trust the Whop receipt, then open the Premium hub.</p>
 <p>Generated {esc(today)}. Plan id used on site buttons: <code>{esc(whop["plan_id"])}</code> (existing, not newly invented).</p>
 </div></section>
 </main>{footer()}{scripts()}</body></html>'''

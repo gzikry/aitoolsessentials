@@ -8,6 +8,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+from premium_copy import BUY_PAGE_LABEL, post_audit_upgrade_html
 from stack_audit_lib import build_catalog, catalog_index
 
 DOMAIN = "https://aitoolsessentials.com"
@@ -107,8 +108,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     <h1>See what you actually pay for.</h1>
     <p class="subhead">This is the free instant scorecard — not Keep/Cut Weekly and not paid Premium. Pick the tools you already use. Enter what you pay — or mark spend unknown. See keep/cut advice, tools that do the same job, and how efficiently you spend. Affiliate status never changes the result.</p>
     <p><a class="button button-blue" href="#sa-app">Start the free audit</a>
-       <a class="button button-ghost-dark" href="/stack-builder.html" style="margin-left:8px">Need a starter stack instead?</a>
-       <a class="button button-ghost-dark" href="/premium/" style="margin-left:8px">See what $12 buys</a></p>
+       <a class="button button-ghost-dark" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a></p>
   </div>
 </section>
 <section class="scene scene-light content-hub" id="sa-app">
@@ -172,19 +172,13 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
           <button class="button button-dark" type="button" id="sa-load-local">Load local save</button>
         </div>
       </section>
-      <section class="score-card sa-premium-upsell">
-        <span>Included with Premium</span>
-        <h3>Want the full replacement plan?</h3>
-        <p>Premium gets you a step-by-step replacement sequence: what to switch to, migration steps, a 30-day roadmap, and a branded strategy PDF you can hand to your team. Plus weekly checklists, tool-change alerts, and a 67-tool decision matrix.</p>
-        <p><a class="button button-blue" data-sa-cta href="/premium/">See what $12 buys</a> <a class="button button-ghost-dark" data-sa-cta href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener">Start 7-day free trial</a></p>
-        <p class="sa-note">7-day free trial, then $12/month. Code <strong>LAUNCH50</strong> for 50% off the first paid month. Cancel anytime. Research and strategy only — no implementation or account access.</p>
-      </section>
+      {post_audit_upgrade_html()}
       <div id="sa-premium-panel"></div>
       <div class="sa-actions">
         <button class="button button-dark" type="button" id="sa-back-2">Edit answers</button>
         <button class="button button-blue" type="button" id="sa-restart">Start over</button>
         <a class="button button-ghost-dark" data-sa-cta href="/newsletter/">Free Keep/Cut Weekly</a>
-        <a class="button button-ghost-dark" data-sa-cta href="/premium/">See what $12 buys</a>
+        <a class="button button-ghost-dark" data-sa-cta href="/premium/">{BUY_PAGE_LABEL}</a>
       </div>
     </section>
   </div>

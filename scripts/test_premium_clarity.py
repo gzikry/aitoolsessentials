@@ -9,7 +9,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 WHOP = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/"
+WHOP_PROMO = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50"
 PRODUCT = "https://whop.com/aitoolsessentials/aitoolsessentials-premium/"
+HUB = "https://whop.com/joined/aitoolsessentials-premium/"
+JOIN_LABEL = "Join Premium on Whop — 7-day trial · LAUNCH50"
 
 
 def main() -> None:
@@ -25,23 +28,52 @@ def main() -> None:
         errors.append("Do not invent a new Whop plan id")
 
     home = (ROOT / "index.html").read_text()
-    if WHOP not in home:
-        errors.append("Homepage missing existing Whop Premium checkout")
-    if "Join Premium on Whop ($12/mo)" not in home:
-        errors.append("Homepage paid CTA is not labeled Join Premium on Whop ($12/mo)")
+    if WHOP_PROMO not in home:
+        errors.append("Homepage missing LAUNCH50 promo checkout on the upgrade path")
+    if "$12" not in home:
+        errors.append("Homepage must keep $12/mo visible near Premium upgrade copy")
+    if home.count(JOIN_LABEL) > 2:
+        errors.append("Homepage repeats Join more than mid-page upgrade + footer")
     subscribe = home[home.find('id="subscribe"'): home.find('id="subscribe"') + 1200]
-    if WHOP in subscribe:
+    if WHOP in subscribe or WHOP_PROMO in subscribe:
         errors.append("Homepage #subscribe still contains Whop checkout")
+    hero = home[home.find('class="hero '): home.find("hero-device")]
+    if 'href="/stack-audit.html">Free Stack Audit</a>' not in hero and 'href="/stack-audit.html">Free Stack Audit' not in hero:
+        errors.append("Homepage hero primary CTA must be Free Stack Audit")
+    if "Join Premium" in hero:
+        errors.append("Homepage hero must not sell Join Premium as a primary CTA")
+    if '<a class="button' in hero and "Build a starter list" in hero:
+        starter = hero.find("Build a starter list")
+        if starter != -1 and '<a class="button' in hero[max(0, starter - 80): starter]:
+            errors.append("Homepage hero still promotes Build a starter list as a primary button")
+    if "pay $12 to stop paying" in home.lower() or "Premium is $12/month to decide which ones to keep" in home:
+        errors.append("Homepage still sells Premium as pay $12 to stop paying for AI")
 
     checkout = (ROOT / "checkout/complete/index.html").read_text()
-    if "Payment confirmed" in checkout:
-        errors.append("Checkout complete still claims Payment confirmed")
-    if "If Whop shows payment succeeded" not in checkout:
+    if "Payment confirmed" in checkout or "You're in" in checkout:
+        errors.append("Checkout complete still claims payment confirmation")
+    if 'http-equiv="refresh"' not in checkout or "/premium/welcome/" not in checkout:
+        errors.append("Checkout complete must redirect to /premium/welcome/")
+    if "cannot verify a charge" not in checkout.lower() and "If Whop shows payment succeeded" not in checkout:
         errors.append("Checkout complete missing honest Whop wording")
 
+    welcome = (ROOT / "premium/welcome/index.html").read_text()
+    if HUB not in welcome:
+        errors.append("Welcome page missing product hub deep link")
+    if "https://whop.com/hub\"" in welcome or "https://whop.com/hub'" in welcome:
+        errors.append("Welcome page still uses generic whop.com/hub")
+    if "cannot verify a charge" not in welcome.lower():
+        errors.append("Welcome page must say this page cannot verify a charge")
+
     stack = (ROOT / "stack-audit.html").read_text()
-    if "paid Premium" not in stack.lower() and "Paid Premium" not in stack and "See what $12 buys" not in stack:
+    if "paid Premium" not in stack.lower() and "Paid Premium" not in stack and "keep/cut pack" not in stack.lower() and "See Premium keep/cut pack" not in stack:
         errors.append("Free Stack Audit page must label paid Premium separately")
+    if WHOP_PROMO not in stack:
+        errors.append("Stack Audit post-result upgrade must use the LAUNCH50 checkout")
+    if "You could save" in stack:
+        errors.append("Stack Audit must not invent savings in the Premium upgrade CTA")
+    if "200 audit" in stack.lower():
+        errors.append("Do not invent audit-count metrics")
     if "Keep/Cut Weekly" not in stack:
         errors.append("Free Stack Audit page must label the free newsletter")
 
@@ -65,8 +97,16 @@ def main() -> None:
         errors.append("Research brief must use dated digest tools, not invented ones")
 
     library_hub = (library / "index.html").read_text()
+    if "public premium preview" not in library_hub.lower():
+        errors.append("Library hub must be labeled Public Premium preview")
     if "public preview" not in library_hub.lower() and "not gated" not in library_hub.lower():
         errors.append("Library hub must say it is a public preview / not gated")
+    if "format only" not in library_hub.lower():
+        errors.append("Library hub must contrast preview format vs paid Whop pack")
+    if HUB not in library_hub and HUB not in (library / "how-to-access.html").read_text():
+        errors.append("Library must use the product hub deep link")
+    if WHOP_PROMO not in library_hub:
+        errors.append("Library hub missing LAUNCH50 promo checkout")
     if "delivered in Whop" not in library_hub and "delivered in Whop" not in library_hub.replace("\n", " "):
         if "lives in Whop" not in library_hub and "inside Whop" not in library_hub:
             errors.append("Library hub must say Premium is delivered in Whop")
@@ -78,14 +118,22 @@ def main() -> None:
     access = (library / "how-to-access.html").read_text()
     if "George" in access:
         errors.append("how-to-access.html must not name George")
+    if HUB not in access:
+        errors.append("how-to-access.html missing product hub deep link")
+    if "/premium/welcome/" not in access:
+        errors.append("how-to-access.html must point post-purchase to /premium/welcome/")
+    if "You're in" in access or "Payment confirmed" in access:
+        errors.append("how-to-access.html has confirmation tone")
 
     pricing = (ROOT / "pricing/index.html").read_text()
     if "Instant Stack Audit" not in pricing and "free instant" not in pricing.lower():
         errors.append("Pricing must show the free Stack Audit lane")
-    if "Join Premium on Whop ($12/mo)" not in pricing:
+    if JOIN_LABEL not in pricing:
         errors.append("Pricing missing labeled Premium checkout")
     if "not a second product" not in pricing.lower() and "not a second paid" not in pricing.lower():
         errors.append("Pricing must say the written reply is not a second product")
+    if WHOP_PROMO not in pricing:
+        errors.append("Pricing missing LAUNCH50 promo checkout URL")
     if WHOP not in pricing:
         errors.append("Pricing missing existing Whop checkout URL")
 
@@ -115,12 +163,28 @@ def main() -> None:
     ):
         if heading not in premium:
             errors.append(f"premium/index.html missing heading {heading!r}")
-    if "You are paying for overlapping AI tools" not in premium:
-        errors.append("premium/index.html must lead with overlapping-tool money pain")
-    if "Join Premium on Whop ($12/mo)" not in premium:
+    if "The free audit finds the waste" not in premium:
+        errors.append("premium/index.html must lead with Path A: free audit finds waste")
+    if "cheaper than one overlapping seat" not in premium.lower():
+        errors.append("premium/index.html must use one-time-feeling value, not another AI subscription")
+    if "Premium is $12/month to decide which ones to keep" in premium:
+        errors.append("premium/index.html still sells pay $12 to stop paying")
+    if JOIN_LABEL not in premium:
         errors.append("premium/index.html missing labeled Premium checkout")
+    if WHOP_PROMO not in premium:
+        errors.append("premium/index.html missing LAUNCH50 promo checkout")
     if "George" in premium:
         errors.append("premium/index.html must not name George")
+
+    faq = (ROOT / "premium/faq.html").read_text()
+    if HUB not in faq:
+        errors.append("premium/faq.html missing product hub deep link")
+    if "/premium/welcome/" not in faq:
+        errors.append("premium/faq.html must point post-purchase to welcome")
+    if "You're in" in faq or "Payment confirmed" in faq:
+        errors.append("premium/faq.html has confirmation tone")
+    if JOIN_LABEL not in faq:
+        errors.append("premium/faq.html missing labeled Premium checkout")
 
     banned = [
         "operationalize the best AI tools",
@@ -135,6 +199,8 @@ def main() -> None:
         "This is the $12/month Whop membership library",
         "curated for outcomes",
         "member library as product",
+        "Premium is $12/month to decide which ones to keep",
+        "pay $12 to stop paying",
     ]
     priority = [
         ROOT / "index.html",

@@ -254,8 +254,12 @@ def main():
         page = (ROOT / 'stack-audit.html').read_text() if (ROOT / 'stack-audit.html').exists() else ''
         if 'sa-premium-upsell' not in page:
             errors.append('Stack Audit page missing Premium upsell section')
-        if 'Detailed replacement plan' not in page and 'replacement plan' not in page:
-            errors.append('Stack Audit page missing replacement plan section')
+        if 'keep/cut pack' not in page.lower() and 'written reply' not in page.lower():
+            errors.append('Stack Audit page missing Path A keep/cut pack upgrade')
+        if '?promo=LAUNCH50' not in page:
+            errors.append('Stack Audit upgrade CTA must use the LAUNCH50 checkout')
+        if 'You could save' in page:
+            errors.append('Stack Audit must not invent savings in the Premium CTA')
         if 'Never changes' not in page and 'never changes' not in page:
             errors.append('Stack Audit page missing affiliate/sponsor editorial policy')
     comparison_hub = ROOT/'comparisons/index.html'
@@ -428,8 +432,15 @@ def main():
             errors.append('Homepage #subscribe must be labeled as the free Keep/Cut Weekly email')
         if 'join premium on whop' in subscribe_block.lower() or 'start 7-day' in subscribe_block.lower():
             errors.append('Homepage #subscribe must not look like the paid Premium CTA')
-    if 'Join Premium on Whop ($12/mo)' not in home_html:
-        errors.append('Homepage must label the paid Whop CTA as Join Premium on Whop ($12/mo)')
+    if 'Join Premium on Whop — 7-day trial · LAUNCH50' not in home_html:
+        errors.append('Homepage must keep a labeled LAUNCH50 upgrade CTA (not as the hero primary)')
+    if 'https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50' not in home_html:
+        errors.append('Homepage upgrade checkout must use the LAUNCH50 promo URL')
+    hero_html = home_html[home_html.find('class="hero '): home_html.find('hero-device')] if 'class="hero ' in home_html and 'hero-device' in home_html else ''
+    if 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
+        errors.append('Homepage hero primary CTA must be Free Stack Audit')
+    if 'Join Premium' in hero_html:
+        errors.append('Homepage hero must not lead with Join Premium')
     if '/stack-audit.html' not in home_html:
         errors.append('Homepage must link the free Stack Audit')
     home_head = home_html.split('</head>', 1)[0]
@@ -460,13 +471,26 @@ def main():
     checkout_html = (ROOT / 'checkout/complete/index.html').read_text()
     if 'Payment confirmed' in checkout_html:
         errors.append('checkout/complete must not claim Payment confirmed from a client query')
-    if 'If Whop shows payment succeeded' not in checkout_html:
+    if '/premium/welcome/' not in checkout_html:
+        errors.append('checkout/complete must redirect to /premium/welcome/')
+    if 'http-equiv="refresh"' not in checkout_html:
+        errors.append('checkout/complete must use a JS-free meta refresh')
+    if 'cannot verify a charge' not in checkout_html.lower() and 'If Whop shows payment succeeded' not in checkout_html:
         errors.append('checkout/complete must be honest that Whop is the source of truth')
+    if "You're in" in checkout_html:
+        errors.append('checkout/complete must not use confirmation tone')
+    welcome_html = (ROOT / 'premium/welcome/index.html').read_text()
+    if 'https://whop.com/joined/aitoolsessentials-premium/' not in welcome_html:
+        errors.append('premium/welcome must use the product hub deep link')
+    if 'https://whop.com/hub"' in welcome_html or "https://whop.com/hub'" in welcome_html:
+        errors.append('premium/welcome still uses generic whop.com/hub')
     pricing_html = (ROOT / 'pricing/index.html').read_text()
     if '/stack-audit.html' not in pricing_html:
         errors.append('Pricing page must link the free Stack Audit')
-    if 'Join Premium on Whop ($12/mo)' not in pricing_html:
-        errors.append('Pricing page must label the Whop CTA as paid Premium')
+    if 'Join Premium on Whop — 7-day trial · LAUNCH50' not in pricing_html:
+        errors.append('Pricing page must label the Whop CTA with trial + LAUNCH50')
+    if 'https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50' not in pricing_html:
+        errors.append('Pricing page primary checkout must use the LAUNCH50 promo URL')
     if 'second product' not in pricing_html.lower() and 'not a second' not in pricing_html.lower():
         errors.append('Pricing page must say the human audit is not a second paid product')
     services_audit = ROOT / 'services/ai-stack-audit.html'
@@ -487,6 +511,10 @@ def main():
             errors.append('Premium library hub must say the pages are a public preview and not gated')
         if 'whop.com/checkout/ch_DKm5yxA1OBXoDru' not in library_html:
             errors.append('Premium library hub must keep the existing Whop Premium checkout URL')
+        if 'public premium preview' not in library_html.lower():
+            errors.append('Premium library hub must be labeled Public Premium preview')
+        if '?promo=LAUNCH50' not in library_html:
+            errors.append('Premium library hub primary checkout must use LAUNCH50')
     conversion_hits = list((ROOT).glob('tools/*/index.html'))[:3]
     for sample in conversion_hits:
         text = sample.read_text()

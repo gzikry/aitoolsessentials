@@ -40,7 +40,12 @@ a:hover { text-decoration: underline; }
 .brand { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .brand-glyph { font-size: 15px; line-height: 1; }
 .nav-links { display: flex; align-items: center; gap: 34px; opacity: .92; }
-.nav-cta { color: #fff; opacity: .92; }
+.nav-cta { color: #fff; background: var(--blue); padding: 6px 12px; border-radius: 7px; font-weight: 600; opacity: 1; }
+.nav-cta:hover { text-decoration: none; background: var(--blue-light); }
+.nav-links a[href*="subscribe"], .nav-links a[href*="newsletter"] { opacity: .78; font-weight: 400; }
+.hero-secondary-links { margin: 14px 0 0; color: rgba(255,255,255,.62); font-size: 14px; }
+.hero-secondary-links a { color: #c5c9d4; text-decoration: underline; text-underline-offset: 2px; }
+.checkout-plain-link { color: inherit; text-decoration: underline; font-size: 13px; }
 .scene { width: 100%; overflow: hidden; }
 .scene-dark { background: var(--black); color: var(--white); }
 .scene-light { background: var(--light); color: var(--ink); }
@@ -648,6 +653,15 @@ td, th { padding: 12px 14px; vertical-align: top; }
   .content-hub-grid, .workflow-cards, .product-grid { grid-template-columns: 1fr !important; }
   .featured-guide { grid-template-columns: 1fr; gap: 34px; }
   body { font-size: 16.5px; }
+  .nav-cta { background: var(--blue); color: #fff; font-weight: 700; }
+  .nav-links a[href*="subscribe"], .nav-links a[href*="newsletter"] { opacity: .68; font-weight: 400; }
+  .newsletter-panel:not(.premium-conversion-panel) .button-blue {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.28);
+    color: #f7f8f8;
+    box-shadow: none;
+  }
+  .premium-conversion-panel .button-blue { font-weight: 700; }
 }
 
 /* Focus visibility for keyboard users */

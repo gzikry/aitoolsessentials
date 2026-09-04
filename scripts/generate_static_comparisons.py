@@ -118,8 +118,8 @@ def _premium_module():
             '<p>Premium is $12/month on Whop. Dated keep/cut research, monthly CSV, weekly checklist, alerts, and a written reply — delivered in Whop. Keep/Cut Weekly and the instant Stack Audit stay free.</p>'
             '<p class="affiliate-inline">7-day free trial · then $12/month · code LAUNCH50 for 50% off first paid month · delivered in Whop · research and strategy only.</p>'
             '</div><div class="newsletter-actions">'
-            '<a class="button button-blue" href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/" rel="external noopener">Join Premium on Whop ($12/mo)</a>'
-            '<a class="button button-dark" href="/premium/">See what $12 buys</a>'
+            '<a class="button button-blue" href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50" rel="external noopener">Join Premium on Whop — 7-day trial · LAUNCH50</a>'
+            '<a class="button button-dark" href="/premium/">See Premium keep/cut pack</a>'
             '<a class="button button-dark" href="/premium/faq.html">FAQ</a>'
             '</div></section>'
         )
