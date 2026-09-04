@@ -54,6 +54,10 @@ def main() -> None:
         errors.append("Homepage must keep exactly one Premium band")
     if home.count('id="subscribe"') != 1:
         errors.append("Homepage must keep exactly one #subscribe panel")
+    if "Beehiiv form" in home or 'beehiiv.com/subscribe"' in home:
+        errors.append("Homepage must not show a Beehiiv form button next to Subscribe free")
+    if home.count('href="/subscribe/">Subscribe free') != 1:
+        errors.append("Homepage must keep exactly one Subscribe free button")
 
     checkout = (ROOT / "checkout/complete/index.html").read_text()
     if "Payment confirmed" in checkout or "You're in" in checkout:
@@ -184,6 +188,10 @@ def main() -> None:
             errors.append("enhance_homepage still emits the fat homepage")
         if 'href="/stack-audit.html">Free Stack Audit' not in first_home:
             errors.append("enhance_homepage dropped the Free Stack Audit CTA")
+        if "Beehiiv form" in first_home or 'beehiiv.com/subscribe"' in first_home:
+            errors.append("enhance_homepage must not emit a Beehiiv form button on the homepage")
+        if first_home.count('href="/subscribe/">Subscribe free') != 1:
+            errors.append("enhance_homepage must keep exactly one Subscribe free button")
 
     premium = (ROOT / "premium/index.html").read_text()
     for heading in (

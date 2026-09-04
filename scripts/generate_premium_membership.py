@@ -923,7 +923,7 @@ def rewrite_homepage_hero_actions(html: str) -> str:
     """Hero: Stack Audit first. Premium keep/cut pack is secondary."""
     actions = homepage_hero_actions_html(_whop_dict())
     pattern = re.compile(
-        r'(<section class="hero scene scene-dark">.*?<div class="hero-copy">.*?)(<div class="actions">.*?</div>)(?:\s*<p class="affiliate-inline">.*?</p>)?(?:\s*<p class="hero-secondary-links">.*?</p>)?',
+        r'(<section class="hero(?: home-hero)? scene scene-dark">.*?<div class="hero-copy">.*?)(<div class="actions">.*?</div>)(?:\s*<p class="affiliate-inline">.*?</p>)?(?:\s*<p class="hero-secondary-links">.*?</p>)?',
         flags=re.S,
     )
     match = pattern.search(html)
@@ -933,24 +933,23 @@ def rewrite_homepage_hero_actions(html: str) -> str:
 
 
 def homepage_newsletter_panel(root: Path) -> str:
+    """One Subscribe CTA to the on-site embed. Beehiiv lives on /subscribe/ only."""
     cfg = {}
     cfg_path = root / "data/newsletter.json"
     if cfg_path.exists():
         cfg = json.loads(cfg_path.read_text())
-    signup = esc(cfg.get("signup_url") or "https://aitoolsessentials.beehiiv.com/subscribe")
     kicker = esc(cfg.get("homepage_kicker") or "Keep/Cut Weekly · free email")
     headline = esc(cfg.get("homepage_headline") or "Get the free weekly keep/cut email.")
     body = esc(cfg.get("homepage_body") or "One email a week on Beehiiv. Premium is a separate paid membership — not this list.")
     return f'''<!-- AIT HOMEPAGE NEWSLETTER START -->
-<section id="subscribe" class="newsletter-panel">
+<section id="subscribe" class="newsletter-panel home-newsletter">
 <div>
 <span>{kicker}</span>
 <h2>{headline}</h2>
 <p>{body}</p>
 </div>
 <div class="newsletter-actions">
-<a class="button button-dark" href="/subscribe/">Subscribe free</a>
-<a class="button button-dark" href="{signup}" rel="noopener sponsored nofollow">Beehiiv form</a>
+<a class="button button-secondary" href="/subscribe/">Subscribe free</a>
 </div>
 </section>
 <!-- AIT HOMEPAGE NEWSLETTER END -->'''
@@ -975,7 +974,7 @@ def slim_homepage_html(html: str, root: Path) -> str:
     head = html[: head_end + len("</head>")]
     scripts = _homepage_scripts(html)
     body = (
-        "\n<body>\n  "
+        '\n<body data-page="home">\n  '
         + homepage_header_html()
         + "\n\n  <main>\n"
         + homepage_hero_html(_whop_dict())

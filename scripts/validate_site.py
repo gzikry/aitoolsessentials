@@ -426,8 +426,14 @@ def main():
         subscribe_block = subscribe_match.group(0)
         if 'whop.com/checkout' in subscribe_block.lower():
             errors.append('Homepage #subscribe must not be the Whop Premium checkout')
-        if '/subscribe/' not in subscribe_block and 'beehiiv.com/subscribe' not in subscribe_block:
-            errors.append('Homepage #subscribe must link to /subscribe/ or Beehiiv')
+        if '/subscribe/' not in subscribe_block:
+            errors.append('Homepage #subscribe must link to /subscribe/')
+        if 'Beehiiv form' in subscribe_block or re.search(
+            r'<a[^>]+href="https?://[^"]*beehiiv\.com/subscribe"', subscribe_block, flags=re.I
+        ):
+            errors.append('Homepage #subscribe must not add a second Beehiiv form button')
+        if len(re.findall(r'<a\b[^>]*\bbutton\b', subscribe_block)) != 1:
+            errors.append('Homepage #subscribe must have exactly one button CTA')
         if 'keep/cut' not in subscribe_block.lower() and 'weekly' not in subscribe_block.lower():
             errors.append('Homepage #subscribe must be labeled as the free Keep/Cut Weekly email')
         if 'join premium on whop' in subscribe_block.lower() or 'start 7-day' in subscribe_block.lower():

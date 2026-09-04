@@ -336,7 +336,7 @@ def homepage_hero_actions_html(whop: dict[str, Any]) -> str:
 def homepage_hero_html(whop: dict[str, Any]) -> str:
     """Homepage hero only: overlap/cancel H1, Stack Audit primary, Premium secondary line."""
     actions = homepage_hero_actions_html(whop)
-    return f'''    <section class="hero scene scene-dark">
+    return f'''    <section class="hero home-hero scene scene-dark">
       <div class="hero-copy">
         <p class="kicker">You are paying for overlapping AI tools.</p>
         <h1>Find overlapping AI subscriptions — and what to cancel.</h1>
@@ -395,7 +395,7 @@ def homepage_band_html(whop: dict[str, Any]) -> str:
 <div>
 <p class="kicker light">Optional Premium</p>
 <p>Need a keep/cut pack and a 48-hour written reply before renewals? ${price}/month — cheaper than one overlapping seat, not another AI subscription.</p>
-<p><a class="button button-blue" href="/premium/">{BUY_PAGE_LABEL}</a>
+<p class="home-premium-actions"><a class="button button-secondary" href="/premium/">{BUY_PAGE_LABEL}</a>
 <a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
 </div>
 </section>
