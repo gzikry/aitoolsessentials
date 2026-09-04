@@ -109,11 +109,13 @@ def fix_page(p: Path) -> bool:
     if '<nav class="nav-links">' in h and '>Benchmarks</a>' not in h:
         h = h.replace('</nav>', f'<a href="{prefix}benchmarks/">Benchmarks</a>\n</nav>', 1)
 
-    # 8. Inject share.css + site.js + share-row mount
+    # 8. Inject share.css + site.js + cookie-consent.js + share-row mount
     if 'share.css' not in h:
         h = h.replace('</head>', f'<link rel="stylesheet" href="{prefix}css/share.css">\n</head>', 1)
     if 'site.js' not in h:
         h = h.replace('</body>', f'<script src="{prefix}js/site.js" defer></script>\n</body>')
+    if 'cookie-consent.js' not in h:
+        h = h.replace('</body>', f'<script src="{prefix}js/cookie-consent.js" defer></script>\n</body>')
     if 'id="share-row"' not in h and '<footer' in h:
         h = h.replace('<footer', '<div id="share-row" hidden></div>\n  <footer', 1)
 
