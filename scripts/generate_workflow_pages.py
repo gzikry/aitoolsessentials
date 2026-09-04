@@ -130,14 +130,14 @@ def generate(root: Path) -> int:
     home = root / "index.html"
     if home.exists():
         html = home.read_text()
-        block = f'''\n<!-- AIT WORKFLOW LIBRARY PROMO START -->\n<section class="scene scene-light guide-strip"><div><p class="kicker light">Workflow search guides</p><h2>Start with the job you do this week.</h2><p>Property-manager operations, rental listings, podcast editing, nonprofit grants, consultant admin, and more — written for you, not for the tool.</p><div class="guide-pill-grid"><a class="guide-pill" href="workflows/">Browse workflow guides</a><a class="guide-pill" href="/newsletter/">Keep/Cut Weekly</a><a class="guide-pill" href="articles/best-ai-tools-for-property-managers.html">AI tools for property managers</a><a class="guide-pill" href="workflows/property-manager-operations.html">Property manager operations</a><a class="guide-pill" href="workflows/rental-listing-copy.html">Rental listing copy</a><a class="guide-pill" href="articles/best-ai-tools-for-podcast-shows.html">AI tools for podcasters</a><a class="guide-pill" href="articles/best-ai-tools-for-nonprofits.html">AI tools for nonprofits</a></div></div></section>\n<!-- AIT WORKFLOW LIBRARY PROMO END -->\n'''
-        html = re.sub(r"\s*<!-- AIT WORKFLOW LIBRARY PROMO START -->.*?<!-- AIT WORKFLOW LIBRARY PROMO END -->\s*", "\n", html, flags=re.S)
-        anchor = '<!-- AIT LEAD MAGNET START -->'
-        if anchor in html:
-            html = html.replace(anchor, block + anchor, 1)
-        else:
-            html = html.replace("</main>", block + "</main>", 1)
-        home.write_text(html)
+        stripped = re.sub(
+            r"\s*<!-- AIT WORKFLOW LIBRARY PROMO START -->.*?<!-- AIT WORKFLOW LIBRARY PROMO END -->\s*",
+            "\n",
+            html,
+            flags=re.S,
+        )
+        if stripped != html:
+            home.write_text(stripped)
 
     return len(workflows) + 1
 

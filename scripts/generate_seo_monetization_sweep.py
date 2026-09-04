@@ -154,7 +154,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         "<a class=\"button button-dark\" href=\"/downloads/ai-stack-decision-checklist.html\">Open HTML</a></div></section>"
         f"{L_MARK_E}"
     )
-    lead_targets = [root / "index.html", root / "tool-finder.html", root / "stack-builder.html", root / "cost-calculator.html"]
+    lead_targets = [root / "tool-finder.html", root / "stack-builder.html", root / "cost-calculator.html"]
     for t in lead_targets:
         if not t.exists():
             continue

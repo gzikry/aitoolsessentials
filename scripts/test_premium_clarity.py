@@ -48,6 +48,12 @@ def main() -> None:
             errors.append("Homepage hero still promotes Build a starter list as a primary button")
     if "pay $12 to stop paying" in home.lower() or "Premium is $12/month to decide which ones to keep" in home:
         errors.append("Homepage still sells Premium as pay $12 to stop paying for AI")
+    if "Three paths" in home or "Essential categories" in home or "AIT LEAD MAGNET" in home:
+        errors.append("Homepage is still the fat pre-slim page")
+    if home.count("AIT HOMEPAGE PREMIUM BAND START") != 1:
+        errors.append("Homepage must keep exactly one Premium band")
+    if home.count('id="subscribe"') != 1:
+        errors.append("Homepage must keep exactly one #subscribe panel")
 
     checkout = (ROOT / "checkout/complete/index.html").read_text()
     if "Payment confirmed" in checkout or "You're in" in checkout:
@@ -153,6 +159,31 @@ def main() -> None:
             errors.append("update_pricing_page is not idempotent (Delivery/Scope spacing drifted)")
         if first.count("<strong>Scope:") != 1:
             errors.append("pricing page Scope label was lost or duplicated")
+
+    from generate_premium_membership import enhance_homepage
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_root = Path(tmp)
+        (tmp_root / "index.html").write_text(home)
+        (tmp_root / "data").mkdir()
+        (tmp_root / "data" / "voice_rewrites.json").write_text(
+            (ROOT / "data" / "voice_rewrites.json").read_text()
+        )
+        (tmp_root / "data" / "newsletter.json").write_text(
+            (ROOT / "data" / "newsletter.json").read_text()
+        )
+        (tmp_root / "data" / "integrations.json").write_text(
+            (ROOT / "data" / "integrations.json").read_text()
+        )
+        enhance_homepage(tmp_root)
+        first_home = (tmp_root / "index.html").read_text()
+        enhance_homepage(tmp_root)
+        second_home = (tmp_root / "index.html").read_text()
+        if first_home != second_home:
+            errors.append("enhance_homepage is not idempotent (second generate changed index.html)")
+        if "Three paths" in first_home or "AIT LEAD MAGNET" in first_home:
+            errors.append("enhance_homepage still emits the fat homepage")
+        if 'href="/stack-audit.html">Free Stack Audit' not in first_home:
+            errors.append("enhance_homepage dropped the Free Stack Audit CTA")
 
     premium = (ROOT / "premium/index.html").read_text()
     for heading in (

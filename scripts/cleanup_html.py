@@ -103,11 +103,14 @@ def fix_page(p: Path) -> bool:
         r'href="(?:\.\./)+((?:' + '|'.join(PUBLIC_PREFIXES) + r')/[^"]*|leaderboard\.html|submit-tool\.html)"',
         lambda m: f'href="{prefix}{m.group(1)}"', h)
 
-    # 7b. Keep benchmark evidence one click away from every primary nav.
-    if '<nav class="nav-links">' in h and '>Learn</a>' not in h:
-        h = h.replace('</nav>', f'<a href="{prefix}articles/learn.html">Learn</a></nav>', 1)
-    if '<nav class="nav-links">' in h and '>Benchmarks</a>' not in h:
-        h = h.replace('</nav>', f'<a href="{prefix}benchmarks/">Benchmarks</a>\n</nav>', 1)
+    # 7b. Keep benchmark evidence one click away from every primary nav
+    # except the slim homepage header (hero already fronts Stack Audit).
+    is_slim_home = rel_parts == ('index.html',) or 'data-nav="slim"' in h
+    if not is_slim_home:
+        if '<nav class="nav-links">' in h and '>Learn</a>' not in h:
+            h = h.replace('</nav>', f'<a href="{prefix}articles/learn.html">Learn</a></nav>', 1)
+        if '<nav class="nav-links">' in h and '>Benchmarks</a>' not in h:
+            h = h.replace('</nav>', f'<a href="{prefix}benchmarks/">Benchmarks</a>\n</nav>', 1)
 
     # 8. Inject share.css + site.js + cookie-consent.js + share-row mount
     if 'share.css' not in h:
@@ -120,7 +123,8 @@ def fix_page(p: Path) -> bool:
         h = h.replace('<footer', '<div id="share-row" hidden></div>\n  <footer', 1)
 
     # 9. Canonical trust/legal links in every public footer.
-    if '<footer' in h:
+    # Slim homepage footer is owned by enhance_homepage — do not re-inflate it.
+    if '<footer' in h and 'data-footer="slim"' not in h:
         footer_match = re.search(r'<footer[^>]*>.*?</footer>', h, re.S)
         if footer_match:
             footer = footer_match.group(0)
