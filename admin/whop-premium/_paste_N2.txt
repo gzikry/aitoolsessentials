@@ -1,0 +1,16 @@
+TITLE: N2 — November brief: Stop paying for AI tools you don't use
+
+Most teams and solo users are paying for 3-5 AI tools and actively using 1-2. The rest are overlap, inertia, or "just in case" subscriptions.
+
+**This month's decision framework:**
+
+1. **Download the AI Stack Audit Template** (`ai-stack-audit-template.csv`)
+2. **Fill it out honestly** — list every AI tool you pay for, monthly cost, weekly hours, what it does, and whether something else could do it
+3. **Reply with your completed audit** — within 48 hours you'll get a personalized strategy-only recommendation: keep, cut, trial, or switch
+4. **Use the AI ROI Calculator** (`ai-roi-calculator-template.csv`) to see if your total AI spend is actually paying for itself
+
+**The rule:** if a tool doesn't save you measurable time on a weekly workflow, it's a candidate for cancellation. "Just in case" is not a workflow.
+
+Attach: `ai-stack-audit-template.csv`, `ai-roi-calculator-template.csv`, `premium-tool-decision-matrix-2026-11.csv`
+
+---

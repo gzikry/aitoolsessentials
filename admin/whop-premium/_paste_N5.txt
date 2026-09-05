@@ -1,0 +1,16 @@
+TITLE: N5 — Hands-on comparison: ChatGPT vs Claude vs Grok vs Gemini
+
+Stop reading reviews. Run the test yourself.
+
+**Protocol:**
+1. Download the comparison CSV (`assistant-hands-on-comparison-2026-11.csv`)
+2. Write one brief for each of three workflows: drafting, research, coding
+3. Run the identical brief in all four assistants
+4. Fill in the "Member test result" rows with your findings
+5. The verdict row: which assistant won each workflow for *your* work?
+
+**Why this matters:** benchmarks don't match your actual tasks. This protocol takes about 30 minutes and gives you a defensible answer for which assistant to keep paying for.
+
+Attach: `assistant-hands-on-comparison-2026-11.csv`
+
+---

@@ -1,0 +1,28 @@
+TITLE: N1 — Pinned: Welcome to Premium (updated for November)
+
+Welcome to AIToolsEssentials Premium. This is the $12/month membership for deciding which subscriptions you keep — not another folder of unused tools.
+
+**New this month (November):**
+1. **AI Stack Audit Template** — fill it out and reply with your answers for a personalized stack recommendation within 48 hours.
+2. **Weekly AI Stack Checklist** — a 7-day rhythm for keeping your stack lean.
+3. **Tool-Change Alert Feed** — curated pricing, model, and feature changes across all 74 tracked tools.
+4. **Assistant Hands-On Comparison** — ChatGPT vs Claude vs Grok vs Gemini test protocol with fillable results.
+5. **AI ROI Calculator** — measure whether your AI spend is actually paying for itself.
+6. **Refreshed decision matrix** — `premium-tool-decision-matrix-2026-11.csv`.
+
+**What Premium includes (all months):**
+- Monthly decision matrix CSV
+- One workflow deep-dive or playbook each month
+- Weekly AI stack checklist
+- Tool-change alert feed (pricing, models, features)
+- AI stack audit template with personalized strategy-only response
+- Assistant hands-on comparison protocol with fillable CSV
+- AI ROI calculator template
+- Source-dated pricing/policy notes when available
+- Member request thread for upcoming research
+- Priority research slots for the first 5 complete requests each month
+- Strategy-only recommendations — no account access, implementation, integrations, or ongoing support
+
+**Billing:** 7-day free trial, then $12/month via Whop. Use code LAUNCH50 for 50% off your first paid month (new users only). Cancel anytime from your Whop account. All sales final — no refunds.
+
+---

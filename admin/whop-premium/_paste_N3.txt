@@ -1,0 +1,17 @@
+TITLE: N3 — Weekly AI Stack Checklist: your 7-day rhythm
+
+Stop doing ad-hoc tool reviews. Run this checklist every week — it takes 15 minutes total.
+
+| Day | Task | Why |
+|-----|------|-----|
+| Mon | Check tool-change alerts | Catch pricing/model changes before they affect you |
+| Tue | Run one real task in your primary assistant | Notice quality/limit shifts early |
+| Wed | Review overlap matrix | Is anything overlapping or unused? |
+| Thu | Test one tool you're considering switching to | One real task, not a demo |
+| Fri | Check change-radar for the week's updates | One scan, all recorded changes |
+| Fri | Log any limit-hits or friction | Data for next month's decisions |
+| Sun | Decide: cancellations or trials to start? | Act on data, not impulse |
+
+Attach: `weekly-ai-stack-checklist.csv`
+
+---

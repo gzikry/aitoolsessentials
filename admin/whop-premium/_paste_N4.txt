@@ -1,0 +1,16 @@
+TITLE: N4 — November alert feed: what changed across tracked tools
+
+Curated changes for members. Public change-radar catches up later; members get the curated feed here first.
+
+**Highlights:**
+- **Cursor:** Composer 2.5 now default on Pro; Grok 4.6 available as alternative model
+- **Grok:** Grok 4.6 shipping; Grok Build and Grok Bot features expanded
+- **HtmlSlides:** New tool added (vendor submission) — interactive HTML presentation maker
+- **Whop CLI:** Business CLI launched — programmatically manage products, pricing, ads, payouts
+- **All tools:** Monthly pricing snapshot refreshed across 74 tracked tools
+
+**Action:** Review the full alert feed CSV. If any change affects a tool in your stack, note it in your weekly checklist.
+
+Attach: `tool-change-alert-feed-2026-11.csv`
+
+---

@@ -1,0 +1,18 @@
+TITLE: N6 — November request thread + priority research slots
+
+Reply with the workflow you want researched next. Good requests include:
+
+- Your role/team
+- Current tool stack
+- The task you do weekly
+- Tools you're deciding between
+- Budget, privacy, or export constraints
+
+**November research slots (first 5 complete requests):**
+1. Open
+2. Open
+3. Open
+4. Open
+5. Open
+
+Research is delivered as a new CSV + brief in the next monthly drop. Replies are strategy-only — no implementation, setup, account access, or ongoing support.

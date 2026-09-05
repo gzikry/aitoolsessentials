@@ -1,0 +1,44 @@
+[
+  {
+    "file": "whop-posts-2026-11.md",
+    "id": "file_e4sl8wVNbFdVK",
+    "status": "ready",
+    "refreshed_at": "2026-09-04"
+  },
+  {
+    "file": "premium-tool-decision-matrix-2026-11.csv",
+    "id": "file_h1RkmmuhKnkNf",
+    "status": "ready",
+    "refreshed_at": "2026-09-04"
+  },
+  {
+    "file": "tool-change-alert-feed-2026-11.csv",
+    "id": "file_fmzNNbFIn4b58",
+    "status": "ready",
+    "refreshed_at": "2026-09-04"
+  },
+  {
+    "file": "ai-stack-audit-template.csv",
+    "id": "file_NDuynmcebiXEd",
+    "status": "ready",
+    "refreshed_at": "2026-09-04"
+  },
+  {
+    "file": "weekly-ai-stack-checklist.csv",
+    "id": "file_Rr8h3eWKSQd2D",
+    "status": "ready",
+    "refreshed_at": "2026-09-04"
+  },
+  {
+    "file": "assistant-hands-on-comparison-2026-11.csv",
+    "id": "file_5Xs4AnD0sep3h",
+    "status": "ready",
+    "refreshed_at": "2026-09-04"
+  },
+  {
+    "file": "ai-roi-calculator-template.csv",
+    "id": "file_61RdM1jCOxN3f",
+    "status": "ready",
+    "refreshed_at": "2026-09-04"
+  }
+]

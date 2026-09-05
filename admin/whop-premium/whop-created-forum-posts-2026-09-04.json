@@ -1,0 +1,207 @@
+{
+  "created": [
+    {
+      "pack": "September",
+      "source": "whop-posts-2026-09.md",
+      "title": "1 \u2014 Pinned start here: Welcome to Premium",
+      "http": 200,
+      "id": "post_1CeidXMntaJ39BHSYZ6GCV",
+      "attachments": [
+        "file_cjV4h1XlP8RO9"
+      ],
+      "error": null
+    },
+    {
+      "pack": "September",
+      "source": "whop-posts-2026-09.md",
+      "title": "2 \u2014 September brief: cut AI subscription sprawl",
+      "http": 400,
+      "id": null,
+      "attachments": [
+        "file_cjV4h1XlP8RO9"
+      ],
+      "error": {
+        "error": {
+          "type": "bad_request",
+          "message": "Attachment file_cjV4h1XlP8RO9 does not belong to this resource: it was uploaded for post_1CeidXMntaJ39BHSYZ6GCV. Upload the file again for this resource."
+        }
+      }
+    },
+    {
+      "pack": "September",
+      "source": "whop-posts-2026-09.md",
+      "title": "3 \u2014 General AI assistant shortlist",
+      "http": 200,
+      "id": "post_1CeidXQ3rR4439ZnAA3e88",
+      "attachments": [
+        "file_ReeLlbhQ9SljF"
+      ],
+      "error": null
+    },
+    {
+      "pack": "September",
+      "source": "whop-posts-2026-09.md",
+      "title": "4 \u2014 Automation pricing model decoder",
+      "http": 200,
+      "id": "post_1CeidXR1HJbS3hD6uP8RGq",
+      "attachments": [
+        "file_wgOXFOACq9fzL"
+      ],
+      "error": null
+    },
+    {
+      "pack": "September",
+      "source": "whop-posts-2026-09.md",
+      "title": "5 \u2014 Vendor/security questions pack",
+      "http": 200,
+      "id": "post_1CeidXRtiUKrYVVcSVQLmk",
+      "attachments": [],
+      "error": null
+    },
+    {
+      "pack": "September",
+      "source": "whop-posts-2026-09.md",
+      "title": "6 \u2014 Member request thread",
+      "http": 200,
+      "id": "post_1CeidXSitjLvJwKyEmPz1L",
+      "attachments": [],
+      "error": null
+    },
+    {
+      "pack": "October",
+      "source": "whop-posts-2026-10.md",
+      "title": "O1 - October drop: what changed since September",
+      "http": 200,
+      "id": "post_1CeidXTcFAnRK26NZiTQD2",
+      "attachments": [],
+      "error": null
+    },
+    {
+      "pack": "October",
+      "source": "whop-posts-2026-10.md",
+      "title": "O2 - October playbook: pick ONE visual AI and stop paying for three",
+      "http": 200,
+      "id": "post_1CeidXUZSSS8goCqXWcAVd",
+      "attachments": [],
+      "error": null
+    },
+    {
+      "pack": "October",
+      "source": "whop-posts-2026-10.md",
+      "title": "O3 - October request thread",
+      "http": 200,
+      "id": "post_1CeidXVQg5SaSk9byj45id",
+      "attachments": [],
+      "error": null
+    },
+    {
+      "pack": "November",
+      "source": "whop-posts-2026-11.md",
+      "title": "N1 \u2014 Pinned: Welcome to Premium (updated for November)",
+      "http": 200,
+      "id": "post_1CeidXWHyY23MpNnqBtRk3",
+      "attachments": [
+        "file_x97nNjwyqKEsj"
+      ],
+      "error": null
+    },
+    {
+      "pack": "November",
+      "source": "whop-posts-2026-11.md",
+      "title": "N2 \u2014 November brief: Stop paying for AI tools you don't use",
+      "http": 400,
+      "id": null,
+      "attachments": [
+        "file_INqVYKhe5ilrG",
+        "file_y4NTyOMA3aaAt",
+        "file_x97nNjwyqKEsj"
+      ],
+      "error": {
+        "error": {
+          "type": "bad_request",
+          "message": "rate limit exceeded"
+        }
+      }
+    },
+    {
+      "pack": "November",
+      "source": "whop-posts-2026-11.md",
+      "title": "N3 \u2014 Weekly AI Stack Checklist: your 7-day rhythm",
+      "http": 400,
+      "id": null,
+      "attachments": [
+        "file_DwuRsGmHv4LNF"
+      ],
+      "error": {
+        "error": {
+          "type": "bad_request",
+          "message": "rate limit exceeded"
+        }
+      }
+    },
+    {
+      "pack": "November",
+      "source": "whop-posts-2026-11.md",
+      "title": "N4 \u2014 November alert feed: what changed across tracked tools",
+      "http": 400,
+      "id": null,
+      "attachments": [
+        "file_K1yuaC4vWhLaE"
+      ],
+      "error": {
+        "error": {
+          "type": "bad_request",
+          "message": "rate limit exceeded"
+        }
+      }
+    },
+    {
+      "pack": "November",
+      "source": "whop-posts-2026-11.md",
+      "title": "N5 \u2014 Hands-on comparison: ChatGPT vs Claude vs Grok vs Gemini",
+      "http": 400,
+      "id": null,
+      "attachments": [
+        "file_C5IzAKQIKUHZ6"
+      ],
+      "error": {
+        "error": {
+          "type": "bad_request",
+          "message": "rate limit exceeded"
+        }
+      }
+    },
+    {
+      "pack": "November",
+      "source": "whop-posts-2026-11.md",
+      "title": "N6 \u2014 November request thread + priority research slots",
+      "http": 400,
+      "id": null,
+      "attachments": [],
+      "error": {
+        "error": {
+          "type": "bad_request",
+          "message": "rate limit exceeded"
+        }
+      }
+    },
+    {
+      "action": "pin",
+      "id": "post_1CeidXMntaJ39BHSYZ6GCV",
+      "http": 200,
+      "error": null
+    }
+  ],
+  "file_ids": {
+    "ai-roi-calculator-template.csv": "file_y4NTyOMA3aaAt",
+    "ai-stack-audit-template.csv": "file_INqVYKhe5ilrG",
+    "assistant-hands-on-comparison-2026-11.csv": "file_C5IzAKQIKUHZ6",
+    "automation-pricing-model-decoder-2026-09.csv": "file_wgOXFOACq9fzL",
+    "general-ai-assistant-shortlist-2026-09.csv": "file_ReeLlbhQ9SljF",
+    "premium-tool-decision-matrix-2026-09.csv": "file_cjV4h1XlP8RO9",
+    "premium-tool-decision-matrix-2026-11.csv": "file_x97nNjwyqKEsj",
+    "tool-change-alert-feed-2026-11.csv": "file_K1yuaC4vWhLaE",
+    "weekly-ai-stack-checklist.csv": "file_DwuRsGmHv4LNF"
+  },
+  "forum_count": 25
+}
