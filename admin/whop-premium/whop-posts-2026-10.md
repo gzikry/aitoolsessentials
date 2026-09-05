@@ -9,11 +9,11 @@ Prepared ahead so the next monthly drop is upload-ready. Create these as Whop po
 Welcome to month two. This month focuses on visual/meeting tool decisions and the new public pricing tracker.
 
 **New files this month:**
-1. premium-tool-decision-matrix-2026-10.csv - refreshed decision matrix (74 tools).
+1. premium-tool-decision-matrix-2026-10.csv - refreshed decision matrix (75 tools).
 2. visual-ai-tool-shortlist-2026-10.csv - image/video generation shortlist.
 3. meeting-notes-decision-sheet-2026-10.csv - Fireflies vs Otter style decision sheet.
 
-**Also new on the public site:** AI Pricing Watch (https://aitoolsessentials.com/pricing-watch/) tracks verified price changes across all 74 tools. Members get flagged summaries here first.
+**Also new on the public site:** AI Pricing Watch (https://aitoolsessentials.com/pricing-watch/) tracks verified price changes across all 75 tools. Members get flagged summaries here first.
 
 ---
 

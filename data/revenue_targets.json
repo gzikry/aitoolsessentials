@@ -1242,5 +1242,20 @@
     "status": "not_started",
     "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "tunii",
+    "tool_name": "Tunii",
+    "priority": "medium",
+    "category": "Audio",
+    "recommended_networks_to_check": [],
+    "search_queries": [],
+    "target_pages": [],
+    "best_audiences": [
+      "AI tool buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Check direct affiliate/partner page and major networks"
   }
 ]

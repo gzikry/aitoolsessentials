@@ -295,6 +295,14 @@
     "catch-ai": {
       "date": "2026-09-02",
       "digest": "Official homepage and /security (checked 2026-09-02) advertise one public plan: $99/month, billed monthly, cancel anytime, with a 10-day free trial. catchagent.ai/pricing returned 404. The same homepa"
+    },
+    "tunii": {
+      "date": "2026-09-05",
+      "digest": "Free: 10 min signup + 5 min/week. Paid: minute packs, no subscription, no public pricing page.",
+      "changes": "initial_entry",
+      "sources": [
+        "https://tunii.net/"
+      ]
     }
   },
   "changes": [

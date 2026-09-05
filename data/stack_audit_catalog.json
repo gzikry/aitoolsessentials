@@ -1787,6 +1787,31 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "tunii",
+      "name": "Tunii",
+      "category": "Audio & Video",
+      "official_url": "https://tunii.net/",
+      "review_url": "/tools/tunii/",
+      "price_label": "Free + paid minutes",
+      "pricing_summary": "Free tier: 10 min on signup, 5 min/week. Paid: minute packs (no public pricing page). Failed jobs do not consume minutes.",
+      "pricing_url": "",
+      "pricing_checked_date": "2026-09-05",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "video",
+        "audio",
+        "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

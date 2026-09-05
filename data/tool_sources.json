@@ -51,7 +51,7 @@
     {
       "slug": "canva-ai",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free—up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education—up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise—up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
+      "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free\u2014up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education\u2014up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise\u2014up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
       "pricing_url": "https://www.canva.com/pricing/",
       "docs_url": "https://www.canva.com/help/ai-access/",
       "privacy_url": "https://www.canva.com/trust/privacy/",
@@ -82,7 +82,7 @@
     {
       "slug": "claude",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2–150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
+      "pricing_summary": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2\u2013150 users and lists Standard seats at $20 per seat per month and Premium seats at $100 per seat per month. Enterprise is billed annually at a seat price plus usage at API rates.",
       "pricing_url": "https://www.anthropic.com/pricing",
       "docs_url": "https://support.anthropic.com/en/collections/4078534-claude-ai",
       "privacy_url": "https://privacy.anthropic.com/en/articles/10023555-how-do-you-use-personal-data-in-model-training",
@@ -320,15 +320,15 @@
     {
       "slug": "aibase",
       "pricing_checked_date": "2026-08-28",
-      "pricing_summary": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respectively. Yearly billing is 20–40% off (Basic yearly ~$180; Pro yearly equivalent ~$29.9 × 12 × 0.6 ≈ $215; Ultimate $99.9 × 12 with 40% off ≈ $720, saving $238.8 on the Pro tier). Pay-as-you-go credit packs available. Per the public Credits Cost Table, text-to-image runs 12–46 credits (~$0.05–$0.18) and 5-second video runs 150–380 credits (~$0.60–$1.52). Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, and Veo 3.1 Fast run on monthly; Veo 3.1 Pro, Seedance 2.0, and HappyHorse 1.0 require yearly or credit packs.",
+      "pricing_summary": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respectively. Yearly billing is 20\u201340% off (Basic yearly ~$180; Pro yearly equivalent ~$29.9 \u00d7 12 \u00d7 0.6 \u2248 $215; Ultimate $99.9 \u00d7 12 with 40% off \u2248 $720, saving $238.8 on the Pro tier). Pay-as-you-go credit packs available. Per the public Credits Cost Table, text-to-image runs 12\u201346 credits (~$0.05\u2013$0.18) and 5-second video runs 150\u2013380 credits (~$0.60\u2013$1.52). Nano Banana 2, GPT Image 2, Seedream 5.0 Lite, Seedance 1.5 Pro, and Veo 3.1 Fast run on monthly; Veo 3.1 Pro, Seedance 2.0, and HappyHorse 1.0 require yearly or credit packs.",
       "pricing_url": "https://aibase.art/pricing",
       "docs_url": "https://aibase.art/",
       "privacy_url": "https://aibase.art/privacy-policy",
       "rights_url": "https://aibase.art/terms-of-service",
-      "verification_notes": "Submitted via the site form by the vendor on 2026-08-28; editorial entry written independently. AIBase explicitly states it is 'an independent platform … not affiliated with, endorsed by, or an official product of' the underlying model providers (Nano Banana, GPT Image, Seedream, Seedance, Veo, Wan, HappyHorse). Terms of Service §4 (User Content and Generated Content): 'You may use Generated Content for lawful personal or commercial purposes' subject to compliance; user grants AIBase a limited, worldwide, non-exclusive, royalty-free license to host/process content as needed to operate. Outputs are not guaranteed unique, copyrightable, or free of third-party rights. Acceptable Use Policy and Privacy Policy both live and dated. Free trial credits available; ongoing work is credit-based paid.",
+      "verification_notes": "Submitted via the site form by the vendor on 2026-08-28; editorial entry written independently. AIBase explicitly states it is 'an independent platform \u2026 not affiliated with, endorsed by, or an official product of' the underlying model providers (Nano Banana, GPT Image, Seedream, Seedance, Veo, Wan, HappyHorse). Terms of Service \u00a74 (User Content and Generated Content): 'You may use Generated Content for lawful personal or commercial purposes' subject to compliance; user grants AIBase a limited, worldwide, non-exclusive, royalty-free license to host/process content as needed to operate. Outputs are not guaranteed unique, copyrightable, or free of third-party rights. Acceptable Use Policy and Privacy Policy both live and dated. Free trial credits available; ongoing work is credit-based paid.",
       "unresolved_claims": [
         "Credits-as-cost model makes monthly spend harder to forecast than flat-rate plans; users should run a real task before subscribing.",
-        "Veo 3.1 Pro and Seedance 2.0 are gated to yearly plans / credit packs — Basic and Pro monthly cannot access them.",
+        "Veo 3.1 Pro and Seedance 2.0 are gated to yearly plans / credit packs \u2014 Basic and Pro monthly cannot access them.",
         "Because AIBase routes to third-party models, each model's provider's terms and safety layers apply on top of AIBase's own.",
         "No explicit SOC 2 / security claims located on the public site.",
         "Affiliate program live: 30% recurring for the first year, PayPal NET-15 payouts."
@@ -428,7 +428,7 @@
     {
       "slug": "n8n",
       "pricing_checked_date": "2026-08-25",
-      "pricing_summary": "Starter: €20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: €50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: €667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
+      "pricing_summary": "Starter: \u20ac20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: \u20ac50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: \u20ac667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
       "pricing_url": "https://n8n.io/pricing/",
       "docs_url": "https://docs.n8n.io/build/integrate-ai",
       "privacy_url": "https://n8n.io/legal/privacy/",
@@ -476,7 +476,7 @@
       "docs_url": "https://perplexity.ai/help-center/en",
       "privacy_url": "https://perplexity.ai/help-center/en/articles/11564572-data-collection-at-perplexity",
       "rights_url": "https://www.perplexity.ai/hub/legal/terms-of-service",
-      "verification_notes": "Perplexity is documented as an AI-powered answer/search product with citations, premium models, file uploads, Research, Create files and apps, Comet, and Computer features depending on plan. AI Data Retention is enabled by default for Free, Pro, and Max users and can be turned off for future collection; previously collected training data is not removed by a later opt-out. Enterprise data is not used for AI training, and Perplexity says its third-party model-provider agreements prohibit provider training on Perplexity data. Consumer terms warn that output may be subject to third-party model licenses and use restrictions. 2026-09-02 official blog “Optimizing On-Device Inference for Apple Silicon” (https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon): Lily is a lightweight local inference engine built specifically for Apple silicon and Qwen3.6-35B-A3B so on-device compute does not bottleneck Hybrid Compute / Perplexity Computer tasks. Official facts from that post: Rust runtime; OpenAI-compatible chat-completions API; custom Metal kernels; neither PyTorch nor MLX in the execution path; standalone demo on GitHub. The official pplx-garden README names the demo at https://github.com/perplexityai/pplx-garden (lily/), Apache-2.0, greedy generation for the Qwen3.6-35B-A3B MLX affine 4-bit checkpoint format, Apple GPU family 10 or later (M5 and newer). Lily is not a new paid Perplexity plan SKU. Consumer Pro/Max dollar prices were not re-verified on 2026-09-02.",
+      "verification_notes": "Perplexity is documented as an AI-powered answer/search product with citations, premium models, file uploads, Research, Create files and apps, Comet, and Computer features depending on plan. AI Data Retention is enabled by default for Free, Pro, and Max users and can be turned off for future collection; previously collected training data is not removed by a later opt-out. Enterprise data is not used for AI training, and Perplexity says its third-party model-provider agreements prohibit provider training on Perplexity data. Consumer terms warn that output may be subject to third-party model licenses and use restrictions. 2026-09-02 official blog \u201cOptimizing On-Device Inference for Apple Silicon\u201d (https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon): Lily is a lightweight local inference engine built specifically for Apple silicon and Qwen3.6-35B-A3B so on-device compute does not bottleneck Hybrid Compute / Perplexity Computer tasks. Official facts from that post: Rust runtime; OpenAI-compatible chat-completions API; custom Metal kernels; neither PyTorch nor MLX in the execution path; standalone demo on GitHub. The official pplx-garden README names the demo at https://github.com/perplexityai/pplx-garden (lily/), Apache-2.0, greedy generation for the Qwen3.6-35B-A3B MLX affine 4-bit checkpoint format, Apple GPU family 10 or later (M5 and newer). Lily is not a new paid Perplexity plan SKU. Consumer Pro/Max dollar prices were not re-verified on 2026-09-02.",
       "unresolved_claims": [
         "Current public prices for individual Pro and Max were not verifiable from the reviewed official pages.",
         "A blanket commercial-use or output-ownership claim was not made because consumer outputs may be governed by third-party model licenses.",
@@ -613,7 +613,7 @@
       "docs_url": "",
       "privacy_url": "https://allvideoai.com/privacy",
       "rights_url": "",
-      "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published — commercial-use terms should be confirmed in ToS before client delivery.",
+      "verification_notes": "Pricing verified from official pricing page 2026-08-23. Submitted via site submission form by vendor (support@allvideoai.com); editorial entry written independently from vendor summary. No rights/output-ownership page published \u2014 commercial-use terms should be confirmed in ToS before client delivery.",
       "unresolved_claims": [
         "Output ownership/commercial rights not documented on a dedicated page"
       ]
@@ -736,7 +736,7 @@
     {
       "slug": "harvey",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Harvey’s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
+      "pricing_summary": "Harvey\u2019s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
       "pricing_url": "https://www.harvey.ai/",
       "docs_url": "https://www.harvey.ai/",
       "privacy_url": "https://www.harvey.ai/en-US/security",
@@ -751,7 +751,7 @@
     {
       "slug": "spellbook",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Spellbook’s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
+      "pricing_summary": "Spellbook\u2019s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
       "pricing_url": "https://spellbook.com/",
       "docs_url": "https://help.spellbook.legal/en/articles/9926203-getting-started-with-spellbook",
       "privacy_url": "https://spellbook.com/security",
@@ -766,7 +766,7 @@
     {
       "slug": "cocounsel",
       "pricing_checked_date": "2026-08-26",
-      "pricing_summary": "Thomson Reuters’ official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
+      "pricing_summary": "Thomson Reuters\u2019 official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
       "pricing_url": "https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing",
       "docs_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
       "privacy_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
@@ -902,7 +902,7 @@
       "slug": "htmlslides",
       "pricing_checked_date": "2026-08-27",
       "pricing_summary": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5/60 credits, $10/150 credits. Credits non-refundable, may expire.",
-      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change — launch offer price noted.",
+      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change \u2014 launch offer price noted.",
       "pricing_url": "https://www.htmlslides.ai/pricing",
       "docs_url": "https://www.htmlslides.ai/terms",
       "privacy_url": "https://www.htmlslides.ai/privacy"
@@ -1064,18 +1064,30 @@
     {
       "slug": "catch-ai",
       "pricing_checked_date": "2026-09-02",
-      "pricing_summary": "Official homepage and /security (checked 2026-09-02) advertise one public plan: $99/month, billed monthly, cancel anytime, with a 10-day free trial. catchagent.ai/pricing returned 404. The same homepage also shows a Closed Beta — Limited Spots waitlist questionnaire.",
+      "pricing_summary": "Official homepage and /security (checked 2026-09-02) advertise one public plan: $99/month, billed monthly, cancel anytime, with a 10-day free trial. catchagent.ai/pricing returned 404. The same homepage also shows a Closed Beta \u2014 Limited Spots waitlist questionnaire.",
       "pricing_url": "https://www.catchagent.ai/",
       "docs_url": "https://www.catchagent.ai/security",
       "privacy_url": "https://app.catchagent.ai/privacy",
       "rights_url": "https://app.catchagent.ai/terms",
-      "verification_notes": "Independently fetched with a browser user-agent on 2026-09-02. Homepage (200) and /security (200) both render a pricing module: “Hire your admin for $99/month”, “$99/month. Billed monthly. Cancel anytime.”, and “Start with a 10-day free trial.” /pricing, /docs, /rights, /privacy, and /terms on www.catchagent.ai returned 404. Footer links Privacy Policy and Terms of Service to app.catchagent.ai/privacy and app.catchagent.ai/terms (HTTP 200 SPA shells without readable policy text in the static HTML). Announcement tweet https://x.com/therealnirs/status/2095134650431586686 was not used for prices.",
+      "verification_notes": "Independently fetched with a browser user-agent on 2026-09-02. Homepage (200) and /security (200) both render a pricing module: \u201cHire your admin for $99/month\u201d, \u201c$99/month. Billed monthly. Cancel anytime.\u201d, and \u201cStart with a 10-day free trial.\u201d /pricing, /docs, /rights, /privacy, and /terms on www.catchagent.ai returned 404. Footer links Privacy Policy and Terms of Service to app.catchagent.ai/privacy and app.catchagent.ai/terms (HTTP 200 SPA shells without readable policy text in the static HTML). Announcement tweet https://x.com/therealnirs/status/2095134650431586686 was not used for prices.",
       "unresolved_claims": [
         "Closed-beta waitlist copy and a public $99/month module appear on the same homepage; it is unclear whether checkout is open to anyone or gated.",
         "Marketing-host /privacy, /terms, /docs, and /rights 404. app.catchagent.ai/privacy and /terms are JavaScript SPA shells, so the full policy text was not independently readable in static HTML.",
         "SOC 2 Type II, CASA Tier-2, and Google Verified claims are vendor statements; the security page says full audit reports are available upon request.",
         "Named testimonials on the marketing site are vendor-supplied and were not independently corroborated."
       ]
+    },
+    {
+      "slug": "tunii",
+      "pricing_checked_date": "2026-09-05",
+      "pricing_summary": "Free tier: 10 min on signup, 5 min/week. Paid: minute packs (no public pricing page). Failed jobs do not consume minutes.",
+      "official_url": "https://tunii.net/",
+      "pricing_url": "https://tunii.net/",
+      "last_checked": "2026-09-05",
+      "evidence_freshness": "verified",
+      "docs_url": "",
+      "privacy_url": "",
+      "rights_url": ""
     }
   ]
 }
