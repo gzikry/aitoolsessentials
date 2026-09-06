@@ -332,14 +332,14 @@ def homepage_hero_actions_html(whop: dict[str, Any]) -> str:
 
 
 def homepage_hero_html(whop: dict[str, Any]) -> str:
-    """Copy-first homepage hero. Choose/learn first. No decorative device card."""
+    """Copy-first homepage hero. Choose/learn with dated evidence first. No decorative device card."""
     actions = homepage_hero_actions_html(whop)
     return f'''    <section class="hero home-hero scene scene-dark">
       <div class="home-hero-grain" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="home-kicker home-appear" data-appear="2">Reviews, comparisons, and a free stack check</p>
+        <p class="home-kicker home-appear" data-appear="2">Dated reviews, comparisons, and a free stack check</p>
         <h1><span class="home-line home-appear" data-appear="3">Find AI tools that fit</span> <span class="home-line home-appear" data-appear="4">the job — not the <em>hype</em>.</span></h1>
-        <p class="subhead home-appear" data-appear="4">Browse honest reviews, or run a free Stack Audit to see what you already pay for and what&apos;s overlapping.</p>
+        <p class="subhead home-appear" data-appear="4">Learn what fits with dated evidence, or run a free Stack Audit to see what&apos;s overlapping and what&apos;s worth keeping.</p>
         {actions}
       </div>
     </section>'''

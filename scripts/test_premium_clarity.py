@@ -205,6 +205,8 @@ def main() -> None:
             errors.append("enhance_homepage must not restore brochure homepage copy")
         if "Choose the right AI tools" not in first_home:
             errors.append("enhance_homepage must keep the choose/learn homepage title")
+        if "dated evidence" not in first_home.lower():
+            errors.append("enhance_homepage must keep the dated-evidence choose/learn spin")
         if "Which AI tools should you cancel?" in first_home:
             errors.append("enhance_homepage must not restore the cancel-only homepage title")
         if 'href="/tools/index.html">Browse tools' not in first_home:

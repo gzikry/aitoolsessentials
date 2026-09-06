@@ -2,6 +2,7 @@
   "purpose": "Canonical inventory of AI-speak / product-first copy rewritten into second-person human voice. Apply via generators and data files, not one-off HTML.",
   "rules": [
     "Speak to the reader, not the tool.",
+    "Primary job: help people choose and learn about AI tools with dated evidence. Keep/cut is a useful outcome, not the whole brand.",
     "Say what they keep, cancel, or pay — not operationalize, research layer, or operating model.",
     "Keep free Keep/Cut Weekly and free Stack Audit clearly free and separate from $12/mo Premium.",
     "Do not invent Whop plan IDs, prices, or checkout URLs."
@@ -9,7 +10,7 @@
   "rewrites": [
     {
       "phrase": "operationalize the best AI tools",
-      "rewrite": "Reviews, comparisons, and a free stack check so you can pick tools that fit.",
+      "rewrite": "Choose AI tools with dated evidence. Learn what fits the job, then keep or cut what you already pay for.",
       "files": ["index.html", "scripts/generate_premium_membership.py"]
     },
     {
