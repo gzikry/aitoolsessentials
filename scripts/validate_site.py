@@ -578,6 +578,10 @@ def main():
         errors.append('Homepage H1 must be about overlapping subscriptions / what to cancel')
     if '<em>' not in hero_html or 'Instrument+Serif' not in home_head:
         errors.append('Homepage must load Instrument Serif italic and accent one H1 phrase with <em>')
+    if not re.search(r'href="(?:/)?css/styles\.css\?v=', home_head):
+        errors.append('Homepage stylesheet must be cache-busted so frosted Premium CSS can ship')
+    if 'ait-home-critical' not in home_head or 'home-premium-band>div' not in home_head.replace(' ', ''):
+        errors.append('Homepage critical CSS must keep the Premium band dark if styles.css is stale')
     if 'home-cta-primary' not in hero_html or 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
         errors.append('Homepage hero primary must stay Free Stack Audit')
     if 'home-badge' not in hero_html or 'Free Stack Audit · no login' not in hero_html:

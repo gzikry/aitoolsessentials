@@ -970,17 +970,40 @@ HOME_FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1"
     "&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
 )
+# CDN caches /css/styles.css for 30 days. Bump when homepage-scoped CSS must ship.
+HOME_CSS_HREF = "css/styles.css?v=20260906b"
+HOME_CRITICAL_CSS = (
+    "html,body{background:#000;color:#f4f5f7}"
+    "body[data-page=home] .home-rest{background:#000;color:#f4f5f7}"
+    "body[data-page=home] .home-premium-band{background:transparent;color:#f4f5f7}"
+    "body[data-page=home] .home-premium-band>div{"
+    "background:linear-gradient(180deg,rgba(36,38,46,.68),rgba(10,11,14,.82));"
+    "border:1px solid rgba(255,255,255,.14);"
+    "box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}"
+    "body[data-page=home] .home-premium-band p,"
+    "body[data-page=home] .home-premium-band .kicker{color:rgba(244,245,247,.84)}"
+)
 
 
 def homepage_critical_head() -> str:
     """First-paint dark canvas + homepage fonts. Idempotent marker pair."""
     return (
         f"{HOME_CRITICAL_START}"
-        '<style id="ait-home-critical">html,body{background:#000;color:#f4f5f7}</style>'
+        f'<style id="ait-home-critical">{HOME_CRITICAL_CSS}</style>'
         '<link rel="preconnect" href="https://fonts.googleapis.com">'
         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
         f'<link href="{HOME_FONTS_HREF}" rel="stylesheet">'
         f"{HOME_CRITICAL_END}"
+    )
+
+
+def apply_homepage_stylesheet(html: str) -> str:
+    """Point the homepage at a cache-busted stylesheet so frosted-band CSS can ship."""
+    return re.sub(
+        r'<link rel="stylesheet" href="(?:/)?css/styles\.css(?:\?[^"]*)?">',
+        f'<link rel="stylesheet" href="{HOME_CSS_HREF}">',
+        html,
+        count=1,
     )
 
 
@@ -998,6 +1021,7 @@ def apply_homepage_critical_head(html: str) -> str:
         html,
         count=1,
     )
+    html = apply_homepage_stylesheet(html)
     html = re.sub(r"(<head\b[^>]*>)\s*", r"\1", html, count=1, flags=re.I)
     head_open = re.search(r"<head\b[^>]*>", html, flags=re.I)
     if not head_open:
