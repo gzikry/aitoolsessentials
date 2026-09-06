@@ -949,7 +949,7 @@ def homepage_newsletter_panel(root: Path) -> str:
 <p>{body}</p>
 </div>
 <div class="newsletter-actions">
-<a class="button button-secondary" href="/subscribe/">Subscribe free</a>
+<a class="button home-cta-ghost" href="/subscribe/">Subscribe free</a>
 </div>
 </section>
 <!-- AIT HOMEPAGE NEWSLETTER END -->'''
