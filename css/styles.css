@@ -1731,7 +1731,7 @@ body[data-page="home"] .footer[data-footer="slim"] {
     line-height: 1.45;
   }
   body[data-page="home"] .home-newsletter.newsletter-panel {
-    margin: 16px auto 24px;
+    margin: 8px auto 24px;
     padding: 22px 18px;
     width: min(1100px, calc(100% - 24px));
   }
