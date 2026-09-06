@@ -203,8 +203,12 @@ def main() -> None:
             errors.append("enhance_homepage must not restore the decorative hero device card")
         if "Not a drip" in first_home or "on this device" in first_home.lower():
             errors.append("enhance_homepage must not restore brochure homepage copy")
-        if "Which AI tools should you cancel?" not in first_home:
-            errors.append("enhance_homepage must keep the human homepage title")
+        if "Choose the right AI tools" not in first_home:
+            errors.append("enhance_homepage must keep the choose/learn homepage title")
+        if "Which AI tools should you cancel?" in first_home:
+            errors.append("enhance_homepage must not restore the cancel-only homepage title")
+        if 'href="/tools/index.html">Browse tools' not in first_home:
+            errors.append("enhance_homepage must keep a Browse tools learning path")
         if "4.2M workflows" in first_home or "Vesper.ai" in first_home:
             errors.append("enhance_homepage must not emit cloned Vesper stats or brand")
         if 'scene-light home-premium-band' in first_home:
