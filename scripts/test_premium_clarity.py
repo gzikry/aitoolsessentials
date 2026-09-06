@@ -198,6 +198,10 @@ def main() -> None:
             errors.append("enhance_homepage must keep Stack Audit as the solid primary CTA")
         if "4.2M workflows" in first_home or "Vesper.ai" in first_home:
             errors.append("enhance_homepage must not emit cloned Vesper stats or brand")
+        if 'scene-light home-premium-band' in first_home:
+            errors.append("enhance_homepage must not emit a light Premium band on the homepage")
+        if 'class="home-premium-band' in first_home and 'home-cta-primary' not in first_home[first_home.find("home-premium-band"): first_home.find("AIT HOMEPAGE PREMIUM BAND END")]:
+            errors.append("enhance_homepage must keep a liquid-glass Premium band CTA")
 
     premium = (ROOT / "premium/index.html").read_text()
     for heading in (

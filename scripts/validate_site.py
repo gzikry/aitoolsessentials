@@ -561,6 +561,16 @@ def main():
         errors.append('Homepage still has the vendor submit pitch')
     if home_html.count('AIT HOMEPAGE PREMIUM BAND START') != 1:
         errors.append('Homepage must have exactly one Premium band')
+    band_match = re.search(
+        r'<!-- AIT HOMEPAGE PREMIUM BAND START -->.*?<!-- AIT HOMEPAGE PREMIUM BAND END -->',
+        home_html,
+        flags=re.S,
+    )
+    band_html = band_match.group(0) if band_match else ''
+    if 'home-cta-primary' not in band_html or 'href="/premium/"' not in band_html:
+        errors.append('Homepage Premium band must keep a liquid-glass CTA to /premium/')
+    if 'scene-light' in band_html:
+        errors.append('Homepage Premium band must stay in the dark mid-page composition')
     stack_audit_buttons = home_html.count('href="/stack-audit.html">Free Stack Audit')
     if stack_audit_buttons > 2:
         errors.append(f'Homepage repeats Free Stack Audit too many times ({stack_audit_buttons})')

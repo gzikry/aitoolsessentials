@@ -397,11 +397,11 @@ def homepage_band_html(whop: dict[str, Any]) -> str:
     price = int(whop["price_usd_month"])
     trial = int(whop["trial_period_days"])
     return f"""<!-- AIT HOMEPAGE PREMIUM BAND START -->
-<section class="scene scene-light home-premium-band">
+<section class="scene scene-dark home-premium-band">
 <div>
 <p class="kicker light">Optional Premium</p>
 <p>Need a keep/cut pack and a 48-hour written reply before renewals? ${price}/month — cheaper than one overlapping seat, not another AI subscription.</p>
-<p class="home-premium-actions"><a class="button button-secondary" href="/premium/">{BUY_PAGE_LABEL}</a>
+<p class="home-premium-actions"><a class="button home-cta-primary" href="/premium/">{BUY_PAGE_LABEL}</a>
 <a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
 </div>
 </section>
