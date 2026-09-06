@@ -200,6 +200,8 @@ def main() -> None:
             errors.append("enhance_homepage must not emit cloned Vesper stats or brand")
         if 'scene-light home-premium-band' in first_home:
             errors.append("enhance_homepage must not emit a light Premium band on the homepage")
+        if "css/styles.css?v=" not in first_home:
+            errors.append("enhance_homepage must cache-bust the homepage stylesheet")
         if 'class="home-premium-band' in first_home and 'home-cta-primary' not in first_home[first_home.find("home-premium-band"): first_home.find("AIT HOMEPAGE PREMIUM BAND END")]:
             errors.append("enhance_homepage must keep a liquid-glass Premium band CTA")
 
