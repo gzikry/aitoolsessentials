@@ -326,37 +326,35 @@ def homepage_hero_actions_html(whop: dict[str, Any]) -> str:
     return (
         '<div class="actions home-appear" data-appear="5">'
         f'<a class="button home-cta-primary" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a>'
-        "</div>\n"
-        '        <p class="hero-secondary-links home-appear" data-appear="5">'
-        '<a href="/premium/">Or see the optional keep/cut pack</a>'
-        "</p>"
+        '<a class="button home-cta-ghost" href="/tools/index.html">Browse tools</a>'
+        "</div>"
     )
 
 
 def homepage_hero_html(whop: dict[str, Any]) -> str:
-    """Copy-first homepage hero. No decorative device card."""
+    """Copy-first homepage hero. Choose/learn first. No decorative device card."""
     actions = homepage_hero_actions_html(whop)
     return f'''    <section class="hero home-hero scene scene-dark">
       <div class="home-hero-grain" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="home-kicker home-appear" data-appear="2">You&apos;re paying for overlapping AI tools</p>
-        <h1><span class="home-line home-appear" data-appear="3">See which ones</span> <span class="home-line home-appear" data-appear="4">you should <em>cancel</em>.</span></h1>
-        <p class="subhead home-appear" data-appear="4">Run a free audit. See what&apos;s overlapping. Cancel before renewal.</p>
+        <p class="home-kicker home-appear" data-appear="2">Reviews, comparisons, and a free stack check</p>
+        <h1><span class="home-line home-appear" data-appear="3">Find AI tools that fit</span> <span class="home-line home-appear" data-appear="4">the job — not the <em>hype</em>.</span></h1>
+        <p class="subhead home-appear" data-appear="4">Browse honest reviews, or run a free Stack Audit to see what you already pay for and what&apos;s overlapping.</p>
         {actions}
       </div>
     </section>'''
 
 
 def homepage_header_html() -> str:
-    """Slim homepage header. Inner pages keep their own nav."""
+    """Slim homepage header. Tools stays first-class so learning is not buried."""
     return (
         '<header class="global-nav" aria-label="Primary navigation" data-nav="slim">'
         '<a class="brand home-appear" data-appear="0" href="/" aria-label="AIToolsEssentials home"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>'
         '<nav class="nav-links home-appear" data-appear="1">'
+        '<a href="/tools/index.html">Tools</a>'
         '<a href="/stack-audit.html">Stack Audit</a>'
         '<a href="/premium/">Premium</a>'
         '<a href="/subscribe/">Subscribe</a>'
-        '<a href="/tools/index.html">Tools</a>'
         "</nav>"
         f'<a class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a>'
         "</header>"
@@ -379,14 +377,14 @@ def homepage_footer_html() -> str:
 
 
 def homepage_band_html(whop: dict[str, Any]) -> str:
-    """One short Premium line — not a second sales page."""
+    """One short Premium line — second opinion, not a cancel-only pitch."""
     price = int(whop["price_usd_month"])
     trial = int(whop["trial_period_days"])
     return f"""<!-- AIT HOMEPAGE PREMIUM BAND START -->
 <section class="scene scene-dark home-premium-band">
 <div>
-<p class="kicker light">Want help before a renewal?</p>
-<p>Optional ${price}/month pack on Whop — dated keep/cut notes and a written reply in 48 hours. Usually cheaper than one forgotten seat.</p>
+<p class="kicker light">Want a second opinion before you renew?</p>
+<p>Optional ${price}/month keep/cut pack on Whop — dated notes and a written reply in 48 hours when you want help deciding. Usually cheaper than one forgotten seat.</p>
 <p class="home-premium-actions"><a class="button home-cta-primary" href="/premium/">{BUY_PAGE_LABEL}</a>
 <a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
 </div>

@@ -461,20 +461,22 @@ def main():
         errors.append('Homepage still says operationalize (meta/OG/Twitter/JSON-LD must use second-person voice)')
     if 'The essential AI tools directory' in home_html:
         errors.append('Homepage still uses The essential AI tools directory')
-    if 'Which AI tools should you cancel?' not in home_head:
-        errors.append('Homepage head missing human title')
-    if "See what's overlapping" not in home_head and 'See what&apos;s overlapping' not in home_head:
-        errors.append('Homepage head missing human description')
+    if 'Choose the right AI tools' not in home_head:
+        errors.append('Homepage head missing choose/learn title')
+    if 'Which AI tools should you cancel?' in home_head:
+        errors.append('Homepage title must not be cancel-only')
+    if 'free stack check' not in home_head.lower():
+        errors.append('Homepage head missing choose/learn description')
     for needle, label in (
-        ('property="og:title" content="AIToolsEssentials — Which AI tools should you cancel?"', 'og:title'),
-        ('property="og:description" content="Run a free audit. See what\'s overlapping. Cancel before renewal."', 'og:description'),
-        ('name="twitter:title" content="AIToolsEssentials — Which AI tools should you cancel?"', 'twitter:title'),
-        ('name="twitter:description" content="Run a free audit. See what\'s overlapping. Cancel before renewal."', 'twitter:description'),
-        ('"name": "AIToolsEssentials — Which AI tools should you cancel?"', 'JSON-LD name'),
-        ('"description": "Run a free audit. See what\'s overlapping. Cancel before renewal."', 'JSON-LD description'),
+        ('property="og:title" content="AIToolsEssentials — Choose the right AI tools"', 'og:title'),
+        ('property="og:description" content="Reviews, comparisons, and a free stack check so you can pick tools that fit."', 'og:description'),
+        ('name="twitter:title" content="AIToolsEssentials — Choose the right AI tools"', 'twitter:title'),
+        ('name="twitter:description" content="Reviews, comparisons, and a free stack check so you can pick tools that fit."', 'twitter:description'),
+        ('"name": "AIToolsEssentials — Choose the right AI tools"', 'JSON-LD name'),
+        ('"description": "Reviews, comparisons, and a free stack check so you can pick tools that fit."', 'JSON-LD description'),
     ):
         if needle not in home_head:
-            errors.append(f'Homepage head missing {label} second-person voice')
+            errors.append(f'Homepage head missing {label} choose/learn voice')
     for p in ROOT.rglob('*.html'):
         rel = p.relative_to(ROOT)
         if 'admin' in rel.parts or any(part.startswith('.') for part in rel.parts) or 'go' in rel.parts:
@@ -578,13 +580,17 @@ def main():
         errors.append('Homepage Premium band must keep a liquid-glass CTA to /premium/')
     if 'scene-light' in band_html:
         errors.append('Homepage Premium band must stay in the dark mid-page composition')
+    if 'second opinion' not in band_html.lower() and 'help deciding' not in band_html.lower():
+        errors.append('Homepage Premium band must frame keep/cut as help deciding, not cancel-only')
     stack_audit_buttons = home_html.count('href="/stack-audit.html">Free Stack Audit')
     if stack_audit_buttons > 2:
         errors.append(f'Homepage repeats Free Stack Audit too many times ({stack_audit_buttons})')
-    if 'cancel' not in hero_html.lower():
-        errors.append('Homepage H1 must stay about what to cancel')
-    if "You're paying for overlapping AI tools" not in hero_html and 'You&apos;re paying for overlapping AI tools' not in hero_html:
-        errors.append('Homepage hero missing the overlapping-tools kicker')
+    if 'you should cancel' in hero_html.lower() or 'which ones you should cancel' in hero_html.lower():
+        errors.append('Homepage H1 must not be cancel-only')
+    if 'fit the job' not in hero_html.lower() and 'not the <em>hype</em>' not in hero_html.lower():
+        errors.append('Homepage H1 must stay about choosing tools that fit')
+    if 'Reviews, comparisons, and a free stack check' not in hero_html:
+        errors.append('Homepage hero missing the reviews/comparisons kicker')
     if '<em>' not in hero_html or 'Instrument+Serif' not in home_head:
         errors.append('Homepage must load Instrument Serif italic and accent one H1 phrase with <em>')
     if not re.search(r'href="(?:/)?css/styles\.css\?v=', home_head):
@@ -593,8 +599,8 @@ def main():
         errors.append('Homepage critical CSS must keep the Premium band dark if styles.css is stale')
     if 'home-cta-primary' not in hero_html or 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
         errors.append('Homepage hero primary must stay Free Stack Audit')
-    if 'Or see the optional keep/cut pack' not in hero_html or 'href="/premium/"' not in hero_html:
-        errors.append('Homepage hero missing the quiet Premium text link')
+    if 'href="/tools/index.html">Browse tools' not in hero_html:
+        errors.append('Homepage hero missing the Browse tools learning path')
     if home_html.count('href="/subscribe/">Subscribe free') != 1:
         errors.append('Homepage must keep exactly one Subscribe free button')
     if re.search(r'<html[^>]*style="[^"]*overflow\s*:\s*hidden', home_html, flags=re.I) or re.search(
