@@ -465,15 +465,15 @@ def main():
         errors.append('Homepage head missing choose/learn title')
     if 'Which AI tools should you cancel?' in home_head:
         errors.append('Homepage title must not be cancel-only')
-    if 'free stack check' not in home_head.lower():
-        errors.append('Homepage head missing choose/learn description')
+    if 'dated evidence' not in home_head.lower():
+        errors.append('Homepage head missing dated-evidence choose/learn description')
     for needle, label in (
         ('property="og:title" content="AIToolsEssentials — Choose the right AI tools"', 'og:title'),
-        ('property="og:description" content="Reviews, comparisons, and a free stack check so you can pick tools that fit."', 'og:description'),
+        ('property="og:description" content="Choose AI tools with dated evidence. Learn what fits the job, then keep or cut what you already pay for."', 'og:description'),
         ('name="twitter:title" content="AIToolsEssentials — Choose the right AI tools"', 'twitter:title'),
-        ('name="twitter:description" content="Reviews, comparisons, and a free stack check so you can pick tools that fit."', 'twitter:description'),
+        ('name="twitter:description" content="Choose AI tools with dated evidence. Learn what fits the job, then keep or cut what you already pay for."', 'twitter:description'),
         ('"name": "AIToolsEssentials — Choose the right AI tools"', 'JSON-LD name'),
-        ('"description": "Reviews, comparisons, and a free stack check so you can pick tools that fit."', 'JSON-LD description'),
+        ('"description": "Choose AI tools with dated evidence. Learn what fits the job, then keep or cut what you already pay for."', 'JSON-LD description'),
     ):
         if needle not in home_head:
             errors.append(f'Homepage head missing {label} choose/learn voice')
@@ -589,8 +589,10 @@ def main():
         errors.append('Homepage H1 must not be cancel-only')
     if 'fit the job' not in hero_html.lower() and 'not the <em>hype</em>' not in hero_html.lower():
         errors.append('Homepage H1 must stay about choosing tools that fit')
-    if 'Reviews, comparisons, and a free stack check' not in hero_html:
-        errors.append('Homepage hero missing the reviews/comparisons kicker')
+    if 'Dated reviews, comparisons, and a free stack check' not in hero_html:
+        errors.append('Homepage hero missing the dated-reviews kicker')
+    if 'dated evidence' not in hero_html.lower():
+        errors.append('Homepage hero must lead with dated evidence, not cancel-only')
     if '<em>' not in hero_html or 'Instrument+Serif' not in home_head:
         errors.append('Homepage must load Instrument Serif italic and accent one H1 phrase with <em>')
     if not re.search(r'href="(?:/)?css/styles\.css\?v=', home_head):

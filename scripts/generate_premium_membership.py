@@ -87,7 +87,7 @@ def homepage_voice_meta(root: Path | None = None) -> tuple[str, str]:
     """Homepage title/description from data/voice_rewrites.json (second-person voice)."""
     root = root or Path(__file__).resolve().parent.parent
     title_tail = "Choose the right AI tools"
-    desc = "Reviews, comparisons, and a free stack check so you can pick tools that fit."
+    desc = "Choose AI tools with dated evidence. Learn what fits the job, then keep or cut what you already pay for."
     path = root / "data" / "voice_rewrites.json"
     if path.exists():
         data = json.loads(path.read_text())
