@@ -119,6 +119,27 @@
   });
 })();
 
+/* Homepage entrance: force final state if CSS animations never run. */
+(function () {
+  var root = document.documentElement;
+  var body = document.body;
+  if (!body || body.getAttribute('data-page') !== 'home') return;
+  function reveal() { root.classList.add('home-enter-done'); }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    reveal();
+    return;
+  }
+  var finished = false;
+  function finish() {
+    if (finished) return;
+    finished = true;
+    reveal();
+  }
+  window.addEventListener('load', function () { setTimeout(finish, 1600); });
+  setTimeout(finish, 2400);
+})();
+
 /* Exit-intent email capture: offer free Stack Audit or Keep/Cut Weekly. */
 (function () {
   var STORAGE_KEY = 'aitoolsessentials.exit_prompt.v1';

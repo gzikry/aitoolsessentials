@@ -566,6 +566,21 @@ def main():
         errors.append(f'Homepage repeats Free Stack Audit too many times ({stack_audit_buttons})')
     if 'Find overlapping AI subscriptions' not in hero_html and 'what to cancel' not in hero_html.lower():
         errors.append('Homepage H1 must be about overlapping subscriptions / what to cancel')
+    if '<em>' not in hero_html or 'Instrument+Serif' not in home_head:
+        errors.append('Homepage must load Instrument Serif italic and accent one H1 phrase with <em>')
+    if 'home-cta-primary' not in hero_html or 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
+        errors.append('Homepage hero primary must stay Free Stack Audit')
+    if 'home-badge' not in hero_html or 'Free Stack Audit · no login' not in hero_html:
+        errors.append('Homepage hero missing the free-audit badge')
+    if home_html.count('href="/subscribe/">Subscribe free') != 1:
+        errors.append('Homepage must keep exactly one Subscribe free button')
+    if re.search(r'<html[^>]*style="[^"]*overflow\s*:\s*hidden', home_html, flags=re.I) or re.search(
+        r'<body[^>]*style="[^"]*overflow\s*:\s*hidden', home_html, flags=re.I
+    ):
+        errors.append('Homepage must not lock html/body to overflow:hidden')
+    for banned_proof in ('4.2M workflows', '92% reduction', '180+ teams', 'Vesper.ai', 'Operational AI Infrastructure'):
+        if banned_proof.lower() in home_html.lower():
+            errors.append(f'Homepage must not use cloned Vesper copy or invented stats: {banned_proof}')
     if 'pay $12 to stop paying' in home_html.lower():
         errors.append('Homepage still says pay $12 to stop paying for AI')
     footer = home_html[home_html.find('<footer'): home_html.find('</footer>')] if '<footer' in home_html else ''

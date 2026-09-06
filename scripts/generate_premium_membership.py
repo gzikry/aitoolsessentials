@@ -964,10 +964,52 @@ def _homepage_scripts(_html: str) -> str:
     )
 
 
+HOME_CRITICAL_START = "<!-- AIT HOME CRITICAL START -->"
+HOME_CRITICAL_END = "<!-- AIT HOME CRITICAL END -->"
+HOME_FONTS_HREF = (
+    "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1"
+    "&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
+)
+
+
+def homepage_critical_head() -> str:
+    """First-paint dark canvas + homepage fonts. Idempotent marker pair."""
+    return (
+        f"{HOME_CRITICAL_START}"
+        '<style id="ait-home-critical">html,body{background:#000;color:#f4f5f7}</style>'
+        '<link rel="preconnect" href="https://fonts.googleapis.com">'
+        '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+        f'<link href="{HOME_FONTS_HREF}" rel="stylesheet">'
+        f"{HOME_CRITICAL_END}"
+    )
+
+
+def apply_homepage_critical_head(html: str) -> str:
+    """Force a dark first paint and load Instrument Serif italic on the homepage only."""
+    html = re.sub(
+        rf"{re.escape(HOME_CRITICAL_START)}.*?{re.escape(HOME_CRITICAL_END)}",
+        "",
+        html,
+        flags=re.S,
+    )
+    html = re.sub(
+        r'<meta name="theme-color" content="[^"]*">',
+        '<meta name="theme-color" content="#000000">',
+        html,
+        count=1,
+    )
+    html = re.sub(r"(<head\b[^>]*>)\s*", r"\1", html, count=1, flags=re.I)
+    head_open = re.search(r"<head\b[^>]*>", html, flags=re.I)
+    if not head_open:
+        return html
+    return html[: head_open.end()] + homepage_critical_head() + html[head_open.end():]
+
+
 def slim_homepage_html(html: str, root: Path) -> str:
     """Rebuild homepage body to hero + one Premium band + subscribe + slim chrome."""
     load_whop_from_integrations(root)
     html = apply_homepage_voice_meta(html, root=root)
+    html = apply_homepage_critical_head(html)
     head_end = html.find("</head>")
     if head_end == -1:
         return html
@@ -978,11 +1020,11 @@ def slim_homepage_html(html: str, root: Path) -> str:
         + homepage_header_html()
         + "\n\n  <main>\n"
         + homepage_hero_html(_whop_dict())
-        + "\n"
+        + '\n<div class="home-rest">\n'
         + homepage_band_html(_whop_dict()).rstrip()
         + "\n"
         + homepage_newsletter_panel(root)
-        + "\n</main>\n\n"
+        + "\n</div>\n</main>\n\n"
         + '  <div id="share-row" hidden></div>\n  '
         + homepage_footer_html()
         + "\n"

@@ -192,6 +192,12 @@ def main() -> None:
             errors.append("enhance_homepage must not emit a Beehiiv form button on the homepage")
         if first_home.count('href="/subscribe/">Subscribe free') != 1:
             errors.append("enhance_homepage must keep exactly one Subscribe free button")
+        if "<em>" not in first_home or "Instrument+Serif" not in first_home:
+            errors.append("enhance_homepage must keep an Instrument Serif H1 accent")
+        if "home-cta-primary" not in first_home or 'href="/stack-audit.html">Free Stack Audit' not in first_home:
+            errors.append("enhance_homepage must keep Stack Audit as the solid primary CTA")
+        if "4.2M workflows" in first_home or "Vesper.ai" in first_home:
+            errors.append("enhance_homepage must not emit cloned Vesper stats or brand")
 
     premium = (ROOT / "premium/index.html").read_text()
     for heading in (
