@@ -37,7 +37,10 @@ def main() -> None:
     subscribe = home[home.find('id="subscribe"'): home.find('id="subscribe"') + 1200]
     if WHOP in subscribe or WHOP_PROMO in subscribe:
         errors.append("Homepage #subscribe still contains Whop checkout")
-    hero = home[home.find('class="hero '): home.find("hero-device")]
+    hero_end = home.find("</section>", home.find('class="hero '))
+    hero = home[home.find('class="hero '): hero_end] if 'class="hero ' in home and hero_end != -1 else ""
+    if "hero-device" in home or "device-window" in home:
+        errors.append("Homepage must not include the decorative hero device card")
     if 'href="/stack-audit.html">Free Stack Audit</a>' not in hero and 'href="/stack-audit.html">Free Stack Audit' not in hero:
         errors.append("Homepage hero primary CTA must be Free Stack Audit")
     if "Join Premium" in hero:
@@ -196,6 +199,12 @@ def main() -> None:
             errors.append("enhance_homepage must keep an Instrument Serif H1 accent")
         if "home-cta-primary" not in first_home or 'href="/stack-audit.html">Free Stack Audit' not in first_home:
             errors.append("enhance_homepage must keep Stack Audit as the solid primary CTA")
+        if "hero-device" in first_home or "device-window" in first_home:
+            errors.append("enhance_homepage must not restore the decorative hero device card")
+        if "Not a drip" in first_home or "on this device" in first_home.lower():
+            errors.append("enhance_homepage must not restore brochure homepage copy")
+        if "Which AI tools should you cancel?" not in first_home:
+            errors.append("enhance_homepage must keep the human homepage title")
         if "4.2M workflows" in first_home or "Vesper.ai" in first_home:
             errors.append("enhance_homepage must not emit cloned Vesper stats or brand")
         if 'scene-light home-premium-band' in first_home:

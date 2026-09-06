@@ -321,42 +321,28 @@ def upsell_module_html(whop: dict[str, Any]) -> str:
     )
 
 
-HOME_BADGE_SPARK = (
-    '<svg class="home-badge-spark" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">'
-    '<path fill="currentColor" d="M8 1.1c.18 2.55 1.16 4.28 3.7 5.9-2.54 1.62-3.52 3.35-3.7 5.9-.18-2.55-1.16-4.28-3.7-5.9 2.54-1.62 3.52-3.35 3.7-5.9z"/>'
-    "</svg>"
-)
-
-
 def homepage_hero_actions_html(whop: dict[str, Any]) -> str:
     _ = whop
     return (
         '<div class="actions home-appear" data-appear="5">'
         f'<a class="button home-cta-primary" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a>'
-        f'<a class="button home-cta-ghost" href="/premium/">{BUY_PAGE_LABEL}</a>'
-        "</div>"
+        "</div>\n"
+        '        <p class="hero-secondary-links home-appear" data-appear="5">'
+        '<a href="/premium/">Or see the optional keep/cut pack</a>'
+        "</p>"
     )
 
 
 def homepage_hero_html(whop: dict[str, Any]) -> str:
-    """Homepage hero only: overlap/cancel H1, Stack Audit primary, Premium secondary."""
+    """Copy-first homepage hero. No decorative device card."""
     actions = homepage_hero_actions_html(whop)
     return f'''    <section class="hero home-hero scene scene-dark">
       <div class="home-hero-grain" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="home-badge home-appear" data-appear="2">{HOME_BADGE_SPARK}Free Stack Audit · no login</p>
-        <h1><span class="home-line home-appear" data-appear="3">Find overlapping AI subscriptions —</span> <span class="home-line home-appear" data-appear="4">and what to <em>cancel</em>.</span></h1>
-        <p class="subhead home-appear" data-appear="4">Run a free Stack Audit on this device. Keep one tool per job. Cancel the rest before renewal.</p>
+        <p class="home-kicker home-appear" data-appear="2">You&apos;re paying for overlapping AI tools</p>
+        <h1><span class="home-line home-appear" data-appear="3">See which ones</span> <span class="home-line home-appear" data-appear="4">you should <em>cancel</em>.</span></h1>
+        <p class="subhead home-appear" data-appear="4">Run a free audit. See what&apos;s overlapping. Cancel before renewal.</p>
         {actions}
-      </div>
-      <div class="hero-device home-appear" data-appear="5" aria-hidden="true">
-        <div class="device-window">
-          <div class="window-bar"><span></span><span></span><span></span></div>
-          <div class="search-line">Find overlapping subscriptions</div>
-          <div class="result-card active"><b>Keep one</b><span>The seat that does this week&apos;s job</span><em>Free audit</em></div>
-          <div class="result-card"><b>Cut overlap</b><span>Same job, second subscription</span><em>Cancel before renewal</em></div>
-          <div class="result-card"><b>Optional pack</b><span>Keep/cut notes + 48-hour reply</span><em>Premium</em></div>
-        </div>
       </div>
     </section>'''
 
@@ -399,8 +385,8 @@ def homepage_band_html(whop: dict[str, Any]) -> str:
     return f"""<!-- AIT HOMEPAGE PREMIUM BAND START -->
 <section class="scene scene-dark home-premium-band">
 <div>
-<p class="kicker light">Optional Premium</p>
-<p>Need a keep/cut pack and a 48-hour written reply before renewals? ${price}/month — cheaper than one overlapping seat, not another AI subscription.</p>
+<p class="kicker light">Want help before a renewal?</p>
+<p>Optional ${price}/month pack on Whop — dated keep/cut notes and a written reply in 48 hours. Usually cheaper than one forgotten seat.</p>
 <p class="home-premium-actions"><a class="button home-cta-primary" href="/premium/">{BUY_PAGE_LABEL}</a>
 <a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
 </div>

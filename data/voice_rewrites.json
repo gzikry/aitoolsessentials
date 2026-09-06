@@ -9,12 +9,12 @@
   "rewrites": [
     {
       "phrase": "operationalize the best AI tools",
-      "rewrite": "See which subscriptions you should keep, which you can cancel, and what to test this week.",
+      "rewrite": "Run a free audit. See what's overlapping. Cancel before renewal.",
       "files": ["index.html", "scripts/generate_premium_membership.py"]
     },
     {
       "phrase": "The essential AI tools directory",
-      "rewrite": "Stop paying for tools you do not use",
+      "rewrite": "Which AI tools should you cancel?",
       "files": ["index.html", "scripts/generate_premium_membership.py"]
     },
     {
