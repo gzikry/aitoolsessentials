@@ -86,8 +86,8 @@ def esc(s: Any) -> str:
 def homepage_voice_meta(root: Path | None = None) -> tuple[str, str]:
     """Homepage title/description from data/voice_rewrites.json (second-person voice)."""
     root = root or Path(__file__).resolve().parent.parent
-    title_tail = "Stop paying for tools you do not use"
-    desc = "See which subscriptions you should keep, which you can cancel, and what to test this week."
+    title_tail = "Which AI tools should you cancel?"
+    desc = "Run a free audit. See what's overlapping. Cancel before renewal."
     path = root / "data" / "voice_rewrites.json"
     if path.exists():
         data = json.loads(path.read_text())
@@ -939,8 +939,8 @@ def homepage_newsletter_panel(root: Path) -> str:
     if cfg_path.exists():
         cfg = json.loads(cfg_path.read_text())
     kicker = esc(cfg.get("homepage_kicker") or "Keep/Cut Weekly · free email")
-    headline = esc(cfg.get("homepage_headline") or "Get the free weekly keep/cut email.")
-    body = esc(cfg.get("homepage_body") or "One email a week on Beehiiv. Premium is a separate paid membership — not this list.")
+    headline = esc(cfg.get("homepage_headline") or "One short email a week.")
+    body = esc(cfg.get("homepage_body") or "What changed, what to keep, what to cut.")
     return f'''<!-- AIT HOMEPAGE NEWSLETTER START -->
 <section id="subscribe" class="newsletter-panel home-newsletter">
 <div>
@@ -971,7 +971,7 @@ HOME_FONTS_HREF = (
     "&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
 )
 # CDN caches /css/styles.css for 30 days. Bump when homepage-scoped CSS must ship.
-HOME_CSS_HREF = "css/styles.css?v=20260906b"
+HOME_CSS_HREF = "css/styles.css?v=20260906c"
 HOME_CRITICAL_CSS = (
     "html,body{background:#000;color:#f4f5f7}"
     "body[data-page=home] .home-rest{background:#000;color:#f4f5f7}"

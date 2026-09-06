@@ -442,7 +442,14 @@ def main():
         errors.append('Homepage must keep a labeled LAUNCH50 upgrade CTA (not as the hero primary)')
     if 'https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50' not in home_html:
         errors.append('Homepage upgrade checkout must use the LAUNCH50 promo URL')
-    hero_html = home_html[home_html.find('class="hero '): home_html.find('hero-device')] if 'class="hero ' in home_html and 'hero-device' in home_html else ''
+    hero_match = re.search(r'<section class="hero[^"]*".*?</section>', home_html, flags=re.S)
+    hero_html = hero_match.group(0) if hero_match else ''
+    if 'hero-device' in home_html or 'device-window' in home_html:
+        errors.append('Homepage must not include the decorative hero device card')
+    if 'Not a drip' in home_html:
+        errors.append('Homepage must not use Not a drip newsletter copy')
+    if 'on this device' in home_html.lower():
+        errors.append('Homepage must not say on this device')
     if 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
         errors.append('Homepage hero primary CTA must be Free Stack Audit')
     if 'Join Premium' in hero_html:
@@ -454,17 +461,17 @@ def main():
         errors.append('Homepage still says operationalize (meta/OG/Twitter/JSON-LD must use second-person voice)')
     if 'The essential AI tools directory' in home_html:
         errors.append('Homepage still uses The essential AI tools directory')
-    if 'Stop paying for tools you do not use' not in home_head:
-        errors.append('Homepage head missing second-person title')
-    if 'See which subscriptions you should keep' not in home_head:
-        errors.append('Homepage head missing second-person description')
+    if 'Which AI tools should you cancel?' not in home_head:
+        errors.append('Homepage head missing human title')
+    if "See what's overlapping" not in home_head and 'See what&apos;s overlapping' not in home_head:
+        errors.append('Homepage head missing human description')
     for needle, label in (
-        ('property="og:title" content="AIToolsEssentials — Stop paying for tools you do not use"', 'og:title'),
-        ('property="og:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', 'og:description'),
-        ('name="twitter:title" content="AIToolsEssentials — Stop paying for tools you do not use"', 'twitter:title'),
-        ('name="twitter:description" content="See which subscriptions you should keep, which you can cancel, and what to test this week."', 'twitter:description'),
-        ('"name": "AIToolsEssentials — Stop paying for tools you do not use"', 'JSON-LD name'),
-        ('"description": "See which subscriptions you should keep, which you can cancel, and what to test this week."', 'JSON-LD description'),
+        ('property="og:title" content="AIToolsEssentials — Which AI tools should you cancel?"', 'og:title'),
+        ('property="og:description" content="Run a free audit. See what\'s overlapping. Cancel before renewal."', 'og:description'),
+        ('name="twitter:title" content="AIToolsEssentials — Which AI tools should you cancel?"', 'twitter:title'),
+        ('name="twitter:description" content="Run a free audit. See what\'s overlapping. Cancel before renewal."', 'twitter:description'),
+        ('"name": "AIToolsEssentials — Which AI tools should you cancel?"', 'JSON-LD name'),
+        ('"description": "Run a free audit. See what\'s overlapping. Cancel before renewal."', 'JSON-LD description'),
     ):
         if needle not in home_head:
             errors.append(f'Homepage head missing {label} second-person voice')
@@ -574,8 +581,10 @@ def main():
     stack_audit_buttons = home_html.count('href="/stack-audit.html">Free Stack Audit')
     if stack_audit_buttons > 2:
         errors.append(f'Homepage repeats Free Stack Audit too many times ({stack_audit_buttons})')
-    if 'Find overlapping AI subscriptions' not in hero_html and 'what to cancel' not in hero_html.lower():
-        errors.append('Homepage H1 must be about overlapping subscriptions / what to cancel')
+    if 'cancel' not in hero_html.lower():
+        errors.append('Homepage H1 must stay about what to cancel')
+    if "You're paying for overlapping AI tools" not in hero_html and 'You&apos;re paying for overlapping AI tools' not in hero_html:
+        errors.append('Homepage hero missing the overlapping-tools kicker')
     if '<em>' not in hero_html or 'Instrument+Serif' not in home_head:
         errors.append('Homepage must load Instrument Serif italic and accent one H1 phrase with <em>')
     if not re.search(r'href="(?:/)?css/styles\.css\?v=', home_head):
@@ -584,8 +593,8 @@ def main():
         errors.append('Homepage critical CSS must keep the Premium band dark if styles.css is stale')
     if 'home-cta-primary' not in hero_html or 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
         errors.append('Homepage hero primary must stay Free Stack Audit')
-    if 'home-badge' not in hero_html or 'Free Stack Audit · no login' not in hero_html:
-        errors.append('Homepage hero missing the free-audit badge')
+    if 'Or see the optional keep/cut pack' not in hero_html or 'href="/premium/"' not in hero_html:
+        errors.append('Homepage hero missing the quiet Premium text link')
     if home_html.count('href="/subscribe/">Subscribe free') != 1:
         errors.append('Homepage must keep exactly one Subscribe free button')
     if re.search(r'<html[^>]*style="[^"]*overflow\s*:\s*hidden', home_html, flags=re.I) or re.search(
