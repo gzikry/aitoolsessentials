@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-06",
+  "platforms_checked": [
+    "HARO (helpareporter.com)",
+    "Connectively (connectively.us / featured.com)",
+    "Qwoted (qwoted.com)",
+    "Source of Sources (sourceofsources.com)",
+    "JournoFinder (journofinder.com/requests)",
+    "Medialyst (medialyst.ai)",
+    "X/Twitter #journorequest",
+    "General web search"
+  ],
+  "relevant_queries_found": 0,
+  "status": "No publicly accessible journalist queries found today about AI tools, AI pricing, or overlapping subscriptions.",
+  "notes": "All major source-request platforms now require login/registration to view actual queries. HARO queries page is not publicly accessible (email-digest-only delivery). Connectively requires platform login (paid tiers $19-$99/mo). Qwoted requires account. Source of Sources is email-only. JournoFinder request search did not return relevant AI pricing/subscription overlap results. #journorequest feed on X did not surface any AI pricing/subscription overlap queries today. Web searches for 'AI tools pricing journalist query', 'subscription overlap reporter request', 'SaaS pricing HARO query' returned no active/relevant results. Previous digests (2026-09-04, 2026-09-05) also found 0 relevant queries.",
+  "opportunities": []
+}
