@@ -3,7 +3,7 @@
     "slug": "2026-09",
     "title": "What changed in AI tools — September 2026",
     "month_label": "September 2026",
-    "checked_at": "2026-09-03",
+    "checked_at": "2026-09-07",
     "summary": "A public keep/cut digest of recorded vendor launches and directory checks this month. OpenAI released GPT-6 Astra on 2026-09-03: official Path to Astra post designates it at Critical cybersecurity capability, with advanced cyber access gated to trusted testers / Daybreak Blue; Axios reports limited Daybreak Access first, then ChatGPT Plus / Pro / Business / Enterprise and API in the coming days — not a new SKU and not a confirmed Plus/Pro price change. Perplexity open-sourced Lily (2026-09-02 official blog) as a lightweight local inference engine for Apple silicon and Qwen3.6-35B-A3B, tied to Perplexity Computer hybrid compute — not a new paid SKU. Catch (catchagent.ai) was listed on 2026-09-02 after the official homepage and /security page advertised $99/month billed monthly (cancel anytime, 10-day free trial); /pricing 404s and the same homepage still shows Closed Beta — Limited Spots. World Labs Atlas remains an early-access watch with no public self-serve pricing.",
     "new_listings": [
       {
@@ -53,7 +53,7 @@
         "checked_at": "2026-09-02"
       }
     ],
-    "keep_cut_rule": "If a launch has no public pricing, do not treat it as a buy decision. A model rolling onto existing ChatGPT paid tiers is not a reason to add a seat or assume a price change. An open-source local engine is not a reason to add a paid seat. If a public price is mixed with closed-beta waitlist copy, treat availability as unresolved until you can actually start a trial. Watch official sources, then re-check before adding a seat.",
+    "keep_cut_rule": "If a launch has no public pricing, do not treat it as a buy decision. A model rolling onto existing ChatGPT paid tiers is not a reason to add a seat or assume a price change. An open-source local engine is not a reason to add a paid seat. If a public price is mixed with closed-beta waitlist copy, treat availability as unresolved until you can actually start a trial. Watch official sources, then re-check before adding a seat. A small rank move with an unchanged rating is not a buying signal; test the same real task before changing seats.",
     "sources": [
       "https://openai.com/index/path-to-astra/",
       "https://openai.com/",
@@ -67,7 +67,16 @@
       "/local-ai-planner/",
       "https://www.catchagent.ai/",
       "https://www.catchagent.ai/security",
-      "https://x.com/therealnirs/status/2095134650431586686"
+      "https://x.com/therealnirs/status/2095134650431586686",
+      "https://arena.ai/leaderboard/text"
+    ],
+    "benchmark_updates": [
+      {
+        "name": "Arena Text snapshot",
+        "note": "The public snapshot advanced from 2026-08-31 to 2026-09-02. All six tracked ratings were unchanged; five ranks slipped 1–3 places as the leaderboard changed, while Claude stayed #62. Treat this as leaderboard drift, not a reason to add, cancel, or switch a paid product.",
+        "source_url": "/benchmarks/",
+        "checked_at": "2026-09-07"
+      }
     ]
   },
   {
@@ -77,14 +86,38 @@
     "checked_at": "2026-08-27",
     "summary": "A public keep/cut digest of recorded directory changes this month: new listings, model-lineup notes, and what to re-check before you renew.",
     "new_listings": [
-      {"name": "HtmlSlides", "slug": "htmlslides", "note": "Vendor submission. Interactive HTML decks. Test against Gamma before adding a paid seat."},
-      {"name": "Whop CLI", "slug": "whop-cli", "note": "Terminal/agent control for Whop products, plans, and checkout. Relevant if you sell on Whop."}
+      {
+        "name": "HtmlSlides",
+        "slug": "htmlslides",
+        "note": "Vendor submission. Interactive HTML decks. Test against Gamma before adding a paid seat."
+      },
+      {
+        "name": "Whop CLI",
+        "slug": "whop-cli",
+        "note": "Terminal/agent control for Whop products, plans, and checkout. Relevant if you sell on Whop."
+      }
     ],
     "watch_list": [
-      {"name": "Grok", "slug": "grok", "note": "Model lineup panel last checked 2026-08-26. Confirm current Grok 4.6 / Grok Build names on X before you pay for SuperGrok as a second assistant."},
-      {"name": "Cursor", "slug": "cursor", "note": "Composer / model options move quickly. Re-run one real coding task before renewing Pro if you also pay Copilot or Claude."},
-      {"name": "ChatGPT", "slug": "chatgpt", "note": "Lineup recorded as GPT-5.4 family as of 2026-08-26. Verify openai.com/pricing before annual."},
-      {"name": "Claude", "slug": "claude", "note": "Sonnet/Opus point releases plus Claude Code as a coding surface. Do not assume the chat plan and the coding workflow are the same job."}
+      {
+        "name": "Grok",
+        "slug": "grok",
+        "note": "Model lineup panel last checked 2026-08-26. Confirm current Grok 4.6 / Grok Build names on X before you pay for SuperGrok as a second assistant."
+      },
+      {
+        "name": "Cursor",
+        "slug": "cursor",
+        "note": "Composer / model options move quickly. Re-run one real coding task before renewing Pro if you also pay Copilot or Claude."
+      },
+      {
+        "name": "ChatGPT",
+        "slug": "chatgpt",
+        "note": "Lineup recorded as GPT-5.4 family as of 2026-08-26. Verify openai.com/pricing before annual."
+      },
+      {
+        "name": "Claude",
+        "slug": "claude",
+        "note": "Sonnet/Opus point releases plus Claude Code as a coding surface. Do not assume the chat plan and the coding workflow are the same job."
+      }
     ],
     "keep_cut_rule": "If two paid tools own the same weekly job, keep one. Use a real task test, then cancel the extra seat before renewal.",
     "sources": [

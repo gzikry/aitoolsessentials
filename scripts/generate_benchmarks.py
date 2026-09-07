@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate the public benchmark evidence hub from data/benchmarks.json."""
+import csv
 import json
 from pathlib import Path
 
@@ -13,13 +14,39 @@ def generate(root: Path) -> Path:
     tool_names = {t['slug']: t['name'] for t in json.loads((root / 'data/tools.json').read_text())}
 
     snapshot_rows = ""
+    csv_rows = []
     for row in data.get("arena_text_snapshot", []):
         source = sources[row["source_id"]]
+        name = tool_names.get(row['tool_slug'], row['tool_slug'].replace('-', ' ').title())
         snapshot_rows += f'''<tr>
-<td><a href="../tools/{row['tool_slug']}/">{tool_names.get(row['tool_slug'], row['tool_slug'].replace('-', ' ').title())}</a></td>
+<td><a href="../tools/{row['tool_slug']}/">{name}</a></td>
 <td><code>{row['model']}</code></td><td>#{row['rank']}</td><td>{row['score']} <small>(95% CI)</small></td>
 <td>{row['votes']:,}</td><td>{row['note']} <a href="{source['url']}" rel="external noopener">[{source['id']}]</a></td>
 </tr>'''
+        csv_rows.append([data['snapshot_date'], name, row['tool_slug'], row['model'], row['rank'], row['score'], row['votes'], source['url'], row['note']])
+
+    downloads = root / "downloads"
+    downloads.mkdir(exist_ok=True)
+    with (downloads / "arena-text-snapshot.csv").open("w", newline="") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["snapshot_date", "product_family", "tool_slug", "exact_model", "arena_rank", "arena_rating_ci", "preference_votes", "source_url", "interpretation"])
+        writer.writerows(csv_rows)
+
+    change_rows = ""
+    for row in data.get("arena_text_changes", []):
+        name = tool_names.get(row['tool_slug'], row['tool_slug'].replace('-', ' ').title())
+        rank_delta = row['new_rank'] - row['old_rank']
+        rank_text = "unchanged" if rank_delta == 0 else f"down {rank_delta}"
+        vote_delta = row['new_votes'] - row['old_votes']
+        vote_text = f"{vote_delta:+,}"
+        score_text = "unchanged" if not row.get('score_changed') else "changed"
+        change_rows += f'''<tr><td><a href="../tools/{row['tool_slug']}/">{name}</a></td><td><code>{row['model']}</code></td><td>#{row['old_rank']} → #{row['new_rank']} ({rank_text})</td><td>{vote_text}</td><td>{score_text}</td></tr>'''
+
+    change_section = ""
+    if change_rows:
+        change_section = f'''<section class="benchmark-section scene scene-light"><div class="section-title"><p class="kicker light">Snapshot change</p><h2>What moved since {data['previous_snapshot_date']}.</h2><p>{data['snapshot_summary']}</p></div>
+<div class="table-wrap"><table class="benchmark-table"><thead><tr><th>Product family</th><th>Exact model</th><th>Rank</th><th>Vote change</th><th>Arena rating</th></tr></thead><tbody>{change_rows}</tbody></table></div>
+<p class="benchmark-caveat"><strong>Buying decision:</strong> Do not add, cancel, or switch a subscription because a model moved a few leaderboard places while its rating stayed fixed. Re-run the same real task in the products you can actually buy.</p></section>'''
 
     coding_cards = ""
     for row in data.get("coding_agent_snapshot", []):
@@ -69,7 +96,10 @@ def generate(root: Path) -> Path:
 <section class="benchmark-section"><div class="section-title"><p class="kicker light">Current snapshot</p><h2>Arena Text: representative model listings</h2>
 <p>Arena Text is a public leaderboard built from anonymous, pairwise human preference battles. <strong>Rank</strong> is the model's position in that snapshot; <strong>Arena rating</strong> is the statistical preference score; <strong>± value</strong> is the approximate 95% confidence interval around that rating; and <strong>preference votes</strong> are the recorded battle outcomes contributing to the snapshot—not votes for the product alone.</p></div>
 <div class="table-wrap"><table class="benchmark-table" id="benchmark-table"><thead><tr><th><button type="button" data-col="0">Product family</button></th><th><button type="button" data-col="1">Exact model</button></th><th><button type="button" data-col="2">Arena rank</button></th><th><button type="button" data-col="3">Arena rating ± CI</button></th><th><button type="button" data-col="4">Preference votes</button></th><th>Interpretation</th></tr></thead><tbody>{snapshot_rows}</tbody></table></div>
+<p style="text-align:center;margin:18px 0"><a class="button button-blue" href="/downloads/arena-text-snapshot.csv" download>Download current snapshot CSV</a></p>
 <p class="benchmark-caveat"><strong>Read this correctly:</strong> Arena ratings summarize human preference in anonymous pairwise battles. A higher rank does not prove better factuality, lower cost, stronger privacy, or a better end-user product. <a href="{sources[2]['url']}" target="_blank" rel="external noopener">Methodology [2] ↗</a></p></section>
+
+{change_section}
 
 <section class="benchmark-section scene scene-light"><div class="section-title"><p class="kicker light">Coding-agent evidence</p><h2>Keep the full configuration attached.</h2><p>A coding score belongs to the agent, exact model, reasoning effort, harness version, trial policy, and integrity checks—not to one product name.</p></div><div class="benchmark-source-grid">{coding_cards}</div></section>
 

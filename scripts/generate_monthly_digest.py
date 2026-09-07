@@ -49,11 +49,16 @@ def generate(root: Path) -> int:
         listings = "".join(listing_item(x) for x in d.get("new_listings", []))
         launches = "".join(listing_item(x) for x in d.get("vendor_launches", []))
         watch = "".join(listing_item(x) for x in d.get("watch_list", []))
+        benchmark_updates = "".join(listing_item(x) for x in d.get("benchmark_updates", []))
         sources = "".join(source_item(s) for s in d.get("sources", []))
         desc = d.get("summary", "")
         launches_block = (
             f"<h2>Vendor launches (not directory listings)</h2><ul>{launches}</ul>"
             if launches else ""
+        )
+        benchmarks_block = (
+            f"<h2>Benchmark changes</h2><ul>{benchmark_updates}</ul>"
+            if benchmark_updates else ""
         )
         sources_block = (
             f"<h2>Sources</h2><ul>{sources}</ul>"
@@ -65,6 +70,7 @@ def generate(root: Path) -> int:
 <div class="score-card"><span>Rule</span><h2>Keep one tool per weekly job.</h2><p>{esc(d.get("keep_cut_rule"))}</p></div>
 <h2>New listings this month</h2><ul>{listings or "<li>None recorded.</li>"}</ul>
 {launches_block}
+{benchmarks_block}
 <h2>Re-check before you renew</h2><ul>{watch or "<li>None recorded.</li>"}</ul>
 {sources_block}
 <p>These notes are from recorded directory checks, not a live vendor API. Confirm prices and model names on official pages. Public digest is the headline list. <a href="/premium/">Premium</a> members get the curated alert feed, stack-audit template, and 7-day free trial (code LAUNCH50 for 50% off the first paid month, new users).</p>

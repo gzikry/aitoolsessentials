@@ -263,5 +263,63 @@
         5
       ]
     }
+  ],
+  "previous_snapshot_date": "2026-08-31",
+  "snapshot_summary": "All six tracked Arena ratings were unchanged. Five ranks moved down by 1–3 places as the leaderboard changed; Claude stayed at #62. This is leaderboard drift, not evidence that the products became worse.",
+  "arena_text_changes": [
+    {
+      "tool_slug": "grok",
+      "model": "grok-4.1",
+      "old_rank": 51,
+      "new_rank": 53,
+      "old_votes": 66374,
+      "new_votes": 66382,
+      "score_changed": false
+    },
+    {
+      "tool_slug": "deepseek",
+      "model": "deepseek-v4-pro",
+      "old_rank": 54,
+      "new_rank": 55,
+      "old_votes": 54214,
+      "new_votes": 54225,
+      "score_changed": false
+    },
+    {
+      "tool_slug": "claude",
+      "model": "claude-sonnet-4-5-20250929",
+      "old_rank": 62,
+      "new_rank": 62,
+      "old_votes": 79687,
+      "new_votes": 79668,
+      "score_changed": false
+    },
+    {
+      "tool_slug": "gemini",
+      "model": "gemini-2.5-pro",
+      "old_rank": 73,
+      "new_rank": 75,
+      "old_votes": 122589,
+      "new_votes": 122612,
+      "score_changed": false
+    },
+    {
+      "tool_slug": "chatgpt",
+      "model": "chatgpt-4o-latest-20250326",
+      "old_rank": 76,
+      "new_rank": 78,
+      "old_votes": 80687,
+      "new_votes": 80696,
+      "score_changed": false
+    },
+    {
+      "tool_slug": "mistral-le-chat",
+      "model": "mistral-medium-3.5",
+      "old_rank": 100,
+      "new_rank": 103,
+      "old_votes": 11006,
+      "new_votes": 11017,
+      "score_changed": false
+    }
   ]
 }

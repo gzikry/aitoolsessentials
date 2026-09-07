@@ -1,0 +1,7 @@
+snapshot_date,product_family,tool_slug,exact_model,arena_rank,arena_rating_ci,preference_votes,source_url,interpretation
+2026-09-02,Grok,grok,grok-4.1,53,1459±3,66382,https://arena.ai/leaderboard/text,Representative public xAI model listing; not necessarily the product's current default.
+2026-09-02,DeepSeek,deepseek,deepseek-v4-pro,55,1458±4,54225,https://arena.ai/leaderboard/text,Representative public DeepSeek model listing.
+2026-09-02,Claude,claude,claude-sonnet-4-5-20250929,62,1455±3,79668,https://arena.ai/leaderboard/text,Older public Claude listing retained for reproducible snapshot context; newer variants may rank differently.
+2026-09-02,Gemini,gemini,gemini-2.5-pro,75,1446±2,122612,https://arena.ai/leaderboard/text,"Specific Gemini model version, not the whole Gemini product."
+2026-09-02,ChatGPT,chatgpt,chatgpt-4o-latest-20250326,78,1443±3,80696,https://arena.ai/leaderboard/text,Historical public ChatGPT model listing; do not interpret as the current default model's rank.
+2026-09-02,Mistral Le Chat,mistral-le-chat,mistral-medium-3.5,103,1427±7,11017,https://arena.ai/leaderboard/text,Representative Mistral model listing with a wider confidence interval.
