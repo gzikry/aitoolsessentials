@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-07",
+  "monitor": "HARO/Connectively/Featured journalist request monitor",
+  "search_scope": "AI tools, AI pricing, overlapping subscriptions, SaaS costs, software spending",
+  "platforms_checked": [
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Queries distributed via 3x daily email digests only. /view-queries requires email entry. No public query feed. Cannot access without subscribed email."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "no_public_feed",
+      "notes": "No public query listing page. /queries returns 404. Platform requires login."
+    },
+    {
+      "platform": "Featured.com",
+      "status": "partial_access",
+      "notes": "Main /questions page shows featured questions. Search and category filters return 404. One tangentially relevant question found (see opportunities)."
+    },
+    {
+      "platform": "X/Twitter #JournoRequest",
+      "status": "blocked",
+      "notes": "x_search tool returned credit limit error (team spending limit reached). Could not search hashtag."
+    },
+    {
+      "platform": "JournoFinder (journofinder.com/requests)",
+      "status": "js_rendered",
+      "notes": "Page loads but search results are JS-rendered; web_extract returned empty content. No query results visible without browser execution."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "source": "Featured.com",
+      "query_text": "Why do you believe AI skills are becoming essential for today's job seekers, and how can mastering AI tools open new career opportunities? Please share one specific example of how AI proficiency has helped you or someone you know advance professionally.",
+      "journalist_publication": "Fast Company",
+      "category": "Technology / Business / Human Resources",
+      "deadline": "Open (no explicit deadline shown; 202 answers already submitted)",
+      "contact_method": "Submit answer via Featured.com question page",
+      "relevance": "tangential",
+      "relevance_notes": "About AI skills/career advancement, not directly about AI tool pricing or overlapping subscriptions. Could pitch AIToolsEssentials angle on how auditing your AI stack is itself an AI skill.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: frame the Stack Audit as an AI skill that helps professionals identify which tools to keep/cut, demonstrating AI proficiency.",
+      "url": "https://featured.com/questions"
+    }
+  ],
+  "expired_or_irrelevant": [
+    {
+      "source": "HARO journalist profile (publicly indexed)",
+      "query_text": "How do you measure AI effectiveness in your support operations",
+      "publication": "Dialpad Blog",
+      "deadline": "Jun 22nd, 2025 12:00 PM ET",
+      "status": "expired"
+    }
+  ],
+  "summary": "No directly relevant journalist queries about AI tool pricing, overlapping subscriptions, or SaaS cost optimization were found in publicly accessible sources on 2026-09-07. HARO's query feed is email-gated (requires subscription to receive 3x daily digests). Connectively has no public query page. Featured.com shows one tangentially relevant Fast Company question about AI skills/careers. The #JournoRequest X hashtag could not be searched due to API credit limits. Recommend: (1) George subscribes to HARO email digest at helpareporter.com to receive queries directly, (2) set up Featured.com keyword alerts for 'AI tools', 'SaaS', 'subscription', 'pricing' at featured.com/alerts, (3) retry #JournoRequest search when X API credits reset."
+}
