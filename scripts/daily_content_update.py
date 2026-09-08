@@ -457,4 +457,24 @@ _enhance_homepage(root)
 print('Re-applied homepage voice meta after final metadata pass')
 _sitemap_urls_final = refresh_sitemap(root)
 print(f'Refreshed final sitemap with {len(_sitemap_urls_final)} URLs')
+# Post-processors can append shared scripts after the earlier cleanup pass.
+# Run cleanup last so button handlers and other external scripts load once.
+_final_cleanup = subprocess.run(
+    ['python3', 'scripts/cleanup_html.py'],
+    capture_output=True,
+    text=True,
+    cwd=str(root),
+)
+print(_final_cleanup.stdout.strip() or _final_cleanup.stderr.strip())
+if _final_cleanup.returncode:
+    raise RuntimeError('Final HTML cleanup failed')
+_final_affiliate = subprocess.run(
+    ['python3', 'scripts/wire_affiliate_links.py'],
+    capture_output=True,
+    text=True,
+    cwd=str(root),
+)
+print(_final_affiliate.stdout.strip() or _final_affiliate.stderr.strip())
+if _final_affiliate.returncode:
+    raise RuntimeError('Final affiliate wiring failed')
 print('Re-injected final metadata layers')

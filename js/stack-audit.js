@@ -513,7 +513,6 @@
     if (premiumPanel && !document.querySelector("#sa-results .sa-premium-upsell")) {
       premiumPanel.innerHTML = '<section class="score-card sa-premium-savings sa-premium-upsell"><span>Optional next step</span><h3>Want a keep/cut pack and a written reply before you renew?</h3><p>The scorecard above stays free. Premium is optional: dated keep/cut notes and a 48-hour written reply in Whop when you want someone to decide with you. $12/month — cheaper than one overlapping seat, not another AI subscription.</p><p><a class="button button-blue" data-sa-cta href="https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50" rel="external noopener">Join Premium on Whop — 7-day trial · LAUNCH50</a></p><p class="sa-note">Then $12/month. We do not invent how much you will save. Use your own numbers from this audit.</p></section>';
     }
-    }
   }
   function shareUrl(includeSpend) {
     var url = new URL(location.href);

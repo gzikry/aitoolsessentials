@@ -129,7 +129,7 @@ h3 { margin-bottom: 8px; font-size: 28px; line-height: 1.14; font-weight: 600; l
 }
 @media (max-width: 520px) {
   .global-nav { gap: 12px; } .brand span:last-child { display:none; }
-  .global-nav[data-nav="slim"] { gap: 8px; }
+  .global-nav[data-nav="slim"] { gap: 8px; padding-left: 12px; padding-right: 12px; }
   .global-nav[data-nav="slim"] .nav-links { gap: 8px; font-size: 11px; }
   .global-nav[data-nav="slim"] .nav-cta { display: none; }
   .hero { padding-left: 18px; padding-right: 18px; }
@@ -1717,4 +1717,58 @@ body[data-page="home"] .footer[data-footer="slim"] {
     min-height: 48px;
     width: min(100%, 320px);
   }
+}
+
+/* Accessible button contrast across light and dark sections. */
+.button {
+  border: 1px solid transparent;
+  color-scheme: light;
+  cursor: pointer;
+  font-family: inherit;
+}
+.button-blue:hover,
+.nav-cta:hover,
+.cta-button:hover {
+  background: var(--blue-dark);
+  color: #fff;
+}
+.button-dark {
+  background: #24262b;
+  border-color: #24262b;
+  color: #fff;
+}
+.button-dark:hover {
+  background: #343741;
+  border-color: #343741;
+  color: #fff;
+  text-decoration: none;
+}
+.button-ghost-dark {
+  background: #f0f1ff;
+  border-color: #aeb6e8;
+  color: #3d46a8;
+}
+.button-ghost-dark:hover {
+  background: #e2e5ff;
+  border-color: #7e88d8;
+  color: #30388d;
+  text-decoration: none;
+}
+.scene-dark .button-ghost-dark,
+.newsletter-panel .button-ghost-dark,
+.benchmark-policy .button-ghost-dark {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.38);
+  color: #f0f2ff;
+}
+.scene-dark .button-ghost-dark:hover,
+.newsletter-panel .button-ghost-dark:hover,
+.benchmark-policy .button-ghost-dark:hover {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.58);
+  color: #fff;
+}
+.button:disabled,
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
 }

@@ -3211,6 +3211,7 @@
   },
   {
     "slug": "ideogram",
+    "official": "https://ideogram.ai",
     "name": "Ideogram",
     "category": "Creative",
     "description": "AI image generation with strong text rendering and style variety.",
@@ -3246,6 +3247,7 @@
   },
   {
     "slug": "luma-ai",
+    "official": "https://lumalabs.ai",
     "name": "Luma AI",
     "category": "Video",
     "description": "AI video generation and 3D scene creation from prompts or images.",
@@ -3283,6 +3285,7 @@
   },
   {
     "slug": "pika",
+    "official": "https://pika.art",
     "name": "Pika",
     "category": "Video",
     "description": "AI video generation for short clips, style transfers, and character consistency.",
@@ -3318,6 +3321,7 @@
   },
   {
     "slug": "suno",
+    "official": "https://suno.com",
     "name": "Suno",
     "category": "Audio & Video",
     "description": "AI music generation with vocals, lyrics, and full song production.",
@@ -3352,6 +3356,7 @@
   },
   {
     "slug": "udio",
+    "official": "https://udio.com",
     "name": "Udio",
     "category": "Audio & Video",
     "description": "AI music generation focused on high-fidelity tracks and genre control.",

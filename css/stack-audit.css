@@ -11,7 +11,8 @@
 .sa-pick { display: flex; gap: 10px; align-items: flex-start; padding: 12px; border-radius: 12px; border: 1px solid #e2e3eb; background: #fff; cursor: pointer; }
 .sa-pick:hover, .sa-pick:focus-within { border-color: #5e6ad2; background: #f7f8ff; }
 .sa-pick input { margin-top: 3px; accent-color: #5663d6; }
-.sa-pick strong { display: block; }
+.score-card .sa-pick > span { color: #1d1d1f; font-size: inherit; font-weight: 400; letter-spacing: normal; text-transform: none; }
+.score-card .sa-pick strong { display: block; color: #1d1d1f; font-size: 16px; font-weight: 700; letter-spacing: normal; text-transform: none; }
 .sa-pick small { color: #5c6070; }
 .sa-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .sa-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: #eef0ff; font-size: 13px; }

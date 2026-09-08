@@ -98,7 +98,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     slug = tool['slug']
     name = tool.get('name', '')
     rating = valid_rating_value(tool)
-    official = tool.get('official', '')
+    official = tool.get('official') or tool.get('url', '')
     summary = tool.get('summary', '')
     category = tool.get('category', '')
     source_record = _source_record(root, slug)
@@ -241,10 +241,10 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
         automation_decoder_block = f'''<section class="score-card"><span>Automation billing decoder</span><h2>Translate this workflow into billing units.</h2><p>Estimate Zapier tasks, Make credits, and n8n executions for the same monthly run volume before comparing plan prices.</p><p><a class="button button-blue" href="/automation-cost-decoder/">Open the free decoder</a></p></section>\n'''
 
     visit_href = official
-    visit_rel = 'sponsored noopener nofollow'
+    visit_rel = 'external noopener nofollow'
     visit_target = ' target="_blank"'
     visit_label = f'Visit {name}'
-    visit_note = 'Affiliate link — supports editorial maintenance at no cost to you.'
+    visit_note = 'Official site — no paid placement affects this review.'
     visit_offer = ''
     visit_fineprint = ''
     try:

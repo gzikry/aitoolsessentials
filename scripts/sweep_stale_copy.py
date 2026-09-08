@@ -77,7 +77,7 @@ for cat in new_categories:
           </div>
           <div class="card-actions">
             <a class="text-link" href="../../tools/{t['slug']}/">Read review</a>
-            <a class="button button-blue small" href="{H.escape(t.get('official',''))}" rel="sponsored noopener nofollow" target="_blank">Visit site</a>
+            <a class="button button-blue small" href="{H.escape(t.get('official',''))}" rel="external noopener nofollow" target="_blank">Visit site</a>
           </div>
         </article>''')
     new_grid = '<div class="directory-grid" style="max-width:760px">\n' + '\n'.join(cards) + '\n</div>'

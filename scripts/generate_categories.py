@@ -46,7 +46,7 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
           </div>
           <div class="card-actions">
             <a class="text-link" href="../../tools/{t['slug']}/">Read review</a>
-            <a class="button button-blue small" href="{t.get('official','')}" rel="sponsored noopener nofollow" target="_blank">Visit site</a>
+            <a class="button button-blue small" href="{t.get('official','')}" rel="external noopener nofollow" target="_blank">Visit site</a>
           </div>
         </article>'''
 

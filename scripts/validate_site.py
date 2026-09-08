@@ -5,6 +5,8 @@ from html.parser import HTMLParser
 from urllib.parse import urldefrag
 import json
 import re
+import shutil
+import subprocess
 import sys
 from datetime import date
 
@@ -18,19 +20,29 @@ class Parser(HTMLParser):
         self.refs = []
         self.ids = set()
         self.outbound_ctas = []
+        self.external_scripts = []
+        self.invalid_button_links = []
         self.text = []
     def handle_starttag(self, tag, attrs):
         d = dict(attrs)
         if 'id' in d:
             self.ids.add(d['id'])
-        if tag == 'a' and d.get('href'):
-            self.refs.append(('a', d['href']))
-            if d['href'].startswith(('http://','https://')):
-                self.outbound_ctas.append(d)
+        if tag == 'a':
+            href = (d.get('href') or '').strip()
+            classes = set((d.get('class') or '').split())
+            if classes.intersection({'button', 'nav-cta', 'cta-button'}) and (
+                not href or href == '#' or href.lower().startswith('javascript:')
+            ):
+                self.invalid_button_links.append(d)
+            if href:
+                self.refs.append(('a', href))
+                if href.startswith(('http://','https://')):
+                    self.outbound_ctas.append(d)
         if tag == 'link' and d.get('href'):
             self.refs.append(('link', d['href']))
         if tag == 'script' and d.get('src'):
             self.refs.append(('script', d['src']))
+            self.external_scripts.append(d['src'])
     def handle_data(self, data):
         self.text.append(data)
 
@@ -323,9 +335,30 @@ def main():
             errors.append('Pricing research table does not match current tool inventory')
 
     parsers = {}
+
+    node = shutil.which('node')
+    if not node:
+        errors.append('Node.js is required to validate frontend JavaScript syntax')
+    else:
+        for js_path in sorted((ROOT / 'js').glob('*.js')):
+            checked = subprocess.run(
+                [node, '--check', str(js_path)],
+                capture_output=True,
+                text=True,
+            )
+            if checked.returncode:
+                detail = (checked.stderr or checked.stdout).strip().splitlines()
+                errors.append(f'{js_path.relative_to(ROOT)} JavaScript syntax failed: {detail[0] if detail else "node --check failed"}')
+
     for f in ROOT.rglob('*.html'):
         raw_html = f.read_text()
         p = Parser(); p.feed(raw_html); parsers[f.resolve()] = p
+        if p.invalid_button_links:
+            errors.append(f'{f.relative_to(ROOT)} has {len(p.invalid_button_links)} styled button link(s) without a usable href')
+        if 'admin' not in f.relative_to(ROOT).parts:
+            duplicate_scripts = sorted({src for src in p.external_scripts if p.external_scripts.count(src) > 1})
+            if duplicate_scripts:
+                errors.append(f'{f.relative_to(ROOT)} loads duplicate external scripts: {duplicate_scripts}')
         for raw_schema in re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', raw_html, flags=re.S | re.I):
             try:
                 json.loads(raw_schema)

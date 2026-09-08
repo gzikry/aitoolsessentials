@@ -20,6 +20,21 @@ def normalize_home_links(html: str) -> str:
     return html
 
 
+def dedupe_external_scripts(html: str) -> str:
+    """Keep the first external script tag for each normalized src."""
+    seen = set()
+    pattern = re.compile(r'<script\b(?=[^>]*\bsrc="([^"]+)")[^>]*>\s*</script>', re.I)
+
+    def keep_first(match):
+        src = match.group(1)
+        if src in seen:
+            return ''
+        seen.add(src)
+        return match.group(0)
+
+    return pattern.sub(keep_first, html)
+
+
 def fix_page(p: Path) -> bool:
     rel_parts = p.relative_to(ROOT).parts
     depth = len(rel_parts) - 1
@@ -158,6 +173,10 @@ def fix_page(p: Path) -> bool:
     # GSC verification on every page
     if '<meta name="google-site-verification"' not in h:
         h = h.replace('<head>', '<head><meta name="google-site-verification" content="OzzGs2QF4v6zSBd9uO95NGgSPH5B598E6DPtcjRNn_4">', 1)
+    # Remove duplicate external scripts after path normalization and injection.
+    # Double-loading click handlers can make buttons fire twice.
+    h = dedupe_external_scripts(h)
+
     # Normalize trailing horizontal whitespace so generated diffs stay clean.
     h = re.sub(r'[ \t]+(?=\r?$)', '', h, flags=re.M)
 
