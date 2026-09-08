@@ -2,6 +2,7 @@
 """Generate the free, no-login Stack Audit page and catalog contract."""
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from datetime import date
@@ -41,6 +42,10 @@ def esc(value: Any) -> str:
 def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     today = catalog.get("generated_at") or date.today().isoformat()
     count = len(catalog.get("tools", []))
+    asset_versions = {
+        rel: hashlib.sha256((root / rel).read_bytes()).hexdigest()[:12]
+        for rel in ("css/styles.css", "css/stack-audit.css", "js/stack-audit.js")
+    }
     desc = (
         "Free, no-login AI stack audit. Enter the tools you already pay for, "
         "see overlap, keep/cut advice, and a personal efficiency score. "
@@ -95,8 +100,8 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/css/styles.css">
-<link rel="stylesheet" href="/css/stack-audit.css">
+<link rel="stylesheet" href="/css/styles.css?v={asset_versions['css/styles.css']}">
+<link rel="stylesheet" href="/css/stack-audit.css?v={asset_versions['css/stack-audit.css']}">
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
@@ -186,7 +191,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
 </main>
 {FOOTER}
 <script type="application/json" id="sa-catalog">{payload}</script>
-<script src="/js/stack-audit.js" defer></script>
+<script src="/js/stack-audit.js?v={asset_versions['js/stack-audit.js']}" defer></script>
 <script src="/js/site.js" defer></script>
 <script src="/js/analytics.js" defer></script>
 </body>
