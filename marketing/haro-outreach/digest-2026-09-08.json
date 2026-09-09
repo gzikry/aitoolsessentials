@@ -1,0 +1,138 @@
+{
+  "date": "2026-09-08",
+  "monitor": "HARO/Connectively/Featured journalist request monitor",
+  "search_scope": "AI tools, AI pricing, overlapping subscriptions, SaaS costs, software spending, AI budget",
+  "platforms_checked": [
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Queries distributed via 3x daily email digests only. /view-queries requires email entry. No public query feed accessible without subscribed email."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Migrated from Featured.com as of May 26, 2026. All query pages return 404 or 'Not Found' without login. No public query listing."
+    },
+    {
+      "platform": "Featured.com",
+      "status": "login_required",
+      "notes": "Featured.com now redirects to Connectively. Question pages return 404. Main page requires login to search journalist requests. Previously found SaaS subscription question and Syxo solopreneur AI marketing stack question are no longer publicly accessible."
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Peter Shankman's free HARO alternative. Queries distributed via email only, no public query feed on website."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "launching_soon",
+      "notes": "B2B/SaaS-focused request platform (formerly Help a B2B Writer). Website says 'launching soon.' No public request feed available."
+    },
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Aggregates journalist requests from X, Bluesky, Facebook, Reddit, HARO, and other sources. Publicly browsable by topic. Checked AI, Technology, Startups, Finance, and Marketing topics."
+    },
+    {
+      "platform": "JournoFinder (journofinder.com/requests)",
+      "status": "search_error",
+      "notes": "Search engine for journalist requests. Attempted search for 'AI tools' and 'AI tools pricing subscription' — both returned 500 error 'Search failed. Please try again later.'"
+    },
+    {
+      "platform": "X/Twitter #JournoRequest",
+      "status": "accessible_via_sourcee",
+      "notes": "X API credits still limited but Sourcee.app aggregates #JournoRequest posts. Checked via Sourcee topic pages."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "source": "Sourcee.app (aggregated from X #journorequest)",
+      "query_text": "FinOps Professionals - Agentic AI Cost Overruns. Uber burned its entire 2026 AI budget in four months, and had to cut back on usage. Agentic AI cost just doesn't behave like traditional software that we know how to budget for. I spent years at Apptio building the tooling that made cloud spend predictable, and that playbook doesn't survive contact with agents. Most teams are learning that lesson the hard way. My new piece is on why agentic AI keeps blowing out of budget, and what makes it so hard to see coming. Would like to hear from others how they are managing their AI costs. #AgenticAI #FinOps #AI",
+      "journalist_publication": "Unknown (posted via X, formerly Apptio FinOps professional)",
+      "category": "AI / FinOps / Business",
+      "deadline": "Open (posted within last 7 days per Sourcee)",
+      "contact_method": "DM via X/Twitter or email (redacted on Sourcee)",
+      "relevance": "high",
+      "relevance_notes": "Directly about AI costs and budget management — core AIToolsEssentials territory. The overlap/stack audit angle maps perfectly: teams overspend on AI tools because they don't audit their stack. Can pitch the Stack Audit as a practical solution to the exact budget overrun problem described.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: frame AIToolsEssentials Stack Audit as a concrete tool for managing AI costs before they blow out of budget. The piece is about agentic AI cost unpredictability; pitch the keep/cut framework as the audit layer that catches overlap spend before it compounds. Offer data on common AI tool overlaps (Copilot + Cursor + Claude = $130/mo for same coding job) as a concrete example of how budgets inflate silently.",
+      "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns"
+    },
+    {
+      "id": 2,
+      "source": "Sourcee.app (aggregated from X #journorequest, Marketing topic)",
+      "query_text": "Looking for experts in dynamic pricing and other related strategies. I'm writing about dynamic pricing and what it means for consumers. I'm also looking at such variations as AI dynamic pricing, surge pricing, surveillance pricing, and the difference between variable and dynamic pricing. How long have all of these been around, what's the history of the concept, etc. Any good stories of how dynamic pricing has gone really well or badly? It's for Forbes online, I'm trying to do a few interviews by Wednesday, please, only well-qualified sources, and I'd appreciate some bullet points to show expertise.",
+      "journalist_publication": "Forbes (online)",
+      "category": "Business / Pricing / Consumer",
+      "deadline": "Wednesday (this week — short turnaround)",
+      "contact_method": "Contact via Substack link or X DM",
+      "relevance": "medium-high",
+      "relevance_notes": "About AI dynamic pricing and consumer impact, not directly about AI tool subscription overlap. But AIToolsEssentials tracks pricing trends (Microsoft 365 +16%, ChatGPT Pro split $120/$200, GitHub Copilot usage-based) — these are examples of AI vendors adopting dynamic/usage-based pricing. Can offer verified pricing shift data as evidence of how AI pricing is becoming more variable and harder for consumers to budget.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: offer verified data on AI tool pricing shifts toward usage-based/dynamic models (GitHub Copilot AI Credits, ChatGPT Pro tier split, Cursor Auto billing per-model). Frame as 'AI dynamic pricing is already happening in the tool subscription market.' Provide bullet points showing expertise as requested.",
+      "url": "https://www.sourcee.app/topics/marketing/journo-requests"
+    },
+    {
+      "id": 3,
+      "source": "Sourcee.app (aggregated from X #journorequest, Finance topic)",
+      "query_text": "I'm writing an article about how different generations are responding to AI for the launch of a financial advisory firm's editorial platform (set to go live in October). How are you using AI tools to automate routine work? Are you using them to retrain and learn new skills? Or build a more flexible career than the one you have now? And how are those actions affecting your finances? Keen to speak with Britons of all ages, ideally via phone on Friday or Tuesday next week. #journorequest #casestudyrequest #AIatwork",
+      "journalist_publication": "Financial advisory firm editorial platform (launching October 2026)",
+      "category": "Finance / AI / Careers",
+      "deadline": "Friday or Tuesday next week (short turnaround)",
+      "contact_method": "DM via X/Twitter",
+      "relevance": "medium",
+      "relevance_notes": "About AI tools and finances — tangentially relevant. AIToolsEssentials can offer the angle that auditing your AI stack is a financial decision: cutting overlapping subscriptions is a direct way AI tools affect your finances. The generational angle is interesting — younger workers may adopt more AI tools and accumulate more overlap. Note: journalist is specifically looking for Britons.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: pitch the financial impact of AI tool overlap on individual workers. Different generations adopt AI tools differently, and the cost of overlap (paying for 2-3 tools doing the same job) is a hidden financial drain. Offer the Stack Audit as a practical financial wellness tool.",
+      "url": "https://www.sourcee.app/topics/finance/journo-requests"
+    },
+    {
+      "id": 4,
+      "source": "Sourcee.app (aggregated from X #journorequest, AI topic)",
+      "query_text": "How is AI helping employers to combat workplace fraud: expenses, product theft, time, etc? I'm looking for AI entrepreneurs/startups focused on this specific issue: the challenges and the solutions.",
+      "journalist_publication": "Unknown (posted via X #journorequest)",
+      "category": "AI / Business / Workplace",
+      "deadline": "Open (no explicit deadline)",
+      "contact_method": "Email (redacted on Sourcee) or X DM",
+      "relevance": "low-medium",
+      "relevance_notes": "About AI for workplace fraud detection, not about AI tool pricing or overlap. AIToolsEssentials doesn't cover fraud detection tools specifically. Only marginally relevant — could pitch the directory as a resource for finding AI tools in this space, but it's a stretch.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: offer AIToolsEssentials as a resource for discovering AI tools in the workplace fraud detection category. Low priority — weak fit.",
+      "url": "https://www.sourcee.app/topics/ai/journo-requests"
+    },
+    {
+      "id": 5,
+      "source": "Sourcee.app (aggregated from X #journorequest, AI topic)",
+      "query_text": "Companies are running out of data to train AI, and to patch the gap, they are turning to their own workers, recording precisely how they use their computers, including mouse clicks and keystrokes. Is your employer doing the same? Have you found yourself gatekeeping your knowledge in response? For a story for The Guardian, I'm looking to speak to people who are now hiding their knowledge from workplace AI systems and wish workplaces would better reward employees for AI data. #journorequest #sourcerequest #AI #AIdata #workplaces #AItraining",
+      "journalist_publication": "The Guardian",
+      "category": "AI / Workplace / Privacy",
+      "deadline": "Open (no explicit deadline shown)",
+      "contact_method": "DM via X/Twitter or email (redacted on Sourcee)",
+      "relevance": "low",
+      "relevance_notes": "About workplace AI surveillance and data extraction, not about AI tool pricing or overlap. Not a fit for AIToolsEssentials expertise.",
+      "suggested_pitch_template": "N/A — skip (not relevant to AI tool pricing/overlap)",
+      "url": "https://www.sourcee.app/topics/ai/journo-requests"
+    }
+  ],
+  "expired_or_inaccessible": [
+    {
+      "source": "Featured.com (previously accessible)",
+      "query_text": "Will Traditional SaaS Subscription Models Survive?",
+      "publication": "Featured.com/Connectively",
+      "status": "no_longer_accessible",
+      "notes": "Question page previously found at featured.com/questions/saas-subscription-models-future. Now returns 404 after Featured to Connectively migration. Was directly relevant (SaaS subscription models). Cannot verify if still active."
+    },
+    {
+      "source": "Featured.com (previously accessible)",
+      "query_text": "Solopreneurs: What's in your AI marketing stack? What AI tools did you try and drop — and why?",
+      "publication": "Syxo (via Featured.com/Connectively)",
+      "status": "no_longer_accessible",
+      "notes": "Question page previously found at featured.com/public-link/syxoaicom/solopreneurs-ai-marketing-stack-weekly-tools-dropped. Now redirects to Connectively which requires login. Was highly relevant (AI tool stack + tools dropped = keep/cut). Cannot verify if still active."
+    },
+    {
+      "source": "HARO journalist profile (publicly indexed)",
+      "query_text": "How do you measure AI effectiveness in your support operations",
+      "publication": "Dialpad Blog",
+      "deadline": "Jun 22nd, 2025 12:00 PM ET",
+      "status": "expired"
+    }
+  ],
+  "summary": "One high-relevance opportunity found: a FinOps professional writing about agentic AI cost overruns (Sourcee.app, posted within 7 days, open deadline) — directly maps to AIToolsEssentials' Stack Audit value proposition. One medium-high opportunity: Forbes online journalist seeking experts on AI dynamic pricing (short Wednesday deadline) — AIToolsEssentials can offer verified pricing shift data. One medium opportunity: financial advisory platform writing about generational AI tool adoption and financial impact (Tuesday/Friday deadline, Britons only). Two low-relevance requests (workplace fraud detection, AI data surveillance) — not a fit. Two previously accessible Featured.com questions (SaaS subscription models, solopreneur AI marketing stack) are now behind login after the Connectively migration and could not be verified. HARO's query feed remains email-gated. Connectively requires login. JournoFinder search returned 500 errors. Recommend: (1) pitch the FinOps/AI cost overruns journalist ASAP — strongest fit, (2) prepare bullet points for the Forbes dynamic pricing request before Wednesday if time permits, (3) George should subscribe to HARO email digest at helpareporter.com and set up Featured.com/Connectively keyword alerts to catch queries directly, (4) retry JournoFinder search later when their API recovers."
+}
