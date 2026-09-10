@@ -1,0 +1,166 @@
+{
+  "date": "2026-09-09",
+  "monitor": "HARO/Connectively/Featured journalist request monitor",
+  "search_scope": "AI tools, AI pricing, overlapping subscriptions, SaaS costs, software spending, AI budget",
+  "platforms_checked": [
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Queries distributed via 3x daily email digests only. /view-queries requires email entry. No public query feed accessible without subscribed email. Relaunched by Featured.com April 2025; now runs Pangram AI-detection on all responses."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Migrated from Featured.com. All query pages return 404 or require login. No public query listing."
+    },
+    {
+      "platform": "Featured.com",
+      "status": "login_required",
+      "notes": "Now operates HARO brand. Question pages return 404 without login. Previously accessible SaaS subscription and solopreneur AI marketing stack questions are no longer publicly viewable."
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Peter Shankman's free HARO alternative. Queries distributed via email only (up to 3x daily), no public query feed on website."
+    },
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Aggregates journalist requests from X, Bluesky, Facebook, Reddit, HARO, Help a B2B Writer, Featured, SourceBottle, and reader callouts. Publicly browsable by topic, outlet, and location. Checked AI, Technology, Startups, Finance, Marketing, Cybersecurity topics and Forbes/FT/The Stack outlet pages."
+    },
+    {
+      "platform": "Qwoted (qwoted.com)",
+      "status": "login_required",
+      "notes": "Query feed requires login. Free tier: 2 pitches/mo with 2-hour delay. Pro: $149/mo. Cannot browse requests without account."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "launching_soon",
+      "notes": "B2B/SaaS-focused request platform (formerly Help a B2B Writer). Website says 'launching soon.' No public request feed available."
+    },
+    {
+      "platform": "JournoFinder (journofinder.com/requests)",
+      "status": "not_checked_this_run",
+      "notes": "Previously returned 500 errors on search. Did not re-check this run due to time. Free aggregator of HARO/Qwoted/#journorequest requests."
+    },
+    {
+      "platform": "X/Twitter #JournoRequest",
+      "status": "credits_exhausted",
+      "notes": "X Search via xAI returned 'credits exhausted / monthly spending limit reached.' Could not search #journorequest posts directly. Sourcee.app aggregation used as proxy."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "source": "Sourcee.app (Financial Times outlet page)",
+      "query_text": "The Financial Times has commissioned me to write an analysis article on how, as management consulting firms lean more on AI, their business clients are demanding/will demand a reduction in consulting fees. I think it's a really interesting subject. I'm pretty sure people have some strong views on it! NB: My article is focused on UK management consulting firms. Who I'm looking to talk to: - A couple of UK businesses who say they've demanded/will demand that their UK management consultant firm cuts fees/changes its fees to reflect AI use - 2-3 management consulting firms who do business in the UK (How AI is changing/will change their fees; or maybe it won't? As AI automates an growing proportion of consulting tasks - data analysis, idea generation, strategy advice... how are firms justifying to clients their fees and any fee increases?) - An AI/tech expert with deep knowledge of how consulting firms are using AI in their business, estimates for how much time/productivity benefits AI creates, whether consultants are adjusting their fees in response to greater AI use.",
+      "journalist_publication": "Financial Times",
+      "category": "Business / AI / Consulting / Pricing",
+      "deadline": "Not explicitly stated (appears active/recent based on Sourcee listing)",
+      "contact_method": "Email (redacted on Sourcee) or DM via original platform",
+      "relevance": "high",
+      "relevance_notes": "Directly about AI cost impact on business pricing — the core thesis that AI tool adoption should reduce fees, not increase them. AIToolsEssentials' verified pricing data shows AI tools are getting cheaper (API costs down ~10x, Gemini Ultra dropped from $250 to $100) while subscriptions multiply. Can offer the perspective that as AI tools commoditize, the businesses passing on AI cost savings to clients will win. The overlap/stack audit angle applies: consulting firms using 5+ AI tools are paying for overlap, and clients should demand that inefficiency doesn't get passed to them.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: pitch as an 'AI/tech expert with deep knowledge of how AI tools are used in business.' Offer verified data on AI tool pricing trends (API costs down 10x, Gemini Ultra $250→$100, ChatGPT Go at $8/mo, GitHub Copilot moving to usage-based credits). Frame the argument: AI tools are commoditizing, so consulting firms that lean on AI should be passing savings to clients, not maintaining fees. Offer the Stack Audit framework as evidence that most businesses overpay for AI tool overlap — consulting firms are no exception. Note: journalist wants UK-focused sources, so acknowledge UK market context if pitching.",
+      "url": "https://sourcee.app/media-outlets/financial-times/journo-requests"
+    },
+    {
+      "id": 2,
+      "source": "Sourcee.app (Forbes outlet page)",
+      "query_text": "Where Business Leaders Focus Their Tech Budgets As Tech Stock Market Volatility Persists. Tech stocks continue on a volatile trajectory, with Goldman Sachs reporting that hedge funds are selling US tech stocks at a record pace, and Bloomberg reporting that big tech needs to justify AI spending. Meanwhile, small, medium, and large business leaders, decision-makers, and executives, who are modernizing their tech and operations, are left to figure out the road ahead. Amid this volatility, a new report from Forrester Research agrees that tech leaders face 'sustained pressure to deliver value, modernize for AI, govern at speed, and maintain trust — all amid persistent volatility and budget scrutiny'. However, the same report found that more than 80% of business and technology leaders expect budget increases for 2027, highlighting strategic areas of investment for next year. For this report, I am looking for expert sources to provide clear signals for small, medium, and large business owners and decision-makers to help them navigate the current landscape and plan for 2027.",
+      "journalist_publication": "Forbes",
+      "category": "Business / Technology / AI Budget / Enterprise",
+      "deadline": "Not explicitly stated (appears active/recent)",
+      "contact_method": "Email (redacted on Sourcee) or LinkedIn",
+      "relevance": "high",
+      "relevance_notes": "Directly about AI spending and budget decisions for businesses. AIToolsEssentials' core value proposition is helping businesses decide which AI tools to keep, cut, and replace — exactly the 'clear signals' this journalist is seeking. The Stack Audit provides a concrete framework for budget scrutiny. Verified pricing data on 74+ tools with keep/cut verdicts is a directly citeable resource. The Forrester data about 80% expecting budget increases for 2027 aligns with the overlap problem: more budget without an audit means more overlap spend.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: pitch as an expert source on 'where business leaders should focus AI tech budgets for 2027.' Offer the keep/cut framework: most teams don't need more AI budget, they need to audit what they already pay for. Cite common overlaps (Copilot Pro $10 + Cursor Pro $20 + Claude Max $100 = $130/mo for same coding job). Offer Stack Audit data showing the average team carries 2-3 overlapping subscriptions. Frame: 'The clear signal for 2027 budget planning is not which new AI tools to buy, but which existing subscriptions to cut before adding more.'",
+      "url": "https://sourcee.app/media-outlets/forbes/journo-requests"
+    },
+    {
+      "id": 3,
+      "source": "Sourcee.app (Forbes outlet page)",
+      "query_text": "Looking for #solopreneurs for a Forbes story on how they are faring with #cybersecurity & risk, what tools are they using, what's most affordable and effective? Is AI offering them a solution? e: [email redacted]",
+      "journalist_publication": "Forbes",
+      "category": "Business / Cybersecurity / AI Tools / Solopreneurs",
+      "deadline": "Not explicitly stated (appears active/recent)",
+      "contact_method": "Email (redacted on Sourcee)",
+      "relevance": "medium",
+      "relevance_notes": "About solopreneurs using cybersecurity tools and whether AI offers affordable solutions. Not directly about AI tool pricing or overlap, but touches on affordability and tool selection for small businesses. AIToolsEssentials can offer the angle that solopreneurs face the same overlap problem — paying for multiple AI tools when one would suffice. The directory includes cybersecurity AI tools with verified pricing. Weaker fit than #1 and #2.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: offer AIToolsEssentials as a resource for solopreneurs evaluating AI cybersecurity tools with verified pricing. Frame: solopreneurs can't afford to overpay for tools, and the directory's keep/cut verdicts help them pick the most affordable effective option. Low priority — weak fit.",
+      "url": "https://sourcee.app/media-outlets/forbes/journo-requests"
+    },
+    {
+      "id": 4,
+      "source": "Sourcee.app (Startups topic page)",
+      "query_text": "The biggest AI problem isn't the AI. Went for 'Demo to Dollars'... Expected to learn about: usage-based pricing, subscriptions, AI monetisation. Instead, the biggest takeaway was something much simpler. Data architecture... As subscription models that worked for SaaS are starting to fracture forecasting becomes ever more so relevant... Right now I'm on a mission to collect 10 real SME operational problems that AI could solve. If you run an SME and there's a repetitive task or messy process in your business: Drop it in the comments or DM me.",
+      "journalist_publication": "Independent (posted via LinkedIn, appears to be a content creator/researcher)",
+      "category": "SaaS / AI / Subscription Models / SME",
+      "deadline": "Open (collecting 10 case studies)",
+      "contact_method": "DM via LinkedIn or comments",
+      "relevance": "medium",
+      "relevance_notes": "About SaaS subscription models fracturing and AI solving SME operational problems. The 'subscription models that worked for SaaS are starting to fracture' observation directly connects to AIToolsEssentials' coverage of AI pricing shifts (usage-based credits, tier splits, per-outcome pricing). Can offer data on how AI tool pricing is moving away from flat subscriptions toward usage-based and tiered models. The SME operational problems angle is a fit for the Stack Audit.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: offer the observation that AI tool subscriptions are indeed fracturing — from flat $20/mo to usage-based credits (GitHub Copilot AI Credits), per-outcome pricing (HubSpot Breeze $0.50/resolved conversation), and multi-tier splits (ChatGPT 7 tiers, Claude 7 tiers). Pitch the Stack Audit as a tool for SMEs to navigate this fracturing by identifying which subscription model actually fits their usage. Offer to contribute one of the 10 SME operational problems: 'SMEs paying for overlapping AI tool subscriptions without realizing it.'",
+      "url": "https://sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study"
+    },
+    {
+      "id": 5,
+      "source": "Sourcee.app (AI topic page, also seen on previous digests)",
+      "query_text": "How is AI helping employers to combat workplace fraud: expenses, product theft, time, etc? I'm looking for AI entrepreneurs/startups focused on this specific issue: the challenges and the solutions.",
+      "journalist_publication": "Unknown (posted via X #journorequest)",
+      "category": "AI / Business / Workplace",
+      "deadline": "Open (no explicit deadline)",
+      "contact_method": "Email (redacted on Sourcee) or X DM",
+      "relevance": "low",
+      "relevance_notes": "About AI for workplace fraud detection, not about AI tool pricing or overlap. AIToolsEssentials doesn't cover fraud detection tools specifically. Only marginally relevant.",
+      "suggested_pitch_template": "N/A — skip (not relevant to AI tool pricing/overlap)",
+      "url": "https://sourcee.app/topics/ai/journo-requests"
+    },
+    {
+      "id": 6,
+      "source": "Sourcee.app (AI topic page)",
+      "query_text": "Companies are running out of data to train AI, and to patch the gap, they are turning to their own workers, recording precisely how they use their computers, including mouse clicks and keystrokes. Is your employer doing the same? Have you found yourself gatekeeping your knowledge in response? For a story for The Guardian, I'm looking to speak to people who are now hiding their knowledge from workplace AI systems and wish workplaces would better reward employees for AI data. #journorequest #sourcerequest #AI #AIdata #workplaces #AItraining",
+      "journalist_publication": "The Guardian",
+      "category": "AI / Workplace / Privacy",
+      "deadline": "Open (no explicit deadline shown)",
+      "contact_method": "DM via X/Twitter or email (redacted on Sourcee)",
+      "relevance": "low",
+      "relevance_notes": "About workplace AI surveillance and data extraction, not about AI tool pricing or overlap. Not a fit for AIToolsEssentials expertise.",
+      "suggested_pitch_template": "N/A — skip (not relevant to AI tool pricing/overlap)",
+      "url": "https://sourcee.app/topics/ai/journo-requests"
+    },
+    {
+      "id": 7,
+      "source": "Sourcee.app (The Financial Brand outlet page, Artificial Intelligence topic)",
+      "query_text": "Traditional loyalty mechanisms (interest rate incentives and rewards programs) are losing effectiveness as differentiators. Today's customers demonstrate greater retention with institutions that reduce friction, enhance security, and deliver proactive financial guidance. This piece analyzes emerging loyalty frameworks driven by artificial intelligence, protective services, subscription models, and trust-building practices that create sustainable competitive advantages in increasingly commoditized markets. The deadline for submission is the week of the 22nd, so it's a bit of a tight turnaround. I'm looking to lock in interviews next week.",
+      "journalist_publication": "The Financial Brand",
+      "category": "Finance / AI / Subscription Models / Banking",
+      "deadline": "Week of September 22 (tight turnaround — interviews next week)",
+      "contact_method": "DM via LinkedIn or X",
+      "relevance": "low-medium",
+      "relevance_notes": "About AI, subscription models, and loyalty in banking. The subscription model angle is tangentially relevant — AIToolsEssentials tracks how AI tools are moving to subscription and usage-based models. But the banking loyalty focus is outside AIToolsEssentials' core expertise. Could offer commentary on how subscription model fatigue is a cross-industry problem, but it's a stretch.",
+      "suggested_pitch_template": "N/A — skip (banking loyalty focus is outside AIToolsEssentials expertise; subscription model angle too tangential)",
+      "url": "https://sourcee.app/topics/artificial-intelligence/journo-requests"
+    }
+  ],
+  "previously_reported_still_relevant": [
+    {
+      "id": "prev-1",
+      "source": "Sourcee.app (aggregated from X #journorequest)",
+      "query_text": "FinOps Professionals - Agentic AI Cost Overruns. Uber burned its entire 2026 AI budget in four months, and had to cut back on usage. Agentic AI cost just doesn't behave like traditional software that we know how to budget for... Would like to hear from others how they are managing their AI costs.",
+      "journalist_publication": "Unknown (posted via X, formerly Apptio FinOps professional)",
+      "status": "still_visible_on_sourcee",
+      "relevance": "high",
+      "notes": "Reported in digest-2026-09-08. Still the strongest fit. If not yet pitched, recommend ASAP."
+    },
+    {
+      "id": "prev-2",
+      "source": "Sourcee.app (aggregated from X #journorequest, Marketing topic)",
+      "query_text": "Looking for experts in dynamic pricing and other related strategies. I'm writing about dynamic pricing and what it means for consumers. I'm also looking at such variations as AI dynamic pricing, surge pricing, surveillance pricing... It's for Forbes online, I'm trying to do a few interviews by Wednesday.",
+      "journalist_publication": "Forbes (online)",
+      "status": "likely_expired",
+      "relevance": "medium-high",
+      "notes": "Reported in digest-2026-09-08 with a Wednesday deadline. Likely expired if not pitched by now. The Forbes AI spending request (#2 above) is a fresher Forbes opportunity."
+    }
+  ],
+  "summary": "Two new high-relevance opportunities found this run. (1) Financial Times commissioned an article on how management consulting firms leaning on AI face client demands for fee reductions — directly about AI cost impact on business pricing, and AIToolsEssentials' verified AI tool pricing data (API costs down 10x, Gemini Ultra $250→$100, usage-based model shifts) is strong evidence. (2) Forbes seeking expert sources on where business leaders should focus tech budgets for 2027 amid AI spending scrutiny — the Stack Audit keep/cut framework is exactly the 'clear signal' they want. Both are strong fits. One medium opportunity: SME/SaaS subscription fracturing (open deadline, collecting case studies). One low-medium: The Financial Brand on AI + subscription models in banking (tight Sept 22 deadline, but banking focus is a stretch). Two low-relevance AI requests (workplace fraud, AI data surveillance) — skip. Previously reported FinOps/AI cost overruns request still visible and high-relevance — pitch if not yet done. Forbes dynamic pricing request likely expired (Wednesday deadline). HARO remains email-gated, Connectively requires login, Qwoted requires login, Source of Sources is email-only, X Search credits exhausted. Sourcee.app remains the best accessible aggregation source. Recommend: (1) pitch FT consulting fees + AI costs request ASAP — strongest new fit, (2) pitch Forbes business tech budgets / AI spending request — second strongest, (3) pitch SME SaaS subscription fracturing if time permits, (4) if FinOps/AI cost overruns not yet pitched from last run, do it now, (5) George should subscribe to HARO email digest and Source of Sources for direct access to email-gated queries."
+}
