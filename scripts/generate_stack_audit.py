@@ -46,10 +46,10 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
         rel: hashlib.sha256((root / rel).read_bytes()).hexdigest()[:12]
         for rel in ("css/styles.css", "css/stack-audit.css", "js/stack-audit.js")
     }
+    title = "AI Stack Audit — keep, cut, or review with a free scorecard"
     desc = (
-        "Free, no-login AI stack audit. Enter the tools you already pay for, "
-        "see overlap, keep/cut advice, and a personal efficiency score. "
-        "Nothing is submitted to a server."
+        "Free, no-login scorecard. See overlap in the tools you already pay for, "
+        "then keep, cut, or review — nothing is submitted to a server."
     )
     schema = json.dumps({
         "@context": "https://schema.org",
@@ -94,9 +94,9 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(desc)}">
-<title>AI Stack Audit — Keep, cut, or review your tools</title>
+<title>{esc(title)}</title>
 <link rel="canonical" href="{DOMAIN}/stack-audit.html">
-<meta property="og:title" content="AI Stack Audit">
+<meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
 <meta name="twitter:card" content="summary_large_image">

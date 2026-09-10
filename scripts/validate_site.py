@@ -274,6 +274,13 @@ def main():
             errors.append('Stack Audit must not invent savings in the Premium CTA')
         if 'Never changes' not in page and 'never changes' not in page:
             errors.append('Stack Audit page missing affiliate/sponsor editorial policy')
+        stack_head = page.split('</head>', 1)[0]
+        if 'Which AI tools should you cancel' in stack_head:
+            errors.append('Stack Audit title/meta must not be cancel-only')
+        if 'free scorecard' not in stack_head.lower() and 'see overlap' not in stack_head.lower():
+            errors.append('Stack Audit title/meta must mention the free scorecard or overlap')
+        if '<h1>See what you actually pay for.</h1>' not in page:
+            errors.append('Stack Audit H1 must stay the practical scorecard line')
     comparison_hub = ROOT/'comparisons/index.html'
     comparison_pages = {
         p.name for p in (ROOT/'comparisons').glob('*.html')
@@ -601,6 +608,30 @@ def main():
         errors.append('Homepage still has a duplicate Premium closer module')
     if 'If you sell a tool, submit evidence' in main_html:
         errors.append('Homepage still has the vendor submit pitch')
+    if home_html.count('AIT HOMEPAGE LEARN START') != 1:
+        errors.append('Homepage must have exactly one Learn strip')
+    learn_match = re.search(
+        r'<!-- AIT HOMEPAGE LEARN START -->.*?<!-- AIT HOMEPAGE LEARN END -->',
+        home_html,
+        flags=re.S,
+    )
+    learn_html = learn_match.group(0) if learn_match else ''
+    if 'dated evidence' not in learn_html.lower():
+        errors.append('Homepage Learn strip must promise choose/learn with dated evidence')
+    if 'href="/premium/"' in learn_html or 'Join Premium' in learn_html:
+        errors.append('Homepage Learn strip must not add a Premium CTA')
+    if 'hero-device' in learn_html or 'device-window' in learn_html:
+        errors.append('Homepage Learn strip must not add a decorative device card')
+    for href in (
+        '/articles/chatgpt-vs-claude-which-is-better.html',
+        '/articles/cursor-vs-github-copilot-deep-comparison.html',
+        '/comparisons/best-ai-tools.html',
+        '/pricing-watch/',
+        '/articles/',
+        '/alternatives/',
+    ):
+        if href not in learn_html:
+            errors.append(f'Homepage Learn strip missing real path {href}')
     if home_html.count('AIT HOMEPAGE PREMIUM BAND START') != 1:
         errors.append('Homepage must have exactly one Premium band')
     band_match = re.search(
