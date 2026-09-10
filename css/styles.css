@@ -1653,8 +1653,14 @@ body[data-page="home"] .home-learn-card {
   color: inherit;
   text-decoration: none;
 }
-body[data-page="home"] .home-learn-card:hover {
+body[data-page="home"] .home-learn-card:visited {
+  color: inherit;
+}
+body[data-page="home"] .home-learn-card:hover,
+body[data-page="home"] .home-learn-card:visited {
   text-decoration: none;
+}
+body[data-page="home"] .home-learn-card:hover {
   border-color: rgba(255,255,255,.28);
   background: linear-gradient(180deg, rgba(48,51,62,.74), rgba(14,16,20,.88));
 }
