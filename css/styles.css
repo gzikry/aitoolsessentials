@@ -1599,6 +1599,107 @@ body[data-page="home"] .home-rest::before {
   pointer-events: none;
   background: linear-gradient(180deg, rgba(0,0,0,0), #000);
 }
+body[data-page="home"] .home-learn {
+  padding: 8px 24px 12px;
+  background: #000;
+  color: var(--home-ink);
+}
+body[data-page="home"] .home-learn-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  text-align: center;
+}
+body[data-page="home"] .home-learn-kicker {
+  margin: 0 0 8px;
+  color: rgba(228,231,238,.8);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+body[data-page="home"] .home-learn h2 {
+  margin: 0 auto 22px;
+  max-width: 28em;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  font-weight: 500;
+  color: #fff;
+}
+body[data-page="home"] .home-learn h2 em {
+  font-family: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+body[data-page="home"] .home-learn-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  text-align: left;
+}
+body[data-page="home"] .home-learn-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+  padding: 20px 20px 18px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(36,38,46,.68), rgba(10,11,14,.82));
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  color: inherit;
+  text-decoration: none;
+}
+body[data-page="home"] .home-learn-card:hover {
+  text-decoration: none;
+  border-color: rgba(255,255,255,.28);
+  background: linear-gradient(180deg, rgba(48,51,62,.74), rgba(14,16,20,.88));
+}
+body[data-page="home"] .home-learn-card h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  color: #fff;
+}
+body[data-page="home"] .home-learn-card p {
+  margin: 0;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(244,245,247,.78);
+}
+body[data-page="home"] .home-learn-card-link {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(228,231,238,.82);
+  text-underline-offset: 3px;
+}
+body[data-page="home"] .home-learn-card:hover .home-learn-card-link {
+  color: #fff;
+  text-decoration: underline;
+}
+body[data-page="home"] .home-learn-more {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
+  margin: 18px 0 0;
+  color: rgba(228,231,238,.62);
+  font-size: 14px;
+}
+body[data-page="home"] .home-learn-more a {
+  color: rgba(228,231,238,.78);
+  text-underline-offset: 3px;
+}
+body[data-page="home"] .home-learn-more a:hover {
+  color: #fff;
+}
+
 body[data-page="home"] .home-premium-band {
   padding: 20px 24px 8px;
   background: transparent;
@@ -1696,6 +1797,17 @@ body[data-page="home"] .footer[data-footer="slim"] {
   body[data-page="home"] .home-hero .actions .button {
     width: 100%;
     min-height: 48px;
+  }
+  body[data-page="home"] .home-learn { padding: 4px 16px 8px; }
+  body[data-page="home"] .home-learn-cards {
+    grid-template-columns: 1fr;
+  }
+  body[data-page="home"] .home-learn-card {
+    min-height: 0;
+    padding: 18px 16px 16px;
+  }
+  body[data-page="home"] .home-learn h2 {
+    margin-bottom: 16px;
   }
   body[data-page="home"] .home-premium-band { padding: 16px 16px 8px; }
   body[data-page="home"] .home-premium-band > div { padding: 22px 18px; }

@@ -25,6 +25,7 @@ from premium_copy import (
     homepage_header_html,
     homepage_hero_actions_html,
     homepage_hero_html,
+    homepage_learn_html,
     hub_url,
     join_label,
     lanes_note,
@@ -971,10 +972,14 @@ HOME_FONTS_HREF = (
     "&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
 )
 # CDN caches /css/styles.css for 30 days. Bump when homepage-scoped CSS must ship.
-HOME_CSS_HREF = "css/styles.css?v=20260906d"
+HOME_CSS_HREF = "css/styles.css?v=20260910a"
 HOME_CRITICAL_CSS = (
     "html,body{background:#000;color:#f4f5f7}"
     "body[data-page=home] .home-rest{background:#000;color:#f4f5f7}"
+    "body[data-page=home] .home-learn{background:#000;color:#f4f5f7}"
+    "body[data-page=home] .home-learn-card{"
+    "background:linear-gradient(180deg,rgba(36,38,46,.68),rgba(10,11,14,.82));"
+    "border:1px solid rgba(255,255,255,.14)}"
     "body[data-page=home] .home-premium-band{background:transparent;color:#f4f5f7}"
     "body[data-page=home] .home-premium-band>div{"
     "background:linear-gradient(180deg,rgba(36,38,46,.68),rgba(10,11,14,.82));"
@@ -1045,6 +1050,7 @@ def slim_homepage_html(html: str, root: Path) -> str:
         + "\n\n  <main>\n"
         + homepage_hero_html(_whop_dict())
         + '\n<div class="home-rest">\n'
+        + homepage_learn_html()
         + homepage_band_html(_whop_dict()).rstrip()
         + "\n"
         + homepage_newsletter_panel(root)

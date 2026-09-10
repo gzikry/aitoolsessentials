@@ -376,6 +376,55 @@ def homepage_footer_html() -> str:
     )
 
 
+def homepage_learn_html() -> str:
+    """Compact choose/learn strip. Real existing URLs only. No Premium CTA."""
+    cards = (
+        (
+            "/articles/chatgpt-vs-claude-which-is-better.html",
+            "ChatGPT vs Claude",
+            "Which assistant fits the week's work, not the brand.",
+            "Read the comparison",
+        ),
+        (
+            "/articles/cursor-vs-github-copilot-deep-comparison.html",
+            "Cursor vs GitHub Copilot",
+            "An IDE agent or inline completions — pick one paid seat.",
+            "Read the comparison",
+        ),
+        (
+            "/comparisons/best-ai-tools.html",
+            "Best AI tools",
+            "A practical shortlist by job, not a ranked trophy list.",
+            "See the shortlist",
+        ),
+    )
+    card_html = "".join(
+        f'<a class="home-learn-card" href="{esc(href)}">'
+        f"<h3>{esc(title)}</h3>"
+        f"<p>{esc(line)}</p>"
+        f'<span class="home-learn-card-link">{esc(cta)}</span>'
+        "</a>"
+        for href, title, line, cta in cards
+    )
+    return f"""<!-- AIT HOMEPAGE LEARN START -->
+<section class="scene scene-dark home-learn" aria-labelledby="home-learn-heading">
+<div class="home-learn-inner">
+<p class="home-learn-kicker">Learn</p>
+<h2 id="home-learn-heading">Choose with <em>dated evidence</em> — then keep or cut overlap.</h2>
+<div class="home-learn-cards">
+{card_html}
+</div>
+<p class="home-learn-more">
+<a href="/pricing-watch/">Pricing Watch</a>
+<a href="/articles/">Articles</a>
+<a href="/alternatives/">Alternatives</a>
+</p>
+</div>
+</section>
+<!-- AIT HOMEPAGE LEARN END -->
+"""
+
+
 def homepage_band_html(whop: dict[str, Any]) -> str:
     """One short Premium line — second opinion, not a cancel-only pitch."""
     price = int(whop["price_usd_month"])

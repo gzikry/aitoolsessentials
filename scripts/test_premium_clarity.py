@@ -89,6 +89,10 @@ def main() -> None:
         errors.append("Do not invent audit-count metrics")
     if "Keep/Cut Weekly" not in stack:
         errors.append("Free Stack Audit page must label the free newsletter")
+    if "Which AI tools should you cancel" in stack:
+        errors.append("Stack Audit title/meta must not be cancel-only")
+    if "free scorecard" not in stack.lower() and "see overlap" not in stack.lower():
+        errors.append("Stack Audit title/meta must mention the free scorecard or overlap")
 
     library = ROOT / "premium/library"
     for name in (
@@ -219,6 +223,25 @@ def main() -> None:
             errors.append("enhance_homepage must cache-bust the homepage stylesheet")
         if 'class="home-premium-band' in first_home and 'home-cta-primary' not in first_home[first_home.find("home-premium-band"): first_home.find("AIT HOMEPAGE PREMIUM BAND END")]:
             errors.append("enhance_homepage must keep a liquid-glass Premium band CTA")
+        if first_home.count("AIT HOMEPAGE LEARN START") != 1:
+            errors.append("enhance_homepage must emit exactly one Learn strip")
+        learn_start = first_home.find("AIT HOMEPAGE LEARN START")
+        learn_end = first_home.find("AIT HOMEPAGE LEARN END")
+        learn_block = first_home[learn_start:learn_end] if learn_start != -1 and learn_end != -1 else ""
+        if "dated evidence" not in learn_block.lower():
+            errors.append("enhance_homepage Learn strip must keep the dated-evidence promise")
+        if 'href="/premium/"' in learn_block or "Join Premium" in learn_block:
+            errors.append("enhance_homepage Learn strip must not add a Premium CTA")
+        for href in (
+            "/articles/chatgpt-vs-claude-which-is-better.html",
+            "/articles/cursor-vs-github-copilot-deep-comparison.html",
+            "/comparisons/best-ai-tools.html",
+            "/pricing-watch/",
+            "/articles/",
+            "/alternatives/",
+        ):
+            if href not in learn_block:
+                errors.append(f"enhance_homepage Learn strip missing {href}")
 
     premium = (ROOT / "premium/index.html").read_text()
     for heading in (
