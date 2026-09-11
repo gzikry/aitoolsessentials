@@ -10,7 +10,11 @@ from pathlib import Path
 
 ACCOUNT = "aitools"
 SPAM = "[Gmail]/Spam"
-FOLDERS = ["[Gmail]/All Mail", SPAM]
+TRASH = "[Gmail]/Trash"
+# All Mail covers the inbox; Spam catches misfiled form submissions; Trash matters
+# because Gmail files some outbound mail and bounce replies there, which otherwise
+# hides dead recipient domains indefinitely.
+FOLDERS = ["[Gmail]/All Mail", SPAM, TRASH]
 SELF = "aitoolsessentials@gmail.com"
 STATE = Path.home() / ".local" / "state" / "aitoolsessentials" / "hourly-mail.json"
 
@@ -54,8 +58,10 @@ def disposition(message: dict) -> tuple[bool, str]:
     subject = (message.get("subject") or "").strip()
     lower = subject.lower()
 
+    # Outbound mail we sent is never actionable.
     if sender == SELF:
         return False, ""
+    # Bounces and delivery delays matter whatever folder Gmail filed them to.
     if sender in {"mailer-daemon@googlemail.com", "mailer-daemon@gmail.com"}:
         return True, "Delivery failure — inspect the bounced recipient and error."
     if sender == "submissions@formsubmit.co":
@@ -67,10 +73,12 @@ def disposition(message: dict) -> tuple[bool, str]:
             return True, "New community test report — verify before publishing."
         return True, "New website form submission — review the details."
 
-    # Anything landing in Spam is only actionable when it comes from a sender we
-    # already treat as legitimate (form submissions, bounce reports, self). Plain
-    # junk must not raise an alert, or the monitor becomes noise.
-    if message.get("_folder") == SPAM:
+    # Mail in Spam or Trash is only actionable from senders we already trust, or
+    # when it is a real reply. Plain junk must stay silent or the monitor becomes noise.
+    folder = message.get("_folder")
+    if folder in (SPAM, TRASH):
+        if lower.startswith("re:") or lower.startswith("fw:"):
+            return True, "A correspondent replied — read the full thread and respond if needed."
         return False, ""
 
     if lower.startswith("re:") or lower.startswith("fw:"):
