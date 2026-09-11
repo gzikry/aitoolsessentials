@@ -36,6 +36,8 @@ LEARN = [
     ('is-an-ai-tool-membership-worth-it.html', 'Is the $12/month membership worth it?', 'When $12/month of dated keep/cut notes beats another SaaS seat — and when free is enough.'),
     ('ai-invoicing-admin-stack-consultants.html', 'AI invoicing stack for consultants', 'Free-first invoices, reminders, and weekly admin without five overlapping tools.'),
     ('evaluating-ai-coding-tools-team-rollout.html', 'Evaluating AI coding tools for a team', 'Security-first rollout checklist so you do not buy two IDEs.'),
+    ('company-ai-usage-policy-checklist.html', 'Writing a company AI usage policy', 'The seven sections to write, a three-tier allow list, and who approves a new tool.'),
+    ('ai-email-triage-setup.html', 'AI email triage that actually works', 'What summaries save, a rules-first order, and what never to automate in email.'),
     ('ai-image-rights-commercial-use.html', 'AI image rights for commercial use', 'What to check before using Midjourney or Leonardo output in client work.'),
     ('how-to-cancel-ai-tools-before-renewal.html', 'How to cancel AI tools before renewal', '14-day process to cancel unused seats without losing the weekly workflow.'),
     ('cursor-vs-copilot-which-to-pay-for.html', 'Cursor vs Copilot: which to pay for', 'Pick one paid coding assistant with a real bugfix, not two overlapping seats.'),

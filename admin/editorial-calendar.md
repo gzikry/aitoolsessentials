@@ -71,3 +71,19 @@
 - Claude Code vs Cursor vs Copilot keep-one ✅ shipped 2026-08-27
 - August 2026 keep/cut digest + /subscribe/ ✅ shipped 2026-08-27
 - Homepage job tiles (overlap / first paid / cancel) ✅ 2026-08-27
+
+- Writing a company AI usage policy ✅ shipped 2026-09-11 (workflow)
+- AI email triage setup ✅ shipped 2026-09-11 (workflow)
+
+## Backlog: next weekly batches (from 2026-09-18)
+Priority order: how-to/workflow → audience guides → question-intent. All six original
+how-to items and all six audience guides are now shipped; continue with:
+1. AI-assisted job-search and application workflow (honest framing, no outcome claims)
+2. Running a monthly AI cost review: the recurring keep/cut meeting
+3. Vendor evaluation questionnaire: the questions to send a tool vendor before buying
+4. Best AI tools for project managers (audience guide)
+5. Best AI tools for customer support teams (audience guide)
+6. Best AI tools for HR and recruiting ops (audience guide — note recruiters guide exists)
+7. How do I know if an AI tool is worth its price? (question-intent)
+8. What should I ask before connecting an AI tool to company data? (question-intent)
+
