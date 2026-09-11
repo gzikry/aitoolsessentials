@@ -1,0 +1,197 @@
+{
+  "date": "2026-09-10",
+  "monitor": "HARO/Connectively/Featured journalist request monitor",
+  "search_scope": "AI tools, AI pricing, overlapping subscriptions, SaaS costs, software spending, AI budget, AI cost optimization",
+  "platforms_checked": [
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Queries distributed via 3x daily email digests only. /view-queries requires email entry. No public query feed accessible without subscribed email. Relaunched by Featured.com April 2025; now runs Pangram AI-detection on all responses. No change from prior runs."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Migrated from Featured.com. All query pages require login. No public query listing. Pricing tiers: Free (3 answers/mo), Lite $19/mo, Pro $49/mo."
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Peter Shankman's free HARO alternative. Queries distributed via email only (up to 3x daily), no public query feed on website."
+    },
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Aggregates journalist requests from X, Bluesky, Facebook, Reddit, HARO, Help a B2B Writer, Featured, SourceBottle, and reader callouts. Publicly browsable by topic, outlet, and location. Checked AI, Technology, Startups, Finance topic pages and Forbes/FT outlet pages. Some outlet pages (Forbes, FT) now return minimal content — likely due to login-wall changes on Sourcee."
+    },
+    {
+      "platform": "Qwoted (qwoted.com)",
+      "status": "login_required",
+      "notes": "Query feed requires login. Free tier: 2 pitches/mo with 2-hour delay. Pro: $149/mo."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "launching_soon",
+      "notes": "B2B/SaaS-focused request platform (formerly Help a B2B Writer). Website says 'launching soon.' No public request feed available."
+    },
+    {
+      "platform": "The Stack (thestack.tech)",
+      "status": "accessible",
+      "notes": "Tech publication that accepts guest contributions on FinOps, AI economics, K8s, security. Sourcee outlet page shows interest in AI modernization stories and guest think pieces. Not a traditional journo request but a standing editorial interest."
+    },
+    {
+      "platform": "X/Twitter #JournoRequest",
+      "status": "credits_exhausted",
+      "notes": "X Search via xAI still returning 'credits exhausted / monthly spending limit reached.' Could not search #journorequest posts directly. Sourcee.app aggregation used as proxy."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "source": "Sourcee.app (Finance topic page)",
+      "query_text": "UK Managers - Cracked Down on Gen Z AI Overuse. Looking to talk to UK managers who've cracked down on their Gen Z team members for overusing AI, and generally when people have crossed the line with AI. What rules have they put in place and what boundaries shouldn't employees cross? This is for a UK national newspaper and I'm keen to hear from you by the end of the week.",
+      "journalist_publication": "UK national newspaper (name not disclosed on Sourcee)",
+      "category": "AI / Workplace / Management / UK",
+      "deadline": "End of this week (approximately September 12-13, 2026)",
+      "contact_method": "Email (redacted on Sourcee) — also appears in Pitch to Published newsletter",
+      "relevance": "medium-high",
+      "relevance_notes": "About AI tool usage boundaries in the workplace — tangential to AIToolsEssentials' core of pricing/overlap but directly about AI tool governance and which tools employees should/shouldn't use. AIToolsEssentials can offer the angle that the real problem isn't employees overusing AI — it's that teams are paying for overlapping AI tools without a clear policy on which one to use for which job. The keep/cut framework applies: if you tell employees which AI tool to use for which task, you also solve the 'which AI tool are we paying for' problem. UK-focused.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: pitch as an expert on AI tool governance in the workplace. Frame: the Gen Z AI overuse problem is really a tool selection problem — teams have 3+ AI tools and no policy on which to use when. The keep/cut framework gives managers a simple policy: pick one tool per job, cancel the rest, and tell employees which one to use. Offer data on common overlaps (coding ×2, assistants ×2, meeting notes ×2). Note: UK-focused, deadline end of week — pitch ASAP if pursuing.",
+      "url": "https://sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse"
+    },
+    {
+      "id": 2,
+      "source": "Sourcee.app (Startups topic page)",
+      "query_text": "AI Agents Making Money 2026 - Sales & LeadGen, Workflow, Ops. Building a list of the Top 20 AI Agents actually making money in 2026. Looking to feature agents in: Sales / Lead Generation, Workflow / Automation, Ops / Finance. Drop your tool below with your current stack & #1 problem solved to be featured on @ToolVetting.",
+      "journalist_publication": "ToolVetting (independent AI tool review platform)",
+      "category": "AI / SaaS / Tools / Sales / Workflow",
+      "deadline": "Open (collecting submissions for a list)",
+      "contact_method": "Comment or DM via X/Twitter (@ToolVetting)",
+      "relevance": "medium",
+      "relevance_notes": "Looking for AI tools/agents making money — this is a tool directory feature, not a pricing/overlap story. However, AIToolsEssentials reviews 74+ AI tools and can offer the perspective that 'making money' for AI agents often means replacing overlapping subscriptions — the ROI case is cutting what you don't need, not adding more. Could pitch the Stack Audit as a tool that helps businesses figure out which AI agents to keep. Lower priority than the UK managers request.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: pitch AIToolsEssentials as the independent review platform that evaluates which AI agents deliver real ROI by cutting overlap. Offer to contribute the keep/cut angle to their Top 20 list: the AI agents that make money are the ones that replace 2-3 overlapping subscriptions, not the ones that add another $20/mo. Low priority — tool list feature, not a pricing story.",
+      "url": "https://sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops"
+    },
+    {
+      "id": 3,
+      "source": "Sourcee.app (Finance topic page)",
+      "query_text": "UK Finance Risk & Regulatory Leaders - AI Explainability Risks. The main risk with AI in Finance is not that it gives the wrong answer. The bigger issue is when it gives an answer that looks right but cannot be properly explained afterwards. Looking at: Three questions every CFO should ask before the next AI budget is committed; The FCA and PRA position on model risk; What the EU AI Act requires from financial institutions from August 2026; Why 75% of UK financial services firms are using AI, but only 2% run AI use cases without human sign-off on individual decisions.",
+      "journalist_publication": "Independent (LinkedIn article/finance transformation newsletter)",
+      "category": "Finance / AI / Governance / Budget / Regulation",
+      "deadline": "Open (no explicit deadline)",
+      "contact_method": "DM via LinkedIn or comments",
+      "relevance": "medium",
+      "relevance_notes": "About AI governance and explainability in finance, with a specific section on 'three questions every CFO should ask before the next AI budget is committed.' The AI budget angle is relevant — AIToolsEssentials can offer the CFO perspective that the first budget question should be 'are we paying for overlapping AI tools?' The 75% adoption / 2% autonomous stat parallels the overlap problem: widespread AI use without structured oversight. UK/Europe focused. Moderate fit.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: pitch as an expert on AI budget scrutiny for CFOs. Frame: before committing the next AI budget, the first question should be 'how many of our current AI tools are doing the same job?' Offer Stack Audit data showing the average finance team carries 2-3 overlapping subscriptions. The 75% adoption / 2% autonomous stat mirrors the overlap problem — widespread use without governance. Note UK/Europe focus.",
+      "url": "https://sourcee.app/journo-request/uk-finance-risk-and-regulatory-leaders-ai-explainability-risks"
+    },
+    {
+      "id": 4,
+      "source": "Sourcee.app (Finance topic page)",
+      "query_text": "AI Project Builders - YouTube Finance & Lifestyle Channel Feature. 500k subs on YouTube (finance/lifestyle). Looking to feature cool AI projects. Building something? DMs open.",
+      "journalist_publication": "Independent YouTube channel (500k subs, finance/lifestyle)",
+      "category": "AI / Finance / YouTube / Content",
+      "deadline": "Open",
+      "contact_method": "DM via X/Twitter or YouTube",
+      "relevance": "low-medium",
+      "relevance_notes": "A YouTube channel looking to feature AI projects. Not a traditional journo request but a content opportunity. AIToolsEssentials could pitch the Stack Audit as a 'cool AI project' — a free tool that helps people find out they're overpaying for overlapping AI tools. Finance/lifestyle audience aligns with the cost-saving angle. Low-medium priority — good for brand awareness if time permits.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: pitch the Stack Audit as a free AI project worth featuring: 'Enter your AI tools and spending, get a keep/cut/replace report with a Stack Efficiency Score.' Frame for the finance/lifestyle audience: most people don't realize they're paying for 2-3 AI tools doing the same job. Low priority — brand awareness, not a pricing story.",
+      "url": "https://sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature"
+    },
+    {
+      "id": 5,
+      "source": "Sourcee.app (Technology topic page)",
+      "query_text": "Enterprise AI Leaders - AI Governance & Agent Sprawl. Most enterprises don't have an AI strategy. They have an AI sprawl problem dressed up as one — Hundreds of agents. Dozens of models. Zero unified visibility into what they're doing, what they're consuming, or what they cost. The question is 'How do I safely govern hundreds of AI agents across my enterprise — without losing visibility, control, or trust?'",
+      "journalist_publication": "Independent (LinkedIn article, enterprise AI governance)",
+      "category": "Enterprise AI / Governance / Agent Sprawl / Cost",
+      "deadline": "Open (collecting comments/input for upcoming article)",
+      "contact_method": "Comments on LinkedIn post or DM",
+      "relevance": "medium",
+      "relevance_notes": "About AI agent sprawl in enterprises — 'hundreds of agents, dozens of models, zero unified visibility into what they cost.' The cost angle is directly relevant: agent sprawl is the enterprise version of the overlap problem. AIToolsEssentials can offer that the Stack Audit framework scales from individual subscriptions to enterprise agent inventories — the question 'what are you paying for and is any of it redundant?' applies at both levels. Moderate fit.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: pitch as an expert on AI tool overlap and cost visibility. Frame: agent sprawl is the enterprise version of the overlap problem we solve for individuals — hundreds of agents with no cost visibility is the same pattern as paying for 3 coding tools at home. The Stack Audit framework asks the same governance question at any scale: what are you paying for, is any of it redundant, and what should you cut? Medium priority.",
+      "url": "https://sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl"
+    },
+    {
+      "id": 6,
+      "source": "Sourcee.app (Technology topic page, via web search)",
+      "query_text": "AI SaaS Users in Production - Integrations & Autonomous Workflows. I spent the last few days creating a truly fact-checked guide to the AI SaaS landscape in 2026, because most comparison articles are full of recycled marketing claims. An interesting trend: Almost every major AI platform has converged around the ~$20/month pricing model. The real competition now is integrations, orchestration, environment maintenance, and autonomous workflows. I would love to hear from people who are actually using these tools in production.",
+      "journalist_publication": "Independent (blog/guide creator)",
+      "category": "AI SaaS / Pricing / Tools / Production",
+      "deadline": "Open (posted >1 month ago but still accepting responses)",
+      "contact_method": "Via Sourcee or original platform (likely X/Twitter or blog comments)",
+      "relevance": "high",
+      "relevance_notes": "Directly about AI SaaS pricing convergence to $20/month and the real differentiator being integrations/orchestration. This is the core of AIToolsEssentials' thesis: when every tool costs ~$20, the question isn't which to buy — it's which to keep and which to cut. The $20/mo convergence is exactly what creates the overlap problem: teams add one $20 tool after another until they're paying $200/mo for 10 tools doing the same jobs. Strong fit despite being posted >1 month ago — pricing guides are evergreen.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: pitch as an expert on the $20/mo convergence and what it means. Frame: when every AI platform converges to $20/mo, the pricing decision becomes trivial — they all cost the same. The real decision is which ones to keep and which to cut, because at $20 each, teams accumulate 5-10 overlapping subscriptions without noticing. Offer verified pricing data on 74+ tools showing the $20 convergence pattern and the overlaps it creates. The Stack Audit is the tool that solves this. High priority despite age — evergreen topic.",
+      "url": "https://sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows"
+    },
+    {
+      "id": 7,
+      "source": "Sourcee.app (via web search)",
+      "query_text": "MSP Experts & Case Studies - AI Ops & Pricing & Backup Trends. MSPs aren't questioning whether AI matters anymore — they're debating where it belongs in the managed services stack. AI is forcing MSPs to rethink their service packaging and pricing to show customers real value. Clear offerings, outcome-based pricing, and tight scope control are key to monetizing AI services. Also: navigating out-of-scope AI customer demands — AI user training, assessing compliance of AI tools, or identifying the best AI coding platforms.",
+      "journalist_publication": "Channel/MSP industry publication (Channel Industry Roundup)",
+      "category": "MSP / AI / Pricing / SaaS / Channel",
+      "deadline": "Open (posted >1 month ago, recurring roundup format)",
+      "contact_method": "Via Sourcee or original platform",
+      "relevance": "medium-high",
+      "relevance_notes": "About MSPs struggling with AI pricing models and customers asking which AI tools to use. The 'identifying the best AI coding platforms' is directly in AIToolsEssentials' wheelhouse. MSPs are the intermediary — they're the ones who need to tell clients which AI tools to keep and cut, which is exactly what the Stack Audit does. The outcome-based pricing angle also connects: as AI tools converge on $20/mo, the value isn't the tool itself but the curation. Moderate-high fit.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: pitch as a resource for MSPs advising clients on AI tool selection. Frame: MSPs are fielding 'which AI tools should we use' questions from clients — that's the overlap problem. The Stack Audit gives MSPs a structured way to answer: audit the client's current stack, identify overlaps, recommend keep/cut/replace. The $20/mo convergence means the tool cost is trivial; the MSP value is in the curation. Medium-high priority — recurring format, MSP audience is a distribution channel.",
+      "url": "https://sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends"
+    }
+  ],
+  "previously_reported_still_relevant": [
+    {
+      "id": "prev-1",
+      "source": "Sourcee.app (Financial Times outlet page)",
+      "query_text": "Financial Times commissioned article on how management consulting firms leaning on AI face client demands for fee reductions. Looking for: UK businesses demanding fee cuts, UK management consulting firms, and an AI/tech expert with deep knowledge of how consulting firms use AI.",
+      "journalist_publication": "Financial Times",
+      "status": "likely_still_active",
+      "relevance": "high",
+      "notes": "Reported in digest-2026-09-09. Still the strongest fit from prior runs. No deadline stated. FT outlet page on Sourcee now returns minimal content (login-wall change), but the request was active as of yesterday. If not yet pitched, recommend ASAP — pitch as the 'AI/tech expert' they're seeking. Use verified pricing data (API costs down 10x, Gemini Ultra $250→$100, usage-based model shifts)."
+    },
+    {
+      "id": "prev-2",
+      "source": "Sourcee.app (Forbes outlet page)",
+      "query_text": "Forbes: Where Business Leaders Focus Their Tech Budgets As Tech Stock Market Volatility Persists. Looking for expert sources to provide clear signals for business owners and decision-makers to navigate the current landscape and plan for 2027.",
+      "journalist_publication": "Forbes",
+      "status": "likely_still_active",
+      "relevance": "high",
+      "notes": "Reported in digest-2026-09-09. Still a strong fit. No deadline stated. Forbes outlet page on Sourcee now returns minimal content but request was active yesterday. The keep/cut framework is exactly the 'clear signal' this journalist wants. If not yet pitched, pitch ASAP."
+    },
+    {
+      "id": "prev-3",
+      "source": "Sourcee.app (Startups topic page)",
+      "query_text": "SME Owners - Operational Challenges for AI Solutions. 'As subscription models that worked for SaaS are starting to fracture... I'm on a mission to collect 10 real SME operational problems that AI could solve.'",
+      "journalist_publication": "Independent (LinkedIn content creator/researcher)",
+      "status": "likely_still_active",
+      "relevance": "medium",
+      "notes": "Reported in digest-2026-09-09. Open deadline (collecting 10 case studies). The SaaS subscription fracturing angle connects to AIToolsEssentials' pricing shift coverage. If not yet pitched, offer 'SMEs paying for overlapping AI subscriptions' as one of the 10 problems."
+    },
+    {
+      "id": "prev-4",
+      "source": "Sourcee.app (aggregated from X #journorequest)",
+      "query_text": "FinOps Professionals - Agentic AI Cost Overruns. Uber burned its entire 2026 AI budget in four months. Would like to hear from others how they are managing their AI costs.",
+      "journalist_publication": "Unknown (posted via X, formerly Apptio FinOps professional)",
+      "status": "uncertain",
+      "relevance": "high",
+      "notes": "Reported in digest-2026-09-08 and 2026-09-09. The strongest fit from prior runs. Could not re-verify visibility this run (X credits exhausted, Sourcee search did not surface it). If not yet pitched, still recommend attempting — AI cost management is the core AIToolsEssentials value prop."
+    },
+    {
+      "id": "prev-5",
+      "source": "Sourcee.app (aggregated from X #journorequest, Marketing topic)",
+      "query_text": "Forbes: Looking for experts in dynamic pricing and other related strategies. AI dynamic pricing, surge pricing, surveillance pricing. Interviews by Wednesday.",
+      "journalist_publication": "Forbes (online)",
+      "status": "expired",
+      "relevance": "medium-high",
+      "notes": "Reported in digest-2026-09-08 with a Wednesday deadline. Confirmed expired. Do not pitch."
+    }
+  ],
+  "new_this_run": [
+    "UK managers cracking down on Gen Z AI overuse (UK national newspaper, end-of-week deadline) — NEW, medium-high relevance",
+    "AI agents making money 2026 list (ToolVetting, open) — NEW, medium relevance",
+    "UK finance AI explainability risks / CFO AI budget questions (independent, open) — NEW, medium relevance",
+    "AI project builders YouTube feature (500k subs, open) — NEW, low-medium relevance",
+    "Enterprise AI governance & agent sprawl (independent, open) — NEW, medium relevance",
+    "AI SaaS $20/mo pricing convergence guide (independent, open, >1mo old but evergreen) — NEW, high relevance",
+    "MSP AI ops & pricing trends (channel publication, open, recurring) — NEW, medium-high relevance"
+  ],
+  "summary": "Seven new opportunities identified this run, plus four previously reported (two high-relevance from yesterday likely still active). The strongest NEW find is the AI SaaS $20/mo pricing convergence guide (#6) — directly about the pricing trend that creates the overlap problem AIToolsEssentials solves. Second strongest new find is the MSP AI ops & pricing roundup (#7) — MSPs are the intermediary who need to advise clients on which AI tools to keep/cut. The UK managers Gen Z AI overuse request (#1) has the tightest deadline (end of week) and is a decent fit for the tool-selection-policy angle. The enterprise AI agent sprawl request (#5) connects the overlap problem to enterprise scale. Previously reported FT consulting fees + AI costs (prev-1) and Forbes tech budgets for 2027 (prev-2) remain the strongest overall opportunities if not yet pitched — recommend pitching those first. HARO remains email-gated, Connectively requires login, Qwoted requires login, X Search credits still exhausted. Sourcee.app remains the best accessible aggregation source, though outlet-specific pages (Forbes, FT) now return minimal content. The Stack (thestack.tech) accepts standing FinOps/AI economics guest contributions — potential evergreen outlet for a contributed piece on AI tool overlap costs."
+}
