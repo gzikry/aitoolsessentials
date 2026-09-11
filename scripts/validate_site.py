@@ -8,6 +8,7 @@ import re
 import shutil
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
 from datetime import date
 
 from enhance_structured_data import is_hands_on_published, valid_rating_value
@@ -713,11 +714,32 @@ def main():
     if newsletter_hub.exists() and 'Sir, you appear' in newsletter_hub.read_text():
         errors.append('Newsletter index still uses the butler Issue 1 teaser')
 
+    # Unrendered template placeholders are visible copy bugs (e.g. a missing f-string).
+    leak_hits = []
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if 'admin' in rel.parts:
+            continue
+        visible = re.sub(r'<(script|style)\b.*?</\1>', '', f.read_text(), flags=re.S | re.I)
+        for match in set(re.findall(r'\$\{[^}]{1,40}\}', visible)):
+            leak_hits.append(f'{rel}: {match}')
+    if leak_hits:
+        errors.append(f'Unrendered template placeholder(s) visible in HTML: {sorted(leak_hits)[:5]}')
+
+    # The public directory must list every tracked tool.
+    directory_index = ROOT / 'tools' / 'index.html'
+    if directory_index.exists():
+        card_count = directory_index.read_text().count('class="directory-card"')
+        if card_count != len(tools):
+            errors.append(
+                f'tools/index.html lists {card_count} directory cards but data/tools.json has {len(tools)} tools'
+            )
+
     sitemap = ROOT/'sitemap.xml'
     if sitemap.exists():
         html_count = len([
             p for p in ROOT.rglob('*.html')
-            if 'admin' not in p.relative_to(ROOT).parts
+            if not {'admin', 'marketing', 'scripts', 'content_briefs', 'audit_reports', 'go'}.intersection(p.relative_to(ROOT).parts)
             and p.name != '404.html'
             and 'name="robots" content="noindex' not in p.read_text()
         ])
@@ -725,6 +747,15 @@ def main():
         url_count = sitemap_text.count('<url>')
         if html_count != url_count:
             errors.append(f'Sitemap URL count {url_count} != HTML count {html_count}')
+        # Unescaped spaces/ampersands make the sitemap invalid XML and can drop URLs.
+        try:
+            ET.fromstring(sitemap_text)
+        except Exception as exc:
+            errors.append(f'sitemap.xml is not valid XML: {exc}')
+        bad_locs = [loc for loc in re.findall(r'<loc>(.*?)</loc>', sitemap_text)
+                    if ' ' in loc or re.search(r'&(?!amp;|lt;|gt;|quot;|apos;)', loc)]
+        if bad_locs:
+            errors.append(f'Sitemap has {len(bad_locs)} unescaped loc URL(s): {bad_locs[:3]}')
         for slug in old_slugs:
             if f'https://aitoolsessentials.com{slug}' in sitemap_text and 'riverside-fm' not in slug:
                 errors.append(f'Sitemap still lists retired path {slug}')

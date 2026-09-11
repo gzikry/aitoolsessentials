@@ -44,14 +44,19 @@ def _sitemap_priority_changefreq(rel_path: str) -> tuple[str, str]:
 
 
 def refresh_sitemap(root: Path) -> list[str]:
+    from urllib.parse import quote
+    # Working directories are not public content and must never be in the sitemap.
+    excluded_dirs = {'admin', 'marketing', 'scripts', 'content_briefs', 'audit_reports', 'go'}
     sitemap_urls = []
     for p in sorted(root.rglob('*.html')):
         if '.hermes' in p.parts:
             continue
         rel = p.relative_to(root)
+        if excluded_dirs.intersection(rel.parts):
+            continue
         html_text = p.read_text()
         # Exclude internal, error, checkout-return, redirect, and noindex pages.
-        if 'admin' in rel.parts or p.name == '404.html' or 'name="robots" content="noindex' in html_text:
+        if p.name == '404.html' or 'name="robots" content="noindex' in html_text:
             continue
         if p.name == 'index.html':
             url = f'/{rel.parent}/'
@@ -62,7 +67,9 @@ def refresh_sitemap(root: Path) -> list[str]:
     sitemap = '''<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'''
     for url in sitemap_urls:
         priority, changefreq = _sitemap_priority_changefreq(url.lstrip('/'))
-        sitemap += f'  <url><loc>https://aitoolsessentials.com{url}</loc><lastmod>{today}</lastmod><changefreq>{changefreq}</changefreq><priority>{priority}</priority></url>\n'
+        # Category paths contain spaces and ampersands; encode so the XML stays valid.
+        loc = f'https://aitoolsessentials.com{quote(url, safe="/")}'
+        sitemap += f'  <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>{changefreq}</changefreq><priority>{priority}</priority></url>\n'
     sitemap += '</urlset>\n'
     (root / 'sitemap.xml').write_text(sitemap)
     return sitemap_urls
@@ -91,6 +98,16 @@ generate_all(root, tools, today)
 # Generate polished category buyer guides
 from generate_categories import generate_all as generate_categories_all
 generate_categories_all(root, tools, today)
+
+# The directory index must list every tracked tool; regenerate it from data.
+from generate_directory import generate as generate_directory
+generate_directory(root, tools, today)
+print('Generated tool directory index')
+
+from generate_quiz import generate as generate_quiz, link_quiz as link_quiz_pages
+generate_quiz(root)
+print('Generated coding assistant keep/cut quiz')
+print('Quiz linked from pages:', link_quiz_pages(root))
 
 # Generate benchmark evidence hub
 from generate_benchmarks import generate as generate_benchmarks_page

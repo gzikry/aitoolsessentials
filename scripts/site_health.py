@@ -15,11 +15,15 @@ REQUIRED = [
     "cost-calculator.html", "compare-shortlist.html", "stack-audit.html",
 ]
 SECRET_PATTERNS = [
-    re.compile(r"(?:sk|rk|pk)-[A-Za-z0-9_-]{20,}"),
-    re.compile(r"gh[pousr]_[A-Za-z0-9]{20,}"),
-    re.compile(r"xai-[A-Za-z0-9_-]{20,}"),
-    re.compile(r"AIza[A-Za-z0-9_-]{30,}"),
+    re.compile(r"(?<![A-Za-z0-9])(?:sk|rk|pk)-[A-Za-z0-9_-]{20,}"),
+    re.compile(r"(?<![A-Za-z0-9])gh[pousr]_[A-Za-z0-9]{20,}"),
+    re.compile(r"(?<![A-Za-z0-9])xai-[A-Za-z0-9_-]{20,}"),
+    re.compile(r"(?<![A-Za-z0-9])AIza[A-Za-z0-9_-]{30,}"),
 ]
+# A prefixed token is only a secret if it looks like a key, not a URL slug or
+# prose fragment such as "sk-and-regulatory-...-risks". Real keys carry digits.
+def looks_like_secret(token: str) -> bool:
+    return any(ch.isdigit() for ch in token)
 
 def load_json(path: Path):
     return json.loads(path.read_text())
@@ -74,7 +78,14 @@ def run(root: Path) -> dict:
         if not p.is_file() or ".git" in p.parts or p.suffix in {".png",".jpg",".jpeg",".gif",".pdf",".woff",".woff2"}: continue
         try: text=p.read_text(errors="ignore")
         except Exception: continue
-        if any(rx.search(text) for rx in SECRET_PATTERNS): secret_hits.append(str(p.relative_to(root)))
+        for rx in SECRET_PATTERNS:
+            for match in rx.findall(text):
+                if looks_like_secret(match):
+                    secret_hits.append(str(p.relative_to(root)))
+                    break
+            else:
+                continue
+            break
     checks={
       "required_pages": {"ok": not missing, "missing": missing},
       "coverage": {"ok": slugs==review_slugs, "tools":len(slugs), "reviews":len(review_slugs), "missing_reviews":sorted(slugs-review_slugs), "orphan_reviews":sorted(review_slugs-slugs)},

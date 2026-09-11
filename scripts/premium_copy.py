@@ -305,7 +305,7 @@ def upsell_module_html(whop: dict[str, Any]) -> str:
         f"<span>Optional Premium · ${price}/mo via Whop</span>"
         "<h2>Want someone to decide with you before a renewal?</h2>"
         f"<p>The free Stack Audit finds the waste. Premium is optional: a dated keep/cut pack, "
-        "alerts, and a 48-hour written reply in Whop — ${price}/month, cheaper than one overlapping "
+        f"alerts, and a 48-hour written reply in Whop — ${price}/month, cheaper than one overlapping "
         "seat, not another AI subscription. The directory, Keep/Cut Weekly, and the instant Stack "
         "Audit stay free.</p>"
         f'<p class="affiliate-inline">{trial}-day free trial · then ${price}/month · code {promo} '

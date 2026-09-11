@@ -239,20 +239,44 @@ def generate_feeds(root: Path, tools: list[dict[str, Any]], today: str) -> None:
 
 def postprocess_related_next_steps(root: Path) -> None:
     marker = "<!-- AIT RELATED NEXT STEPS START -->"
+    end_marker = "<!-- AIT RELATED NEXT STEPS END -->"
     targets = (list((root / "alternatives").glob("*-alternatives.html"))
                + list((root / "use-cases").glob("*.html"))
                + list((root / "stacks").glob("*.html"))
                + list((root / "comparisons").glob("*.html"))
+               + list((root / "articles").glob("*.html"))
+               + list((root / "how-to").glob("*.html"))
                + [p for p in (root / "categories").glob("*/index.html")])
+    body = (
+        '<section class="score-card related-next-steps"><span>Related next steps</span>'
+        '<h2>Turn this page into a decision.</h2>'
+        '<p>See what you already pay for, what overlaps, and what to cut, then price the replacement.</p>'
+        '<p><a class="button button-blue" href="/stack-audit.html">Run the free Stack Audit</a>'
+        '<a class="button button-blue" href="/cost-calculator.html" style="margin-left:8px">Estimate cost</a>'
+        '<a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p>'
+        '</section>'
+    )
+    block = "\n" + marker + "\n" + body + "\n" + end_marker + "\n"
+    # Strip any previously written module (with or without its markers) so a
+    # rerun replaces rather than appends. Losing the markers caused duplicates.
+    loose = re.compile(
+        r"\s*(?:<!-- AIT RELATED NEXT STEPS START -->\s*)?"
+        r'<section class="score-card related-next-steps">.*?</section>'
+        r"(?:\s*<!-- AIT RELATED NEXT STEPS END -->)?\s*",
+        re.S,
+    )
     for p in targets:
         if p == root / "categories" / "index.html":
             continue
         html = p.read_text()
-        if marker in html:
-            continue
-        block = f'\n{marker}\n<section class="score-card related-next-steps"><span>Related next steps</span><h2>Turn this page into a decision.</h2><p><a class="button button-blue" href="/stack-builder.html">Generate stack</a><a class="button button-blue" href="/cost-calculator.html" style="margin-left:8px">Estimate cost</a><a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p></section>\n<!-- AIT RELATED NEXT STEPS END -->\n'
-        html = html.replace("</main>", block + "</main>", 1)
-        p.write_text(html)
+        cleaned = loose.sub("\n", html)
+        if "</main>" in cleaned:
+            updated = cleaned.replace("</main>", block + "</main>", 1)
+        else:
+            updated = cleaned
+        if updated != html:
+            p.write_text(updated)
+
 
 def generate_js(root: Path) -> None:
     js = r'''

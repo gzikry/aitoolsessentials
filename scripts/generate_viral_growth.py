@@ -217,7 +217,7 @@ def inject_review_stack_modules(root: Path, tools: list[dict[str, Any]]) -> None
             if needle in hay:
                 role, title = value
                 break
-        block = f'\n<!-- AIT STACK MODULE START -->\n<section class="score-card stack-entry-module"><span>Build around {esc(t["name"])}</span><h2>{esc(title)}</h2><p>Use {esc(t["name"])} as one part of a complete AI workflow, then compare cost and overlap before paying for the whole stack.</p><p><a class="button button-blue" href="/stack-builder.html">Generate related stack</a><a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p></section>\n<!-- AIT STACK MODULE END -->\n'
+        block = f'\n<!-- AIT STACK MODULE START -->\n<section class="score-card stack-entry-module"><span>Build around {esc(t["name"])}</span><h2>{esc(title)}</h2><p>Use {esc(t["name"])} as one part of a complete AI workflow, then compare cost and overlap before paying for the whole stack.</p><p><a class="button button-blue" href="/stack-audit.html">Run the free Stack Audit</a><a class="button button-blue" href="/stack-builder.html" style="margin-left:8px">Generate related stack</a><a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p></section>\n<!-- AIT STACK MODULE END -->\n'
         if "</main>" in html:
             html = html.replace("</main>", block + "</main>", 1)
             path.write_text(html)
