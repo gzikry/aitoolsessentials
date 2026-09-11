@@ -342,6 +342,10 @@ from generate_conversion_growth import postprocess as _conversion_postprocess
 _conversion_postprocess(root, tools)
 print('Injected conversion growth post-process modules')
 
+# Re-link the quiz after module injectors run, so later passes cannot strip it.
+from generate_quiz import link_quiz as _link_quiz
+print('Quiz links refreshed:', _link_quiz(root))
+
 from generate_site_discovery import postprocess as _site_discovery_postprocess
 _site_discovery_postprocess(root, tools, today)
 print('Injected site discovery head/status modules')

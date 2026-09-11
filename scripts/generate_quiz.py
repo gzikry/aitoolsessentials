@@ -7,6 +7,7 @@ published at a real public URL so it can be linked and promoted.
 """
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 DOMAIN = "https://aitoolsessentials.com"
@@ -142,7 +143,7 @@ def link_quiz(root: Path) -> int:
     """Link the quiz from related public pages so it is not an orphan."""
     block = (
         f'\n{QUIZ_LINK_MARK_START}\n'
-        '<section class="score-card related-next-steps"><span>Free quiz</span>'
+        '<section class="score-card quiz-entry-module"><span>Free quiz</span>'
         '<h2>Paying for two coding assistants?</h2>'
         '<p>Answer three questions and get a keep/cut verdict for Copilot Pro, Cursor Pro, and Claude Max.</p>'
         f'<p><a class="button button-blue" href="/quiz/{SLUG}.html">Take the keep/cut quiz</a>'
@@ -156,11 +157,19 @@ def link_quiz(root: Path) -> int:
             continue
         html = path.read_text()
         if QUIZ_LINK_MARK_START in html:
+            updated = re.sub(
+                re.escape(QUIZ_LINK_MARK_START) + r".*?" + re.escape(QUIZ_LINK_MARK_END),
+                block.strip(),
+                html,
+                flags=re.S,
+            )
+        elif "</main>" in html:
+            updated = html.replace("</main>", block + "</main>", 1)
+        else:
             continue
-        if "</main>" not in html:
-            continue
-        path.write_text(html.replace("</main>", block + "</main>", 1))
-        linked += 1
+        if updated != html:
+            path.write_text(updated)
+            linked += 1
     return linked
 
 
