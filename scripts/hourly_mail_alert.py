@@ -9,7 +9,8 @@ import sys
 from pathlib import Path
 
 ACCOUNT = "aitools"
-FOLDER = "[Gmail]/All Mail"
+SPAM = "[Gmail]/Spam"
+FOLDERS = ["[Gmail]/All Mail", SPAM]
 SELF = "aitoolsessentials@gmail.com"
 STATE = Path.home() / ".local" / "state" / "aitoolsessentials" / "hourly-mail.json"
 
@@ -23,20 +24,24 @@ def himalaya(*args: str) -> subprocess.CompletedProcess[str]:
     )
 
 
-def list_messages() -> list[dict]:
+def list_messages(folder: str) -> list[dict]:
     result = himalaya(
         "envelope", "list", "--account", ACCOUNT,
-        "--folder", FOLDER, "--page", "1", "--page-size", "100",
+        "--folder", folder, "--page", "1", "--page-size", "100",
         "--output", "json",
     )
     if result.returncode:
         raise RuntimeError(result.stderr.strip() or "himalaya envelope list failed")
-    return json.loads(result.stdout)
+    messages = json.loads(result.stdout)
+    for message in messages:
+        message["_folder"] = folder
+    return messages
 
 
 def fingerprint(message: dict) -> str:
     sender = (message.get("from") or {}).get("addr", "").lower()
     return "|".join([
+        message.get("_folder") or FOLDERS[0],
         sender,
         message.get("subject") or "",
         message.get("date") or "",
@@ -61,6 +66,13 @@ def disposition(message: dict) -> tuple[bool, str]:
         if "test" in lower or "report" in lower:
             return True, "New community test report — verify before publishing."
         return True, "New website form submission — review the details."
+
+    # Anything landing in Spam is only actionable when it comes from a sender we
+    # already treat as legitimate (form submissions, bounce reports, self). Plain
+    # junk must not raise an alert, or the monitor becomes noise.
+    if message.get("_folder") == SPAM:
+        return False, ""
+
     if lower.startswith("re:") or lower.startswith("fw:"):
         return True, "A correspondent replied — read the full thread and respond if needed."
     if message.get("has_attachment"):
@@ -92,7 +104,9 @@ def main() -> int:
     args = parser.parse_args()
 
     try:
-        messages = list_messages()
+        messages = []
+        for folder in FOLDERS:
+            messages.extend(list_messages(folder))
         current = {fingerprint(message) for message in messages}
         seen = load_seen()
         if args.initialize or not seen:
