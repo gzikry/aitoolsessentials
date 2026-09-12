@@ -31,6 +31,7 @@ GUIDES = {
         'title': 'Best AI tools for agencies',
         'subhead': 'Team-plan decisions for content production, design, meetings, and client reporting — evaluated on seats, permissions, and margin.',
         'slugs':['claude','jasper','copy-ai','adobe-firefly','heygen','fireflies'],
+        'depth': 'agencies',
         'angle': ('Agencies buy seats, not subscriptions. The evaluation axis is different from solo use: '
                   'team workspaces, permission controls, brand-voice consistency, output rights you can '
                   'transfer to clients, and per-seat cost against billable value. Consumer plans usually '
@@ -130,6 +131,130 @@ GUIDES = {
     },
 }
 
+# Verified seat pricing and rights notes for the depth sections. Amounts and check dates
+# come from data/tool_sources.json; do not add a figure that is not sourced there.
+AGENCY_SEAT_DATA = {
+    'claude': {
+        'price': '$20/seat/mo (Standard teams, 2-150 users); Premium seats $100/seat/mo',
+        'checked': '2026-08-25',
+        'rights': 'Consumer Terms govern Free/Pro; Team and Enterprise add commercial terms. '
+                  'Check the training policy for the tier you buy.',
+        'rights_url': 'https://www.anthropic.com/legal/consumer-terms',
+    },
+    'jasper': {
+        'price': 'Pro $69/seat/mo monthly or $59/seat/mo yearly (1 seat included); Business custom',
+        'checked': '2026-08-25',
+        'rights': 'Pro includes 2 Brand Voices, 5 Knowledge assets, 3 Audiences. Client-delivery '
+                  'rights sit in the main Terms — review before reselling output.',
+        'rights_url': 'https://www.jasper.ai/legal/terms',
+    },
+    'copy-ai': {
+        'price': 'Chat $29/mo (5 seats) or $24/mo billed annually; Growth from $1,000/mo (75 seats)',
+        'checked': '2026-08-25',
+        'rights': 'Seat counts rise steeply between tiers — price the tier that matches your '
+                  'actual headcount, not the entry plan.',
+        'rights_url': 'https://www.copy.ai/terms-of-service',
+    },
+    'adobe-firefly': {
+        'price': 'Standard $9.99/mo (2,000 credits); Pro $19.99/mo (4,000); Pro Plus $49.99/mo',
+        'checked': '2026-08-25',
+        'rights': 'Adobe generative-AI user guidelines govern commercial use; Firefly is positioned '
+                  'as commercially safe, which matters when output goes to a client.',
+        'rights_url': 'https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html',
+    },
+    'heygen': {
+        'price': 'Creator $29/mo (600 credits); Business $149/mo + $20 per extra seat',
+        'checked': '2026-08-25',
+        'rights': 'Avatar consent and likeness rights are the risk here; confirm the terms for '
+                  'each presenter you create.',
+        'rights_url': 'https://www.heygen.com/terms',
+    },
+    'fireflies': {
+        'price': 'Pro $18/seat/mo monthly or $10/seat/mo billed annually; Business $29/seat/mo',
+        'checked': '2026-08-25',
+        'rights': 'Recording consent is the compliance issue: you are capturing client calls. '
+                  'A written recording policy is a prerequisite, not an afterthought.',
+        'rights_url': 'https://fireflies.ai/terms-of-service',
+    },
+}
+
+AGENCY_DEPTH = """<h2>What agencies actually get wrong about AI seats</h2>
+<p>Solo buyers optimise for capability. Agencies have to optimise for four things the consumer plans do not address: <strong>seat economics</strong>, <strong>permission boundaries</strong>, <strong>brand consistency across writers</strong>, and <strong>the right to hand output to a client</strong>. A tool that is excellent for one person often becomes a liability at eight, because the per-seat price is only the visible cost.</p>
+<p>The hidden costs are the ones that show up in month two: seats you bought for contractors who finished their engagement, a plan tier that silently excludes the feature your senior writer needs, and output you cannot legally deliver because the plan you are on reserves commercial rights for a higher tier.</p>
+
+<h2>Per-seat cost, priced for a real team</h2>
+<p>Prices below are per official vendor pages as checked. Where a plan includes an unusual seat count, that matters more than the headline number.</p>
+<table>
+<thead><tr><th>Tool</th><th>Verified seat pricing</th><th>Checked</th></tr></thead>
+<tbody>
+<tr><td><strong>Claude</strong></td><td>{claude}</td><td>{claude_d}</td></tr>
+<tr><td><strong>Jasper</strong></td><td>{jasper}</td><td>{jasper_d}</td></tr>
+<tr><td><strong>Copy.ai</strong></td><td>{copy_ai}</td><td>{copy_ai_d}</td></tr>
+<tr><td><strong>Adobe Firefly</strong></td><td>{firefly}</td><td>{firefly_d}</td></tr>
+<tr><td><strong>HeyGen</strong></td><td>{heygen}</td><td>{heygen_d}</td></tr>
+<tr><td><strong>Fireflies.ai</strong></td><td>{fireflies}</td><td>{fireflies_d}</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">These are official published amounts with check dates, not quotes. Teams plans, volume discounts, and annual prepayment change the real number — confirm at signup.</p>
+
+<h2>Do the seat math before you buy</h2>
+<p>A worked example using the verified numbers, for a seven-person agency with three writers, two designers, one producer, and one account lead:</p>
+<ul>
+<li><strong>Writing layer (3 seats).</strong> Jasper Pro at $59/seat/mo billed annually is <strong>$177/month</strong>. Claude Team at $20/seat/mo is <strong>$60/month</strong> for the same three people. The difference is roughly $117/month — about $1,400/year — and it buys brand-voice controls rather than raw writing quality.</li>
+<li><strong>Creative layer (2 seats).</strong> Firefly Pro at $19.99/seat/mo is <strong>$39.98/month</strong> for 4,000 credits per seat. Credits, not seats, are the real constraint for image-heavy work.</li>
+<li><strong>Meetings layer (7 seats).</strong> Fireflies Pro at $10/seat/mo billed annually is <strong>$70/month</strong> across the whole team. This is the cheapest per-seat layer and usually the easiest to justify.</li>
+<li><strong>Producer and account lead.</strong> Do not buy them a writing seat. Give them the shared assistant and the meeting tool; a seat they open twice a month is the most common wasted line on an agency's AI invoice.</li>
+</ul>
+<p>Total for that shape lands near <strong>$290-350/month</strong> depending on which writing path you take. The single biggest lever is the writing layer, and the decision there is brand consistency versus cost.</p>
+
+<h2>Permissions, client data, and what you are allowed to deliver</h2>
+<p>Two questions decide most agency rollouts, and neither is answered by a feature comparison.</p>
+<p><strong>Who can see what?</strong> Shared workspaces are the reason agencies move off individual plans, but a shared workspace also means a junior can read a senior's client drafts. Check whether the plan separates projects or workspaces per client before you consolidate everyone onto one account.</p>
+<p><strong>Can you deliver the output?</strong> Commercial-use rights are plan-specific. On Claude, the Consumer Terms govern Free and Pro while Team and Enterprise add commercial terms. On Jasper, delivery rights sit in the main Terms. On Adobe Firefly, the generative-AI user guidelines are what make it the safer default for client-facing visuals. The practical rule: <em>read the rights page for the exact tier you are buying, and do it before the first client deliverable, not after.</em></p>
+<p><strong>Meeting recording is a consent problem, not a tooling problem.</strong> Any tool that joins a client call — Fireflies included — captures client conversation. A written recording policy that you state in the call is a prerequisite. This is the one area where a cheap seat can create an expensive conversation.</p>
+
+<h2>Rollout order that survives month two</h2>
+<ol>
+<li><strong>Start with the meeting layer.</strong> It is the cheapest per seat, the benefit is obvious to everyone in the room, and it produces a searchable record that improves every other workflow.</li>
+<li><strong>Add one assistant for the whole team</strong> before adding specialists. A shared assistant replaces scattered personal subscriptions and gives you one place to answer the data-handling question.</li>
+<li><strong>Add the writing layer only when brand consistency is a real problem.</strong> If two writers produce inconsistent client copy, brand-voice tooling earns its premium. If they do not, you are paying $1,400/year for a feature you will not use.</li>
+<li><strong>Add creative generation last.</strong> Image and video credits are the hardest to forecast, and the rights question is the most consequential because the output is most visible to clients.</li>
+</ol>
+
+<h2>Agency AI questions we get asked</h2>
+<details><summary>Should an agency buy team plans or individual subscriptions?</summary><p>Team plans, once you pass roughly three people. Individual subscriptions cannot be administered — you cannot offboard a departing employee, you cannot enforce a permission boundary per client, and the data-handling terms are written for a consumer. The visible per-seat premium is usually smaller than the administrative cost of not having it.</p></details>
+<details><summary>How do we stop paying for seats nobody uses?</summary><p>Audit seats monthly against actual logins, not against who asked for one. Contractors and part-time contributors are the usual source of waste — buy them seats for the engagement and remove them when it ends. Most vendors bill per active seat, so an unused seat is a pure loss.</p></details>
+<details><summary>Which tools can we safely use on client work?</summary><p>Start with the rights page for the tier you are on, not the marketing page. Firefly is the safest default for client-facing visuals because Adobe publishes explicit generative-AI guidelines. For writing, Team and Enterprise tiers generally carry commercial terms that consumer plans do not. Never assume a consumer plan you tested personally grants delivery rights at work.</p></details>
+<details><summary>Do we need to tell clients we use AI?</summary><p>Increasingly yes, and it is usually contractual rather than optional. Check your master service agreements for AI disclosure clauses, and state your recording policy in the call before any meeting tool joins. Being able to describe your process plainly is a sales advantage with sophisticated clients, not a risk.</p></details>
+"""
+
+
+# Placeholder key -> slug, because the template uses short names ({firefly}) while the
+# data uses slugs (adobe-firefly).
+DEPTH_KEY_MAP = {
+    'claude': 'claude', 'jasper': 'jasper', 'copy_ai': 'copy-ai',
+    'firefly': 'adobe-firefly', 'heygen': 'heygen', 'fireflies': 'fireflies',
+}
+
+
+def _fill(values):
+    """Flatten seat data into .format() keys: {claude} for price, {claude_d} for the date."""
+    out = {}
+    for key, slug in DEPTH_KEY_MAP.items():
+        d = values.get(slug)
+        if not d:
+            continue
+        out[key] = d['price']
+        out[key + '_d'] = d['checked']
+    return out
+
+
+DEPTH_FILL = _fill(AGENCY_SEAT_DATA)
+
+DEPTH_BLOCKS = {
+    'agencies': AGENCY_DEPTH,
+}
+
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
 
 FOOTER = '''<footer class="footer">
@@ -164,6 +289,9 @@ def generate(root: Path) -> int:
                       f'<div class="pick-actions"><a class="button button-blue" href="../tools/{s}/">Read review</a>'
                       f'<a class="text-link" href="../legal/editorial-methodology.html">How we score</a></div></article>')
             picks.append(t['name'])
+        depth_html = ''
+        if spec.get('depth') and spec['depth'] in DEPTH_BLOCKS:
+            depth_html = DEPTH_BLOCKS[spec['depth']].format(**DEPTH_FILL)
         page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{_e(spec['title'])}: {_e(spec['subhead'])}"><title>{_e(spec['title'])} — AIToolsEssentials</title><link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/share.css"><!-- AIT SEO START -->
   <link rel="canonical" href="https://aitoolsessentials.com/articles/{fname}">
@@ -184,7 +312,7 @@ def generate(root: Path) -> int:
 <h2>How this stack is chosen</h2><p>{_e(spec['angle'])}</p>
 <h2>The shortlist</h2>
 {cards}
-<h2>Before you pay for anything</h2>
+{depth_html}<h2>Before you pay for anything</h2>
 <p>Run each finalist's trial checklist on one real task. Record time-to-result, corrections needed, and what the plan actually costs at your volume — then decide. Our <a href="../downloads/ai-tool-evaluation-scorecard.html">free scorecard</a> gives you the template.</p>
 <p class="monetization-note">Official product links remain in place until affiliate programs are approved and verified.</p>
 </article></section>
