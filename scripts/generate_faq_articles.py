@@ -133,7 +133,7 @@ ARTICLES['ai-tools-for-real-estate-listings.html'] = {
 ARTICLES['chatgpt-free-vs-plus.html'] = {
  'title':'ChatGPT free vs Plus: what the limits actually are','kicker':'Question guide','desc':'What OpenAI officially publishes about ChatGPT plan structure — without treating unofficial dollar figures as list prices.',
  'body':'''
-<p><strong>Short answer:</strong> start on Free. Upgrade only if a published limit interrupts real work more than once a week. Exact localized Plus prices were not consistently exposed on OpenAI’s official pricing page during the last check, so verify <a href="https://openai.com/chatgpt/pricing/" rel="sponsored noopener nofollow" target="_blank">openai.com/chatgpt/pricing</a> before you pay.</p>
+<p><strong>Short answer:</strong> start on Free. Upgrade only if a published limit interrupts real work more than once a week. Exact localized Plus prices were not consistently exposed on OpenAI’s official pricing page during the last check, so verify <a href="https://openai.com/chatgpt/pricing/" rel="external noopener nofollow" target="_blank">openai.com/chatgpt/pricing</a> before you pay.</p>
 <h2>What is official</h2>
 <p>OpenAI lists ChatGPT Free, Go, Plus, Pro, Business, and Enterprise. Free is $0. Paid self-service plans are billed per user per month. Enterprise is sales-assisted. Our last official-source check (2026-08-25) did not treat unofficial third-party dollar amounts as list prices.</p>
 <h2>What paying is for</h2>
@@ -302,7 +302,7 @@ ARTICLES['launch-ai-business-whop-blueprints.html'] = {
 <h2>What a Blueprint deploys</h2>
 <ul><li><strong>Products:</strong> copied from the blueprint with pricing plans, images, and store-page styling</li><li><strong>Website:</strong> live at your own whop.site address</li><li><strong>Payment wiring:</strong> the site can take payments from the moment it is up</li></ul>
 <h2>Step 1: Pick a Blueprint</h2>
-<p>Browse the gallery at <a href="https://whop.com/blueprints" rel="sponsored noopener nofollow" target="_blank">whop.com/blueprints</a>. Categories include ecommerce stores, agencies, gyms, marketplaces, and more. Each blueprint is a real running business — deploying it gives you your own copy.</p>
+<p>Browse the gallery at <a href="https://whop.com/blueprints" rel="external noopener nofollow" target="_blank">whop.com/blueprints</a>. Categories include ecommerce stores, agencies, gyms, marketplaces, and more. Each blueprint is a real running business — deploying it gives you your own copy.</p>
 <h2>Step 2: Deploy</h2>
 <p>Click deploy on the blueprint detail page. Whop creates your business if you do not have one, copies the products and site over, and serves it at your route. Nothing builds on your machine.</p>
 <p>Or from the CLI:</p>
@@ -485,7 +485,7 @@ ARTICLES['ai-image-rights-commercial-use.html'] = {
 <p><strong>Short answer:</strong> commercial use depends on the vendor plan and the content of the image. Output that looks like a real person, brand, or copyrighted character is still your legal problem even if the tool allowed the prompt.</p>
 <h2>Check before you publish</h2>
 <ul>
-<li>Current commercial-use terms on the official <a href="https://www.midjourney.com/" rel="sponsored noopener nofollow" target="_blank">Midjourney</a> and <a href="https://leonardo.ai/" rel="sponsored noopener nofollow" target="_blank">Leonardo</a> plan pages.</li>
+<li>Current commercial-use terms on the official <a href="https://www.midjourney.com/" rel="external noopener nofollow" target="_blank">Midjourney</a> and <a href="https://leonardo.ai/" rel="external noopener nofollow" target="_blank">Leonardo</a> plan pages.</li>
 <li>Whether the paid plan you have actually includes commercial rights.</li>
 <li>Likeness, celebrity, and trademark risk in the prompt and the output.</li>
 <li>Client contract language: some NDAs forbid AI-generated creative without disclosure.</li>

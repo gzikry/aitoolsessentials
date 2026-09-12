@@ -27,7 +27,7 @@ def beehiiv_block(cfg: dict) -> str:
 <p style="text-align:center"><img src="{logo}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"></p>
 <h2>One email. One week. One cut, if you are lucky.</h2>
 <p>One email a week. What changed, what to keep, and what to cancel before renewal. Weekly only. Hosted on Beehiiv — not FormSubmit.</p>
-<p><a class="button button-blue" href="{src}" rel="noopener sponsored nofollow">Get the free email</a></p>
+<p><a class="button button-blue" href="{src}" rel="noopener external">Get the free email</a></p>
 <iframe src="{src}" title="Keep/Cut Weekly signup" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;min-height:520px;border:0;border-radius:12px;background:#fff;margin-top:16px"></iframe>
 <p class="affiliate-inline">If the form does not load, use the button. Publication: aitoolsessentials.beehiiv.com.</p>
 </div>'''

@@ -1,0 +1,242 @@
+{
+  "date": "2026-09-12",
+  "monitor": "HARO / Connectively / journalist request monitor",
+  "run_at": "2026-09-12T09:00:00-07:00",
+  "search_scope": "AI tools, AI pricing, overlapping AI subscriptions, software spend, SaaS cost/credits, agentic AI cost overruns, enterprise AI budget visibility",
+  "platforms_checked": [
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Unchanged and now harder: both / and /view-queries return HTTP 429 behind a 'Vercel Security Checkpoint' interstitial (previously reported as Cloudflare browser-verification — the vendor has changed, the gate has not). Queries are distributed only by 3x-daily email digest. Needs a subscribed inbox George controls. Featured.com operates it."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Both / and /queries return HTTP 429 behind the same Vercel Security Checkpoint as HARO — the two properties now share infrastructure. Still no public query feed. Platform itself is healthy (Featured.com reported 100,000+ users as of June 2026)."
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Root returns 200 (194 KB, live). /requests returns a real 404 'Page Not Found'. Confirms: reporter submission form only, no public source-facing query feed. Queries by email only."
+    },
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Primary source again. Full sitemap-journo-requests.xml pulled and date-sorted in code (40,812 URLs; 39,963 indexed by slug; newest lastmod 2026-09-12T02:08Z). 773 requests dated since 2026-09-03; 31 matched strict pricing/cost/budget/subscription keywords; 79 matched an AI/software slug filter. Outlet pages work at /media-outlets/<slug>/journo-requests (Forbes, FT, TechCrunch all read successfully this run). EXTRACTION CORRECTED THIS RUN — see monitor_health."
+    },
+    {
+      "platform": "Qwoted (qwoted.com)",
+      "status": "login_required",
+      "notes": "app.qwoted.com/requests returns a genuine 404 (the path is wrong, not gated) — the query feed requires an authenticated app session. Free tier for sources; paid from ~$99-$149/mo. Not pursued further this run."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "pre_launch",
+      "notes": "Root and /requests both return 200 but serve an identical 11 KB Lovable-built shell with no visible content and no query data ('Edit with' badge only). Still pre-launch / marketing page. No feed. Third consecutive run confirming this."
+    },
+    {
+      "platform": "Medialyst MCP (medialyst.ai/api/mcp)",
+      "status": "oauth_required",
+      "notes": "Returns 401 {\"error\":\"invalid_token\"} as before. Free read-only multi-platform feed (Connectively, HARO, X, LinkedIn, MentionMatch, Substack). Needs an interactive OAuth handshake — hermes mcp add --auth oauth — which cannot be done from cron. Still the single highest-leverage fix for this monitor."
+    },
+    {
+      "platform": "X/Twitter #journorequest",
+      "status": "credits_exhausted",
+      "notes": "x_search returns 'permission-denied: Your team fb0358a8... has either used all available credits or reached its monthly spending limit.' Fourth consecutive run blocked. Sourcee's X-originated aggregation used as proxy."
+    },
+    {
+      "platform": "ResponseSource (responsesource.com)",
+      "status": "paywalled_uk",
+      "notes": "Not re-probed this run. UK-only; enquiry feed sold by category from £85 pay-as-you-go."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "source": "Sourcee.app (X #journorequest, aggregated; author Niloy Ghosh)",
+      "query_text": "Uber burned its entire 2026 AI budget in four months, and had to cut back on usage. Agentic AI cost just doesn't behave like traditional software that we know how to budget for. I spent years at Apptio building the tooling that made cloud spend predictable, and that playbook doesn't survive contact with agents. Most teams are learning that lesson the hard way. My new piece is on why agentic AI keeps blowing out of budget, and what makes it so hard to see coming. Would like to hear from others how they are managing their AI costs.",
+      "journalist_publication": "Independent (ex-Apptio FinOps practitioner; LinkedIn/X long-form piece)",
+      "category": "AI / FinOps / Cost Management / Agentic AI",
+      "deadline": "Open — posted 2026-09-07T14:19Z, five days old and NOT refreshed since posting",
+      "contact_method": "Comment on the original X/LinkedIn post, or DM the author",
+      "relevance": "high",
+      "relevance_notes": "Fourth consecutive run this has surfaced and the best-context fit in the entire queue: it is the exact problem AIToolsEssentials exists to solve. The post has not been edited or refreshed in five days, which usually means the author has already collected replies and is drafting — treat the window as closing rather than open. Note the framing is agentic token/consumption spend, not seat subscriptions; the honest pitch is the half of the bill that is auditable today.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: lead with the subscription layer of the same bill. Frame: agentic token spend is genuinely hard to forecast, but the seat-based AI subscriptions sitting beside it are auditable this week with no engineering project. Offer the overlap data (coding x2, assistants x2, meeting notes x2) and the point that cancelling two overlapping $20-$30 seats funds a measurable share of the agentic budget the author is worried about. Offer verified pricing snapshots with checked dates. PITCH TODAY — closing window.",
+      "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns"
+    },
+    {
+      "id": 2,
+      "source": "Sourcee.app (Reddit r/... crossposted; marketintelligencetools.com reviewer)",
+      "query_text": "Amplemarket wants to replace your SDR stack with one AI copilot... I publish tool reviews on marketintelligencetools.com, and I just finished a long one on Amplemarket... I want to hear from people who've run real pipeline through it, especially anyone who came from Apollo, Outreach or Salesloft and can compare the switch directly. Amplemarket bundles a 200-million-contact database, outreach across seven channels and an AI copilot called Duo into one contract. The Startup plan is $600 a month for two seats, billed annually, with no monthly option and no published free trial anywhere on the site. Fifteen thousand email credits and 480 phone credits per user come with it, plus two mailboxes. Growth and Elite are both custom quotes, & neither publishes a number. Vendr's tracked-contract data puts the real median at $16,608 a year, ranging from $11,678 to $35,946. That's two to five times the advertised Startup rate, once a team needs the tiers Amplemarket won't price in public. Has anyone here signed a Growth or Elite contract? I'd like to know if the number landed near that $16,608 median, or somewhere past the $35,946 high end Vendr has on record?",
+      "journalist_publication": "Independent reviewer — marketintelligencetools.com (Reddit-sourced call for comment)",
+      "category": "AI / Software Pricing / Credits / Price Opacity / Contract Negotiation",
+      "deadline": "Open — posted 2026-09-06T16:36Z, no stated cutoff",
+      "contact_method": "Reply to the original Reddit thread",
+      "relevance": "high",
+      "relevance_notes": "NEW to the digest and the most methodologically aligned request in the queue. This is a reviewer doing exactly what AIToolsEssentials does — refusing to accept published pricing, pulling tracked-contract medians, dating the snapshots, and asking what the real number is. The request also asks about credit allowances (15k email / 480 phone credits) and annual-only billing, which is the credits-and-commitment half of the overlap problem. The reviewer is explicitly asking for signed-contract data points, so the play is to supply methodology and corroborating pricing evidence rather than a quote.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: pitch the method, not the tool. Frame: published list price and real contract value have decoupled across AI software, and the gap is 2-5x at the tiers vendors refuse to publish — which makes 'what do you actually pay' the only number worth tracking. Offer the verified-pricing methodology (official vendor pages, dated snapshots, credits and renewal terms recorded, no scraped data) and offer to corroborate the Vendr median with AIToolsEssentials' own tracked figures where any overlap exists. Do not pitch AIToolsEssentials as an Amplemarket expert — pitch the pricing-verification discipline. HIGH priority.",
+      "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot"
+    },
+    {
+      "id": 3,
+      "source": "Sourcee.app (X/LinkedIn #Sourcecall)",
+      "query_text": "#Sourcecall: I am writing a story about the difficulties that people have had with Anthropic customer service. Are there any users or businesses owners who can share about their Anthropic customer service experiences? I'd love to chat via DMs, email, or Signal.",
+      "journalist_publication": "Independent journalist (writing a dedicated story on Anthropic customer service)",
+      "category": "AI / Vendor Support Quality / Subscription Value",
+      "deadline": "Open — posted 2026-09-11T16:58Z, less than 24 hours old at run time",
+      "contact_method": "DM, email, or Signal — the journalist's Signal handle is published in the request; email is redacted on Sourcee, reply to the original post",
+      "relevance": "medium-high",
+      "relevance_notes": "NEW this run and the freshest request in the queue — under 24 hours old, so competition is minimal. It is a case-study call (they want users and business owners, not an analyst), but it lands directly on the value question AIToolsEssentials covers: people paying $20-$200/month for an AI subscription and finding the support behind it is not there. The honest play is to supply the commercial backdrop — what the tiers cost and what users are paying for — and to offer the AIToolsEssentials review data on Anthropic's plans, dated. Do not claim a support grievance we do not have.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: pair the support story with the price story. Frame: Anthropic's paid tiers run from $20/month (Pro, $17 annual) to $100-$200/month (Max), and at the top tiers buyers are paying enterprise money for consumer-grade support channels — which is what makes the support gap a value problem, not just an annoyance. Offer verified Anthropic pricing snapshots with checked dates plus the overlap angle (what a buyer could move to, and what it costs). Offer to connect the reporter with business owners in the AIToolsEssentials readership if any come forward. PITCH TODAY — freshest item in the queue.",
+      "url": "https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences"
+    },
+    {
+      "id": 4,
+      "source": "Sourcee.app (LinkedIn long-form, enterprise AI governance)",
+      "query_text": "Most enterprises don't have an AI strategy. They have an AI sprawl problem dressed up as one — Hundreds of agents. Dozens of models. Zero unified visibility into what they're doing, what they're consuming, or what they cost. After 21 years in enterprise technology, I firmly believe this is a defining infrastructure problem of the AI era. And most organizations won't realize it until a compliance audit, a security incident, or a budget review forces the conversation. The question keeping enterprise leaders up at night has shifted. It's no longer [cut off] — I'm writing a detailed piece covering AI governance architecture, agent ecosystems, model economics.",
+      "journalist_publication": "Independent (LinkedIn long-form, enterprise AI governance; 21-year enterprise tech practitioner)",
+      "category": "Enterprise AI / Governance / Agent Sprawl / Model Economics",
+      "deadline": "Open — posted 2026-09-05T07:46Z, collecting input for an in-progress article",
+      "contact_method": "Comment on the LinkedIn post or DM",
+      "relevance": "high",
+      "relevance_notes": "Still live and still the best enterprise-scale fit. Names cost visibility in its second sentence ('what they're consuming, or what they cost') and frames the trigger as 'a budget review' — the AIToolsEssentials beat stated back to us. Agent sprawl is the enterprise form of subscription overlap, and the seat-and-subscription inventory layer is what most governance frameworks skip on the way to token metering.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: enterprise scale, inventory first. Frame: before you can govern hundreds of agents you have to be able to list what you already pay for — most enterprises cannot enumerate their AI subscriptions, let alone their agents, and the budget review that exposes it arrives before the governance framework does. Offer the overlap taxonomy as the inventory layer that sits underneath agent governance, and the free Stack Audit as the concrete first step a reader can take. Offer verified pricing data for the enterprise tiers specifically (seat-based vs credits vs custom quote). HIGH priority.",
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl"
+    },
+    {
+      "id": 5,
+      "source": "Sourcee.app (X thread)",
+      "query_text": "Are you a scientist (PhD student, postdoc or beyond) paying for your own AI subscription to help with your research? I'd love to hear from you for something I'm working on at Science Magazine. Drop me a DM or reply to this thread and we can connect.",
+      "journalist_publication": "Science Magazine (journalist: Tom)",
+      "category": "AI / Science / Personal Subscription Spend",
+      "deadline": "Open, but flagging — posted 2026-09-04T16:49Z, now eight days old with no refresh. Likely closed or fully sourced.",
+      "contact_method": "DM or reply to the original thread",
+      "relevance": "high",
+      "relevance_notes": "Top-tier outlet and squarely on the personal-budget version of the overlap problem — individuals paying out of pocket for AI subscriptions their institutions assume are covered. This is a case-study call (they want the people, not the analyst), and it is now eight days old without a refresh, which suggests the reporter has already filled the piece. A citation in Science is worth more than a quote in a trade publication, so it stays in the digest, but pitch it as a late data offer with no expectation of placement rather than as a live opportunity.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: supply backdrop data for case studies already collected. Frame: researchers paying personally for AI subscriptions are absorbing a cost their institutions believe is covered; here is what the major plans actually cost and where they overlap — a postdoc paying for both Claude Pro and ChatGPT Plus is paying twice for one research job. Offer verified pricing snapshots with checked dates and the overlap data rather than a quote. MEDIUM-priority given age and likely closure — send only if the queue is otherwise clear.",
+      "url": "https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions"
+    },
+    {
+      "id": 6,
+      "source": "Sourcee.app (Forbes outlet page — /media-outlets/forbes/journo-requests)",
+      "query_text": "Open call for experts: Where Are Business Leaders Focusing Their Tech Budgets As Tech Stock Market Volatility Persists. This report is for Forbes. Open call to all experts to participate... AI and tech stocks continue on a volatile trajectory, with Goldman Sachs reporting that hedge funds are selling US tech stocks at a record pace, and Bloomberg reporting that big tech needs to justify AI spending... For this report, I am looking for expert sources to provide clear signals for small, medium, and large business owners and decision-makers to help them navigate the current landscape and plan for 2027.",
+      "journalist_publication": "Forbes",
+      "category": "Tech Budgets / AI Spend / 2027 Planning",
+      "deadline": "Stated as an open call with no cutoff, BUT datePublished is 2026-07-20T22:08Z — nearly eight weeks old. Verify with the outlet before pitching.",
+      "contact_method": "Expert-submission link in the original LinkedIn post (see Sourcee page)",
+      "relevance": "high",
+      "relevance_notes": "The single most on-beat query available on relevance — it is literally a Forbes call for expert input on where tech/AI budgets go — but the date is the problem. This listing was reported as 'rotated off' in digest-2026-09-11 and is present again today on the Forbes page, which is itself an important correction: the Forbes and FT outlet pages are persistent lists, not rolling newest-first feeds, so yesterday's 'rotated off' conclusion was not reliable evidence of expiry. Treat this as unresolved rather than live or dead.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: 2027 budget planning through the AI-spend lens. Frame: 80%+ of business and technology leaders expect 2027 budget increases, and the question is how much of that goes to AI seats versus agentic consumption — the fastest way to free real budget in 2027 is auditing overlapping AI subscriptions already being paid for. Offer the overlap data and verified pricing snapshots with checked dates. MEDIUM-priority until the outlet confirms the call is still open; do not spend a pitch slot on an eight-week-old listing without verifying.",
+      "url": "https://www.sourcee.app/journo-request/business-and-technology-leaders-tech-budget-priorities-amid-volatility"
+    },
+    {
+      "id": 7,
+      "source": "Sourcee.app (LinkedIn long-form)",
+      "query_text": "Good morning — I'm looking for ten CEOs who would be up for talking about what AI is or isn't doing for their company. I'd like to hear from folks who are advanced and those who haven't started. I'm keen to find out how it's changing your operations, culture and value propositions. I'd also like to know if it's affected your pricing, placement, promotion and proposition. This would be a call or a coffee. With your permission, I would publish your comments on the Executive Summary and in my book, Outcome Economics. I'm happy to do so anonymously if you prefer.",
+      "journalist_publication": "Independent author/practitioner (book: Outcome Economics; Executive Summary)",
+      "category": "AI / Leadership / Commercial Strategy & Pricing",
+      "deadline": "Open — posted 2026-09-03T07:29Z, recruiting ten CEOs, no cutoff stated",
+      "contact_method": "Reply to the original LinkedIn post ('drop me a line')",
+      "relevance": "medium",
+      "relevance_notes": "NEW this run. Explicitly asks whether AI has 'affected your pricing' — the only request in the queue that puts AI-driven pricing change to business leaders directly, which is the AIToolsEssentials Pricing Watch beat. It is a CEO-profile/book-contribution call rather than a citation play, and it wants CEOs specifically, so George is not the target profile. Best used as a data-supply or referral play, not a headline pitch.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: supply the buyer-side pricing evidence rather than a CEO interview. Frame: the CEOs being interviewed will report that AI changed their cost base, but the vendor side of that story is already public and dated — Microsoft 365 raised commercial pricing ~16% in July 2026, ChatGPT Pro split into $120/$200 tiers, GitHub Copilot moved to usage-based AI Credits. Offer verified, dated snapshots of those changes as corroborating material for the book chapter, and offer the overlap data behind the 'we didn't budget for this' theme. LOW-MEDIUM priority — contributes data, earns no direct citation.",
+      "url": "https://www.sourcee.app/journo-request/ceos-ai-impact-on-ops-culture-and-commercial-strategy"
+    },
+    {
+      "id": 8,
+      "source": "Sourcee.app (X #journorequest)",
+      "query_text": "I'm looking to speak with a source today in tech policy about California's new AI bills, which establish standards for third-party audits and assessments of AI systems. I am hoping to talk about how this will impact CIOs and tech leadership — how do they navigate legislation like this?",
+      "journalist_publication": "Independent journalist (tech policy beat)",
+      "category": "AI Policy / Regulation / CIO Impact",
+      "deadline": "Posted 2026-09-10T15:11Z with 'today' as the stated turnaround — that day has passed. Effectively closed.",
+      "contact_method": "Email (redacted on Sourcee) or DM — reply to the original post",
+      "relevance": "medium-low",
+      "relevance_notes": "NEW this run but only adjacent to the beat, and the 'today' turnaround has already expired. Regulation and third-party AI audits connect to AIToolsEssentials only through a stretch (auditability of AI systems is not the same as auditability of AI spend). Listed for completeness and so it is not re-surfaced as new tomorrow.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted if pursuing: the compliance-driven inventory angle. Frame: third-party AI audit requirements force organisations to enumerate which AI systems they run and what those systems cost — most cannot, and the subscription inventory is the prerequisite nobody scopes. Do not pitch: the stated deadline has passed.",
+      "url": "https://www.sourcee.app/journo-request/tech-policy-experts-california-ai-audit-bills-impact-cios"
+    }
+  ],
+  "previously_reported_still_relevant": [
+    {
+      "id": "prev-1",
+      "source": "Sourcee.app (Forbes outlet page — re-checked this run)",
+      "query_text": "Forbes: Where Business Leaders Focus Their Tech Budgets As Tech Stock Market Volatility Persists.",
+      "journalist_publication": "Forbes",
+      "status": "relisted — status reversed from digest-2026-09-11",
+      "relevance": "high",
+      "notes": "Reported as EXPIRED in digest-2026-09-11 ('rotated off the Forbes page'). It is present again today. Root cause: /media-outlets/<slug>/journo-requests renders a persistent set of ~20 listings, many months old (this one is dated 2026-07-20; the TechCrunch outlet page still lists an item dated 2025-09-12, a full year stale), and which items appear is not strictly recency-ordered. Conclusion: absence from an outlet page is NOT evidence of expiry, and the digest-2026-09-11 retirements of this item and of the FT consulting-fee item were made on unreliable evidence. Tracked as its own opportunity (#6 above) with a stale-date caveat."
+    },
+    {
+      "id": "prev-2",
+      "source": "Sourcee.app (Financial Times outlet page — re-checked this run)",
+      "query_text": "Financial Times commissioned article on how management consulting firms leaning on AI face client demands for fee reductions.",
+      "journalist_publication": "Financial Times",
+      "status": "not_visible_on_current_ft_page",
+      "relevance": "high",
+      "notes": "Second consecutive run absent. The FT page renders all 20 listings successfully this run and the consulting-fee query is not among them (current FT list: parents' money advice, Bethlehem/Lehigh living costs, Canadian US-boycott, London Mon-Fri rentals, eSIM market research, Merlin app birdwatching, mutual-fund retreats, city-raised parents, Texas/NM ranchers, recent business graduates, 2-month notice flat hunters, startup engineer retention, UK DB trustees, long notice periods, UK jobseekers, UK personal finance, workcations, student side hustles, US dealer principals AI). Absent twice is reasonable grounds for retirement, unlike a single absence — but per prev-1 the outlet page is not a reliable proxy. Treat as dormant, not confirmed expired."
+    },
+    {
+      "id": "prev-3",
+      "source": "Sourcee.app (X #journorequest, UK national newspaper via Pitch to Published)",
+      "query_text": "UK Managers - Cracked Down on Gen Z AI Overuse.",
+      "journalist_publication": "UK national newspaper",
+      "status": "expired",
+      "relevance": "medium",
+      "notes": "Reported 2026-09-10 with an end-of-week (Sep 12-13) deadline. The stated cutoff is today at the earliest; it is unsafe to pitch on a same-day cutoff with an unknown exact hour. Retire."
+    },
+    {
+      "id": "prev-4",
+      "source": "Sourcee.app (aggregated from X, Marketing topic)",
+      "query_text": "Forbes: Looking for experts in dynamic pricing and other related strategies. AI dynamic pricing, surge pricing, surveillance pricing.",
+      "journalist_publication": "Forbes (online)",
+      "status": "expired",
+      "relevance": "medium-high",
+      "notes": "Reported 2026-09-08 with a Wednesday deadline, now passed. Retire."
+    },
+    {
+      "id": "prev-5",
+      "source": "Sourcee.app (Startups topic page)",
+      "query_text": "SME Owners - Operational Challenges for AI Solutions. 'As subscription models that worked for SaaS are starting to fracture...'",
+      "journalist_publication": "Independent (LinkedIn content creator/researcher)",
+      "status": "not_re_verified",
+      "relevance": "medium",
+      "notes": "Third run without resurfacing in the sitemap scan. The SaaS-subscription-fracturing angle still maps to the pricing-shift beat but is unverified. Do not treat as active."
+    }
+  ],
+  "new_this_run": [
+    "Anthropic customer service experiences (medium-high — under 24h old, freshest in queue)",
+    "Amplemarket Growth/Elite pricing opacity, credits and contract medians (high — first digest appearance; most methodologically aligned request seen)",
+    "California AI audit bills / CIO impact (medium-low — stated 'today' deadline already passed)",
+    "CEOs on AI impact including pricing, for Outcome Economics book (medium)",
+    "MONITOR CORRECTION: Sourcee extraction method rewritten — request pages no longer serve an HTML <main> block, they now serve a Next.js RSC flight payload with JSON-LD. The skill's documented curl+<main> recipe silently returned 0 chars for every request.",
+    "MONITOR CORRECTION: Sourcee outlet pages are persistent ~20-item lists, not rolling feeds — absence from an outlet page is not proof of expiry. Two retirements made on 2026-09-11 are reversed/softened."
+  ],
+  "expired_this_run": [
+    "California AI audit bills / CIOs — stated 'today' turnaround (2026-09-10) has passed",
+    "UK managers Gen Z AI overuse — end-of-week cutoff reached (2026-09-12/13)",
+    "Forbes dynamic pricing — Wednesday deadline passed (retired 2026-09-11, confirmed)",
+    "FT management-consulting AI fee reductions — absent for the second consecutive run; dormant rather than confirmed expired (single-absence expiry is not reliable, see prev-1)",
+    "SME owners operational AI challenges — third run not resurfaced; unverified",
+    "REVERSED: Forbes 2027 tech budgets — restored to active with a stale-date caveat; the 2026-09-11 'rotated off' retirement was based on an unreliable test"
+  ],
+  "summary": "Three opportunities are worth pitching today and two of them are new. The strongest remains the FinOps agentic-AI-cost-overrun request (#1) — the core AIToolsEssentials problem, now on its fourth consecutive appearance with no refresh in five days, which reads as a closing window rather than an open one. The best new find is the Amplemarket pricing review (#2): a reviewer refusing to accept published pricing, pulling Vendr's tracked-contract median ($16,608/yr against a $600/mo advertised Startup tier), and asking for signed-contract data points — the most methodologically aligned request this monitor has seen, and the natural fit for AIToolsEssentials' verified-pricing discipline. The freshest is the Anthropic customer service story (#3), under 24 hours old, which turns a support complaint into the value question buyers actually face at $200/month tiers. The enterprise agent-sprawl request (#4) stays live and still names cost visibility explicitly. Science Magazine (#5) is now eight days old with no refresh and should be treated as a late data offer, not a live placement. Two items carried into this run were retired correctly and one was not: the Forbes 2027 tech-budgets request is back on the Forbes page today after being reported as rotated off yesterday, which exposed a real methodological error in this monitor — Sourcee outlet pages are persistent ~20-item lists (the TechCrunch page still carries a request dated 2025-09-12), so absence from an outlet page is not evidence of expiry. The 2026-09-11 retirements of the Forbes and FT items were made on that faulty test and are corrected or softened here. Access did not improve: HARO and Connectively now both sit behind a Vercel Security Checkpoint returning HTTP 429 (the gate changed vendor, not strength), Qwoted needs an authenticated app session, MentionMatch still serves an empty pre-launch shell, Source of Sources has no query feed at all, and X search is out of credits for the fourth consecutive run. Sourcee carried the run again, but only after its extraction path was rewritten — request pages no longer serve an HTML <main> block and instead ship a Next.js RSC flight payload with the request text in a JSON-LD Article block, so the previously documented scrape recipe returned zero characters for every single request this run until fixed. The Medialyst MCP remains the one change that would materially improve this monitor.",
+  "recommended_actions": [
+    "Pitch #1 (FinOps agentic AI cost overruns) today — fourth appearance, no refresh in five days, window closing",
+    "Pitch #2 (Amplemarket pricing/credits) — pitch the pricing-verification method and offer corroborating tracked figures; new and high fit",
+    "Pitch #3 (Anthropic customer service) today — under 24h old, competition minimal, pair support with verified tier pricing",
+    "Pitch #4 (enterprise agent sprawl) — open and still the best enterprise-scale fit",
+    "Hold #5 (Science Magazine) — eight days old with no refresh; send only as a late data offer",
+    "Verify #6 (Forbes 2027 tech budgets) is still open before spending a pitch slot — datePublished 2026-07-20",
+    "Reinstate the Forbes 2027 tech-budgets item to the active queue and correct the 2026-09-11 expiry call",
+    "George to authorize the Medialyst MCP via hermes mcp add --auth oauth (interactive only) — highest-leverage access fix",
+    "George to consider a HARO subscription inbox if a HARO feed is wanted; it remains email-only behind a Vercel checkpoint"
+  ],
+  "monitor_health": {
+    "status": "degraded_but_working",
+    "working": ["Sourcee.app (sitemap + per-request pages, after extractor rewrite)", "Sourcee outlet pages (Forbes, FT, TechCrunch)"],
+    "blocked": ["HARO (email + Vercel Security Checkpoint, HTTP 429)", "Connectively (login + Vercel Security Checkpoint, HTTP 429)", "Qwoted (authenticated app session only; /requests 404s)", "MentionMatch (pre-launch shell)", "Source of Sources (email only, no feed)", "X search (credits exhausted, 4th run)", "Medialyst MCP (OAuth needed)"],
+    "extraction_fix_this_run": "Sourcee request pages stopped serving an HTML <main> element and now render as a Next.js App Router page. The request text lives in an RSC flight payload as a JSON-LD Article object: headline, description, datePublished. New recipe — curl with a browser UA, then regex the escaped JSON-LD fields: re.search(r'\\\\\"description\\\\\":\\\\\"((?:[^\"\\\\\\\\]|\\\\\\\\.)*?)\\\\\"', raw). The old recipe (strip tags from <main>) returns 0 characters on every request page and fails silently. A companion trap: the string 'has disappeared faster than a leaked story' is present in the bundled 404 component on EVERY page including valid ones — do not use it as a removal test, it produces false 'removed' verdicts. Author names are NOT reliably extractable (the JSON-LD name field returns CSS hint strings like 'next-size-adjust'); use the headline as the title and treat the author as unknown.",
+    "outlet_page_fix_this_run": "Outlet pages (/media-outlets/<slug>/journo-requests) render ~20 persistent listings, not a rolling newest-first feed — Forbes carries a listing dated 2026-07-20 and TechCrunch one dated 2025-09-12. Absence from an outlet page is not evidence that a request expired. Withdraw an item only after two consecutive absences or a stated deadline passing.",
+    "recommendation": "Authorize Medialyst MCP. Free, read-only, covers six platforms, and would remove the X-credits, HARO-checkpoint and Connectively-login dependencies in one step."
+  }
+}

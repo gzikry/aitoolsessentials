@@ -108,8 +108,8 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         "<span>Verified picks</span><h3>Tools we recommend with confidence</h3>"
         "<p>Two of our highest-scored tools have partner programs we're enrolled in. "
         "Links below are affiliate links — they never influence our rankings.</p>"
-        '<p><a href="https://try.elevenlabs.io/xs6witq7izqe" target="_blank" rel="sponsored nofollow noopener">Try ElevenLabs (editorial 4.6/5) →</a>'
-        ' &nbsp;·&nbsp; <a href="https://www.make.com/en/register?pc=aitoolsessentials" target="_blank" rel="sponsored nofollow noopener">Try Make.com (automation pick) →</a></p>'
+        '<p><a href="https://try.elevenlabs.io/xs6witq7izqe" target="_blank" rel="external nofollow noopener">Try ElevenLabs (editorial 4.6/5) →</a>'
+        ' &nbsp;·&nbsp; <a href="https://www.make.com/en/register?pc=aitoolsessentials" target="_blank" rel="external nofollow noopener">Try Make.com (automation pick) →</a></p>'
         f"</section>{A_MARK_E}"
     )
     for t in targets:

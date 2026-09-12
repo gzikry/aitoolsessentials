@@ -810,6 +810,26 @@ def main():
     if heading_issues:
         errors.extend(f'Heading structure — {item}' for item in heading_issues[:10])
 
+    # rel="sponsored" must mark only links issued by a real affiliate program. The site's own
+    # methodology says so, and Google defines sponsored as paid placement. Using it on ordinary
+    # vendor links is both false and a misdeclaration - 191 instances did this across 38 pages.
+    affiliate_prefixes = ('make.com/en/register?pc=', 'try.elevenlabs.io/',
+                          '/go/nous/', 'portal.nousresearch.com/r/')
+    bad_sponsored = []
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+            continue
+        html = f.read_text(errors='ignore')
+        for m in re.finditer(r'<a[^>]*rel="[^"]*sponsored[^"]*"[^>]*>', html):
+            href = re.search(r'href="([^"]+)"', m.group(0))
+            if not href:
+                continue
+            if not any(k in href.group(1) for k in affiliate_prefixes):
+                bad_sponsored.append(f'{rel}: {href.group(1)[:60]}')
+    if bad_sponsored:
+        errors.extend(f'sponsored on a non-affiliate link — {item}' for item in bad_sponsored[:10])
+
     # A score table row must carry a real number in every cell. Some comparison pages were
     # generated while a tool had no rating, so the cell baked in as "/5" with no score and
     # nothing rewrote them.
