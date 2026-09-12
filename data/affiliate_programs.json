@@ -153,10 +153,10 @@
       "availability": "available",
       "program_type": "public affiliate program",
       "network": "PartnerStack",
-      "official_program_url": "https://www.descript.com/affiliate",
+      "official_program_url": "https://dash.partnerstack.com/application?company=descriptinc&group=affiliates",
       "application_status": "ready_to_apply",
       "commission_note": "$25 one-time flat fee per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; PartnerStack; monthly PayPal payouts, no minimum threshold.",
-      "notes": "PartnerStack (not Impact) - company \"descriptinc\". $25 one-time per new subscriber plus 15% recurring for the first 12 months; 30-day cookie. Approval typically about a week, up to 30 days. Official help: help.descript.com/connect-with-us/affiliates. Application copy ready in admin/affiliate-applications-ready.md."
+      "notes": "Route confirmed 2026-09-12: descript.com/affiliate links to dash.partnerstack.com/application?company=descriptinc&group=affiliates (PartnerStack company slug \"descriptinc\"). $25 one-time per new subscriber plus 15% recurring for 12 months; 30-day cookie; approval ~1 week up to 30 days. Not yet applied. Requires the PartnerStack network account email to be verified first."
     },
     {
       "tool_slug": "copy-ai",
@@ -164,9 +164,9 @@
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://market.partnerstack.com/artificial-intelligence/copy-ai",
-      "application_status": "ready_to_apply",
+      "application_status": "listing_not_open",
       "commission_note": "45% recurring commission for the first 12 months per referral; 60-day cookie; $50 minimum payout; monthly via PayPal or Stripe.",
-      "notes": "Program runs on PartnerStack (copyai.partnerstack.com; listing market.partnerstack.com/artificial-intelligence/copy-ai). 45% recurring for 12 months, 90-day cookie, $50 minimum payout, monthly via PayPal or Stripe. Application copy ready in admin/affiliate-applications-ready.md. PartnerStack network account must be approved first."
+      "notes": "Verified 2026-09-12: the PartnerStack listing renders \"Request program\" with unfilled {{name}}/{{company.description}} placeholders rather than \"Apply to program\", i.e. the listing is removed or awaiting vendor setup. copyai.partnerstack.com/signup renders the same dead template and is NOT a working application form - do not submit there. Copy.ai was acquired by Fullcast in Oct 2025 and repositioned to enterprise GTM, which may explain an unmaintained affiliate program. Next step: search the in-app Marketplace inside the verified PartnerStack dashboard; if not joinable there, treat as closed. Reported rate 45% recurring for 12 months remains unverified because no live listing is available."
     },
     {
       "tool_slug": "gamma",
@@ -174,9 +174,10 @@
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://market.partnerstack.com/artificial-intelligence/gammaapp",
-      "application_status": "ready_to_apply",
+      "application_status": "applied_pending_review",
       "commission_note": "Commission rate not exposed on the public help page; confirmed via PartnerStack program. 30% recurring per third-party aggregator; verify exact rate on the PartnerStack application page.",
-      "notes": "Program managed via PartnerStack (gammaapp.partnerstack.com; marketplace listing market.partnerstack.com/artificial-intelligence/gammaapp). Official help: help.gamma.app/en/articles/11048092. Gamma Partner Program Terms effective 2025-08-04. Paid advertising requires prior written approval. CAUTION: gammaapp.ai is a different company, not Gamma - do not use it as the program source or cite its 50% claim. Application copy ready in admin/affiliate-applications-ready.md."
+      "notes": "Applied 2026-09-12 via https://market.partnerstack.com/artificial-intelligence/gammaapp (listing confirms \"Apply to program\" and is populated). ~30% recurring; confirm exact rate in the portal. PartnerStack network account created 2026-09-12 but email verification was still outstanding at the time of applying. CAUTION: gammaapp.ai is a different company from Gamma - do not use it as the program source or cite its 50% claim.",
+      "applied_date": "2026-09-12"
     },
     {
       "tool_slug": "browse-ai",
@@ -184,9 +185,9 @@
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://www.browse.ai/affiliate-program",
-      "application_status": "ready_to_apply",
+      "application_status": "vendor_portal_broken",
       "commission_note": "20% recurring commission on every payment by referrals, lifetime; 30-day cookie; monthly payouts via Wise (PayPal on request, $200 minimum).",
-      "notes": "Program transitioned to PartnerStack (browseai.partnerstack.com; listing market.partnerstack.com/artificial-intelligence/browse-ai). Official terms: browse.ai/legal/affiliate-program-terms. 20% recurring for the lifetime of the referral, 30-day cookie, monthly payouts via Wise (PayPal on request, $200 minimum), no commission cap. Application copy ready in admin/affiliate-applications-ready.md."
+      "notes": "Verified 2026-09-12: affiliates.browse.ai/signup returns HTTP 525 (Cloudflare SSL handshake failed) on repeated attempts with two user agents, while browse.ai/affiliate-program renders normally - the affiliate subdomain is misconfigured. Its PartnerStack listing also renders \"Request program\" (not open). Next step: report the portal error to Browse AI support, or apply only once the signup returns 200. Reported rate 20% recurring for the lifetime of the referral remains unverified against a working application form."
     },
     {
       "tool_slug": "hermes-agent",

@@ -810,6 +810,29 @@ def main():
     if heading_issues:
         errors.extend(f'Heading structure — {item}' for item in heading_issues[:10])
 
+    # A program marked ready_to_apply must have a live application form, not a dead listing.
+    # A PartnerStack listing renders "Apply to program" when open and "Request program" with
+    # unfilled {{name}} placeholders when the vendor has withdrawn it. An HTTP 200 on a
+    # JS-rendered page proves nothing, which is how a dead Copy.ai listing was reported as
+    # "reachable" once already.
+    import subprocess as _sp
+    prog_path2 = ROOT / 'data' / 'affiliate_programs.json'
+    if prog_path2.exists():
+        _progs = json.loads(prog_path2.read_text()).get('affiliate_programs', [])
+        for _p in _progs:
+            if _p.get('application_status') != 'ready_to_apply':
+                continue
+            _url = _p.get('official_program_url') or ''
+            if not _url.startswith('http'):
+                errors.append(f'ready_to_apply without an application URL — {_p.get("tool_slug")}')
+                continue
+            _r = _sp.run(['curl', '-sS', '-L', '--max-time', '20', '-A', 'Mozilla/5.0', _url],
+                         capture_output=True, text=True)
+            _body = _r.stdout or ''
+            if '{{name}}' in _body or 'Request program' in _body:
+                errors.append(
+                    f'ready_to_apply but the listing is not open — {_p.get("tool_slug")}: {_url}')
+
     # Every program marked ready_to_apply must be documented in the application pack, or the
     # pack drifts from the data and applications get submitted stale.
     pack_path = ROOT / 'admin' / 'affiliate-applications-ready.md'

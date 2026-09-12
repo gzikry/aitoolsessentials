@@ -643,7 +643,7 @@
       ],
       "capability_confidence": "curated",
       "capabilities_known": true,
-      "affiliate_status": "ready_to_apply",
+      "affiliate_status": "listing_not_open",
       "affiliate": false,
       "sponsored": false
     },
@@ -779,7 +779,7 @@
       ],
       "capability_confidence": "curated",
       "capabilities_known": true,
-      "affiliate_status": "ready_to_apply",
+      "affiliate_status": "applied_pending_review",
       "affiliate": false,
       "sponsored": false
     },
@@ -1671,7 +1671,7 @@
       ],
       "capability_confidence": "curated",
       "capabilities_known": true,
-      "affiliate_status": "ready_to_apply",
+      "affiliate_status": "vendor_portal_broken",
       "affiliate": false,
       "sponsored": false
     },

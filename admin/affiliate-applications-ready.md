@@ -1,11 +1,8 @@
 # Ready-to-Submit Affiliate Applications
 
-Verified 2026-09-12. Site facts below are real and checkable — do not inflate them.
-Current site: 721 public pages, 75 reviewed tools, 16 categories, 192 comparisons,
-175 guides, 15 audience guides, 29 switch guides. Sitemap lists 717 URLs.
-
-Traffic, stated honestly: ~66 visitors / 217 pageviews in the last 30 days
-(early stage, growing). Never claim more than Plausible shows.
+Last verified 2026-09-12 16:05 PT. Site facts below are real and checkable — do not inflate.
+Site: 721 public pages, 75 reviewed tools, 16 categories, 192 comparisons, 175 guides.
+Traffic, stated honestly: ~66 visitors / 217 pageviews per 30 days (early stage, growing).
 
 **Shared answers** (use in every form):
 
@@ -17,66 +14,60 @@ Traffic, stated honestly: ~66 visitors / 217 pageviews in the last 30 days
 
 ---
 
-## TIER 1 — PartnerStack programs (4 applications, one network)
+## PartnerStack network account — ALREADY CREATED, email verification outstanding
 
-PartnerStack requires the business website to be live, owned, and functional before the
-network approves an account, then each program is applied to separately. All four below
-run on PartnerStack, so one account unlocks all of them — and none depend on Impact,
-which previously rejected us on traffic grounds.
+Signup was completed with **Sign in with Google** as `aitoolsessentials@gmail.com`
+(profile `AiToolsEssentials`) on 2026-09-12 15:32 PT. PartnerStack sent
+"Verify your email address" at 15:34 PT (SendGrid DKIM/SPF pass, from
+`hello@partnerstackmail.com`).
 
-**Network account status (checked 2026-09-12):** the account already exists in
-PartnerStack and has **not yet been email-verified**.
+**The verification link has not been opened.** It is a single-use token — do **not**
+pre-fetch, automate, or share it; open it from the mailbox and stay signed in.
 
-- Signup was completed with **Sign in with Google** as
-  `aitoolsessentials@gmail.com`, profile `AiToolsEssentials`, on 2026-09-12 15:32 PT.
-- PartnerStack sent "Verify your email address" at 15:34 PT (SendGrid DKIM/SPF pass,
-  `hello@partnerstackmail.com`). **The verification link has not been opened** — it is a
-  single-use token, so do not pre-fetch or share it; open it from the mailbox and stay signed in.
-- Nothing can be applied to until the email is verified. Only then does the Marketplace
-  listing flow below become available.
+Until the email is verified, individual program applications may not go through. Verify,
+then apply from the Marketplace listing (or, once inside the dashboard, from the in-app
+Marketplace search, which is more reliable than the public listing pages — see below).
 
-Register the network account first **(only if it does not already exist)**:
-https://app.partnerstack.com/signup
-Then verify the email, then apply to each program from the Marketplace listing.
+---
 
-### 1) Copy.ai — 45% recurring + 90-day cookie (best rate here)
+## How to tell whether a PartnerStack listing is actually open
 
-**Program:** https://market.partnerstack.com/artificial-intelligence/copy-ai
-**Commission:** 45% recurring for first 12 months of each referral; 90-day cookie;
-$50 minimum payout; monthly via PayPal or Stripe.
+Do not trust HTTP 200. A worked listing renders **"Apply to program"** with real details
+(attribution type, SubIDs). A dead one renders **"Request program"** plus unfilled
+placeholders — `{{name}}`, `{{company.description}}`, literal `undefined`.
 
-**How you plan to promote Copy.ai:**
-> AIToolsEssentials is an independent AI tool review directory. Our Copy.ai review
-> (aitoolsessentials.com/tools/copy-ai/) carries a dated pricing check from Copy.ai's own
-> pages, an editorial score with published reasoning, honest pros and cons, and a
-> before-you-pay trial checklist. Copy.ai also appears in our Jasper-vs-Copy.ai
-> comparison, our best-AI-writing-tools and best-free-AI-writing-tools guides, and our
-> Creative category hub — pages that target buyers at the point they choose a writing tool.
->
-> Promotion is contextual only: affiliate links appear inside relevant reviews and guides
-> with FTC-compliant disclosure, marked rel="sponsored nofollow". No display advertising,
-> no popups, no email blasts. Affiliate status never changes an editorial score or ranking,
-> which is stated publicly in our methodology.
+Verified 2026-09-12:
+- **Gamma** → *Apply to program*, populated → **OPEN**
+- **ClickUp** (control) → *Apply to program*, populated → worked listing
+- **Copy.ai, Browse AI, Descript** → *Request program*, `{{name}}` unfilled → **NOT OPEN**
 
-**Audience:** Founders, freelance writers, marketers, and small content teams comparing
-paid AI writing tools. They arrive on decision-stage queries ("Jasper vs Copy.ai",
-"best AI writing tools", "free AI writing tools") and use our evaluation scorecards
-before subscribing.
+`copyai.partnerstack.com` and `browseai.partnerstack.com` render the same unpopulated
+template, so the vendor-hosted subdomains are not a working fallback either.
 
-**Volume expectation:** Early stage and growing. We prioritize conversion quality over
-click volume and can share Plausible analytics on request.
+---
 
-### 2) Gamma — ~30% recurring
+## STATUS 2026-09-12
 
-**Program:** https://market.partnerstack.com/artificial-intelligence/gammaapp
-(official help article: help.gamma.app/en/articles/11048092)
-**Commission:** 30% recurring (third-party listings; confirm exact rate in the portal).
-30-day cookie per Gamma's program terms.
+**George has applied to PartnerStack (network account) and Gamma.**
 
-**Caution:** gammaapp.ai is a DIFFERENT company, not Gamma. Do not use it as the
-program source or cite its 50% claim.
+| # | Program | Route | Rate | Status |
+|---|---------|-------|------|--------|
+| 0 | PartnerStack network | app.partnerstack.com | — | applied 2026-09-12; **email unverified** |
+| 1 | Gamma | PartnerStack listing | ~30% rec. | **applied 2026-09-12** |
+| 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | next — apply now |
+| 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | no working route; try in-app Marketplace |
+| 4 | Browse AI | own portal 525-broken | 20% rec. life | no working route; report broken portal |
+| 5 | ElevenLabs | direct | 22% rec. 12mo | approved 2026-08-23 |
+| 6 | Make | direct | 35% rec. 12mo | approved 2026-08-23 |
+| 7 | Nous / Hermes | direct | $15 off referral | approved 2026-09-02 |
 
-**How you plan to promote Gamma:**
+### Gamma — APPLIED 2026-09-12
+Program: https://market.partnerstack.com/artificial-intelligence/gammaapp
+Official help: help.gamma.app/en/articles/11048092 · ~30% recurring (confirm in portal).
+**Caution:** `gammaapp.ai` is a DIFFERENT company from Gamma — do not cite its 50% claim.
+
+Answers used (reusable for the reference/audience fields if the portal asks again):
+
 > Our Gamma review (aitoolsessentials.com/tools/gamma/) documents dated pricing, an
 > editorial score with published reasoning, and explicit trade-offs — including that
 > important decks still need design review. Gamma also appears in our
@@ -89,33 +80,12 @@ program source or cite its 50% claim.
 **Audience:** Consultants, marketers, founders, and educators who build decks regularly
 and are choosing between paid presentation tools.
 
-### 3) Browse AI — 20% recurring, lifetime
+### Descript — the clean remaining route
+**Apply:** https://dash.partnerstack.com/application?company=descriptinc&group=affiliates
+(linked from descript.com/affiliate as "Apply Now")
+**Commission:** $25 one-time per new subscriber + 15% recurring for 12 months; 30-day
+cookie. Approval typically ~1 week, up to 30 days. PartnerStack company slug `descriptinc`.
 
-**Program:** https://market.partnerstack.com/artificial-intelligence/browse-ai
-(transitioned from its own program; official terms at browse.ai/legal/affiliate-program-terms)
-**Commission:** 20% recurring on every payment, lifetime; 30-day cookie; no commission cap.
-
-**How you plan to promote Browse AI:**
-> Our Browse AI review (aitoolsessentials.com/tools/browse-ai/) covers dated pricing,
-> an editorial score with reasoning, and the honest caveats — visual robots break when a
-> site changes, and volume pricing grows quickly. Browse AI also appears in our
-> best-AI-automation-tools guide and our automation cost decoder, a tool that helps
-> readers compare per-task, per-credit, and per-execution pricing models.
->
-> That cost-comparison angle is the real fit: our readers are choosing between automation
-> platforms on total cost, which is exactly when a monitoring/extraction tool gets
-> evaluated on price at volume.
-
-**Audience:** Operations leads, agencies, analysts, and founders building repeatable
-monitoring or data-extraction workflows.
-
-### 4) Descript — $25 flat + 15% recurring
-
-**Program:** https://www.descript.com/affiliate (routes to PartnerStack, company "descriptinc")
-**Commission:** $25 one-time per new subscriber plus 15% recurring for 12 months;
-30-day cookie; approval typically about a week, up to 30 days.
-
-**How you plan to promote Descript:**
 > Our Descript review (aitoolsessentials.com/tools/descript/) has dated pricing, an
 > editorial score with published reasoning, and the workflow limitation stated plainly —
 > advanced video work may still need a dedicated editor. Descript appears in our
@@ -128,67 +98,49 @@ monitoring or data-extraction workflows.
 **Audience:** Podcasters, creators, video editors, and small content teams choosing
 transcript-based editing tools.
 
----
+### Copy.ai — no working public route as of 2026-09-12
+Its PartnerStack listing shows *Request program* with unfilled placeholders, and
+`copyai.partnerstack.com` renders the same dead template. Copy.ai was acquired by Fullcast
+in October 2025 and repositioned toward enterprise GTM, which may explain an unmaintained
+affiliate listing.
+**Next step:** inside the verified PartnerStack dashboard, search the in-app Marketplace for
+Copy.ai. If it is not joinable there, treat the program as closed. Do not submit to
+`copyai.partnerstack.com/signup` — it is not a live application form.
 
-## TIER 2 — Direct programs (apply separately)
-
-### 5) ElevenLabs — ALREADY APPROVED (22% / 12 months)
-Tracking URL live: https://try.elevenlabs.io/xs6witq7izqe — wired on 10 pages.
-No action needed; listed for completeness.
-
-### 6) Make — ALREADY APPROVED (35% / 12 months)
-Partner code live: https://www.make.com/en/register?pc=aitoolsessentials — wired on 9 pages.
-No action needed.
+### Browse AI — own portal is broken
+`affiliates.browse.ai/signup` returns **HTTP 525 (Cloudflare SSL handshake failed)** on
+repeated attempts with two user agents, while `browse.ai/affiliate-program` renders fine.
+The affiliate subdomain is misconfigured. Its PartnerStack listing is also not open.
+**Next step:** email Browse AI support reporting the portal error, or apply only once the
+signup returns 200.
 
 ---
 
 ## BLOCKED — do not spend time on these
 
-- **Jasper** — hosts its program through **Impact**, and our Impact publisher account was
-  rejected on traffic grounds. Jasper cannot be joined until Impact approves us. Its own
-  application page (partners.jasper.ai) returns an unavailable campaign. Treat Jasper as
-  blocked behind the Impact reapplication, not as an independent target.
+- **Jasper** — hosts through **Impact**, and our Impact publisher account was rejected on
+  traffic grounds. `partners.jasper.ai` returns an unavailable campaign.
 - **Grammarly** — same Impact dependency; denied 2026-08-25.
 - **Canva, Notion** — applications closed.
 - **ChatGPT, Claude, GitHub Copilot** — no publisher commission program exists.
 - **Midjourney, Zapier** — no open public affiliate application.
 
-**The Impact reapplication is the highest-leverage single action** once traffic grows:
-it unlocks Jasper, Grammarly, and every other Impact-hosted program at once.
-Prior guidance: reapply around 20–30 visits/day.
-
----
-
-## Submission tracker
-
-| # | Program | Network | Rate | Status | Submitted | Approved | Tracking URL |
-|---|---------|---------|------|--------|-----------|----------|--------------|
-| 0 | **PartnerStack network account** | PartnerStack | — | **signed up 2026-09-12 · email unverified · not verified yet** | 2026-09-12 | | |
-| 1 | Copy.ai | PartnerStack | 45% rec. 12mo | blocked — network email unverified | | | |
-| 2 | Gamma | PartnerStack | ~30% rec. | blocked — network email unverified | | | |
-| 3 | Browse AI | PartnerStack | 20% rec. life | blocked — network email unverified | | | |
-| 4 | Descript | PartnerStack | $25 + 15% rec. | blocked — network email unverified | | | |
-| 5 | ElevenLabs | direct | 22% rec. 12mo | approved | - | 2026-08-23 | try.elevenlabs.io/xs6witq7izqe |
-| 6 | Make | direct | 35% rec. 12mo | approved | - | 2026-08-23 | make.com/en/register?pc=aitoolsessentials |
-| 7 | Nous / Hermes | direct | $15 off referral | approved | - | 2026-09-02 | /go/nous/ |
+**The Impact reapplication is the highest-leverage single action** once traffic grows: it
+unlocks Jasper, Grammarly, and every other Impact-hosted program at once.
 
 ---
 
 ## After approval (per program)
 
-1. Add the tracking URL and `application_status: approved` to
-   `data/affiliate_programs.json`. The validator requires the key `affiliate_url`
-   (not `approved_tracking_url`).
-2. Run `python3 scripts/wire_affiliate_links.py` — it swaps the official-URL CTA for the
-   tracking URL across `tools/<slug>/`, `articles/`, and `comparisons/`, and adds a
-   disclosure note on review pages.
-3. Run the pipeline, validate, and push:
-   `daily_content_update.py` → `validate_site.py` → `git push`.
-4. Log the approval date and terms here.
+1. Add the tracking URL and `application_status: approved` to `data/affiliate_programs.json`.
+   The validator requires the key `affiliate_url` (not `approved_tracking_url`).
+2. Run `python3 scripts/wire_affiliate_links.py` — swaps the official-URL CTA for the
+   tracking URL across `tools/<slug>/`, `articles/`, `comparisons/`.
+3. Pipeline: `daily_content_update.py` → `validate_site.py` → `git push`.
+4. Log the approval date in the table above.
 
 ## Rejection playbook
 
-If declined for low traffic: reply asking for early-partner consideration, cite the
-concrete page count and the dated-evidence approach, and reapply in 30 days. Record the
-reapplication date in the tracker above. Do not misstate traffic — several networks check
-the live site, and an inflated claim costs the account.
+If declined for low traffic: reply asking for early-partner consideration, cite the concrete
+page count and dated-evidence approach, and reapply in 30 days. Never misstate traffic —
+several networks check the live site, and a misrepresentation rejection is not appealable.
