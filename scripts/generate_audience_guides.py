@@ -87,6 +87,7 @@ GUIDES = {
         'title': 'Best AI tools for teachers',
         'subhead': 'Free-first tools for lesson plans, rubrics, slides, and family emails — with no implied FERPA, grading, or student-data certification.',
         'slugs':['magicschool','khanmigo','canva-ai','gamma','chatgpt','perplexity'],
+        'depth': 'teachers',
         'angle': ('Teachers should start on official free education tiers, not a $20 chatbot, unless a general '
                   'assistant already owns a weekly task. MagicSchool publishes a $0 individual teacher plan and '
                   'Plus at $12.99/month or $8.33/month billed annually. Khanmigo’s official teacher page states '
@@ -251,8 +252,57 @@ def _fill(values):
 
 DEPTH_FILL = _fill(AGENCY_SEAT_DATA)
 
+TEACHERS_DEPTH = """<h2>The teacher-buying situation is unusual: the best options are free</h2>
+<p>Teachers are the one audience where the correct answer is usually <strong>not to pay at all</strong>. Two education-specific platforms publish real free teacher tiers, and the general assistants your school may already license cover the rest. The decision is therefore not "which tool is best" but "which of the free tiers actually fits the task, and where does a paid plan start to earn its place".</p>
+
+<h2>What the free tiers actually include</h2>
+<table>
+<thead><tr><th>Tool</th><th>Free tier</th><th>Paid step</th></tr></thead>
+<tbody>
+<tr><td><strong>MagicSchool</strong></td><td>$0 forever-free individual teacher plan</td><td>Plus $12.99/month, or $8.33/month billed annually ($99.96/year). District Enterprise is quote-only.</td></tr>
+<tr><td><strong>Khanmigo</strong></td><td>Teacher tools free in supported locales</td><td>Learners and families $4/month or $44/year. District classroom rollout is quote-only.</td></tr>
+<tr><td><strong>Canva AI</strong></td><td>Free plan with limited AI credits</td><td>Paid plans unlock more generation and brand controls</td></tr>
+<tr><td><strong>Gamma</strong></td><td>Free plan with credit limits</td><td>Paid plans for more decks and faster generation</td></tr>
+<tr><td><strong>ChatGPT / Perplexity</strong></td><td>Capable free tiers</td><td>Paid plans add higher limits and stronger models</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Amounts are official published prices with check dates, not quotes. District and school-wide pricing is quote-only for both MagicSchool and Khanmigo.</p>
+
+<h2>Which free tier fits which task</h2>
+<ul>
+<li><strong>Lesson plans, rubrics, quiz drafts, family emails.</strong> MagicSchool is purpose-built for these and its free plan is a real plan, not a trial. Its generation limits are published, so you can see the ceiling before you hit it.</li>
+<li><strong>Tutoring and learner-facing practice.</strong> Khanmigo. Note the access rule that catches schools out: the teacher tools being free does not automatically give students Khanmigo access. Learner and parent subscriptions are governed by official age and geographic rules, so a teacher cannot simply issue student accounts.</li>
+<li><strong>Slides and visuals.</strong> Gamma for deck structure, Canva AI for templated classroom materials. Both have workable free tiers; expect credit limits on generation.</li>
+<li><strong>Research and drafting outside a purpose-built tool.</strong> Perplexity for anything needing citations, ChatGPT for general drafting. Check your school's AI policy per course before using either for student-facing material.</li>
+</ul>
+
+<h2>Why teachers should stop before paying for a general assistant</h2>
+<p>A $20/month general chatbot is the wrong purchase for most teachers, for three reasons. It duplicates capabilities the school may already license. It has no classroom-specific scaffolding — you supply the pedagogy in the prompt every time. And the plan you tested personally is a consumer plan, which typically does not carry the data-handling terms an institution needs.</p>
+<p>The exception is real but narrow: if one general assistant already owns a recurring weekly task for you — drafting parent communication, adapting a text to three reading levels — then a paid plan is defensible. That is a task-specific justification, not a capability one.</p>
+
+<h2>Safety, student data, and what these tools are not</h2>
+<p>This is the section that matters most, and it is where most "best AI tools for teachers" pages are dangerously quiet.</p>
+<ul>
+<li><strong>These are not student-data systems.</strong> Do not paste identifiable student information — names, IEPs, behavioural records, grades — into a general AI tool. Purpose-built education tools make claims about FERPA, COPPA, and SOC 2; those are <em>vendor claims to verify through your district</em>, not certifications made by this site or any reviewer.</li>
+<li><strong>These are not grading systems.</strong> Use them to draft practice questions and feedback scaffolds. A grade that decides a student's path should not be the output of an unreviewed model.</li>
+<li><strong>No implied institutional approval.</strong> Nothing here substitutes for your school's or district's AI policy. Disclosure rules differ widely between institutions and even between courses within one institution.</li>
+<li><strong>Verify anything cited.</strong> Research-backed answers from Perplexity or a general assistant still need opening the actual source before the material reaches students.</li>
+</ul>
+
+<h2>District and school-wide buyers</h2>
+<p>If you are buying for a school or district rather than yourself, the calculus changes entirely. Both MagicSchool and Khanmigo route district pricing through a quote, which means contract review, data-processing terms, and a roll-out plan rather than a credit-card signup. Ask three questions in that process: <strong>what is the data-retention and deletion policy</strong>, <strong>which staff roles get access to student-linked features</strong>, and <strong>what is the offboarding path when a teacher leaves or a contract ends</strong>. The last one is the question most districts forget and the one that causes the most trouble.</p>
+
+<h2>Teacher AI questions we get asked</h2>
+<details><summary>Is there really a free AI tool for teachers, or is it a trial?</summary><p>MagicSchool publishes a forever-free individual teacher plan at $0 with published generation limits. Khanmigo's official teacher page states teacher tools are free in supported locales. Both are genuinely free tiers rather than trials, but both limit generation and both route district features through a quote.</p></details>
+<details><summary>Do I need to worry about student privacy if I only use it myself?</summary><p>Yes, the moment student information enters the tool. Drafting a generic lesson plan carries no student data. Summarising a specific student's progress or writing an IEP narrative does — and general consumer tools are not the right place for that. Keep identifiable student information inside systems your district has approved.</p></details>
+<details><summary>Can my students use Khanmigo because my teacher account is free?</summary><p>No. Teacher-free access does not extend to students. Learner and family subscriptions follow official age and geographic rules, and district classroom access is a quote-based arrangement. Confirm eligibility rather than assuming student access follows from your teacher account.</p></details>
+<details><summary>What is worth paying for as a teacher?</summary><p>Usually one thing, chosen by the task it replaces. If generation limits interrupt real work more than once a week, MagicSchool Plus at $8.33/month billed annually is the cheapest purpose-built upgrade. If you need student-facing practice with guardrails, a family or learner Khanmigo subscription at $44/year is cheaper than most general assistants. Upgrade only after a free tier has demonstrably slowed you down.</p></details>
+"""
+
+
 DEPTH_BLOCKS = {
     'agencies': AGENCY_DEPTH,
+    'teachers': TEACHERS_DEPTH,
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

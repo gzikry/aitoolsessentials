@@ -143,6 +143,11 @@ USE_CASE_DEFS = [
     ("best-ai-tools-for-property-managers", "Best AI tools for property managers", ["Property Management"], "Landlord software and writing assistants for listings, rent follow-up, and maintenance — without treating them as fair-housing systems."),
 ]
 
+# Use-case slugs consolidated into a deeper audience guide. Key -> destination path.
+CONSOLIDATED_TO = {
+    'best-ai-tools-for-teachers': '/articles/best-ai-tools-for-teachers.html',
+}
+
 PROMOTION_TARGETS = [
     ("Product Hunt", "Launch as a free AI stack builder and AI tools directory."),
     ("Indie Hackers", "Share the build story and revenue-site angle."),
@@ -159,6 +164,33 @@ def generate_use_case_pages(root: Path, tools: list[dict[str, Any]]) -> None:
     out.mkdir(exist_ok=True)
     index_cards = []
     for slug, title, needles, desc in USE_CASE_DEFS:
+        # Consolidated pages: this use-case page duplicated a now-deeper audience guide.
+        # Emitting a redirect stub instead of a second thin page stops the two competing
+        # for the same intent while keeping every inbound link working.
+        if slug in CONSOLIDATED_TO:
+            dest = CONSOLIDATED_TO[slug]
+            stub = (
+                '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                '<meta name="viewport" content="width=device-width,initial-scale=1">'
+                f'<meta name="description" content="{esc(title)} has moved to our full guide.">'
+                f'<title>{esc(title)} (moved) | AIToolsEssentials</title>'
+                f'<link rel="canonical" href="{DOMAIN}{dest}">'
+                f'<meta http-equiv="refresh" content="0; url={dest}">'
+                '<meta name="robots" content="noindex,follow">'
+                '<link rel="stylesheet" href="/css/styles.css"></head><body>'
+                f'<main><section class="scene scene-light"><div class="article-shell">'
+                f'<h1>{esc(title)}</h1>'
+                f'<p>This guide has been consolidated into our full {esc(title.lower())} page, '
+                f'which is longer, dated, and kept current.</p>'
+                f'<p><a class="button button-blue" href="{dest}">Open the full guide</a></p>'
+                '</div></section></main></body></html>'
+            )
+            (out / f"{slug}.html").write_text(stub)
+            index_cards.append(
+                f'<article class="content-hub-card"><span>Use case</span>'
+                f'<h3><a href="{dest}">{esc(title)}</a></h3><p>{esc(desc)}</p>'
+                f'<a class="button button-blue small" href="{dest}">Open guide</a></article>')
+            continue
         selected = []
         for t in tools:
             hay = (t.get("category", "") + " " + t.get("best_for", "") + " " + t.get("summary", "")).lower()
