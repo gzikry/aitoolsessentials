@@ -134,7 +134,7 @@
       ],
       "capability_confidence": "curated",
       "capabilities_known": true,
-      "affiliate_status": "ready_to_apply",
+      "affiliate_status": "applied_pending_review",
       "affiliate": false,
       "sponsored": false
     },

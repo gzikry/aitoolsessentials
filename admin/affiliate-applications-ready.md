@@ -48,13 +48,13 @@ template, so the vendor-hosted subdomains are not a working fallback either.
 
 ## STATUS 2026-09-12
 
-**George has applied to PartnerStack (network account) and Gamma.**
+**Applied: PartnerStack network account, Gamma (2026-09-12), and Descript (2026-09-12).**
 
 | # | Program | Route | Rate | Status |
 |---|---------|-------|------|--------|
 | 0 | PartnerStack network | app.partnerstack.com | — | applied 2026-09-12; **email unverified** |
 | 1 | Gamma | PartnerStack listing | ~30% rec. | **applied 2026-09-12** |
-| 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | next — apply now |
+| 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | **applied 2026-09-12** — pending review |
 | 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | no working route; try in-app Marketplace |
 | 4 | Browse AI | own portal 525-broken | 20% rec. life | no working route; report broken portal |
 | 5 | ElevenLabs | direct | 22% rec. 12mo | approved 2026-08-23 |
@@ -80,7 +80,7 @@ Answers used (reusable for the reference/audience fields if the portal asks agai
 **Audience:** Consultants, marketers, founders, and educators who build decks regularly
 and are choosing between paid presentation tools.
 
-### Descript — the clean remaining route
+### Descript — APPLIED 2026-09-12 (pending review)
 **Apply:** https://dash.partnerstack.com/application?company=descriptinc&group=affiliates
 (linked from descript.com/affiliate as "Apply Now")
 **Commission:** $25 one-time per new subscriber + 15% recurring for 12 months; 30-day
@@ -97,6 +97,14 @@ cookie. Approval typically ~1 week, up to 30 days. PartnerStack company slug `de
 
 **Audience:** Podcasters, creators, video editors, and small content teams choosing
 transcript-based editing tools.
+
+**What was stated on the application (traffic):** ~4,600 impressions and 66 visitors in the
+trailing 30 days, average position improving from 62 to 44 across three weeks. The case made
+was **intent, not volume**: a published Descript-vs-Riverside comparison and an
+ElevenLabs-to-Descript switch guide both reach readers who already pay for an audio tool and
+are actively moving. Descript-relevant pages currently sit at positions 41-83, so near-term
+signup volume is expected to be under 1/month — deliberately not overstated, because
+PartnerStack verifies the live site and a misrepresentation rejection is not appealable.
 
 ### Copy.ai — no working public route as of 2026-09-12
 Its PartnerStack listing shows *Request program* with unfilled placeholders, and

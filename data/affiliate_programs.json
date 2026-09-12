@@ -154,9 +154,10 @@
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://dash.partnerstack.com/application?company=descriptinc&group=affiliates",
-      "application_status": "ready_to_apply",
+      "application_status": "applied_pending_review",
       "commission_note": "$25 one-time flat fee per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; PartnerStack; monthly PayPal payouts, no minimum threshold.",
-      "notes": "Route confirmed 2026-09-12: descript.com/affiliate links to dash.partnerstack.com/application?company=descriptinc&group=affiliates (PartnerStack company slug \"descriptinc\"). $25 one-time per new subscriber plus 15% recurring for 12 months; 30-day cookie; approval ~1 week up to 30 days. Not yet applied. Requires the PartnerStack network account email to be verified first."
+      "notes": "APPLIED 2026-09-12 via dash.partnerstack.com/application?company=descriptinc&group=affiliates (PartnerStack company slug \"descriptinc\"). $25 one-time per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; monthly PayPal payouts. Approval typically ~1 week, up to 30 days. Traffic stated honestly on the application: ~4,600 impressions / 66 visitors in the trailing 30 days, average position improving 62 -> 44 over three weeks. Descript-relevant pages currently sit at positions 41-83, so near-term signup volume is expected to be under 1/month; the case made was intent (switch and comparison content reaching readers already paying for an audio tool) rather than volume. When approved: add the tracking URL here as affiliate_url - the validator requires that key, not approved_tracking_url - then run scripts/wire_affiliate_links.py so the CTA is actually swapped, or the approval earns nothing.",
+      "applied_date": "2026-09-12"
     },
     {
       "tool_slug": "copy-ai",
