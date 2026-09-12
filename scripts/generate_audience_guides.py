@@ -11,6 +11,7 @@ GUIDES = {
         'title': 'Best AI tools for freelancers',
         'subhead': 'A lean AI stack for solo operators: one assistant, one writing tool, one automation platform — chosen by cost per delivered project.',
         'slugs': ['chatgpt','claude','canva-ai','zapier-ai','notion-ai','grammarly'],
+        'depth': 'freelancers',
         'angle': ('Freelancers feel every subscription personally, so the stack has to earn its keep '
                   'monthly. The pattern that works: one general assistant for drafting and analysis, '
                   'one client-facing production tool, and one automation to kill repetitive admin. '
@@ -112,6 +113,7 @@ GUIDES = {
         'title': 'Best AI tools for podcasters',
         'subhead': 'Record, enhance, edit, clip, and voice a weekly show — with published free or trial paths and no implied music-rights or likeness certification.',
         'slugs':['riverside-fm','adobe-enhance-speech','descript','elevenlabs','canva-ai','chatgpt'],
+        'depth': 'podcast',
         'angle': ('Start on official free recording and cleanup tiers before stacking Descript plus a voice lab. '
                   'Riverside publishes Free at $0 with a 2-hour one-off multi-track allowance, then Pro at $24/month '
                   'billed annually or $29 monthly. Adobe Podcast publishes Free Enhance Speech and Studio limits and '
@@ -430,12 +432,197 @@ REALESTATE_DEPTH = """<h2>The real constraint for agents is not the model</h2>
 """
 
 
+
+PODCAST_DEPTH = """<h2>Where the money actually goes in a podcast stack</h2>
+<p>A weekly show needs four jobs done: <strong>clean the audio</strong>, <strong>record remotely</strong>, <strong>edit by transcript</strong>, and <strong>produce the music and intro</strong>. Those are four different products, and the common mistake is buying one expensive platform hoping it covers all four.</p>
+
+<h2>Verified costs by job</h2>
+<table>
+<thead><tr><th>Job</th><th>Tool</th><th>Free tier</th><th>Paid step</th></tr></thead>
+<tbody>
+<tr><td>Audio cleanup</td><td><strong>Adobe Podcast</strong></td><td>Enhance Speech free — audio-only, 30 min / 500 MB per file, 1 hour per day</td><td>Premium adds video, bulk upload, 4 hours/day, files to 1 GB / 2 hours. No public USD price on the plans page at check time</td></tr>
+<tr><td>Remote recording</td><td><strong>Riverside</strong></td><td>$0 with 2 hours one-off multi-track, 720p, watermark</td><td>Pro $24/mo billed annually ($29 monthly, $288/year)</td></tr>
+<tr><td>Transcript editing</td><td><strong>Descript</strong></td><td>$0 with 1 media hour/month and 100 one-time AI credits</td><td>Hobbyist $16/person/mo billed annually ($24 monthly); Creator $24/mo annually ($35 monthly)</td></tr>
+<tr><td>Voice and narration</td><td><strong>ElevenLabs</strong></td><td>$0 with 10,000 credits</td><td>Starter $6/mo (30,000 credits); Creator $22/mo (121,000 credits)</td></tr>
+<tr><td>Intro music</td><td><strong>Suno</strong></td><td>Free plan</td><td>Pro and Premier tiers; the official page did not expose reliable dollar prices at check time</td></tr>
+<tr><td>Stem separation</td><td><strong>Tunii</strong></td><td>10 min at signup, 5 min/week</td><td>Minute packs; no public pricing page. Failed jobs do not consume minutes</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Official published amounts with check dates. Two rows state no price because the vendor's page did not publish a verifiable figure — we do not print an amount we cannot source.</p>
+
+<h2>The cheapest path to a working show</h2>
+<p>You can produce a professional-sounding weekly show for roughly <strong>$16-24/month</strong>, not the $100+ that a full platform subscription implies:</p>
+<ol>
+<li><strong>Record on Riverside's free tier</strong> while you are establishing the show. Two hours of one-off multi-track covers several early episodes. The watermark and 720p cap are real limits, so upgrade to Pro at $24/month billed annually once the show is publishing consistently — that buys unlimited multitrack and removes the watermark.</li>
+<li><strong>Clean the audio with Adobe Podcast's free Enhance Speech.</strong> The free tier handles 30 minutes per file and up to an hour a day, which covers a typical episode. This is the single highest-value free tool in the stack.</li>
+<li><strong>Edit by transcript in Descript's Hobbyist tier</strong> at $16/person/month billed annually, which includes 10 media hours and 400 AI credits per month — enough for one weekly episode.</li>
+<li><strong>Skip paid voice and music at the start.</strong> ElevenLabs Starter at $6/month is there when you need narration. For an intro bed, generate it once rather than subscribing to a music tool monthly.</li>
+</ol>
+
+<h2>What each free tier will and will not do</h2>
+<ul>
+<li><strong>Adobe Podcast free is genuinely useful, not a sample.</strong> You get real Enhance Speech processing at 30 minutes per file and an hour a day. What you do not get is video, bulk upload, or strength adjustment. For audio-only shows this is not a limitation.</li>
+<li><strong>Riverside free is an evaluation tier.</strong> Two hours one-off does not reset monthly, so it is a fixed allowance rather than a recurring one. The 720p ceiling and watermark mean you will outgrow it as soon as the show is public.</li>
+<li><strong>Descript free is small but real.</strong> One media hour per month and 100 one-time AI credits lets you test transcript editing on a single episode before committing.</li>
+<li><strong>ElevenLabs free gives 10,000 credits</strong>, enough to evaluate the voice quality that makes it the reference point in the category. Commercial use rights sit on paid plans — check before publishing.</li>
+</ul>
+
+<h2>Podcast AI questions we get asked</h2>
+<details><summary>What is the cheapest way to start a podcast with AI?</summary><p>Riverside free for recording, Adobe Podcast free for cleanup, and Descript Hobbyist at $16/person/month billed annually for transcript editing. That is a working production chain, and the only paid piece covers the job you will use every episode.</p></details>
+<details><summary>Do I need to pay for ElevenLabs if I am the host?</summary><p>Probably not at first. Use your own voice and keep ElevenLabs free for evaluation. Paid tiers become worth it when you need consistent narration you cannot record yourself, or you are producing multiple shows. Commercial-use rights require a paid plan, so check terms before monetising a synthetic voice.</p></details>
+<details><summary>Is Adobe Podcast free forever or a trial?</summary><p>The official plans page lists a Free plan with published daily limits alongside a Premium plan with a 30-day trial. The free tier is a standing plan, not a trial — but its limits (30 minutes per file, 1 hour per day, audio only) are enforced.</p></details>
+<details><summary>Can I edit a podcast without learning an audio editor?</summary><p>Yes — that is the specific value of transcript-based editing in Descript. You edit the words and the audio follows. The trade-off is that advanced multi-track work may still need a dedicated editor, so treat it as the fast path for talking-head shows rather than a full DAW replacement.</p></details>
+"""
+
+FREELANCER_DEPTH = """<h2>A freelancer stack should cost less than one billable hour</h2>
+<p>Solo operators feel every subscription personally, and the failure mode is not choosing badly — it is accumulating four tools that each do a version of the same job. The discipline that works: <strong>one assistant for thinking, one for production, one for admin automation, and nothing else until a specific limit slows you down.</strong></p>
+
+<h2>Verified costs</h2>
+<table>
+<thead><tr><th>Tool</th><th>Free tier</th><th>Paid step</th></tr></thead>
+<tbody>
+<tr><td><strong>ChatGPT</strong></td><td>$0</td><td>Paid plans per user per month; official page did not expose exact localized prices at check time</td></tr>
+<tr><td><strong>Claude</strong></td><td>$0</td><td>Pro $17/mo with $200 annual prepayment, or $20 month-to-month</td></tr>
+<tr><td><strong>Grammarly</strong></td><td>$0 with 100 AI prompts/month</td><td>Pro displayed at $12 with 2,000 AI prompts/month</td></tr>
+<tr><td><strong>Canva AI</strong></td><td>$0 — up to 200 Standard or 20 Premium AI uses/month</td><td>Pro $180/year for one person</td></tr>
+<tr><td><strong>Notion AI</strong></td><td>Limited AI trial</td><td>Business $20/member/mo includes Notion Agent and AI Meeting Notes</td></tr>
+<tr><td><strong>Zapier AI</strong></td><td>$0 with 100 tasks/month</td><td>Professional from $19.99/mo billed annually</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Published amounts with check dates. One row deliberately states no figure because the vendor does not publish a verifiable one.</p>
+
+<h2>The realistic monthly bill</h2>
+<p>Most freelancers who feel they are overspending are paying for capability they already have for free. A stack that genuinely covers solo client work:</p>
+<ul>
+<li><strong>Claude Pro at $17/month</strong> (annual prepayment) — the assistant for drafting, editing, and long-document work. Chosen over alternatives because sustained long-context editing is the recurring freelance task.</li>
+<li><strong>Grammarly Pro at $12/month</strong> — 2,000 AI prompts per month against 100 on free. This is the upgrade that matters if you write for clients daily; the free tier is a sample.</li>
+<li><strong>Canva AI free</strong> — up to 200 Standard or 20 Premium AI uses monthly. Stay free until a real client week exhausts it; Pro at $180/year is then a considered choice rather than a default.</li>
+<li><strong>Zapier free with 100 tasks/month</strong> — enough for a handful of admin automations. Note AI steps draw from a shared task pool: Standard model steps consume 1 task per run, Advanced 3, Premium 5.</li>
+</ul>
+<p>That lands near <strong>$29/month</strong> and covers the work. Everything below is what to add only on evidence.</p>
+
+<h2>When each upgrade actually pays for itself</h2>
+<ol>
+<li><strong>Claude Pro</strong> pays for itself the first time you would have lost an hour to a usage limit during a deadline. If you work on long documents, this is usually the first upgrade worth making.</li>
+<li><strong>Grammarly Pro</strong> earns its $12 the moment you are writing daily for clients. At 100 prompts on free, a single busy week exhausts the allowance.</li>
+<li><strong>Canva Pro</strong> only after your AI-use count actually hits the monthly cap. Most freelancers never reach 200 Standard uses.</li>
+<li><strong>Zapier Professional</strong> only when 100 tasks/month is a demonstrated ceiling. Automate the task you do most often first, and measure.</li>
+</ol>
+
+<h2>What to avoid</h2>
+<ul>
+<li><strong>Two general assistants.</strong> The most common freelance overspend. If you have ChatGPT and Claude both on paid plans, you are paying twice for one job — pick the one that fits your main task and keep the other free.</li>
+<li><strong>Annual prepayment before you know you will use it.</strong> Annual saves money on tools you keep, and locks in losses on tools you abandon by month three. Claude's Pro annual prepayment is $200 versus $20 month-to-month — a good deal only if you are certain.</li>
+<li><strong>Paying for tools that exist on free tiers you have not tested.</strong> Canva AI's free allowance is 200 Standard or 20 Premium uses monthly. Most solo designers never exceed it.</li>
+</ul>
+
+<h2>Freelancer AI questions we get asked</h2>
+<details><summary>How much should a freelancer spend on AI tools per month?</summary><p>Under one billable hour. For most solo service providers that means roughly $17-30/month covering an assistant and a writing tool. Anything beyond that should be tied to a specific, measured limit rather than the hope of more capability.</p></details>
+<details><summary>Should I put AI tools on my client invoices?</summary><p>Generally no — treat them as overhead, like your laptop. Charging separately invites clients to question the line item, and AI assistance is increasingly an expected part of professional service rather than an add-on. Check your contracts for disclosure obligations instead.</p></details>
+<details><summary>Do I need a team plan as a freelancer?</summary><p>No. Team plans are for administration — onboarding and offboarding seats, permission boundaries. A solo operator has nobody to administer. If you occasionally subcontract, buy the collaborator a monthly seat for the engagement rather than restructuring onto a team plan.</p></details>
+<details><summary>Is the free tier enough to run client work?</summary><p>Often yes for production tools, rarely for writing volume. Canva AI's free allowance covers most freelance design work. Grammarly free at 100 prompts/month does not cover daily client writing. Test each on a real week before upgrading.</p></details>
+"""
+
+APPBUILDER_DEPTH = """<h2>App builders are scaffolding tools, not production platforms</h2>
+<p>Every tool on this page can produce a working app from a prompt. None of them, at any price, removes the need for engineering review before real users touch the result. The decision is therefore not "which builds best" but <strong>which gets you to a validated prototype fastest at the lowest cost</strong>, and what happens when you outgrow it.</p>
+
+<h2>Verified costs, including what the token and credit limits really mean</h2>
+<table>
+<thead><tr><th>Tool</th><th>Free tier</th><th>Paid step</th></tr></thead>
+<tbody>
+<tr><td><strong>Bolt.new</strong></td><td>$0 with a 300,000-token daily limit and 1 million tokens/month</td><td>Pro $25/mo with no daily token limit, from 10 million tokens/month, custom domains, token rollover</td></tr>
+<tr><td><strong>Lovable</strong></td><td>5 daily build credits, capped at 30/month</td><td>Pro $25/mo per workspace shared across unlimited users, 100 monthly credits</td></tr>
+<tr><td><strong>v0</strong></td><td>$0 with $5 monthly credits and a 7-message daily limit</td><td>Plus $30/user/mo with $30 monthly credits. Note: the $20 Premium tier is being sunset and is unavailable to new users</td></tr>
+<tr><td><strong>Replit AI</strong></td><td>Starter free with daily Agent credits</td><td>Core $20/mo billed annually ($25 monthly), two parallel agents; Pro $95/mo billed annually ($100 monthly), ten parallel agents</td></tr>
+<tr><td><strong>Cursor</strong></td><td>Limited agent requests and Composer access</td><td>Pro $20/mo; Pro Plus $60/mo; Ultra $200/mo</td></tr>
+<tr><td><strong>GitHub Copilot</strong></td><td>Copilot Free — 2,000 completions/month; free for verified students</td><td>Pro $10/mo with 1,500 monthly AI credits; Pro+ $39/mo; Max $100/mo; Business $19/user/mo</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Official published amounts with check dates. Credit and token allowances change frequently — verify in the vendor's portal before committing.</p>
+
+<h2>The free tiers are more generous than they look — and more limited</h2>
+<ul>
+<li><strong>Bolt.new free is the most usable allowance here:</strong> 1 million tokens per month with a 300,000 daily ceiling. The daily cap rather than the monthly total is what usually interrupts you.</li>
+<li><strong>Lovable free is genuinely small:</strong> 5 daily build credits capped at 30/month. Enough to evaluate, not enough to build something you would ship.</li>
+<li><strong>v0's free tier is $5 of credits with a 7-message daily limit</strong>, and its mid-tier is being retired — new users go from free straight to Plus at $30/user/month. That gap matters in planning.</li>
+<li><strong>Replit's Starter tier includes one published live project and a built-in database</strong>, which is unusual for a free tier and enough to show something to a client.</li>
+</ul>
+
+<h2>The distinction that decides which to use</h2>
+<ol>
+<li><strong>Do you want a browser prototype or a real codebase?</strong> Bolt.new, Lovable, and v0 produce a running app you can share and export. Cursor and GitHub Copilot work inside a codebase you already have. These are different jobs, and mixing them up is why people feel they bought the wrong tool.</li>
+<li><strong>Are you the kind of builder who wants to see code?</strong> If yes, Cursor at $20/month and Copilot at $10/month are far cheaper per unit of real work than a credit-based builder. If you do not want to read code, the builders are the right entry.</li>
+<li><strong>Will a human engineer touch this afterwards?</strong> If yes, generate into a structure an engineer can adopt — v0's React output and Bolt's exportable projects both do this. An app that exists only inside a platform's runtime is a dead end.</li>
+</ol>
+
+<h2>What the credits and tokens actually cost you</h2>
+<p>The pricing model is the part people misjudge. Bolt.new meters tokens, Lovable meters build credits, v0 meters dollars of credit, Replit meters Agent credits plus model spend, and Copilot meters AI credits against a plan. A cheap entry tier can be consumed in an afternoon of iteration.</p>
+<p>Practical approach: run your real project on the free tier until it stops you, note exactly which limit stopped you, and buy the tier above that — not the top tier. Iteration is where credits disappear, so a plan you can think in is worth more than one you ration.</p>
+
+<h2>App-builder questions we get asked</h2>
+<details><summary>Can I launch a real product built by these tools?</summary><p>Not without engineering review. These tools produce working prototypes; production needs authentication, error handling, data modelling, security review, and a deployment path. The prototype is genuinely valuable — it validates the idea cheaply — but treat it as the start of the build, not the end.</p></details>
+<details><summary>Which is cheapest for a solo developer?</summary><p>GitHub Copilot Pro at $10/month inside an editor you already use, or Cursor Pro at $20/month if you want an AI-native editor. Credit-based builders cost more per unit of real work once you are iterating daily — they shine for non-engineers who want a running app without setup.</p></details>
+<details><summary>Why do my credits disappear so quickly?</summary><p>Iteration. Every regeneration and every failed attempt consumes the same credit as a successful one, so debugging through a builder burns budget fast. Plan the change before prompting rather than prompting to explore — or move to an editor-based tool where you pay per seat rather than per attempt.</p></details>
+<details><summary>Is v0 still worth starting on?</summary><p>With a caveat: its $20 Premium tier is being sunset and is unavailable to new users, so the realistic path is free ($5 credits, 7 messages/day) then Plus at $30/user/month. v0's strength is UI generation quality; if you need that, budget for the jump from free.</p></details>
+"""
+
+IMAGE_DEPTH = """<h2>Image tools are priced per GPU hour, per token, or per credit — that shapes everything</h2>
+<p>No category has less comparable pricing. Midjourney sells GPU hours, Leonardo sells tokens with a rollover bank, Adobe sells generative credits, and Canva sells monthly AI uses. Comparing sticker prices across those models is meaningless; what matters is <strong>cost per usable asset at your volume</strong>.</p>
+
+<h2>Verified costs by pricing model</h2>
+<table>
+<thead><tr><th>Tool</th><th>Free tier</th><th>Paid step</th><th>Metering</th></tr></thead>
+<tbody>
+<tr><td><strong>Midjourney</strong></td><td>None published</td><td>Basic $10/mo or $96/year, 3.3 Fast GPU hours/month; Standard $30/mo with 15 hours and unlimited Relax generations</td><td>GPU hours</td></tr>
+<tr><td><strong>Leonardo AI</strong></td><td>150 Fast Tokens daily</td><td>Essential $12/mo with 8,500 Fast Tokens; Premium $30/mo with 25,000; Ultimate $60/mo with 60,000</td><td>Tokens with rollover bank</td></tr>
+<tr><td><strong>Adobe Firefly</strong></td><td>Free plan</td><td>Standard $9.99/mo with 2,000 credits; Pro $19.99/mo with 4,000</td><td>Generative credits</td></tr>
+<tr><td><strong>Canva AI</strong></td><td>$0 — up to 200 Standard or 20 Premium AI uses/month</td><td>Pro $180/year for one person</td><td>Monthly AI uses</td></tr>
+<tr><td><strong>Ideogram</strong></td><td>Free plan with weekly slow credits</td><td>Plus $15/mo with 1,000 priority credits</td><td>Priority vs slow credits</td></tr>
+<tr><td><strong>AIBase</strong></td><td>Free starter credits</td><td>From roughly $29.9/mo; per-task image costs about 12-46 credits ($0.05-$0.18)</td><td>Credits across third-party models</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Official published amounts with check dates. The metering column is the important one — two tools with the same headline price are not comparable if one bills hours and the other bills per image.</p>
+
+<h2>Midjourney's two-tier model is the key insight in this category</h2>
+<p>Midjourney prices GPU hours on every tier, but from <strong>Standard at $30/month</strong> upward it also grants <em>unlimited Relax image generations</em>. That changes the economics completely for high-volume, low-urgency work: if you are generating hundreds of concept variations and do not need them instantly, you are not paying per image at all.</p>
+<p>The practical consequence: Basic at $10/month is an evaluation tier. If your work involves volume rather than a handful of hero images, the $30 Standard tier is where the value is — the jump buys unlimited generations, not just more hours.</p>
+
+<h2>Where each tool actually wins</h2>
+<ul>
+<li><strong>Legible text inside an image.</strong> Ideogram, and it is not close. Its Plus tier at $15/month with 1,000 priority credits is the cheapest entry for a real capability advantage. If your images contain words — posters, ads, packaging mockups — start here.</li>
+<li><strong>Volume concept work.</strong> Midjourney Standard at $30/month, because unlimited Relax generations remove the per-image maths entirely.</li>
+<li><strong>Client-deliverable commercial visuals.</strong> Adobe Firefly, because Adobe publishes explicit generative-AI user guidelines, which matters when output goes to a client. Standard at $9.99/month with 2,000 credits is inexpensive for that reassurance.</li>
+<li><strong>Non-designers producing branded marketing assets.</strong> Canva AI. The free allowance is up to 200 Standard or 20 Premium AI uses monthly, which covers a surprising amount of social and presentation work before you need Pro at $180/year.</li>
+<li><strong>Style control and asset pipelines.</strong> Leonardo AI — 150 free Fast Tokens daily to evaluate, then $12/month for 8,500 tokens with a rollover bank that caps at 25,500.</li>
+</ul>
+
+<h2>Watch the expiry rules — they decide real cost</h2>
+<p>This is where budgets quietly break:</p>
+<ul>
+<li><strong>Ideogram's priority credits expire each billing cycle.</strong> Only paid top-ups carry over. Unused subscription credits are lost monthly.</li>
+<li><strong>Leonardo's rollover bank is capped</strong> at 25,500 tokens on Essential — saving up beyond that is not possible.</li>
+<li><strong>Canva's AI allowance resets monthly</strong> and the free tier includes no Ultra access at all.</li>
+<li><strong>AIBase is a wrapper</strong>, not a model: per-task costs are published (images roughly 12-46 credits, $0.05-$0.18), which makes budgeting possible but means output quality depends on whichever third-party model runs.</li>
+</ul>
+
+<h2>Image-tool questions we get asked</h2>
+<details><summary>Which image tool is best for text inside images?</summary><p>Ideogram, by a wide margin — text rendering is its defining capability rather than a side feature. The free tier limits you to weekly slow credits, so budget for Plus at $15/month if text-in-image is your actual job. Note that priority credits expire each cycle.</p></details>
+<details><summary>Is Midjourney worth $30 a month?</summary><p>If you generate at volume, yes — Standard is the first tier with unlimited Relax generations, so the per-image cost stops mattering for non-urgent work. At $10 Basic you get only 3.3 Fast GPU hours and no unlimited tier, which makes it an evaluation plan.</p></details>
+<details><summary>Are credits or GPU hours better value?</summary><p>It depends on your urgency, not the rate. GPU-hour billing (Midjourney) penalises iteration. Token or credit billing (Leonardo, Firefly, Canva) gives predictable per-asset costs but expires on a schedule. For slow high-volume work, unlimited tiers beat both.</p></details>
+<details><summary>Can I use AI images commercially?</summary><p>Varies by vendor and plan, so read the rights page for your exact tier. Adobe Firefly publishes explicit generative-AI guidelines and is the safest default for client work. Ideogram states it does not claim ownership of generated images. Do not assume a free tier grants delivery rights — check before the first client deliverable.</p></details>
+"""
+
+
 DEPTH_BLOCKS = {
     'agencies': AGENCY_DEPTH,
     'teachers': TEACHERS_DEPTH,
     'assistants': ASSISTANTS_DEPTH,
     'search': SEARCH_DEPTH,
     'realestate': REALESTATE_DEPTH,
+    'podcast': PODCAST_DEPTH,
+    'freelancers': FREELANCER_DEPTH,
+    'appbuilders': APPBUILDER_DEPTH,
+    'images': IMAGE_DEPTH,
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

@@ -5,6 +5,7 @@ from pathlib import Path
 
 from generate_audience_guides import (
     ASSISTANTS_DEPTH, SEARCH_DEPTH, REALESTATE_DEPTH,
+    PODCAST_DEPTH, FREELANCER_DEPTH, APPBUILDER_DEPTH, IMAGE_DEPTH,
 )
 
 # page -> depth block. Injected as a marker-delimited section so reruns replace it
@@ -13,6 +14,10 @@ PAGE_DEPTH = {
     'best-ai-assistants.html': ASSISTANTS_DEPTH,
     'best-ai-search-engines.html': SEARCH_DEPTH,
     'best-ai-tools-for-real-estate-agents.html': REALESTATE_DEPTH,
+    'best-ai-tools-for-podcast-shows.html': PODCAST_DEPTH,
+    'best-ai-tools-for-freelancers.html': FREELANCER_DEPTH,
+    'best-ai-app-builders.html': APPBUILDER_DEPTH,
+    'best-ai-image-tools.html': IMAGE_DEPTH,
 }
 
 GUIDES = {
@@ -28,6 +33,7 @@ GUIDES = {
  'best-ai-presentation-tools.html':'Presentations',
  'best-ai-app-builders.html':'Development',
  'best-ai-search-engines.html':'Research',
+ 'best-ai-image-tools.html':'Creative',
  'best-ai-tools-for-real-estate-agents.html':'Productivity',
 }
 
