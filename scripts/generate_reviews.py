@@ -186,6 +186,10 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     if isinstance(raw_features, str):
         raw_features = [x.strip() for x in raw_features.split(',') if x.strip()]
     features_html = ''.join(f'<li>{f}</li>\n' for f in raw_features)
+    # Publish the recorded reasoning so the score is auditable by a reader, not just
+    # asserted. Every scored record carries one.
+    _rat = (tool.get('rating_rationale') or '').strip()
+    rationale_html = f'<p class="rating-rationale">{_rat}</p>' if _rat else ''
     trial_checklist = tool.get('trial_checklist', '')
     best_plan = tool.get('best_plan', '')
     faq = tool.get('faq', [])
@@ -352,7 +356,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <h2>How {name} compares</h2>
 <p>{compare_para}</p>
 <h2>How we evaluated</h2>
-<p>The AIToolsEssentials rating is an editorial score—not an external benchmark. It summarizes job fit, likely output quality, ease of adoption, and operational cost using published product information, benchmark context where the exact model is identifiable, and the repeatable trial checklist above. Benchmarks never determine the final product rating by themselves. See our <a href="../../methodology/">editorial methodology</a>, <a href="../../evidence/">evidence ledger</a>, and <a href="../../benchmarks/">benchmark evidence policy</a>.</p>
+{rationale_html}<p>The AIToolsEssentials rating is an editorial score—not an external benchmark. It summarizes job fit, likely output quality, ease of adoption, and operational cost using published product information, benchmark context where the exact model is identifiable, and the repeatable trial checklist above. Benchmarks never determine the final product rating by themselves. See our <a href="../../methodology/">editorial methodology</a>, <a href="../../evidence/">evidence ledger</a>, and <a href="../../benchmarks/">benchmark evidence policy</a>.</p>
 {best_plan_html}<h2>Frequently asked questions</h2>
 <div class="faq-list">
 {faq_html}</div>

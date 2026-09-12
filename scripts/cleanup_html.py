@@ -69,6 +69,80 @@ def qualify_editorial_score(html: str, depth: int) -> str:
     return html
 
 
+def _load_tools_by_name():
+    """Map display name -> record so score cells can be resolved without a generator."""
+    import json
+    tp = ROOT / 'data' / 'tools.json'
+    if not tp.exists():
+        return {}
+    return {t.get('name'): t for t in json.loads(tp.read_text()) if t.get('name')}
+
+
+TOOLS_BY_NAME = _load_tools_by_name()
+
+
+OLD_HEADER_RE = re.compile(r'<header class="site-header">.*?</header>', re.S)
+BRAND_H1_RE = re.compile(r'<h1><a href="/">AIToolsEssentials</a></h1>')
+
+
+def repair_legacy_article_header(html: str, depth: int) -> str:
+    """Fix pages still on the retired article template.
+
+    Those pages put the site brand in an <h1> and the real heading in a second one, so
+    every page carried two H1s and the first said "AIToolsEssentials" instead of the
+    topic. The brand is not a heading; demote it to a span and leave the real H1 intact.
+    """
+    if 'site-header' not in html:
+        return html
+    html = BRAND_H1_RE.sub('<span class="brand-mark">AIToolsEssentials</span>', html)
+    # Give those pages the same method link every other score surface carries.
+    if 'editorial-methodology' not in html:
+        prefix = '../' * depth
+        link = (f'<p class="score-note">Ratings are editorial product assessments, not lab '
+                f'benchmarks. <a href="{prefix}legal/editorial-methodology.html">How we score</a>.</p>')
+        if '</main>' in html:
+            html = html.replace('</main>', link + '</main>', 1)
+    return html
+
+
+def backfill_empty_scores(html: str, tools_by_name: dict) -> str:
+    """Replace empty <td>/5</td> score cells using the table's own column headers.
+
+    Some comparison pages were generated while a tool had no rating, so the score cell
+    baked in as "/5" with no number. Those pages have no owning generator, so nothing
+    rewrites them; the <thead> column header names the tool, which is enough to resolve
+    the score.
+    """
+    def fix_table(match: re.Match) -> str:
+        table = match.group(0)
+        if '<td>/5</td>' not in table:
+            return table
+        thead = re.search(r'<thead>(.*?)</thead>', table, re.S)
+        if not thead:
+            return table
+        # Column headers live in <thead>; the first is the row label ("Decision point").
+        cols = [re.sub(r'<[^>]+>', '', h).strip()
+                for h in re.findall(r'<th>(.*?)</th>', thead.group(1))]
+        cols = cols[1:]
+        row = re.search(r'(<tr><th>AIToolsEssentials editorial score</th>)(.*?)(</tr>)', table, re.S)
+        if not row or not cols:
+            return table
+        cells = re.findall(r'<td>(.*?)</td>', row.group(2))
+        if len(cells) != len(cols):
+            return table
+        fixed = []
+        for name, cell in zip(cols, cells):
+            if cell.strip() == '/5':
+                t = tools_by_name.get(name)
+                if t and t.get('rating'):
+                    fixed.append(f'<td>{t["rating"]}/5</td>')
+                    continue
+            fixed.append(f'<td>{cell}</td>')
+        return table.replace(row.group(0), row.group(1) + ''.join(fixed) + row.group(3), 1)
+
+    return re.sub(r'<table>.*?</table>', fix_table, html, flags=re.S)
+
+
 def fix_page(p: Path) -> bool:
     rel_parts = p.relative_to(ROOT).parts
     depth = len(rel_parts) - 1
@@ -88,6 +162,8 @@ def fix_page(p: Path) -> bool:
     # rewritten by any script, yet they remain live and in the sitemap. Qualify their
     # score label so no page presents an editorial score as an unlabelled rating.
     h = qualify_editorial_score(h, depth)
+    h = backfill_empty_scores(h, TOOLS_BY_NAME)
+    h = repair_legacy_article_header(h, depth)
 
     # 1. Domain typo
     h = h.replace('aitoolsessentials.com', 'aitoolsessentials.com')

@@ -779,6 +779,54 @@ def main():
     if unresolved_crumbs:
         errors.extend(f'Breadcrumb URL does not resolve — {item}' for item in unresolved_crumbs[:10])
 
+    # A scored review page must publish its reasoning. Every record carries a
+    # rating_rationale; if the page drops it, the score is asserted rather than auditable.
+    missing_rationale = []
+    for tool_dir in sorted((ROOT / 'tools').iterdir()):
+        page = tool_dir / 'index.html'
+        if not (tool_dir.is_dir() and page.exists()):
+            continue
+        html = page.read_text()
+        if 'editorial score' in html and 'rating-rationale' not in html:
+            missing_rationale.append(tool_dir.name)
+    if missing_rationale:
+        errors.extend(f'Score without published reasoning — {s}' for s in missing_rationale[:10])
+
+    # Each page must have exactly one <h1>, and it must not be the site brand. Twenty
+    # legacy article pages carried the brand in an <h1> plus the real heading in a second
+    # one, so the first heading a crawler read was "AIToolsEssentials".
+    heading_issues = []
+    BRAND_H1 = re.compile(r'<h1[^>]*>\s*(?:<a[^>]*>)?\s*AIToolsEssentials\s*(?:</a>)?\s*</h1>', re.I)
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+            continue
+        html = f.read_text(errors='ignore')
+        if BRAND_H1.search(html):
+            heading_issues.append(f'{rel}: brand rendered as an h1')
+        h1s = re.findall(r'<h1[^>]*>', html)
+        if len(h1s) > 1:
+            heading_issues.append(f'{rel}: {len(h1s)} h1 elements')
+    if heading_issues:
+        errors.extend(f'Heading structure — {item}' for item in heading_issues[:10])
+
+    # A score table row must carry a real number in every cell. Some comparison pages were
+    # generated while a tool had no rating, so the cell baked in as "/5" with no score and
+    # nothing rewrote them.
+    empty_score_cells = []
+    SCORE_ROW = re.compile(r'<tr><th>AIToolsEssentials editorial score</th>(.*?)</tr>', re.S)
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+            continue
+        html = f.read_text(errors='ignore')
+        for m in SCORE_ROW.finditer(html):
+            for cell in re.findall(r'<td>(.*?)</td>', m.group(1)):
+                if not re.match(r'^\s*\d\.\d\s*/\s*5\s*$', cell):
+                    empty_score_cells.append(f'{rel}: {cell.strip()!r}')
+    if empty_score_cells:
+        errors.extend(f'Empty score cell — {item}' for item in empty_score_cells[:10])
+
     # A page showing an editorial score must label it and explain it. Unqualified
     # "AIToolsEssentials score" reads as an unlabelled rating, and a score table with no
     # method link gives the reader no way to know it is not a benchmark.
