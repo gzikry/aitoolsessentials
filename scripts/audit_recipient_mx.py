@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Audit outbound outreach recipients for deliverability.
 
-Checks every September+ outbound message (Sent Mail and Trash, since Gmail files
-some sends there) and reports recipient domains with no MX record. A no-MX domain
-cannot receive mail and will never generate a bounce, so this is the only way to
-catch it.
+Checks every September+ outbound message (Sent Mail, Trash, and All Mail, since Gmail
+files some sends outside Sent) and reports recipient domains with no MX record. A no-MX
+domain cannot receive mail; per RFC 5321 it falls back to its A record as an implicit MX,
+so MTAs keep retrying for roughly three days before emitting a final `Action: failed`
+DSN (which can land in Spam). That makes a no-MX recipient slow-detection, not
+undetectable — this proactive check is still the fast way to catch it, but absence of a
+same-day bounce is not evidence of delivery.
 
 Usage:
     python3 scripts/audit_recipient_mx.py            # report only
@@ -82,8 +85,10 @@ def main() -> int:
         print("\nUNDELIVERABLE RECIPIENT DOMAINS (no MX — mail cannot arrive):")
         for domain in sorted(dead):
             print(f"  {domain}  ->  {sorted(dead[domain])}")
-        print("\nRemove these from outreach lists; a no-MX domain never bounces, so it")
-        print("fails silently and is invisible to bounce-driven detection.")
+        print("\nRemove these from outreach lists. A no-MX domain falls back to its A record")
+        print("as an implicit MX (RFC 5321), so it fails slowly: expect a final 'Action: failed'")
+        print("DSN up to ~3 days later, possibly filed to [Gmail]/Spam. MX-checking is the")
+        print("prompt signal; a same-day bounce is not.")
         return 1
 
     if not args.quiet:
