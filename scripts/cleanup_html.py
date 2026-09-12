@@ -17,6 +17,11 @@ def normalize_home_links(html: str) -> str:
     """Point every homepage link at the canonical root URL."""
     html = re.sub(r'href="(?:/|(?:\.\./)*)index\.html([#?][^"]*)?"',
                   lambda m: 'href="/' + (m.group(1) or '') + '"', html)
+    # Canonical directory URLs everywhere else. Linking to "X/index.html" and "X/"
+    # both serve 200, so analytics reports two rows for one page and crawl signals
+    # split. Canonicals already use the directory form; make links agree.
+    html = re.sub(r'href="([^"]*/)index\.html([#?][^"]*)?"',
+                  lambda m: 'href="' + m.group(1) + (m.group(2) or '') + '"', html)
     return html
 
 

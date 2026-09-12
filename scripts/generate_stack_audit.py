@@ -110,10 +110,11 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
 <section class="scene scene-dark">
   <div style="max-width:920px;margin:0 auto;padding:88px 28px 64px;text-align:center">
     <p class="kicker">Free stack audit · no login · stays on your device</p>
-    <h1>See what you actually pay for.</h1>
-    <p class="subhead">This is the free instant scorecard — not Keep/Cut Weekly and not paid Premium. Pick the tools you already use. Enter what you pay — or mark spend unknown. See keep/cut advice, tools that do the same job, and how efficiently you spend. Affiliate status never changes the result.</p>
+    <h1>Paying twice for AI tools? Find out in two minutes.</h1>
+    <p class="subhead">Pick the AI tools you already pay for. Enter what they cost, or mark spend unknown. You get a keep/cut call on each one, the tools that duplicate the same job, and a score for how efficiently you spend. Nothing is submitted to a server.</p>
     <p><a class="button button-blue" href="#sa-app">Start the free audit</a>
        <a class="button button-ghost-dark" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a></p>
+    <p class="sa-note" style="margin-top:18px">Free and instant. Keep/Cut Weekly is a separate free email, and Premium is a separate paid option — neither is required for this audit.</p>
   </div>
 </section>
 <section class="scene scene-light content-hub" id="sa-app">

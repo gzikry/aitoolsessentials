@@ -280,7 +280,7 @@ def main():
             errors.append('Stack Audit title/meta must not be cancel-only')
         if 'free scorecard' not in stack_head.lower() and 'see overlap' not in stack_head.lower():
             errors.append('Stack Audit title/meta must mention the free scorecard or overlap')
-        if '<h1>See what you actually pay for.</h1>' not in page:
+        if '<h1>Paying twice for AI tools? Find out in two minutes.</h1>' not in page:
             errors.append('Stack Audit H1 must stay the practical scorecard line')
     comparison_hub = ROOT/'comparisons/index.html'
     comparison_pages = {
@@ -666,7 +666,7 @@ def main():
         errors.append('Homepage critical CSS must keep the Premium band dark if styles.css is stale')
     if 'home-cta-primary' not in hero_html or 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
         errors.append('Homepage hero primary must stay Free Stack Audit')
-    if 'href="/tools/index.html">Browse tools' not in hero_html:
+    if 'href="/tools/">Browse tools' not in hero_html and 'href="/tools/index.html">Browse tools' not in hero_html:
         errors.append('Homepage hero missing the Browse tools learning path')
     if home_html.count('href="/subscribe/">Subscribe free') != 1:
         errors.append('Homepage must keep exactly one Subscribe free button')
@@ -734,6 +734,34 @@ def main():
             errors.append(
                 f'tools/index.html lists {card_count} directory cards but data/tools.json has {len(tools)} tools'
             )
+
+    # Linking to "X/index.html" and "X/" both serve 200, so analytics reports two
+    # rows for one page and crawl signals split. Canonicals use the directory form;
+    # internal links must agree. Admin pages are internal-only and exempt.
+    # Public pages must not link to /index.html instead of the canonical directory URL.
+    split_hits = []
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if 'admin' in rel.parts or any(part.startswith('.') for part in rel.parts):
+            continue
+        for href in re.findall(r'href="([^"]*/index\.html[^"]*)"', f.read_text()):
+            if href.startswith(('http://', 'https://')):
+                continue
+            split_hits.append(f'{rel}: {href}')
+    if split_hits:
+        errors.append(
+            f'{len(split_hits)} internal link(s) use /index.html instead of the canonical directory URL: {sorted(split_hits)[:4]}'
+        )
+
+    # The analytics goal mapper must keep external vendor links out of our own
+    # conversion goals: 448 external /pricing/ links were labelling as conversion_pricing.
+    analytics_js = ROOT / 'js' / 'analytics.js'
+    if analytics_js.exists():
+        analytics_text = analytics_js.read_text()
+        if 'isInternal' not in analytics_text:
+            errors.append('js/analytics.js must gate goal tracking to internal links')
+        if "hasAttribute('data-outbound')" not in analytics_text:
+            errors.append('js/analytics.js must exclude data-outbound affiliate links from goals')
 
     sitemap = ROOT/'sitemap.xml'
     if sitemap.exists():
