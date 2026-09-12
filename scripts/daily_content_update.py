@@ -28,7 +28,8 @@ print(f'Loaded {len(tools)} tools')
 
 def _sitemap_priority_changefreq(rel_path: str) -> tuple[str, str]:
     """Return (priority, changefreq) for a sitemap URL based on page type."""
-    if rel_path in ('/', 'index.html'):
+    # Callers pass url.lstrip('/'), so the homepage arrives as '' or '/'.
+    if rel_path in ('', '/', 'index.html'):
         return '1.0', 'daily'
     if rel_path.startswith('tools/') and rel_path != 'tools/index.html':
         return '0.9', 'weekly'
@@ -59,7 +60,9 @@ def refresh_sitemap(root: Path) -> list[str]:
         if p.name == '404.html' or 'name="robots" content="noindex' in html_text:
             continue
         if p.name == 'index.html':
-            url = f'/{rel.parent}/'
+            # A root-level index.html has rel.parent == '.', which must not
+            # become '/./' (an unresolvable path that also loses homepage priority).
+            url = '/' if str(rel.parent) == '.' else f'/{rel.parent}/'
         else:
             url = f'/{rel}'
         sitemap_urls.append(url)
