@@ -1,0 +1,213 @@
+{
+  "date": "2026-09-11",
+  "monitor": "HARO / Connectively / journalist request monitor",
+  "run_at": "2026-09-11T09:00:00-07:00",
+  "search_scope": "AI tools, AI pricing, overlapping subscriptions, SaaS costs, software spending, AI budget, AI cost optimization, FinOps",
+  "platforms_checked": [
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Queries are distributed only by 3x-daily email digest. /view-queries requires an email entry (HTTP 429 from curl; Cloudflare browser-verification wall in front of the whole domain). No public query feed. Owned/operated by Featured.com since April 2025. No change from prior runs — needs a subscribed inbox George controls."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Live and growing — Featured.com press release (June 9, 2026) reports 100,000+ users and one expert-publisher match every six seconds; revived in 2026 after Cision discontinued it Dec 2024. All query pages still require login; no public listing. (A stale 'platform is now closed' notice is still cached on the marketing page for the pre-2026 Cision shutdown — do not confuse the two.)"
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Peter Shankman's free HARO alternative. Queries distributed by email only (up to 3x daily); the site has a reporter submission form but no public source-facing query feed."
+    },
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Primary source again this run. Full sitemap-journo-requests.xml (40,717 URLs, allow-all robots.txt) was pulled and date-sorted in code rather than browsed — 1,471 requests dated since 2026-08-25, of which 256 matched AI/tool keywords and 64 matched strict pricing/cost keywords. Individual request pages render full text without login. Outlet pages (Forbes, FT) work at /media-outlets/<slug>/journo-requests; the bare /media-outlets/<slug> path 404s."
+    },
+    {
+      "platform": "Medialyst MCP (medialyst.ai/api/mcp)",
+      "status": "oauth_required",
+      "notes": "NEW this run. Free MCP feed normalizing six platforms (Connectively, HARO, X, LinkedIn, MentionMatch, Substack), hourly polling, read-only, no send capability. Direct JSON-RPC from cron returns invalid_token — needs an interactive OAuth handshake (hermes mcp add --auth oauth). This is the single highest-leverage fix available for this monitor: it would replace browser-scraping Sourcee with an authenticated structured feed."
+    },
+    {
+      "platform": "Qwoted (qwoted.com)",
+      "status": "login_required",
+      "notes": "Query feed requires login. Free tier for sources with usage limits; paid tiers from ~$99-$149/mo."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "launching_soon",
+      "notes": "B2B/SaaS-focused (formerly Help a B2B Writer, by Superpath). /requests returns an empty page — still pre-launch, no query feed."
+    },
+    {
+      "platform": "X/Twitter #journorequest",
+      "status": "credits_exhausted",
+      "notes": "x_search (xAI) still returns 'used all available credits or reached monthly spending limit.' Third consecutive run blocked. Sourcee aggregation used as the proxy."
+    },
+    {
+      "platform": "ResponseSource (responsesource.com)",
+      "status": "paywalled_uk",
+      "notes": "UK-focused; only the media-bulletin news headlines are public, not the journalist enquiry feed. Access sold by inquiry category from £85 pay-as-you-go."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "source": "Sourcee.app (AI topic / X #journorequest)",
+      "query_text": "Uber burned its entire 2026 AI budget in four months, and had to cut back on usage. Agentic AI cost just doesn't behave like traditional software that we know how to budget for. I spent years at Apptio building the tooling that made cloud spend predictable, and that playbook doesn't survive contact with agents. Most teams are learning that lesson the hard way. My new piece is on why agentic AI keeps blowing out of budget, and what makes it so hard to see coming. Would like to hear from others how they are managing their AI costs.",
+      "journalist_publication": "Independent (ex-Apptio FinOps practitioner; LinkedIn/X long-form piece)",
+      "category": "AI / FinOps / Cost Management / Agentic AI",
+      "deadline": "Open (posted 2026-09-07, 'posted in last 7 days' as of this run)",
+      "contact_method": "Comment on the original X/LinkedIn post, or DM the author",
+      "relevance": "high",
+      "relevance_notes": "The single best fit in this run and the third consecutive run it has surfaced. This is the exact problem AIToolsEssentials exists to solve: teams cannot see or predict what their AI spend is doing. Note the shift in framing since digest-2026-09-08 — the query now anchors on agentic AI cost overruns (token/consumption spend) rather than subscription overlap. AIToolsEssentials' verified-pricing dataset and keep/cut framework address the seat/subscription half of that bill, which is the half most teams can act on this week without an engineering project.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: lead with the subscription layer of the same bill. Frame: agentic token spend is genuinely hard to forecast, but the seat-based AI subscriptions sitting next to it are auditable today. Offer the overlap data (coding x2, assistants x2, meeting notes x2) and the point that a team cutting two overlapping $20-$30 seats funds a meaningful share of the agentic budget they are worried about. Offer verified pricing snapshots with checked dates. High priority — pitch immediately, and note it has been open for several days so the window may close.",
+      "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns"
+    },
+    {
+      "id": 2,
+      "source": "Sourcee.app (AI topic)",
+      "query_text": "Are you a scientist (PhD student, postdoc or beyond) paying for your own AI subscription to help with your research? I'd love to hear from you for something I'm working on at Science Magazine. Drop me a DM or reply to this thread and we can connect.",
+      "journalist_publication": "Science Magazine (journalist: Tom)",
+      "category": "AI / Science / Personal subscription spend",
+      "deadline": "Open (posted 2026-09-04, 'posted in last 7 days')",
+      "contact_method": "DM or reply to the original thread",
+      "relevance": "high",
+      "relevance_notes": "Science Magazine is a top-tier outlet, and the query is squarely about individuals paying out of pocket for AI subscriptions — the personal-budget version of the overlap problem. It is a case-study call (they want the people, not the analyst), so the play is to supply AIToolsEssentials' aggregate data as context for the reporter rather than pitching George as the story. This is exactly the pattern where a verified pricing dataset earns a citation.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: offer the reporter the backdrop data for their case studies. Frame: researchers paying personally for AI subscriptions are absorbing a cost that institutions increasingly assume is covered; here is what the major plans actually cost and where they overlap (a postdoc paying for both Claude Pro and ChatGPT Plus is paying twice for one research job). Offer verified pricing snapshots with checked dates, and offer to connect them with the overlap data rather than a quote. High priority — top-tier outlet, and a citation here is worth more than a quote in a trade publication.",
+      "url": "https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions"
+    },
+    {
+      "id": 3,
+      "source": "Sourcee.app (AI topic)",
+      "query_text": "Most enterprises don't have an AI strategy. They have an AI sprawl problem dressed up as one — Hundreds of agents. Dozens of models. Zero unified visibility into what they're doing, what they're consuming, or what they cost. ... The question is 'How do I safely govern hundreds of AI agents across my enterprise — without losing visibility, control, or trust?' ... I'm writing a detailed piece on this — covering AI governance architecture, agent ecosystems, model economics...",
+      "journalist_publication": "Independent (LinkedIn long-form, enterprise AI governance)",
+      "category": "Enterprise AI / Governance / Agent Sprawl / Model Economics",
+      "deadline": "Open (collecting input for upcoming article; posted 2026-09-05)",
+      "contact_method": "Comment on the LinkedIn post or DM",
+      "relevance": "high",
+      "relevance_notes": "Carried forward from digest-2026-09-10 and still live. Directly names cost visibility ('what they're consuming, or what they cost') alongside governance. Agent sprawl is the enterprise form of the overlap problem, and AIToolsEssentials can speak to the seat-and-subscription layer that most governance frameworks skip past while going straight to token metering.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: enterprise scale. Frame: before you can govern hundreds of agents you have to know what you already pay for — most enterprises cannot list their AI subscriptions, let alone their agents. The Stack Audit question scales: what are you paying for, is any of it redundant, what should you cut? Offer the overlap taxonomy as the inventory layer that sits underneath agent governance. High priority.",
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl"
+    },
+    {
+      "id": 4,
+      "source": "Sourcee.app (X #journorequest)",
+      "query_text": "How is AI helping employers to combat workplace fraud: expenses, product theft, time, etc? I'm looking for AI entrepreneurs/startups focused on this specific issue: the challenges and the solutions.",
+      "journalist_publication": "Independent journalist (email contact redacted on Sourcee)",
+      "category": "AI / Business / Fraud & Expense Controls",
+      "deadline": "Open (posted in last 7 days)",
+      "contact_method": "Email (redacted on Sourcee — reply to the original #journorequest post)",
+      "relevance": "medium",
+      "relevance_notes": "Adjacent rather than core. The connection is expense visibility: shadow AI subscriptions bought on company cards are a real and under-reported line in the expense-fraud conversation, and AIToolsEssentials has the angle that the cheapest control is knowing what is already being paid for. Not a pricing story, so it ranks below the top three.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: pitch the shadow-AI-spend angle. Frame: the fastest-growing uncontrolled line item on a company card right now is AI subscriptions bought by individual teams; before AI can police expenses it has to make existing spend visible. Offer the overlap/duplication data and the Stack Audit as the audit step. Medium priority — good fit, off the core beat.",
+      "url": "https://www.sourcee.app/journo-request/ai-startups-workplace-fraud-detection-expenses-time-theft"
+    },
+    {
+      "id": 5,
+      "source": "Sourcee.app (AI topic)",
+      "query_text": "Looking for founders building something from scratch. I'm looking to talk to a few founders who are currently building a startup, SaaS, AI tool, or any kind of online business. I'm putting together a bi-weekly series called Built From Scratch, where we follow real founders and show what building a business actually looks like — not just the polished success story. ... At the end, we'll give the business a Launch Score based on things like traction, growth, product, and potential.",
+      "journalist_publication": "Independent (bi-weekly founder series, 'Built From Scratch')",
+      "category": "Founders / SaaS / AI Tools / Startup Profile",
+      "deadline": "Open (recurring series)",
+      "contact_method": "Comment on the original post with a short description of the business",
+      "relevance": "medium",
+      "relevance_notes": "A founder-profile slot, not a pricing story — but it is an easy, low-cost brand mention and it explicitly asks for the unpolished version (what is not working), which suits an honest independent directory. Free Stack Audit is a concrete, demonstrable artifact to show a 'what's working' answer with.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: pitch AIToolsEssentials as a bootstrapped independent tool directory that grew out of the overlap problem. Angle: 'what's completely not working' is honest material — the directory earns nothing from rankings, so the keep/cut verdicts are the product. Mention the free Stack Audit as the current traction experiment. Medium priority — brand mention, not a citation play.",
+      "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch"
+    },
+    {
+      "id": 6,
+      "source": "Sourcee.app (Marketing topic)",
+      "query_text": "I'm looking to interview 120 marketing and content leaders about how they review AI-assisted work before it ships. Specifically: who defines the brief, who checks brand voice, where the human sign-off happens, and what gets sent back for revision. 20 minutes. No pitch.",
+      "journalist_publication": "Independent researcher (multi-leader study)",
+      "category": "Marketing / AI Workflow / Review Process",
+      "deadline": "Open (interview recruitment, 20 minutes per leader)",
+      "contact_method": "Comment or DM on the original post",
+      "relevance": "medium",
+      "relevance_notes": "Carried forward from digest-2026-09-10. A research interview rather than a press placement — low direct value, but the study output will describe how teams operationalize AI work, which is useful source material for AIToolsEssentials' own editorial. Only worth the 20 minutes if the queue is clear.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted: participate as a practitioner who reviews AI-assisted output daily. Frame the overlap angle: the same tool-selection question ('which tool for which job') is what makes a review process work or fail. Low-medium priority — contributes data, earns no citation directly.",
+      "url": "https://www.sourcee.app/journo-request/marketing-and-content-leaders-aiassisted-work-review-process"
+    }
+  ],
+  "previously_reported_still_relevant": [
+    {
+      "id": "prev-1",
+      "source": "Sourcee.app (Financial Times outlet page — re-verified this run)",
+      "query_text": "Financial Times commissioned article on how management consulting firms leaning on AI face client demands for fee reductions. Looking for: UK businesses demanding fee cuts, UK management consulting firms, and an AI/tech expert with deep knowledge of how consulting firms use AI.",
+      "journalist_publication": "Financial Times",
+      "status": "not_visible_on_current_ft_page",
+      "relevance": "high",
+      "notes": "Reported in digest-2026-09-09 and 2026-09-10. I re-checked the FT outlet page this run using the correct path (/media-outlets/financial-times/journo-requests) and the consulting-fee query no longer appears — the current FT list is Merlin app users, Canadian US-boycott, eSIM market research, long notice periods, and Renters' Rights. The page now renders properly (the previous 'minimal content' issue was a wrong URL, not a login wall). Treat the consulting-fee request as expired or rotated off unless it reappears. Do not pitch on the basis of this digest."
+    },
+    {
+      "id": "prev-2",
+      "source": "Sourcee.app (Forbes outlet page — re-verified this run)",
+      "query_text": "Forbes: Where Business Leaders Focus Their Tech Budgets As Tech Stock Market Volatility Persists. Looking for expert sources to provide clear signals for business owners and decision-makers to navigate the current landscape and plan for 2027.",
+      "journalist_publication": "Forbes",
+      "status": "not_visible_on_current_forbes_page",
+      "relevance": "high",
+      "notes": "Reported in digest-2026-09-09 and 2026-09-10. Re-checked this run via /media-outlets/forbes/journo-requests; the current Forbes list is travel, employment law, and Medicaid/ABA payments. The tech-budgets-for-2027 query has rotated off. Treat as expired unless it reappears."
+    },
+    {
+      "id": "prev-3",
+      "source": "Sourcee.app (Startups topic page)",
+      "query_text": "SME Owners - Operational Challenges for AI Solutions. 'As subscription models that worked for SaaS are starting to fracture... I'm on a mission to collect 10 real SME operational problems that AI could solve.'",
+      "journalist_publication": "Independent (LinkedIn content creator/researcher)",
+      "status": "not_re-verified",
+      "relevance": "medium",
+      "notes": "Reported in digest-2026-09-09. Did not resurface in this run's sitemap scan. The SaaS-subscription-fracturing angle still maps to AIToolsEssentials' pricing-shift coverage. Unverified — do not treat as active without a fresh check."
+    },
+    {
+      "id": "prev-4",
+      "source": "Sourcee.app (X #journorequest)",
+      "query_text": "UK Managers - Cracked Down on Gen Z AI Overuse. Looking to talk to UK managers who've cracked down on their Gen Z team members for overusing AI... This is for a UK national newspaper and I'm keen to hear from you by the end of the week.",
+      "journalist_publication": "UK national newspaper (via Pitch to Published newsletter)",
+      "status": "expired",
+      "relevance": "medium-high",
+      "notes": "Reported in digest-2026-09-10 with an end-of-week (Sept 12-13) deadline. Page still live on Sourcee but posted 2026-09-07 with an explicit end-of-week cutoff — treat as closed. The same post's second request (money expert on Gen Z finances) had a hard Sept 9 deadline and is long expired. Do not pitch."
+    },
+    {
+      "id": "prev-5",
+      "source": "Sourcee.app (aggregated from X #journorequest, Marketing topic)",
+      "query_text": "Forbes: Looking for experts in dynamic pricing and other related strategies. AI dynamic pricing, surge pricing, surveillance pricing. Interviews by Wednesday.",
+      "journalist_publication": "Forbes (online)",
+      "status": "expired",
+      "relevance": "medium-high",
+      "notes": "Reported in digest-2026-09-08. Wednesday deadline has passed. Do not pitch."
+    }
+  ],
+  "new_this_run": [
+    "Science Magazine — scientists/PhD students/postdocs paying for their own AI subscriptions (NEW, high relevance, top-tier outlet)",
+    "AI Startups — workplace fraud detection, expenses and time theft (NEW, medium relevance)",
+    "Built From Scratch founder series — early-stage SaaS/AI tool founders (NEW, medium relevance)",
+    "Medialyst MCP free multi-platform journo-request feed discovered (NEW infrastructure finding — needs interactive OAuth)"
+  ],
+  "carried_forward_still_live": [
+    "FinOps agentic AI cost overruns (high — open, third run surfacing)",
+    "Enterprise AI agent sprawl and cost visibility (high — open)",
+    "Marketing/content leaders AI review process study (medium — open)"
+  ],
+  "expired_this_run": [
+    "FT management-consulting AI fee reductions (rotated off FT page)",
+    "Forbes tech budgets for 2027 (rotated off Forbes page)",
+    "UK managers Gen Z AI overuse (end-of-week deadline passed)",
+    "Forbes dynamic pricing (Wednesday deadline passed)",
+    "SME owners operational AI challenges (not re-verified, treat as stale)"
+  ],
+  "summary": "Three high-relevance opportunities are live and should be pitched today. The strongest is the FinOps agentic-AI-cost-overrun request (#1) — it is the core AIToolsEssentials problem, open, and has now surfaced three runs running, so the window is likely narrowing. The best outlet is Science Magazine (#2), which wants individual scientists paying out of pocket for AI subscriptions; that is a data-supply play, not a quote play, and a citation in Science is worth more than a quote in a trade publication. The enterprise agent-sprawl request (#3) stays live and directly names cost visibility. Two new medium-relevance items this run: an AI-fraud/expense request (#4) and a founder-profile series (#5). Two previously high-ranked opportunities must now be retired — the FT consulting-fee request and the Forbes tech-budgets request have both rotated off their outlet pages, which I could finally read properly this run after discovering the correct URL path (/media-outlets/<slug>/journo-requests); the earlier 'login wall' diagnosis was a wrong-URL artifact and is corrected here. Access did not improve overall: HARO is email-gated behind Cloudflare, Connectively requires login (though it is healthy — 100k+ users as of June 2026, and the stale 'platform closed' notice refers to the 2024 Cision shutdown, not the current Featured-owned service), Qwoted requires login, MentionMatch is still pre-launch, and X search is out of credits for the third consecutive run. The real fix is the newly found Medialyst MCP (medialyst.ai/api/mcp) — a free, read-only feed that normalizes Connectively, HARO, X, LinkedIn, MentionMatch and Substack with hourly polling. It needs an interactive OAuth handshake (hermes mcp add --auth oauth), which cannot be done from cron; once authorized it would replace sitemap-scraping Sourcee with a structured, authenticated feed and would likely catch requests in hours instead of days. Recommend George authorizes it. Sourcee remained the workhorse: I pulled its full 40,717-URL sitemap and date-sorted in code rather than browsing topic pages, which is both faster and more complete.",
+  "recommended_actions": [
+    "Pitch #1 (FinOps agentic AI cost overruns) today — open, high fit, window narrowing after three runs",
+    "Pitch #2 (Science Magazine) as a data-supply offer rather than a quote request — top-tier outlet",
+    "Pitch #3 (enterprise agent sprawl) — open, high fit, names cost visibility explicitly",
+    "Retire the FT consulting-fee and Forbes tech-budgets requests from the active queue (rotated off)",
+    "George to authorize the Medialyst MCP via hermes mcp add --auth oauth (interactive only) — highest-leverage access improvement available",
+    "George to consider a HARO subscription inbox if a public HARO feed is wanted; it stays email-only"
+  ],
+  "monitor_health": {
+    "status": "degraded_but_working",
+    "working": ["Sourcee.app (sitemap + per-request pages)", "Sourcee outlet pages (Forbes, FT)"],
+    "blocked": ["HARO (email/Cloudflare)", "Connectively (login)", "Qwoted (login)", "MentionMatch (pre-launch)", "X search (credits exhausted)", "Medialyst MCP (OAuth needed)"],
+    "recommendation": "Authorize Medialyst MCP. It is free, read-only, covers six platforms, and would remove the X-credits and Connectively-login dependencies in one step."
+  }
+}
