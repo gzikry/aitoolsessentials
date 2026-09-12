@@ -49,7 +49,7 @@
     "trial_checklist": "Use a real task involving voiceovers—not a demo prompt. Verify whether realistic tts voice generation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to voice rights and consent matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "ElevenLabs scores 4.6/5 as an editorial product assessment in Audio & Video. Strengths recorded: High-quality voices; Broad audio toolkit. Factors — job fit 5/5, output quality 5/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 5/5, operational cost 4/5. Pricing reads \"Free + paid plans\". Main trade-offs: Voice rights and consent matter; Costs scale with usage. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - voice generation, dubbing, narration, and voice agents cover several repeated production jobs in one platform. Output quality 5 - its voices are the reference point competitors get measured against, and the developer tooling is production-grade. Adoption 4 - self-serve plans and a broad creator ecosystem lower the start, though voice cloning and rights workflows carry their own setup. Cost 4 - usage-scaled pricing makes heavy dubbing or agent volume expensive, so the entry tier is best treated as evaluation. Held below 4.7 because cost predictability, not capability, is the ceiling."
   },
   {
     "slug": "descript",
@@ -99,7 +99,7 @@
     "trial_checklist": "Use a real task involving podcast editing—not a demo prompt. Verify whether edit video/audio by editing the transcript text materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced video work may need dedicated tools. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Descript scores 4.3/5 as an editorial product assessment in Audio & Video. Strengths recorded: Fast editing workflow; Good creator features. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Advanced video work may need dedicated tools; Review exports carefully. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - editing audio and video by editing the transcript is a genuinely different workflow that suits podcast and talking-head production. Output quality 4 - cleanup and filler-word removal are reliable, but finished video polish is not its strength. Adoption 5 - if you can edit a document you can use this, which is why it beats most editors on time-to-first-result. Cost 4 - the free tier and creator plans are reasonable, but advanced features sit on higher tiers. Capped at 4.3 because complex video work still needs a dedicated editor alongside it."
   },
   {
     "slug": "make",
@@ -151,7 +151,7 @@
     "trial_checklist": "Use a real task involving operations automation—not a demo prompt. Verify whether visual scenario builder with branching logic materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more complex than simple zaps so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Make scores 4.3/5 as an editorial product assessment in Automation. Strengths recorded: Flexible visual builder; Good multi-step control. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: More complex than simple zaps; Requires testing and monitoring. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - multi-step operational routing with AI steps covers recurring back-office work. Output quality 4 - the visual scenario builder exposes real control over branching and error handling that simpler tools hide. Adoption 3 - the flexibility is the cost: scenarios need testing and monitoring, and the learning curve is steeper than the one-trigger products. Cost 4 - operations-based pricing is fair at moderate volume but scales with task count. Below Zapier AI because fewer teams already know it, so adoption carries the discount."
   },
   {
     "slug": "zapier-ai",
@@ -203,7 +203,7 @@
     "trial_checklist": "Use a real task involving lead routing—not a demo prompt. Verify whether ai actions: gpt/claude steps inside any automation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex workflows need testing so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Zapier AI scores 4.4/5 as an editorial product assessment in Automation. Strengths recorded: Huge app ecosystem; Practical business workflows. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Complex workflows need testing; Costs scale with task volume. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - connecting apps and removing manual handoffs is the most common automation job there is. Output quality 4 - the generated workflows are practical rather than clever, which is the right bias for business routing. Adoption 5 - the largest app integration set plus low-code setup means most teams can ship a working zap the same day. Cost 3 - task-based pricing gets expensive at volume, and heavy multi-step flows consume tasks quickly. The 4.4 reflects capability minus cost predictability."
   },
   {
     "slug": "n8n",
@@ -255,7 +255,7 @@
     "trial_checklist": "Use a real task involving internal automations—not a demo prompt. Verify whether open source — self-host for unlimited runs at zero cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to more technical setup so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "n8n scores 4.3/5 as an editorial product assessment in Automation. Strengths recorded: Highly flexible; Self-host option. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free self-hosted + paid cloud\". Main trade-offs: More technical setup; Governance and maintenance required. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - deep workflow control and self-hosting suit technical teams with unusual routing or data-residency needs. Output quality 4 - once built, the automations are as robust as the code you put in them. Adoption 2 - this is a builder's tool: self-hosting means you own upgrades, secrets, and monitoring. Cost 5 - free self-hosted removes per-task pricing entirely, which is the whole reason a team picks it. Scored 4.3 rather than higher because the adoption burden is real and ongoing."
   },
   {
     "slug": "adobe-firefly",
@@ -307,7 +307,7 @@
     "trial_checklist": "Use a real task involving commercial creative—not a demo prompt. Verify whether trained on licensed adobe stock — commercially safest output materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for adobe users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Adobe Firefly scores 4.4/5 as an editorial product assessment in Creative. Strengths recorded: Adobe ecosystem fit; Commercial creative orientation. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans / Adobe plans\". Main trade-offs: Best value for Adobe users; Creative review still required. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - commercially oriented image generation inside Adobe workflows removes a licensing anxiety that makes other generators hard to use at work. Output quality 4 - strong enough for design assets, trained on licensed material, though it trails the aesthetic leaders. Adoption 4 - genuinely easy for existing Creative Cloud users and awkward for everyone else. Cost 4 - credit tiers are reasonable, but the best value only lands if you already pay for Adobe. Held at 4.4 because non-Adobe users get less for the same money."
   },
   {
     "slug": "leonardo-ai",
@@ -359,7 +359,7 @@
     "trial_checklist": "Use a real task involving concept art—not a demo prompt. Verify whether fine-tune custom models on your own image sets materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires visual direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Leonardo AI scores 4.3/5 as an editorial product assessment in Creative. Strengths recorded: Strong creative controls; Good for asset workflows. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Requires visual direction; Advanced workflows take practice. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - asset production and controlled image generation for game, product, and concept work is a repeatable need. Output quality 4 - the creative controls and presets produce usable assets faster than prompting from scratch, though results still need a director's eye. Adoption 4 - a usable free tier and presets lower the start, but advanced workflows take real practice. Cost 4 - credit pricing is competitive. Held at 4.3 because output quality depends heavily on the operator's visual direction rather than the tool carrying the work."
   },
   {
     "slug": "aibase",
@@ -425,7 +425,7 @@
     "trial_checklist": "Start with the free credits and run one real task from your own content calendar — an image you'd actually publish plus one short video. Count credits consumed: if your typical work burns through the Basic plan in a week, do the math against Pro/Ultimate before subscribing. Confirm the model picker shows you which underlying provider is running (Nano Banana vs Veo vs Seedance) so you know whose terms actually apply. Cross-check output ownership and acceptable-use against your client's brand rules before going commercial.",
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
-    "rating_rationale": "AIBase scores 4.0/5 as an editorial product assessment in Creative. Strengths recorded: Free starter credits to try before paying; Transparent per-task credit pricing — image ~12–46 credits ($0.05–$0.18), 5s video 150–380 credits ($0.60–$1.52). Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free trial credits + paid plans ($29.9/mo Basic, $49.9/mo Pro, $99.9/mo Ultimate; yearly 20–40% off; pay-as-you-go credit packs available)\". Main trade-offs: AIBase is not affiliated with the underlying model providers — it's a wrapper, not a model; Credits-based pricing makes total monthly cost harder to predict than flat plans. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 3 - consolidating several third-party image and video models behind one credit balance solves subscription sprawl for indie creators. Output quality 4 - output quality is inherited from whichever model runs, and the model list is current. Adoption 3 - transparent per-task credit costs help, but credit-based pricing makes total monthly spend harder to predict than a flat plan. Cost 3 - the published per-task rates are fair, yet the models you most want are gated to yearly plans or credit packs. Below 4.1 because it is a wrapper, not a model: it adds convenience, not capability."
   },
   {
     "slug": "midjourney",
@@ -477,7 +477,7 @@
     "trial_checklist": "Use a real task involving ad concepts—not a demo prompt. Verify whether strong aesthetic controls for stylized and concept imagery materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to workflow differs from standard design tools. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Midjourney scores 4.5/5 as an editorial product assessment in Creative. Strengths recorded: Beautiful default aesthetics; Great exploration speed. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Paid plans\". Main trade-offs: Workflow differs from standard design tools; Requires human art direction. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - brand visuals, concept art, and moodboards are exactly the work it was built for, and teams return to it constantly. Output quality 5 - the default aesthetics are the strongest in the category, which is why it keeps winning on taste rather than features. Adoption 3 - the Discord-first workflow does not match standard design tools, and results need human art direction. Cost 3 - paid-only, with no free tier to evaluate before committing. Still 4.5 because nothing else produces this quality this quickly."
   },
   {
     "slug": "canva-ai",
@@ -527,7 +527,7 @@
     "trial_checklist": "Use a real task involving social posts—not a demo prompt. Verify whether magic design generates full layouts from a prompt materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to advanced control is limited so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Canva AI scores 4.4/5 as an editorial product assessment in Creative. Strengths recorded: Accessible editor; Useful templates. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Advanced control is limited; Outputs can feel templated. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - branded social, presentation, and marketing assets are the highest-volume design work in most businesses. Output quality 4 - good enough for everyday production, templated by design. Adoption 5 - the most accessible editor in this set; non-designers ship something presentable without training. Cost 4 - the free tier is genuinely useful and paid plans are modest. Held at 4.4 because advanced control is limited and outputs can look like the template they came from."
   },
   {
     "slug": "bolt-new",
@@ -579,7 +579,7 @@
     "trial_checklist": "Use a real task involving rapid prototypes—not a demo prompt. Verify whether prompt-to-full-stack app in browser (no local setup) materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to production hardening required so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Bolt.new scores 4.2/5 as an editorial product assessment in Development. Strengths recorded: Very fast start; Browser-native building. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Production hardening required; Prompting skill matters. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - prompt-to-working-app prototyping answers a real need for validating an idea before committing engineering time. Output quality 4 - impressive first-pass output for demos, clearly not production code. Adoption 5 - nothing to install, which makes it the fastest path from idea to something shareable. Cost 4 - free tier plus reasonable paid plans. Capped at 4.2 because production hardening is mandatory and prompting skill noticeably changes results."
   },
   {
     "slug": "cursor",
@@ -633,7 +633,7 @@
     "trial_checklist": "Use a real task involving feature prototypes—not a demo prompt. Verify whether tab completion that predicts multi-line edits across files materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to requires engineering review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Cursor scores 4.6/5 as an editorial product assessment in Development. Strengths recorded: Own-model stack: Grok 4.6 + Composer 2.5 give generous included usage at low cost; Full agentic loop: editor agents, cloud agents, Bugbot review, team marketplace. Factors — job fit 5/5, output quality 5/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 5/5, operational cost 4/5. Pricing reads \"Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo\". Main trade-offs: Best features (effort levels, Fast mode, Bugbot) sit above the free plan; Third-party models incur a Cursor Token Rate surcharge on team plans. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - day-to-day editing, refactoring, and code review across a real codebase is the highest-frequency job a developer has. Output quality 5 - the own-model stack (Grok 4.6 and Composer 2.5) gives generous included usage without the per-request surcharges of third-party models. Adoption 4 - familiar VS Code fork, but the agentic features reward learning effort levels and Fast mode. Cost 4 - Pro at $20/month is strong value; the discount reflects usage-based overages and a Token Rate surcharge on team plans."
   },
   {
     "slug": "github-copilot",
@@ -685,7 +685,7 @@
     "trial_checklist": "Use a real task involving code completion—not a demo prompt. Verify whether lives natively in vs code, jetbrains, xcode, and more materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality varies by task so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "GitHub Copilot scores 4.5/5 as an editorial product assessment in Development. Strengths recorded: Broad IDE support; Enterprise options. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Paid plans\". Main trade-offs: Quality varies by task; Can reinforce existing code issues. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - inline completion and chat inside the IDE plus GitHub-native review covers the recurring parts of professional development. Output quality 4 - dependable on routine work, variable on harder tasks, and it can echo problems already present in the codebase. Adoption 5 - the lowest-friction adoption of any coding assistant because it meets teams wherever they already work. Cost 4 - paid-only and enterprise licensing is per-seat, which is where the discount comes from. 4.5 for breadth rather than peak capability."
   },
   {
     "slug": "lovable",
@@ -737,7 +737,7 @@
     "trial_checklist": "Use a real task involving mvp prototypes—not a demo prompt. Verify whether chat-to-app with instant visual preview materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to generated apps need technical review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Lovable scores 4.2/5 as an editorial product assessment in Development. Strengths recorded: Fast product ideation; Good for nontraditional builders. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Generated apps need technical review; Scaling requires engineering discipline. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - turning a prompt into a designed, shareable product surface suits founders and non-engineers validating an interface. Output quality 4 - visually stronger than most prompt-to-app tools, but generated apps need technical review before real users touch them. Adoption 5 - accessible to people who have never set up a dev environment, which is its main audience. Cost 4 - free tier plus affordable paid plans. Held at 4.2 because scaling anything generated here still requires engineering discipline."
   },
   {
     "slug": "replit-ai",
@@ -789,7 +789,7 @@
     "trial_checklist": "Use a real task involving web prototypes—not a demo prompt. Verify whether full ide + hosting + database in one platform materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex production work needs engineering review. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Replit AI scores 4.3/5 as an editorial product assessment in Development. Strengths recorded: Browser-based workflow; Good for prototypes. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Complex production work needs engineering review; Platform fit matters. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - prototyping, explaining, and debugging in the browser covers learning and early-stage building in one place. Output quality 4 - competent assistance for browser-scale projects. Adoption 5 - no local setup, and beginners can be productive immediately, which is rare. Cost 4 - free tier with paid plans for heavier use. Capped at 4.3 because production-grade work needs engineering review and the platform fit constrains where projects can go."
   },
   {
     "slug": "v0",
@@ -841,7 +841,7 @@
     "trial_checklist": "Use a real task involving ui components—not a demo prompt. Verify whether generates production-grade react/tailwind/shadcn ui materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs integration into real codebase so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "v0 scores 4.3/5 as an editorial product assessment in Development. Strengths recorded: Strong UI generation; Modern frontend focus. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Needs integration into real codebase; Not a full product process alone. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - generating UI components and React patterns answers a specific, frequent frontend need. Output quality 5 - the strongest UI generation in this set, producing modern component code rather than screenshots. Adoption 4 - fast to get value if you already work in React and Vercel's ecosystem. Cost 4 - free tier plus reasonable paid plans. Held at 4.3 because output still has to be integrated into a real codebase and it is not a full product process on its own."
   },
   {
     "slug": "chatgpt",
@@ -893,7 +893,7 @@
     "trial_checklist": "Use a real task involving content drafts—not a demo prompt. Verify whether multimodal input: text, images, files, and voice in one conversation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs review for factual claims so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "ChatGPT scores 4.8/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Broad capability; Fast iteration. Factors — job fit 5/5, output quality 5/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 5/5, operational cost 4/5. Pricing reads \"Free + paid plans\". Main trade-offs: Needs review for factual claims; Team governance depends on plan. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - drafting, analysis, brainstorming, and coding help across a huge range of tasks makes it the default generalist. Output quality 5 - broad capability with fast iteration and a large integration ecosystem around it. Adoption 5 - the interface is now the reference point for everyone else, so almost no user needs training. Cost 4 - the free tier is capable and paid plans are competitive, but team governance and controls depend on tier. Scored 4.8; factual claims still need checking, which is the honest ceiling."
   },
   {
     "slug": "claude",
@@ -945,7 +945,7 @@
     "trial_checklist": "Use a real task involving document analysis—not a demo prompt. Verify whether projects that keep context, files, and instructions organized per workstream materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to can still miss details so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Claude scores 4.7/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Excellent writing quality; Strong long-context work. Factors — job fit 5/5, output quality 5/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 5/5, operational cost 4/5. Pricing reads \"Free + paid plans\". Main trade-offs: Can still miss details; External integrations vary. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - editing, long-context analysis, and turning messy notes into structured output is where it is most often reached for. Output quality 5 - the writing quality and careful tone are distinctive, and long-document work holds together better than most rivals. Adoption 4 - easy to start; the ceiling is that external integrations vary by plan and ecosystem. Cost 4 - competitive tiers, though the heaviest long-context use consumes limits quickly. Held at 4.7 because it can still miss details in a long document - a real limitation, not a nitpick."
   },
   {
     "slug": "deepseek",
@@ -1005,7 +1005,7 @@
     "trial_checklist": "Use a real task involving coding—not a demo prompt. Verify whether frontier-level reasoning at a fraction of rival cost materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to teams need data and compliance review. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "DeepSeek scores 4.3/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Strong technical interest; Good for model evaluation. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + API pricing\". Main trade-offs: Teams need data and compliance review; Availability/performance can vary. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - reasoning and coding work with strong price-performance is a real draw for teams watching inference costs. Output quality 4 - technically credible, which is why it keeps appearing in model comparisons. Adoption 3 - teams need data, compliance, and hosting review before anything sensitive goes near it, and availability or performance can vary. Cost 5 - API pricing is among the most aggressive available. Scored 4.3 because governance, not capability, gates real adoption."
   },
   {
     "slug": "gemini",
@@ -1057,7 +1057,7 @@
     "trial_checklist": "Use a real task involving google workspace drafting—not a demo prompt. Verify whether deep integration with gmail, docs, sheets, and drive materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best features depend on account/plan so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Gemini scores 4.6/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Google ecosystem integration; Strong multimodal direction. Factors — job fit 5/5, output quality 5/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 5/5, operational cost 4/5. Pricing reads \"Free + paid plans\". Main trade-offs: Best features depend on account/plan; Workspace controls matter for teams. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - multimodal work inside Docs, Gmail, and Android means it fits where many teams already operate rather than adding a tab. Output quality 4 - strong multimodal direction with capable text work, though it trails Claude on long-form editing. Adoption 5 - consumer accessibility is excellent and the Google integration removes setup entirely. Cost 4 - free tier plus paid plans, but the best features depend on account and plan type. 4.6 reflects ecosystem fit rather than being the best assistant in isolation."
   },
   {
     "slug": "grok",
@@ -1122,7 +1122,7 @@
     "trial_checklist": "Use a real task involving current-event research—not a demo prompt. Verify whether real-time x (twitter) data in answers materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to enterprise workflows still need policy review. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Grok scores 4.5/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Newest-model velocity: Grok 4.5/4.6 shipped within weeks of each other in mid-2026; Unique product breadth: coding agent, app builder, always-on bots, voice, image/video in one subscription. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo; API from $1–$6 per 1M tokens\". Main trade-offs: 500K context on Grok 4.5/4.6 is smaller than some rivals' windows; Build Mode is early beta and gated to top SuperGrok tiers at launch. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - newest-model velocity plus unusual product breadth: coding agent, app builder, always-on bots, voice, and image/video in one subscription. Output quality 4 - Grok 4.6 is genuinely frontier, and real-time information access is distinctive. Adoption 3 - Build Mode was early beta gated to top tiers at launch, and enterprise workflows need policy review. Cost 4 - SuperGrok at $30/month is competitive for the breadth. Held at 4.5 because the fastest-moving surface is also the least settled for business use."
   },
   {
     "slug": "meta-ai",
@@ -1178,7 +1178,7 @@
     "trial_checklist": "Use a real task involving consumer assistant tasks—not a demo prompt. Verify whether embedded in whatsapp, instagram, messenger, and ray-ban glasses materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to business workflows are less mature so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Meta AI scores 4.1/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Wide consumer reach; Free access. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free\". Main trade-offs: Business workflows are less mature; Privacy review needed for sensitive work. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 3 - consumer chat, image generation, and social contexts are useful but less tied to a repeated business workflow. Output quality 3 - adequate for everyday tasks, not a specialist. Adoption 5 - free and reachable across Meta surfaces, which makes it the lowest-friction assistant for casual use. Cost 5 - no cost at all. Scored 4.1 because business workflows are immature and sensitive work needs a privacy review before it should be used."
   },
   {
     "slug": "mistral-le-chat",
@@ -1238,7 +1238,7 @@
     "trial_checklist": "Use a real task involving general chat—not a demo prompt. Verify whether fastest response streaming in category testing materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to ecosystem smaller than incumbents so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Mistral Le Chat scores 4.2/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Fast model family; European AI option. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Ecosystem smaller than incumbents; Workflow integrations vary. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - general chat, reasoning, writing, and coding help against Mistral's own model family covers standard assistant work. Output quality 4 - fast and competent, though not the leader on hardest tasks. Adoption 4 - clean interface and a developer-friendly ecosystem around the models. Cost 4 - free tier plus modest paid plans. Held at 4.2 because the ecosystem and integration surface is smaller than the incumbents, which matters more as usage deepens."
   },
   {
     "slug": "copy-ai",
@@ -1298,7 +1298,7 @@
     "trial_checklist": "Use a real task involving sales copy—not a demo prompt. Verify whether gtm-focused: sales email sequences, prospecting workflows materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to quality depends on inputs so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Copy.ai scores 4.1/5 as an editorial product assessment in Creative. Strengths recorded: GTM workflow positioning; Useful templates. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Quality depends on inputs; Needs brand review. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - marketing and sales content workflows including GTM process support is more than a copy generator, which is why teams keep it. Output quality 3 - output quality depends heavily on the brief and needs brand review before publishing. Adoption 4 - templates make the first useful output quick. Cost 4 - free tier plus reasonable paid plans. Scored 4.1 because it is a workflow tool whose raw writing quality is not the reason to choose it."
   },
   {
     "slug": "jasper",
@@ -1350,7 +1350,7 @@
     "trial_checklist": "Use a real task involving marketing copy—not a demo prompt. Verify whether brand voice trained on your existing content materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best value for active content teams. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Jasper scores 4.2/5 as an editorial product assessment in Creative. Strengths recorded: Marketing workflow focus; Brand controls. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Paid plans\". Main trade-offs: Best value for active content teams; Outputs still need editors. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - brand voice, campaign assets, and content operations for marketing teams is a genuinely team-shaped job. Output quality 4 - brand controls are the differentiator, keeping multi-author output consistent. Adoption 4 - team-oriented setup is straightforward where a content function already exists. Cost 3 - paid-only, and the value only lands for active content teams, which is the discount. 4.2 because outputs still need an editor."
   },
   {
     "slug": "fathom",
@@ -1402,7 +1402,7 @@
     "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether unlimited free meeting recording + transcription materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to consent and privacy policies matter so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Fathom scores 4.3/5 as an editorial product assessment in Meetings. Strengths recorded: Fast meeting summaries; Good sharing workflow. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid team plans\". Main trade-offs: Consent and privacy policies matter; Integrations should be checked. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - recording calls, summarizing them, and sharing highlights is a recurring need in any client-facing role. Output quality 4 - summaries are fast and reliable, and the sharing workflow is better than exporting transcripts. Adoption 5 - install it and it works; almost no setup friction. Cost 4 - free tier plus team plans, though team features are where the value sits. Held at 4.3 because consent and privacy policy need deliberate review before recording clients."
   },
   {
     "slug": "fireflies",
@@ -1454,7 +1454,7 @@
     "trial_checklist": "Use a real task involving meeting archive—not a demo prompt. Verify whether auto-joins zoom, meet, and teams calls materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs clear recording policy so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Fireflies.ai scores 4.2/5 as an editorial product assessment in Meetings. Strengths recorded: Searchable meeting history; Broad meeting support. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Needs clear recording policy; Transcript quality varies by audio. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - searchable meeting history across many platforms is the real capability here; it answers questions weeks after a call. Output quality 4 - broad meeting support and useful summaries, with transcript quality tracking audio conditions. Adoption 4 - easy to join meetings, but a clear recording policy has to exist first. Cost 4 - free tier plus paid plans. Scored 4.2 because value depends on team-wide adoption rather than individual use."
   },
   {
     "slug": "otter-ai",
@@ -1506,7 +1506,7 @@
     "trial_checklist": "Use a real task involving sales calls—not a demo prompt. Verify whether live transcription during meetings with highlighting materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sensitive meetings need policy review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Otter.ai scores 4.2/5 as an editorial product assessment in Meetings. Strengths recorded: Easy meeting capture; Useful summaries. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Sensitive meetings need policy review; Transcript accuracy depends on audio. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - capture, summarize, and extract follow-ups is the standard meeting-notes job and it does all three. Output quality 4 - summaries are useful and notes are shareable, with accuracy tracking audio quality. Adoption 5 - the easiest capture in this set, which is why it spreads bottom-up. Cost 4 - free tier plus paid plans. Capped at 4.2 because sensitive meetings need policy review and transcript accuracy is input-dependent."
   },
   {
     "slug": "poe",
@@ -1566,7 +1566,7 @@
     "trial_checklist": "Use a real task involving model comparison—not a demo prompt. Verify whether access dozens of models in one app materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to not a dedicated workflow system so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Poe scores 4.2/5 as an editorial product assessment in General AI Assistant. Strengths recorded: Many models in one place; Easy experimentation. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Not a dedicated workflow system; Availability depends on provider access. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 3 - comparing assistants and testing specialized bots is valuable during evaluation but is not a daily production workflow. Output quality 4 - output quality tracks whichever model you route to, and access to many of them in one place is the point. Adoption 5 - easy experimentation with no per-provider setup. Cost 4 - free tier plus paid plans. Held at 4.2 because it is a comparison surface rather than a system you build a process on."
   },
   {
     "slug": "gamma",
@@ -1618,7 +1618,7 @@
     "trial_checklist": "Use a real task involving pitch decks—not a demo prompt. Verify whether prompt-to-deck in under a minute with real design materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to important decks still need design review. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Gamma scores 4.3/5 as an editorial product assessment in Productivity. Strengths recorded: Fast deck creation; Modern layouts. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Important decks still need design review; Brand control may require paid plans. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - turning an idea into a presentable deck quickly is a high-frequency task for anyone who presents. Output quality 4 - modern layouts and good first drafts, with brand control improving on paid plans. Adoption 5 - the fastest path from outline to something you can send. Cost 4 - free tier plus affordable paid plans. Held at 4.3 because important decks still need design review and it is not a substitute for real brand systems."
   },
   {
     "slug": "airtable-ai",
@@ -1670,7 +1670,7 @@
     "trial_checklist": "Use a real task involving crm enrichment—not a demo prompt. Verify whether ai fields generate/enrich data per record automatically materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best for airtable users so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Airtable AI scores 4.2/5 as an editorial product assessment in Productivity. Strengths recorded: Works with structured data; Good for operations teams. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Paid plan availability varies\". Main trade-offs: Best for Airtable users; Requires careful field design. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - summarizing records, categorizing data, and drafting inside operational tables suits operations teams with structured data. Output quality 3 - useful transformations, with results bounded by how well the fields were designed. Adoption 3 - only pays off if you already run on Airtable, and it requires careful field design to work well. Cost 3 - AI availability varies by plan, which makes budgeting uncertain. 4.2 reflects strong fit for a specific population rather than broad value."
   },
   {
     "slug": "microsoft-copilot",
@@ -1722,7 +1722,7 @@
     "trial_checklist": "Use a real task involving office documents—not a demo prompt. Verify whether drafts and rewrites inside word with document context materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on microsoft stack adoption. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Microsoft Copilot scores 4.5/5 as an editorial product assessment in Productivity. Strengths recorded: Microsoft 365 fit; Enterprise controls. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Value depends on Microsoft stack adoption; Licensing can be complex. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - workplace search, writing, meetings, and enterprise software workflows inside Microsoft 365 is where a large share of office work happens. Output quality 4 - dependable across the suite, rarely best-in-class at any single task. Adoption 5 - a familiar interface and existing tenant controls mean IT can deploy it without a change-management project. Cost 3 - licensing is genuinely complex and the value depends on how much of the stack you already own. 4.5 on integration strength."
   },
   {
     "slug": "notion-ai",
@@ -1774,7 +1774,7 @@
     "trial_checklist": "Use a real task involving meeting notes—not a demo prompt. Verify whether writing, summarizing, and translating inside your docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to best if notion is already your workspace. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Notion AI scores 4.3/5 as an editorial product assessment in Productivity. Strengths recorded: Works where docs live; Good for teams already in Notion. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Paid add-on / included in some plans\". Main trade-offs: Best if Notion is already your workspace; Not a full research system alone. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - summarizing docs, drafting pages, and searching existing knowledge works precisely because it sits where the docs already live. Output quality 4 - competent writing and useful summaries, though not a dedicated research system. Adoption 5 - zero migration cost if Notion is already your workspace, which is the whole argument. Cost 4 - a paid add-on or bundled depending on plan. Scored 4.3 because it is only worth it if you are already in Notion."
   },
   {
     "slug": "slack-ai",
@@ -1826,7 +1826,7 @@
     "trial_checklist": "Use a real task involving channel summaries—not a demo prompt. Verify whether channel and thread summaries catch you up instantly materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to value depends on slack adoption so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Slack AI scores 4.1/5 as an editorial product assessment in Productivity. Strengths recorded: Works in team chat; Good catch-up use case. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Paid add-on / plan availability varies\". Main trade-offs: Value depends on Slack adoption; Knowledge quality depends on team habits. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - summarizing channels and catching up on threads solves the information-overload problem in large workspaces. Output quality 3 - catch-up summaries are useful, but knowledge quality depends entirely on team habits, not the tool. Adoption 4 - nothing to install, it appears where people already talk. Cost 3 - a paid add-on with plan-dependent availability. Scored 4.1 because the value is real but conditional on a well-maintained workspace."
   },
   {
     "slug": "perplexity",
@@ -1878,7 +1878,7 @@
     "trial_checklist": "Use a real task involving competitor scans—not a demo prompt. Verify whether every answer includes numbered source citations materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to sources still need checking so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Perplexity scores 4.6/5 as an editorial product assessment in Research. Strengths recorded: Citations are central; Good for discovery. Factors — job fit 5/5, output quality 5/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 5/5, operational cost 4/5. Pricing reads \"Free + paid plans\". Main trade-offs: Sources still need checking; Less suited to complex workflows alone. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - keeping sources visible while answering is what makes it usable for research rather than just fast. Output quality 5 - citations are central to the design and current-information discovery is genuinely strong. Adoption 5 - works like a search engine, so the learning curve is essentially zero. Cost 4 - free tier plus competitively priced paid plans. Held at 4.6 because sources still need checking and it is not built for complex multi-step workflows alone."
   },
   {
     "slug": "you-com",
@@ -1938,7 +1938,7 @@
     "trial_checklist": "Use a real task involving ai search—not a demo prompt. Verify whether ai search with citations like perplexity materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs source verification so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "You.com scores 4.2/5 as an editorial product assessment in Research. Strengths recorded: Search-first workflow; Useful for discovery. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Needs source verification; Differentiation depends on workflow. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - search-first answers plus multiple assistant modes covers discovery and light productivity work. Output quality 3 - useful answers that need source verification. Adoption 4 - familiar search interface with several modes to explore. Cost 4 - free tier plus paid plans. Scored 4.2 because differentiation depends on finding the one workflow it does better than a pure search engine or a pure assistant."
   },
   {
     "slug": "heygen",
@@ -1990,7 +1990,7 @@
     "trial_checklist": "Use a real task involving sales videos—not a demo prompt. Verify whether 500+ stock avatars, 175+ languages materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to avatar content can feel synthetic so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "HeyGen scores 4.2/5 as an editorial product assessment in Video. Strengths recorded: Business-friendly video workflows; Avatar and translation features. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Avatar content can feel synthetic; Brand review is important. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - avatars, translation, and personalized videos let teams produce presenter-led content at a volume that would otherwise need a studio. Output quality 4 - business-friendly and consistent, with avatar delivery still readable as synthetic. Adoption 4 - templates and translation remove most production setup. Cost 4 - free tier plus paid plans. Held at 4.2 because avatar content needs brand review and no independent benchmark evaluates it as an end-user product."
   },
   {
     "slug": "runway",
@@ -2042,7 +2042,7 @@
     "trial_checklist": "Use a real task involving concept videos—not a demo prompt. Verify whether gen-3 text-to-video with strong motion quality materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to outputs need art direction so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Runway scores 4.2/5 as an editorial product assessment in Video. Strengths recorded: Strong creative capabilities; Rapid ideation. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Outputs need art direction; Commercial workflows require testing. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - generative video, editing, and motion experiments cover ideation through to usable clips. Output quality 4 - strong creative capability and rapid ideation, with results needing art direction. Adoption 4 - video-first toolkit with a workable free tier. Cost 4 - credit pricing with reasonable entry. Scored 4.2 because commercial workflows still require testing before production use, and output consistency varies."
   },
   {
     "slug": "synthesia",
@@ -2094,7 +2094,7 @@
     "trial_checklist": "Use a real task involving training videos—not a demo prompt. Verify whether 230+ ai avatars with natural gestures materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less suited to cinematic creative so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Synthesia scores 4.2/5 as an editorial product assessment in Video. Strengths recorded: Enterprise-friendly; Good training workflows. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Paid plans\". Main trade-offs: Less suited to cinematic creative; Needs governance for avatar use. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - training, enablement, and explainer videos with avatars and templates is a repeated enterprise need, not a one-off. Output quality 4 - enterprise-grade consistency and repeatable templates, deliberately not cinematic. Adoption 4 - straightforward for L&D teams already producing this content. Cost 3 - paid-only with enterprise licensing. Held at 4.2 because it is unsuited to cinematic creative and avatar use needs governance."
   },
   {
     "slug": "grammarly",
@@ -2146,7 +2146,7 @@
     "trial_checklist": "Use a real task involving email polishing—not a demo prompt. Verify whether works everywhere: browser, desktop, office, google docs materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to less powerful for deep research so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Grammarly scores 4.4/5 as an editorial product assessment in Productivity. Strengths recorded: Works across many apps; Low-friction adoption. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Less powerful for deep research; Can over-standardize voice. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - grammar, tone, clarity, and rewriting across everyday business writing is a constant, low-stakes-but-frequent need. Output quality 4 - clear and reliable on exactly that, without overreaching. Adoption 5 - works inside the apps people already write in, which is why adoption is near-total once installed. Cost 4 - a genuinely useful free tier with modest paid plans. Held at 4.4 because it can over-standardize voice and is not built for deep research."
   },
   {
     "slug": "allvideoai",
@@ -2196,7 +2196,7 @@
     "trial_checklist": "Generate the same prompt on two different models inside the workspace and compare quality. Check how many credits your typical video actually consumes, then compute real monthly cost at that volume before picking a plan.",
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
-    "rating_rationale": "AllVideoAI scores 4.2/5 as an editorial product assessment in Video. Strengths recorded: Multiple generation models in one workspace; Credit system shared across models instead of per-tool subscriptions. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free tier + credit plans from $17/month\". Main trade-offs: Credit pricing makes monthly costs usage-dependent; Newer entrant — less community tooling than established generators. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - generating video from prompts or reference images across several models in one workspace solves subscription sprawl for video output. Output quality 4 - quality tracks the model chosen, and the shared credit pool is the real convenience. Adoption 4 - free tier to test before paying, though newer entrants lack the community tooling of established generators. Cost 3 - credit pricing makes monthly spend usage-dependent, and annual billing is pushed via countdown offers. 4.2 because the wrapper adds choice, not capability."
   },
   {
     "slug": "hermes-agent",
@@ -2507,7 +2507,7 @@
     "trial_checklist": "Use only a de-identified or organization-approved test visit. Compare draft-note quality, edit time, template fit, export path, and whether the official plan you actually receive matches the public comparison table. Do not put identifiable patient data into a trial until contracts and compliance review are complete.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Heidi Health scores 4.2/5 as an editorial product assessment in Healthcare. Strengths recorded: Official pricing page lists a free starting plan; Self-serve onboarding is publicly advertised. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid Clinician and Teams plans\". Main trade-offs: Exact regional paid prices were not consistently exposed on the official pricing page during verification; Outputs are drafts and still require clinician review. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - visit notes and related clinical admin is a high-volume workflow for clinicians, and a published free plan plus self-serve onboarding is unusual in this category. Output quality 3 - outputs are drafts that still require clinician review, which is the correct framing. Adoption 4 - self-serve onboarding is publicly advertised rather than sales-gated. Cost 3 - exact regional paid prices were not consistently exposed during verification. 4.2 because verification of security claims is still the buyer's job."
   },
   {
     "slug": "openevidence",
@@ -2557,7 +2557,7 @@
     "trial_checklist": "Ask the same clinical question you would look up in a reference workflow, then open the cited sources directly. Record whether citations resolve, whether the answer stays inside the cited material, and whether your account eligibility matches the official homepage claim.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "OpenEvidence scores 4.3/5 as an editorial product assessment in Healthcare. Strengths recorded: Official homepage states the product is free and unlimited for healthcare professionals; Publicly listed content partnerships with major medical publishers. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free for healthcare professionals, per official homepage\". Main trade-offs: Eligibility, geography, and verification rules can change and should be checked at signup; Cited answers still need primary-source verification. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - finding and citing medical evidence is a specific, repeated clinical need. Output quality 4 - answers cite published sources, with content agreements involving major medical publishers. Adoption 5 - free and unlimited for healthcare professionals per the official homepage, which removes the procurement barrier entirely. Cost 5 - no cost for that audience. Held at 4.3 because eligibility rules can change and cited answers still need primary-source verification."
   },
   {
     "slug": "dragon-copilot",
@@ -2607,7 +2607,7 @@
     "trial_checklist": "If your organization can obtain a sandbox, run the same de-identified encounter through Dragon Copilot and one self-serve scribe. Compare note edit time, EHR placement, admin controls, and the actual quoted license shape. Do not infer a monthly price from reseller blogs.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Microsoft Dragon Copilot scores 4.2/5 as an editorial product assessment in Healthcare. Strengths recorded: Official Microsoft product with documented license types; Role-based physician, nurse, and radiology experiences are publicly described. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Sales-assisted Microsoft licensing; no self-serve public list price\". Main trade-offs: No official self-serve public list price; Procurement goes through Microsoft or a certified partner. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - documentation, information surfacing, and task automation for physicians, nurses, and radiologists is a broad clinical workflow play. Output quality 3 - role-based experiences are documented, but there is no self-serve way to judge quality before procurement. Adoption 2 - no public list price and no free trial; it only works where an organization standardizes on Microsoft. Cost 3 - sales-assisted licensing with no published figure. Scored 4.2 for the organization already inside that stack, while the factors describe what an individual clinician faces today."
   },
   {
     "slug": "harvey",
@@ -2657,7 +2657,7 @@
     "trial_checklist": "If you can obtain a sandbox, run one de-identified research memo and one contract-review task. Record source-check time, privilege/access controls, export ownership, and whether the quote includes the workflow you actually need. Do not upload live client files until counsel and IT approve the vendor.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Harvey scores 4.3/5 as an editorial product assessment in Legal. Strengths recorded: Official site is built for law firms and in-house legal teams; Publicly describes enterprise security controls. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Sales-assisted demo / quote; no self-serve public list price\". Main trade-offs: No official self-serve public price list; Not a fit for a solo lawyer who needs a free trial today. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - firmwide legal research, analysis, and drafting for law firms and in-house teams is a genuine enterprise need. Output quality 4 - built specifically for legal work rather than adapted from a general assistant. Adoption 2 - demo-and-quote only, so an individual lawyer cannot evaluate it at all. Cost 2 - no public price list. The headline 4.3 reflects the intended enterprise buyer, who already expects procurement; the factor scores describe the barrier an individual faces, and the gap between them is deliberate rather than an error. Outputs still need attorney review."
   },
   {
     "slug": "spellbook",
@@ -2707,7 +2707,7 @@
     "trial_checklist": "Use a non-confidential or fully sanitized agreement. Compare first-pass redline quality, playbook fit, Word add-in friction, and export ownership. Ask sales for current retention, training, and SOC/HIPAA terms in writing before a live-matter pilot.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Spellbook scores 4.2/5 as an editorial product assessment in Legal. Strengths recorded: Works in Word instead of a separate chat window; Official positioning is commercial contract work, not generic writing. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Custom per-seat subscription; no public self-serve price list on the official homepage\". Main trade-offs: No official public list price on the homepage during this check; Word-centric workflow is less useful if your practice is not contract-heavy. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - commercial contract review and drafting inside Word suits contract-heavy practice, which is where a lot of billable legal work sits. Output quality 4 - redlining against your own standards is more useful than generic drafting, and public trust language is unusually specific. Adoption 3 - no published list price, and Word-centric design limits value outside contract work. Cost 3 - custom per-seat subscription with no self-serve number. 4.2 because confidentiality claims remain the firm's to verify."
   },
   {
     "slug": "cocounsel",
@@ -2757,7 +2757,7 @@
     "trial_checklist": "If you already have Thomson Reuters access, run the same research question in CoCounsel and in Westlaw directly. Record citation-check time, whether authorities resolve, Word-draft quality, and the actual quoted bundle versus the official starting-at figure.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "CoCounsel Legal scores 4.3/5 as an editorial product assessment in Legal. Strengths recorded: Official product is grounded in Westlaw and Practical Law; An official starting-at price exists for a named Westlaw + CoCounsel Essentials bundle. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Sales-quoted; official Westlaw Advantage with CoCounsel Essentials starts at $415.35/month\". Main trade-offs: Standalone CoCounsel Legal is still quote-configured; A starting-at Westlaw bundle price is not a complete firm quote. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - research, analysis, and drafting grounded in Westlaw content and Practical Law suits firms that already trust that authority. Output quality 4 - grounding in a known legal corpus is the differentiator over general assistants. Adoption 3 - standalone access is quote-configured, though a named Westlaw bundle price does exist. Cost 3 - a starting-at bundle price is not a firm quote. Scored 4.3 because citations and authority still need human checking."
   },
   {
     "slug": "magicschool",
@@ -2807,7 +2807,7 @@
     "trial_checklist": "Run one lesson plan, one family-email draft, and one rubric on de-identified class context. Record whether Free-tier limits block the weekly workflow, whether exports are editable, and whether your school requires a DPA before any student-identifiable use.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "MagicSchool scores 4.3/5 as an editorial product assessment in Education. Strengths recorded: Official pricing page publishes a $0 individual teacher plan; Official Plus prices are public: $12.99 monthly or $8.33/month billed annually. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free $0 for individual teachers; Plus $12.99/mo or $8.33/mo billed annually ($99.96/year); Enterprise custom\". Main trade-offs: Free-plan generation limits apply; Plus is required for unlimited generations; District Enterprise pricing is quote-only. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - classroom-specific tooling for teachers is a focused need that general assistants serve badly. Output quality 4 - built for teaching tasks, with free-plan generation limits kept deliberately explicit. Adoption 5 - a forever-free individual teacher plan is published, which is rare and removes the barrier entirely. Cost 4 - Plus prices are public at $12.99 monthly or $8.33/month annually. Held at 4.3 because district FERPA and COPPA claims need contractual verification."
   },
   {
     "slug": "khanmigo",
@@ -2857,7 +2857,7 @@
     "trial_checklist": "Create a teacher account through the official Khanmigo teachers page. Generate one lesson plan, one quiz with an answer key, and one family newsletter from de-identified class context. Confirm whether your students would need a paid family plan or a district implementation.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Khanmigo scores 4.4/5 as an editorial product assessment in Education. Strengths recorded: Official teacher page states Khanmigo is completely free for teachers; Official learner/family price is public: $4/month or $44/year. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Teacher tools officially free in supported locales; learners/families $4/month or $44/year; district tools by quote\". Main trade-offs: Teacher-free tools do not automatically give students Khanmigo access; Learner and parent subscriptions are limited by official geographic and age rules. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - tutoring and teaching assistance tied to a free core content library is a strong fit for schools already using Khan Academy. Output quality 4 - pedagogically grounded rather than general-purpose, which matters for learner-facing use. Adoption 5 - completely free for teachers per the official teacher page. Cost 4 - $4/month or $44/year for learners and families, which is unusually cheap. Held at 4.4 because teacher-free access does not extend to students and geographic rules apply."
   },
   {
     "slug": "instrumentl",
@@ -2907,7 +2907,7 @@
     "trial_checklist": "Use the official 14-day trial on one real program, not a demo funder. Record match quality, whether AI drafting uses only your uploaded past proposals, export ownership, and the actual billed annual-upfront total versus the advertised monthly equivalent.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Instrumentl scores 4.2/5 as an editorial product assessment in Nonprofit. Strengths recorded: Official pricing page publishes dollar amounts for three self-serve tiers; Official 14-day trial requires no credit card. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Discover $299/mo billed annually ($349 monthly); Pre-Award $499/$579; Full Lifecycle $999/$1,159; Enterprise custom; 14-day free trial\". Main trade-offs: No forever-free plan; the cheapest official path is a paid Discover subscription after the trial; Annual rates are paid upfront, not monthly installments. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - finding, drafting, and managing grants end to end is a real operating need for nonprofits with dedicated development staff. Output quality 3 - AI-assisted proposal drafting appears only from the Pre-Award tier up, so the cheapest tier is discovery only. Adoption 3 - a 14-day trial with no credit card helps, but there is no forever-free plan and annual rates are paid upfront. Cost 2 - $299/month entry is a serious commitment. The headline 4.2 reflects a funded nonprofit with a grants function; the factors show why an unfunded one should not start here."
   },
   {
     "slug": "grantable",
@@ -2957,7 +2957,7 @@
     "trial_checklist": "Start on Free. Load one sanitized past proposal and one public RFP. Record whether 5 messages/day is enough for a weekly cycle, whether exports remain editable, and whether you actually qualify for the 50% nonprofit price before budgeting Starter or Pro.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Grantable scores 4.3/5 as an editorial product assessment in Nonprofit. Strengths recorded: Official pricing page publishes a real free plan, not only a trial; Official 50% nonprofit discount amounts are public for Starter and Pro. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free $0 with 5 chat messages/day; Starter $50/mo; Pro $150/mo; qualifying 501(c)(3)s under ~$500K get 50% off for 1 year ($25/$75)\". Main trade-offs: Free plan is limited to 5 chat messages per day and 10 MB file imports; Nonprofit discount is eligibility-gated and lasts one year unless renewed. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - an AI grant-writing workspace with a genuine free plan suits small nonprofits writing proposals regularly. Output quality 4 - drafting assistance is the core product, and the free tier is a real plan rather than a trial. Adoption 4 - no per-seat fees and a public free plan make it easy to start. Cost 4 - $50/$150 tiers plus a published 50% nonprofit discount for qualifying 501(c)(3)s. Held at 4.3 because the free plan caps at 5 messages a day."
   },
   {
     "slug": "riverside-fm",
@@ -3007,7 +3007,7 @@
     "trial_checklist": "Record one real remote interview on Free first. Measure whether the 2-hour one-off multi-track allowance covers a typical episode, whether watermarked 720p is publishable, and whether Pro's 15 download hours and 14-day trial actually change edit time.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Riverside scores 4.3/5 as an editorial product assessment in Audio & Video. Strengths recorded: Official Free plan is published at $0; Official Pro, Grow, and Webinar dollar amounts are public. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom\". Main trade-offs: Free multi-track recording is a one-off 2-hour allowance, not a monthly reset; Free exports carry a Riverside watermark and max out at 720p. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - remote recording for podcasts and video shows with AI editing, clips, and hosting covers the whole production chain. Output quality 4 - multi-track recording is the strength, and paid tiers remove the free-plan constraints. Adoption 4 - a published $0 plan with a 2-hour one-off multi-track allowance lets you evaluate properly. Cost 4 - public Pro, Grow, and Webinar prices. Held at 4.3 because the free tier does not reset monthly and exports are watermarked."
   },
   {
     "slug": "adobe-enhance-speech",
@@ -3057,7 +3057,7 @@
     "trial_checklist": "Run one noisy 20-minute voice file through Free Enhance Speech. Record whether the 30-minute / 1-hour daily caps block a weekly show, whether branded audiograms are acceptable, and whether Premium's 30-day trial is required for video or bulk work.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Adobe Podcast scores 4.2/5 as an editorial product assessment in Audio & Video. Strengths recorded: Official Free plan publishes usable Enhance Speech and Studio limits; Official Premium trial is 30 days. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free plan with published daily limits; Premium via official 30-day trial — no public USD list price on the plans page during this check\". Main trade-offs: Official plans page did not publish a Premium USD price during this check; Free Enhance Speech is audio-only, 30 minutes per file, 1 hour per day. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 3 - cleanup rather than a full show operating system; most users pair it with a real editor. Output quality 5 - Enhance Speech is close to magic on poor audio and is the reason it gets used at all. Adoption 5 - browser-based with a published free plan and usable limits. Cost 3 - the official plans page did not publish a Premium USD price during verification, which makes budgeting impossible. Scored 4.2 on the strength of one excellent feature."
   },
   {
     "slug": "tenantcloud",
@@ -3107,7 +3107,7 @@
     "trial_checklist": "Run the official 14-day trial on one real unit. Record listing publish time, rent-collection setup, maintenance ticket flow, and export ownership before paying annually.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "TenantCloud scores 4.1/5 as an editorial product assessment in Property Management. Strengths recorded: Official self-serve dollar amounts are public; Official 14-day trial on published plans. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Starter $25/mo or $180/year ($15/mo); Growth $35/$350 ($29/mo); Pro $60/$600 ($50/mo); Business from $100/mo custom; 14-day trial\". Main trade-offs: Not a dedicated AI writing or leasing-agent product; Business pricing is customized above the published $100/month starting point. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - rent, listings, and maintenance in one system suits landlords who have outgrown spreadsheets. Output quality 3 - competent operations software, but it is not a dedicated AI writing or leasing-agent product and listing copy needs fair-housing review. Adoption 4 - public self-serve tier prices and a 14-day trial. Cost 4 - Starter at $25/month, Growth at $35, Pro at $60. Scored 4.1 because Business pricing is customized above the published starting point."
   },
   {
     "slug": "landlord-studio",
@@ -3157,7 +3157,7 @@
     "trial_checklist": "Create a Go account with one sanitized unit. Test listing, rent reminder, and expense entry. If you need bank feeds, use the official 14-day Pro trial and compare export quality before paying $144/year.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "high",
-    "rating_rationale": "Landlord Studio scores 4.2/5 as an editorial product assessment in Property Management. Strengths recorded: Official Go plan is free for up to 3 units; Official Pro and Pro Plus dollar amounts are public. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Go Free for up to 3 units; Pro $12/mo or $144/year; Pro Plus $28/mo or $366/year; 14-day Pro trial\". Main trade-offs: Go is limited to 3 units and one user; Vendor ROI and hours-saved calculators are marketing claims. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - all-in-one bookkeeping and tenancy management for independent landlords is precisely scoped to a real workflow. Output quality 3 - dependable operations tooling; vendor ROI calculators are marketing claims and should be treated as such. Adoption 5 - a free Go plan for up to 3 units and a 14-day Pro trial with no credit card. Cost 5 - $12/month Pro is genuinely low for the category. Held at 4.2 because Go is capped at 3 units and one user."
   },
   {
     "slug": "htmlslides",
@@ -3216,7 +3216,7 @@
     "trial_checklist": "Use a real presentation task — not a demo prompt. Generate a deck from your actual topic using the create-page prompt with an AI agent. Verify whether the HTML deck format (animations, interactions, shareability) materially improves on your current slide workflow. Test sharing via link and embed. Check whether the free tier's 50MB storage and 10 templates are sufficient or if Pro features (video export, Speaker Mode, text editing) are needed. Compare output quality and sharing experience against Gamma or Canva for the same task.",
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
-    "rating_rationale": "HtmlSlides scores 3.9/5 as an editorial product assessment in Productivity. Strengths recorded: Decks are real HTML — animations, interactions, and live content beyond static slides; Plays in the browser with no install required. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + Pro $9.90/mo (launch offer) + credit packs from $1\". Main trade-offs: Newer product with a smaller template marketplace than Gamma or Canva; Pro is a launch offer price — may increase. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 3 - interactive HTML decks suit a specific need (animation, embedding, live content) that static slide tools cannot meet. Output quality 4 - real HTML means the output is more capable than a slide export, playing in the browser with no install. Adoption 4 - free tier plus share, embed, and export paths. Cost 3 - Pro at $9.90/month is a launch offer that may increase, and credits are non-refundable and may expire. 3.9 because the template marketplace is thin and there is no offline mode."
   },
   {
     "slug": "whop-cli",
@@ -3274,7 +3274,7 @@
     "trial_checklist": "Install the CLI and run whop --help to see the full command surface. Use whop products list to verify your existing Whop business. Try deploying a Blueprint from whop.com/blueprints to see the one-click flow. If you use AI agents, run whop --llms and whop mcp add to test agent integration. Compare the CLI workflow against your current dashboard routine for a real admin task.",
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
-    "rating_rationale": "Whop CLI scores 4.0/5 as an editorial product assessment in Automation. Strengths recorded: Full Whop API access from the terminal — no dashboard clicking; Self-describing CLI works with AI agents via --llms and MCP. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free (Whop platform fees apply on sales)\". Main trade-offs: Requires a Whop account and business to manage; Terminal-first; no GUI for users who prefer dashboards. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - driving an end-to-end business API from the terminal, including agent-readable self-description, is a real capability for automation-first operators. Output quality 4 - blueprints deploy a working business in one step and every command is scriptable. Adoption 3 - requires a Whop account and business to manage, and offers no GUI for anyone who prefers dashboards. Cost 5 - free to use, with Whop platform fees only on sales. 4.0 because it is new and its command surface may change."
   },
   {
     "slug": "ideogram",
@@ -3692,7 +3692,7 @@
     "trial_checklist": "Use a real work week with real threads. Verify whether summaries and triage rules cut read/sort time. Track volume of messages moved without review. Compare feel against vanilla Gmail and at least one alternative before renewing.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Shortwave scores 4.5/5 as an editorial product assessment in Productivity. Strengths recorded: Works inside Gmail; Fast AI summaries. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Mobile experience differs from desktop; Some users prefer vanilla Gmail. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - triage, summaries, and reminders inside Gmail addresses the highest-volume knowledge-worker inbox problem. Output quality 4 - fast summaries and a clear free tier, with the AI doing narrow work well rather than broadly. Adoption 5 - it works inside Gmail rather than asking you to migrate, which is the entire adoption argument. Cost 4 - usable free tier with paid plans above it. Held at 4.5-adjacent at 4.5 because mobile differs from desktop and some users simply prefer plain Gmail."
   },
   {
     "slug": "browse-ai",
@@ -3738,7 +3738,7 @@
     "trial_checklist": "Run one real extraction against live pages and one monitoring task. Verify whether retries and proxy behavior recover from a real page change. Compare cost and maintenance against a Make/Zapier/n8n equivalent before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Browse AI scores 4.3/5 as an editorial product assessment in Automation. Strengths recorded: Visual setup; Handles auth and pagination. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Site changes can break robots; Volume pricing grows quickly. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - turning site monitoring and extraction into repeatable robots answers a need that appears the moment anyone tracks a page manually. Output quality 4 - visual setup handles authentication and pagination, which is where naive scrapers fail. Adoption 4 - visual configuration means no scripting required. Cost 3 - volume pricing grows quickly, and site changes can break robots that then need maintenance. Scored 4.3 because running costs scale with how much you monitor."
   },
   {
     "slug": "rows",
@@ -3784,7 +3784,7 @@
     "trial_checklist": "Use one real planning/reporting workbook with live integrations. Verify whether cell-level AI transforms actually shorten prep time. Share a published dashboard and check access/update behavior. Repeat the same workflow in Airtable AI or Notion AI before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Rows scores 4.4/5 as an editorial product assessment in Productivity. Strengths recorded: Built-in integrations; AI transforms in cells. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Smaller ecosystem than Excel/Sheets; Advanced formulas differ from Excel. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - a spreadsheet with AI transforms and native integrations inside the grid suits teams whose work already lives in tables. Output quality 4 - in-cell AI transforms and clean sharing are the draw, and they work without leaving the sheet. Adoption 4 - familiar spreadsheet model with a free tier. Cost 4 - free plus paid plans at reasonable tiers. Held at 4.4 because the ecosystem is smaller than Excel or Sheets and advanced formulas differ from what power users already know."
   },
   {
     "slug": "notebooklm",
@@ -3830,7 +3830,7 @@
     "trial_checklist": "Use one real document set with proprietary or time-sensitive content. Verify whether answers stay grounded in your sources rather than hallucinating from general knowledge. Check export quality for study guides and audio overviews. Compare against at least one alternative before relying on it for regular research.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "NotebookLM scores 4.5/5 as an editorial product assessment in Research. Strengths recorded: Free to use; Grounded in your sources. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free\". Main trade-offs: Data usage governed by Google's privacy terms; Upload limits apply. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 5 - answering questions grounded in documents you uploaded, with audio overviews, removes the hallucination problem that makes general assistants unreliable for source work. Output quality 5 - grounding in your own sources is the whole value and it does it well. Adoption 5 - free, with no setup beyond uploading files. Cost 5 - free to use. Scored 4.5 rather than higher because data usage falls under Google's privacy terms and upload limits apply, which matters for confidential material."
   },
   {
     "slug": "typingmind",
@@ -3876,7 +3876,7 @@
     "trial_checklist": "Use at least two real provider keys on the same prompt. Verify whether cost tracking and routing actually match your bill. If self-hosting, confirm update path and access controls. Repeat the same prompts in Poe and at least one direct model UI before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "TypingMind scores 4.4/5 as an editorial product assessment in AI Agents. Strengths recorded: Self-hosted option; Multi-provider. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Setup complexity for self-hosting; UI is functional rather than polished. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - unifying multiple LLM providers under one prompt library and usage dashboard solves a real multi-model management problem. Output quality 4 - output quality follows whichever provider you route to, with the control surface being the product. Adoption 3 - the self-hosted option adds setup complexity, and the UI is functional rather than polished. Cost 4 - self-hosting keeps costs to your own API usage. 4.4 because it is powerful for people willing to configure it."
   },
   {
     "slug": "speechify",
@@ -3922,7 +3922,7 @@
     "trial_checklist": "Use one real long document and one web reading session. Verify voice quality, speed control, and offline behavior. Compare cost and output quality against ElevenLabs or Murf for any narration use case. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Speechify scores 4.2/5 as an editorial product assessment in Audio & Video. Strengths recorded: Wide format support; Natural reader voices. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"Free + paid plans\". Main trade-offs: Best voices require paid plans; Background noise handling is limited. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - turning documents, web pages, and PDFs into listenable audio serves accessibility and commuting workflows alike. Output quality 4 - natural reader voices with wide format support, though the best voices sit on paid plans. Adoption 5 - install and start listening, with an accessibility-first design. Cost 3 - the free tier's voices are noticeably weaker than paid ones. Scored 4.2 because background-noise handling is limited and the voice gap creates a paywall early."
   },
   {
     "slug": "catch-ai",
@@ -3985,7 +3985,7 @@
     "trial_checklist": "Do not buy from the homepage headline alone. Attempt the advertised 10-day free trial with one real scheduling thread, one real inbox follow-up, and one calendar conflict. Confirm whether signup is open or waitlist-gated. Record what mailbox, calendar, and phone permissions Catch requests. Compare the same three tasks against your current assistant (human EA, Shortwave, or a general chat tool) before paying $99/month. Named testimonials on the site are vendor-supplied — do not treat them as independent proof.",
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
-    "rating_rationale": "Catch scores 4.0/5 as an editorial product assessment in AI Agents. Strengths recorded: Official site positions Catch as an action-taking admin for email, scheduling, travel, and calls rather than a summarize-only assistant; Homepage and /security name a flat $99/month price with cancel anytime and a 10-day free trial. Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 3/5, operational cost 3/5. Pricing reads \"$99/month billed monthly (10-day free trial; cancel anytime)\". Main trade-offs: The same official homepage currently mixes Closed Beta — Limited Spots waitlist copy with a public $99/month cancel-anytime module, so availability is not a clean self-serve SKU; The product is described as acting on mailbox, calendar, and phone access; that is a real data-access risk even with vendor security claims. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - an admin assistant that schedules, drafts, books travel, and places calls is positioned as action-taking rather than summarize-only, which is the right ambition. Output quality 3 - the scope is genuinely useful but hard to evaluate without using it. Adoption 2 - the official homepage mixes a Closed Beta waitlist with a public $99/month cancel-anytime module, so availability is not a clean self-serve SKU. Cost 3 - $99/month is a real commitment against an unsettled product state. 4.0 reflects that ambiguity."
   },
   {
     "slug": "tunii",
@@ -4038,6 +4038,6 @@
     "trial_checklist": "Use a real task involving vocal removal or stem splitting—not a demo prompt. Verify whether browser-based separation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to whether the free tier covers your typical use. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Tunii scores 4.3/5 as an editorial product assessment in Audio & Video. Strengths recorded: No desktop install required; Generous free tier (10 min signup + 5 min/week). Factors — job fit 4/5, output quality 4/5 (from official documentation and benchmark context where the model is identifiable, never from a lab test), adoption 4/5, operational cost 3/5. Pricing reads \"Free + paid minutes\". Main trade-offs: Requires account to process audio; 10-minute max per file. Not a benchmark, and no hands-on result is published."
+    "rating_rationale": "Job fit 4 - browser-based vocal removal and stem splitting covers a repeated need for creators working with audio, without a desktop editor. Output quality 4 - stem splitting goes beyond vocals-only tools, and failed jobs do not consume minutes. Adoption 4 - no install required, though an account is needed to process audio. Cost 4 - a generous free tier (10 minutes at signup plus 5 minutes weekly). Held at 4.3 because files cap at 10 minutes and there is no public pricing page for minute packs."
   }
 ]
