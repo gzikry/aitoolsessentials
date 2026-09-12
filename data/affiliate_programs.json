@@ -130,9 +130,9 @@
       "program_type": "public affiliate program",
       "network": "Impact",
       "official_program_url": "https://www.jasper.ai/legal/affiliates",
-      "application_status": "ready_to_apply",
+      "application_status": "blocked_by_impact_rejection",
       "commission_note": "25% recurring for 12 months (up to 30% at 100+ conversions/year); 45-day cookie; $25 min payout via PayPal/Impact.",
-      "notes": "Application pack ready in admin/affiliate-applications-ready.md §5. Jasper now runs its affiliate program through Impact (not FirstPromoter). Note: our Impact publisher account was rejected; revisit after reapplying to Impact with traffic evidence, same as Grammarly."
+      "notes": "Jasper hosts its affiliate program through Impact, and the Impact publisher account was rejected on traffic grounds (2026-08-25). partners.jasper.ai returns an unavailable campaign. Cannot be joined until Impact approves us; treat as blocked rather than ready_to_apply. Reapply to Impact around 20-30 visits/day, which would unlock Jasper and other Impact-hosted programs at once. Application copy is ready in admin/affiliate-applications-ready.md."
     },
     {
       "tool_slug": "elevenlabs",
@@ -156,27 +156,27 @@
       "official_program_url": "https://www.descript.com/affiliate",
       "application_status": "ready_to_apply",
       "commission_note": "$25 one-time flat fee per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; PartnerStack; monthly PayPal payouts, no minimum threshold.",
-      "notes": "Application pack ready in admin/affiliate-applications-ready.md §6. PartnerStack (not Impact). Approvals may take up to 30 days. Official help: help.descript.com/connect-with-us/affiliates."
+      "notes": "PartnerStack (not Impact) - company \"descriptinc\". $25 one-time per new subscriber plus 15% recurring for the first 12 months; 30-day cookie. Approval typically about a week, up to 30 days. Official help: help.descript.com/connect-with-us/affiliates. Application copy ready in admin/affiliate-applications-ready.md."
     },
     {
       "tool_slug": "copy-ai",
       "availability": "available",
       "program_type": "public affiliate program",
       "network": "PartnerStack",
-      "official_program_url": "https://copyai.partnerstack.com/",
+      "official_program_url": "https://market.partnerstack.com/artificial-intelligence/copy-ai",
       "application_status": "ready_to_apply",
       "commission_note": "45% recurring commission for the first 12 months per referral; 60-day cookie; $50 minimum payout; monthly via PayPal or Stripe.",
-      "notes": "Program runs on PartnerStack (copyai.partnerstack.com). No Impact dependency. Application pack not yet prepared."
+      "notes": "Program runs on PartnerStack (copyai.partnerstack.com; listing market.partnerstack.com/artificial-intelligence/copy-ai). 45% recurring for 12 months, 90-day cookie, $50 minimum payout, monthly via PayPal or Stripe. Application copy ready in admin/affiliate-applications-ready.md. PartnerStack network account must be approved first."
     },
     {
       "tool_slug": "gamma",
       "availability": "available",
       "program_type": "public affiliate program",
       "network": "PartnerStack",
-      "official_program_url": "https://gammaapp.partnerstack.com/?group=affiliates",
+      "official_program_url": "https://market.partnerstack.com/artificial-intelligence/gammaapp",
       "application_status": "ready_to_apply",
       "commission_note": "Commission rate not exposed on the public help page; confirmed via PartnerStack program. 30% recurring per third-party aggregator; verify exact rate on the PartnerStack application page.",
-      "notes": "Program managed via PartnerStack (gammaapp.partnerstack.com). Official help article: help.gamma.app/en/articles/11048092. Partner Program Terms effective August 4, 2025 at gamma-partners-y9y8f3m.gamma.site. Paid advertising requires prior written approval."
+      "notes": "Program managed via PartnerStack (gammaapp.partnerstack.com; marketplace listing market.partnerstack.com/artificial-intelligence/gammaapp). Official help: help.gamma.app/en/articles/11048092. Gamma Partner Program Terms effective 2025-08-04. Paid advertising requires prior written approval. CAUTION: gammaapp.ai is a different company, not Gamma - do not use it as the program source or cite its 50% claim. Application copy ready in admin/affiliate-applications-ready.md."
     },
     {
       "tool_slug": "browse-ai",
@@ -186,7 +186,7 @@
       "official_program_url": "https://www.browse.ai/affiliate-program",
       "application_status": "ready_to_apply",
       "commission_note": "20% recurring commission on every payment by referrals, lifetime; 30-day cookie; monthly payouts via Wise (PayPal on request, $200 minimum).",
-      "notes": "Program transitioning to PartnerStack (browseai.partnerstack.com). Official terms at browse.ai/legal/affiliate-program-terms. No Impact dependency. No cap on commissions."
+      "notes": "Program transitioned to PartnerStack (browseai.partnerstack.com; listing market.partnerstack.com/artificial-intelligence/browse-ai). Official terms: browse.ai/legal/affiliate-program-terms. 20% recurring for the lifetime of the referral, 30-day cookie, monthly payouts via Wise (PayPal on request, $200 minimum), no commission cap. Application copy ready in admin/affiliate-applications-ready.md."
     },
     {
       "tool_slug": "hermes-agent",

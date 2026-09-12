@@ -810,6 +810,20 @@ def main():
     if heading_issues:
         errors.extend(f'Heading structure — {item}' for item in heading_issues[:10])
 
+    # Every program marked ready_to_apply must be documented in the application pack, or the
+    # pack drifts from the data and applications get submitted stale.
+    pack_path = ROOT / 'admin' / 'affiliate-applications-ready.md'
+    prog_path = ROOT / 'data' / 'affiliate_programs.json'
+    if pack_path.exists() and prog_path.exists():
+        pack_text = pack_path.read_text(errors='ignore').lower()
+        prog_data = json.loads(prog_path.read_text())
+        undocumented = [x.get('tool_slug') for x in prog_data.get('affiliate_programs', [])
+                        if x.get('application_status') == 'ready_to_apply'
+                        and str(x.get('tool_slug')) not in pack_text
+                        and str(x.get('tool_slug')).replace('-', ' ') not in pack_text]
+        if undocumented:
+            errors.extend(f'Affiliate applicant ready but undocumented — {s}' for s in undocumented[:10])
+
     # rel="sponsored" must mark only links issued by a real affiliate program. The site's own
     # methodology says so, and Google defines sponsored as paid placement. Using it on ordinary
     # vendor links is both false and a misdeclaration - 191 instances did this across 38 pages.
