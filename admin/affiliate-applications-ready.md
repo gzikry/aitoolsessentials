@@ -24,9 +24,18 @@ Signup was completed with **Sign in with Google** as `aitoolsessentials@gmail.co
 **The verification link has not been opened.** It is a single-use token — do **not**
 pre-fetch, automate, or share it; open it from the mailbox and stay signed in.
 
-Until the email is verified, individual program applications may not go through. Verify,
-then apply from the Marketplace listing (or, once inside the dashboard, from the in-app
-Marketplace search, which is more reliable than the public listing pages — see below).
+**Corrected 2026-09-12 (evidence): the unverified email did *not* block applications.**
+The earlier claim that "until the email is verified, individual program applications may
+not go through" is false. Both Descript and Gamma accepted submissions through the
+PartnerStack application flow while the network email was still unverified, and
+PartnerStack sent a separate "Your Application to join <program>" acknowledgement for
+each — Descript at 16:36 PT, Gamma at 15:51 PT. Verification is still required to unlock
+the dashboard, track status and collect payouts, but an application itself is not gated
+on it. Do not treat the outstanding verification as a reason to delay applying.
+
+**Also verified 2026-09-12:** the Descript acknowledgement landed in `[Gmail]/Trash`, not
+Sent or All Mail, while the Gamma one stayed in INBOX. Scan `[Gmail]/Trash` when checking
+whether an application registered — the same folder trap that hides outbound sends.
 
 ---
 
