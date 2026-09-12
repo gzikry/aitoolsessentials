@@ -167,9 +167,12 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
             f'<div class="score-meter" aria-label="Editorial score {rating} out of 5"><i style="width:{score_percent}%"></i></div>'
         )
     else:
+        # Wording must not imply that a scored page has a published hands-on result:
+        # 65 rated pages carry protocol_ready_not_published, so a score is an editorial
+        # assessment, never a test claim.
         score_heading = (
             '<strong>Not yet scored</strong>\n'
-            '<span>No published hands-on result, so this page does not claim a star rating.</span>'
+            '<span>Our editorial score needs a completed assessment across job fit, output quality, adoption, and operational cost.</span>'
         )
 
     # SoftwareApplication only unless a hands-on result is published.

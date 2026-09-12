@@ -779,6 +779,26 @@ def main():
     if unresolved_crumbs:
         errors.extend(f'Breadcrumb URL does not resolve — {item}' for item in unresolved_crumbs[:10])
 
+    # Every review page must carry a complete editorial record: a score, the four
+    # factor-level fields, and a stated rationale. Thin records previously rendered
+    # three empty sections and an unscored page.
+    incomplete = []
+    for tool_dir in sorted((ROOT / 'tools').iterdir()):
+        page = tool_dir / 'index.html'
+        if not (tool_dir.is_dir() and page.exists()):
+            continue
+        html = page.read_text()
+        if re.search(r'<h2>Use cases</h2>\s*<ul>\s*</ul>', html):
+            incomplete.append(f'{tool_dir.name}: empty Use cases')
+        if re.search(r'<h2>Pros</h2>\s*<ul>\s*</ul>', html):
+            incomplete.append(f'{tool_dir.name}: empty Pros')
+        if re.search(r'<h2>Cons</h2>\s*<ul>\s*</ul>', html):
+            incomplete.append(f'{tool_dir.name}: empty Cons')
+        if 'Not yet scored' in html:
+            incomplete.append(f'{tool_dir.name}: no editorial score')
+    if incomplete:
+        errors.extend(f'Incomplete review record — {item}' for item in incomplete[:10])
+
     # Review pages must not ship empty hero/overview/feature sections: this is what
     # a data record using `features` (string) instead of `key_features` (list) causes,
     # and it renders as an invisible page to both readers and crawlers.

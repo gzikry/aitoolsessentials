@@ -2206,7 +2206,9 @@
     "trial_checklist": "Install it in an isolated profile and run three repeatable tasks: one research task, one file/terminal task, and one scheduled or messaging task. Record setup friction, approval prompts, model cost, tool errors, memory usefulness, and how easy it is to reset or remove the profile.",
     "affiliate_url": "/go/nous/",
     "hands_on_status": "protocol_ready_not_published",
-    "hands_on_priority": "high"
+    "hands_on_priority": "high",
+    "rating": 4.3,
+    "rating_rationale": "Job fit 4 - a broad agent surface (tools, skills, memory, gateways, delegation, MCP, scheduling) that suits repeatable multi-step work. Output quality 4 - model-dependent, and the framework does not change the underlying model. Adoption 3 - configuration and security are genuinely yours to get right, and the project moves fast enough that docs must be read version-specifically. Cost 4 - open source with model, hosting, and tool costs separate. Scored conservatively rather than optimistically because this site holds a referral link for it; a flattering score here would be indefensible."
   },
   {
     "slug": "openclaw",
@@ -2256,7 +2258,9 @@
     ],
     "trial_checklist": "Run a contained pilot with one channel, one provider, and one low-risk tool. Measure setup time, token cost, message reliability, extension review effort, restart/recovery behavior, and whether you can export or remove the deployment cleanly.",
     "hands_on_status": "protocol_ready_not_published",
-    "hands_on_priority": "high"
+    "hands_on_priority": "high",
+    "rating": 4.2,
+    "rating_rationale": "Job fit 4 - multi-channel agent gateway for people who already run their own infrastructure. Output quality 4 - driven by the connected providers. Adoption 3 - self-hosting and extension choices carry real security and maintenance weight. Cost 4 - open source, with model and hosting costs separate."
   },
   {
     "slug": "ollama",
@@ -2306,7 +2310,9 @@
     ],
     "trial_checklist": "Install Ollama, pull one model whose license and hardware needs you understand, call the local API with a fixed prompt, and record cold-start time, tokens per second, memory use, context behavior, and output quality. Repeat with one smaller model before choosing hardware or a cloud plan.",
     "hands_on_status": "protocol_ready_not_published",
-    "hands_on_priority": "high"
+    "hands_on_priority": "high",
+    "rating": 4.4,
+    "rating_rationale": "Job fit 5 - a repeated, valuable workflow (run open models locally) with a simple CLI and local API. Output quality 4 - depends on the model you pull, not on Ollama. Adoption 5 - install-and-run, with a local API that is trivial to integrate. Cost 5 - free runtime, no per-token charge. Held below 4.5 because speed and quality are hardware-bound and model licences sit outside the product."
   },
   {
     "slug": "lm-studio",
@@ -2356,7 +2362,9 @@
     ],
     "trial_checklist": "Run the same model through LM Studio and one alternative runtime. Measure download/setup time, time to first token, sustained speed, memory use, API compatibility, model switching, and whether the workflow remains usable when the desktop UI is closed.",
     "hands_on_status": "protocol_ready_not_published",
-    "hands_on_priority": "standard"
+    "hands_on_priority": "standard",
+    "rating": 4.3,
+    "rating_rationale": "Job fit 4 - local model discovery and testing for individuals rather than teams. Output quality 4 - model-dependent. Adoption 5 - the most approachable desktop workflow of the local runtimes, with both chat and API surfaces. Cost 5 - free local use, optional pay-as-you-go cloud models. Below Ollama on job fit because large models need serious hardware and it is less scriptable at scale."
   },
   {
     "slug": "open-webui",
@@ -2406,7 +2414,9 @@
     ],
     "trial_checklist": "Connect Open WebUI to one local backend, create a test user, upload a non-sensitive sample document, and run the same question through two models. Record setup time, indexing behavior, retrieval quality, user separation, backup/restore steps, and exposure of the admin surface.",
     "hands_on_status": "protocol_ready_not_published",
-    "hands_on_priority": "standard"
+    "hands_on_priority": "standard",
+    "rating": 4.2,
+    "rating_rationale": "Job fit 4 - a self-hosted interface that makes local models usable by non-technical people. Output quality 4 - inherited from the connected backend. Adoption 3 - deployment, upgrades, and security are the operator's responsibility. Cost 4 - open source, with enterprise/support options to weigh for larger deployments."
   },
   {
     "slug": "heidi-health",
@@ -3219,10 +3229,10 @@
     "affiliate_url": "https://ideogram.ai",
     "pricing": "Freemium; paid tiers for higher resolution and commercial use.",
     "features": [
-      "Text rendering",
-      "Style variety",
-      "Templates",
-      "Community gallery"
+      "Text rendering inside generated images (its main differentiator)",
+      "Multiple models (4.0, 3.0, 2a) with Turbo/Balanced/Quality rendering",
+      "Style variety, templates, and a community gallery",
+      "Batch generation and private generation on paid plans"
     ],
     "best_for": "Marketing visuals, Social media graphics, Concept art",
     "competitors": [
@@ -3251,7 +3261,37 @@
     ],
     "summary": "AI image generation with strong text rendering and style variety.",
     "price": "Free plan; Plus $15/mo ($180/yr); Pro $42/mo ($504/yr); Team $20/user/mo",
-    "pricing_checked_date": "2026-09-12"
+    "pricing_checked_date": "2026-09-12",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard",
+    "key_features": [
+      "Text rendering inside generated images (its main differentiator)",
+      "Multiple models (4.0, 3.0, 2a) with Turbo/Balanced/Quality rendering",
+      "Style variety, templates, and a community gallery",
+      "Batch generation and private generation on paid plans",
+      "Character consistency and AI editing tools (Magic Fill)",
+      "API access with separate API pricing"
+    ],
+    "use_cases": [
+      "Marketing and social graphics that need legible text",
+      "Print-on-demand and product mockups",
+      "Concept art and moodboards",
+      "Ad resizing and background removal"
+    ],
+    "pros": [
+      "Best-in-class text rendering for a diffusion image model",
+      "Free plan with weekly slow credits, so you can evaluate before paying",
+      "Inexpensive entry point ($15/month Plus with 1,000 priority credits)"
+    ],
+    "cons": [
+      "Priority credits do not roll over between billing cycles",
+      "Free tier is slow-queue only with limited weekly credits",
+      "Unused subscription credits expire; only paid top-ups carry over",
+      "No free trial or discount on subscription plans"
+    ],
+    "trial_checklist": "Generate one image whose value depends on readable text (a poster or ad) rather than a pretty generic scene, since text rendering is the reason to pick Ideogram over alternatives. Note how many priority credits that took and whether the result was usable without manual retouching. Then generate the same prompt on the free slow queue to see whether the wait is tolerable at your volume, and check whether the commercial-use terms on the official pricing page cover your intended use.",
+    "rating": 4.4,
+    "rating_rationale": "Job fit 5 - image generation where legible text matters is a repeated, high-value workflow that most diffusion models handle badly. Output quality 5 - the strongest text rendering in the category and the reason to choose it. Adoption 4 - templates and a community gallery lower the learning curve. Cost 4 - $15/month entry with a usable free tier, marked down because priority credits expire each cycle and only paid top-ups carry over."
   },
   {
     "slug": "luma-ai",
@@ -3263,10 +3303,10 @@
     "affiliate_url": "https://lumalabs.ai",
     "pricing": "Freemium; subscription for high-fidelity video exports.",
     "features": [
-      "Text-to-video",
-      "Image-to-video",
-      "3D capture",
-      "Dream Machine"
+      "Ray3 and Ray3.14 text-to-video and image-to-video models",
+      "Video-to-video and reframe actions at multiple resolutions",
+      "Luma Agents for multi-stage creative work with shared context",
+      "Third-party image and video models in the same platform"
     ],
     "best_for": "Product demos, Social video, 3D prototyping",
     "competitors": [
@@ -3294,7 +3334,39 @@
       ]
     ],
     "price": "Plus $30/month, Pro $90/month, Ultra $300/month",
-    "summary": "Luma AI is a 3D and video generation platform that creates photorealistic 3D models and AI-generated video from text prompts or reference images, targeting product demos, social video, and 3D prototyping workflows."
+    "summary": "Luma AI is a 3D and video generation platform that creates photorealistic 3D models and AI-generated video from text prompts or reference images, targeting product demos, social video, and 3D prototyping workflows.",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard",
+    "pricing_checked_date": "2026-09-12",
+    "key_features": [
+      "Ray3 and Ray3.14 text-to-video and image-to-video models",
+      "Video-to-video and reframe actions at multiple resolutions",
+      "Luma Agents for multi-stage creative work with shared context",
+      "Third-party image and video models in the same platform",
+      "3D capture and scene generation",
+      "Credit-based cost per generation published by model and resolution"
+    ],
+    "use_cases": [
+      "Product and brand video prototyping",
+      "Social video and campaign assets",
+      "3D asset and scene generation",
+      "Iterative creative exploration with an agent"
+    ],
+    "pros": [
+      "Published per-generation credit costs make budgeting possible",
+      "Multiple resolution tiers including a cheap draft mode",
+      "Broad model access beyond Luma's own models",
+      "Commercial use included on individual plans"
+    ],
+    "cons": [
+      "Plans start at $30/month with no free generation tier",
+      "Credit consumption scales steeply with resolution (1080p costs multiples of draft)",
+      "Video-to-video is billed per second, so long clips get expensive",
+      "Team controls and SSO require contacting sales"
+    ],
+    "trial_checklist": "Generate a draft-resolution version of a clip you would actually ship before committing to a high-resolution render, because draft costs a fraction of 1080p and answers the quality question cheaper. Record the credits one finished clip consumes at your target resolution and compare it with the 10,000 monthly credits on Plus. If you need brand consistency across assets, test one agent workflow rather than isolated generations.",
+    "rating": 4.2,
+    "rating_rationale": "Job fit 4 - video and 3D generation for prototyping and campaign assets. Output quality 4 - Ray3 covers draft through 1080p with published per-generation credit costs. Adoption 3 - no free generation tier, so evaluation costs money from the first render. Cost 3 - $30/month entry and steep resolution scaling, with 1080p and video-to-video consuming multiples of draft."
   },
   {
     "slug": "pika",
@@ -3306,10 +3378,10 @@
     "affiliate_url": "https://pika.art",
     "pricing": "Freemium; paid plans for HD and extended clips.",
     "features": [
-      "Text-to-video",
-      "Image-to-video",
-      "Lip sync",
-      "Style presets"
+      "Text-to-video and image-to-video with the Pika 2.5 model",
+      "Pikaffects, Pikascenes, Pikaswaps, Pikatwists, and Pikaframes editing tools",
+      "Pikaformance lip sync and audio-driven performance",
+      "Resolution tiers from 480p to 1080p with credit-based pricing"
     ],
     "best_for": "Short-form video, Marketing clips, Creative experiments",
     "competitors": [
@@ -3338,7 +3410,37 @@
     ],
     "summary": "AI video generation for short clips, style transfers, and character consistency.",
     "price": "Free plan; Basic $8/mo; Standard $28/mo; Pro $76/mo (annual billing)",
-    "pricing_checked_date": "2026-09-12"
+    "pricing_checked_date": "2026-09-12",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard",
+    "key_features": [
+      "Text-to-video and image-to-video with the Pika 2.5 model",
+      "Pikaffects, Pikascenes, Pikaswaps, Pikatwists, and Pikaframes editing tools",
+      "Pikaformance lip sync and audio-driven performance",
+      "Resolution tiers from 480p to 1080p with credit-based pricing",
+      "Pika Agent and Pika MCP for agent-driven video creation",
+      "API access via dev.pika.art"
+    ],
+    "use_cases": [
+      "Short-form social video and vertical clips",
+      "Advertising and product teasers",
+      "Stylized effects content (transformations and visual gags)",
+      "Rapid concept iteration before a real shoot"
+    ],
+    "pros": [
+      "Real free tier (80 monthly credits) that allows evaluation",
+      "Effect-driven tools are unusually fast for social formats",
+      "Credit costs are published per effect, resolution, and duration"
+    ],
+    "cons": [
+      "Published plan prices assume annual billing",
+      "1080p and longer clips burn credits quickly",
+      "Commercial use requires a paid plan",
+      "Effect library churns; older workflows may not map to current tools"
+    ],
+    "trial_checklist": "Pick the effect you actually intend to publish rather than testing the flashiest demo, and run it at the resolution you would ship. Record the credits consumed for one finished clip and multiply by your real monthly output — that number, not the sticker price, decides which tier you need. Confirm clips render watermark-free on the plan you are considering, and check the commercial-use terms that apply.",
+    "rating": 4.2,
+    "rating_rationale": "Job fit 4 - short-form social video and effect-driven clips. Output quality 4 - Pika 2.5 is capable at 480p-1080p, with published credit costs per effect and resolution. Adoption 5 - a real 80-credit free tier and one-tap effects make it the easiest in this set to evaluate. Cost 3 - published plan prices assume annual billing, and 1080p or longer clips consume credits quickly."
   },
   {
     "slug": "suno",
@@ -3350,10 +3452,10 @@
     "affiliate_url": "https://suno.com",
     "pricing": "Freemium; paid tiers for commercial rights and longer tracks.",
     "features": [
-      "Text-to-song",
-      "Custom lyrics",
-      "Vocals + instrumentals",
-      "Style prompts"
+      "Text-to-song generation with vocals, lyrics, and full arrangements",
+      "Free tier with 50 credits per day",
+      "Pro and Premier plans with commercial use rights",
+      "Suno Studio: a web-based generative audio workstation with MIDI, effects, and automation"
     ],
     "best_for": "Content creators, Podcast intros, Marketing music",
     "competitors": [
@@ -3381,7 +3483,38 @@
     ],
     "summary": "AI music generation with vocals, lyrics, and full song production.",
     "price": "Free plan; Pro $8/mo ($96/yr); Premier $24/mo ($288/yr) (annual billing)",
-    "pricing_checked_date": "2026-09-12"
+    "pricing_checked_date": "2026-09-12",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard",
+    "key_features": [
+      "Text-to-song generation with vocals, lyrics, and full arrangements",
+      "Free tier with 50 credits per day",
+      "Pro and Premier plans with commercial use rights",
+      "Suno Studio: a web-based generative audio workstation with MIDI, effects, and automation",
+      "Stem separation (2 types on Pro, 3 on Premier)",
+      "Custom lyrics, personas, and voice recording on paid tiers"
+    ],
+    "use_cases": [
+      "Background music for video and podcasts",
+      "Marketing and brand jingles",
+      "Songwriting demos and lyric prototyping",
+      "Audio branding experiments"
+    ],
+    "pros": [
+      "Strong vocal generation and full-song structure",
+      "Free tier is usable for genuine evaluation (50 credits/day)",
+      "Commercial use rights are explicit on Pro and Premier",
+      "Suno Studio adds DAW-style editing rather than generation alone"
+    ],
+    "cons": [
+      "Subscription credits do not carry over between cycles",
+      "Song downloads are capped per month and were restricted from 2026-09-03",
+      "The free tier grants no commercial use rights",
+      "Purchased add-on credits need an active subscription to use"
+    ],
+    "trial_checklist": "Generate one full song in the genre you actually need and check whether the vocal and mix are usable without rework — that is the whole value proposition. Confirm the download allowance and commercial-use terms on the plan you are considering, because both changed recently. Then check whether stem separation matters for your workflow, since that capability differs by tier, and note that unused credits expire each cycle.",
+    "rating": 4.5,
+    "rating_rationale": "Job fit 5 - full-song generation with vocals covers a repeated need for content, podcast, and marketing music. Output quality 5 - the strongest vocal and song-structure output in the category. Adoption 4 - the free tier allows genuine evaluation at 50 credits/day. Cost 4 - $8/month Pro with explicit commercial rights, marked down because subscription credits do not roll over and monthly downloads are capped."
   },
   {
     "slug": "udio",
@@ -3393,10 +3526,10 @@
     "affiliate_url": "https://udio.com",
     "pricing": "Freemium; subscription for commercial use and high-quality exports.",
     "features": [
-      "Text-to-music",
-      "Genre control",
-      "Extended clips",
-      "Remix"
+      "Text-to-music generation with genre and mood control",
+      "Audio upload and AI editing tools for existing material",
+      "Voice Control and reusable custom voices",
+      "Song extension, remixing, and style blending"
     ],
     "best_for": "Background music, Content scoring, Audio prototyping",
     "competitors": [
@@ -3424,7 +3557,38 @@
     ],
     "summary": "AI music generation focused on high-fidelity tracks and genre control.",
     "price": "Free plan; Standard $8/mo ($96/yr); Pro $24/mo ($288/yr) (annual billing)",
-    "pricing_checked_date": "2026-09-12"
+    "pricing_checked_date": "2026-09-12",
+    "hands_on_status": "protocol_ready_not_published",
+    "hands_on_priority": "standard",
+    "key_features": [
+      "Text-to-music generation with genre and mood control",
+      "Audio upload and AI editing tools for existing material",
+      "Voice Control and reusable custom voices",
+      "Song extension, remixing, and style blending",
+      "Stem separation and lyric editing",
+      "Generated cover art with custom upload support"
+    ],
+    "use_cases": [
+      "Background and scoring music for content",
+      "Audio prototyping for producers",
+      "Style and genre exploration",
+      "Editing and extending existing audio"
+    ],
+    "pros": [
+      "Fine-grained genre and style control",
+      "Upload-your-own-audio editing is unusual at this price",
+      "Free tier allows genuine evaluation (10 credits/day)",
+      "Entry paid tier is inexpensive for the feature set"
+    ],
+    "cons": [
+      "Free tier caps full-length generations at 3 per day",
+      "Credits do not roll over month to month",
+      "Published plan prices assume annual billing",
+      "Smaller ecosystem and fewer integrations than Suno"
+    ],
+    "trial_checklist": "Test genre control specifically: request the same brief twice and compare whether Udio follows your intent for the style you need, since precise style steering is the reason to pick it over Suno. If you plan to edit existing audio, upload one real file and confirm the editing tools work on material you already own. Check the daily generation cap against your volume and verify the commercial-use terms for the tier you would buy.",
+    "rating": 4.3,
+    "rating_rationale": "Job fit 4 - music generation with unusually precise genre and style control, plus editing of audio you already own. Output quality 5 - high-fidelity tracks and strong style steering. Adoption 4 - modest but usable free tier. Cost 4 - inexpensive entry tier, but held to 4.3 rather than matching Suno because the free tier caps full-length songs at 3/day and the ecosystem and integrations are smaller."
   },
   {
     "slug": "shortwave",
