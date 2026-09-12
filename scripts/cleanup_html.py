@@ -40,6 +40,35 @@ def dedupe_external_scripts(html: str) -> str:
     return pattern.sub(keep_first, html)
 
 
+SCORE_NOTE = ('<p class="score-note">Scores are editorial product assessments — job fit, likely output '
+              'quality, ease of adoption, and operational cost — not lab benchmarks, and no tool here has a '
+              'published hands-on result. <a href="{p}legal/editorial-methodology.html">How we score</a>.</p>')
+
+
+def qualify_editorial_score(html: str, depth: int) -> str:
+    """Label any bare score header as editorial and attach the method note.
+
+    Some comparison and article pages predate the current generators and are no longer
+    rewritten by any script, but they stay live and sitemap-listed. They must not present
+    an editorial score as an unlabelled rating.
+    """
+    prefix = '../' * depth
+    if 'AIToolsEssentials score' in html:
+        html = html.replace('AIToolsEssentials score', 'AIToolsEssentials editorial score')
+    if 'editorial score' in html and 'score-note' not in html:
+        note = SCORE_NOTE.format(p=prefix)
+        m = re.search(r'<tr><th>AIToolsEssentials editorial score</th>.*?</tr>', html, re.S)
+        if m:
+            # Append after the element that closes the score table, never inside it.
+            for closer in ('</table></div>', '</table>'):
+                idx = html.find(closer, m.end())
+                if idx > 0:
+                    at = idx + len(closer)
+                    html = html[:at] + note + html[at:]
+                    break
+    return html
+
+
 def fix_page(p: Path) -> bool:
     rel_parts = p.relative_to(ROOT).parts
     depth = len(rel_parts) - 1
@@ -54,6 +83,11 @@ def fix_page(p: Path) -> bool:
     # Leftover pick-one pages once appended ".html" onto filenames that already
     # included the suffix, producing crawl-breaking /page.html.html canonicals.
     h = h.replace(".html.html", ".html")
+
+    # Some comparison/article pages predate the current generators and are no longer
+    # rewritten by any script, yet they remain live and in the sitemap. Qualify their
+    # score label so no page presents an editorial score as an unlabelled rating.
+    h = qualify_editorial_score(h, depth)
 
     # 1. Domain typo
     h = h.replace('aitoolsessentials.com', 'aitoolsessentials.com')

@@ -162,7 +162,7 @@ def generate(root: Path) -> int:
                       f'<p>{_e(t.get("summary",""))}</p>'
                       f'<p class="pick-meta">Category: {_e(t["category"])} · Pricing verified {_e(checked)}</p>'
                       f'<div class="pick-actions"><a class="button button-blue" href="../tools/{s}/">Read review</a>'
-                      f'<a class="text-link" href="../legal/testing-protocol.html">How we test</a></div></article>')
+                      f'<a class="text-link" href="../legal/editorial-methodology.html">How we score</a></div></article>')
             picks.append(t['name'])
         page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{_e(spec['title'])}: {_e(spec['subhead'])}"><title>{_e(spec['title'])} — AIToolsEssentials</title><link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/share.css"><!-- AIT SEO START -->

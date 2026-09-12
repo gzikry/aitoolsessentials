@@ -779,6 +779,53 @@ def main():
     if unresolved_crumbs:
         errors.extend(f'Breadcrumb URL does not resolve — {item}' for item in unresolved_crumbs[:10])
 
+    # A page showing an editorial score must label it and explain it. Unqualified
+    # "AIToolsEssentials score" reads as an unlabelled rating, and a score table with no
+    # method link gives the reader no way to know it is not a benchmark.
+    score_label_issues = []
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+            continue
+        html = f.read_text(errors='ignore')
+        if 'AIToolsEssentials score</th>' in html or 'AIToolsEssentials score<' in html:
+            score_label_issues.append(f'{rel}: unqualified score header')
+        if 'editorial score</th>' in html and 'score-note' not in html:
+            score_label_issues.append(f'{rel}: score table without a method note')
+    if score_label_issues:
+        errors.extend(f'Unlabelled rating — {item}' for item in score_label_issues[:10])
+
+    # No public page may imply hands-on testing or a lab benchmark. The site publishes
+    # editorial product scores only, and legal/testing-protocol.html states that a page
+    # may claim "hands-on tested" only with a complete logged test. None exists, so any
+    # such claim is false.
+    test_claims = []
+    # These pages legitimately discuss the protocol or reader-submitted reports; they
+    # do not claim we tested a product.
+    ALLOWED = {'legal/testing-protocol.html', 'leaderboard.html', 'community/reports.html',
+               'community/test-report.html', 'legal/editorial-methodology.html'}
+    for f in ROOT.rglob('*.html'):
+        rel = f.relative_to(ROOT)
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+            continue
+        if str(rel).replace('\\', '/') in ALLOWED:
+            continue
+        html = f.read_text(errors='ignore')
+        text = re.sub(r'<[^>]+>', ' ', html)
+        # Only *claims* are failures, not disclaimers. "not lab benchmarks" and
+        # "no published hands-on result" are the wording we want, so require the
+        # phrase to lack a preceding negation.
+        for pat in (r'How we test', r'we tested', r'our testing', r'hands-on tested',
+                    r'tested by us', r'our lab', r'lab[- ]tested'):
+            for m in re.finditer(pat, text, re.I):
+                before = text[max(0, m.start() - 60):m.start()].lower()
+                if re.search(r'\b(not|no|never|without|rather than|instead of)\b[^.]{0,40}$', before):
+                    continue
+                test_claims.append(f'{rel}: {m.group(0)!r} in {text[max(0,m.start()-60):m.start()+60]!r}')
+                break
+    if test_claims:
+        errors.extend(f'Implies hands-on testing — {item}' for item in test_claims[:10])
+
     # Every review page must carry a complete editorial record: a score, the four
     # factor-level fields, and a stated rationale. Thin records previously rendered
     # three empty sections and an unscored page.

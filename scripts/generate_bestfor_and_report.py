@@ -120,7 +120,7 @@ def generate_best_for(root: Path) -> Path:
         for pslug, why in picks:
             t = tools.get(pslug)
             name = t["name"] if t else pslug
-            rating = f' · {t["rating"]}/5' if t and t.get("rating") else ""
+            rating = f' · {t["rating"]}/5 editorial' if t and t.get("rating") else ""
             pick_items += (f'<li><strong><a href="/tools/{pslug}/">{_esc(name)}</a></strong>{rating} — {_esc(why)}</li>')
         cards += (
             f'<article class="content-hub-card"><span>{_esc(title)}</span>'

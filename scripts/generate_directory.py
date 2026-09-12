@@ -88,7 +88,7 @@ def visit_link(tool: dict, programs: dict) -> tuple[str, str, str]:
 
 def tool_card(tool: dict, programs: dict) -> str:
     rating = tool.get("rating")
-    rating_text = f"{rating}/5" if rating else "Not yet scored"
+    rating_text = f"{rating}/5 editorial" if rating else "Not yet scored"
     href, rel, label = visit_link(tool, programs)
     visit = (
         f'<a class="button button-blue small" href="{esc(href)}" rel="{rel}" '
@@ -104,7 +104,7 @@ def tool_card(tool: dict, programs: dict) -> str:
         f'<p>{esc(tool.get("summary") or tool.get("description"))}</p></div>'
         f'<dl><dt>Best for</dt><dd>{esc(tool.get("best_for"))}</dd>'
         f'<dt>Price</dt><dd>{esc(tool.get("price"))}</dd>'
-        f'<dt>Rating</dt><dd>{esc(rating_text)}</dd></dl>'
+        f'<dt>Rating (editorial)</dt><dd>{esc(rating_text)}</dd></dl>'
         f'<div class="card-actions">'
         f'<a class="text-link" href="/tools/{esc(tool["slug"])}/">Read review ›</a>'
         f'{visit}</div></article>'
@@ -159,6 +159,7 @@ def generate(root: Path, tools: list[dict] | None = None, today: str | None = No
 <label for="toolSearch">Search tools</label>
 <input id="toolSearch" type="search" placeholder="Try: Grok, research, video, coding, meetings…">
 <p class="monetization-note">This is a living directory, not a claim that the market is finite. Affiliate status never changes ranking or inclusion; recommendations are organized by workflow fit first. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
+<p class="monetization-note">Ratings here are editorial product scores — job fit, likely output quality, ease of adoption, and operational cost. They are not lab benchmarks and no tool has a published hands-on result. <a href="/legal/editorial-methodology.html">How we score</a>.</p>
 </div>
 <div class="category-related"><div class="guide-pills">{pills}</div></div>
 <div class="directory-grid" id="toolGrid">

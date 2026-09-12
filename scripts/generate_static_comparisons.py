@@ -200,8 +200,9 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         '<tr><th>Best for</th>' + ''.join(f'<td>{_e(TOOLS[s].get("best_for",""))}</td>' for s in slugs) + '</tr>'
         '<tr><th>Category</th>' + ''.join(f'<td>{_e(TOOLS[s].get("category",""))}</td>' for s in slugs) + '</tr>'
         '<tr><th>Price</th>' + ''.join(f'<td>{_e(TOOLS[s].get("price","Free + paid plans"))}</td>' for s in slugs) + '</tr>'
-        '<tr><th>AIToolsEssentials score</th>' + ''.join(f'<td>{_e(str(TOOLS[s].get("rating","")))}/5</td>' for s in slugs) + '</tr>'
+        '<tr><th>AIToolsEssentials editorial score</th>' + ''.join(f'<td>{_e(str(TOOLS[s].get("rating","")))}/5</td>' for s in slugs) + '</tr>'
     )
+    score_note = '<p class="score-note">Scores are editorial product assessments — job fit, likely output quality, ease of adoption, and operational cost — not lab benchmarks, and no tool here has a published hands-on result. <a href="../legal/editorial-methodology.html">How we score</a>.</p>'
     cards = ''.join(_source_card(s, TOOLS[s]['name']) for s in slugs)
     review_links = ' '.join(f'<a class="button button-blue" href="../tools/{s}/">Read {_e(TOOLS[s]["name"])} review</a>' for s in slugs)
     bench = _bench_section(set(slugs))
@@ -212,6 +213,7 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         f'<h1>{_e(title)}</h1><p class="subhead">{_e(subhead)}</p></div></section>'
         '<section class="scene scene-light comparison-section"><div class="article-shell wide">'
         '<div class="table-wrap"><table><thead><tr><th>Decision point</th>' + header_cells + '</tr></thead><tbody>' + rows + '</tbody></table></div>'
+        + score_note +
         '<section class="comparison-evidence"><h2>Evidence status</h2><div class="decision-grid">' + cards + '</div>' + bench + '</section>'
         f'{lineup}'
         '<h2>How to decide</h2>'

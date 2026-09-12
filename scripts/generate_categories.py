@@ -33,7 +33,7 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
     compact_card = ' style="min-height:260px"' if len(cat_tools) < 3 else ''
     for i, t in enumerate(sorted(cat_tools, key=lambda x: -x.get('rating', 0))[:12], start=1):
         stars = '★' * int(round(t.get('rating', 0)))
-        score_label = f"{t['rating']}/5" if t.get('rating') else 'Editorial score in review'
+        score_label = f"{t['rating']}/5 editorial" if t.get('rating') else 'Editorial score in review'
         best = ', '.join(t.get('best_for', t.get('summary', ''))) if isinstance(t.get('best_for', t.get('summary', '')), list) else t.get('best_for', t.get('summary', ''))
         best = best[:110].rstrip()
         cards_html += f'''
