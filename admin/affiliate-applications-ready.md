@@ -24,8 +24,20 @@ network approves an account, then each program is applied to separately. All fou
 run on PartnerStack, so one account unlocks all of them — and none depend on Impact,
 which previously rejected us on traffic grounds.
 
-Register the network account first: https://app.partnerstack.com/signup
-Then apply to each program from the Marketplace listing.
+**Network account status (checked 2026-09-12):** the account already exists in
+PartnerStack and has **not yet been email-verified**.
+
+- Signup was completed with **Sign in with Google** as
+  `aitoolsessentials@gmail.com`, profile `AiToolsEssentials`, on 2026-09-12 15:32 PT.
+- PartnerStack sent "Verify your email address" at 15:34 PT (SendGrid DKIM/SPF pass,
+  `hello@partnerstackmail.com`). **The verification link has not been opened** — it is a
+  single-use token, so do not pre-fetch or share it; open it from the mailbox and stay signed in.
+- Nothing can be applied to until the email is verified. Only then does the Marketplace
+  listing flow below become available.
+
+Register the network account first **(only if it does not already exist)**:
+https://app.partnerstack.com/signup
+Then verify the email, then apply to each program from the Marketplace listing.
 
 ### 1) Copy.ai — 45% recurring + 90-day cookie (best rate here)
 
@@ -151,10 +163,11 @@ Prior guidance: reapply around 20–30 visits/day.
 
 | # | Program | Network | Rate | Status | Submitted | Approved | Tracking URL |
 |---|---------|---------|------|--------|-----------|----------|--------------|
-| 1 | Copy.ai | PartnerStack | 45% rec. 12mo | ready | | | |
-| 2 | Gamma | PartnerStack | ~30% rec. | ready | | | |
-| 3 | Browse AI | PartnerStack | 20% rec. life | ready | | | |
-| 4 | Descript | PartnerStack | $25 + 15% rec. | ready | | | |
+| 0 | **PartnerStack network account** | PartnerStack | — | **signed up 2026-09-12 · email unverified · not verified yet** | 2026-09-12 | | |
+| 1 | Copy.ai | PartnerStack | 45% rec. 12mo | blocked — network email unverified | | | |
+| 2 | Gamma | PartnerStack | ~30% rec. | blocked — network email unverified | | | |
+| 3 | Browse AI | PartnerStack | 20% rec. life | blocked — network email unverified | | | |
+| 4 | Descript | PartnerStack | $25 + 15% rec. | blocked — network email unverified | | | |
 | 5 | ElevenLabs | direct | 22% rec. 12mo | approved | - | 2026-08-23 | try.elevenlabs.io/xs6witq7izqe |
 | 6 | Make | direct | 35% rec. 12mo | approved | - | 2026-08-23 | make.com/en/register?pc=aitoolsessentials |
 | 7 | Nous / Hermes | direct | $15 off referral | approved | - | 2026-09-02 | /go/nous/ |
