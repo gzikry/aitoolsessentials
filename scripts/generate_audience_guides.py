@@ -300,9 +300,142 @@ TEACHERS_DEPTH = """<h2>The teacher-buying situation is unusual: the best option
 """
 
 
+
+ASSISTANTS_DEPTH = """<h2>What each assistant actually costs</h2>
+<p>Prices below are official published amounts with check dates. Note where the official page does <em>not</em> publish a figure — that is recorded as such rather than estimated.</p>
+<table>
+<thead><tr><th>Assistant</th><th>Free tier</th><th>Paid step</th><th>Checked</th></tr></thead>
+<tbody>
+<tr><td><strong>ChatGPT</strong></td><td>$0</td><td>Paid self-service plans are billed per user per month; exact localized prices were not exposed by the official pricing page during verification, so no figure is stated here</td><td>2026-08-25</td></tr>
+<tr><td><strong>Claude</strong></td><td>$0</td><td>Pro $17/mo with $200 annual prepayment, or $20 month-to-month. Max from $100/mo</td><td>2026-08-25</td></tr>
+<tr><td><strong>Gemini</strong></td><td>$0</td><td>Google AI Pro $19.99/mo; Ultra from $99.99/mo</td><td>2026-08-25</td></tr>
+<tr><td><strong>Grok</strong></td><td>$0</td><td>SuperGrok $30/mo; SuperGrok Plus $100/mo</td><td>2026-08-25</td></tr>
+<tr><td><strong>Mistral Le Chat</strong></td><td>$0</td><td>Pro $14.99/mo; Team $24.99/user/mo (excl. tax)</td><td>2026-08-25</td></tr>
+<tr><td><strong>DeepSeek</strong></td><td>Free web chat</td><td>No official paid consumer or team plan located</td><td>2026-08-25</td></tr>
+<tr><td><strong>Meta AI</strong></td><td>Free</td><td>Meta states higher usage is available via subscription plans but publishes no plan names, prices, or limits</td><td>2026-08-25</td></tr>
+<tr><td><strong>Poe</strong></td><td>Free daily points</td><td>From $49.99/yr (~$4.17/mo) up to $2,499.99/yr (~$208.33/mo) in five tiers</td><td>2026-08-25</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Two entries deliberately show no dollar amount. ChatGPT's and Meta AI's official pages did not publish verifiable consumer figures at check time, and this site does not print an amount it cannot source.</p>
+
+<h2>How to choose in ten minutes</h2>
+<p>Most people over-research this decision and then buy on a feature they never use. The three questions that actually separate these products:</p>
+<ol>
+<li><strong>Where does your work already live?</strong> If it is Google Docs, Gmail, and Android, Gemini's inclusion in Workspace editions removes a decision entirely. If it is a corporate Microsoft tenant, Copilot is already partly provisioned — Microsoft 365 Copilot Chat works for work or education without an additional Copilot licence. Buying against your existing stack is usually cheaper than buying the best standalone model.</li>
+<li><strong>Do you need your assistant to read long documents?</strong> This is where Claude is distinctive — sustained long-context work where the whole document stays coherent. If your job is long contracts, policy documents, or research synthesis, that capability is worth a premium. If your job is short drafting and questions, it is not.</li>
+<li><strong>Do you need current information with visible sources?</strong> That is a search problem, not an assistant problem, and it points at Perplexity or Gemini rather than a chat model.</li>
+</ol>
+
+<h2>The free tiers are more capable than most people assume</h2>
+<p>Every assistant in the table above has a usable free tier, and several are genuinely good rather than crippled trials. The honest test: run your single most repeated weekly task on the free tier for two weeks. If it completes without hitting a limit that interrupts real work, you do not have a reason to pay — and "I might need more" is not a reason.</p>
+<p>Upgrade when a <em>published, specific limit</em> interrupts you more than once a week. That is a measurable trigger. Anything vaguer means you are buying reassurance, not capability.</p>
+
+<h2>What matters beyond the model</h2>
+<ul>
+<li><strong>Data handling on the tier you are buying.</strong> Consumer tiers and business tiers carry different terms at every vendor here. Anthropic publishes its training policy explicitly; Google and OpenAI publish theirs; Mistral documents admin-level data controls. Check the policy for your plan, not the vendor's reputation.</li>
+<li><strong>Team administration.</strong> Claude Team supports 2-150 users with Standard seats at $20/seat/mo and Premium at $100/seat/mo. Microsoft Copilot Business lists at a promotional $18/user/mo paid yearly against a $21 list. If you need to onboard and offboard people, an individual plan is the wrong shape regardless of model quality.</li>
+<li><strong>What you can take with you.</strong> Export, API access, and whether your conversation history is portable differ widely. Poe is the outlier here — it is a multi-model front end rather than a single vendor, priced from $49.99/year.</li>
+</ul>
+
+<h2>Assistant questions we get asked</h2>
+<details><summary>Which AI assistant is actually the best?</summary><p>There is no single answer, which is why this page scores eight of them rather than crowning one. Claude leads on long-document editing, Gemini on ecosystem integration if you use Google products, ChatGPT on breadth and ecosystem, Grok on newest-model velocity and real-time information. The right question is which one fits the work you actually repeat.</p></details>
+<details><summary>Should I pay for two assistants?</summary><p>Usually not. Two paid assistants is the most common form of AI subscription overlap: capability that duplicates rather than adds. The exception is a genuine split of jobs — a long-context editor plus a search-and-citations tool are doing different work. Two general chat assistants are not.</p></details>
+<details><summary>Is the free tier enough for professional work?</summary><p>Often yes, and you should prove it before upgrading. Run your most repeated task for two weeks on free. If a specific published limit interrupts you more than once a week, upgrade that tool. If not, you have your answer for $0.</p></details>
+<details><summary>Does my employer's licence cover personal use?</summary><p>No. A work Copilot or Workspace licence is administered by your employer, and using it for personal work typically breaches the acceptable-use terms. Personal use needs a personal plan. If you need both, that is a legitimate reason to hold two — and it is a different situation from paying twice for the same capability.</p></details>
+"""
+
+SEARCH_DEPTH = """<h2>AI search is a different purchase from an AI assistant</h2>
+<p>An assistant generates a plausible answer. An AI search tool finds something and shows you where it came from. If your task requires a source you can open and check, you are buying search — and the deciding question is not model quality but <strong>citation behaviour</strong>: does the tool keep sources visible, and can you verify each one.</p>
+
+<h2>What each search tool costs</h2>
+<table>
+<thead><tr><th>Tool</th><th>Free tier</th><th>Paid step</th><th>Checked</th></tr></thead>
+<tbody>
+<tr><td><strong>Perplexity</strong></td><td>Standard/Free plan</td><td>Consumer Pro and Max dollar prices were not exposed on the reviewed public pages. Enterprise Pro is $40/seat monthly or $400/seat annually</td><td>2026-08-25</td></tr>
+<tr><td><strong>You.com</strong></td><td>Free chat plan with unlimited Smart Agent access</td><td>Public pricing page primarily lists APIs: Web Search $5/1,000 calls, Contents $1/1,000 pages, Answer $5/1,000 calls, Research from $12/1,000 calls</td><td>2026-08-25</td></tr>
+<tr><td><strong>Gemini</strong></td><td>$0</td><td>Google AI Pro $19.99/mo; Ultra from $99.99/mo</td><td>2026-08-25</td></tr>
+<tr><td><strong>NotebookLM</strong></td><td>Free (now Gemini Notebook)</td><td>No paid consumer subscription published</td><td>2026-09-01</td></tr>
+<tr><td><strong>Grok</strong></td><td>$0</td><td>SuperGrok $30/mo; real-time access is the differentiator</td><td>2026-08-25</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Where an official page did not publish a figure, none is stated. That is a deliberate policy, not an oversight.</p>
+
+<h2>The distinction that decides it: web search vs your own documents</h2>
+<p>These tools answer two different questions and are often conflated.</p>
+<ul>
+<li><strong>Searching the open web.</strong> Perplexity is built around keeping sources visible while answering. You.com is search-first with multiple agent modes. Both are for questions where the answer exists somewhere public.</li>
+<li><strong>Searching documents you already have.</strong> NotebookLM (now Gemini Notebook) is the clearest case in the whole catalogue: it grounds answers in files <em>you uploaded</em> — PDFs, websites, YouTube videos, audio, Google Docs and Slides — with citations and an Audio Overview feature, and it is free for individuals. If your problem is "I have 40 documents and cannot find the sentence I need", this is a different and often better fit than a web search tool.</li>
+</ul>
+<p>Choosing the wrong one is the common mistake: people buy web-search tools to interrogate their own files, or expect a document tool to know about this week.</p>
+
+<h2>How to test citation reliability before paying</h2>
+<ol>
+<li><strong>Ask something you already know the answer to</strong>, where the answer is in a specific document you can open. Check whether the tool cites that document and whether the cited passage actually supports the claim.</li>
+<li><strong>Ask something with a false premise.</strong> A tool that invents a confident, well-formatted answer to a question with no true answer is telling you how it will behave on the questions you cannot check. This is the single most informative test, and it takes two minutes.</li>
+<li><strong>Ask a question whose answer changed recently.</strong> This separates tools with live retrieval from ones leaning on training data.</li>
+<li><strong>Count how many citations you had to open.</strong> If you verify every source, the tool is a research accelerator. If you verify none and trust the summary, you have a liability.</li>
+</ol>
+
+<h2>Search-engine-optimisation traffic is not your audience</h2>
+<p>Worth noting if you publish: AI search tools are heavily used by people auditing sites, which produces search-console impressions from operator queries rather than readers. Judge this category by citations you can verify, not by traffic patterns.</p>
+
+<h2>AI search questions we get asked</h2>
+<details><summary>Is Perplexity better than Google for research?</summary><p>For questions where you need to see and open sources, yes — that is the design. For navigational queries, shopping, and local results, a conventional search engine remains better. Most researchers end up using both, and that is not a failure of either.</p></details>
+<details><summary>Can I use an AI search tool to interrogate my own documents?</summary><p>Use a document-grounded tool instead. NotebookLM ingests your PDFs, Docs, Slides, audio, and video and answers from them with citations, free for individuals. A web-search tool will answer from the public web and may not know your file exists.</p></details>
+<details><summary>How do I know the citations are real?</summary><p>Open them. Every time, at least while you are deciding whether to trust the tool. A citation that does not support the claim is worse than no citation, because it looks like verification.</p></details>
+<details><summary>Should I pay for an AI search subscription?</summary><p>Only if a published limit interrupts real work. Free tiers in this category are capable, and the paid steps mostly buy query volume and access to stronger models. Test on free first, then upgrade the tool that demonstrably slows you down.</p></details>
+"""
+
+REALESTATE_DEPTH = """<h2>The real constraint for agents is not the model</h2>
+<p>Real-estate work has three properties that shape every tooling decision: you handle <strong>regulated advertising</strong>, you handle <strong>personally identifying client information</strong>, and you compete on <strong>responsiveness</strong>. A tool that is excellent for general marketing can be actively dangerous here, because listing copy and client communication sit under fair-housing and disclosure rules that no AI tool enforces for you.</p>
+<p>This page is not fair-housing advice and nothing here is a compliance certification. It is a map of which task each tool fits, and where a human review step is non-negotiable.</p>
+
+<h2>What a working agent stack costs</h2>
+<table>
+<thead><tr><th>Tool</th><th>Free tier</th><th>Paid step</th><th>Checked</th></tr></thead>
+<tbody>
+<tr><td><strong>ChatGPT</strong></td><td>$0</td><td>Paid plans billed per user per month; official page did not expose exact localized prices at check time</td><td>2026-08-25</td></tr>
+<tr><td><strong>Perplexity</strong></td><td>Standard/Free plan</td><td>Consumer Pro/Max prices not published; Enterprise Pro $40/seat monthly</td><td>2026-08-25</td></tr>
+<tr><td><strong>Canva AI</strong></td><td>$0 (up to 200 Standard or 20 Premium AI uses/month)</td><td>Pro $180/year for one person; Business $250/year per person</td><td>2026-08-25</td></tr>
+<tr><td><strong>Gamma</strong></td><td>$0 with 400 one-time signup credits that do not refill</td><td>Plus $9/seat/mo equivalent ($108/seat annually); Pro $18/seat/mo equivalent</td><td>2026-08-25</td></tr>
+<tr><td><strong>Grammarly</strong></td><td>$0 with 100 generative-AI prompts/month</td><td>Pro displayed at $12 with 2,000 AI prompts/month</td><td>2026-08-25</td></tr>
+<tr><td><strong>Zapier AI</strong></td><td>$0 with 100 tasks/month</td><td>Professional from $19.99/mo billed annually; Team $69/mo billed annually</td><td>2026-08-25</td></tr>
+</tbody>
+</table>
+<p class="monetization-note">Published amounts with check dates, not quotes. Verify current pricing before subscribing — several of these vendors changed plan structure during 2026.</p>
+
+<h2>Which tool for which task</h2>
+<ul>
+<li><strong>Listing descriptions and marketing copy.</strong> A general assistant (ChatGPT) drafts; you review for fair-housing language and factual accuracy. Never publish unreviewed output. Property descriptions are advertising, and advertising is regulated.</li>
+<li><strong>Market and neighbourhood research.</strong> Perplexity, because citations stay visible and you can open the source. Never cite a metric in a client-facing document that you have not opened yourself.</li>
+<li><strong>Listing visuals, social tiles, open-house flyers.</strong> Canva AI. The Free tier cap is specific — up to 200 Standard or 20 Premium AI uses per month — so a busy listing season can exhaust it, which makes Pro at $180/year a real consideration rather than an upsell.</li>
+<li><strong>Client presentations and market updates.</strong> Gamma. Note the free tier's 400 credits are one-time and do not refill, so it is an evaluation tier rather than a working one; Plus at $108/seat annually is the first genuinely usable step.</li>
+<li><strong>Email and client correspondence.</strong> Grammarly. Free includes 100 AI prompts/month; Pro's 2,000 prompts/month is the step that makes it a working tool rather than a sample.</li>
+<li><strong>Follow-up and pipeline admin.</strong> Zapier AI, but budget carefully: AI steps draw from a shared task pool, with Standard model steps consuming 1 task per run, Advanced 3, and Premium 5. A workflow that looks cheap per run can consume a plan quickly at volume.</li>
+</ul>
+
+<h2>Client data: the line that matters</h2>
+<p>Client names, addresses, phone numbers, offer terms, and anything in a transaction file are personally identifying information. General consumer AI tools are not the right place for it, regardless of how convenient the assistant is.</p>
+<p>Practical rules that hold up: keep identifiable client data in your CRM or transaction system, not in a chat window. When you need an assistant to help with a client situation, describe the situation without identifiers. Check whether your brokerage has an approved AI policy before using any tool on client material — most now do, and following it is also your protection if something goes wrong.</p>
+
+<h2>Fair housing and disclosure: what AI cannot do for you</h2>
+<p>No tool on this page will tell you that a listing description violates fair-housing rules. Language that signals preference or exclusion — about families, religion, national origin, disability, or anything else protected — is a legal exposure that a language model will happily generate if prompted loosely, and will not reliably flag even when asked.</p>
+<p>Treat AI output as a first draft that a human with training reviews. If you would not publish a sentence a junior colleague wrote without reading it, do not publish an AI draft unread either. The disclosure question is separate and increasingly contractual: check your listing agreements and state AI disclosure rules in your market rather than assuming silence is fine.</p>
+
+<h2>Real-estate AI questions we get asked</h2>
+<details><summary>Can I use AI to write listing descriptions?</summary><p>To draft, yes. To publish unchecked, no. Listing copy is regulated advertising, and a model will generate language with fair-housing exposure if your prompt is loose — and will not reliably catch it if you ask. Draft with AI, review with a trained human.</p></details>
+<details><summary>Is it a problem to put client details into ChatGPT?</summary><p>Yes, for identifiable client information on a consumer plan. Describe the situation without names, addresses, or offer terms, or keep the work inside systems your brokerage has approved for client data.</p></details>
+<details><summary>What is the cheapest stack that actually works?</summary><p>ChatGPT free for drafting, Grammarly Pro at $12 for correspondence volume, and Canva AI free while your AI-use count stays under the monthly cap. That covers most solo agents for very little. Add Gamma Plus or Zapier only when a specific task is demonstrably slowed by the free tier.</p></details>
+<details><summary>Do my clients need to know I use AI?</summary><p>Increasingly yes, and it is usually governed by your listing agreements and market rules rather than left to judgment. Check your contract language and your brokerage's policy before assuming disclosure is optional.</p></details>
+"""
+
+
 DEPTH_BLOCKS = {
     'agencies': AGENCY_DEPTH,
     'teachers': TEACHERS_DEPTH,
+    'assistants': ASSISTANTS_DEPTH,
+    'search': SEARCH_DEPTH,
+    'realestate': REALESTATE_DEPTH,
 }
 
 HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

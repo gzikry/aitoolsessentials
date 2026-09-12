@@ -3,6 +3,18 @@
 import json, re
 from pathlib import Path
 
+from generate_audience_guides import (
+    ASSISTANTS_DEPTH, SEARCH_DEPTH, REALESTATE_DEPTH,
+)
+
+# page -> depth block. Injected as a marker-delimited section so reruns replace it
+# rather than duplicating it.
+PAGE_DEPTH = {
+    'best-ai-assistants.html': ASSISTANTS_DEPTH,
+    'best-ai-search-engines.html': SEARCH_DEPTH,
+    'best-ai-tools-for-real-estate-agents.html': REALESTATE_DEPTH,
+}
+
 GUIDES = {
  'best-ai-assistants.html':'General AI Assistant',
  'best-ai-coding-tools.html':'Development',
@@ -15,6 +27,8 @@ GUIDES = {
  'best-ai-meeting-tools.html':'Meetings',
  'best-ai-presentation-tools.html':'Presentations',
  'best-ai-app-builders.html':'Development',
+ 'best-ai-search-engines.html':'Research',
+ 'best-ai-tools-for-real-estate-agents.html':'Productivity',
 }
 
 def generate(root: Path) -> int:
@@ -33,6 +47,15 @@ def generate(root: Path) -> int:
         panel=f'''<!-- AIT GUIDE EVIDENCE START --><div class="review-benchmark"><span class="evidence-label">Guide evidence status</span><h3>Official product sources checked {source_data['checked_at']}</h3><p>Prices and vendor-policy links are maintained in the individual reviews. External benchmarks apply only to exact model/configuration records: {links}</p><p>Independent same-task hands-on ranking: <strong>not yet published</strong>. Until retained test logs exist, ordering remains an editorial product assessment. <a href="../legal/testing-protocol.html">Testing protocol →</a></p></div><!-- AIT GUIDE EVIDENCE END -->'''
         idx=h.find('<h2>')
         if idx>=0:h=h[:idx]+panel+h[idx:]
+
+        # Depth section: replaces any previous marker block so the pass stays idempotent.
+        h=re.sub(r'<!-- AIT GUIDE DEPTH START -->.*?<!-- AIT GUIDE DEPTH END -->','',h,flags=re.S)
+        depth=PAGE_DEPTH.get(filename)
+        if depth:
+            block=('<!-- AIT GUIDE DEPTH START -->'+depth+'<!-- AIT GUIDE DEPTH END -->')
+            pos=h.find('<h2>')
+            if pos>=0:
+                h=h[:pos]+block+h[pos:]
         if h!=original:p.write_text(h);changed+=1
     print(f'Enhanced buyer-guide evidence on {changed} pages')
     return changed
