@@ -102,7 +102,33 @@ def generate_stack_pages(root: Path, tools: list[dict[str, Any]]) -> str:
     outdir = root / "stacks"
     outdir.mkdir(exist_ok=True)
     index_cards: list[str] = []
+    # Stack pages consolidated into a deeper guide. Key -> destination path.
+    consolidated = {
+        'ai-stack-for-teachers': '/articles/best-ai-tools-for-teachers.html',
+    }
     for slug, title, role, budget, vibe, desc in STACK_PAGE_DEFS:
+        if slug in consolidated:
+            dest = consolidated[slug]
+            (outdir / f"{slug}.html").write_text(
+                '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                '<meta name="viewport" content="width=device-width,initial-scale=1">'
+                f'<meta name="description" content="{esc(desc)}">'
+                f'<title>{esc(title)} (moved) | AIToolsEssentials</title>'
+                f'<link rel="canonical" href="{DOMAIN}{dest}">'
+                f'<meta http-equiv="refresh" content="0; url={dest}">'
+                '<meta name="robots" content="noindex,follow">'
+                '<link rel="stylesheet" href="/css/styles.css"></head><body>'
+                '<main><section class="scene scene-light"><div class="article-shell">'
+                f'<h1>{esc(title)}</h1>'
+                '<p>This stack has been consolidated into our full guide, which is longer, '
+                'dated, and kept current.</p>'
+                f'<p><a class="button button-blue" href="{dest}">Open the full guide</a></p>'
+                '</div></section></main></body></html>')
+            index_cards.append(
+                f'<article class="content-hub-card"><span>{esc(role)} · {esc(budget)}</span>'
+                f'<h3><a href="{dest}">{esc(title)}</a></h3><p>{esc(desc)}</p>'
+                f'<a class="button button-blue small" href="{dest}">Open guide</a></article>')
+            continue
         items = pick_stack(tools, role, budget, vibe)
         cards = "".join(tool_card(t) for t in items)
         share = stack_visual_card(title, role, budget, vibe, items)

@@ -28,6 +28,26 @@ def jsonld(data: dict[str, Any]) -> str:
     return json.dumps(data, separators=(",", ":")).replace("</", "<\\/")
 
 
+def redirect_stub(title, desc, dest, domain):
+    """Canonical + noindex + refresh stub so a consolidated page stops competing."""
+    return (
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        f'<meta name="description" content="{esc(desc)}">'
+        f'<title>{esc(title)} (moved) | AIToolsEssentials</title>'
+        f'<link rel="canonical" href="{domain}{dest}">'
+        f'<meta http-equiv="refresh" content="0; url={dest}">'
+        '<meta name="robots" content="noindex,follow">'
+        '<link rel="stylesheet" href="/css/styles.css"></head><body>'
+        '<main><section class="scene scene-light"><div class="article-shell">'
+        f'<h1>{esc(title)}</h1>'
+        f'<p>This page has been consolidated into our full guide, which is longer, '
+        f'dated, and kept current.</p>'
+        f'<p><a class="button button-blue" href="{dest}">Open the full guide</a></p>'
+        '</div></section></main></body></html>'
+    )
+
+
 def head(title: str, desc: str, canonical: str, schema: dict[str, Any] | None = None) -> str:
     schema_html = f'<script type="application/ld+json">{jsonld(schema)}</script>' if schema else ""
     return f'<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>{esc(title)}</title><link rel="canonical" href="{esc(canonical)}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/css/styles.css">{schema_html}</head>'
@@ -52,12 +72,25 @@ def generate(root: Path) -> int:
     out.mkdir(exist_ok=True)
     index_cards: list[str] = []
 
+    # Workflow slugs consolidated into a deeper guide. Key -> destination path.
+    consolidated = {
+        'classroom-lesson-planning': '/articles/best-ai-tools-for-teachers.html',
+    }
     seen = set()
     for wf in workflows:
         slug = wf.get("slug")
         if not isinstance(slug, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or slug in seen:
             raise ValueError(f"Invalid or duplicate workflow slug: {slug!r}")
         seen.add(slug)
+        if slug in consolidated:
+            dest = consolidated[slug]
+            (out / f"{slug}.html").write_text(
+                redirect_stub(wf["title"], wf["description"], dest, DOMAIN))
+            index_cards.append(
+                f'<article class="content-hub-card"><h3><a href="{dest}">'
+                f'{esc(wf["title"])}</a></h3><p>{esc(wf["description"])}</p>'
+                f'<a class="button button-blue small" href="{dest}">Open guide</a></article>')
+            continue
         primary = wf.get("primary_tools", [])
         if not isinstance(primary, list) or not primary:
             raise ValueError(f"Workflow {slug} has no primary_tools list")
