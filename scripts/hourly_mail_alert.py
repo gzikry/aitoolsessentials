@@ -53,6 +53,60 @@ def fingerprint(message: dict) -> str:
     ])
 
 
+def bounce_detail(folder: str, message_id: str) -> str:
+    """Extract the failed recipient and delivery status from a DSN.
+
+    The bounced address is not in the envelope ``To:`` — it lives inside the
+    attached ``message/delivery-status`` / ``message/rfc822`` parts, so the
+    message has to be exported and parsed rather than grepped.
+    """
+    try:
+        result = himalaya(
+            "message", "export", str(message_id),
+            "--account", ACCOUNT, "--folder", folder, "--full",
+        )
+        if result.returncode:
+            return ""
+        import email
+        from email import policy
+        msg = email.message_from_string(result.stdout, policy=policy.default)
+        recipients: list[str] = []
+        actions: list[str] = []
+        statuses: list[str] = []
+        for part in msg.walk():
+            if part.get_content_type() == "message/delivery-status":
+                payload = part.get_payload()
+                if not isinstance(payload, list):
+                    continue
+                for sub in payload:
+                    if not hasattr(sub, "get"):
+                        continue
+                    recipient = sub.get("Final-Recipient") or sub.get("Original-Recipient")
+                    if recipient:
+                        recipients.append(str(recipient).split(";")[-1].strip())
+                    if sub.get("Action"):
+                        actions.append(str(sub.get("Action")))
+                    if sub.get("Status"):
+                        statuses.append(str(sub.get("Status")))
+        if not recipients:
+            body = msg.get_body(preferencelist=("plain",))
+            text = body.get_content() if body else ""
+            for line in text.splitlines():
+                if "delivering your message to" in line:
+                    recipients.append(line.split("delivering your message to")[-1].strip().rstrip("."))
+                    break
+        fields = []
+        if recipients:
+            fields.append("Recipient: " + ", ".join(dict.fromkeys(recipients)))
+        if actions:
+            fields.append("Action: " + ", ".join(dict.fromkeys(actions)))
+        if statuses:
+            fields.append("Status: " + ", ".join(dict.fromkeys(statuses)))
+        return " ".join(fields)
+    except Exception:
+        return ""
+
+
 def disposition(message: dict) -> tuple[bool, str]:
     sender = (message.get("from") or {}).get("addr", "").lower()
     subject = (message.get("subject") or "").strip()
@@ -63,7 +117,21 @@ def disposition(message: dict) -> tuple[bool, str]:
         return False, ""
     # Bounces and delivery delays matter whatever folder Gmail filed them to.
     if sender in {"mailer-daemon@googlemail.com", "mailer-daemon@gmail.com"}:
-        return True, "Delivery failure — inspect the bounced recipient and error."
+        detail = bounce_detail(message.get("_folder") or FOLDERS[0], message.get("id"))
+        if "delay" in lower:
+            # A Delay is a retry notice, not a verdict: it becomes a Failure
+            # later if the recipient is genuinely unreachable. Worth diagnosing,
+            # never worth declaring a recipient dead on its own.
+            reason = (
+                "Delivery DELAY (not final — a Failure may follow). "
+                "Resolve MX for the recipient domain before concluding anything."
+            )
+        else:
+            reason = (
+                "Delivery FAILURE (final). Inspect the recipient and error; "
+                "do not retry unless a working address exists."
+            )
+        return True, f"{reason} {detail}".strip()
     if sender == "submissions@formsubmit.co":
         if "audit" in lower or "intake" in lower:
             return True, "New AI Stack Audit intake — review and respond within 24 hours."
