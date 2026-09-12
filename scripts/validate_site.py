@@ -738,6 +738,24 @@ def main():
     # Linking to "X/index.html" and "X/" both serve 200, so analytics reports two
     # rows for one page and crawl signals split. Canonicals use the directory form;
     # internal links must agree. Admin pages are internal-only and exempt.
+    # Review pages must not ship empty hero/overview/feature sections: this is what
+    # a data record using `features` (string) instead of `key_features` (list) causes,
+    # and it renders as an invisible page to both readers and crawlers.
+    empty_sections = []
+    for tool_dir in sorted((ROOT / 'tools').iterdir()):
+        page = tool_dir / 'index.html'
+        if not (tool_dir.is_dir() and page.exists()):
+            continue
+        html = page.read_text()
+        if re.search(r'<h2>Overview</h2>\s*<p>\s*</p>', html):
+            empty_sections.append(f'{tool_dir.name}: empty Overview')
+        if re.search(r'<h2>Key features</h2>\s*<ul>\s*</ul>', html):
+            empty_sections.append(f'{tool_dir.name}: empty Key features')
+        if not re.search(r'<meta name="description" content="[^"]{40,}"', html):
+            empty_sections.append(f'{tool_dir.name}: missing meta description')
+    if empty_sections:
+        errors.extend(f'Empty/blank review section — {item}' for item in empty_sections[:10])
+
     # Public pages must not link to /index.html instead of the canonical directory URL.
     split_hits = []
     for f in ROOT.rglob('*.html'):

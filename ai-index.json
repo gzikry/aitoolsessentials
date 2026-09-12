@@ -474,7 +474,7 @@
       "name": "Ideogram",
       "slug": "ideogram",
       "category": "Creative",
-      "price": null,
+      "price": "Free plan; Plus $15/mo ($180/yr); Pro $42/mo ($504/yr); Team $20/user/mo",
       "url": "https://aitoolsessentials.com/tools/ideogram/"
     },
     {
@@ -488,21 +488,21 @@
       "name": "Pika",
       "slug": "pika",
       "category": "Video",
-      "price": null,
+      "price": "Free plan; Basic $8/mo; Standard $28/mo; Pro $76/mo (annual billing)",
       "url": "https://aitoolsessentials.com/tools/pika/"
     },
     {
       "name": "Suno",
       "slug": "suno",
       "category": "Audio & Video",
-      "price": null,
+      "price": "Free plan; Pro $8/mo ($96/yr); Premier $24/mo ($288/yr) (annual billing)",
       "url": "https://aitoolsessentials.com/tools/suno/"
     },
     {
       "name": "Udio",
       "slug": "udio",
       "category": "Audio & Video",
-      "price": null,
+      "price": "Free plan; Standard $8/mo ($96/yr); Pro $24/mo ($288/yr) (annual billing)",
       "url": "https://aitoolsessentials.com/tools/udio/"
     },
     {

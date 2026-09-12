@@ -99,7 +99,9 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     name = tool.get('name', '')
     rating = valid_rating_value(tool)
     official = tool.get('official') or tool.get('url', '')
-    summary = tool.get('summary', '')
+    # Some vendor-added records carry only `description`; falling back keeps the
+    # meta description and on-page summary from rendering empty.
+    summary = tool.get('summary') or tool.get('description') or ''
     category = tool.get('category', '')
     source_record = _source_record(root, slug)
     official_source_html = _official_source_html(source_record)
@@ -174,7 +176,13 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     # A standalone Review plus AggregateRating is what GSC flagged as 2 invalid items.
     schema = json.dumps(software_schema_for_tool(tool))
 
-    features_html = ''.join(f'<li>{f}</li>\n' for f in tool.get('key_features', []))
+    # Records arrive with `key_features` (list), `features` (comma-separated string,
+    # as vendor submissions carry them), or nothing. Normalise all three so a page
+    # never renders an empty Key features list.
+    raw_features = tool.get('key_features') or tool.get('features') or []
+    if isinstance(raw_features, str):
+        raw_features = [x.strip() for x in raw_features.split(',') if x.strip()]
+    features_html = ''.join(f'<li>{f}</li>\n' for f in raw_features)
     trial_checklist = tool.get('trial_checklist', '')
     best_plan = tool.get('best_plan', '')
     faq = tool.get('faq', [])
