@@ -78,14 +78,28 @@ def url_for_rel(rel: Path) -> str:
 
 
 def title_from_file(html: str, rel: Path) -> str:
+    """A short, human label for a breadcrumb crumb.
+
+    Prefer <title> over <h1>: several pages use an <h1> as a marketing line
+    ("Paying twice for AI tools? Find out in two minutes."), which reads as nonsense
+    inside a breadcrumb trail. The <title> is already the page's short name.
+    """
+    m = re.search(r'<title>(.*?)</title>', html, re.S | re.I)
+    if m:
+        title = re.sub(r'\s*[—|].*$', '', m.group(1)).strip()
+        if title:
+            return title
     m = re.search(r'<h1[^>]*>(.*?)</h1>', html, re.S | re.I)
     if m:
         return re.sub(r'<.*?>', '', m.group(1)).strip()
-    m = re.search(r'<title>(.*?)</title>', html, re.S | re.I)
-    if m:
-        return re.sub(r'\s*[—|].*$', '', m.group(1)).strip()
     stem = rel.stem if rel.name != 'index.html' else (rel.parts[-2] if len(rel.parts) > 1 else 'Home')
     return stem.replace('-', ' ').title()
+
+
+def _dir_has_index(path_accum: list) -> bool:
+    """True when the directory exists and serves an index.html (GitHub Pages 403s otherwise)."""
+    d = ROOT / Path(*path_accum)
+    return d.is_dir() and (d / 'index.html').exists()
 
 
 def breadcrumb_schema(rel: Path, html: str):
@@ -93,12 +107,12 @@ def breadcrumb_schema(rel: Path, html: str):
         return None
     crumbs = [{"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"}]
     parts = list(rel.parts)
-    if parts[-1] == 'index.html':
+    is_index = parts[-1] == 'index.html'
+    if is_index:
         parts = parts[:-1]
-    else:
-        parts[-1] = rel.stem
     path_accum = []
     for part in parts:
+        is_leaf = part == parts[-1]
         if part in ('tools', 'categories', 'articles', 'comparisons', 'legal', 'services', 'benchmarks', 'research', 'community', 'alternatives'):
             name = {
                 'tools': 'Tools', 'categories': 'Categories', 'articles': 'Guides', 'comparisons': 'Comparisons',
@@ -106,12 +120,22 @@ def breadcrumb_schema(rel: Path, html: str):
                 'community': 'Community', 'alternatives': 'Alternatives'
             }.get(part, part.title())
         else:
-            name = title_from_file(html, rel) if part == parts[-1] else part.replace('-', ' ').replace('%20', ' ').title()
+            name = title_from_file(html, rel) if is_leaf else part.replace('-', ' ').replace('%20', ' ').title()
         path_accum.append(part)
         item = f"{DOMAIN}/" + '/'.join(path_accum)
-        if rel.name == 'index.html' or part != parts[-1]:
+        # GitHub Pages serves neither extensionless URLs (/stack-audit 404s while
+        # /stack-audit.html is 200) nor a directory without an index.html (403). Every
+        # crumb below resolves: a leaf links the file as served, a directory links only
+        # when it has an index.html, and an unresolvable intermediate is dropped.
+        if is_index or not is_leaf:
+            if not _dir_has_index(path_accum):
+                continue
+            item += '/'
+        elif not part.endswith('.html') and _dir_has_index(path_accum):
             item += '/'
         crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1, "name": name, "item": item})
+    for i, c in enumerate(crumbs, start=1):
+        c['position'] = i
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbs}
 
 

@@ -738,6 +738,47 @@ def main():
     # Linking to "X/index.html" and "X/" both serve 200, so analytics reports two
     # rows for one page and crawl signals split. Canonicals use the directory form;
     # internal links must agree. Admin pages are internal-only and exempt.
+    # Every BreadcrumbList crumb must resolve. GitHub Pages serves neither extensionless
+    # URLs (/stack-audit 404s) nor a directory without an index.html (403), so a crumb
+    # built from rel.stem produced 569 dead URLs across the site.
+    unresolved_crumbs = []
+    existing_urls = set()
+    for f in ROOT.rglob('*.html'):
+        r = f.relative_to(ROOT)
+        if any(part.startswith('.') or part == 'admin' for part in r.parts):
+            continue
+        existing_urls.add('https://aitoolsessentials.com/' + str(r).replace('\\', '/'))
+        if r.name == 'index.html':
+            d = '/'.join(r.parts[:-1])
+            existing_urls.add('https://aitoolsessentials.com/' + (d + '/' if d else ''))
+    for f in ROOT.rglob('*.html'):
+        r = f.relative_to(ROOT)
+        if any(part.startswith('.') or part == 'admin' for part in r.parts):
+            continue
+        html = f.read_text(errors='ignore')
+        for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+            if 'BreadcrumbList' not in block:
+                continue
+            try:
+                data = json.loads(block)
+            except Exception:
+                continue
+            items = []
+            if isinstance(data, dict):
+                if data.get('@type') == 'BreadcrumbList':
+                    items = data.get('itemListElement') or []
+                for g in data.get('@graph') or []:
+                    if isinstance(g, dict) and g.get('@type') == 'BreadcrumbList':
+                        items = g.get('itemListElement') or []
+            for it in items:
+                url = it.get('item') if isinstance(it, dict) else None
+                if isinstance(url, dict):
+                    url = url.get('@id')
+                if isinstance(url, str) and url.startswith('https://aitoolsessentials.com') and url not in existing_urls:
+                    unresolved_crumbs.append(f'{r}: {url}')
+    if unresolved_crumbs:
+        errors.extend(f'Breadcrumb URL does not resolve — {item}' for item in unresolved_crumbs[:10])
+
     # Review pages must not ship empty hero/overview/feature sections: this is what
     # a data record using `features` (string) instead of `key_features` (list) causes,
     # and it renders as an invisible page to both readers and crawlers.

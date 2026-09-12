@@ -290,7 +290,7 @@ def _wrap(title, description, kicker, body, canonical_name):
 <script type="application/ld+json">{faq_schema}</script>
 <script type="application/ld+json">{schema}</script>
 <!-- AIT STRUCTURED DATA START -->
-<script type="application/ld+json">{{"@context":"https://***@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"{DOMAIN}/"}},{{"@type":"ListItem","position":2,"name":"Comparisons","item":"{DOMAIN}/comparisons/"}},{{"@type":"ListItem","position":3,"name":"{_e(kicker)}","item":"{DOMAIN}/comparisons/{canonical_name}"}}]}}</script>
+<script type="application/ld+json">{{"@context":"https://***@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"{DOMAIN}/"}},{{"@type":"ListItem","position":2,"name":"Comparisons","item":"{DOMAIN}/comparisons/"}},{{"@type":"ListItem","position":3,"name":"{_e(kicker)}","item":"{DOMAIN}/comparisons/{canonical_name}.html"}}]}}</script>
 <!-- AIT STRUCTURED DATA END -->
 <!-- AIT DISCOVERY LINKS --><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>
 <!-- AIT KNOWLEDGE SCHEMA START -->
