@@ -4048,6 +4048,14 @@
     "price": "$99 one-time per profession (five products)",
     "rating": 4.1,
     "official": "https://sonaopus.com/",
+    "affiliate_url": "https://sonaopus.com/?ref=58448483",
+    "product_links": [
+      {"name": "AI Recruiting", "url": "https://gumroad.com/a/58448483/hapwxp"},
+      {"name": "AI Project Management", "url": "https://gumroad.com/a/58448483/iwiiw"},
+      {"name": "AI HR Management", "url": "https://gumroad.com/a/58448483/eiddl"},
+      {"name": "AI Executive Assistant", "url": "https://gumroad.com/a/58448483/pqpox"},
+      {"name": "AI Real Estate Agent", "url": "https://gumroad.com/a/58448483/wtyioq"}
+    ],
     "summary": "A prompt-structuring layer for five professions. You describe your situation once in a profession-specific multi-stage workflow, and Sonaopus pre-loads it into Claude, ChatGPT, or Gemini so the assistant drafts the HR policy, employee-relations letter, status report, or listing copy without you re-explaining the context.",
     "use_cases": [
       "Drafting HR policies and employee-relations letters",

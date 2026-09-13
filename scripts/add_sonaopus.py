@@ -38,6 +38,14 @@ TOOL = {
     "price": "$99 one-time per profession (five products)",
     "rating": 4.1,
     "official": "https://sonaopus.com/",
+    "affiliate_url": "https://sonaopus.com/?ref=58448483",
+    "product_links": [
+        {"name": "AI Recruiting", "url": "https://gumroad.com/a/58448483/hapwxp"},
+        {"name": "AI Project Management", "url": "https://gumroad.com/a/58448483/iwiiw"},
+        {"name": "AI HR Management", "url": "https://gumroad.com/a/58448483/eiddl"},
+        {"name": "AI Executive Assistant", "url": "https://gumroad.com/a/58448483/pqpox"},
+        {"name": "AI Real Estate Agent", "url": "https://gumroad.com/a/58448483/wtyioq"},
+    ],
     "summary": "A prompt-structuring layer for five professions. You describe your situation once in a profession-specific multi-stage workflow, and Sonaopus pre-loads it into Claude, ChatGPT, or Gemini so the assistant drafts the HR policy, employee-relations letter, status report, or listing copy without you re-explaining the context.",
     "use_cases": [
         "Drafting HR policies and employee-relations letters",
@@ -98,7 +106,7 @@ SOURCE = {
     "slug": "sonaopus",
     "pricing_checked_date": TODAY,
     "pricing_summary": "$99 USD one-time per profession-specific product, no subscription and no recurring charge. Five products: HR Management, Executive Assistant, Project Management, Real Estate, Recruiting. Free tier: up to eight generations per profession before purchase, with no signup or card. Lifetime access covers future updates to that profession's tool. Terms state that except where required by law all purchases are final and no refunds are offered, with the free trial given as the reason. A stale third-party mirror (devadex.com) still lists a retired pre-launch $59 price; the mirrored store account sonaopusaiworkflow.gumroad.com now returns 404 and the price on every live vendor page is $99.",
-    "verification_notes": "Submitted via /submit-tool.html by the vendor on 2026-09-09 and held pending verification. The vendor published /privacy and /terms on 2026-09-12 and answered every outstanding question, so the listing was published 2026-09-12 with remaining caveats recorded in cons and unresolved_claims. Editorial entry written independently; no submission copy was reused. Verified on 2026-09-12: both legal pages live and substantive; all five Gumroad products at $99 with no subscription; shipped JavaScript writes only sonaopus_hr/_ea/_pm/_re/_role to localStorage, makes zero fetch/XHR/sendBeacon calls, and has no third-party script tags; handoff targets claude.ai/new, chatgpt.com/ and gemini.google.com/ carry no query parameters. Operator: Praise Boyinde, sole proprietor, no registered entity, governing law Nigeria. The domain publishes no MX records, so the Gmail address printed in both legal pages is the only reachable contact. Re-checked 2026-09-13 against the live homepage and a vendor email the same day. Closed: the homepage FAQ no longer says \u201cNothing stored\u201d; on-page copy now matches the Privacy Policy (everything runs in the browser, progress saves locally, nothing is sent until you hand it to an assistant). Closed: a standalone legal-review FAQ (\u201cNothing happens without you\u201d) is live and treats ER letters, HR policies, and similar outputs as drafts to verify, with legal or compliance risk flagged on-screen. Closed: affiliate terms were stated in writing by the vendor on 2026-09-13 \u2014 40% flat one-time commission ($39.60 per $99 product), no recurring commission because there is no subscription, 30-day cookie, attribution and payout through Gumroad; signup at https://sonaopus.com/ or https://sonaopus.gumroad.com/affiliates. We have not enrolled and have not wired a tracking URL.",
+    "verification_notes": "Submitted via /submit-tool.html by the vendor on 2026-09-09 and held pending verification. The vendor published /privacy and /terms on 2026-09-12 and answered every outstanding question, so the listing was published 2026-09-12 with remaining caveats recorded in cons and unresolved_claims. Editorial entry written independently; no submission copy was reused. Verified on 2026-09-12: both legal pages live and substantive; all five Gumroad products at $99 with no subscription; shipped JavaScript writes only sonaopus_hr/_ea/_pm/_re/_role to localStorage, makes zero fetch/XHR/sendBeacon calls, and has no third-party script tags; handoff targets claude.ai/new, chatgpt.com/ and gemini.google.com/ carry no query parameters. Operator: Praise Boyinde, sole proprietor, no registered entity, governing law Nigeria. The domain publishes no MX records, so the Gmail address printed in both legal pages is the only reachable contact. Re-checked 2026-09-13 against the live homepage and a vendor email the same day. Closed: the homepage FAQ no longer says \u201cNothing stored\u201d; on-page copy now matches the Privacy Policy (everything runs in the browser, progress saves locally, nothing is sent until you hand it to an assistant). Closed: a standalone legal-review FAQ (\u201cNothing happens without you\u201d) is live and treats ER letters, HR policies, and similar outputs as drafts to verify, with legal or compliance risk flagged on-screen. Closed: affiliate terms were stated in writing by the vendor on 2026-09-13 \u2014 40% flat one-time commission ($39.60 per $99 product), no recurring commission because there is no subscription, 30-day cookie, attribution and payout through Gumroad. Approved and wired 2026-09-13: site ref https://sonaopus.com/?ref=58448483 on Visit and official-pricing CTAs; per-product Gumroad affiliate URLs on the five profession products. Editorial score, cons, and methodology are unchanged.",
     "pricing_url": "https://sonaopus.com/",
     "docs_url": "https://sonaopus.com/terms",
     "privacy_url": "https://sonaopus.com/privacy",
@@ -119,9 +127,25 @@ REVENUE_TARGET = {
     "search_queries": [],
     "target_pages": ["/tools/sonaopus/"],
     "best_audiences": ["HR and people-operations buyers", "workflow-specific buyers"],
-    "status": "not_started",
-    "next_action": "Vendor stated affiliate terms in writing on 2026-09-13. Do not invent enrollment. Apply only when ready to accept a Gumroad tracking URL; keep the official site URL on the review until then.",
-    "notes": "Vendor-stated 2026-09-13: 40% flat one-time ($39.60 per $99 product); no recurring commission; 30-day cookie; Gumroad tracks and pays. Signup: https://sonaopus.com/ or https://sonaopus.gumroad.com/affiliates. Not enrolled. Do not invent affiliate URLs.",
+    "status": "approved",
+    "next_action": "Links live 2026-09-13. Keep disclosed affiliate hrefs on the review CTAs.",
+    "notes": "Approved 2026-09-13. Site ref https://sonaopus.com/?ref=58448483. Gumroad product links: AI Recruiting hapwxp, AI Project Management iwiiw, AI HR Management eiddl, AI Executive Assistant pqpox, AI Real Estate Agent wtyioq. 40% one-time, 30-day cookie.",
+}
+
+AFFILIATE_PROGRAM = {
+    "tool_slug": "sonaopus",
+    "availability": "available",
+    "program_type": "direct vendor program (Gumroad affiliate)",
+    "network": "Gumroad",
+    "official_program_url": "https://sonaopus.gumroad.com/affiliates",
+    "application_status": "approved",
+    "commission_note": "Vendor-stated 2026-09-13: 40% flat one-time ($39.60 per $99 product); no recurring; 30-day cookie; Gumroad tracks and pays.",
+    "notes": "Approved 2026-09-13 from vendor/Gumroad affiliate links. Site ref wired on Visit and official-pricing CTAs. Per-product Gumroad links wired on the review. Editorial score and cons unchanged.",
+    "status": "approved",
+    "approved_date": "2026-09-13",
+    "approved_tracking_url": "https://sonaopus.com/?ref=58448483",
+    "affiliate_url": "https://sonaopus.com/?ref=58448483",
+    "product_links": TOOL["product_links"],
 }
 
 SNAPSHOT = {
@@ -132,11 +156,56 @@ SNAPSHOT = {
 }
 
 
+def _upsert_named(records: list, key: str, value: str, record: dict) -> list:
+    for i, existing in enumerate(records):
+        if existing.get(key) == value:
+            records[i] = record
+            return records
+    records.append(record)
+    return records
+
+
+def upsert_affiliate_records() -> None:
+    """Keep approved tracking URLs in sync even after the tool row already exists."""
+    tools_path = ROOT / "data/tools.json"
+    tools = json.loads(tools_path.read_text())
+    for tool in tools:
+        if tool.get("slug") == TOOL["slug"]:
+            tool["affiliate_url"] = TOOL["affiliate_url"]
+            tool["product_links"] = TOOL["product_links"]
+            break
+    tools_path.write_text(json.dumps(tools, indent=2, ensure_ascii=False) + "\n")
+
+    sources_path = ROOT / "data/tool_sources.json"
+    sources = json.loads(sources_path.read_text())
+    for existing in sources.get("tools", []):
+        if existing.get("slug") == SOURCE["slug"]:
+            existing["verification_notes"] = SOURCE["verification_notes"]
+            break
+    sources_path.write_text(json.dumps(sources, indent=2, ensure_ascii=False) + "\n")
+
+    targets_path = ROOT / "data/revenue_targets.json"
+    targets = json.loads(targets_path.read_text())
+    _upsert_named(targets, "tool_slug", REVENUE_TARGET["tool_slug"], REVENUE_TARGET)
+    targets_path.write_text(json.dumps(targets, indent=2, ensure_ascii=False) + "\n")
+
+    programs_path = ROOT / "data/affiliate_programs.json"
+    programs = json.loads(programs_path.read_text())
+    programs["affiliate_programs"] = _upsert_named(
+        programs.get("affiliate_programs", []),
+        "tool_slug",
+        AFFILIATE_PROGRAM["tool_slug"],
+        AFFILIATE_PROGRAM,
+    )
+    programs_path.write_text(json.dumps(programs, indent=2, ensure_ascii=False) + "\n")
+
+
 def main() -> None:
     tools_path = ROOT / "data/tools.json"
     tools = json.loads(tools_path.read_text())
     if any(t["slug"] == TOOL["slug"] for t in tools):
-        print("sonaopus already present in tools.json; nothing to do")
+        upsert_affiliate_records()
+        print("sonaopus already present in tools.json; refreshed affiliate records")
         return
     tools.append(TOOL)
     tools_path.write_text(json.dumps(tools, indent=2, ensure_ascii=False) + "\n")
@@ -157,6 +226,8 @@ def main() -> None:
     snapshots["snapshots"][TOOL["slug"]] = SNAPSHOT
     snapshots["updated"] = TODAY
     snapshots_path.write_text(json.dumps(snapshots, indent=2, ensure_ascii=False) + "\n")
+
+    upsert_affiliate_records()
 
     print(f"Added sonaopus: tools={len(tools)} sources={len(sources['tools'])} targets={len(targets)} snapshots={len(snapshots['snapshots'])}")
 

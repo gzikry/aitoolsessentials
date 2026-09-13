@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-01",
+  "checked_at": "2026-09-13",
   "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
   "affiliate_programs": [
     {
@@ -213,9 +213,20 @@
       "program_type": "direct vendor program (Gumroad affiliate)",
       "network": "Gumroad",
       "official_program_url": "https://sonaopus.gumroad.com/affiliates",
-      "application_status": "not_applied",
+      "application_status": "approved",
       "commission_note": "Vendor-stated 2026-09-13: 40% flat one-time ($39.60 per $99 product); no recurring; 30-day cookie; Gumroad tracks and pays.",
-      "notes": "Terms received in writing from the vendor on 2026-09-13. Signup also advertised from https://sonaopus.com/. Not enrolled; no tracking URL wired. Do not mark approved until a real affiliate URL is issued."
+      "notes": "Approved 2026-09-13 from vendor/Gumroad affiliate links. Site ref wired on Visit and official-pricing CTAs. Per-product Gumroad links wired on the review. Editorial score and cons unchanged.",
+      "status": "approved",
+      "approved_date": "2026-09-13",
+      "approved_tracking_url": "https://sonaopus.com/?ref=58448483",
+      "affiliate_url": "https://sonaopus.com/?ref=58448483",
+      "product_links": [
+        {"name": "AI Recruiting", "url": "https://gumroad.com/a/58448483/hapwxp"},
+        {"name": "AI Project Management", "url": "https://gumroad.com/a/58448483/iwiiw"},
+        {"name": "AI HR Management", "url": "https://gumroad.com/a/58448483/eiddl"},
+        {"name": "AI Executive Assistant", "url": "https://gumroad.com/a/58448483/pqpox"},
+        {"name": "AI Real Estate Agent", "url": "https://gumroad.com/a/58448483/wtyioq"}
+      ]
     }
   ],
   "priority_application_queue": [

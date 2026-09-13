@@ -6,7 +6,7 @@ Public hrefs use public_href (site hop) when set so tracking slugs stay off publ
 import re
 from pathlib import Path
 
-from affiliate_util import approved_programs, public_affiliate_href, write_hop_pages
+from affiliate_util import approved_programs, inject_product_links_module, public_affiliate_href, write_hop_pages
 
 
 def main():
@@ -46,6 +46,10 @@ def main():
             if is_internal:
                 new = new.replace(f'href="{url}" rel="sponsored noopener nofollow" target="_blank"', f'href="{url}" rel="{rel_attr}"')
                 new = new.replace(f'href="{url}" rel="sponsored noopener nofollow"', f'href="{url}" rel="{rel_attr}"')
+            if p == root/'tools'/slug/'index.html':
+                with_products = inject_product_links_module(new, prog)
+                if with_products != new:
+                    new = with_products
             if new != s and 'sponsored' in new:
                 # add disclosure on review page CTA
                 if p == root/'tools'/slug/'index.html' and 'pricing-fineprint">Affiliate' not in new:
@@ -53,6 +57,9 @@ def main():
                     if j > -1:
                         k = new.find('</a>', j)
                         new = new[:k+4] + disclosure + new[k+4:]
+                p.write_text(new)
+                changed += 1
+            elif new != s:
                 p.write_text(new)
                 changed += 1
     print(f'affiliate wiring: {changed} pages updated; hops={hops}')

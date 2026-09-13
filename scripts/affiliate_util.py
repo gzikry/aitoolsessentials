@@ -8,6 +8,8 @@ from typing import Any
 
 NOUS_MARK_S = "<!-- AIT NOUS REFERRAL START -->"
 NOUS_MARK_E = "<!-- AIT NOUS REFERRAL END -->"
+PRODUCT_MARK_S = "<!-- AIT PRODUCT AFFILIATE START -->"
+PRODUCT_MARK_E = "<!-- AIT PRODUCT AFFILIATE END -->"
 
 NOUS_OFFER = (
     "Nous Research gives you $15 off your first month on the Nous API and Hermes Agent."
@@ -39,6 +41,74 @@ def public_affiliate_href(prog: dict[str, Any]) -> str:
 
 def tracking_destination(prog: dict[str, Any]) -> str:
     return prog.get("affiliate_url") or prog.get("approved_tracking_url") or ""
+
+
+def product_links(prog: dict[str, Any] | None) -> list[dict[str, str]]:
+    if not prog:
+        return []
+    out: list[dict[str, str]] = []
+    for item in prog.get("product_links") or []:
+        name = (item or {}).get("name") or ""
+        url = (item or {}).get("url") or ""
+        if name and url.startswith("http"):
+            out.append({"name": name, "url": url})
+    return out
+
+
+def product_links_module(prog: dict[str, Any] | None, disclosure_href: str = "../../legal/affiliate-disclosure.html") -> str:
+    """Disclosed per-product affiliate checkout list for a review pricing section."""
+    items = product_links(prog)
+    if not items:
+        return ""
+    lis = "".join(
+        f'<li><a href="{item["url"]}" rel="sponsored noopener nofollow" target="_blank">{item["name"]}</a></li>'
+        for item in items
+    )
+    return (
+        f'{PRODUCT_MARK_S}<div class="official-source-links">'
+        "<p><strong>Profession products</strong> (affiliate checkout):</p>"
+        f"<ul>{lis}</ul>"
+        '<p class="pricing-fineprint">Affiliate links — we may earn a commission at no cost to you. See our '
+        f'<a href="{disclosure_href}">disclosure</a>.</p>'
+        f"</div>{PRODUCT_MARK_E}"
+    )
+
+
+def inject_product_links_module(html: str, prog: dict[str, Any] | None) -> str:
+    import re
+
+    module = product_links_module(prog)
+    pattern = re.compile(re.escape(PRODUCT_MARK_S) + r".*?" + re.escape(PRODUCT_MARK_E), re.S)
+    if not module:
+        return pattern.sub("", html) if PRODUCT_MARK_S in html else html
+    if PRODUCT_MARK_S in html:
+        return pattern.sub(lambda _m: module, html)
+    anchor = html.find('<p class="affiliate-inline">Pricing changes often')
+    if anchor == -1:
+        return html
+    return html[:anchor] + module + "\n" + html[anchor:]
+
+
+def sponsored_href_needles(root: Path) -> tuple[str, ...]:
+    """Distinctive href fragments that may legally carry rel=sponsored."""
+    needles = [
+        "make.com/en/register?pc=",
+        "try.elevenlabs.io/",
+        "/go/nous/",
+        "portal.nousresearch.com/r/",
+    ]
+    for prog in approved_programs(root).values():
+        for url in (
+            public_affiliate_href(prog),
+            tracking_destination(prog),
+            *(item["url"] for item in product_links(prog)),
+        ):
+            if not url:
+                continue
+            stripped = url.replace("https://", "").replace("http://", "")
+            if stripped and stripped not in needles:
+                needles.append(stripped)
+    return tuple(needles)
 
 
 def nous_referral_module() -> str:
