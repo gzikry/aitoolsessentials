@@ -5,11 +5,12 @@ when run as a function; can also run standalone."""
 import json
 import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
 
-from affiliate_util import approved_programs, public_affiliate_href, NOUS_OFFER
+from affiliate_util import approved_programs, public_affiliate_href, product_links_module, NOUS_OFFER
 from enhance_structured_data import software_schema_for_tool, valid_rating_value
 
 
@@ -21,14 +22,32 @@ def _source_record(root: Path, slug: str):
     return next((x for x in data.get('tools', []) if x.get('slug') == slug), None)
 
 
-def _official_source_html(record) -> str:
+def _same_host(left: str, right: str) -> bool:
+    def host(url: str) -> str:
+        return urlparse(url).netloc.replace('www.', '').lower()
+    try:
+        return bool(left) and bool(right) and host(left) == host(right)
+    except Exception:
+        return False
+
+
+def _official_source_html(record, prog=None) -> str:
     if not record:
         return '<div class="official-source-card pending"><span>Source status</span><strong>Official verification pending</strong><p>Verify the vendor pricing and policy pages before purchasing.</p></div>'
     labels = [('Official pricing', 'pricing_url'), ('Product documentation', 'docs_url'), ('Privacy / data use', 'privacy_url'), ('Rights / terms', 'rights_url')]
-    links = ''.join(
-        f'<a href="{record[key]}" target="_blank" rel="external noopener">{label} ↗</a>'
-        for label, key in labels if record.get(key)
-    )
+    link_bits = []
+    for label, key in labels:
+        href = record.get(key)
+        if not href:
+            continue
+        rel = 'external noopener'
+        if label == 'Official pricing' and prog:
+            aff = public_affiliate_href(prog)
+            if aff.startswith('http') and _same_host(aff, href):
+                href = aff
+                rel = 'sponsored noopener nofollow'
+        link_bits.append(f'<a href="{href}" target="_blank" rel="{rel}">{label} ↗</a>')
+    links = ''.join(link_bits)
     unresolved = ''.join(f'<li>{x}</li>' for x in record.get('unresolved_claims', []))
     unresolved_html = f'<details><summary>Open verification questions</summary><ul>{unresolved}</ul></details>' if unresolved else ''
     notes = record.get('verification_notes') or ''
@@ -104,7 +123,12 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     summary = tool.get('summary') or tool.get('description') or ''
     category = tool.get('category', '')
     source_record = _source_record(root, slug)
-    official_source_html = _official_source_html(source_record)
+    try:
+        prog = approved_programs(root).get(slug)
+    except Exception:
+        prog = None
+    official_source_html = _official_source_html(source_record, prog)
+    product_links_html = product_links_module(prog)
     benchmark_html = _benchmark_html(root, slug, category)
 
     same_cat = [t for t in tools if t['slug'] != slug and category in t.get('category', '')]
@@ -262,10 +286,6 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     visit_note = 'Official site — no paid placement affects this review.'
     visit_offer = ''
     visit_fineprint = ''
-    try:
-        prog = approved_programs(root).get(slug)
-    except Exception:
-        prog = None
     if prog:
         visit_href = public_affiliate_href(prog)
         is_internal = visit_href.startswith('/')
@@ -329,6 +349,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 
 <h2>Pricing</h2>
 {price_html}
+{product_links_html}
 <p class="affiliate-inline">Pricing changes often — verify current plans on the official site before buying. Dated snapshots: <a href="../../pricing-watch/">Pricing Watch</a>.</p>
 
 <h2>Use cases</h2>

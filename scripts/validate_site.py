@@ -850,8 +850,8 @@ def main():
     # rel="sponsored" must mark only links issued by a real affiliate program. The site's own
     # methodology says so, and Google defines sponsored as paid placement. Using it on ordinary
     # vendor links is both false and a misdeclaration - 191 instances did this across 38 pages.
-    affiliate_prefixes = ('make.com/en/register?pc=', 'try.elevenlabs.io/',
-                          '/go/nous/', 'portal.nousresearch.com/r/')
+    from affiliate_util import sponsored_href_needles
+    affiliate_prefixes = sponsored_href_needles(ROOT)
     bad_sponsored = []
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
