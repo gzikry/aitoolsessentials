@@ -206,6 +206,16 @@
       "offer_copy": "Nous Research gives you $15 off your first month on the Nous API and Hermes Agent.",
       "hop_title": "Continuing to Nous Research",
       "cta_label": "Claim the $15 first-month referral"
+    },
+    {
+      "tool_slug": "sonaopus",
+      "availability": "available",
+      "program_type": "direct vendor program (Gumroad affiliate)",
+      "network": "Gumroad",
+      "official_program_url": "https://sonaopus.gumroad.com/affiliates",
+      "application_status": "not_applied",
+      "commission_note": "Vendor-stated 2026-09-13: 40% flat one-time ($39.60 per $99 product); no recurring; 30-day cookie; Gumroad tracks and pays.",
+      "notes": "Terms received in writing from the vendor on 2026-09-13. Signup also advertised from https://sonaopus.com/. Not enrolled; no tracking URL wired. Do not mark approved until a real affiliate URL is issued."
     }
   ],
   "priority_application_queue": [

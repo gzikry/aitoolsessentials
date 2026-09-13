@@ -4064,10 +4064,8 @@
       "Terms name the operator (Praise Boyinde, sole proprietor), the governing law (Nigeria), the subprocessors that actually hold data (Netlify, Gumroad), and a no-refunds position explained by the free trial"
     ],
     "cons": [
-      "The homepage FAQ still says “Nothing stored,” which is broader than what the product does — inputs are saved in your browser's local storage; the Privacy Policy describes this correctly and the site copy has not been brought into line",
+      "Not a writing tool — it structures your situation and hands it to Claude, ChatGPT, or Gemini; the draft quality still depends on whichever assistant you already use.",
       "No export for the workflow data stored locally, so clearing site data for sonaopus.com discards in-progress work",
-      "It does not draft documents itself — the writing comes from whichever AI assistant you already pay for, so output quality tracks that subscription",
-      "The legal-review disclosure lives inside the workflow prompts, not as a standalone FAQ entry, so a buyer can easily miss that ER letters, offer letters, and HR policies are drafts requiring review",
       "No team, self-hosted, or shared-seat option, and the $99 one-time price applies per profession",
       "sonaopus.com publishes no MX records, so the only working contact is a personal Gmail address",
       "A stale third-party mirror still advertises the retired pre-launch $59 price, so search results can show a figure the vendor no longer charges"
@@ -4089,7 +4087,7 @@
       ],
       [
         "Does Sonaopus store my data?",
-        "Your workflow inputs, output history, and in-progress state are kept in your browser's local storage on your own device, and the page makes no server calls. The homepage's “Nothing stored” line is not accurate as written — what is accurate is that nothing reaches Sonaopus's servers. Clearing your browser's site data deletes the local copy, and there is no server-side copy for anyone to delete or export."
+        "Workflow inputs, output history, and in-progress state stay in your browser's local storage on your own device, and the page makes no server calls. We re-checked sonaopus.com on 2026-09-13: the old homepage FAQ line “Nothing stored” is gone, and the on-page wording now matches the Privacy Policy — everything runs in the browser, progress saves locally, and nothing is sent until you hand it to Claude, ChatGPT, or Gemini. Clearing site data deletes the local copy; there is no server-side copy to delete or export."
       ],
       [
         "Does Sonaopus send my input to Sonaopus's servers?",
@@ -4097,12 +4095,12 @@
       ],
       [
         "Is Sonaopus a legal or HR advisory service?",
-        "No. The Terms state that using Sonaopus creates no legal, HR, or financial advisory relationship. Outputs are drafts your chosen AI assistant writes from your input, and the workflow prompts tell you to have jurisdiction-specific clauses reviewed by a qualified employment lawyer before issuing them."
+        "No. The Terms state that using Sonaopus creates no legal, HR, or financial advisory relationship. Outputs are drafts your chosen AI assistant writes from your input. As of 2026-09-13 the homepage has a standalone FAQ that treats ER letters, HR policies, and similar outputs as drafts to verify, and flags legal or compliance risk on-screen."
       ]
     ],
     "trial_checklist": "Run one real task in a profession you actually work in — an ER letter, a policy, or a status report — not a demo prompt. Enter your genuine jurisdiction and organisation size, because the workflow changes what gets written from them. Before sending anything onward, open your browser's site-data settings for sonaopus.com and check what was stored locally, so you know what is on the device. Then compare how much re-explaining the multi-stage flow saves against prompting your AI assistant directly, and factor the eight-generation cap into whether $99 is worth it for that one profession.",
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
-    "rating_rationale": "Job fit 4 - five profession-specific workflows cover repeated document jobs across HR, EA, project management, recruiting and real estate, with context carried between stages; it structures prompts rather than drafting documents itself. Output quality 4 - the drafts come from whichever assistant you connect, and the workflows do embed jurisdiction and legal-review instructions. Adoption 4 - no account or install is required and eight generations are free per profession, though it presupposes an AI assistant subscription. Cost 4 - $99 one-time with lifetime updates for one profession is reasonable if you need that one profession, and there is no subscription to forget to cancel. Held at 4.1 because the homepage still claims “Nothing stored” where the Privacy Policy correctly describes local browser storage, there is no export for that local data, and a stale mirror still advertises a retired $59 price."
+    "rating_rationale": "Job fit 4 - five profession-specific workflows cover repeated document jobs across HR, EA, project management, recruiting and real estate, with context carried between stages. It is a prompt-structuring layer used alongside Claude, ChatGPT, or Gemini, not a writing tool in its own right. Output quality 4 - the drafts come from whichever assistant you already use, and the workflows do embed jurisdiction and legal-review instructions. Adoption 4 - no account or install is required and eight generations are free per profession; you still need an AI assistant to produce the draft. Cost 4 - $99 one-time with lifetime updates for one profession is reasonable if you need that one profession, and there is no subscription to forget to cancel. Held at 4.1 because there is no export for the local workflow data, and a stale mirror still advertises a retired $59 price."
   }
 ]
