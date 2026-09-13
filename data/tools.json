@@ -4039,5 +4039,70 @@
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4 - browser-based vocal removal and stem splitting covers a repeated need for creators working with audio, without a desktop editor. Output quality 4 - stem splitting goes beyond vocals-only tools, and failed jobs do not consume minutes. Adoption 4 - no install required, though an account is needed to process audio. Cost 4 - a generous free tier (10 minutes at signup plus 5 minutes weekly). Held at 4.3 because files cap at 10 minutes and there is no public pricing page for minute packs."
+  },
+  {
+    "slug": "sonaopus",
+    "name": "Sonaopus",
+    "category": "Productivity",
+    "best_for": "Structuring HR, EA, project, recruiting, and real-estate situations into prompts that produce usable documents",
+    "price": "$99 one-time per profession (five products)",
+    "rating": 4.1,
+    "official": "https://sonaopus.com/",
+    "summary": "A prompt-structuring layer for five professions. You describe your situation once in a profession-specific multi-stage workflow, and Sonaopus pre-loads it into Claude, ChatGPT, or Gemini so the assistant drafts the HR policy, employee-relations letter, status report, or listing copy without you re-explaining the context.",
+    "use_cases": [
+      "Drafting HR policies and employee-relations letters",
+      "Executive briefings, meeting prep, and correspondence",
+      "Project status reports and risk logs",
+      "Job adverts, screening assessments, and candidate outreach",
+      "Property listing copy and CMA summaries"
+    ],
+    "pros": [
+      "The handoff works the way it is described: your input opens in Claude or ChatGPT, or is copied to the clipboard for Gemini, with no query parameters carrying data in a URL",
+      "Verified local-device storage — workflow inputs live in browser storage on your machine, and the page makes no fetch or XHR calls and loads no analytics or telemetry scripts",
+      "Real free tier: eight generations per profession, no signup and no card",
+      "Output ownership is stated plainly — you retain all rights to what you enter and to the draft your AI assistant writes from it",
+      "Terms name the operator (Praise Boyinde, sole proprietor), the governing law (Nigeria), the subprocessors that actually hold data (Netlify, Gumroad), and a no-refunds position explained by the free trial"
+    ],
+    "cons": [
+      "The homepage FAQ still says “Nothing stored,” which is broader than what the product does — inputs are saved in your browser's local storage; the Privacy Policy describes this correctly and the site copy has not been brought into line",
+      "No export for the workflow data stored locally, so clearing site data for sonaopus.com discards in-progress work",
+      "It does not draft documents itself — the writing comes from whichever AI assistant you already pay for, so output quality tracks that subscription",
+      "The legal-review disclosure lives inside the workflow prompts, not as a standalone FAQ entry, so a buyer can easily miss that ER letters, offer letters, and HR policies are drafts requiring review",
+      "No team, self-hosted, or shared-seat option, and the $99 one-time price applies per profession",
+      "sonaopus.com publishes no MX records, so the only working contact is a personal Gmail address",
+      "A stale third-party mirror still advertises the retired pre-launch $59 price, so search results can show a figure the vendor no longer charges"
+    ],
+    "key_features": [
+      "Five profession toolkits: HR Management, Executive Assistant, Project Management, Real Estate, Recruiting",
+      "Multi-stage workflow that carries your context forward between stages",
+      "One-click handoff into Claude or ChatGPT with the input pre-loaded",
+      "Clipboard handoff for Gemini",
+      "Local browser storage of workflow inputs, output history, and in-progress state",
+      "Eight free generations per profession before purchase",
+      "One-time purchase with lifetime access to future updates for that profession",
+      "Public affiliate program listed at 40% through Gumroad"
+    ],
+    "faq": [
+      [
+        "Is Sonaopus free?",
+        "There is a free tier: eight generations per profession with no signup and no card. After that, each profession-specific toolkit is a $99 one-time purchase and there is no subscription. All five products were listed at $99 when we checked on 2026-09-12."
+      ],
+      [
+        "Does Sonaopus store my data?",
+        "Your workflow inputs, output history, and in-progress state are kept in your browser's local storage on your own device, and the page makes no server calls. The homepage's “Nothing stored” line is not accurate as written — what is accurate is that nothing reaches Sonaopus's servers. Clearing your browser's site data deletes the local copy, and there is no server-side copy for anyone to delete or export."
+      ],
+      [
+        "Does Sonaopus send my input to Sonaopus's servers?",
+        "No. The handoff either opens Claude or ChatGPT with your input pre-loaded or copies it to your clipboard for Gemini, and no query parameters ride in a URL. Once you send it onward, Anthropic's, OpenAI's, or Google's own privacy policy governs it, not Sonaopus's."
+      ],
+      [
+        "Is Sonaopus a legal or HR advisory service?",
+        "No. The Terms state that using Sonaopus creates no legal, HR, or financial advisory relationship. Outputs are drafts your chosen AI assistant writes from your input, and the workflow prompts tell you to have jurisdiction-specific clauses reviewed by a qualified employment lawyer before issuing them."
+      ]
+    ],
+    "trial_checklist": "Run one real task in a profession you actually work in — an ER letter, a policy, or a status report — not a demo prompt. Enter your genuine jurisdiction and organisation size, because the workflow changes what gets written from them. Before sending anything onward, open your browser's site-data settings for sonaopus.com and check what was stored locally, so you know what is on the device. Then compare how much re-explaining the multi-stage flow saves against prompting your AI assistant directly, and factor the eight-generation cap into whether $99 is worth it for that one profession.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "medium",
+    "rating_rationale": "Job fit 4 - five profession-specific workflows cover repeated document jobs across HR, EA, project management, recruiting and real estate, with context carried between stages; it structures prompts rather than drafting documents itself. Output quality 4 - the drafts come from whichever assistant you connect, and the workflows do embed jurisdiction and legal-review instructions. Adoption 4 - no account or install is required and eight generations are free per profession, though it presupposes an AI assistant subscription. Cost 4 - $99 one-time with lifetime updates for one profession is reasonable if you need that one profession, and there is no subscription to forget to cancel. Held at 4.1 because the homepage still claims “Nothing stored” where the Privacy Policy correctly describes local browser storage, there is no export for that local data, and a stale mirror still advertises a retired $59 price."
   }
 ]

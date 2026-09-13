@@ -1812,6 +1812,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "sonaopus",
+      "name": "Sonaopus",
+      "category": "Productivity",
+      "official_url": "https://sonaopus.com/",
+      "review_url": "/tools/sonaopus/",
+      "price_label": "$99 one-time per profession (five products)",
+      "pricing_summary": "$99 USD one-time per profession-specific product, no subscription and no recurring charge. Five products: HR Management, Executive Assistant, Project Management, Real Estate, Recruiting. Free tier: up to eight generations per profession before purchase, with no signup or card. Lifetime access covers future updates to that profession's tool. Terms state that except where required by law all purchases are final and no refunds are offered, with the free trial given as the reason. A stale third-party mirror (devadex.com) still lists a retired pre-launch $59 price; the mirrored store account sonaopusaiworkflow.gumroad.com now returns 404 and the price on every live vendor page is $99.",
+      "pricing_url": "https://sonaopus.com/",
+      "pricing_checked_date": "2026-09-12",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "video",
+        "meetings",
+        "automation",
+        "email"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

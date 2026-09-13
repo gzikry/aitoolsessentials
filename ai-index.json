@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-09-12",
-  "tools_count": 75,
+  "tools_count": 76,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -560,6 +560,13 @@
       "category": "Audio & Video",
       "price": "Free + paid minutes",
       "url": "https://aitoolsessentials.com/tools/tunii/"
+    },
+    {
+      "name": "Sonaopus",
+      "slug": "sonaopus",
+      "category": "Productivity",
+      "price": "$99 one-time per profession (five products)",
+      "url": "https://aitoolsessentials.com/tools/sonaopus/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -1257,5 +1257,25 @@
     ],
     "status": "not_started",
     "next_action": "Check direct affiliate/partner page and major networks"
+  },
+  {
+    "tool_slug": "sonaopus",
+    "tool_name": "Sonaopus",
+    "priority": "low",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct vendor program (Gumroad affiliate)"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/sonaopus/"
+    ],
+    "best_audiences": [
+      "HR and people-operations buyers",
+      "workflow-specific buyers"
+    ],
+    "status": "not_started",
+    "next_action": "Email the vendor about affiliate/partner terms — a 40% program is advertised on their site and through Gumroad; ask for written terms before wiring any tracking URL.",
+    "notes": "Do not invent affiliate URLs. Use the official URL until terms are confirmed in writing."
   }
 ]
