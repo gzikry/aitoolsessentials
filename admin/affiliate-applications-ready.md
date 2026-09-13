@@ -1,8 +1,8 @@
 # Ready-to-Submit Affiliate Applications
 
-Last verified 2026-09-12 16:05 PT. Site facts below are real and checkable — do not inflate.
-Site: 721 public pages, 75 reviewed tools, 16 categories, 192 comparisons, 175 guides.
-Traffic, stated honestly: ~66 visitors / 217 pageviews per 30 days (early stage, growing).
+Last verified 2026-09-13 02:00 PT. Site facts below are real and checkable — do not inflate.
+Site: 736 public pages, 76 reviewed tools, 16 categories, 200 comparisons, 173 guides.
+Traffic, stated honestly: ~69 visitors / 223 pageviews per 30 days (early stage, growing).
 
 **Shared answers** (use in every form):
 
