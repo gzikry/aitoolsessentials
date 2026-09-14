@@ -305,14 +305,8 @@
       ]
     },
     "sonaopus": {
-      "date": "2026-09-12",
-      "digest": "$99 USD one-time per profession (five products: HR Management, Executive Assistant, Project Management, Real Estate, Recruiting); no subscription. Free tier of eight generations per profession with no signup or card. Lifetime access includes future updates for that profession. Purchases are final with no refunds except where required by law. A stale third-party mirror still lists a retired $59 pre-launch price; live vendor pages all show $99.",
-      "changes": "initial_entry",
-      "sources": [
-        "https://sonaopus.com/",
-        "https://sonaopus.com/terms",
-        "https://sonaopus.com/privacy"
-      ]
+      "date": "2026-09-13",
+      "digest": "$99 USD one-time per profession-specific product, no subscription and no recurring charge. Five products: HR Management, Executive Assistant, Project Management, Real Estate, Recruiting. Free tier: up"
     }
   },
   "changes": [
@@ -371,6 +365,13 @@
       "previous_check": "2026-08-29",
       "new_check": "2026-09-01",
       "note": "Speechify: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+    },
+    {
+      "slug": "sonaopus",
+      "detected": "2026-09-13",
+      "previous_check": "2026-09-12",
+      "new_check": "2026-09-13",
+      "note": "Sonaopus: official pricing page changed since 2026-09-12 check. Re-verified 2026-09-13."
     }
   ],
   "updated": "2026-09-13"

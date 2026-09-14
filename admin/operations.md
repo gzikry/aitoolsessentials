@@ -66,7 +66,7 @@ python3 scripts/validate_site.py
 5. Grammarly (AI writing — blocked on Impact)
 6. etc.
 
-**Approved / live:** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack unique link live 2026-09-14).
+**Approved / live:** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack unique link live 2026-09-13).
 
 ### Sponsorship Placements
 **File:** `data/sponsor_inventory.json`
