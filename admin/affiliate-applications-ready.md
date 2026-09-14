@@ -59,6 +59,15 @@ template, so the vendor-hosted subdomains are not a working fallback either.
 
 **Approved live: Gamma (PartnerStack unique link 2026-09-13). Applied pending: PartnerStack network account and Descript (2026-09-12).**
 
+**George-only, outstanding:** Gumroad sent "Confirmation instructions" for the account
+carrying the Sonaopus affiliate program on 2026-09-13 16:50 UTC, about an hour before the
+program was approved (17:58 UTC). Whether that confirmation was completed is not
+verifiable from the website side, so treat the account's verification state as George's
+to check. The affiliate link itself already works — the ref and per-product checkout URLs
+return 200 with tracking — so this blocks only dashboard access, affiliate stats, and
+payouts, not the live links. Same class as the PartnerStack network verification: it
+gates visibility and payment, not placement. Do not rebuild the links.
+
 | # | Program | Route | Rate | Status |
 |---|---------|-------|------|--------|
 | 0 | PartnerStack network | app.partnerstack.com | — | applied 2026-09-12; **email unverified** |
