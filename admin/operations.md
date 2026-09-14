@@ -59,12 +59,14 @@ python3 scripts/validate_site.py
 **High Priority:** 16 tools
 
 **Apply for:**
-1. Gamma (AI presentations)
-2. Jasper (AI writing)
-3. Copy.ai (AI copywriting)
+1. Descript (applied 2026-09-12 — pending)
+2. Jasper (AI writing — blocked on Impact)
+3. Copy.ai (AI copywriting — listing not open)
 4. Midjourney (AI art)
-5. Grammarly (AI writing)
+5. Grammarly (AI writing — blocked on Impact)
 6. etc.
+
+**Approved / live:** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack unique link live 2026-09-14).
 
 ### Sponsorship Placements
 **File:** `data/sponsor_inventory.json`

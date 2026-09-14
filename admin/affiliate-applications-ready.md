@@ -1,6 +1,6 @@
 # Ready-to-Submit Affiliate Applications
 
-Last verified 2026-09-13 02:00 PT. Site facts below are real and checkable — do not inflate.
+Last verified 2026-09-14 PT. Site facts below are real and checkable — do not inflate.
 Site: 736 public pages, 76 reviewed tools, 16 categories, 200 comparisons, 173 guides.
 Traffic, stated honestly: ~69 visitors / 223 pageviews per 30 days (early stage, growing).
 
@@ -55,24 +55,27 @@ template, so the vendor-hosted subdomains are not a working fallback either.
 
 ---
 
-## STATUS 2026-09-12
+## STATUS 2026-09-14
 
-**Applied: PartnerStack network account, Gamma (2026-09-12), and Descript (2026-09-12).**
+**Approved live: Gamma (PartnerStack unique link 2026-09-14). Applied pending: PartnerStack network account and Descript (2026-09-12).**
 
 | # | Program | Route | Rate | Status |
 |---|---------|-------|------|--------|
 | 0 | PartnerStack network | app.partnerstack.com | — | applied 2026-09-12; **email unverified** |
-| 1 | Gamma | PartnerStack listing | ~30% rec. | **applied 2026-09-12** |
+| 1 | Gamma | PartnerStack listing | 25% first year | **approved 2026-09-13; link live 2026-09-14** — https://try.gamma.app/ty4k3o3rpeyd |
 | 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | **applied 2026-09-12** — pending review |
 | 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | no working route; try in-app Marketplace |
 | 4 | Browse AI | own portal 525-broken | 20% rec. life | no working route; report broken portal |
 | 5 | ElevenLabs | direct | 22% rec. 12mo | approved 2026-08-23 |
 | 6 | Make | direct | 35% rec. 12mo | approved 2026-08-23 |
 | 7 | Nous / Hermes | direct | $15 off referral | approved 2026-09-02 |
+| 8 | Sonaopus | Gumroad | 40% one-time | approved 2026-09-13 |
 
-### Gamma — APPLIED 2026-09-12
+### Gamma — APPROVED 2026-09-13 / LINK LIVE 2026-09-14
 Program: https://market.partnerstack.com/artificial-intelligence/gammaapp
-Official help: help.gamma.app/en/articles/11048092 · ~30% recurring (confirm in portal).
+Unique link: https://try.gamma.app/ty4k3o3rpeyd
+Commission: 25% for the first year on referred customers (partners@gamma.app / PartnerStack, 2026-09-14 PT).
+Wired on `/tools/gamma/` Visit CTA with `rel="sponsored noopener nofollow"` and the existing review disclosure fineprint. Official pricing/docs/privacy/terms stay on gamma.app. Editorial score and cons unchanged.
 **Caution:** `gammaapp.ai` is a DIFFERENT company from Gamma — do not cite its 50% claim.
 
 Answers used (reusable for the reference/audience fields if the portal asks again):
