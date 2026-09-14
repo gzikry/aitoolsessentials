@@ -226,9 +226,9 @@ That is a clear enough pattern to stop and name: **the outreach list is being an
 
 ### HARO / journalist requests
 
-Daily digests ran Sep 8–13. The Sep 11 and Sep 12 digests flagged live on-beat opportunities — notably a **FinOps agentic-AI-cost-overrun request** ("the core AIToolsEssentials problem", live across four consecutive runs) and a **Science Magazine** request for individual scientists paying out of pocket for AI subscriptions. The Sep 13 digest found nothing new and concluded the AI-spend beat on Sourcee is genuinely thin: of 882 requests posted since Sep 2, only three co-occur with both an AI and a spend token.
+Daily digests ran Sep 8–14. The Sep 11 and Sep 12 digests flagged live on-beat opportunities — notably a **FinOps agentic-AI-cost-overrun request** ("the core AIToolsEssentials problem", live across four consecutive runs) and a **Science Magazine** request for individual scientists paying out of pocket for AI subscriptions. The Sep 13 and Sep 14 digests both came back thin, and the Sep 14 run verified it at the body level rather than by slug: of 63 AI-token candidate bodies since Sep 2, only 6 carry a strong spend signal, five of which were already in or retired from the queue — **exactly one new adjacent body surfaced**, an EdTech writer's "whoever signs the invoice controls the roadmap" call. The beat is genuinely thin, not under-searched. **Six opportunities expired in today's run, including the FinOps request still sitting unpitched.**
 
-**No pitch emails were sent from any of these leads.** I searched Sent Mail, Trash, and All Mail for every HARO/pitch variant and found zero sends. The FinOps request — the best-matched opportunity of the month, flagged live on four separate runs — went unpitched, and its window has likely closed.
+**No pitch emails were sent from any of these leads.** I searched Sent Mail, Trash, and All Mail for every HARO/pitch variant and found zero sends. The FinOps request — the best-matched opportunity of the month, flagged live on four separate runs and then allowed to expire — went unpitched. Its window has closed.
 
 **This is the clearest process failure of the month, and it is a process failure, not a targeting failure.** The monitor is doing its job: it found the right request, correctly identified it as core to the site's thesis, and recorded that the window was narrowing. Nothing then acted on it. Monitoring without a send step produces reports, not links.
 
@@ -327,8 +327,52 @@ Subscriber state cannot be verified programmatically without a key, and "0 subsc
 - GSC export 2026-08-22 → 2026-09-10 (see `marketing/gsc-diagnosis-2026-09-12.md`): 4,665 impressions, 6 clicks, average position 44.3, improving from 62.
 - Git history for page, commit, and file counts.
 - Himalaya over the `aitools` IMAP account: INBOX, Sent Mail, Trash, All Mail, Spam.
-- `admin/held-submissions.md`, `marketing/backlink-outreach-2026-09.md`, `admin/affiliate-applications-ready.md`, `marketing/haro-outreach/digest-2026-09-1{0,1,2,3}.json`.
+- `admin/held-submissions.md`, `marketing/backlink-outreach-2026-09.md`, `admin/affiliate-applications-ready.md`, `marketing/haro-outreach/digest-2026-09-{10,11,12,13,14}.json`.
 - Live HTTP checks: SaaSHub (listing + alternatives page), The Next AI, AIAI.Tools.
+
+---
+
+## 4. Analytics coverage gap — 53 pages could not be counted (fixed 2026-09-14)
+
+Every figure above is a **floor, not a total**. A third of the site had no analytics
+loader, so its visitors were never counted by Plausible at all.
+
+53 live, sitemap-listed pages served no `js/analytics.js`:
+
+- the legacy article/`.html` comparison template — `articles/*-vs-*.html` (20 pages:
+  jasper-vs-copy-ai, elevenlabs-vs-playht, make-vs-n8n, gamma-vs-beautiful-ai, …) and
+  `comparisons/gemini-vs-claude.html`
+- the how-to hub and its 9 guides (`how-to/*.html`, including install-hermes-agent)
+- `guides/official/*` (index + cohere, qwen, apple-intelligence, deepseek)
+- `best-for/`, `change-radar/`, `pricing-report/`, `local-ai-planner/`
+- `hardware/` + 5 hardware pages, `use-cases/best-ai-tools-for-teachers.html`,
+  `workflows/classroom-lesson-planning.html`, `services/ai-stack-consulting.html`,
+  `downloads/ai-stack-decision-checklist.html`, `checkout/complete/`,
+  `xai-bot-guides/designing-grok-bot-with-grok-bot/`
+
+Two consequences that matter more than the missing rows:
+
+1. **The teachers page is a hole in the data.** It is tied to the single largest GSC
+   opportunity theme (51 queries / 343 impressions) and it was one of the uncounted
+   pages. Any decision about deepening it was made blind.
+2. **Affiliate-eligible pages were among the invisible ones.** `articles/make-vs-n8n.html`,
+   `articles/zapier-vs-make.html`, `articles/elevenlabs-vs-playht.html`,
+   `articles/gamma-vs-beautiful-ai.html`, `how-to/install-hermes-agent.html` and
+   `best-for/` all carry links to approved programs (Make 35%, ElevenLabs 22%, Gamma,
+   Nous) and none of their traffic was measurable, so affiliate intent could not be
+   attributed.
+
+**Fix shipped:** `scripts/cleanup_html.py` now injects the loader on every public page
+(and keeps it across regeneration), and `scripts/validate_site.py` fails the build with
+`Public pages missing analytics loader` if any public page lacks it. `admin/` paste packs
+and `go/` redirect stubs stay excluded. Commit `60dfa418`; deploy verified live on
+cache-busted URLs across all affected page types.
+
+**Read next week's figures with this in mind:** visitors and pageviews will rise for a
+reason that is not growth. Pages that were never counted are now counted, so a step up in
+`articles/*-vs-*.html`, `how-to/*`, `guides/official/*`, `best-for/`, `change-radar/`,
+`pricing-report/` and the teachers guide is instrumentation, not audience. The honest
+comparison baseline resets on 2026-09-14.
 
 ---
 
