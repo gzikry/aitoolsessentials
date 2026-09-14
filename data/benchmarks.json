@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-09-02",
-  "reviewed_date": "2026-09-07",
+  "snapshot_date": "2026-09-13",
+  "reviewed_date": "2026-09-14",
   "policy": {
     "title": "Benchmark evidence policy",
     "summary": "Benchmarks are supporting evidence, not our final ranking. We identify the exact model/version, source, snapshot date and harness. Product scores are not treated as model scores, and results from different harness versions are not compared directly.",
@@ -37,7 +37,7 @@
       "url": "https://github.com/LiveBench/LiveBench",
       "measures": "Objective, frequently refreshed tasks across reasoning, math, coding, language, instruction following and data analysis.",
       "use_for": "Contamination-limited general-model context",
-      "caveat": "Always state the release; questions and model configurations change between snapshots."
+      "caveat": "Always state the release; questions and model configurations change between snapshots. Checked 2026-09-14: the repository is live, but its public changelog stops at 2026-01-08 and its README still shows \"Top models as of 30th September 2024\". livebench.ai renders client-side only, so no dated leaderboard could be read without a browser. Treat LiveBench as release-pinned evidence, not a current ranking."
     },
     {
       "id": 5,
@@ -49,11 +49,11 @@
     },
     {
       "id": 6,
-      "name": "Terminal-Bench 2.1",
+      "name": "Terminal-Bench 2.1 leaderboard (frozen; subdomain now serves 4.0)",
       "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1",
       "measures": "Accuracy of an agent + model + reasoning-effort configuration on 89 complex containerized terminal tasks.",
       "use_for": "Coding agents and terminal-capable development tools",
-      "caveat": "Never present this as a model-only score. Keep agent, exact model, effort, trial count and integrity metadata visible."
+      "caveat": "Checked 2026-09-14: https://www.tbench.ai/leaderboard/terminal-bench/2.1 returns a 308 redirect to https://www.tbench.ai/?version=2.1, and every route on that host — including ?version=2.1 — served the Terminal-Bench 4.0 board (title \"TERMINAL-BENCH 4.0\", leaderboard slug \"4-0-0\"). No 2.1 rows could be read from this URL on that date, and no archived 2.1 board was found on the site. Never present this as a model-only score; keep agent, exact model, effort, trial count and integrity metadata visible."
     },
     {
       "id": 7,
@@ -85,61 +85,69 @@
       "url": "https://raw.githubusercontent.com/harbor-framework/terminal-bench-2-1/main/leaderboard/submissions/2026-07-09-cursor-grok-4-5-none-cursor-cli.json",
       "measures": "Maintainer-verified Terminal-Bench 2.1 submission record for one exact Cursor CLI configuration.",
       "use_for": "A configuration-specific Cursor benchmark snapshot",
-      "caveat": "This is Cursor CLI + Grok 4.5 at high effort, not a universal score for Cursor or Grok."
+      "caveat": "Checked 2026-09-14 against the raw submission file: Cursor CLI 2026.07.08-0c04a8a + cursor/grok-4.5 at high effort, 79.33% +/- 1.46, 445 trials, 8.99% reward-hack disqualifications, dated 2026-07-09. The record is unchanged. Two limits sit on it: the Terminal-Bench 2.1 README states \"Community submissions are currently closed for Terminal-Bench 2.1\", so the 2.1 board is frozen, and the live 4.0 board carries no Cursor entry, so there is no current Cursor reading to compare it to. Scores from 2.1 and 4.0 are different harness versions and must never be compared with each other."
+    },
+    {
+      "id": 11,
+      "name": "Harbor Hub — Terminal-Bench 2.1 dataset",
+      "url": "https://hub.harborframework.com/datasets/terminal-bench/terminal-bench-2-1/latest",
+      "measures": "The live dataset record for Terminal-Bench 2.1: which tasks the frozen board ran and which version is published.",
+      "use_for": "Confirming the task set behind a Terminal-Bench 2.1 configuration score",
+      "caveat": "Checked 2026-09-14: the dataset page reports \"Displaying 89 of 89 tasks\" and \"Version 2.1 of Terminal-Bench\", so 89 tasks is the verified count for 2.1 — the 4.0 board is a different, larger task set. This page publishes the task list, not leaderboard scores; it cannot upgrade a 2.1 score into a 4.0 score."
     }
   ],
   "arena_text_snapshot": [
     {
       "tool_slug": "grok",
       "model": "grok-4.1",
-      "rank": 53,
+      "rank": 54,
       "score": "1459±3",
-      "votes": 66382,
+      "votes": 66340,
       "source_id": 1,
       "note": "Representative public xAI model listing; not necessarily the product's current default."
     },
     {
       "tool_slug": "deepseek",
       "model": "deepseek-v4-pro",
-      "rank": 55,
-      "score": "1458±4",
-      "votes": 54225,
+      "rank": 57,
+      "score": "1457±4",
+      "votes": 54130,
       "source_id": 1,
       "note": "Representative public DeepSeek model listing."
     },
     {
       "tool_slug": "claude",
       "model": "claude-sonnet-4-5-20250929",
-      "rank": 62,
+      "rank": 65,
       "score": "1455±3",
-      "votes": 79668,
+      "votes": 79628,
       "source_id": 1,
       "note": "Older public Claude listing retained for reproducible snapshot context; newer variants may rank differently."
     },
     {
       "tool_slug": "gemini",
       "model": "gemini-2.5-pro",
-      "rank": 75,
-      "score": "1446±2",
-      "votes": 122612,
+      "rank": 77,
+      "score": "1445±2",
+      "votes": 122554,
       "source_id": 1,
       "note": "Specific Gemini model version, not the whole Gemini product."
     },
     {
       "tool_slug": "chatgpt",
       "model": "chatgpt-4o-latest-20250326",
-      "rank": 78,
+      "rank": 80,
       "score": "1443±3",
-      "votes": 80696,
+      "votes": 80677,
       "source_id": 1,
       "note": "Historical public ChatGPT model listing; do not interpret as the current default model's rank."
     },
     {
       "tool_slug": "mistral-le-chat",
       "model": "mistral-medium-3.5",
-      "rank": 103,
-      "score": "1427±7",
-      "votes": 11017,
+      "rank": 106,
+      "score": "1426±7",
+      "votes": 10996,
       "source_id": 1,
       "note": "Representative Mistral model listing with a wider confidence interval."
     }
@@ -213,7 +221,8 @@
       "run_date": "2026-07-09",
       "reward_hack_disqualification": "9.0%",
       "source_id": 10,
-      "note": "Maintainer-verified configuration snapshot. Agent, model, effort and integrity metadata are inseparable from the score."
+      "note": "Maintainer-verified configuration snapshot, unchanged on re-check 2026-09-14. Agent, model, effort and integrity metadata are inseparable from the score. The Terminal-Bench 2.1 board is now closed to new submissions and carries no later Cursor entry, and the current Terminal-Bench 4.0 board lists no Cursor configuration at all, so this remains the most recent published Cursor reading and is only valid for the 2.1 task set.",
+      "dataset_source_id": 11
     }
   ],
   "benchmark_unavailable": [
@@ -264,62 +273,134 @@
       ]
     }
   ],
-  "previous_snapshot_date": "2026-08-31",
-  "snapshot_summary": "All six tracked Arena ratings were unchanged. Five ranks moved down by 1–3 places as the leaderboard changed; Claude stayed at #62. This is leaderboard drift, not evidence that the products became worse.",
+  "previous_snapshot_date": "2026-09-02",
+  "snapshot_summary": "All six tracked Arena listings were re-read from the 13 Sep 2026 snapshot (vote cutoff 2026-09-13, 8,146,274 votes across 402 models). Every row holds the same exact model version as before. Three ratings moved by one point (DeepSeek, Gemini, Mistral) and three were unchanged; all six ranks moved down by 2-3 places and all six vote counts were revised downward as Arena re-filtered battles. Ratings moved by at most one point against confidence intervals of +/-2 to +/-7, so this is leaderboard drift, not evidence that any product got worse.",
   "arena_text_changes": [
     {
       "tool_slug": "grok",
       "model": "grok-4.1",
-      "old_rank": 51,
-      "new_rank": 53,
-      "old_votes": 66374,
-      "new_votes": 66382,
-      "score_changed": false
+      "old_rank": 53,
+      "new_rank": 54,
+      "old_votes": 66382,
+      "new_votes": 66340,
+      "score_changed": false,
+      "old_score": "1459±3",
+      "new_score": "1459±3"
     },
     {
       "tool_slug": "deepseek",
       "model": "deepseek-v4-pro",
-      "old_rank": 54,
-      "new_rank": 55,
-      "old_votes": 54214,
-      "new_votes": 54225,
-      "score_changed": false
+      "old_rank": 55,
+      "new_rank": 57,
+      "old_votes": 54225,
+      "new_votes": 54130,
+      "score_changed": true,
+      "old_score": "1458±4",
+      "new_score": "1457±4"
     },
     {
       "tool_slug": "claude",
       "model": "claude-sonnet-4-5-20250929",
       "old_rank": 62,
-      "new_rank": 62,
-      "old_votes": 79687,
-      "new_votes": 79668,
-      "score_changed": false
+      "new_rank": 65,
+      "old_votes": 79668,
+      "new_votes": 79628,
+      "score_changed": false,
+      "old_score": "1455±3",
+      "new_score": "1455±3"
     },
     {
       "tool_slug": "gemini",
       "model": "gemini-2.5-pro",
-      "old_rank": 73,
-      "new_rank": 75,
-      "old_votes": 122589,
-      "new_votes": 122612,
-      "score_changed": false
+      "old_rank": 75,
+      "new_rank": 77,
+      "old_votes": 122612,
+      "new_votes": 122554,
+      "score_changed": true,
+      "old_score": "1446±2",
+      "new_score": "1445±2"
     },
     {
       "tool_slug": "chatgpt",
       "model": "chatgpt-4o-latest-20250326",
-      "old_rank": 76,
-      "new_rank": 78,
-      "old_votes": 80687,
-      "new_votes": 80696,
-      "score_changed": false
+      "old_rank": 78,
+      "new_rank": 80,
+      "old_votes": 80696,
+      "new_votes": 80677,
+      "score_changed": false,
+      "old_score": "1443±3",
+      "new_score": "1443±3"
     },
     {
       "tool_slug": "mistral-le-chat",
       "model": "mistral-medium-3.5",
-      "old_rank": 100,
-      "new_rank": 103,
-      "old_votes": 11006,
-      "new_votes": 11017,
-      "score_changed": false
+      "old_rank": 103,
+      "new_rank": 106,
+      "old_votes": 11017,
+      "new_votes": 10996,
+      "score_changed": true,
+      "old_score": "1427±7",
+      "new_score": "1426±7"
     }
-  ]
+  ],
+  "source_checks": {
+    "checked_on": "2026-09-14",
+    "results": [
+      {
+        "source_id": 1,
+        "status": "live",
+        "detail": "Read the 2026-09-13 snapshot: 8,146,274 votes, 402 models, vote cutoff 2026-09-13T14:00:00Z."
+      },
+      {
+        "source_id": 2,
+        "status": "live",
+        "detail": "Methodology page live; confirms Bradley-Terry ratings with reweighting for models with fewer battles and closed-form confidence intervals."
+      },
+      {
+        "source_id": 3,
+        "status": "live-methodology-only",
+        "detail": "Page confirms the 500-instance human-validated subset and that mini-SWE-agent 1.x and 2.x results are not comparable. No dated public score table was served on this URL, so no SWE-bench row was added or changed."
+      },
+      {
+        "source_id": 4,
+        "status": "stale-content",
+        "detail": "Repository live, but public changelog ends 2026-01-08 and the README still shows top models as of 30 September 2024."
+      },
+      {
+        "source_id": 5,
+        "status": "live-methodology-only",
+        "detail": "Methodology page live; no dated per-model score table on this URL, so no Artificial Analysis row was changed."
+      },
+      {
+        "source_id": 6,
+        "status": "blocked-superseded",
+        "detail": "URL 308-redirects and every route on the host now serves Terminal-Bench 4.0; no current 2.1 rows readable. No row changed on this evidence."
+      },
+      {
+        "source_id": 7,
+        "status": "live-methodology-only",
+        "detail": "Image methodology page live with separate text-to-image and editing sections; no dated score table served."
+      },
+      {
+        "source_id": 8,
+        "status": "live-methodology-only",
+        "detail": "Video methodology page live with modality-separated sections; no dated score table served."
+      },
+      {
+        "source_id": 9,
+        "status": "live-methodology-only",
+        "detail": "Text-to-speech methodology page live with separate controlled-voice and provider-voice sections; no dated score table served."
+      },
+      {
+        "source_id": 10,
+        "status": "verified-unchanged",
+        "detail": "Raw submission record re-read byte-for-byte on the same values already stored; harness board now closed."
+      },
+      {
+        "source_id": 11,
+        "status": "live",
+        "detail": "New registry entry: Harbor Hub Terminal-Bench 2.1 dataset reports 89 tasks at version 2.1."
+      }
+    ]
+  }
 }
