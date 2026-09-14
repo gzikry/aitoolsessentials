@@ -468,16 +468,20 @@
     "tool_name": "Gamma",
     "priority": "medium",
     "category": "Presentations",
-    "recommended_networks_to_check": [],
+    "recommended_networks_to_check": [
+      "PartnerStack"
+    ],
     "search_queries": [],
-    "target_pages": [],
+    "target_pages": [
+      "/tools/gamma/"
+    ],
     "best_audiences": [
       "AI tool buyers",
       "workflow-specific buyers"
     ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+    "status": "approved",
+    "next_action": "Links live 2026-09-14. Keep the disclosed PartnerStack href on the review Visit CTA.",
+    "notes": "Approved 2026-09-13. Tracking URL https://try.gamma.app/ty4k3o3rpeyd. 25% for the first year on referred customers."
   },
   {
     "tool_slug": "airtable-ai",

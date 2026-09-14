@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-13",
+  "checked_at": "2026-09-14",
   "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
   "affiliate_programs": [
     {
@@ -171,14 +171,18 @@
     },
     {
       "tool_slug": "gamma",
-      "availability": "available",
+      "availability": "approved_publisher_affiliate",
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://market.partnerstack.com/artificial-intelligence/gammaapp",
-      "application_status": "applied_pending_review",
-      "commission_note": "Commission rate not exposed on the public help page; confirmed via PartnerStack program. 30% recurring per third-party aggregator; verify exact rate on the PartnerStack application page.",
-      "notes": "Applied 2026-09-12 via https://market.partnerstack.com/artificial-intelligence/gammaapp (listing confirms \"Apply to program\" and is populated). ~30% recurring; confirm exact rate in the portal. PartnerStack network account created 2026-09-12; the network email was still unverified when this application went through and it was accepted anyway - PartnerStack sent the \"Your Application to join Gamma\" acknowledgement at 15:51 PT. The outstanding verification blocks the dashboard and payouts, not applying. CAUTION: gammaapp.ai is a different company from Gamma - do not use it as the program source or cite its 50% claim.",
-      "applied_date": "2026-09-12"
+      "application_status": "approved",
+      "commission_note": "25% for the first year on referred customers (PartnerStack / partners@gamma.app, 2026-09-14 PT).",
+      "notes": "Approved 2026-09-13; unique PartnerStack tracking URL received 2026-09-14 PT. Visit CTA on /tools/gamma/ uses https://try.gamma.app/ty4k3o3rpeyd with rel=\"sponsored noopener nofollow\". Official pricing/docs/privacy/terms stay on gamma.app as editorial source links. Editorial score and cons unchanged. Applied 2026-09-12 via the Gamma PartnerStack listing. CAUTION: gammaapp.ai is a different company from Gamma - do not use it as the program source or cite its 50% claim.",
+      "status": "approved",
+      "applied_date": "2026-09-12",
+      "approved_date": "2026-09-13",
+      "approved_tracking_url": "https://try.gamma.app/ty4k3o3rpeyd",
+      "affiliate_url": "https://try.gamma.app/ty4k3o3rpeyd"
     },
     {
       "tool_slug": "browse-ai",
@@ -237,7 +241,6 @@
     "jasper",
     "elevenlabs",
     "descript",
-    "gemini",
-    "gamma"
+    "gemini"
   ]
 }
