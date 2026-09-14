@@ -1,6 +1,16 @@
 {
-  "checked_at": "2026-09-13",
+  "checked_at": "2026-09-14",
   "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
+  "network_accounts": {
+    "partnerstack": {
+      "network_status": "limited_marketplace_access",
+      "decided": "2026-09-14",
+      "evidence": "networkquality@partnerstack.com, \"The status of your PartnerStack Network Application\", 2026-09-14 16:17 UTC (2026-09-14 09:17 PT). Reason given: \"We are working on expanding our Network. Your profile is not a great fit, but may be in the future.\"",
+      "effect": "Cannot join any NEW programs through the PartnerStack Marketplace. Existing partnerships are unaffected, so the approved Gamma tracking link stays live and the pending Descript application is not cancelled. Reapplying is dashboard-only and George-only.",
+      "not_affected": "Gamma (approved 2026-09-13, unique link live), ElevenLabs, Make, Nous / Hermes, Sonaopus — all direct or already-approved.",
+      "blocked": "Copy.ai and Browse AI were both parked on \"search the in-app Marketplace inside the PartnerStack dashboard\"; that route is now closed. Any other PartnerStack-hosted vendor (Notion, Grammarly-via-PartnerStack) is likewise unavailable."
+    }
+  },
   "affiliate_programs": [
     {
       "tool_slug": "chatgpt",
@@ -121,7 +131,7 @@
       "official_program_url": "https://www.grammarly.com/affiliates",
       "application_status": "rejected_via_impact",
       "commission_note": null,
-      "notes": "Application answers ready in admin/affiliate-applications-ready.md; George submits at grammarly.com/affiliates. Grammarly affiliate application denied (2026-08-25): program routes through Impact (app.impact.com/advertiser-advertiser-info/Grammarly.brand), and our Impact publisher account was rejected earlier. Revisit after reapplying to Impact with traffic evidence.",
+      "notes": "UPDATED 2026-09-14: a Grammarly listing DOES exist on PartnerStack (company key co_s4UUPYp9Nuvh1L, group grammarlybusinessaffiliateprogram, company.approved=FALSE - i.e. not publicly discoverable in the marketplace - with application=true). Recorded as an UNVERIFIED lead, not an open route: application=true is unreliable for private listings (Notion shows the same application=true while its program is officially closed). Grammarly's own page still routes affiliates through Impact, and our Impact publisher account was rejected. So the standing blocker is unchanged: Grammarly stays blocked until Impact approves us. Worth one look once George can sign into the PartnerStack dashboard: if this private Grammarly Business group is visible to him, applying there would bypass Impact entirely. Do not attempt it blind from a URL.",
       "application_date": "2026-08-24"
     },
     {
@@ -132,7 +142,7 @@
       "official_program_url": "https://www.jasper.ai/legal/affiliates",
       "application_status": "blocked_by_impact_rejection",
       "commission_note": "25% recurring for 12 months (up to 30% at 100+ conversions/year); 45-day cookie; $25 min payout via PayPal/Impact.",
-      "notes": "Jasper hosts its affiliate program through Impact, and the Impact publisher account was rejected on traffic grounds (2026-08-25). partners.jasper.ai returns an unavailable campaign. Cannot be joined until Impact approves us; treat as blocked rather than ready_to_apply. Reapply to Impact around 20-30 visits/day, which would unlock Jasper and other Impact-hosted programs at once. Application copy is ready in admin/affiliate-applications-ready.md."
+      "notes": "Jasper hosts its affiliate program through Impact, and the Impact publisher account was rejected on traffic grounds (2026-08-25). partners.jasper.ai returns an unavailable campaign. Cannot be joined until Impact approves us; treat as blocked rather than ready_to_apply. Reapply to Impact around 20-30 visits/day, which would unlock Jasper and other Impact-hosted programs at once. Application copy is ready in admin/affiliate-applications-ready.md. Re-verified 2026-09-14: no PartnerStack listing reaches Jasper (its market page returns a null company block, same signature as Copy.ai), so the Impact route remains the only path. Impact reapplication guidance: published guidance puts successful applicants at roughly 5,000+ monthly unique visitors; the site has 77 visitors/30d. Reapplying now would burn the retry for little chance of approval - revisit around 20-30 visits/day as previously recorded."
     },
     {
       "tool_slug": "elevenlabs",
@@ -156,7 +166,7 @@
       "official_program_url": "https://dash.partnerstack.com/application?company=descriptinc&group=affiliates",
       "application_status": "applied_pending_review",
       "commission_note": "$25 one-time flat fee per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; PartnerStack; monthly PayPal payouts, no minimum threshold.",
-      "notes": "APPLIED 2026-09-12 via dash.partnerstack.com/application?company=descriptinc&group=affiliates (PartnerStack company slug \"descriptinc\"). $25 one-time per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; monthly PayPal payouts. Approval typically ~1 week, up to 30 days. Traffic stated honestly on the application: ~4,600 impressions / 66 visitors in the trailing 30 days, average position improving 62 -> 44 over three weeks. Descript-relevant pages currently sit at positions 41-83, so near-term signup volume is expected to be under 1/month; the case made was intent (switch and comparison content reaching readers already paying for an audio tool) rather than volume. When approved: add the tracking URL here as affiliate_url - the validator requires that key, not approved_tracking_url - then run scripts/wire_affiliate_links.py so the CTA is actually swapped, or the approval earns nothing.",
+      "notes": "APPLIED 2026-09-12 via dash.partnerstack.com/application?company=descriptinc&group=affiliates (PartnerStack company slug \"descriptinc\"). $25 one-time per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; monthly PayPal payouts. Approval typically ~1 week, up to 30 days. Traffic stated honestly on the application: ~4,600 impressions / 66 visitors in the trailing 30 days, average position improving 62 -> 44 over three weeks. Descript-relevant pages currently sit at positions 41-83, so near-term signup volume is expected to be under 1/month; the case made was intent (switch and comparison content reaching readers already paying for an audio tool) rather than volume. When approved: add the tracking URL here as affiliate_url - the validator requires that key, not approved_tracking_url - then run scripts/wire_affiliate_links.py so the CTA is actually swapped, or the approval earns nothing. STATUS UPDATE 2026-09-14: PartnerStack limited our marketplace access (network profile not accepted), but its own notice states existing partnerships are not impacted, so this application is not cancelled and no action is needed on the listing itself. Do not submit any further PartnerStack-hosted applications while that limit stands.",
       "applied_date": "2026-09-12"
     },
     {
@@ -167,7 +177,7 @@
       "official_program_url": "https://market.partnerstack.com/artificial-intelligence/copy-ai",
       "application_status": "listing_not_open",
       "commission_note": "45% recurring commission for the first 12 months per referral; 60-day cookie; $50 minimum payout; monthly via PayPal or Stripe.",
-      "notes": "Verified 2026-09-12: the PartnerStack listing renders \"Request program\" with unfilled {{name}}/{{company.description}} placeholders rather than \"Apply to program\", i.e. the listing is removed or awaiting vendor setup. copyai.partnerstack.com/signup renders the same dead template and is NOT a working application form - do not submit there. Copy.ai was acquired by Fullcast in Oct 2025 and repositioned to enterprise GTM, which may explain an unmaintained affiliate program. Next step: search the in-app Marketplace inside the verified PartnerStack dashboard; if not joinable there, treat as closed. Reported rate 45% recurring for 12 months remains unverified because no live listing is available."
+      "notes": "Re-confirmed 2026-09-14 and the recorded status HOLDS. Its marketplace listing returns a null company block - no base_offers, no default_group_application, no program state at all - which is the signature of a removed or unlisted program (compare the six validated open controls). Two other Copy.ai routes are also dead but were previously conflated in this record, so recorded precisely: (1) copyai.partnerstack.com/signup renders a 15,260-byte generic template with unfilled {{name}}/{{company.description}} - but that same template is served by browseai/copyai/descript/gamma.partnerstack.com IDENTICALLY, including for programs we successfully applied to, so the placeholder leak proves nothing about availability; it is not evidence of anything and should not be cited again. (2) affiliates.copy.ai/apply is a Notion-hosted page (1.3MB SPA) whose Notion API endpoints 301 away; it could not be read from the command line and is unverified either way. Conclusion: no verified working Copy.ai application route. Copy.ai was acquired by Fullcast in Oct 2025 and repositioned, which fits a discontinued affiliate program. Do not spend further effort here unless George sees the program in his PartnerStack dashboard."
     },
     {
       "tool_slug": "gamma",
@@ -190,9 +200,9 @@
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://www.browse.ai/affiliate-program",
-      "application_status": "vendor_portal_broken",
+      "application_status": "ready_to_apply",
       "commission_note": "20% recurring commission on every payment by referrals, lifetime; 30-day cookie; monthly payouts via Wise (PayPal on request, $200 minimum).",
-      "notes": "Verified 2026-09-12: affiliates.browse.ai/signup returns HTTP 525 (Cloudflare SSL handshake failed) on repeated attempts with two user agents, while browse.ai/affiliate-program renders normally - the affiliate subdomain is misconfigured. Its PartnerStack listing also renders \"Request program\" (not open). Next step: report the portal error to Browse AI support, or apply only once the signup returns 200. Reported rate 20% recurring for the lifetime of the referral remains unverified against a working application form."
+      "notes": "CORRECTED 2026-09-14: the earlier \"vendor_portal_broken / do not apply\" status was wrong. It rested on affiliates.browse.ai/signup returning HTTP 525, but that subdomain is not the application route - the live route is the PartnerStack marketplace listing, which is open. Re-verified 2026-09-14 from the marketplace listing's embedded state (window.__INITIAL_STATE__.company.company): application=true, approved=true, archived=false, base_offers[0] = 20% (value 2000) \"Earn 20% commission as long as the user is subscribed\", default_group_application=marketplace. The discriminator was validated against six programs PartnerStack markets as joinable (adcreative, activecampaign, beautifulai, clickup, getresponse, runpod: all application=true, approved=true) and three known-closed public listings (canva, airtable, logomeai: application=false). Apply from the listing page at market.partnerstack.com/artificial-intelligence/browseai using its \"Apply to program\" button (the button carries the correct group; dash.partnerstack.com/application URLs are a JS shell that returns identical 1428-byte bytes for every program, so a direct URL cannot be verified from the command line - do not treat that shell as evidence either way). 20% recurring for the life of the referral, 30-day cookie, monthly via Wise (PayPal on request, $200 minimum). Browse AI is already a reviewed tool on the site (75-tool index) so the pitch is straightforward. NOTE: this is an \"application\" program - Browse AI approves partners, so expect review."
     },
     {
       "tool_slug": "hermes-agent",
@@ -225,11 +235,26 @@
       "approved_tracking_url": "https://sonaopus.com/?ref=58448483",
       "affiliate_url": "https://sonaopus.com/?ref=58448483",
       "product_links": [
-        {"name": "AI Recruiting", "url": "https://gumroad.com/a/58448483/hapwxp"},
-        {"name": "AI Project Management", "url": "https://gumroad.com/a/58448483/iwiiw"},
-        {"name": "AI HR Management", "url": "https://gumroad.com/a/58448483/eiddl"},
-        {"name": "AI Executive Assistant", "url": "https://gumroad.com/a/58448483/pqpox"},
-        {"name": "AI Real Estate Agent", "url": "https://gumroad.com/a/58448483/wtyioq"}
+        {
+          "name": "AI Recruiting",
+          "url": "https://gumroad.com/a/58448483/hapwxp"
+        },
+        {
+          "name": "AI Project Management",
+          "url": "https://gumroad.com/a/58448483/iwiiw"
+        },
+        {
+          "name": "AI HR Management",
+          "url": "https://gumroad.com/a/58448483/eiddl"
+        },
+        {
+          "name": "AI Executive Assistant",
+          "url": "https://gumroad.com/a/58448483/pqpox"
+        },
+        {
+          "name": "AI Real Estate Agent",
+          "url": "https://gumroad.com/a/58448483/wtyioq"
+        }
       ]
     }
   ],

@@ -48,7 +48,11 @@ placeholders — `{{name}}`, `{{company.description}}`, literal `undefined`.
 Verified 2026-09-12:
 - **Gamma** → *Apply to program*, populated → **OPEN**
 - **ClickUp** (control) → *Apply to program*, populated → worked listing
-- **Copy.ai, Browse AI, Descript** → *Request program*, `{{name}}` unfilled → **NOT OPEN**
+- **Copy.ai** → marketplace listing returns a null company block (no offers, no program
+  state) → **NOT OPEN**. Note: the *"Request program" + unfilled `{{name}}`* signature
+  previously cited here proves nothing — the identical 15,260-byte template is served by
+  `browseai/copyai/descript/gamma.partnerstack.com`, including programs we successfully
+  applied to. Do not cite that signature again.
 
 `copyai.partnerstack.com` and `browseai.partnerstack.com` render the same unpopulated
 template, so the vendor-hosted subdomains are not a working fallback either.
@@ -74,7 +78,7 @@ gates visibility and payment, not placement. Do not rebuild the links.
 | 1 | Gamma | PartnerStack listing | 25% first year | **approved 2026-09-13; link live 2026-09-13** — https://try.gamma.app/ty4k3o3rpeyd |
 | 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | **applied 2026-09-12** — pending review |
 | 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | no working route; try in-app Marketplace |
-| 4 | Browse AI | own portal 525-broken | 20% rec. life | no working route; report broken portal |
+| 4 | Browse AI | market.partnerstack.com/artificial-intelligence/browseai | 20% rec. life | **apply now** — listing open (verified 2026-09-14) |
 | 5 | ElevenLabs | direct | 22% rec. 12mo | approved 2026-08-23 |
 | 6 | Make | direct | 35% rec. 12mo | approved 2026-08-23 |
 | 7 | Nous / Hermes | direct | $15 off referral | approved 2026-09-02 |
@@ -136,12 +140,47 @@ affiliate listing.
 Copy.ai. If it is not joinable there, treat the program as closed. Do not submit to
 `copyai.partnerstack.com/signup` — it is not a live application form.
 
-### Browse AI — own portal is broken
-`affiliates.browse.ai/signup` returns **HTTP 525 (Cloudflare SSL handshake failed)** on
-repeated attempts with two user agents, while `browse.ai/affiliate-program` renders fine.
-The affiliate subdomain is misconfigured. Its PartnerStack listing is also not open.
-**Next step:** email Browse AI support reporting the portal error, or apply only once the
-signup returns 200.
+**Two dead routes previously conflated here, now recorded precisely** (so neither is cited
+as evidence again):
+- `copyai.partnerstack.com/signup` serves a 15,260-byte generic template with unfilled
+  `{{name}}`/`{{company.description}}`. **That signature proves nothing** — the byte-identical
+  template is served by `browseai`/`copyai`/`descript`/`gamma.partnerstack.com`, including
+  programs we successfully applied to. It is not evidence of availability in either direction.
+- `affiliates.copy.ai/apply` is a Notion-hosted SPA (1.3 MB) whose Notion API endpoints 301
+  away, so it could not be read from the command line. **Unverified either way** — it may
+  still be a working form that only renders in a browser.
+
+The real evidence that Copy.ai is closed: its marketplace listing's embedded state returns
+`company: null` — no `base_offers`, no `default_group_application`, no program state at all.
+That is the signature of a removed or unlisted program (contrast the six validated open
+controls).
+
+### Browse AI — OPEN, apply from the marketplace listing
+**Corrected 2026-09-14: the previous "portal broken, wait for a 200" advice was wrong.**
+`affiliates.browse.ai/signup` does return **HTTP 525**, but that subdomain is *not* the
+application route — so a 525 there never meant the program was closed. The live route is the
+PartnerStack marketplace listing, and it is **open**.
+
+Evidence (marketplace listing's embedded `window.__INITIAL_STATE__.company.company`):
+`application=true`, `approved=true`, `archived=false`, `base_offers[0]` = 20% / value 2000 /
+*"Earn 20% commission as long as the user is subscribed"*,
+`default_group_application=marketplace`.
+
+That discriminator was validated against six programs PartnerStack markets as joinable
+(`adcreative`, `activecampaign`, `beautifulai`, `clickup`, `getresponse`, `runpod` — all
+`application=true, approved=true`) and three known-closed listings (`canva`, `airtable`,
+`logomeai` — `application=false`).
+
+**Next step:** apply from
+`market.partnerstack.com/artificial-intelligence/browseai` using its **Apply to program**
+button. Do **not** hand-build a `dash.partnerstack.com/application` URL: every such URL
+returns an identical 1,428-byte SPA shell regardless of program, so it cannot be verified from
+the command line and is not evidence either way.
+
+Terms: 20% recurring for the life of the referral, 30-day cookie, monthly via Wise (PayPal on
+request, $200 minimum). Browse AI is already a reviewed tool on the site, so the pitch is
+straightforward. The offer's per-click stats show 8.4% signup rate and ~$13.91 revenue per
+click, which is strong for this category.
 
 ---
 
@@ -150,12 +189,27 @@ signup returns 200.
 - **Jasper** — hosts through **Impact**, and our Impact publisher account was rejected on
   traffic grounds. `partners.jasper.ai` returns an unavailable campaign.
 - **Grammarly** — same Impact dependency; denied 2026-08-25.
+  **One unverified lead (2026-09-14):** a Grammarly listing *does* exist on PartnerStack
+  (`company key co_s4UUPYp9Nuvh1L`, group `grammarlybusinessaffiliateprogram`) with
+  `application=true` — but `approved=false`, i.e. it is not publicly discoverable. Not an open
+  route: `application=true` is unreliable for private listings (Notion shows the same while
+  its program is officially closed). **Worth one look from inside George's dashboard** — if
+  that private Grammarly Business group is visible to him, applying there bypasses Impact
+  entirely. Do not attempt it blind from a URL.
 - **Canva, Notion** — applications closed.
 - **ChatGPT, Claude, GitHub Copilot** — no publisher commission program exists.
 - **Midjourney, Zapier** — no open public affiliate application.
 
 **The Impact reapplication is the highest-leverage single action** once traffic grows: it
 unlocks Jasper, Grammarly, and every other Impact-hosted program at once.
+
+**Assessed 2026-09-14 — do NOT reapply yet.** Published guidance on Impact approval puts
+successful applicants at roughly **5,000+ monthly unique visitors** with engagement proof;
+the site currently has **77 visitors / 247 pageviews per 30 days** (Plausible, verified
+2026-09-14) against a 58% bounce and 133s average visit. That is ~1.5% of the low bound.
+Impact also declined on **MSA standards**, which assess content quality and brand alignment
+rather than raw pageviews alone — so the fix is more than traffic, and a second rejection
+would burn the retry. Revisit around **20–30 visits/day** as previously recorded.
 
 ---
 

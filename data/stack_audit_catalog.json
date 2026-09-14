@@ -1671,7 +1671,7 @@
       ],
       "capability_confidence": "curated",
       "capabilities_known": true,
-      "affiliate_status": "vendor_portal_broken",
+      "affiliate_status": "ready_to_apply",
       "affiliate": false,
       "sponsored": false
     },
