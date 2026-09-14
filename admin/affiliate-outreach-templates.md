@@ -1,12 +1,13 @@
 # Affiliate Application Outreach — AIToolsEssentials
 
-Priority queue: Make, Grammarly, Jasper, ElevenLabs, Descript, Gemini (Google).
+Priority queue (still open): Grammarly, Jasper, Descript, Copy.ai, Browse AI, Gemini (Google).
+Already approved and wired: ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack).
 Networks to join first: Impact.com, CJ Affiliate, PartnerStack (covers most SaaS programs).
 
 ## Standard application blurb
 
 > AIToolsEssentials (aitoolsessentials.com) is an evidence-first AI tools directory:
-> 40 independently reviewed tools with verified official pricing, dated benchmark
+> 76 independently reviewed tools with verified official pricing, dated benchmark
 > evidence, and buyer guides for specific audiences (agencies, freelancers,
 > developers). We publish honest cons alongside pros — our reviews carry trust
 > because we show tradeoffs.
