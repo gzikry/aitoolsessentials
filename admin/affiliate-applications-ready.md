@@ -59,9 +59,35 @@ template, so the vendor-hosted subdomains are not a working fallback either.
 
 ---
 
-## STATUS 2026-09-13
+## STATUS 2026-09-14
 
-**Approved live: Gamma (PartnerStack unique link 2026-09-13). Applied pending: PartnerStack network account and Descript (2026-09-12).**
+**Approved live: Gamma (PartnerStack unique link 2026-09-13). Applied pending: Descript (2026-09-12).**
+
+**CHANGED 2026-09-14 — PartnerStack network application was DECLINED, not still pending.**
+`networkquality@partnerstack.com` ("The status of your PartnerStack Network Application",
+2026-09-14 09:17 PT) says PartnerStack has **limited our access to new programs via the
+Marketplace**: "We are working on expanding our Network. Your profile is not a great fit, but
+may be in the future."
+
+What it does and does not do:
+- **Does not affect existing partnerships** (their words): Gamma's approved tracking link stays
+  live, and the pending Descript application is not cancelled. ElevenLabs, Make, Nous and
+  Sonaopus are direct programs and were never PartnerStack-dependent.
+- **Does block every NEW marketplace join**, including **Browse AI** — its listing is genuinely
+  open (`application=true, approved=true`, 20% recurring lifetime), but the *join* is gated by
+  the network limit. The vendor-side fact and the network-side gate are different things: the
+  listing is open, the join is not available.
+- **Closes the last fallback for Copy.ai and the Grammarly lead.** Copy.ai's earlier next step
+  ("search the in-app Marketplace inside the dashboard") is gone; treat Copy.ai as closed. The
+  private Grammarly Business group (`co_s4UUPYp9Nuvh1L`, `approved=false`) is likewise
+  unreachable until the profile is re-approved.
+- **Reapplying is dashboard-only and George-only** at `app.partnerstack.com`. PartnerStack says
+  re-evaluation is possible "based on new or corrected information."
+
+This is the same class of outcome as the Impact rejection: a network-level gate on traffic and
+profile fit, not a vendor-level refusal. The site's answer is unchanged — keep building direct
+programs (ElevenLabs, Make, Nous, Sonaopus already live) and revisit networks once traffic
+supports acceptance.
 
 **George-only, outstanding:** Gumroad sent "Confirmation instructions" for the account
 carrying the Sonaopus affiliate program on 2026-09-13 16:50 UTC, about an hour before the
@@ -74,11 +100,11 @@ gates visibility and payment, not placement. Do not rebuild the links.
 
 | # | Program | Route | Rate | Status |
 |---|---------|-------|------|--------|
-| 0 | PartnerStack network | app.partnerstack.com | — | applied 2026-09-12; **email unverified** |
-| 1 | Gamma | PartnerStack listing | 25% first year | **approved 2026-09-13; link live 2026-09-13** — https://try.gamma.app/ty4k3o3rpeyd |
-| 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | **applied 2026-09-12** — pending review |
-| 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | no working route; try in-app Marketplace |
-| 4 | Browse AI | market.partnerstack.com/artificial-intelligence/browseai | 20% rec. life | **apply now** — listing open (verified 2026-09-14) |
+| 0 | PartnerStack network | app.partnerstack.com | — | **DECLINED 2026-09-14** — marketplace access limited ("profile is not a great fit"); existing partnerships unaffected; reapply is dashboard-only, George-only |
+| 1 | Gamma | PartnerStack listing | 25% first year | **approved 2026-09-13; link live 2026-09-13** — https://try.gamma.app/ty4k3o3rpeyd (unaffected by the network limit) |
+| 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | **applied 2026-09-12** — pending review; not cancelled (existing partnerships unaffected) |
+| 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | **closed 2026-09-14** — listing dead and the in-app Marketplace fallback is gone with the network limit |
+| 4 | Browse AI | market.partnerstack.com/artificial-intelligence/browseai | 20% rec. life | listing open (verified 2026-09-14) but **join gated by the 2026-09-14 network limit** |
 | 5 | ElevenLabs | direct | 22% rec. 12mo | approved 2026-08-23 |
 | 6 | Make | direct | 35% rec. 12mo | approved 2026-08-23 |
 | 7 | Nous / Hermes | direct | $15 off referral | approved 2026-09-02 |
@@ -155,7 +181,7 @@ The real evidence that Copy.ai is closed: its marketplace listing's embedded sta
 That is the signature of a removed or unlisted program (contrast the six validated open
 controls).
 
-### Browse AI — OPEN, apply from the marketplace listing
+### Browse AI — listing OPEN, join BLOCKED by the network limit
 **Corrected 2026-09-14: the previous "portal broken, wait for a 200" advice was wrong.**
 `affiliates.browse.ai/signup` does return **HTTP 525**, but that subdomain is *not* the
 application route — so a 525 there never meant the program was closed. The live route is the
@@ -176,6 +202,16 @@ That discriminator was validated against six programs PartnerStack markets as jo
 button. Do **not** hand-build a `dash.partnerstack.com/application` URL: every such URL
 returns an identical 1,428-byte SPA shell regardless of program, so it cannot be verified from
 the command line and is not evidence either way.
+
+**BLOCKER ADDED 2026-09-14 (same day) — do not attempt the join.** PartnerStack limited our
+marketplace access the same afternoon (see STATUS above). Their words are explicit: *"You will
+not be able to join any new programs through our marketplace until your Network Profile has
+been approved into our network."* That is a guarantee of failure, not a maybe, so the join is
+**not worth an attempt** — and a declined join may itself count against the profile.
+
+The listing being open is a fact about Browse AI; the join is what the network limit gates.
+Blocked on the network, not on the vendor. Revisit only after the Network Profile is
+re-approved. Do not substitute the dead `affiliates.browse.ai/signup` route.
 
 Terms: 20% recurring for the life of the referral, 30-day cookie, monthly via Wise (PayPal on
 request, $200 minimum). Browse AI is already a reviewed tool on the site, so the pitch is

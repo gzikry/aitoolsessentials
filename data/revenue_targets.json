@@ -28,8 +28,8 @@
       "workflow-specific buyers"
     ],
     "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+    "next_action": "Application submitted 2026-09-12 and still pending review. The 2026-09-14 PartnerStack network limit does not cancel existing partnerships, so leave the application alone and do not resubmit. When approved: add the tracking URL as affiliate_url, run scripts/wire_affiliate_links.py, then log it.",
+    "notes": "Do not invent affiliate URLs. Use the official URL until approved. Pending, not cancelled - the network limit affects new marketplace joins only."
   },
   {
     "tool_slug": "make",
@@ -380,8 +380,8 @@
       "workflow-specific buyers"
     ],
     "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+    "next_action": "Closed 2026-09-14. The marketplace listing returns a null company block (no offers, no program state) and the in-app Marketplace fallback ended with the PartnerStack network limit. No verified working application route remains; revisit only if the vendor starts its own program.",
+    "notes": "Do not invent affiliate URLs. Recorded as closed rather than pending, so it stops consuming outreach time."
   },
   {
     "tool_slug": "jasper",
@@ -640,8 +640,8 @@
       "workflow-specific buyers"
     ],
     "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+    "next_action": "Blocked. Grammarly routes through Impact and the Impact publisher account was rejected (2026-08-25); a private Grammarly Business listing on PartnerStack (co_s4UUPYp9Nuvh1L, approved=false) is gated by the 2026-09-14 PartnerStack network limit. No action until Impact is reapplied to at the traffic threshold.",
+    "notes": "Do not invent affiliate URLs. Use the official URL until approved. Two network-level gates, neither vendor-controlled."
   },
   {
     "tool_slug": "allvideoai",
@@ -1124,8 +1124,8 @@
       "workflow-specific buyers"
     ],
     "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+    "next_action": "Listing verified open 2026-09-14 (application=true, approved=true, 20% recurring lifetime) but the join was gated the same day by the PartnerStack network limit. Attempt the marketplace apply only if George is already signed in and the listing still offers it; otherwise wait for the Network Profile to be re-approved. Do not use affiliates.browse.ai/signup - it is dead (HTTP 525) and was never the application route.",
+    "notes": "Do not invent affiliate URLs. Use the official URL until approved. Blocked on the network profile, not on the vendor."
   },
   {
     "tool_slug": "rows",

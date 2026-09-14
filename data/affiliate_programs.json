@@ -8,7 +8,8 @@
       "evidence": "networkquality@partnerstack.com, \"The status of your PartnerStack Network Application\", 2026-09-14 16:17 UTC (2026-09-14 09:17 PT). Reason given: \"We are working on expanding our Network. Your profile is not a great fit, but may be in the future.\"",
       "effect": "Cannot join any NEW programs through the PartnerStack Marketplace. Existing partnerships are unaffected, so the approved Gamma tracking link stays live and the pending Descript application is not cancelled. Reapplying is dashboard-only and George-only.",
       "not_affected": "Gamma (approved 2026-09-13, unique link live), ElevenLabs, Make, Nous / Hermes, Sonaopus — all direct or already-approved.",
-      "blocked": "Copy.ai and Browse AI were both parked on \"search the in-app Marketplace inside the PartnerStack dashboard\"; that route is now closed. Any other PartnerStack-hosted vendor (Notion, Grammarly-via-PartnerStack) is likewise unavailable."
+      "blocked": "Every NEW program join through the PartnerStack marketplace, including Browse AI (its listing is open and was marked ready_to_apply on 2026-09-14, but the join is now gated by this limit) and the private Grammarly Business group lead. Copy.ai's closed listing is unaffected either way. Notion, Grammarly-via-PartnerStack and other network-hosted vendors are unreachable until the profile is re-approved.",
+      "george_action": "Dashboard-only and George-only: sign in at app.partnerstack.com and reapply the Network Profile with corrected/new information. Do not attempt marketplace joins before that."
     }
   },
   "affiliate_programs": [
@@ -200,9 +201,9 @@
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://www.browse.ai/affiliate-program",
-      "application_status": "ready_to_apply",
+      "application_status": "gated_by_network_limit",
       "commission_note": "20% recurring commission on every payment by referrals, lifetime; 30-day cookie; monthly payouts via Wise (PayPal on request, $200 minimum).",
-      "notes": "CORRECTED 2026-09-14: the earlier \"vendor_portal_broken / do not apply\" status was wrong. It rested on affiliates.browse.ai/signup returning HTTP 525, but that subdomain is not the application route - the live route is the PartnerStack marketplace listing, which is open. Re-verified 2026-09-14 from the marketplace listing's embedded state (window.__INITIAL_STATE__.company.company): application=true, approved=true, archived=false, base_offers[0] = 20% (value 2000) \"Earn 20% commission as long as the user is subscribed\", default_group_application=marketplace. The discriminator was validated against six programs PartnerStack markets as joinable (adcreative, activecampaign, beautifulai, clickup, getresponse, runpod: all application=true, approved=true) and three known-closed public listings (canva, airtable, logomeai: application=false). Apply from the listing page at market.partnerstack.com/artificial-intelligence/browseai using its \"Apply to program\" button (the button carries the correct group; dash.partnerstack.com/application URLs are a JS shell that returns identical 1428-byte bytes for every program, so a direct URL cannot be verified from the command line - do not treat that shell as evidence either way). 20% recurring for the life of the referral, 30-day cookie, monthly via Wise (PayPal on request, $200 minimum). Browse AI is already a reviewed tool on the site (75-tool index) so the pitch is straightforward. NOTE: this is an \"application\" program - Browse AI approves partners, so expect review."
+      "notes": "CORRECTED 2026-09-14: the earlier \"vendor_portal_broken / do not apply\" status was wrong. It rested on affiliates.browse.ai/signup returning HTTP 525, but that subdomain is not the application route - the live route is the PartnerStack marketplace listing, which is open. Re-verified 2026-09-14 from the marketplace listing's embedded state (window.__INITIAL_STATE__.company.company): application=true, approved=true, archived=false, base_offers[0] = 20% (value 2000) \"Earn 20% commission as long as the user is subscribed\", default_group_application=marketplace. The discriminator was validated against six programs PartnerStack markets as joinable (adcreative, activecampaign, beautifulai, clickup, getresponse, runpod: all application=true, approved=true) and three known-closed public listings (canva, airtable, logomeai: application=false). 20% recurring for the life of the referral, 30-day cookie, monthly via Wise (PayPal on request, $200 minimum). Browse AI is already a reviewed tool on the site (75-tool index) so the pitch is straightforward. NOTE: this is an \"application\" program - Browse AI approves partners, so expect review. BLOCKER ADDED 2026-09-14 (same day): PartnerStack limited our marketplace access, so the join itself is now gated by the network profile. The listing stays recorded as open/ready_to_apply - that is a fact about Browse AI - but do not expect a marketplace join to go through until the Network Profile is re-approved. If George is already signed in and the listing still offers an apply action, submit it before the limit is enforced; otherwise treat Browse AI as blocked on the network, not on the vendor. STATUS SUPERSEDED 2026-09-14: the listing is genuinely open (verified above), but PartnerStack limited our Marketplace access the same afternoon - \"You will not be able to join any new programs through our marketplace until your Network Profile has been approved into our network\" (networkquality@partnerstack.com, 2026-09-14 16:17 UTC). The join is therefore blocked at the NETWORK level, not at the vendor level, and is not worth attempting - a declined join may count against the profile. This is why the status is no longer ready_to_apply despite the open listing: ready_to_apply means George can act now, and he cannot. Revisit only after the Network Profile is re-approved (dashboard-only, George-only)."
     },
     {
       "tool_slug": "hermes-agent",
@@ -259,9 +260,7 @@
     }
   ],
   "priority_application_queue": [
-    "copy-ai",
     "browse-ai",
-    "make",
     "grammarly",
     "jasper",
     "elevenlabs",

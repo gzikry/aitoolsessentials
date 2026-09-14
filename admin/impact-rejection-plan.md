@@ -29,8 +29,17 @@ channel per our revenue strategy.
    - Strong candidates typically: ElevenLabs (done ✅), Make.com (done ✅),
      plus any tools offering direct/partner signup.
 2. **Other networks are optional backups**, applied only when traffic supports
-   acceptance: ShareASale/Awin, PartnerStack (SaaS-heavy, friendlier to small
-   sites), CJ Affiliate.
+   acceptance: ShareASale/Awin, CJ Affiliate.
+   - **PartnerStack — DECLINED 2026-09-14.** The line here previously called it
+     "SaaS-heavy, friendlier to small sites". That turned out to be wrong for us:
+     `networkquality@partnerstack.com` limited our Marketplace access the same way,
+     saying our Network Profile "is not a great fit, but may be in the future."
+     Two network rejections in three weeks on the same ground — traffic and profile fit
+     — so treat **networks as closed until the traffic threshold is met**, not as a
+     queue to keep working. Direct programs are the only channel still accepting us.
+   - Existing PartnerStack partnerships survive the limit (Gamma's link is live), so the
+     rejection cost us nothing already earned; it only closes new marketplace joins
+     (Browse AI, Grammarly Business, Copy.ai).
 3. **Reapply to Impact at ~20–30 organic visits/day** (the same threshold as
    AdSense). At that point include:
    - Plausible screenshot or public dashboard link showing real traffic.
@@ -52,15 +61,26 @@ Edit `admin/impact-application-answers.md` when reapplying:
 
 ## Direct-application queue (apply now, no Impact needed)
 
-These four have official direct/partner programs we haven't applied to yet.
+These have official direct/partner programs we haven't applied to yet.
 George applies manually; answers are in `admin/affiliate-applications-ready.md`
 patterns. Priority order:
 
 1. **Grammarly** — grammarly.com/affiliates (big consumer reach, content-friendly)
-2. **Jasper** — Jasper affiliate via FirstPromoter (writing audience match)
+   — still routes through Impact, so blocked on the Impact reapplication. A private
+   Grammarly Business listing exists on PartnerStack but is itself gated by the
+   2026-09-14 network limit.
+2. **Jasper** — Jasper affiliate via FirstPromoter (writing audience match) — hosts
+   through Impact; blocked on the same reapplication.
 3. **Descript** — descript.com/affiliate via PartnerStack (creator/podcast audience)
+   — **application submitted 2026-09-12 and still pending**; the network limit does
+   not cancel existing partnerships, so leave it.
 4. **Gemini/Google Cloud** — CJ Affiliate via cloud.google.com/affiliate-program
    (lower priority: indirect program, B2B-ish)
+
+Note as of 2026-09-14: items 1-2 both depend on Impact, and every
+PartnerStack-hosted route is gated by the network limit, so this queue is effectively
+**paused on traffic** rather than actionable today. The work that still pays is
+direct-program outreach and the site itself.
 
 For each application, reuse our Impact answer copy but swap in:
 - Real traffic numbers from Plausible once available.

@@ -103,17 +103,20 @@ git push -u origin main
    - Submit sitemap
 
 ### Affiliate Program Applications (Ongoing)
-Priority applications:
-- [ ] Canva (PartnerStack)
-- [ ] Zapier (PartnerStack)
-- [ ] Make (PartnerStack)
-- [ ] Grammarly (PartnerStack)
-- [ ] Jasper (PartnerStack)
-- [ ] Copy.ai (PartnerStack)
-- [ ] Notion (PartnerStack)
-- [ ] GitHub Copilot (GitHub)
-- [ ] Perplexity (Perplexity)
-- [ ] Claude (Anthropic)
+
+**Network status 2026-09-14 — both networks closed to us:**
+Impact.com rejected 2026-08-25; PartnerStack declined 2026-09-14 (Marketplace access limited,
+"Network Profile is not a great fit"). Existing PartnerStack partnerships survive: Gamma's
+tracking link is live and Descript's application is still pending. No new marketplace joins.
+
+**Approved and wired (this is the real list):** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma.
+**Pending:** Descript (applied 2026-09-12).
+**Closed / blocked:** Canva (applications closed), Copy.ai (listing dead + marketplace fallback
+gone), Notion (applications closed), Grammarly + Jasper (Impact-dependent), Zapier / Midjourney
+(no open public program), GitHub Copilot / Perplexity / Claude (no publisher commission program).
+
+Every entry on the old priority list is now either closed or gated on traffic. Direct vendor
+programs and the site's own traffic are the only levers that advance monetization right now.
 
 ### Initial Traffic (Week 1)
 - [ ] Share on LinkedIn

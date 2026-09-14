@@ -1,8 +1,14 @@
 # Affiliate Application Outreach — AIToolsEssentials
 
-Priority queue (still open): Grammarly, Jasper, Descript, Copy.ai, Browse AI, Gemini (Google).
+Priority queue (still open): Browse AI, Grammarly, Jasper, Gemini (Google).
 Already approved and wired: ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack).
 Networks to join first: Impact.com, CJ Affiliate, PartnerStack (covers most SaaS programs).
+**Network status 2026-09-14: Impact rejected (2026-08-25); PartnerStack DECLINED (2026-09-14)** —
+our Network Profile was not accepted and access to *new* Marketplace programs is limited. Existing
+partnerships are unaffected (Gamma's link stays live, Descript's application is not cancelled).
+Every remaining marketplace-hosted target — Browse AI, Grammarly Business, Copy.ai — is now gated
+on the network profile, not on the vendor. Reapply is dashboard-only and George-only. Direct
+programs are the path that still works; do not open new network applications until traffic grows.
 
 ## Standard application blurb
 
