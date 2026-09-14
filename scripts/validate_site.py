@@ -994,6 +994,22 @@ def main():
         if "hasAttribute('data-outbound')" not in analytics_text:
             errors.append('js/analytics.js must exclude data-outbound affiliate links from goals')
 
+    # Every public page must load the analytics loader. Pages that skip it are live and
+    # sitemap-listed but invisible in traffic reports, which corrupts every editorial
+    # decision made from those numbers. admin/ paste packs and go/ redirect stubs are not
+    # public pages.
+    untracked_pages = []
+    for page in ROOT.rglob('*.html'):
+        parts = page.relative_to(ROOT).parts
+        if 'admin' in parts or 'go' in parts:
+            continue
+        text = page.read_text()
+        if 'js/analytics.js' not in text and 'plausible.io/js/script.js' not in text:
+            untracked_pages.append(str(page.relative_to(ROOT)))
+    if untracked_pages:
+        errors.append(f'Public pages missing analytics loader: {sorted(untracked_pages)[:10]}'
+                      f' ({len(untracked_pages)} total)')
+
     sitemap = ROOT/'sitemap.xml'
     if sitemap.exists():
         html_count = len([

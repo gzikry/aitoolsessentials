@@ -249,6 +249,14 @@ def fix_page(p: Path) -> bool:
         h = h.replace('</body>', f'<script src="{prefix}js/site.js" defer></script>\n</body>')
     if 'cookie-consent.js' not in h:
         h = h.replace('</body>', f'<script src="{prefix}js/cookie-consent.js" defer></script>\n</body>')
+    # Analytics must reach every public page, not only the ones whose owning generator
+    # happens to emit it. Legacy and second-template pages (43 sitemap-listed URLs) had
+    # no Plausible loader at all, so their traffic was invisible in every report.
+    if 'js/analytics.js' not in h and 'plausible.io/js/script.js' not in h:
+        if '</body>' in h:
+            h = h.replace('</body>', f'<script src="{prefix}js/analytics.js" defer></script>\n</body>')
+        elif '</html>' in h:
+            h = h.replace('</html>', f'<script src="{prefix}js/analytics.js" defer></script>\n</html>')
     if 'id="share-row"' not in h and '<footer' in h:
         h = h.replace('<footer', '<div id="share-row" hidden></div>\n  <footer', 1)
 
