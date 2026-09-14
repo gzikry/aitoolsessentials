@@ -1,0 +1,102 @@
+[
+ {
+  "platform": "HARO root",
+  "url": "https://www.helpareporter.com/",
+  "code_size_time": "429|32177|0.098395",
+  "title": "Vercel Security Checkpoint",
+  "flags": [
+   "VERCEL_CHECKPOINT"
+  ],
+  "bytes": 29400
+ },
+ {
+  "platform": "HARO queries",
+  "url": "https://www.helpareporter.com/view-queries",
+  "code_size_time": "429|32183|0.075401",
+  "title": "Vercel Security Checkpoint",
+  "flags": [
+   "VERCEL_CHECKPOINT"
+  ],
+  "bytes": 29406
+ },
+ {
+  "platform": "Connectively root",
+  "url": "https://www.connectively.us/",
+  "code_size_time": "429|32177|0.084471",
+  "title": "Vercel Security Checkpoint",
+  "flags": [
+   "VERCEL_CHECKPOINT"
+  ],
+  "bytes": 29400
+ },
+ {
+  "platform": "Connectively queries",
+  "url": "https://www.connectively.us/queries",
+  "code_size_time": "429|32183|0.063430",
+  "title": "Vercel Security Checkpoint",
+  "flags": [
+   "VERCEL_CHECKPOINT"
+  ],
+  "bytes": 29406
+ },
+ {
+  "platform": "Source of Sources root",
+  "url": "https://www.sourceofsources.com/",
+  "code_size_time": "200|194164|0.860150",
+  "title": "Connecting Reporters With High Quality Sources - Source of Sources",
+  "flags": [],
+  "bytes": 193861
+ },
+ {
+  "platform": "Source of Sources reqs",
+  "url": "https://www.sourceofsources.com/requests",
+  "code_size_time": "404|140644|0.508609",
+  "title": "Page Not Found - Source of Sources",
+  "flags": [
+   "404"
+  ],
+  "bytes": 140408
+ },
+ {
+  "platform": "Qwoted requests",
+  "url": "https://app.qwoted.com/requests",
+  "code_size_time": "404|3265|0.380630",
+  "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+  "flags": [],
+  "bytes": 3265
+ },
+ {
+  "platform": "MentionMatch root",
+  "url": "https://www.mentionmatch.com/",
+  "code_size_time": "000|0|0.032964",
+  "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+  "flags": [],
+  "bytes": 3265
+ },
+ {
+  "platform": "MentionMatch reqs",
+  "url": "https://www.mentionmatch.com/requests",
+  "code_size_time": "000|0|0.003008",
+  "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+  "flags": [],
+  "bytes": 3265
+ },
+ {
+  "platform": "Medialyst MCP",
+  "url": "https://medialyst.ai/api/mcp",
+  "code_size_time": "401|73|0.383544",
+  "title": "",
+  "flags": [
+   "OAUTH_401"
+  ],
+  "bytes": 73
+ },
+ {
+  "platform": "Sourcee health",
+  "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
+  "code_size_time": "200|62626|0.715998",
+  "title": "FinOps Professionals - Agentic AI Cost Overruns | Journo Request",
+  "flags": [],
+  "bytes": 62597
+ }
+]
