@@ -1,0 +1,5 @@
+{
+  "pitched": {},
+  "skipped": {},
+  "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it."
+}
