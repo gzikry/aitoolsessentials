@@ -1,0 +1,79 @@
+[
+  {
+    "url": "https://www.helpareporter.com/",
+    "status": "429|32183|https://www.helpareporter.com/",
+    "title": "Vercel Security Checkpoint",
+    "checkpoint": true,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://www.helpareporter.com/view-queries",
+    "status": "429|32187|https://www.helpareporter.com/view-queries",
+    "title": "Vercel Security Checkpoint",
+    "checkpoint": true,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://www.connectively.us/",
+    "status": "429|32182|https://www.connectively.us/",
+    "title": "Vercel Security Checkpoint",
+    "checkpoint": true,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://www.connectively.us/queries",
+    "status": "429|32183|https://www.connectively.us/queries",
+    "title": "Vercel Security Checkpoint",
+    "checkpoint": true,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://www.sourceofsources.com/",
+    "status": "200|194164|https://www.sourceofsources.com/",
+    "title": "Connecting Reporters With High Quality Sources - Source of Sources",
+    "checkpoint": false,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://www.sourceofsources.com/requests",
+    "status": "404|140644|https://www.sourceofsources.com/requests",
+    "title": "Page Not Found - Source of Sources",
+    "checkpoint": false,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://app.qwoted.com/requests",
+    "status": "404|3265|https://app.qwoted.com/requests",
+    "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+    "checkpoint": false,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://mentionmatch.com/",
+    "status": "200|11345|https://mentionmatch.com/",
+    "title": "MentionMatch - Connect B2B Writers with Expert Sources",
+    "checkpoint": false,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://www.mentionmatch.com/",
+    "status": "000|0|https://www.mentionmatch.com/",
+    "title": "MentionMatch - Connect B2B Writers with Expert Sources",
+    "checkpoint": false,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://medialyst.ai/api/mcp",
+    "status": "401|73|https://medialyst.ai/api/mcp",
+    "title": "",
+    "checkpoint": false,
+    "journo_request_refs": 0
+  },
+  {
+    "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
+    "status": "200|62626|https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
+    "title": "FinOps Professionals - Agentic AI Cost Overruns | Journo Request",
+    "checkpoint": false,
+    "journo_request_refs": 45
+  }
+]
