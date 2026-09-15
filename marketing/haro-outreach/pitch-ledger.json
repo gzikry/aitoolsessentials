@@ -1,5 +1,20 @@
 {
-  "pitched": {},
-  "skipped": {},
-  "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it."
+  "pitched": {
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "2026-09-15"
+  },
+  "skipped": {
+    "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
+  },
+  "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it.",
+  "log": [
+    {
+      "date": "2026-09-15",
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
+      "action": "pitched",
+      "to": "hello@foxandspindle.com",
+      "route": "email (the request publishes a Calendly link; emailed the published address instead)",
+      "sent_message_id": "171/172 (one message; Gmail stored it twice)",
+      "note": "First pitch ever sent from this monitor, after 12 days and 43 flagged opportunities."
+    }
+  ]
 }

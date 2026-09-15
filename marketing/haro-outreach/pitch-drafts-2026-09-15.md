@@ -18,6 +18,12 @@ sends.
 **Ask:** White paper on how value is created with AI; the writer's hypothesis is that it
 **is not primarily a technology problem**. Wants enterprise AI leaders; offers a scheduling
 link for anyone willing to talk.
+**Send route resolved 2026-09-15:** the scheduling link resolves (via `lnkd.in/eZkcsHTQ`) to a
+Calendly consultation — `calendly.com/foxandspindle/consultation` — belonging to **Luka** at
+**Fox + Spindle**, an AI and digital-transformation consultancy (`foxandspindle.com`,
+hello@foxandspindle.com, MX at Outlook). So the writer is a practitioner arguing our exact
+thesis, and the route the request publishes is a booking rather than a mailbox.
+
 **Why it is on-thesis:** "value realization, ownership and governance" is the site's core
 subject — who pays for AI, what the spend actually buys, and why the invoice determines the
 product. This is the closest match to the Stack Audit proposition of anything the monitor has
@@ -35,9 +41,10 @@ surfaced.
 > usually unmeasurable before it is unachievable.
 >
 > Two specifics if useful for the paper:
-> - Most overlap we find is not duplicate *function* but duplicate *category* — two writing
->   assistants, three transcription tools, bought by different teams who never compared notes.
->   Cancelling is a governance act, not a procurement one.
+> - Most overlap we find is not duplicate *function* but duplicate *category*. Across the 76
+>   tools we track, 60 sit in the 13 categories holding three or more — three meeting
+>   notetakers alone (Fathom, Fireflies, Otter) — bought by different teams who never compared
+>   notes. Cancelling is a governance act, not a procurement one.
 > - Ownership is the harder half. A tool licensed by one team but used by three has no owner
 >   who benefits from cutting it, which is why spend survives long past its justification.
 >

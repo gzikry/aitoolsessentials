@@ -1,24 +1,10 @@
 # Pitch queue — clear this in one pass
 
-Built 2026-09-15 from 21 unique requests across the digest history. 17 live, 4 cold (> 10 days, never refreshed).
+Built 2026-09-15 from 21 unique requests across the digest history. 15 live, 4 cold (> 10 days, never refreshed).
 
 **Every pitch here needs a human send.** HARO and Connectively sit behind an email wall, Qwoted and Medialyst need authenticated sessions, and Sourcee's requests ask for a LinkedIn DM. That is why 43 flagged opportunities produced zero pitches. Reply routes are named per row.
 
 ## Live — pitch these
-
-### [medium] Software Procurement Incentives / Who-Pays-Shapes-The-Product
-- **URL:** https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning
-- **Seen:** first 2026-09-14, last 2026-09-15 (2x) · **3d old**
-- **Publication:** Independent writer — 'The EdTech Audit' series (LinkedIn long-form)
-- **Reply route:** Comment on the original LinkedIn post or DM the author (Sourcee page links the post)  ·  _no — LinkedIn DM / comment (George)_
-- **Angle:** Template 1 (AI Tool Pricing Changes, reactive) — adapted: lend the incentive thesis an AI-software proof set rather than an EdTech opinion. Frame: 'whoever signs the cheque sets the roadmap' is now observable in AI tooling — GitHub Copilot moved to usage-based AI Credits, ChatGPT Pro split into $120/$200 tiers, and seat-based AI contracts renew into overlapping stacks that nobody chose deliberatel
-
-### [low-medium] Enterprise AI Value Realization / Ownership & Governance
-- **URL:** https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance
-- **Seen:** first 2026-09-15, last 2026-09-15 (1x) · **2d old**
-- **Publication:** Independent practitioner — AI value-creation white paper
-- **Reply route:** Schedule via the scheduling link published in the request (lnkd.in short link on the Sourcee page); the author also invites referrals  ·  _no — scheduling link (George)_
-- **Angle:** Template 3 (AI Tool Directory / Comparison, general) — adapted, and only if a slot is free: offer the overlap audit as the concrete proof of the ownership thesis. Frame: 'who owns the AI tool decision' is the exact fault line that produces unmanaged stacks — when no one owns the budget, seats accumulate and nobody can say what the stack costs. Offer the keep/cut framework and dated pricing snapsho
 
 ### [high] AI SaaS / Pricing / Tools / Production
 - **URL:** https://sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows
