@@ -1,0 +1,206 @@
+{
+  "date": "2026-09-15",
+  "monitor": "HARO / Connectively / journalist request monitor",
+  "run_at": "2026-09-15T09:00:00-07:00",
+  "search_scope": "AI tools, AI pricing, overlapping AI subscriptions, software spend, SaaS cost/credits, agentic AI cost overruns, enterprise AI budget visibility, tool consolidation",
+  "platforms_checked": [
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Re-probed this run. / returns HTTP 429 (32,178 bytes) and /view-queries returns HTTP 429 (32,182 bytes), both titled 'Vercel Security Checkpoint'. Fifth consecutive identical result, byte-identical in kind to every prior run. Queries are distributed only by 3x-daily email digest requiring a subscribed inbox George controls. Operated by Featured.com."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Re-probed. / returns HTTP 429 (32,185 bytes) and /queries returns HTTP 429 (32,177 bytes) behind the same Vercel Security Checkpoint — sizes within ~8 bytes of HARO's, confirming shared infrastructure. No public query feed. Platform itself remains healthy (100,000+ users as of June 2026, Featured.com)."
+    },
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Primary source again. Sitemap-journo-requests.xml pulled fresh this run: 9,846,665 bytes, 40,953 loc/lastmod pairs, 40,102 unique slugs, newest lastmod 2026-09-15T02:17:17.440Z, oldest 2025-01-01. 992 requests carry a lastmod since 2026-09-02 (up from 921 on 2026-09-14). 94 matched the broad AI/software slug tier; 46 matched the strict pricing/cost/budget/subscription tier of which 4 co-occur with an AI token; 19 matched the pay/cancel/stack/sprawl/procurement token sweep of which 7 co-occur with AI. ALL 94 AI-token candidate bodies were fetched this run (not just the strict tier) — see monitor_health. Extractor health-checked and passing."
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Re-probed. Root returns HTTP 200 (194,163 bytes, live, title 'Connecting Reporters With High Quality Sources'). /requests returns a genuine 404 (140,644 bytes, title 'Page Not Found'). Reporter submission form only; no public source-facing query feed."
+    },
+    {
+      "platform": "Qwoted (qwoted.com)",
+      "status": "login_required",
+      "notes": "Re-probed. app.qwoted.com/requests returns a genuine 404 (3,265 bytes, title 'Error: The page you were looking for doesn't exist'). The path is wrong, not gated — the feed needs an authenticated app session. Free tier for sources, paid from ~$99-$149/mo. Not pursued."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "pre_launch",
+      "notes": "Re-probed both hosts. Apex mentionmatch.com returns HTTP 200 (11,345 bytes, title 'MentionMatch - Connect B2B Writers with Expert Sources') with zero 'journo-request' references; www.mentionmatch.com returns HTTP 000 (host connection failure). Fifth consecutive run confirming a pre-launch marketing shell with no feed."
+    },
+    {
+      "platform": "Medialyst MCP (medialyst.ai/api/mcp)",
+      "status": "oauth_required",
+      "notes": "Re-probed: HTTP 401 with a 73-byte {\"error\":\"invalid_token\"} body. Free read-only multi-platform feed covering Connectively, HARO, X, LinkedIn, MentionMatch and Substack. Needs an interactive OAuth handshake (hermes mcp add --auth oauth) that cannot be completed from cron. Still the single highest-leverage fix for this monitor."
+    },
+    {
+      "platform": "X/Twitter #journorequest",
+      "status": "credits_exhausted",
+      "notes": "Direct x_search attempt this run ('#journorequest AI subscription pricing OR overlapping AI tools OR AI software spend') returned permission-denied: the team has used all available credits or reached its monthly spending limit. Seventh consecutive run blocked. Sourcee's X-originated aggregation used as proxy."
+    },
+    {
+      "platform": "ResponseSource (responsesource.com)",
+      "status": "paywalled_uk",
+      "notes": "Not re-probed this run. UK-only; enquiry feed sold by category from GBP 85 pay-as-you-go."
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "source": "Sourcee.app (LinkedIn long-form, #ReimagineEducation / #EdTech)",
+      "query_text": "The most successful education technology of the last twenty-five years has never taught anyone anything... A full semester of LMS usage data at one large university: Announcements in 82% of courses. Grades in 71%. The discussion board — the one tool built for students to think in front of each other — in 21%... Why? Follow the invoice. The learner has never signed the cheque for an LMS. The registrar does. And a product serves whoever pays for it, with a fidelity no mission statement can override. I call it The Vendor Trap. Three questions I would ask of every EdTech product before a rupee moves: Does it touch the learning or the ledger? Whose week actually improves? What does it measure?... I would genuinely like to hear from those of you inside EdTech: which of your products would pass all three questions?",
+      "journalist_publication": "Independent writer — 'The EdTech Audit' series (LinkedIn long-form)",
+      "category": "Software Procurement Incentives / Who-Pays-Shapes-The-Product",
+      "deadline": "Open, no cutoff stated — page re-fetched this run, datePublished unchanged at 2026-09-13T05:50:41.153+00:00, now ~2 days old. Second digest appearance. Still the freshest live item in the queue.",
+      "contact_method": "Comment on the original LinkedIn post or DM the author (Sourcee page links the post)",
+      "relevance": "medium (adjacent, not core AI-spend)",
+      "relevance_notes": "SECOND digest appearance (previously 2026-09-14). Page verified live this run: 67,713 bytes, headline 'EdTech Product Managers - LMS Audit - Does Product Manage Learning', 1,726-char body byte-identical to yesterday. It is EdTech, not AI tools — be honest about that: the category is adjacent and the link to the AI-subscription beat is thesis-level ('the product serves whoever signs the cheque'), not literal. It clears the bar because that is the same mechanism behind overlapping AI subscriptions and usage-based credits. Treated as a data-supply / point-of-view contribution rather than a citation play. Carried because it is the only live on-topic item remaining after this run's retirements — not because it got stronger.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — adapted: lend the incentive thesis an AI-software proof set rather than an EdTech opinion. Frame: 'whoever signs the cheque sets the roadmap' is now observable in AI tooling — GitHub Copilot moved to usage-based AI Credits, ChatGPT Pro split into $120/$200 tiers, and seat-based AI contracts renew into overlapping stacks nobody chose deliberately. Offer dated vendor-page snapshots showing where the billing model, not the user's need, shaped the product. Do not claim EdTech expertise. LOW-MEDIUM priority: contributes a point of view and possibly a link, earns no direct citation.",
+      "url": "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning"
+    },
+    {
+      "id": 2,
+      "source": "Sourcee.app (LinkedIn long-form — posted 2026-09-14T15:19:39Z)",
+      "query_text": "Hello, world. While the AI CEOs are asking... themselves(?) to slow down AI development because the technology is legitimately dangerous and the president is telling them to go faster so that China doesn't surpass the U.S... I'd like to slow down and write about how AI to get value from all this. Whether you're an AI enthusiast or a skeptic I want to talk... I'm writing a white paper about how value is created with AI, and my hypothesis is that this ISN'T primarily a technology problem. It depends on how organizations assign ownership, make decisions, change the way work gets done, and govern who (and what) has access to sensitive data. I'm looking to speak with leaders and experienced operators to understand where that hypothesis holds up.",
+      "journalist_publication": "Independent practitioner — AI value-creation white paper",
+      "category": "Enterprise AI Value Realization / Ownership & Governance",
+      "deadline": "Open, no cutoff stated — posted 2026-09-14T15:19:39.833+00:00, ~1 day old. NEW this run.",
+      "contact_method": "Schedule via the scheduling link published in the request (lnkd.in short link on the Sourcee page); the author also invites referrals",
+      "relevance": "low-medium (adjacent; no cost or spend angle in the text)",
+      "relevance_notes": "NEW this run — the only genuinely fresh on-topic body found, and it is a near-miss on the beat. The hypothesis (value creation is an ownership/governance problem, not a technology problem) is the same thesis AIToolsEssentials runs on for subscription overlap, but the request asks about governance and data access, never about cost, pricing, seats or spend. Do not pitch it as a pricing source — it is not one. Value here is a research interview / data-supply contribution at best, per the monitor's rule on adjacent angles.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) — adapted, and only if a slot is free: offer the overlap audit as the concrete proof of the ownership thesis. Frame: 'who owns the AI tool decision' is the exact fault line that produces unmanaged stacks — when no one owns the budget, seats accumulate and nobody can say what the stack costs. Offer the keep/cut framework and dated pricing snapshots as a measurable version of the governance question. Do NOT force a pricing pitch onto a governance white paper. LOW priority.",
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance"
+    }
+  ],
+  "previously_reported_still_relevant": [
+    {
+      "id": "prev-1",
+      "source": "Sourcee.app (X #Sourcecall) — re-verified live this run",
+      "query_text": "#Sourcecall: I am writing a story about the difficulties that people have had with Anthropic customer service. Are there any users or businesses owners who can share about their Anthropic customer service experiences? I'd love to chat via DMs, email, or Signal hliwrites.99",
+      "journalist_publication": "Independent journalist (dedicated story on Anthropic customer service)",
+      "status": "RETIRED THIS RUN — fourth-digest rule",
+      "relevance": "medium-high (was)",
+      "notes": "FOURTH digest appearance (2026-09-12, 09-13, 09-14, 09-15) — the standing rule now bars it. Page re-fetched and verified live: 61,813 bytes, headline recovered, datePublished unchanged at 2026-09-11T16:58:59.04+00:00, 274-char body byte-identical, no removal. Now ~4 days old. This is a PROCESS EXPIRY, not a closure claim: the request is open and the reporter published a Signal handle in the clear, so if this citation is wanted the correct move is a direct DM/Signal pitch today, not another digest cycle. It was the cheapest live pitch in the queue and it has now aged out of automated carriage on relevance alone."
+    },
+    {
+      "id": "prev-2",
+      "source": "Sourcee.app (Forbes outlet page — /media-outlets/forbes/journo-requests) — re-checked this run",
+      "query_text": "Open call for experts: Where Are Business Leaders Focusing Their Tech Budgets As Tech Stock Market Volatility Persists. This report is for Forbes. Open call to all experts to participate... AI and tech stocks continue on a volatile trajectory, with Goldman Sachs reporting that hedge funds are selling US tech stocks at a record pace, and Bloomberg reporting that big tech needs to justify AI spending... For this report, I am looking for expert sources to provide clear signals for small, medium, and large business owners and decision-makers to help them navigate the current landscape and plan for 2027.",
+      "journalist_publication": "Forbes",
+      "status": "RETIRED THIS RUN — fourth-digest rule + age",
+      "relevance": "high on topic (was), low on currency",
+      "notes": "Fourth digest appearance (2026-09-12, 09-13, 09-14, 09-15). Page re-fetched: 67,824 bytes, headline recovered, datePublished unchanged at 2026-07-20T22:08:33.378+00:00 — now EIGHT WEEKS old — and still listed on the Forbes outlet page this run (a persistent ~20-item list, not a rolling feed; that same page still carries a travel-writers call dated 'May 6', a summer June/July pitches call, and 17 other stale items). Absence of evidence either way. Retired on the fourth-digest rule rather than held again: eight weeks without a refresh means the call is almost certainly closed, and carriage was buying nothing. If a Forbes citation is wanted, verify the call is open by replying to the original post directly."
+    },
+    {
+      "id": "prev-3",
+      "source": "Sourcee.app — re-verified live this run (extractor health check)",
+      "query_text": "FinOps Professionals - Agentic AI Cost Overruns: 'Uber burned its entire 2026 AI budget in four months... that Playbook doesn't survive contact with agents... Would like to hear from others how they are managing their AI costs.'",
+      "journalist_publication": "Independent (ex-Apptio FinOps practitioner)",
+      "status": "retired 2026-09-13 (fourth-digest rule) — not re-surfaced",
+      "relevance": "high (was)",
+      "notes": "Re-fetched this run: 62,585 bytes, headline recovered, datePublished unchanged 2026-09-07T14:19:46.055+00:00, spend tokens ['budget','cost','spend'], strong signal confirmed. Now ~8 days old. Retired on 2026-09-13 and deliberately NOT re-surfaced — recorded here so the next run does not mistake it for a new find. Still the most methodologically aligned request this monitor has seen."
+    },
+    {
+      "id": "prev-4",
+      "source": "Sourcee.app — re-verified live this run",
+      "query_text": "Enterprise AI Leaders - AI Governance & Agent Sprawl: 'Most enterprises don't have an AI strategy. They have an AI sprawl problem dressed up as one — Hundreds of agents. Dozens of models. Zero unified visibility into what they're doing, what they're consuming, or what they cost... most organizations won't realize it until a compliance audit, a security incident, or a budget review forces the conversation.'",
+      "journalist_publication": "Independent (21-year enterprise tech practitioner)",
+      "status": "retired 2026-09-13 (fourth-digest + age rule) — not re-surfaced",
+      "relevance": "high (was)",
+      "notes": "Re-fetched: 68,340 bytes, datePublished unchanged 2026-09-05T07:46:42.657+00:00, spend tokens ['budget','cost'], now 10 days old. Retired on 2026-09-13 and not re-surfaced. Still the best enterprise-scale framing available (cost visibility named in the second sentence) — re-open manually only with a new angle, never automatically."
+    },
+    {
+      "id": "prev-5",
+      "source": "Sourcee.app — re-verified live this run",
+      "query_text": "Scientists (PhD Students & Postdocs) - Paying for AI Subscriptions: 'Are you a scientist paying for your own AI subscription to help with your research? I'd love to hear from you for something I'm working on at Science Magazine.'",
+      "journalist_publication": "Science Magazine (journalist: Tom)",
+      "status": "retired 2026-09-13 (age rule) — not re-surfaced",
+      "relevance": "medium (was)",
+      "notes": "Re-fetched: 63,166 bytes, datePublished unchanged 2026-09-04T16:49:05.226+00:00, now 11 days old. Retired on 2026-09-13; if a Science citation is still wanted the move is a direct follow-up to the reporter, not a digest re-surface."
+    },
+    {
+      "id": "prev-6",
+      "source": "Sourcee.app — Amplemarket Growth & Elite (retired 2026-09-14)",
+      "query_text": "Amplemarket wants to replace your SDR stack with one AI copilot... The Startup plan is $600 a month for two seats, billed annually, with no monthly option and no published free trial... Vendr's tracked-contract data puts the real median at $16,608 a year, ranging from $11,678 to $35,946... Has anyone here signed a Growth or Elite contract?",
+      "journalist_publication": "Independent reviewer — marketintelligencetools.com (Reddit-sourced call for comment)",
+      "status": "retired 2026-09-14 (age rule) — not re-surfaced",
+      "relevance": "high (was)",
+      "notes": "Re-fetched this run to confirm the retirement: 97,868 bytes, datePublished unchanged 2026-09-06T16:36:38+00:00, 9 spend tokens including '$1','$3','$6','per user','a month','credits','seats' — the strongest quantified spend signal in the whole pool. Now 9 days old. Retirement stands as a process expiry; direct thread reply only."
+    },
+    {
+      "id": "prev-7",
+      "source": "Sourcee.app — Financial Times outlet page (re-checked this run)",
+      "query_text": "Financial Times commissioned article on how management consulting firms leaning on AI face client demands for fee reductions.",
+      "journalist_publication": "Financial Times",
+      "status": "dormant — fifth consecutive absence from a clean render",
+      "relevance": "medium (was)",
+      "notes": "Fifth consecutive run absent. The FT outlet page rendered all 20 listings successfully again this run (parents' money advice, Bethlehem/Lehigh living costs, Canadian US-boycott, London Mon-Fri rentals, weekday-only tenants, eSIM market research, Merlin app birdwatching, mutual-fund retreats, city-raised parents, Texas/NM ranchers, recent business graduates, 2-month-notice flat hunters, startup engineer retention, UK DB trustees, long notice periods, UK jobseekers, workcations, student side hustles, UK personal finance, US dealer principals AI). Stays dormant. The FT page's one AI item — 'us-dealer-principals-gms-and-group-leaders-ai-dealership-ops' — was fetched and read in full this run: it is a call for speakers/panellists for an FT automotive-retail event in Chicago on 8 October 2026 (AI in dealership operating models, DMS readiness, fixed-ops margin). No cost, pricing or spend angle; speaker slot, not a source slot. Not pursued."
+    }
+  ],
+  "new_this_run": [
+    "NO NEW CORE BEAT OPPORTUNITIES on AI pricing, subscription overlap or software spend. Third consecutive run with zero new core-beat finds — and this run's evidence is stronger than the last two because it is body-level across the entire AI pool, not slug-based.",
+    "ONE new adjacent on-topic body: 'Enterprise AI Leaders - Value Creation Ownership & Governance' (posted 2026-09-14T15:19:39.833+00:00, ~1 day old), included as Opportunity #2 at low priority. A white-paper research call on how AI value is created through ownership, decision rights and governance. Explicitly NO cost/spend content in the text — it is a near-miss on the beat, not a hit. Flagged as such rather than dressed up.",
+    "13 AI-token slugs were newly indexed by Sourcee since the 2026-09-14T09:00 run marker. All 13 bodies were fetched and scanned: NONE carries a single spend token. They are AI synchronicity stories, dating-app users using ChatGPT, UK 80-year-olds on tech change, employees who replaced their boss with AI, publishers' use of AI, parents/partners vs AI, Cornell academic-integrity experiences, e-commerce peak-traffic resilience, Morocco sports-event AI, enterprise AI governance, HR access for female employees, North Texas school AI policy, and childhood-visions/lunar-age politics. The beat is producing volume in AI-workplace, AI-education and AI-policy — not in AI spend.",
+    "BODY-LEVEL TEXT SCAN COMPLETED ACROSS THE WHOLE AI POOL — 94 of 94 AI-token candidate bodies fetched (previous run: 63), zero missing headline fields so no removal-detection false positives. Result: 15 contain any spend token and only 6 carry a strong spend signal ($ amount, '/month', or two or more distinct spend tokens). Those six are Amplemarket (retired 09-14), FinOps agentic cost overruns (retired 09-13), Enterprise AI agent sprawl (retired 09-13), the CEOs/pricing call (retired 09-14), the Forbes 2027 budgets call (retired today), and the Frontier Lab Researchers archive post. FIVE of six were already retired, and the sixth is a false positive: 'Frontier Lab Researchers - Archives Teaching Models' (2026-09-02, now 13 days old) matched on 'I had spent thirty years near the pointy end of the Internet' and 'tier' — it is a personal essay about the photographer behind The 8 Museum, not a source request at all.",
+    "Near-misses checked by hand and ruled out, exactly as the monitor's model predicts: 'Global Innovators - Sci-Fi Tech & Futuristic Locations' matched on 'fee' and 'tier' while being a documentary casting call for sci-fi technology and filming locations (2026-09-08); 'AI Startups - Workplace Fraud Detection' matched on 'expenses' in the sense of employee expense fraud, not software expense (2026-09-07); 'Parents Who Bought AI Toys' matched on the word 'fee' meaning a paid interviewee fee (2026-09-07); 'Security Architects & CTOs - Orbital AI Compute Claims' matched 'subscribed' while being about satellite-compute power figures (2026-09-14 run); 'AI Ethics & Risk Experts - Superintelligence' matched 'we spend a tremendous amount of time worrying' (2026-09-14 run).",
+    "Outlet pages re-scanned this run: Forbes 20 listings (one AI item — the retired July budgets call), Financial Times 20 listings (one AI item — the FT automotive-retail event speaker call, read in full and ruled out), TechCrunch 7 listings (two AI items, both fetched and read: 'AI Content Moderation Experts - TechCrunch Same-Day' is dated 2025-09-12 — a full year stale — and 'AI Researchers or Cybersecurity Experts on Moltbook Privacy' is dated 2026-02-03, seven months stale). Note TechCrunch's page carries only 7 listings and is the most recency-decayed of the three; absence there means nothing.",
+    "Also fetched and ruled out from the AI pool: 'AI & Mobile Tech Experts - Journalist Story on Emerging Tech' (2026-09-09) and 'Technology Expert - Tech Industry Commentary - Daily Mirror' (2026-09-10) — both generic expert calls with no subject matter, no spend angle and redacted contacts; low-value, no data contribution possible.",
+    "CONFIRMED THIN, NOT UNDER-SEARCHED: 992 requests carry a lastmod since 2026-09-02 (up from 921); 46 match the strict pricing/cost/budget/subscription slug tier and only 4 co-occur with an AI token; a 19-match sweep on pay/cancel/stack/sprawl/waste/procurement/cfo/audit tokens returns 7 AI co-occurrences, every one of them already known or ruled out; and the body-level scan of all 94 AI-token bodies found zero new spend requests. The strict tier remains ~91% false positives on cost-of-living stories (rent, heating oil, housing, commuting, insurance), as expected. Three independent methods agree."
+  ],
+  "expired_this_run": [
+    "Anthropic customer service experiences: RETIRED on the fourth-digest rule (4th appearance, ~4 days old) — page verified live with byte-identical text, so this is a process expiry, not a closure claim",
+    "Forbes 2027 tech budget priorities: RETIRED on the fourth-digest rule + age (4th appearance, 8 weeks old) — page still live, still listed on the persistent Forbes outlet page; a process expiry, not evidence of closure",
+    "Frontier Lab Researchers - Archives Teaching Models: never queued, now ruled out and 13 days old — false positive on 'spent'/'tier'",
+    "Amplemarket Growth & Elite pricing: already retired 2026-09-14 on the age rule; confirmed still live at 9 days old and deliberately NOT re-surfaced",
+    "CEOs - AI impact on ops, culture and commercial strategy: already retired 2026-09-14 on the age rule; confirmed still live, not re-surfaced",
+    "FinOps agentic AI cost overruns and Enterprise AI agent sprawl: already retired 2026-09-13 on the fourth-digest rule; both confirmed still live, not re-surfaced",
+    "Science Magazine scientists paying for AI subscriptions: already retired 2026-09-13 at 9 days old; confirmed still live at 11 days, not re-surfaced",
+    "Financial Times management consulting AI fee reductions: stays DORMANT after a fifth consecutive absence from a cleanly-rendered 20-listing FT outlet page",
+    "TechCrunch AI content moderation (dated 2025-09-12) and Moltbook privacy (dated 2026-02-03): both read in full and ruled out as a year and seven months stale respectively"
+  ],
+  "summary": "Third consecutive thin run, and the best-evidenced one yet. All 94 AI-token candidate bodies in the 2026-09-02+ window were fetched and text-scanned — not just the strict slug tier — and only 6 carry a strong spend signal, of which 5 were already retired and the 6th is a false positive ('I had spent thirty years near the pointy end of the Internet' in an art-archive essay). Exactly ONE new on-topic body surfaced and it is adjacent, not core: an enterprise AI practitioner's white-paper call on how AI value is created through ownership and governance, with no cost or pricing content in the text. 13 AI-token requests were newly indexed in the last 24 hours and not one contains a single spend token — the AI beat is currently producing workplace, education and policy requests, not spend requests. Three independent methods agree (strict tier: 46 matches / 4 AI co-occurrences; third token sweep: 19 matches / 7 AI co-occurrences all known; body scan: 94 fetch / 0 new spend requests), so the thinness is real, not under-searching. The queue has now been fully pruned of its aging items: the Anthropic customer-service call and the Forbes 2027 budgets call both hit the fourth-digest rule and are retired as process expiries with their pages verified still live, alongside the five earlier retirements. That leaves exactly two carried opportunities, both honest about being adjacent — the EdTech 'vendor trap' piece (2nd appearance, 2 days old, the only genuinely live on-beat item) and the new governance white paper (1 day old, low priority). The one thing worth acting on today is not a digest item: the Anthropic reporter publishes a Signal handle in the clear and their request is now barred from further carriage, so if that citation is wanted it has to be a direct DM now. Access is unchanged across all eight platforms: HARO and Connectively both behind a Vercel Security Checkpoint returning HTTP 429 with byte-identical interstitials (fifth run), Qwoted needs an authenticated app session, MentionMatch is a pre-launch shell on the apex host, Source of Sources has no feed, and X search is blocked for the seventh consecutive run on exhausted credits.",
+  "recommended_actions": [
+    "DECIDE ON ANTHROPIC TODAY OR LET IT GO — the request is now barred from further automated carriage (4th appearance) but the page is live with a published Signal handle 'hliwrites.99'. If George wants that citation, pitch it directly this morning; otherwise accept the retirement and stop tracking it",
+    "Pitch #1 (EdTech LMS audit / vendor-incentive thesis) as a low-priority point-of-view contribution — do not claim EdTech expertise; the offer is the AI-billing proof set (Copilot usage-based AI Credits, ChatGPT Pro $120/$200 tiers, overlapping seat contracts)",
+    "Treat #2 (enterprise AI value/governance white paper) as a research-interview contribution only — the request has no cost content, so a pricing pitch would be off-target; the overlap audit is the concrete proof of its ownership thesis if a slot is free",
+    "Accept the Anthropic, Forbes, Amplemarket, CEOs and earlier retirements as process expiries, not closures — do not auto-resurface any of them; if a specific citation is wanted, reply to the original thread directly",
+    "Keep NOT re-surfacing FinOps, enterprise agent-sprawl and Science Magazine; all three pages are verified live but were retired on the fourth-digest or age rule",
+    "George to authorize the Medialyst MCP via 'hermes mcp add --auth oauth' (interactive only) — removes the X-credits, HARO-checkpoint and Connectively-login dependencies in one step and remains the only route to a materially better feed",
+    "George to decide on a HARO subscription inbox if a HARO feed is wanted — HARO remains email-only behind a Vercel checkpoint for the fifth consecutive run",
+    "WIDEN OR SLOW THE MONITOR — three consecutive runs have produced no new core-beat opportunity while the AI volume has moved to workplace, education and policy requests. Either add those categories to the scope (they post at volume, though none has yet touched spend) or drop the cadence to twice weekly; the current daily scan is now spending a full run's effort to confirm an unchanged queue"
+  ],
+  "monitor_health": {
+    "status": "working_no_new_core_beat",
+    "working": [
+      "Sourcee.app sitemap scan (9,846,665 bytes, 40,953 loc/lastmod pairs, 40,102 unique slugs, newest lastmod 2026-09-15T02:17:17.440Z)",
+      "Sourcee.app per-request pages via the JSON-LD RSC extractor (health-checked at run start on finops-professionals-agentic-ai-cost-overruns: headline and description recovered, datePublished 2026-09-07T14:19:46.055+00:00)",
+      "Sourcee.app outlet pages (Forbes 20 listings, Financial Times 20 listings, TechCrunch 7 listings — all rendered cleanly this run)",
+      "Body-level fetch at scale across the full AI pool: 94 of 94 candidate bodies retrieved with zero missing headline fields, so no removal-detection false positives"
+    ],
+    "blocked": [
+      "HARO (email only + Vercel Security Checkpoint, HTTP 429 on / and /view-queries)",
+      "Connectively (login + Vercel Security Checkpoint, HTTP 429, byte-identical to HARO)",
+      "Qwoted (authenticated app session only; /requests 404s)",
+      "MentionMatch (pre-launch shell; apex resolves, www. does not)",
+      "Source of Sources (email only, no source-facing feed)",
+      "X search (credits exhausted, 7th consecutive run)",
+      "Medialyst MCP (OAuth needed, 401 invalid_token)"
+    ],
+    "extractor_check_this_run": "PASSED. The 2026-09-12 extractor rewrite remains valid: curl with a browser UA, then regex the escaped JSON-LD fields headline / description / datePublished out of the Next.js RSC flight payload. Verified once more against https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns (62,585 bytes, headline 'FinOps Professionals - Agentic AI Cost Overruns'). Reminder for future runs: the old strip-<main> recipe returns 0 characters silently, and the string 'has disappeared faster than a leaked story' appears in the bundled 404 component on EVERY page including valid ones — detect removal by an absent headline field instead. Also note escaped \\u0026 in headlines (e.g. 'Business \\u0026 Technology Leaders') must be unescaped before display.",
+    "known_traps": [
+      "Outlet pages (/media-outlets/<slug>/journo-requests) are persistent ~20-item lists, not rolling feeds — absence is not proof of expiry. Confirmed again this run: the Forbes page still carries a travel-writers call dated 'May 6' and a summer June/July pitches call alongside 18 other items, and TechCrunch's page carries only 7 listings of which the newest AI item is a year old.",
+      "Slug-token matching is not evidence. This run: 'spend' matched an art-archive essay ('I had spent thirty years near the pointy end of the Internet'), 'fee' matched a documentary casting call and a paid-interviewee fee, 'expenses' matched employee expense-fraud detection rather than software expense, 'tier' matched two unrelated stories, 'agents' matched a Medicare-broker call, 'bill' matched a California AI-audit bill and a Bill Gates documentary. The body fetch is what decides.",
+      "The strict tier is ~91% false positives on cost-of-living stories (rent, heating oil, housing, commuting, insurance, sports tickets) — 46 slug matches produced 4 AI co-occurrences. That ratio is the expected baseline, not a failure.",
+      "The sitemap lastmod is a re-index timestamp as well as a post timestamp; do not read a recent lastmod as a recent post without checking datePublished in the JSON-LD.",
+      "Two requests (the EdTech audit and the Forbes budgets call) are absent from the 2026-09-02+ sitemap window because their posts are older, yet their pages still fetch live — a slug's absence from a recency window is a recency fact, not a removal or closure. Track them by URL, not by window membership.",
+      "Track appearance counts in code before deciding what to carry (grep -l <slug> digest-*.json). This run's counts: FinOps 5, Anthropic 3 (now 4, retired), Forbes 3 (now 4, retired), agent-sprawl 3, Amplemarket 2, CEOs 2, Science Magazine 2, EdTech audit 1 (now 2)."
+    ],
+    "recommendation": "Authorize Medialyst MCP, and widen or slow the monitor. Three consecutive cycles have produced no new core-beat opportunity despite exhaustive body-level searching (94 of 94 AI-token bodies this run) — the constraint is no longer search effort, it is that the AI-spend beat on Sourcee is genuinely quiet while AI-workplace, education and policy requests post at volume. Medialyst would add six platforms in one step; failing that, the honest move is to cut the cadence rather than keep spending a full run to confirm an unchanged queue."
+  }
+}

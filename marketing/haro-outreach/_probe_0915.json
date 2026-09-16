@@ -1,0 +1,92 @@
+{
+ "https://www.helpareporter.com/": {
+  "url": "https://www.helpareporter.com/",
+  "http": "429",
+  "bytes": "32178",
+  "effective": "https://www.helpareporter.com/",
+  "title": "Vercel Security Checkpoint",
+  "has_journo": false,
+  "sample": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justi"
+ },
+ "https://www.helpareporter.com/view-queries": {
+  "url": "https://www.helpareporter.com/view-queries",
+  "http": "429",
+  "bytes": "32182",
+  "effective": "https://www.helpareporter.com/view-queries",
+  "title": "Vercel Security Checkpoint",
+  "has_journo": false,
+  "sample": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justi"
+ },
+ "https://www.connectively.us/": {
+  "url": "https://www.connectively.us/",
+  "http": "429",
+  "bytes": "32185",
+  "effective": "https://www.connectively.us/",
+  "title": "Vercel Security Checkpoint",
+  "has_journo": false,
+  "sample": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justi"
+ },
+ "https://www.connectively.us/queries": {
+  "url": "https://www.connectively.us/queries",
+  "http": "429",
+  "bytes": "32177",
+  "effective": "https://www.connectively.us/queries",
+  "title": "Vercel Security Checkpoint",
+  "has_journo": false,
+  "sample": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#000\"><title>Vercel Security Checkpoint</title><style>.spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justi"
+ },
+ "https://app.qwoted.com/requests": {
+  "url": "https://app.qwoted.com/requests",
+  "http": "404",
+  "bytes": "3265",
+  "effective": "https://app.qwoted.com/requests",
+  "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+  "has_journo": false,
+  "sample": "<!DOCTYPE html> <html lang=\"en\">   <head>     <title>Error: The page you were looking for doesn't exist (404) | Qwoted</title>     <meta charset=\"utf-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge,chrome=1\">     <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />     <"
+ },
+ "https://mentionmatch.com/": {
+  "url": "https://mentionmatch.com/",
+  "http": "200",
+  "bytes": "11345",
+  "effective": "https://mentionmatch.com/",
+  "title": "MentionMatch - Connect B2B Writers with Expert Sources",
+  "has_journo": false,
+  "sample": "<!doctype html> <html lang=\"en\">   <head>     <meta charset=\"UTF-8\" />     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />     <link rel=\"icon\" href=\"/favicon.png\" type=\"image/png\" />     <title>MentionMatch - Connect B2B Writers with Expert Sources</title>     <meta name=\"d"
+ },
+ "https://www.mentionmatch.com/": {
+  "url": "https://www.mentionmatch.com/",
+  "http": "000",
+  "bytes": "0",
+  "effective": "https://www.mentionmatch.com/",
+  "title": "MentionMatch - Connect B2B Writers with Expert Sources",
+  "has_journo": false,
+  "sample": "<!doctype html> <html lang=\"en\">   <head>     <meta charset=\"UTF-8\" />     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />     <link rel=\"icon\" href=\"/favicon.png\" type=\"image/png\" />     <title>MentionMatch - Connect B2B Writers with Expert Sources</title>     <meta name=\"d"
+ },
+ "https://www.sourceofsources.com/": {
+  "url": "https://www.sourceofsources.com/",
+  "http": "200",
+  "bytes": "194163",
+  "effective": "https://www.sourceofsources.com/",
+  "title": "Connecting Reporters With High Quality Sources - Source of Sources",
+  "has_journo": false,
+  "sample": "<!DOCTYPE html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> \t<link rel=\"profile\" href=\"https://gmpg.org/xfn/11\">  \t <!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ --> "
+ },
+ "https://www.sourceofsources.com/requests": {
+  "url": "https://www.sourceofsources.com/requests",
+  "http": "404",
+  "bytes": "140644",
+  "effective": "https://www.sourceofsources.com/requests",
+  "title": "Page Not Found - Source of Sources",
+  "has_journo": false,
+  "sample": "<!DOCTYPE html> <html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> \t<link rel=\"profile\" href=\"https://gmpg.org/xfn/11\">  \t <!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ --> "
+ },
+ "https://medialyst.ai/api/mcp": {
+  "url": "https://medialyst.ai/api/mcp",
+  "http": "401",
+  "bytes": "73",
+  "effective": "https://medialyst.ai/api/mcp",
+  "title": "",
+  "has_journo": false,
+  "sample": "{\"error\":\"invalid_token\",\"error_description\":\"No authorization provided\"}"
+ }
+}
