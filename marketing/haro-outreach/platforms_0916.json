@@ -1,0 +1,106 @@
+{
+ "HARO": {
+  "url": "https://www.helpareporter.com/issues/",
+  "http": "429",
+  "bytes": 29402,
+  "title": "Vercel Security Checkpoint",
+  "checkpoint": true,
+  "has_feed": false
+ },
+ "HARO home": {
+  "url": "https://www.helpareporter.com/",
+  "http": "429",
+  "bytes": 29413,
+  "title": "Vercel Security Checkpoint",
+  "checkpoint": true,
+  "has_feed": false
+ },
+ "Connectively": {
+  "url": "https://www.connectively.us/",
+  "http": "429",
+  "bytes": 29406,
+  "title": "Vercel Security Checkpoint",
+  "checkpoint": true,
+  "has_feed": false
+ },
+ "Connectively queries": {
+  "url": "https://www.connectively.us/queries",
+  "http": "429",
+  "bytes": 29402,
+  "title": "Vercel Security Checkpoint",
+  "checkpoint": true,
+  "has_feed": false
+ },
+ "Qwoted app": {
+  "url": "https://app.qwoted.com/requests",
+  "http": "404",
+  "bytes": 3266,
+  "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+  "checkpoint": false,
+  "has_feed": false
+ },
+ "Qwoted www": {
+  "url": "https://www.qwoted.com/",
+  "http": "200",
+  "bytes": 551286,
+  "title": "Qwoted \u2013 Connecting the Media with Expert Sources",
+  "checkpoint": false,
+  "has_feed": true
+ },
+ "Source of Sources": {
+  "url": "https://www.sourceofsources.com/",
+  "http": "200",
+  "bytes": 193861,
+  "title": "Connecting Reporters With High Quality Sources - Source of Sources",
+  "checkpoint": false,
+  "has_feed": true
+ },
+ "Source of Sources requests": {
+  "url": "https://www.sourceofsources.com/requests",
+  "http": "404",
+  "bytes": 140409,
+  "title": "Page Not Found - Source of Sources",
+  "checkpoint": false,
+  "has_feed": true
+ },
+ "MentionMatch": {
+  "url": "https://mentionmatch.com/",
+  "http": "200",
+  "bytes": 11342,
+  "title": "MentionMatch - Connect B2B Writers with Expert Sources",
+  "checkpoint": false,
+  "has_feed": false
+ },
+ "MentionMatch www": {
+  "url": "https://www.mentionmatch.com/",
+  "http": "000",
+  "bytes": 1,
+  "title": null,
+  "checkpoint": false,
+  "has_feed": false
+ },
+ "Medialyst MCP": {
+  "url": "https://medialyst.ai/api/mcp",
+  "http": "401",
+  "bytes": 74,
+  "title": null,
+  "checkpoint": false,
+  "has_feed": false
+ },
+ "Sourcee AI topic": {
+  "url": "https://www.sourcee.app/topics/ai/journo-requests",
+  "http": "200",
+  "bytes": 225628,
+  "title": "Ai | Journo Requests",
+  "checkpoint": false,
+  "has_feed": true
+ },
+ "Sourcee sitemap": {
+  "url": "https://www.sourcee.app/sitemap-journo-requests.xml",
+  "http": "200",
+  "bytes": 9859317,
+  "title": null,
+  "checkpoint": false,
+  "has_feed": true
+ }
+}
