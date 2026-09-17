@@ -14,6 +14,8 @@ from collections import defaultdict
 from pathlib import Path
 from urllib.parse import urljoin
 
+from site_scope import is_working_rel
+
 SITE_ROOT = Path(__file__).resolve().parent.parent
 HTML_DIR = SITE_ROOT
 
@@ -38,6 +40,9 @@ def find_html_files() -> list[Path]:
     """Find all HTML files in the site."""
     html_files = []
     for path in HTML_DIR.rglob("*.html"):
+        # Working dirs hold scratch captures, not site pages.
+        if is_working_rel(path.relative_to(SITE_ROOT)):
+            continue
         # Skip generated tool pages (too many, not useful for this audit)
         if "/tools/" in str(path) and path.name != "index.html":
             continue

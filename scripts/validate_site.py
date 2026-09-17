@@ -12,6 +12,7 @@ import xml.etree.ElementTree as ET
 from datetime import date
 
 from enhance_structured_data import is_hands_on_published, valid_rating_value
+from site_scope import is_public_rel, is_working_rel
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -318,6 +319,8 @@ def main():
         errors.append('Missing article hub')
     duplicate_home_links = []
     for page in ROOT.rglob('*.html'):
+        if not is_public_rel(page.relative_to(ROOT)):
+            continue
         if re.search(r'href="(?:/|(?:\.\./)*)index\.html(?:[#?][^"]*)?"', page.read_text()):
             duplicate_home_links.append(str(page.relative_to(ROOT)))
     if duplicate_home_links:
@@ -359,6 +362,12 @@ def main():
                 errors.append(f'{js_path.relative_to(ROOT)} JavaScript syntax failed: {detail[0] if detail else "node --check failed"}')
 
     for f in ROOT.rglob('*.html'):
+        # Scratch artifacts under marketing/ are third-party captures, not our
+        # pages: their external links and /_next/ asset paths are not ours to
+        # satisfy. Admin pages stay in the parser map so their internal links
+        # still resolve for the checks that cover them.
+        if is_working_rel(f.relative_to(ROOT)):
+            continue
         raw_html = f.read_text()
         p = Parser(); p.feed(raw_html); parsers[f.resolve()] = p
         if p.invalid_button_links:
@@ -423,7 +432,7 @@ def main():
     old_slugs = ('/riverside', '/adobe-podcast', '/categories/Podcast', '/best-ai-tools-for-podcasters')
     for html_path in ROOT.rglob('*.html'):
         rel = html_path.relative_to(ROOT)
-        if 'admin' in rel.parts:
+        if 'admin' in rel.parts or is_working_rel(rel):
             continue
         raw = html_path.read_text()
         if '.html.html' in raw:
@@ -521,6 +530,8 @@ def main():
     for p in ROOT.rglob('*.html'):
         rel = p.relative_to(ROOT)
         if 'admin' in rel.parts or any(part.startswith('.') for part in rel.parts) or 'go' in rel.parts:
+            continue
+        if is_working_rel(rel):
             continue
         if 'operationalize' in p.read_text().lower():
             errors.append(f'{rel} still says operationalize')
@@ -718,7 +729,7 @@ def main():
     leak_hits = []
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
-        if 'admin' in rel.parts:
+        if 'admin' in rel.parts or is_working_rel(rel):
             continue
         visible = re.sub(r'<(script|style)\b.*?</\1>', '', f.read_text(), flags=re.S | re.I)
         for match in set(re.findall(r'\$\{[^}]{1,40}\}', visible)):
@@ -745,7 +756,7 @@ def main():
     existing_urls = set()
     for f in ROOT.rglob('*.html'):
         r = f.relative_to(ROOT)
-        if any(part.startswith('.') or part == 'admin' for part in r.parts):
+        if any(part.startswith('.') or part == 'admin' for part in r.parts) or is_working_rel(r):
             continue
         existing_urls.add('https://aitoolsessentials.com/' + str(r).replace('\\', '/'))
         if r.name == 'index.html':
@@ -753,7 +764,7 @@ def main():
             existing_urls.add('https://aitoolsessentials.com/' + (d + '/' if d else ''))
     for f in ROOT.rglob('*.html'):
         r = f.relative_to(ROOT)
-        if any(part.startswith('.') or part == 'admin' for part in r.parts):
+        if any(part.startswith('.') or part == 'admin' for part in r.parts) or is_working_rel(r):
             continue
         html = f.read_text(errors='ignore')
         for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
@@ -799,7 +810,7 @@ def main():
     BRAND_H1 = re.compile(r'<h1[^>]*>\s*(?:<a[^>]*>)?\s*AIToolsEssentials\s*(?:</a>)?\s*</h1>', re.I)
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
-        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts) or is_working_rel(rel):
             continue
         html = f.read_text(errors='ignore')
         if BRAND_H1.search(html):
@@ -855,7 +866,7 @@ def main():
     bad_sponsored = []
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
-        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts) or is_working_rel(rel):
             continue
         html = f.read_text(errors='ignore')
         for m in re.finditer(r'<a[^>]*rel="[^"]*sponsored[^"]*"[^>]*>', html):
@@ -874,7 +885,7 @@ def main():
     SCORE_ROW = re.compile(r'<tr><th>AIToolsEssentials editorial score</th>(.*?)</tr>', re.S)
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
-        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts) or is_working_rel(rel):
             continue
         html = f.read_text(errors='ignore')
         for m in SCORE_ROW.finditer(html):
@@ -890,7 +901,7 @@ def main():
     score_label_issues = []
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
-        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts) or is_working_rel(rel):
             continue
         html = f.read_text(errors='ignore')
         if 'AIToolsEssentials score</th>' in html or 'AIToolsEssentials score<' in html:
@@ -911,7 +922,7 @@ def main():
                'community/test-report.html', 'legal/editorial-methodology.html'}
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
-        if any(part.startswith('.') or part == 'admin' for part in rel.parts):
+        if any(part.startswith('.') or part == 'admin' for part in rel.parts) or is_working_rel(rel):
             continue
         if str(rel).replace('\\', '/') in ALLOWED:
             continue
@@ -973,7 +984,7 @@ def main():
     split_hits = []
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
-        if 'admin' in rel.parts or any(part.startswith('.') for part in rel.parts):
+        if 'admin' in rel.parts or any(part.startswith('.') for part in rel.parts) or is_working_rel(rel):
             continue
         for href in re.findall(r'href="([^"]*/index\.html[^"]*)"', f.read_text()):
             if href.startswith(('http://', 'https://')):
@@ -1001,7 +1012,7 @@ def main():
     untracked_pages = []
     for page in ROOT.rglob('*.html'):
         parts = page.relative_to(ROOT).parts
-        if 'admin' in parts or 'go' in parts:
+        if 'admin' in parts or 'go' in parts or is_working_rel(page.relative_to(ROOT)):
             continue
         text = page.read_text()
         if 'js/analytics.js' not in text and 'plausible.io/js/script.js' not in text:
@@ -1014,7 +1025,7 @@ def main():
     if sitemap.exists():
         html_count = len([
             p for p in ROOT.rglob('*.html')
-            if not {'admin', 'marketing', 'scripts', 'content_briefs', 'audit_reports', 'go'}.intersection(p.relative_to(ROOT).parts)
+            if is_public_rel(p.relative_to(ROOT))
             and p.name != '404.html'
             and 'name="robots" content="noindex' not in p.read_text()
         ])
@@ -1049,6 +1060,7 @@ def main():
     print('Validation passed')
     print(f'Tools: {len(tools)}')
     print(f'HTML pages: {len(list(ROOT.rglob("*.html")))}')
+    print(f'Public HTML pages: {sum(1 for p in ROOT.rglob("*.html") if is_public_rel(p.relative_to(ROOT)))}')
     return 0
 
 if __name__ == '__main__':

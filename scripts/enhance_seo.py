@@ -9,6 +9,8 @@ import html
 import json
 import re
 
+from site_scope import is_working_rel
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://aitoolsessentials.com'
 SITE_NAME = 'AIToolsEssentials'
@@ -119,6 +121,8 @@ def main():
     changed = 0
     for path in ROOT.rglob('*.html'):
         if '.hermes' in path.parts:
+            continue
+        if is_working_rel(path.relative_to(ROOT)):
             continue
         if enhance(path):
             changed += 1

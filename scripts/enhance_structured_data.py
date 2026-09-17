@@ -15,6 +15,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from site_scope import is_working_rel
+
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = 'https://aitoolsessentials.com'
 MARKER_START = '<!-- AIT STRUCTURED DATA START -->'
@@ -65,6 +67,8 @@ def public_pages():
     for p in ROOT.rglob('*.html'):
         rel = p.relative_to(ROOT)
         if 'admin' in rel.parts or 'go' in rel.parts:
+            continue
+        if is_working_rel(rel):
             continue
         yield p
 

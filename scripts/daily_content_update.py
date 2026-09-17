@@ -12,6 +12,8 @@ from datetime import datetime
 import json
 import re
 
+from site_scope import is_working_rel
+
 root = Path(__file__).resolve().parents[1]
 today = datetime.today().strftime('%Y-%m-%d')
 brief_file = root / 'content_briefs' / f'{today}-daily-content-brief.md'
@@ -419,6 +421,10 @@ for _path in root.rglob('*'):
         continue
     if '.git' in _path.parts or '.hermes' in _path.parts:
         continue
+    # HTML in working dirs is scratch, not published copy; rewriting it only
+    # pollutes third-party captures. Notes/XML handling stays unchanged.
+    if _path.suffix == '.html' and is_working_rel(_path.relative_to(root)):
+        continue
     try:
         _text = _path.read_text()
         _new = _text
@@ -445,6 +451,8 @@ _knowledge_postprocess(root, tools, today)
 # Final postprocessors can rewrite status and discovery pages after the cleanup pass.
 # Normalize homepage links once more so analytics and crawl signals stay on `/`.
 for _html_path in root.rglob('*.html'):
+    if is_working_rel(_html_path.relative_to(root)):
+        continue
     _html = _html_path.read_text()
     _normalized = re.sub(
         r'href="(?:/|(?:\.\./)*)index\.html([#?][^"]*)?"',

@@ -9,6 +9,8 @@ import argparse, json, re, sys
 from datetime import date, datetime
 from pathlib import Path
 
+from site_scope import is_public_rel
+
 REQUIRED = [
     "fit-interview", "confidence-check", "change-radar", "evidence", "methodology",
     "pricing-watch", "guides/switch-guides", "model-lineups", "workflows", "decision-brief.html", "stack-builder.html",
@@ -50,6 +52,7 @@ def run(root: Path) -> dict:
     duplicate_source_slugs=sorted({slug for slug in source_slugs if source_slugs.count(slug) > 1})
     today=date.today()
     html=list(root.rglob("*.html"))
+    public_html=[p for p in html if is_public_rel(p.relative_to(root))]
     reviews=list((root/"tools").glob("*/index.html"))
     missing=[p for p in REQUIRED if not (root/p if p.endswith('.html') else root/p/"index.html").exists()]
     slugs={t.get("slug") for t in tools}
@@ -91,7 +94,7 @@ def run(root: Path) -> dict:
       "coverage": {"ok": slugs==review_slugs, "tools":len(slugs), "reviews":len(review_slugs), "missing_reviews":sorted(slugs-review_slugs), "orphan_reviews":sorted(review_slugs-slugs)},
       "pricing_freshness": {"ok": not malformed_sources and not duplicate_source_slugs and not invalid and not future, "latest_recorded_date": latest.isoformat() if latest else None, "older_than_latest": stale, "undated_or_invalid": invalid, "future_dated": future, "malformed_records": malformed_sources, "duplicate_slugs": duplicate_source_slugs},
       "secrets_scan": {"ok": not secret_hits, "hits": secret_hits},
-      "generated_output": {"html_pages":len(html), "fit_interview":(root/"fit-interview/index.html").exists(), "change_radar_rows":(root/"change-radar/index.html").read_text().count('class="radar-row"') if (root/"change-radar/index.html").exists() else 0},
+      "generated_output": {"html_pages":len(html), "public_html_pages":len(public_html), "fit_interview":(root/"fit-interview/index.html").exists(), "change_radar_rows":(root/"change-radar/index.html").read_text().count('class="radar-row"') if (root/"change-radar/index.html").exists() else 0},
     }
     ok=all(v.get("ok",True) for v in checks.values())
     return {"status":"pass" if ok else "fail", "checked_at":datetime.now().isoformat(timespec="seconds"), "checks":checks}

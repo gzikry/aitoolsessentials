@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from affiliate_util import inject_nous_referral_module
+from site_scope import is_public_rel, is_working_rel
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
@@ -103,7 +104,13 @@ def generate_start_here(root: Path) -> None:
 
 
 def generate_status(root: Path, tools: list[dict[str, Any]], today: str) -> None:
-    html_count = len(list(root.rglob("*.html")))
+    # The public status page states a page count as a coverage claim, so it must
+    # count public pages only: scratch captures under marketing/ are not pages.
+    html_count = sum(
+        1 for p in root.rglob("*.html")
+        if is_public_rel(p.relative_to(root)) and p.name != "404.html"
+        and 'name="robots" content="noindex' not in p.read_text()
+    )
     source_data = json.loads((root / "data/tool_sources.json").read_text())
     source_records = source_data.get("tools", [])
     if not isinstance(source_records, list):
@@ -197,6 +204,8 @@ def postprocess_head_links(root: Path) -> None:
     for p in root.rglob("*.html"):
         rel_parts = p.relative_to(root).parts
         if any(part.startswith(".") for part in rel_parts) or "go" in rel_parts:
+            continue
+        if is_working_rel(p.relative_to(root)):
             continue
         html = p.read_text()
         html = re.sub(r"\s*<!-- AIT DISCOVERY LINKS -->.*?<script src=\"/js/discovery\.js\" defer></script>", "", html, flags=re.S)

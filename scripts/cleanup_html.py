@@ -5,6 +5,8 @@ asset path depths, CTA labels/links, category slugs, share-row mount, contact em
 import re
 from pathlib import Path
 
+from site_scope import is_working_rel
+
 ROOT = Path(__file__).resolve().parents[1]
 EMAIL = 'contact@aitoolsessentials.com'
 SLUG_MAP = {'writing-productivity': 'Writing & Productivity', 'creative-marketing': 'Creative & Marketing',
@@ -313,7 +315,7 @@ def main():
     changed = 0
     for p in ROOT.rglob('*.html'):
         rel = p.relative_to(ROOT)
-        if 'admin' in rel.parts or 'go' in rel.parts:
+        if 'admin' in rel.parts or 'go' in rel.parts or is_working_rel(rel):
             continue
         if fix_page(p):
             changed += 1

@@ -12,6 +12,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from site_scope import is_working_rel
+
 DOMAIN = "https://aitoolsessentials.com"
 CITE_START = "<!-- AIT SOURCE CITE START -->"
 CITE_END = "<!-- AIT SOURCE CITE END -->"
@@ -44,6 +46,8 @@ def _public_html(root: Path):
     for p in root.rglob("*.html"):
         rel = p.relative_to(root)
         if "admin" in rel.parts or any(part.startswith(".") for part in rel.parts) or "go" in rel.parts:
+            continue
+        if is_working_rel(rel):
             continue
         yield p, rel
 

@@ -8,6 +8,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from site_scope import is_working_rel
+
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
 HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/stack-builder.html">Stack builder</a><a href="/tool-finder.html">Tool finder</a><a href="/free-ai-tools.html">Free AI tools</a><a href="/alternatives/">Alternatives</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/articles/index.html">Guides</a><a href="/deals/">Deals</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>'
@@ -165,6 +167,8 @@ def inject_site_schema(root: Path, tools: list[dict[str, Any]] | None = None) ->
     for p in root.rglob("*.html"):
         rel_parts = p.relative_to(root).parts
         if any(part.startswith(".") for part in rel_parts) or "go" in rel_parts:
+            continue
+        if is_working_rel(p.relative_to(root)):
             continue
         html = p.read_text()
         html = re.sub(r"\s*<!-- AIT KNOWLEDGE SCHEMA START -->.*?<!-- AIT KNOWLEDGE SCHEMA END -->\s*", "\n", html, flags=re.S)
