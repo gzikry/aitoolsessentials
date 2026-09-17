@@ -33,7 +33,7 @@ URLS = {
 def fetch_page(url: str, timeout: int = 15) -> str:
     """Fetch a page using curl."""
     try:
-        result = run(
+        result = subprocess.run(
             ['curl', '-s', '--max-time', str(timeout), '-A',
              'Mozilla/5.0 (compatible; AIToolsEssentials/1.0; +https://aitoolsessentials.com)',
              url],

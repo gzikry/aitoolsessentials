@@ -51,11 +51,53 @@ def curl(url: str, timeout: int = 30) -> tuple[str, str]:
 
 
 def _field(raw: str, key: str) -> str | None:
-    m = (re.search(r'\\"' + key + r'\\":\\"((?:[^"\\]|\\.)*?)\\"', raw)
-         or re.search(r'"' + key + r'":"((?:[^"\\]|\\.)*?)"', raw))
+    """Read a field out of the page payload.
+
+    Two payloads carry the same keys: the JSON-LD block (plain `"key":"value"`) and the RSC
+    payload (`\\"key\\":\\"value\\"`). Both are matched, and the plain form is preferred because
+    it is the unescaped one. Scanning `\\"` first surfaced the RSC copy, whose extra backslashes
+    survived the old single-pass unescape and produced values the age parser then rejected.
+    """
+    for pat in (r'"' + key + r'":\s*"((?:[^"\\]|\\.)*?)"',
+                r'\\+"' + key + r'\\+":\\+"((?:[^"\\]|\\.)*?)\\+"'):
+        m = re.search(pat, raw)
+        if m:
+            v = m.group(1)
+            # Unescape repeatedly while backslashes remain, so a double-escaped value still
+            # comes out clean instead of carrying `\\/` and `\\"` into the parsed date.
+            for _ in range(3):
+                n = v.replace("\\n", " ").replace("\\u0026", "&").replace("\\/", "/")
+                n = re.sub(r'\\(.)', r'\1', n)
+                if n == v:
+                    break
+                v = n
+            return v.strip()
+    return None
+
+
+def _age_days(stamp: str | None) -> int | None:
+    """Days since a page-supplied timestamp, tolerant of Python 3.9's strict fromisoformat.
+
+    `datetime.fromisoformat` before 3.11 only accepts exactly 3 or 6 fractional digits, so a
+    real page value like `2026-09-11T16:58:59.04+00:00` raises ValueError and the request's age
+    silently became None — which the queue then renders as "age unknown" instead of ranking it.
+    Falls back to parsing the seconds-precision prefix.
+    """
+    if not stamp:
+        return None
+    try:
+        return (datetime.now(timezone.utc)
+                - datetime.fromisoformat(stamp.replace("Z", "+00:00"))).days
+    except ValueError:
+        pass
+    m = re.match(r"(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2}:\d{2})", stamp)
     if not m:
         return None
-    return (m.group(1).replace("\\n", " ").replace("\\u0026", "&").replace("\\/", "/").strip())
+    try:
+        d = datetime.fromisoformat(f"{m.group(1)}T{m.group(2)}+00:00")
+        return (datetime.now(timezone.utc) - d).days
+    except ValueError:
+        return None
 
 
 def visible(raw: str) -> str:
@@ -90,12 +132,7 @@ def probe(url: str, feed: set[str]) -> dict:
     code, raw = curl(url)
     core = visible(raw)
     dp = _field(raw, "datePublished")
-    age = None
-    if dp:
-        try:
-            age = (datetime.now(timezone.utc) - datetime.fromisoformat(dp.replace("Z", "+00:00"))).days
-        except ValueError:
-            age = None
+    age = _age_days(dp)
     badge = re.search(r"(Posted (?:in last 7 days|today|\d+ (?:days?|hours?) ago))", core)
     slug = url.rstrip("/").split("/journo-request/")[-1]
     links = [u for u in sorted(set(re.findall(r"https?://[A-Za-z0-9._~:/?#\[\]@!$&()*+,;=%-]{8,160}", raw)))
@@ -118,6 +155,13 @@ def probe(url: str, feed: set[str]) -> dict:
                                if h.lower() in core.lower()}),
         "checked": date.today().isoformat(),
     }
+
+
+def _slug(raw: str) -> str | None:
+    """The request's own slug, read off the page. Used to re-key cached records."""
+    m = _field(raw, "url") or ""
+    m = m.rstrip("/").split("/journo-request/")[-1]
+    return m if m and "/" not in m else None
 
 
 def main() -> None:
@@ -151,6 +195,13 @@ def main() -> None:
               f"{str(rec['days_old']):>5}d feed={'Y' if rec['in_ai_topic_feed'] else 'n'} "
               f"{str(rec['badge']):<22} {str(rec['headline'])[:52]}", flush=True)
         time.sleep(1)
+
+    # A request probed without `www.` caches under its slug, which is correct — but a record
+    # keyed on a bare http URL from an older run would never be found by slug lookup again.
+    # Re-key any such stray so the queue's page-truth lookup cannot silently miss.
+    for k in [k for k in cache if k.startswith("http")]:
+        v = cache.pop(k)
+        cache[_slug(v.get("url", "")) or v.get("slug") or k] = v
 
     CACHE.write_text(json.dumps(cache, indent=1))
     fresh = [r for r in cache.values()

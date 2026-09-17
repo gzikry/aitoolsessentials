@@ -99,6 +99,7 @@ def collect() -> list[dict]:
     seen: dict[str, dict] = {}
     verified = _load_verified()
     digest_sizes: dict[str, int] = {}
+    digest_urls: dict[str, int] = {}
     digests = sorted(OUT.glob("digest-*.json"))
     for f in digests:
         day = f.stem.replace("digest-", "")
@@ -106,11 +107,14 @@ def collect() -> list[dict]:
             d = json.loads(f.read_text())
         except json.JSONDecodeError:
             continue
-        digest_sizes[day] = len(d.get("opportunities") or [])
-        for op in d.get("opportunities") or []:
+        ops = d.get("opportunities") or []
+        digest_sizes[day] = len(ops)
+        with_url = 0
+        for op in ops:
             url = (op.get("url") or "").strip()
             if not url:
                 continue
+            with_url += 1
             url = _canon(url)
             # Index/browse pages are not requests: they carry no deadline, no journalist and
             # no reply route, yet they scored as "high relevance" and outranked real requests.
@@ -150,6 +154,13 @@ def collect() -> list[dict]:
                 v = (op.get(src) or "").strip()
                 if v and (longest is False or len(v) > len(rec[dst])):
                     rec[dst] = v
+        digest_urls[day] = with_url
+    # A digest carrying zero URLs holds no membership information — the 2026-09-16 digest
+    # recorded nine opportunities by prose with no `url` field at all (they have since been
+    # re-keyed, and scripts/haro_monitor.py's undefined `run()` call that produced them is
+    # fixed). Treating such a digest as "did not carry this request" flagged every row in the
+    # queue as dropped off at once, which is a data defect masquerading as a cold signal.
+    members = [day for day, n in digest_urls.items() if n > 0]
     latest = max((r["last_seen"] for r in seen.values()), default="")
     for rec in seen.values():
         v = _verified_for(rec["url"], verified)
@@ -175,12 +186,17 @@ def collect() -> list[dict]:
         rec["in_latest"] = rec["last_seen"] == latest
         if rec["page_live"] is False:
             rec["dropped_off"] = "page no longer serves the request"
-        elif not rec["in_latest"] and not rec["in_ai_topic_feed"]:
-            # Absent from both the newest digest and Sourcee's live AI topic page. Absence from
-            # a single thin digest is not evidence on its own — the 2026-09-15 digest carried
-            # only two opportunities — so this needs both signals to fire.
-            rec["dropped_off"] = (f"absent from both the {latest} digest "
-                                  f"({digest_sizes.get(latest, '?')} items) and the AI topic page")
+        elif not rec["in_latest"] and members:
+            # Absent from the newest URL-carrying digest. Note what is deliberately NOT used as
+            # evidence here: Sourcee's /topics/ai/journo-requests page. Measured on 2026-09-17,
+            # all 42 of its slugs have a lastmod inside a single 15.7-hour window (2026-09-16
+            # 12:14Z to 2026-09-17 03:59Z) and it shares 0 of 36 slugs with the previous day's
+            # capture. It is a recency window over the newest ~42 requests, so any carried
+            # request is absent from it by construction. Treating that absence as a cold signal
+            # flagged requests as "dropped off" for the sole reason that they were posted more
+            # than a day ago.
+            rec["dropped_off"] = (f"not carried by the {latest} digest "
+                                  f"({digest_sizes.get(latest, '?')} items)")
         else:
             rec["dropped_off"] = ""
     return list(seen.values())
@@ -223,10 +239,12 @@ def render(queue: list[dict], ledger: dict) -> str:
 
     def key(q):
         # Specified ranking: still-live-in-the-feed first, then relevance, then age. Feed
-        # membership comes from two independent checks — appearing in the newest digest, and
-        # appearing on Sourcee's own /topics/ai/journo-requests page — so a request that the
-        # digest stopped carrying but the topic page still lists is not wrongly demoted.
-        live_in_feed = q["in_latest"] or q["in_ai_topic_feed"]
+        # membership comes from the newest URL-carrying digest. Sourcee's AI topic page is
+        # deliberately NOT used here: it is a recency window over the newest ~42 requests
+        # (all 42 slugs dated inside one 15.7-hour window on 2026-09-17, 0 of 36 shared with
+        # the previous capture), so every carried request is absent from it by construction
+        # and using it as a membership test would demote the whole queue.
+        live_in_feed = q["in_latest"]
         return (0 if live_in_feed else 1,
                 RELEVANCE_RANK.get(q["relevance"], 9),
                 q["days_old"] if q["days_old"] is not None else 999)

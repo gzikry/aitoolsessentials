@@ -1,0 +1,281 @@
+{
+  "date": "2026-09-17",
+  "monitor": "HARO / Connectively / journalist request monitor",
+  "run_at": "2026-09-17T09:35:00-07:00",
+  "search_scope": "AI tools, AI pricing, overlapping AI subscriptions, software spend, SaaS cost/credits, agentic AI cost overruns, enterprise AI budget visibility, tool consolidation, AI vendor support value",
+  "age_policy": "Ages are read off each request page (JSON-LD datePublished plus the rendered 'Posted ... ago' badge), never off the digest text. Two parser defects were found and fixed this run: datePublished was being read from the RSC payload's double-escaped copy and then rejected by Python 3.9's strict fromisoformat, which silently turned every affected age into None. See scripts/verify_journo_requests.py (_field, _age_days).",
+  "platforms_checked": [
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Sitemap pulled fresh: 9,880,774 bytes, 41,093 loc/lastmod pairs, 40,242 unique slugs, newest lastmod 2026-09-17T03:59:13Z. 47 slugs carry a lastmod since the 2026-09-16T16:00Z run marker; 9 of them carry any AI or spend token and NONE carries a strong on-beat signal (lego buyers pricing/budgets, Australian dentists price sensitivity, HR outsourcing cost, Edmonton rent, dating-app AI, CSUN digital detox, Gen Z AI annotators, AI training ops, Canadians on AI in newsrooms). 143 candidate bodies fetched across the 2026-09-15+ window; 2 carry a strong AI+spend co-occurrence and both are off-beat (e-discovery legal practice; retail trading). Feed used this run: /topics/ai/journo-requests, 42 slugs."
+    },
+    {
+      "platform": "Sourcee AI topic feed — /topics/ai/journo-requests",
+      "status": "recency_window_not_persistence",
+      "notes": "IMPORTANT CORRECTION to how this signal was being read. All 42 slugs on the page carry a lastmod inside a 15.7-hour window (2026-09-16T12:14:57Z to 2026-09-17T03:59:13Z), and the page shares 0 of its 36 slugs with the previous day's capture. It is a rolling recency window over the newest ~42 indexed requests, not a curated AI feed that a request can persist on. Consequence: every carried request is absent from it by construction, so 'absent from the AI topic feed' is not evidence a request has gone cold — using it that way flagged requests as dropped off for the sole reason that they were posted more than a day ago. build_pitch_queue.py no longer uses it as a membership signal."
+    },
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Re-probed. / returns HTTP 429 (32,192 bytes) titled 'Vercel Security Checkpoint'. Seventh consecutive identical result. Queries are distributed only by a 3x-daily email digest requiring a subscribed inbox."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Re-probed. / HTTP 429 (32,178 bytes) and /queries HTTP 429 (32,179 bytes) behind the same Vercel Security Checkpoint. No public query feed."
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Re-probed. Root HTTP 200 (194,164 bytes, 'Connecting Reporters With High Quality Sources'). /requests returns a genuine 404 (140,644 bytes, 'Page Not Found'). Reporter submission form only; no source-facing feed."
+    },
+    {
+      "platform": "Qwoted (qwoted.com)",
+      "status": "login_required",
+      "notes": "Re-probed. app.qwoted.com/requests returns a genuine 404 (3,265 bytes) — the path is wrong, not gated. The feed needs an authenticated app session."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "pre_launch",
+      "notes": "Re-probed. Apex HTTP 200 (11,345 bytes, 'MentionMatch - Connect B2B Writers with Expert Sources') with no feed; www returns HTTP 000. Seventh consecutive run confirming a pre-launch shell."
+    },
+    {
+      "platform": "Medialyst MCP (medialyst.ai/api/mcp)",
+      "status": "oauth_required",
+      "notes": "Re-probed: HTTP 401, 73-byte {\"error\":\"invalid_token\",\"error_description\":\"No authorization provided\"}. www.medialyst.ai serves HTTP 200 (389,255 bytes); medialyst.com and www.medialyst.com both return HTTP 503. Free read-only feed covering Connectively, HARO, X, LinkedIn, MentionMatch and Substack. Needs an interactive OAuth handshake that cannot be completed from a scheduled run."
+    },
+    {
+      "platform": "X/Twitter #journorequest",
+      "status": "credits_exhausted",
+      "notes": "Not re-attempted. The team-level credit limit blocked this on seven consecutive runs and the block is an account state, not a transient failure. Sourcee's X-originated aggregation is used as a proxy."
+    },
+    {
+      "platform": "ResponseSource (responsesource.com)",
+      "status": "paywalled_uk",
+      "notes": "Root re-probed HTTP 200. UK-only; enquiry feed sold by category from GBP 85 pay-as-you-go. No free source-facing feed."
+    }
+  ],
+  "opportunities": [
+    {
+      "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
+      "query_text": "Uber burned its entire 2026 AI budget in four months, and had to cut back on usage. Agentic AI cost just doesn't behave like traditional software that we know how to budget for. I spent years at Apptio building the tooling that made cloud spend predictable, and that playbook doesn't survive contact with agents. My new piece is on why agentic AI keeps blowing out of budget, and what makes it so hard to see coming. Would like to hear from others how they are managing their AI costs.",
+      "journalist_publication": "Niloy Ghosh — AI & Data Science Leader, ex-IBM/Apptio, Citi, Flipkart (LinkedIn post 'The True Cost of Agentic AI')",
+      "category": "AI / FinOps / Cost Management / Agentic AI",
+      "deadline": "No cutoff stated. Page badge reads 'Posted 10 days ago'; datePublished 2026-09-07T14:19:46Z. Carried by four digests and refreshed by none — the window is closing, not open.",
+      "contact_method": "Comment on the original LinkedIn post, or DM the author. The Sourcee page publishes no email and no link, but the page's own author field now names him (previously only inferable from the text): linkedin.com/in/niloy-ghosh, whose profile matches the request exactly ('Ex-IBM/Apptio', 'The True Cost of Agentic AI').",
+      "relevance": "high",
+      "relevance_notes": "The most methodologically aligned request this monitor tracks: it asks other practitioners how they manage AI cost and names budget visibility as the hard part. Our angle is complementary, not competitive — agentic token spend genuinely resists forecasting, but the seat-based subscriptions renewing alongside it are auditable today and that is where we hold dated evidence.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — lead with the auditable half of the same bill: 70 of the 76 AI tools we track sit in 13 categories holding three or more, including three meeting notetakers bought separately (Fathom $20/mo monthly vs $16 annual; Fireflies $18 vs $10; Otter $16.99 vs $8.33, all checked 2026-08-21), so overlap is a category problem, not a function problem."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
+      "query_text": "Amplemarket wants to replace your SDR stack with one AI copilot... The Startup plan is $600 a month for two seats, billed annually, with no monthly option and no published free trial. Growth and Elite are both custom quotes, and neither publishes a number. Vendr's tracked-contract data puts the real median at $16,608 a year, ranging from $11,678 to $35,946. Has anyone here signed a Growth or Elite contract? I'd like to know if the number landed near that $16,608 median.",
+      "journalist_publication": "Market Intelligence Tools (marketintelligencetools.com) — Jan Suski, independent reviewer; also runs r/marketinteltools. Reddit handle on the page: ObviousInvestment346",
+      "category": "AI / Software Pricing / Credits / Price Opacity / Contract Negotiation",
+      "deadline": "No cutoff stated. Page badge reads 'Posted 10 days ago'; datePublished 2026-09-06T16:36:38Z.",
+      "contact_method": "Reply to the original Reddit thread, OR email the site's published address: contact@marketintelligencetools.com, verified live on /contact this run (MX mx1/mx2.spacemail.com, root HTTP 200).",
+      "relevance": "high",
+      "relevance_notes": "Entirely about the gap between published list price and real contract value, which is what our dated snapshots measure. IMPORTANT HONESTY CONSTRAINT: he asks for people who have signed a Growth or Elite contract and we have not, so a pitch must not pose as a customer. The legitimate contribution is method and evidence, plus a direct statement that we hold no Growth/Elite number. His own about page states he re-checks every number against its source, so a methodology pitch is the one that fits his standard.",
+      "suggested_pitch_template": "Template 4 (Price opacity / list-vs-real) — lead with our own verified number: across the 76 AI tools we track, 29 quote both a monthly and an annual rate and paying monthly costs up to 2.5x the annual rate (Browse AI $48/month vs $19/month billed annually, checked 2026-09-01), and 7 of the 76 publish no price for the paid tier at all. State plainly that we have not signed a Growth or Elite contract."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
+      "query_text": "Looking for founders building something from scratch... What you're building. Why you started it. How you got your first users. Your current MRR/revenue (if you're comfortable sharing). What's working, and what's completely not working.",
+      "journalist_publication": "Independent — 'Built From Scratch' bi-weekly founder series (LinkedIn)",
+      "category": "Founders / SaaS / AI Tools / Startup Profile",
+      "deadline": "No cutoff stated; recurring bi-weekly series. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-11T01:09:33Z (6 days).",
+      "contact_method": "Comment on the original LinkedIn post with a short description of the business. Page author field: PrideCompetitive542. No email published.",
+      "relevance": "medium",
+      "relevance_notes": "Not a data request, but its 'what's completely not working' prompt is the one place a publisher can be useful to a founder audience without pitching itself. The honest contribution is the overlap finding and the free Stack Audit as a live traction experiment. Medium: contributes standing, earns no citation directly.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison) — lead with the number that started it: of the 76 AI tools we track, 70 sit in the 13 categories holding three or more, which is why tool overlap is a category problem rather than a function problem. Mention the free Stack Audit (aitoolsessentials.com/stack-audit.html) as the current experiment."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay",
+      "query_text": "Did you choose an individual contributor career to do the work — not manage — only to end up managing AI agents without the title or pay bump? I want to hear from you! DM or email [email redacted].",
+      "journalist_publication": "Rani Molla — Senior Tech Correspondent, Sherwood News (author named in the page's own author field)",
+      "category": "AI / Workplace / Individual Contributors / Agent Management",
+      "deadline": "No cutoff stated. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-10T14:08:12Z (7 days).",
+      "contact_method": "Sourcee redacts the address, but the reporter is named on the page and her publication publishes a direct route: Rani@Sherwood.news and Signal ranimolla.01, both listed on sherwood.news/author/rani-molla (fetched this run). Also reachable by DM via her X (@ranimolla) and LinkedIn (/in/ranimolla).",
+      "relevance": "medium",
+      "relevance_notes": "Adjacent to our beat rather than on it: the story is about the unacknowledged management load AI agents place on individual contributors. The only honest angle we hold is tool-selection ownership — teams running three or more overlapping AI tools are where 'who owns this' never gets answered, which is why the load lands on ICs. Reachable route, weaker subject fit.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison) — if pursued, lead with the overlap count as the structural cause: 70 of 76 tools in 13 categories holding three or more, so no single person owns the decision and the management work falls to whoever is closest to the tool."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences",
+      "query_text": "#Sourcecall: I am writing a story about the difficulties that people have had with Anthropic customer service. Are there any users or business owners who can share about their Anthropic customer service experiences? I'd love to chat via DMs, email, or Signal hliwrites.99",
+      "journalist_publication": "Helen Li — independent journalist (author named in the page's own author field)",
+      "category": "AI / Vendor Support Quality / Subscription Value",
+      "deadline": "No cutoff stated. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-11T16:58:59.04Z (5 days). Not carried by the 2026-09-16 digest.",
+      "contact_method": "Signal handle 'hliwrites.99' is published verbatim in the request; DMs or email also invited but the address is redacted on Sourcee.",
+      "relevance": "medium-high",
+      "relevance_notes": "On-beat as a subscription-value story once framed as price-to-support rather than grievance. We have dated official Anthropic pricing and no customer-service complaint of our own, so the honest contribution is the price-side evidence only.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) — frame the price-to-support ratio using our dated snapshot: Claude Free $0; Pro $17/month with a $200 annual prepayment or $20 month-to-month; Max from $100/month; Team Standard $20/seat/month and Premium $100/seat/month (checked 2026-08-21; data/tool_sources.json 2026-08-25)."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops",
+      "query_text": "Building a list of the Top 20 #AIAgents actually making money in 2026. Looking to feature agents in: #Sales / #LeadGeneration, #Workflow #Automation, #Ops / #Finance. Drop your tool below with your current revenue.",
+      "journalist_publication": "Tool Vetting (independent AI tool review platform) — page author field: 'Tool Vetting'",
+      "category": "AI / SaaS / Tools / Sales / Workflow",
+      "deadline": "No cutoff stated. Page badge reads 'Posted 10 days ago'; datePublished 2026-09-07T07:35:27Z.",
+      "contact_method": "Drop the tool in the replies on the original X/LinkedIn post, or DM @ToolVetting. No email published.",
+      "relevance": "medium",
+      "relevance_notes": "A tool-listing call, not a data request: featuring ourselves in someone's Top 20 is promotion, not evidence. Only worth a reply if the keep/cut framing is welcome.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison) — contribute the keep/cut angle instead of a listing: the AI agents that hold up are the ones replacing two or three overlapping subscriptions, not the ones adding another $20/month."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/tech-policy-experts-california-ai-audit-bills-impact-cios",
+      "query_text": "I'm looking to speak with a source today in tech policy about California's new AI bills, which establish standards for third-party audits and assessments of AI systems. I am hoping to talk about how those requirements land on CIOs.",
+      "journalist_publication": "Paige Gross — Industry Dive (industrydive.com)",
+      "category": "AI Policy / Regulation / CIO Impact",
+      "deadline": "STATED DEADLINE PASSED — 'looking to speak with a source today' was posted 7 days ago (badge 'Posted in last 7 days'; datePublished 2026-09-10T15:11:11Z). Page carries no expiry notice but the ask is spent. Do not pitch.",
+      "contact_method": "Email or DM — both redacted on Sourcee. Reporter is named on the page (Paige Gross, Industry Dive).",
+      "relevance": "medium-low",
+      "relevance_notes": "The compliance-driven inventory angle is real but the reporter needed a source the same day, a week ago. Recorded for completeness, marked do-not-pitch.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison) — the angle if it ever recurs: third-party AI audit requirements force organisations to enumerate which AI systems they run and what those cost, and most cannot, so the subscription inventory is the prerequisite nobody scopes."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies",
+      "query_text": "Source callout: I want to hear from U.S.-based founders about how calls to slow AI development are affecting their companies. Are you rethinking your business strategy, hearing concerns from customers, or strengthening your safety guardrails?",
+      "journalist_publication": "Aaron Mok — Inc. (inc.com), author named in the page's own author field",
+      "category": "AI / Founders / Policy Impact",
+      "deadline": "No cutoff stated. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-15T20:47:51Z (1 day). Freshest in-window on-beat-adjacent request.",
+      "contact_method": "Email the reporter — address redacted on Sourcee; reporter is named on the page.",
+      "relevance": "low-medium",
+      "relevance_notes": "Wants US founders' firsthand accounts of safety guardrails and strategic rethinking. We are a pricing publisher, not a founder account of that kind. Wrong standing — excluded from the drafts.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison) — only if a data contribution is welcome: the commercial-AI-spend action small teams are actually taking is consolidation, not guardrails, and we hold dated evidence for how that looks."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety",
+      "query_text": "Calling all cybersecurity experts and organizations. Over the past few weeks, I've received quite a few requests from reporters looking for cybersecurity experts... the timing couldn't be better to build a proactive media strategy.",
+      "journalist_publication": "Sandra Torres — independent PR/comms practitioner sourcing cybersecurity spokespeople (author named in the page's own author field)",
+      "category": "Cybersecurity / Media Placement / AI Scams",
+      "deadline": "No cutoff stated; positioned around October (Cybersecurity Awareness Month). datePublished 2026-09-15T17:26:30Z (1 day).",
+      "contact_method": "Not stated on the Sourcee page — the body asks companies to identify themselves; no email, DM handle or form published. Contact is redacted.",
+      "relevance": "low",
+      "relevance_notes": "A PR firm building a spokesperson roster, not a journalist request, and it wants cybersecurity vendors. Off-beat and off-standing.",
+      "suggested_pitch_template": "None — excluded."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse",
+      "query_text": "Looking to speak to UK managers who have cracked down on Gen Z employees' AI overuse.",
+      "journalist_publication": "MaryLou Costa — UK national newspaper (outlet name not disclosed on Sourcee), author named in the page's own author field",
+      "category": "AI / Workplace / Management / UK",
+      "deadline": "STATED INTERNAL DEADLINE PASSED ('by the end of the week' / 'by this Wednesday September 9'). Page is live with no expiry notice; badge 'Posted 10 days ago'; datePublished 2026-09-07T09:57:18Z.",
+      "contact_method": "Email redacted on Sourcee. Reporter is named on the page.",
+      "relevance": "medium-high",
+      "relevance_notes": "The subject fits — Gen Z AI overuse is a tool-selection problem — but the reporter's own deadline passed eight days ago and the request has not refreshed. Recorded as cold.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) — the keep/cut policy framing: pick one tool per job, cancel the rest, and tell employees which one to use."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-startups-workplace-fraud-detection-expenses-time-theft",
+      "query_text": "Looking for AI startups working on workplace fraud detection — expenses and time theft.",
+      "journalist_publication": "Alison Coleman — independent journalist (author named in the page's own author field)",
+      "category": "AI / Business / Fraud & Expense Controls",
+      "deadline": "No cutoff stated. Page badge reads 'Posted 10 days ago'; datePublished 2026-09-07T15:03:12Z.",
+      "contact_method": "Email redacted on Sourcee; reporter is named on the page.",
+      "relevance": "medium",
+      "relevance_notes": "Its 'expenses' hook is employee expense fraud and time theft, not software spend, and it wants AI startups rather than a publisher. Adjacent, not on-beat.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison) — the shadow-AI-spend angle, if ever pursued: the uncontrolled line item growing on company cards is AI subscriptions bought by individual teams, and before AI can police expenses it has to make existing spend visible."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/marketing-and-content-leaders-aiassisted-work-review-process",
+      "query_text": "Looking for marketing and content leaders to share how AI-assisted work passes through their review process.",
+      "journalist_publication": "Multi-leader study (page author field: 'Hurmu')",
+      "category": "Marketing / AI Workflow / Review Process",
+      "deadline": "No cutoff stated. Page badge reads 'Posted 10 days ago'; datePublished 2026-09-07T00:05:04Z.",
+      "contact_method": "Comment or DM on the original post. No email published.",
+      "relevance": "medium",
+      "relevance_notes": "Participates as a practitioner rather than contributing data; contributes standing and earns no citation directly. Not carried by the 2026-09-16 digest.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison) — the overlap angle: 'which tool for which job' is what makes a review process work or fail."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice",
+      "query_text": "Has AI-assisted review changed how you work a case? I'm working on a piece about AI in e-discovery for Mass Lawyers Weekly (then posted to other state Lawyers Weekly sites)... nearly everything that's published about time savings comes from the vendors themselves. So I'm asking people who use these tools — has AI-assisted review made a difference in your practice? Where does it not live up to the promises?",
+      "journalist_publication": "Massachusetts Lawyers Weekly (masslawyersweekly.com) — published across state Lawyers Weekly titles",
+      "category": "Legal / AI Vendor Claims / Practice Impact",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-17T03:02:47Z (0 days). NEW this run and currently on the AI topic feed.",
+      "contact_method": "DM the author (page author field: misterschwartz33). No email published; on-record or on-background offered.",
+      "relevance": "low",
+      "relevance_notes": "NEW this run and the freshest thing in the feed, but it is a legal-practice story, not a spend story, and it wants practising e-discovery lawyers rather than a pricing publisher. The one thread we could pull — vendor-published time-savings claims being unverifiable — is adjacent to our vendor-claims work but not what the reporter asked for. Recorded, not drafted.",
+      "suggested_pitch_template": "None this run — wrong standing. If pursued, the only honest line is that vendor-published performance claims are self-reported, the same pattern we document on pricing pages."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact",
+      "query_text": "I'm a freelance reporter with Fortune, looking to speak with people who have trained AI through companies like DataAnnotation, Outlier AI, Micro1, Mercor and Handshake AI about their experiences... whether the income has made a meaningful difference in day-to-day expenses.",
+      "journalist_publication": "Fortune (freelance reporter)",
+      "category": "AI Labour / Data Annotation / Income",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-16T21:31:04Z (1 day).",
+      "contact_method": "DM or email — redacted on Sourcee.",
+      "relevance": "low",
+      "relevance_notes": "On-topic as AI-industry economics but it wants Gen Z data annotators describing their own work and pay. We have no standing. Recorded, off-beat.",
+      "suggested_pitch_template": "None — excluded."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-automation-experts-speakers-on-marketing-sales-operations-gains",
+      "query_text": "Seeking AI Automation Experts for Speaking Opportunities. I am looking for individuals who have successfully built AI automations, agents, tools, or apps that have tangibly improved a business's marketing, sales, or operations.",
+      "journalist_publication": "Independent platform (AI TED-talk format)",
+      "category": "AI / Automation / Speaking",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-16T16:15:19Z (1 day).",
+      "contact_method": "Comment on the original post (body instructs commenting a keyword for tickets). No email published.",
+      "relevance": "low",
+      "relevance_notes": "A speaking-slot solicitation, not a journalist request, and it wants people with built automations rather than published cost evidence. Off-beat.",
+      "suggested_pitch_template": "None — excluded."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ecommerce-marketers-transparency-in-ai-recommendations-and-conversion",
+      "query_text": "Looking for example for @MarketingSherpa — how transparency impacts AI recommendations (AEO) and conversion. What you changed. How you got the idea to change it. What surprised you.",
+      "journalist_publication": "MarketingSherpa (marketingsherpa.com)",
+      "category": "Ecommerce / AI Recommendations / Conversion",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-16T20:40:29Z (1 day).",
+      "contact_method": "Reply to the original X/LinkedIn post (body links a recent article). No email published.",
+      "relevance": "low",
+      "relevance_notes": "Wants ecommerce marketers' AEO case studies. Not our beat and we hold no such case study. Recorded, off-beat.",
+      "suggested_pitch_template": "None — excluded."
+    }
+  ],
+  "previously_reported_still_relevant": [
+    {
+      "id": "prev-1",
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
+      "status": "PITCHED 2026-09-15 — do not re-queue",
+      "notes": "Sent to hello@foxandspindle.com (msg 171/172) on 2026-09-15. Re-verified this run: HTTP 200, badge 'Posted in last 7 days', datePublished unchanged at 2026-09-14T15:19:39Z (now 3 days old). NO REPLY as of this run — INBOX, All Mail, Sent Mail and Spam all checked; the newest message in All Mail is our own 2026-09-15 send."
+    },
+    {
+      "id": "prev-2",
+      "url": "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning",
+      "status": "DELIBERATELY SKIPPED 2026-09-15 — do not re-queue",
+      "notes": "Re-verified live: HTTP 200, 'Posted in last 7 days', datePublished 2026-09-13T05:50:41Z (4 days). Skipped because the writer is sourcing people inside EdTech and we would be overstating our standing. Judgement stands."
+    }
+  ],
+  "new_this_run": [
+    "Feed rotation measured for the first time: /topics/ai/journo-requests carried 36 slugs yesterday and 42 today with ZERO overlap, and all 42 sit inside a single 15.7-hour lastmod window. The page is a rolling recency window over the newest ~42 requests. It had been used as a 'still live in the feed' membership signal, which meant every carried request was marked dropped-off for the sole reason of being more than a day old. build_pitch_queue.py no longer treats absence from it as a cold signal.",
+    "Two parser defects fixed in scripts/verify_journo_requests.py. (a) _field read datePublished out of the RSC payload's double-escaped copy, whose residual backslashes the old single-pass unescape left in place. (b) _age_days did not exist, and the inline fromisoformat call was rejected by Python 3.9 for any timestamp with 2 fractional digits — a real format on these pages — so those ages silently became None. Anthropic (5d) and Individual Contributors (7d) recovered as a result.",
+    "digest-2026-09-16.json repair: its nine opportunities were written with no `url` field, unlike every other digest in the series. build_pitch_queue.py therefore could not count that digest's members and flagged ALL nine requests as 'absent from the newest digest' — which is why yesterday's queue showed 9 of 9 rows dropped off. Each record has been re-keyed to the slug whose page carries the datePublished its own deadline text quotes, and the mapping is asserted against the live page.",
+    "scripts/haro_monitor.py had a NameError in fetch_page (`run` was never imported), so every fetch it attempted failed. It wrote no digest. Fixed to subprocess.run.",
+    "Every request page carries the ORIGINAL AUTHOR in its payload, which the monitor had not been reading. This resolves several routes that were previously recorded as simply 'redacted': Niloy Ghosh (linkedin.com/in/niloy-ghosh, profile matches the request text), Rani Molla (Sherwood News), Helen Li, MaryLou Costa, Paige Gross, Alison Coleman, Aaron Mok, Sandra Torres. Rani Molla's publication publishes a direct email and Signal handle; that route is now actionable.",
+    "Supply check: 47 slugs newly indexed since the previous run marker, 9 carrying any AI or spend token, none carrying a strong on-beat signal; 143 candidate bodies text-scanned across the 2026-09-15+ window, 2 with a strong AI+spend co-occurrence, both off-beat. Fifth consecutive run with no new core-beat request on Sourcee."
+  ],
+  "expired_this_run": [
+    "Tech Policy Experts - California AI audit bills (Industry Dive, Paige Gross): stated deadline 'speak with a source today' passed 2026-09-12. Do-not-pitch.",
+    "UK Managers - Gen Z AI overuse (MaryLou Costa): internal deadline ('by the end of the week' / 'by this Wednesday September 9') passed. Page itself is live and shows no expiry.",
+    "No request page fetched this run returned a removal notice; all 23 tracked URLs still serve their request body (HTTP 200)."
+  ],
+  "summary": "23 tracked requests, 12 live and not yet pitched, 9 cold. No new core-beat request appeared on Sourcee for the fifth consecutive run. The on-beat supply is the same carried set: FinOps/agentic cost (10d, high), Amplemarket list-vs-real pricing (10d, high, verified email route), and the Anthropic subscription-value story (5d, medium-high, published Signal handle). The run's real output is corrective: three defects were fixed that between them made the queue's cold signal meaningless and hid two live requests' ages, and the pages' own author fields are now being read, which converts several dead-end 'redacted' rows into reachable routes.",
+  "recommended_actions": [
+    "Send the FinOps pitch as a LinkedIn DM/comment to Niloy Ghosh (linkedin.com/in/niloy-ghosh) — the queue's #1 and the only live request that asks the question we exist to answer. Draft 1 in marketing/haro-outreach/pitch-drafts-2026-09-17.md.",
+    "Send the Amplemarket pitch to contact@marketintelligencetools.com — the only live request with a verified email route. Keep the no-contract disclosure intact. Draft 2.",
+    "Resolve the Medialyst MCP OAuth handshake: it is the single step that adds six platforms' feeds (Connectively, HARO, X, LinkedIn, MentionMatch, Substack) to this monitor. Endpoint confirmed live (401 invalid_token) and still unconfigured in this profile (hermes mcp list: none)."
+  ],
+  "monitor_health": {
+    "platforms_accessible": 1,
+    "platforms_blocked": 9,
+    "core_beat_new_requests": 0,
+    "consecutive_runs_without_new_core_beat": 5,
+    "tracked_urls": 23,
+    "live_unpitched": 12,
+    "pitches_sent_to_date": 1,
+    "pitches_sent_this_run": 0,
+    "replies_received_to_date": 0
+  }
+}
