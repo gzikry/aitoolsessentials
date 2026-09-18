@@ -149,6 +149,30 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 - [low-medium] 26d old, never refreshed — https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature
 - [medium-high] 184d old, never refreshed — https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends
 
+## Connectively mail is a lifecycle drip, not a query feed
+
+Verified 2026-09-18. Six mails have arrived from `connectively`/`support@connectively.us` since
+account creation on 2026-09-03, all onboarding or marketing: "Verify Your Email on Connectively",
+"Welcome to Connectively!", "Create your Profile + best practices", "Answer questions, get
+featured", "Monitor Every Press Opportunity in One Place", and "Checking in". Four of the six were
+already auto-filed to `[Gmail]/Trash`; none contained a journalist request.
+
+**No digest has ever recorded a Connectively-sourced query** (checked across every
+`digest-2026-09-*.json`). The platform is behind a Vercel Security Checkpoint on every path —
+`/`, `/queries`, `/requests`, `/signup`, `/login` all return **HTTP 429** with no cookie or
+session (re-probed 2026-09-18 with a browser UA). The address has valid MX
+(`1 smtp.google.com`), so this is not a deliverability problem.
+
+Consequence for the hourly mail monitor: a Connectively onboarding mail is **not** actionable and
+must not page George. The guard in `scripts/hourly_mail_alert.py` matches sender **and** exact
+subject rather than the sender alone, because Connectively sends its real alerts from the same
+`community@` address — silencing the sender would blind the one feed this monitor exists to catch.
+
+The actual query feed for this address requires an authenticated session, which is George's lane.
+Do not re-investigate the gate each run; it has been confirmed closed on every probe since 2026-09-04.
+
+---
+
 ## Dropped off the feed
 
 Still fetching, but absent from the newest digest — colder than the age says.
