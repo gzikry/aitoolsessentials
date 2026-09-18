@@ -8,17 +8,16 @@ Hi [Journalist Name],
 
 I saw your query on [platform] about [specific topic — AI tool pricing / subscription overlap / SaaS cost optimization].
 
-I run AIToolsEssentials — we review AI tools with verified pricing from official pages, dated evidence, and keep/cut guidance for overlapping subscriptions. We track 74 tools and re-verify pricing weekly against official vendor pages.
+I run AIToolsEssentials — we review AI tools with verified pricing from official pages, dated evidence, and keep/cut guidance for overlapping subscriptions. We track 76 tools and re-verify pricing against official vendor pages.
 
 A few data points I can offer for your story:
 
-- **The overlap problem**: The most common stack overlap is paying for Copilot Pro ($10), Cursor Pro ($20), and Claude Max ($100+) simultaneously — $130/month for essentially the same coding job.
-- **Pricing trends**: Microsoft 365 raised commercial pricing ~16% in July 2026 while expanding AI tool catalogs. ChatGPT Pro split into a two-tier structure ($120/$200). GitHub Copilot moved to usage-based AI Credits.
+- **The overlap problem**: The priciest stack to double up on is coding. Cursor Pro is $20/mo and Claude Max starts at $100/mo, so a team holding both plus a GitHub Copilot seat is paying for the same job two or three times over.
+- **Verified pricing**: Every number here comes from the vendor's own pricing page with a checked date on our Pricing Watch page — no scraped or estimated figures.
 - **The subscription audit gap**: Most teams don't realize they're paying for 2+ tools doing the same job until they run a structured audit.
 
-Happy to provide specific pricing comparisons, screenshots of official pages, or connect you with founders who've cut overlapping subscriptions.
+Happy to provide specific pricing comparisons, links to the official pages we verified, or commentary.
 
-— George Zikry
 AIToolsEssentials
 https://aitoolsessentials.com
 contact@aitoolsessentials.com
@@ -33,7 +32,7 @@ Hi [Journalist Name],
 
 I saw your query about [AI subscription costs / SaaS optimization / tool consolidation].
 
-I run AIToolsEssentials, where we help founders and operators decide which AI tools to keep and which to cut. Our directory reviews 74 AI tools with verified pricing from official pages and keep/cut verdicts.
+I run AIToolsEssentials, where we help founders and operators decide which AI tools to keep and which to cut. Our directory reviews 76 AI tools with verified pricing from official pages and keep/cut verdicts.
 
 The pattern I see most: teams start with one AI tool, add a second "just in case," then a third for a specific use case — and end up paying for overlap they don't need. The fix isn't "use less AI." It's "pick one tool per job and cancel the rest."
 
@@ -44,7 +43,6 @@ I can offer:
 
 Happy to comment on background or on the record.
 
-— George Zikry
 AIToolsEssentials
 https://aitoolsessentials.com
 
@@ -58,7 +56,7 @@ Hi [Journalist Name],
 
 I saw your query about [AI tool recommendations / comparisons].
 
-I run AIToolsEssentials — an independent AI tool directory that reviews 74 tools with verified pricing from official pages, dated evidence, and honest worth-it guidance.
+I run AIToolsEssentials — an independent AI tool directory that reviews 76 tools with verified pricing from official pages, dated evidence, and honest worth-it guidance.
 
 A few angles I can speak to:
 - **Verification**: We check pricing directly against official vendor pages and date every snapshot. No scraped data, no estimates.
@@ -67,7 +65,6 @@ A few angles I can speak to:
 
 Happy to provide data, comparisons, or commentary.
 
-— George Zikry
 AIToolsEssentials
 https://aitoolsessentials.com
 contact@aitoolsessentials.com

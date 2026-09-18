@@ -16,6 +16,35 @@ SITE_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = SITE_ROOT / "marketing" / "guest-pitches"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
+
+def tracked_tool_count() -> int:
+    """Read the live inventory so the pitch copy cannot drift from the site.
+
+    These templates hardcoded "74 tools" and shipped stale for at least two days
+    after the catalog reached 76 (caught in marketing/guest-pitches/responses.md).
+    Never hardcode an inventory number in outbound copy; derive it.
+    """
+    try:
+        return len(json.loads((SITE_ROOT / "data" / "tools.json").read_text()))
+    except Exception:  # noqa: BLE001
+        return 0
+
+
+def verified_overlap_line() -> str:
+    """One overlap claim built only from figures in our own verified snapshots.
+
+    The previous bullets (Copilot Pro $10, Claude Max $100+, "$130/month",
+    "ChatGPT Pro two tiers $120/$200", "Microsoft 365 +16%") appear nowhere in
+    data/tools.json or data/pricing_snapshots.json. Sending unsourced numbers to
+    editors is the one error that costs the "verified pricing" angle.
+    """
+    return (
+        "The pattern is overlap, not duplication: across our tracked tools, "
+        "the coding stack is the most expensive one to double up on — Cursor Pro is "
+        "$20/mo and Claude Max starts at $100/mo (cursor.com and claude.com pricing, "
+        "snapshots dated in our Pricing Watch page)."
+    )
+
 # Target outlets for guest pitches
 TARGETS = [
     {
@@ -107,7 +136,7 @@ Hi {contact_name},
 
 I read {outlet_name} regularly — {specific_observation}.
 
-One resource I can offer for your coverage: I run AIToolsEssentials, where we review AI tools with verified pricing from official pages and dated evidence. We track 74 tools and re-verify pricing weekly.
+One resource I can offer for your coverage: I run AIToolsEssentials, where we review AI tools with verified pricing from official pages and dated evidence. We track {tool_count} tools and re-verify pricing against official vendor pages.
 
 Our Pricing Watch page (https://aitoolsessentials.com/pricing-watch/) is a source for tool roundups, pricing changes, and overlap warnings. Every claim has a checked date and a source link.
 
@@ -115,7 +144,6 @@ Happy to be cited or to send advance notice when we detect price changes.
 
 No strings — if it's useful, use it.
 
-— George Zikry
 AIToolsEssentials
 https://aitoolsessentials.com""",
 
@@ -125,16 +153,13 @@ Hi {contact_name},
 
 I've been following {outlet_name} and appreciate {specific_observation}.
 
-I wanted to offer a source: AIToolsEssentials reviews AI tools with verified pricing from official pages and dated evidence. We track 74 tools and re-verify pricing weekly against vendor official pages.
+I wanted to offer a source: AIToolsEssentials reviews AI tools with verified pricing from official pages and dated evidence. We track {tool_count} tools and re-verify pricing against vendor official pages.
 
-A few recent findings your readers might find useful:
-- The most common overlap: Copilot Pro ($10) + Cursor Pro ($20) + Claude Max ($100+) = $130/month for the same coding job
-- Microsoft 365 raised commercial pricing ~16% in July 2026 while expanding AI tool catalogs
-- ChatGPT Pro split into two tiers ($120/$200) in Q2 2026
+One finding your readers might find useful:
+- {overlap_line}
 
-I'm happy to provide specific pricing comparisons, official page screenshots, or commentary.
+I'm happy to provide specific pricing comparisons, official page links, or commentary.
 
-— George Zikry
 AIToolsEssentials
 https://aitoolsessentials.com""",
 
@@ -150,7 +175,6 @@ Quick guest pitch for {outlet_name}: most teams now pay for 2+ overlapping AI su
 
 Audience walks away able to cut at least one subscription. Happy to prep a one-pager in advance.
 
-— George Zikry
 AIToolsEssentials
 https://aitoolsessentials.com"""
 }
@@ -182,7 +206,9 @@ def generate_pitches() -> list[dict]:
         pitch = template.format(
             outlet_name=target["name"],
             contact_name=target["contact"].split("@")[0],
-            specific_observation=specific
+            specific_observation=specific,
+            tool_count=tracked_tool_count(),
+            overlap_line=verified_overlap_line(),
         )
         
         pitches.append({

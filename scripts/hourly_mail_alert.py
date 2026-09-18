@@ -18,6 +18,26 @@ FOLDERS = ["[Gmail]/All Mail", SPAM, TRASH]
 SELF = "aitoolsessentials@gmail.com"
 STATE = Path.home() / ".local" / "state" / "aitoolsessentials" / "hourly-mail.json"
 
+# Platform lifecycle/marketing drips that are never actionable on their own. Matched on the
+# exact sender AND subject, deliberately — NOT by sender alone. Connectively sends its actual
+# keyword/opportunity alerts from `community@connectively.us`, which is the one feed the
+# journalist monitor exists to catch, so silencing the sender would blind the monitor.
+# Observed onboarding drips 2026-09-03 → 2026-09-18: "Welcome to Connectively!" (Trash),
+# "Verify Your Email on Connectively" (Trash, support@), "Create your Profile + best
+# practices" (Trash), "Answer questions, get featured" (Trash), "Monitor Every Press
+# Opportunity in One Place" (Trash), and "Checking in" (INBOX) — the last one raised this
+# alert. Four of the six were already auto-filed to Trash. An unrecognised new subject still
+# alerts, which is correct: a real query must never be suppressed, and an unknown drip costs
+# one line of review to add here.
+LIFECYCLE_DRIP_SUBJECTS = {
+    ("community@connectively.us", "checking in"),
+    ("community@connectively.us", "welcome to connectively!"),
+    ("community@connectively.us", "create your profile + best practices"),
+    ("community@connectively.us", "answer questions, get featured"),
+    ("community@connectively.us", "monitor every press opportunity in one place"),
+    ("support@connectively.us", "verify your email on connectively"),
+}
+
 
 def himalaya(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
@@ -151,6 +171,8 @@ def disposition(message: dict) -> tuple[bool, str]:
 
     if lower.startswith("re:") or lower.startswith("fw:"):
         return True, "A correspondent replied — read the full thread and respond if needed."
+    if (sender, lower) in LIFECYCLE_DRIP_SUBJECTS:
+        return False, ""
     if message.get("has_attachment"):
         return True, "New incoming attachment — inspect before taking action."
 
