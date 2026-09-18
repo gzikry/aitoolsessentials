@@ -1,6 +1,6 @@
 # Pitch queue — clear this in one pass
 
-Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 cold (> 10 days, never refreshed).
+Built 2026-09-18 from 27 unique requests across the digest history. 14 live, 9 cold (> 10 days, never refreshed).
 
 **Ages are read off each request page** (`datePublished`), not off the digest text — see `marketing/haro-outreach/verified-requests.json`, refreshed by `scripts/verify_journo_requests.py`. An earlier build fell back to the digest's first-seen date and showed a 190-day-old request as 8 days old.
 
@@ -16,15 +16,6 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 - **Reply route:** Comment on the original LinkedIn post, or DM the author. The Sourcee page publishes no email and no link, but the page's own author field now names him (previously only inferable from the text): linkedin.com/in/niloy-ghosh, whose profile matches the request exactly ('Ex-IBM/Apptio', 'The True Cost of Agentic AI').  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** Template 2 (Overlapping Subscriptions / Cost Optimization) — adapted: lead with the subscription layer of the same bill. Frame: agentic token spend is genuinely hard to forecast, but the seat-based AI subscriptions sitting next to it are auditable today. Offer the overlap data (coding x2, assistants x2, meeting notes x2) and the point that a team cutting two overlapping $20-$30 seats funds a meani
 
-### [high] AI / Software Pricing / Credits / Price Opacity / Contract Negotiation
-- **URL:** https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot
-- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
-- **Seen:** first 2026-09-12, last 2026-09-17 (4x)
-- **Publication:** Market Intelligence Tools (marketintelligencetools.com) — Jan Suski, independent reviewer; also runs r/marketinteltools. Reddit handle on the page: ObviousInvestment346 · domain marketintelligencetools.com
-- **Reply route:** Reply to the original Reddit thread, OR email the site's published address: contact@marketintelligencetools.com, verified live on /contact this run (MX mx1/mx2.spacemail.com, root HTTP 200).  ·  _no — platform reply (George)_
-- **Links published on the page:** https://marketintelligencetools.com/reports/amplemarket-pricing/, https://marketintelligencetools.com/reviews/amplemarket/
-- **Angle:** Template 1 (AI Tool Pricing Changes, reactive) — adapted: pitch the method, not the tool. Frame: published list price and real contract value have decoupled across AI software, and the gap is 2-5x at the tiers vendors refuse to publish, which makes 'what do you actually pay' the only number worth tracking. Offer the verified-pricing methodology (official vendor pages, dated snapshots, credits and 
-
 ### [medium] Founders / SaaS / AI Tools / Startup Profile
 - **URL:** https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch
 - **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
@@ -32,14 +23,6 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 - **Publication:** Independent — 'Built From Scratch' bi-weekly founder series (LinkedIn)
 - **Reply route:** Comment on the original LinkedIn post with a short description of the business. Page author field: PrideCompetitive542. No email published.  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** Template 3 (AI Tool Directory / Comparison, general) — adapted: pitch AIToolsEssentials as a bootstrapped independent tool directory that grew out of the overlap problem. Angle: 'what's completely not working' is honest material — the directory earns nothing from rankings, so the keep/cut verdicts are the product. Mention the free Stack Audit as the current traction experiment. Medium priority — b
-
-### [medium] AI / Workplace / Individual Contributors / Agent Management
-- **URL:** https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay
-- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-16, last 2026-09-17 (2x)
-- **Publication:** Rani Molla — Senior Tech Correspondent, Sherwood News (author named in the page's own author field)
-- **Reply route:** Sourcee redacts the address, but the reporter is named on the page and her publication publishes a direct route: Rani@Sherwood.news and Signal ranimolla.01, both listed on sherwood.news/author/rani-molla (fetched this run). Also reachable by DM via her X (@ranimolla) and LinkedIn (/in/ranimolla).  ·  _no — contact redacted on Sourcee (George: original platform)_
-- **Angle:** Template 3 (AI Tool Directory / Comparison, general) — if pursued, the only honest contribution is the tool-selection angle: teams with three or more overlapping AI tools are the ones where 'who owns this' never gets answered, which is why the management load lands on ICs.
 
 ### [medium] AI / SaaS / Tools / Sales / Workflow
 - **URL:** https://www.sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops
@@ -81,14 +64,6 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 - **Reply route:** Email or DM — both redacted on Sourcee. Reporter is named on the page (Paige Gross, Industry Dive).  ·  _no — contact redacted on Sourcee (George: original platform)_
 - **Angle:** Template 3 (AI Tool Directory / Comparison, general) — adapted if pursuing: the compliance-driven inventory angle. Frame: third-party AI audit requirements force organisations to enumerate which AI systems they run and what those systems cost — most cannot, and the subscription inventory is the prerequisite nobody scopes. Do not pitch: the stated deadline has passed.
 
-### [low] Legal / AI Vendor Claims / Practice Impact
-- **URL:** https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice
-- **Posted:** 1d old (digest (page not probed)) · badge: — · AI-topic feed: no
-- **Seen:** first 2026-09-17, last 2026-09-17 (1x)
-- **Publication:** Massachusetts Lawyers Weekly (masslawyersweekly.com) — published across state Lawyers Weekly titles
-- **Reply route:** DM the author (page author field: misterschwartz33). No email published; on-record or on-background offered.  ·  _no — LinkedIn DM / comment (George)_
-- **Angle:** None this run — wrong standing. If pursued, the only honest line is that vendor-published performance claims are self-reported, the same pattern we document on pricing pages.
-
 ### [low] Cybersecurity / Media Placement / AI Scams
 - **URL:** https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety
 - **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
@@ -97,9 +72,17 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 - **Reply route:** Not stated on the Sourcee page — the body asks companies to identify themselves; no email, DM handle or form published. Contact is redacted.  ·  _no — platform reply (George)_
 - **Angle:** None — off-beat and off-standing.
 
+### [low] Legal / AI Vendor Claims / Practice Impact
+- **URL:** https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice
+- **Posted:** 2d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Seen:** first 2026-09-17, last 2026-09-17 (1x)
+- **Publication:** Massachusetts Lawyers Weekly (masslawyersweekly.com) — published across state Lawyers Weekly titles
+- **Reply route:** DM the author (page author field: misterschwartz33). No email published; on-record or on-background offered.  ·  _no — LinkedIn DM / comment (George)_
+- **Angle:** None this run — wrong standing. If pursued, the only honest line is that vendor-published performance claims are self-reported, the same pattern we document on pricing pages.
+
 ### [low] AI Labour / Data Annotation / Income
 - **URL:** https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact
-- **Posted:** 2d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Posted:** 3d old (digest (page not probed)) · badge: — · AI-topic feed: no
 - **Seen:** first 2026-09-17, last 2026-09-17 (1x)
 - **Publication:** Fortune (freelance reporter)
 - **Reply route:** DM or email — redacted on Sourcee.  ·  _no — platform reply (George)_
@@ -107,7 +90,7 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 
 ### [low] AI / Automation / Speaking
 - **URL:** https://www.sourcee.app/journo-request/ai-automation-experts-speakers-on-marketing-sales-operations-gains
-- **Posted:** 2d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Posted:** 3d old (digest (page not probed)) · badge: — · AI-topic feed: no
 - **Seen:** first 2026-09-17, last 2026-09-17 (1x)
 - **Publication:** Independent platform (AI TED-talk format)
 - **Reply route:** Comment on the original post (body instructs commenting a keyword for tickets). No email published.  ·  _no — LinkedIn DM / comment (George)_
@@ -115,7 +98,7 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 
 ### [low] Ecommerce / AI Recommendations / Conversion
 - **URL:** https://www.sourcee.app/journo-request/ecommerce-marketers-transparency-in-ai-recommendations-and-conversion
-- **Posted:** 2d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Posted:** 3d old (digest (page not probed)) · badge: — · AI-topic feed: no
 - **Seen:** first 2026-09-17, last 2026-09-17 (1x)
 - **Publication:** MarketingSherpa (marketingsherpa.com)
 - **Reply route:** Reply to the original X/LinkedIn post (body links a recent article). No email published.  ·  _no — LinkedIn DM / comment (George)_
@@ -148,30 +131,6 @@ Built 2026-09-17 from 27 unique requests across the digest history. 16 live, 9 c
 - [medium] 191d old, never refreshed — https://www.sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study
 - [low-medium] 26d old, never refreshed — https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature
 - [medium-high] 184d old, never refreshed — https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends
-
-## Connectively mail is a lifecycle drip, not a query feed
-
-Verified 2026-09-18. Six mails have arrived from `connectively`/`support@connectively.us` since
-account creation on 2026-09-03, all onboarding or marketing: "Verify Your Email on Connectively",
-"Welcome to Connectively!", "Create your Profile + best practices", "Answer questions, get
-featured", "Monitor Every Press Opportunity in One Place", and "Checking in". Four of the six were
-already auto-filed to `[Gmail]/Trash`; none contained a journalist request.
-
-**No digest has ever recorded a Connectively-sourced query** (checked across every
-`digest-2026-09-*.json`). The platform is behind a Vercel Security Checkpoint on every path —
-`/`, `/queries`, `/requests`, `/signup`, `/login` all return **HTTP 429** with no cookie or
-session (re-probed 2026-09-18 with a browser UA). The address has valid MX
-(`1 smtp.google.com`), so this is not a deliverability problem.
-
-Consequence for the hourly mail monitor: a Connectively onboarding mail is **not** actionable and
-must not page George. The guard in `scripts/hourly_mail_alert.py` matches sender **and** exact
-subject rather than the sender alone, because Connectively sends its real alerts from the same
-`community@` address — silencing the sender would blind the one feed this monitor exists to catch.
-
-The actual query feed for this address requires an authenticated session, which is George's lane.
-Do not re-investigate the gate each run; it has been confirmed closed on every probe since 2026-09-04.
-
----
 
 ## Dropped off the feed
 

@@ -1,6 +1,8 @@
 {
   "pitched": {
-    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "2026-09-15"
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "2026-09-15",
+    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "2026-09-18",
+    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "2026-09-18"
   },
   "skipped": {
     "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
@@ -14,7 +16,31 @@
       "to": "hello@foxandspindle.com",
       "route": "email (the request publishes a Calendly link; emailed the published address instead)",
       "sent_message_id": "171/172 (one message; Gmail stored it twice)",
-      "note": "First pitch ever sent from this monitor, after 12 days and 43 flagged opportunities."
+      "note": "First pitch ever sent from this monitor, after 12 days and 43 flagged opportunities.",
+      "figures_cited": "76 tools tracked; '60 of 76 sit in the 13 categories holding three or more'",
+      "figures_check": "2026-09-18: the 60 understated the real figure, which is 70. Recompute any count before reusing it from this pitch."
+    },
+    {
+      "date": "2026-09-18",
+      "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
+      "action": "pitched",
+      "to": "contact@marketintelligencetools.com",
+      "sent_message_id": "174 (one message)",
+      "route": "email - published on marketintelligencetools.com/contact (MX mx1/mx2.spacemail.com, verified live)",
+      "note": "Jan Suski, independent reviewer. The pitch deliberately did NOT claim an Amplemarket Growth/Elite contract figure we do not have; it led with the price-opacity method, which is what the request actually asked for.",
+      "figures_cited": "5 of 76 publish no self-serve price (Harvey, Spellbook, Dragon Copilot, Pika, Tunii); Browse AI $48/mo vs $19/mo billed annually = 2.5x",
+      "figures_check": "Computed from data/pricing_snapshots.json after the digests contradicted each other (one said 10 tools publish no price, another said 7). The true opaque count is 5 - the naive count of 7 wrongly included products that are simply free. Browse AI's figure re-verified live on browse.ai/pricing 2026-09-18."
+    },
+    {
+      "date": "2026-09-18",
+      "url": "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay",
+      "action": "pitched",
+      "to": "Rani@Sherwood.news",
+      "sent_message_id": "175/176 (one message; Gmail stored it twice)",
+      "route": "email - published on sherwood.news/author/rani-molla (Google Workspace MX)",
+      "note": "Rani Molla, Senior Tech Correspondent, Sherwood News. The request asked for individual stories; we do not have one, so the pitch offered the structural cause instead of a fabricated anecdote.",
+      "figures_cited": "70 of 76 tools sit in the 13 categories holding three or more",
+      "figures_check": "Verified from data/stack_audit_catalog.json 2026-09-18."
     }
   ]
 }
