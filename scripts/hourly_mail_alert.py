@@ -16,6 +16,10 @@ TRASH = "[Gmail]/Trash"
 # hides dead recipient domains indefinitely.
 FOLDERS = ["[Gmail]/All Mail", SPAM, TRASH]
 SELF = "aitoolsessentials@gmail.com"
+# Every address we send *as*. Verification requests go out from the site's
+# forwarder alias, and Gmail files a copy of each in All Mail; without this the
+# monitor treats our own outbound mail as incoming and re-alerts on it.
+SELF_ALIASES = {SELF, "contact@aitoolsessentials.com"}
 STATE = Path.home() / ".local" / "state" / "aitoolsessentials" / "hourly-mail.json"
 
 # Platform lifecycle/marketing drips that are never actionable on their own. Matched on the
@@ -63,13 +67,27 @@ def list_messages(folder: str) -> list[dict]:
 
 
 def fingerprint(message: dict) -> str:
+    """Stable identity for a message: sender + subject + date.
+
+    Deliberately excludes the folder and the IMAP sequence id. Both are unstable
+    for the *same* message: Gmail refiles mail between folders (a bounce can sit in
+    Trash while its original lives in All Mail), and IMAP ids are per-folder UIDs,
+    so one message has a different id in every folder it appears in. Including
+    either made already-handled mail re-alert — the failure that produced a run of
+    21 stale "actionable" items.
+
+    Known and accepted limitation: two *distinct* messages that share a sender, a
+    subject and the same minute collapse to one key, because himalaya's envelope
+    date has minute resolution and carries no Message-ID. That is safe here — an
+    alert is a notification aid, not the source of truth: every run re-lists the
+    whole mailbox and dedupes against the hold ledger, so a collapsed duplicate
+    cannot cause a missed action.
+    """
     sender = (message.get("from") or {}).get("addr", "").lower()
     return "|".join([
-        message.get("_folder") or FOLDERS[0],
         sender,
-        message.get("subject") or "",
+        (message.get("subject") or "").strip(),
         message.get("date") or "",
-        str(message.get("id") or ""),
     ])
 
 
@@ -132,8 +150,8 @@ def disposition(message: dict) -> tuple[bool, str]:
     subject = (message.get("subject") or "").strip()
     lower = subject.lower()
 
-    # Outbound mail we sent is never actionable.
-    if sender == SELF:
+    # Outbound mail we sent is never actionable, whichever address we sent it as.
+    if sender in SELF_ALIASES:
         return False, ""
     # Bounces and delivery delays matter whatever folder Gmail filed them to.
     if sender in {"mailer-daemon@googlemail.com", "mailer-daemon@gmail.com"}:
@@ -183,17 +201,33 @@ def disposition(message: dict) -> tuple[bool, str]:
     return True, "New incoming message — review and classify."
 
 
-def load_seen() -> set[str]:
+# Bump when the fingerprint shape changes: state written by an older shape can
+# never match the new keys, so it is re-seeded instead of firing every message in
+# the window as "new" on the first run after a code change.
+STATE_VERSION = 2
+# How many fingerprints to retain. The mailbox window is 100/folder, but retaining
+# more than the live window means mail that scrolls out of view and back in later
+# (a reply thread Gmail re-lists) still never re-alerts.
+STATE_LIMIT = 5000
+
+
+def load_seen() -> tuple[set[str], bool]:
+    """Return (fingerprints, is_current_shape)."""
     try:
-        return set(json.loads(STATE.read_text()).get("seen", []))
+        payload = json.loads(STATE.read_text())
+        if payload.get("version") != STATE_VERSION:
+            return set(), False
+        return set(payload.get("seen", [])), True
     except Exception:
-        return set()
+        return set(), False
 
 
 def save_seen(fingerprints: set[str]) -> None:
     STATE.parent.mkdir(parents=True, exist_ok=True)
-    # The current 100-message window is enough to prevent repeat alerts while bounding state.
-    STATE.write_text(json.dumps({"seen": sorted(fingerprints)}, indent=2) + "\n")
+    kept = sorted(fingerprints)[-STATE_LIMIT:]
+    STATE.write_text(
+        json.dumps({"version": STATE_VERSION, "seen": kept}, indent=2) + "\n"
+    )
 
 
 def main() -> int:
@@ -206,18 +240,25 @@ def main() -> int:
         for folder in FOLDERS:
             messages.extend(list_messages(folder))
         current = {fingerprint(message) for message in messages}
-        seen = load_seen()
-        if args.initialize or not seen:
-            save_seen(current)
+        seen, shape_current = load_seen()
+        # A missing state file, --initialize, or a fingerprint-shape change all mean
+        # "seed now, alert on nothing": we cannot tell old mail from new without a
+        # baseline, and firing the whole window would bury a real alert in noise.
+        if args.initialize or not shape_current:
+            save_seen(current | seen)
             return 0
 
         alerts = []
+        alerted: set[str] = set()
         for message in reversed(messages):
             key = fingerprint(message)
-            if key in seen:
+            # Skip mail already handled, and skip the second copy of a message that
+            # Gmail exposes in more than one folder, so one mail alerts once.
+            if key in seen or key in alerted:
                 continue
             actionable, reason = disposition(message)
             if actionable:
+                alerted.add(key)
                 sender = (message.get("from") or {}).get("addr", "unknown sender")
                 alerts.append(
                     f"ACTIONABLE EMAIL\n"
@@ -226,7 +267,9 @@ def main() -> int:
                     f"Date: {message.get('date') or 'unknown'}\n"
                     f"Next: {reason}"
                 )
-        save_seen(current)
+        # Merge rather than replace: fingerprints outside the live window must
+        # survive, or that mail re-alerts when Gmail lists it again.
+        save_seen(seen | current)
         if alerts:
             print("\n\n".join(alerts))
         return 0
