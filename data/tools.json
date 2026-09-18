@@ -3448,27 +3448,27 @@
       "synthesia"
     ],
     "verdict": "Good for fast short-form video and stylized clips.",
-    "checked_date": "2026-08-28",
+    "checked_date": "2026-09-18",
     "sources": [
       "https://pika.art"
     ],
     "faq": [
       [
         "Is Pika free?",
-        "Pika offers a free tier with watermarked output. Paid plans remove watermarks and unlock higher resolution and longer clips."
+        "Pika has a $0 plan, but it includes no monthly credits - it is credit-pack only. The free plan does include no-watermark output and 2 parallel video generations. Paid plans add monthly credits: 900 on Starter ($8/month billed annually), 3,150 on Creator, 8,550 on Fancy."
       ],
       [
-        "What is Pika best for?",
-        "Pika is best for short AI-generated video clips from text or image prompts, targeting social media and quick creative prototyping."
+        "How much does Pika cost?",
+        "Starter is $10/month billed monthly or $8/month billed annually for 900 credits/month. Creator is $35 or $28/month billed annually for 3,150 credits. Fancy is $95-$880/month, or $76-$704 billed annually, for 8,550+ credits. One-time credit packs run $25 for 1,500 credits up to $1,000 for 66,000."
       ],
       [
-        "Does Pika support audio?",
-        "Check the official feature page for current audio support, as capabilities evolve rapidly."
+        "Does Pika allow commercial use?",
+        "Commercial use requires a paid plan. The Starter tier still excludes the commercial license; Creator and above include it. Check the current tier table before paying, because plan names and inclusions change."
       ]
     ],
     "summary": "AI video generation for short clips, style transfers, and character consistency.",
-    "price": "Free plan; Basic $8/mo; Standard $28/mo; Pro $76/mo (annual billing)",
-    "pricing_checked_date": "2026-09-12",
+    "price": "Free $0 (packs only); Starter $8/mo; Creator $28/mo; Fancy $76/mo (annual billing; $10/$35/$95 monthly)",
+    "pricing_checked_date": "2026-09-18",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
     "key_features": [
@@ -3486,15 +3486,16 @@
       "Rapid concept iteration before a real shoot"
     ],
     "pros": [
-      "Real free tier (80 monthly credits) that allows evaluation",
+      "Free tier needs no card and includes no watermark, so effect quality is testable before paying",
       "Effect-driven tools are unusually fast for social formats",
-      "Credit costs are published per effect, resolution, and duration"
+      "Credit costs are published per effect, resolution, and duration",
+      "Cheapest paid entry is $8/month billed annually for 900 credits"
     ],
     "cons": [
-      "Published plan prices assume annual billing",
+      "The cheapest paid tier ($8/mo annual) still excludes the commercial license",
+      "The free tier gets no monthly credits at all - it is credit packs only, so free evaluation runs on purchased credits",
       "1080p and longer clips burn credits quickly",
-      "Commercial use requires a paid plan",
-      "Effect library churns; older workflows may not map to current tools"
+      "Effect library churns and tier names change; older workflows may not map to current tools"
     ],
     "trial_checklist": "Pick the effect you actually intend to publish rather than testing the flashiest demo, and run it at the resolution you would ship. Record the credits consumed for one finished clip and multiply by your real monthly output — that number, not the sticker price, decides which tier you need. Confirm clips render watermark-free on the plan you are considering, and check the commercial-use terms that apply.",
     "rating": 4.2,
@@ -3993,7 +3994,7 @@
     "name": "Tunii",
     "category": "Audio & Video",
     "best_for": "AI vocal removal, stem splitting, and instrumental tracks in the browser",
-    "price": "Free + paid minutes",
+    "price": "Free 10 trial min + 5 min/week; one-time packs: $4.99/30 min, $9.99/90 min, $24.99/300 min",
     "rating": 4.3,
     "official": "https://tunii.net/",
     "summary": "Browser-based AI vocal remover and stem splitter. Upload a song to create instrumentals, isolate vocals, or split into stems — no desktop audio editor needed.",
@@ -4013,7 +4014,7 @@
     "cons": [
       "Requires account to process audio",
       "10-minute max per file",
-      "No public pricing page for minute packs"
+      "Paid access is prepaid minute packs, so heavy users must rebuy rather than scale a plan"
     ],
     "key_features": [
       "AI vocal removal",
@@ -4039,7 +4040,10 @@
     "trial_checklist": "Use a real task involving vocal removal or stem splitting—not a demo prompt. Verify whether browser-based separation materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to whether the free tier covers your typical use. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Job fit 4 - browser-based vocal removal and stem splitting covers a repeated need for creators working with audio, without a desktop editor. Output quality 4 - stem splitting goes beyond vocals-only tools, and failed jobs do not consume minutes. Adoption 4 - no install required, though an account is needed to process audio. Cost 4 - a generous free tier (10 minutes at signup plus 5 minutes weekly). Held at 4.3 because files cap at 10 minutes and there is no public pricing page for minute packs."
+    "rating_rationale": "Job fit 4 - browser-based vocal removal and stem splitting covers a repeated need for creators working with audio, without a desktop editor. Output quality 4 - stem splitting goes beyond vocals-only tools, and failed jobs do not consume minutes. Adoption 4 - no install required, though an account is needed to process audio. Cost 4 - a generous free tier (10 minutes at signup plus 5 minutes weekly), and paid access is prepaid packs at $4.99/30 min, $9.99/90 min and $24.99/300 min that never expire. Held at 4.3 because files cap at 10 minutes and prepaid packs mean heavy users must rebuy rather than scale a plan.",
+    "url": "https://tunii.net/",
+    "checked_date": "2026-09-18",
+    "pricing_checked_date": "2026-09-18"
   },
   {
     "slug": "sonaopus",
@@ -4051,11 +4055,26 @@
     "official": "https://sonaopus.com/",
     "affiliate_url": "https://sonaopus.com/?ref=58448483",
     "product_links": [
-      {"name": "AI Recruiting", "url": "https://gumroad.com/a/58448483/hapwxp"},
-      {"name": "AI Project Management", "url": "https://gumroad.com/a/58448483/iwiiw"},
-      {"name": "AI HR Management", "url": "https://gumroad.com/a/58448483/eiddl"},
-      {"name": "AI Executive Assistant", "url": "https://gumroad.com/a/58448483/pqpox"},
-      {"name": "AI Real Estate Agent", "url": "https://gumroad.com/a/58448483/wtyioq"}
+      {
+        "name": "AI Recruiting",
+        "url": "https://gumroad.com/a/58448483/hapwxp"
+      },
+      {
+        "name": "AI Project Management",
+        "url": "https://gumroad.com/a/58448483/iwiiw"
+      },
+      {
+        "name": "AI HR Management",
+        "url": "https://gumroad.com/a/58448483/eiddl"
+      },
+      {
+        "name": "AI Executive Assistant",
+        "url": "https://gumroad.com/a/58448483/pqpox"
+      },
+      {
+        "name": "AI Real Estate Agent",
+        "url": "https://gumroad.com/a/58448483/wtyioq"
+      }
     ],
     "summary": "A prompt-structuring layer for five professions. You describe your situation once in a profession-specific multi-stage workflow, and Sonaopus pre-loads it into Claude, ChatGPT, or Gemini so the assistant drafts the HR policy, employee-relations letter, status report, or listing copy without you re-explaining the context.",
     "use_cases": [

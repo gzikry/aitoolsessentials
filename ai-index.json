@@ -488,7 +488,7 @@
       "name": "Pika",
       "slug": "pika",
       "category": "Video",
-      "price": "Free plan; Basic $8/mo; Standard $28/mo; Pro $76/mo (annual billing)",
+      "price": "Free $0 (packs only); Starter $8/mo; Creator $28/mo; Fancy $76/mo (annual billing; $10/$35/$95 monthly)",
       "url": "https://aitoolsessentials.com/tools/pika/"
     },
     {
@@ -558,7 +558,7 @@
       "name": "Tunii",
       "slug": "tunii",
       "category": "Audio & Video",
-      "price": "Free + paid minutes",
+      "price": "Free 10 trial min + 5 min/week; one-time packs: $4.99/30 min, $9.99/90 min, $24.99/300 min",
       "url": "https://aitoolsessentials.com/tools/tunii/"
     },
     {

@@ -445,7 +445,7 @@ PODCAST_DEPTH = """<h2>Where the money actually goes in a podcast stack</h2>
 <tr><td>Transcript editing</td><td><strong>Descript</strong></td><td>$0 with 1 media hour/month and 100 one-time AI credits</td><td>Hobbyist $16/person/mo billed annually ($24 monthly); Creator $24/mo annually ($35 monthly)</td></tr>
 <tr><td>Voice and narration</td><td><strong>ElevenLabs</strong></td><td>$0 with 10,000 credits</td><td>Starter $6/mo (30,000 credits); Creator $22/mo (121,000 credits)</td></tr>
 <tr><td>Intro music</td><td><strong>Suno</strong></td><td>Free plan</td><td>Pro and Premier tiers; the official page did not expose reliable dollar prices at check time</td></tr>
-<tr><td>Stem separation</td><td><strong>Tunii</strong></td><td>10 min at signup, 5 min/week</td><td>Minute packs; no public pricing page. Failed jobs do not consume minutes</td></tr>
+<tr><td>Stem separation</td><td><strong>Tunii</strong></td><td>10 min at signup, 5 min/week</td><td>One-time minute packs $4.99/30 min, $9.99/90 min, $24.99/300 min; minutes never expire. Failed jobs do not consume minutes</td></tr>
 </tbody>
 </table>
 <p class="monetization-note">Official published amounts with check dates. Two rows state no price because the vendor's page did not publish a verifiable figure — we do not print an amount we cannot source.</p>

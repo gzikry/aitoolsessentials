@@ -29,7 +29,7 @@
       "route": "email - published on marketintelligencetools.com/contact (MX mx1/mx2.spacemail.com, verified live)",
       "note": "Jan Suski, independent reviewer. The pitch deliberately did NOT claim an Amplemarket Growth/Elite contract figure we do not have; it led with the price-opacity method, which is what the request actually asked for.",
       "figures_cited": "5 of 76 publish no self-serve price (Harvey, Spellbook, Dragon Copilot, Pika, Tunii); Browse AI $48/mo vs $19/mo billed annually = 2.5x",
-      "figures_check": "Computed from data/pricing_snapshots.json after the digests contradicted each other (one said 10 tools publish no price, another said 7). The true opaque count is 5 - the naive count of 7 wrongly included products that are simply free. Browse AI's figure re-verified live on browse.ai/pricing 2026-09-18."
+      "figures_check": "SUPERSEDED - this entry contained two errors, both corrected 2026-09-18. (1) The opaque count is 3, not 5: Pika and Tunii DO publish paid prices (pika.art/pricing has a full tier table with a monthly/annual toggle; tunii.net/pricing lists one-time minute packs at $4.99/$9.99/$24.99). Our own records for both were wrong, not the vendors'. Only Harvey, Spellbook and Dragon Copilot publish no paid-tier price. (2) The '1.2-1.3x' spread claim was understated: across the 9 same-tier monthly/annual pairs we hold, the ratio runs 1.21x (Slack Pro $8.75 vs $7.25) to 2.53x (Browse AI $48 vs $19), median 1.33x - but three are above 1.8x, so the range is wider than stated. Both errors were disclosed to the recipient in the reply below rather than left standing."
     },
     {
       "date": "2026-09-18",
@@ -41,6 +41,18 @@
       "note": "Rani Molla, Senior Tech Correspondent, Sherwood News. The request asked for individual stories; we do not have one, so the pitch offered the structural cause instead of a fabricated anecdote.",
       "figures_cited": "70 of 76 tools sit in the 13 categories holding three or more",
       "figures_check": "Verified from data/stack_audit_catalog.json 2026-09-18."
+    },
+    {
+      "date": "2026-09-18",
+      "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
+      "action": "replied",
+      "to": "jan@jansuski.com",
+      "sent_message_id": "178 (one message; verified in Sent Mail and All Mail, no Trash copy)",
+      "route": "reply-all to the correspondent's own reply (In-Reply-To <BEFKB5PHCUU4.4QL01L7GFNUG3@mailcore-84f949d7c6-dhwdf>)",
+      "note": "Jan Suski answered the pitch. His reply asked directly whether a dynamically re-checked, searchable pricing database would make sense, offered his three Amplemarket URLs, and invited an exchange. Answered as a peer method discussion: why a price database is defensible (the source degrades; the checked date is the artifact a vendor cannot publish about itself), the Amplemarket tier data verified from amplemarket.com/pricing today, and two failure modes from building the same thing.",
+      "figures_cited": "Amplemarket from amplemarket.com/pricing checked 2026-09-18: Startup $600/mo annual term, 2 users, 27,000 contacts; Growth 4 users/140,000 contacts and Elite 10 users/400,000 contacts both 'Custom'; email credits 13,500/35,000/40,000 per user/year; phone credits 600/5,000/9,600; mailboxes 2/4/8. Three tools publish no paid-tier price (Harvey, Spellbook, Dragon Copilot; harvey.ai/pricing 404s). Nine same-tier monthly/annual pairs: 1.21x-2.53x, median 1.33x.",
+      "figures_check": "All Amplemarket figures read off the live pricing page this run. Every credit, seat and contact number was verified present in the rendered page before citing. The monthly/annual ratios were computed from data/tool_sources.json using one tier per tool - an earlier pass compared Slack's Business+ monthly ($18) against its Pro annual ($7.25) and produced a meaningless 2.48x; same-tier Slack Pro is $8.75 vs $7.25 = 1.21x. Recomputed and disclosed.",
+      "corrections_disclosed": true
     }
   ]
 }
