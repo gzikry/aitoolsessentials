@@ -31,13 +31,14 @@ An earlier resource pitch to `dan@tldr.tech`, `support@therundown.ai`, `team@ben
 
 ## Content corrections before sending
 
-1. **"We track 74 tools" is stale in all 10 drafts.** The site publishes **76** (verified on `/tools/`, 2026-09-15). `scripts/guest_pitch_builder.py` hardcodes 74 — fix the template.
-2. **The blog-template bullets are unverified claims.** The drafts assert "Copilot Pro ($10) + Cursor Pro ($20) + Claude Max ($100+) = $130/month" and "ChatGPT Pro split into two tiers ($120/$200)." Neither figure appears in `data/tools.json` or `data/pricing_snapshots.json` — our own verified data has ChatGPT priced as "Free + paid plans" and no "Copilot Pro" tier at all. For a site whose pitch is *verified pricing with dated evidence*, shipping unsourced numbers to editors is the one error that costs the angle. Either source and snapshot them first, or cut the bullets.
-3. **Signature.** Drafts are signed "— George Zikry". Standing convention is outbound mail signed **AIToolsEssentials**, never George's name.
-4. **Pricing Watch freshness.** Snapshots run 2026-08-21 → 2026-09-13; 37 of 76 are from 2026-08-21 (25 days old) while the page promises weekly re-verification. An editor who clicks today sees August dates. Re-verify before pitching it as current.
+1. ~~**"We track 74 tools" is stale in all 10 drafts.**~~ **FIXED 2026-09-18** (commit `3bec7a04`). `scripts/guest_pitch_builder.py` now derives the count from `data/tools.json` (`tracked_tool_count()`) instead of hardcoding it, so it cannot drift again. Regenerated drafts read "We track 76 tools".
+2. ~~**The blog-template bullets are unverified claims.**~~ **FIXED 2026-09-18** (commit `3bec7a04`). The unsourced bullets (Copilot Pro $10, "$130/month", Microsoft 365 "+16%", ChatGPT Pro "$120/$200") are replaced by `verified_overlap_line()`, which cites only figures present in our own dated snapshots: Cursor Pro $20/mo and Claude Max from $100/mo. The identical claims in `marketing/haro-outreach/pitch-templates.md` were fixed in the same commit.
+3. ~~**Signature.**~~ **FIXED 2026-09-18** (commit `3bec7a04`). All three `guest_pitch_builder.py` templates and all three `haro-outreach/pitch-templates.md` templates now close as AIToolsEssentials only; zero occurrences of George's name remain in either file.
+4. **Pricing Watch freshness.** Snapshots run 2026-08-21 → 2026-09-13; 37 of 76 are from 2026-08-21 (25 days old) while the page promises weekly re-verification. An editor who clicks today sees August dates. **Still open** — re-verify before pitching it as current. The pitch wording now says "with a checked date" rather than "weekly", which removes the mismatch but not the staleness.
 
 ## Log
 
 | Date | Action | Notes |
 |---|---|---|
 | 2026-09-15 | Tracking file created | 0 sends from this batch; contacts and draft claims verified |
+| 2026-09-18 | Corrections 1–3 fixed in source | `guest_pitch_builder.py` + `haro-outreach/pitch-templates.md` (commit `3bec7a04`). No send. Item 4 (snapshot freshness) still open. |
