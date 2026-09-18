@@ -78,8 +78,8 @@
 ## Backlog: next weekly batches (from 2026-09-18)
 Priority order: how-to/workflow → audience guides → question-intent. All six original
 how-to items and all six audience guides are now shipped; continue with:
-1. AI-assisted job-search and application workflow (honest framing, no outcome claims)
-2. Running a monthly AI cost review: the recurring keep/cut meeting
+1. AI-assisted job-search and application workflow (honest framing, no outcome claims) ✅ shipped 2026-09-18
+2. Running a monthly AI cost review: the recurring keep/cut meeting ✅ shipped 2026-09-18
 3. Vendor evaluation questionnaire: the questions to send a tool vendor before buying
 4. Best AI tools for project managers (audience guide)
 5. Best AI tools for customer support teams (audience guide)

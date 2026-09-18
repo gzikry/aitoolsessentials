@@ -38,6 +38,8 @@ LEARN = [
     ('evaluating-ai-coding-tools-team-rollout.html', 'Evaluating AI coding tools for a team', 'Security-first rollout checklist so you do not buy two IDEs.'),
     ('company-ai-usage-policy-checklist.html', 'Writing a company AI usage policy', 'The seven sections to write, a three-tier allow list, and who approves a new tool.'),
     ('ai-email-triage-setup.html', 'AI email triage that actually works', 'What summaries save, a rules-first order, and what never to automate in email.'),
+    ('ai-assisted-job-search-workflow.html', 'AI-assisted job search workflow', 'Tailoring, letters, rehearsal, research, and tracking — with the claims that must stay yours.'),
+    ('monthly-ai-cost-review.html', 'Running a monthly AI cost review', 'A 30-minute recurring keep/cut meeting that catches subscription creep before renewal.'),
     ('ai-image-rights-commercial-use.html', 'AI image rights for commercial use', 'What to check before using Midjourney or Leonardo output in client work.'),
     ('how-to-cancel-ai-tools-before-renewal.html', 'How to cancel AI tools before renewal', '14-day process to cancel unused seats without losing the weekly workflow.'),
     ('cursor-vs-copilot-which-to-pay-for.html', 'Cursor vs Copilot: which to pay for', 'Pick one paid coding assistant with a real bugfix, not two overlapping seats.'),
