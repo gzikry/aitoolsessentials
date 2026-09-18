@@ -5,12 +5,14 @@
       "digest": "Official US monthly pricing lists Firefly Standard at US$9.99 with 2,000 generative credits/month; Firefly Pro at US$19.99 with 4,000 credits/month; Firefly Pro Plus regularly US$49.99 with 10,000 cre"
     },
     "airtable-ai": {
-      "date": "2026-08-21",
-      "digest": "Free: $0 and 500 AI credits per editor each month. Team: $20/seat/month billed annually or $24 billed monthly, with 15,000 AI credits per billable collaborator each month. Business: $45/seat/month bil"
+      "date": "2026-09-18",
+      "digest": "Free: $0 and 500 AI credits per editor each month. Team: $20/seat/month billed annually or $24 billed monthly, with 15,000 AI credits per billable collaborator each month. Business: $45/seat/month bil",
+      "verified_against": "https://airtable.com/pricing"
     },
     "bolt-new": {
-      "date": "2026-08-21",
-      "digest": "Free: $0, public and private projects, 300,000-token daily limit, 1 million tokens/month, 10 MB uploads, Bolt-branded hosting, up to 333,000 web requests, and unlimited databases. Pro: $25/month, no d"
+      "date": "2026-09-18",
+      "digest": "Free: $0, public and private projects, 300,000-token daily limit, 1 million tokens/month, 10 MB uploads, Bolt-branded hosting, up to 333,000 web requests, and unlimited databases. Pro: $25/month, no d",
+      "verified_against": "https://bolt.new/pricing"
     },
     "canva-ai": {
       "date": "2026-08-21",
@@ -21,64 +23,75 @@
       "digest": "OpenAI officially lists ChatGPT Free, Go, Plus, Pro, Business, and Enterprise. Free is $0; paid self-service plans are billed per user per month, while Enterprise pricing is sales-assisted. Exact loca"
     },
     "claude": {
-      "date": "2026-08-21",
-      "digest": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2\u2013150 users and lists Standard seats at $20 per seat per month "
+      "date": "2026-09-18",
+      "digest": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2\u2013150 users and lists Standard seats at $20 per seat per month ",
+      "verified_against": "https://www.anthropic.com/pricing"
     },
     "copy-ai": {
-      "date": "2026-08-21",
-      "digest": "Official pricing page lists Chat at US$29/month or US$24/month billed US$288 annually, with 5 seats and unlimited words and projects in Chat. Growth is US$1,000/month billed annually with 75 seats and"
+      "date": "2026-09-18",
+      "digest": "Official pricing page lists Chat at US$29/month or US$24/month billed US$288 annually, with 5 seats and unlimited words and projects in Chat. Growth is US$1,000/month billed annually with 75 seats and",
+      "verified_against": "https://www.copy.ai/prices"
     },
     "cursor": {
-      "date": "2026-08-25",
-      "digest": "Cursor Free includes limited agent requests and Composer access. Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom (cursor.com/pricing, checked 2026-08-25). Cursor Model"
+      "date": "2026-09-18",
+      "digest": "Cursor Free includes limited agent requests and Composer access. Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom (cursor.com/pricing, checked 2026-08-25). Cursor Model",
+      "verified_against": "https://cursor.com/pricing"
     },
     "deepseek": {
       "date": "2026-08-21",
       "digest": "DeepSeek's official website describes its consumer web chat as free. No official paid consumer or team subscription schedule was located. API access is separately usage-priced, with current model and "
     },
     "descript": {
-      "date": "2026-08-21",
-      "digest": "Free $0 includes 1 media hour/month and 100 one-time AI credits. Hobbyist is $24/month or $16/person/month billed annually, with 10 media hours and 400 AI credits/month. Creator is $35/month or $24/pe"
+      "date": "2026-09-18",
+      "digest": "Free $0 includes 1 media hour/month and 100 one-time AI credits. Hobbyist is $24/month or $16/person/month billed annually, with 10 media hours and 400 AI credits/month. Creator is $35/month or $24/pe",
+      "verified_against": "https://descript.com/pricing"
     },
     "elevenlabs": {
-      "date": "2026-08-21",
-      "digest": "Monthly Creative plans: Free $0 with 10,000 credits; Starter $6 with 30,000 credits; Creator $22 with 121,000 credits, currently advertised at $11 for the first month; Pro $99 with 600,000 credits; Sc"
+      "date": "2026-09-18",
+      "digest": "Monthly Creative plans: Free $0 with 10,000 credits; Starter $6 with 30,000 credits; Creator $22 with 121,000 credits, currently advertised at $11 for the first month; Pro $99 with 600,000 credits; Sc",
+      "verified_against": "https://elevenlabs.io/pricing"
     },
     "fathom": {
-      "date": "2026-08-21",
-      "digest": "free: $0; unlimited recordings, transcription, and storage; instant AI summaries; clips, playlists, and search. premium: $20/user/month monthly or $16/user/month billed annually; advanced summaries, A"
+      "date": "2026-09-18",
+      "digest": "free: $0; unlimited recordings, transcription, and storage; instant AI summaries; clips, playlists, and search. premium: $20/user/month monthly or $16/user/month billed annually; advanced summaries, A",
+      "verified_against": "https://www.fathom.ai/pricing"
     },
     "fireflies": {
-      "date": "2026-08-21",
-      "digest": "free: $0; unlimited transcription and AI summaries; 400 minutes of storage per team; 2-hour recording limit. pro: $18/seat/month monthly or $10/seat/month billed annually; 8,000 storage minutes per se"
+      "date": "2026-09-18",
+      "digest": "free: $0; unlimited transcription and AI summaries; 400 minutes of storage per team; 2-hour recording limit. pro: $18/seat/month monthly or $10/seat/month billed annually; 8,000 storage minutes per se",
+      "verified_against": "https://fireflies.ai/pricing"
     },
     "gamma": {
       "date": "2026-08-21",
       "digest": "free: $0; 400 one-time signup credits that do not refill; up to 10 slides per prompt; PDF, PPTX, PNG, and Google Slides export. plus: $9/seat/month equivalent, $108/seat billed annually; 1,000 monthly"
     },
     "gemini": {
-      "date": "2026-08-21",
-      "digest": "For US personal accounts, Gemini Free is $0 per month, Google AI Pro is $19.99 per month, and Google AI Ultra starts at $99.99 per month, with a $199.99 option offering higher limits. For organization"
+      "date": "2026-09-18",
+      "digest": "For US personal accounts, Gemini Free is $0 per month, Google AI Pro is $19.99 per month, and Google AI Ultra starts at $99.99 per month, with a $199.99 option offering higher limits. For organization",
+      "verified_against": "https://gemini.google/us/subscriptions/"
     },
     "github-copilot": {
       "date": "2026-08-21",
       "digest": "Copilot Free is free and limited to 2,000 completions per month, auto model selection, and an unspecified allowance of GitHub AI Credits. Copilot Student is free for verified students. Paid individual"
     },
     "grammarly": {
-      "date": "2026-08-21",
-      "digest": "Free: $0/month and 100 generative-AI prompts per month. Pro: displayed at $12 USD and includes 2,000 AI prompts per member per month, unlimited personalized suggestions, full-sentence rewrites, tone c"
+      "date": "2026-09-18",
+      "digest": "Free: $0/month and 100 generative-AI prompts per month. Pro: displayed at $12 USD and includes 2,000 AI prompts per member per month, unlimited personalized suggestions, full-sentence rewrites, tone c",
+      "verified_against": "https://www.grammarly.com/plans"
     },
     "grok": {
       "date": "2026-08-25",
       "digest": "Grok Free is $0. SuperGrok is $30/month, SuperGrok Plus is $100/month, with higher tiers above. API (docs.x.ai, checked 2026-08-25): Grok 4.6 $2.00 input / $6.00 output per 1M tokens (500K context); p"
     },
     "heygen": {
-      "date": "2026-08-21",
-      "digest": "Free $0 with up to 3 videos/month. Creator is $29/month or $24/month billed annually with 600 credits/month. Pro starts at $49/month with 1,000 credits/month; official pricing says Pro tiers scale to "
+      "date": "2026-09-18",
+      "digest": "Free $0 with up to 3 videos/month. Creator is $29/month or $24/month billed annually with 600 credits/month. Pro starts at $49/month with 1,000 credits/month; official pricing says Pro tiers scale to ",
+      "verified_against": "https://www.heygen.com/pricing"
     },
     "jasper": {
-      "date": "2026-08-21",
-      "digest": "Pro: $69/month per seat when billed monthly or $59/month per seat when billed yearly, with a seven-day free trial and one included seat. Pro includes two Brand Voices, five Knowledge assets, and three"
+      "date": "2026-09-18",
+      "digest": "Pro: $69/month per seat when billed monthly or $59/month per seat when billed yearly, with a seven-day free trial and one included seat. Pro includes two Brand Voices, five Knowledge assets, and three",
+      "verified_against": "https://www.jasper.ai/pricing"
     },
     "leonardo-ai": {
       "date": "2026-08-21",
@@ -105,60 +118,71 @@
       "digest": "Official plans are Basic at US$10/month or US$96/year with 3.3 Fast GPU hours/month; Standard at US$30/month or US$288/year with 15 Fast GPU hours/month and unlimited Relax image generations; Pro at U"
     },
     "mistral-le-chat": {
-      "date": "2026-08-21",
-      "digest": "Le Chat is now Mistral Vibe. Free plan available; Pro is $14.99/month excluding taxes; Team is $24.99/user/month excluding taxes; Enterprise pricing is custom."
+      "date": "2026-09-18",
+      "digest": "Le Chat is now Mistral Vibe. Free plan available; Pro is $14.99/month excluding taxes; Team is $24.99/user/month excluding taxes; Enterprise pricing is custom.",
+      "verified_against": "https://mistral.ai/pricing/"
     },
     "n8n": {
       "date": "2026-08-21",
       "digest": "Starter: \u20ac20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: \u20ac50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 "
     },
     "notion-ai": {
-      "date": "2026-08-21",
-      "digest": "Free: $0/member/month with a limited Notion AI trial. Plus: $10/member/month with a limited AI trial. Business: $20/member/month and includes Notion Agent, AI Meeting Notes, Enterprise Search beta, an"
+      "date": "2026-09-18",
+      "digest": "Free: $0/member/month with a limited Notion AI trial. Plus: $10/member/month with a limited AI trial. Business: $20/member/month and includes Notion Agent, AI Meeting Notes, Enterprise Search beta, an",
+      "verified_against": "https://www.notion.com/pricing"
     },
     "otter-ai": {
-      "date": "2026-08-21",
-      "digest": "basic: Free; 300 monthly transcription minutes, 30 minutes per conversation, and three lifetime audio/video file imports. pro: $16.99/user/month monthly or $8.33/user/month billed annually; 1,200 in-a"
+      "date": "2026-09-18",
+      "digest": "basic: Free; 300 monthly transcription minutes, 30 minutes per conversation, and three lifetime audio/video file imports. pro: $16.99/user/month monthly or $8.33/user/month billed annually; 1,200 in-a",
+      "verified_against": "https://otter.ai/pricing"
     },
     "perplexity": {
       "date": "2026-08-21",
       "digest": "Official support lists Standard/Free, individual Pro, individual Max, Enterprise Pro, and Enterprise Max. Max includes everything in Pro plus the highest access to advanced models, Comet Max Assistant"
     },
     "poe": {
-      "date": "2026-08-21",
-      "digest": "Poe offers free daily points and annual subscriptions of $49.99/year for 10,000 points/day, $199.99/year for 660,000 points/month, $499.99/year for 1.65 million points/month, $999.99/year for 3.3 mill"
+      "date": "2026-09-18",
+      "digest": "Poe offers free daily points and annual subscriptions of $49.99/year for 10,000 points/day, $199.99/year for 660,000 points/month, $499.99/year for 1.65 million points/month, $999.99/year for 3.3 mill",
+      "verified_against": "https://poe.com/subscription_plans"
     },
     "replit-ai": {
       "date": "2026-08-21",
-      "digest": "Starter is free with daily Agent credits, free daily usage, one published live project, and a built-in database. Core is $25 monthly or $20/month billed annually, includes two parallel agents and $25 "
+      "digest": "Starter is free with daily Agent credits, free daily usage, one published live project, and a built-in database. Core is $25 monthly or $20/month billed annually, includes two parallel agents and $25 ",
+      "freshness_flag": "DRIFTED 2026-09-18: the figure(s) [25.0] asserted in this digest were not found on https://replit.com/pricing on 2026-09-18. The page is reachable and shows other prices, so this needs human re-verification before the snapshot is cited again. NOT auto-corrected."
     },
     "runway": {
-      "date": "2026-08-21",
-      "digest": "Creative plans: Free $0 with 125 one-time credits and 5 GB storage; Standard $15 monthly or $12/month billed annually with 625 credits/month; Pro $35 monthly or $28/month billed annually with 2,250 cr"
+      "date": "2026-09-18",
+      "digest": "Creative plans: Free $0 with 125 one-time credits and 5 GB storage; Standard $15 monthly or $12/month billed annually with 625 credits/month; Pro $35 monthly or $28/month billed annually with 2,250 cr",
+      "verified_against": "https://runwayml.com/pricing"
     },
     "slack-ai": {
-      "date": "2026-08-21",
-      "digest": "Free: $0. Pro: $7.25/user/month when paid annually or $8.75 when paid monthly. Business+: $15/user/month annually or $18 monthly. Enterprise+ uses sales-based pricing. The pricing page labels Free and"
+      "date": "2026-09-18",
+      "digest": "Free: $0. Pro: $7.25/user/month when paid annually or $8.75 when paid monthly. Business+: $15/user/month annually or $18 monthly. Enterprise+ uses sales-based pricing. The pricing page labels Free and",
+      "verified_against": "https://slack.com/pricing"
     },
     "synthesia": {
-      "date": "2026-08-21",
-      "digest": "Basic is $0 with 1,200 credits/month. Starter is displayed at $29/month with 1,200 credits/month, or $18/month billed yearly with 14,500 credits/year. Creator is displayed at $89/month with 3,600 cred"
+      "date": "2026-09-18",
+      "digest": "Basic is $0 with 1,200 credits/month. Starter is displayed at $29/month with 1,200 credits/month, or $18/month billed yearly with 14,500 credits/year. Creator is displayed at $89/month with 3,600 cred",
+      "verified_against": "https://www.synthesia.io/pricing"
     },
     "v0": {
-      "date": "2026-08-21",
-      "digest": "Free: $0/month, $5 monthly credits, 7-message daily limit. Premium: $20/month with $20 monthly credits, but is being sunset and is unavailable to new users. Plus: $30/user/month with $30 monthly credi"
+      "date": "2026-09-18",
+      "digest": "Free: $0/month, $5 monthly credits, 7-message daily limit. Premium: $20/month with $20 monthly credits, but is being sunset and is unavailable to new users. Plus: $30/user/month with $30 monthly credi",
+      "verified_against": "https://v0.app/docs/pricing"
     },
     "you-com": {
       "date": "2026-08-21",
       "digest": "Official support says the chat product has a free plan with unlimited Smart Agent access, limited premium-agent/model queries, and paid plans with greater access, but it does not state current chat-pl"
     },
     "zapier-ai": {
-      "date": "2026-08-21",
-      "digest": "Core Zapier plans: Free at $0 with 100 tasks/month; Professional starts at $19.99/month when billed annually; Team is $69/month when billed annually; Enterprise is custom. AI steps, code, MCP, SDK, an"
+      "date": "2026-09-18",
+      "digest": "Core Zapier plans: Free at $0 with 100 tasks/month; Professional starts at $19.99/month when billed annually; Team is $69/month when billed annually; Enterprise is custom. AI steps, code, MCP, SDK, an",
+      "verified_against": "https://zapier.com/pricing"
     },
     "allvideoai": {
-      "date": "2026-08-23",
-      "digest": "Free tier plus credit-based plans: Starter $17/month (billed annually, $204/year), Plus $39/month (annual $468), Max $59/month (annual $708), Ultra $159/month (annual $1,908). Promotional countdown ti"
+      "date": "2026-09-18",
+      "digest": "Free tier plus credit-based plans: Starter $17/month (billed annually, $204/year), Plus $39/month (annual $468), Max $59/month (annual $708), Ultra $159/month (annual $1,908). Promotional countdown ti",
+      "verified_against": "https://allvideoai.com/pricing"
     },
     "hermes-agent": {
       "date": "2026-08-26",
@@ -201,32 +225,39 @@
       "digest": "Spellbook\u2019s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as"
     },
     "cocounsel": {
-      "date": "2026-08-26",
-      "digest": "Thomson Reuters\u2019 official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by juri"
+      "date": "2026-09-18",
+      "digest": "Thomson Reuters\u2019 official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by juri",
+      "verified_against": "https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing"
     },
     "magicschool": {
-      "date": "2026-08-26",
-      "digest": "MagicSchool's official pricing page lists Free at $0 Forever Free for individual teachers exploring AI; Plus at $8.33 USD/user/month billed annually or $12.99 USD/month billed monthly; and Enterprise "
+      "date": "2026-09-18",
+      "digest": "MagicSchool's official pricing page lists Free at $0 Forever Free for individual teachers exploring AI; Plus at $8.33 USD/user/month billed annually or $12.99 USD/month billed monthly; and Enterprise ",
+      "verified_against": "https://www.magicschool.ai/pricing"
     },
     "khanmigo": {
-      "date": "2026-08-26",
-      "digest": "Khanmigo's official teacher page states the product is completely free for teachers. The official pricing page lists $4/month or $44/year for learners and for families, with sales tax not included, an"
+      "date": "2026-09-18",
+      "digest": "Khanmigo's official teacher page states the product is completely free for teachers. The official pricing page lists $4/month or $44/year for learners and for families, with sales tax not included, an",
+      "verified_against": "https://www.khanmigo.ai/pricing"
     },
     "instrumentl": {
-      "date": "2026-08-26",
-      "digest": "Instrumentl's official pricing page lists Discover at $299/month paid upfront annually or $349 paid monthly (up to 3 users); Pre-Award at $499/month annually or $579 monthly (up to 5 users); Full Life"
+      "date": "2026-09-18",
+      "digest": "Instrumentl's official pricing page lists Discover at $299/month paid upfront annually or $349 paid monthly (up to 3 users); Pre-Award at $499/month annually or $579 monthly (up to 5 users); Full Life",
+      "verified_against": "https://www.instrumentl.com/pricing"
     },
     "grantable": {
-      "date": "2026-08-26",
-      "digest": "Grantable's official pricing page lists Free at $0 with 5 chat messages/day and file imports up to 10 MB; Starter at $50/month; and Pro at $150/month. Qualifying 501(c)(3) organizations with annual op"
+      "date": "2026-09-18",
+      "digest": "Grantable's official pricing page lists Free at $0 with 5 chat messages/day and file imports up to 10 MB; Starter at $50/month; and Pro at $150/month. Qualifying 501(c)(3) organizations with annual op",
+      "verified_against": "https://www.grantable.co/pricing"
     },
     "tenantcloud": {
-      "date": "2026-08-26",
-      "digest": "TenantCloud's official pricing page lists Starter at $25/month or $180/year billed annually ($15/month, advertised as 40% off); Growth at $35/month or $350/year ($29/month); Pro at $60/month or $600/y"
+      "date": "2026-09-18",
+      "digest": "TenantCloud's official pricing page lists Starter at $25/month or $180/year billed annually ($15/month, advertised as 40% off); Growth at $35/month or $350/year ($29/month); Pro at $60/month or $600/y",
+      "verified_against": "https://www.tenantcloud.com/pricing"
     },
     "landlord-studio": {
-      "date": "2026-08-26",
-      "digest": "Landlord Studio's official pricing page lists Go as Free for up to 3 units; Pro at $12.00/month or $144 annually; and Pro Plus at $28.00/month or $366 annually. Official FAQ copy says annual billing s"
+      "date": "2026-09-18",
+      "digest": "Landlord Studio's official pricing page lists Go as Free for up to 3 units; Pro at $12.00/month or $144 annually; and Pro Plus at $28.00/month or $366 annually. Official FAQ copy says annual billing s",
+      "verified_against": "https://www.landlordstudio.com/pricing"
     },
     "riverside-fm": {
       "date": "2026-08-26",
@@ -238,15 +269,17 @@
     },
     "htmlslides": {
       "date": "2026-08-27",
-      "digest": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5"
+      "digest": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5",
+      "freshness_flag": "DRIFTED 2026-09-18: the figure(s) [9.9] asserted in this digest were not found on https://www.htmlslides.ai/pricing on 2026-09-18. The page is reachable and shows other prices, so this needs human re-verification before the snapshot is cited again. NOT auto-corrected."
     },
     "whop-cli": {
       "date": "2026-08-27",
       "digest": "Free CLI install. Whop platform fees apply on sales (standard Whop transaction fees). No separate CLI subscription."
     },
     "aibase": {
-      "date": "2026-08-28",
-      "digest": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respecti"
+      "date": "2026-09-18",
+      "digest": "Official /en/pricing lists Free trial credits, plus monthly Basic $29.9/mo (was $39.9), Pro $49.9/mo (was $69.9), and Ultimate $99.9/mo (was $120) with 800, 1,400, and 2,800 credits per month respecti",
+      "verified_against": "https://aibase.art/pricing"
     },
     "ideogram": {
       "date": "2026-08-28",
@@ -254,7 +287,7 @@
     },
     "luma-ai": {
       "date": "2026-08-28",
-      "digest": "Luma official pricing lists Plus at $30/month ($300/year) with 10,000 credits; Pro at $90/month ($900/year) with 40,000 credits and 4x Luma Agents usage; Ultra at $300/month ($3,000/year) with 150,000 credits and 15x Luma Agents usage. Business Team and Enterprise are contact-sales. Individual plans save 20% yearly. Utilities priced separately: remove background 1 credit/image, reframe video 32 credits/sec, upscale 1080p 10 credits/sec, upscale 4K 17 credits/sec. lumalabs.ai/pricing checked 2026-08-28."
+      "digest": "Plus is $30/month or $300/year with 10,000 credits; Pro is $90/month or $900/year with 40,000 credits; Ultra is $300/month or $3,000/year with 150,000 credits. Team and Enterprise are sales-assisted."
     },
     "pika": {
       "date": "2026-08-28",
@@ -269,32 +302,37 @@
       "digest": "Udio official pricing lists Standard at $10/month with 1,200 monthly credits, no daily limit, up to 6 concurrent songs, editing tools, stems, and custom cover art. Pro at $30/month with 4,800 monthly credits and up to 8 concurrent songs. Free plan at $0 with 100 credits/month and 10 credit daily limit. Top-ups: 100 credits $3.00, 1,000 credits $25.00. udio.com/pricing checked 2026-08-28."
     },
     "shortwave": {
-      "date": "2026-09-01",
-      "digest": "Business is $30/seat/month, Premier is $45/seat/month, and Max is $120/seat/month. Business includes standard intelligence (Claude Sonnet 4.6), roughly 150-300 AI requests/day, 5 years AI search histo"
+      "date": "2026-09-18",
+      "digest": "Business is $30/seat/month, Premier is $45/seat/month, and Max is $120/seat/month. Business includes standard intelligence (Claude Sonnet 4.6), roughly 150-300 AI requests/day, 5 years AI search histo",
+      "verified_against": "https://www.shortwave.com/pricing/"
     },
     "browse-ai": {
-      "date": "2026-09-01",
-      "digest": "Free: $0 forever, unlimited robots, 2 websites, 3 users. Personal: $48/month or $19/month billed annually, 5 websites, 3 users. Professional: $87/month or $69/month billed annually, 10 websites, 10 us"
+      "date": "2026-09-18",
+      "digest": "Free: $0 forever, unlimited robots, 2 websites, 3 users. Personal: $48/month or $19/month billed annually, 5 websites, 3 users. Professional: $87/month or $69/month billed annually, 10 websites, 10 us",
+      "verified_against": "https://www.browse.ai/pricing"
     },
     "rows": {
-      "date": "2026-09-01",
-      "digest": "Free: $0 forever, 5 AI tasks/month, manual data import, 10 integration accounts, 3 guests. Plus: $8/month per user billed monthly or $6/month billed annually, 200 AI tasks/month, daily data automation"
+      "date": "2026-09-18",
+      "digest": "Free: $0 forever, 5 AI tasks/month, manual data import, 10 integration accounts, 3 guests. Plus: $8/month per user billed monthly or $6/month billed annually, 200 AI tasks/month, daily data automation",
+      "verified_against": "https://rows.com/pricing"
     },
     "notebooklm": {
       "date": "2026-09-01",
       "digest": "NotebookLM has been renamed to Gemini Notebook. The official about page states it is free to use for individuals. The page advertises uploading PDFs, websites, YouTube videos, audio files, Google Docs"
     },
     "typingmind": {
-      "date": "2026-09-01",
-      "digest": "TypingMind offers one-time lifetime licenses: Standard at $39 (basic chat, AI agents, voice input, chat sharing), Extended at $79 (adds image generation, web search, text-to-speech, vision/images, doc"
+      "date": "2026-09-18",
+      "digest": "TypingMind offers one-time lifetime licenses: Standard at $39 (basic chat, AI agents, voice input, chat sharing), Extended at $79 (adds image generation, web search, text-to-speech, vision/images, doc",
+      "verified_against": "https://typingmind.com/buy"
     },
     "speechify": {
       "date": "2026-09-01",
       "digest": "Free: $0, listen at up to 1.5x speed, 10 robotic-sounding voices, text-to-speech features only. Premium: $29/month, includes 1000+ natural voices, 60+ languages, 5x speed, scan and listen, AI summarie"
     },
     "catch-ai": {
-      "date": "2026-09-02",
-      "digest": "Official homepage and /security (checked 2026-09-02) advertise one public plan: $99/month, billed monthly, cancel anytime, with a 10-day free trial. catchagent.ai/pricing returned 404. The same homepa"
+      "date": "2026-09-18",
+      "digest": "Official homepage and /security (checked 2026-09-02) advertise one public plan: $99/month, billed monthly, cancel anytime, with a 10-day free trial. catchagent.ai/pricing returned 404. The same homepa",
+      "verified_against": "https://www.catchagent.ai/"
     },
     "tunii": {
       "date": "2026-09-05",
@@ -372,6 +410,13 @@
       "previous_check": "2026-09-12",
       "new_check": "2026-09-13",
       "note": "Sonaopus: official pricing page changed since 2026-09-12 check. Re-verified 2026-09-13."
+    },
+    {
+      "slug": "luma-ai",
+      "detected": "2026-09-18",
+      "previous_check": "2026-09-18",
+      "new_check": "2026-08-28",
+      "note": "Luma AI: official pricing page changed since 2026-09-18 check. Re-verified 2026-08-28."
     }
   ],
   "updated": "2026-09-18"

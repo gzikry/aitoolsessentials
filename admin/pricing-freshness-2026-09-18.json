@@ -1,0 +1,983 @@
+{
+ "generated": "2026-09-18",
+ "results": [
+  {
+   "slug": "adobe-enhance-speech",
+   "url": "https://podcast.adobe.com/en/plans",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "adobe-firefly",
+   "url": "https://www.adobe.com/products/firefly/plans.html",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    9.99,
+    19.99,
+    49.99
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "aibase",
+   "url": "https://aibase.art/pricing",
+   "recorded_date": "2026-08-28",
+   "claimed": [
+    29.0,
+    39.0,
+    49.0,
+    69.0,
+    99.0,
+    120.0
+   ],
+   "present": 6,
+   "claimed_n": 6,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 6,
+   "status": "FRESH"
+  },
+  {
+   "slug": "airtable-ai",
+   "url": "https://airtable.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    20.0,
+    24.0,
+    45.0
+   ],
+   "present": 3,
+   "claimed_n": 3,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 6,
+   "status": "FRESH"
+  },
+  {
+   "slug": "allvideoai",
+   "url": "https://allvideoai.com/pricing",
+   "recorded_date": "2026-08-23",
+   "claimed": [
+    17.0,
+    39.0,
+    59.0,
+    159.0,
+    204.0,
+    468.0,
+    708.0,
+    1908.0
+   ],
+   "present": 8,
+   "claimed_n": 8,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 14,
+   "status": "FRESH"
+  },
+  {
+   "slug": "bolt-new",
+   "url": "https://bolt.new/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    25.0
+   ],
+   "present": 1,
+   "claimed_n": 1,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 3,
+   "status": "FRESH"
+  },
+  {
+   "slug": "browse-ai",
+   "url": "https://www.browse.ai/pricing",
+   "recorded_date": "2026-09-01",
+   "claimed": [
+    19.0,
+    48.0,
+    69.0,
+    87.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 11,
+   "status": "FRESH"
+  },
+  {
+   "slug": "canva-ai",
+   "url": "https://www.canva.com/pricing/",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    180.0,
+    250.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "catch-ai",
+   "url": "https://www.catchagent.ai/",
+   "recorded_date": "2026-09-02",
+   "claimed": [
+    99.0
+   ],
+   "present": 1,
+   "claimed_n": 1,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 4,
+   "status": "FRESH"
+  },
+  {
+   "slug": "chatgpt",
+   "url": "https://openai.com/chatgpt/pricing/",
+   "recorded_date": "2026-08-21",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "claude",
+   "url": "https://www.anthropic.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    17.0,
+    20.0,
+    100.0,
+    200.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 25,
+   "status": "FRESH"
+  },
+  {
+   "slug": "cocounsel",
+   "url": "https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [
+    415.35
+   ],
+   "present": 1,
+   "claimed_n": 1,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 3,
+   "status": "FRESH"
+  },
+  {
+   "slug": "copy-ai",
+   "url": "https://www.copy.ai/prices",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    24.0,
+    29.0,
+    288.0,
+    1000.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 11,
+   "status": "FRESH"
+  },
+  {
+   "slug": "cursor",
+   "url": "https://cursor.com/pricing",
+   "recorded_date": "2026-08-25",
+   "claimed": [
+    20.0,
+    40.0,
+    60.0,
+    200.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 4,
+   "status": "FRESH"
+  },
+  {
+   "slug": "deepseek",
+   "url": "https://www.deepseek.com/",
+   "recorded_date": "2026-08-21",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "descript",
+   "url": "https://descript.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    16.0,
+    24.0,
+    35.0
+   ],
+   "present": 3,
+   "claimed_n": 3,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 5,
+   "status": "FRESH"
+  },
+  {
+   "slug": "dragon-copilot",
+   "url": "https://www.microsoft.com/en-us/health-solutions/clinical-workflow/dragon-copilot",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "elevenlabs",
+   "url": "https://elevenlabs.io/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    6.0,
+    11.0,
+    22.0,
+    99.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 15,
+   "status": "FRESH"
+  },
+  {
+   "slug": "fathom",
+   "url": "https://www.fathom.ai/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    16.0,
+    20.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 6,
+   "status": "FRESH"
+  },
+  {
+   "slug": "fireflies",
+   "url": "https://fireflies.ai/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    10.0,
+    18.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 5,
+   "status": "FRESH"
+  },
+  {
+   "slug": "gamma",
+   "url": "https://gamma.app/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    9.0,
+    108.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "gemini",
+   "url": "https://gemini.google/us/subscriptions/",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    19.99,
+    99.99,
+    199.99
+   ],
+   "present": 3,
+   "claimed_n": 3,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 4,
+   "status": "FRESH"
+  },
+  {
+   "slug": "github-copilot",
+   "url": "https://docs.github.com/en/copilot/get-started/plans",
+   "recorded_date": "2026-08-21",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 5
+  },
+  {
+   "slug": "grammarly",
+   "url": "https://www.grammarly.com/plans",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    12.0
+   ],
+   "present": 1,
+   "claimed_n": 1,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 6,
+   "status": "FRESH"
+  },
+  {
+   "slug": "grantable",
+   "url": "https://www.grantable.co/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [
+    50.0,
+    150.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 7,
+   "status": "FRESH"
+  },
+  {
+   "slug": "grok",
+   "url": "https://x.ai/pricing",
+   "recorded_date": "2026-08-25",
+   "claimed": [
+    2.0,
+    6.0,
+    30.0,
+    100.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "harvey",
+   "url": "https://www.harvey.ai/",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 2
+  },
+  {
+   "slug": "heidi-health",
+   "url": "https://www.heidihealth.com/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "hermes-agent",
+   "url": "https://hermes-agent.nousresearch.com/docs/",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 1
+  },
+  {
+   "slug": "heygen",
+   "url": "https://www.heygen.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    24.0,
+    29.0,
+    49.0
+   ],
+   "present": 3,
+   "claimed_n": 3,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 6,
+   "status": "FRESH"
+  },
+  {
+   "slug": "htmlslides",
+   "url": "https://www.htmlslides.ai/pricing",
+   "recorded_date": "2026-08-27",
+   "claimed": [
+    1.0,
+    5.0,
+    9.9
+   ],
+   "present": 2,
+   "claimed_n": 3,
+   "pct": 67,
+   "missing": [
+    9.9
+   ],
+   "live_figures": 3,
+   "status": "DRIFTED"
+  },
+  {
+   "slug": "ideogram",
+   "url": "https://ideogram.ai/pricing",
+   "recorded_date": "2026-08-28",
+   "claimed": [
+    15.0,
+    20.0,
+    42.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "instrumentl",
+   "url": "https://www.instrumentl.com/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [
+    299.0,
+    349.0,
+    499.0,
+    579.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 7,
+   "status": "FRESH"
+  },
+  {
+   "slug": "jasper",
+   "url": "https://www.jasper.ai/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    59.0,
+    69.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 2,
+   "status": "FRESH"
+  },
+  {
+   "slug": "khanmigo",
+   "url": "https://www.khanmigo.ai/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [
+    4.0,
+    44.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 2,
+   "status": "FRESH"
+  },
+  {
+   "slug": "landlord-studio",
+   "url": "https://www.landlordstudio.com/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [
+    12.0,
+    28.0,
+    144.0,
+    366.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 7,
+   "status": "FRESH"
+  },
+  {
+   "slug": "leonardo-ai",
+   "url": "https://leonardo.ai/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    12.0,
+    30.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "lm-studio",
+   "url": "https://lmstudio.ai/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 2
+  },
+  {
+   "slug": "lovable",
+   "url": "https://lovable.dev/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    25.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "luma-ai",
+   "url": "https://lumalabs.ai/pricing",
+   "recorded_date": "2026-08-28",
+   "claimed": [
+    30.0,
+    90.0,
+    300.0,
+    900.0,
+    3000.0
+   ],
+   "present": 5,
+   "claimed_n": 5,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 5,
+   "status": "FRESH"
+  },
+  {
+   "slug": "magicschool",
+   "url": "https://www.magicschool.ai/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [
+    8.33,
+    12.99
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 5,
+   "status": "FRESH"
+  },
+  {
+   "slug": "make",
+   "url": "https://www.make.com/en/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    12.0,
+    21.0,
+    38.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "meta-ai",
+   "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/",
+   "recorded_date": "2026-08-21",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "microsoft-copilot",
+   "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 7
+  },
+  {
+   "slug": "midjourney",
+   "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    10.0,
+    30.0,
+    96.0,
+    288.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "mistral-le-chat",
+   "url": "https://mistral.ai/pricing/",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    14.99,
+    24.99
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 8,
+   "status": "FRESH"
+  },
+  {
+   "slug": "n8n",
+   "url": "https://n8n.io/pricing/",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    20.0,
+    50.0
+   ],
+   "status": "UNVERIFIED",
+   "claimed_n": 2,
+   "live_figures": 28,
+   "missing": [
+    20.0,
+    50.0
+   ]
+  },
+  {
+   "slug": "notebooklm",
+   "url": "https://notebooklm.google.com/about/",
+   "recorded_date": "2026-09-01",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "notion-ai",
+   "url": "https://www.notion.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    10.0,
+    20.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 12,
+   "status": "FRESH"
+  },
+  {
+   "slug": "ollama",
+   "url": "https://ollama.com/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 46
+  },
+  {
+   "slug": "open-webui",
+   "url": "https://docs.openwebui.com/license/",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "openclaw",
+   "url": "https://docs.openclaw.ai/",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "openevidence",
+   "url": "https://www.openevidence.com/",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "otter-ai",
+   "url": "https://otter.ai/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    8.33,
+    16.99
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 10,
+   "status": "FRESH"
+  },
+  {
+   "slug": "perplexity",
+   "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+   "recorded_date": "2026-08-21",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "pika",
+   "url": "https://pika.art/pricing",
+   "recorded_date": "2026-08-28",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 18
+  },
+  {
+   "slug": "poe",
+   "url": "https://poe.com/subscription_plans",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    49.99,
+    199.99,
+    499.99,
+    999.99
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 10,
+   "status": "FRESH"
+  },
+  {
+   "slug": "replit-ai",
+   "url": "https://replit.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    20.0,
+    25.0
+   ],
+   "present": 1,
+   "claimed_n": 2,
+   "pct": 50,
+   "missing": [
+    25.0
+   ],
+   "live_figures": 9,
+   "status": "DRIFTED"
+  },
+  {
+   "slug": "riverside-fm",
+   "url": "https://riverside.com/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 10
+  },
+  {
+   "slug": "rows",
+   "url": "https://rows.com/pricing",
+   "recorded_date": "2026-09-01",
+   "claimed": [
+    6.0,
+    8.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 4,
+   "status": "FRESH"
+  },
+  {
+   "slug": "runway",
+   "url": "https://runwayml.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    12.0,
+    15.0,
+    28.0,
+    35.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 9,
+   "status": "FRESH"
+  },
+  {
+   "slug": "shortwave",
+   "url": "https://www.shortwave.com/pricing/",
+   "recorded_date": "2026-09-01",
+   "claimed": [
+    30.0,
+    45.0,
+    120.0
+   ],
+   "present": 3,
+   "claimed_n": 3,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 3,
+   "status": "FRESH"
+  },
+  {
+   "slug": "slack-ai",
+   "url": "https://slack.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    7.25,
+    8.75,
+    15.0,
+    18.0
+   ],
+   "present": 4,
+   "claimed_n": 4,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 6,
+   "status": "FRESH"
+  },
+  {
+   "slug": "sonaopus",
+   "url": "https://sonaopus.com/",
+   "recorded_date": "2026-09-13",
+   "claimed": [
+    99.0
+   ],
+   "status": "UNREADABLE",
+   "live_figures": 1
+  },
+  {
+   "slug": "speechify",
+   "url": "https://speechify.com/pricing/",
+   "recorded_date": "2026-09-01",
+   "claimed": [
+    29.0
+   ],
+   "status": "UNREADABLE",
+   "live_figures": 1
+  },
+  {
+   "slug": "spellbook",
+   "url": "https://spellbook.com/",
+   "recorded_date": "2026-08-26",
+   "claimed": [],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "suno",
+   "url": "https://suno.com/pricing",
+   "recorded_date": "2026-08-28",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 3
+  },
+  {
+   "slug": "synthesia",
+   "url": "https://www.synthesia.io/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    18.0,
+    29.0,
+    89.0
+   ],
+   "present": 3,
+   "claimed_n": 3,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 7,
+   "status": "FRESH"
+  },
+  {
+   "slug": "tenantcloud",
+   "url": "https://www.tenantcloud.com/pricing",
+   "recorded_date": "2026-08-26",
+   "claimed": [
+    15.0,
+    25.0,
+    29.0,
+    35.0,
+    60.0,
+    180.0,
+    350.0,
+    600.0
+   ],
+   "present": 8,
+   "claimed_n": 8,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 17,
+   "status": "FRESH"
+  },
+  {
+   "slug": "tunii",
+   "url": "https://tunii.net/",
+   "recorded_date": "2026-09-05",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 3
+  },
+  {
+   "slug": "typingmind",
+   "url": "https://typingmind.com/buy",
+   "recorded_date": "2026-09-01",
+   "claimed": [
+    39.0,
+    79.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 9,
+   "status": "FRESH"
+  },
+  {
+   "slug": "udio",
+   "url": "https://udio.com/pricing",
+   "recorded_date": "2026-08-28",
+   "claimed": [
+    3.0,
+    10.0,
+    25.0,
+    30.0
+   ],
+   "status": "UNREADABLE",
+   "text_len": 0
+  },
+  {
+   "slug": "v0",
+   "url": "https://v0.app/docs/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    5.0,
+    20.0,
+    30.0
+   ],
+   "present": 3,
+   "claimed_n": 3,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 4,
+   "status": "FRESH"
+  },
+  {
+   "slug": "whop-cli",
+   "url": "https://whop.com/",
+   "recorded_date": "2026-08-27",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 1
+  },
+  {
+   "slug": "you-com",
+   "url": "https://you.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [],
+   "status": "NO_CLAIM",
+   "live_figures": 5
+  },
+  {
+   "slug": "zapier-ai",
+   "url": "https://zapier.com/pricing",
+   "recorded_date": "2026-08-21",
+   "claimed": [
+    19.99,
+    69.0
+   ],
+   "present": 2,
+   "claimed_n": 2,
+   "pct": 100,
+   "missing": [],
+   "live_figures": 8,
+   "status": "FRESH"
+  }
+ ]
+}
