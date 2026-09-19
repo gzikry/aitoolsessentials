@@ -1,0 +1,414 @@
+{
+  "date": "2026-09-19",
+  "monitor": "HARO / Connectively / journalist request monitor",
+  "run_at": "2026-09-19T09:00:00-07:00",
+  "search_scope": "AI tools, AI pricing, shadow/unbudgeted AI spend, overlapping AI subscriptions, software spend, SaaS cost/credits, agentic AI cost overruns, AI vendor support value, tool consolidation, procurement budget",
+  "age_policy": "Ages are read off each request page (JSON-LD datePublished plus the rendered 'Posted ... ago' badge), never off the digest text. All 29 tracked URLs were re-fetched this run: HTTP 200 and the request body still served, none returns an expiry notice.",
+  "platforms_checked": [
+    {
+      "platform": "Sourcee (sourcee.app)",
+      "status": "accessible",
+      "notes": "Sitemap pulled fresh from the index child /sitemap-journo-requests.xml (9,927,746 bytes, 41,286 loc/lastmod pairs, 40,435 unique slugs, newest lastmod 2026-09-19T02:27:03Z). 578 slugs carry a lastmod inside the 2026-09-11+ window; 63 carry any AI token; 1 carries a strict pricing/cost token alongside an AI token and 3 carry a third-tier spend token alongside one. 32 candidate bodies were fetched and read this run. No new core-beat request."
+    },
+    {
+      "platform": "Sourcee AI topic feed \u2014 /topics/ai/journo-requests",
+      "status": "recency_window_not_persistence",
+      "notes": "Re-measured for the third run. The page carries 30 slugs today; all 30 have a lastmod inside a single 15.4-hour window (2026-09-18T11:01:23Z to 2026-09-19T02:27:03Z) and it shares 0 of its slugs with the 2026-09-17 capture, which itself shared 0 with 2026-09-16. It is a rolling recency window over the newest ~30-42 indexed requests, not a feed a request persists on, so absence from it is NOT a cold signal and build_pitch_queue.py does not use it as one. This run also established the reason it can never be one: 53 slugs across the entire 40,435-slug sitemap are newer than the window's oldest member, i.e. the window is the newest ~30 of everything, with no topic curation at all."
+    },
+    {
+      "platform": "HARO (helpareporter.com)",
+      "status": "email_wall",
+      "notes": "Re-probed. / returns HTTP 429 (33,954 bytes) titled 'Vercel Security Checkpoint'. Eighth consecutive identical result. Queries are distributed only by a 3x-daily email digest requiring a subscribed inbox."
+    },
+    {
+      "platform": "Connectively (connectively.us)",
+      "status": "login_required",
+      "notes": "Re-probed. / HTTP 429 (33,944 bytes) and /queries HTTP 429 (33,945 bytes), both 'Vercel Security Checkpoint'. No public query feed."
+    },
+    {
+      "platform": "Source of Sources (sourceofsources.com)",
+      "status": "email_only",
+      "notes": "Re-probed. /requests returns a genuine 404 (140,650 bytes, 'Page Not Found - Source of Sources'). Reporter submission form only; no source-facing feed."
+    },
+    {
+      "platform": "Qwoted (qwoted.com)",
+      "status": "login_required",
+      "notes": "Re-probed. app.qwoted.com/requests returns a genuine 404 (3,265 bytes) \u2014 the path is wrong, not gated. The feed needs an authenticated app session."
+    },
+    {
+      "platform": "MentionMatch (mentionmatch.com)",
+      "status": "pre_launch",
+      "notes": "Re-probed. Apex HTTP 200 (11,345 bytes, 'MentionMatch - Connect B2B Writers with Expert Sources') with no feed. Eighth consecutive run confirming a pre-launch shell."
+    },
+    {
+      "platform": "Medialyst MCP (medialyst.ai/api/mcp)",
+      "status": "oauth_required",
+      "notes": "Re-probed: HTTP 401, 73-byte {\"error\":\"invalid_token\"}. Free read-only feed covering Connectively, HARO, X, LinkedIn, MentionMatch and Substack. Needs an interactive OAuth handshake that cannot be completed from a scheduled run. `hermes mcp list` in this profile still reports no MCP servers configured."
+    },
+    {
+      "platform": "X/Twitter #journorequest",
+      "status": "credits_exhausted",
+      "notes": "Not re-attempted. Team-level credit limit blocked this on eight consecutive runs; the block is account state, not a transient failure. Sourcee's X-originated aggregation is used as a proxy."
+    },
+    {
+      "platform": "ResponseSource (responsesource.com)",
+      "status": "paywalled_uk",
+      "notes": "Root re-probed HTTP 200 (148,264 bytes, 'ResponseSource - Connecting the media'). UK-only; enquiry feed sold by category from GBP 85 pay-as-you-go. No free source-facing feed."
+    }
+  ],
+  "opportunities": [
+    {
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket",
+      "query_text": "CALL FOR HELP: I'm currently researching for a Raconteur article on the use of shadow AI. I am looking for quotes and comments from full-time employees who use AI without the approval or knowledge of their employers, and who even pay out of their own pocket to use AI. I and Raconteur will of course protect your anonymity if we use your quotes. Please email me at [email redacted] if willing to participate. Thanks! Raconteur",
+      "journalist_publication": "Raconteur (raconteur.net) \u2014 author named in the page's own author field: Simon Chandler",
+      "category": "AI / Shadow AI Spend / Out-of-Pocket Subscriptions / Enterprise Tech",
+      "deadline": "No cutoff stated. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-17T11:40:39Z (2 days at this run). Re-verified live this run: HTTP 200, page still serves the request body, no expiry notice. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-17T11:40:39Z = 2 days, no expiry notice on the page.",
+      "contact_method": "The page redacts the address ('Please email me at [email redacted]'), but Raconteur's own byline pages publish the writer's address as an obfuscated data-part1/2/3 triple that the site's JS assembles at runtime (scripts-last.min.js: part1 + '@' + part2 + '.' + part3). Reconstructed and cross-checked against a second author this run: simon.chandler@raconteur.net. raconteur.net MX = Google Workspace (aspmx.l.google.com). Raconteur's /contact page states PRs should contact the relevant writer directly.",
+      "relevance": "high",
+      "relevance_notes": "The closest thing to our core beat that Sourcee has produced in six runs: employees buying AI tools without approval and paying for them personally is unbudgeted, unenumerated software spend \u2014 the exact quantity our dated price set exists to make visible. Raconteur's own contact page says it wants 'pitches with exclusive business data', which is what we hold. Honesty constraint: the request asks for employees to give personal quotes and we are a publisher, not a shadow-AI employee, so the pitch must offer the price evidence and say outright that we hold no personal account. Its title says Raconteur; the byline that published the request is on raconteur.net, and the article is anonymous-source-based.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization), shadow-spend framing \u2014 lead with the affordability threshold computed from data/pricing_snapshots.json today: 31 of the 76 tools we track have a cheapest paid tier at or under $25/month, median $16.50, lowest $4 (Khanmigo, checked 2026-09-18); and the same tier billed monthly instead of annually runs up to 2.53x (Browse AI $48/month vs $19/month billed annually, checked 2026-09-18). Offer the dated set; state plainly that we have no personal shadow-AI account to quote."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences",
+      "query_text": "#Sourcecall: I am writing a story about the difficulties that people have had with Anthropic customer service. Are there any users or businesses owners who can share about their Anthropic customer service experiences? I'd love to chat via DMs, email, or Signal hliwrites.99",
+      "journalist_publication": "Independent journalist (dedicated story on Anthropic customer service)",
+      "category": "AI / Vendor Support Quality / Subscription Value",
+      "deadline": "No cutoff stated. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-11T16:58:59Z (7 days at this run, up from 5 on 2026-09-17). Re-verified live: HTTP 200, body unchanged, Signal handle still published. The request has NOT been renewed or edited since posting \u2014 see the lastmod finding below. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-11T16:58:59Z = 7 days, no expiry notice on the page.",
+      "contact_method": "Signal handle 'hliwrites.99' published verbatim in the request (re-read off the live page this run); DMs or email also invited, address redacted on Sourcee.",
+      "relevance": "medium-high",
+      "relevance_notes": "On-beat as a subscription-value story rather than a grievance: we hold dated official Anthropic pricing and no customer-service complaint of our own, so the honest contribution is the price side only. The route is the strongest thing about it \u2014 a Signal handle, published in the request, is a direct channel. Its age is now 7 days and rising, so send or drop.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: pair the support story with the price story. Frame: Anthropic's paid tiers run from $20/month (Pro, $17 annual) to $100-$200/month (Max); at the top tiers buyers are paying enterprise money for consumer-grade support channels, which is what makes a support gap a value problem rather than an annoyance. Offer verified Anthropic pricing snapshots with checked dates plus the overlap angle (what a buyer could move to and what it costs). Offer to connect the reporter with business owners in the AIToolsEssentials readership if any come forward. PITCH TODAY \u2014 highest priority this run."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
+      "query_text": "Looking for founders building something from scratch. I'm looking to talk to a few founders who are currently building a startup, SaaS, AI tool, or any kind of online business. I'm putting together a bi-weekly series called Built From Scratch, where we follow real founders and show what building a business actually looks like \u2014 not just the polished success story. ... At the end, we'll give the business a Launch Score based on things like traction, growth, product, and potential.",
+      "journalist_publication": "Independent (bi-weekly founder series, 'Built From Scratch')",
+      "category": "Founders / SaaS / AI Tools / Startup Profile",
+      "deadline": "Open (recurring series) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 8 days ago', datePublished 2026-09-11T01:09:33Z = 8 days, no expiry notice on the page.",
+      "contact_method": "Comment on the original post with a short description of the business | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "medium",
+      "relevance_notes": "A founder-profile slot, not a pricing story \u2014 but it is an easy, low-cost brand mention and it explicitly asks for the unpolished version (what is not working), which suits an honest independent directory. Free Stack Audit is a concrete, demonstrable artifact to show a 'what's working' answer with.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted: pitch AIToolsEssentials as a bootstrapped independent tool directory that grew out of the overlap problem. Angle: 'what's completely not working' is honest material \u2014 the directory earns nothing from rankings, so the keep/cut verdicts are the product. Mention the free Stack Audit as the current traction experiment. Medium priority \u2014 brand mention, not a citation play."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "query_text": "Tech is becoming an increasingly powerful force in retailers' lives, and for the October issue of Speciality Food I'd love to hear from retailers and food/drink businesses about how they are adopting the growing resources and technologies available... or how and why they are avoiding them. If you had \u00a310k to spend on revamping your establishment/business with the likes of new EPOS tools, electronic shelf labels, a new and improved digital portfolio including ecommerce and website, stock management and loyalty systems etc, how would you utilise it? If you'd like to share your thoughts, please drop me a line on [email redacted] - look forward to hearing from you. Speciality Food",
+      "journalist_publication": "Speciality Food magazine (specialityfoodmagazine.com) \u2014 author named in the page's own author field: Holly Shackleton, Content Editor",
+      "category": "Retail Tech Budget / \u00a310k Procurement / Speciality Food",
+      "deadline": "For the October issue, so the window is roughly two weeks. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-17T16:05:55Z (1 days at this run). Re-verified live this run: HTTP 200, page still serves the request body, no expiry notice. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-17T16:05:55Z = 1 days, no expiry notice on the page.",
+      "contact_method": "The page redacts the address, but the magazine's /contact page publishes named editorial addresses: holly.shackleton@artichokehq.com (Content Editor), verified live this run. artichokehq.com MX = Outlook/Microsoft 365 (artichokehq-com.mail.protection.outlook.com).",
+      "relevance": "low-medium",
+      "relevance_notes": "Fresh (1 day) and with a verified email route to the named author, but a standing mismatch: the request asks speciality food and drink businesses how they would spend \u00a310k on EPOS, shelf labels, ecommerce and stock systems. We are not a food retailer and our price set covers AI tools, not retail hardware. The only honest contribution is the pricing-method half \u2014 what a fixed budget buys at dated prices, and how billing term changes it \u2014 offered as a benchmark rather than as a retailer's own answer.",
+      "suggested_pitch_template": "Template 2 (cost optimization), budget-benchmark framing \u2014 lead with a verified figure and no currency conversion: 40 of the 76 AI tools we track publish a non-zero monthly price, 31 of them at or under $25/month, and of those that quote both terms the same tier runs 1.21x-2.53x depending on whether it is billed monthly or annually (checked 2026-09-18). Offer the dated set as a benchmark against their \u00a310k and say we are not a food retailer."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies",
+      "query_text": "Source callout: I want to hear from U.S.-based founders about how calls to slow AI development are affecting their companies. Are you rethinking your business strategy, hearing concerns from customers, or strengthening your safety guardrails? If you have firsthand insights to share, email me at [email redacted].",
+      "journalist_publication": "Inc. (domain inc.com)",
+      "category": "AI / Founders / Policy Impact",
+      "deadline": "No cutoff stated. NEW this run \u2014 page badge 'Posted in last 7 days'; datePublished 2026-09-15T20:47:51Z (age superseded). On Sourcee's live AI topic page. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-15T20:47:51Z = 3 days, no expiry notice on the page.",
+      "contact_method": "Email the reporter \u2014 redacted on Sourcee. No reachable route from the page. | PAGE-VERIFIED 2026-09-19: email_redacted=True, emails_on_page=none, reply_hints=['email me'].",
+      "relevance": "low-medium",
+      "relevance_notes": "The freshest in-feed request of the run and it is a national outlet, but the question is aimed at US founders reacting to calls for an AI slowdown. We are a publisher of AI pricing evidence, not an AI developer rethinking safety guardrails, so we have no firsthand account to give. Flagged as a genuine near-miss: fresh and top-tier, wrong standing.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 only if a data contribution is welcome: the commercial-AI-spend picture small teams are actually acting on is consolidation, not guardrails, and we hold dated pricing evidence for how that looks."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice",
+      "query_text": "Has AI-assisted review changed how you work a case? I'm working on a piece about AI in e-discovery for Mass Lawyers Weekly (then posted to other state Lawyers Weekly sites)... nearly everything that's published about time savings comes from the vendors themselves. So I'm asking people who use these tools \u2014 has AI-assisted review made a difference in your practice? Where does it not live up to the promises?",
+      "journalist_publication": "Massachusetts Lawyers Weekly (masslawyersweekly.com) \u2014 published across state Lawyers Weekly titles",
+      "category": "Legal / AI Vendor Claims / Practice Impact",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-17T03:02:47Z (age superseded). NEW this run and currently on the AI topic feed. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-17T03:02:47Z = 2 days, no expiry notice on the page.",
+      "contact_method": "DM the author (page author field: misterschwartz33). No email published; on-record or on-background offered. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['DM me'].",
+      "relevance": "low",
+      "relevance_notes": "NEW this run and the freshest thing in the feed, but it is a legal-practice story, not a spend story, and it wants practising e-discovery lawyers rather than a pricing publisher. The one thread we could pull \u2014 vendor-published time-savings claims being unverifiable \u2014 is adjacent to our vendor-claims work but not what the reporter asked for. Recorded, not drafted.",
+      "suggested_pitch_template": "None this run \u2014 wrong standing. If pursued, the only honest line is that vendor-published performance claims are self-reported, the same pattern we document on pricing pages."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact",
+      "query_text": "I'm a freelance reporter with Fortune, looking to speak with people who have trained AI through companies like DataAnnotation, Outlier AI, Micro1, Mercor and Handshake AI about their experiences... whether the income has made a meaningful difference in day-to-day expenses.",
+      "journalist_publication": "Fortune (freelance reporter)",
+      "category": "AI Labour / Data Annotation / Income",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-16T21:31:04Z (age superseded). PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-16T21:31:04Z = 2 days, no expiry notice on the page.",
+      "contact_method": "DM or email \u2014 redacted on Sourcee. | PAGE-VERIFIED 2026-09-19: email_redacted=True, emails_on_page=none, reply_hints=['DM me', 'email me'].",
+      "relevance": "low",
+      "relevance_notes": "On-topic as AI-industry economics but it wants Gen Z data annotators describing their own work and pay. We have no standing. Recorded, off-beat.",
+      "suggested_pitch_template": "None \u2014 excluded."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-automation-experts-speakers-on-marketing-sales-operations-gains",
+      "query_text": "Seeking AI Automation Experts for Speaking Opportunities. I am looking for individuals who have successfully built AI automations, agents, tools, or apps that have tangibly improved a business's marketing, sales, or operations.",
+      "journalist_publication": "Independent platform (AI TED-talk format)",
+      "category": "AI / Automation / Speaking",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-16T16:15:19Z (age superseded). PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-16T16:15:19Z = 2 days, no expiry notice on the page.",
+      "contact_method": "Comment on the original post (body instructs commenting a keyword for tickets). No email published. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Comment'].",
+      "relevance": "low",
+      "relevance_notes": "A speaking-slot solicitation, not a journalist request, and it wants people with built automations rather than published cost evidence. Off-beat.",
+      "suggested_pitch_template": "None \u2014 excluded."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ecommerce-marketers-transparency-in-ai-recommendations-and-conversion",
+      "query_text": "Looking for example for @MarketingSherpa \u2014 how transparency impacts AI recommendations (AEO) and conversion. What you changed. How you got the idea to change it. What surprised you.",
+      "journalist_publication": "MarketingSherpa (marketingsherpa.com)",
+      "category": "Ecommerce / AI Recommendations / Conversion",
+      "deadline": "No cutoff stated. Badge 'Posted in last 7 days'; datePublished 2026-09-16T20:40:29Z (age superseded). PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-16T20:40:29Z = 2 days, no expiry notice on the page.",
+      "contact_method": "Reply to the original X/LinkedIn post (body links a recent article). No email published. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "low",
+      "relevance_notes": "Wants ecommerce marketers' AEO case studies. Not our beat and we hold no such case study. Recorded, off-beat.",
+      "suggested_pitch_template": "None \u2014 excluded."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety",
+      "query_text": "Calling all cybersecurity experts and organizations... Over the past few weeks, I've received quite a few requests from reporters looking for cybersecurity experts who can speak to the threats consumers and businesses are facing right now... October is Cybersecurity Awareness Month... I'm looking to connect with cybersecurity companies, organizations and experts who want to position themselves as go-to media resources in this space.",
+      "journalist_publication": "Independent PR/comms practitioner sourcing cybersecurity spokespeople",
+      "category": "Cybersecurity / Media Placement / AI Scams",
+      "deadline": "No cutoff stated; positioned around October (Cybersecurity Awareness Month). NEW this run \u2014 datePublished 2026-09-15T17:26:30Z (age superseded). On Sourcee's live AI topic page. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-15T17:26:30Z = 3 days, no expiry notice on the page.",
+      "contact_method": "Not stated on the Sourcee page \u2014 the body asks companies to identify themselves; no email, DM handle or form published. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "low",
+      "relevance_notes": "Not a journalist request, and it wants cybersecurity vendors and credentialed experts, which we are not. Included only so the digest is complete about what the AI feed produced this run; do not pitch.",
+      "suggested_pitch_template": "None \u2014 off-beat and off-standing."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning",
+      "query_text": "The most successful education technology of the last twenty-five years has never taught anyone anything... A full semester of LMS usage data at one large university: Announcements in 82% of courses. Grades in 71%. The discussion board \u2014 the one tool built for students to think in front of each other \u2014 in 21%... Why? Follow the invoice. The learner has never signed the cheque for an LMS. The registrar does. And a product serves whoever pays for it, with a fidelity no mission statement can override. I call it The Vendor Trap. Three questions I would ask of every EdTech product before a rupee moves: Does it touch the learning or the ledger? Whose week actually improves? What does it measure?... I would genuinely like to hear from those of you inside EdTech: which of your products would pass all three questions?",
+      "journalist_publication": "Independent writer \u2014 'The EdTech Audit' series (LinkedIn long-form)",
+      "category": "Software Procurement Incentives / Who-Pays-Shapes-The-Product",
+      "deadline": "Open, no cutoff stated \u2014 posted 2026-09-13T05:50:41Z, ~age superseded. The only genuinely new on-topic body found this run. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-13T05:50:41Z = 6 days, no expiry notice on the page.",
+      "contact_method": "Comment on the original LinkedIn post or DM the author (Sourcee page links the post) | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "medium",
+      "relevance_notes": "NEW this run. It is EdTech, not AI tools \u2014 be honest about that: the category is adjacent and the connection to the AI-subscription beat is a thesis-level one, not literal. The reason it clears the bar at all is that it is the clearest statement of the buyer-incentive mechanism this monitor has seen: the product serves whoever signs the cheque, and the invoice is what determines what gets built. That is the same mechanism behind overlapping AI subscriptions and usage-based credits. Treated as a data-supply / point-of-view contribution rather than a citation play, per the monitor's rule on adjacent angles.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: lend the incentive thesis an AI-software proof set rather than an EdTech opinion. Frame: 'whoever signs the cheque sets the roadmap' is now observable in AI tooling \u2014 GitHub Copilot moved to usage-based AI Credits, ChatGPT Pro split into $120/$200 tiers, and seat-based AI contracts renew into overlapping stacks that nobody chose deliberately. Offer dated vendor-page snapshots showing where the billing model, not the user's need, shaped the product. Do not claim EdTech expertise. LOW-MEDIUM priority: contributes a point of view and possibly a link, earns no direct citation."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/tech-policy-experts-california-ai-audit-bills-impact-cios",
+      "query_text": "I'm looking to speak with a source today in tech policy about California's new AI bills, which establish standards for third-party audits and assessments of AI systems. I am hoping to talk about how this will impact CIOs and tech leadership \u2014 how do they navigate legislation like this?",
+      "journalist_publication": "Independent journalist (tech policy beat)",
+      "category": "AI Policy / Regulation / CIO Impact",
+      "deadline": "STATED DEADLINE PASSED \u2014 'looking to speak with a source today' was posted 2026-09-10 (badge 'Posted 9 days ago'; datePublished 2026-09-10T15:11:11Z). Page is live with no expiry notice but the ask is spent. Do not pitch. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 9 days ago', datePublished 2026-09-10T15:11:11Z = 9 days, no expiry notice on the page.",
+      "contact_method": "Email (redacted on Sourcee) or DM \u2014 reply to the original post",
+      "relevance": "medium-low",
+      "relevance_notes": "NEW this run but only adjacent to the beat, and the 'today' turnaround has already expired. Regulation and third-party AI audits connect to AIToolsEssentials only through a stretch (auditability of AI systems is not the same as auditability of AI spend). Listed for completeness and so it is not re-surfaced as new tomorrow.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted if pursuing: the compliance-driven inventory angle. Frame: third-party AI audit requirements force organisations to enumerate which AI systems they run and what those systems cost \u2014 most cannot, and the subscription inventory is the prerequisite nobody scopes. Do not pitch: the stated deadline has passed."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
+      "query_text": "FinOps Professionals - Agentic AI Cost Overruns. Uber burned its entire 2026 AI budget in four months, and had to cut back on usage. Agentic AI cost just doesn't behave like traditional software that we know how to budget for. I spent years at Apptio building the tooling that made cloud spend predictable, and that playbook doesn't survive contact with agents. Most teams are learning that lesson the hard way. My new piece is on why agentic AI keeps blowing out of budget, and what makes it so hard to see coming. Would like to hear from others how they are managing their AI costs. #AgenticAI #FinOps #AI",
+      "journalist_publication": "Unknown (posted via X, formerly Apptio FinOps professional)",
+      "category": "AI / FinOps / Business",
+      "deadline": "No cutoff stated. Page badge now reads 'Posted 12 days ago'; datePublished 2026-09-07T14:19:46Z. NEWLY COLD this run: it was the queue's #1 on 2026-09-17 at 10 days and has crossed the 10-day line unpitched. Its route is a LinkedIn DM to a named author (linkedin.com/in/niloy-ghosh). PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 12 days ago', datePublished 2026-09-07T14:19:46Z = 12 days, no expiry notice on the page.",
+      "contact_method": "DM via X/Twitter or email (redacted on Sourcee)",
+      "relevance": "high",
+      "relevance_notes": "Directly about AI costs and budget management \u2014 core AIToolsEssentials territory. The overlap/stack audit angle maps perfectly: teams overspend on AI tools because they don't audit their stack. Can pitch the Stack Audit as a practical solution to the exact budget overrun problem described.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) \u2014 adapted: frame AIToolsEssentials Stack Audit as a concrete tool for managing AI costs before they blow out of budget. The piece is about agentic AI cost unpredictability; pitch the keep/cut framework as the audit layer that catches overlap spend before it compounds. Offer data on common AI tool overlaps (Copilot + Cursor + Claude = $130/mo for same coding job) as a concrete example of how budgets inflate silently."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse",
+      "query_text": "UK Managers - Cracked Down on Gen Z AI Overuse. Looking to talk to UK managers who've cracked down on their Gen Z team members for overusing AI, and generally when people have crossed the line with AI. What rules have they put in place and what boundaries shouldn't employees cross? This is for a UK national newspaper and I'm keen to hear from you by the end of the week.",
+      "journalist_publication": "UK national newspaper (name not disclosed on Sourcee)",
+      "category": "AI / Workplace / Management / UK",
+      "deadline": "STATED INTERNAL DEADLINE PASSED ('by this Wednesday September 9'). Page live, no expiry notice; badge 'Posted 12 days ago'; datePublished 2026-09-07T09:57:18Z. Cold: crossed the 10-day line this run. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 12 days ago', datePublished 2026-09-07T09:57:18Z = 12 days, no expiry notice on the page.",
+      "contact_method": "Email (redacted on Sourcee) \u2014 also appears in Pitch to Published newsletter",
+      "relevance": "medium-high",
+      "relevance_notes": "About AI tool usage boundaries in the workplace \u2014 tangential to AIToolsEssentials' core of pricing/overlap but directly about AI tool governance and which tools employees should/shouldn't use. AIToolsEssentials can offer the angle that the real problem isn't employees overusing AI \u2014 it's that teams are paying for overlapping AI tools without a clear policy on which one to use for which job. The keep/cut framework applies: if you tell employees which AI tool to use for which task, you also solve the 'which AI tool are we paying for' problem. UK-focused.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) \u2014 adapted: pitch as an expert on AI tool governance in the workplace. Frame: the Gen Z AI overuse problem is really a tool selection problem \u2014 teams have 3+ AI tools and no policy on which to use when. The keep/cut framework gives managers a simple policy: pick one tool per job, cancel the rest, and tell employees which one to use. Offer data on common overlaps (coding \u00d72, assistants \u00d72, meeting notes \u00d72). Note: UK-focused, deadline end of week \u2014 pitch ASAP if pursuing."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-startups-workplace-fraud-detection-expenses-time-theft",
+      "query_text": "How is AI helping employers to combat workplace fraud: expenses, product theft, time, etc? I'm looking for AI entrepreneurs/startups focused on this specific issue: the challenges and the solutions.",
+      "journalist_publication": "Independent journalist (email contact redacted on Sourcee)",
+      "category": "AI / Business / Fraud & Expense Controls",
+      "deadline": "Open (posted in last 7 days) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 12 days ago', datePublished 2026-09-07T15:03:12Z = 12 days, no expiry notice on the page.",
+      "contact_method": "Email (redacted on Sourcee \u2014 reply to the original #journorequest post) | PAGE-VERIFIED 2026-09-19: email_redacted=True, emails_on_page=none, reply_hints=none.",
+      "relevance": "medium",
+      "relevance_notes": "Adjacent rather than core. The connection is expense visibility: shadow AI subscriptions bought on company cards are a real and under-reported line in the expense-fraud conversation, and AIToolsEssentials has the angle that the cheapest control is knowing what is already being paid for. Not a pricing story, so it ranks below the top three.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted: pitch the shadow-AI-spend angle. Frame: the fastest-growing uncontrolled line item on a company card right now is AI subscriptions bought by individual teams; before AI can police expenses it has to make existing spend visible. Offer the overlap/duplication data and the Stack Audit as the audit step. Medium priority \u2014 good fit, off the core beat."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/marketing-and-content-leaders-aiassisted-work-review-process",
+      "query_text": "I'm looking to interview 120 marketing and content leaders about how they review AI-assisted work before it ships. Specifically: who defines the brief, who checks brand voice, where the human sign-off happens, and what gets sent back for revision. 20 minutes. No pitch.",
+      "journalist_publication": "Independent researcher (multi-leader study)",
+      "category": "Marketing / AI Workflow / Review Process",
+      "deadline": "Open (interview recruitment, 20 minutes per leader) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 12 days ago', datePublished 2026-09-07T00:05:04Z = 12 days, no expiry notice on the page.",
+      "contact_method": "Comment or DM on the original post | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "medium",
+      "relevance_notes": "Carried forward from digest-2026-09-10. A research interview rather than a press placement \u2014 low direct value, but the study output will describe how teams operationalize AI work, which is useful source material for AIToolsEssentials' own editorial. Only worth the 20 minutes if the queue is clear.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted: participate as a practitioner who reviews AI-assisted output daily. Frame the overlap angle: the same tool-selection question ('which tool for which job') is what makes a review process work or fail. Low-medium priority \u2014 contributes data, earns no citation directly."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops",
+      "query_text": "AI Agents Making Money 2026 - Sales & LeadGen, Workflow, Ops. Building a list of the Top 20 AI Agents actually making money in 2026. Looking to feature agents in: Sales / Lead Generation, Workflow / Automation, Ops / Finance. Drop your tool below with your current stack & #1 problem solved to be featured on @ToolVetting.",
+      "journalist_publication": "ToolVetting (independent AI tool review platform)",
+      "category": "AI / SaaS / Tools / Sales / Workflow",
+      "deadline": "Open (collecting submissions for a list) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 12 days ago', datePublished 2026-09-07T07:35:27Z = 12 days, no expiry notice on the page.",
+      "contact_method": "Comment or DM via X/Twitter (@ToolVetting) | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "medium",
+      "relevance_notes": "Looking for AI tools/agents making money \u2014 this is a tool directory feature, not a pricing/overlap story. However, AIToolsEssentials reviews 74+ AI tools and can offer the perspective that 'making money' for AI agents often means replacing overlapping subscriptions \u2014 the ROI case is cutting what you don't need, not adding more. Could pitch the Stack Audit as a tool that helps businesses figure out which AI agents to keep. Lower priority than the UK managers request.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted: pitch AIToolsEssentials as the independent review platform that evaluates which AI agents deliver real ROI by cutting overlap. Offer to contribute the keep/cut angle to their Top 20 list: the AI agents that make money are the ones that replace 2-3 overlapping subscriptions, not the ones that add another $20/mo. Low priority \u2014 tool list feature, not a pricing story."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
+      "query_text": "Hello, world. While the AI CEOs are asking... themselves(?) to slow down AI development because the technology is legitimately dangerous and the president is telling them to go faster so that China doesn't surpass the U.S... I'd like to slow down and write about how AI to get value from all this. Whether you're an AI enthusiast or a skeptic I want to talk... I'm writing a white paper about how value is created with AI, and my hypothesis is that this ISN'T primarily a technology problem. It depends on how organizations assign ownership, make decisions, change the way work gets done, and govern who (and what) has access to sensitive data. I'm looking to speak with leaders and experienced operators to understand where that hypothesis holds up.",
+      "journalist_publication": "Independent practitioner \u2014 AI value-creation white paper",
+      "category": "Enterprise AI Value Realization / Ownership & Governance",
+      "deadline": "Open, no cutoff stated \u2014 posted 2026-09-14T15:19:39.833+00:00, ~age superseded. NEW this run. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted in last 7 days', datePublished 2026-09-14T15:19:39Z = 5 days, no expiry notice on the page.",
+      "contact_method": "Schedule via the scheduling link published in the request (lnkd.in short link on the Sourcee page); the author also invites referrals | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['schedule time'].",
+      "relevance": "low-medium",
+      "relevance_notes": "NEW this run \u2014 the only genuinely fresh on-topic body found, and it is a near-miss on the beat. The hypothesis (value creation is an ownership/governance problem, not a technology problem) is the same thesis AIToolsEssentials runs on for subscription overlap, but the request asks about governance and data access, never about cost, pricing, seats or spend. Do not pitch it as a pricing source \u2014 it is not one. Value here is a research interview / data-supply contribution at best, per the monitor's rule on adjacent angles.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted, and only if a slot is free: offer the overlap audit as the concrete proof of the ownership thesis. Frame: 'who owns the AI tool decision' is the exact fault line that produces unmanaged stacks \u2014 when no one owns the budget, seats accumulate and nobody can say what the stack costs. Offer the keep/cut framework and dated pricing snapshots as a measurable version of the governance question. Do NOT force a pricing pitch onto a governance white paper. LOW priority."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
+      "query_text": "Amplemarket wants to replace your SDR stack with one AI copilot... I publish tool reviews on marketintelligencetools.com, and I just finished a long one on Amplemarket, which is a conflict when I'm the one asking for real opinions on it. I want to hear from people who've run real pipeline through it, especially anyone who came from Apollo, Outreach or Salesloft and can compare the switch directly. Amplemarket bundles a 200-million-contact database, outreach across seven channels and an AI copilot called Duo into one contract. The Startup plan is $600 a month for two seats, billed annually, with no monthly option and no published free trial anywhere on the site. Fifteen thousand email credits and 480 phone credits per user come with it, plus two mailboxes. Growth and Elite are both custom quotes, & neither publishes a number. Vendr's tracked-contract data puts the real median at $16,608 a year, ranging from $11,678 to $35,946. That's two to five times the advertised Startup rate, once a team needs the tiers Amplemarket won't price in public. Has anyone here signed a Growth or Elite contract? I'd like to know if the number landed near that $16,608 median, or somewhere past the $35,94",
+      "journalist_publication": "Independent reviewer \u2014 marketintelligencetools.com (Reddit-sourced call for comment)",
+      "category": "AI / Software Pricing / Credits / Price Opacity / Contract Negotiation",
+      "deadline": "Open, no stated cutoff \u2014 posted 2026-09-06T16:36Z, now ~age superseded with no refresh. Closing window on the age rule. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 12 days ago', datePublished 2026-09-06T16:36:38Z = 12 days, no expiry notice on the page.",
+      "contact_method": "Reply to the original Reddit thread | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Comment'].",
+      "relevance": "high",
+      "relevance_notes": "Second digest appearance and still the most methodologically aligned request this monitor has seen: a reviewer refusing to accept published pricing, pulling Vendr's tracked-contract median, dating the snapshots, and asking for signed-contract data points to test against the range. It also names the credits-and-commitment half of the overlap problem (15k email / 480 phone credits, annual-only billing, no published free trial). The reviewer wants contract data, not a quote, so the play is to supply methodology and corroborating pricing evidence. Age is now the main risk: seven days with no refresh means the thread may already be sourced. Pitch only if a slot is available and prioritise the method offer over a placement ask.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: pitch the method, not the tool. Frame: published list price and real contract value have decoupled across AI software, and the gap is 2-5x at the tiers vendors refuse to publish, which makes 'what do you actually pay' the only number worth tracking. Offer the verified-pricing methodology (official vendor pages, dated snapshots, credits and renewal terms recorded, no scraped data) and offer to corroborate the Vendr median with AIToolsEssentials' own tracked figures where any overlap exists. Do not pitch AIToolsEssentials as an Amplemarket expert \u2014 pitch the pricing-verification discipline. HIGH priority but age-flagged."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay",
+      "query_text": "Did you choose an individual contributor career to do the work \u2014 not manage \u2014 only to end up managing AI agents without the title or pay bump? I want to hear from you! DM or email [email redacted].",
+      "journalist_publication": "Independent journalist (contact redacted on Sourcee)",
+      "category": "AI / Workplace / Individual Contributors / Agent Management",
+      "deadline": "No cutoff stated. Page badge reads 'Posted in last 7 days'; datePublished 2026-09-10T14:08:12Z (age superseded). PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 9 days ago', datePublished 2026-09-10T14:08:12Z = 9 days, no expiry notice on the page.",
+      "contact_method": "DM the author, or the original post's email \u2014 redacted on Sourcee. No route is reachable from our side without the original post. | PAGE-VERIFIED 2026-09-19: email_redacted=True, emails_on_page=none, reply_hints=['DM or email'].",
+      "relevance": "medium",
+      "relevance_notes": "Fresh and adjacent: it is about the labour of managing agents rather than the cost of them. We can contribute an operator's view on tool-selection drift, but the request wants individual contributors describing their own career situation, which is not our standing. Include as a low-priority reply at most.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 if pursued, the only honest contribution is the tool-selection angle: teams with three or more overlapping AI tools are the ones where 'who owns this' never gets answered, which is why the management load lands on ICs."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl",
+      "query_text": "Most enterprises don't have an AI strategy. They have an AI sprawl problem dressed up as one \u2014 Hundreds of agents. Dozens of models. Zero unified visibility into what they're doing, what they're consuming, or what they cost. After 21 years in enterprise technology, I firmly believe this is a defining infrastructure problem of the AI era. And most organizations won't realize it until a compliance audit, a security incident, or a budget review forces the conversation. The question keeping enterprise leaders up at night has shifted. It's no longer [cut off] \u2014 I'm writing a detailed piece covering AI governance architecture, agent ecosystems, model economics.",
+      "journalist_publication": "Independent (LinkedIn long-form, enterprise AI governance; 21-year enterprise tech practitioner)",
+      "category": "Enterprise AI / Governance / Agent Sprawl / Model Economics",
+      "deadline": "Open \u2014 posted 2026-09-05T07:46Z, collecting input for an in-progress article PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 14 days ago', datePublished 2026-09-05T07:46:42Z = 14 days, no expiry notice on the page.",
+      "contact_method": "Comment on the LinkedIn post or DM | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Comment'].",
+      "relevance": "high",
+      "relevance_notes": "Still live and still the best enterprise-scale fit. Names cost visibility in its second sentence ('what they're consuming, or what they cost') and frames the trigger as 'a budget review' \u2014 the AIToolsEssentials beat stated back to us. Agent sprawl is the enterprise form of subscription overlap, and the seat-and-subscription inventory layer is what most governance frameworks skip on the way to token metering.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) \u2014 adapted: enterprise scale, inventory first. Frame: before you can govern hundreds of agents you have to be able to list what you already pay for \u2014 most enterprises cannot enumerate their AI subscriptions, let alone their agents, and the budget review that exposes it arrives before the governance framework does. Offer the overlap taxonomy as the inventory layer that sits underneath agent governance, and the free Stack Audit as the concrete first step a reader can take. Offer verified pricing data for the enterprise tiers specifically (seat-based vs credits vs custom quote). HIGH priority."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions",
+      "query_text": "Are you a scientist (PhD student, postdoc or beyond) paying for your own AI subscription to help with your research? I'd love to hear from you for something I'm working on at Science Magazine. Drop me a DM or reply to this thread and we can connect.",
+      "journalist_publication": "Science Magazine (journalist: Tom)",
+      "category": "AI / Science / Personal subscription spend",
+      "deadline": "Open (posted 2026-09-04, 'posted in last 7 days') PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 14 days ago', datePublished 2026-09-04T16:49:05Z = 14 days, no expiry notice on the page.",
+      "contact_method": "DM or reply to the original thread | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['reply to this thread'].",
+      "relevance": "high",
+      "relevance_notes": "Science Magazine is a top-tier outlet, and the query is squarely about individuals paying out of pocket for AI subscriptions \u2014 the personal-budget version of the overlap problem. It is a case-study call (they want the people, not the analyst), so the play is to supply AIToolsEssentials' aggregate data as context for the reporter rather than pitching George as the story. This is exactly the pattern where a verified pricing dataset earns a citation.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: offer the reporter the backdrop data for their case studies. Frame: researchers paying personally for AI subscriptions are absorbing a cost that institutions increasingly assume is covered; here is what the major plans actually cost and where they overlap (a postdoc paying for both Claude Pro and ChatGPT Plus is paying twice for one research job). Offer verified pricing snapshots with checked dates, and offer to connect them with the overlap data rather than a quote. High priority \u2014 top-tier outlet, and a citation here is worth more than a quote in a trade publication."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ceos-ai-impact-on-ops-culture-and-commercial-strategy",
+      "query_text": "Good morning \u2014 I'm looking for ten CEOs who would be up for talking about what AI is or isn't doing for their company. I'd like to hear from folks who are advanced and those who haven't started. I'm keen to find out how it's changing your operations, culture and value propositions. I'd also like to know if it's affected your pricing, placement, promotion and proposition. This would be a call or a coffee. With your permission, I would publish your comments on the Executive Summary and in my book, Outcome Economics. I'm happy to do so anonymously if you prefer.",
+      "journalist_publication": "Independent author/practitioner (book: Outcome Economics; Executive Summary)",
+      "category": "AI / Leadership / Commercial Strategy & Pricing",
+      "deadline": "Open \u2014 posted 2026-09-03T07:29Z, recruiting ten CEOs, no cutoff stated PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 16 days ago', datePublished 2026-09-03T07:29:32Z = 16 days, no expiry notice on the page.",
+      "contact_method": "Reply to the original LinkedIn post ('drop me a line') | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Comment'].",
+      "relevance": "medium",
+      "relevance_notes": "NEW this run. Explicitly asks whether AI has 'affected your pricing' \u2014 the only request in the queue that puts AI-driven pricing change to business leaders directly, which is the AIToolsEssentials Pricing Watch beat. It is a CEO-profile/book-contribution call rather than a citation play, and it wants CEOs specifically, so George is not the target profile. Best used as a data-supply or referral play, not a headline pitch.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted: supply the buyer-side pricing evidence rather than a CEO interview. Frame: the CEOs being interviewed will report that AI changed their cost base, but the vendor side of that story is already public and dated \u2014 Microsoft 365 raised commercial pricing ~16% in July 2026, ChatGPT Pro split into $120/$200 tiers, GitHub Copilot moved to usage-based AI Credits. Offer verified, dated snapshots of those changes as corroborating material for the book chapter, and offer the overlap data behind the 'we didn't budget for this' theme. LOW-MEDIUM priority \u2014 contributes data, earns no direct citation."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/business-and-technology-leaders-tech-budget-priorities-amid-volatility",
+      "query_text": "Open call for experts: Where Are Business Leaders Focusing Their Tech Budgets As Tech Stock Market Volatility Persists. This report is for Forbes. Open call to all experts to participate... AI and tech stocks continue on a volatile trajectory, with Goldman Sachs reporting that hedge funds are selling US tech stocks at a record pace, and Bloomberg reporting that big tech needs to justify AI spending... For this report, I am looking for expert sources to provide clear signals for small, medium, and large business owners and decision-makers to help them navigate the current landscape and plan for 2027.",
+      "journalist_publication": "Forbes",
+      "category": "Tech Budgets / AI Spend / 2027 Planning",
+      "deadline": "Stated as an open call with no cutoff, BUT datePublished is 2026-07-20T22:08Z \u2014 nearly eight weeks old. Verify with the outlet before pitching. PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'None', datePublished 2026-07-20T22:08:33Z = 60 days, no expiry notice on the page.",
+      "contact_method": "Expert-submission link in the original LinkedIn post (see Sourcee page) | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Signal'].",
+      "relevance": "high",
+      "relevance_notes": "The single most on-beat query available on relevance \u2014 it is literally a Forbes call for expert input on where tech/AI budgets go \u2014 but the date is the problem. This listing was reported as 'rotated off' in digest-2026-09-11 and is present again today on the Forbes page, which is itself an important correction: the Forbes and FT outlet pages are persistent lists, not rolling newest-first feeds, so yesterday's 'rotated off' conclusion was not reliable evidence of expiry. Treat this as unresolved rather than live or dead.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: 2027 budget planning through the AI-spend lens. Frame: 80%+ of business and technology leaders expect 2027 budget increases, and the question is how much of that goes to AI seats versus agentic consumption \u2014 the fastest way to free real budget in 2027 is auditing overlapping AI subscriptions already being paid for. Offer the overlap data and verified pricing snapshots with checked dates. MEDIUM-priority until the outlet confirms the call is still open; do not spend a pitch slot on an eight-week-old listing without verifying."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows",
+      "query_text": "AI SaaS Users in Production - Integrations & Autonomous Workflows. I spent the last few days creating a truly fact-checked guide to the AI SaaS landscape in 2026, because most comparison articles are full of recycled marketing claims. An interesting trend: Almost every major AI platform has converged around the ~$20/month pricing model. The real competition now is integrations, orchestration, environment maintenance, and autonomous workflows. I would love to hear from people who are actually using these tools in production.",
+      "journalist_publication": "Independent (blog/guide creator)",
+      "category": "AI SaaS / Pricing / Tools / Production",
+      "deadline": "Open (posted >1 month ago but still accepting responses) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'None', datePublished 2026-05-22T09:48:47Z = 120 days, no expiry notice on the page.",
+      "contact_method": "Via Sourcee or original platform (likely X/Twitter or blog comments) | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "high",
+      "relevance_notes": "Directly about AI SaaS pricing convergence to $20/month and the real differentiator being integrations/orchestration. This is the core of AIToolsEssentials' thesis: when every tool costs ~$20, the question isn't which to buy \u2014 it's which to keep and which to cut. The $20/mo convergence is exactly what creates the overlap problem: teams add one $20 tool after another until they're paying $200/mo for 10 tools doing the same jobs. Strong fit despite being posted >1 month ago \u2014 pricing guides are evergreen.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: pitch as an expert on the $20/mo convergence and what it means. Frame: when every AI platform converges to $20/mo, the pricing decision becomes trivial \u2014 they all cost the same. The real decision is which ones to keep and which to cut, because at $20 each, teams accumulate 5-10 overlapping subscriptions without noticing. Offer verified pricing data on 74+ tools showing the $20 convergence pattern and the overlaps it creates. The Stack Audit is the tool that solves this. High priority despite age \u2014 evergreen topic."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/uk-finance-risk-and-regulatory-leaders-ai-explainability-risks",
+      "query_text": "UK Finance Risk & Regulatory Leaders - AI Explainability Risks. The main risk with AI in Finance is not that it gives the wrong answer. The bigger issue is when it gives an answer that looks right but cannot be properly explained afterwards. Looking at: Three questions every CFO should ask before the next AI budget is committed; The FCA and PRA position on model risk; What the EU AI Act requires from financial institutions from August 2026; Why 75% of UK financial services firms are using AI, but only 2% run AI use cases without human sign-off on individual decisions.",
+      "journalist_publication": "Independent (LinkedIn article/finance transformation newsletter)",
+      "category": "Finance / AI / Governance / Budget / Regulation",
+      "deadline": "Open (no explicit deadline) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 26 days ago', datePublished 2026-08-24T08:04:59Z = 26 days, no expiry notice on the page.",
+      "contact_method": "DM via LinkedIn or comments | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "medium",
+      "relevance_notes": "About AI governance and explainability in finance, with a specific section on 'three questions every CFO should ask before the next AI budget is committed.' The AI budget angle is relevant \u2014 AIToolsEssentials can offer the CFO perspective that the first budget question should be 'are we paying for overlapping AI tools?' The 75% adoption / 2% autonomous stat parallels the overlap problem: widespread AI use without structured oversight. UK/Europe focused. Moderate fit.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: pitch as an expert on AI budget scrutiny for CFOs. Frame: before committing the next AI budget, the first question should be 'how many of our current AI tools are doing the same job?' Offer Stack Audit data showing the average finance team carries 2-3 overlapping subscriptions. The 75% adoption / 2% autonomous stat mirrors the overlap problem \u2014 widespread use without governance. Note UK/Europe focus."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature",
+      "query_text": "AI Project Builders - YouTube Finance & Lifestyle Channel Feature. 500k subs on YouTube (finance/lifestyle). Looking to feature cool AI projects. Building something? DMs open.",
+      "journalist_publication": "Independent YouTube channel (500k subs, finance/lifestyle)",
+      "category": "AI / Finance / YouTube / Content",
+      "deadline": "Open PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'Posted 28 days ago', datePublished 2026-08-22T16:00:44Z = 28 days, no expiry notice on the page.",
+      "contact_method": "DM via X/Twitter or YouTube | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.",
+      "relevance": "low-medium",
+      "relevance_notes": "A YouTube channel looking to feature AI projects. Not a traditional journo request but a content opportunity. AIToolsEssentials could pitch the Stack Audit as a 'cool AI project' \u2014 a free tool that helps people find out they're overpaying for overlapping AI tools. Finance/lifestyle audience aligns with the cost-saving angle. Low-medium priority \u2014 good for brand awareness if time permits.",
+      "suggested_pitch_template": "Template 3 (AI Tool Directory / Comparison, general) \u2014 adapted: pitch the Stack Audit as a free AI project worth featuring: 'Enter your AI tools and spending, get a keep/cut/replace report with a Stack Efficiency Score.' Frame for the finance/lifestyle audience: most people don't realize they're paying for 2-3 AI tools doing the same job. Low priority \u2014 brand awareness, not a pricing story."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends",
+      "query_text": "MSP Experts & Case Studies - AI Ops & Pricing & Backup Trends. MSPs aren't questioning whether AI matters anymore \u2014 they're debating where it belongs in the managed services stack. AI is forcing MSPs to rethink their service packaging and pricing to show customers real value. Clear offerings, outcome-based pricing, and tight scope control are key to monetizing AI services. Also: navigating out-of-scope AI customer demands \u2014 AI user training, assessing compliance of AI tools, or identifying the best AI coding platforms.",
+      "journalist_publication": "Channel/MSP industry publication (Channel Industry Roundup)",
+      "category": "MSP / AI / Pricing / SaaS / Channel",
+      "deadline": "Open (posted >1 month ago, recurring roundup format) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'None', datePublished 2026-03-16T22:17:45Z = 186 days, no expiry notice on the page.",
+      "contact_method": "Via Sourcee or original platform | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Comment'].",
+      "relevance": "medium-high",
+      "relevance_notes": "About MSPs struggling with AI pricing models and customers asking which AI tools to use. The 'identifying the best AI coding platforms' is directly in AIToolsEssentials' wheelhouse. MSPs are the intermediary \u2014 they're the ones who need to tell clients which AI tools to keep and cut, which is exactly what the Stack Audit does. The outcome-based pricing angle also connects: as AI tools converge on $20/mo, the value isn't the tool itself but the curation. Moderate-high fit.",
+      "suggested_pitch_template": "Template 2 (Overlapping Subscriptions / Cost Optimization) \u2014 adapted: pitch as a resource for MSPs advising clients on AI tool selection. Frame: MSPs are fielding 'which AI tools should we use' questions from clients \u2014 that's the overlap problem. The Stack Audit gives MSPs a structured way to answer: audit the client's current stack, identify overlaps, recommend keep/cut/replace. The $20/mo convergence means the tool cost is trivial; the MSP value is in the curation. Medium-high priority \u2014 recurring format, MSP audience is a distribution channel."
+    },
+    {
+      "url": "https://www.sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study",
+      "query_text": "The biggest AI problem isn't the AI. Went for 'Demo to Dollars'... Expected to learn about: usage-based pricing, subscriptions, AI monetisation. Instead, the biggest takeaway was something much simpler. Data architecture... As subscription models that worked for SaaS are starting to fracture forecasting becomes ever more so relevant... Right now I'm on a mission to collect 10 real SME operational problems that AI could solve. If you run an SME and there's a repetitive task or messy process in your business: Drop it in the comments or DM me.",
+      "journalist_publication": "Independent (posted via LinkedIn, appears to be a content creator/researcher)",
+      "category": "SaaS / AI / Subscription Models / SME",
+      "deadline": "Open (collecting 10 case studies) PAGE-VERIFIED 2026-09-19: HTTP 200, live=True, badge 'None', datePublished 2026-03-10T09:47:55Z = 193 days, no expiry notice on the page.",
+      "contact_method": "DM via LinkedIn or comments | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Comment', 'DM me'].",
+      "relevance": "medium",
+      "relevance_notes": "About SaaS subscription models fracturing and AI solving SME operational problems. The 'subscription models that worked for SaaS are starting to fracture' observation directly connects to AIToolsEssentials' coverage of AI pricing shifts (usage-based credits, tier splits, per-outcome pricing). Can offer data on how AI tool pricing is moving away from flat subscriptions toward usage-based and tiered models. The SME operational problems angle is a fit for the Stack Audit.",
+      "suggested_pitch_template": "Template 1 (AI Tool Pricing Changes, reactive) \u2014 adapted: offer the observation that AI tool subscriptions are indeed fracturing \u2014 from flat $20/mo to usage-based credits (GitHub Copilot AI Credits), per-outcome pricing (HubSpot Breeze $0.50/resolved conversation), and multi-tier splits (ChatGPT 7 tiers, Claude 7 tiers). Pitch the Stack Audit as a tool for SMEs to navigate this fracturing by identifying which subscription model actually fits their usage. Offer to contribute one of the 10 SME operational problems: 'SMEs paying for overlapping AI tool subscriptions without realizing it.'"
+    }
+  ],
+  "new_this_run": [
+    "TWO RESOLVED EMAIL ROUTES, the first in this monitor's history beyond a hand-found contact form. Sourcee redacts the requester's address inside the request body \u2014 verified this run that the redaction is real, not display-only: no address survives anywhere in the page payload for five sampled requests. But the *publication's* own site publishes the reporter, and two are reachable: (a) Raconteur's byline pages carry the writer's address as an obfuscated data-part1/2/3 triple that the site's own scripts-last.min.js assembles at runtime (part1+'@'+part2+'.'+part3); reconstructed and cross-checked on two authors, giving simon.chandler@raconteur.net for the shadow-AI request's author, on Google Workspace MX. (b) Speciality Food magazine's /contact page lists named editorial addresses, including holly.shackleton@artichokehq.com for that request's author, on Microsoft 365 MX. Raconteur's own contact page explicitly asks PRs to approach the relevant writer directly.",
+    "NEW HIGH-RELEVANCE REQUEST, the first in six runs: 'Full-Time Employees - Shadow AI Use & Paying Out-of-Pocket' (Raconteur, Simon Chandler, 2 days old). Employees buying AI without employer approval and paying personally is unbudgeted, unenumerated software spend \u2014 our actual beat. It has been on Sourcee since 2026-09-17 and was missed because the previous run's sitemap scan read /sitemap.xml, which now returns only an index of 8 children; the scan silently produced 0 pairs. This run read /sitemap-journo-requests.xml directly.",
+    "RENEWAL SIGNAL TESTED AND FOUND ABSENT. The queue's cold label said 'never refreshed', which asserts an edit event. Sourcee's sitemap lastmod is byte-identical to the page's datePublished on all 300 most recently indexed slugs (300/300) and all 30 live-feed slugs (30/30), so lastmod carries no renewal information. build_pitch_queue.py no longer makes the claim.",
+    "RELEVANCE-RANKING DEFECT FIXED in build_pitch_queue.py._norm_rel. The digests use free-text labels ('high on topic, low on currency', 'medium (adjacent, not core AI-spend)'); only parentheticals were stripped, so 'high on topic, low on currency' reached RELEVANCE_RANK as an unknown key and took the default 9 \u2014 ranking it below every 'low' request. Both occurrences normalise to 'medium' now.",
+    "THE 2026-09-18 DIGEST WAS NEVER WRITTEN. That run produced its scratch artifacts (_scan_0918.json, _bodies_0918.json, _bodies_0918b.json \u2014 all committed) but no digest-2026-09-18.json, so build_pitch_queue.py's newest-digest membership test had been pointing at 2026-09-17 and reading 'not carried by the 2026-09-17 digest' on rows the 2026-09-18 run had in fact seen. Confirmed by git: no digest-2026-09-18.json exists in the working tree or anywhere in history. This run's digest carries all 29 tracked requests so the membership test has a complete newest digest to read.",
+    "SUPPLY: 578 slugs newly indexed in the 2026-09-11+ window, 63 carrying any AI token, of which 9 AI-token slugs had never been body-read by any prior run and all 9 were read this run (travel/cruise, narrative-medicine podcast, UK 80+ book interview, Cornell academic-integrity, Morocco sports hosting, parents teaching kids AI, two Medicare-agent requests). None is core-beat. 32 bodies read in total this run, 1 new core-beat-adjacent request (Raconteur).",
+    "TWO REQUESTS CROSSED INTO COLD UNPITCHED TODAY. FinOps/agentic AI cost overruns (12 days) was the queue's #1 on 2026-09-17 at 10 days and its draft was written and never sent; it is now past the 10-day line with its route still a LinkedIn DM. UK managers/Gen Z AI overuse (12 days) also crossed."
+  ],
+  "expired_this_run": [
+    "Tech Policy Experts - California AI audit bills (Industry Dive, Paige Gross): the request's own stated turnaround was 'speak with a source today' and it was posted 2026-09-10; now 9 days. Page live, no expiry notice. Do-not-pitch.",
+    "UK Managers - Gen Z AI overuse (MaryLou Costa): internal deadline ('by this Wednesday September 9') passed 10 days ago; now also past the 10-day line. Cold.",
+    "No request page fetched this run returned a removal notice: all 29 tracked URLs still serve their request body at HTTP 200."
+  ],
+  "summary": "29 tracked requests, 12 live and unpitched, 17 at or past the cold line. One new high-relevance request (Raconteur shadow AI, 2 days) \u2014 the first core-beat find in six runs \u2014 and, for the first time, two resolved publication-side email routes rather than DM-only. Two requests that had drafts written for them crossed into cold unpitched. Two monitor defects fixed: a missing 2026-09-18 digest that corrupted the newest-digest membership test, and a relevance normaliser that ranked the two highest-scoring requests below every low one.",
+  "recommended_actions": [
+    "Send Draft 1 to simon.chandler@raconteur.net (Raconteur, shadow AI spend, 2 days, high). The strongest request this monitor has held: on-beat, fresh, and with a resolved email route to the named author. Keep the no-personal-account disclosure.",
+    "Send Draft 2 to hliwrites.99 on Signal (Anthropic subscription value, 7 days, medium-high). Handle re-read off the live page this run; it is the direct channel and the request is ageing.",
+    "Send Draft 3 to holly.shackleton@artichokehq.com (Speciality Food, 1 day, low-medium) only if a budget benchmark is welcome from a non-retailer; the draft says so in its first line.",
+    "Decide on FinOps (12 days, cold): send the existing 2026-09-17 draft 1 as a LinkedIn DM or drop it. It is now the longest-standing high-relevance request we have never answered.",
+    "Resolve the Medialyst MCP OAuth handshake: the single step that adds six platforms' feeds (Connectively, HARO, X, LinkedIn, MentionMatch, Substack) to this monitor. Endpoint confirmed live (401 invalid_token); no MCP servers are configured in this profile."
+  ],
+  "monitor_health": {
+    "platforms_accessible": 1,
+    "platforms_blocked": 9,
+    "core_beat_new_requests": 1,
+    "consecutive_runs_without_new_core_beat": 0,
+    "tracked_urls": 29,
+    "live_unpitched": 12,
+    "pitches_sent_to_date": 3,
+    "pitches_sent_this_run": 0,
+    "replies_received_to_date": 1,
+    "resolved_email_routes": 2
+  }
+}

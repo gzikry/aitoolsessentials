@@ -1,116 +1,131 @@
 # Pitch queue — clear this in one pass
 
-Built 2026-09-18 from 27 unique requests across the digest history. 9 live, 14 cold (> 10 days, never refreshed).
+Built 2026-09-19 from 29 unique requests across the digest history. 11 live, 14 cold (> 10 days and unpitched).
 
 **Ages are read off each request page** (`datePublished`), not off the digest text — see `marketing/haro-outreach/verified-requests.json`, refreshed by `scripts/verify_journo_requests.py`. An earlier build fell back to the digest's first-seen date and showed a 190-day-old request as 8 days old.
 
-**Every pitch here needs a human send.** HARO and Connectively sit behind an email wall, Qwoted and Medialyst need authenticated sessions, and Sourcee's requests ask for a LinkedIn DM. That is why 43 flagged opportunities produced zero pitches. Reply routes are named per row, including any email the request page itself publishes.
+**No renewal signal exists on this source.** Sourcee publishes no renewal signal: on the 300 most recently indexed slugs and all 30 slugs of the live AI topic feed (checked 2026-09-19) the sitemap lastmod is byte-identical to datePublished, so 'never refreshed' is not observable and is not claimed here. Cold means old and unpitched, not provably abandoned.
+
+**Every pitch here needs a human send.** HARO and Connectively sit behind an email wall, Qwoted and Medialyst need authenticated sessions, and Sourcee redacts the requester's own address in the request body. That is why 43 flagged opportunities produced zero pitches. Reply routes are named per row — including addresses resolved off the *publication's* own site (a byline page or an editorial contact page), which is now the strongest route class in this queue.
+
+## Drafts that exist and were never sent
+
+Read this before clearing the queue: three drafts are already written and none has been sent. A written draft is not progress — the send is.
+
+- anthropic-users-and-business-owners-customer-service-experiences — **Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §2.** Route: Signal hliwrites.99.
+- finops-professionals-agentic-ai-cost-overruns — **Draft ready and UNSENT: `pitch-drafts-2026-09-17.md` §1.** Route: LinkedIn DM to linkedin.com/in/niloy-ghosh. This row was the queue's #1 two runs ago and has now crossed the cold line without being sent — send it or drop it, do not re-draft it.
+- fulltime-employees-shadow-ai-use-and-paying-outofpocket — **Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §1.** Route: simon.chandler@raconteur.net.
+- speciality-food-retailers-and-producers-how-theyd-spend-10k-on-t — **Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §3.** Route: holly.shackleton@artichokehq.com.
 
 ## Live — pitch these
 
+### [high] AI / Shadow AI Spend / Out-of-Pocket Subscriptions / Enterprise Tech
+- **URL:** https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-19, last 2026-09-19 (1x)
+- **Publication:** Raconteur (raconteur.net) — author named in the page's own author field: Simon Chandler · domain raconteur.net
+- **Reply route:** The page redacts the address ('Please email me at [email redacted]'), but Raconteur's own byline pages publish the writer's address as an obfuscated data-part1/2/3 triple that the site's JS assembles at runtime (scripts-last.min.js: part1 + '@' + part2 + '.' + part3). Reconstructed and cross-checked against a second author this run: simon.chandler@raconteur.net. raconteur.net MX = Google Workspace (aspmx.l.google.com). Raconteur's /contact page states PRs should contact the relevant writer directly.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
+- **Angle:** Template 2 (Overlapping Subscriptions / Cost Optimization), shadow-spend framing — lead with the affordability threshold computed from data/pricing_snapshots.json today: 31 of the 76 tools we track have a cheapest paid tier at or under $25/month, median $16.50, lowest $4 (Khanmigo, checked 2026-09-18); and the same tier billed monthly instead of annually runs up to 2.53x (Browse AI $48/month vs $1
+
 ### [medium] Founders / SaaS / AI Tools / Startup Profile
 - **URL:** https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch
-- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-11, last 2026-09-17 (3x)
-- **Publication:** Independent — 'Built From Scratch' bi-weekly founder series (LinkedIn)
-- **Reply route:** Comment on the original LinkedIn post with a short description of the business. Page author field: PrideCompetitive542. No email published.  ·  _no — LinkedIn DM / comment (George)_
+- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
+- **Seen:** first 2026-09-11, last 2026-09-19 (4x)
+- **Publication:** Independent (bi-weekly founder series, 'Built From Scratch')
+- **Reply route:** Comment on the original post with a short description of the business | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** Template 3 (AI Tool Directory / Comparison, general) — adapted: pitch AIToolsEssentials as a bootstrapped independent tool directory that grew out of the overlap problem. Angle: 'what's completely not working' is honest material — the directory earns nothing from rankings, so the keep/cut verdicts are the product. Mention the free Stack Audit as the current traction experiment. Medium priority — b
+
+### [low-medium] Retail Tech Budget / £10k Procurement / Speciality Food
+- **URL:** https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech
+- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-19, last 2026-09-19 (1x)
+- **Publication:** Speciality Food magazine (specialityfoodmagazine.com) — author named in the page's own author field: Holly Shackleton, Content Editor · domain specialityfoodmagazine.com
+- **Reply route:** The page redacts the address, but the magazine's /contact page publishes named editorial addresses: holly.shackleton@artichokehq.com (Content Editor), verified live this run. artichokehq.com MX = Outlook/Microsoft 365 (artichokehq-com.mail.protection.outlook.com).  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
+- **Angle:** Template 2 (cost optimization), budget-benchmark framing — lead with a verified figure and no currency conversion: 40 of the 76 AI tools we track publish a non-zero monthly price, 31 of them at or under $25/month, and of those that quote both terms the same tier runs 1.21x-2.53x depending on whether it is billed monthly or annually (checked 2026-09-18). Offer the dated set as a benchmark against t
 
 ### [low-medium] AI / Founders / Policy Impact
 - **URL:** https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies
-- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-16, last 2026-09-17 (2x)
-- **Publication:** Aaron Mok — Inc. (inc.com), author named in the page's own author field · domain inc.com
-- **Reply route:** Email the reporter — address redacted on Sourcee; reporter is named on the page.  ·  _no — contact redacted on Sourcee (George: original platform)_
+- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-16, last 2026-09-19 (3x)
+- **Publication:** Inc. (domain inc.com) · domain inc.com
+- **Reply route:** Email the reporter — redacted on Sourcee. No reachable route from the page. | PAGE-VERIFIED 2026-09-19: email_redacted=True, emails_on_page=none, reply_hints=['email me'].  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** Template 3 (AI Tool Directory / Comparison, general) — only if a data contribution is welcome: the commercial-AI-spend picture small teams are actually acting on is consolidation, not guardrails, and we hold dated pricing evidence for how that looks.
 
 ### [medium-low] AI Policy / Regulation / CIO Impact
 - **URL:** https://www.sourcee.app/journo-request/tech-policy-experts-california-ai-audit-bills-impact-cios
-- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
-- **Seen:** first 2026-09-12, last 2026-09-17 (3x)
-- **Publication:** Paige Gross — Industry Dive (industrydive.com) · domain industrydive.com
-- **Reply route:** Email or DM — both redacted on Sourcee. Reporter is named on the page (Paige Gross, Industry Dive).  ·  _no — contact redacted on Sourcee (George: original platform)_
+- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
+- **Seen:** first 2026-09-12, last 2026-09-19 (4x)
+- **Publication:** Independent journalist (tech policy beat) · domain industrydive.com
+- **Reply route:** Email (redacted on Sourcee) or DM — reply to the original post  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** Template 3 (AI Tool Directory / Comparison, general) — adapted if pursuing: the compliance-driven inventory angle. Frame: third-party AI audit requirements force organisations to enumerate which AI systems they run and what those systems cost — most cannot, and the subscription inventory is the prerequisite nobody scopes. Do not pitch: the stated deadline has passed.
 
 ### [low] Legal / AI Vendor Claims / Practice Impact
 - **URL:** https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice
-- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-17, last 2026-09-17 (1x)
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-17, last 2026-09-19 (2x)
 - **Publication:** Massachusetts Lawyers Weekly (masslawyersweekly.com) — published across state Lawyers Weekly titles · domain masslawyersweekly.com
-- **Reply route:** DM the author (page author field: misterschwartz33). No email published; on-record or on-background offered.  ·  _no — LinkedIn DM / comment (George)_
+- **Reply route:** DM the author (page author field: misterschwartz33). No email published; on-record or on-background offered. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['DM me'].  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** None this run — wrong standing. If pursued, the only honest line is that vendor-published performance claims are self-reported, the same pattern we document on pricing pages.
 
 ### [low] AI Labour / Data Annotation / Income
 - **URL:** https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact
-- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-17, last 2026-09-17 (1x)
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-17, last 2026-09-19 (2x)
 - **Publication:** Fortune (freelance reporter) · domain fortune.com
-- **Reply route:** DM or email — redacted on Sourcee.  ·  _no — contact redacted on Sourcee (George: original platform)_
+- **Reply route:** DM or email — redacted on Sourcee. | PAGE-VERIFIED 2026-09-19: email_redacted=True, emails_on_page=none, reply_hints=['DM me', 'email me'].  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded.
 
 ### [low] AI / Automation / Speaking
 - **URL:** https://www.sourcee.app/journo-request/ai-automation-experts-speakers-on-marketing-sales-operations-gains
-- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-17, last 2026-09-17 (1x)
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-17, last 2026-09-19 (2x)
 - **Publication:** Independent platform (AI TED-talk format)
-- **Reply route:** Comment on the original post (body instructs commenting a keyword for tickets). No email published.  ·  _no — LinkedIn DM / comment (George)_
+- **Reply route:** Comment on the original post (body instructs commenting a keyword for tickets). No email published. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=['Comment'].  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** None — excluded.
 
 ### [low] Ecommerce / AI Recommendations / Conversion
 - **URL:** https://www.sourcee.app/journo-request/ecommerce-marketers-transparency-in-ai-recommendations-and-conversion
-- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-17, last 2026-09-17 (1x)
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-17, last 2026-09-19 (2x)
 - **Publication:** MarketingSherpa (marketingsherpa.com) · domain marketingsherpa.com
-- **Reply route:** Reply to the original X/LinkedIn post (body links a recent article). No email published.  ·  _no — LinkedIn DM / comment (George)_
+- **Reply route:** Reply to the original X/LinkedIn post (body links a recent article). No email published. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.  ·  _no — LinkedIn DM / comment (George)_
 - **Links published on the page:** https://t.co/1pVlbDpTfQ
 - **Angle:** None — excluded.
 
 ### [low] Cybersecurity / Media Placement / AI Scams
 - **URL:** https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety
-- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-16, last 2026-09-17 (2x)
-- **Publication:** Sandra Torres — independent PR/comms practitioner sourcing cybersecurity spokespeople (author named in the page's own author field)
-- **Reply route:** Not stated on the Sourcee page — the body asks companies to identify themselves; no email, DM handle or form published. Contact is redacted.  ·  _no — platform reply (George)_
+- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-16, last 2026-09-19 (3x)
+- **Publication:** Independent PR/comms practitioner sourcing cybersecurity spokespeople
+- **Reply route:** Not stated on the Sourcee page — the body asks companies to identify themselves; no email, DM handle or form published. | PAGE-VERIFIED 2026-09-19: email_redacted=False, emails_on_page=none, reply_hints=none.  ·  _no — platform reply (George)_
 - **Angle:** None — off-beat and off-standing.
 
 ### [medium-high] AI / Vendor Support Quality / Subscription Value
 - **URL:** https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences
-- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-09-12, last 2026-09-17 (4x)
-- **Publication:** Helen Li — independent journalist (author named in the page's own author field)
-- **Reply route:** Signal handle 'hliwrites.99' is published verbatim in the request; DMs or email also invited but the address is redacted on Sourcee.  ·  _no — platform reply (George)_
+- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-09-12, last 2026-09-19 (5x)
+- **Publication:** Independent journalist (dedicated story on Anthropic customer service)
+- **Reply route:** Signal handle 'hliwrites.99' published verbatim in the request (re-read off the live page this run); DMs or email also invited, address redacted on Sourcee.  ·  _no — platform reply (George)_
 - **Angle:** Template 1 (AI Tool Pricing Changes, reactive) — adapted: pitch the price-to-support ratio, not a grievance. Frame: Anthropic's paid tiers run from $20/month (Pro, $17 annual) to $100-$200/month (Max); at the top tiers buyers pay enterprise money for consumer-grade support channels, which is what makes a support gap a value problem rather than an annoyance. Offer verified Anthropic pricing snapsho
 
 ## Cold — only if you have a reason
 
-- [high] 11d old, never refreshed — https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns
-- [medium] 11d old, never refreshed — https://www.sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops
-- [medium] 11d old, never refreshed — https://www.sourcee.app/journo-request/ai-startups-workplace-fraud-detection-expenses-time-theft
-- [medium] 11d old, never refreshed — https://www.sourcee.app/journo-request/marketing-and-content-leaders-aiassisted-work-review-process
-- [medium-high] 11d old, never refreshed — https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse
-- [high] 13d old, never refreshed — https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl
-- [high] 13d old, never refreshed — https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions
-- [high] 59d old, never refreshed — https://www.sourcee.app/journo-request/business-and-technology-leaders-tech-budget-priorities-amid-volatility
-- [high] 119d old, never refreshed — https://www.sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows
-- [medium] 15d old, never refreshed — https://www.sourcee.app/journo-request/ceos-ai-impact-on-ops-culture-and-commercial-strategy
-- [medium] 25d old, never refreshed — https://www.sourcee.app/journo-request/uk-finance-risk-and-regulatory-leaders-ai-explainability-risks
-- [medium] 192d old, never refreshed — https://www.sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study
-- [low-medium] 27d old, never refreshed — https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature
-- [medium-high] 185d old, never refreshed — https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends
+Older than the 10-day line and never pitched. Not provably abandoned — no renewal signal exists on this source — but every one of these has already passed an ideal send window.
 
-## Dropped off the feed
-
-Still fetching, but absent from the newest digest — colder than the age says.
-
-- [medium] 192d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study
-- [medium] 25d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/uk-finance-risk-and-regulatory-leaders-ai-explainability-risks
-- [low-medium] 27d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature
-- [high] 13d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl
-- [high] 119d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows
-- [medium-high] 185d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends
-- [high] 13d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions
-- [high] 59d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/business-and-technology-leaders-tech-budget-priorities-amid-volatility
-- [medium] 15d old — not carried by the 2026-09-17 digest (16 items) — https://www.sourcee.app/journo-request/ceos-ai-impact-on-ops-culture-and-commercial-strategy
+- [high] 12d old — https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns
+- [high] 14d old — https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl
+- [high] 14d old — https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions
+- [high] 60d old — https://www.sourcee.app/journo-request/business-and-technology-leaders-tech-budget-priorities-amid-volatility
+- [high] 120d old — https://www.sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows
+- [medium] 12d old — https://www.sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops
+- [medium] 12d old — https://www.sourcee.app/journo-request/ai-startups-workplace-fraud-detection-expenses-time-theft
+- [medium] 12d old — https://www.sourcee.app/journo-request/marketing-and-content-leaders-aiassisted-work-review-process
+- [medium] 16d old — https://www.sourcee.app/journo-request/ceos-ai-impact-on-ops-culture-and-commercial-strategy
+- [medium] 26d old — https://www.sourcee.app/journo-request/uk-finance-risk-and-regulatory-leaders-ai-explainability-risks
+- [medium] 193d old — https://www.sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study
+- [low-medium] 28d old — https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature
+- [medium-high] 12d old — https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse
+- [medium-high] 186d old — https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends
 
 ---
 

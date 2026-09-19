@@ -88,8 +88,23 @@ def _days_old(text: str, first_seen: str | None) -> float | None:
 
 
 def _norm_rel(rel: str) -> str:
+    """Normalise a digest's relevance label.
+
+    The digests are written by hand and use free text: "medium (adjacent, not core AI-spend)",
+    "high on topic, low on currency", "low-medium (adjacent; no cost or spend angle in the text)",
+    "tangential". Stripping only at "(" left "high on topic, low on currency" unmapped, and
+    RELEVANCE_RANK.get() then returned the default 9 — so the two highest-scoring requests in the
+    queue were ranked below every "low" one. Parentheticals are dropped and the leading qualifier
+    is mapped onto a known band.
+    """
     r = (rel or "").strip().lower()
-    r = r.split("(")[0].split("—")[0].split("-")[0 and 0 or 0] if False else r.split("(")[0]
+    r = r.split("(")[0].strip().strip(",;").strip()
+    # "high on topic, low on currency" -> the qualifier is the operative half
+    if "," in r:
+        parts = [p.strip() for p in r.split(",") if p.strip()]
+        r = parts[-1] if len(parts) > 1 else parts[0]
+    r = r.replace("high on topic", "medium").replace("low on currency", "medium")
+    r = {"tangential": "low", "adjacent": "low-medium"}.get(r, r)
     r = r.strip().rstrip("-").strip()
     return r or "unknown"
 
@@ -213,7 +228,17 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
     """
     rec = rec or {}
     if rec.get("email_redacted"):
-        return "no — contact redacted on Sourcee (George: original platform)"
+        # The request body's address is redacted by Sourcee — verified 2026-09-19 that the redaction
+        # is real, not display-only: no address survives anywhere in the payload for five sampled
+        # requests. A route may still exist on the *publication's* own site (Raconteur assembles the
+        # byline address from data-part1/2/3 in its own JS; Speciality Food's /contact page lists
+        # named editorial addresses), but only some rows have had that resolved. Say which, because
+        # claiming a resolved route on a row that has none is the same class of error as the old
+        # "email — could be automated" line.
+        c = (contact or "").lower()
+        if "@" in c or "resolved" in c:
+            return "no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)"
+        return "no — body address redacted by Sourcee, no route resolved for this request (George: original platform)"
     emails = rec.get("emails_on_page") or []
     if emails:
         return f"no — email {emails[0]} published (George sends)"
@@ -229,6 +254,56 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
     if "reply to the original" in c or "reddit" in c or "x/twitter" in c or "dm" in c:
         return "no — platform reply (George)"
     return "unknown — verify the route before sending"
+
+
+def _load_renewal() -> dict:
+    """Per-slug page-edit evidence, written by the run's sitemap cross-check."""
+    p = OUT / "_renewal_0919.json"
+    if p.exists():
+        try:
+            return json.loads(p.read_text())
+        except json.JSONDecodeError:
+            pass
+    return {}
+
+
+# Measured 2026-09-19 and deliberately recorded, because it removes a claim the queue used to make:
+# Sourcee's sitemap <lastmod> for a journo-request is byte-identical to that page's datePublished.
+# Verified on all 300 most recently indexed slugs (300/300) and on all 30 slugs of the live AI
+# topic feed (30/30). So lastmod carries NO renewal information, and any wording of the form
+# "never refreshed" asserts knowledge of an edit event that cannot be observed from this source.
+# The cold label therefore rests on age + the poster's own stated deadline, nothing else.
+RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently indexed slugs and all 30 "
+                  "slugs of the live AI topic feed (checked 2026-09-19) the sitemap lastmod is "
+                  "byte-identical to datePublished, so 'never refreshed' is not observable and is not "
+                  "claimed here. Cold means old and unpitched, not provably abandoned.")
+
+
+# A request can sit in the queue for days while a draft for it already exists: the FinOps request
+# was the queue's #1 on 2026-09-17 with a finished draft in pitch-drafts-2026-09-17.md and was never
+# sent, and it crossed into cold on 2026-09-19. Naming which rows are already written is the one
+# thing that turns "3 live requests" into an actual send decision.
+DRAFTS = {
+    "finops-professionals-agentic-ai-cost-overruns":
+        "**Draft ready and UNSENT: `pitch-drafts-2026-09-17.md` §1.** Route: LinkedIn DM to "
+        "linkedin.com/in/niloy-ghosh. This row was the queue's #1 two runs ago and has now crossed "
+        "the cold line without being sent — send it or drop it, do not re-draft it.",
+    "anthropic-users-and-business-owners-customer-service-experiences":
+        "**Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §2.** Route: Signal hliwrites.99.",
+    "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
+        "**Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §1.** Route: "
+        "simon.chandler@raconteur.net.",
+    "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
+        "**Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §3.** Route: "
+        "holly.shackleton@artichokehq.com.",
+}
+
+DRAFT_INDEX = (
+    "## Drafts that exist and were never sent\n\n"
+    "Read this before clearing the queue: three drafts are already written and none has been sent. "
+    "A written draft is not progress — the send is.\n\n"
+    + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(DRAFTS.items()))
+)
 
 
 def render(queue: list[dict], ledger: dict) -> str:
@@ -256,17 +331,23 @@ def render(queue: list[dict], ledger: dict) -> str:
         "# Pitch queue — clear this in one pass",
         "",
         f"Built {date.today().isoformat()} from {len(queue)} unique requests across the digest "
-        f"history. {len(fresh)} live, {len(stale)} cold (> {STALE_DAYS} days, never refreshed).",
+        f"history. {len(fresh)} live, {len(stale)} cold (> {STALE_DAYS} days and unpitched).",
         "",
         "**Ages are read off each request page** (`datePublished`), not off the digest text — see "
         "`marketing/haro-outreach/verified-requests.json`, refreshed by "
         "`scripts/verify_journo_requests.py`. An earlier build fell back to the digest's "
         "first-seen date and showed a 190-day-old request as 8 days old.",
         "",
+        f"**No renewal signal exists on this source.** {RENEWAL_CAVEAT}",
+        "",
         "**Every pitch here needs a human send.** HARO and Connectively sit behind an email wall, "
-        "Qwoted and Medialyst need authenticated sessions, and Sourcee's requests ask for a "
-        "LinkedIn DM. That is why 43 flagged opportunities produced zero pitches. Reply routes "
-        "are named per row, including any email the request page itself publishes.",
+        "Qwoted and Medialyst need authenticated sessions, and Sourcee redacts the requester's own "
+        "address in the request body. That is why 43 flagged opportunities produced zero pitches. "
+        "Reply routes are named per row — including addresses resolved off the *publication's* own "
+        "site (a byline page or an editorial contact page), which is now the strongest route class "
+        "in this queue.",
+        "",
+        DRAFT_INDEX,
         "",
     ]
 
@@ -297,10 +378,13 @@ def render(queue: list[dict], ledger: dict) -> str:
         lines += ["## Live — none", ""]
 
     if stale:
-        lines += ["## Cold — only if you have a reason", ""]
+        lines += ["## Cold — only if you have a reason", "",
+                  "Older than the 10-day line and never pitched. Not provably abandoned — no renewal "
+                  "signal exists on this source — but every one of these has already passed an ideal "
+                  "send window.", ""]
         for q in stale:
             age = f"{q['days_old']:.0f}d old" if q["days_old"] is not None else "age unknown"
-            lines.append(f"- [{q['relevance']}] {age}, never refreshed — {q['url']}")
+            lines.append(f"- [{q['relevance']}] {age} — {q['url']}")
         lines.append("")
 
     dropped = [q for q in live if q["dropped_off"]]

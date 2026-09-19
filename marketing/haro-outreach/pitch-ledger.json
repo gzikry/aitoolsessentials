@@ -8,6 +8,26 @@
     "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
   },
   "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it.",
+  "reply_status_checked": "2026-09-19",
+  "reply_status": {
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). INBOX, All Mail, Sent Mail, Spam and Trash all re-checked 2026-09-19. Five days of silence.",
+    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live. The correspondence asked whether a dynamically re-checked pricing database would make sense; the reply answered it as a peer method discussion.",
+    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). One day of silence."
+  },
+  "cold_without_a_send": [
+    {
+      "date": "2026-09-19",
+      "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
+      "action": "went cold unpitched",
+      "note": "Was the queue's #1 at 10 days on 2026-09-17, with a draft written in pitch-drafts-2026-09-17.md section 1. Never sent. Now 12 days and past the 10-day line. The draft still exists and its route (LinkedIn DM to linkedin.com/in/niloy-ghosh) is unchanged, so sending it late is still possible - but the monitor's own queue no longer counts it as live."
+    },
+    {
+      "date": "2026-09-19",
+      "url": "https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse",
+      "action": "went cold unpitched",
+      "note": "Was medium-high. The reporter's own internal deadline ('by this Wednesday September 9') had already passed when the request was first recorded; the page has stayed live with no expiry notice and it has now also crossed the 10-day line. Not a live opportunity in practice."
+    }
+  ],
   "log": [
     {
       "date": "2026-09-15",
