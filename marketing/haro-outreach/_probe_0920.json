@@ -1,0 +1,50 @@
+{
+ "HARO": {
+  "url": "https://www.helpareporter.com/",
+  "http": "429",
+  "bytes": 31198,
+  "title": "Vercel Security Checkpoint"
+ },
+ "Connectively": {
+  "url": "https://www.connectively.us/",
+  "http": "429",
+  "bytes": 31199,
+  "title": "Vercel Security Checkpoint"
+ },
+ "Source of Sources": {
+  "url": "https://sourceofsources.com/requests",
+  "http": "404",
+  "bytes": 140415,
+  "title": "Page Not Found - Source of Sources"
+ },
+ "Qwoted": {
+  "url": "https://app.qwoted.com/requests",
+  "http": "404",
+  "bytes": 3266,
+  "title": "Error: The page you were looking for doesn't exist (404) | Qwoted"
+ },
+ "MentionMatch": {
+  "url": "https://mentionmatch.com/",
+  "http": "200",
+  "bytes": 11342,
+  "title": "MentionMatch - Connect B2B Writers with Expert Sources"
+ },
+ "Medialyst MCP": {
+  "url": "https://medialyst.ai/api/mcp",
+  "http": "401",
+  "bytes": 74,
+  "title": ""
+ },
+ "ResponseSource": {
+  "url": "https://www.responsesource.com/",
+  "http": "200",
+  "bytes": 148252,
+  "title": "ResponseSource - Connecting the media"
+ },
+ "Sourcee": {
+  "url": "https://www.sourcee.app/",
+  "http": "200",
+  "bytes": 100854,
+  "title": "Sourcee - We find the Journo Requests, You get Featured"
+ }
+}

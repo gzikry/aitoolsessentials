@@ -38,7 +38,26 @@ VERIFIED = OUT / "verified-requests.json"
 # A request older than this, never refreshed, is cold in practice even if the page is live.
 STALE_DAYS = 10
 
-RELEVANCE_RANK = {"high": 0, "medium": 1, "low-medium": 2, "medium-low": 2, "low": 3}
+# Band order, best first. "medium-high" was missing from this map, so the three requests carrying
+# that label — including the Anthropic subscription-value request that has a finished draft and the
+# only published direct channel in the whole queue — fell through RELEVANCE_RANK.get()'s default of
+# 9 and were ranked BELOW every "low" request. That is the same defect class the previous run fixed
+# for "high on topic, low on currency", reached through a different label: the digests use free text,
+# so the map has to be defensive about every variant rather than the handful that were noticed.
+RELEVANCE_RANK = {"high": 0, "medium-high": 0.5, "medium": 1, "low-medium": 2, "medium-low": 2,
+                  "low": 3, "tangential": 4, "unknown": 5}
+
+
+def _rel_rank(label: str) -> float:
+    """Rank a (possibly messy) relevance label, never silently dropping it below 'low'."""
+    r = (label or "").strip().lower()
+    if r in RELEVANCE_RANK:
+        return RELEVANCE_RANK[r]
+    # "high" / "medium" / "low" as a prefix or with a trailing qualifier still bands correctly.
+    for band in ("high", "medium", "low"):
+        if r.startswith(band):
+            return RELEVANCE_RANK[band]
+    return RELEVANCE_RANK["unknown"]
 
 
 def _load_verified() -> dict:
@@ -156,7 +175,7 @@ def collect() -> list[dict]:
             rec["last_seen"] = max(rec["last_seen"], day)
             rec["appearances"] += 1
             # keep the strongest relevance and the longest text we have
-            if RELEVANCE_RANK.get(rel, 9) < RELEVANCE_RANK.get(rec["relevance"], 9):
+            if _rel_rank(rel) < _rel_rank(rec["relevance"]):
                 rec["relevance"] = rel
             for src, dst, longest in (
                 ("deadline", "deadline", False),
@@ -257,14 +276,21 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
 
 
 def _load_renewal() -> dict:
-    """Per-slug page-edit evidence, written by the run's sitemap cross-check."""
-    p = OUT / "_renewal_0919.json"
-    if p.exists():
-        try:
-            return json.loads(p.read_text())
-        except json.JSONDecodeError:
-            pass
-    return {}
+    """Per-slug page-edit evidence, written by whichever run's sitemap cross-check produced it.
+
+    The filename used to be pinned to _renewal_0919.json, so every later run loaded the 2026-09-19
+    file regardless of what it had measured. Globs the newest available instead.
+    """
+    candidates = sorted(OUT.glob("_renewal_*.json"))
+    if not candidates:
+        return {}
+    p = candidates[-1]
+    try:
+        d = json.loads(p.read_text())
+        d["_source_file"] = p.name
+        return d
+    except json.JSONDecodeError:
+        return {}
 
 
 # Measured 2026-09-19 and deliberately recorded, because it removes a claim the queue used to make:
@@ -284,23 +310,30 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
 # sent, and it crossed into cold on 2026-09-19. Naming which rows are already written is the one
 # thing that turns "3 live requests" into an actual send decision.
 DRAFTS = {
-    "finops-professionals-agentic-ai-cost-overruns":
-        "**Draft ready and UNSENT: `pitch-drafts-2026-09-17.md` §1.** Route: LinkedIn DM to "
-        "linkedin.com/in/niloy-ghosh. This row was the queue's #1 two runs ago and has now crossed "
-        "the cold line without being sent — send it or drop it, do not re-draft it.",
-    "anthropic-users-and-business-owners-customer-service-experiences":
-        "**Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §2.** Route: Signal hliwrites.99.",
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        "**Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §1.** Route: "
-        "simon.chandler@raconteur.net.",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-20: "
+        "`pitch-drafts-2026-09-20.md` §1.** Route: simon.chandler@raconteur.net. ROUTE NOTE: the "
+        "2026-09-19 digest cited raconteur.net/author/simon-chandler/ for the obfuscated address "
+        "triple; that URL 404s as of 2026-09-20 and the live page is "
+        "/contributors/simon-chandler (HTTP 200, same triple, same address). Send this row.",
+    "anthropic-users-and-business-owners-customer-service-experiences":
+        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-20: "
+        "`pitch-drafts-2026-09-20.md` §2.** Route: Signal hliwrites.99 (re-read off the live page "
+        "2026-09-20). Now 8 days old — send or drop.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        "**Draft ready and UNSENT: `pitch-drafts-2026-09-19.md` §3.** Route: "
-        "holly.shackleton@artichokehq.com.",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-20: "
+        "`pitch-drafts-2026-09-20.md` §3.** Route: holly.shackleton@artichokehq.com (re-read off "
+        "specialityfoodmagazine.com/contact 2026-09-20).",
+    "finops-professionals-agentic-ai-cost-overruns":
+        "**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1.** Route: "
+        "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — the "
+        "longest-standing high-relevance request this monitor has never answered. Send it late or "
+        "drop it, do not draft it a fourth time.",
 }
 
 DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
-    "Read this before clearing the queue: three drafts are already written and none has been sent. "
+    "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
     + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(DRAFTS.items()))
 )
@@ -321,7 +354,7 @@ def render(queue: list[dict], ledger: dict) -> str:
         # and using it as a membership test would demote the whole queue.
         live_in_feed = q["in_latest"]
         return (0 if live_in_feed else 1,
-                RELEVANCE_RANK.get(q["relevance"], 9),
+                _rel_rank(q["relevance"]),
                 q["days_old"] if q["days_old"] is not None else 999)
 
     fresh.sort(key=key)
