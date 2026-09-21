@@ -13,8 +13,15 @@ from datetime import date
 
 from enhance_structured_data import is_hands_on_published, valid_rating_value
 from site_scope import is_public_rel, is_working_rel
+from affiliate_util import sponsored_href_needles
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# Href fragments that may only ever appear on links issued by a real affiliate program.
+# Defined once at module scope so both the rel=sponsored rule (below) and the outbound-CTA
+# rule read the same list — they previously drifted, and the outbound rule's `external`
+# escape hatch let commission-bearing links through unlabeled.
+_AFFILIATE_NEEDLES = sponsored_href_needles(ROOT)
 
 class Parser(HTMLParser):
     def __init__(self):
@@ -424,10 +431,22 @@ def main():
             if any(domain in href.lower() for domain in ['twitter.com', 'facebook.com', 'facebook.com/sharer', 'linkedin.com/share']):
                 continue
             # Editorial/benchmark citations are non-commercial references.
+            #
+            # ORDER MATTERS: check the affiliate needles FIRST. This used to read
+            # `if 'external' in rel: continue`, which meant a commission-bearing link
+            # marked `rel="external ..."` was skipped entirely — the injected affiliate
+            # modules shipped 12 such links across 6 pages, so they were both mislabeled
+            # for Google (sponsored is required for paid placement) and invisible to this
+            # guard. A real affiliate href must be labeled sponsored regardless of what
+            # else is in rel; only genuinely non-affiliate external links may pass.
+            if any(k in href for k in _AFFILIATE_NEEDLES):
+                if 'sponsored' not in rel or 'nofollow' not in rel:
+                    errors.append(f'{f.relative_to(ROOT)} affiliate link missing sponsored nofollow: {href}')
+                continue
             if 'external' in rel:
                 continue
             if 'sponsored' not in rel or 'nofollow' not in rel:
-                errors.append(f'{f.relative_to(ROOT)} outbound link missing sponsored nofollow: {a.get("href")}')
+                errors.append(f'{f.relative_to(ROOT)} outbound link missing sponsored nofollow: {href}')
 
     old_slugs = ('/riverside', '/adobe-podcast', '/categories/Podcast', '/best-ai-tools-for-podcasters')
     for html_path in ROOT.rglob('*.html'):
@@ -861,8 +880,7 @@ def main():
     # rel="sponsored" must mark only links issued by a real affiliate program. The site's own
     # methodology says so, and Google defines sponsored as paid placement. Using it on ordinary
     # vendor links is both false and a misdeclaration - 191 instances did this across 38 pages.
-    from affiliate_util import sponsored_href_needles
-    affiliate_prefixes = sponsored_href_needles(ROOT)
+    affiliate_prefixes = _AFFILIATE_NEEDLES
     bad_sponsored = []
     for f in ROOT.rglob('*.html'):
         rel = f.relative_to(ROOT)
