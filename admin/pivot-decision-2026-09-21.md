@@ -114,3 +114,11 @@ So the highest-value asset is unmonetised by omission, not by failure.
   footnote — the affiliate lane is the passive one and it is the $2.42 lane.
 - 44% of our position-≤10 impressions come from operator/scraper queries, not
   buyers.
+
+## George's calls (2026-09-21)
+
+- **Keep payment as invoice-on-confirmation.** Do not wire a checkout (Whop/Stripe) until the
+  first paid audit lands. The intake collects the brief; payment is arranged manually.
+- **Do NOT rebuild the Canyon Optometry audit** under the corrected standard. Offered as a free
+  redo; George declined. Do not re-propose it. The failed delivery stays as-is and the
+  corrected standard applies to future builds only.
