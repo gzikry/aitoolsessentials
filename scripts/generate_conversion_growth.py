@@ -144,8 +144,30 @@ USE_CASE_DEFS = [
 ]
 
 # Use-case slugs consolidated into a deeper audience guide. Key -> destination path.
+#
+# Each entry here is a real duplicate-intent pair: the /use-cases/ page and the /articles/
+# guide carried the SAME <title> and the SAME <h1>, so they competed for one query and Google
+# had to pick. In every case below the /articles/ guide is the deeper page and the one wired to
+# the depth-block mechanism, so it is the destination.
+#
+# Read off the 2026-09-21 Search Console export (3-month window). Where both sides earned
+# impressions, the article won: nonprofits 198 vs 69, property managers 73 vs 62, podcasters
+# 27 vs 1. `best-ai-tools-for-lawyers` is the one pair with no article-side impressions, but its
+# /use-cases/ page showed 21 impressions at position 4.19 with zero clicks — junk traffic, not
+# a win worth protecting, and the canonical on the stub passes the signal either way.
+#
+# Deliberately NOT consolidated, because the use-case page is the DEEPER one and redirecting it
+# would destroy the better page: `best-ai-tools-for-students` (547w use-case vs 395w article)
+# and `best-ai-tools-for-sales-teams` (496w vs 440w). Duplicate titles are still a defect
+# there — the fix is to deepen the article first, then add it here. Left for a deliberate pass
+# rather than guessed at.
 CONSOLIDATED_TO = {
     'best-ai-tools-for-teachers': '/articles/best-ai-tools-for-teachers.html',
+    'best-ai-tools-for-nonprofits': '/articles/best-ai-tools-for-nonprofits.html',
+    'best-ai-tools-for-property-managers': '/articles/best-ai-tools-for-property-managers.html',
+    'best-ai-tools-for-lawyers': '/articles/best-ai-tools-for-lawyers.html',
+    'best-ai-tools-for-healthcare-admin': '/articles/best-ai-tools-for-healthcare-admin.html',
+    'best-ai-tools-for-show-producers': '/articles/best-ai-tools-for-podcast-shows.html',
 }
 
 PROMOTION_TARGETS = [
