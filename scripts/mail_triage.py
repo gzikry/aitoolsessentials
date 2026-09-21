@@ -64,6 +64,11 @@ def classify(msg):
     frm = ((msg.get("from") or {}).get("addr") or "").lower()
     has_att = msg.get("has_attachment")
     if "formsubmit" in frm and "intake" in subj:
+        # Distinguish the $497 written audit intake from the included-with-Premium one.
+        # Both matter, but the paid one is a revenue commitment with a stated SLA, so it must
+        # not sit in the same queue as a $12 membership questionnaire.
+        if "$497" in subj or "paid" in subj:
+            return "💰 PAID AUDIT INTAKE ($497) — reply within 1 business day"
         return "🔥 AUDIT INTAKE — reply within 24h (paid lead)"
     if "formsubmit" in frm and "tool" in subj:
         return "📬 VENDOR SUBMISSION — review queue"

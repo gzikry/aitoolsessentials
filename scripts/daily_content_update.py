@@ -195,6 +195,18 @@ from generate_stack_audit import generate as generate_stack_audit
 generate_stack_audit(root, today)
 print('Generated stack audit')
 
+# Public paid service pages. Runs AFTER stack_audit so the free-audit cross-links exist.
+# Must run before the premium postprocess, which rewrites /services/ai-stack-audit.html.
+from generate_paid_audit_service import generate_all as generate_paid_audit_service
+generate_paid_audit_service(root, today)
+print('Generated paid audit service pages')
+
+# Route existing offer-page traffic to the paid audit. Runs after every generator that writes
+# those pages, so the markers survive regeneration; idempotent by marker replacement.
+from generate_paid_audit_crosslinks import apply_crosslinks as apply_paid_audit_crosslinks
+apply_paid_audit_crosslinks(root)
+print('Applied paid audit cross-links')
+
 from generate_switch_guides import generate as generate_switch_guides
 generate_switch_guides(root, tools, today)
 print('Generated switch-from migration guides')
