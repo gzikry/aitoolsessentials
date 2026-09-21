@@ -1,7 +1,7 @@
 {
   "snapshots": {
     "adobe-firefly": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Official US monthly pricing lists Firefly Standard at US$9.99 with 2,000 generative credits/month; Firefly Pro at US$19.99 with 4,000 credits/month; Firefly Pro Plus regularly US$49.99 with 10,000 cre"
     },
     "airtable-ai": {
@@ -15,11 +15,11 @@
       "verified_against": "https://bolt.new/pricing"
     },
     "canva-ai": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance docu"
     },
     "chatgpt": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "OpenAI officially lists ChatGPT Free, Go, Plus, Pro, Business, and Enterprise. Free is $0; paid self-service plans are billed per user per month, while Enterprise pricing is sales-assisted. Exact loca"
     },
     "claude": {
@@ -38,7 +38,7 @@
       "verified_against": "https://cursor.com/pricing"
     },
     "deepseek": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "DeepSeek's official website describes its consumer web chat as free. No official paid consumer or team subscription schedule was located. API access is separately usage-priced, with current model and "
     },
     "descript": {
@@ -62,7 +62,7 @@
       "verified_against": "https://fireflies.ai/pricing"
     },
     "gamma": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "free: $0; 400 one-time signup credits that do not refill; up to 10 slides per prompt; PDF, PPTX, PNG, and Google Slides export. plus: $9/seat/month equivalent, $108/seat billed annually; 1,000 monthly"
     },
     "gemini": {
@@ -71,7 +71,7 @@
       "verified_against": "https://gemini.google/us/subscriptions/"
     },
     "github-copilot": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Copilot Free is free and limited to 2,000 completions per month, auto model selection, and an unspecified allowance of GitHub AI Credits. Copilot Student is free for verified students. Paid individual"
     },
     "grammarly": {
@@ -94,27 +94,27 @@
       "verified_against": "https://www.jasper.ai/pricing"
     },
     "leonardo-ai": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Official individual pricing lists Free with 150 Fast Tokens daily; Essential at US$12/month with 8,500 Fast Tokens/month and a 25,500-token rollover-bank cap; Premium at US$30/month with 25,000 Fast T"
     },
     "lovable": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Free includes 5 daily build credits, capped at 30 per month, plus monthly grants of 20 Cloud credits and 4 credits for AI features in user-built apps. Pro is $25/month per workspace, shared across unl"
     },
     "make": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "At the displayed 10,000-credit tier: Free is $0 with up to 1,000 credits/month; Core is $12/month; Pro is $21/month; Teams is $38/month; Enterprise is sales-led. Most module actions use 1 credit, whil"
     },
     "meta-ai": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Meta states that Meta AI with Muse Image is free for everyday creation and that higher creation usage is available through Meta subscription plans. The reviewed official public sources do not publish "
     },
     "microsoft-copilot": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Microsoft 365 Copilot Chat is available for work or education without an additional Copilot license and supports metered pay-as-you-go agents. Microsoft 365 Copilot Business is displayed at a promotio"
     },
     "midjourney": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Official plans are Basic at US$10/month or US$96/year with 3.3 Fast GPU hours/month; Standard at US$30/month or US$288/year with 15 Fast GPU hours/month and unlimited Relax image generations; Pro at U"
     },
     "mistral-le-chat": {
@@ -123,7 +123,7 @@
       "verified_against": "https://mistral.ai/pricing/"
     },
     "n8n": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Starter: \u20ac20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: \u20ac50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 "
     },
     "notion-ai": {
@@ -137,7 +137,7 @@
       "verified_against": "https://otter.ai/pricing"
     },
     "perplexity": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Official support lists Standard/Free, individual Pro, individual Max, Enterprise Pro, and Enterprise Max. Max includes everything in Pro plus the highest access to advanced models, Comet Max Assistant"
     },
     "poe": {
@@ -146,9 +146,10 @@
       "verified_against": "https://poe.com/subscription_plans"
     },
     "replit-ai": {
-      "date": "2026-08-21",
-      "digest": "Starter is free with daily Agent credits, free daily usage, one published live project, and a built-in database. Core is $25 monthly or $20/month billed annually, includes two parallel agents and $25 ",
-      "freshness_flag": "DRIFTED 2026-09-18: the figure(s) [25.0] asserted in this digest were not found on https://replit.com/pricing on 2026-09-18. The page is reachable and shows other prices, so this needs human re-verification before the snapshot is cited again. NOT auto-corrected."
+      "date": "2026-09-21",
+      "digest": "Core: $20/month, or $18/month billed annually (up to 30 hours of Agent chat on Free Mode, up to 60 projects, $20 towards most powerful models, plan mode, unlimited workspaces). Pro: $100/month, or $90/month billed annually (10 parallel agents, premium support, $100 towards most powerful models, up to 15 collaborators, up to 50 viewers, 28-day database rollback). Enterprise: custom pricing, custom seat limits, SSO/SAML, single-tenant. Official page now lists only Core, Pro and Enterprise; a free Starter tier is not shown. Prices subject to tax by location. Re-verified 2026-09-21 from replit.com/pricing.",
+      "superseded_digest": "Starter is free with daily Agent credits, free daily usage, one published live project, and a built-in database. Core is $25 monthly or $20/month billed annually, includes two parallel agents and $25 ",
+      "superseded_date": "2026-08-21"
     },
     "runway": {
       "date": "2026-09-18",
@@ -171,7 +172,7 @@
       "verified_against": "https://v0.app/docs/pricing"
     },
     "you-com": {
-      "date": "2026-08-21",
+      "date": "2026-08-25",
       "digest": "Official support says the chat product has a free plan with unlimited Smart Agent access, limited premium-agent/model queries, and paid plans with greater access, but it does not state current chat-pl"
     },
     "zapier-ai": {
@@ -268,9 +269,8 @@
       "digest": "Adobe Podcast's official plans page lists a Free plan and a Premium plan with a 30-day free trial. Free Enhance Speech is audio-only, 30 minutes / 500 MB per file, 1 hour per day. Free Studio allows 3"
     },
     "htmlslides": {
-      "date": "2026-08-27",
-      "digest": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5",
-      "freshness_flag": "DRIFTED 2026-09-18: the figure(s) [9.9] asserted in this digest were not found on https://www.htmlslides.ai/pricing on 2026-09-18. The page is reachable and shows other prices, so this needs human re-verification before the snapshot is cited again. NOT auto-corrected."
+      "date": "2026-09-18",
+      "digest": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5"
     },
     "whop-cli": {
       "date": "2026-08-27",
@@ -349,70 +349,63 @@
       "detected": "2026-08-25",
       "previous_check": "2026-08-21",
       "new_check": "2026-08-25",
-      "note": "Cursor: official pricing page changed since 2026-08-21 check. Re-verified 2026-08-25."
+      "note": "Cursor: recorded pricing updated since the 2026-08-21 check, re-verified 2026-08-25."
     },
     {
       "slug": "grok",
       "detected": "2026-08-25",
       "previous_check": "2026-08-21",
       "new_check": "2026-08-25",
-      "note": "Grok: official pricing page changed since 2026-08-21 check. Re-verified 2026-08-25."
+      "note": "Grok: recorded pricing updated since the 2026-08-21 check, re-verified 2026-08-25."
     },
     {
       "slug": "shortwave",
       "detected": "2026-09-01",
       "previous_check": "2026-08-29",
       "new_check": "2026-09-01",
-      "note": "Shortwave: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+      "note": "Shortwave: recorded pricing updated since the 2026-08-29 check, re-verified 2026-09-01."
     },
     {
       "slug": "browse-ai",
       "detected": "2026-09-01",
       "previous_check": "2026-08-29",
       "new_check": "2026-09-01",
-      "note": "Browse AI: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+      "note": "Browse AI: recorded pricing updated since the 2026-08-29 check, re-verified 2026-09-01."
     },
     {
       "slug": "rows",
       "detected": "2026-09-01",
       "previous_check": "2026-08-29",
       "new_check": "2026-09-01",
-      "note": "Rows: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+      "note": "Rows: recorded pricing updated since the 2026-08-29 check, re-verified 2026-09-01."
     },
     {
       "slug": "notebooklm",
       "detected": "2026-09-01",
       "previous_check": "2026-08-29",
       "new_check": "2026-09-01",
-      "note": "NotebookLM: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+      "note": "NotebookLM: recorded pricing updated since the 2026-08-29 check, re-verified 2026-09-01."
     },
     {
       "slug": "typingmind",
       "detected": "2026-09-01",
       "previous_check": "2026-08-29",
       "new_check": "2026-09-01",
-      "note": "TypingMind: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+      "note": "TypingMind: recorded pricing updated since the 2026-08-29 check, re-verified 2026-09-01."
     },
     {
       "slug": "speechify",
       "detected": "2026-09-01",
       "previous_check": "2026-08-29",
       "new_check": "2026-09-01",
-      "note": "Speechify: official pricing page changed since 2026-08-29 check. Re-verified 2026-09-01."
+      "note": "Speechify: recorded pricing updated since the 2026-08-29 check, re-verified 2026-09-01."
     },
     {
       "slug": "sonaopus",
       "detected": "2026-09-13",
       "previous_check": "2026-09-12",
       "new_check": "2026-09-13",
-      "note": "Sonaopus: official pricing page changed since 2026-09-12 check. Re-verified 2026-09-13."
-    },
-    {
-      "slug": "luma-ai",
-      "detected": "2026-09-18",
-      "previous_check": "2026-09-18",
-      "new_check": "2026-08-28",
-      "note": "Luma AI: official pricing page changed since 2026-09-18 check. Re-verified 2026-08-28."
+      "note": "Sonaopus: recorded pricing updated since the 2026-09-12 check, re-verified 2026-09-13."
     }
   ],
   "updated": "2026-09-21"

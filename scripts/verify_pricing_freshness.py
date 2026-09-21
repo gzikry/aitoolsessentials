@@ -28,6 +28,8 @@ Usage:
 """
 from __future__ import annotations
 
+from html import unescape
+
 import argparse
 import json
 import re
@@ -54,6 +56,89 @@ PRICE = re.compile(r"(?<![\w$\\])\$(?!\$|[A-Z])\s?(\d[\d,]*)\s*(?:[.,]\s*(\d{2})
 
 # Splits the fetched content into rendered body (before) and script payloads (after).
 SCRIPT_MARKER = "\n<<<SCRIPTS>>>\n"
+
+# A digest asserting that a vendor publishes NO price list. That is a claim, not an absence of
+# one — it can be falsified by the vendor's own page, so it must not pass as "nothing to check".
+OPACITY = re.compile(
+    r"no\s+(?:public(?:ly)?[- ]?)?(?:self[- ]service\s+)?(?:consumer\s+)?"
+    r"(?:pricing|price)\s+(?:page|list|table|information)"
+    r"|does\s+not\s+(?:publish|expose|list|disclose|offer"
+    r"|make\s+(?:its\s+)?pricing\s+public)"
+    r"|pricing\s+(?:is\s+)?not\s+(?:public|disclosed|published)"
+    r"|no\s+self[- ]service\s+(?:plan|tier|signup)",
+    re.I,
+)
+
+# Context that marks a figure as a real PUBLISHED PRICE rather than any other money number.
+# Harvey's homepage carries "$550M at a $15.5B valuation" — a funding round. Without this guard
+# every opaque-tool record would be flagged as wrong on the strength of unrelated figures.
+PRICE_CONTEXT = re.compile(
+    r"(/\s*(?:mo|month|year|yr|user|seat|member|credit)\b"
+    r"|per\s+(?:month|user|seat|member|year|credit)"
+    r"|billed|monthly|annually|annual|per\s+month|\bplan\b|\btier\b|\bsubscription\b)",
+    re.I,
+)
+
+
+def price_like_figures(text: str) -> set[float]:
+    """Money figures that sit near billing language — i.e. plausibly real published prices.
+
+    Deliberately narrow. Its only job is to help a human decide whether a record claiming
+    "the vendor publishes no price" is still true, so it must not fire on funding rounds,
+    valuations, or revenue numbers.
+    """
+    body = text.split(SCRIPT_MARKER, 1)[0]
+    out: set[float] = set()
+    for m in re.finditer(r"\$\s?\d[\d,]*(?:[.,]\d{2})?", body):
+        ctx = body[max(0, m.start() - 70): m.end() + 70]
+        if not PRICE_CONTEXT.search(ctx):
+            continue
+        for p in prices(m.group(0)):
+            if p > 0:
+                out.add(p)
+    return out
+
+
+def split_content(raw: str) -> str:
+    """Split raw HTML into searchable content: body text, attribute text, and scripts.
+
+    Single source of truth for the extraction pipeline, because `fetch_text` and `is_flaky`
+    both classify the same page and previously drifted apart — a fix applied to one and not
+    the other silently produced contradictory verdicts on the same URL.
+
+    Three parts, each for a different reason:
+
+    * **Body text** — bare `$` figures are only trustworthy here. Rendering frameworks embed
+      chunk references that look exactly like prices: Next.js flight data contains `\\"$24\\"`
+      and `$L25`, so udio.com/pricing appears to publish three prices it does not. The escaped
+      quotes defeat any lookbehind, because the byte before `$` is a legitimate non-word char.
+    * **Attribute text** — `content`, `alt` and `aria-label` values are publisher-authored
+      human-readable prose. htmlslides publishes its entire Pro price ("get the Pro launch
+      offer at $9.90/month") ONLY in its `<meta name="description" content="...">`, so
+      stripping tags discarded it and reported a price that is still live as vanished. Only
+      content-bearing attributes are read: `class`, `href`, `src` and `data-*` hold framework
+      payloads and would reintroduce the false positives above.
+    * **Script payloads** — structured plan data lives here and nowhere else. Airtable
+      publishes `"costPerUserPerMonthInCents": 2400` (its $24 tier) while rendering just $20
+      and $45; cursor.com publishes its whole plan table as JSON-LD.
+    """
+    raw = re.sub(r"<style.*?</style>", " ", raw, flags=re.S)
+    # content-bearing attributes only (NOT class/href/src/data-*, which carry framework noise)
+    attrs = re.findall(
+        r"""\b(?:content|alt|aria-label|title|placeholder|value)\s*=\s*["']([^"']{2,})["']""",
+        raw, flags=re.I,
+    )
+    parts = re.split(r"<script[^>]*>(.*?)</script>", raw, flags=re.S | re.I)
+    body = " ".join(p for i, p in enumerate(parts) if i % 2 == 0)
+    scripts = " ".join(p for i, p in enumerate(parts) if i % 2 == 1)
+    body = re.sub(r"<[^>]+>", " ", body)
+    # Normalise each half BEFORE joining. Collapsing whitespace across the marker destroys it —
+    # the newlines it is made of become spaces, `norm_set`'s split then never fires, and the
+    # scripts silently get classified as body text. That failure mode is invisible in one
+    # direction and loud in the other: Airtable's cents-only price looked drifted, while
+    # Udio's Next.js flight payload leaked in as three prices it does not publish.
+    norm = lambda s: re.sub(r"\s+", " ", unescape(s))  # noqa: E731
+    return norm(body) + norm(" ".join(attrs)) + SCRIPT_MARKER + norm(scripts)
 
 
 def fetch_text(url: str, timeout: int = 35, attempts: int = 3) -> str:
@@ -83,14 +168,7 @@ def fetch_text(url: str, timeout: int = 35, attempts: int = 3) -> str:
             ).stdout
         except Exception:
             continue
-        out = re.sub(r"<style.*?</style>", " ", out, flags=re.S)
-        # separate scripts from the rendered body with an explicit marker
-        parts = re.split(r"<script[^>]*>(.*?)</script>", out, flags=re.S | re.I)
-        body = " ".join(p for i, p in enumerate(parts) if i % 2 == 0)
-        scripts = " ".join(p for i, p in enumerate(parts) if i % 2 == 1)
-        body = re.sub(r"<[^>]+>", " ", body)
-        body = re.sub(r"\s+", " ", body)
-        candidate = body + SCRIPT_MARKER + scripts
+        candidate = split_content(out)
         if len(norm_set(candidate)) > len(norm_set(best)):
             best = candidate
     return best
@@ -112,12 +190,7 @@ def is_flaky(url: str, missing: list[float], timeout: int = 35, attempts: int = 
             ).stdout
         except Exception:
             continue
-        out = re.sub(r"<style.*?</style>", " ", out, flags=re.S)
-        parts = re.split(r"<script[^>]*>(.*?)</script>", out, flags=re.S | re.I)
-        body = " ".join(x for i, x in enumerate(parts) if i % 2 == 0)
-        scripts = " ".join(x for i, x in enumerate(parts) if i % 2 == 1)
-        body = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body))
-        live = norm_set(body + SCRIPT_MARKER + scripts)
+        live = norm_set(split_content(out))
         if any(abs(m - v) < 0.01 for m in missing for v in live):
             return True
     return False
@@ -236,8 +309,19 @@ def classify(slug: str, rec: dict, url: str | None, text: str) -> dict:
         entry["text_len"] = len(text)
         return entry
     if not claimed:
+        # A digest with no dollar figures is not automatically uninteresting: it often asserts
+        # OPACITY instead ("does not publish a self-serve consumer price list"). That is a
+        # falsifiable claim the old code never tested, which is exactly how two wrong records
+        # (Pika, Tunii) passed silently — the site claimed no price list existed while the live
+        # page published a full one, and NO_CLAIM read as "nothing to check".
         entry["status"] = "NO_CLAIM"
         entry["live_figures"] = len(norm_set(text))
+        if OPACITY.search(digest):
+            entry["asserts_opacity"] = True
+            # Only a figure that reads like a published PRICE counts. Harvey's homepage shows
+            # "$550M at a $15.5B valuation" — a funding round, not a plan price — and treating
+            # any bare figure as a price would flag the three genuinely-opaque tools as wrong.
+            entry["opacity_review"] = sorted(price_like_figures(text))[:8]
         return entry
 
     live = norm_set(text)
@@ -328,7 +412,15 @@ def main() -> int:
         elif r["status"] in ("FRESH",):
             note = f"  {r['present']}/{r['claimed_n']} claims still present"
         elif r["status"] == "NO_CLAIM":
-            note = "  digest asserts no figures"
+            if r.get("opacity_review"):
+                note = (
+                    "  OPACITY CLAIM contradicted - live price-like figures "
+                    f"{r['opacity_review']}: re-check this record"
+                )
+            else:
+                note = "  digest asserts no figures"
+                if r.get("asserts_opacity"):
+                    note += " (claims no published price - none found live, consistent)"
         elif r["status"] == "UNREADABLE":
             note = f"  only {r.get('text_len', 0)}b rendered"
         print(f"  [{i:>2}/{len(targets)}] {slug:<20} {r['status']:<10}{note}")

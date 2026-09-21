@@ -502,8 +502,8 @@
   },
   {
    "slug": "replit-ai",
-   "pricing_checked_date": "2026-08-25",
-   "pricing_summary": "Starter is free with daily Agent credits, free daily usage, one published live project, and a built-in database. Core is $25 monthly or $20/month billed annually, includes two parallel agents and $25 toward the most powerful models. Pro is $100 monthly or $95/month billed annually, includes ten parallel agents, $100 toward the most powerful models, up to 15 collaborators, and premium support. Enterprise is custom-priced. Replit also uses effort-based/pay-as-you-go and usage-based billing for applicable AI, deployment, and database resources.",
+   "pricing_checked_date": "2026-09-21",
+   "pricing_summary": "Official US pricing: Core $20/month ($18/month billed annually) with up to 30 hours of Agent chat on Free Mode, up to 60 projects and $20 towards most powerful models; Pro $100/month ($90 billed annually) with 10 parallel agents, up to 15 collaborators and 28-day database rollback; Enterprise is custom (custom seat limits, SSO/SAML, single-tenant). The page lists only Core, Pro and Enterprise and no free Starter tier. Re-verified 2026-09-21 from replit.com/pricing.",
    "pricing_url": "https://replit.com/pricing",
    "docs_url": "https://docs.replit.com/references/agent/overview",
    "privacy_url": "https://replit.com/privacy-policy",
@@ -513,8 +513,7 @@
     "The explicit Output Content ownership and no-training language is in the Commercial Agreement. The general consumer Terms do not publish an equally explicit assignment of rights in AI-generated Output.",
     "The pricing page labels free and included Agent allowances qualitatively rather than publishing exact numeric Agent-credit limits.",
     "Third-party AI services are excluded from the Commercial Agreement's definition of Replit AI Features and can be governed by separate provider terms."
-   ],
-   "pricing_freshness": "DRIFTED 2026-09-18: the figure(s) [25.0] asserted in this digest were not found on https://replit.com/pricing on 2026-09-18. The page is reachable and shows other prices, so this needs human re-verification before the snapshot is cited again. NOT auto-corrected."
+   ]
   },
   {
    "slug": "runway",
@@ -901,13 +900,12 @@
   },
   {
    "slug": "htmlslides",
-   "pricing_checked_date": "2026-08-27",
+   "pricing_checked_date": "2026-09-18",
    "pricing_summary": "Free: $0, 10 templates, 50MB storage. Pro: $9.90/month (launch offer), all official templates free, 1GB storage, text/speaker-notes editing, Speaker Mode, video export. Credit packs: $1/10 credits, $5/60 credits, $10/150 credits. Credits non-refundable, may expire.",
    "verification_notes": "Submitted via form by vendor; editorial entry written independently. Official site, pricing, terms, and privacy pages verified 2026-08-27. Terms last updated July 11, 2026. Pricing may change — launch offer price noted.",
    "pricing_url": "https://www.htmlslides.ai/pricing",
    "docs_url": "https://www.htmlslides.ai/terms",
-   "privacy_url": "https://www.htmlslides.ai/privacy",
-   "pricing_freshness": "DRIFTED 2026-09-18: the figure(s) [9.9] asserted in this digest were not found on https://www.htmlslides.ai/pricing on 2026-09-18. The page is reachable and shows other prices, so this needs human re-verification before the snapshot is cited again. NOT auto-corrected."
+   "privacy_url": "https://www.htmlslides.ai/privacy"
   },
   {
    "slug": "whop-cli",

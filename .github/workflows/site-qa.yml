@@ -27,6 +27,12 @@ jobs:
         run: python3 scripts/daily_content_update.py
       - name: Validate first pass
         run: python3 scripts/validate_site.py
+      - name: Run unit tests and guards
+        run: |
+          for t in scripts/test_*.py; do
+            echo "=== $t ==="
+            python3 "$t"
+          done
       - name: Capture first-pass output
         run: git diff --binary HEAD > /tmp/generation-first.patch
       - name: Generate site (idempotency pass)

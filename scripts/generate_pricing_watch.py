@@ -43,17 +43,36 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
     for slug, rec in records.items():
         prev = snapshots.get(slug)
         cur_digest = (rec.get("pricing_summary") or "")[:200]
-        if prev and prev.get("digest") != cur_digest and prev.get("date") != rec.get("pricing_checked_date"):
+        cur_date = rec.get("pricing_checked_date") or ""
+        # A change entry is only credible if the re-check moved FORWARD in time and the recorded
+        # evidence text actually differs. Two guards, both earned:
+        #
+        #  * new_check must be strictly later than previous_check. Without this, re-dating a
+        #    snapshot can emit an entry like "changed since 2026-09-18 check. Re-verified
+        #    2026-08-28" — a re-verification that predates the check it claims to follow. That
+        #    entry was live on the public page.
+        #  * A digest diff alone does not prove the VENDOR changed. Our own prose edits (a
+        #    correction, a re-wording) change the digest too. The note therefore says the
+        #    RECORDED pricing changed, not that the vendor's page did — we can support the
+        #    former from our own evidence and not the latter.
+        moved_forward = bool(prev) and cur_date > (prev.get("date") or "")
+        if prev and prev.get("digest") != cur_digest and moved_forward:
             changelog.append({
                 "slug": slug,
                 "detected": today,
                 "previous_check": prev.get("date"),
-                "new_check": rec.get("pricing_checked_date"),
-                "note": f"{names.get(slug, slug)}: official pricing page changed since {prev.get('date')} check. Re-verified {rec.get('pricing_checked_date')}.",
+                "new_check": cur_date,
+                "note": (
+                    f"{names.get(slug, slug)}: recorded pricing updated since the "
+                    f"{prev.get('date')} check, re-verified {cur_date}."
+                ),
             })
-            snapshots[slug] = {"date": rec.get("pricing_checked_date"), "digest": cur_digest}
+            snapshots[slug] = {"date": cur_date, "digest": cur_digest}
         elif not prev:
-            snapshots[slug] = {"date": rec.get("pricing_checked_date"), "digest": cur_digest}
+            snapshots[slug] = {"date": cur_date, "digest": cur_digest}
+        elif cur_date > (prev.get("date") or ""):
+            # Same evidence re-confirmed on a later date: advance the date only.
+            snapshots[slug] = {"date": cur_date, "digest": cur_digest}
     store["updated"] = today
     SNAPSHOT_PATH.write_text(json.dumps(store, indent=2) + "\n")
 
@@ -119,7 +138,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
             f'<li><strong>{c["note"]}</strong> <span class="muted">(detected {c["detected"]})</span></li>'
             for c in reversed(changelog[-20:])
         )
-        change_html = f'<section class="score-card" style="margin-top:28px;border-left:4px solid #d97706"><span>Change log</span><h3>Re-checks that detected differences</h3><ul style="padding-left:20px">{items}</ul></section>'
+        change_html = f'<section class="score-card" style="margin-top:28px;border-left:4px solid #d97706"><span>Change log</span><h3>Recorded pricing updates</h3><ul style="padding-left:20px">{items}</ul></section>'
     else:
         change_html = ('<section class="score-card" style="margin-top:28px"><span>Change log</span>'
                        '<h3>No changes detected yet</h3>'
@@ -128,12 +147,12 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 
     html = f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Verified AI tool pricing snapshots with checked dates across {len(tools_list)} tools, a public change log of confirmed price-page changes, and Premium member price alerts.">
+<meta name="description" content="Verified AI tool pricing snapshots with a checked date for every figure across {len(tools_list)} tools, a public log of recorded pricing updates, and Premium member price alerts.">
 <title>AI Pricing Watch — Verified Price Snapshots &amp; Changes — AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/pricing-watch/">
 <meta property="og:title" content="AI Pricing Watch — AIToolsEssentials"><meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
 <link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="/css/share.css">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"AI Pricing Watch","description":"Verified AI tool pricing snapshots and public change log.","dateModified":"{today}","publisher":{{"@type":"Organization","name":"AIToolsEssentials"}}}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"AI Pricing Watch","description":"Verified AI tool pricing snapshots and a public log of recorded pricing updates.","dateModified":"{today}","publisher":{{"@type":"Organization","name":"AIToolsEssentials"}}}}</script>
 </head><body>
 <header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/guides/switch-guides/">Switching</a><a href="/pricing-index/">Pricing index</a><a href="/evidence/">Evidence ledger</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
 <main>
