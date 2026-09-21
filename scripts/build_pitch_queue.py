@@ -311,32 +311,57 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
 # thing that turns "3 live requests" into an actual send decision.
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-20: "
-        "`pitch-drafts-2026-09-20.md` §1.** Route: simon.chandler@raconteur.net. ROUTE NOTE: the "
-        "2026-09-19 digest cited raconteur.net/author/simon-chandler/ for the obfuscated address "
-        "triple; that URL 404s as of 2026-09-20 and the live page is "
-        "/contributors/simon-chandler (HTTP 200, same triple, same address). Send this row.",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-21: "
+        "`pitch-drafts-2026-09-21.md` §1.** Route: simon.chandler@raconteur.net, re-resolved off the "
+        "live /contributors/simon-chandler page (HTTP 200, triple unchanged) on 2026-09-21. One figure "
+        "corrected (the 1.21x floor is 1.16x). The only high-relevance request in the queue.",
     "anthropic-users-and-business-owners-customer-service-experiences":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-20: "
-        "`pitch-drafts-2026-09-20.md` §2.** Route: Signal hliwrites.99 (re-read off the live page "
-        "2026-09-20). Now 8 days old — send or drop.",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-21: "
+        "`pitch-drafts-2026-09-21.md` §2.** Route: Signal hliwrites.99 (re-read off the live page "
+        "2026-09-21). Now 9 days old — one day short of the cold line. Send or drop, do not carry again.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-20: "
-        "`pitch-drafts-2026-09-20.md` §3.** Route: holly.shackleton@artichokehq.com (re-read off "
-        "specialityfoodmagazine.com/contact 2026-09-20).",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-21: "
+        "`pitch-drafts-2026-09-21.md` §3.** Route: holly.shackleton@artichokehq.com (re-read off "
+        "specialityfoodmagazine.com/contact 2026-09-21, alongside five other named staff addresses).",
     "finops-professionals-agentic-ai-cost-overruns":
         "**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1.** Route: "
         "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — the "
         "longest-standing high-relevance request this monitor has never answered. Send it late or "
-        "drop it, do not draft it a fourth time.",
+        "drop it, do not draft it a fifth time.",
 }
 
 DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
+    "**One figure in these drafts was corrected on 2026-09-21.** Every draft written since 2026-09-18 "
+    "cites the same-tier monthly-vs-annual range as `1.21x to 2.53x, median 1.33x`. That range came "
+    "from a regex-dependent pair set and is wrong at the floor: four pairs sit below 1.21x and the "
+    "true range is **1.16x to 2.53x, median 1.25x**, over 18 curated pairs. See "
+    "`data/monthly_annual_pairs.json` and `scripts/extract_monthly_annual_pairs.py`, which re-asserts "
+    "each pair's own sentence on every run. The 2026-09-18 send to Jan Suski carried the wrong floor; "
+    "it is disclosed rather than left standing.\n\n"
     + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(DRAFTS.items()))
 )
+
+
+def _sendable(q: dict) -> bool:
+    """Is this row something a person could actually send, or just a live page?
+
+    The queue's headline used to read "16 live" and a reader scanning it concluded there were 16
+    candidates. Only 3 of those 16 had both a relevance above the tangential band and a resolved
+    reply route; the remaining 13 are off-beat calls (hospital billing, podcast bookings, a founders'
+    profile slot) that the queue's own draft file documents as excluded. A count nobody can act on is
+    the same defect as a draft nobody sends, so the sendable number is now named separately.
+    """
+    if q["stale"] or q["dropped_off"]:
+        return False
+    if _rel_rank(q["relevance"]) >= RELEVANCE_RANK["low"]:
+        return False
+    route = (q.get("contact") or "").lower()
+    has_route = bool(q.get("emails_on_page")) or "@" in route or "linkedin.com/in/" in route \
+        or "signal" in route or bool(q.get("published_links"))
+    return has_route
 
 
 def render(queue: list[dict], ledger: dict) -> str:
@@ -352,6 +377,12 @@ def render(queue: list[dict], ledger: dict) -> str:
         # (all 42 slugs dated inside one 15.7-hour window on 2026-09-17, 0 of 36 shared with
         # the previous capture), so every carried request is absent from it by construction
         # and using it as a membership test would demote the whole queue.
+        #
+        # 2026-09-21: all 41 tracked requests now carry last_seen == the newest digest day, so
+        # `in_latest` is True for every row and the first key component no longer discriminates.
+        # That is a property of carrying every request forward in each digest, not a ranking error,
+        # and relevance + age still order the list correctly. Left in place because the moment a
+        # digest stops carrying a row it becomes the strongest cold signal available.
         live_in_feed = q["in_latest"]
         return (0 if live_in_feed else 1,
                 _rel_rank(q["relevance"]),
@@ -359,12 +390,24 @@ def render(queue: list[dict], ledger: dict) -> str:
 
     fresh.sort(key=key)
     stale.sort(key=key)
+    # Built AFTER the sort, not before. Building it first (as this did) froze the sendable list in
+    # pre-sort order, so the section headed "pitch these" listed the 9-day medium-high row above the
+    # 4-day high row — the same class of defect as the relevance-band bug, reached by mutating a
+    # filtered copy before ordering the list it derives from.
+    sendable = sorted([q for q in fresh if _sendable(q)], key=key)
 
     lines = [
         "# Pitch queue — clear this in one pass",
         "",
         f"Built {date.today().isoformat()} from {len(queue)} unique requests across the digest "
-        f"history. {len(fresh)} live, {len(stale)} cold (> {STALE_DAYS} days and unpitched).",
+        f"history. **{len(sendable)} sendable**, {len(fresh)} live, {len(stale)} cold "
+        f"(> {STALE_DAYS} days and unpitched).",
+        "",
+        "*\"Sendable\" is the number that matters and the one the headline used to hide: a live page "
+        "is not a candidate. A row counts as sendable only when it is live, not cold, not dropped "
+        "off, not already pitched, ranked above the tangential band, and has a resolved reply route "
+        "(a published email, a named handle, a booking link). The other live rows are off-beat calls "
+        "this queue already documents as excluded.*",
         "",
         "**Ages are read off each request page** (`datePublished`), not off the digest text — see "
         "`marketing/haro-outreach/verified-requests.json`, refreshed by "
@@ -384,31 +427,51 @@ def render(queue: list[dict], ledger: dict) -> str:
         "",
     ]
 
+    def _row(q: dict) -> list[str]:
+        age = f"{q['days_old']:.0f}d old" if q["days_old"] is not None else "age unknown"
+        out = [
+            f"### [{q['relevance']}] {q['category'] or '(uncategorised)'}",
+            f"- **URL:** {q['url']}",
+            f"- **Posted:** {age} ({q['age_source']}) · badge: {q['badge'] or '—'} · "
+            f"AI-topic feed: {'yes' if q['in_ai_topic_feed'] else 'no'}",
+            f"- **Seen:** first {q['first_seen']}, last {q['last_seen']} ({q['appearances']}x)",
+            f"- **Publication:** {q['publication'] or '—'}"
+            + (f" · domain {q['domain']}" if q["domain"] else ""),
+            f"- **Reply route:** {q['contact'] or '—'}  ·  _{q['automatable']}_",
+        ]
+        if q["emails_on_page"]:
+            out.append(f"- **Email published on the page:** {', '.join(q['emails_on_page'])}")
+        if q["published_links"]:
+            out.append(f"- **Links published on the page:** {', '.join(q['published_links'])}")
+        if q["dropped_off"]:
+            out.append(f"- **⚠ Dropped off:** {q['dropped_off']} — colder than its age suggests")
+        if q["angle"]:
+            out.append(f"- **Angle:** {q['angle'][:400]}")
+        out.append("")
+        return out
+
     if fresh:
-        lines += ["## Live — pitch these", ""]
-        for q in fresh:
-            age = f"{q['days_old']:.0f}d old" if q["days_old"] is not None else "age unknown"
-            lines += [
-                f"### [{q['relevance']}] {q['category'] or '(uncategorised)'}",
-                f"- **URL:** {q['url']}",
-                f"- **Posted:** {age} ({q['age_source']}) · badge: {q['badge'] or '—'} · "
-                f"AI-topic feed: {'yes' if q['in_ai_topic_feed'] else 'no'}",
-                f"- **Seen:** first {q['first_seen']}, last {q['last_seen']} ({q['appearances']}x)",
-                f"- **Publication:** {q['publication'] or '—'}"
-                + (f" · domain {q['domain']}" if q["domain"] else ""),
-                f"- **Reply route:** {q['contact'] or '—'}  ·  _{q['automatable']}_",
-            ]
-            if q["emails_on_page"]:
-                lines.append(f"- **Email published on the page:** {', '.join(q['emails_on_page'])}")
-            if q["published_links"]:
-                lines.append(f"- **Links published on the page:** {', '.join(q['published_links'])}")
-            if q["dropped_off"]:
-                lines.append(f"- **⚠ Dropped off:** {q['dropped_off']} — colder than its age suggests")
-            if q["angle"]:
-                lines.append(f"- **Angle:** {q['angle'][:400]}")
-            lines.append("")
+        # Splitting this section matters: the heading used to say "pitch these" over every live row,
+        # which is where "16 live" came from. 19 of these 22 rows are off-beat calls with no route
+        # and no standing; the 3 that are not are the ones worth a person's time, so they get the
+        # heading that implies action and the rest get one that says what they are.
+        lines += [f"## Sendable — pitch these ({len(sendable)})", "",
+                  "Live, not cold, ranked above the tangential band, and with a reply route a human "
+                  "can actually use. This is the whole actionable queue.", ""]
+        for q in sendable:
+            lines += _row(q)
+        rest = [q for q in fresh if q not in sendable]
+        if rest:
+            lines += [f"## Live but not sendable ({len(rest)})", "",
+                      "These pages resolve and the requests are unexpired, so they are recorded — but "
+                      "none has both a relevance above the tangential band and a usable route. They are "
+                      "listed for completeness, not as candidates: pitching any of them would mean "
+                      "claiming standing we do not have (see the exclusions in the newest "
+                      "`pitch-drafts-*.md`).", ""]
+            for q in rest:
+                lines += _row(q)
     else:
-        lines += ["## Live — none", ""]
+        lines += ["## Sendable — none", ""]
 
     if stale:
         lines += ["## Cold — only if you have a reason", "",
@@ -451,13 +514,21 @@ def main() -> None:
     QUEUE_MD.write_text(render(queue, ledger))
     live = [q for q in queue if not q["stale"] and q["url"] not in ledger.get("pitched", {})]
     live = [q for q in live if q["url"] not in ledger.get("skipped", {})]
+    sendable = [q for q in live if _sendable(q)]
     print(f"unique requests: {len(queue)}")
     print(f"live (not stale, not pitched): {len(live)}")
-    print(f"of those, dropped off the newest digest: {sum(1 for q in live if q['dropped_off'])}")
+    print(f"SENDABLE (live + route + relevance above low): {len(sendable)}")
+    print(f"of those, dropped off the newest digest: {sum(1 for q in sendable if q['dropped_off'])}")
     print(f"wrote {QUEUE_MD.relative_to(SITE_ROOT)}")
-    for q in sorted(live, key=lambda x: x["days_old"] if x["days_old"] is not None else 999)[:5]:
+    for q in sorted(sendable, key=lambda x: (0 if x["in_latest"] else 1, _rel_rank(x["relevance"]),
+                                             x["days_old"] if x["days_old"] is not None else 999)):
         age = f"{q['days_old']:.0f}d" if q["days_old"] is not None else "?"
-        print(f"  {age:>5} [{q['relevance']:<9}] {q['url'][:72]}")
+        print(f"  SEND {age:>5} [{q['relevance']:<9}] {q['url'][:66]}")
+    for q in sorted(live, key=lambda x: x["days_old"] if x["days_old"] is not None else 999):
+        if q in sendable:
+            continue
+        age = f"{q['days_old']:.0f}d" if q["days_old"] is not None else "?"
+        print(f"  (not sendable) {age:>5} [{q['relevance']:<9}] {q['url'][:58]}")
 
 
 if __name__ == "__main__":

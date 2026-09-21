@@ -1,0 +1,156 @@
+{
+  "built": "2026-09-21",
+  "source": "data/pricing_snapshots.json",
+  "method": "curated by hand from each pair's own sentence; sentence re-asserted on every run",
+  "pairs": [
+    {
+      "slug": "instrumentl",
+      "plan": "Pre-Award",
+      "monthly_usd": 579.0,
+      "annual_billed_monthly_usd": 499.0,
+      "ratio": 1.16,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "instrumentl",
+      "plan": "Discover",
+      "monthly_usd": 349.0,
+      "annual_billed_monthly_usd": 299.0,
+      "ratio": 1.17,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "airtable-ai",
+      "plan": "Team",
+      "monthly_usd": 24.0,
+      "annual_billed_monthly_usd": 20.0,
+      "ratio": 1.2,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "slack-ai",
+      "plan": "Business+",
+      "monthly_usd": 18.0,
+      "annual_billed_monthly_usd": 15.0,
+      "ratio": 1.2,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "slack-ai",
+      "plan": "Pro",
+      "monthly_usd": 8.75,
+      "annual_billed_monthly_usd": 7.25,
+      "ratio": 1.21,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "heygen",
+      "plan": "Creator",
+      "monthly_usd": 29.0,
+      "annual_billed_monthly_usd": 24.0,
+      "ratio": 1.21,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "fathom",
+      "plan": "premium",
+      "monthly_usd": 20.0,
+      "annual_billed_monthly_usd": 16.0,
+      "ratio": 1.25,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "replit-ai",
+      "plan": "Core",
+      "monthly_usd": 25.0,
+      "annual_billed_monthly_usd": 20.0,
+      "ratio": 1.25,
+      "snapshot_date": "2026-08-21"
+    },
+    {
+      "slug": "runway",
+      "plan": "Standard",
+      "monthly_usd": 15.0,
+      "annual_billed_monthly_usd": 12.0,
+      "ratio": 1.25,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "runway",
+      "plan": "Pro",
+      "monthly_usd": 35.0,
+      "annual_billed_monthly_usd": 28.0,
+      "ratio": 1.25,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "browse-ai",
+      "plan": "Professional",
+      "monthly_usd": 87.0,
+      "annual_billed_monthly_usd": 69.0,
+      "ratio": 1.26,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "rows",
+      "plan": "Plus",
+      "monthly_usd": 8.0,
+      "annual_billed_monthly_usd": 6.0,
+      "ratio": 1.33,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "descript",
+      "plan": "Hobbyist",
+      "monthly_usd": 24.0,
+      "annual_billed_monthly_usd": 16.0,
+      "ratio": 1.5,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "magicschool",
+      "plan": "Plus",
+      "monthly_usd": 12.99,
+      "annual_billed_monthly_usd": 8.33,
+      "ratio": 1.56,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "synthesia",
+      "plan": "Starter",
+      "monthly_usd": 29.0,
+      "annual_billed_monthly_usd": 18.0,
+      "ratio": 1.61,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "fireflies",
+      "plan": "pro",
+      "monthly_usd": 18.0,
+      "annual_billed_monthly_usd": 10.0,
+      "ratio": 1.8,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "otter-ai",
+      "plan": "pro",
+      "monthly_usd": 16.99,
+      "annual_billed_monthly_usd": 8.33,
+      "ratio": 2.04,
+      "snapshot_date": "2026-09-18"
+    },
+    {
+      "slug": "browse-ai",
+      "plan": "Personal",
+      "monthly_usd": 48.0,
+      "annual_billed_monthly_usd": 19.0,
+      "ratio": 2.53,
+      "snapshot_date": "2026-09-18"
+    }
+  ],
+  "range_low": 1.16,
+  "range_high": 2.53,
+  "median": 1.25,
+  "n": 18,
+  "supersedes": "the 1.21x-2.53x / median 1.33x claim published 2026-09-18 (it measured a regex-dependent population of 9 pairs and omitted four pairs below 1.21x)"
+}

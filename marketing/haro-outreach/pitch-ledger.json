@@ -8,13 +8,25 @@
     "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
   },
   "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it.",
-  "reply_status_checked": "2026-09-20",
+  "reply_status_checked": "2026-09-21",
+  "figures_disclosure": {
+    "date": "2026-09-21",
+    "status": "UNSENT DISCLOSURE — the recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The floor and the median are both wrong. Proven on 2026-09-21 by extracting the pairs four different ways from the same data/pricing_snapshots.json and getting 2, 7, 9 and 18 pairs — the range was regex-dependent, so nobody had ever defined the population it measured. The true set is 18 curated pairs: 1.16x to 2.53x, median 1.25x. Four pairs sit below the published 1.21x floor (instrumentl Pre-Award 1.16x, instrumentl Discover 1.17x, airtable-ai Team 1.20x, slack-ai Business+ 1.20x).",
+    "action_required": "Send Jan Suski a short correction. The thread is live and he replied to us on 2026-09-18, so an un-flagged wrong figure in a peer method discussion is worse than a follow-up. Route: reply to jan@jansuski.com (In-Reply-To the existing thread). George's lane.",
+    "source_of_truth": "data/monthly_annual_pairs.json, re-asserted by scripts/extract_monthly_annual_pairs.py"
+  },
   "reply_status": {
-    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). INBOX, All Mail, Sent Mail, Spam and Trash all re-checked 2026-09-20. Six days of silence.",
-    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-09-20. The correspondence asked whether a dynamically re-checked pricing database would make sense; the reply answered it as a peer method discussion.",
-    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Two days of silence. Request is now 10 days old and at the cold line."
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). INBOX, All Mail, Sent Mail, Spam and Trash all re-checked 2026-09-21. Six days of silence.",
+    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-09-21. The correspondence asked whether a dynamically re-checked pricing database would make sense; the reply answered it as a peer method discussion — and then repeated a monthly/annual range whose floor this run proved wrong. See figures_disclosure.",
+    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Three days of silence. Request is now 11 days old and past the cold line."
   },
   "cold_without_a_send": [
+    {
+      "date": "2026-09-21",
+      "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
+      "action": "crossed the cold line unpitched",
+      "note": "Medium relevance, 10 days. Not a loss in the usual sense: it is a founder-profile slot answered by a public comment, so it earns standing rather than a citation, and the queue documents it as deliberately left. Recorded so the crossing is visible."
+    },
     {
       "date": "2026-09-19",
       "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
