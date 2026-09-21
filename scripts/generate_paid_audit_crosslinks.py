@@ -69,6 +69,10 @@ def apply_crosslinks(root: Path) -> dict[str, int]:
         (root / "premium" / "index.html", "premium"),
         (root / "stack-audit.html", "stack_audit"),
         (root / "services" / "ai-stack-audit.html", "premium"),
+        # The free/Premium intake and the $497 intake are two different forms. Without a link
+        # across, someone who wanted the deeper service fills in the lighter questionnaire and
+        # never learns the option exists — which reads as an upsell-by-omission once they do.
+        (root / "services" / "intake-questionnaire.html", "premium"),
     ]
     stats = {"updated": 0, "skipped": 0}
     for path, context in targets:
