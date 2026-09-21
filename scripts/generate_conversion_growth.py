@@ -156,11 +156,14 @@ USE_CASE_DEFS = [
 # /use-cases/ page showed 21 impressions at position 4.19 with zero clicks — junk traffic, not
 # a win worth protecting, and the canonical on the stub passes the signal either way.
 #
-# Deliberately NOT consolidated, because the use-case page is the DEEPER one and redirecting it
-# would destroy the better page: `best-ai-tools-for-students` (547w use-case vs 395w article)
-# and `best-ai-tools-for-sales-teams` (496w vs 440w). Duplicate titles are still a defect
-# there — the fix is to deepen the article first, then add it here. Left for a deliberate pass
-# rather than guessed at.
+# Deliberately consolidated anyway, with the reasoning recorded because it reverses an earlier
+# call: `best-ai-tools-for-students` (547w use-case vs 395w article) and
+# `best-ai-tools-for-sales-teams` (496w vs 440w) have a marginally deeper use-case page. The
+# difference is ~100-150 words on pages that are BOTH thin (<600w) and NEITHER ranking (students
+# 0 and 2 impressions; sales teams 5 at position 72.60 and 1 at position 5.00). A 150-word edge
+# between two pages that earn nothing is not an asset worth preserving, while a duplicate
+# <title> is a defect on every crawl. Consolidate to the article for consistency with the other
+# seven pairs and because that is where the depth mechanism and the inbound internal links live.
 CONSOLIDATED_TO = {
     'best-ai-tools-for-teachers': '/articles/best-ai-tools-for-teachers.html',
     'best-ai-tools-for-nonprofits': '/articles/best-ai-tools-for-nonprofits.html',
@@ -168,6 +171,8 @@ CONSOLIDATED_TO = {
     'best-ai-tools-for-lawyers': '/articles/best-ai-tools-for-lawyers.html',
     'best-ai-tools-for-healthcare-admin': '/articles/best-ai-tools-for-healthcare-admin.html',
     'best-ai-tools-for-show-producers': '/articles/best-ai-tools-for-podcast-shows.html',
+    'best-ai-tools-for-students': '/articles/best-ai-tools-for-students.html',
+    'best-ai-tools-for-sales-teams': '/articles/best-ai-tools-for-sales-teams.html',
 }
 
 PROMOTION_TARGETS = [
