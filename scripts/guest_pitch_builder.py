@@ -45,8 +45,48 @@ def verified_overlap_line() -> str:
         "snapshots dated in our Pricing Watch page)."
     )
 
+# Greeting per outlet. The old code did contact.split("@")[0], which produced
+# "Hi support," and, on the 2026-09-22 additions, "Hi tips," and "Hi hello," — the
+# local-part is a mailbox name, not a person's name, and editors notice. A named
+# contact (infoDOCKET = Gary Price) is the only case that gets a first name.
+SALUTATIONS = {
+    "The Rundown AI": "The Rundown AI team",
+    "TLDR AI": "TLDR team",
+    "Ben's Bites": "Ben's Bites team",
+    "The Neuron": "The Neuron team",
+    "ToolChase": "ToolChase team",
+    "ToolRadar": "ToolRadar team",
+    "Last Week in AI": "Last Week in AI team",
+    "Changelog / Practical AI": "Changelog editors",
+    "infoDOCKET": "Gary",
+    "AIToolsRecap": "AIToolsRecap editors",
+    "Latent Space": "Latent Space team",
+    "The Decoder": "The Decoder team",
+}
+
 # Target outlets for guest pitches
 TARGETS = [
+    {
+        # Verified 2026-09-22 on https://www.latent.space/about: "News tips and pitches:
+        # tips@latent.space" and "Sponsorship, partnership, job and business inquiries:
+        # business@latent.space". tips@ is the editorial route - use it, not business@.
+        "name": "Latent Space",
+        "type": "podcast",
+        "contact": "tips@latent.space",
+        "audience": "AI engineers and technical founders",
+        "angle": "guest on overlapping AI subscriptions",
+        "url": "https://www.latent.space"
+    },
+    {
+        # Verified 2026-09-22 on https://the-decoder.com/about: "Contact us - E-Mail:
+        # hello@the-decoder.com" over the imprint of Deep Content GmbH (Hannover, DE).
+        "name": "The Decoder",
+        "type": "blog",
+        "contact": "hello@the-decoder.com",
+        "audience": "AI news readers and tool buyers",
+        "angle": "verified pricing source for coverage",
+        "url": "https://the-decoder.com"
+    },
     {
         "name": "The Rundown AI",
         "type": "newsletter",
@@ -186,7 +226,6 @@ def generate_pitches() -> list[dict]:
     
     for target in TARGETS:
         template = PITCH_TEMPLATES.get(target["type"], PITCH_TEMPLATES["newsletter"])
-        
         # Customize specific observation based on outlet
         specific_observations = {
             "The Rundown AI": "your daily roundups are one of the few newsletters I actually read",
@@ -198,14 +237,19 @@ def generate_pitches() -> list[dict]:
             "Last Week in AI": "your coverage of AI industry developments is thorough",
             "Changelog / Practical AI": "your technical depth is unmatched",
             "infoDocket": "your library perspective on information tools is unique",
-            "AIToolsRecap": "your directory comparison approach is valuable"
+            "AIToolsRecap": "your directory comparison approach is valuable",
+            "Latent Space": "your AI-engineer focus and technical depth",
+            "The Decoder": "how clearly you mark sponsored posts and keep them separate from editorial",
         }
         
         specific = specific_observations.get(target["name"], "the quality of your coverage")
+        salutation = SALUTATIONS.get(
+            target["name"], target["contact"].split("@")[0]
+        )
         
         pitch = template.format(
             outlet_name=target["name"],
-            contact_name=target["contact"].split("@")[0],
+            contact_name=salutation,
             specific_observation=specific,
             tool_count=tracked_tool_count(),
             overlap_line=verified_overlap_line(),
