@@ -1,8 +1,24 @@
 {
-  "built": "2026-09-21",
+  "built": "2026-09-22",
   "source": "data/pricing_snapshots.json",
   "method": "curated by hand from each pair's own sentence; sentence re-asserted on every run",
   "pairs": [
+    {
+      "slug": "replit-ai",
+      "plan": "Core",
+      "monthly_usd": 20.0,
+      "annual_billed_monthly_usd": 18.0,
+      "ratio": 1.11,
+      "snapshot_date": "2026-09-21"
+    },
+    {
+      "slug": "replit-ai",
+      "plan": "Pro",
+      "monthly_usd": 100.0,
+      "annual_billed_monthly_usd": 90.0,
+      "ratio": 1.11,
+      "snapshot_date": "2026-09-21"
+    },
     {
       "slug": "instrumentl",
       "plan": "Pre-Award",
@@ -58,14 +74,6 @@
       "annual_billed_monthly_usd": 16.0,
       "ratio": 1.25,
       "snapshot_date": "2026-09-18"
-    },
-    {
-      "slug": "replit-ai",
-      "plan": "Core",
-      "monthly_usd": 25.0,
-      "annual_billed_monthly_usd": 20.0,
-      "ratio": 1.25,
-      "snapshot_date": "2026-08-21"
     },
     {
       "slug": "runway",
@@ -148,9 +156,9 @@
       "snapshot_date": "2026-09-18"
     }
   ],
-  "range_low": 1.16,
+  "range_low": 1.11,
   "range_high": 2.53,
   "median": 1.25,
-  "n": 18,
+  "n": 19,
   "supersedes": "the 1.21x-2.53x / median 1.33x claim published 2026-09-18 (it measured a regex-dependent population of 9 pairs and omitted four pairs below 1.21x)"
 }

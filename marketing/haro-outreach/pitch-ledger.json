@@ -8,19 +8,25 @@
     "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
   },
   "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it.",
-  "reply_status_checked": "2026-09-21",
+  "reply_status_checked": "2026-09-22",
   "figures_disclosure": {
-    "date": "2026-09-21",
-    "status": "UNSENT DISCLOSURE — the recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The floor and the median are both wrong. Proven on 2026-09-21 by extracting the pairs four different ways from the same data/pricing_snapshots.json and getting 2, 7, 9 and 18 pairs — the range was regex-dependent, so nobody had ever defined the population it measured. The true set is 18 curated pairs: 1.16x to 2.53x, median 1.25x. Four pairs sit below the published 1.21x floor (instrumentl Pre-Award 1.16x, instrumentl Discover 1.17x, airtable-ai Team 1.20x, slack-ai Business+ 1.20x).",
-    "action_required": "Send Jan Suski a short correction. The thread is live and he replied to us on 2026-09-18, so an un-flagged wrong figure in a peer method discussion is worse than a follow-up. Route: reply to jan@jansuski.com (In-Reply-To the existing thread). George's lane.",
-    "source_of_truth": "data/monthly_annual_pairs.json, re-asserted by scripts/extract_monthly_annual_pairs.py"
+    "date": "2026-09-22",
+    "status": "UNSENT DISCLOSURE — the recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The floor and the median are both wrong, and the figure has now been wrong twice in opposite directions. (1) 2026-09-21: the range was regex-dependent, so nobody had defined the population it measured; re-extracting four ways returned 2, 7, 9 and 18 pairs. Curated by hand: 18 pairs, 1.16x to 2.53x, median 1.25x. (2) 2026-09-22: the replit-ai snapshot was refreshed on 2026-09-21 and BOTH of its figures moved — Core $25/$20 became $20/$18, and Pro is newly quoted as a second pair at $100/$90. Re-derived set: 19 tiers across 14 tools, range 1.11x to 2.53x, median 1.25x. Four pairs sit below the published 1.21x floor (instrumentl Pre-Award 1.16x, instrumentl Discover 1.17x, airtable-ai Team 1.20x, slack-ai Business+ 1.20x) and the two replit tiers sit below 1.16x at 1.11x. The 1.16x floor in the 2026-09-21 drafts and queue is superseded and must not be sent.",
+    "action_required": "Send Jan Suski a short correction. The thread is live and he replied to us on 2026-09-18, so an un-flagged wrong figure in a peer method discussion is worse than a follow-up. Send the CURRENT figure (1.11x-2.53x, median 1.25x over 19 tiers), not the 1.16x one from the 2026-09-21 drafts. Route: reply to jan@jansuski.com (In-Reply-To the existing thread). George's lane.",
+    "source_of_truth": "data/monthly_annual_pairs.json, re-asserted by scripts/extract_monthly_annual_pairs.py, which now refuses to write the file unless all 19 curated pairs re-assert against the live snapshot"
   },
   "reply_status": {
-    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). INBOX, All Mail, Sent Mail, Spam and Trash all re-checked 2026-09-21. Six days of silence.",
-    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-09-21. The correspondence asked whether a dynamically re-checked pricing database would make sense; the reply answered it as a peer method discussion — and then repeated a monthly/annual range whose floor this run proved wrong. See figures_disclosure.",
-    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Three days of silence. Request is now 11 days old and past the cold line."
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). INBOX, All Mail, Sent Mail, Spam and Trash all re-checked 2026-09-22. Seven days of silence.",
+    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-09-22. The correspondence asked whether a dynamically re-checked pricing database would make sense; the reply answered it as a peer method discussion — and then repeated a monthly/annual range that has since been proven wrong twice. See figures_disclosure.",
+    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Four days of silence. Request is now 12 days old and well past the cold line."
   },
   "cold_without_a_send": [
+    {
+      "date": "2026-09-22",
+      "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
+      "action": "at 11 days, recorded as cold",
+      "note": "Medium relevance. Not a loss in the usual sense: it is a founder-profile slot answered by a public comment, so it earns standing rather than a citation. Recorded so the crossing is visible."
+    },
     {
       "date": "2026-09-21",
       "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
@@ -31,7 +37,7 @@
       "date": "2026-09-19",
       "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
       "action": "went cold unpitched",
-      "note": "Was the queue's #1 at 10 days on 2026-09-17, with a draft written in pitch-drafts-2026-09-17.md section 1. Never sent. Now 12 days and past the 10-day line. The draft still exists and its route (LinkedIn DM to linkedin.com/in/niloy-ghosh) is unchanged, so sending it late is still possible - but the monitor's own queue no longer counts it as live."
+      "note": "Was the queue's #1 at 10 days on 2026-09-17, with a draft written in pitch-drafts-2026-09-17.md section 1. Never sent. Now 15 days and past the 10-day line. The draft still exists and its route (LinkedIn DM to linkedin.com/in/niloy-ghosh) is unchanged, so sending it late is still possible - but the monitor's own queue no longer counts it as live."
     },
     {
       "date": "2026-09-19",

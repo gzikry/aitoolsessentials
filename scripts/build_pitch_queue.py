@@ -311,18 +311,20 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
 # thing that turns "3 live requests" into an actual send decision.
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-21: "
-        "`pitch-drafts-2026-09-21.md` §1.** Route: simon.chandler@raconteur.net, re-resolved off the "
-        "live /contributors/simon-chandler page (HTTP 200, triple unchanged) on 2026-09-21. One figure "
-        "corrected (the 1.21x floor is 1.16x). The only high-relevance request in the queue.",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-22: "
+        "`pitch-drafts-2026-09-22.md` §1.** Route: simon.chandler@raconteur.net, re-resolved off the "
+        "live /contributors/simon-chandler page (HTTP 200, triple unchanged, control author checked) "
+        "on 2026-09-22. Figure corrected twice: the pair range is now 1.11x-2.53x over 19 tiers. "
+        "Written and unsent for four consecutive runs. The only high-relevance request in the queue.",
     "anthropic-users-and-business-owners-customer-service-experiences":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-21: "
-        "`pitch-drafts-2026-09-21.md` §2.** Route: Signal hliwrites.99 (re-read off the live page "
-        "2026-09-21). Now 9 days old — one day short of the cold line. Send or drop, do not carry again.",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-22: "
+        "`pitch-drafts-2026-09-22.md` §2.** Route: Signal hliwrites.99 (re-read off the live page "
+        "2026-09-22). Now exactly 10 days old — the last day before the cold line. Send or record as "
+        "skipped; carrying it a fourth time is the defect this queue exists to catch.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified unchanged 2026-09-21: "
-        "`pitch-drafts-2026-09-21.md` §3.** Route: holly.shackleton@artichokehq.com (re-read off "
-        "specialityfoodmagazine.com/contact 2026-09-21, alongside five other named staff addresses).",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-22: "
+        "`pitch-drafts-2026-09-22.md` §3.** Route: holly.shackleton@artichokehq.com (re-read off "
+        "specialityfoodmagazine.com/contact 2026-09-22, alongside five other named staff addresses).",
     "finops-professionals-agentic-ai-cost-overruns":
         "**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1.** Route: "
         "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — the "
@@ -334,13 +336,16 @@ DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
-    "**One figure in these drafts was corrected on 2026-09-21.** Every draft written since 2026-09-18 "
-    "cites the same-tier monthly-vs-annual range as `1.21x to 2.53x, median 1.33x`. That range came "
-    "from a regex-dependent pair set and is wrong at the floor: four pairs sit below 1.21x and the "
-    "true range is **1.16x to 2.53x, median 1.25x**, over 18 curated pairs. See "
-    "`data/monthly_annual_pairs.json` and `scripts/extract_monthly_annual_pairs.py`, which re-asserts "
-    "each pair's own sentence on every run. The 2026-09-18 send to Jan Suski carried the wrong floor; "
-    "it is disclosed rather than left standing.\n\n"
+    "**The pair range has now been corrected twice, and the current figures are `1.11x to 2.53x, "
+    "median 1.25x` over 19 tiers across 14 tools.** History, because both previous values are still "
+    "sitting in dated draft files and must not be reused: the range was first published as "
+    "`1.21x to 2.53x, median 1.33x` (2026-09-18, sent to a real correspondent — wrong because the "
+    "pair population was regex-dependent and undefined); corrected to `1.16x to 2.53x, median 1.25x` "
+    "over 18 curated pairs (2026-09-21); then re-derived to **1.11x to 2.53x** when the replit-ai "
+    "snapshot was refreshed and its two tiers moved (2026-09-22). Every draft before this date cites "
+    "a superseded floor. See `data/monthly_annual_pairs.json` and "
+    "`scripts/extract_monthly_annual_pairs.py`, which now refuses to write the file at all unless "
+    "every curated pair re-asserts against the live snapshot.\n\n"
     + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(DRAFTS.items()))
 )
 

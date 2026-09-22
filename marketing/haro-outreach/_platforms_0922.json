@@ -1,0 +1,66 @@
+[
+ {
+  "platform": "Sourcee (sourcee.app)",
+  "url": "https://www.sourcee.app/",
+  "http": "200",
+  "bytes": 100854,
+  "title": "Sourcee - We find the Journo Requests, You get Featured",
+  "flags": [],
+  "text_head": "Sourcee - We find the Journo Requests, You get Featured Sourcee Open main menu Features Pricing Reviews FAQ Log in Start free trial We find the Journo Requests You get Featured Stop manually searching for relevant Journo Requests. We monitor the web and alert you as soon as they get posted. Start yo"
+ },
+ {
+  "platform": "HARO (helpareporter.com)",
+  "url": "https://www.helpareporter.com/",
+  "http": "429",
+  "bytes": 31199,
+  "title": "Vercel Security Checkpoint",
+  "flags": [
+   "Vercel Security Checkpoint",
+   "rate-limited"
+  ],
+  "text_head": "Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{transform-origin:50%;animation:1s step-start infinite spinner-circle-animate}rect[data-astro-cid-ijmsm3te]{fill:var(--ds-"
+ },
+ {
+  "platform": "Connectively (connectively.us)",
+  "url": "https://www.connectively.us/",
+  "http": "429",
+  "bytes": 31204,
+  "title": "Vercel Security Checkpoint",
+  "flags": [
+   "Vercel Security Checkpoint",
+   "rate-limited"
+  ],
+  "text_head": "Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{transform-origin:50%;animation:1s step-start infinite spinner-circle-animate}rect[data-astro-cid-ijmsm3te]{fill:var(--ds-"
+ },
+ {
+  "platform": "Source of Sources (sourceofsources.com)",
+  "url": "https://www.sourceofsources.com/requests",
+  "http": "404",
+  "bytes": 140415,
+  "title": "Page Not Found - Source of Sources",
+  "flags": [
+   "genuine 404 (feed path does not exist)"
+  ],
+  "text_head": "Page Not Found - Source of Sources img:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px} /*# sourceURL=wp-img-auto-sizes-contain-inline-css */ :root{--ast-post-nav-space:0;--ast-container-default-xlg-padding:2.5em;--ast-container-default-lg-padding:2.5em;--ast-container-def"
+ },
+ {
+  "platform": "Qwoted (qwoted.com)",
+  "url": "https://app.qwoted.com/requests",
+  "http": "404",
+  "bytes": 3266,
+  "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+  "flags": [
+   "genuine 404 (feed path does not exist)"
+  ],
+  "text_head": "Error: The page you were looking for doesn't exist (404) | Qwoted Copyright Qwoted. All rights reserved.\" /> Qwoted News Herald Issue nr.1, Weekly News Qwoted Website Has 404 Error &ldquo;Ugh!&rdquo; said user. This just in: innocent user attempting to use a world wide web site interrupted in their "
+ },
+ {
+  "platform": "MentionMatch (mentionmatch.com)",
+  "url": "https://mentionmatch.com/",
+  "http": "200",
+  "bytes": 11342,
+  "title": "MentionMatch - Connect B2B Writers with Expert Sources",
+  "flags": [],
+  "text_head": "MentionMatch - Connect B2B Writers with Expert Sources @font-face { font-family: 'CameraPlainVariable'; src: url('https://cdn.gpteng.co/mcp-widgets/v1/fonts/CameraPlainVariable.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; } #lovable-badge { --badge-bg: #1b1b"
+ }
+]

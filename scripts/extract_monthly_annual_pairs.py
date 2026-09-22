@@ -33,7 +33,13 @@ PAIRS = [
     ("slack-ai",        "Pro",          8.75,   7.25, "$7.25/user/month when paid annually or $8.75 when paid monthly"),
     ("heygen",          "Creator",     29.0,   24.0, "Creator is $29/month or $24/month billed annually"),
     ("fathom",          "premium",     20.0,   16.0, "$20/user/month monthly or $16/user/month billed annually"),
-    ("replit-ai",       "Core",        25.0,   20.0, "Core is $25 monthly or $20/month billed annually"),
+    # replit-ai CORRECTED 2026-09-22: the snapshot was refreshed on 2026-09-21 and both figures moved
+    # (Core $25/$20 -> $20/$18, and Pro is now quoted as a second pair at $100/$90). The old needles
+    # failed the assertion, which is how this was caught — but the script then wrote the stale range
+    # to monthly_annual_pairs.json anyway and exited 1, so a run that ignored the exit code would have
+    # published a wrong floor. The write is now gated on a clean assertion run.
+    ("replit-ai",       "Core",        20.0,   18.0, "Core: $20/month, or $18/month billed annually"),
+    ("replit-ai",       "Pro",        100.0,   90.0, "Pro: $100/month, or $90/month billed annually"),
     ("runway",          "Standard",    15.0,   12.0, "Standard $15 monthly or $12/month billed annually"),
     ("runway",          "Pro",         35.0,   28.0, "Pro $35 monthly or $28/month billed annually"),
     ("browse-ai",       "Professional", 87.0,   69.0, "$87/month or $69/month billed annually"),
@@ -76,13 +82,26 @@ lo = [r for r in rows if r[4] == min(vals)]
 hi = [r for r in rows if r[4] == max(vals)]
 print(f"lowest pair        : {lo[0][0]} {lo[0][1]} ${lo[0][2]:g} vs ${lo[0][3]:g}")
 print(f"highest pair       : {hi[0][0]} {hi[0][1]} ${hi[0][2]:g} vs ${hi[0][3]:g}")
-print(f"\nPUBLISHABLE SENTENCE: across {len(vals)} tools where the same tier quotes both a monthly "
+print(f"\nPUBLISHABLE SENTENCE: across {len(vals)} tiers where the same tier quotes both a monthly "
       f"price and an annual-billed monthly price ({min(vals):.2f}x to {max(vals):.2f}x), the monthly "
       f"payer always pays more; median {statistics.median(vals):.2f}x.")
 print(f"all pair dates: {sorted({r[5] for r in rows})}")
 
+if fails:
+    # DO NOT WRITE ON FAILURE. This is load-bearing: on 2026-09-22 a refreshed replit-ai snapshot broke
+    # two needles, the script printed "range: 1.16x to 2.53x" over a 19-pair set that included the two
+    # dead replit rows, wrote that to disk, and exited 1. The file on disk then disagreed with the live
+    # snapshot while still looking authoritative. A failed assertion means the pair set no longer
+    # describes the data, so the previous good file stays in place and the run fails loudly.
+    print("\nFAILURES:")
+    for f in fails:
+        print("  ", f)
+    print("\nNOT WRITING data/monthly_annual_pairs.json — the pair set did not assert cleanly, so the "
+          "existing file is left in place and this run is a failure.")
+    sys.exit(1)
+
 # machine-readable, so drafts and the verifier read one source
-out = {"built": "2026-09-21", "source": "data/pricing_snapshots.json",
+out = {"built": "2026-09-22", "source": "data/pricing_snapshots.json",
        "method": "curated by hand from each pair's own sentence; sentence re-asserted on every run",
        "pairs": [{"slug": s, "plan": p, "monthly_usd": m, "annual_billed_monthly_usd": a,
                   "ratio": round(r, 2), "snapshot_date": dt} for s, p, m, a, r, dt, _ in rows],
@@ -92,8 +111,3 @@ out = {"built": "2026-09-21", "source": "data/pricing_snapshots.json",
                      "regex-dependent population of 9 pairs and omitted four pairs below 1.21x)"}
 (S / "data" / "monthly_annual_pairs.json").write_text(json.dumps(out, indent=2))
 print(f"\nwrote data/monthly_annual_pairs.json")
-if fails:
-    print("\nFAILURES:")
-    for f in fails:
-        print("  ", f)
-sys.exit(1 if fails else 0)
