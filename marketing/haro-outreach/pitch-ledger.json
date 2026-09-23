@@ -8,10 +8,10 @@
     "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
   },
   "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it.",
-  "reply_status_checked": "2026-09-22",
+  "reply_status_checked": "2026-09-23",
   "figures_disclosure": {
-    "date": "2026-09-22",
-    "status": "UNSENT DISCLOSURE — the recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The floor and the median are both wrong, and the figure has now been wrong twice in opposite directions. (1) 2026-09-21: the range was regex-dependent, so nobody had defined the population it measured; re-extracting four ways returned 2, 7, 9 and 18 pairs. Curated by hand: 18 pairs, 1.16x to 2.53x, median 1.25x. (2) 2026-09-22: the replit-ai snapshot was refreshed on 2026-09-21 and BOTH of its figures moved — Core $25/$20 became $20/$18, and Pro is newly quoted as a second pair at $100/$90. Re-derived set: 19 tiers across 14 tools, range 1.11x to 2.53x, median 1.25x. Four pairs sit below the published 1.21x floor (instrumentl Pre-Award 1.16x, instrumentl Discover 1.17x, airtable-ai Team 1.20x, slack-ai Business+ 1.20x) and the two replit tiers sit below 1.16x at 1.11x. The 1.16x floor in the 2026-09-21 drafts and queue is superseded and must not be sent.",
+    "date": "2026-09-23",
+    "status": "STILL UNSENT — the recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The floor and the median are both wrong, and the figure has now been wrong twice in opposite directions. (1) 2026-09-21: the range was regex-dependent, so nobody had defined the population it measured; re-extracting four ways returned 2, 7, 9 and 18 pairs. Curated by hand: 18 pairs, 1.16x to 2.53x, median 1.25x. (2) 2026-09-22: the replit-ai snapshot was refreshed on 2026-09-21 and BOTH of its figures moved — Core $25/$20 became $20/$18, and Pro is newly quoted as a second pair at $100/$90. Re-derived set: 19 tiers across 14 tools, range 1.11x to 2.53x, median 1.25x. Four pairs sit below the published 1.21x floor (instrumentl Pre-Award 1.16x, instrumentl Discover 1.17x, airtable-ai Team 1.20x, slack-ai Business+ 1.20x) and the two replit tiers sit below 1.16x at 1.11x. 2026-09-23: the 19-pair set RE-ASSERTED CLEAN against the refreshed snapshot (data/pricing_snapshots.json updated 2026-09-23, extract_monthly_annual_pairs.py exit 0, no needle failures) — the range is unchanged for the first day since the gate was added. The 1.16x floor in the 2026-09-21 drafts, and the 138/136 word counts in the 2026-09-23 drafts, are superseded and must not be sent. Day 5 unsent.",
     "action_required": "Send Jan Suski a short correction. The thread is live and he replied to us on 2026-09-18, so an un-flagged wrong figure in a peer method discussion is worse than a follow-up. Send the CURRENT figure (1.11x-2.53x, median 1.25x over 19 tiers), not the 1.16x one from the 2026-09-21 drafts. Route: reply to jan@jansuski.com (In-Reply-To the existing thread). George's lane.",
     "source_of_truth": "data/monthly_annual_pairs.json, re-asserted by scripts/extract_monthly_annual_pairs.py, which now refuses to write the file unless all 19 curated pairs re-assert against the live snapshot"
   },
@@ -21,6 +21,12 @@
     "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Four days of silence. Request is now 12 days old and well past the cold line."
   },
   "cold_without_a_send": [
+    {
+      "date": "2026-09-23",
+      "url": "https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences",
+      "action": "went cold unpitched at 11 days",
+      "note": "Medium-high. Draft finished and unsent since 2026-09-19 (pitch-drafts-2026-09-22.md section 2, route Signal hliwrites.99, re-read verbatim off the live page on 2026-09-22). Carried as the queue's #2 for four consecutive runs and sendable every one of them, including the day before it crossed. Not a data loss: the draft is intact and the Signal handle is still published, so a late send is still possible. Recorded so the crossing is visible rather than only the count changing from 3 sendable to 2."
+    },
     {
       "date": "2026-09-22",
       "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",

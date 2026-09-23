@@ -311,20 +311,26 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
 # thing that turns "3 live requests" into an actual send decision.
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-22: "
-        "`pitch-drafts-2026-09-22.md` §1.** Route: simon.chandler@raconteur.net, re-resolved off the "
-        "live /contributors/simon-chandler page (HTTP 200, triple unchanged, control author checked) "
-        "on 2026-09-22. Figure corrected twice: the pair range is now 1.11x-2.53x over 19 tiers. "
-        "Written and unsent for four consecutive runs. The only high-relevance request in the queue.",
-    "anthropic-users-and-business-owners-customer-service-experiences":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-22: "
-        "`pitch-drafts-2026-09-22.md` §2.** Route: Signal hliwrites.99 (re-read off the live page "
-        "2026-09-22). Now exactly 10 days old — the last day before the cold line. Send or record as "
-        "skipped; carrying it a fourth time is the defect this queue exists to catch.",
+        "**Draft ready and UNSENT since 2026-09-19, re-verified and re-drafted 2026-09-23: "
+        "`pitch-drafts-2026-09-23.md` §1 (154-word body).** Route: simon.chandler@raconteur.net, "
+        "re-resolved off the live /contributors/simon-chandler page (HTTP 200, triple unchanged, "
+        "control author checked) on 2026-09-23; the older /author/simon-chandler/ URL still 404s and "
+        "must not be cited. Figures re-derived today against data/pricing_snapshots.json "
+        "(`updated: 2026-09-23`): 76 tools, 31 of 40 priced tools at or under $25/month, median "
+        "$16.50, and the pair range holding at 1.11x-2.53x over 19 tiers across 14 tools. "
+        "Written and unsent for five consecutive runs. The only high-relevance request in the queue.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-22: "
-        "`pitch-drafts-2026-09-22.md` §3.** Route: holly.shackleton@artichokehq.com (re-read off "
-        "specialityfoodmagazine.com/contact 2026-09-22, alongside five other named staff addresses).",
+        "**Draft ready and UNSENT since 2026-09-19, re-drafted 2026-09-23: "
+        "`pitch-drafts-2026-09-23.md` §2 (164-word body).** Route: holly.shackleton@artichokehq.com "
+        "(re-read off specialityfoodmagazine.com/contact 2026-09-23, HTTP 200, alongside five other "
+        "named staff addresses). Standing constraint is stated in the draft's first line: we are not a "
+        "food retailer. 5 days old.",
+    "anthropic-users-and-business-owners-customer-service-experiences":
+        "**CROSSED COLD 2026-09-23 at 11 days — no longer counted as sendable.** Draft finished and "
+        "unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal hliwrites.99 "
+        "(re-read verbatim off the live page 2026-09-22). It was the queue's #2 and sendable on four "
+        "consecutive runs. Send late or record as skipped in pitch-ledger.json; the crossing is logged "
+        "in `cold_without_a_send`.",
     "finops-professionals-agentic-ai-cost-overruns":
         "**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1.** Route: "
         "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — the "
@@ -336,16 +342,19 @@ DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
-    "**The pair range has now been corrected twice, and the current figures are `1.11x to 2.53x, "
-    "median 1.25x` over 19 tiers across 14 tools.** History, because both previous values are still "
-    "sitting in dated draft files and must not be reused: the range was first published as "
-    "`1.21x to 2.53x, median 1.33x` (2026-09-18, sent to a real correspondent — wrong because the "
-    "pair population was regex-dependent and undefined); corrected to `1.16x to 2.53x, median 1.25x` "
-    "over 18 curated pairs (2026-09-21); then re-derived to **1.11x to 2.53x** when the replit-ai "
-    "snapshot was refreshed and its two tiers moved (2026-09-22). Every draft before this date cites "
-    "a superseded floor. See `data/monthly_annual_pairs.json` and "
-    "`scripts/extract_monthly_annual_pairs.py`, which now refuses to write the file at all unless "
-    "every curated pair re-asserts against the live snapshot.\n\n"
+    "**Today's drafts are `pitch-drafts-2026-09-23.md` (§1 shadow AI, §2 Speciality Food, both "
+    "paste-ready).** One of the four rows below crossed the cold line today: the Anthropic draft is "
+    "not in today's file and is not sendable any more.\n\n"
+    "**The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers across 14 tools, and it held "
+    "today.** History, because every superseded value is still sitting in dated draft files and must "
+    "not be reused: the range was first published as `1.21x to 2.53x, median 1.33x` (2026-09-18, sent "
+    "to a real correspondent — wrong because the pair population was regex-dependent and undefined); "
+    "corrected to `1.16x to 2.53x, median 1.25x` over 18 curated pairs (2026-09-21); then re-derived "
+    "to **1.11x to 2.53x** when the replit-ai snapshot was refreshed (2026-09-22). On 2026-09-23 the "
+    "19-pair set re-asserted clean against the refreshed snapshot (exit 0, no needle failures) — the "
+    "first day since the assertion gate was added that the figure did NOT move. See "
+    "`data/monthly_annual_pairs.json` and `scripts/extract_monthly_annual_pairs.py`, which refuses to "
+    "write the file at all unless every curated pair re-asserts against the live snapshot.\n\n"
     + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(DRAFTS.items()))
 )
 

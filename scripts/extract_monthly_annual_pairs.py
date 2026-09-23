@@ -19,6 +19,7 @@ The true range across same-tier per-month pairs is 1.16x to 2.53x, and the media
 import json
 import statistics
 import sys
+from datetime import date
 from pathlib import Path
 
 S = Path("/Users/georgezikry/aitoolessentials/site")
@@ -101,7 +102,10 @@ if fails:
     sys.exit(1)
 
 # machine-readable, so drafts and the verifier read one source
-out = {"built": "2026-09-22", "source": "data/pricing_snapshots.json",
+# `built` is the date this file was last re-derived, not a constant. It was hardcoded to 2026-09-22, so
+# today's clean re-assertion still stamped yesterday's date onto the file — which is how a reader tells
+# whether the range describes the current snapshot. Date it at write time.
+out = {"built": date.today().isoformat(), "source": "data/pricing_snapshots.json",
        "method": "curated by hand from each pair's own sentence; sentence re-asserted on every run",
        "pairs": [{"slug": s, "plan": p, "monthly_usd": m, "annual_billed_monthly_usd": a,
                   "ratio": round(r, 2), "snapshot_date": dt} for s, p, m, a, r, dt, _ in rows],
