@@ -40,6 +40,8 @@ LEARN = [
     ('ai-email-triage-setup.html', 'AI email triage that actually works', 'What summaries save, a rules-first order, and what never to automate in email.'),
     ('ai-assisted-job-search-workflow.html', 'AI-assisted job search workflow', 'Tailoring, letters, rehearsal, research, and tracking — with the claims that must stay yours.'),
     ('monthly-ai-cost-review.html', 'Running a monthly AI cost review', 'A 30-minute recurring keep/cut meeting that catches subscription creep before renewal.'),
+    ('vendor-evaluation-questionnaire.html', 'Questions to send a tool vendor before you buy', 'Data handling, billing mechanics, real limits, support, and exit terms — and how to read a vague answer.'),
+    ('best-ai-tools-for-project-managers.html', 'Best AI tools for project managers', 'Meeting capture, status drafting, task extraction, and the tracker layer — plus what this directory does not track.'),
     ('ai-image-rights-commercial-use.html', 'AI image rights for commercial use', 'What to check before using Midjourney or Leonardo output in client work.'),
     ('how-to-cancel-ai-tools-before-renewal.html', 'How to cancel AI tools before renewal', '14-day process to cancel unused seats without losing the weekly workflow.'),
     ('cursor-vs-copilot-which-to-pay-for.html', 'Cursor vs Copilot: which to pay for', 'Pick one paid coding assistant with a real bugfix, not two overlapping seats.'),

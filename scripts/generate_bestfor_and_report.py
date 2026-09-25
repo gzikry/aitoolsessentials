@@ -109,6 +109,12 @@ ROLES = [
       ("chatgpt", "Listing drafts from amenity lists after a fair-housing check"),
       ("canva-ai", "Listing graphics and owner-update one-pagers")],
      "articles/best-ai-tools-for-property-managers.html"),
+    ("project-managers", "Project managers", "Meeting capture, status drafting, and task extraction around the tracker you already run, with no implied replacement for your schedule of record.",
+     [("fathom", "Meeting capture with decisions and owners in a pasteable structure"),
+      ("fireflies", "Searchable meeting archive across a long-running project"),
+      ("notion-ai", "Briefs, decision logs, and status pages in one written layer"),
+      ("chatgpt", "Status drafting and stakeholder rewrites from your own update")],
+     "articles/best-ai-tools-for-project-managers.html"),
 ]
 
 

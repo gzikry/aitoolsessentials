@@ -80,8 +80,8 @@ Priority order: how-to/workflow → audience guides → question-intent. All six
 how-to items and all six audience guides are now shipped; continue with:
 1. AI-assisted job-search and application workflow (honest framing, no outcome claims) ✅ shipped 2026-09-18
 2. Running a monthly AI cost review: the recurring keep/cut meeting ✅ shipped 2026-09-18
-3. Vendor evaluation questionnaire: the questions to send a tool vendor before buying
-4. Best AI tools for project managers (audience guide)
+3. Vendor evaluation questionnaire: the questions to send a tool vendor before buying ✅ shipped 2026-09-25 (workflow, articles/vendor-evaluation-questionnaire.html)
+4. Best AI tools for project managers (audience guide) ✅ shipped 2026-09-25 (articles/best-ai-tools-for-project-managers.html; /best-for/ + stack builder role added)
 5. Best AI tools for customer support teams (audience guide)
 6. Best AI tools for HR and recruiting ops (audience guide — note recruiters guide exists)
 7. How do I know if an AI tool is worth its price? (question-intent)
