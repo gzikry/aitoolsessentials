@@ -1,0 +1,257 @@
+{
+ "seattle-k2-parents-new-screen-time-limits-and-classroom-ai": {
+  "url": "https://www.sourcee.app/journo-request/seattle-k2-parents-new-screen-time-limits-and-classroom-ai",
+  "http": "200",
+  "datePublished": "2026-09-24T22:17:11+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Seattle K-2 Parents - New Screen Time Limits &amp; Classroom AI Issue 43 -- SPS Scales Back iPad Use in K-2 Classrooms In this issue we take a relatively quick look at this week&#x27;s announcement of new screen time limits in grades K-2. It&#x27;s a good start, but is notably less ambitious and less comprehensive than the limits LA and NYC public schools adopted for this school year, which cover all grades. NYC also just banned generative AI, but SPS hasn&#x27;t. That&#x27;s despite growing concerns among parents, educators, and students about what seems to be widespread AI use in SPS classrooms. (We&#x27;re working on a story there too and if you have any experiences to share, let me know!)",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Seattle K-2 Parents - New Screen Time Limits & Classroom AI"
+ },
+ "agentic-ai-researchers-harness-safety-and-forensics": {
+  "url": "https://www.sourcee.app/journo-request/agentic-ai-researchers-harness-safety-and-forensics",
+  "http": "200",
+  "datePublished": "2026-09-24T20:52:13.471+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Agentic AI Researchers - Harness Safety &amp; Forensics \ud835\uddd7\ud835\uddee\ud835\ude06 \ud835\udfed/\ud835\udfed\ud835\udfec\ud835\udfec \u2014 \ud835\udfed\ud835\udfec\ud835\udfec \ud835\uddd7\ud835\uddee\ud835\ude06\ud835\ude00 \ud835\uddfc\ud835\uddf3 \ud835\uddd4\ud835\uddf4\ud835\uddf2\ud835\uddfb\ud835\ude01\ud835\uddf6\ud835\uddf0 \ud835\uddd4\ud835\udddc \ud835\uddd9\ud835\uddfc\ud835\uddff\ud835\uddf2\ud835\uddfb\ud835\ude00\ud835\uddf6\ud835\uddf0\ud835\ude00 This is Day 1 of my \u201c100 Days of Agentic AI Forensics\u201d series, where I\u2019ll explore agent security, attacks, forensics, harness safety, and trustworthy agentic systems. I\u2019d really like to hear from researchers working on AI agents, agent security, multi-agent systems, or trustworthy AI. \ud835\uddd4\ud835\uddff\ud835\uddf2 \ud835\uddea\ud835\uddf2 \ud835\udde7\ud835\uddff\ud835\ude02\ud835\uddf9\ud835\ude06 \ud835\udde0\ud835\uddf2\ud835\uddee\ud835\ude00\ud835\ude02\ud835\uddff\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\udddb\ud835\uddee\ud835\uddff\ud835\uddfb\ud835\uddf2\ud835\ude00\ud835\ude00 \ud835\udde6\ud835\uddee\ud835\uddf3\ud835\uddf2\ud835\ude01\ud835\ude06 \ud835\uddf6\ud835\uddfb \ud835\uddd4\ud835\uddf4\ud835\uddf2\ud835\uddfb\ud835\ude01\ud835\uddf6\ud835\uddf0 \ud835\uddd4\ud835\udddc \ud835\udde6\ud835\ude06\ud835\ude00\ud835\ude01\ud835\uddf2\ud835\uddfa\ud835\ude00? Imagine this: \ud835\udde7\ud835\uddee\ud835\ude00\ud835\uddf8: Prepare a financial report using the company\u2019s authorized financial files. The agent produces the correct report. But during execution, it: \u2705 Accesses financial.csv \u274c Accesses unauthorized employee_salary.csv \u274c Shares salary information with another agent \u2705 Still completes the task successfully So\u2026 \ud835\uddea\ud835\uddee\ud835\ude00 \ud835\ude01\ud835\uddf5\ud835\uddf2 \ud835\uddee\ud835\uddf4\ud835\uddf2\ud835\uddfb\ud835\ude01 \ud835\ude00\ud835\uddee\ud835\uddf3\ud835\uddf2? This is the key question behind: \ud83d\udcc4 HarnessAudit: Auditing Agent Harness Safety https://lnkd.in/g9rDGB5X The paper argues that evaluating an agent only by its final answer or task success is not enough. \ud835\udddb\ud835\uddee\ud835\uddff\ud835\uddfb\ud835\uddf2\ud835\ude00\ud835\ude00 \ud835\udde6\ud835\uddee\ud835\uddf3\ud835\uddf2\ud835\ude01\ud835\ude06 \u2248 Task Completion + Step-Level Permission Checks + Cross-Agent Information Flow + Workflow Fidelity + Robustness One striking observation is that safety violations can accumulate as agents execute more actions. Even strong evaluated configurations achieve only around \ud835\udfec.\ud835\udfef\ud835\udfee overall safety score, with many violations related to unauthorized resource access and inter-agent information sharing. But, \ud835\uddd4\ud835\uddff\ud835\uddf2 \ud835\ude04\ud835\uddf2 \ud835\uddfa\ud835\uddf2\ud835\uddee\ud835\ude00\ud835\ude02\ud835\uddff\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\uddf2\ud835\uddfb\ud835\uddfc\ud835\ude02\ud835\uddf4\ud835\uddf5? \ud835\uddea\ud835\uddf5\ud835\uddee\ud835\ude01 \ud835\uddf6\ud835\uddfa\ud835\uddfd\ud835\uddfc\ud835\uddff\ud835\ude01\ud835\uddee\ud835\uddfb\ud835\ude01 \ud835\uddf1\ud835\uddf6\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude00\ud835\uddf6\ud835\uddfc\ud835\uddfb \ud835\uddfc\ud835\uddf3 \ud835\uddf5\ud835\uddee\ud835\uddff\ud835\uddfb\ud835\uddf2\ud835\ude00\ud835\ude00 \ud835\ude00\ud835\uddee\ud835\uddf3\ud835\uddf2\ud835\ude01\ud835\ude06 \ud835\uddee\ud835\uddff\ud835\uddf2 \ud835\ude04\ud835\uddf2 \ud835\ude00\ud835\ude01\ud835\uddf6\ud835\uddf9\ud835\uddf9 \ud835\uddfa\ud835\uddf6\ud835\ude00\ud835\ude00\ud835\uddf6\ud835\uddfb\ud835\uddf4? Some questions I kept thinking about while reading the paper: \u2022 Did the agent violate the policy naturally, or was it intentionally manipulated? \u2022 If an attack exists, is it direct (active attack) where the attacker agent itself breaks the rules or indirect (passive attack), where a malicious agent manipulates a benign agent into violating them? \u2022 What about private information that is never explicitly sent through a tool, but is implicitly stored or transferred through the agent\u2019s internal state, memory, or communication? \u2022 Could an agent contain a backdoor that remains dormant until a specific trigger appears? \u2022 Could sensitive information leak indirectly through knowledge transfer or subliminal learning, even when the victim agent does not realize it is revealing anything? Subliminal Learning: https://lnkd.in/g4zUWP4y \u2022 Can an agent achieve the goal while silently bypassing a required security layer? \u2022 What about attacks that do not steal information at all, but push other agents into deadlocks, infinite loops, or resource-exhaustion states? Comments, corrections, paper suggestions, and different viewpoints are very welcome. I\u2019m also open to discussions and collaborations around these questions. #AgenticAI #AISecurity #AIForensics #MultiAgentSystems #TrustworthyAI #LLMSecurity #AgentSecurity #ArtificialIntelligence #Research",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://lnkd.in/g4zUWP4y",
+   "https://lnkd.in/g9rDGB5X",
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Agentic AI Researchers - Harness Safety & Forensics"
+ },
+ "firms-and-marketing-agencies-advertising-to-ai-agents-priority": {
+  "url": "https://www.sourcee.app/journo-request/firms-and-marketing-agencies-advertising-to-ai-agents-priority",
+  "http": "200",
+  "datePublished": "2026-09-24T19:31:56+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Firms &amp; Marketing Agencies - Advertising To AI Agents Priority For a story, I\u2019m looking to speak to firms &amp; marketing agencies who are thinking hard about how to advertise their products *to* AI agents. I&#x27;m curious how much this occupies brands/advertisers, and whether addressing it is a priority. If that\u2019s you, please get in touch!",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Firms & Marketing Agencies - Advertising To AI Agents Priority"
+ },
+ "interior-designers-and-architects-role-in-built-environment-and-ai": {
+  "url": "https://www.sourcee.app/journo-request/interior-designers-and-architects-role-in-built-environment-and-ai",
+  "http": "200",
+  "datePublished": "2026-09-24T18:17:45.124+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Interior Designers &amp; Architects - Role in Built Environment &amp; AI \ud83d\udcefCalling all interiors designers, architects, and others who work in construction!\ud83d\udc69\ud83c\udfa8\ud83d\udc77 I\u2019m currently working on an article for FK Architecture clearly defining the functions of an interior designer, detailing how we are still necessary in the built-environment (especially in the era of artificial intelligence). I am looking for strong voices who want to share their thoughts and experiences you have had as a designer or someone who has worked with one, and predictions for the future of how this profession will change. If you\u2019d like to help us with this, feel free to reach out to me either here on LinkedIn or at my email [email redacted]. #interiordesign FK Architecture",
+  "emails": [],
+  "redacted": true,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Interior Designers & Architects - Role in Built Environment & AI"
+ },
+ "ai-builders-in-africa-ai-use-cases-and-policy": {
+  "url": "https://www.sourcee.app/journo-request/ai-builders-in-africa-ai-use-cases-and-policy",
+  "http": "200",
+  "datePublished": "2026-09-24T17:47:07+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days AI Builders in Africa - AI Use Cases &amp; Policy Starting in October, we at Condia are going to be covering AI in Africa a lot more closely. If you\u2019re building an AI solution, using AI in interesting ways beyond leaving 300-word comments on LinkedIn posts, or even thinking about AI policy, I\u2019d love to hear from you.",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "AI Builders in Africa - AI Use Cases & Policy"
+ },
+ "academia-healthcare-law-and-customer-service-pros-ai-notetakers-use": {
+  "url": "https://www.sourcee.app/journo-request/academia-healthcare-law-and-customer-service-pros-ai-notetakers-use",
+  "http": "200",
+  "datePublished": "2026-09-24T17:43:31.327+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Academia, Healthcare, Law &amp; Customer Service Pros - AI Note-Takers Use Do you use AI note-takers in your work? Is your school or program against them? I&#x27;m working on a story for NYT Wirecutter about the role AI note-takers play across fields, such as academia, customer service, healthcare, and law. Good or bad, for or against, I&#x27;d love to hear your thoughts. Wirecutter",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Academia, Healthcare, Law & Customer Service Pros - AI Note-Takers Use"
+ },
+ "women-in-ai-founders-builders-and-educators-spotlight": {
+  "url": "https://www.sourcee.app/journo-request/women-in-ai-founders-builders-and-educators-spotlight",
+  "http": "200",
+  "datePublished": "2026-09-24T17:01:33.178+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Women in AI - Founders, Builders &amp; Educators Spotlight Over the past few months I&#x27;ve had so many INCREDIBLE conversations with BRILLIANT women in AI space (they don&#x27;t even fit on one collage!! true PINCH ME moment!). and.... I want MORE of them! SO if you know a woman who&#x27;s building a company, running a bold project or helping others understand AI, tag her below. \u2728 Her voice deserves to be heard!! \ud83d\udcaa Let&#x27;s make them impossible to miss! \ud83e\udd29 And if that&#x27;s you, nominate yourself! Seriously, I&#x27;d love to hear from you. \ud83d\udc9c Thank you to all the amazing woman I\u2019ve had pleasure speaking to: Simona Todorova Aime Ayrehart Alex Issakova Kelly Hartman Victoria Silverman Zo\u00eb Walters Marta Haynes Maria Jordan \u26a1\ufe0f Mariana De la Rosa Jackelinne Vaillard Jena Zangs Lindsey Chrismon \ud83c\uddfa\ud83c\uddf8 Laurie Wang",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Women in AI - Founders, Builders & Educators Spotlight"
+ },
+ "independent-creators-decentralized-ai-and-irl-fan-gatherings": {
+  "url": "https://www.sourcee.app/journo-request/independent-creators-decentralized-ai-and-irl-fan-gatherings",
+  "http": "200",
+  "datePublished": "2026-09-24T15:24:41.553+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Independent Creators - Decentralized AI &amp; IRL Fan Gatherings What structures can we build \u2014 technological structures, market structures, and community structures \u2014 to make sure creators and innovators thrive in the age of AI and have sovereignty over their creations? This is the question I&#x27;m obsessed with right now. One of the highlights of my career was when Don Henley, musician, songwriter, producer, and founding member of the Eagles, gave this blurb for my book, Monopolies Suck: \u201cThe creative community is paying a steep price in monopolized America, with millions of artists struggling to make a living under rules that prioritize Big Tech profits. Sally Hubbard lays out the case for how we fight back\u2014and why we must.\u201d The tech titans of Web 2.0, the version of the internet dominated by big platforms, extracted so much from creators. And yet we\u2019re careening in the direction of AI titans robbing creators more than any robber barons have done before. What most people don\u2019t realize is the shift from Web 2.0 to the agentic web presents a rare opportunity for creators to take back control. The internet as we know it is transforming to the agentic web \u2013 a complex hive structure of AI agents shaping the flow of information, art, and business. This technological revolution offers the opportunity to build de-concentrated networks that allow creators to be fairly compensated and to own the relationship with the audience, instead of having big tech platforms control that relationship and siphon off the fruits of creators\u2019 labor. The danger is that we keep our ideas small, yearning for a time of slightly less theft, instead of dreaming about the world we want and reverse engineering that reality. To start, I\u2019m focusing on two main areas, and writing about it here https://lnkd.in/gVZfa9A7: 1) Decentralized AI, including on-premise AI, local control over data, and local LLMs. In other words, technologies that can give creators and innovators control over what they create and how it\u2019s used. I will call this inquiry AI at the Edge. 2) Fans supporting creators though joyful, in-person gatherings. I\u2019ve been experimenting with this through my Gather IRL Rock Club. We recently hosted a pre-party for the Daisy Chain Fields music festival, the all-women rock festival spearheaded by Olivia Rodrigo. I&#x27;m an amateur bassist, and below is a pic of me having a blast at our celebration! Now is the time to lean into our humanity and the things that machines can\u2019t replace, like community and the energy we all feel when we get together in real life. Are you working on making sure creators thrive in the age of AI, decentralized AI tech, or making gathering in-person easier? I&#x27;d love to hear from you!",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://lnkd.in/gVZfa9A7:",
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Independent Creators - Decentralized AI & IRL Fan Gatherings"
+ },
+ "workers-whose-jobs-shifted-by-ai-and-automation-share-experiences": {
+  "url": "https://www.sourcee.app/journo-request/workers-whose-jobs-shifted-by-ai-and-automation-share-experiences",
+  "http": "200",
+  "datePublished": "2026-09-24T15:22:58.93+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Workers Whose Jobs Shifted by AI &amp; Automation - Share Experiences I&#x27;ve spent my career around automation, ai, and robotics. The conversations I keep having and hearing are about the technology. I want to talk more about the people whose jobs it&#x27;s changing. So I&#x27;m looking to talk with people whose work is shifting because of AI or automation. You might have: * Had your tasks, role, or a team reshaped by new tools * Worked alongside robots or automated systems on a warehouse, plant or logistics floor * Been laid off, taken a buyout or started retraining * Chosen to lean in and learn something new It would be a 30-minute conversation, and nothing to prepare. I&#x27;m not selling anything. If you&#x27;re local, I&#x27;ll happily buy you coffee or lunch. I&#x27;m listening, and I&#x27;ll share what I learn (anonymously, unless you&#x27;d like to be named). If that&#x27;s you, or someone you know, send me a message or comment below. I&#x27;d especially love to hear from people outside tech.",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Workers Whose Jobs Shifted by AI & Automation - Share Experiences"
+ },
+ "sales-enablement-leaders-fullcycle-tech-sales-rep-onboarding-ai": {
+  "url": "https://www.sourcee.app/journo-request/sales-enablement-leaders-fullcycle-tech-sales-rep-onboarding-ai",
+  "http": "200",
+  "datePublished": "2026-09-24T14:45:00.944+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Sales Enablement Leaders - Full-Cycle Tech Sales Rep Onboarding - AI @Sales Enablement Leaders who own onboarding for full-cycle tech sales reps: I\u2019d love to speak with you! I\u2019m looking to talk with people at least 10 sales organizations about what\u2019s working in their onboarding programs. I\u2019ll be sharing what I learn with everyone who takes part. Over the last 2 years, our team has done two similar interview series with enablement leaders across 20+ teams, including ZoomInfo, Darktrace, NetSuite, and Zip. Those conversations were extremely valuable in helping us improve our BDR onboarding and progression programs. I\u2019ve recently started supporting full-cycle sales reps, and we want to keep our onboarding best in class. AI has changed what\u2019s possible, so I want to hear how other teams are using it and what\u2019s working. I\u2019d love to talk with global tech sales teams that onboard new groups of reps every month across different teams and regions. If you run a program like this, or you\u2019ve recently been through a great one, please reach out. Thanks!",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Sales Enablement Leaders - Full-Cycle Tech Sales Rep Onboarding - AI"
+ },
+ "chinese-suppliers-and-sourcing-agents-spanish-market-products": {
+  "url": "https://www.sourcee.app/journo-request/chinese-suppliers-and-sourcing-agents-spanish-market-products",
+  "http": "200",
+  "datePublished": "2026-09-24T11:50:20+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Chinese Suppliers &amp; Sourcing Agents - Spanish Market Products \ud83d\udce6 Looking for unique Chinese products to introduce to Spain I\u2019m looking for Chinese suppliers with products that deserve more attention in the Spanish market. I\u2019m evangelistachina, a Spanish content creator focused on discovering products and suppliers from China. I\u2019m interested in discovering new products that I can test and potentially promote to my audience. What I\u2019m looking for: Reliable suppliers Good product quality Competitive prices Good communication Suppliers interested in the Spanish market Possibility of sending samples I\u2019m also looking for sourcing agents/intermediaries who can help me find these suppliers. If you introduce me to a supplier and we establish a successful collaboration, you can receive a percentage agreed with that supplier as compensation for the introduction. If you are a supplier or have access to suppliers, send me a DM with your information and what products you work with. \ud83c\udde8\ud83c\uddf3 Chinese suppliers \u2192 Spanish market \ud83c\uddea\ud83c\uddf8",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Chinese Suppliers & Sourcing Agents - Spanish Market Products"
+ },
+ "selfdiagnosed-via-ai-and-social-media-misdiagnosis-delayed-care": {
+  "url": "https://www.sourcee.app/journo-request/selfdiagnosed-via-ai-and-social-media-misdiagnosis-delayed-care",
+  "http": "200",
+  "datePublished": "2026-09-24T09:37:47+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Self-Diagnosed Via AI &amp; Social Media - Misdiagnosis Delayed Care Offering \u00a350 for a case study of someone who has relied on AI, social media or influencer advice to self-diagnose an issue, leading to misdiagnosis, delayed treatment or a condition worsening. For national media #prrequest #journorequest",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Self-Diagnosed Via AI & Social Media - Misdiagnosis Delayed Care"
+ },
+ "licensed-psychologist-and-addiction-specialist-fivem-gta-rp-addiction": {
+  "url": "https://www.sourcee.app/journo-request/licensed-psychologist-and-addiction-specialist-fivem-gta-rp-addiction",
+  "http": "200",
+  "datePublished": "2026-09-25T01:36:33+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Licensed Psychologist &amp; Addiction Specialist - FiveM GTA RP Addiction Looking for Psychologist willing to talk about addiction for a project I\u2019m producing a mini-documentary on adult video game addiction, focusing specifically on roleplay servers FiveM (GTA RP). I want to ground the project with clinical insight. I\u2019m looking for a licensed psychologist, psychiatrist, or addiction specialist willing to review some findings and provide expert commentary on camera via zoom or in person (depends on distance) If you\u2019re interested or can recommend a colleague who specializes in digital dependency, please shoot me a DM. Happy to share more details about the project! ... I have multiple interviews with people talking about how this game affected their lives, its interesting because ive spoken to people around the world at this point with very very similar stories to each other.",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Licensed Psychologist & Addiction Specialist - FiveM GTA RP Addiction"
+ },
+ "personal-story-interviewees-paid-newspaper-opportunities": {
+  "url": "https://www.sourcee.app/journo-request/personal-story-interviewees-paid-newspaper-opportunities",
+  "http": "200",
+  "datePublished": "2026-09-24T13:01:42+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Personal Story Interviewees - Paid Newspaper Opportunities ***** VARIOUS PAID NEWSPAPER OPPORTUNITIES! FANCY BEING AN INTERVIEWEE? ** Reasons to take part: * you get paid * your story may help someone else going through a similar experience or raise awareness of a subject * you get full copy approval so you have the peace of mind that you&#x27;ll be happy with the final feature when it&#x27;s published * it&#x27;s great publicity if you have a book, charity or business to promote Here are the interviewees I&#x27;m currently searching for...I&#x27;ve highlighted whether you&#x27;ll need to be pictured or if a piece can be anonymous.... [email redacted] 1. **My marriage ended when my kids left for university. **PICTURED, IDEALLY. 2. **I&#x27;m a wealthy woman - and I&#x27;m sick of subbing my friends** (can have reached a head a few years ago where you got sick of paying for them in bars, restaurants, on holidays etc, and you have since moved on from those particular friends). PICTURED. 3. When **my husband and I stopped sharing our money in a joint account, our marriage became so much happier**. PICTURED. 4. I&#x27;m **childless because we kept waiting until we could afford to have kids..**. but we never could. PICTURED. 5. I cancelled my wedding after **my fiance went to a strip club on his stag do** (fine if you ultimately went on to marry him). WILL CONSIDER ANONYMOUS. 6. **What REALLY happens on a men&#x27;s golf trip abroad**? ANONYMOUS FOR OBVIOUS REASONS! 7. When my husband and I split up, **these are the terrible things I did before our divorce came through**... eg cutting up his clothes, throwing paint on his car, putting laxatives in his food, sleeping with someone else in the marital bed etc. CAN BE ANONYMOUS. 8. **My husband and I have had a food divorce **- our tastes and schedules are so different that now we shop for cook and eat our meals separately **[email redacted]**",
+  "emails": [],
+  "redacted": true,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Personal Story Interviewees - Paid Newspaper Opportunities"
+ },
+ "uk-menopausal-women-heavy-spending-on-supplements-lacking-evidence": {
+  "url": "https://www.sourcee.app/journo-request/uk-menopausal-women-heavy-spending-on-supplements-lacking-evidence",
+  "http": "200",
+  "datePublished": "2026-09-24T10:16:36+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days UK Menopausal Women - Heavy Spending On Supplements Lacking Evidence Offering \u00a350 for a case study of someone going through menopause who has turned to supplements and is spending lots of \u00a3\u00a3 on them but isn&#x27;t fully aware of the benefits or evidence behind everything they&#x27;re taking. For national media #prrequest #journorequest",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "UK Menopausal Women - Heavy Spending On Supplements Lacking Evidence"
+ },
+ "double-income-no-children-dincs-cost-barriers-to-having-kids": {
+  "url": "https://www.sourcee.app/journo-request/double-income-no-children-dincs-cost-barriers-to-having-kids",
+  "http": "200",
+  "datePublished": "2026-09-24T08:58:32+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Double Income No Children (DINCs) - Cost Barriers To Having Kids #journorequest I am doing a story on DINCs (Double Income No Children) and how more people are becoming DINCs not out of choice but because financially it is becoming more expensive to have children and the costs associated with it. Email me on [email redacted] i",
+  "emails": [],
+  "redacted": true,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Double Income No Children (DINCs) - Cost Barriers To Having Kids"
+ },
+ "tungsten-producers-and-recyclers-pricing-supply-chain-and-compliance": {
+  "url": "https://www.sourcee.app/journo-request/tungsten-producers-and-recyclers-pricing-supply-chain-and-compliance",
+  "http": "200",
+  "datePublished": "2026-09-24T08:29:05.863+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Tungsten Producers &amp; Recyclers - Pricing, Supply Chain &amp; Compliance Last week I was in Berlin at the ITIA International Tungsten Conference \u2014 a few shifts I&#x27;m watching closely coming out of it: 1. Price divergence is widening \u2014 fast. China&#x27;s export controls are creating a clear &quot;two-track market&quot;: concentrate, APT, and powder are repricing upstream in lockstep, while downstream carbide makers absorb the squeeze. Supply chain strategy is no longer a procurement detail \u2014 it&#x27;s a board-level conversation. 2. The upstream concentrate market is starving for an independent pricing benchmark. Information asymmetry remains the norm. Miners, converters, traders \u2014 everyone is essentially negotiating in the dark. Both sides want a transparent, third-party reference price to anchor long-term contracts and discipline spot trades. 3. Compliance is reshaping the map \u2014 though the final outcome is still an open question. RMI and similar schemes are now front-of-mind for European and U.S. buyers. Chinese suppliers aren&#x27;t standing still \u2014 many are stepping up audit work and traceability upgrades. The end state is still unclear, and that uncertainty is keeping Western procurement teams cautious. Honest takeaway: the bottleneck has moved downstream, not upstream. Demand for tungsten is intact. What the market is missing is price transparency and compliant supply. Time was tight, so I couldn&#x27;t meet everyone I wanted to face-to-face. If you&#x27;re working on tungsten \u2014 mining, APT, powder, cemented carbide, or scrap recycling \u2014 and want to dig into pricing, supply chain, or compliance, drop me a line. Happy to set up a virtual meeting. \ud83d\udce7 [email redacted] #ITIA #Tungsten #APT #CementedCarbide #CriticalMinerals #SupplyChain #RareMetals #Mining #CommodityMarkets #PriceDiscovery #ResponsibleSourcing #Berlin Shanghai Metals Market",
+  "emails": [],
+  "redacted": true,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Tungsten Producers & Recyclers - Pricing, Supply Chain & Compliance"
+ },
+ "unsigned-musicians-no-label-budget-connections-years-making-music": {
+  "url": "https://www.sourcee.app/journo-request/unsigned-musicians-no-label-budget-connections-years-making-music",
+  "http": "200",
+  "datePublished": "2026-09-24T04:52:00+00:00",
+  "badge": "Posted in last 7 days",
+  "body": "Posted in last 7 days Unsigned Musicians - No Label Budget Connections - Years Making Music? \ud83c\udf99\ufe0f I want to hear from the artists grinding with NO major label, NO huge budget and NO industry connections. How long have you been making music?",
+  "emails": [],
+  "redacted": false,
+  "links": [
+   "https://www.linkedin.com/in/andrewsmith313/",
+   "https://x.com/andy_cb_smith"
+  ],
+  "headline": "Unsigned Musicians - No Label Budget Connections - Years Making Music?"
+ }
+}
