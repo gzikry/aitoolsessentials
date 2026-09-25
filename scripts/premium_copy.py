@@ -88,7 +88,7 @@ def path_a_pitch(price: int = 12) -> tuple[str, str, str]:
 
 
 def post_audit_upgrade_html(whop: dict[str, Any] | None = None) -> str:
-    """One paid upgrade after the free audit. No invented savings figures."""
+    """Two paid lanes after the free audit, stated as a real choice. No invented savings figures."""
     price = int((whop or {}).get("price_usd_month") or 12)
     trial = int((whop or {}).get("trial_period_days") or 7)
     promo = str((whop or {}).get("promo_code") or "LAUNCH50")
@@ -105,6 +105,28 @@ def post_audit_upgrade_html(whop: dict[str, Any] | None = None) -> str:
         f'<p class="sa-note">{trial}-day free trial, then ${price}/month. Code <strong>{esc(promo)}</strong> '
         "for 50% off the first paid month. We do not invent how much you will save. "
         "Use your own numbers from this audit.</p>"
+        "</section>"
+        # The written audit belongs here and nowhere more naturally: the reader has just
+        # inventoried the stack and seen the overlap, which is exactly the input a $497 audit
+        # needs. Offering only the $12 lane at this moment hid the higher-value service from
+        # the warmest leads on the site.
+        '<section class="score-card sa-paid-audit">'
+        "<span>If a scorecard is not enough</span>"
+        "<h3>Written AI Stack Audit — $497, one-time.</h3>"
+        "<p>This scorecard tells you where the overlap is. It cannot tell you what the "
+        "overlap costs, because it cannot see your invoices or renewal dates. The written "
+        "audit is built from completed discovery plus public vendor documentation, priced "
+        "against what you actually pay.</p>"
+        "<p>What it includes: a direct answer to every workflow you named, a keep/cut/defer "
+        "table with money attached, a deep pass on the one bottleneck you ranked, a Monday "
+        "action per finding, and a 30-day sequence.</p>"
+        '<p><a class="button button-ghost-dark" data-sa-cta href="/services/paid-audit.html">'
+        "What the written audit adds</a>"
+        '<a class="text-link" data-sa-cta href="/services/audit-intake.html" '
+        'style="margin-left:8px">Start the intake</a></p>'
+        '<p class="sa-note">Strategy and written recommendations only. No implementation, no '
+        "account access, no credentials or API keys. Discovery is required first — we say so "
+        "before you pay rather than shipping a document full of gaps.</p>"
         "</section>"
     )
 
@@ -433,8 +455,9 @@ def homepage_band_html(whop: dict[str, Any]) -> str:
 <section class="scene scene-dark home-premium-band">
 <div>
 <p class="kicker light">Want a second opinion before you renew?</p>
-<p>Optional ${price}/month keep/cut pack on Whop — dated notes and a written reply in 48 hours when you want help deciding. Usually cheaper than one forgotten seat.</p>
+<p>Two ways to get one. Premium is the ${price}/month keep/cut pack — dated notes and a written reply in 48 hours, usually cheaper than one forgotten seat. If your stack is bigger than a pack can cover, the <a href="/services/paid-audit.html">written AI Stack Audit</a> is $497 one-time.</p>
 <p class="home-premium-actions"><a class="button home-cta-primary" href="/premium/">{BUY_PAGE_LABEL}</a>
+<a href="/services/paid-audit.html">Or see the $497 written audit</a>
 <a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
 </div>
 </section>

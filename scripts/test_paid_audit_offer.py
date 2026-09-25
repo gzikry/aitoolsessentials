@@ -30,6 +30,10 @@ REACHABLE_FROM = [
     "premium/index.html",
     "stack-audit.html",
     "services/ai-stack-audit.html",
+    # The homepage is where essentially every visitor lands, and it previously sold only the
+    # $12 membership. A visitor who never leaves the homepage is the single largest group on
+    # the site, so omitting the offer here was the largest remaining hole in its reach.
+    "index.html",
 ]
 ACTIVATED_ENDPOINT = "formsubmit.co/eb3d1bf5a35125c06383cafa247af931"
 
@@ -109,6 +113,41 @@ def main() -> None:
         for phrase in ("no implementation", "no access"):
             if phrase not in text:
                 errors.append(f"paid-audit.html must state the scope boundary ({phrase})")
+
+    # The free audit's result panel is the warmest moment on the site: the reader has just
+    # inventoried their stack and seen the overlap, which is precisely the input a $497 audit
+    # needs. It must offer both paid lanes, not only the $12 one.
+    #
+    # Assert on the RENDERED page, not on the source string. A first version of this guard
+    # checked premium_copy.py for the literal "/services/paid-audit.html" and passed even after
+    # the paid-audit section was deleted, because the href survived as an unrelated string.
+    # A guard that cannot fail on the regression it exists to catch is worse than no guard.
+    stack_page = ROOT / "stack-audit.html"
+    if stack_page.exists():
+        text = stack_page.read_text(errors="ignore")
+        if "sa-paid-audit" not in text:
+            errors.append(
+                "stack-audit.html result panel no longer offers the paid audit "
+                "(missing the sa-paid-audit lane)"
+            )
+        if "/services/paid-audit.html" not in text:
+            errors.append("stack-audit.html no longer links the paid audit offer")
+        if "/services/audit-intake.html" not in text:
+            errors.append("stack-audit.html no longer links the paid audit intake")
+
+    # The homepage must reach the offer too: it is where most visitors land and it previously
+    # sold only the $12 membership.
+    home_page = ROOT / "index.html"
+    if home_page.exists():
+        text = home_page.read_text(errors="ignore")
+        band_start = text.find("AIT HOMEPAGE PREMIUM BAND START")
+        band_end = text.find("AIT HOMEPAGE PREMIUM BAND END")
+        band = text[band_start:band_end] if band_start != -1 and band_end != -1 else ""
+        if band and "/services/paid-audit.html" not in band:
+            errors.append(
+                "homepage Premium band no longer offers the paid audit — visitors who never "
+                "leave the homepage would only ever see the $12 membership"
+            )
 
     if errors:
         raise SystemExit("paid audit guard failures:\n- " + "\n- ".join(errors))
