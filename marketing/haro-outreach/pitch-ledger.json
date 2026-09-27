@@ -7,22 +7,40 @@
   "skipped": {
     "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
   },
-  "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it.",
-  "reply_status_checked": "2026-09-26",
+  "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it. Pitches sent to date: 3. Replies received: 1. Zero sent on 2026-09-27.",
+  "reply_status_checked": "2026-09-27",
   "figures_disclosure": {
-    "date": "2026-09-26",
-    "status": "STILL UNSENT \u2014 the recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The floor and the median are both wrong, and the figure has now been wrong twice in opposite directions. (1) 2026-09-21: the range was regex-dependent, so nobody had defined the population it measured; re-extracting four ways returned 2, 7, 9 and 18 pairs. Curated by hand: 18 pairs, 1.16x to 2.53x, median 1.25x. (2) 2026-09-22: the replit-ai snapshot was refreshed on 2026-09-21 and BOTH of its figures moved \u2014 Core $25/$20 became $20/$18, and Pro is newly quoted as a second pair at $100/$90. Re-derived set: 19 tiers across 14 tools, range 1.11x to 2.53x, median 1.25x. Four pairs sit below the published 1.21x floor (instrumentl Pre-Award 1.16x, instrumentl Discover 1.17x, airtable-ai Team 1.20x, slack-ai Business+ 1.20x) and the two replit tiers sit below 1.16x at 1.11x. 2026-09-23 through 2026-09-26: the 19-pair set RE-ASSERTED CLEAN against the refreshed snapshot on FOUR consecutive days (data/pricing_snapshots.json updated 2026-09-26, extract_monthly_annual_pairs.py exit 0, no needle failures) \u2014 the longest stretch the figure has held since the assertion gate was added. The 1.16x floor in the 2026-09-21 drafts, and the 138/136 word counts claimed in the 2026-09-23 drafts, are superseded and must not be sent. Day 8 unsent.",
+    "date": "2026-09-27",
+    "status": "STILL UNSENT - Day 9. The recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The current verified figure is 1.11x-2.53x, median 1.25x over 19 tiers across 14 tools. 2026-09-23 through 2026-09-27: the 19-pair set RE-ASSERTED CLEAN against the refreshed snapshot on FIVE consecutive days (data/pricing_snapshots.json updated 2026-09-27, extract_monthly_annual_pairs.py exit 0, no needle failures) - the longest stretch the figure has held since the assertion gate was added. The 1.16x floor in the 2026-09-21 drafts, and the 138/136 word counts claimed in the 2026-09-23 drafts, are superseded and must not be sent. Day 9 unsent.",
     "action_required": "Send Jan Suski a short correction. The thread is live and he replied to us on 2026-09-18, so an un-flagged wrong figure in a peer method discussion is worse than a follow-up. Send the CURRENT figure (1.11x-2.53x, median 1.25x over 19 tiers), not the 1.16x one from the 2026-09-21 drafts. Route: reply to jan@jansuski.com (In-Reply-To the existing thread). George's lane.",
     "source_of_truth": "data/monthly_annual_pairs.json, re-asserted by scripts/extract_monthly_annual_pairs.py, which now refuses to write the file unless all 19 curated pairs re-assert against the live snapshot",
     "superseded_word_counts_note": "The 2026-09-23 drafts claimed 138 and 136 words for the shadow-AI and Speciality Food bodies; measured body-only they are 152 and 162. The 2026-09-26 drafts re-measure at 153 and 159 words body-only (the 2026-09-26 verifier measures them rather than asserting them).",
     "carried_record_repair": "2026-09-26: the superseded floor was still sitting in the Amplemarket request's own `suggested_pitch_template` in the digest ('the same tier runs 1.21x-2.53x'). Fixed at source \u2014 every carried angle field is now rewritten to the current figure and any 'checked 2026-09-18/19' re-stamped to the run date, so a future draft copying an angle cannot inherit a wrong number."
   },
   "reply_status": {
-    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). INBOX, All Mail, Sent Mail, Spam and Trash all re-checked 2026-09-26. Eleven days of silence. This send is what crossed the 10-day cold line on 2026-09-25; it is 12 days old now.",
-    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-09-26. The correspondence asked whether a dynamically re-checked pricing database would make sense; the reply answered it as a peer method discussion \u2014 and then repeated a monthly/annual range that has since been proven wrong twice. See figures_disclosure. The correction is now EIGHT days outstanding.",
-    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Eight days of silence. Request is now 16 days old and well past the cold line."
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). INBOX, All Mail, Sent Mail, Spam and Trash all re-checked 2026-09-27. Twelve days of silence. This send crossed the 10-day cold line on 2026-09-25 and is 13 days old today.",
+    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-09-27. The correspondence asked whether a dynamically re-checked pricing database would make sense; the reply answered it as a peer method discussion - and then repeated a monthly/annual range that has since been proven wrong twice. See figures_disclosure. The correction is now NINE days outstanding.",
+    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Nine days of silence. Request is now 17 days old and well past the cold line."
   },
   "cold_without_a_send": [
+    {
+      "date": "2026-09-27",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket",
+      "action": "LAST LIVE DAY - crosses TOMORROW, unpitched, with a paste-ready draft",
+      "note": "10 days old today and sendable; it crosses the 10-day line tomorrow. This is the row the monitor has been watching for a week, and today is the last day it counts as sendable. The draft has been written and unsent for NINE consecutive runs (pitch-drafts-2026-09-27.md section 1, figures re-derived today against a snapshot refreshed today). Route simon.chandler@raconteur.net re-resolved off the live /contributors/simon-chandler page today (HTTP 200, 154,797 bytes, data-part1/2/3 triple unchanged). It is the only high-relevance request this queue has ever held with a finished draft, so if it crosses unpitched it is the first high-relevance loss of that kind. Logged on the day it can still be prevented, not after the fact."
+    },
+    {
+      "date": "2026-09-27",
+      "url": "https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "one day from the line - crosses TOMORROW, unpitched, with a paste-ready draft",
+      "note": "9 days old and sendable; crosses the day after the shadow-AI row and its October issue window is closing. Draft re-verified today at pitch-drafts-2026-09-27.md section 2, route holly.shackleton@artichokehq.com re-read today off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, alongside five other named masthead addresses). Standing constraint stated in the draft's first line: we are not a food retailer."
+    },
+    {
+      "date": "2026-09-27",
+      "url": "https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety, https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies",
+      "action": "crossed the 10-day line today at 11 days, both unpitched, neither ever had a draft",
+      "note": "Both low/low-medium relevance and neither has ever had a resolved reply route, so nothing sendable was lost. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling from 26 to 24. Logged so that a quiet count change is never mistaken for a quiet week."
+    },
     {
       "date": "2026-09-26",
       "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",

@@ -1,0 +1,24 @@
+pricing_snapshots.updated: 2026-09-27
+tools: 76 snapshots: 76
+
+[1] categories: 16 | holding >=3: 13 | tools in them: 70
+
+[2] tools quoting a non-zero monthly price: 40 of 76
+    cheapest paid monthly tier <= $25: 31
+    median cheapest paid monthly tier: $16.50
+    min $4.00 (['khanmigo'])
+    sub-$25 set: [('$4.00', 'khanmigo', '2026-09-18'), ('$6.00', 'rows', '2026-09-18'), ('$7.25', 'slack-ai', '2026-09-18'), ('$8.00', 'pika', '2026-09-18'), ('$8.33', 'otter-ai', '2026-09-18'), ('$9.00', 'gamma', '2026-08-25'), ('$9.90', 'htmlslides', '2026-09-18'), ('$10.00', 'fireflies', '2026-09-18'), ('$10.00', 'midjourney', '2026-08-25'), ('$10.00', 'notion-ai', '2026-09-18'), ('$10.00', 'udio', '2026-08-28'), ('$12.00', 'landlord-studio', '2026-09-18'), ('$12.00', 'leonardo-ai', '2026-08-25'), ('$12.00', 'make', '2026-08-25'), ('$12.00', 'runway', '2026-09-18'), ('$14.99', 'mistral-le-chat', '2026-09-18'), ('$15.00', 'ideogram', '2026-08-28'), ('$15.00', 'tenantcloud', '2026-09-18'), ('$16.00', 'descript', '2026-09-18'), ('$16.00', 'fathom', '2026-09-18'), ('$17.00', 'allvideoai', '2026-09-18'), ('$18.00', 'replit-ai', '2026-09-21'), ('$18.00', 'synthesia', '2026-09-18'), ('$19.00', 'browse-ai', '2026-09-18'), ('$19.99', 'zapier-ai', '2026-09-18'), ('$20.00', 'airtable-ai', '2026-09-18'), ('$20.00', 'v0', '2026-09-18'), ('$24.00', 'copy-ai', '2026-09-18'), ('$24.00', 'heygen', '2026-09-18'), ('$25.00', 'bolt-new', '2026-09-18'), ('$25.00', 'lovable', '2026-08-25')]
+
+[3] tools quoting BOTH a monthly and an annual rate: 30 of 76
+
+[5] tools publishing no paid-tier price: 5
+    deepseek               checked 2026-08-25
+    dragon-copilot         checked 2026-08-26
+    harvey                 checked 2026-08-26
+    meta-ai                checked 2026-08-25
+    spellbook              checked 2026-08-26
+
+[6] shadow-AI draft figures re-checked
+    tools tracked: 76
+    priced tools: 40; of those <= $25/mo: 31; median $16.50; lowest $4.00 (['khanmigo'])
+    monthly/annual pairs file keys: ['built', 'source', 'method', 'pairs', 'range_low', 'range_high', 'median', 'n']

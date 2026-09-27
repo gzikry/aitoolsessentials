@@ -311,30 +311,33 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
 # thing that turns "3 live requests" into an actual send decision.
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified and re-drafted 2026-09-26: "
-        "`pitch-drafts-2026-09-26.md` §1.** Route: simon.chandler@raconteur.net, "
+        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-27: "
+        "`pitch-drafts-2026-09-27.md` §1.** Route: simon.chandler@raconteur.net, "
         "re-resolved off the live /contributors/simon-chandler page (HTTP 200, 154,797 bytes, triple "
-        "unchanged, control author checked) on 2026-09-26; the older /author/simon-chandler/ URL still "
+        "unchanged, control author checked) on 2026-09-27; the older /author/simon-chandler/ URL still "
         "404s and must not be cited. Figures re-derived today against data/pricing_snapshots.json "
-        "(`updated: 2026-09-26`): 76 tools, 40 publishing a monthly price, 31 of those at or under "
+        "(`updated: 2026-09-27`): 76 tools, 40 publishing a monthly price, 31 of those at or under "
         "$25/month, median $16.50, and the pair range holding at 1.11x-2.53x over 19 tiers across 14 "
-        "tools. Written and unsent for EIGHT consecutive runs, now 9 days old and ONE DAY from the cold "
-        "line. The only high-relevance request in the queue.",
+        "tools. Written and unsent for NINE consecutive runs, now 10 days old - **TODAY IS ITS LAST "
+        "LIVE DAY.** It crosses the cold line tomorrow. The only high-relevance request in the queue. "
+        "If it crosses unpitched it becomes the first high-relevance request this queue has lost to "
+        "the line with a paste-ready draft sitting ready.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        "**Draft ready and UNSENT since 2026-09-19, re-drafted 2026-09-26: "
-        "`pitch-drafts-2026-09-26.md` §2.** Route: holly.shackleton@artichokehq.com "
-        "(re-read off specialityfoodmagazine.com/contact 2026-09-26, HTTP 200, 59,500 bytes, alongside "
+        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-27: "
+        "`pitch-drafts-2026-09-27.md` §2.** Route: holly.shackleton@artichokehq.com "
+        "(re-read off specialityfoodmagazine.com/contact 2026-09-27, HTTP 200, 59,500 bytes, alongside "
         "five other named staff addresses). Standing constraint is stated in the draft's first line: we "
-        "are not a food retailer. 8 days old, and the October issue window is closing - send or drop.",
+        "are not a food retailer. 9 days old, crosses the line TOMORROW, and the October issue window "
+        "is closing - send or drop.",
     "anthropic-users-and-business-owners-customer-service-experiences":
-        "**CROSSED COLD 2026-09-23 at 11 days, now 14 — no longer counted as sendable.** Draft "
+        "**CROSSED COLD 2026-09-23 at 11 days, now 15 — no longer counted as sendable.** Draft "
         "finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal "
-        "hliwrites.99 (re-read verbatim off the live page, still published 2026-09-26). It was the "
+        "hliwrites.99 (re-read verbatim off the live page, still published 2026-09-27). It was the "
         "queue's #2 and sendable on four consecutive runs. Send late or record as skipped in "
         "pitch-ledger.json; the crossing is logged in `cold_without_a_send`.",
     "finops-professionals-agentic-ai-cost-overruns":
         "**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1.** Route: "
-        "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 (now 19 days) and still "
+        "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 (now 20 days) and still "
         "unsent — the longest-standing high-relevance request this monitor has never answered. Send "
         "it late or drop it, do not draft it a fifth time.",
 }
@@ -343,24 +346,24 @@ DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
-    "**Today's drafts are `pitch-drafts-2026-09-26.md` (§1 shadow AI, §2 Speciality Food, both "
-    "paste-ready).** The pair range re-asserted clean for the fourth consecutive day against a freshly "
-    "refreshed snapshot (`updated: 2026-09-26`), so today's drafts cite the same figures as yesterday's."
-    "\n\n"
-    "**BOTH SENDABLE REQUESTS ARE NOW ONE DAY FROM THE COLD LINE.** The shadow-AI request (9d) crosses "
-    "it tomorrow; the Speciality Food one (8d) crosses it the day after. Neither has ever been pitched. "
-    "The shadow-AI draft alone has been written and unsent for eight consecutive runs — if it is not "
-    "sent today it becomes the first high-relevance request this queue has lost to the line with a "
+    "**Today's drafts are `pitch-drafts-2026-09-27.md` (§1 shadow AI, §2 Speciality Food, both "
+    "paste-ready).** The pair range re-asserted clean for the fifth consecutive day against a freshly "
+    "refreshed snapshot (`updated: 2026-09-27`), so today's drafts cite the same figures as "
+    "yesterday's.\n\n"
+    "**THE SHADOW-AI REQUEST IS ON ITS LAST LIVE DAY.** It is 10 days old and crosses the cold line "
+    "tomorrow. The Speciality Food request (9d) crosses the day after. Neither has ever been pitched. "
+    "The shadow-AI draft has been written and unsent for NINE consecutive runs — if it crosses "
+    "unpitched it becomes the first high-relevance request this queue has lost to the line with a "
     "draft sitting ready.\n\n"
     "**The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers across 14 tools, and it held "
     "today.** History, because every superseded value is still sitting in dated draft files and must "
     "not be reused: the range was first published as `1.21x to 2.53x, median 1.33x` (2026-09-18, sent "
     "to a real correspondent — wrong because the pair population was regex-dependent and undefined); "
     "corrected to `1.16x to 2.53x, median 1.25x` over 18 curated pairs (2026-09-21); then re-derived "
-    "to **1.11x to 2.53x** when the replit-ai snapshot was refreshed (2026-09-22). On 2026-09-23, "
-    "2026-09-24, 2026-09-25 and 2026-09-26 the 19-pair set re-asserted clean against the refreshed "
-    "snapshot (exit 0, no needle failures) — four consecutive days without the figure moving, the "
-    "longest such stretch since the assertion gate was added. See `data/monthly_annual_pairs.json` and "
+    "to **1.11x to 2.53x** when the replit-ai snapshot was refreshed (2026-09-22). From 2026-09-23 "
+    "through 2026-09-27 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
+    "needle failures) — five consecutive days without the figure moving, the longest such stretch "
+    "since the assertion gate was added. See `data/monthly_annual_pairs.json` and "
     "`scripts/extract_monthly_annual_pairs.py`, which refuses to write the file at all unless every "
     "curated pair re-asserts against the live snapshot.\n\n"
     + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(DRAFTS.items()))
