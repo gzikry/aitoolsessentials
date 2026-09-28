@@ -22,6 +22,15 @@ SITE = "aitoolsessentials.com"
 API = "https://plausible.io/api/v2/query"
 
 
+class PlausibleError(RuntimeError):
+    """The API answered, but with an error instead of data.
+
+    Raised so a locked/unsubscribed site can never be reported as zero traffic. Before
+    this existed the wrapper printed a valid-looking empty report (exit 0, no numbers)
+    when the site was locked, which is indistinguishable from genuine zero traffic.
+    """
+
+
 def query(metrics: list[str], period: str = "30d",
           dimensions: list[str] | None = None,
           filters: list | None = None) -> dict:
@@ -39,9 +48,16 @@ def query(metrics: list[str], period: str = "30d",
         capture_output=True, text=True, timeout=90,
     )
     try:
-        return json.loads(result.stdout)
+        data = json.loads(result.stdout)
     except json.JSONDecodeError:
-        return {"error": result.stdout[:300]}
+        # Truncate for the message only; never echo the token or full payload.
+        raise PlausibleError(f"non-JSON response from Plausible API: {result.stdout[:200]!r}")
+
+    # An error object is NOT empty data. Fail loudly so a locked site is never
+    # silently reported as zero traffic.
+    if isinstance(data, dict) and data.get("error"):
+        raise PlausibleError(str(data["error"]))
+    return data
 
 
 def rows(response: dict) -> list[dict]:
@@ -121,7 +137,13 @@ def main() -> int:
         print(f"Missing Plausible token at {TOKEN_PATH}", file=sys.stderr)
         return 2
 
-    lines = build_report(args.period)
+    try:
+        lines = build_report(args.period)
+    except PlausibleError as exc:
+        print("Plausible API returned an error — no metrics can be reported.", file=sys.stderr)
+        print(f"Reason: {exc}", file=sys.stderr)
+        print("Do NOT record this as zero traffic; the data is unavailable.", file=sys.stderr)
+        return 3
     text = "\n".join(lines)
     print(text)
     if args.markdown:
