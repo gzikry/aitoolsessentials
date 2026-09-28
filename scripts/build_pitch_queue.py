@@ -311,33 +311,34 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
 # thing that turns "3 live requests" into an actual send decision.
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-27: "
-        "`pitch-drafts-2026-09-27.md` §1.** Route: simon.chandler@raconteur.net, "
+        "**CROSSED COLD 2026-09-28 at 11 days, draft ready and UNSENT — send it late: "
+        "`pitch-drafts-2026-09-28.md` §1.** Route: simon.chandler@raconteur.net, "
         "re-resolved off the live /contributors/simon-chandler page (HTTP 200, 154,797 bytes, triple "
-        "unchanged, control author checked) on 2026-09-27; the older /author/simon-chandler/ URL still "
+        "unchanged, control author checked) on 2026-09-28; the older /author/simon-chandler/ URL still "
         "404s and must not be cited. Figures re-derived today against data/pricing_snapshots.json "
-        "(`updated: 2026-09-27`): 76 tools, 40 publishing a monthly price, 31 of those at or under "
+        "(`updated: 2026-09-28`): 76 tools, 40 publishing a monthly price, 31 of those at or under "
         "$25/month, median $16.50, and the pair range holding at 1.11x-2.53x over 19 tiers across 14 "
-        "tools. Written and unsent for NINE consecutive runs, now 10 days old - **TODAY IS ITS LAST "
-        "LIVE DAY.** It crosses the cold line tomorrow. The only high-relevance request in the queue. "
-        "If it crosses unpitched it becomes the first high-relevance request this queue has lost to "
-        "the line with a paste-ready draft sitting ready.",
+        "tools. Written and unsent for TEN consecutive runs, and it crossed unpitched on 2026-09-28 — "
+        "the first high-relevance request this queue has lost to the cold line with a paste-ready "
+        "draft sitting ready. The page is still HTTP 200 and the address still resolves, so a late "
+        "send is still possible; what was lost is the ideal window, not the pitch.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        "**Draft ready and UNSENT since 2026-09-19, re-verified 2026-09-27: "
-        "`pitch-drafts-2026-09-27.md` §2.** Route: holly.shackleton@artichokehq.com "
-        "(re-read off specialityfoodmagazine.com/contact 2026-09-27, HTTP 200, 59,500 bytes, alongside "
+        "**CROSSED COLD 2026-09-28 at 11 days, draft ready and UNSENT — send or skip: "
+        "`pitch-drafts-2026-09-28.md` §2.** Route: holly.shackleton@artichokehq.com "
+        "(re-read off specialityfoodmagazine.com/contact 2026-09-28, HTTP 200, 59,500 bytes, alongside "
         "five other named staff addresses). Standing constraint is stated in the draft's first line: we "
-        "are not a food retailer. 9 days old, crosses the line TOMORROW, and the October issue window "
-        "is closing - send or drop.",
+        "are not a food retailer. 11 days old and cold as of today; its October issue window has "
+        "almost certainly closed, so treat this as a send-or-skip call and record the outcome in "
+        "pitch-ledger.json.",
     "anthropic-users-and-business-owners-customer-service-experiences":
-        "**CROSSED COLD 2026-09-23 at 11 days, now 15 — no longer counted as sendable.** Draft "
+        "**CROSSED COLD 2026-09-23 at 11 days, now 16 — no longer counted as sendable.** Draft "
         "finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal "
-        "hliwrites.99 (re-read verbatim off the live page, still published 2026-09-27). It was the "
+        "hliwrites.99 (re-read verbatim off the live page, still published 2026-09-28). It was the "
         "queue's #2 and sendable on four consecutive runs. Send late or record as skipped in "
         "pitch-ledger.json; the crossing is logged in `cold_without_a_send`.",
     "finops-professionals-agentic-ai-cost-overruns":
         "**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1.** Route: "
-        "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 (now 20 days) and still "
+        "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 (now 21 days) and still "
         "unsent — the longest-standing high-relevance request this monitor has never answered. Send "
         "it late or drop it, do not draft it a fifth time.",
 }
@@ -346,23 +347,25 @@ DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
-    "**Today's drafts are `pitch-drafts-2026-09-27.md` (§1 shadow AI, §2 Speciality Food, both "
-    "paste-ready).** The pair range re-asserted clean for the fifth consecutive day against a freshly "
-    "refreshed snapshot (`updated: 2026-09-27`), so today's drafts cite the same figures as "
-    "yesterday's.\n\n"
-    "**THE SHADOW-AI REQUEST IS ON ITS LAST LIVE DAY.** It is 10 days old and crosses the cold line "
-    "tomorrow. The Speciality Food request (9d) crosses the day after. Neither has ever been pitched. "
-    "The shadow-AI draft has been written and unsent for NINE consecutive runs — if it crosses "
-    "unpitched it becomes the first high-relevance request this queue has lost to the line with a "
-    "draft sitting ready.\n\n"
+    "**THE QUEUE IS AT ZERO SENDABLE, AND IT GOT THERE BY LOSING BOTH ITS DRAFTS.** Both rows that "
+    "carried a finished draft and a resolved route crossed the 10-day line on 2026-09-28, unpitched: "
+    "the Raconteur shadow-AI request (11d, high relevance, draft unsent for TEN consecutive runs) and "
+    "the Speciality Food request (11d, draft unsent since 2026-09-19). The live count fell 24 to 18 "
+    "and the sendable count fell 2 to 0. Neither draft is void — both pages are still HTTP 200 and "
+    "both routes were re-resolved against the live pages again today, so a late send is still "
+    "possible. What was lost is the ideal window, not the pitch.\n\n"
+    "**Today's drafts are `pitch-drafts-2026-09-28.md` (§1 shadow AI, §2 Speciality Food, both "
+    "paste-ready and both marked crossed-but-still-sendable).** The pair range re-asserted clean for "
+    "the sixth consecutive day against a freshly refreshed snapshot (`updated: 2026-09-28`), so "
+    "today's drafts cite the same figures as yesterday's.\n\n"
     "**The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers across 14 tools, and it held "
     "today.** History, because every superseded value is still sitting in dated draft files and must "
     "not be reused: the range was first published as `1.21x to 2.53x, median 1.33x` (2026-09-18, sent "
     "to a real correspondent — wrong because the pair population was regex-dependent and undefined); "
     "corrected to `1.16x to 2.53x, median 1.25x` over 18 curated pairs (2026-09-21); then re-derived "
     "to **1.11x to 2.53x** when the replit-ai snapshot was refreshed (2026-09-22). From 2026-09-23 "
-    "through 2026-09-27 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
-    "needle failures) — five consecutive days without the figure moving, the longest such stretch "
+    "through 2026-09-28 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
+    "needle failures) — six consecutive days without the figure moving, the longest such stretch "
     "since the assertion gate was added. See `data/monthly_annual_pairs.json` and "
     "`scripts/extract_monthly_annual_pairs.py`, which refuses to write the file at all unless every "
     "curated pair re-asserts against the live snapshot.\n\n"
@@ -483,6 +486,15 @@ def render(queue: list[dict], ledger: dict) -> str:
         lines += [f"## Sendable — pitch these ({len(sendable)})", "",
                   "Live, not cold, ranked above the tangential band, and with a reply route a human "
                   "can actually use. This is the whole actionable queue.", ""]
+        if not sendable:
+            # A zero here is the same class of defect as a draft nobody sends, so it is stated
+            # rather than left as an empty section a reader can skim past.
+            lines += [
+                "**There is nothing to send from this queue today.** Every row that had both a "
+                "relevance above the tangential band and a resolved route has now crossed the "
+                f"{STALE_DAYS}-day line unpitched; the live rows below are off-beat calls with no "
+                "usable route. The rows that carried a finished draft are named in the section above "
+                "as crossed-but-still-sendable — a late send is the only action left on them.", ""]
         if sendable:
             soon = [q for q in sendable if q["days_old"] is not None and q["days_old"] >= STALE_DAYS - 2]
             if soon:
