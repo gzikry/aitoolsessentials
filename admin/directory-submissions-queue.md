@@ -20,12 +20,20 @@ Columns are SaaSHub's own: **Pop** (popularity score), **Traffic** (monthly), **
 
 ## Tier 1 — free, do-follow, no registration (agent-executable)
 
-| Target | Traffic | DS | Submit URL |
-|---|---|---|---|
-| AI to Grow | 200 | 14 | https://aitogrow.com/#send-your-tool |
+| Target | Traffic | DS | Submit URL | Status |
+|---|---|---|---|---|
+| AI to Grow | 200 | 14 | https://aitogrow.com/#send-your-tool | **SUBMITTED 2026-09-28** |
 
-> Verify the form is a plain POST (no login) at submit time. If it now gates on an
-> account, move it to Tier 2 rather than creating one.
+**AI to Grow — submitted 2026-09-28.** The form is a plain WordPress Contact Form 7
+(`form.wpcf7-form`, fields `your-name` / `email` / `url` / `textarea`, native AJAX to
+`/wp-json/contact-form-7/v1/contact-forms/274/feedback`). No login gate, confirmed
+empirically before sending. Submitted as AIToolsEssentials with the site's published
+contact address and a factual description; the form returned "Thank you for your
+message. It has been sent." **The listing is not confirmed until a fetched public page
+shows the site link** — re-check the directory's listing pages, not the form's notice.
+
+> Caution: the same page also carries a SendFox newsletter form that requires a password
+> (`sendfox.com/form/...`). That is not a submission form — do not fill or submit it.
 
 ## Tier 2 — free + do-follow, registration required (George-gated)
 
