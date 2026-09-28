@@ -187,7 +187,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         "<p>Not ready to subscribe? These public utilities use the same verification data our members get:</p>"
         '<div class="content-hub-grid">'
         '<article class="content-hub-card"><span>Free tracker</span><h3><a href="/pricing-watch/">AI Pricing Watch</a></h3>'
-        "<p>Verified official-pricing snapshots for all 40 tracked tools, each with a checked date.</p></article>"
+        f"<p>Verified official-pricing snapshots for all {len(tools_list)} tracked tools, each with a checked date.</p></article>"
         '<article class="content-hub-card"><span>Free report</span><h3><a href="/pricing-report/">State of AI Pricing</a></h3>'
         "<p>The quarterly evidence-based summary: coverage stats, live promotions, confirmed changes.</p></article>"
         '<article class="content-hub-card"><span>Free utility</span><h3><a href="/stack-audit.html">Instant Stack Audit</a></h3>'

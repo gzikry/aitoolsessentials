@@ -145,7 +145,7 @@ from enhance_faq_schema import generate as enhance_faq_schema
 enhance_faq_schema(root)
 
 from generate_faq_articles import generate as generate_faq_articles
-generate_faq_articles(root)
+generate_faq_articles(root, today)
 
 from generate_learn_hub import generate as generate_learn_hub
 generate_learn_hub(root)
@@ -413,8 +413,10 @@ print('Injected test protocols:', _test_protocol_postprocess(root, tools))
 from generate_bestfor_and_report import postprocess_refresh as _bestfor_refresh
 print('Best-for deals strip refreshed:', _bestfor_refresh(root))
 
-# Keep inventory claims accurate after adding or removing tools. Historical pricing
-# research retains its original 40-tool snapshot language; current-directory copy is dynamic.
+# Keep inventory claims accurate after adding or removing tools. Phrase these rules
+# narrowly: "40 tools with a non-zero monthly price" is a real subset statistic in the
+# HARO drafts, not a catalog total, so a bare '40 tools' rule would corrupt it into
+# falsehood. Only whole phrases that can only mean the full catalog are listed here.
 _current_count = len(tools)
 _inventory_replacements = {
     '39 AI tools': f'{_current_count} AI tools',
@@ -422,9 +424,15 @@ _inventory_replacements = {
     '40 tools. Pricing verified': f'{_current_count} tools. Pricing verified',
     '45 AI tools': f'{_current_count} AI tools',
     '45 AI tools organized by real workflows': f'{_current_count} AI tools organized by real workflows',
-    'for all 40 tools': 'for the 40-tool pricing snapshot',
-    'across all 40 tools': 'across the 40-tool pricing snapshot',
-    'across 40 tools': 'across the 40-tool pricing snapshot',
+    # The standalone pricing-research dataset is regenerated from the current inventory,
+    # so its old fixed-size label is stale at every catalog size. Point at it by name.
+    'across the 40-tool pricing snapshot': 'across the current pricing dataset',
+    'for the 40-tool pricing snapshot': 'for the current pricing dataset',
+    'the 40-tool pricing snapshot': 'the current pricing dataset',
+    'for all 40 tools': f'for all {_current_count} tools',
+    'across all 40 tools': f'across all {_current_count} tools',
+    'across 40 tools': f'across {_current_count} tools',
+    '67-tool decision matrix': f'{_current_count}-tool decision matrix',
     "can't personally test all 40 tools": f"can't personally test all {_current_count} tools",
     'verified snapshots for the 40-tool pricing snapshot': f'verified snapshots for {_current_count} tools',
 }

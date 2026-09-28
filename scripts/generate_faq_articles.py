@@ -83,12 +83,20 @@ FOOTER = '''<footer class="footer">
   <a href="../legal/about.html">About</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a><a href="../legal/corrections.html">Corrections</a></footer>'''
 
 
-def generate(root: Path) -> int:
+def generate(root: Path, today=None) -> int:
     made=0
     import json
+    if today is None:
+        from datetime import date as _date
+        today = _date.today().strftime('%Y-%m-%d')
+    # Inventory claims must come from the data, never a hardcoded literal. A hardcoded
+    # "67-tool decision matrix" survived two catalog expansions and shipped stale on the
+    # 76-tool site; the validator guard below now fails the build on this class.
+    _tool_count = len(json.loads((root / 'data' / 'tools.json').read_text()))
     for fname,a in ARTICLES.items():
         p=root/'articles'/fname
         if p.exists(): continue
+        body = a['body'].replace('{TOOL_COUNT}', str(_tool_count))
         faq_schema=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
             {"@type":"Question","name":a['title'],"acceptedAnswer":{"@type":"Answer","text":"See article for the complete evidence-based answer."}}]})
         article_schema=json.dumps({"@context":"https://schema.org","@type":"Article","headline":a['title'],"description":a['desc'],"image":"https://aitoolsessentials.com/assets/og-ai-tools.jpg","datePublished":"2026-08-25","dateModified":today,"url":f"https://aitoolsessentials.com/articles/{fname}","author":{"@type":"Organization","name":"AIToolsEssentials"},"publisher":{"@type":"Organization","name":"AIToolsEssentials","url":"https://aitoolsessentials.com"}})
@@ -100,7 +108,7 @@ def generate(root: Path) -> int:
 <script type="application/ld+json">{article_schema}</script>
 <link rel="icon" href="../assets/aitools-bot-mark.svg" type="image/svg+xml"></head><body>{HEADER}
 <main><section class="scene scene-light article-hero"><p class="kicker light">{H.escape(a['kicker'])}</p><h1>{H.escape(a['title'])}</h1><p>{H.escape(a['desc'])}</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse tools</a><a class="button button-dark" href="learn.html">More guides</a><a class="button button-dark" href="../pricing-watch/">Pricing Watch</a></div></section>
-<section class="scene scene-light"><article class="article-shell">{a['body']}</article></section>
+<section class="scene scene-light"><article class="article-shell">{body}</article></section>
 <section class="newsletter-panel"><div><span>AI Tool Evaluation Scorecard</span><h2>Decide with evidence, not demos</h2><p>Compare candidates on workflow fit, quality, review time, privacy, collaboration, cost, and ROI.</p><p class="affiliate-inline">No email required.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../downloads/ai-tool-evaluation-scorecard.html">Open scorecard</a><a class="button button-dark" href="../pricing/">Premium research</a></div></section>
 
 </main><div id="share-row" hidden></div>
@@ -368,7 +376,7 @@ ARTICLES['ai-stack-audit-checklist.html'] = {
 <li>Check <a href="../pricing-watch/">Pricing Watch</a> before renewing anything annual.</li>
 </ol>
 <h2>When to use the Premium audit pack</h2>
-<p><a href="../premium/">Premium members</a> get a fillable <strong>AI Stack Audit Template</strong>, a weekly checklist, an ROI calculator, and a full 67-tool decision matrix. Reply with a completed audit for a strategy-only keep/cut/trial recommendation within 48 hours. No account access required. 7-day free trial, then $12/month; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
+<p><a href="../premium/">Premium members</a> get a fillable <strong>AI Stack Audit Template</strong>, a weekly checklist, an ROI calculator, and a full {TOOL_COUNT}-tool decision matrix. Reply with a completed audit for a strategy-only keep/cut/trial recommendation within 48 hours. No account access required. 7-day free trial, then $12/month; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
 <h2>Red flags</h2>
 <ul>
 <li>Two paid tools own the same weekly job</li>

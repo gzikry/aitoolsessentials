@@ -159,6 +159,31 @@ def main():
     if extra_reviews:
         errors.append(f'Extra reviews without tool records: {extra_reviews}')
 
+    # Inventory-claim guard. A hardcoded catalog-size literal (e.g. a "67-tool decision
+    # matrix" on a 76-tool site) is how public copy drifts out of sync with the data.
+    # Scope: phrases that can ONLY mean the full catalog — "<N>-tool" and "<N> AI tools
+    # tracked". Deliberately excluded: "<N> tools in the directory with a free tier"
+    # (a real subset count) and dated research/HARO archives. Test that this fires by
+    # injecting a bad literal before trusting it.
+    _catalog_n = len(tool_slugs)
+    _claim_patterns = (
+        r'\b(\d{2,3})-tool\b',
+        r'\b(\d{2,3})\s+AI tools tracked\b',
+        r'\b(\d{2,3})\s+tools tracked\b',
+    )
+    _claim_skip = {'admin', 'marketing', 'scripts'}
+    for _cf in ROOT.rglob('*.html'):
+        _crel = _cf.relative_to(ROOT)
+        if any(s in _crel.parts for s in _claim_skip) or is_working_rel(_crel):
+            continue
+        _ctext = _cf.read_text(errors='replace')
+        for _pat in _claim_patterns:
+            for _m in re.finditer(_pat, _ctext):
+                if int(_m.group(1)) != _catalog_n:
+                    errors.append(
+                        f'{_crel} stale inventory claim "{_m.group(0)}" (catalog is {_catalog_n})'
+                    )
+
     # Benchmark evidence integrity and review provenance gates.
     benchmark_data = json.loads((ROOT/'data/benchmarks.json').read_text())
     source_ids = {s['id'] for s in benchmark_data.get('sources', [])}
