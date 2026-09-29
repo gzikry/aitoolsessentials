@@ -309,63 +309,79 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
 # was the queue's #1 on 2026-09-17 with a finished draft in pitch-drafts-2026-09-17.md and was never
 # sent, and it crossed into cold on 2026-09-19. Naming which rows are already written is the one
 # thing that turns "3 live requests" into an actual send decision.
+#
+# These entries are rewritten on every run against that run's verified-requests.json. They carried
+# hand-written prose for six runs in a row, including a "TODAY IS ITS LAST LIVE DAY" claim for a row
+# that had already crossed - so the ages and the crossing dates here are now read from the cache, not
+# typed out. `scripts/build_pitch_queue.py` refuses to print an age it has not just measured.
+_VERIFIED_CACHE = _load_verified()
+
+
+def _age_of(slug: str) -> int | None:
+    return (_VERIFIED_CACHE.get(slug) or {}).get("days_old")
+
+
+def _sent_word(n: int | None) -> str:
+    return f"{n}d" if n is not None else "age unmeasured"
+
+
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        "**CROSSED COLD 2026-09-28 at 11 days, draft ready and UNSENT — send it late: "
-        "`pitch-drafts-2026-09-28.md` §1.** Route: simon.chandler@raconteur.net, "
-        "re-resolved off the live /contributors/simon-chandler page (HTTP 200, 154,797 bytes, triple "
-        "unchanged, control author checked) on 2026-09-28; the older /author/simon-chandler/ URL still "
-        "404s and must not be cited. Figures re-derived today against data/pricing_snapshots.json "
-        "(`updated: 2026-09-28`): 76 tools, 40 publishing a monthly price, 31 of those at or under "
-        "$25/month, median $16.50, and the pair range holding at 1.11x-2.53x over 19 tiers across 14 "
-        "tools. Written and unsent for TEN consecutive runs, and it crossed unpitched on 2026-09-28 — "
-        "the first high-relevance request this queue has lost to the cold line with a paste-ready "
-        "draft sitting ready. The page is still HTTP 200 and the address still resolves, so a late "
-        "send is still possible; what was lost is the ideal window, not the pitch.",
+        f"**Draft ready and UNSENT — `pitch-drafts-2026-09-29.md` §1. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
+        "old, and it crossed the 10-day line on 2026-09-28 unpitched.** Route: simon.chandler@raconteur.net, "
+        "re-resolved off the live /contributors/simon-chandler page (HTTP 200, 154,759 bytes, "
+        "data-part1/2/3 triple unchanged at simon.chandler + raconteur + net, control author "
+        "/contributors/tom-dennis carries tom.dennis/raconteur/net) on 2026-09-29; the older "
+        "/author/simon-chandler/ URL still 404s and must not be cited. Figures re-derived today "
+        "against data/pricing_snapshots.json (`updated: 2026-09-29`): 76 tools, 40 publishing a "
+        "monthly price, 31 of those at or under $25/month, median $16.50, and the pair range holding "
+        "at 1.11x-2.53x over 19 tiers across 14 tools. Unsent through twelve consecutive runs. It is "
+        "the only high-relevance request this monitor has ever produced with a resolved route; the "
+        "page is still HTTP 200 and the address still resolves, so a late send is still possible — "
+        "what was lost is the ideal window, not the pitch.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        "**CROSSED COLD 2026-09-28 at 11 days, draft ready and UNSENT — send or skip: "
-        "`pitch-drafts-2026-09-28.md` §2.** Route: holly.shackleton@artichokehq.com "
-        "(re-read off specialityfoodmagazine.com/contact 2026-09-28, HTTP 200, 59,500 bytes, alongside "
-        "five other named staff addresses). Standing constraint is stated in the draft's first line: we "
-        "are not a food retailer. 11 days old and cold as of today; its October issue window has "
-        "almost certainly closed, so treat this as a send-or-skip call and record the outcome in "
-        "pitch-ledger.json.",
+        f"**Draft ready and UNSENT — `pitch-drafts-2026-09-29.md` §2. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
+        "old, crossed the 10-day line on 2026-09-28 unpitched.** Route: holly.shackleton@artichokehq.com "
+        "(re-read off specialityfoodmagazine.com/contact 2026-09-29, HTTP 200, 59,500 bytes, byte-count "
+        "unchanged, alongside five other named staff addresses). Standing constraint is stated in the "
+        "draft's first line: we are not a food retailer. Its October issue window has closed, so treat "
+        "this as a send-or-skip call and record the outcome in `pitch-ledger.json` rather than "
+        "carrying it a fourth day.",
     "anthropic-users-and-business-owners-customer-service-experiences":
-        "**CROSSED COLD 2026-09-23 at 11 days, now 16 — no longer counted as sendable.** Draft "
-        "finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal "
-        "hliwrites.99 (re-read verbatim off the live page, still published 2026-09-28). It was the "
-        "queue's #2 and sendable on four consecutive runs. Send late or record as skipped in "
-        "pitch-ledger.json; the crossing is logged in `cold_without_a_send`.",
+        f"**Crossed cold 2026-09-23; now {_sent_word(_age_of('anthropic-users-and-business-owners-customer-service-experiences'))} old — no longer counted as sendable.** "
+        "Draft finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal "
+        "hliwrites.99 (re-read verbatim off the live page 2026-09-29). Send late or record as skipped "
+        "in `pitch-ledger.json`; the crossing is logged in `cold_without_a_send`.",
     "finops-professionals-agentic-ai-cost-overruns":
-        "**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1.** Route: "
-        "LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 (now 21 days) and still "
-        "unsent — the longest-standing high-relevance request this monitor has never answered. Send "
-        "it late or drop it, do not draft it a fifth time.",
+        f"**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1. Now {_sent_word(_age_of('finops-professionals-agentic-ai-cost-overruns'))} old.** "
+        "Route: LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — "
+        "the longest-standing high-relevance request this monitor has never answered. Send it late or "
+        "drop it, do not draft it a fifth time.",
 }
 
 DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
-    "**THE QUEUE IS AT ZERO SENDABLE, AND IT GOT THERE BY LOSING BOTH ITS DRAFTS.** Both rows that "
-    "carried a finished draft and a resolved route crossed the 10-day line on 2026-09-28, unpitched: "
-    "the Raconteur shadow-AI request (11d, high relevance, draft unsent for TEN consecutive runs) and "
-    "the Speciality Food request (11d, draft unsent since 2026-09-19). The live count fell 24 to 18 "
-    "and the sendable count fell 2 to 0. Neither draft is void — both pages are still HTTP 200 and "
-    "both routes were re-resolved against the live pages again today, so a late send is still "
-    "possible. What was lost is the ideal window, not the pitch.\n\n"
-    "**Today's drafts are `pitch-drafts-2026-09-28.md` (§1 shadow AI, §2 Speciality Food, both "
-    "paste-ready and both marked crossed-but-still-sendable).** The pair range re-asserted clean for "
-    "the sixth consecutive day against a freshly refreshed snapshot (`updated: 2026-09-28`), so "
-    "today's drafts cite the same figures as yesterday's.\n\n"
+    "**THE QUEUE IS AT ZERO SENDABLE, AND TODAY IT TOOK A CODE FIX TO SEE THAT.** The 2026-09-29 "
+    "build first reported **1 sendable** — the Forbes founders-cutting-AI request — because this "
+    "run's refresh script had dropped Sourcee's two own social links from its chrome filter, so a "
+    "page's own chrome landed in that row's `published_links` and `_sendable()` read it as a reply "
+    "route. The row's body says the opposite: *\"Please only answer as a comment on this post. Do "
+    "not email or DM me because they won't be used.\"* Filter restored, queue re-built: **0 "
+    "sendable**, which is the true number. Nothing was sent this run either.\n\n"
+    "**Today's drafts are `pitch-drafts-2026-09-29.md` (§1 Raconteur shadow AI, §2 Speciality "
+    "Food, both paste-ready, both crossed-but-still-sendable).** The pair range re-asserted clean "
+    "for the seventh consecutive day against a freshly refreshed snapshot (`updated: 2026-09-29`), "
+    "so today's drafts cite the same figures as yesterday's.\n\n"
     "**The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers across 14 tools, and it held "
     "today.** History, because every superseded value is still sitting in dated draft files and must "
     "not be reused: the range was first published as `1.21x to 2.53x, median 1.33x` (2026-09-18, sent "
     "to a real correspondent — wrong because the pair population was regex-dependent and undefined); "
     "corrected to `1.16x to 2.53x, median 1.25x` over 18 curated pairs (2026-09-21); then re-derived "
     "to **1.11x to 2.53x** when the replit-ai snapshot was refreshed (2026-09-22). From 2026-09-23 "
-    "through 2026-09-28 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
-    "needle failures) — six consecutive days without the figure moving, the longest such stretch "
+    "through 2026-09-29 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
+    "needle failures) — seven consecutive days without the figure moving, the longest such stretch "
     "since the assertion gate was added. See `data/monthly_annual_pairs.json` and "
     "`scripts/extract_monthly_annual_pairs.py`, which refuses to write the file at all unless every "
     "curated pair re-asserts against the live snapshot.\n\n"
