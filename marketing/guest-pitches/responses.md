@@ -2,7 +2,7 @@
 
 Tracking file for the pitches in `pitches-2026-09-22.json` (12 drafts, supersedes the
 10 in `pitches-2026-09-03.json`).
-**Created:** 2026-09-15 · **Re-verified:** 2026-09-22 (cron reminder run). No sends logged yet.
+**Created:** 2026-09-15 · **Re-verified:** 2026-09-29 (cron reminder run). Still no sends logged.
 
 Status legend: `NOT SENT` · `SENT` · `AWAITING` · `REPLIED` · `NO RESPONSE` · `CLOSED`
 
@@ -83,14 +83,17 @@ the angle or skip those addresses.
    local-part, producing "Hi support," and, on the two new targets, "Hi tips," and
    "Hi hello,". A `SALUTATIONS` map now renders "Hi Latent Space team," / "Hi The Decoder
    team," / "Hi Gary," (infoDOCKET only, where the contact is a named person).
-5. **Pricing Watch freshness — still open, now measurable.**
-   `python3 scripts/verify_pricing_freshness.py` (2026-09-22): **42 FRESH · 23 UNREADABLE ·
-   10 NO_CLAIM · 1 UNVERIFIED** across 76 snapshots. The two figures the pitch copy actually
-   cites are both FRESH — `cursor` 4/4 claims and `claude` 4/4 claims still present on the
-   vendors' live pages. But the **public page still shows stale August dates** (39 entries
-   dated 2026-09-18, 21 dated 2026-08-25, 16 dated 2026-09-01), while promising weekly
-   re-verification. Re-run the refresh before pitching the page as current, or lead the pitch
-   with the September-18 batch.
+5. **Pricing Watch freshness — STALE, and now the blocking issue for pitching the page.**
+   `python3 scripts/verify_pricing_freshness.py` (2026-09-29): **41 FRESH · 23 UNREADABLE ·
+   10 NO_CLAIM · 2 UNVERIFIED** across 76 snapshots (was 42/23/10/1 on 2026-09-22). The two
+   figures the pitch copy cites are still FRESH — `cursor` and `claude` claims remain on the
+   vendors' live pages. But the **public page still shows August dates**: 39 table rows dated
+   2026-09-18, 21 dated 2026-08-25, 16 dated 2026-09-01, and the newest "re-verified" stamps on
+   the page are 2026-09-13/2026-09-01/2026-08-25. `pricing-watch/index.html` was regenerated
+   2026-09-29 by daily maintenance, but the underlying `checked_at` values did not move.
+   Pitching it as "re-verified weekly" while it shows August dates is the one claim in these
+   drafts that a recipient can falsify in one click. Either run a real refresh first, or lead
+   with the 2026-09-18 batch and drop the "weekly" phrasing.
 
 ## Log
 
@@ -99,3 +102,4 @@ the angle or skip those addresses.
 | 2026-09-15 | Tracking file created | 0 sends from this batch; contacts and draft claims verified |
 | 2026-09-18 | Corrections 1–3 fixed in source | `guest_pitch_builder.py` + `haro-outreach/pitch-templates.md` (commit `3bec7a04`). No send. |
 | 2026-09-22 | Re-verified + 2 fresh targets added | `theneurondaily.com` resolves again (prior NXDOMAIN note stale); `tips@latent.space` and `hello@the-decoder.com` verified from the outlets' own pages and added to `TARGETS`; greeting bug fixed; freshness re-run. 12 drafts in `pitches-2026-09-22.json`. No send. |
+| 2026-09-29 | Cron reminder re-verification | **7 days with 0 sends from either batch.** Live MX re-confirmed on all 6 remaining candidates (latent.space, the-decoder.com, bensbites.com, lastweekinai.com, changelog.com, toolchase.com). Freshness re-run: 41/23/10/2 (see correction 5 — Pricing Watch still shows August dates). No send. |
