@@ -184,6 +184,25 @@ def main():
                         f'{_crel} stale inventory claim "{_m.group(0)}" (catalog is {_catalog_n})'
                     )
 
+    # Signature guard. Outbound correspondence closes as AIToolsEssentials only —
+    # never under a personal name. Draft/artifact files under the repo root are the
+    # durable source a later send is pasted from, so a personal name left in one is a
+    # name that reaches recipients. Scans text assets outside admin/ (which may hold
+    # legitimate internal references) and outside dated research archives.
+    _sig_bad = ('George Zikry',)
+    _sig_skip = {'admin', 'scripts', 'node_modules', '.git'}
+    for _sf in list(ROOT.rglob('*.md')) + list(ROOT.rglob('*.json')):
+        _srel = _sf.relative_to(ROOT)
+        if any(s in _srel.parts for s in _sig_skip) or _sf.name.endswith('.lock'):
+            continue
+        _stext = _sf.read_text(errors='replace')
+        for _bad in _sig_bad:
+            if _bad in _stext:
+                errors.append(
+                    f'{_srel} carries prohibited personal signature "{_bad}" '
+                    '(outbound mail signs as AIToolsEssentials only)'
+                )
+
     # Benchmark evidence integrity and review provenance gates.
     benchmark_data = json.loads((ROOT/'data/benchmarks.json').read_text())
     source_ids = {s['id'] for s in benchmark_data.get('sources', [])}
