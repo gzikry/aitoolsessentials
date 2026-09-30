@@ -180,8 +180,9 @@ for slug in NEW_SLUGS:
 all_rows = sorted(rows + new_rows, key=lambda r: (rel_rank(r["relevance"]),
                                                   r["_days_old"] if r["_days_old"] is not None else 999))
 
-live_unpitched = [r for r in all_rows if r["url"] not in ledger["pitched"]]
-cold = [r for r in all_rows if r["_days_old"] is not None and r["_days_old"] > 10]
+live_unpitched = [r for r in all_rows if r["url"] not in ledger["pitched"]
+                  and r["url"] not in ledger["skipped"]]
+cold = [r for r in live_unpitched if r["_days_old"] is not None and r["_days_old"] > 10]
 
 digest = {
     "date": DATE,
@@ -307,7 +308,8 @@ digest = {
          "Food request 12 days old (unsent through five). Both pages returned HTTP 200 again today and "
          "both routes were re-resolved against the live pages this run. Neither is void - what was "
          "lost is the ideal window, not the pitch."),
-        ("THE COLD QUEUE IS 32 STRONG AND STILL GROWING FASTER THAN IT IS BEING CLEARED. Six "
+        ("THE COLD QUEUE IS 32 ROWS STRONG AND STILL GROWING FASTER THAN IT IS BEING CLEARED - 28 of "
+         "those never pitched, the other four pitched or deliberately skipped. Six "
          "high-relevance requests sit past the line with no send: Business & Technology Leaders - "
          "tech budget priorities (71d), AI SaaS users in production (131d), Scientists paying for "
          "PhD/postdoc AI subscriptions (25d), FinOps - agentic AI cost overruns (23d, draft unsent "
@@ -355,6 +357,7 @@ digest = {
         "tracked_urls": len(all_rows), "carried_and_reverified": 51, "unpitched": len(live_unpitched),
         "live_unpitched": sum(1 for o in live_unpitched if not (o["_days_old"] and o["_days_old"] > 10)),
         "cold_unpitched": len(cold),
+        "pitched_plus_skipped": len(all_rows) - len(live_unpitched),
         "live_unpitched_with_a_resolved_route": 0,
         "pitches_sent_to_date": 3, "pitches_sent_this_run": 0, "replies_received_to_date": 1,
         "resolved_email_routes": 2, "resolved_signal_routes": 1,

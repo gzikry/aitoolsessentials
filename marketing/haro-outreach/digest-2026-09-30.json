@@ -875,7 +875,7 @@
   "Nothing expired and nothing dropped off this run. All 51 carried URLs returned HTTP 200 with the request body still served, and none has stopped appearing in a URL-carrying digest. The usual caveat applies and is not a clean bill of health: this monitor carries every tracked request forward into each new digest, so 'absent from the newest digest' cannot fire by construction. Independently cross-checked against the full sitemap: all 51 tracked slugs are still present in it, and ZERO carry a lastmod inside today's new window.",
   "TWO ROWS CROSSED THE 10-DAY LINE TODAY, BOTH UNPITCHED, NEITHER WITH A RESOLVED ROUTE, SO NOTHING SENDABLE WAS LOST: founders-cutting-ai-use-eliminating-or-reducing-ai-in-business (10d -> 11d, medium-low, comment-only by the poster's own instruction: 'Please only answer as a comment on this post. Do not email or DM me because they won't be used.') and ai-alignment-researchers-humanai-mutual-understanding (10d -> 11d, low, no email or handle published on the page). The Forbes row matters because build_pitch_queue.py wrongly counted it sendable on 2026-09-29, so its crossing is logged explicitly rather than left to show up as a count change. A third row, companies-that-stopped-emailing-pdfs-new-tools-and-transition, crossed yesterday (11d -> 12d today, low) and is named for the same reason.",
   "THE TWO CROSSED-BUT-LIVE DRAFTS ARE STILL LIVE AND STILL UNSENT: the Raconteur shadow-AI request is now 13 days old (unsent through THIRTEEN consecutive runs) and the Speciality Food request 12 days old (unsent through five). Both pages returned HTTP 200 again today and both routes were re-resolved against the live pages this run. Neither is void - what was lost is the ideal window, not the pitch.",
-  "THE COLD QUEUE IS 32 STRONG AND STILL GROWING FASTER THAN IT IS BEING CLEARED. Six high-relevance requests sit past the line with no send: Business & Technology Leaders - tech budget priorities (71d), AI SaaS users in production (131d), Scientists paying for PhD/postdoc AI subscriptions (25d), FinOps - agentic AI cost overruns (23d, draft unsent since 2026-09-17), the Raconteur shadow-AI request (13d) and the Amplemarket pricing/credits request (23d, pitched, replied to, figures correction now 12 days outstanding). Of the 28 cold unpitched rows, 16 are medium relevance or better; none has ever been pitched."
+  "THE COLD QUEUE IS 32 ROWS STRONG AND STILL GROWING FASTER THAN IT IS BEING CLEARED - 28 of those never pitched, the other four pitched or deliberately skipped. Six high-relevance requests sit past the line with no send: Business & Technology Leaders - tech budget priorities (71d), AI SaaS users in production (131d), Scientists paying for PhD/postdoc AI subscriptions (25d), FinOps - agentic AI cost overruns (23d, draft unsent since 2026-09-17), the Raconteur shadow-AI request (13d) and the Amplemarket pricing/credits request (23d, pitched, replied to, figures correction now 12 days outstanding). Of the 28 cold unpitched rows, 16 are medium relevance or better; none has ever been pitched."
  ],
  "summary": "54 tracked requests (51 carried and all 51 re-verified live, 3 new AI-token finds added, 0 dropped off, 3 pitched, 1 deliberately skipped). Of the 50 unpitched, 22 are live and 28 are cold, and ZERO are sendable. The new window produced 3 AI-token slugs and ZERO real AI+spend slugs - the eighth consecutive run with none - and all three AI-token finds are off-beat with no usable route. The pair range re-asserted clean against today's refreshed snapshot and held at 1.11x-2.53x over 19 tiers across 14 tools for the eighth consecutive day. No new replies to any tracked pitch; the mailbox's newest inbound remains Lilach Bullock's paid-placement offer of 2026-09-29, already declined same-day. Zero pitches sent this run - sends remain George's lane. The two crossed-but-live drafts remain sendable late: pages HTTP 200, routes re-resolved today.",
  "recommended_actions": [
@@ -896,9 +896,10 @@
   "consecutive_runs_without_new_core_beat": 8,
   "tracked_urls": 54,
   "carried_and_reverified": 51,
-  "unpitched": 51,
+  "unpitched": 50,
   "live_unpitched": 22,
-  "cold_unpitched": 32,
+  "cold_unpitched": 28,
+  "pitched_plus_skipped": 4,
   "live_unpitched_with_a_resolved_route": 0,
   "pitches_sent_to_date": 3,
   "pitches_sent_this_run": 0,
