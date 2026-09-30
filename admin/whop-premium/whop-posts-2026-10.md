@@ -1,4 +1,4 @@
-# AIToolsEssentials Premium - Whop Upload Pack - OCTOBER (2026-09-29)
+# AIToolsEssentials Premium - Whop Upload Pack - OCTOBER (2026-09-30)
 
 Prepared ahead so the next monthly drop is upload-ready. Create these as Whop posts when October begins; attach CSVs from admin/whop-premium/files/.
 
