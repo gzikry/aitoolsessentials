@@ -325,32 +325,55 @@ def _sent_word(n: int | None) -> str:
     return f"{n}d" if n is not None else "age unmeasured"
 
 
+def _newest_drafts() -> str:
+    """The newest `pitch-drafts-*.md`, derived rather than typed.
+
+    This block carried a hardcoded filename for six consecutive runs and drifted a day behind the
+    drafts that actually existed, so a reader following the queue opened the wrong file. Deriving it
+    means the pointer cannot be older than the newest draft on disk.
+    """
+    files = sorted(OUT.glob("pitch-drafts-*.md"))
+    return files[-1].name if files else "pitch-drafts-<none>.md"
+
+
+def _carried_runs(slug: str) -> int:
+    """How many draft files have carried this request — measured, not asserted.
+
+    The old prose said "unsent through twelve consecutive runs" as typed text; the number moved
+    every day and was maintained by hand. Counting the files that actually name the slug makes the
+    claim checkable.
+    """
+    return sum(1 for f in OUT.glob("pitch-drafts-*.md") if slug in f.read_text(errors="ignore"))
+
+
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        f"**Draft ready and UNSENT — `pitch-drafts-2026-09-29.md` §1. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
-        "old, and it crossed the 10-day line on 2026-09-28 unpitched.** Route: simon.chandler@raconteur.net, "
-        "re-resolved off the live /contributors/simon-chandler page (HTTP 200, 154,759 bytes, "
+        f"**Draft ready and UNSENT — `{_newest_drafts()}` §1. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
+        f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
+        f"{_carried_runs('fulltime-employees-shadow-ai-use-and-paying-outofpocket')} draft files.** Route: simon.chandler@raconteur.net, "
+        "re-resolved off the live /contributors/simon-chandler page (HTTP 200, 154,857 bytes, "
         "data-part1/2/3 triple unchanged at simon.chandler + raconteur + net, control author "
-        "/contributors/tom-dennis carries tom.dennis/raconteur/net) on 2026-09-29; the older "
+        "/contributors/tom-dennis carries tom.dennis/raconteur/net) on 2026-09-30; the older "
         "/author/simon-chandler/ URL still 404s and must not be cited. Figures re-derived today "
-        "against data/pricing_snapshots.json (`updated: 2026-09-29`): 76 tools, 40 publishing a "
+        "against data/pricing_snapshots.json (`updated: 2026-09-30`): 76 tools, 40 publishing a "
         "monthly price, 31 of those at or under $25/month, median $16.50, and the pair range holding "
-        "at 1.11x-2.53x over 19 tiers across 14 tools. Unsent through twelve consecutive runs. It is "
+        "at 1.11x-2.53x over 19 tiers across 14 tools. It is "
         "the only high-relevance request this monitor has ever produced with a resolved route; the "
         "page is still HTTP 200 and the address still resolves, so a late send is still possible — "
         "what was lost is the ideal window, not the pitch.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        f"**Draft ready and UNSENT — `pitch-drafts-2026-09-29.md` §2. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
-        "old, crossed the 10-day line on 2026-09-28 unpitched.** Route: holly.shackleton@artichokehq.com "
-        "(re-read off specialityfoodmagazine.com/contact 2026-09-29, HTTP 200, 59,500 bytes, byte-count "
+        f"**Draft ready and UNSENT — `{_newest_drafts()}` §2. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
+        f"old, crossed the 10-day line on 2026-09-28 unpitched. Carried in "
+        f"{_carried_runs('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech')} draft files.** Route: holly.shackleton@artichokehq.com "
+        "(re-read off specialityfoodmagazine.com/contact 2026-09-30, HTTP 200, 59,500 bytes, byte-count "
         "unchanged, alongside five other named staff addresses). Standing constraint is stated in the "
         "draft's first line: we are not a food retailer. Its October issue window has closed, so treat "
         "this as a send-or-skip call and record the outcome in `pitch-ledger.json` rather than "
-        "carrying it a fourth day.",
+        "carrying it a fifth day.",
     "anthropic-users-and-business-owners-customer-service-experiences":
         f"**Crossed cold 2026-09-23; now {_sent_word(_age_of('anthropic-users-and-business-owners-customer-service-experiences'))} old — no longer counted as sendable.** "
         "Draft finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal "
-        "hliwrites.99 (re-read verbatim off the live page 2026-09-29). Send late or record as skipped "
+        "hliwrites.99 (re-read verbatim off the live page 2026-09-30). Send late or record as skipped "
         "in `pitch-ledger.json`; the crossing is logged in `cold_without_a_send`.",
     "finops-professionals-agentic-ai-cost-overruns":
         f"**Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1. Now {_sent_word(_age_of('finops-professionals-agentic-ai-cost-overruns'))} old.** "
@@ -363,16 +386,16 @@ DRAFT_INDEX = (
     "## Drafts that exist and were never sent\n\n"
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
-    "**THE QUEUE IS AT ZERO SENDABLE, AND TODAY IT TOOK A CODE FIX TO SEE THAT.** The 2026-09-29 "
-    "build first reported **1 sendable** — the Forbes founders-cutting-AI request — because this "
-    "run's refresh script had dropped Sourcee's two own social links from its chrome filter, so a "
-    "page's own chrome landed in that row's `published_links` and `_sendable()` read it as a reply "
-    "route. The row's body says the opposite: *\"Please only answer as a comment on this post. Do "
-    "not email or DM me because they won't be used.\"* Filter restored, queue re-built: **0 "
-    "sendable**, which is the true number. Nothing was sent this run either.\n\n"
-    "**Today's drafts are `pitch-drafts-2026-09-29.md` (§1 Raconteur shadow AI, §2 Speciality "
-    "Food, both paste-ready, both crossed-but-still-sendable).** The pair range re-asserted clean "
-    "for the seventh consecutive day against a freshly refreshed snapshot (`updated: 2026-09-29`), "
+    "**THE QUEUE IS AT ZERO SENDABLE, AND TODAY THAT IS THE TRUE NUMBER RATHER THAN A CODE ARTEFACT.** "
+    "The 2026-09-29 build briefly reported 1 sendable because that run's refresh script had dropped "
+    "Sourcee's two own social links from its chrome filter, so a page's own chrome landed in one row's "
+    "`published_links` and `_sendable()` read it as a reply route. That filter is fixed and stayed "
+    "fixed: today the live set is 22 rows, 21 of them relevance `low` with no usable route and the "
+    "remaining one a comment-only DM call, so there is genuinely nothing a person can send from the "
+    "live queue. Nothing was sent this run either.\n\n"
+    f"**Today's drafts are `{_newest_drafts()}` (§1 Raconteur shadow AI, §2 Speciality Food, both "
+    "paste-ready, both crossed-but-still-sendable).** The pair range re-asserted clean "
+    "for the eighth consecutive day against a freshly refreshed snapshot (`updated: 2026-09-30`), "
     "so today's drafts cite the same figures as yesterday's.\n\n"
     "**The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers across 14 tools, and it held "
     "today.** History, because every superseded value is still sitting in dated draft files and must "
@@ -380,8 +403,8 @@ DRAFT_INDEX = (
     "to a real correspondent — wrong because the pair population was regex-dependent and undefined); "
     "corrected to `1.16x to 2.53x, median 1.25x` over 18 curated pairs (2026-09-21); then re-derived "
     "to **1.11x to 2.53x** when the replit-ai snapshot was refreshed (2026-09-22). From 2026-09-23 "
-    "through 2026-09-29 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
-    "needle failures) — seven consecutive days without the figure moving, the longest such stretch "
+    "through 2026-09-30 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
+    "needle failures) — eight consecutive days without the figure moving, the longest such stretch "
     "since the assertion gate was added. See `data/monthly_annual_pairs.json` and "
     "`scripts/extract_monthly_annual_pairs.py`, which refuses to write the file at all unless every "
     "curated pair re-asserts against the live snapshot.\n\n"
