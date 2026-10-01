@@ -387,15 +387,18 @@ DRAFT_INDEX = (
     "Read this before clearing the queue: four drafts are already written and none has been sent. "
     "A written draft is not progress — the send is.\n\n"
     "**THE QUEUE IS AT ZERO SENDABLE, AND TODAY THAT IS THE TRUE NUMBER RATHER THAN A CODE ARTEFACT.** "
-    "The 2026-09-29 build briefly reported 1 sendable because that run's refresh script had dropped "
-    "Sourcee's two own social links from its chrome filter, so a page's own chrome landed in one row's "
-    "`published_links` and `_sendable()` read it as a reply route. That filter is fixed and stayed "
-    "fixed: today the live set is 22 rows, 21 of them relevance `low` with no usable route and the "
-    "remaining one a comment-only DM call, so there is genuinely nothing a person can send from the "
-    "live queue. Nothing was sent this run either.\n\n"
+    "Two consecutive builds have now had to be corrected for the same defect class — a field that "
+    "records something adjacent to a reply route being read as one. On 2026-09-29 the refresh script "
+    "had dropped Sourcee's two own social links from its chrome filter, so a page's own chrome landed "
+    "in one row's `published_links`. On 2026-10-01 the first build read the employees-conflicted-"
+    "about-AI-use row as sendable because its body embeds a docs.google.com casting form, which "
+    "`_sendable()` accepted as a link route. Both are fixed: a `published_links` entry now counts as a "
+    "route only when it is a booking/contact link. Today the live set is 21 rows, 20 of them relevance "
+    "`low`/`low-medium` with no usable route and the remaining one a comment-only DM call, so there is "
+    "genuinely nothing a person can send from the live queue. Nothing was sent this run either.\n\n"
     f"**Today's drafts are `{_newest_drafts()}` (§1 Raconteur shadow AI, §2 Speciality Food, both "
     "paste-ready, both crossed-but-still-sendable).** The pair range re-asserted clean "
-    "for the eighth consecutive day against a freshly refreshed snapshot (`updated: 2026-09-30`), "
+    "for the ninth consecutive day against a freshly refreshed snapshot (`updated: 2026-10-01`), "
     "so today's drafts cite the same figures as yesterday's.\n\n"
     "**The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers across 14 tools, and it held "
     "today.** History, because every superseded value is still sitting in dated draft files and must "
@@ -403,8 +406,8 @@ DRAFT_INDEX = (
     "to a real correspondent — wrong because the pair population was regex-dependent and undefined); "
     "corrected to `1.16x to 2.53x, median 1.25x` over 18 curated pairs (2026-09-21); then re-derived "
     "to **1.11x to 2.53x** when the replit-ai snapshot was refreshed (2026-09-22). From 2026-09-23 "
-    "through 2026-09-30 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
-    "needle failures) — eight consecutive days without the figure moving, the longest such stretch "
+    "through 2026-10-01 the 19-pair set re-asserted clean against the refreshed snapshot (exit 0, no "
+    "needle failures) — nine consecutive days without the figure moving, the longest such stretch "
     "since the assertion gate was added. See `data/monthly_annual_pairs.json` and "
     "`scripts/extract_monthly_annual_pairs.py`, which refuses to write the file at all unless every "
     "curated pair re-asserts against the live snapshot.\n\n"
@@ -426,8 +429,17 @@ def _sendable(q: dict) -> bool:
     if _rel_rank(q["relevance"]) >= RELEVANCE_RANK["low"]:
         return False
     route = (q.get("contact") or "").lower()
+    # `published_links` is the list of non-chrome URLs found anywhere in the page payload, and a
+    # request body routinely embeds ones that are NOT a reply route for us: a Google Form casting
+    # call, a bit.ly to the poster's own newsletter, a t.co to the article being written. On
+    # 2026-10-01 the employees-conflicted-about-AI-use row was counted sendable for exactly that
+    # reason — its only "route" was a docs.google.com casting form — which is the same defect class
+    # as the 2026-09-29 chrome-filter bug, reached through a different field. A link now counts as a
+    # route only when it is a booking/contact route of the kind _automatable() already recognises.
+    booking = [u for u in (q.get("published_links") or [])
+               if any(k in u.lower() for k in ("calendly", "lnkd.in", "hubspot", "/contact", "mailto:"))]
     has_route = bool(q.get("emails_on_page")) or "@" in route or "linkedin.com/in/" in route \
-        or "signal" in route or bool(q.get("published_links"))
+        or "signal" in route or bool(booking)
     return has_route
 
 
