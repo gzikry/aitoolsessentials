@@ -1,19 +1,19 @@
 {
- "checked_at": "2026-09-12",
+ "checked_at": "2026-10-01",
  "source_policy": "Official vendor sources only. Missing values remain null or unresolved; no inference.",
  "tools": [
   {
    "slug": "adobe-firefly",
-   "pricing_checked_date": "2026-08-25",
-   "pricing_summary": "Official US monthly pricing lists Firefly Standard at US$9.99 with 2,000 generative credits/month; Firefly Pro at US$19.99 with 4,000 credits/month; Firefly Pro Plus regularly US$49.99 with 10,000 credits/month; and Firefly Premium regularly US$199.99 with 50,000 credits/month. On the verification date, Pro Plus and Premium had first-year 30% promotions of US$34.97 and US$139.91 per month, ending 2026-10-21. Standard image features are unlimited; credits cover premium features such as video, audio, and partner-model generations. Promotional unlimited access to selected models applies for the first year under the offer terms.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Official US monthly pricing (re-confirmed 2026-10-01) lists Firefly Standard at US$9.99 with 2,000 generative credits/month; Firefly Pro at US$19.99 with 4,000 credits/month; Firefly Pro Plus at US$49.99 with 10,000 credits/month; and Firefly Premium at US$199.99 with 50,000 credits/month and unlimited Firefly Video Model access. All paid tiers include unlimited standard image and vector generations; credits cover premium features such as video, audio, and partner-model generations. The first-year promotional rates recorded on 2026-08-25 (US$34.97 Pro Plus and US$139.91 Premium) were no longer displayed on the official pricing page on 2026-10-01.",
    "pricing_url": "https://www.adobe.com/products/firefly/plans.html",
    "docs_url": "https://helpx.adobe.com/firefly/using/generative-credits-faq.html",
    "privacy_url": "https://www.adobe.com/privacy/policy.html",
    "rights_url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
-   "verification_notes": "Adobe's official Firefly FAQ and policy statements say Adobe does not train Firefly foundation models on customer content; current Firefly models use licensed content such as Adobe Stock and public-domain content. Adobe's General Terms say users retain rights and ownership in their Content and Adobe does not claim ownership. The Generative AI User Guidelines state that output may generally be used commercially; if Adobe specifically designates a beta feature as non-commercial, output from that feature is personal-use only. Credits renew monthly and do not roll over.",
+   "verification_notes": "Adobe's official Firefly FAQ and policy statements say Adobe does not train Firefly foundation models on customer content; current Firefly models use licensed content such as Adobe Stock and public-domain content. Adobe's General Terms say users retain rights and ownership in their Content and Adobe does not claim ownership. The Generative AI User Guidelines state that output may generally be used commercially; if Adobe specifically designates a beta feature as non-commercial, output from that feature is personal-use only. Credits renew monthly and do not roll over. Re-verified 2026-10-01: the four regular monthly plan prices and credit allocations are unchanged. The 30% first-year promotional rates recorded on 2026-08-25 were no longer shown on the pricing page, so only the regular list rates are carried in the summary.",
    "unresolved_claims": [
     "The exact free-plan credit allocation was not exposed consistently on the public pricing page and is therefore not stated.",
-    "Promotional unlimited-generation model coverage can change and is governed by Adobe's current promotion page and offer terms.",
+    "Promotional pricing and unlimited-generation model coverage can change and are governed by Adobe's current promotion page and offer terms.",
     "Adobe does not warrant that output is non-infringing, unique, or copyrightable.",
     "IP indemnification is plan- and contract-specific, particularly for enterprise offerings, and should not be assumed for every Firefly subscription or beta feature."
    ]
@@ -50,13 +50,13 @@
   },
   {
    "slug": "canva-ai",
-   "pricing_checked_date": "2026-08-25",
-   "pricing_summary": "The official US annual pricing view lists Canva Free at US$0, Canva Pro at US$180/year for one person, Canva Business at US$250/year per person, and Enterprise through sales. Canva's AI allowance documentation states: Free—up to 200 Standard or 20 Premium uses/month, with no Ultra access; Pro, Teams, Nonprofits, and Education—up to 2,000 Standard, 200 Premium, or 20 Ultra uses/month; Business and Enterprise—up to 4,000 Standard, 400 Premium, or 40 Ultra uses/month. These are alternative estimated ranges against one shared allowance, not additive quotas.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "The official US annual pricing view (checked 2026-10-01) lists Canva Free at US$0/year for one person, Canva Pro at US$144/year for one person, Canva Business at US$250/year per person, and Enterprise through sales; the page advertises saving from 16% on yearly billing. AI allowance as published on 2026-10-01: Canva Free gets up to 20 uses of Standard or Premium AI tools with no Ultra AI access; on paid plans Standard AI tools can be used abundantly and do not draw from the allowance, Premium AI tools draw up to 200 uses, and Ultra AI tools up to 20 uses, all against a single monthly allowance pooled across AI tools. Pro is described as 10x and Business as 20x the Canva Free AI allowance. An optional AI Pass add-on and AI top-ups are sold at extra cost on some plans. Allowances reset monthly.",
    "pricing_url": "https://www.canva.com/pricing/",
    "docs_url": "https://www.canva.com/help/ai-access/",
    "privacy_url": "https://www.canva.com/trust/privacy/",
    "rights_url": "https://www.canva.com/policies/ai-product-terms",
-   "verification_notes": "Canva states that allowance consumption depends on the tool, model, and task complexity; allowances reset monthly. Canva's privacy page says User Content is not used to improve AI-powered features unless consistent with the user's Privacy Settings, which users can review and change. The AI Product Terms say that, as between Canva and the user and to the maximum extent permitted by law, the user owns Output and may use it for any lawful purpose. Output that incorporates or modifies Canva Licensed Content remains subject to the applicable content license. Outputs may not be unique.",
+   "verification_notes": "Canva states that allowance consumption depends on the tool, model, and task complexity; allowances reset monthly. Canva's privacy page says User Content is not used to improve AI-powered features unless consistent with the user's Privacy Settings, which users can review and change. The AI Product Terms say that, as between Canva and the user and to the maximum extent permitted by law, the user owns Output and may use it for any lawful purpose. Output that incorporates or modifies Canva Licensed Content remains subject to the applicable content license. Outputs may not be unique. Re-verified 2026-10-01: Canva Pro is now US$144/year for one person on the annual view, replacing the US$180/year recorded on 2026-08-25. The published AI allowance has also been restated: Free is now described as up to 20 Standard or Premium AI uses (previously recorded as 200 Standard / 20 Premium), and paid plans are expressed as multipliers of the Free allowance rather than fixed Standard/Premium/Ultra counts.",
    "unresolved_claims": [
     "Canva prices are localized and may be personalized by billing region; the summary records the official US annual view observed on the verification date.",
     "The official pages do not translate the shared AI allowance into a guaranteed generation count because task complexity changes consumption.",
@@ -66,17 +66,17 @@
   },
   {
    "slug": "chatgpt",
-   "pricing_checked_date": "2026-08-25",
-   "pricing_summary": "OpenAI officially lists ChatGPT Free, Go, Plus, Pro, Business, and Enterprise. Free is $0; paid self-service plans are billed per user per month, while Enterprise pricing is sales-assisted. Exact localized prices were not consistently exposed by the official pricing page during verification, so no unverified amounts are reported.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "OpenAI officially lists ChatGPT Free, Go, Plus, Pro, Business, and Enterprise. The official pricing page rendered US-dollar amounts on 2026-10-01: Free $0, Go $8/month, Plus $20/month, and Pro $100/month, billed per user per month; Business and Enterprise pricing is sales-assisted. Pro includes Pro reasoning powered by GPT-6 Astra.",
    "pricing_url": "https://openai.com/chatgpt/pricing/",
    "docs_url": "https://help.openai.com/en/collections/3742473-chatgpt",
    "privacy_url": "https://openai.com/policies/privacy-policy/",
    "rights_url": "https://openai.com/policies/terms-of-use/",
-   "verification_notes": "Official OpenAI sources confirm consumer and business plan availability. OpenAI's terms state that, as between the user and OpenAI and to the extent permitted by applicable law, users retain Input ownership and own Output. OpenAI's data controls documentation should be consulted for consumer training controls; business products and the API are covered by separate business-data commitments. 2026-09-03 watch: OpenAI released GPT-6 Astra. Official Path to Astra post (https://openai.com/index/path-to-astra/, 2026-09-01) designates Astra as the first model at Critical cybersecurity capability; advanced cyber workflows are limited at launch to trusted testers / Daybreak Blue. Axios reports limited Daybreak Access first, then ChatGPT Plus / Pro / Business / Enterprise and API developers in the coming days. This is not a new ChatGPT SKU. Plus/Pro plan prices were not confirmed as changed on 2026-09-03 and were not re-verified as dollar amounts on this date.",
+   "verification_notes": "Official OpenAI sources confirm consumer and business plan availability. OpenAI's terms state that, as between the user and OpenAI and to the extent permitted by applicable law, users retain Input ownership and own Output. OpenAI's data controls documentation should be consulted for consumer training controls; business products and the API are covered by separate business-data commitments. 2026-09-03 watch: OpenAI released GPT-6 Astra. Official Path to Astra post (https://openai.com/index/path-to-astra/, 2026-09-01) designates Astra as the first model at Critical cybersecurity capability; advanced cyber workflows are limited at launch to trusted testers / Daybreak Blue. Axios reports limited Daybreak Access first, then ChatGPT Plus / Pro / Business / Enterprise and API developers in the coming days. This is not a new ChatGPT SKU. Plus/Pro plan prices were not confirmed as changed on 2026-09-03 and were not re-verified as dollar amounts on this date. Re-verified 2026-10-01: the official pricing page now exposes US-dollar amounts for Go ($8), Plus ($20) and Pro ($100), which the 2026-08-25 check could not retrieve and therefore left unreported. GPT-6 Astra is still presented as an included feature of Pro rather than a separate consumer SKU.",
    "unresolved_claims": [
-    "Exact US-dollar prices for Go, Plus, Pro, and Business were not reliably retrievable from the official dynamic pricing page during this check.",
     "Enterprise pricing requires contacting OpenAI sales.",
-    "Astra ChatGPT/API availability timing, any Astra-specific API token prices, and a public system-card URL were not confirmed as a published SKU on the official pricing page during the 2026-09-03 watch."
+    "Subscription prices, included benefits, and model limits vary by country, account type, taxes, and promotions.",
+    "Astra ChatGPT/API availability timing, any Astra-specific API token prices, and a public system-card URL were not confirmed as a published SKU on the official pricing page."
    ]
   },
   {
@@ -126,13 +126,13 @@
   },
   {
    "slug": "deepseek",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "DeepSeek's official website describes its consumer web chat as free. No official paid consumer or team subscription schedule was located. API access is separately usage-priced, with current model and peak/off-peak rates published in DeepSeek's API pricing documentation.",
    "pricing_url": "https://www.deepseek.com/",
    "docs_url": "https://api-docs.deepseek.com/",
    "privacy_url": "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
    "rights_url": "https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html",
-   "verification_notes": "DeepSeek's privacy policy says Inputs and related personal data may be used to improve services and train machine-learning models and that collected personal data is directly processed and stored in the People's Republic of China. Its terms state that users retain any rights in Inputs and that DeepSeek assigns to users any rights it may have in Outputs, subject to applicable law and the terms; the terms expressly mention lawful uses including personal use, research, derivative-product development, and training other models.",
+   "verification_notes": "DeepSeek's privacy policy says Inputs and related personal data may be used to improve services and train machine-learning models and that collected personal data is directly processed and stored in the People's Republic of China. Its terms state that users retain any rights in Inputs and that DeepSeek assigns to users any rights it may have in Outputs, subject to applicable law and the terms; the terms expressly mention lawful uses including personal use, research, derivative-product development, and training other models. Re-verified 2026-10-01: The official site still publishes no paid consumer or team subscription; API pricing remains published separately in the API documentation.",
    "unresolved_claims": [
     "No official consumer team subscription or enterprise-seat price was found.",
     "Current API prices are model-, token-, cache-, and peak/off-peak-dependent and are not summarized as a single price.",
@@ -199,15 +199,16 @@
   },
   {
    "slug": "gamma",
-   "pricing_checked_date": "2026-08-25",
-   "pricing_summary": "free: $0; 400 one-time signup credits that do not refill; up to 10 slides per prompt; PDF, PPTX, PNG, and Google Slides export. plus: $9/seat/month equivalent, $108/seat billed annually; 1,000 monthly credits, up to 100 slides per prompt, branding removal, and advanced image models. pro: $18/seat/month equivalent, $216/seat billed annually; 4,000 monthly credits, premium image models, custom branding/fonts, analytics, 10 custom domains, API access, and workspace templates. ultra: $90/seat/month equivalent, $1,080/seat billed annually; 20,000 monthly credits, advanced text/image/video models, 100 custom domains, and early feature access. team: $20/seat/month, $240/seat billed annually; 6,000 monthly credits per seat, centralized billing, company theme, shared folders, admin controls, and advanced data controls. business: $40/seat/month, $480/seat billed annually; 10,000 monthly credits per seat, SSO, advanced models, and advanced data controls. enterprise: Custom annual agreement.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Individual plans re-confirmed on 2026-10-01 from gamma.app/pricing: free: $0; 400 one-time signup credits that do not refill; up to 10 slides per prompt; PDF, PPTX, PNG, and Google Slides export. plus: $9/seat/month equivalent, $108/seat billed annually; 1,000 monthly credits, up to 100 slides per prompt, branding removal, and advanced image models. pro: $18/seat/month equivalent, $216/seat billed annually; 4,000 monthly credits, premium image models, custom branding, analytics, 10 custom domains, API access, and workspace templates. ultra: $90/seat/month equivalent, $1,080/seat billed annually; 20,000 monthly credits, advanced text/image/video models, 100 custom domains, and early feature access. The page advertises saving up to 28% on annual billing. Team and Business pricing did not render on the 2026-10-01 fetch, so the previously recorded $20/$240 Team and $40/$480 Business figures were not re-confirmed.",
    "pricing_url": "https://gamma.app/pricing",
    "docs_url": "https://help.gamma.app/",
    "privacy_url": "https://gamma.app/privacy",
    "rights_url": "https://gamma.app/terms",
-   "verification_notes": "The repository's 400-credit Free allowance remains supported, but those are one-time starter credits rather than a monthly refill. The repository's Plus $10 and Pro $20 figures do not match the current official annual-pricing view, which shows $9 and $18 monthly equivalents. Paid credits roll over only up to twice the monthly allocation; additional credits can be purchased. Individual Free, Plus, Pro, and Ultra workspaces allow Gamma to use content for AI-feature improvement by default, but users can opt out in account settings. Team and Business workspace content is automatically excluded from training, with the control locked. Gamma does not claim ownership of user content. Users grant Gamma a license needed to operate and provide the service. The pricing page also states that content remains the user's after cancellation or downgrade. Public API documentation is available at https://developers.gamma.app/; the pricing page says API access is available on paid plans and consumes AI credits. Approved and wired 2026-09-13: PartnerStack tracking URL on the Visit CTA. Official pricing, docs, privacy, and terms links stay on gamma.app. Editorial score, cons, and methodology are unchanged.",
+   "verification_notes": "The repository's 400-credit Free allowance remains supported, but those are one-time starter credits rather than a monthly refill. The repository's Plus $10 and Pro $20 figures do not match the current official annual-pricing view, which shows $9 and $18 monthly equivalents. Paid credits roll over only up to twice the monthly allocation; additional credits can be purchased. Individual Free, Plus, Pro, and Ultra workspaces allow Gamma to use content for AI-feature improvement by default, but users can opt out in account settings. Team and Business workspace content is automatically excluded from training, with the control locked. Gamma does not claim ownership of user content. Users grant Gamma a license needed to operate and provide the service. The pricing page also states that content remains the user's after cancellation or downgrade. Public API documentation is available at https://developers.gamma.app/; the pricing page says API access is available on paid plans and consumes AI credits. Approved and wired 2026-09-13: PartnerStack tracking URL on the Visit CTA. Official pricing, docs, privacy, and terms links stay on gamma.app. Editorial score, cons, and methodology are unchanged. Re-verified 2026-10-01: Free, Plus, Pro and Ultra individual prices and credit allocations are unchanged from the 2026-08-25 record. The Team and Business columns did not render, so those figures remain as recorded earlier rather than re-verified. The FAQ still states that paid credits roll over up to 2x the monthly amount and that Free credits are a one-time allocation.",
    "unresolved_claims": [
-    "The official page was extracted in its annual-billing state. Monthly individual-plan checkout prices were not independently captured and should not be inferred from the annual discount.",
+    "The Team and Business plan prices recorded on 2026-08-25 did not render on the 2026-10-01 fetch and were not re-confirmed.",
+    "The official page was captured in its annual-billing state. Monthly individual-plan checkout prices were not independently captured and should not be inferred from the annual discount.",
     "Gamma's terms grant a broad training license where training controls are unavailable or left enabled; publications should distinguish individual plans from Team/Business plans."
    ]
   },
@@ -228,13 +229,13 @@
   },
   {
    "slug": "github-copilot",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Copilot Free is free and limited to 2,000 completions per month, auto model selection, and an unspecified allowance of GitHub AI Credits. Copilot Student is free for verified students. Paid individual plans: Pro $10/month with 1,500 total monthly AI credits; Pro+ $39/month with 7,000; Max $100/month with 20,000. Organization plans: Business $19/user/month with 1,900 AI credits per user; Enterprise $39/user/month with 3,900. Additional usage is $0.01 per AI credit; code completions and next-edit suggestions remain unlimited on paid plans.",
    "pricing_url": "https://docs.github.com/en/copilot/get-started/plans",
    "docs_url": "https://docs.github.com/en/copilot/get-started/plans",
    "privacy_url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
    "rights_url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
-   "verification_notes": "GitHub's Terms effective April 27, 2026 state that GitHub does not claim ownership of Copilot Input or Output. For individual licenses, GitHub and its affiliates may use Inputs and Outputs to develop, train, and improve AI/ML models unless the user opts out in account settings. The individual-license training provision does not apply when use is governed by a GitHub Customer Agreement or volume licensing agreement; those agreements control data use. GitHub says Inputs and Outputs are not shared with third-party AI model providers for those providers' independent model training. GitHub warns that Output can resemble training data or third-party/open-source code. Users must determine whether a license is required and review, test, and validate Output. GitHub's broader Terms grant GitHub and its affiliates rights to use hosted user content to develop and train AI technologies; the Copilot opt-out does not apply to public-repository content or the broader repository-content license.",
+   "verification_notes": "GitHub's Terms effective April 27, 2026 state that GitHub does not claim ownership of Copilot Input or Output. For individual licenses, GitHub and its affiliates may use Inputs and Outputs to develop, train, and improve AI/ML models unless the user opts out in account settings. The individual-license training provision does not apply when use is governed by a GitHub Customer Agreement or volume licensing agreement; those agreements control data use. GitHub says Inputs and Outputs are not shared with third-party AI model providers for those providers' independent model training. GitHub warns that Output can resemble training data or third-party/open-source code. Users must determine whether a license is required and review, test, and validate Output. GitHub's broader Terms grant GitHub and its affiliates rights to use hosted user content to develop and train AI technologies; the Copilot opt-out does not apply to public-repository content or the broader repository-content license. Re-verified 2026-10-01: The official Copilot plans documentation still matches the recorded Free/Pro/Pro+/Max and Business/Enterprise prices and AI-credit allocations; no drift detected.",
    "unresolved_claims": [
     "GitHub does not publish a numeric AI-credit allowance for Copilot Free or Student on the plans page.",
     "The public Terms do not give a blanket commercial-use warranty, non-infringement guarantee, or ownership assignment for generated Output; they only state that GitHub does not claim ownership.",
@@ -257,17 +258,18 @@
   },
   {
    "slug": "grok",
-   "pricing_checked_date": "2026-08-25",
-   "pricing_summary": "Grok Free is $0. SuperGrok is $30/month, SuperGrok Plus is $100/month, with higher tiers above. API (docs.x.ai, checked 2026-08-25): Grok 4.6 $2.00 input / $6.00 output per 1M tokens (500K context); prior Grok 4.3 $1.25/$2.50 per 1M. Voice API from $0.05/min; TTS $15/1M chars.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Grok Free is $0. SuperGrok is $30/month and SuperGrok Plus is $100/month, with higher tiers above. API (docs.x.ai, checked 2026-10-01): grok-4.7 is the current flagship model at $2.00 input and $6.00 output per 1M tokens with a 500k-token context. Voice API: Agent $0.08/min, TTS $15.00 per 1M characters, batch STT $0.10/hour and streaming STT $0.20/hour. Imagine API image generation starts at $0.02/image and video at $0.05/second.",
    "pricing_url": "https://x.ai/pricing",
    "docs_url": "https://x.ai/grok",
    "privacy_url": "https://x.ai/legal/privacy-policy",
    "rights_url": "https://x.ai/legal/terms-of-service",
-   "verification_notes": "xAI's consumer terms, effective June 26, 2026, state that users retain ownership rights in User Content to the extent permitted by law. Logged-in users can choose whether User Content is used for product improvement and model training; logged-out use may grant broader training rights where permitted. The standalone Grok service and Grok accessed through X are governed by different privacy policies.",
+   "verification_notes": "xAI's consumer terms, effective June 26, 2026, state that users retain ownership rights in User Content to the extent permitted by law. Logged-in users can choose whether User Content is used for product improvement and model training; logged-out use may grant broader training rights where permitted. The standalone Grok service and Grok accessed through X are governed by different privacy policies. Re-verified 2026-10-01 against x.ai/pricing and the official model documentation. Consumer plan prices are unchanged, but the API section is superseded: grok-4.7 is now the flagship at $2.00/$6.00 per 1M tokens, and the 2026-08-25 record's Grok 4.6 and Grok 4.3 ($1.25/$2.50) figures no longer appear in the official model overview. The recorded voice figure of '$0.05/min' was also superseded by the published Voice API rates above.",
    "unresolved_claims": [
     "Enterprise prices are not published and require a sales quote.",
     "Pricing or entitlements for Grok accessed through an X subscription were not treated as equivalent to standalone SuperGrok plans.",
-    "The consumer terms require attribution under xAI's Brand Guidelines when using Output or xAI brand elements; applicability to a specific commercial use requires case-specific review."
+    "The consumer terms require attribution under xAI's Brand Guidelines when using Output or xAI brand elements; applicability to a specific commercial use requires case-specific review.",
+    "Legacy xAI API models (including Grok 4.6 and 4.3) were not re-priced on 2026-10-01; only the currently published flagship rate was verified."
    ],
    "checked_at": "2026-08-25"
   },
@@ -309,12 +311,13 @@
    "docs_url": "https://intercom.help/leonardo-ai/en/articles/8044033-token-usage",
    "privacy_url": "https://leonardo.ai/privacy-policy",
    "rights_url": "https://leonardo.ai/terms-of-service",
-   "verification_notes": "The Privacy Policy and Terms were last updated 2026-01-19. Under clause 8.3, paid subscribers own the intellectual-property rights in Content they create, to the extent permitted by law, and Leonardo assigns any corresponding interest it has. Under clause 8.7, rights in free-subscriber Output vest in Leonardo. Paid subscribers can mark Content private; clause 8.5 says Private Content is not used, retained, analyzed, or processed for AI training or new-product development without express written consent. Clause 8.6 gives Leonardo a perpetual, transferable license to Public Content for service operation, promotion, improvement, AI-model training, new offerings, and commercial purposes.",
+   "verification_notes": "The Privacy Policy and Terms were last updated 2026-01-19. Under clause 8.3, paid subscribers own the intellectual-property rights in Content they create, to the extent permitted by law, and Leonardo assigns any corresponding interest it has. Under clause 8.7, rights in free-subscriber Output vest in Leonardo. Paid subscribers can mark Content private; clause 8.5 says Private Content is not used, retained, analyzed, or processed for AI training or new-product development without express written consent. Clause 8.6 gives Leonardo a perpetual, transferable license to Public Content for service operation, promotion, improvement, AI-model training, new offerings, and commercial purposes. Re-check attempted 2026-10-01: leonardo.ai/pricing returned HTTP 403 to every automated fetch route used, so the recorded prices and the 2026-08-25 checked date were left unchanged rather than re-dated on unverified evidence.",
    "unresolved_claims": [
     "The reviewed current Terms clearly allocate ownership but do not provide an equally explicit standalone commercial-use license for free-tier users; commercial rights for free-tier output should not be inferred.",
     "Team, enterprise, top-up-token, and API prices vary or require separate pricing paths and are not included in this individual-plan summary.",
     "Unlimited relaxed generation applies only to listed supported models and remains subject to slower queues and fair-use controls.",
-    "Leonardo does not guarantee that output is unique, copyrightable, accurate, or free of third-party rights."
+    "Leonardo does not guarantee that output is unique, copyrightable, accurate, or free of third-party rights.",
+    "The official pricing page returned HTTP 403 to automated fetches on 2026-10-01, so the 2026-08-25 pricing record could not be re-verified; the check must be repeated from a browser session."
    ]
   },
   {
@@ -336,13 +339,13 @@
   },
   {
    "slug": "lovable",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Free includes 5 daily build credits, capped at 30 per month, plus monthly grants of 20 Cloud credits and 4 credits for AI features in user-built apps. Pro is $25/month per workspace, shared across unlimited users, with 100 monthly credits and additional daily grants. Business is $50/month per workspace, shared across unlimited users, with 100 monthly credits and added SSO, roles, internal publishing, security, and workspace controls. Enterprise uses a company-size-based platform fee and volume-based credit pricing. Credit use varies by feature and task complexity; monthly plan credits expire two months after issue, while daily grants do not roll over.",
    "pricing_url": "https://lovable.dev/pricing",
    "docs_url": "https://docs.lovable.dev/introduction/welcome",
    "privacy_url": "https://lovable.dev/privacy",
    "rights_url": "https://lovable.dev/terms",
-   "verification_notes": "Official documentation describes Lovable as generating editable frontend, backend, database, authentication, and integration code from natural language, with GitHub synchronization and shared workspaces. Terms effective August 15, 2026 state that users own Customer Data, including applications, websites, and projects, and own AI Output generated for them, subject to third-party rights in underlying models, training data, or outputs. The Terms permit personal or internal-business use, including creating, deploying, operating, and making built applications available to end users. The Terms grant Lovable a broad license to use Customer Data, including for AI/ML development and training, but users can opt out prospectively for free regardless of plan. The official data-control documentation says Free and Pro customer-data training is scheduled to begin September 9, 2026 and users may opt out before or after that date. Business and Enterprise workspace data is excluded from training by default under organization agreements and DPAs. The April 14, 2026 Privacy Policy says raw or identifiable Personal Data is not used for training, while anonymized or aggregated data may be used.",
+   "verification_notes": "Official documentation describes Lovable as generating editable frontend, backend, database, authentication, and integration code from natural language, with GitHub synchronization and shared workspaces. Terms effective August 15, 2026 state that users own Customer Data, including applications, websites, and projects, and own AI Output generated for them, subject to third-party rights in underlying models, training data, or outputs. The Terms permit personal or internal-business use, including creating, deploying, operating, and making built applications available to end users. The Terms grant Lovable a broad license to use Customer Data, including for AI/ML development and training, but users can opt out prospectively for free regardless of plan. The official data-control documentation says Free and Pro customer-data training is scheduled to begin September 9, 2026 and users may opt out before or after that date. Business and Enterprise workspace data is excluded from training by default under organization agreements and DPAs. The April 14, 2026 Privacy Policy says raw or identifiable Personal Data is not used for training, while anonymized or aggregated data may be used. Re-verified 2026-10-01: The official pricing page still matches the recorded Free/Pro/Business credit structure and workspace pricing; no drift detected.",
    "unresolved_claims": [
     "As of August 21, the effective Terms already grant training rights with a prospective opt-out, while the product documentation says Free and Pro customer-data training begins September 9, 2026. The sources do not fully explain operational use during the intervening period.",
     "Lovable does not guarantee that AI Output is unique, free of third-party rights, accurate, or suitable for a particular purpose.",
@@ -351,29 +354,30 @@
   },
   {
    "slug": "make",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "At the displayed 10,000-credit tier: Free is $0 with up to 1,000 credits/month; Core is $12/month; Pro is $21/month; Teams is $38/month; Enterprise is sales-led. Most module actions use 1 credit, while AI features using Make's AI Provider can consume an operation credit plus token-based credits. Make's AI Provider is available on all plans; custom AI-provider connections are available on paid plans. Credits normally expire at the end of the subscription term, and extra-credit bundles are available on eligible paid plans.",
    "pricing_url": "https://www.make.com/en/pricing",
    "docs_url": "https://apps.make.com/ai-tools",
    "privacy_url": "https://www.make.com/en/privacy-notice",
    "rights_url": null,
-   "verification_notes": "Official documentation says Make AI Toolkit can analyze sentiment, categorize, identify language, extract, standardize, summarize, translate, and chunk text. Its documentation states that Make does not store submitted AI data or use it to train AI, while separately noting that interaction data remains in standard scenario logs for 30 days. Make's Maia system card says prompts, scenario structures, and outputs are not used to train or fine-tune the underlying LLM; calls sent to an AI provider remain subject to Make's data-processing agreement with that provider. For Make AI Agent, use with Make's provider generally costs 1 credit per operation plus token/tool/embedding usage; custom-provider use generally costs operation credits while the external provider bills model tokens.",
+   "verification_notes": "Official documentation says Make AI Toolkit can analyze sentiment, categorize, identify language, extract, standardize, summarize, translate, and chunk text. Its documentation states that Make does not store submitted AI data or use it to train AI, while separately noting that interaction data remains in standard scenario logs for 30 days. Make's Maia system card says prompts, scenario structures, and outputs are not used to train or fine-tune the underlying LLM; calls sent to an AI provider remain subject to Make's data-processing agreement with that provider. For Make AI Agent, use with Make's provider generally costs 1 credit per operation plus token/tool/embedding usage; custom-provider use generally costs operation credits while the external provider bills model tokens. Re-verified 2026-10-01: the displayed 10,000-credit tier prices (Free $0, Core $12, Pro $21, Teams $38 per month) and the $667 Business tier were confirmed unchanged. The page now advertises saving 15% or more on annual billing. The affiliate page still states 35% commission for 12 months, but a separate answer on the same page says affiliates are paid 'for a period of 24 months' - the two statements conflict and were left as recorded. That page also states Make is 'currently facing delays in processing payouts'.",
    "unresolved_claims": [
     "No current official Make AI-specific provision assigning ownership of generated output to the customer was verified; the general Master Services Agreement is therefore not presented as an output-rights guarantee.",
     "The no-training statements were verified for Make AI Toolkit and Maia, but a single universal statement covering every Make AI feature, every connected third-party provider, and every customer configuration was not found.",
     "The AI Toolkit statement that Make does not store data must be read alongside its explicit statement that interaction logs are retained in scenario logs for 30 days.",
+    "The official affiliate page states 35% commission for 12 months in one place and a 24-month affiliate commission period in another; the conflict was not resolvable from the page alone.",
     "AI Agent functionality and pricing remain subject to beta-era changes where the applicable documentation labels the feature beta."
    ]
   },
   {
    "slug": "meta-ai",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Meta states that Meta AI with Muse Image is free for everyday creation and that higher creation usage is available through Meta subscription plans. The reviewed official public sources do not publish the subscription plan names, prices, or limits.",
    "pricing_url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/",
    "docs_url": "https://www.meta.ai/",
    "privacy_url": "https://privacycenter.instagram.com/privacy/genai",
    "rights_url": "https://www.facebook.com/legal/ai-terms/",
-   "verification_notes": "Official sources describe an assistant for questions, planning, actions, and image creation/editing. Meta's Privacy Policy covers AI interactions and related metadata; it states that public information on Meta products and interactions with AI at Meta may be used to develop and improve generative-AI models, with objection rights where applicable. Regional AI terms differ. The general AI terms expressly preserve rights in prompts but do not provide a comparable ownership assignment for outputs.",
+   "verification_notes": "Official sources describe an assistant for questions, planning, actions, and image creation/editing. Meta's Privacy Policy covers AI interactions and related metadata; it states that public information on Meta products and interactions with AI at Meta may be used to develop and improve generative-AI models, with objection rights where applicable. Regional AI terms differ. The general AI terms expressly preserve rights in prompts but do not provide a comparable ownership assignment for outputs. Re-verified 2026-10-01: Official Meta sources still describe Meta AI with Muse Image as free for everyday creation with higher usage via Meta subscription plans, and still publish no subscription names, prices or limits. Re-confirmed that the linked announcement page publishes no consumer subscription price list; the record's no-published-price claim is unchanged.",
    "unresolved_claims": [
     "Current Meta AI subscription prices, included quotas, and regional availability were not published in the reviewed official sources.",
     "The reviewed general AI terms do not expressly establish user ownership of outputs or a blanket commercial-use license.",
@@ -382,13 +386,13 @@
   },
   {
    "slug": "microsoft-copilot",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Microsoft 365 Copilot Chat is available for work or education without an additional Copilot license and supports metered pay-as-you-go agents. Microsoft 365 Copilot Business is displayed at a promotional $18/user/month, paid yearly, versus a $21 list price. Microsoft 365 Business Standard with Copilot is $23.50/user/month paid yearly, and Business Premium with Copilot is $32/user/month paid yearly. Prices are USD, annual subscriptions that auto-renew, and may vary by market.",
    "pricing_url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing",
    "docs_url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-overview",
    "privacy_url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy",
    "rights_url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy#about-the-content-that-microsoft-365-copilot-creates",
-   "verification_notes": "This verification is scoped to Microsoft 365 Copilot for business, not every consumer or product-specific service branded Copilot. Microsoft 365 Copilot works in Word, Excel, PowerPoint, Outlook, Teams, Loop, and other Microsoft 365 surfaces; it uses Microsoft Graph data the user is permitted to access and includes Copilot Chat, Copilot Search, agents, and app-specific drafting, summarization, analysis, and meeting capabilities. Prompts, responses, and Microsoft Graph data are not used to train foundation LLMs. Interaction content is stored under the customer's Microsoft 365 contractual commitments, encrypted at rest, manageable through Microsoft Purview, and deletable through Copilot activity history controls. Microsoft does not claim ownership of service output but does not determine whether output is copyright-protected or enforceable. Its Copilot Copyright Commitment can defend qualifying commercial customers against certain copyright claims when required guardrails and content filters were used. The official privacy and overview documentation was updated July 9, 2026.",
+   "verification_notes": "This verification is scoped to Microsoft 365 Copilot for business, not every consumer or product-specific service branded Copilot. Microsoft 365 Copilot works in Word, Excel, PowerPoint, Outlook, Teams, Loop, and other Microsoft 365 surfaces; it uses Microsoft Graph data the user is permitted to access and includes Copilot Chat, Copilot Search, agents, and app-specific drafting, summarization, analysis, and meeting capabilities. Prompts, responses, and Microsoft Graph data are not used to train foundation LLMs. Interaction content is stored under the customer's Microsoft 365 contractual commitments, encrypted at rest, manageable through Microsoft Purview, and deletable through Copilot activity history controls. Microsoft does not claim ownership of service output but does not determine whether output is copyright-protected or enforceable. Its Copilot Copyright Commitment can defend qualifying commercial customers against certain copyright claims when required guardrails and content filters were used. The official privacy and overview documentation was updated July 9, 2026. Re-verified 2026-10-01: The official Microsoft 365 Copilot pricing page still shows the recorded promotional $18/user/month Business price against the $21 list price, plus the $23.50 and $32 Business Standard/Premium-with-Copilot rates; no drift detected.",
    "unresolved_claims": [
     "The general pricing page does not expose one comprehensive price for every Microsoft Copilot product or enterprise licensing scenario.",
     "Pay-as-you-go agent consumption depends on the selected agent and metering arrangement; no single universal usage limit or price is stated on the overview page.",
@@ -397,13 +401,13 @@
   },
   {
    "slug": "midjourney",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Official plans are Basic at US$10/month or US$96/year with 3.3 Fast GPU hours/month; Standard at US$30/month or US$288/year with 15 Fast GPU hours/month and unlimited Relax image generations; Pro at US$60/month or US$576/year with 30 Fast GPU hours/month, unlimited Relax images and SD video, and Stealth Mode; and Mega at US$120/month or US$1,152/year with 60 Fast GPU hours/month, unlimited Relax images and SD video, and Stealth Mode. Annual billing is a 20% discount. Unused subscription Fast time does not roll over.",
    "pricing_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
    "docs_url": "https://docs.midjourney.com/hc/en-us/articles/33329261836941-Getting-Started-Guide",
    "privacy_url": "https://docs.midjourney.com/hc/en-us/articles/32083472637453-Privacy-Policy",
    "rights_url": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
-   "verification_notes": "The current Terms are effective 2026-05-27. They say users own Assets they create to the fullest extent possible under applicable law, subject to third-party rights and the Agreement. Companies, and employees of companies, with more than US$1 million in annual revenue must use Pro or Mega to own Assets. Midjourney receives a perpetual, worldwide, non-exclusive, sublicensable, royalty-free, irrevocable license over submitted Content and generated Assets. Content is publicly viewable and remixable by default; Stealth Mode is limited to Pro and Mega. The Privacy Policy covers prompts and uploaded content and says Midjourney may use personal data to provide, maintain, and improve the service.",
+   "verification_notes": "The current Terms are effective 2026-05-27. They say users own Assets they create to the fullest extent possible under applicable law, subject to third-party rights and the Agreement. Companies, and employees of companies, with more than US$1 million in annual revenue must use Pro or Mega to own Assets. Midjourney receives a perpetual, worldwide, non-exclusive, sublicensable, royalty-free, irrevocable license over submitted Content and generated Assets. Content is publicly viewable and remixable by default; Stealth Mode is limited to Pro and Mega. The Privacy Policy covers prompts and uploaded content and says Midjourney may use personal data to provide, maintain, and improve the service. Re-verified 2026-10-01: Official plan pages still match the recorded Basic/Standard/Pro/Mega prices, Fast GPU-hour allocations and the 20% annual discount; no drift detected.",
    "unresolved_claims": [
     "The official Privacy Policy discusses training-data collection and service improvement but does not expressly state, in the reviewed text, whether every user's prompts or generated Assets are used for model training.",
     "Midjourney does not guarantee that generated Assets are copyrightable, unique, or free of third-party rights.",
@@ -427,17 +431,18 @@
   },
   {
    "slug": "n8n",
-   "pricing_checked_date": "2026-08-25",
-   "pricing_summary": "Starter: €20/month billed annually for 2,500 workflow executions with unlimited steps and 2,300 AI credits/month. Pro: €50/month billed annually for 10,000 executions and either 5,700 or up to 13,700 AI credits/month depending on plan size. Business: €667/month billed annually for 40,000 executions and self-hosted deployment. Enterprise: custom. Starter and Pro trials include 800 AI Assistant credits. AI-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Starter: €20/month billed annually for 2,500 workflow executions with unlimited steps and 1,600 Assistant credits/month. Pro: €50/month billed annually for 10,000 executions with either 4,000 or up to 9,600 Assistant credits/month depending on plan size. Business: €667/month billed annually for 40,000 executions, self-hosted. Enterprise: custom. Free trials include 800 Assistant credits plus 100 AI credits that expire when the trial ends. Assistant-credit balances refresh monthly and unused credits do not roll over; additional AI credits cannot currently be purchased. The page advertises saving 17% on annual billing.",
    "pricing_url": "https://n8n.io/pricing/",
    "docs_url": "https://docs.n8n.io/build/integrate-ai",
    "privacy_url": "https://n8n.io/legal/privacy/",
    "rights_url": "https://n8n.io/legal/ai-terms/",
-   "verification_notes": "Official documentation says n8n workflows can connect providers including OpenAI, Anthropic, and Google, add tools and memory, and combine models. n8n's AI Terms, last updated March 20, 2026, say n8n will not use Customer Data to train n8n-operated AI models, retain it beyond immediate AI processing, or share it except as needed to deliver customer-configured AI features. Usage Data may be used to improve services only when it does not contain Customer Data or identify the customer or users. Customer-configured third-party model providers receive data under their own terms. As between n8n and the customer, the customer owns AI Output to the extent permitted by law; n8n receives a limited operational license and will not use AI Output to train n8n-operated AI models.",
+   "verification_notes": "Official documentation says n8n workflows can connect providers including OpenAI, Anthropic, and Google, add tools and memory, and combine models. n8n's AI Terms, last updated March 20, 2026, say n8n will not use Customer Data to train n8n-operated AI models, retain it beyond immediate AI processing, or share it except as needed to deliver customer-configured AI features. Usage Data may be used to improve services only when it does not contain Customer Data or identify the customer or users. Customer-configured third-party model providers receive data under their own terms. As between n8n and the customer, the customer owns AI Output to the extent permitted by law; n8n receives a limited operational license and will not use AI Output to train n8n-operated AI models. Re-verified 2026-10-01: the published cloud allowances changed from the 2026-08-25 record. Starter now lists 1,600 Assistant credits/month (recorded as 2,300 AI credits) and Pro lists 4,000 or up to 9,600 (recorded as 5,700 or up to 13,700). Free trials are listed as 800 Assistant credits plus 100 AI credits. Execution counts and euro plan prices are unchanged.",
    "unresolved_claims": [
     "The no-training commitment is expressly limited to AI models operated by n8n; third-party LLM treatment depends on the provider selected by the customer.",
     "The official terms qualify output ownership with 'to the extent permitted by applicable law' and do not promise uniqueness, copyrightability, or non-infringement.",
-    "The retrieved pricing page distinguishes AI Assistant credits from model-provider usage; customer-built workflows calling external LLMs may incur separate provider charges."
+    "The retrieved pricing page distinguishes Assistant credits from model-provider usage; customer-built workflows calling external LLMs may incur separate provider charges.",
+    "Assistant and Agents features are labelled preview on the official pricing page and their allowances can change."
    ]
   },
   {
@@ -470,13 +475,13 @@
   },
   {
    "slug": "perplexity",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Official support lists Standard/Free, individual Pro, individual Max, Enterprise Pro, and Enterprise Max. Max includes everything in Pro plus the highest access to advanced models, Comet Max Assistant, Create files and apps, and Brain. The reviewed public consumer-plan pages did not expose current Pro or Max dollar prices. An official organization-onboarding article lists Enterprise Pro at $40/seat monthly or $400/seat annually.",
    "pricing_url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
    "docs_url": "https://perplexity.ai/help-center/en",
    "privacy_url": "https://perplexity.ai/help-center/en/articles/11564572-data-collection-at-perplexity",
    "rights_url": "https://www.perplexity.ai/hub/legal/terms-of-service",
-   "verification_notes": "Perplexity is documented as an AI-powered answer/search product with citations, premium models, file uploads, Research, Create files and apps, Comet, and Computer features depending on plan. AI Data Retention is enabled by default for Free, Pro, and Max users and can be turned off for future collection; previously collected training data is not removed by a later opt-out. Enterprise data is not used for AI training, and Perplexity says its third-party model-provider agreements prohibit provider training on Perplexity data. Consumer terms warn that output may be subject to third-party model licenses and use restrictions. 2026-09-02 official blog “Optimizing On-Device Inference for Apple Silicon” (https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon): Lily is a lightweight local inference engine built specifically for Apple silicon and Qwen3.6-35B-A3B so on-device compute does not bottleneck Hybrid Compute / Perplexity Computer tasks. Official facts from that post: Rust runtime; OpenAI-compatible chat-completions API; custom Metal kernels; neither PyTorch nor MLX in the execution path; standalone demo on GitHub. The official pplx-garden README names the demo at https://github.com/perplexityai/pplx-garden (lily/), Apache-2.0, greedy generation for the Qwen3.6-35B-A3B MLX affine 4-bit checkpoint format, Apple GPU family 10 or later (M5 and newer). Lily is not a new paid Perplexity plan SKU. Consumer Pro/Max dollar prices were not re-verified on 2026-09-02.",
+   "verification_notes": "Perplexity is documented as an AI-powered answer/search product with citations, premium models, file uploads, Research, Create files and apps, Comet, and Computer features depending on plan. AI Data Retention is enabled by default for Free, Pro, and Max users and can be turned off for future collection; previously collected training data is not removed by a later opt-out. Enterprise data is not used for AI training, and Perplexity says its third-party model-provider agreements prohibit provider training on Perplexity data. Consumer terms warn that output may be subject to third-party model licenses and use restrictions. 2026-09-02 official blog “Optimizing On-Device Inference for Apple Silicon” (https://www.perplexity.ai/hub/blog/optimizing-on-device-inference-for-apple-silicon): Lily is a lightweight local inference engine built specifically for Apple silicon and Qwen3.6-35B-A3B so on-device compute does not bottleneck Hybrid Compute / Perplexity Computer tasks. Official facts from that post: Rust runtime; OpenAI-compatible chat-completions API; custom Metal kernels; neither PyTorch nor MLX in the execution path; standalone demo on GitHub. The official pplx-garden README names the demo at https://github.com/perplexityai/pplx-garden (lily/), Apache-2.0, greedy generation for the Qwen3.6-35B-A3B MLX affine 4-bit checkpoint format, Apple GPU family 10 or later (M5 and newer). Lily is not a new paid Perplexity plan SKU. Consumer Pro/Max dollar prices were not re-verified on 2026-09-02. Re-verified 2026-10-01: the official plan-comparison article still routes consumer Pro and Max to the app rather than publishing dollar amounts, and lists Education Pro at $10/mo with SheerID verification. Enterprise Pro is stated as starting at $40/month or $400/year per seat, matching the 2026-08-25 record.",
    "unresolved_claims": [
     "Current public prices for individual Pro and Max were not verifiable from the reviewed official pages.",
     "A blanket commercial-use or output-ownership claim was not made because consumer outputs may be governed by third-party model licenses.",
@@ -576,13 +581,13 @@
   },
   {
    "slug": "you-com",
-   "pricing_checked_date": "2026-08-25",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Official support says the chat product has a free plan with unlimited Smart Agent access, limited premium-agent/model queries, and paid plans with greater access, but it does not state current chat-plan prices. The current public pricing page primarily lists APIs: Web Search $5/1,000 calls, Contents $1/1,000 pages, Answer $5/1,000 calls, Research from $12/1,000 calls, and Finance Research from $110/1,000 calls, with a $100 introductory credit.",
    "pricing_url": "https://you.com/pricing",
    "docs_url": "https://home.you.com/support",
    "privacy_url": "https://you.com/privacy",
    "rights_url": "https://you.com/terms",
-   "verification_notes": "Official materials document Smart Agent, premium agents, multiple third-party models, custom agents, file handling, and search/research APIs. The privacy policy says prompts and user-created/shared content sent to third-party AI providers are not used to develop, improve, or train those third-party models. Separately, You.com's terms permit You.com to use Content to provide, maintain, train, and improve its own services and develop products. The terms assign You.com's rights in outputs to the user, subject to applicable law and excluding third-party output. Official API documentation expressly permits commercial applications when the terms are followed and API keys and user data are secured.",
+   "verification_notes": "Official materials document Smart Agent, premium agents, multiple third-party models, custom agents, file handling, and search/research APIs. The privacy policy says prompts and user-created/shared content sent to third-party AI providers are not used to develop, improve, or train those third-party models. Separately, You.com's terms permit You.com to use Content to provide, maintain, train, and improve its own services and develop products. The terms assign You.com's rights in outputs to the user, subject to applicable law and excluding third-party output. Official API documentation expressly permits commercial applications when the terms are followed and API keys and user data are secured. Re-verified 2026-10-01: The official pricing page still publishes the recorded API rates (Web Search $5/1,000 calls, Contents $1/1,000 pages, Answer $5/1,000 calls, Research from $12/1,000 calls) and no consumer chat-plan prices; no drift detected.",
    "unresolved_claims": [
     "Current consumer chat-plan names and prices were not published on the reviewed public pricing page.",
     "The output assignment does not cover third-party output, whose separate terms may apply.",
@@ -620,13 +625,13 @@
   },
   {
    "slug": "hermes-agent",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Open-source Hermes Agent software is available under the MIT license. Model access, Nous Portal or third-party provider usage, hosting, and infrastructure are separate cost considerations; no single universal subscription price was treated as the software price.",
    "pricing_url": "https://hermes-agent.nousresearch.com/docs/",
    "docs_url": "https://hermes-agent.nousresearch.com/docs/",
    "privacy_url": "https://hermes-agent.nousresearch.com/docs/security",
    "rights_url": "https://github.com/NousResearch/hermes-agent/blob/main/LICENSE",
-   "verification_notes": "Official documentation describes Hermes as an open-source autonomous agent with tools, skills, memory, profiles, gateways, MCP, scheduling, and multiple providers. Verify current feature names and provider pricing before purchase or deployment.",
+   "verification_notes": "Official documentation describes Hermes as an open-source autonomous agent with tools, skills, memory, profiles, gateways, MCP, scheduling, and multiple providers. Verify current feature names and provider pricing before purchase or deployment. Re-verified 2026-10-01: The official documentation still presents Hermes Agent as MIT-licensed open-source software with provider, hosting and infrastructure costs billed separately; no published product price list.",
    "unresolved_claims": [
     "Total operating cost depends on model provider, tool gateway, hosting, terminal backend, and workload.",
     "Feature availability and setup commands can change quickly as the project evolves."
@@ -634,13 +639,13 @@
   },
   {
    "slug": "openclaw",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Official OpenClaw materials describe the project as open-source and MIT-licensed. Self-hosted software cost is distinct from model API usage, hosting, maintenance, and any optional managed service.",
    "pricing_url": "https://docs.openclaw.ai/",
    "docs_url": "https://docs.openclaw.ai/",
    "privacy_url": "https://docs.openclaw.ai/",
    "rights_url": "https://github.com/openclaw/openclaw/blob/main/LICENSE",
-   "verification_notes": "Official documentation identifies OpenClaw as a multi-channel gateway for AI agents. Treat token, hosting, gateway exposure, and extension security as separate procurement questions.",
+   "verification_notes": "Official documentation identifies OpenClaw as a multi-channel gateway for AI agents. Treat token, hosting, gateway exposure, and extension security as separate procurement questions. Re-verified 2026-10-01: The official documentation still describes OpenClaw as an MIT-licensed multi-channel agent gateway with no published price list; the record's no-price claim is unchanged.",
    "unresolved_claims": [
     "The total cost of a deployment varies with provider, model, channel count, and hosting.",
     "Managed-service availability and enterprise features may change; verify the current official offering."
@@ -648,13 +653,13 @@
   },
   {
    "slug": "ollama",
-   "pricing_checked_date": "2026-08-26",
-   "pricing_summary": "Ollama supports running models on your own hardware and also offers optional cloud plans. Local runtime cost is separate from hardware, electricity, model licenses, and any cloud usage; the official pricing page lists current cloud tiers.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Ollama supports running models on your own hardware and also offers cloud plans. Official pricing (checked 2026-10-01): Free $0 with pay-as-you-go usage credits; Pro $20/month or $200/year billed annually ($16.67/month equivalent) including $60 of usage credits per month and access to larger models; Max $100/month including $300 of usage credits per month and up to 10 concurrent requests; Team $500/month with unlimited users and $1,000 of usage credits per month shared across the team. Per-model token rates are published on the same page. Local runtime cost is separate from hardware, electricity, model licenses, and any cloud usage.",
    "pricing_url": "https://ollama.com/pricing",
    "docs_url": "https://docs.ollama.com/api/introduction",
    "privacy_url": "https://docs.ollama.com/faq",
    "rights_url": "https://github.com/ollama/ollama/blob/main/LICENSE",
-   "verification_notes": "Official docs state the local API is served at localhost:11434 by default and provide official Python and JavaScript libraries. Ollama's FAQ distinguishes local runs from cloud-hosted models and explains model storage locations.",
+   "verification_notes": "Official docs state the local API is served at localhost:11434 by default and provide official Python and JavaScript libraries. Ollama's FAQ distinguishes local runs from cloud-hosted models and explains model storage locations. Re-verified 2026-10-01: the official pricing page now publishes dollar amounts for the Pro, Max and Team cloud tiers; the 2026-08-26 record stated only that the page 'lists current cloud tiers'. Official docs still serve the local API at localhost:11434 by default.",
    "unresolved_claims": [
     "Each model has its own license and usage terms; Ollama does not make every model legally interchangeable.",
     "Hardware performance, context limits, and output quality vary by model and quantization."
@@ -662,13 +667,13 @@
   },
   {
    "slug": "lm-studio",
-   "pricing_checked_date": "2026-08-26",
-   "pricing_summary": "LM Studio's official pricing page lists free local use and optional pay-as-you-go cloud models. Local hardware and model-license costs remain separate.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Official pricing (checked 2026-10-01): Free at $0 for running local LLMs on your own machine, including the Bionic Agent, llama.cpp and MLX execution, offline voice transcription, LM Link for up to 5 devices, and limited web search. Bionic+ at $20 USD/month for private, US-hosted open-source models, discounted bulk tokens, and web search with page extraction. Pro at $100 USD/month with 5x usage limits, discounted bulk tokens, and early access. Cloud inference is US-hosted with zero data retention. Centralized billing for teams is available via organizations; team subscription plans are listed as coming soon. Local hardware and model-license costs remain separate.",
    "pricing_url": "https://lmstudio.ai/pricing",
    "docs_url": "https://lmstudio.ai/docs",
    "privacy_url": "https://lmstudio.ai/",
    "rights_url": "https://lmstudio.ai/",
-   "verification_notes": "Official pages describe local model execution, llama.cpp/MLX support, server deployment, SDK options, and optional cloud model billing. Verify current commercial and enterprise terms before organizational rollout.",
+   "verification_notes": "Official pages describe local model execution, llama.cpp/MLX support, server deployment, SDK options, and optional cloud model billing. Verify current commercial and enterprise terms before organizational rollout. Re-verified 2026-10-01: the official pricing page now publishes dollar amounts for the Bionic+ ($20/month) and Pro ($100/month) cloud tiers; the 2026-08-26 record described 'optional pay-as-you-go cloud models' without figures.",
    "unresolved_claims": [
     "The exact boundary between free local features and future commercial/server features can change.",
     "Model licenses and hardware requirements are model-specific."
@@ -676,13 +681,13 @@
   },
   {
    "slug": "open-webui",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Open WebUI is self-hosted software; its official license documentation describes the current licensing and branding requirements, including distinctions for larger deployments. Optional enterprise/support arrangements are separate.",
    "pricing_url": "https://docs.openwebui.com/license/",
    "docs_url": "https://docs.openwebui.com/",
    "privacy_url": "https://docs.openwebui.com/",
    "rights_url": "https://docs.openwebui.com/license/",
-   "verification_notes": "Official documentation describes Docker, Python, and Kubernetes paths plus connections to Ollama, OpenAI, Anthropic, vLLM, RAG, tool calling, and multi-user capabilities. Read the current license page before rebranding or redistributing.",
+   "verification_notes": "Official documentation describes Docker, Python, and Kubernetes paths plus connections to Ollama, OpenAI, Anthropic, vLLM, RAG, tool calling, and multi-user capabilities. Read the current license page before rebranding or redistributing. Re-verified 2026-10-01: The official licence documentation still describes self-hosted software with branding and deployment thresholds rather than a published price list; the record's position is unchanged.",
    "unresolved_claims": [
     "Backend provider retention and telemetry may differ from the Open WebUI application.",
     "Enterprise features, support, and licensing for larger deployments require direct confirmation."
@@ -690,28 +695,28 @@
   },
   {
    "slug": "heidi-health",
-   "pricing_checked_date": "2026-08-26",
-   "pricing_summary": "Heidi's official pricing page lists Free, Clinician, and Teams plans and a feature comparison covering transcription, templates, Ask Heidi, evidence features, team controls, EHR integration, SSO, and custom hosting. A free starting plan is advertised. Exact regional paid dollar amounts were not consistently exposed on the official pricing page during this verification, so no unverified USD figures are reported.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Heidi's official pricing page (checked 2026-10-01) lists Free, Clinician, and Teams plans. Free is advertised as free for everyone with unlimited ambient AI documentation, cited answers to clinical questions, and HIPAA-compliant security and privacy. Clinician is listed at $110 per user/month billed annually on the Standard seat, excluding applicable sales taxes, with a Max seat at a higher rate and monthly billing available; the page shows a $480 saving for annual billing. Medical trainees can get Clinician free after verifying student status. Teams is sales-quoted, with shared monthly capacity, EHR integration, and optional enterprise governance and SSO. The feature comparison covers transcription, templates, dictation, Ask and Evidence features, patient and session linking, EHR integration, SSO, and custom hosting.",
    "pricing_url": "https://www.heidihealth.com/pricing",
    "docs_url": "https://www.heidihealth.com/",
    "privacy_url": "https://www.heidihealth.com/",
    "rights_url": "https://www.heidihealth.com/pricing",
-   "verification_notes": "Official comparison tables list unlimited transcription on Free and additional Clinician/Teams capabilities. The page states subscriptions can be cancelled and annual plans are not charged for the following year after cancellation. Treat any HIPAA, BAA, or security claim as vendor language to verify in contract review.",
+   "verification_notes": "Official comparison tables list unlimited transcription on Free and additional Clinician/Teams capabilities. The page states subscriptions can be cancelled and annual plans are not charged for the following year after cancellation. Treat any HIPAA, BAA, or security claim as vendor language to verify in contract review. Re-verified 2026-10-01: the official pricing page now renders US-dollar amounts for the Clinician seat, which the 2026-08-26 check could not retrieve. The page serves locale variants that render different figures, so the US annual view observed on the verification date is the one recorded.",
    "unresolved_claims": [
-    "Exact US-dollar Clinician and Teams prices were not consistently exposed on the official pricing page during this check.",
+    "The pricing page serves multiple locale variants with different rendered figures; the recorded $110/user/month reflects the US annual view on the verification date.",
     "BAA availability, data-residency options, and EHR integration scope are contract-specific.",
     "A vendor security or HIPAA mark is not independently certified by AIToolsEssentials."
    ]
   },
   {
    "slug": "openevidence",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "The official OpenEvidence homepage states the product is free and unlimited for healthcare professionals. No self-serve paid consumer price list was published on that page during verification.",
    "pricing_url": "https://www.openevidence.com/",
    "docs_url": "https://www.openevidence.com/",
    "privacy_url": "https://www.openevidence.com/",
    "rights_url": "https://www.openevidence.com/",
-   "verification_notes": "Official homepage copy lists content agreements or collaborations with NEJM, JAMA, Nature, NCCN, and Cochrane, and displays a HIPAA Compliant mark. Eligibility, verification, advertising, and geographic availability should be confirmed in the official signup flow. This is a knowledge/reference product, not a clinical-decision device certification.",
+   "verification_notes": "Official homepage copy lists content agreements or collaborations with NEJM, JAMA, Nature, NCCN, and Cochrane, and displays a HIPAA Compliant mark. Eligibility, verification, advertising, and geographic availability should be confirmed in the official signup flow. This is a knowledge/reference product, not a clinical-decision device certification. Re-verified 2026-10-01: The official site still states the product is free and unlimited for verified U.S. healthcare professionals, with no self-serve paid price list; no drift detected.",
    "unresolved_claims": [
     "Current professional-verification rules and geographic eligibility are completed in the official signup flow and may change.",
     "The homepage HIPAA mark is a vendor claim, not an independent audit result published here.",
@@ -720,13 +725,13 @@
   },
   {
    "slug": "dragon-copilot",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Microsoft's official Dragon Copilot product page does not publish a self-serve consumer price list; next steps route to a Microsoft representative. Microsoft Learn documents Physician Per User and Physician Flex licenses sold through a direct customer agreement or a Microsoft certified partner. Flex ambient and generative AI features can require linking an Azure subscription, and Microsoft publishes a consumption-unit description for Flex AI-assisted sessions.",
    "pricing_url": "https://www.microsoft.com/en-us/health-solutions/clinical-workflow/dragon-copilot",
    "docs_url": "https://learn.microsoft.com/en-us/industry/healthcare/dragon-admin-center/licensing/",
    "privacy_url": "https://www.microsoft.com/privacy/privacystatement",
    "rights_url": "https://www.microsoft.com/licensing/docs/view/Licensing-Use-Rights",
-   "verification_notes": "Official product materials describe physician, nurse, and radiologist experiences and a migration path from Dragon Medical One. Do not copy third-party reseller dollar figures as official Microsoft list prices. Confirm current SKUs and quotes with Microsoft or a certified partner.",
+   "verification_notes": "Official product materials describe physician, nurse, and radiologist experiences and a migration path from Dragon Medical One. Do not copy third-party reseller dollar figures as official Microsoft list prices. Confirm current SKUs and quotes with Microsoft or a certified partner. Re-verified 2026-10-01: The official product page still publishes no self-serve USD list price and routes to a Microsoft representative; Physician Per User and Flex licensing remain documented on Microsoft Learn.",
    "unresolved_claims": [
     "No official self-serve USD list price for the Physician Per User license was published on the product page during this check.",
     "Consumption-unit rates and included Flex sessions can change and should be read from current Microsoft licensing guidance.",
@@ -735,13 +740,13 @@
   },
   {
    "slug": "harvey",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Harvey’s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported.",
    "pricing_url": "https://www.harvey.ai/",
    "docs_url": "https://www.harvey.ai/",
    "privacy_url": "https://www.harvey.ai/en-US/security",
    "rights_url": "https://www.harvey.ai/",
-   "verification_notes": "Official homepage copy describes Harvey as AI software for legal and professional services, introduces Harvey II, and states enterprise default controls including SAML SSO, audit logs, IP allow-listing, and data lifecycle management. Official customer-count marketing figures are vendor claims, not independently audited here.",
+   "verification_notes": "Official homepage copy describes Harvey as AI software for legal and professional services, introduces Harvey II, and states enterprise default controls including SAML SSO, audit logs, IP allow-listing, and data lifecycle management. Official customer-count marketing figures are vendor claims, not independently audited here. Re-verified 2026-10-01: Harvey's official homepage still publishes no self-serve price list and routes to a demo request; the only dollar figures on the page are the $550M funding round and $15.5B valuation, which are not prices.",
    "unresolved_claims": [
     "No official public list price was published on the homepage during this check.",
     "Data-processing, training, and privilege-safe deployment terms are contract-specific.",
@@ -750,13 +755,13 @@
   },
   {
    "slug": "spellbook",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Spellbook’s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as a list price.",
    "pricing_url": "https://spellbook.com/",
    "docs_url": "https://help.spellbook.legal/en/articles/9926203-getting-started-with-spellbook",
    "privacy_url": "https://spellbook.com/security",
    "rights_url": "https://spellbook.com/",
-   "verification_notes": "Official homepage describes Word-native contract review and drafting, intake-to-signed-contract search, and a zero-retention statement that LLM providers do not train on or store customer data. A public trust center lists SOC 2 Type II and other vendor compliance resources. Treat those as vendor claims to verify in contract review.",
+   "verification_notes": "Official homepage describes Word-native contract review and drafting, intake-to-signed-contract search, and a zero-retention statement that LLM providers do not train on or store customer data. A public trust center lists SOC 2 Type II and other vendor compliance resources. Treat those as vendor claims to verify in contract review. Re-verified 2026-10-01: The official homepage still publishes no self-serve price list; custom per-seat annual subscriptions and the zero-retention statement remain as recorded.",
    "unresolved_claims": [
     "Exact per-seat USD pricing is quote-specific and was not listed on the official homepage.",
     "Zero-retention and training statements should be confirmed in the current DPA/contract, not only marketing copy.",
@@ -840,13 +845,13 @@
   },
   {
    "slug": "riverside-fm",
-   "pricing_checked_date": "2026-08-26",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Riverside's official pricing page lists Free at $0/month with 2 hours of one-off multi-track recording, 720p, a watermark, 44.1 kHz audio, and unlimited single-track recording. Official compare/FAQ copy lists Pro at $24/month billed annually or $29 monthly ($288/year) with a 14-day trial; Grow at $34/$39 ($408/year); Webinar at $79/$99; and Business as custom. Official FAQ states annual billing saves up to 20% and that recording is unlimited while separate-track download hours are capped (15 on Pro, 20 on Grow, 25 on Webinar).",
    "pricing_url": "https://riverside.com/pricing",
    "docs_url": "https://riverside.com/",
    "privacy_url": "https://riverside.com/privacy-policy",
    "rights_url": "https://riverside.com/terms-conditions",
-   "verification_notes": "Official riverside.com/pricing and riverside.fm/pricing checked 2026-08-26. Some Webinar cards also display 'Billed $408 annually,' which conflicts with the official $79/month annual equivalent. The $79/$99 Webinar pair from the compare table and FAQ is recorded; the $408 Webinar annual total is unresolved. SOC 2 and ISO 27001 marks on the Business tier are vendor claims.",
+   "verification_notes": "Official riverside.com/pricing and riverside.fm/pricing checked 2026-08-26. Some Webinar cards also display 'Billed $408 annually,' which conflicts with the official $79/month annual equivalent. The $79/$99 Webinar pair from the compare table and FAQ is recorded; the $408 Webinar annual total is unresolved. SOC 2 and ISO 27001 marks on the Business tier are vendor claims. Re-verified 2026-10-01: The official pricing and FAQ pages still match the recorded Free/Pro/Grow/Webinar rates and separate-track download caps; the Webinar $408 annual-total discrepancy remains unresolved.",
    "unresolved_claims": [
     "Webinar annual-total copy on some cards shows $408 while official FAQ/compare list $79/month billed annually.",
     "Editor-seat add-on dollar amounts are not published as a public list price.",
@@ -855,16 +860,15 @@
   },
   {
    "slug": "adobe-enhance-speech",
-   "pricing_checked_date": "2026-08-26",
-   "pricing_summary": "Adobe Podcast's official plans page lists a Free plan and a Premium plan with a 30-day free trial. Free Enhance Speech is audio-only, 30 minutes / 500 MB per file, 1 hour per day. Free Studio allows 30-minute projects, 2 downloads per day, no original-recording download, and branded audiograms. Premium adds video, bulk upload, strength adjustment, 4 hours/day, files up to 1 GB / 2 hours, and unlimited Studio downloads. No self-serve USD Premium price was published on that official page during this check.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Adobe Podcast's official plans page (checked 2026-10-01) lists a Free plan and premium access delivered through the Adobe Firefly Pro plan at US$19.99/month, which includes Adobe Podcast Premium and up to 4,000 generative credits/month. Free Enhance Speech is audio-only, 30 minutes / 500 MB per file, 1 hour per day. Free Studio allows 30-minute projects, 2 downloads per day, no original-recording download, and branded audiograms. Premium adds video, bulk upload, strength adjustment, 4 hours/day, files up to 1 GB / 2 hours, and unlimited Studio downloads.",
    "pricing_url": "https://podcast.adobe.com/en/plans",
    "docs_url": "https://podcast.adobe.com/en/plans",
    "privacy_url": "https://www.adobe.com/privacy/policy.html",
    "rights_url": "https://www.adobe.com/legal/licenses-terms.html",
-   "verification_notes": "Official plans page checked 2026-08-26. Third-party pages listing Premium at $9.99/month are not treated as official Adobe list prices because that dollar figure was not on the official plans page during verification.",
+   "verification_notes": "Official plans page checked 2026-08-26. Third-party pages listing Premium at $9.99/month are not treated as official Adobe list prices because that dollar figure was not on the official plans page during verification. Re-verified 2026-10-01: the plans page now attaches a published price to premium access — it is sold as part of the Adobe Firefly Pro plan at US$19.99/month with 4,000 generative credits/month — rather than as a standalone Adobe Podcast subscription. The 2026-08-26 record correctly noted that no standalone price was published, and specifically declined to treat third-party $9.99/month listings as official.",
    "unresolved_claims": [
-    "Exact Premium USD monthly or annual price was not published on the official plans page.",
-    "Whether Premium is bundled into specific Creative Cloud or Express seats should be confirmed in the Adobe checkout flow.",
+    "Premium access is bundled into Adobe Firefly Pro rather than sold as a standalone Adobe Podcast subscription; the exact entitlement should be confirmed in the Adobe checkout flow.",
     "Daily enhancement caps can change and should be re-read on the live plans page."
    ]
   },
@@ -909,33 +913,33 @@
   },
   {
    "slug": "whop-cli",
-   "pricing_checked_date": "2026-08-27",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Free CLI install. Whop platform fees apply on sales (standard Whop transaction fees). No separate CLI subscription.",
-   "verification_notes": "Independently verified 2026-08-27 from official Whop docs (docs.whop.com/developer/cli) and Whop blog (whop.com/blog/cli). CLI launched August 2026. Blueprints launched same period.",
+   "verification_notes": "Independently verified 2026-08-27 from official Whop docs (docs.whop.com/developer/cli) and Whop blog (whop.com/blog/cli). CLI launched August 2026. Blueprints launched same period. Re-verified 2026-10-01: The Whop site still carries no separate CLI subscription; the record's 'free CLI install, standard Whop platform fees' remains accurate.",
    "pricing_url": "https://whop.com/",
    "docs_url": "https://docs.whop.com/developer/cli",
    "privacy_url": "https://whop.com/privacy"
   },
   {
    "slug": "ideogram",
-   "pricing_checked_date": "2026-08-28",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Free includes 10 slow credits weekly. Plus is $15/month billed annually with 1,000 priority credits; Pro is $42/month billed annually with 3,500 priority credits; Team is $20/user/month billed annually with 1,500 priority credits per user; Enterprise is custom.",
    "pricing_url": "https://ideogram.ai/pricing",
    "docs_url": "https://docs.ideogram.ai",
    "privacy_url": "https://ideogram.ai/legal/privacy-policy",
    "rights_url": "https://ideogram.ai/legal/tos",
-   "verification_notes": "Official pricing and terms checked 2026-08-28. Paid plans add private generation; Ideogram says it does not claim ownership of generated images and permits commercial use subject to its terms.",
+   "verification_notes": "Official pricing and terms checked 2026-08-28. Paid plans add private generation; Ideogram says it does not claim ownership of generated images and permits commercial use subject to its terms. Re-verified 2026-10-01: Ideogram plan prices and credit allocations (Plus $15/mo billed annually, Pro $42/mo billed annually, Team $20/user/mo billed annually, 1,000/3,500/1,500 priority credits) are unchanged on the official pricing page, which still records paid plans as not claiming ownership of generated images and permitting commercial use subject to the terms.",
    "unresolved_claims": []
   },
   {
    "slug": "luma-ai",
-   "pricing_checked_date": "2026-08-28",
+   "pricing_checked_date": "2026-10-01",
    "pricing_summary": "Plus is $30/month or $300/year with 10,000 credits; Pro is $90/month or $900/year with 40,000 credits; Ultra is $300/month or $3,000/year with 150,000 credits. Team and Enterprise are sales-assisted.",
    "pricing_url": "https://lumalabs.ai/pricing",
    "docs_url": "https://docs.lumalabs.ai",
    "privacy_url": "https://lumalabs.ai/privacy",
    "rights_url": "https://lumalabs.ai/terms",
-   "verification_notes": "Official pricing checked 2026-08-28. Credit costs vary by model and utility; commercial use is listed for paid individual plans.",
+   "verification_notes": "Official pricing checked 2026-08-28. Credit costs vary by model and utility; commercial use is listed for paid individual plans. Re-verified 2026-10-01: Official Luma pricing still matches the recorded Plus $30/$300, Pro $90/$900 and Ultra $300/$3,000 plans and credit allocations, with commercial use listed for paid individual plans.",
    "unresolved_claims": []
   },
   {
@@ -951,24 +955,27 @@
   },
   {
    "slug": "suno",
-   "pricing_checked_date": "2026-08-28",
-   "pricing_summary": "Suno offers a free plan plus Pro and Premier subscriptions. The official public pricing page exposed plan features but did not expose reliable dollar prices in the retrieved content, so no unverified amount is stated.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Monthly plan pricing published on the official pricing page (checked 2026-10-01): Free $0/month with access to free models, 50 credits per day, standard features only, up to 8 minutes of audio upload, a shared creation queue, no monthly song downloads, no commercial rights, no add-on credit purchases and no stem separation. Pro $8/month with the best models, 2,500 credits/month, 20 song downloads/month, commercial use rights, 2 stem-separation types and a priority queue of up to 10 songs; yearly billing saves $24. Premier $24/month with Suno Studio, 10,000 credits/month, 60 song downloads/month, 3 stem-separation types and up to 30 minutes of audio upload; yearly billing saves $72. The page advertises saving 20% on annual billing and states taxes are calculated at checkout.",
    "pricing_url": "https://suno.com/pricing",
    "docs_url": "https://help.suno.com",
    "privacy_url": "https://suno.com/legal/privacy",
    "rights_url": "https://suno.com/legal/terms",
-   "verification_notes": "Official pricing checked 2026-08-28. Subscription credits do not carry over; purchased top-up credits do not expire but require an active subscription. Commercial-rights limits depend on plan and terms.",
-   "unresolved_claims": []
+   "verification_notes": "Official pricing checked 2026-08-28. Subscription credits do not carry over; purchased top-up credits do not expire but require an active subscription. Commercial-rights limits depend on plan and terms. Re-verified 2026-10-01: the official pricing page now publishes dollar amounts for the Free, Pro and Premier plans, which the 2026-08-28 check could not retrieve. Subscription credits still do not carry over; purchased top-up credits do not expire but require an active subscription.",
+   "unresolved_claims": [
+    "Commercial-rights limits depend on plan and on the terms of service; the Free plan states it grants no commercial rights.",
+    "Annual prices are shown as 'saves $24' / 'saves $72' versus monthly rather than as a single annual total on the captured view."
+   ]
   },
   {
    "slug": "udio",
-   "pricing_checked_date": "2026-08-28",
-   "pricing_summary": "Free includes 100 monthly credits and a 10-credit daily limit. Standard is $10/month with 1,200 monthly credits; Pro is $30/month with 4,800 monthly credits. Top-ups are $3 for 100 credits or $25 for 1,000 credits.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Free includes 100 monthly credits and a 10-credit daily limit, with no rollovers. Standard is $10/month or $8/month billed annually ($96 billed annually) with 2,400 monthly credits. Pro is $30/month or $24/month billed annually ($288 billed annually) with 6,000 monthly credits. Top-ups are $3 for 100 credits or $25 for 1,000 credits. Paid tiers add editing, audio upload, stem download, and higher concurrent-generation limits.",
    "pricing_url": "https://udio.com/pricing",
    "docs_url": "https://help.udio.com",
    "privacy_url": "https://www.udio.com/privacy",
    "rights_url": "https://www.udio.com/terms-of-service",
-   "verification_notes": "Official pricing checked 2026-08-28. Paid plans add editing, audio upload, stem download, and higher concurrent-generation limits.",
+   "verification_notes": "Official pricing checked 2026-08-28. Paid plans add editing, audio upload, stem download, and higher concurrent-generation limits. Re-verified 2026-10-01: the monthly credit allocations changed from the 2026-08-28 record. Standard now lists 2,400 monthly credits (recorded as 1,200) and Pro lists 6,000 (recorded as 4,800). Plan prices and top-up prices are unchanged.",
    "unresolved_claims": []
   },
   {
@@ -1018,16 +1025,16 @@
   },
   {
    "slug": "notebooklm",
-   "pricing_checked_date": "2026-09-01",
-   "pricing_summary": "NotebookLM has been renamed to Gemini Notebook. The official about page states it is free to use for individuals. The page advertises uploading PDFs, websites, YouTube videos, audio files, Google Docs, and Google Slides; summarization with citations; and an Audio Overview feature. No paid consumer subscription price was published on the about page during verification.",
-   "pricing_url": "https://notebooklm.google.com/about/",
-   "docs_url": "https://notebooklm.google.com/",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "NotebookLM is now Gemini Notebook (the official FAQ states the rename took effect in July 2026). The product remains free for individuals with standard usage limits and up to 50 sources per notebook. Gemini Notebook is also included in Google AI Plus (double the standard usage limits, up to 100 sources), Google AI Pro (four times the standard limits, up to 300 sources), and Google AI Ultra (5-20x the Pro limits, up to 600 sources). The plans page does not publish US-dollar prices; the paid tiers are billed through Google One and are available only in listed regions. Organizations, schools, and enterprise access route through Google Workspace or Google Cloud.",
+   "pricing_url": "https://notebook.google/plans",
+   "docs_url": "https://notebook.google/",
    "privacy_url": "https://policies.google.com/",
    "rights_url": "https://policies.google.com/",
-   "verification_notes": "Official about page checked 2026-09-01. The page states: 'We value your privacy and never use your organization's data to train Gemini Notebook.' When used as an individual, data is not used for training unless the user shares feedback. The product is powered by Gemini's multimodal capabilities. A support page (support.google.com/gemininotebook/answer/16179536) provides additional privacy details. Privacy and Terms are governed by Google's policies at policies.google.com.",
+   "verification_notes": "Official about page checked 2026-09-01. The page states: 'We value your privacy and never use your organization's data to train Gemini Notebook.' When used as an individual, data is not used for training unless the user shares feedback. The product is powered by Gemini's multimodal capabilities. A support page (support.google.com/gemininotebook/answer/16179536) provides additional privacy details. Privacy and Terms are governed by Google's policies at policies.google.com. Re-verified 2026-10-01: Google now publishes a dedicated Gemini Notebook plans page, which the 2026-09-01 check on the about page did not surface. The plans page is entitlement-based and still publishes no dollar amounts; pricing sits with the Google One AI Plus/Pro/Ultra subscriptions. The privacy statement is unchanged: organization data is never used to train Gemini Notebook, and individual data is not used for training unless the user shares feedback.",
    "unresolved_claims": [
-    "The about page does not publish paid plan prices; if a premium tier exists, it was not exposed on the retrieved page.",
-    "Google's general terms and policies govern use; no product-specific commercial-use or output-ownership clause was found on the NotebookLM page.",
+    "The Gemini Notebook plans page does not publish US-dollar prices; the Plus, Pro and Ultra tiers are billed through Google One and are region-limited.",
+    "Google's general terms and policies govern use; no product-specific commercial-use or output-ownership clause was found on the Gemini Notebook pages.",
     "The rename from NotebookLM to Gemini Notebook may not be fully reflected across all Google surfaces."
    ]
   },
@@ -1048,15 +1055,15 @@
   },
   {
    "slug": "speechify",
-   "pricing_checked_date": "2026-09-01",
-   "pricing_summary": "Free: $0, listen at up to 1.5x speed, 10 robotic-sounding voices, text-to-speech features only. Premium: $29/month, includes 1000+ natural voices, 60+ languages, 5x speed, scan and listen, AI summaries and chats, Google Drive/Dropbox/OneDrive integrations, voice typing, AI podcasts, and a voice AI assistant. The pricing page did not expose an annual billing option or a team/enterprise price during verification.",
+   "pricing_checked_date": "2026-10-01",
+   "pricing_summary": "Free: $0, listen at up to 1.5x speed, 10 robotic-sounding voices, text-to-speech features only. Premium: $29/month, includes 1000+ natural voices, 60+ languages, 5x speed, scan and listen, AI summaries and chats, Google Drive/Dropbox/OneDrive integrations, voice typing, AI podcasts, and a voice AI assistant. The official pricing page also offers a yearly billing toggle advertised as 'SAVE 60%'; the captured view showed monthly prices with the note 'Prices shown per month, billed monthly'. No team or enterprise price was exposed on that page.",
    "pricing_url": "https://speechify.com/pricing/",
    "docs_url": "https://speechify.com/",
    "privacy_url": "https://speechify.com/privacy/",
    "rights_url": "https://speechify.com/terms",
-   "verification_notes": "Official pricing page checked 2026-09-01. Terms of Service state that Speechify Voice Over Studio AI voice overs may be used for commercial purposes. The Terms grant a non-exclusive, non-transferable, revocable license for personal use of the app on one registered account on one device. The Privacy Policy (updated July 22, 2026) states Speechify does not sell user information and offers both free and paid services. An AI Voice API is available under supplementary terms at speechify.com/terms-ai-voice-api.",
+   "verification_notes": "Official pricing page checked 2026-09-01. Terms of Service state that Speechify Voice Over Studio AI voice overs may be used for commercial purposes. The Terms grant a non-exclusive, non-transferable, revocable license for personal use of the app on one registered account on one device. The Privacy Policy (updated July 22, 2026) states Speechify does not sell user information and offers both free and paid services. An AI Voice API is available under supplementary terms at speechify.com/terms-ai-voice-api. Re-verified 2026-10-01: Free and Premium ($29/month) are unchanged. The page now exposes an annual billing toggle advertised as saving 60%, which the 2026-09-01 record said was absent; the captured view still rendered monthly amounts. Premium access now also bundles voice typing, AI podcasts and the voice AI assistant, and Speechify publishes a public affiliate program at https://speechify.com/affiliates/ advertising 30% of every sale referred with a 30-day cookie.",
    "unresolved_claims": [
-    "The pricing page displayed only a monthly Premium price ($29/month); no annual or multi-seat plan price was exposed.",
+    "The pricing page presents monthly amounts with a yearly toggle advertised as saving 60%; no single annual total was exposed on the captured view.",
     "Commercial use is permitted for Voice Over Studio output, but the general app license is for personal use on one device; broader commercial deployment may require additional terms.",
     "The Privacy Policy does not explicitly state whether user content (uploaded text) is used to train Speechify's AI models."
    ]
