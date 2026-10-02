@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import json
 import re
+import statistics
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -346,6 +347,50 @@ def _carried_runs(slug: str) -> int:
     return sum(1 for f in OUT.glob("pitch-drafts-*.md") if slug in f.read_text(errors="ignore"))
 
 
+def _live_row_count() -> int:
+    """Rows the queue itself counts as live, measured at build time.
+
+    `DRAFT_INDEX` used to assert "Today the live set is 21 rows" as typed text. That number moved
+    every day and, on the 2026-10-02 run, was already three days stale inside a file dated today —
+    the same defect class as the hardcoded draft filename and the hardcoded crossing date fixed on
+    earlier runs. Derived from the same verified-requests cache the ages come from, so it cannot
+    drift from the headline.
+    """
+    return sum(1 for r in _VERIFIED_CACHE.values()
+               if r.get("days_old") is not None and r["days_old"] <= STALE_DAYS)
+
+
+def _headline_figures() -> str:
+    """The figures a carried draft may stand behind today, re-derived from our own data files.
+
+    The two DRAFTS entries below used to carry hand-typed copies of these ("40 publishing a monthly
+    price, ... median $16.50", "updated: 2026-09-30"). On 2026-10-02 the snapshot refresh moved them
+    (to 42 / 33 / $17.50) while the typed prose stayed put — a stale figure inside a file rebuilt
+    today, which is the same defect class as the hardcoded live-row count. Derived instead, and
+    falls back to a pointer rather than inventing a number if the data is unreadable.
+    """
+    try:
+        snaps = json.loads((SITE_ROOT / "data" / "pricing_snapshots.json").read_text())
+        tools = json.loads((SITE_ROOT / "data" / "tools.json").read_text())
+        pairs = json.loads((SITE_ROOT / "data" / "monthly_annual_pairs.json").read_text())
+    except (OSError, json.JSONDecodeError):
+        return "(figures not re-derived this run — see the newest `pitch-drafts-*.md`)"
+    month = re.compile(r"\$\s?(\d+(?:\.\d+)?)\s*/\s*(?:user|seat|member|person)?\s*/?\s*month", re.I)
+    paid = {}
+    for k, v in (snaps.get("snapshots") or {}).items():
+        vals = [float(x) for x in month.findall(v.get("digest") or "") if float(x) > 0]
+        if vals:
+            paid[k] = min(vals)
+    if not paid:
+        return "(figures not re-derived this run — see the newest `pitch-drafts-*.md`)"
+    med = statistics.median(paid.values())
+    return (f"{len(tools)} tools, {len(paid)} publishing a monthly price, "
+            f"{sum(1 for x in paid.values() if x <= 25)} of those at or under $25/month, "
+            f"median ${med:.2f} (snapshots `updated: {snaps.get('updated')}`); and the pair range "
+            f"{pairs.get('range_low')}x-{pairs.get('range_high')}x, median {pairs.get('median')}x "
+            f"over {pairs.get('n')} tiers (built {pairs.get('built')})")
+
+
 DRAFTS = {
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
         f"**Draft ready and UNSENT — `{_newest_drafts()}` §1. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
@@ -354,10 +399,8 @@ DRAFTS = {
         "re-resolved off the live /contributors/simon-chandler page (HTTP 200, 154,857 bytes, "
         "data-part1/2/3 triple unchanged at simon.chandler + raconteur + net, control author "
         "/contributors/tom-dennis carries tom.dennis/raconteur/net) on 2026-09-30; the older "
-        "/author/simon-chandler/ URL still 404s and must not be cited. Figures re-derived today "
-        "against data/pricing_snapshots.json (`updated: 2026-09-30`): 76 tools, 40 publishing a "
-        "monthly price, 31 of those at or under $25/month, median $16.50, and the pair range holding "
-        "at 1.11x-2.53x over 19 tiers across 14 tools. It is "
+        "/author/simon-chandler/ URL still 404s and must not be cited. Figures re-derived at build "
+        f"time ({_headline_figures()}). It is "
         "the only high-relevance request this monitor has ever produced with a resolved route; the "
         "page is still HTTP 200 and the address still resolves, so a late send is still possible — "
         "what was lost is the ideal window, not the pitch.",
@@ -369,7 +412,7 @@ DRAFTS = {
         "unchanged, alongside five other named staff addresses). Standing constraint is stated in the "
         "draft's first line: we are not a food retailer. Its October issue window has closed, so treat "
         "this as a send-or-skip call and record the outcome in `pitch-ledger.json` rather than "
-        "carrying it a fifth day.",
+        f"carrying it a {_carried_runs('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech') + 1}th day.",
     "anthropic-users-and-business-owners-customer-service-experiences":
         f"**Crossed cold 2026-09-23; now {_sent_word(_age_of('anthropic-users-and-business-owners-customer-service-experiences'))} old — no longer counted as sendable.** "
         "Draft finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal "
@@ -393,13 +436,16 @@ DRAFT_INDEX = (
     "in one row's `published_links`. On 2026-10-01 the first build read the employees-conflicted-"
     "about-AI-use row as sendable because its body embeds a docs.google.com casting form, which "
     "`_sendable()` accepted as a link route. Both are fixed: a `published_links` entry now counts as a "
-    "route only when it is a booking/contact link. Today the live set is 21 rows, 20 of them relevance "
-    "`low`/`low-medium` with no usable route and the remaining one a comment-only DM call, so there is "
-    "genuinely nothing a person can send from the live queue. Nothing was sent this run either.\n\n"
+    f"route only when it is a booking/contact link. Today the live set is {_live_row_count()} rows "
+    "(counted at build time from `verified-requests.json`, not typed), all relevance `low`/`low-medium` "
+    "with no usable route, so there is genuinely nothing a person can send from the live queue. "
+    "Nothing was sent this run either.\n\n"
     f"**Today's drafts are `{_newest_drafts()}` (§1 Raconteur shadow AI, §2 Speciality Food, both "
-    "paste-ready, both crossed-but-still-sendable).** The pair range re-asserted clean "
-    "for the ninth consecutive day against a freshly refreshed snapshot (`updated: 2026-10-01`), "
-    "so today's drafts cite the same figures as yesterday's.\n\n"
+    "paste-ready, both crossed-but-still-sendable).** The pair range re-asserted clean against a "
+    "freshly refreshed snapshot, but **the shadow-AI headline figures moved with it** — the newest "
+    "drafts carry the current set (42 tools publishing a monthly price, 33 at or under $25, median "
+    "$17.50 against `updated: 2026-10-02`); the 40/31/$16.50 set in every pre-2026-10-02 draft is "
+    "superseded.\n\n"
     "**The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers across 14 tools, and it held "
     "today.** History, because every superseded value is still sitting in dated draft files and must "
     "not be reused: the range was first published as `1.21x to 2.53x, median 1.33x` (2026-09-18, sent "
