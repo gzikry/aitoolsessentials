@@ -1,0 +1,31 @@
+From: AIToolsEssentials <aitoolsessentials@gmail.com>
+To: support@rewordsai.app
+Subject: ReWords AI submission - verification needed before editorial listing
+
+Hi,
+
+Thanks for submitting ReWords AI through our site form. We reviewed the live product, the pricing page, the about page, the privacy policy, the terms of service and the refund policy, plus the public domain records. We have not listed it yet - a few things need your input first.
+
+What we could verify
+- The product matches the submission: upload a finished PNG/JPG/WebP, detect and select existing text, replace, translate or remove it, download the result, with best-effort font, colour and background matching.
+- Pricing is internally consistent: Professional $16.67/mo list ($8.33/mo billed annually, $99.99/yr), Advanced $33.33/mo ($16.67/mo, $199.99/yr), Ultimate $66.67/mo ($33.33/mo, $399.99/yr); one-time packs 100 credits $5.99, 200 credits $9.99 (list $13.99), 500 credits $19.99 (list $29.99); 10 credits per 1K image, 20 per 2K, 30 per 4K; pack credits never expire; Stripe is the only payment processor; a 48-hour unused-credit refund window with a review path outside it.
+- The privacy policy discloses the categories of data collected and the processor roles in use (Stripe, Cloudflare, third-party OCR and image-editing models, email delivery), and the terms state users keep the rights they already have in their images.
+
+Open questions, please answer on the record
+1. Operator identity. Your own policies state that you do not publish a corporate legal entity name, company registration number or street address. Our listing has to say who a buyer is contracting with, so please tell us who operates ReWords AI (person or registered entity) and in which country or jurisdiction. If you are a sole proprietor, saying so is enough.
+2. Governing law. The Terms of Service contain no governing-law or jurisdiction clause. Which country's law applies to a purchase?
+3. Retention. The privacy policy says "Account details stay while you use the account" but states no retention period for uploaded images, detected text or generated outputs. Please state how long each is kept, and how a user deletes them.
+4. Training and resale rights. Are uploaded images, detected text or outputs used to train or improve any model (yours or a provider's)? And what rights do you hold to run third-party OCR and image-editing models on user images as part of a paid service?
+5. Output rights. The terms say a user keeps the rights they already had in their images. What rights does a user have to the edited output itself, and may they use it commercially?
+6. Subprocessors. The privacy policy names processor roles rather than companies. Please name the OCR and image-editing providers that actually receive images, so buyers can check their terms.
+7. Contact. Is support@rewordsai.app the correct working address for buyers and legal correspondence? The domain has MX records, so mail there is deliverable.
+8. Name. There is another, separate image text editor trading as ReWords.AI at rewords.ai. Please confirm ReWords AI is unrelated to it, and tell us how you came to the name.
+
+Separately: your submission gave https://rewordsai.app/pricing as the pricing URL, which we verified, but left the docs URL blank. We do not need documentation access - we publish only what the public pages state.
+
+We are holding the submission, not rejecting it. Our listings carry honest cons and open questions, and paid relationships never affect scores or placement. If you offer an affiliate or partner program, send those terms separately - they will not change the editorial decision.
+
+Please reply with public URLs wherever possible. We do not need account access, credentials or private documents.
+
+- AIToolsEssentials
+https://aitoolsessentials.com

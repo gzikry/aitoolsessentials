@@ -1,0 +1,28 @@
+From: AIToolsEssentials <aitoolsessentials@gmail.com>
+To: samuellamphier@gmail.com
+Subject: CiteScore submission - verification needed before editorial listing
+
+Hi,
+
+Thanks for submitting CiteScore through our site form. We reviewed the live product, the pricing page, the checkout page, the sample report, the FAQ, the privacy page, and the public domain records. We have not listed it yet - a few things need your input first.
+
+What we could verify
+- Product and price: a one-time $39 AI-visibility audit for one URL - paste a URL, pay through a Stripe Payment Link, receive a scored PDF (0-100) plus about ten ranked fixes. No subscription is sold; a $29/mo weekly rescan is described as roadmap only and is not for sale on the page.
+- The sample report is plainly labelled fictional and illustrative ("Fictional company. Illustrative scores. Not a customer story."), and the FAQ is unusually straight about what the report is - including that you do not log into ChatGPT, Perplexity or Google AI Overviews, and that the engine rows are inferred from on-page signals plus a language-model review. We appreciate both.
+- The privacy page discloses that the submitted URL and publicly fetchable page content may be sent to a language model, and that you do not ask for passwords or login-gated content.
+
+Open questions, please answer on the record
+1. Operator identity and jurisdiction. The site names no legal entity, no individual operator and no country - the footer reads only "2026 CiteScore". Our listing has to say who a buyer is contracting with and which law applies to the purchase. Please tell us the operator (person or entity) and the jurisdiction. A sole-proprietor answer is fine.
+2. Contact. No email address is published anywhere on the site, yet the FAQ tells buyers to "email us within 14 days" for a refund and the privacy page says to "reply to the receipt". Your submission gives samuellamphier@gmail.com. Please confirm that is the address buyers and legal correspondence should use - it is the address we are writing to - and consider printing it on the site.
+3. Name. CiteScore is Elsevier's and Scopus's registered metric for journal citation impact, in worldwide use and extensively documented. You are selling a GEO/visibility audit under the identical name at citescore.vercel.app. Please tell us how you came to the name and confirm the product is unrelated to Elsevier or Scopus. We cannot list under a name readers will reasonably confuse with an established, unrelated mark without you addressing that directly. If you have applied for or hold a mark, say so.
+4. Domain. The product runs on a Vercel subdomain (citescore.vercel.app) rather than a domain you control. Do you have a dedicated domain planned? A listing needs a stable home and a working contact address, since a *.vercel.app URL can be reassigned.
+5. Delivery and failure handling. The checkout page says Stripe confirms the charge first and the report is then emailed - it is not generated in the browser tab. If payment succeeds but the crawl or the model call fails, what does the buyer get and how quickly? Please state the real turnaround and the failure path.
+6. Refund scope. The FAQ and checkout page describe a 14-day refund only when the file is "missing, unreadable, or about the wrong URL". Please confirm that is the whole policy, including the case where no report is delivered at all.
+7. Data handling. How long are the submitted URL and the fetched content retained, is any of it used for training, and which language-model and crawl providers receive it? The privacy page names roles ("a large language model (and related embedding or crawl services)") rather than companies.
+
+We are holding the submission, not rejecting it. Our listings carry honest cons and open questions, and paid relationships never affect scores or placement. If you offer an affiliate or partner program, send those terms separately - they will not change the editorial decision.
+
+Please reply with public URLs wherever possible. We do not need account access, credentials or private documents.
+
+- AIToolsEssentials
+https://aitoolsessentials.com
