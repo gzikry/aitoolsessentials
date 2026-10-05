@@ -1,0 +1,32 @@
+From: AIToolsEssentials <aitoolsessentials@gmail.com>
+To: support@aitextcleaner.pro
+Subject: AI Text Cleaner submission - verification needed before editorial listing
+
+Hi,
+
+Thanks for submitting AI Text Cleaner through our site form. We reviewed the live tool, the pricing page, the about, contact, privacy, terms and refund pages, and the shipped JavaScript. We have not listed it yet - a few things need your input first.
+
+What we could verify
+- The product matches the submission and works as described: free browser-side tools strip invisible/zero-width Unicode characters and Markdown residue, and a paid "Pro" tier does sentence-level rewriting through credits.
+- Your local-processing claim holds up in the code, which is worth saying plainly. Reading the shipped bundles: the free cleaning path uses no network call, and the only outbound request is a POST to /api/humanize for the Pro rewriting path (plus /api/auth, /api/billing/*). So "free text hygiene tools execute entirely within your client browser" is accurate as shipped - we verified it from the JavaScript, not the marketing copy.
+- Pricing is internally consistent: Free $0 forever; Pro annual plans Starter $3.00/mo (billed $35.94/yr, 200 credits/mo), Professional $5.00/mo ($59.94/yr, 420), Advanced $10.00/mo ($119.94/yr, 1,000); 10 credits = 1,000 Pro words; monthly-billed credits expire at the end of each billing cycle while one-time credit packs never expire; Stripe is the only processor named.
+- Privacy, terms and refund pages all load (dated 2026-08-20), refunds are reviewed individually by email, and the terms include a candid "we do not warrant that processed text will bypass third-party AI detectors" clause - that honesty is a point in your favour.
+- The domain aitextcleaner.pro has working MX records, so support@aitextcleaner.pro is deliverable.
+
+Open questions, please answer on the record
+1. Operator identity and jurisdiction. The site names no legal entity, company or individual operator, and the terms of service contain no governing-law clause at all. A listing has to say who a buyer is contracting with and which law applies. Please tell us the operator (person or registered entity) and the jurisdiction. A sole-proprietor answer is fine.
+2. Relationship to other sites. aitextcleaner.pro sits on the identical Cloudflare nameserver pair (lee.ns.cloudflare.com / liberty.ns.cloudflare.com) as aiagentskills.net, which was submitted to us minutes earlier and links seedaud.io, productshotai.app and m3u8-player.net from its footer - all on the same nameserver pair and sharing the same "Ask AI" footer widget. Please confirm whether AI Text Cleaner is related to those sites and, if so, under which entity they are run.
+3. Name. "AI Text Cleaner" is a generic name already in use by several unrelated tools - we found live pages at aitextcleaner.io, aitextcleaner.app and aitextcleaner.com. Please tell us how you came to the name and confirm the product is unrelated to those. We are not asking you to change it; we are asking so the listing is not confused with them.
+4. Retention. The privacy policy says the Pro path "transmit[s] your input text to trusted third-party AI endpoints" but states no retention period for that text, and no deletion path. How long is Pro input text kept, and how does a user delete it?
+5. Subprocessors. The privacy policy names provider roles ("selected AI providers for Pro rewriting services") rather than companies. Please name the model providers that actually receive Pro input text, so buyers can check their terms.
+6. Cancellation. The terms say "In-app self-service cancellations are not supported" and that all cancellations and refunds must be requested by email. Please confirm the exact cancellation path and timing, and how a buyer stops a renewal before it is charged.
+7. Promotional pricing. A permanent 30-minute "50% off annual" countdown runs on every page, including pricing. Please confirm whether the annual discount is a genuine limited offer or always-on, since our listings note aggressive promotional tactics.
+
+Separately: your submission gave https://aitextcleaner.pro/pricing as the pricing URL, which we verified, and https://aitextcleaner.pro/about as the docs URL. No action needed there.
+
+We are holding the submission, not rejecting it. Our listings carry honest cons and open questions, and paid relationships never affect scores or placement. If you offer an affiliate or partner program, send those terms separately - they will not change the editorial decision.
+
+Please reply with public URLs wherever possible. We do not need account access, credentials or private documents.
+
+- AIToolsEssentials
+https://aitoolsessentials.com

@@ -1,0 +1,26 @@
+From: AIToolsEssentials <aitoolsessentials@gmail.com>
+To: support@aiagentskills.net
+Subject: AI Agent Skills submission - verification needed before editorial listing
+
+Hi,
+
+Thanks for submitting AI Agent Skills through our site form. We reviewed the live directory, the about page, the contact page, the privacy policy, the terms of service, /llms.txt, the stats page, and the public domain records. We have not listed it yet - a few things need your input first.
+
+What we could verify
+- The product is real and substantial, not a stub: a curated index of open-source agent skills (SKILL.md packages) for Claude Code, Codex CLI and similar assistants, with category and search pages, a stats page, and a blog. The homepage advertises 8.6K+ skills, and the directory section says 8,347 released skills from 1,036 GitHub maintainers. It is free to browse - we found no paid tier, subscription or checkout anywhere on the site.
+- The site is explicit that it is not affiliated with Anthropic or OpenAI, both on the homepage and the about page, and the methodology notes say counts include only skills with release status "released". That candour is a point in your favour.
+- The privacy policy and terms of service both load, and the contact page publishes support@aiagentskills.net. The domain aiagentskills.net has working MX records, so mail to that address is deliverable.
+
+Open questions, please answer on the record
+1. Operator identity and jurisdiction. The site names no legal entity, company or individual operator, and no country. The terms of service say they are governed by "the laws of your jurisdiction" - which names no chosen law at all. A listing of this kind needs to say who a reader is dealing with and which law applies. Please tell us the operator (person or registered entity) and the jurisdiction. A sole-proprietor answer is fine.
+2. Public skill index on GitHub. Both the homepage footer and your own WebSite structured data cite https://github.com/bbwdadfg/ai-agent-skills-index as the "public skill index on GitHub". That URL - and the account it sits under - currently return 404. Please either give us the correct working public URL or remove the claim, because a citation that does not resolve is not something we can repeat.
+3. Relationship to other sites. Your footer links Seed Audio AI (seedaud.io), Product Shot AI (productshotai.app) and M3U8 Player (m3u8-player.net) as "Friend Links". All four of these domains, plus your own, sit on the identical Cloudflare nameserver pair (lee.ns.cloudflare.com / liberty.ns.cloudflare.com), and they share the same "Ask AI - ChatGPT / Perplexity / Claude / Gemini / Grok / DeepSeek / Kimi" footer widget. Please confirm whether these are all yours (or one operator's) or genuinely independent sites, and if they are related, tell us under which entity they are run.
+4. Privacy and terms accuracy. Your privacy policy collects and stores "Payment and Billing Information ... credit card number, billing address", and your terms describe paid subscriptions - but the site we inspected sells nothing and has no checkout, account or pricing page. Those policies also carry an effective date of 2025-10-24, which predates the domain's registration (2026-01-09). Please publish a privacy policy and terms that describe the site you actually operate, with a current date.
+5. Counts. /llms.txt says "8.3K+ curated skills" while the homepage says "8.6K+". Please make the public claim consistent, or note the snapshot date next to it.
+
+We are holding the submission, not rejecting it. Our listings carry honest cons and open questions, and paid relationships never affect scores or placement. If you offer an affiliate or partner program, send those terms separately - they will not change the editorial decision.
+
+Please reply with public URLs wherever possible. We do not need account access, credentials or private documents.
+
+- AIToolsEssentials
+https://aitoolsessentials.com
