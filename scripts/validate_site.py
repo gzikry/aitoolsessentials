@@ -184,6 +184,23 @@ def main():
                         f'{_crel} stale inventory claim "{_m.group(0)}" (catalog is {_catalog_n})'
                     )
 
+    # Subset-claim guard for the free-tier hub. "<N> Free-Tier Picks" is a real subset count
+    # (so the catalog-size rule above deliberately skips it), but it IS derivable, and it had
+    # drifted: the title said "33 Free-Tier Picks" while the same page's body rendered 59 from
+    # `len([t for t in tools if 'free' in t['price'].lower()])`. A number that contradicts
+    # another number on the same page is worse than a stale one, so pin it to the derivation.
+    _free_n = len([t for t in tools if 'free' in str(t.get('price', '')).lower()])
+    for _cf in ROOT.rglob('*.html'):
+        _crel = _cf.relative_to(ROOT)
+        if any(s in _crel.parts for s in _claim_skip) or is_working_rel(_crel):
+            continue
+        for _m in re.finditer(r'\b(\d{2,3})\s+Free-Tier Picks\b', _cf.read_text(errors='replace')):
+            if int(_m.group(1)) != _free_n:
+                errors.append(
+                    f'{_crel} stale free-tier claim "{_m.group(0)}" '
+                    f'(free-tier subset is {_free_n}, catalog is {_catalog_n})'
+                )
+
     # Signature guard. Outbound correspondence closes as AIToolsEssentials only —
     # never under a personal name. Draft/artifact files under the repo root are the
     # durable source a later send is pasted from, so a personal name left in one is a
