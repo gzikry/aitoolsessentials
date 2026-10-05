@@ -109,6 +109,7 @@ gates visibility and payment, not placement. Do not rebuild the links.
 | 6 | Make | direct | 35% rec. 12mo | approved 2026-08-23 |
 | 7 | Nous / Hermes | direct | $15 off referral | approved 2026-09-02 |
 | 8 | Sonaopus | Gumroad | 40% one-time | approved 2026-09-13 |
+| 9 | AIDetector.cx | direct (partnerships@aidetector.cx) | 30% recurring | **in progress 2026-10-03** — vendor approved and asked us to register; account registered + verified and confirmed to them the same day (Sent msgs 190, 191). **Now awaiting THEIR tracked link, cookie duration, payout details and test credits** — next action is theirs, do not re-send. Not yet a listed tool: no review exists, so nothing to wire in `affiliate_programs.json` until the link arrives and a review is published. |
 
 ### Gamma — APPROVED 2026-09-13 / LINK LIVE 2026-09-13
 Program: https://market.partnerstack.com/artificial-intelligence/gammaapp
