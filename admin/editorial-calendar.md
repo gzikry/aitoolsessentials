@@ -82,8 +82,8 @@ how-to items and all six audience guides are now shipped; continue with:
 2. Running a monthly AI cost review: the recurring keep/cut meeting ✅ shipped 2026-09-18
 3. Vendor evaluation questionnaire: the questions to send a tool vendor before buying ✅ shipped 2026-09-25 (workflow, articles/vendor-evaluation-questionnaire.html)
 4. Best AI tools for project managers (audience guide) ✅ shipped 2026-09-25 (articles/best-ai-tools-for-project-managers.html; /best-for/ + stack builder role added)
-5. Best AI tools for customer support teams (audience guide)
-6. Best AI tools for HR and recruiting ops (audience guide — note recruiters guide exists)
+5. Best AI tools for customer support teams (audience guide) ✅ shipped 2026-10-02 (articles/best-ai-tools-for-customer-support.html; /best-for/ + stack builder role added)
+6. Best AI tools for HR and recruiting ops (audience guide) — shipped as best-ai-tools-for-hr-and-people-ops.html 2026-10-02 (function-scoped, not hiring; /best-for/ + stack builder role added). Hiring-side remains best-ai-tools-for-recruiters.html.
 7. How do I know if an AI tool is worth its price? (question-intent)
 8. What should I ask before connecting an AI tool to company data? (question-intent)
 

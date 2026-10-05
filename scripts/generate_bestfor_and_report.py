@@ -115,6 +115,18 @@ ROLES = [
       ("notion-ai", "Briefs, decision logs, and status pages in one written layer"),
       ("chatgpt", "Status drafting and stakeholder rewrites from your own update")],
      "articles/best-ai-tools-for-project-managers.html"),
+    ("customer-support", "Customer support teams", "Reply drafting, help-center upkeep, and queue triage around the help desk you already run, with no implied replacement for your ticketing system.",
+     [("chatgpt", "Reply drafting and macro rewrites from the real ticket thread"),
+      ("notion-ai", "Help-center articles, runbooks, and saved replies in one place"),
+      ("airtable-ai", "Triage and categorisation at queue volume"),
+      ("zapier-ai", "Routing and follow-up records across your existing apps")],
+     "articles/best-ai-tools-for-customer-support.html"),
+    ("hr-people-ops", "HR & people ops", "Policy drafting, onboarding documentation, and survey analysis with a person approving every output, and no implied employment-decision or HRIS role.",
+     [("claude", "Long-document review and structured policy drafts"),
+      ("notion-ai", "Onboarding handbooks, runbooks, and internal FAQs"),
+      ("rows", "Survey and free-text analysis inside a spreadsheet"),
+      ("grammarly", "Tone and clarity on policy, offer, and announcement copy")],
+     "articles/best-ai-tools-for-hr-and-people-ops.html"),
 ]
 
 
