@@ -131,15 +131,18 @@ so they are placed here by **shared infrastructure rather than disclosure**: sam
 Cloudflare MX, plus every page loading a self-hosted Umami analytics script from `umami.bestvid.net`
 (`bestvid.net` is the cluster's one domain on Namecheap's `eforward1-5.registrar-servers.com` MX
 rather than Cloudflare's). State the evidence, not a conclusion: ask each vendor whether it is
-related, rather than asserting it is. Ten of the eleven submitted through `/submit-tool.html`.
+related, rather than asserting it is. Seven of the eleven have a submission on file
+(aiagentskills.net, aitextcleaner.pro, adhdreading.org, facialharmonyai.com, aimangatranslator.app,
+digibouquetai.com, wan3video.art); seedaud.io, productshotai.app and m3u8-player.net have no
+submission, and bestvid.net is the analytics host the instrumentation evidence rests on.
 
 `tianwei3333@agent.qq.com` (the ADHD Reading submission contact) is a QQ/Chinese mailbox, not the
 operator's domain identity — when a cluster domain later presents a `*@agent.qq.com` contact,
 treat it as the same operator family rather than a new submitter. It has now appeared on **eight**
 submissions: adhdreading.org (2026-10-05), facialharmonyai.com (2026-10-06 06:52 UTC),
 aimangatranslator.app (12:14), digibouquetai.com (12:27) and wan3video.art (12:47) — a 33-minute
-burst on 2026-10-06. Seven of the eight members submitted through
-`/submit-tool.html` (aiagentskills.net, aitextcleaner.pro on 2026-10-05; adhdreading.org later the
+burst on 2026-10-06. Seven of the eleven cluster members have a submission on file
+(aiagentskills.net, aitextcleaner.pro on 2026-10-05; adhdreading.org later the
 same day; facialharmonyai.com and the three 2026-10-06 sites). Verification requests on file: 197
 (aiagentskills.net), 199 (aitextcleaner.pro), 201 (adhdreading.org), 203 (facialharmonyai.com),
 205 (aimangatranslator.app), 207 (digibouquetai.com), 209 (wan3video.art).
