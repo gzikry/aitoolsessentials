@@ -1,0 +1,53 @@
+{
+ "today": "2026-10-06",
+ "sitemap_http": "200",
+ "bytes": 9585351,
+ "count": 39872,
+ "newest": "2026-10-06T03:37:51.000Z",
+ "mark": "2026-10-05T03:40:34.000Z",
+ "window": 113,
+ "ai": 10,
+ "ai_strict": 1,
+ "spend_any": 9,
+ "ai_strict_false_positives": 0,
+ "feed_count": 50,
+ "feed_http": "200",
+ "feed_bytes": 170735,
+ "feed_overlap_with_window": 50
+}
+--- AI-Token window slugs ---
+  2026-10-05T23:12:39.171Z  plaintiffs-attorneys-and-legal-scholars-ai-deepfake-liability
+  2026-10-05T22:36:36.000Z  emergency-managers-ai-tools-for-funding-and-staffing-shortfalls
+  2026-10-05T21:14:55.245Z  ai-infrastructure-experts-china-vs-us-datacenter-capacity
+  2026-10-05T20:03:33.000Z  coweta-county-artists-and-creatives-data-centers-and-ai-infrastructure
+  2026-10-05T15:15:45.430Z  employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks
+  2026-10-05T14:04:17.853Z  ai-liability-insurers-and-legal-experts-procurement-and-implementation
+  2026-10-05T12:54:35.359Z  uk-cybersecurity-hiring-managers-state-of-hiring-2026-and-ai-impact
+  2026-10-05T11:20:47.977Z  ai-emotional-support-users-chatbot-therapy-and-journaling
+  2026-10-05T10:23:33.825Z  mortgage-adviser-using-ai-efficiency-and-client-outcomes-video-series
+  2026-10-05T06:25:24.487Z  founders-and-cxos-in-automotive-ai-evs-autonomy-thought-leadership
+--- AI+spend (with matched tokens) ---
+  2026-10-05T14:04:17.853Z  ai-liability-insurers-and-legal-experts-procurement-and-implementation   tokens=['procurement']
+--- strict hits judged false positives ---
+--- spend-any window slugs ---
+  student-loan-borrowers-repayment-plan-confusion-and-servicer-issues   2026-10-05T18:18:26.000Z
+  buyers-and-procurement-leaders-what-you-need-before-vendor-call   2026-10-05T17:14:00.000Z
+  ai-liability-insurers-and-legal-experts-procurement-and-implementation   2026-10-05T14:04:17.853Z
+  artist-what-we-spend-podcast-feature   2026-10-05T13:44:12.000Z
+  connecticut-residents-on-heating-oil-winter-cost-impact   2026-10-05T13:36:36.000Z
+  people-using-debt-snowball-personal-debt-payoff-stories   2026-10-05T13:04:15.465Z
+  child-safety-expert-halloween-costume-hazards-this-week   2026-10-05T11:00:17.000Z
+  pensioners-who-took-taxfree-lump-sum-budget-worries   2026-10-05T08:04:38.000Z
+  parents-sacrificing-to-afford-school-fees-financial-strain   2026-10-05T08:01:16.000Z
+--- platforms ---
+   200   100825 Sourcee (sourcee.app)                    Sourcee - We find the Journo Requests, You get Featured  ckpt=False
+   200   170735 Sourcee AI topic feed                    Ai | Journo Requests  ckpt=False
+   429    31208 HARO (helpareporter.com)                 Vercel Security Checkpoint  ckpt=True
+   429    31209 Connectively (connectively.us)           Vercel Security Checkpoint  ckpt=True
+   404   140415 Source of Sources (sourceofsources.com)  Page Not Found - Source of Sources  ckpt=False
+   404     3266 Qwoted (qwoted.com)                      Error: The page you were looking for doesn't exist (404) | Q  ckpt=False
+   200    11486 MentionMatch (mentionmatch.com)          MentionMatch - Connect B2B Writers with Expert Sources  ckpt=False
+   401       74 Medialyst MCP (medialyst.ai/api/mcp)       ckpt=False
+   200   148267 ResponseSource (responsesource.com)      ResponseSource - Connecting the media  ckpt=False
+--- feed ---
+  50 slugs; overlap with window 50

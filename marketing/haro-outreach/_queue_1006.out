@@ -1,0 +1,42 @@
+unique requests: 84
+live (not stale, not pitched): 37
+SENDABLE (live + route + relevance above low): 1
+of those, dropped off the newest digest: 0
+wrote marketing/haro-outreach/pitch-queue.md
+  SEND    1d [medium   ] https://www.sourcee.app/journo-request/employees-blocked-from-ai-o
+  (not sendable)    0d [low      ] https://www.sourcee.app/journo-request/ai-infrastructure-e
+  (not sendable)    0d [low      ] https://www.sourcee.app/journo-request/plaintiffs-attorney
+  (not sendable)    0d [low      ] https://www.sourcee.app/journo-request/emergency-managers-
+  (not sendable)    0d [low      ] https://www.sourcee.app/journo-request/coweta-county-artis
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/ai-liability-insure
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/uk-cybersecurity-hi
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/ai-emotional-suppor
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/mortgage-adviser-us
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/founders-and-cxos-i
+  (not sendable)    2d [low      ] https://www.sourcee.app/journo-request/video-game-develope
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/lawyers-and-tech-et
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/mls-executives-risk
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/real-estate-agents-
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/advertising-tech-an
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/storytellers-and-br
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/newsletter-editors-
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/scottish-teachers-a
+  (not sendable)    4d [low-medium] https://www.sourcee.app/journo-request/law-firm-lawyers-co
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/hr-leaders-company-
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/fea-engineers-using
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/parents-ai-acting-a
+  (not sendable)    5d [low-medium] https://www.sourcee.app/journo-request/employees-conflicte
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/fb-marketplace-sell
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/k8-and-hs-teachers-
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/ai-summit-barcelona
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/ai-glasses-owners-u
+  (not sendable)    6d [low      ] https://www.sourcee.app/journo-request/cybersecurity-exper
+  (not sendable)    6d [low      ] https://www.sourcee.app/journo-request/chatbot-users-exper
+  (not sendable)    6d [low      ] https://www.sourcee.app/journo-request/us-ai-security-expe
+  (not sendable)    6d [low      ] https://www.sourcee.app/journo-request/real-estate-agents-
+  (not sendable)    7d [low-medium] https://www.sourcee.app/journo-request/insurance-agents-ai
+  (not sendable)    7d [low      ] https://www.sourcee.app/journo-request/us-emergency-physic
+  (not sendable)    7d [low      ] https://www.sourcee.app/journo-request/job-seekers-and-rec
+  (not sendable)    8d [low      ] https://www.sourcee.app/journo-request/data-center-operato
+  (not sendable)    8d [low      ] https://www.sourcee.app/journo-request/b2b-marketing-leade
+  (not sendable)    8d [low      ] https://www.sourcee.app/journo-request/ai-practitioners-an

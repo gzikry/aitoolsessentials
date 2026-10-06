@@ -392,8 +392,16 @@ def _headline_figures() -> str:
 
 
 DRAFTS = {
+    "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks":
+        f"**SENDABLE — draft ready and UNSENT — `{_newest_drafts()}` §1. Now "
+        f"{_sent_word(_age_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks'))} old.** "
+        "Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ (verified HTTP 200 on "
+        "2026-10-06 with the title 'Christopher Mims - The Wall Street Journal | LinkedIn'; the "
+        "request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and "
+        "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). This is the ONLY row "
+        "in this queue that is both above the tangential band and route-resolved. George's lane.",
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        f"**Draft ready and UNSENT — `{_newest_drafts()}` §1. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
+        f"**Draft ready and UNSENT — `{_newest_drafts()}` §2. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
         f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
         f"{_carried_runs('fulltime-employees-shadow-ai-use-and-paying-outofpocket')} draft files.** Route: simon.chandler@raconteur.net, "
         "re-resolved off the live /contributors/simon-chandler page this run (HTTP 200, 154,819 bytes, "
@@ -405,7 +413,7 @@ DRAFTS = {
         "page is still HTTP 200 and the address still resolves, so a late send is still possible — "
         "what was lost is the ideal window, not the pitch.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        f"**Draft ready and UNSENT — `{_newest_drafts()}` §2. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
+        f"**Draft ready and UNSENT — `{_newest_drafts()}` §3. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
         f"old, crossed the 10-day line on 2026-09-28 unpitched. Carried in "
         f"{_carried_runs('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech')} draft files.** Route: holly.shackleton@artichokehq.com "
         "(re-read off specialityfoodmagazine.com/contact this run, HTTP 200, 59,488 bytes, alongside "
@@ -455,41 +463,76 @@ def _figures_now() -> tuple[str, str, str, str]:
             f"{statistics.median(paid.values()):.2f}")
 
 
-def _draft_index(live_count: int) -> str:
+def _unsent_draft_files() -> int:
+    """How many draft files exist on disk, measured — not asserted.
+
+    The prose said "four drafts are already written and none has been sent" as typed text. On
+    2026-10-06 there were 17 draft files on disk and the count moved every day, so it was wrong
+    by an order of magnitude inside a file rebuilt that morning. Same defect class as the
+    hardcoded draft filename, live-row count and figures fixed on earlier runs.
+    """
+    return len(list(OUT.glob("pitch-drafts-*.md")))
+
+
+def _draft_index(live_count: int, sendable_count: int) -> str:
     """The carried-drafts block, with every date-sensitive claim re-derived at build time.
 
-    Three consecutive runs have now been bitten by typed prose inside a file rebuilt today: a
+    Four consecutive runs have now been bitten by typed prose inside a file rebuilt today: a
     hardcoded draft filename (fixed 2026-09-29), a hardcoded crossing date and live-row count
-    (fixed 2026-09-30/2026-10-01), and a hardcoded "the figures moved today" block plus byte-count
-    route notes (this run). The block is now a function of the run's own measurements: the live-row
-    count comes from the queue render, the figures from our data files, and the range from
-    data/monthly_annual_pairs.json. Anything that cannot be re-derived prints '?' rather than a
-    number nobody measured.
+    (fixed 2026-09-30/2026-10-01), a hardcoded "the figures moved today" block plus byte-count
+    route notes (2026-10-05), and — this run — a hardcoded "ZERO SENDABLE" paragraph that flatly
+    contradicted the 1 sendable row the same build had just measured. The block is now a function
+    of the run's own numbers: the sendable and live counts come from the queue render, the draft
+    file count and section pointers from the files on disk, and the figures from our data files.
+    Anything that cannot be re-derived prints '?' rather than a number nobody measured.
     """
     n_tools, n_paid, n_25, med = _figures_now()
     lo, hi, mid, n = _pairs_now()
+    snap_updated = "?"
+    try:
+        snap_updated = json.loads(
+            (SITE_ROOT / "data" / "pricing_snapshots.json").read_text()).get("updated", "?")
+    except (OSError, json.JSONDecodeError):
+        pass
+    if sendable_count:
+        # A non-zero sendable count is the state this monitor spent eleven runs failing to reach.
+        # It must never be reported through prose that says otherwise, so the two states carry
+        # different text rather than one paragraph with a number spliced in.
+        state = (
+            f"**THE QUEUE IS AT {sendable_count} SENDABLE — THE FIRST TIME THIS MONITOR HAS "
+            f"EVER PRODUCED ONE.** Every prior build reported 0, and twice that 0 was a genuine "
+            f"measurement after a defect had been fixed (the 2026-09-29 chrome leak into "
+            f"`published_links`, the 2026-10-01 Google Form read as a link route). The row is "
+            f"declared sendable on two facts evidenced separately: a relevance above the "
+            f"tangential band, and a reply route verified by fetching a page today rather than by "
+            f"trusting a digest field. Both are named in the row. The live unpitched set is "
+            f"{live_count} rows."
+        )
+    else:
+        state = (
+            f"**THE QUEUE IS AT ZERO SENDABLE, AND TODAY THAT IS THE TRUE NUMBER RATHER THAN A "
+            f"CODE ARTEFACT.** Repeated builds have each had to be corrected for the same defect "
+            f"class — a field that records something adjacent to a reply route being read as one. "
+            f"On 2026-09-29 the refresh script had dropped Sourcee's two own social links from its "
+            f"chrome filter, so a page's own chrome landed in one row's `published_links`. On "
+            f"2026-10-01 the first build read the employees-conflicted-about-AI-use row as "
+            f"sendable because its body embeds a docs.google.com casting form, which `_sendable()` "
+            f"accepted as a link route. Both are fixed: a `published_links` entry now counts as a "
+            f"route only when it is a booking/contact link. Today the live unpitched set is "
+            f"{live_count} rows (measured at build time from the merged digests, not typed), and "
+            f"none has both a relevance above the tangential band and a usable route."
+        )
     return (
         "## Drafts that exist and were never sent\n\n"
-        "Read this before clearing the queue: four drafts are already written and none has been sent. "
-        "A written draft is not progress — the send is.\n\n"
-        f"**THE QUEUE IS AT ZERO SENDABLE, AND TODAY THAT IS THE TRUE NUMBER RATHER THAN A CODE "
-        f"ARTEFACT.** Repeated builds have each had to be corrected for the same defect class — a "
-        f"field that records something adjacent to a reply route being read as one. On 2026-09-29 the "
-        f"refresh script had dropped Sourcee's two own social links from its chrome filter, so a "
-        f"page's own chrome landed in one row's `published_links`. On 2026-10-01 the first build read "
-        f"the employees-conflicted-about-AI-use row as sendable because its body embeds a "
-        f"docs.google.com casting form, which `_sendable()` accepted as a link route. Both are fixed: "
-        f"a `published_links` entry now counts as a route only when it is a booking/contact link. "
-        f"Today the live unpitched set is {live_count} rows (measured at build time from the merged "
-        f"digests, not typed), all relevance `low`/`low-medium` with no usable route, so there is "
-        f"genuinely nothing a person can send from the live queue. Nothing was sent this run either.\n\n"
-        f"**Today's drafts are `{_newest_drafts()}` (§1 Raconteur shadow AI, §2 Speciality Food, both "
-        f"paste-ready, both crossed-but-still-sendable).** The headline figures are re-derived every "
-        f"run: {n_paid} of {n_tools} tools publish a monthly price, {n_25} of those at or under "
-        f"$25/month, median ${med} (snapshots `updated: "
-        f"{json.loads((SITE_ROOT / 'data' / 'pricing_snapshots.json').read_text()).get('updated', '?')}`"
-        f" if the file is readable). Superseded sets still sitting in older dated drafts "
-        f"(40/31/$16.50 and earlier) must not be reused.\n\n"
+        f"Read this before clearing the queue: {_unsent_draft_files()} draft files exist on disk "
+        "and not one of the pitches in them has been sent. A written draft is not progress — the "
+        "send is.\n\n"
+        + state + "\n\n"
+        f"**Today's draft file is `{_newest_drafts()}` (derived from disk, not typed).** The "
+        f"headline figures are re-derived every run: {n_paid} of {n_tools} tools publish a monthly "
+        f"price, {n_25} of those at or under $25/month, median ${med} (snapshots `updated: "
+        f"{snap_updated}`). Superseded sets still sitting in older dated drafts "
+        "(40/31/$16.50 and earlier) must not be reused.\n\n"
         f"**The pair range is `{lo}x to {hi}x, median {mid}x` over {n} tiers, and it held today.** "
         "History, because every superseded value is still sitting in dated draft files and must not "
         "be reused: the range was first published as `1.21x to 2.53x, median 1.33x` (2026-09-18, sent "
@@ -590,7 +633,7 @@ def render(queue: list[dict], ledger: dict) -> str:
         "site (a byline page or an editorial contact page), which is now the strongest route class "
         "in this queue.",
         "",
-        _draft_index(len(fresh)),
+        _draft_index(len(fresh), len(sendable)),
         "",
     ]
 

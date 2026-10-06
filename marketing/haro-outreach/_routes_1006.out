@@ -1,0 +1,36 @@
+====================================================================================================
+ZDNET lnkd.in route (Ritoban Mukherjee Qwoted post)
+  https://lnkd.in/dVu9JK4C
+  HTTP 200 | 5322 bytes | effective https://lnkd.in/dVu9JK4C
+  title: LinkedIn
+  emails: []
+====================================================================================================
+Raconteur /contributors/simon-chandler
+  https://www.raconteur.net/contributors/simon-chandler
+  HTTP 200 | 154819 bytes | effective https://www.raconteur.net/contributors/simon-chandler
+  title: Simon Chandler, Author at Raconteur
+  emails: []
+====================================================================================================
+Raconteur control /contributors/tom-dennis
+  https://www.raconteur.net/contributors/tom-dennis
+  HTTP 200 | 154030 bytes | effective https://www.raconteur.net/contributors/tom-dennis
+  title: Tom Dennis, Author at Raconteur
+  emails: []
+====================================================================================================
+Raconteur legacy /author/simon-chandler/
+  https://www.raconteur.net/author/simon-chandler/
+  HTTP 404 | 139404 bytes | effective https://www.raconteur.net/author/simon-chandler/
+  title: Page not found - Raconteur
+  emails: []
+====================================================================================================
+Speciality Food /contact
+  https://www.specialityfoodmagazine.com/contact
+  HTTP 200 | 59488 bytes | effective https://www.specialityfoodmagazine.com/contact
+  title: Contact Us | Speciality Food Magazine
+  emails: ['charlotte.smith-jarvis@artichokehq.com', 'holly.shackleton@artichokehq.com', 'jessica.brett@artichokehq.com', 'louise.barnes@artichokehq.com', 'sam.reubin@artichokehq.com', 'subscriptions@artichokehq.com']
+====================================================================================================
+Grist author page /staff/jake-bittle
+  https://grist.org/staff/jake-bittle/
+  HTTP 404 | 154713 bytes | effective https://grist.org/staff/jake-bittle/
+  title: 404 Not Found | Grist
+  emails: []

@@ -1,0 +1,40 @@
+====================================================================================================
+Muck Rack - Christopher Mims
+  https://muckrack.com/christopher-mims
+  HTTP 403 | 5708 bytes | effective https://muckrack.com/christopher-mims
+  title: Just a moment...
+  emails: []
+====================================================================================================
+WSJ author page /news/author/christopher-mims
+  https://www.wsj.com/news/author/christopher-mims
+  HTTP 401 | 768 bytes | effective https://www.wsj.com/news/author/christopher-mims
+  title: wsj.com
+  emails: []
+====================================================================================================
+LinkedIn handle (may 999)
+  https://www.linkedin.com/in/christopher-mims-club/
+  HTTP 200 | 630514 bytes | effective https://www.linkedin.com/in/christopher-mims-club
+  title: Christopher Mims - The Wall Street Journal | LinkedIn
+  emails: []
+  mims-links: ['https://www.linkedin.com/in/christopher-mims-club', 'https://www.linkedin.com/in/christopher-mims-club', 'https://www.linkedin.com/in/christopher-mims-club', 'https://www.linkedin.com/in/christopher-mims-club', 'https://www.linkedin.com/in/christopher-mims-club', 'https://www.linkedin.com/posts/christopher-mims-club_forget-the-ai-apocalypsethe-real-threats-activity-7506033185307357184-IFO5']
+====================================================================================================
+WSJ contact /help/contact-us
+  https://www.wsj.com/help/contact-us
+  HTTP 403 | 460343 bytes | effective https://www.wsj.com/help/contact-us
+  title: 
+  emails: ['support@wsj.com']
+  mims-links: ['https://www.wsj.com/news/author/christopher-mims', 'https://www.wsj.com/news/author/christopher-mims', 'https://www.wsj.com/news/author/christopher-mims', 'https://www.wsj.com/news/author/christopher-mims', 'https://www.wsj.com/news/author/christopher-mims', 'https://www.wsj.com/news/author/christopher-mims']
+Traceback (most recent call last):
+  File "/Users/georgezikry/aitoolessentials/site/marketing/haro-outreach/_mims_1006.py", line 28, in <module>
+    code, eff, raw = curl(url)
+  File "/Users/georgezikry/aitoolessentials/site/marketing/haro-outreach/_mims_1006.py", line 19, in curl
+    r = subprocess.run(["curl", "-sL", "-m", str(timeout), "-A", UA,
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 2017, in _communicate
+    stdout = self._translate_newlines(stdout,
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1011, in _translate_newlines
+    data = data.decode(encoding, errors)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
