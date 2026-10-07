@@ -187,7 +187,12 @@ def collect() -> list[dict]:
                 ("suggested_pitch_template", "angle", True),
             ):
                 v = (op.get(src) or "").strip()
-                if v and (longest is False or len(v) > len(rec[dst])):
+                # For the "longest text" fields, `>` kept the OLDER digest's value whenever two
+                # digests carried equal-length text — so a row's `angle` could point at a superseded
+                # draft filename even though the newest digest had already corrected it. Digests are
+                # iterated oldest→newest, so `>=` lets the newest win on a tie while a genuinely
+                # longer older value still wins.
+                if v and (longest is False or len(v) >= len(rec[dst])):
                     rec[dst] = v
         digest_urls[day] = with_url
     # A digest carrying zero URLs holds no membership information — the 2026-09-16 digest
@@ -391,22 +396,60 @@ def _headline_figures() -> str:
             f"over {pairs.get('n')} tiers (built {pairs.get('built')})")
 
 
+def _latest_route_checks() -> dict:
+    """The newest marketing/haro-outreach/route-checks-*.json, read for route byte counts and titles.
+
+    The DRAFTS prose used to carry hand-typed route evidence from the 2026-10-06 run ("HTTP 200,
+    154,819 bytes", "verified HTTP 200 on 2026-10-06") inside a file rebuilt on a later day — the
+    same defect class as the hardcoded draft filename and figures. The file is written by the run's
+    `_routes_<MMDD>.py` probe and named by date, so the pointer cannot be older than the newest
+    probe on disk. Returns {} rather than inventing a value when no probe exists.
+    """
+    files = sorted(OUT.glob("route-checks-*.json"))
+    if not files:
+        return {}
+    try:
+        return json.loads(files[-1].read_text())
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def _route_evidence(key: str, label: str) -> str:
+    """One route's verified evidence, phrased for the DRAFTS prose, from the newest probe file."""
+    checks = _latest_route_checks()
+    r = (checks.get("routes") or {}).get(key) or {}
+    if not r:
+        return f"{label} (no route probe on disk this run — verify before citing)"
+    when = checks.get("checked", "?")
+    bits = f"HTTP {r.get('http')}, {r.get('bytes'):,} bytes" if isinstance(r.get("bytes"), int) \
+        else f"HTTP {r.get('http')}"
+    out = f"{label} — route-checks probe {when}: {bits}"
+    if r.get("triple"):
+        out += f", data-part triple {r['triple']}"
+    if r.get("title"):
+        out += f", title '{r['title']}'"
+    return out
+
+
+def _route_checked_date() -> str:
+    return (_latest_route_checks().get("checked") or "?")
+
+
 DRAFTS = {
     "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks":
         f"**SENDABLE — draft ready and UNSENT — `{_newest_drafts()}` §1. Now "
         f"{_sent_word(_age_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks'))} old.** "
-        "Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ (verified HTTP 200 on "
-        "2026-10-06 with the title 'Christopher Mims - The Wall Street Journal | LinkedIn'; the "
-        "request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and "
+        "Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ ("
+        f"{_route_evidence('linkedin.com/in/christopher-mims-club/', 'LinkedIn byline page')}; "
+        "the request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and "
         "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). This is the ONLY row "
         "in this queue that is both above the tangential band and route-resolved. George's lane.",
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
         f"**Draft ready and UNSENT — `{_newest_drafts()}` §2. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
         f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
         f"{_carried_runs('fulltime-employees-shadow-ai-use-and-paying-outofpocket')} draft files.** Route: simon.chandler@raconteur.net, "
-        "re-resolved off the live /contributors/simon-chandler page this run (HTTP 200, 154,819 bytes, "
-        "data-part1/2/3 triple unchanged at simon.chandler + raconteur + net, control author "
-        "/contributors/tom-dennis carries tom.dennis/raconteur/net); the older "
+        f"re-resolved off the live {_route_evidence('raconteur.net/contributors/simon-chandler', '/contributors/simon-chandler page')} "
+        f"(control {_route_evidence('raconteur.net/contributors/tom-dennis', '/contributors/tom-dennis')}); the older "
         "/author/simon-chandler/ URL still 404s and must not be cited. Figures re-derived at build "
         f"time ({_headline_figures()}). It is "
         "the only high-relevance request this monitor has ever produced with a resolved route; the "
@@ -416,8 +459,8 @@ DRAFTS = {
         f"**Draft ready and UNSENT — `{_newest_drafts()}` §3. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
         f"old, crossed the 10-day line on 2026-09-28 unpitched. Carried in "
         f"{_carried_runs('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech')} draft files.** Route: holly.shackleton@artichokehq.com "
-        "(re-read off specialityfoodmagazine.com/contact this run, HTTP 200, 59,488 bytes, alongside "
-        "five other named staff addresses). Standing constraint is stated in the "
+        f"({_route_evidence('specialityfoodmagazine.com/contact', 're-read off specialityfoodmagazine.com/contact')}, "
+        "alongside five other named staff addresses). Standing constraint is stated in the "
         "draft's first line: we are not a food retailer. Its October issue window has closed, so treat "
         "this as a send-or-skip call and record the outcome in `pitch-ledger.json` rather than "
         f"carrying it a {_carried_runs('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech') + 1}th day.",

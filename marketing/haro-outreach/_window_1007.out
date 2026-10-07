@@ -1,0 +1,49 @@
+{
+ "today": "2026-10-07",
+ "sitemap_http": "200",
+ "bytes": 9611797,
+ "count": 39981,
+ "newest": "2026-10-07T03:00:43.149Z",
+ "mark": "2026-10-06T03:37:51.000Z",
+ "window": 109,
+ "ai": 10,
+ "ai_strict": 0,
+ "spend_any": 6,
+ "ai_strict_false_positives": 0,
+ "feed_count": 50,
+ "feed_http": "200",
+ "feed_bytes": 188220,
+ "feed_overlap_with_window": 50
+}
+--- AI-Token window slugs ---
+  2026-10-07T03:00:43.149Z  aps-hr-leaders-ai-skills-training-and-workforce-planning
+  2026-10-07T00:39:34.711Z  scrum-masters-daytoday-and-career-pivots-and-ai-impact
+  2026-10-06T23:51:01.000Z  real-estate-agents-replacing-pdf-property-brochure
+  2026-10-06T22:47:52.955Z  anz-marketers-ai-and-martech-innovation-spotlight
+  2026-10-06T15:47:30.000Z  swiss-ai-companion-users-emotional-bonds-and-daily-life
+  2026-10-06T15:35:50.000Z  ai-data-labelers-in-germany-positive-and-negative-experiences
+  2026-10-06T14:05:21.000Z  ai-data-annotators-and-labellers-experience-with-ai-training-data
+  2026-10-06T12:23:15.685Z  uk-companies-implementing-ai-how-automation-transforms-workdays
+  2026-10-06T07:46:52.000Z  ai-chatbot-users-and-therapists-selfdiagnosing-mental-health-stories
+  2026-10-06T07:30:03.581Z  academics-social-media-and-ai-impact-on-womens-identity-and-selfesteem
+--- AI+spend (with matched tokens) ---
+--- strict hits judged false positives ---
+--- spend-any window slugs ---
+  oneflight-international-customers-prepaid-flights-and-cancellations   2026-10-06T21:09:24.000Z
+  lanterns-fans-18-50-paid-remote-casting-call   2026-10-06T16:26:05.000Z
+  houston-hispanic-families-rising-cost-of-living-impact   2026-10-06T15:32:52.000Z
+  crown-heights-and-flatbush-curly-and-coily-residents-hair-care-costs   2026-10-06T15:19:50.000Z
+  people-living-alone-considering-house-share-due-to-rising-costs   2026-10-06T10:15:18.000Z
+  gen-z-vs-millennials-housing-costs-and-retirement-savings   2026-10-06T09:09:41.000Z
+--- platforms ---
+   200   100825 Sourcee (sourcee.app)                    Sourcee - We find the Journo Requests, You get Featured  ckpt=False
+   200   188220 Sourcee AI topic feed                    Ai | Journo Requests  ckpt=False
+   429    31198 HARO (helpareporter.com)                 Vercel Security Checkpoint  ckpt=True
+   429    31203 Connectively (connectively.us)           Vercel Security Checkpoint  ckpt=True
+   404   140415 Source of Sources (sourceofsources.com)  Page Not Found - Source of Sources  ckpt=False
+   404     3266 Qwoted (qwoted.com)                      Error: The page you were looking for doesn't exist (404) | Q  ckpt=False
+   200    11486 MentionMatch (mentionmatch.com)          MentionMatch - Connect B2B Writers with Expert Sources  ckpt=False
+   401       74 Medialyst MCP (medialyst.ai/api/mcp)       ckpt=False
+   200   147630 ResponseSource (responsesource.com)      ResponseSource - Connecting the media  ckpt=False
+--- feed ---
+  50 slugs; overlap with window 50

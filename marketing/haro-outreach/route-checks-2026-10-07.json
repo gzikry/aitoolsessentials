@@ -1,0 +1,27 @@
+{
+ "checked": "2026-10-07",
+ "routes": {
+  "linkedin.com/in/christopher-mims-club/": {
+   "http": "200",
+   "bytes": 603318,
+   "title": "Christopher Mims - The Wall Street Journal | LinkedIn"
+  },
+  "raconteur.net/contributors/simon-chandler": {
+   "http": "200",
+   "bytes": 154819,
+   "title": "Simon Chandler, Author at Raconteur",
+   "triple": "simon.chandler + raconteur + net"
+  },
+  "raconteur.net/contributors/tom-dennis": {
+   "http": "200",
+   "bytes": 154030,
+   "title": "Tom Dennis, Author at Raconteur",
+   "triple": "tom.dennis + raconteur + net"
+  },
+  "specialityfoodmagazine.com/contact": {
+   "http": "200",
+   "bytes": 59488,
+   "title": "Contact Us | Speciality Food Magazine"
+  }
+ }
+}
