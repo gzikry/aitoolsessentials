@@ -14,7 +14,7 @@ sent date, and do not publish a held tool until the vendor answers the outstandi
 | BrickGPT | brickgpt.online | 2026-08-31 | charliiai2024@gmail.com | Awaiting reply — name-squat risk (CMU ICCV 2025 BrickGPT), no legal pages |
 | Zirvox | zirvoxinc@gmail.com | 2026-09-01 | zirvoxinc@gmail.com | Awaiting reply |
 | FreeGen | freegen.ai | 2026-09-07 | justacatbot@proton.me | Awaiting reply — operator identity, HF account `cgb` link, controller/jurisdiction, name collision |
-| Image Describer | imagedescriber.dev | 2026-09-08 | support@imagedescriber.dev | Awaiting reply. **Re-submitted 2026-09-22 15:29 UTC** (identical payload — same name/url/category/summary/contact; `pricing_url` and `docs_url` still blank), first submission 2026-09-08 05:04 UTC. Our 2026-09-07 request was accepted, not bounced (no DSN for this recipient in any folder). Re-checked live 2026-09-22: privacy/ToS now carry retention (temporary server uploads removed after processing, one-day cleanup fallback; local history 20 records/7 days; payment-recovery images 30 minutes), an explicit "we do not train public models on user-uploaded images", and output ownership. **Still open: no legal entity, controller, or jurisdiction named anywhere** (ToS §11 reads "governed by applicable laws" with no chosen law), **no subprocessor named at all** (the AWS/Redis/Crisp hits were substring false positives on "laws"/"credits"), and the four paid tiers the site actually sells were never disclosed. |
+| Image Describer | imagedescriber.dev | 2026-09-08 | support@imagedescriber.dev | Awaiting reply. **Re-submitted 2026-09-22 15:29 UTC** and again **2026-10-07 13:34 UTC** (both payloads identical to the first — same name/url/category/`summary`/contact; `pricing_url` = `/pricing` supplied on 2026-10-07, `docs_url` still blank), first submission 2026-09-08 05:04 UTC. Our 2026-09-07 request was accepted, not bounced — the mailbox holds **no DSN for `imagedescriber.dev` or `support@imagedescriber.dev` in any folder**. (The `[Gmail]/Spam` and `[Gmail]/Trash` DSNs are for the Sept-9 outreach batch — `aigearbase.com`, `llmversus.com`, `aitoolswise.com`; the 2026-09-11 hard bounce for `support@videoupscaler.video` is `[Gmail]/All Mail` msg 111, which sits directly beside this row and is easy to mis-attribute. Recipient names live in the DSN **body** — `himalaya message read` names it in line one.) Re-checked live 2026-09-22: privacy/ToS now carry retention (temporary server uploads removed after processing, one-day cleanup fallback; local history 20 records/7 days; payment-recovery images 30 minutes), an explicit "we do not train public models on user-uploaded images", and output ownership. **Re-checked live again 2026-10-07 — the pricing blocker is now resolved from the vendor's own pages:** `/pricing` publishes the full paid matrix the first pass recorded as missing (one-time packs 100 cr $4.99 / 300 cr $9.99 / 800 cr $19.99 / 1,500 cr $29.99 with a per-credit ladder; monthly subscription $29.99/mo for 600 or 3,000 credits; API one-time $99.99 / 11,000 cr and $199.99 / 25,000 cr), and the refund terms are now findable at `/payments-refund-policy` (200, dated 2026-01-28) — note the site's own `/contact` and `/data-deletion` links both 404, so the refund URL is not the `/refund-policy` this ledger first probed. **Still open: (1) no legal entity, controller or jurisdiction named anywhere** — ToS §11 still reads "governed by applicable laws" and no company address appears even though the site is a **Next.js multi-product operator** whose own footer publishes five siblings (see the cluster note below); (2) **no subprocessor named at all** — privacy §4 names only "trusted third-party providers for cloud infrastructure, AI model execution, basic analytics" (the AWS/Redis/Crisp hits were substring false positives on "laws"/"credits"); (3) an internal contradiction the 2026-10-07 pass surfaced — **ToS §4 says "Free / Standard plans: data is automatically deleted within 24 hours" while privacy says temporary uploads are removed after processing with a one-day cleanup fallback and local history is kept 7 days / up to 20 records**; and the ToS names **no such plan as "Standard"** exists on `/pricing` (the site sells Free + 100/300/800/1,500-credit packs + a $29.99 subscription + API). *(2026-10-07 payload arrived after the ledger's own 2026-10-06 20:51 PDT commit, so this is new inbound mail, not a parallel-run duplicate — verified against `git log -1 --format=%ad -- admin/held-submissions.md`.)* Do not re-send. |
 | Sharpniq / Unblur Image | unblurimage.me | 2026-09-08 | support@unblurimage.me | Awaiting reply — submission said $19.90/month, site sells one-time packs. **Re-submitted 2026-09-22 15:29 UTC** (identical payload), first submission 2026-09-08 05:05 UTC. Prior request accepted, not bounced. Re-checked live 2026-09-22: the credit-model contradiction is now resolved and consistent across pricing, ToS and FAQ — Starter $4.99/100 credits (10 images), Plus $9.99/220 credits (22 images), 10 credits per Cloud Unblur result, **no subscription anywhere**, 10 free new-account credits. Retention stated (originals and outputs scheduled for deletion after 24 hours), processors named (Fal.ai, Stripe; Creem only if shown at checkout), and a brand `/about` page explains Sharpniq = Unblur Image + Image Clarity Checker. **Still open: no legal entity, controller, or jurisdiction named**, and training use is unstated. |
 | Vedic Astrology Chart | vedicastrologychart.net | 2026-09-08 | support@vedicastrologychart.net | Awaiting reply |
 | Video Upscaler | videoupscaler.video | 2026-09-08 | support@videoupscaler.video | **Vendor contact broken** — hard bounce `550 5.1.1 address does not exist` on 2026-09-11; the address is still printed in their own privacy/terms pages. Domain has MX. Unpublishable and unreachable until they fix it. |
@@ -76,27 +76,56 @@ commercial use elsewhere — `aidetector.com` (**registered 2017-09-21**, Google
 re-send.** *(Mail auth: DKIM pass on `gappssmtp.com`, but `spf=none` and `dmarc=fail`; sufficient for
 editorial correspondence, insufficient provenance for any future change of payment instructions.)*
 
-## Operator template cluster: 5 sites, no entity named (verified 2026-09-22)
+## Operator template cluster: 6 sites, no entity named (verified 2026-10-07)
 
 A second cluster — separate from the `s07811005141@gmail.com` one — is proven by the sites' **own public
-cross-links**, not by inference. Every member footer links to the other three, so the relationship is
-published by the operator rather than deduced:
+cross-links**, not by inference. The three `pedro`/`sunny` sites each link to the other two *and* to the
+`alan`/`beth` incumbent, so the relationship is published by the operator rather than deduced:
 
 | Domain | MX | NS pair | Footer cross-links to |
 |---|---|---|---|
 | blurbackground.vip | Cloudflare | `alan`/`beth` | imagedescriber.dev, vedicastrologychart.net, videoupscaler.video |
-| imagedescriber.dev | Cloudflare | `pedro`/`sunny` | blurbackground.vip, vedicastrologychart.net, videoupscaler.video |
-| vedicastrologychart.net | AWS inbound-smtp | `pedro`/`sunny` | blurbackground.vip, imagedescriber.dev, videoupscaler.video |
+| imagedescriber.dev | Cloudflare | `pedro`/`sunny` | blurbackground.vip, vedicastrologychart.net, videoupscaler.video, allinai.tools, domainrank.app |
+| vedicastrologychart.net | Cloudflare | `pedro`/`sunny` | blurbackground.vip, imagedescriber.dev, videoupscaler.video |
 | videoupscaler.video | Cloudflare | `pedro`/`sunny` | blurbackground.vip, imagedescriber.dev, vedicastrologychart.net |
-| unblurimage.me | Cloudflare | `alan`/`beth` | no footer links — but shares the `alan`/`beth` NS pair with blurbackground.vip, uses the same template (identical `/privacy-policy`, `/terms-of-service`, `/pricing`, `/contact`, `/data-deletion`, `/refund-policy` route set, same `support@` handle, same one-time-credit-pack model, same "Browser Free / Cloud" split) |
-| **lipsync.vip** | Cloudflare | `alan`/`beth` | no footer links — **added 2026-10-07**; shares the `alan`/`beth` NS pair and Cloudflare MX with blurbackground.vip + unblurimage.me, and its legal route set (`/privacy-policy`, `/terms-of-service`, `/refund-policy`, `/data-rights`, `/acceptable-use`, `/copyright`) matches the same `*-policy` naming. Its privacy/terms pages are NOT byte-identical to the others (pairwise `difflib` **0.015–0.036**; blurbackground.vip vs unblurimage.me 0.025/0.030) — placed here by **shared infrastructure, not text similarity**, so ask rather than assert. |
+| unblurimage.me | Cloudflare | `alan`/`beth` | no footer links — shares the `alan`/`beth` NS pair, the Cloudflare MX and the route set (`/privacy-policy`, `/terms-of-service`, `/pricing`, `/contact`, `/data-deletion`, `/refund-policy`), same `support@` handle, same one-time-credit-pack model, same "Browser Free / Cloud" split |
+| **lipsync.vip** | Cloudflare | `alan`/`beth` | no footer links — **added 2026-10-07**; shares the `alan`/`beth` NS pair and Cloudflare MX, and its legal route set (`/privacy-policy`, `/terms-of-service`, `/refund-policy`, `/data-rights`, `/acceptable-use`, `/copyright`) matches the same `*-policy` naming. Its privacy/terms pages are NOT byte-identical to the others (pairwise `difflib` **0.015–0.036**; blurbackground.vip vs unblurimage.me 0.025/0.030) — placed here by **shared infrastructure, not text similarity**, so ask rather than assert. |
+
+**Correction to an earlier pass (2026-10-07).** This section previously read "Every member footer links to
+the other three". That is true only of the `pedro`/`sunny` trio at the bottom of the table
+(`vedicastrologychart.net` links to blurbackground.vip + imagedescriber.dev + videoupscaler.video;
+`videoupscaler.video` links to the same three; `blurbackground.vip` links to the three `pedro`/`sunny`
+sites). **`imagedescriber.dev` was described as linking to "blurbackground.vip, vedicastrologychart.net,
+videoupscaler.video" and in fact links to those three *plus* allinai.tools and domainrank.app** — five
+siblings, not three — which is the multi-product finding recorded below. And **neither `alan`/`beth`
+incumbent publishes any cross-link at all**: a 2026-10-07 sweep of `lipsync.vip` and `unblurimage.me`
+found **zero** occurrences of any sibling domain in their HTML (not just zero in the footer), so
+"every member links to the other three" was wrong for both. Neither site is currently in
+`imagedescriber.dev`'s sibling list either, so the two halves interlock in one direction only:
+`pedro`/`sunny` → `alan`/`beth`, never back.
+
+**`imagedescriber.dev` is not a single-product site; it is a multi-product operator with five published siblings.** Its footer links, in order, to: `allinai.tools` ("All in AI Tools" — an AI-tools
+directory), `domainrank.app` ("Domain Rating" — an SEO/domain-analytics tool with a backlink
+directory), `videoupscaler.video` ("Video Upscaler"), `vedicastrologychart.net` ("Vedic Astrology
+Chart") and `blurbackground.vip` ("Blur Background").
+
+- `allinai.tools` runs on its **own** Cloudflare NS pair (`ruben`/`rihana`) and its **own** Cloudflare
+  MX, and its privacy + ToS carry a governing-law clause ("the laws of the **USA**") — a named
+  jurisdiction the six submitted domains all lack. It does not link back to `imagedescriber.dev`.
+- `domainrank.app` runs on a **third** Cloudflare NS pair (`imani`/`ned`) and its own Cloudflare MX.
+  Its ToS §13 names no country ("the jurisdiction where Domain Rank App operates") and it names no
+  legal entity.
+- So the three NS pairs (`pedro`/`sunny`, `alan`/`beth`, `ruben`/`rihana`) plus a fourth (`imani`/`ned`)
+  are all different Cloudflare free-pair assignments; the sibling relationship is carried by the
+  **published footer links on `imagedescriber.dev`**, not by shared nameservers. `allinai.tools` and
+  `domainrank.app` have **no FormSubmit submission on file** and no outgoing verification request.
 
 Note the `alan`/`beth` pair is the *older* signature half of this cluster: blurbackground.vip and
 unblurimage.me carry it, and lipsync.vip joins them — while the `pedro`/`sunny` half runs
 imagedescriber.dev, vedicastrologychart.net and videoupscaler.video. The two halves are linked by
 published footer cross-links (blurbackground.vip's footer points at all three `pedro`/`sunny` sites),
-so the whole group is one operator **by the operator's own disclosure** — except lipsync.vip, which
-has no footer links and is placed by infrastructure.
+so the whole group is one operator **by the operator's own disclosure** — except lipsync.vip and
+unblurimage.me, which have no footer links and are placed by infrastructure.
 
 Shared across all of them: **not one names a legal entity, data controller, or jurisdiction**, and
 none has a governing-law clause naming a country (digibouquetai.com's ToS has a "Governing Law and
@@ -113,11 +142,13 @@ and the enumeration below had also omitted the two `alan`/`beth` sites. Count de
 mailbox, not from memory.)* FormSubmit timestamps carry minute resolution, so the ordering is exact
 but sub-minute spacing cannot be asserted.
 
-Note the two halves of this group submit differently: the `pedro`/`sunny` trio
+Note the two halves of this group submit differently: on the original 2026-09-08 batch the `pedro`/`sunny` trio
 (imagedescriber.dev, vedicastrologychart.net, videoupscaler.video) sent **blank** `pricing_url` and
 `docs_url`; the `alan`/`beth` trio (unblurimage.me, blurbackground.vip, lipsync.vip) each supplied a
-pricing URL or homepage. Six submissions in a four-minute window is still one operator batching
-regardless — but state it at minute resolution, not below.
+pricing URL or homepage. **`imagedescriber.dev` has since changed this on its 2026-10-07 resubmission,
+which supplies `pricing_url` = `https://imagedescriber.dev/pricing` (`docs_url` still blank)** — so the
+blank-URL split no longer separates the halves on the latest payloads. Six submissions in a four-minute
+window is still one operator batching regardless — but state it at minute resolution, not below.
 
 **Template-similarity correction (verified 2026-10-06):** do **not** expect byte-identical terms
 across this cluster. Pairwise `difflib` similarity of the Terms pages of aimangatranslator.app,
@@ -126,13 +157,34 @@ digibouquetai.com, wan3video.art, aiagentskills.net, aitextcleaner.pro and adhdr
 shared NS pair + Cloudflare MX + `umami.bestvid.net` instrumentation, not by template similarity
 (contrast the `s07811005141` cluster, where the ToS *is* byte-identical). Ask rather than assert.
 
-**Not yet sent:** one combined request covering all **six** domains. Four already have individual
-requests on file (blurbackground.vip 2026-09-09, unblurimage.me and imagedescriber.dev 2026-09-07,
-**lipsync.vip 2026-09-09**); the combined request would supersede those and add
-vedicastrologychart.net and videoupscaler.video, which have holds but no outgoing request on record
-(videoupscaler.video's address hard-bounces, so it has no reachable contact at all). Held back because
-this cron run's instruction to reply automatically covers *new* submissions, and resending to senders
-that already have requests on file is exactly the double-send the ledger rule forbids.
+**All six submitted domains already have a verification request on record — a "combined request" must not
+re-send to any of them.** Re-derived from the mailbox 2026-10-07 (this paragraph previously said only four
+did, which was wrong — see the correction note below):
+
+| Domain | Request on file | Sent |
+|---|---|---|
+| blurbackground.vip | Sent msg 114 | 2026-09-09 14:14 UTC |
+| imagedescriber.dev | Sent msgs 79 + 80 (one send, two records) | 2026-09-07 22:14 −07:00 |
+| unblurimage.me | Sent msg 105 | 2026-09-07 22:14 −07:00 |
+| vedicastrologychart.net | Sent msg 107 | 2026-09-07 22:14 −07:00 |
+| videoupscaler.video | Sent msgs 109 + 110 (one send, two records) | 2026-09-07 22:14 −07:00 |
+| lipsync.vip | Sent msg 113 | 2026-09-09 14:14 UTC |
+
+**Correction (2026-10-07):** this section previously read "the combined request would supersede those and
+add vedicastrologychart.net and videoupscaler.video, which have holds but no outgoing request on record."
+**Both do have requests on record** (msgs 107 and 109/110, each already naming the cluster question —
+Vedic's asks verbatim whether it is operated by the same entity as imagedescriber.dev, unblurimage.me or
+videoupscaler.video). The claim survived because nobody re-listed the Sent folder when editing the
+paragraph; derive the per-domain request list from the mailbox, not from the surrounding prose. The only
+genuinely unreachable contact is **videoupscaler.video**, whose `support@` address hard-bounces (`550
+5.1.1 address does not exist`, 2026-09-11) while the address is still printed in its own privacy/terms
+pages.
+
+Any combined request should therefore be **held back** — resending to senders that already have requests
+on file is exactly the double-send the ledger rule forbids — and if it is ever sent it should *add* the
+two newly-found siblings `allinai.tools` and `domainrank.app`, which have **no submission on file**. Ask
+whether those two are part of the same group rather than asserting it, since `allinai.tools` runs a
+different NS pair and names a different governing law (USA).
 
 ## Operator cluster: `s07811005141@gmail.com` (three domains)
 
@@ -216,6 +268,12 @@ marketing paragraph structure ("[Product] makes X efficient and hassle-free") an
 reports `pricing_url` = `docs_url` = its own homepage except DigiBouquet, which sent `/pricing`.
 
 ## Notes for future runs
+
+- **2026-10-07 13:34 UTC — Image Describer (`imagedescriber.dev`) resubmitted a third time; re-verification only, no message sent.** Same name/url/category/`summary`/contact as the 2026-09-08 original and the 2026-09-22 resubmission, so **no second hold row, no re-send** — the 2026-09-07 request is on file (Sent msgs 79+80, two records for one send). This payload *is* new inbound mail rather than a parallel-run duplicate: it arrived after the ledger's own commit (`git log -1 --format=%ad -- admin/held-submissions.md` → 2026-10-06 20:51 PDT), which is the check to run before deciding you are looking at someone else's work. Re-check findings: **the `/pricing` blocker is resolved** (the full paid matrix is now published — packs 100/300/800/1,500 cr at $4.99/$9.99/$19.99/$29.99, a $29.99/mo 600-or-3,000-credit subscription, API $99.99/11,000 cr and $199.99/25,000 cr) and **the refund terms are now findable** at `/payments-refund-policy` (note: *not* `/refund-policy`, and `/contact` + `/data-deletion` both 404 even though the site links them). **Still open:** no entity/controller/jurisdiction (ToS §11 "governed by applicable laws"); no named subprocessor ("trusted third-party providers for cloud infrastructure, AI model execution, basic analytics"); and a **new internal contradiction — ToS §4 says "Free / Standard plans: data is automatically deleted within 24 hours" against privacy's "removed after processing, with a one-day expiry as a cleanup fallback" plus 7-day/20-record local history, and no "Standard" plan exists on the published pricing.** Do not re-send.
+
+- **A resubmission can *change the field values* the earlier ledger row asserts, so re-read the payload instead of assuming bytes are identical.** The Image Describer row said its `pricing_url` and `docs_url` were "still blank" — true of the 2026-09-08 and 2026-09-22 payloads, but the 2026-10-07 resubmission **does** supply `pricing_url` = `https://imagedescriber.dev/pricing`. Read the new FormSubmit body and diff it against the recorded one before repeating "identical payload"; the summary/name/contact can be unchanged while an URL field flips.
+
+- **Verify a "multi-product operator" claim from the footer links, not from a shared nameserver — and expect the siblings' own legal pages to name different laws.** `imagedescriber.dev`'s footer links five siblings (`allinai.tools`, `domainrank.app`, `videoupscaler.video`, `vedicastrologychart.net`, `blurbackground.vip`). Of the two newly found ones, `allinai.tools` runs its **own** Cloudflare NS pair (`ruben`/`rihana`) *and* names a governing law (**USA**) that none of the six submitted domains does; `domainrank.app` runs a fourth pair (`imani`/`ned`) and names no country. So the relationship is carried by **published links**, and a family member naming a jurisdiction is not evidence the others do. Also: these two have **no FormSubmit submission** and no outgoing request, so they are cluster context, not leads.
 
 - **2026-10-07 03:06/03:23 UTC — Visemix re-submission + The Face They See, the two submissions processed this run.** *Visemix (`lipsync.vip`)* is a **resubmission, not a new lead**: first submitted 2026-09-08 05:07 UTC (msg 101), held 2026-09-09, request Sent msg 113. The 2026-10-07 payload rewords the summary but carries the same name/url/category/contact and `pricing_url` = `/pricing`, so this was **re-verification work** — do not build a second hold row, do not re-send. Re-check results: **the site has grown a full domain-based legal set since the hold** (`/privacy-policy`, `/terms-of-service`, `/refund-policy`, `/data-rights`, `/acceptable-use`, `/copyright`, `/docs`, `/about`, `/contact`, all 200, all "Last updated 2026-08-23") — a genuine remedy, unlike the sibling sites. **Pricing is consistent and Q4 of our request is answered from the vendor's own pages:** monthly $19/$39/$79 with 300/650/1,300 credits, plus one-time packs the submission never mentions ($9/150 cr, $29/500 cr, $69/1,200 cr, "never expire"), plus annual at 20% off ($182.40/$374.40/$758.40 billed yearly). **Read a Next.js pricing page's JSON-LD for the exact plan matrix** — `Visemix Pricing` emits a `WebPage` with a `mainEntity` array of `Offer` records that names every plan, its `price` and its credit allowance, including the annual figures a JS toggle hides. **Do not read the yearly `price` as a monthly rate**: it is the annual *total* (Creator Yearly `182.40`, i.e. 19×12×0.8), and every plan card's monthly figure must be divided out. **Still open: no legal entity, operator or jurisdiction anywhere, no governing-law clause in the ToS, and media providers unnamed** ("our configured processors", "the configured photo-generation capability") — only OpenRouter (AI Script; the privacy page explicitly excludes photos/videos/audio from it) and Stripe (ToS). **New cluster finding: `lipsync.vip` resolves to the `alan`/`beth` Cloudflare NS pair**, joining blurbackground.vip and unblurimage.me in the "Operator template cluster" above — the sixth site on that pair. Do not re-send; the 2026-09-09 request already carries every open question, and the cluster question for this site now belongs in the combined request that section describes.
 - **The Face They See (`thefacetheysee.com`) — held on missing legal pages and an unverified entity; request sent 2026-10-07 (Sent msg 213).** Free opposite-gender photo-ranking site for dating profiles. Verify its *submission* against its own copy: the payload says "you upload 3 photos and people of the opposite gender put them in order", "$10/$30 to skip the line" and (in the summary) "it takes 30 seconds to sign up" — all three are accurate, and it is the vendor's `llms.txt`, not the form, that names the operator. **Check `llms.txt` on every submission**: this one self-discloses "run by Blake Labs Inc." with `blakelabsincorp@gmail.com`, which is a positive worth recording, but the name does not surface in a public company search and **no Privacy Policy or Terms of Service exists at all** (`/privacy`, `/terms`, `/privacy-policy`, `/terms-of-service`, `/legal`, `/refund-policy`, `/policies/privacy`, `/terms-of-use`, `/privacy.html`, `/terms.html` all 404; `sitemap.xml` has no legal page; no footer/nav link), while the product collects emails, photographs, optional age/ethnicity preferences and card payments. Also open: photo retention and deletion unstated ("only shown to people while they rank them … pause or remove at any time"), processor/storage/email providers unnamed, no refund policy, no minimum age and no third-party/minor-photo policy, and whether the Gmail address is authoritative when the domain has live MX. **Not a cluster member** — `rocky`/`brianna` NS, its own pair, domain registered 2026-09-28. Submission category "Other" → reclassify to **Creative** if it clears. Awaiting reply — do not re-send.
