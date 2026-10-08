@@ -474,6 +474,22 @@ DRAFTS = {
         "Route: LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — "
         "the longest-standing high-relevance request this monitor has never answered. Send it late or "
         "drop it, do not draft it a fifth time.",
+    # The find of the 2026-10-08 run and the best-matching request this monitor has ever held: a
+    # reporter asking directly for enterprise AI seat and token costs, which our dated price set
+    # answers. It is NOT in the sendable list because no reply route exists on the page — which is
+    # exactly why it is named here rather than left to vanish into the 'not sendable' tail.
+    "google-and-claude-enterprise-users-seats-and-token-costs":
+        f"**DRAFT READY, ROUTE UNRESOLVED — NOT SENDABLE YET — `{_newest_drafts()}` §2. Now "
+        f"{_sent_word(_age_of('google-and-claude-enterprise-users-seats-and-token-costs'))} old, "
+        "relevance 'high'.** This is the first core-beat AI+spend request in fourteen runs and the "
+        "best-matching request this queue has ever held: the reporter (Glenn Hansen) asks directly "
+        "for 'enterprise-level costs for AI seats and tokens' from Google or Claude users, and our "
+        "dated set answers it (Claude Team $20/$100 per seat/month checked 2026-09-18; Gemini in "
+        "Workspace $8.40/$7 to $26.40/$22 per user/month, 2026-09-18; Copilot Business $19 / "
+        "Enterprise $39 per user/month, 2026-10-01). NO ROUTE: the page publishes no address, handle "
+        "or link (verified email_redacted=False, emails_on_page=none), and a web search cannot "
+        "confirm WHICH Glenn Hansen this is — a same-name LinkedIn profile is a different person — so "
+        "no handle may be invented. George's lane to resolve the route; the draft is otherwise ready.",
 }
 
 def _pairs_now() -> tuple[str, str, str, str]:

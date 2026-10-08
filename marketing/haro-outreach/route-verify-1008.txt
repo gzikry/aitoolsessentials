@@ -1,0 +1,20 @@
+ 200    603602 bytes  Mims LinkedIn
+       title: Christopher Mims - The Wall Street Journal | LinkedIn
+ 200    154819 bytes  Raconteur simon.chandler contributor
+       title: Simon Chandler, Author at Raconteur
+       data-part1: ['simon.chandler']
+       data-part2: ['raconteur']
+       data-part3: ['net']
+       'simon.chandler' present: True
+ 200    154030 bytes  Raconteur tom.dennis control
+       title: Tom Dennis, Author at Raconteur
+       'tom.dennis' present: True
+ 404    139404 bytes  Raconteur legacy /author/simon-chandler/
+       title: Page not found - Raconteur
+       data-part1: []
+       data-part2: []
+       data-part3: []
+       'simon.chandler' present: False
+ 200     59488 bytes  Speciality Food contact
+       title: Contact Us | Speciality Food Magazine
+       emails: ['charlotte.smith-jarvis@artichokehq.com', 'holly.shackleton@artichokehq.com', 'jessica.brett@artichokehq.com', 'louise.barnes@artichokehq.com', 'sam.reubin@artichokehq.com', 'subscriptions@artichokehq.com']
