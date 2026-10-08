@@ -1281,5 +1281,26 @@
     "status": "approved",
     "next_action": "Links live 2026-09-13. Keep disclosed affiliate hrefs on the review CTAs.",
     "notes": "Approved 2026-09-13. Site ref https://sonaopus.com/?ref=58448483. Gumroad product links: AI Recruiting hapwxp, AI Project Management iwiiw, AI HR Management eiddl, AI Executive Assistant pqpox, AI Real Estate Agent wtyioq. 40% one-time, 30-day cookie."
+  },
+  {
+    "tool_slug": "aidetector-cx",
+    "tool_name": "AIDetector.cx",
+    "priority": "low",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct vendor program (partnerships@aidetector.cx)"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/aidetector-cx/"
+    ],
+    "best_audiences": [
+      "bloggers and publishers screening content before publication",
+      "SEO professionals and agencies",
+      "editorial and content-quality teams"
+    ],
+    "status": "approved",
+    "next_action": "Direct affiliate approved 2026-10-08 (30% recurring). Tracking link wired to the review CTA; monitor dashboard clicks/conversions.",
+    "notes": "Direct program, no network intermediary. 30% recurring on eligible subscription payments, lifetime of the customer; monthly and annual plans eligible; 30-day attribution window; 30-day hold; $50 minimum payout (USD, bank transfer via dashboard)."
   }
 ]

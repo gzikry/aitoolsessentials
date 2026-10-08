@@ -1838,6 +1838,32 @@
       "affiliate_status": "approved",
       "affiliate": true,
       "sponsored": false
+    },
+    {
+      "slug": "aidetector-cx",
+      "name": "AIDetector.cx",
+      "category": "Productivity",
+      "official_url": "https://aidetector.cx/",
+      "review_url": "/tools/aidetector-cx/",
+      "price_label": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
+      "pricing_summary": "Free: 5 introductory checks total (1 guest + 4 signed-in), no recurring reset. Pro US$12/month or US$120/year - 300 credits/month. Pro Plus US$29/month or US$290/year - 1,000 credits/month. Business US$79/month or US$790/year - 3,000 credits/month with up to 5 team seats. Annual billing is charged upfront and grants credits monthly on the renewal cycle. Credit costs vary by job: standard text/image/video detection 1 credit, advanced image & deepfake analysis 4 credits/image, forensic video & deepfake 6 credits per 30s, citation verification 1 credit per 5 references, hallucination checking 2 credits per 1,000 words. Verified 2026-10-08 from /pricing plus the shipped /assets/index-*.js monthlyPrice literals (12/29/79), which agree.",
+      "pricing_url": "https://aidetector.cx/pricing",
+      "pricing_checked_date": "2026-10-08",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "audio"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": "approved",
+      "affiliate": true,
+      "sponsored": false
     }
   ]
 }

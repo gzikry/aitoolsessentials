@@ -24,7 +24,7 @@ already decisive and will not change much with age:
 For our single best near-miss query — "best ai tools for agencies", 260
 impressions at position 29.61 — every result on page one is a single-topic
 specialist domain (aipedia.wiki, agencypro.app, cartabyte.com, storyflow.so).
-Same for "best ai assistant". A 76-tool generalist with a one-month-old domain
+Same for "best ai assistant". A 77-tool generalist with a one-month-old domain
 does not rank for either, regardless of on-page depth.
 
 Confirmed internally: controlling for page type (only `/articles/` buyer

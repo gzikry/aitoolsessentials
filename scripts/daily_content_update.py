@@ -436,6 +436,15 @@ _inventory_replacements = {
     "can't personally test all 40 tools": f"can't personally test all {_current_count} tools",
     'verified snapshots for the 40-tool pricing snapshot': f'verified snapshots for {_current_count} tools',
 }
+# Catalog-size phrases are self-healing at ANY count: the literal dict above rots at every
+# expansion (a "76-tool decision matrix" key matches nothing once the catalog hits 78). These
+# regexes track the validator's own scoped patterns exactly — whole phrases that can only mean
+# the full catalog — so a page can never ship a stale total.
+_inventory_regex = (
+    (re.compile(r'\b\d{2,3}(-tool\b)'), lambda m: f'{_current_count}{m.group(1)}'),
+    (re.compile(r'\b\d{2,3}(\s+AI tools tracked\b)'), lambda m: f'{_current_count}{m.group(1)}'),
+    (re.compile(r'\b\d{2,3}(\s+tools tracked\b)'), lambda m: f'{_current_count}{m.group(1)}'),
+)
 for _path in root.rglob('*'):
     if not _path.is_file() or _path.suffix not in {'.html', '.txt', '.md', '.xml'}:
         continue
@@ -450,6 +459,8 @@ for _path in root.rglob('*'):
         _new = _text
         for _old, _replacement in _inventory_replacements.items():
             _new = _new.replace(_old, _replacement)
+        for _rx, _fn in _inventory_regex:
+            _new = _rx.sub(_fn, _new)
         if _path.suffix == '.html':
             _new = re.sub(
                 r'href="(?:/|(?:\.\./)*)index\.html([#?][^"]*)?"',

@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-08",
-  "tools_count": 76,
+  "tools_count": 77,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -567,6 +567,13 @@
       "category": "Productivity",
       "price": "$99 one-time per profession (five products)",
       "url": "https://aitoolsessentials.com/tools/sonaopus/"
+    },
+    {
+      "name": "AIDetector.cx",
+      "slug": "aidetector-cx",
+      "category": "Productivity",
+      "price": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
+      "url": "https://aitoolsessentials.com/tools/aidetector-cx/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -158,7 +158,7 @@ Deep comparison pages + no referrer + single pageview is what a click from an AI
 
 **Two homepage paths, one page.** `/` (47v/79pv) and `/index.html` (4v/8pv) both serve the homepage and both carry `canonical → https://aitoolsessentials.com/`. Plausible logs the literal path, so the homepage's true 30-day figure is **51 of 95 visitors** — more than half the site's entire audience — not 47. Read them as one row.
 
-**`/submit-tool.html` is a form being worked, not read.** 7 visitors produced 19 pageviews (2.7 each) with a 167-second average entry duration — the second-longest on the site. One submission was re-verified this week (Short.now, commit `44d405a1`, five items still live) and no new tool was published. 76 tools tracked.
+**`/submit-tool.html` is a form being worked, not read.** 7 visitors produced 19 pageviews (2.7 each) with a 167-second average entry duration — the second-longest on the site. One submission was re-verified this week (Short.now, commit `44d405a1`, five items still live) and no new tool was published. 77 tools tracked.
 
 **`/tools/sonaopus/` (460 s average) is vendor self-review traffic, not readership.** All four of its visitors were Nigerian and it drew 8 of the prior week's Nigerian visitors. See §4.
 
@@ -257,7 +257,7 @@ There are **31 pages carrying outbound anchors** and **327 links to the Whop che
 
 Nigeria's collapse accounts for 8 of the 10 lost visitors. The Sonaopus vendor cluster (4 visitors, 9 pageviews, 9 comparison pages built around it) reviewed its own listing and left; the 35 Nigerian pageviews went with it. **The prior week's traffic was never as large as it read.** And the US fall from 41 pageviews to 8 is the other half: last week's US visitors browsed the site, this week's view one page and leave.
 
-**Content volume this week:** 726 sitemap URLs · 740 HTML pages (732 public) · 76 tools tracked · 33 commits · 528 files changed · **2 new public pages** (`articles/ai-assisted-job-search-workflow.html`, `articles/monthly-ai-cost-review.html`).
+**Content volume this week:** 726 sitemap URLs · 740 HTML pages (732 public) · 77 tools tracked · 33 commits · 528 files changed · **2 new public pages** (`articles/ai-assisted-job-search-workflow.html`, `articles/monthly-ai-cost-review.html`).
 
 ---
 

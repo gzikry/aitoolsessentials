@@ -10,7 +10,7 @@ Marketplace call). The two rows that do carry a resolved route are the two cross
 `updated: 2026-10-02`) took the monthly-priced count from 40 to **42**, the sub-$25 count from 31 to
 **33**, and the median cheapest paid tier from $16.50 to **$17.50**. Every draft dated before today
 cites the superseded 40/31/$16.50 set against `updated: 2026-10-01` and must not be reused.
-Re-derived today by `scripts/haro-outreach/_figures_1002.py`. The 76-tool count and the 19-pair range
+Re-derived today by `scripts/haro-outreach/_figures_1002.py`. The 77-tool count and the 19-pair range
 are unchanged.
 
 **Reply routes re-resolved today, both live:** `simon.chandler@raconteur.net` off

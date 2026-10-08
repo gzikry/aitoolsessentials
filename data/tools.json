@@ -4130,5 +4130,65 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
     "rating_rationale": "Job fit 4 - five profession-specific workflows cover repeated document jobs across HR, EA, project management, recruiting and real estate, with context carried between stages. It is a prompt-structuring layer used alongside Claude, ChatGPT, or Gemini, not a writing tool in its own right. Output quality 4 - the drafts come from whichever assistant you already use, and the workflows do embed jurisdiction and legal-review instructions. Adoption 4 - no account or install is required and eight generations are free per profession; you still need an AI assistant to produce the draft. Cost 4 - $99 one-time with lifetime updates for one profession is reasonable if you need that one profession, and there is no subscription to forget to cancel. Held at 4.1 because there is no export for the local workflow data, and a stale mirror still advertises a retired $59 price."
+  },
+  {
+    "slug": "aidetector-cx",
+    "name": "AIDetector.cx",
+    "category": "Productivity",
+    "best_for": "Screening text, images, video and voice for AI-generation signals before publication or submission",
+    "price": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
+    "rating": 4.0,
+    "official": "https://aidetector.cx/",
+    "affiliate_url": "https://aidetector.cx/ai-checker-for-bloggers?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84",
+    "summary": "Multi-modal AI-content detection covering text, images, video and voice, with sentence-level explanations, a plagiarism checker, an SEO assistant and a humanizer. Credit-based plans; the free entry is five one-time introductory checks.",
+    "use_cases": [
+      "Screening drafts before publishing",
+      "Checking submitted work for AI signals",
+      "Deepfake and AI-image checks on media",
+      "Plagiarism plus AI screening in one pass",
+      "Batch content-quality checks for agencies"
+    ],
+    "pros": [
+      "Multi-modal coverage - text, image, video and voice run off one credit balance",
+      "Sentences are colour-coded with a confidence score and signal indicators rather than a single opaque verdict",
+      "States plainly that submitted analysis text is not used to train or fine-tune models, on any plan",
+      "Output terms are explicit: you retain ownership of submitted content and hold a licence to results for personal or commercial use",
+      "Named legal entity (AIDetector.cx Inc., Berkeley, California) with California governing law and a 12-month default history retention that users can delete from the dashboard"
+    ],
+    "cons": [
+      "AI-text detection is inherently probabilistic; the published benchmark (precision 0.97 / recall 0.94) is the vendor's own internal-corpus result, with no independent third-party evaluation",
+      "The free tier is five one-time introductory checks, not a recurring free plan, so evaluation without paying is short",
+      "Credit costs swing widely by job: standard detection is 1 credit, advanced image/deepfake analysis 4 credits per image and forensic video 6 credits per 30s, so real work drains the 300 monthly credits quickly",
+      "The name is crowded - unrelated live AI detectors run on aidetector.com and aidetector.ai, so buyers must be given the exact .cx domain",
+      "Our two legal-page reads name different payment providers (Privacy names Paystack, the Cookie Policy names Stripe); the checkout flow was not exercised, so which processor bills self-serve accounts is unresolved"
+    ],
+    "key_features": [
+      "Text detection with confidence score and sentence-level colour coding",
+      "AI image and deepfake analysis",
+      "Forensic video and deepfake detection",
+      "Voice and speech analysis",
+      "Plagiarism checker and SEO assistant",
+      "Humanizer and rewrite modes",
+      "Verified-authorship certificates for published work",
+      "REST API, WordPress plugin and Chrome extension"
+    ],
+    "faq": [
+      [
+        "Is AIDetector.cx free to use?",
+        "There is a free entry of five one-time introductory checks (1 guest + 4 signed-in) with no recurring reset. Ongoing use runs on credit plans from $12/month."
+      ],
+      [
+        "Does AIDetector.cx train on the text you submit?",
+        "No. The Privacy Policy's Model Training section states submitted analysis text is not used to train or fine-tune detection models on any plan. Analysis history is retained 12 months by default and can be deleted from the dashboard."
+      ],
+      [
+        "How accurate is the AI-text detection?",
+        "The vendor publishes its own benchmark - precision 0.97, recall 0.94, F1 0.955 on a 400-document internal corpus. Treat any AI-detection score as probabilistic, and note there is no independent third-party evaluation of this tool."
+      ]
+    ],
+    "trial_checklist": "Run a real job, not a demo: pick a document you actually need to screen and take it end to end. Verify whether the sentence-level explanations and signal indicators materially change what you would rewrite, compared with a single score. Record how many credits the task consumes against Pro's 300/month before committing, and repeat the same task in one alternative detector before deciding.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "medium",
+    "rating_rationale": "Job fit 4 - AI-content screening is a real editorial and academic need, and multi-modal coverage means one tool covers text, image and video. Output quality 3 - detection is probabilistic and the published benchmark is the vendor's own internal-corpus result, so a score must be read as a signal rather than proof. Adoption 4 - credit pricing starts low, five free checks let a buyer try it without a card, and API/plugin/extension coverage fits real workflows. Cost 3 - credit costs vary sharply by job type and 300 monthly credits go quickly once image or video analysis is involved. The 4.0 reflects genuine breadth in a category where no tool can claim certainty."
   }
 ]
