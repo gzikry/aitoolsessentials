@@ -445,7 +445,7 @@ DRAFTS = {
         "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). This is the ONLY row "
         "in this queue that is both above the tangential band and route-resolved. George's lane.",
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        f"**Draft ready and UNSENT — `{_newest_drafts()}` §2. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
+        f"**Draft ready and UNSENT — `{_newest_drafts()}` §3. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
         f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
         f"{_carried_runs('fulltime-employees-shadow-ai-use-and-paying-outofpocket')} draft files.** Route: simon.chandler@raconteur.net, "
         f"re-resolved off the live {_route_evidence('raconteur.net/contributors/simon-chandler', '/contributors/simon-chandler page')} "
@@ -456,7 +456,7 @@ DRAFTS = {
         "page is still HTTP 200 and the address still resolves, so a late send is still possible — "
         "what was lost is the ideal window, not the pitch.",
     "speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech":
-        f"**Draft ready and UNSENT — `{_newest_drafts()}` §3. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
+        f"**Draft ready and UNSENT — `{_newest_drafts()}` §4. Now {_sent_word(_age_of('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech'))} "
         f"old, crossed the 10-day line on 2026-09-28 unpitched. Carried in "
         f"{_carried_runs('speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech')} draft files.** Route: holly.shackleton@artichokehq.com "
         f"({_route_evidence('specialityfoodmagazine.com/contact', 're-read off specialityfoodmagazine.com/contact')}, "
@@ -481,7 +481,9 @@ DRAFTS = {
     "google-and-claude-enterprise-users-seats-and-token-costs":
         f"**DRAFT READY, ROUTE UNRESOLVED — NOT SENDABLE YET — `{_newest_drafts()}` §2. Now "
         f"{_sent_word(_age_of('google-and-claude-enterprise-users-seats-and-token-costs'))} old, "
-        "relevance 'high'.** This is the first core-beat AI+spend request in fourteen runs and the "
+        "relevance 'high'.** This is the only core-beat AI+spend request the monitor has produced in "
+        "fifteen runs - the first it ever produced, arriving on the 2026-10-08 run after fourteen "
+        "without one - and the "
         "best-matching request this queue has ever held: the reporter (Glenn Hansen) asks directly "
         "for 'enterprise-level costs for AI seats and tokens' from Google or Claude users, and our "
         "dated set answers it (Claude Team $20/$100 per seat/month checked 2026-09-18; Gemini in "

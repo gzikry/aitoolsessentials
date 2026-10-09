@@ -1,0 +1,50 @@
+{
+ "checked": "2026-10-09",
+ "routes": {
+  "linkedin.com/in/christopher-mims-club/": {
+   "label": "Mims LinkedIn byline page",
+   "url": "https://www.linkedin.com/in/christopher-mims-club/",
+   "http": "200",
+   "bytes": 636389,
+   "title": "Christopher Mims - The Wall Street Journal | LinkedIn"
+  },
+  "raconteur.net/contributors/simon-chandler": {
+   "label": "Raconteur simon.chandler contributor",
+   "url": "https://raconteur.net/contributors/simon-chandler",
+   "http": "200",
+   "bytes": 154984,
+   "title": "Simon Chandler, Author at Raconteur",
+   "triple": "simon.chandler+raconteur+net"
+  },
+  "raconteur.net/contributors/tom-dennis": {
+   "label": "Raconteur tom.dennis control",
+   "url": "https://raconteur.net/contributors/tom-dennis",
+   "http": "200",
+   "bytes": 154027,
+   "title": "Tom Dennis, Author at Raconteur",
+   "triple": "tom.dennis+raconteur+net"
+  },
+  "raconteur.net/author/simon-chandler/": {
+   "label": "Raconteur legacy /author/simon-chandler/",
+   "url": "https://raconteur.net/author/simon-chandler/",
+   "http": "404",
+   "bytes": 139404,
+   "title": "Page not found - Raconteur"
+  },
+  "specialityfoodmagazine.com/contact": {
+   "label": "Speciality Food contact",
+   "url": "https://www.specialityfoodmagazine.com/contact",
+   "http": "200",
+   "bytes": 59488,
+   "title": "Contact Us | Speciality Food Magazine",
+   "emails": [
+    "charlotte.smith-jarvis@artichokehq.com",
+    "holly.shackleton@artichokehq.com",
+    "jessica.brett@artichokehq.com",
+    "louise.barnes@artichokehq.com",
+    "sam.reubin@artichokehq.com",
+    "subscriptions@artichokehq.com"
+   ]
+  }
+ }
+}
