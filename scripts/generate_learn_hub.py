@@ -41,6 +41,8 @@ LEARN = [
     ('ai-assisted-job-search-workflow.html', 'AI-assisted job search workflow', 'Tailoring, letters, rehearsal, research, and tracking — with the claims that must stay yours.'),
     ('monthly-ai-cost-review.html', 'Running a monthly AI cost review', 'A 30-minute recurring keep/cut meeting that catches subscription creep before renewal.'),
     ('vendor-evaluation-questionnaire.html', 'Questions to send a tool vendor before you buy', 'Data handling, billing mechanics, real limits, support, and exit terms — and how to read a vague answer.'),
+    ('is-an-ai-tool-worth-its-price.html', 'Is an AI tool worth its price?', 'A per-seat worth test: name the job, price the substitute, count real usage, then read the exit terms.'),
+    ('what-to-ask-before-connecting-ai-to-company-data.html', 'What to ask before connecting an AI tool to company data', 'Scope, permissions, retention, agent actions, logs, and exit — settle them before the OAuth screen.'),
     ('best-ai-tools-for-project-managers.html', 'Best AI tools for project managers', 'Meeting capture, status drafting, task extraction, and the tracker layer — plus what this directory does not track.'),
     ('best-ai-tools-for-customer-support.html', 'Best AI tools for customer support teams', 'Reply drafting, help-center upkeep, queue triage, and escalation notes around the help desk you already run.'),
     ('best-ai-tools-for-hr-and-people-ops.html', 'Best AI tools for HR and people ops', 'Policy drafts, onboarding material, interview paperwork, and survey analysis — with the privacy rules that decide most purchases.'),
