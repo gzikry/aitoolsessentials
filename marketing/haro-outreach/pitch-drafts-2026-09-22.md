@@ -84,7 +84,7 @@ it is dead and must not be cited. **George's lane. Not automatable.**
 > Happy to hand over the full dated set if it's useful, and to name my source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for AI tools and write about overlapping subscriptions and AI
@@ -138,7 +138,7 @@ monitor exists to fix.
 > the way to reach support is the same at both prices?
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for AI tools and write about overlapping subscriptions and AI
@@ -192,7 +192,7 @@ guessed pattern. `artichokehq.com` MX re-checked today = Microsoft 365
 > Full dated set available if useful, every figure traceable to its own page.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for software tools and write about overlapping subscriptions and

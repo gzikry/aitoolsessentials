@@ -69,7 +69,7 @@ still returns **HTTP 404** (re-checked today) — it is dead and must not be cit
 > Happy to hand over the full dated set, and to name my source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for AI tools and write about overlapping subscriptions and AI
@@ -126,7 +126,7 @@ rather than a guessed pattern. `artichokehq.com` MX re-checked today = Microsoft
 > Full dated set available if useful, every figure traceable to its own page.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for software tools and write about overlapping subscriptions and

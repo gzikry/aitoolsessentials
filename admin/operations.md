@@ -4,7 +4,7 @@
 **Status:** ✅ Fully Operational
 
 ## Quick Links
-- **Site:** https://aitoolessentials.com
+- **Site:** https://aitoolsessentials.com
 - **Admin Dashboard:** `/admin/operations.html`
 - **Operations Guide:** `/admin/operations.md`
 

@@ -60,7 +60,7 @@ interstitial); wsj.com/news/author/christopher-mims → HTTP 401.
 > Happy to hand over the full dated set and name the source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 
@@ -107,7 +107,7 @@ the byline page's JS triplet, not published in the request body.
 > Happy to hand over the full dated set, and to name my source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 
@@ -145,6 +145,6 @@ by hand).
 > If it's useful, I'll send the dated set with a source for every figure.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --

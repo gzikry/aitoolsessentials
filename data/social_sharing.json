@@ -5,7 +5,7 @@
       "title_template": "{tool_name}: AI Tool Review",
       "description_template": "{tool_summary} — Get the full review at {site_url}",
       "image_url": "/assets/og-ai-tools.jpg",
-      "site_url": "https://aitoolessentials.com"
+      "site_url": "https://aitoolsessentials.com"
     },
     "facebook_card": {
       "enabled": true,

@@ -459,9 +459,9 @@ DRAFTS = {
         "Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ ("
         f"{_route_evidence('linkedin.com/in/christopher-mims-club/', 'LinkedIn byline page')}; "
         "the request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and "
-        "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). One of two rows in "
-        "this queue that are both above the tangential band and route-resolved — the other is the "
-        "Glenn Hansen seats-and-tokens request, which is newer and higher-relevance. George's lane.",
+        "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). The last row in this "
+        "queue that is both above the tangential band and route-resolved: the Glenn Hansen "
+        "seats-and-tokens request was the other, and it was sent 2026-10-10. George's lane.",
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
         f"**Draft ready and UNSENT — `{_newest_drafts()}` §3. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
         f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
@@ -560,6 +560,21 @@ def _unsent_draft_files() -> int:
     return len(list(OUT.glob("pitch-drafts-*.md")))
 
 
+def _pitched_slugs() -> set[str]:
+    """Slugs the ledger records as pitched. Derived from the ledger, never typed.
+
+    This section said "not one of the pitches in them has been sent" as hand-written prose, and it
+    re-listed every row in DRAFTS as UNSENT regardless of ledger state. That was true for 22 days
+    and then, on 2026-10-10, George authorised four sends — at which point the sentence was false
+    and the section was still telling him to send rows that had already gone. A queue that
+    re-lists a just-sent pitch is the duplicate-send the ledger exists to prevent, so both the
+    claim and the row membership are now read from the ledger.
+    """
+    pitched = (_load_ledger().get("pitched") or {})
+    return {_canon(u).rsplit("/", 1)[-1] for u in pitched}
+
+
+
 def _draft_index(live_count: int, sendable_count: int) -> str:
     """The carried-drafts block, with every date-sensitive claim re-derived at build time.
 
@@ -609,11 +624,25 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
             f"{live_count} rows (measured at build time from the merged digests, not typed), and "
             f"none has both a relevance above the tangential band and a usable route."
         )
+    _sent = _pitched_slugs()
+    _still = {u: v for u, v in DRAFTS.items() if u not in _sent}
+    _sent_here = [u for u in DRAFTS if u in _sent]
+    if _sent_here:
+        _carried = (
+            f"Read this before clearing the queue: {_unsent_draft_files()} draft files exist on disk. "
+            f"**{len(_sent_here)} of the pitches drafted here {'has' if len(_sent_here) == 1 else 'have'} "
+            f"now been sent** — listed at the bottom, not as work. The rest are still unsent; a written "
+            "draft is not progress — the send is.\n\n"
+        )
+    else:
+        _carried = (
+            f"Read this before clearing the queue: {_unsent_draft_files()} draft files exist on disk "
+            "and not one of its pitches has been sent. A written draft is not progress — the "
+            "send is.\n\n"
+        )
     return (
         "## Drafts that exist and were never sent\n\n"
-        f"Read this before clearing the queue: {_unsent_draft_files()} draft files exist on disk "
-        "and not one of the pitches in them has been sent. A written draft is not progress — the "
-        "send is.\n\n"
+        + _carried
         + state + "\n\n"
         f"**Today's draft file is `{_newest_drafts()}` (derived from disk, not typed).** The "
         f"headline figures are re-derived every run: {n_paid} of {n_tools} tools publish a monthly "
@@ -629,7 +658,10 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
         "See `data/monthly_annual_pairs.json` and `scripts/extract_monthly_annual_pairs.py`, which "
         "refuses to write the file at all unless every curated pair re-asserts against the live "
         "snapshot.\n\n"
-        + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(DRAFTS.items()))
+        + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(_still.items()))
+        + (("\n\n### Already sent — do NOT re-send\n\n"
+            + "\n".join(f"- {u[:64]} — SENT per `pitch-ledger.json`" for u in sorted(_sent_here)))
+           if _sent_here else "")
     )
 
 

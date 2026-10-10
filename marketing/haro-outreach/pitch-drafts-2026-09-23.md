@@ -67,7 +67,7 @@ still returns **HTTP 404** — it is dead and must not be cited. **George's lane
 > Happy to hand over the full dated set, and to name my source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for AI tools and write about overlapping subscriptions and AI
@@ -124,7 +124,7 @@ pattern. `artichokehq.com` MX re-checked today = Microsoft 365
 > Full dated set available if useful, every figure traceable to its own page.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for software tools and write about overlapping subscriptions and

@@ -67,7 +67,7 @@ address rather than one published in the request body, so it is sent by hand.**
 > Happy to hand over the full dated set, and to name my source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for AI tools and write about overlapping subscriptions and AI
@@ -125,7 +125,7 @@ published masthead rather than a guessed pattern. **George's lane. Not automatab
 > Full dated set available if useful, every figure traceable to its own page.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 > We publish dated pricing evidence for software tools and write about overlapping subscriptions and
@@ -164,7 +164,7 @@ tiers.** An un-flagged wrong number in a live peer method discussion is worse th
 > checked date.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 
 **Route:** reply to `jan@jansuski.com`, In-Reply-To the existing thread (msg 77 in the mailbox).
 **George's lane. Not automatable.**

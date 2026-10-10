@@ -220,6 +220,27 @@ def main():
                     '(outbound mail signs as AIToolsEssentials only)'
                 )
 
+    # Outbound-domain guard. Every pitch draft signs off with the site URL, and 47 of those
+    # sign-offs across 19 files misspelled it as "aitoolessentials.com" — missing the s in
+    # "aitools". A draft is the durable source a later send is pasted from, so a typo in one is a
+    # dead link in a journalist's inbox. Same class as the personal-signature guard: the defect
+    # only reaches anyone when a human pastes the artifact, which is exactly when it is too late.
+    #
+    # Note the trap this guard's own fix produced: a bulk find-replace over the typo also rewrote
+    # the sentence *describing* the typo in the ledger. A global string sweep cannot distinguish an
+    # example of a defect from the defect, so the guard matches the wrong domain only, and the
+    # correct one is never rewritten to it.
+    _wrong_domain = 'aitoolessentials.com'
+    for _df in list(ROOT.rglob('*.md')) + list(ROOT.rglob('*.json')) + list(ROOT.rglob('*.txt')):
+        _drel = _df.relative_to(ROOT)
+        if any(s in _drel.parts for s in _sig_skip) or _df.name.endswith('.lock'):
+            continue
+        if _wrong_domain in _df.read_text(errors='replace'):
+            errors.append(
+                f'{_drel} carries the misspelled domain "{_wrong_domain}" '
+                f'— the site is aitoolsessentials.com (missing the s in "aitools")'
+            )
+
     # Benchmark evidence integrity and review provenance gates.
     benchmark_data = json.loads((ROOT/'data/benchmarks.json').read_text())
     source_ids = {s['id'] for s in benchmark_data.get('sources', [])}

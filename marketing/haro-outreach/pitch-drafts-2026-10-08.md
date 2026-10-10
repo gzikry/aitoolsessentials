@@ -63,7 +63,7 @@ Dead ends recorded so they are not retried: muckrack.com/christopher-mims → HT
 > Happy to hand over the full dated set and name the source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 
@@ -102,7 +102,7 @@ Dead ends recorded so they are not retried: muckrack.com/christopher-mims → HT
 > Happy to hand over the full dated set, with a source and check date for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 
@@ -142,6 +142,6 @@ Dead ends recorded so they are not retried: muckrack.com/christopher-mims → HT
 > Happy to hand over the full dated set, and to name my source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --

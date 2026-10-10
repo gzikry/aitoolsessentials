@@ -55,7 +55,7 @@ Dead ends recorded so they are not retried: muckrack.com/christopher-mims → HT
 > Happy to hand over the full dated set and name the source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 
@@ -95,7 +95,7 @@ Dead ends recorded so they are not retried: muckrack.com/christopher-mims → HT
 > Happy to hand over the full dated set, and to name my source for every number.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --
 
@@ -132,6 +132,6 @@ addresses). **George's lane. Not automatable** (address published on the publica
 > If it's useful, I'll send the dated set with a source for every figure.
 >
 > AIToolsEssentials
-> https://aitoolessentials.com
+> https://aitoolsessentials.com
 >
 > --

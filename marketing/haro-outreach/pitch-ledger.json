@@ -1,383 +1,392 @@
 {
- "pitched": {
-  "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "2026-09-15",
-  "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "2026-09-18",
-  "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "2026-09-18"
- },
- "skipped": {
-  "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
- },
- "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it. Pitches sent to date: 3. Replies received: 1. Zero pitches sent on 2026-09-29 through 2026-10-10 (twelve consecutive runs). 2026-10-10 run: 107 tracked, 54 live unpitched, 49 cold unpitched, 2 sendable - the second sendable row is the one that matters: google-and-claude-enterprise-users-seats-and-token-costs (Glenn Hansen, editor of OPE+ / EPG Brand Acceleration) was carried as NOT SENDABLE for two runs for want of a route; the route was resolved this run off his own publication (ghansen@epgacceleration.com, published at ope-plus.com/2024/02/13/announcing-ope/19236, re-verified HTTP 200, 147,438 bytes, address present verbatim; epgacceleration.com MX = Microsoft 365). It is the first core-beat AI+spend request this monitor has ever been able to send. The window produced 66 slugs, ZERO AI-token and zero spend-token; all 66 bodies were fetched and scanned, and exactly one mentions AI at all - to forbid the cliche 'more use of AI' - so the zero is a body-level measurement. Mailbox checked 2026-10-10: All Mail carries no message after 2026-10-08 and exactly one inbound from any pitch recipient ever, Jan Suski's 2026-09-18 reply (msg 234); no reply to the Enterprise AI Leaders or Sherwood News sends, and nothing from raconteur.net, artichokehq.com or foxandspindle.com. INBOX top is still msg 104 (Anike Tobechukwu, on the separate AIDetector.cx affiliate thread); Sent top is msg 221 (2026-10-08), so no pitch-monitor mail has gone out since the 2026-09-18 Sherwood send. Separately: a paid-placement offer (Lilach Bullock, $300) arrived on a different outreach thread on 2026-09-29 and was declined same-day under editorial independence - that is not a pitch from this monitor and is not recorded as one.",
- "reply_status_checked": "2026-10-10",
- "figures_disclosure": {
-  "date": "2026-10-10",
-  "status": "STILL UNSENT - Day 22. The recipient of the 2026-09-18 Amplemarket reply was told the same-tier monthly/annual range is '1.21x-2.53x, median 1.33x'. The current verified figure is 1.11x-2.53x, median 1.25x over 19 tiers. 2026-10-10: the 19-pair set was RE-READ, NOT REBUILT - data/monthly_annual_pairs.json stands on its 2026-10-08 build and the 19 curated pairs are unchanged; scripts/extract_monthly_annual_pairs.py has not been re-run against a 2026-10-10 snapshot this run, so the pair sentence stands on the 2026-10-08 build and says so. SEPARATELY, the shadow-AI headline figures were re-derived against today's refreshed snapshot (data/pricing_snapshots.json `updated: 2026-10-10`, 77 snapshots) and are unchanged: 42 of 77 tools quote a non-zero monthly price, 33 at or under $25/month, median $17.50. The numerator set is unchanged since 2026-10-02, so any sentence reading '42 of 76 tools' is superseded. Drafts written before 2026-10-02 that cite 40/31/$16.50 must not be sent. Day 22 unsent.",
-  "action_required": "Send Jan Suski a short correction. The thread is live and he replied to us on 2026-09-18, so an un-flagged wrong figure in a peer method discussion is worse than a follow-up. Send the CURRENT figure (1.11x-2.53x, median 1.25x over 19 tiers), not the 1.16x one from the 2026-09-21 drafts. Route: reply to jan@jansuski.com (In-Reply-To the existing thread). George's lane. Confirmed unsent again today: the only message ever sent to jansuski.com is msg 178, the 2026-09-18 reply.",
-  "source_of_truth": "data/monthly_annual_pairs.json, re-asserted by scripts/extract_monthly_annual_pairs.py, which refuses to write the file unless all 19 curated pairs re-assert against the live snapshot",
-  "headline_figures_now_derived_not_typed": "2026-10-02: build_pitch_queue.py's DRAFTS prose carried hand-typed copies of the shadow-AI headline figures ('40 publishing a monthly price ... median $16.50', 'updated: 2026-09-30'). The snapshot refresh moved those figures today, so the typed copies were stale inside a file rebuilt today. They are now re-derived at build time by _headline_figures(), along with the live-row count (_live_row_count(), which had asserted '21 rows' three days after it stopped being true) and the Speciality Food carry count. Same defect class as the hardcoded draft filename and crossing date fixed on the 2026-09-29 run.",
-  "superseded_word_counts_note": "The 2026-09-23 drafts claimed 138 and 136 words for the shadow-AI and Speciality Food bodies. As republished in the 2026-10-01 drafts they measure 192 and 197 words including the subject line and signature (scripts/haro-outreach/_verify_drafts_1001.py measures them rather than asserting them).",
-  "carried_record_repair": "2026-09-29: build_pitch_queue.py's DRAFTS and DRAFT_INDEX blocks were hand-written prose for six consecutive runs and had drifted to a crossing date that was already a day old. They are now derived at build time from verified-requests.json, so an age in the queue is always a figure that run measured. 2026-10-01: the Speciality Food row still carried a hand-typed 'Now 13d old' against a re-probe that measured 14d \u2014 that row's crossing date and carry count are now read from the same cache.",
-  "sendable_defect_2026_10_01": "The first build of the 2026-10-01 run reported 1 sendable: employees-conflicted-about-ai-use-generative-ai-workplace-impact (low-medium, 0d), whose only 'route' was a docs.google.com casting form embedded in its body. _sendable() accepted any non-empty `published_links` as a reply route, so a casting form counted as a way to reply. Fixed in scripts/build_pitch_queue.py: a published_links entry now needs to be a booking/contact link (calendly, lnkd.in, hubspot, /contact, mailto:). Rebuilt queue: 0 sendable. Same defect class as 2026-09-29's chrome-filter bug, reached through a different field \u2014 which is why both are recorded rather than just the count.",
-  "denominator_note_2026_10_09": "The 2026-10-09 snapshot added a 77th tool, so the headline set reads 42 of 77 rather than 42 of 76. Every other number is unchanged, which is exactly why it is easy to keep sending the old denominator: the numerator and the median did not move. build_pitch_queue.py re-derives the figures at build time, and marketing/haro-outreach/_write_digest_1009.py's _repair() rewrites any carried '42 of 76' sentence, so the drift cannot survive into today's digest or drafts. marketing/haro-outreach/_verify_drafts_1009.py asserts that no 'of 76 tools' phrase remains in today's draft file.",
-  "sendable_route_resolved_2026_10_10": "A sendable row now exists that is not a late carry: google-and-claude-enterprise-users-seats-and-token-costs was carried for two runs as 'NO ROUTE RESOLVED', which was true of the request page and false of the world. The page's own author field names Glenn Hansen and the body states his beat (power equipment manufacturing), which identifies him as editor of OPE+ (EPG Brand Acceleration); OPE+ publishes 'Glenn Hansen, Editor - ghansen@epgacceleration.com' on its own site. Route-checks 2026-10-10: ope-plus.com/2024/02/13/announcing-ope/19236 HTTP 200, 147,438 bytes, address present verbatim; ope-plus.com/contact-us HTTP 200, 114,185 bytes, same editorial domain. MX = Microsoft 365. This is the class of defect the ledger exists to catch: a route declared absent because only the request page was read."
- },
- "reply_status": {
-  "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). Twenty-one days of silence. This send crossed the 10-day cold line on 2026-09-25 and the request page is 22 days old today.",
-  "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-10-01. The reply told him a monthly/annual range that has since been proven wrong twice. See figures_disclosure - the correction is now THIRTEEN days outstanding.",
-  "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Eighteen days of silence. Request is now 26 days old and well past the cold line."
- },
- "cold_without_a_send": [
-  {
-   "date": "2026-10-10",
-   "url": "https://www.sourcee.app/journo-request/google-and-claude-enterprise-users-seats-and-token-costs",
-   "action": "NEW AND SENDABLE - the route was RESOLVED today, two runs after this row was first carried as unsendable. Not a crossing: the opposite.",
-   "note": "The request page publishes no address, handle or link (email_redacted=False, emails_on_page=none) and the monitor recorded that as 'no route'. The page does name its author in its own author field and states his beat, which identifies him as Glenn Hansen, editor of OPE+ (EPG Brand Acceleration). OPE+ publishes his address on its own site: 'Glenn Hansen, Editor - ghansen@epgacceleration.com' at ope-plus.com/2024/02/13/announcing-ope/19236 (HTTP 200 today, 147,438 bytes, address present verbatim), with the same epgacceleration.com editorial domain named on ope-plus.com/contact-us (HTTP 200, 114,185 bytes, ten other staff addresses). epgacceleration.com MX = Microsoft 365. Relevance 'high' and the best-matching request this monitor has held: the reporter asks for enterprise-level costs for AI seats and tokens, which data/tool_sources.json answers with dated figures (Claude Team $20/$100 per seat/month checked 2026-09-18; Gemini in Workspace from $8.40/$7 to $26.40/$22 per user/month checked 2026-09-18; GitHub Copilot Business $19 / Enterprise $39 per user/month with credits at $0.01 checked 2026-10-01; Microsoft 365 Copilot Business $18 promotional annual vs $21 list checked 2026-10-01). Draft: pitch-drafts-2026-10-10.md section 1. Not sent - sends are George's lane."
+  "pitched": {
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "2026-09-15",
+    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "2026-09-18",
+    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "2026-09-18",
+    "https://www.sourcee.app/journo-request/google-and-claude-enterprise-users-seats-and-token-costs": "2026-10-10",
+    "https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech": "2026-10-10",
+    "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket": "2026-10-10 (SENT BUT BOUNCED - see log)"
   },
-  {
-   "date": "2026-10-10",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent \u2014 the shadow-AI one now sits in 20 draft files and the Speciality Food one in 19. Figures re-derived against a snapshot refreshed to 2026-10-10 (77 tools, 42/33/$17.50); the pair file was RE-READ, not rebuilt, because its inputs were last rebuilt on 2026-10-08.",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,984 bytes, data-part triple unchanged at simon.chandler+raconteur+net; control /contributors/tom-dennis HTTP 200 carries tom.dennis+raconteur+net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The Speciality Food October issue window has closed. What was lost is the ideal window, not the pitch."
+  "skipped": {
+    "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning": "2026-09-15 - wants people inside EdTech; we would be overstating our standing"
   },
-  {
-   "date": "2026-10-10",
-   "url": "insurance-agents-ai-use-in-personal-lines, us-emergency-physicians-and-paramedics-impact-of-ai-answering-911-calls, job-seekers-and-recruiters-ai-recruitment-experiences",
-   "action": "all three crossed the 10-day line today at 11 days, unpitched, none with a resolved route, none with a draft",
-   "note": "All three were already relevance 'low', so the crossing cost nothing sendable - the sendable count is unchanged by them (it rose today, but for a different reason: the Glenn Hansen route was resolved). Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 57 -> 54. Four further rows sit at exactly 10 days and cross on the next run (cybersecurity-expert-ai-nexus-and-security-risks; chatbot-users-experiences-talking-to-ai; us-ai-security-experts-rogue-ai-agents-hitting-government-sites; real-estate-agents-pdf-brochures-vs-alternatives-agent-workflow) - all low or low-medium, none sendable."
+  "notes": "URL -> date or reason. Written by George or the agent when a pitch is sent or deliberately dropped, so build_pitch_queue.py stops resurfacing it. Pitches sent to date: 3. Replies received: 1. Zero pitches sent on 2026-09-29 through 2026-10-10 (twelve consecutive runs). 2026-10-10 run: 107 tracked, 54 live unpitched, 49 cold unpitched, 2 sendable - the second sendable row is the one that matters: google-and-claude-enterprise-users-seats-and-token-costs (Glenn Hansen, editor of OPE+ / EPG Brand Acceleration) was carried as NOT SENDABLE for two runs for want of a route; the route was resolved this run off his own publication (ghansen@epgacceleration.com, published at ope-plus.com/2024/02/13/announcing-ope/19236, re-verified HTTP 200, 147,438 bytes, address present verbatim; epgacceleration.com MX = Microsoft 365). It is the first core-beat AI+spend request this monitor has ever been able to send. The window produced 66 slugs, ZERO AI-token and zero spend-token; all 66 bodies were fetched and scanned, and exactly one mentions AI at all - to forbid the cliche 'more use of AI' - so the zero is a body-level measurement. Mailbox checked 2026-10-10: All Mail carries no message after 2026-10-08 and exactly one inbound from any pitch recipient ever, Jan Suski's 2026-09-18 reply (msg 234); no reply to the Enterprise AI Leaders or Sherwood News sends, and nothing from raconteur.net, artichokehq.com or foxandspindle.com. INBOX top is still msg 104 (Anike Tobechukwu, on the separate AIDetector.cx affiliate thread); Sent top is msg 221 (2026-10-08), so no pitch-monitor mail has gone out since the 2026-09-18 Sherwood send. Separately: a paid-placement offer (Lilach Bullock, $300) arrived on a different outreach thread on 2026-09-29 and was declined same-day under editorial independence - that is not a pitch from this monitor and is not recorded as one. || 2026-10-10 LATE: George authorised sends and 4 went out at 21:20 UTC - the first sends in 22 days. 3 pitches + the owed Jan Suski correction. 1 of the 4 BOUNCED (simon.chandler@raconteur.net, 550 NoSuchUser). The WSJ/Mims row was not sendable (LinkedIn DM, no session). Zero pitches sent 2026-09-29 through 2026-10-10 is no longer true.",
+  "reply_status_checked": "2026-10-10",
+  "figures_disclosure": {
+    "date": "2026-10-10",
+    "status": "SENT - the 22-day-old correction went to jan@jansuski.com at 21:20 UTC. Day 22 closed.",
+    "note": "Told him the same-tier monthly/annual range is 1.11x-2.53x, median 1.25x over 19 tiers across 14 tools (checked 2026-09-18 and 2026-09-21), correcting the '1.21x-2.53x, median 1.33x' we sent on 2026-09-18, and stating plainly that it was our error and not a change in the data. Re-derived from source immediately before sending and both figures re-verified."
   },
-  {
-   "date": "2026-10-09",
-   "url": "saas-tools-gated-content-and-lead-capture-and-document-tracking, indie-makers-product-journey-first-user-and-paid-users",
-   "action": "REMOVED FROM TRACKING - not a crossing. Neither row was ever recorded as an opportunity by any digest.",
-   "note": "These two sat in verified-requests.json (entered from an earlier run's ad-hoc fetch) and in the 2026-10-10 queue's live list, but neither appears in any digest's `opportunities` array and neither is in this ledger. scripts/build_pitch_queue.py merges digests, and scripts/verify_journo_requests.py run with no arguments sweeps every digest URL AND the ledger AND pitch-queue.md - so once pitch-queue.md had carried them, the cache held them and the queue counted them. Effect: the live unpitched count was inflated by two rows the monitor had never classified, which is the mirror image of the index-page bug the queue already filters (digest counted what the queue should not). Removed at the data layer; the queue's live count is now digest-faithful. What they are, for the record: saas-tools-gated-content-and-lead-capture-and-document-tracking is a PR request for 'SaaS tools built for gated content' (a vendor-blog solicitation, not an AI-tool-spend story); indie-makers-product-journey-first-user-and-paid-users is a HackerMRR site promo inviting product stories."
+  "reply_status": {
+    "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance": "no reply. Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). Twenty-one days of silence. This send crossed the 10-day cold line on 2026-09-25 and the request page is 22 days old today.",
+    "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot": "REPLIED 2026-09-18 20:39Z from jan@jansuski.com; answered the same day 21:29Z (msg 178). Thread live, no further message from either side as of 2026-10-01. The reply told him a monthly/annual range that has since been proven wrong twice. See figures_disclosure - the correction is now THIRTEEN days outstanding.",
+    "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay": "no reply. Pitched 2026-09-18 to Rani@Sherwood.news (msg 175/176). Eighteen days of silence. Request is now 26 days old and well past the cold line."
   },
-  {
-   "date": "2026-10-09",
-   "url": "ai-practitioners-and-team-leads-real-ai-deployments-failures-and-fixes, b2b-marketing-leaders-hyperspecialization-to-outcompete-ai, data-center-operators-and-cloud-buyers-proof-of-deployable-ai-capacity",
-   "action": "all three crossed the 10-day line today at 11 days, unpitched, none with a resolved route",
-   "note": "All three were already relevance 'low' with no draft and no resolved route, so the crossing cost nothing sendable - the sendable count is unchanged by them. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling. Three further rows sit at exactly 10 days and cross on the next run."
+  "cold_without_a_send": [
+    {
+      "date": "2026-10-10",
+      "url": "https://www.sourcee.app/journo-request/google-and-claude-enterprise-users-seats-and-token-costs",
+      "action": "NEW AND SENDABLE - the route was RESOLVED today, two runs after this row was first carried as unsendable. Not a crossing: the opposite.",
+      "note": "The request page publishes no address, handle or link (email_redacted=False, emails_on_page=none) and the monitor recorded that as 'no route'. The page does name its author in its own author field and states his beat, which identifies him as Glenn Hansen, editor of OPE+ (EPG Brand Acceleration). OPE+ publishes his address on its own site: 'Glenn Hansen, Editor - ghansen@epgacceleration.com' at ope-plus.com/2024/02/13/announcing-ope/19236 (HTTP 200 today, 147,438 bytes, address present verbatim), with the same epgacceleration.com editorial domain named on ope-plus.com/contact-us (HTTP 200, 114,185 bytes, ten other staff addresses). epgacceleration.com MX = Microsoft 365. Relevance 'high' and the best-matching request this monitor has held: the reporter asks for enterprise-level costs for AI seats and tokens, which data/tool_sources.json answers with dated figures (Claude Team $20/$100 per seat/month checked 2026-09-18; Gemini in Workspace from $8.40/$7 to $26.40/$22 per user/month checked 2026-09-18; GitHub Copilot Business $19 / Enterprise $39 per user/month with credits at $0.01 checked 2026-10-01; Microsoft 365 Copilot Business $18 promotional annual vs $21 list checked 2026-10-01). Draft: pitch-drafts-2026-10-10.md section 1. Not sent - sends are George's lane."
+    },
+    {
+      "date": "2026-10-10",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent — the shadow-AI one now sits in 20 draft files and the Speciality Food one in 19. Figures re-derived against a snapshot refreshed to 2026-10-10 (77 tools, 42/33/$17.50); the pair file was RE-READ, not rebuilt, because its inputs were last rebuilt on 2026-10-08.",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,984 bytes, data-part triple unchanged at simon.chandler+raconteur+net; control /contributors/tom-dennis HTTP 200 carries tom.dennis+raconteur+net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The Speciality Food October issue window has closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-10",
+      "url": "insurance-agents-ai-use-in-personal-lines, us-emergency-physicians-and-paramedics-impact-of-ai-answering-911-calls, job-seekers-and-recruiters-ai-recruitment-experiences",
+      "action": "all three crossed the 10-day line today at 11 days, unpitched, none with a resolved route, none with a draft",
+      "note": "All three were already relevance 'low', so the crossing cost nothing sendable - the sendable count is unchanged by them (it rose today, but for a different reason: the Glenn Hansen route was resolved). Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 57 -> 54. Four further rows sit at exactly 10 days and cross on the next run (cybersecurity-expert-ai-nexus-and-security-risks; chatbot-users-experiences-talking-to-ai; us-ai-security-experts-rogue-ai-agents-hitting-government-sites; real-estate-agents-pdf-brochures-vs-alternatives-agent-workflow) - all low or low-medium, none sendable."
+    },
+    {
+      "date": "2026-10-09",
+      "url": "saas-tools-gated-content-and-lead-capture-and-document-tracking, indie-makers-product-journey-first-user-and-paid-users",
+      "action": "REMOVED FROM TRACKING - not a crossing. Neither row was ever recorded as an opportunity by any digest.",
+      "note": "These two sat in verified-requests.json (entered from an earlier run's ad-hoc fetch) and in the 2026-10-10 queue's live list, but neither appears in any digest's `opportunities` array and neither is in this ledger. scripts/build_pitch_queue.py merges digests, and scripts/verify_journo_requests.py run with no arguments sweeps every digest URL AND the ledger AND pitch-queue.md - so once pitch-queue.md had carried them, the cache held them and the queue counted them. Effect: the live unpitched count was inflated by two rows the monitor had never classified, which is the mirror image of the index-page bug the queue already filters (digest counted what the queue should not). Removed at the data layer; the queue's live count is now digest-faithful. What they are, for the record: saas-tools-gated-content-and-lead-capture-and-document-tracking is a PR request for 'SaaS tools built for gated content' (a vendor-blog solicitation, not an AI-tool-spend story); indie-makers-product-journey-first-user-and-paid-users is a HackerMRR site promo inviting product stories."
+    },
+    {
+      "date": "2026-10-09",
+      "url": "ai-practitioners-and-team-leads-real-ai-deployments-failures-and-fixes, b2b-marketing-leaders-hyperspecialization-to-outcompete-ai, data-center-operators-and-cloud-buyers-proof-of-deployable-ai-capacity",
+      "action": "all three crossed the 10-day line today at 11 days, unpitched, none with a resolved route",
+      "note": "All three were already relevance 'low' with no draft and no resolved route, so the crossing cost nothing sendable - the sendable count is unchanged by them. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling. Three further rows sit at exactly 10 days and cross on the next run."
+    },
+    {
+      "date": "2026-10-09",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (TWENTIETH run; fourteenth run). Figures re-derived against a snapshot refreshed to 2026-10-09 (77 tools, 42/33/$17.50); the pair file was NOT rebuilt this run because its inputs were rebuilt yesterday and the 19 pairs are unchanged.",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,984 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through TWENTY consecutive runs - the first round number this monitor has hit with a finished draft - and the Speciality Food draft has been carried a fourteenth time with its October window closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-08",
+      "url": "https://www.sourcee.app/journo-request/google-and-claude-enterprise-users-seats-and-token-costs",
+      "action": "NEW - the FIRST core-beat AI+spend request in fourteen runs, and the best-matching request this monitor has ever held. Logged here because it is high relevance and would otherwise be lost in the 'not sendable' tail purely for want of a route.",
+      "note": "relevance 'high': the reporter Glenn Hansen asks directly for 'enterprise-level costs for AI seats and tokens' from Google or Claude users - the exact quantity our dated price set measures. Our data holds Claude Team seats $20/$100 per seat/month (checked 2026-09-18), Gemini bundled into Workspace at $8.40/$7 up to $26.40/$22 per user/month (2026-09-18), and Copilot Business $19 / Enterprise $39 per user/month (2026-10-01). NOT SENDABLE: the page publishes no address, handle or link and gives no reply instruction (email_redacted=False but emails_on_page=none). A web search cannot confirm WHICH Glenn Hansen this is - a same-name LinkedIn profile ('In Power', Stillwater MN) is a different person - so NO handle may be invented. Route must be resolved before send. Draft ready at pitch-drafts-2026-10-08.md section 2."
+    },
+    {
+      "date": "2026-10-08",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (NINETEENTH run; thirteenth run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed to 2026-10-08, and the pair file was rebuilt rather than re-read.",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through NINETEEN consecutive runs; the Speciality Food draft has been carried a thirteenth time and its October window has closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-07",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (EIGHTEENTH run; twelfth run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed to 2026-10-07, and the pair file was rebuilt rather than re-read.",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through EIGHTEEN consecutive runs; the Speciality Food draft has been carried a twelfth time and its October window has closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-06",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (seventeenth run; eleventh run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed today, and the pair file was rebuilt rather than re-read.",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through SEVENTEEN consecutive runs; the Speciality Food draft has been carried an eleventh time and its October window has closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-06",
+      "url": "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks",
+      "action": "NEW AND NOT YET COLD - logged here so the first sendable row in this monitor's history does not go unrecorded. 1 day old, relevance 'medium', route resolved.",
+      "note": "The counterweight to the two rows above: this is the first request in twelve runs that is both above the tangential band and route-resolved, and it arrived the day after the monitor went twelve runs without a core-beat find. Written into the ledger rather than left in the digest because the ledger is what the next run reads before deciding what to resurface. Draft: pitch-drafts-2026-10-06.md section 1. Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ (HTTP 200 today, title 'Christopher Mims - The Wall Street Journal | LinkedIn'); the request's own body says '(DMs open)'. Dead ends recorded so they are not retried as routes: muckrack.com/christopher-mims HTTP 403, wsj.com/news/author/christopher-mims HTTP 401. Not sent - sends are George's lane."
+    },
+    {
+      "date": "2026-10-05",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (sixteenth run; ninth run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed today.",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through SIXTEEN consecutive runs; the Speciality Food draft has been carried for a ninth time and its October window has closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-05",
+      "url": "ai-hardware-makers-3d-printing-smart-devices-mini-robots-local-ai, engineering-managers-measuring-engineers-when-using-ai, saas-tools-for-gated-content-lead-gen-and-doc-tracking-q4-roundup",
+      "action": "all three crossed the 10-day line since the 2026-10-02 digest at 13 days, unpitched, none with a resolved route",
+      "note": "All three were already relevance 'low' and none was ever sendable, so the crossing cost nothing. Two of the three were sitting at exactly 10 days in the 2026-10-02 digest's advance warning. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling."
+    },
+    {
+      "date": "2026-10-02",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (fifteenth run; eighth run)",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200, 154,031 bytes, carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through FIFTEEN consecutive runs; the Speciality Food draft has been carried eight times and its October window has closed. NOT a quiet day for the figures, though: the snapshot refresh moved the shadow-AI headline set from 40/31/$16.50 to 42/33/$17.50, so both drafts were re-derived today rather than copied. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-02",
+      "url": "five rows (founders-and-leaders-mindsets-and-milestones; sales-enablement-saas-tools-proposal-and-deck-engagement-tracking; creative-industry-professionals-podcast-on-ai-impact; former-ai-skeptics-changed-views-on-ai-impact; london-businesses-stopped-using-ai-hiring-tools)",
+      "action": "all five crossed the 10-day line today at 11 days, unpitched, none ever had a resolved route - the second consecutive day of a mass crossing",
+      "note": "All five were already relevance 'low' and none was ever sendable, so the crossing cost nothing. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 21 to 16. Three further rows sit at exactly 10 days and cross tomorrow (ai-hardware-makers-3d-printing-smart-devices-mini-robots-local-ai; engineering-managers-measuring-engineers-when-using-ai; saas-tools-for-gated-content-lead-gen-and-doc-tracking-q4-roundup) - all low, none sendable. Seven rows crossed yesterday, so 12 rows have gone cold in two days with nothing actionable lost."
+    },
+    {
+      "date": "2026-10-02",
+      "event": "HEADLINE FIGURES MOVED WITH THE SNAPSHOT REFRESH - drafts re-derived rather than copied",
+      "url": "n/a - data event, not a request",
+      "action": "data/pricing_snapshots.json refreshed to `updated: 2026-10-02`; the shadow-AI headline set moved from 40 monthly-priced tools / 31 at or under $25 / median $16.50 to 42 / 33 / $17.50",
+      "note": "The pair range did NOT move (1.11x-2.53x, median 1.25x, re-asserted clean for the tenth consecutive day), which is why the movement is easy to miss: a run that only re-asserts the pair range would have carried yesterday's 40/31/$16.50 into today's drafts. Both today's drafts were re-derived from scratch by scripts/haro-outreach/_figures_1002.py. build_pitch_queue.py's DRAFTS prose had hand-typed copies of the old set and is now derived at build time (_headline_figures()) - same defect class as the hardcoded live-row count and the hardcoded draft filename fixed on earlier runs."
+    },
+    {
+      "date": "2026-10-01",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (fourteenth run; sixth run)",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200, 154,027 bytes, carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through FOURTEEN consecutive runs; the Speciality Food draft has been carried six times and its October window has closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-10-01",
+      "url": "seven rows (data-center-professionals-podcast-guest-ai-and-hyperscale-trends; employers-and-recruiters-over-50s-adapting-to-ai; patients-with-exorbitant-hospital-bills-billing-errors-and-overcharges; survivors-of-ai-and-autonomous-weapons-civilian-impact-testimonies; founders-55-latelife-entrepreneurship-series-1; founders-and-entrepreneurs-and-musicians-podcast-guests; ml-researchers-continuous-learning-fast-weights-and-adapters)",
+      "action": "all seven crossed the 10-day line today at 11 days, unpitched, none ever had a resolved route - the largest single-day crossing this monitor has recorded",
+      "note": "All seven were already relevance 'low' and none was ever sendable, so the crossing cost nothing. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 26 to 19. Five further rows sit at exactly 10 days and cross tomorrow (founders-and-leaders-mindsets-and-milestones; sales-enablement-saas-tools-proposal-and-deck-engagement-tracking; creative-industry-professionals-podcast-on-ai-impact; former-ai-skeptics-changed-views-on-ai-impact; london-businesses-stopped-using-ai-hiring-tools) - all low, none sendable."
+    },
+    {
+      "date": "2026-09-30",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both sent-ready drafts carried and republished again, still unsent (thirteenth run; fifth run)",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,857 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200, 154,062 bytes, carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through THIRTEEN consecutive runs; the Speciality Food draft has been carried five times and its October window has closed. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-09-30",
+      "url": "https://www.sourcee.app/journo-request/founders-cutting-ai-use-eliminating-or-reducing-ai-in-business, https://www.sourcee.app/journo-request/ai-alignment-researchers-humanai-mutual-understanding",
+      "action": "both crossed the 10-day line today at 11 days, unpitched, neither with a resolved route",
+      "note": "The Forbes founders-cutting-AI row is the important one: build_pitch_queue.py counted it sendable for two consecutive runs (2026-09-28 and 2026-09-29) before the 2026-09-29 chrome-filter fix exposed that its only 'route' was Sourcee's own page chrome. Its body is explicit - 'Please only answer as a comment on this post. Do not email or DM me because they won't be used.' - and it wants a named founder's first-person account of cutting AI, which we do not have. So the crossing cost nothing sendable; it is logged here because the advance warning was pointed at it for two days and would otherwise read as a lost draft. The alignment-researchers row is low relevance with no email or handle on the page. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 22 to 21."
+    },
+    {
+      "date": "2026-09-29",
+      "url": "https://www.sourcee.app/journo-request/founders-cutting-ai-use-eliminating-or-reducing-ai-in-business",
+      "action": "LAST LIVE DAY - crosses TOMORROW at 11 days, and the crossing costs nothing",
+      "note": "10 days old today and it has been counted as sendable for two consecutive runs, wrongly both times. Its body is explicit: \"Please only answer as a comment on this post. Do not email or DM me because they won't be used.\" The queue's own angle field already said the reply route requires a named founder's firsthand account of cutting AI, which we do not have. It looked sendable only because this run's refresh script dropped Sourcee's two own social links from its chrome filter, so a page's own chrome landed in published_links and _sendable() read that as a usable route. With the filter restored the row is correctly not sendable, so tomorrow's crossing removes nothing. Logged on the day it still looks live, so the advance warning is not misread as a lost draft."
+    },
+    {
+      "date": "2026-09-29",
+      "url": "https://www.sourcee.app/journo-request/companies-that-stopped-emailing-pdfs-new-tools-and-transition",
+      "action": "crossed the 10-day line today at 11 days, unpitched, no draft ever existed",
+      "note": "Low relevance, never had a draft and never had a resolved route, so nothing sendable was lost. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 18 to 17."
+    },
+    {
+      "date": "2026-09-29",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "both were sent-ready drafts that had already crossed on 2026-09-28 - re-derived and republished today, still unsent",
+      "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,759 bytes, data-part1/2/3 unchanged, control author /contributors/tom-dennis carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through twelve consecutive runs, and the Speciality Food draft has been carried four times. What was lost is the ideal window, not the pitch."
+    },
+    {
+      "date": "2026-09-28",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "BOTH CROSSED TODAY at 11 days, unpitched, both with a paste-ready draft - the queue is now 0 sendable",
+      "note": "The crossing the monitor spent a week warning about happened, on both rows at once. The Raconteur shadow-AI request (high relevance) had a finished draft for TEN consecutive runs and is the FIRST high-relevance request this queue has ever lost to the cold line with a paste-ready draft sitting ready. The Speciality Food request crossed the same day, draft unsent since 2026-09-19, October issue window now closed. Neither draft is void: both pages are still HTTP 200 and both routes were re-resolved against the live pages today (simon.chandler@raconteur.net off /contributors/simon-chandler, HTTP 200, 154,797 bytes, triple unchanged with a control author; holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact, HTTP 200, 59,500 bytes, alongside five other named masthead addresses). A late send is still possible on either. Both drafts are republished today at pitch-drafts-2026-09-28.md sections 1 and 2 with figures re-derived against today's snapshot, so carrying them did not cost the numbers."
+    },
+    {
+      "date": "2026-09-28",
+      "url": "https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice, https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact",
+      "action": "crossed the 10-day line today at 11 days, both unpitched, neither ever had a draft",
+      "note": "Both low relevance, neither has ever had a resolved reply route, so nothing sendable was lost. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling from 24 to 18 - and today that count change sits next to a real loss, which is exactly why the two have to be named separately."
+    },
+    {
+      "date": "2026-09-27",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket",
+      "action": "LAST LIVE DAY - crosses TOMORROW, unpitched, with a paste-ready draft",
+      "note": "10 days old today and sendable; it crosses the 10-day line tomorrow. This is the row the monitor has been watching for a week, and today is the last day it counts as sendable. The draft has been written and unsent for NINE consecutive runs (pitch-drafts-2026-09-27.md section 1, figures re-derived today against a snapshot refreshed today). Route simon.chandler@raconteur.net re-resolved off the live /contributors/simon-chandler page today (HTTP 200, 154,797 bytes, data-part1/2/3 triple unchanged). It is the only high-relevance request this queue has ever held with a finished draft, so if it crosses unpitched it is the first high-relevance loss of that kind. Logged on the day it can still be prevented, not after the fact."
+    },
+    {
+      "date": "2026-09-27",
+      "url": "https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "one day from the line - crosses TOMORROW, unpitched, with a paste-ready draft",
+      "note": "9 days old and sendable; crosses the day after the shadow-AI row and its October issue window is closing. Draft re-verified today at pitch-drafts-2026-09-27.md section 2, route holly.shackleton@artichokehq.com re-read today off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, alongside five other named masthead addresses). Standing constraint stated in the draft's first line: we are not a food retailer."
+    },
+    {
+      "date": "2026-09-27",
+      "url": "https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety, https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies",
+      "action": "crossed the 10-day line today at 11 days, both unpitched, neither ever had a draft",
+      "note": "Both low/low-medium relevance and neither has ever had a resolved reply route, so nothing sendable was lost. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling from 26 to 24. Logged so that a quiet count change is never mistaken for a quiet week."
+    },
+    {
+      "date": "2026-09-26",
+      "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
+      "action": "NOT YET CROSSED — both sendable rows are one day from the line at the same time, for the first time",
+      "note": "Logged in advance rather than after the fact, because this is the one crossing the monitor can still prevent. The shadow-AI request is 9 days old and crosses TOMORROW (2026-09-27); the Speciality Food request is 8 days old and crosses the day after (2026-09-28). Neither has ever been pitched. Each has a finished, paste-ready draft (pitch-drafts-2026-09-26.md sections 1 and 2) and a re-resolved route (simon.chandler@raconteur.net; holly.shackleton@artichokehq.com). The shadow-AI draft has been written and unsent for EIGHT consecutive runs; if it goes cold unanswered it becomes the first high-relevance request this queue has lost to the line with a draft sitting ready — the same loss as the Anthropic crossing on 2026-09-23, but on the queue's only high-relevance row. build_pitch_queue.py now warns two days ahead instead of only reporting the crossing after it happens."
+    },
+    {
+      "date": "2026-09-25",
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
+      "action": "crossed the 10-day line at 11 days, but as a SEND that got no reply — not an unsent draft",
+      "note": "Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). Ten days of silence, then it aged past the line. This is the opposite cost to the EdTech and Anthropic crossings: no draft was lost here because the pitch actually went out. Logged so the distinction stays visible — three requests crossed the cold line in the last three runs and only one of them (Anthropic, 2026-09-23) cost a finished-and-unsent draft."
+    },
+    {
+      "date": "2026-09-25",
+      "url": "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning",
+      "action": "crossed the 10-day line at 12 days, already recorded as skipped",
+      "note": "No loss again. Recorded in the skipped map on 2026-09-15, so it was never in the sendable count and no draft existed for it."
+    },
+    {
+      "date": "2026-09-24",
+      "url": "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning",
+      "action": "crossed the 10-day line at 11 days, already recorded as skipped",
+      "note": "No loss. It was recorded in the ledger's skipped map on 2026-09-15 (\"wants people inside EdTech; we would be overstating our standing\"), so it was never in the sendable count and no draft existed for it. Logged only so the crossing is visible next to the Anthropic one - the two crossings on consecutive days cost opposite amounts, and that difference is the whole point of separating sendable from live."
+    },
+    {
+      "date": "2026-09-23",
+      "url": "https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences",
+      "action": "went cold unpitched at 11 days",
+      "note": "Medium-high. Draft finished and unsent since 2026-09-19 (pitch-drafts-2026-09-22.md section 2, route Signal hliwrites.99, re-read verbatim off the live page on 2026-09-22). Carried as the queue's #2 for four consecutive runs and sendable every one of them, including the day before it crossed. Not a data loss: the draft is intact and the Signal handle is still published, so a late send is still possible. Recorded so the crossing is visible rather than only the count changing from 3 sendable to 2."
+    },
+    {
+      "date": "2026-09-22",
+      "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
+      "action": "at 11 days, recorded as cold",
+      "note": "Medium relevance. Not a loss in the usual sense: it is a founder-profile slot answered by a public comment, so it earns standing rather than a citation. Recorded so the crossing is visible."
+    },
+    {
+      "date": "2026-09-21",
+      "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
+      "action": "crossed the cold line unpitched",
+      "note": "Medium relevance, 10 days. Not a loss in the usual sense: it is a founder-profile slot answered by a public comment, so it earns standing rather than a citation, and the queue documents it as deliberately left. Recorded so the crossing is visible."
+    },
+    {
+      "date": "2026-09-19",
+      "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
+      "action": "went cold unpitched",
+      "note": "Was the queue's #1 at 10 days on 2026-09-17, with a draft written in pitch-drafts-2026-09-17.md section 1. Never sent. Now 15 days and past the 10-day line. The draft still exists and its route (LinkedIn DM to linkedin.com/in/niloy-ghosh) is unchanged, so sending it late is still possible - but the monitor's own queue no longer counts it as live."
+    },
+    {
+      "date": "2026-09-19",
+      "url": "https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse",
+      "action": "went cold unpitched",
+      "note": "Was medium-high. The reporter's own internal deadline ('by this Wednesday September 9') had already passed when the request was first recorded; the page has stayed live with no expiry notice and it has now also crossed the 10-day line. Not a live opportunity in practice."
+    }
+  ],
+  "log": [
+    {
+      "date": "2026-10-10",
+      "event": "GEORGE AUTHORISED SENDS - 4 messages went out at 21:20 UTC, the first sends from this monitor since 2026-09-18 (22 days). 3 pitches + 1 owed figures correction.",
+      "url": "(batch)",
+      "action": "4 sent: Glenn Hansen seats/tokens; Simon Chandler shadow-AI; Holly Shackleton Speciality Food; Jan Suski figures correction. 1 bounced.",
+      "to": "ghansen@epgacceleration.com; simon.chandler@raconteur.net; holly.shackleton@artichokehq.com; jan@jansuski.com",
+      "route": "email x4 (all plain email; the WSJ/Mims row is a LinkedIn DM and was NOT sendable)",
+      "sent_message_id": null,
+      "note": "Cited by DATE + SUBJECT, not by Himalaya id (ids are folder-relative and every arrival renumbers them): 'Enterprise AI seat and token costs - the dated numbers, both halves'; 'The shadow-AI spend we can date, for your Raconteur piece'; 'The GBP10k tech budget, in dated prices rather than a wish list'; 'Re: The Amplemarket list-vs-real gap, with dated numbers'. Every figure was re-derived from source immediately before sending: 77 tools, 42 monthly-priced, 33 at/under $25, median $17.50 (scripts/build_pitch_queue._figures_now against the 2026-10-10 snapshot) and 1.11x-2.53x median 1.25x over 19 tiers / 14 tools (data/monthly_annual_pairs.json). One draft's signature carried the domain WITHOUT the s in 'aitools' (a 47-occurrence defect across 19 draft files, all now fixed); caught before sending. NOTE: a bulk find-replace over that typo also rewrote this very sentence, which is why the wording is descriptive rather than a literal - a global string sweep cannot tell an example of a defect from the defect itself."
+    },
+    {
+      "date": "2026-10-10",
+      "event": "monitor run - 0 new rows tracked (66-slug window, ZERO AI-token and zero spend-token, all 66 bodies read), 3 rows crossed cold, 1 route RESOLVED (first core-beat sendable row in monitor history), 2 sendable, no sends",
+      "url": "(no pitch)",
+      "action": "none sent - 2 sendable rows carried (Glenn Hansen seats/tokens, 3 days old, email route; WSJ blocked-work-accounts, 5 days old, LinkedIn DM)",
+      "to": null,
+      "route": null,
+      "sent_message_id": null,
+      "note": "107 tracked (101 carried and all 101 re-verified HTTP 200/live, 0 new rows, 3 pitched, 1 skipped), 54 live unpitched, 49 cold unpitched, 2 sendable. New window: 66 slugs, 0 AI-token, 0 spend-token. Because a slug-level zero cannot be confirmed by slug matching, all 66 window bodies were fetched and scanned for AI mentions: exactly one mentions AI (corporate-travel-managers-and-buyers-2027-trends-and-program-impact) and only to forbid the cliche. Window volume is down ~40% (66 vs 105) and the newest lastmod is 2026-10-10T03:26:04Z, ~12 hours before the run: 2026-10-10 is a Saturday, so this is a weekend effect. THE FIND: the Glenn Hansen route was resolved off his own publication (ghansen@epgacceleration.com, ope-plus.com/2024/02/13/announcing-ope/19236, HTTP 200, 147,438 bytes, address verbatim; epgacceleration.com MX = Microsoft 365). Headline figures re-derived and unchanged: 42 of 77 tools publish a monthly price, 33 at or under $25, median $17.50; pair range re-read at 1.11x-2.53x over 19 tiers. Mailbox: no reply to any tracked pitch; All Mail holds no message after 2026-10-08 and exactly one inbound from a pitch recipient ever (Jan Suski, 2026-09-18). 0 pitches sent this run - sends remain George's lane. Defects fixed: (1) a route declared absent because only the request page was read; (2) build_pitch_queue.py's _automatable() could not see an address recorded in `contact_method`; (3) the AI-topic-feed '100% overlap by construction' claim measured at 40/50 today and retired; (4) a slug-level zero confirmed at body level."
+    },
+    {
+      "date": "2026-10-09",
+      "event": "monitor run - 6 new AI-token tracked, 0 AI+spend (first clean window in four runs), 3 rows crossed cold, 2 untracked rows removed, 1 sendable, no sends",
+      "url": "(no pitch)",
+      "action": "none sent - 1 sendable row carried (WSJ blocked-work-accounts, now 4 days old)",
+      "to": null,
+      "route": null,
+      "sent_message_id": null,
+      "note": "107 tracked (101 carried and all 101 re-verified HTTP 200/live, 6 new AI-token finds, 2 untracked rows removed), 57 live unpitched, 46 cold unpitched, 1 sendable. New window: 105 slugs, 8 AI-token, 0 AI+spend, 7 spend-token (all consumer cost-of-living: citizenship-service fees, a political podcast, paid parking, grocery returns, state cost-cutting, cost-of-living relationship trade-offs, a paid interview fee). All 16 candidates fetched and read in full. NOTHING core-beat arrived: the closest is sales-reps-who-cold-call-and-email (Issie Lapowsky), whose body puts product pitches on a 'naughty list' - the clearest anti-pitch instruction this monitor has seen. The carried high-relevance row (google-and-claude-enterprise-users-seats-and-token-costs, Glenn Hansen) is now 1 day old and still has NO resolved route, so it remains unsendable. Headline figures re-derived: 42 of 77 tools publish a monthly price (denominator moved 76 -> 77), 33 at or under $25, median $17.50. Pair range held at 1.11x-2.53x over 19 tiers; the pair file was read, not rebuilt. Mailbox: no reply to any tracked pitch; All-Mail search over the four tracked recipients returns only Jan Suski's 2026-09-18 message. 0 pitches sent this run - sends remain George's lane. Figures correction to Jan Suski now 21 days outstanding. Defect fixed: two rows no digest ever recorded were inflating the queue's live count and are removed from tracking."
+    },
+    {
+      "date": "2026-10-08",
+      "event": "monitor run - 7 new AI-token tracked, 1 AI+spend (first real software-cost hit in three runs), 0 rows crossed cold, 1 sendable, no sends",
+      "url": "(no pitch)",
+      "action": "none sent - 1 sendable row carried (WSJ blocked-work-accounts, now 3 days old)",
+      "to": null,
+      "route": null,
+      "sent_message_id": null,
+      "note": "101 tracked (94 carried and all 94 re-verified HTTP 200/live, 7 new AI-token finds), 54 live unpitched, 43 cold unpitched, 1 sendable. New window: 111 slugs, 7 AI-token, 1 AI+spend, 8 spend-token (all consumer cost-of-living: restaurant labour, student tutoring pay, grocery prices, fuel/household budgets, medical billing, childcare, dating spend). All 14 candidates fetched and read in full. THE FIND: google-and-claude-enterprise-users-seats-and-token-costs (Glenn Hansen) is the first core-beat AI+spend request in fourteen runs - relevance 'high', our data answers it - but it has NO resolved route, so it is not sendable. The other six new rows are off-beat (patent/IP, IA careers, data-labelling labour, pro-bono law, APAC press, a martech vendor blog). The pair range held at 1.11x-2.53x over 19 tiers for the twelfth consecutive day against a snapshot refreshed to `updated: 2026-10-08` and a pair file rebuilt today. Mailbox: no reply to any tracked pitch; INBOX top is a ToolChase reply to the separate Sep-3 guest-pitch batch (msg 102), not this monitor. 0 pitches sent this run - sends remain George's lane. Figures correction to Jan Suski now 20 days outstanding. Defect fixed: the digest writer's `_new_this_run` flag was accumulating across carries (40 flags on a 7-new run) and is now popped on every carried row."
+    },
+    {
+      "date": "2026-10-07",
+      "event": "monitor run - 10 new AI-token tracked, 0 AI+spend (first clean window in three runs), 0 rows crossed cold, 1 sendable, no sends",
+      "url": "(no pitch)",
+      "action": "none sent - 1 sendable row carried (WSJ blocked-work-accounts, now 2 days old)",
+      "to": null,
+      "route": null,
+      "sent_message_id": null,
+      "note": "94 tracked (84 carried and all 84 re-verified HTTP 200/live, 10 new AI-token finds), 47 live unpitched, 43 cold unpitched, 1 sendable. New window: 109 slugs, 10 AI-token, 0 AI+spend, 6 spend-token (all consumer cost-of-living: airline customers, a paid TV casting call, Houston household costs, Brooklyn hair-care costs, house-sharing, Gen Z personal finance). All 16 candidates fetched and read in full. None of the ten new rows is core-beat and none is sendable - all leave the body address Sourcee-redacted or publish no route. The pair range held at 1.11x-2.53x over 19 tiers for the eleventh consecutive day against a snapshot refreshed to `updated: 2026-10-07` and a pair file rebuilt today. The 2026-10-06 sendable row (Christopher Mims, WSJ) re-verified live at 2 days and its route re-fetched (LinkedIn, HTTP 200, 603,318 bytes, matching title). Mailbox: no reply to any tracked pitch; four new tool submissions (msgs 96-100), none a pitch reply. 0 pitches sent this run - sends remain George's lane. Figures correction to Jan Suski now 19 days outstanding."
+    },
+    {
+      "date": "2026-09-15",
+      "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
+      "action": "pitched",
+      "to": "hello@foxandspindle.com",
+      "route": "email (the request publishes a Calendly link; emailed the published address instead)",
+      "sent_message_id": "171/172 (one message; Gmail stored it twice)",
+      "note": "First pitch ever sent from this monitor, after 12 days and 43 flagged opportunities.",
+      "figures_cited": "76 tools tracked; '60 of 76 sit in the 13 categories holding three or more'",
+      "figures_check": "2026-09-18: the 60 understated the real figure, which is 70. Recompute any count before reusing it from this pitch."
+    },
+    {
+      "date": "2026-09-18",
+      "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
+      "action": "pitched",
+      "to": "contact@marketintelligencetools.com",
+      "sent_message_id": "174 (one message)",
+      "route": "email - published on marketintelligencetools.com/contact (MX mx1/mx2.spacemail.com, verified live)",
+      "note": "Jan Suski, independent reviewer. The pitch deliberately did NOT claim an Amplemarket Growth/Elite contract figure we do not have; it led with the price-opacity method, which is what the request actually asked for.",
+      "figures_cited": "5 of 76 publish no self-serve price (Harvey, Spellbook, Dragon Copilot, Pika, Tunii); Browse AI $48/mo vs $19/mo billed annually = 2.5x",
+      "figures_check": "SUPERSEDED - this entry contained two errors, both corrected 2026-09-18. (1) The opaque count is 3, not 5: Pika and Tunii DO publish paid prices (pika.art/pricing has a full tier table with a monthly/annual toggle; tunii.net/pricing lists one-time minute packs at $4.99/$9.99/$24.99). Our own records for both were wrong, not the vendors'. Only Harvey, Spellbook and Dragon Copilot publish no paid-tier price. (2) The '1.2-1.3x' spread claim was understated: across the 9 same-tier monthly/annual pairs we hold, the ratio runs 1.21x (Slack Pro $8.75 vs $7.25) to 2.53x (Browse AI $48 vs $19), median 1.33x - but three are above 1.8x, so the range is wider than stated. Both errors were disclosed to the recipient in the reply below rather than left standing."
+    },
+    {
+      "date": "2026-09-18",
+      "url": "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay",
+      "action": "pitched",
+      "to": "Rani@Sherwood.news",
+      "sent_message_id": "175/176 (one message; Gmail stored it twice)",
+      "route": "email - published on sherwood.news/author/rani-molla (Google Workspace MX)",
+      "note": "Rani Molla, Senior Tech Correspondent, Sherwood News. The request asked for individual stories; we do not have one, so the pitch offered the structural cause instead of a fabricated anecdote.",
+      "figures_cited": "70 of 76 tools sit in the 13 categories holding three or more",
+      "figures_check": "Verified from data/stack_audit_catalog.json 2026-09-18."
+    },
+    {
+      "date": "2026-09-18",
+      "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
+      "action": "replied",
+      "to": "jan@jansuski.com",
+      "sent_message_id": "178 (one message; verified in Sent Mail and All Mail, no Trash copy)",
+      "route": "reply-all to the correspondent's own reply (In-Reply-To <BEFKB5PHCUU4.4QL01L7GFNUG3@mailcore-84f949d7c6-dhwdf>)",
+      "note": "Jan Suski answered the pitch. His reply asked directly whether a dynamically re-checked, searchable pricing database would make sense, offered his three Amplemarket URLs, and invited an exchange. Answered as a peer method discussion: why a price database is defensible (the source degrades; the checked date is the artifact a vendor cannot publish about itself), the Amplemarket tier data verified from amplemarket.com/pricing today, and two failure modes from building the same thing.",
+      "figures_cited": "Amplemarket from amplemarket.com/pricing checked 2026-09-18: Startup $600/mo annual term, 2 users, 27,000 contacts; Growth 4 users/140,000 contacts and Elite 10 users/400,000 contacts both 'Custom'; email credits 13,500/35,000/40,000 per user/year; phone credits 600/5,000/9,600; mailboxes 2/4/8. Three tools publish no paid-tier price (Harvey, Spellbook, Dragon Copilot; harvey.ai/pricing 404s). Nine same-tier monthly/annual pairs: 1.21x-2.53x, median 1.33x.",
+      "figures_check": "All Amplemarket figures read off the live pricing page this run. Every credit, seat and contact number was verified present in the rendered page before citing. The monthly/annual ratios were computed from data/tool_sources.json using one tier per tool - an earlier pass compared Slack's Business+ monthly ($18) against its Pro annual ($7.25) and produced a meaningless 2.48x; same-tier Slack Pro is $8.75 vs $7.25 = 1.21x. Recomputed and disclosed.",
+      "corrections_disclosed": true
+    },
+    {
+      "date": "2026-10-02",
+      "url": "(no pitch)",
+      "action": "none sent - queue is 0 sendable, 23 live unpitched, none with both a relevance above the tangential band and a usable route",
+      "to": null,
+      "route": null,
+      "sent_message_id": null,
+      "note": "Run 2026-10-02: no pitch sent (sends remain George's lane). Two crossed-but-live drafts remain the only sendable-by-hand items (Raconteur shadow AI, 15d; Speciality Food, 14d, October window closed - send-or-skip). The figures correction to Jan Suski is now fourteen days outstanding and remains the only outbound item this monitor has that is not a pitch. Mailbox re-checked: no new inbound at all since 2026-09-29 (INBOX top still msg 84, Lilach Bullock; sent-mail top still msg 189), and no reply to either tracked send (seventeen and fourteen days of silence). New this run: the shadow-AI headline figures moved with the snapshot refresh (40/31/$16.50 -> 42/33/$17.50) and both drafts were re-derived from scratch rather than copied."
+    },
+    {
+      "date": "2026-10-02",
+      "event": "monitor run - 7 new AI-token tracked, 0 AI+spend (10th consecutive), 5 rows crossed cold, 0 sendable, no sends",
+      "detail": "67 tracked (60 carried and all 60 re-verified HTTP 200/live, 7 new AI-token finds), 23 live unpitched, 44 cold, 0 sendable. New window: 91 slugs, 7 AI-token, 0 AI+spend, 8 spend-token (all consumer cost-of-living / personal-finance: Harlem rent freeze, Alaska living costs, Canada childcare, the i Paper budget x2, digital disconnection, consumer product spending, UK SME winter pressures). All 15 candidates fetched and read in full. Pair range held at 1.11x-2.53x over 19 tiers for the TENTH consecutive day against a snapshot refreshed today - but the shadow-AI headline set moved (42 monthly-priced, 33 at or under $25, median $17.50) and both drafts were re-derived. Mailbox: no reply to any tracked pitch, no new inbound at all; sent mail top is still msg 189 (2026-09-29), so nothing has gone out since. 0 pitches sent this run - sends remain George's lane. Code fixes: build_pitch_queue.py's live-row count, headline figures and Speciality Food carry count are now derived at build time rather than hand-typed (the typed live count said 21 rows three days after it stopped being true; the typed figures were stale the day the snapshot moved)."
+    },
+    {
+      "date": "2026-10-01",
+      "url": "(no pitch)",
+      "action": "none sent - queue reached 0 sendable",
+      "to": null,
+      "route": null,
+      "sent_message_id": null,
+      "note": "Run 2026-09-28: no pitch sent (sends remain George's lane). Both sendable rows crossed cold, so the queue is empty of actionable rows. The figures correction to Jan Suski is now ten days outstanding and remains the only outbound item this monitor has that is not a pitch. Mailbox re-checked: no new message at all since yesterday (All Mail top unchanged at msg 82, Sent Mail top unchanged at msg 187)."
+    },
+    {
+      "date": "2026-09-30",
+      "event": "monitor run - 0 sendable, 3 new AI-token tracked, 0 AI+spend (8th consecutive), no sends",
+      "detail": "54 tracked (51 carried and all 51 re-verified HTTP 200/live, 3 new AI-token finds), 22 live unpitched, 28 cold unpitched, 0 sendable. New window: 113 slugs, 3 AI-token, 0 AI+spend, 10 spend-token (all consumer cost-of-living / sport / personal finance). All 13 candidates fetched and read in full. Pair range held at 1.11x-2.53x over 19 tiers for the eighth consecutive day against a snapshot refreshed today. Mailbox: no reply to any tracked pitch; sent mail top is still msg 189 (2026-09-29), so nothing has gone out since. 0 pitches sent this run - sends remain George's lane."
+    },
+    {
+      "date": "2026-10-01",
+      "event": "monitor run - 6 new AI-token tracked (most in one run), 0 AI+spend (9th consecutive), 7 rows crossed cold, 0 sendable, no sends",
+      "detail": "60 tracked (54 carried and all 54 re-verified HTTP 200/live, 6 new AI-token finds), 21 live unpitched before the six new rows, 0 sendable. New window: 95 slugs, 6 AI-token, 0 AI+spend, 4 spend-token (all consumer or non-software: Gen Z dating costs, UK season tickets, small-UK-business winter pressures, physical-goods subscription marketing). All 10 candidates fetched and read in full. Seven rows crossed the 10-day line at once - the largest single-day crossing recorded - and five more sit at exactly 10 days; none was ever sendable. Pair range held at 1.11x-2.53x over 19 tiers for the ninth consecutive day against a snapshot refreshed today (updated: 2026-10-01). Mailbox: no reply to any tracked pitch, no new inbound at all; sent mail top is still msg 189 (2026-09-29), so nothing has gone out since. 0 pitches sent this run - sends remain George's lane. Code fix: build_pitch_queue.py's _sendable() counted a body-embedded Google Docs casting form as a reply route and reported 1 sendable on the first build; fixed to require a booking/contact link, queue re-built to its true count of 0."
+    }
+  ],
+  "declined_paid_placements": {
+    "2026-09-29": {
+      "from": "Lilach Bullock <lilachbullock@gmail.com>",
+      "offer": "$300 paid product placement in a relevant existing article, plus wider partnership options incl. newsletter features; newsletter reaches ~15,000; 50% September discount.",
+      "outcome": "Declined the same day in-thread (Sent msg 189, 2026-09-29 15:52-07:00), signed AIToolsEssentials, no personal name; offered the free tool for editorial mention at her discretion.",
+      "reason": "budget and editorial-independence position; consistent with the prior declines",
+      "thread": "subscription-creep resource pitch (not a HARO/Sourcee pitch)"
+    }
   },
-  {
-   "date": "2026-10-09",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (TWENTIETH run; fourteenth run). Figures re-derived against a snapshot refreshed to 2026-10-09 (77 tools, 42/33/$17.50); the pair file was NOT rebuilt this run because its inputs were rebuilt yesterday and the 19 pairs are unchanged.",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,984 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through TWENTY consecutive runs - the first round number this monitor has hit with a finished draft - and the Speciality Food draft has been carried a fourteenth time with its October window closed. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-10-08",
-   "url": "https://www.sourcee.app/journo-request/google-and-claude-enterprise-users-seats-and-token-costs",
-   "action": "NEW - the FIRST core-beat AI+spend request in fourteen runs, and the best-matching request this monitor has ever held. Logged here because it is high relevance and would otherwise be lost in the 'not sendable' tail purely for want of a route.",
-   "note": "relevance 'high': the reporter Glenn Hansen asks directly for 'enterprise-level costs for AI seats and tokens' from Google or Claude users - the exact quantity our dated price set measures. Our data holds Claude Team seats $20/$100 per seat/month (checked 2026-09-18), Gemini bundled into Workspace at $8.40/$7 up to $26.40/$22 per user/month (2026-09-18), and Copilot Business $19 / Enterprise $39 per user/month (2026-10-01). NOT SENDABLE: the page publishes no address, handle or link and gives no reply instruction (email_redacted=False but emails_on_page=none). A web search cannot confirm WHICH Glenn Hansen this is - a same-name LinkedIn profile ('In Power', Stillwater MN) is a different person - so NO handle may be invented. Route must be resolved before send. Draft ready at pitch-drafts-2026-10-08.md section 2."
-  },
-  {
-   "date": "2026-10-08",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (NINETEENTH run; thirteenth run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed to 2026-10-08, and the pair file was rebuilt rather than re-read.",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through NINETEEN consecutive runs; the Speciality Food draft has been carried a thirteenth time and its October window has closed. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-10-07",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (EIGHTEENTH run; twelfth run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed to 2026-10-07, and the pair file was rebuilt rather than re-read.",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through EIGHTEEN consecutive runs; the Speciality Food draft has been carried a twelfth time and its October window has closed. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-10-06",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (seventeenth run; eleventh run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed today, and the pair file was rebuilt rather than re-read.",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through SEVENTEEN consecutive runs; the Speciality Food draft has been carried an eleventh time and its October window has closed. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-10-06",
-   "url": "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks",
-   "action": "NEW AND NOT YET COLD - logged here so the first sendable row in this monitor's history does not go unrecorded. 1 day old, relevance 'medium', route resolved.",
-   "note": "The counterweight to the two rows above: this is the first request in twelve runs that is both above the tangential band and route-resolved, and it arrived the day after the monitor went twelve runs without a core-beat find. Written into the ledger rather than left in the digest because the ledger is what the next run reads before deciding what to resurface. Draft: pitch-drafts-2026-10-06.md section 1. Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ (HTTP 200 today, title 'Christopher Mims - The Wall Street Journal | LinkedIn'); the request's own body says '(DMs open)'. Dead ends recorded so they are not retried as routes: muckrack.com/christopher-mims HTTP 403, wsj.com/news/author/christopher-mims HTTP 401. Not sent - sends are George's lane."
-  },
-  {
-   "date": "2026-10-05",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (sixteenth run; ninth run). Figures re-derived unchanged (42/33/$17.50) against a snapshot refreshed today.",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200 carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The shadow-AI draft is now unsent through SIXTEEN consecutive runs; the Speciality Food draft has been carried for a ninth time and its October window has closed. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-10-05",
-   "url": "ai-hardware-makers-3d-printing-smart-devices-mini-robots-local-ai, engineering-managers-measuring-engineers-when-using-ai, saas-tools-for-gated-content-lead-gen-and-doc-tracking-q4-roundup",
-   "action": "all three crossed the 10-day line since the 2026-10-02 digest at 13 days, unpitched, none with a resolved route",
-   "note": "All three were already relevance 'low' and none was ever sendable, so the crossing cost nothing. Two of the three were sitting at exactly 10 days in the 2026-10-02 digest's advance warning. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling."
-  },
-  {
-   "date": "2026-10-02",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (fifteenth run; eighth run)",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200, 154,031 bytes, carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through FIFTEEN consecutive runs; the Speciality Food draft has been carried eight times and its October window has closed. NOT a quiet day for the figures, though: the snapshot refresh moved the shadow-AI headline set from 40/31/$16.50 to 42/33/$17.50, so both drafts were re-derived today rather than copied. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-10-02",
-   "url": "five rows (founders-and-leaders-mindsets-and-milestones; sales-enablement-saas-tools-proposal-and-deck-engagement-tracking; creative-industry-professionals-podcast-on-ai-impact; former-ai-skeptics-changed-views-on-ai-impact; london-businesses-stopped-using-ai-hiring-tools)",
-   "action": "all five crossed the 10-day line today at 11 days, unpitched, none ever had a resolved route - the second consecutive day of a mass crossing",
-   "note": "All five were already relevance 'low' and none was ever sendable, so the crossing cost nothing. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 21 to 16. Three further rows sit at exactly 10 days and cross tomorrow (ai-hardware-makers-3d-printing-smart-devices-mini-robots-local-ai; engineering-managers-measuring-engineers-when-using-ai; saas-tools-for-gated-content-lead-gen-and-doc-tracking-q4-roundup) - all low, none sendable. Seven rows crossed yesterday, so 12 rows have gone cold in two days with nothing actionable lost."
-  },
-  {
-   "date": "2026-10-02",
-   "event": "HEADLINE FIGURES MOVED WITH THE SNAPSHOT REFRESH - drafts re-derived rather than copied",
-   "url": "n/a - data event, not a request",
-   "action": "data/pricing_snapshots.json refreshed to `updated: 2026-10-02`; the shadow-AI headline set moved from 40 monthly-priced tools / 31 at or under $25 / median $16.50 to 42 / 33 / $17.50",
-   "note": "The pair range did NOT move (1.11x-2.53x, median 1.25x, re-asserted clean for the tenth consecutive day), which is why the movement is easy to miss: a run that only re-asserts the pair range would have carried yesterday's 40/31/$16.50 into today's drafts. Both today's drafts were re-derived from scratch by scripts/haro-outreach/_figures_1002.py. build_pitch_queue.py's DRAFTS prose had hand-typed copies of the old set and is now derived at build time (_headline_figures()) - same defect class as the hardcoded live-row count and the hardcoded draft filename fixed on earlier runs."
-  },
-  {
-   "date": "2026-10-01",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (fourteenth run; sixth run)",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,819 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200, 154,027 bytes, carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through FOURTEEN consecutive runs; the Speciality Food draft has been carried six times and its October window has closed. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-10-01",
-   "url": "seven rows (data-center-professionals-podcast-guest-ai-and-hyperscale-trends; employers-and-recruiters-over-50s-adapting-to-ai; patients-with-exorbitant-hospital-bills-billing-errors-and-overcharges; survivors-of-ai-and-autonomous-weapons-civilian-impact-testimonies; founders-55-latelife-entrepreneurship-series-1; founders-and-entrepreneurs-and-musicians-podcast-guests; ml-researchers-continuous-learning-fast-weights-and-adapters)",
-   "action": "all seven crossed the 10-day line today at 11 days, unpitched, none ever had a resolved route - the largest single-day crossing this monitor has recorded",
-   "note": "All seven were already relevance 'low' and none was ever sendable, so the crossing cost nothing. Named individually because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 26 to 19. Five further rows sit at exactly 10 days and cross tomorrow (founders-and-leaders-mindsets-and-milestones; sales-enablement-saas-tools-proposal-and-deck-engagement-tracking; creative-industry-professionals-podcast-on-ai-impact; former-ai-skeptics-changed-views-on-ai-impact; london-businesses-stopped-using-ai-hiring-tools) - all low, none sendable."
-  },
-  {
-   "date": "2026-09-30",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent (thirteenth run; fifth run)",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,857 bytes, data-part1/2/3 unchanged at simon.chandler + raconteur + net; control /contributors/tom-dennis HTTP 200, 154,062 bytes, carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through THIRTEEN consecutive runs; the Speciality Food draft has been carried five times and its October window has closed. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-09-30",
-   "url": "https://www.sourcee.app/journo-request/founders-cutting-ai-use-eliminating-or-reducing-ai-in-business, https://www.sourcee.app/journo-request/ai-alignment-researchers-humanai-mutual-understanding",
-   "action": "both crossed the 10-day line today at 11 days, unpitched, neither with a resolved route",
-   "note": "The Forbes founders-cutting-AI row is the important one: build_pitch_queue.py counted it sendable for two consecutive runs (2026-09-28 and 2026-09-29) before the 2026-09-29 chrome-filter fix exposed that its only 'route' was Sourcee's own page chrome. Its body is explicit - 'Please only answer as a comment on this post. Do not email or DM me because they won't be used.' - and it wants a named founder's first-person account of cutting AI, which we do not have. So the crossing cost nothing sendable; it is logged here because the advance warning was pointed at it for two days and would otherwise read as a lost draft. The alignment-researchers row is low relevance with no email or handle on the page. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 22 to 21."
-  },
-  {
-   "date": "2026-09-29",
-   "url": "https://www.sourcee.app/journo-request/founders-cutting-ai-use-eliminating-or-reducing-ai-in-business",
-   "action": "LAST LIVE DAY - crosses TOMORROW at 11 days, and the crossing costs nothing",
-   "note": "10 days old today and it has been counted as sendable for two consecutive runs, wrongly both times. Its body is explicit: \"Please only answer as a comment on this post. Do not email or DM me because they won't be used.\" The queue's own angle field already said the reply route requires a named founder's firsthand account of cutting AI, which we do not have. It looked sendable only because this run's refresh script dropped Sourcee's two own social links from its chrome filter, so a page's own chrome landed in published_links and _sendable() read that as a usable route. With the filter restored the row is correctly not sendable, so tomorrow's crossing removes nothing. Logged on the day it still looks live, so the advance warning is not misread as a lost draft."
-  },
-  {
-   "date": "2026-09-29",
-   "url": "https://www.sourcee.app/journo-request/companies-that-stopped-emailing-pdfs-new-tools-and-transition",
-   "action": "crossed the 10-day line today at 11 days, unpitched, no draft ever existed",
-   "note": "Low relevance, never had a draft and never had a resolved route, so nothing sendable was lost. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling 18 to 17."
-  },
-  {
-   "date": "2026-09-29",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both were sent-ready drafts that had already crossed on 2026-09-28 - re-derived and republished today, still unsent",
-   "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served, and both routes were re-resolved against the live pages this run: simon.chandler@raconteur.net off /contributors/simon-chandler (HTTP 200, 154,759 bytes, data-part1/2/3 unchanged, control author /contributors/tom-dennis carries tom.dennis/raconteur/net; the older /author/simon-chandler/ still 404s), and holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, byte-count unchanged, alongside five other named masthead addresses). The shadow-AI draft is now unsent through twelve consecutive runs, and the Speciality Food draft has been carried four times. What was lost is the ideal window, not the pitch."
-  },
-  {
-   "date": "2026-09-28",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "BOTH CROSSED TODAY at 11 days, unpitched, both with a paste-ready draft - the queue is now 0 sendable",
-   "note": "The crossing the monitor spent a week warning about happened, on both rows at once. The Raconteur shadow-AI request (high relevance) had a finished draft for TEN consecutive runs and is the FIRST high-relevance request this queue has ever lost to the cold line with a paste-ready draft sitting ready. The Speciality Food request crossed the same day, draft unsent since 2026-09-19, October issue window now closed. Neither draft is void: both pages are still HTTP 200 and both routes were re-resolved against the live pages today (simon.chandler@raconteur.net off /contributors/simon-chandler, HTTP 200, 154,797 bytes, triple unchanged with a control author; holly.shackleton@artichokehq.com off specialityfoodmagazine.com/contact, HTTP 200, 59,500 bytes, alongside five other named masthead addresses). A late send is still possible on either. Both drafts are republished today at pitch-drafts-2026-09-28.md sections 1 and 2 with figures re-derived against today's snapshot, so carrying them did not cost the numbers."
-  },
-  {
-   "date": "2026-09-28",
-   "url": "https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice, https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact",
-   "action": "crossed the 10-day line today at 11 days, both unpitched, neither ever had a draft",
-   "note": "Both low relevance, neither has ever had a resolved reply route, so nothing sendable was lost. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling from 24 to 18 - and today that count change sits next to a real loss, which is exactly why the two have to be named separately."
-  },
-  {
-   "date": "2026-09-27",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket",
-   "action": "LAST LIVE DAY - crosses TOMORROW, unpitched, with a paste-ready draft",
-   "note": "10 days old today and sendable; it crosses the 10-day line tomorrow. This is the row the monitor has been watching for a week, and today is the last day it counts as sendable. The draft has been written and unsent for NINE consecutive runs (pitch-drafts-2026-09-27.md section 1, figures re-derived today against a snapshot refreshed today). Route simon.chandler@raconteur.net re-resolved off the live /contributors/simon-chandler page today (HTTP 200, 154,797 bytes, data-part1/2/3 triple unchanged). It is the only high-relevance request this queue has ever held with a finished draft, so if it crosses unpitched it is the first high-relevance loss of that kind. Logged on the day it can still be prevented, not after the fact."
-  },
-  {
-   "date": "2026-09-27",
-   "url": "https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "one day from the line - crosses TOMORROW, unpitched, with a paste-ready draft",
-   "note": "9 days old and sendable; crosses the day after the shadow-AI row and its October issue window is closing. Draft re-verified today at pitch-drafts-2026-09-27.md section 2, route holly.shackleton@artichokehq.com re-read today off specialityfoodmagazine.com/contact (HTTP 200, 59,500 bytes, alongside five other named masthead addresses). Standing constraint stated in the draft's first line: we are not a food retailer."
-  },
-  {
-   "date": "2026-09-27",
-   "url": "https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety, https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies",
-   "action": "crossed the 10-day line today at 11 days, both unpitched, neither ever had a draft",
-   "note": "Both low/low-medium relevance and neither has ever had a resolved reply route, so nothing sendable was lost. Named because build_pitch_queue.py's two-day advance warning covers only sendable rows, so an ordinary crossing otherwise shows up as nothing but the live count falling from 26 to 24. Logged so that a quiet count change is never mistaken for a quiet week."
-  },
-  {
-   "date": "2026-09-26",
-   "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "NOT YET CROSSED \u2014 both sendable rows are one day from the line at the same time, for the first time",
-   "note": "Logged in advance rather than after the fact, because this is the one crossing the monitor can still prevent. The shadow-AI request is 9 days old and crosses TOMORROW (2026-09-27); the Speciality Food request is 8 days old and crosses the day after (2026-09-28). Neither has ever been pitched. Each has a finished, paste-ready draft (pitch-drafts-2026-09-26.md sections 1 and 2) and a re-resolved route (simon.chandler@raconteur.net; holly.shackleton@artichokehq.com). The shadow-AI draft has been written and unsent for EIGHT consecutive runs; if it goes cold unanswered it becomes the first high-relevance request this queue has lost to the line with a draft sitting ready \u2014 the same loss as the Anthropic crossing on 2026-09-23, but on the queue's only high-relevance row. build_pitch_queue.py now warns two days ahead instead of only reporting the crossing after it happens."
-  },
-  {
-   "date": "2026-09-25",
-   "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
-   "action": "crossed the 10-day line at 11 days, but as a SEND that got no reply \u2014 not an unsent draft",
-   "note": "Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). Ten days of silence, then it aged past the line. This is the opposite cost to the EdTech and Anthropic crossings: no draft was lost here because the pitch actually went out. Logged so the distinction stays visible \u2014 three requests crossed the cold line in the last three runs and only one of them (Anthropic, 2026-09-23) cost a finished-and-unsent draft."
-  },
-  {
-   "date": "2026-09-25",
-   "url": "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning",
-   "action": "crossed the 10-day line at 12 days, already recorded as skipped",
-   "note": "No loss again. Recorded in the skipped map on 2026-09-15, so it was never in the sendable count and no draft existed for it."
-  },
-  {
-   "date": "2026-09-24",
-   "url": "https://www.sourcee.app/journo-request/edtech-product-managers-lms-audit-does-product-manage-learning",
-   "action": "crossed the 10-day line at 11 days, already recorded as skipped",
-   "note": "No loss. It was recorded in the ledger's skipped map on 2026-09-15 (\"wants people inside EdTech; we would be overstating our standing\"), so it was never in the sendable count and no draft existed for it. Logged only so the crossing is visible next to the Anthropic one - the two crossings on consecutive days cost opposite amounts, and that difference is the whole point of separating sendable from live."
-  },
-  {
-   "date": "2026-09-23",
-   "url": "https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences",
-   "action": "went cold unpitched at 11 days",
-   "note": "Medium-high. Draft finished and unsent since 2026-09-19 (pitch-drafts-2026-09-22.md section 2, route Signal hliwrites.99, re-read verbatim off the live page on 2026-09-22). Carried as the queue's #2 for four consecutive runs and sendable every one of them, including the day before it crossed. Not a data loss: the draft is intact and the Signal handle is still published, so a late send is still possible. Recorded so the crossing is visible rather than only the count changing from 3 sendable to 2."
-  },
-  {
-   "date": "2026-09-22",
-   "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
-   "action": "at 11 days, recorded as cold",
-   "note": "Medium relevance. Not a loss in the usual sense: it is a founder-profile slot answered by a public comment, so it earns standing rather than a citation. Recorded so the crossing is visible."
-  },
-  {
-   "date": "2026-09-21",
-   "url": "https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch",
-   "action": "crossed the cold line unpitched",
-   "note": "Medium relevance, 10 days. Not a loss in the usual sense: it is a founder-profile slot answered by a public comment, so it earns standing rather than a citation, and the queue documents it as deliberately left. Recorded so the crossing is visible."
-  },
-  {
-   "date": "2026-09-19",
-   "url": "https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns",
-   "action": "went cold unpitched",
-   "note": "Was the queue's #1 at 10 days on 2026-09-17, with a draft written in pitch-drafts-2026-09-17.md section 1. Never sent. Now 15 days and past the 10-day line. The draft still exists and its route (LinkedIn DM to linkedin.com/in/niloy-ghosh) is unchanged, so sending it late is still possible - but the monitor's own queue no longer counts it as live."
-  },
-  {
-   "date": "2026-09-19",
-   "url": "https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse",
-   "action": "went cold unpitched",
-   "note": "Was medium-high. The reporter's own internal deadline ('by this Wednesday September 9') had already passed when the request was first recorded; the page has stayed live with no expiry notice and it has now also crossed the 10-day line. Not a live opportunity in practice."
+  "bounced_routes": {
+    "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket": "2026-10-10 - 550 5.1.1 'The email account that you tried to reach does not exist' (gsmtp), delivered back as INBOX 105 at the send minute. simon.chandler@raconteur.net is DEAD. raconteur.net itself resolves fine (Google Workspace MX) and the contributor page is HTTP 200 and publishes that exact address in its obfuscation data-parts - so reading an address off a live page is NOT evidence the mailbox exists. Do not retry this address; the /contributors page needs a different route (contact form or an editor address) before this row is sendable again."
   }
- ],
- "log": [
-  {
-   "date": "2026-10-10",
-   "event": "monitor run - 0 new rows tracked (66-slug window, ZERO AI-token and zero spend-token, all 66 bodies read), 3 rows crossed cold, 1 route RESOLVED (first core-beat sendable row in monitor history), 2 sendable, no sends",
-   "url": "(no pitch)",
-   "action": "none sent - 2 sendable rows carried (Glenn Hansen seats/tokens, 3 days old, email route; WSJ blocked-work-accounts, 5 days old, LinkedIn DM)",
-   "to": null,
-   "route": null,
-   "sent_message_id": null,
-   "note": "107 tracked (101 carried and all 101 re-verified HTTP 200/live, 0 new rows, 3 pitched, 1 skipped), 54 live unpitched, 49 cold unpitched, 2 sendable. New window: 66 slugs, 0 AI-token, 0 spend-token. Because a slug-level zero cannot be confirmed by slug matching, all 66 window bodies were fetched and scanned for AI mentions: exactly one mentions AI (corporate-travel-managers-and-buyers-2027-trends-and-program-impact) and only to forbid the cliche. Window volume is down ~40% (66 vs 105) and the newest lastmod is 2026-10-10T03:26:04Z, ~12 hours before the run: 2026-10-10 is a Saturday, so this is a weekend effect. THE FIND: the Glenn Hansen route was resolved off his own publication (ghansen@epgacceleration.com, ope-plus.com/2024/02/13/announcing-ope/19236, HTTP 200, 147,438 bytes, address verbatim; epgacceleration.com MX = Microsoft 365). Headline figures re-derived and unchanged: 42 of 77 tools publish a monthly price, 33 at or under $25, median $17.50; pair range re-read at 1.11x-2.53x over 19 tiers. Mailbox: no reply to any tracked pitch; All Mail holds no message after 2026-10-08 and exactly one inbound from a pitch recipient ever (Jan Suski, 2026-09-18). 0 pitches sent this run - sends remain George's lane. Defects fixed: (1) a route declared absent because only the request page was read; (2) build_pitch_queue.py's _automatable() could not see an address recorded in `contact_method`; (3) the AI-topic-feed '100% overlap by construction' claim measured at 40/50 today and retired; (4) a slug-level zero confirmed at body level."
-  },
-  {
-   "date": "2026-10-09",
-   "event": "monitor run - 6 new AI-token tracked, 0 AI+spend (first clean window in four runs), 3 rows crossed cold, 2 untracked rows removed, 1 sendable, no sends",
-   "url": "(no pitch)",
-   "action": "none sent - 1 sendable row carried (WSJ blocked-work-accounts, now 4 days old)",
-   "to": null,
-   "route": null,
-   "sent_message_id": null,
-   "note": "107 tracked (101 carried and all 101 re-verified HTTP 200/live, 6 new AI-token finds, 2 untracked rows removed), 57 live unpitched, 46 cold unpitched, 1 sendable. New window: 105 slugs, 8 AI-token, 0 AI+spend, 7 spend-token (all consumer cost-of-living: citizenship-service fees, a political podcast, paid parking, grocery returns, state cost-cutting, cost-of-living relationship trade-offs, a paid interview fee). All 16 candidates fetched and read in full. NOTHING core-beat arrived: the closest is sales-reps-who-cold-call-and-email (Issie Lapowsky), whose body puts product pitches on a 'naughty list' - the clearest anti-pitch instruction this monitor has seen. The carried high-relevance row (google-and-claude-enterprise-users-seats-and-token-costs, Glenn Hansen) is now 1 day old and still has NO resolved route, so it remains unsendable. Headline figures re-derived: 42 of 77 tools publish a monthly price (denominator moved 76 -> 77), 33 at or under $25, median $17.50. Pair range held at 1.11x-2.53x over 19 tiers; the pair file was read, not rebuilt. Mailbox: no reply to any tracked pitch; All-Mail search over the four tracked recipients returns only Jan Suski's 2026-09-18 message. 0 pitches sent this run - sends remain George's lane. Figures correction to Jan Suski now 21 days outstanding. Defect fixed: two rows no digest ever recorded were inflating the queue's live count and are removed from tracking."
-  },
-  {
-   "date": "2026-10-08",
-   "event": "monitor run - 7 new AI-token tracked, 1 AI+spend (first real software-cost hit in three runs), 0 rows crossed cold, 1 sendable, no sends",
-   "url": "(no pitch)",
-   "action": "none sent - 1 sendable row carried (WSJ blocked-work-accounts, now 3 days old)",
-   "to": null,
-   "route": null,
-   "sent_message_id": null,
-   "note": "101 tracked (94 carried and all 94 re-verified HTTP 200/live, 7 new AI-token finds), 54 live unpitched, 43 cold unpitched, 1 sendable. New window: 111 slugs, 7 AI-token, 1 AI+spend, 8 spend-token (all consumer cost-of-living: restaurant labour, student tutoring pay, grocery prices, fuel/household budgets, medical billing, childcare, dating spend). All 14 candidates fetched and read in full. THE FIND: google-and-claude-enterprise-users-seats-and-token-costs (Glenn Hansen) is the first core-beat AI+spend request in fourteen runs - relevance 'high', our data answers it - but it has NO resolved route, so it is not sendable. The other six new rows are off-beat (patent/IP, IA careers, data-labelling labour, pro-bono law, APAC press, a martech vendor blog). The pair range held at 1.11x-2.53x over 19 tiers for the twelfth consecutive day against a snapshot refreshed to `updated: 2026-10-08` and a pair file rebuilt today. Mailbox: no reply to any tracked pitch; INBOX top is a ToolChase reply to the separate Sep-3 guest-pitch batch (msg 102), not this monitor. 0 pitches sent this run - sends remain George's lane. Figures correction to Jan Suski now 20 days outstanding. Defect fixed: the digest writer's `_new_this_run` flag was accumulating across carries (40 flags on a 7-new run) and is now popped on every carried row."
-  },
-  {
-   "date": "2026-10-07",
-   "event": "monitor run - 10 new AI-token tracked, 0 AI+spend (first clean window in three runs), 0 rows crossed cold, 1 sendable, no sends",
-   "url": "(no pitch)",
-   "action": "none sent - 1 sendable row carried (WSJ blocked-work-accounts, now 2 days old)",
-   "to": null,
-   "route": null,
-   "sent_message_id": null,
-   "note": "94 tracked (84 carried and all 84 re-verified HTTP 200/live, 10 new AI-token finds), 47 live unpitched, 43 cold unpitched, 1 sendable. New window: 109 slugs, 10 AI-token, 0 AI+spend, 6 spend-token (all consumer cost-of-living: airline customers, a paid TV casting call, Houston household costs, Brooklyn hair-care costs, house-sharing, Gen Z personal finance). All 16 candidates fetched and read in full. None of the ten new rows is core-beat and none is sendable - all leave the body address Sourcee-redacted or publish no route. The pair range held at 1.11x-2.53x over 19 tiers for the eleventh consecutive day against a snapshot refreshed to `updated: 2026-10-07` and a pair file rebuilt today. The 2026-10-06 sendable row (Christopher Mims, WSJ) re-verified live at 2 days and its route re-fetched (LinkedIn, HTTP 200, 603,318 bytes, matching title). Mailbox: no reply to any tracked pitch; four new tool submissions (msgs 96-100), none a pitch reply. 0 pitches sent this run - sends remain George's lane. Figures correction to Jan Suski now 19 days outstanding."
-  },
-  {
-   "date": "2026-09-15",
-   "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
-   "action": "pitched",
-   "to": "hello@foxandspindle.com",
-   "route": "email (the request publishes a Calendly link; emailed the published address instead)",
-   "sent_message_id": "171/172 (one message; Gmail stored it twice)",
-   "note": "First pitch ever sent from this monitor, after 12 days and 43 flagged opportunities.",
-   "figures_cited": "76 tools tracked; '60 of 76 sit in the 13 categories holding three or more'",
-   "figures_check": "2026-09-18: the 60 understated the real figure, which is 70. Recompute any count before reusing it from this pitch."
-  },
-  {
-   "date": "2026-09-18",
-   "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
-   "action": "pitched",
-   "to": "contact@marketintelligencetools.com",
-   "sent_message_id": "174 (one message)",
-   "route": "email - published on marketintelligencetools.com/contact (MX mx1/mx2.spacemail.com, verified live)",
-   "note": "Jan Suski, independent reviewer. The pitch deliberately did NOT claim an Amplemarket Growth/Elite contract figure we do not have; it led with the price-opacity method, which is what the request actually asked for.",
-   "figures_cited": "5 of 76 publish no self-serve price (Harvey, Spellbook, Dragon Copilot, Pika, Tunii); Browse AI $48/mo vs $19/mo billed annually = 2.5x",
-   "figures_check": "SUPERSEDED - this entry contained two errors, both corrected 2026-09-18. (1) The opaque count is 3, not 5: Pika and Tunii DO publish paid prices (pika.art/pricing has a full tier table with a monthly/annual toggle; tunii.net/pricing lists one-time minute packs at $4.99/$9.99/$24.99). Our own records for both were wrong, not the vendors'. Only Harvey, Spellbook and Dragon Copilot publish no paid-tier price. (2) The '1.2-1.3x' spread claim was understated: across the 9 same-tier monthly/annual pairs we hold, the ratio runs 1.21x (Slack Pro $8.75 vs $7.25) to 2.53x (Browse AI $48 vs $19), median 1.33x - but three are above 1.8x, so the range is wider than stated. Both errors were disclosed to the recipient in the reply below rather than left standing."
-  },
-  {
-   "date": "2026-09-18",
-   "url": "https://www.sourcee.app/journo-request/individual-contributors-managing-ai-agents-without-title-or-pay",
-   "action": "pitched",
-   "to": "Rani@Sherwood.news",
-   "sent_message_id": "175/176 (one message; Gmail stored it twice)",
-   "route": "email - published on sherwood.news/author/rani-molla (Google Workspace MX)",
-   "note": "Rani Molla, Senior Tech Correspondent, Sherwood News. The request asked for individual stories; we do not have one, so the pitch offered the structural cause instead of a fabricated anecdote.",
-   "figures_cited": "70 of 76 tools sit in the 13 categories holding three or more",
-   "figures_check": "Verified from data/stack_audit_catalog.json 2026-09-18."
-  },
-  {
-   "date": "2026-09-18",
-   "url": "https://www.sourcee.app/journo-request/amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot",
-   "action": "replied",
-   "to": "jan@jansuski.com",
-   "sent_message_id": "178 (one message; verified in Sent Mail and All Mail, no Trash copy)",
-   "route": "reply-all to the correspondent's own reply (In-Reply-To <BEFKB5PHCUU4.4QL01L7GFNUG3@mailcore-84f949d7c6-dhwdf>)",
-   "note": "Jan Suski answered the pitch. His reply asked directly whether a dynamically re-checked, searchable pricing database would make sense, offered his three Amplemarket URLs, and invited an exchange. Answered as a peer method discussion: why a price database is defensible (the source degrades; the checked date is the artifact a vendor cannot publish about itself), the Amplemarket tier data verified from amplemarket.com/pricing today, and two failure modes from building the same thing.",
-   "figures_cited": "Amplemarket from amplemarket.com/pricing checked 2026-09-18: Startup $600/mo annual term, 2 users, 27,000 contacts; Growth 4 users/140,000 contacts and Elite 10 users/400,000 contacts both 'Custom'; email credits 13,500/35,000/40,000 per user/year; phone credits 600/5,000/9,600; mailboxes 2/4/8. Three tools publish no paid-tier price (Harvey, Spellbook, Dragon Copilot; harvey.ai/pricing 404s). Nine same-tier monthly/annual pairs: 1.21x-2.53x, median 1.33x.",
-   "figures_check": "All Amplemarket figures read off the live pricing page this run. Every credit, seat and contact number was verified present in the rendered page before citing. The monthly/annual ratios were computed from data/tool_sources.json using one tier per tool - an earlier pass compared Slack's Business+ monthly ($18) against its Pro annual ($7.25) and produced a meaningless 2.48x; same-tier Slack Pro is $8.75 vs $7.25 = 1.21x. Recomputed and disclosed.",
-   "corrections_disclosed": true
-  },
-  {
-   "date": "2026-10-02",
-   "url": "(no pitch)",
-   "action": "none sent - queue is 0 sendable, 23 live unpitched, none with both a relevance above the tangential band and a usable route",
-   "to": null,
-   "route": null,
-   "sent_message_id": null,
-   "note": "Run 2026-10-02: no pitch sent (sends remain George's lane). Two crossed-but-live drafts remain the only sendable-by-hand items (Raconteur shadow AI, 15d; Speciality Food, 14d, October window closed - send-or-skip). The figures correction to Jan Suski is now fourteen days outstanding and remains the only outbound item this monitor has that is not a pitch. Mailbox re-checked: no new inbound at all since 2026-09-29 (INBOX top still msg 84, Lilach Bullock; sent-mail top still msg 189), and no reply to either tracked send (seventeen and fourteen days of silence). New this run: the shadow-AI headline figures moved with the snapshot refresh (40/31/$16.50 -> 42/33/$17.50) and both drafts were re-derived from scratch rather than copied."
-  },
-  {
-   "date": "2026-10-02",
-   "event": "monitor run - 7 new AI-token tracked, 0 AI+spend (10th consecutive), 5 rows crossed cold, 0 sendable, no sends",
-   "detail": "67 tracked (60 carried and all 60 re-verified HTTP 200/live, 7 new AI-token finds), 23 live unpitched, 44 cold, 0 sendable. New window: 91 slugs, 7 AI-token, 0 AI+spend, 8 spend-token (all consumer cost-of-living / personal-finance: Harlem rent freeze, Alaska living costs, Canada childcare, the i Paper budget x2, digital disconnection, consumer product spending, UK SME winter pressures). All 15 candidates fetched and read in full. Pair range held at 1.11x-2.53x over 19 tiers for the TENTH consecutive day against a snapshot refreshed today - but the shadow-AI headline set moved (42 monthly-priced, 33 at or under $25, median $17.50) and both drafts were re-derived. Mailbox: no reply to any tracked pitch, no new inbound at all; sent mail top is still msg 189 (2026-09-29), so nothing has gone out since. 0 pitches sent this run - sends remain George's lane. Code fixes: build_pitch_queue.py's live-row count, headline figures and Speciality Food carry count are now derived at build time rather than hand-typed (the typed live count said 21 rows three days after it stopped being true; the typed figures were stale the day the snapshot moved)."
-  },
-  {
-   "date": "2026-10-01",
-   "url": "(no pitch)",
-   "action": "none sent - queue reached 0 sendable",
-   "to": null,
-   "route": null,
-   "sent_message_id": null,
-   "note": "Run 2026-09-28: no pitch sent (sends remain George's lane). Both sendable rows crossed cold, so the queue is empty of actionable rows. The figures correction to Jan Suski is now ten days outstanding and remains the only outbound item this monitor has that is not a pitch. Mailbox re-checked: no new message at all since yesterday (All Mail top unchanged at msg 82, Sent Mail top unchanged at msg 187)."
-  },
-  {
-   "date": "2026-09-30",
-   "event": "monitor run - 0 sendable, 3 new AI-token tracked, 0 AI+spend (8th consecutive), no sends",
-   "detail": "54 tracked (51 carried and all 51 re-verified HTTP 200/live, 3 new AI-token finds), 22 live unpitched, 28 cold unpitched, 0 sendable. New window: 113 slugs, 3 AI-token, 0 AI+spend, 10 spend-token (all consumer cost-of-living / sport / personal finance). All 13 candidates fetched and read in full. Pair range held at 1.11x-2.53x over 19 tiers for the eighth consecutive day against a snapshot refreshed today. Mailbox: no reply to any tracked pitch; sent mail top is still msg 189 (2026-09-29), so nothing has gone out since. 0 pitches sent this run - sends remain George's lane."
-  },
-  {
-   "date": "2026-10-01",
-   "event": "monitor run - 6 new AI-token tracked (most in one run), 0 AI+spend (9th consecutive), 7 rows crossed cold, 0 sendable, no sends",
-   "detail": "60 tracked (54 carried and all 54 re-verified HTTP 200/live, 6 new AI-token finds), 21 live unpitched before the six new rows, 0 sendable. New window: 95 slugs, 6 AI-token, 0 AI+spend, 4 spend-token (all consumer or non-software: Gen Z dating costs, UK season tickets, small-UK-business winter pressures, physical-goods subscription marketing). All 10 candidates fetched and read in full. Seven rows crossed the 10-day line at once - the largest single-day crossing recorded - and five more sit at exactly 10 days; none was ever sendable. Pair range held at 1.11x-2.53x over 19 tiers for the ninth consecutive day against a snapshot refreshed today (updated: 2026-10-01). Mailbox: no reply to any tracked pitch, no new inbound at all; sent mail top is still msg 189 (2026-09-29), so nothing has gone out since. 0 pitches sent this run - sends remain George's lane. Code fix: build_pitch_queue.py's _sendable() counted a body-embedded Google Docs casting form as a reply route and reported 1 sendable on the first build; fixed to require a booking/contact link, queue re-built to its true count of 0."
-  }
- ],
- "declined_paid_placements": {
-  "2026-09-29": {
-   "from": "Lilach Bullock <lilachbullock@gmail.com>",
-   "offer": "$300 paid product placement in a relevant existing article, plus wider partnership options incl. newsletter features; newsletter reaches ~15,000; 50% September discount.",
-   "outcome": "Declined the same day in-thread (Sent msg 189, 2026-09-29 15:52-07:00), signed AIToolsEssentials, no personal name; offered the free tool for editorial mention at her discretion.",
-   "reason": "budget and editorial-independence position; consistent with the prior declines",
-   "thread": "subscription-creep resource pitch (not a HARO/Sourcee pitch)"
-  }
- }
 }
