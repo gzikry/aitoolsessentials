@@ -235,6 +235,13 @@ def collect() -> list[dict]:
             # request is absent from it by construction. Treating that absence as a cold signal
             # flagged requests as "dropped off" for the sole reason that they were posted more
             # than a day ago.
+            #
+            # 2026-10-10 CORRECTION: the "by construction" half of that reasoning was never
+            # measured and is now falsified. Re-measured today: the AI topic page listed 50 slugs
+            # and only 40 of them sat inside that day's new-sitemap window, so the page is NOT a
+            # pure recency window over the newest requests. The RULE above is unchanged and does
+            # not depend on the retracted half: absence from that page is still not evidence that
+            # a carried request is dead, which is the only thing this branch needs.
             rec["dropped_off"] = (f"not carried by the {latest} digest "
                                   f"({digest_sizes.get(latest, '?')} items)")
         else:
@@ -272,6 +279,16 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
         if "calendly" in link or "lnkd.in" in link:
             return f"no — published booking link {link} (George)"
     c = (contact or "").lower()
+    # A plain published address carried in `contact_method` — the class of route this queue calls
+    # its strongest (resolved off the publication's own site, not off the request page). Until
+    # 2026-10-10 this fell through every branch below to "unknown — verify the route before
+    # sending", because only a redacted body, an `emails_on_page` list, a booking link or a
+    # LinkedIn/scheduling keyword was recognised. That is the same defect class as the 2026-10-01
+    # casting-form route and the 2026-09-29 chrome leak: a field that records a real route being
+    # unread, and the reason the Glenn Hansen row printed as route-less on the build that first
+    # had its route.
+    if "@" in c:
+        return "no — email resolved off the publication's own site (George sends)"
     if "linkedin" in c or "dm the author" in c or "comment on" in c:
         return "no — LinkedIn DM / comment (George)"
     if "schedule" in c or "scheduling link" in c:
@@ -437,13 +454,14 @@ def _route_checked_date() -> str:
 
 DRAFTS = {
     "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks":
-        f"**SENDABLE — draft ready and UNSENT — `{_newest_drafts()}` §1. Now "
+        f"**SENDABLE — draft ready and UNSENT — `{_newest_drafts()}` §2. Now "
         f"{_sent_word(_age_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks'))} old.** "
         "Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ ("
         f"{_route_evidence('linkedin.com/in/christopher-mims-club/', 'LinkedIn byline page')}; "
         "the request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and "
-        "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). This is the ONLY row "
-        "in this queue that is both above the tangential band and route-resolved. George's lane.",
+        "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). One of two rows in "
+        "this queue that are both above the tangential band and route-resolved — the other is the "
+        "Glenn Hansen seats-and-tokens request, which is newer and higher-relevance. George's lane.",
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
         f"**Draft ready and UNSENT — `{_newest_drafts()}` §3. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
         f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
@@ -476,22 +494,29 @@ DRAFTS = {
         "drop it, do not draft it a fifth time.",
     # The find of the 2026-10-08 run and the best-matching request this monitor has ever held: a
     # reporter asking directly for enterprise AI seat and token costs, which our dated price set
-    # answers. It is NOT in the sendable list because no reply route exists on the page — which is
-    # exactly why it is named here rather than left to vanish into the 'not sendable' tail.
+    # answers. It was out of the sendable list for two runs ONLY for want of a route; the route was
+    # resolved on 2026-10-10 off the author's own publication, and the row is now sendable. Named
+    # here as well because it is the row whose route resolution matters most.
     "google-and-claude-enterprise-users-seats-and-token-costs":
-        f"**DRAFT READY, ROUTE UNRESOLVED — NOT SENDABLE YET — `{_newest_drafts()}` §2. Now "
-        f"{_sent_word(_age_of('google-and-claude-enterprise-users-seats-and-token-costs'))} old, "
-        "relevance 'high'.** This is the only core-beat AI+spend request the monitor has produced in "
-        "fifteen runs - the first it ever produced, arriving on the 2026-10-08 run after fourteen "
-        "without one - and the "
-        "best-matching request this queue has ever held: the reporter (Glenn Hansen) asks directly "
-        "for 'enterprise-level costs for AI seats and tokens' from Google or Claude users, and our "
-        "dated set answers it (Claude Team $20/$100 per seat/month checked 2026-09-18; Gemini in "
-        "Workspace $8.40/$7 to $26.40/$22 per user/month, 2026-09-18; Copilot Business $19 / "
-        "Enterprise $39 per user/month, 2026-10-01). NO ROUTE: the page publishes no address, handle "
-        "or link (verified email_redacted=False, emails_on_page=none), and a web search cannot "
-        "confirm WHICH Glenn Hansen this is — a same-name LinkedIn profile is a different person — so "
-        "no handle may be invented. George's lane to resolve the route; the draft is otherwise ready.",
+        f"**SENDABLE — THE FIRST CORE-BEAT AI+SPEND ROW THIS MONITOR CAN ACT ON — draft at "
+        f"`{_newest_drafts()}` §1. Now {_sent_word(_age_of('google-and-claude-enterprise-users-seats-and-token-costs'))} "
+        "old, relevance 'high'.** This is the only core-beat AI+spend request the monitor has produced "
+        "in fifteen runs — the first it ever produced, arriving on the 2026-10-08 run after fourteen "
+        "without one — and the best-matching request this queue has ever held: the reporter (Glenn "
+        "Hansen, editor of OPE+) asks directly for 'enterprise-level costs for AI seats and tokens' "
+        "from Google or Claude users, and our dated set answers it (Claude Team $20/$100 per "
+        "seat/month checked 2026-09-18; Gemini in Workspace $8.40/$7 to $26.40/$22 per user/month, "
+        "2026-09-18; GitHub Copilot Business $19 / Enterprise $39 per user/month with credits at "
+        "$0.01, 2026-10-01; Microsoft 365 Copilot Business $18 promotional annual vs $21 list, "
+        "2026-10-01). THE ROUTE WAS RESOLVED ON THE 2026-10-10 RUN, off his own publication rather "
+        "than the request page: the page's author field names him and the body states his beat, and "
+        "OPE+ publishes 'Glenn Hansen, Editor — ghansen@epgacceleration.com' at "
+        "ope-plus.com/2024/02/13/announcing-ope/19236 "
+        f"({_route_evidence('ope-plus.com/2024/02/13/announcing-ope/19236', 'OPE+ editor announcement page')}), "
+        "with the same editorial domain on ope-plus.com/contact-us "
+        f"({_route_evidence('ope-plus.com/contact-us', 'contact page')}); epgacceleration.com MX = "
+        "Microsoft 365. Two runs were spent calling this row unsendable because only the request page "
+        "was read. George's lane to send.",
 }
 
 def _pairs_now() -> tuple[str, str, str, str]:
@@ -560,14 +585,15 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
         # It must never be reported through prose that says otherwise, so the two states carry
         # different text rather than one paragraph with a number spliced in.
         state = (
-            f"**THE QUEUE IS AT {sendable_count} SENDABLE — THE FIRST TIME THIS MONITOR HAS "
-            f"EVER PRODUCED ONE.** Every prior build reported 0, and twice that 0 was a genuine "
-            f"measurement after a defect had been fixed (the 2026-09-29 chrome leak into "
-            f"`published_links`, the 2026-10-01 Google Form read as a link route). The row is "
-            f"declared sendable on two facts evidenced separately: a relevance above the "
-            f"tangential band, and a reply route verified by fetching a page today rather than by "
-            f"trusting a digest field. Both are named in the row. The live unpitched set is "
-            f"{live_count} rows."
+            f"**THE QUEUE IS AT {sendable_count} SENDABLE.** Every build before the 2026-10-06 run "
+            f"reported 0, and twice that 0 was a genuine measurement after a defect had been fixed "
+            f"(the 2026-09-29 chrome leak into `published_links`, the 2026-10-01 Google Form read as "
+            f"a link route). A row is declared sendable on two facts evidenced separately rather "
+            f"than trusted from a digest field: a relevance above the tangential band, and a reply "
+            f"route verified by fetching a page today. Both are named in the row. Holding more than "
+            f"one at a time is itself new — the 2026-10-10 build is the first to do it, and it "
+            f"happened because a route was resolved rather than because a find arrived. The live "
+            f"unpitched set is {live_count} rows."
         )
     else:
         state = (
@@ -648,6 +674,11 @@ def render(queue: list[dict], ledger: dict) -> str:
         # (all 42 slugs dated inside one 15.7-hour window on 2026-09-17, 0 of 36 shared with
         # the previous capture), so every carried request is absent from it by construction
         # and using it as a membership test would demote the whole queue.
+        #
+        # 2026-10-10 CORRECTION: the overlap was measured for the first time today and is 40 of
+        # 50, not 50 of 50 — the page is not a pure recency window over the newest requests, so
+        # "by construction" is retired. The decision above stands on its own argument: no carried
+        # row is on that page either way, so it cannot be used as a membership test.
         #
         # 2026-09-21: all 41 tracked requests now carry last_seen == the newest digest day, so
         # `in_latest` is True for every row and the first key component no longer discriminates.
