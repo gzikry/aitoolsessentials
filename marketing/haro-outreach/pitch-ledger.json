@@ -250,6 +250,16 @@
   "log": [
     {
       "date": "2026-10-10",
+      "event": "Hourly actionable-mail run - the only new message was the DSN for the Raconteur pitch, already recorded by the 14:24 send commit; no new submissions, replies or other actionable mail in any folder.",
+      "url": "(no pitch)",
+      "action": "No send. Found and SMTP-verified replacement routes for the bounced Raconteur row (sb@ / id@ live; the Editor's published forms dead) and recorded them under bounced_routes; corrected a stale sentence in admin/affiliate-applications-ready.md.",
+      "to": null,
+      "route": null,
+      "sent_message_id": null,
+      "note": "Sends remain George's call, so nothing was sent - the deliverable is a route, not a pitch. Method note: the RCPT probe is the only way to tell live from dead at this domain, because the byline pages publish identical data-part email markup for dead and live mailboxes alike. Re-audited the two open ledgers in the same pass: both AIDetector.cx affiliate surfaces are in fact complete (affiliate_programs.json carries aidetector-cx approved with the tracked URL, and /legal/affiliate-disclosure.html names the program), so the admin note claiming no review existed was stale and has been corrected."
+    },
+    {
+      "date": "2026-10-10",
       "event": "GEORGE AUTHORISED SENDS - 4 messages went out at 21:20 UTC, the first sends from this monitor since 2026-09-18 (22 days). 3 pitches + 1 owed figures correction.",
       "url": "(batch)",
       "action": "4 sent: Glenn Hansen seats/tokens; Simon Chandler shadow-AI; Holly Shackleton Speciality Food; Jan Suski figures correction. 1 bounced.",
@@ -387,6 +397,6 @@
     }
   },
   "bounced_routes": {
-    "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket": "2026-10-10 - 550 5.1.1 'The email account that you tried to reach does not exist' (gsmtp), delivered back as INBOX 105 at the send minute. simon.chandler@raconteur.net is DEAD. raconteur.net itself resolves fine (Google Workspace MX) and the contributor page is HTTP 200 and publishes that exact address in its obfuscation data-parts - so reading an address off a live page is NOT evidence the mailbox exists. Do not retry this address; the /contributors page needs a different route (contact form or an editor address) before this row is sendable again."
+    "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket": "2026-10-10 - 550 5.1.1 'The email account that you tried to reach does not exist' (gsmtp), delivered back as INBOX 105 at the send minute. simon.chandler@raconteur.net is DEAD. raconteur.net itself resolves fine (Google Workspace MX) and the contributor page is HTTP 200 and publishes that exact address in its obfuscation data-parts - so reading an address off a live page is NOT evidence the mailbox exists. Do not retry this address; the /contributors page needs a different route (contact form or an editor address) before this row is sendable again. || 2026-10-10 SECOND PASS (the DSN arrived 14:20 PDT / 21:20 UTC and was already recorded by the 14:24 send commit): the different route is now resolved AND verified by SMTP RCPT TO probe against raconteur.net's own Google Workspace MX (aspmx.l.google.com:25 - EHLO aitoolsessentials.com, MAIL FROM contact@aitoolsessentials.com, QUIT; nothing sent). TWO editorial mailboxes answer 250 2.1.5 OK: sb@raconteur.net (Sam Birchall, staff finance writer) and id@raconteur.net (Ian Deering, special projects editor) - both printed on /contact and on their own bylines. The Editor's two published forms are both DEAD: fc@raconteur.net (printed on /contact) and francesca-cassidy@raconteur.net (printed on her byline) each answer 550 5.1.1, and a random local part as control also answers 550, so the domain is not a catch-all and the probe discriminates. This sharpens the byline lesson: on this domain a published address is unreliable in BOTH directions - one /contact page prints fc@ dead beside id@ and sb@ live. Row routes from here: sb@ (writer, most on-topic for a spend-data pitch) or id@ (editor). Sending remains George's call."
   }
 }
