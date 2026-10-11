@@ -5,7 +5,7 @@
 **§1 is the whole queue.** The WSJ blocked-work-accounts request — relevance **medium**, **6 days old**,
 carried unsent through two runs now. It is the only row that is live, above the tangential band and
 route-resolved at the same time. **Route: LinkedIn DM to `https://www.linkedin.com/in/christopher-mims-club/`**
-(re-fetched and re-verified today: HTTP 200, 611,240 bytes, title "Christopher Mims - The Wall Street
+(re-fetched and re-verified today: HTTP 200, 611,175 bytes, title "Christopher Mims - The Wall Street
 Journal | LinkedIn"; the request's own body says "(DMs open)"). **George's lane. Not automatable.**
 
 **§2 records what was NOT drafted this run, and why** — three new rows and three recovered rows, none of
@@ -33,9 +33,9 @@ No sentence in this file may go out with an older denominator than the 2026-10-1
 
 **⚠ Honesty constraint — read before sending.** The request wants the respondent's own personal annoyance. We are a publisher, not a blocked employee. The draft says so in its opening line. Do not edit it out.
 
-**Reply route:** LinkedIn DM to **https://www.linkedin.com/in/christopher-mims-club/** — verified today:
-HTTP 200, 611,240 bytes, title "Christopher Mims - The Wall Street Journal | LinkedIn". The request's own
-body says "(DMs open)". **George's lane. Not automatable.**
+**Reply route:** LinkedIn DM to **https://www.linkedin.com/in/christopher-mims-club/** — re-fetched and
+re-verified today: HTTP 200, 611,175 bytes, title "Christopher Mims - The Wall Street Journal | LinkedIn".
+The request's own body says "(DMs open)". **George's lane. Not automatable.**
 Dead ends recorded so they are not retried: muckrack.com/christopher-mims → HTTP 403; wsj.com/news/author/christopher-mims → HTTP 401.
 
 > Subject: The blocked-work-account workaround, in dated prices

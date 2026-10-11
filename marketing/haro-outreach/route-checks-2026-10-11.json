@@ -1,0 +1,36 @@
+{
+ "date": "2026-10-11",
+ "checked": "all routes named in pitch-queue.md for the sendable row, plus the dead ends recorded beside it, so a future run does not retry them",
+ "routes": [
+  {
+   "row": "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks",
+   "route": "https://www.linkedin.com/in/christopher-mims-club/",
+   "http": "200",
+   "bytes": 611175,
+   "title": "Christopher Mims - The Wall Street Journal | LinkedIn",
+   "verdict": "LIVE - the sendable row's route. George's lane (LinkedIn DM), not automatable."
+  },
+  {
+   "row": "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks",
+   "route": "https://www.muckrack.com/christopher-mims",
+   "http": "403",
+   "title": "Cloudflare interstitial",
+   "verdict": "DEAD END - recorded so it is not retried as a route."
+  },
+  {
+   "row": "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks",
+   "route": "https://www.wsj.com/news/author/christopher-mims",
+   "http": "401",
+   "title": "paywall",
+   "verdict": "DEAD END - recorded so it is not retried as a route."
+  },
+  {
+   "row": "tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring",
+   "route": "six byline pages (muckrack.com/tobi-amure, investopedia.com/tobi-amure-5203106, forbes.com/sites/tobiamure, thestreet.com/author/tobi-amure, benzinga.com/author/tobi-amure, inc.com/author/tobi-amure)",
+   "http": "403",
+   "bytes": [5693, 680487, 770, 773, 5486, 767],
+   "title": "Cloudflare / bot walls on all six",
+   "verdict": "NO ROUTE - all six returned 403 on 2026-10-11. This is why the freshest AI-relevant find of the run was not drafted: the request redacts its own address and says 'No DM pitches here on LinkedIn. Email me.'"
+  }
+ ]
+}
