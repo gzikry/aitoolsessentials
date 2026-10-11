@@ -90,8 +90,21 @@ def _load_ledger() -> dict:
 
 
 def _days_old(text: str, first_seen: str | None) -> float | None:
-    """Prefer a datePublished/date in the digest's deadline text, else the first sighting."""
-    stamps = re.findall(r"(20\d{2}-\d{2}-\d{2})", text or "")
+    """Prefer a datePublished/date in the digest's deadline text, else the first sighting.
+
+    A monitor re-verification stamp is NOT the posting date, and on 2026-10-11 this function could
+    not tell them apart. Every deadline string written by that run led with "RE-VERIFIED
+    2026-10-11: HTTP 200 ...", so the first date found in the text was the run's own date: three
+    requests posted in May, July and July (162, 95 and 93 days old) were measured at 0.67 days and
+    floated to the top of the live list, which is the same failure the docstring above describes at
+    190 days. The stamps the monitor writes about itself are stripped first, an explicit
+    `datePublished <date>` is preferred over any other date, and the age is only ever taken from a
+    date the poster could have written.
+    """
+    body = re.sub(r"(?:PAGE-)?RE-?VERIFIED\s+20\d{2}-\d{2}-\d{2}", " ", text or "")
+    body = re.sub(r"(?:PAGE-)?VERIFIED\s+20\d{2}-\d{2}-\d{2}", " ", body)
+    m = re.search(r"datePublished\s+(20\d{2}-\d{2}-\d{2})", body)
+    stamps = ([m.group(1)] if m else []) + re.findall(r"(20\d{2}-\d{2}-\d{2})", body)
     for s in stamps:
         try:
             d = datetime.strptime(s, "%Y-%m-%d").replace(tzinfo=timezone.utc)
@@ -574,6 +587,22 @@ def _pitched_slugs() -> set[str]:
     return {_canon(u).rsplit("/", 1)[-1] for u in pitched}
 
 
+def _pitched_value(url: str) -> str:
+    """The ledger's own value for a pitched URL — the date, or the date plus how it ended.
+
+    The queue's "Already sent" list used to print "SENT per pitch-ledger.json" for every row in it.
+    One of those rows is the shadow-AI pitch, which the ledger records as sent-and-bounced with a 550
+    NoSuchUser, so the blanket wording told a reader that a dead address had been delivered. The value
+    is read from the ledger instead of assumed.
+    """
+    pitched = (_load_ledger().get("pitched") or {})
+    slug = _canon(url).rsplit("/", 1)[-1]
+    for u, v in pitched.items():
+        if _canon(u).rsplit("/", 1)[-1] == slug:
+            return v
+    return "not in pitch-ledger.json"
+
+
 
 def _draft_index(live_count: int, sendable_count: int) -> str:
     """The carried-drafts block, with every date-sensitive claim re-derived at build time.
@@ -605,9 +634,10 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
             f"(the 2026-09-29 chrome leak into `published_links`, the 2026-10-01 Google Form read as "
             f"a link route). A row is declared sendable on two facts evidenced separately rather "
             f"than trusted from a digest field: a relevance above the tangential band, and a reply "
-            f"route verified by fetching a page today. Both are named in the row. Holding more than "
-            f"one at a time is itself new — the 2026-10-10 build is the first to do it, and it "
-            f"happened because a route was resolved rather than because a find arrived. The live "
+            f"route verified by fetching a page today. Both are named in the row. More than one "
+            f"sendable row at a time has happened exactly once in this monitor's history — the "
+            f"2026-10-10 build, which held two, because a route was resolved off a publication's own "
+            f"site rather than because a find arrived. This build holds {sendable_count}. The live "
             f"unpitched set is {live_count} rows."
         )
     else:
@@ -660,7 +690,13 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
         "snapshot.\n\n"
         + "\n".join(f"- {u.rsplit('/', 1)[-1][:64]} — {v}" for u, v in sorted(_still.items()))
         + (("\n\n### Already sent — do NOT re-send\n\n"
-            + "\n".join(f"- {u[:64]} — SENT per `pitch-ledger.json`" for u in sorted(_sent_here)))
+            + "\n".join(
+                f"- {u.rsplit('/', 1)[-1][:64]} — "
+                + ("**SENT BUT BOUNCED — the address is dead, do not retry it; a fresh route is needed "
+                   "before this row can be sent at all.** "
+                   if "BOUNCED" in str(_pitched_value(u)).upper() else "SENT. ")
+                + f"`pitch-ledger.json`: {str(_pitched_value(u))[:120]}"
+                for u in sorted(_sent_here)))
            if _sent_here else "")
     )
 

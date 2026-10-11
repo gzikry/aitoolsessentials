@@ -1,6 +1,6 @@
 # Pitch queue — clear this in one pass
 
-Built 2026-10-10 from 107 unique requests across the digest history. **1 sendable**, 53 live, 47 cold (> 10 days and unpitched).
+Built 2026-10-11 from 114 unique requests across the digest history. **1 sendable**, 53 live, 54 cold (> 10 days and unpitched).
 
 *"Sendable" is the number that matters and the one the headline used to hide: a live page is not a candidate. A row counts as sendable only when it is live, not cold, not dropped off, not already pitched, ranked above the tangential band, and has a resolved reply route (a published email, a named handle, a booking link). The other live rows are off-beat calls this queue already documents as excluded.*
 
@@ -12,23 +12,23 @@ Built 2026-10-10 from 107 unique requests across the digest history. **1 sendabl
 
 ## Drafts that exist and were never sent
 
-Read this before clearing the queue: 23 draft files exist on disk. **3 of the pitches drafted here have now been sent** — listed at the bottom, not as work. The rest are still unsent; a written draft is not progress — the send is.
+Read this before clearing the queue: 24 draft files exist on disk. **3 of the pitches drafted here have now been sent** — listed at the bottom, not as work. The rest are still unsent; a written draft is not progress — the send is.
 
-**THE QUEUE IS AT 1 SENDABLE.** Every build before the 2026-10-06 run reported 0, and twice that 0 was a genuine measurement after a defect had been fixed (the 2026-09-29 chrome leak into `published_links`, the 2026-10-01 Google Form read as a link route). A row is declared sendable on two facts evidenced separately rather than trusted from a digest field: a relevance above the tangential band, and a reply route verified by fetching a page today. Both are named in the row. Holding more than one at a time is itself new — the 2026-10-10 build is the first to do it, and it happened because a route was resolved rather than because a find arrived. The live unpitched set is 53 rows.
+**THE QUEUE IS AT 1 SENDABLE.** Every build before the 2026-10-06 run reported 0, and twice that 0 was a genuine measurement after a defect had been fixed (the 2026-09-29 chrome leak into `published_links`, the 2026-10-01 Google Form read as a link route). A row is declared sendable on two facts evidenced separately rather than trusted from a digest field: a relevance above the tangential band, and a reply route verified by fetching a page today. Both are named in the row. More than one sendable row at a time has happened exactly once in this monitor's history — the 2026-10-10 build, which held two, because a route was resolved off a publication's own site rather than because a find arrived. This build holds 1. The live unpitched set is 53 rows.
 
-**Today's draft file is `pitch-drafts-2026-10-10.md` (derived from disk, not typed).** The headline figures are re-derived every run: 42 of 77 tools publish a monthly price, 33 of those at or under $25/month, median $17.50 (snapshots `updated: 2026-10-10`). Superseded sets still sitting in older dated drafts (40/31/$16.50 and earlier) must not be reused.
+**Today's draft file is `pitch-drafts-2026-10-11.md` (derived from disk, not typed).** The headline figures are re-derived every run: 42 of 77 tools publish a monthly price, 33 of those at or under $25/month, median $17.50 (snapshots `updated: 2026-10-11`). Superseded sets still sitting in older dated drafts (40/31/$16.50 and earlier) must not be reused.
 
 **The pair range is `1.11x to 2.53x, median 1.25x` over 19 tiers, and it held today.** History, because every superseded value is still sitting in dated draft files and must not be reused: the range was first published as `1.21x to 2.53x, median 1.33x` (2026-09-18, sent to a real correspondent — wrong because the pair population was regex-dependent and undefined); corrected to `1.16x to 2.53x, median 1.25x` over 18 curated pairs (2026-09-21); then re-derived to `1.11x to 2.53x` when the replit-ai snapshot was refreshed (2026-09-22). See `data/monthly_annual_pairs.json` and `scripts/extract_monthly_annual_pairs.py`, which refuses to write the file at all unless every curated pair re-asserts against the live snapshot.
 
-- anthropic-users-and-business-owners-customer-service-experiences — **Crossed cold 2026-09-23; now 28d old — no longer counted as sendable.** Draft finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal hliwrites.99 (re-read verbatim off the live page 2026-09-30). Send late or record as skipped in `pitch-ledger.json`; the crossing is logged in `cold_without_a_send`.
-- employees-blocked-from-ai-on-work-accounts-automating-tedious-ta — **SENDABLE — draft ready and UNSENT — `pitch-drafts-2026-10-10.md` §2. Now 5d old.** Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ (LinkedIn byline page — route-checks probe 2026-10-10: HTTP 200, 611,240 bytes, title 'Christopher Mims - The Wall Street Journal | LinkedIn'; the request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and wsj.com/news/author/christopher-mims 401 are dead ends, not routes). The last row in this queue that is both above the tangential band and route-resolved: the Glenn Hansen seats-and-tokens request was the other, and it was sent 2026-10-10. George's lane.
-- finops-professionals-agentic-ai-cost-overruns — **Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1. Now 33d old.** Route: LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — the longest-standing high-relevance request this monitor has never answered. Send it late or drop it, do not draft it a fifth time.
+- anthropic-users-and-business-owners-customer-service-experiences — **Crossed cold 2026-09-23; now 29d old — no longer counted as sendable.** Draft finished and unsent since 2026-09-19 at `pitch-drafts-2026-09-22.md` §2, route Signal hliwrites.99 (re-read verbatim off the live page 2026-09-30). Send late or record as skipped in `pitch-ledger.json`; the crossing is logged in `cold_without_a_send`.
+- employees-blocked-from-ai-on-work-accounts-automating-tedious-ta — **SENDABLE — draft ready and UNSENT — `pitch-drafts-2026-10-11.md` §2. Now 6d old.** Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ (LinkedIn byline page — route-checks probe 2026-10-10: HTTP 200, 611,240 bytes, title 'Christopher Mims - The Wall Street Journal | LinkedIn'; the request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and wsj.com/news/author/christopher-mims 401 are dead ends, not routes). The last row in this queue that is both above the tangential band and route-resolved: the Glenn Hansen seats-and-tokens request was the other, and it was sent 2026-10-10. George's lane.
+- finops-professionals-agentic-ai-cost-overruns — **Draft ready and UNSENT since 2026-09-17: `pitch-drafts-2026-09-17.md` §1. Now 34d old.** Route: LinkedIn DM to linkedin.com/in/niloy-ghosh. Cold since 2026-09-19 and still unsent — the longest-standing high-relevance request this monitor has never answered. Send it late or drop it, do not draft it a fifth time.
 
 ### Already sent — do NOT re-send
 
-- fulltime-employees-shadow-ai-use-and-paying-outofpocket — SENT per `pitch-ledger.json`
-- google-and-claude-enterprise-users-seats-and-token-costs — SENT per `pitch-ledger.json`
-- speciality-food-retailers-and-producers-how-theyd-spend-10k-on-t — SENT per `pitch-ledger.json`
+- fulltime-employees-shadow-ai-use-and-paying-outofpocket — **SENT BUT BOUNCED — the address is dead, do not retry it; a fresh route is needed before this row can be sent at all.** `pitch-ledger.json`: 2026-10-10 (SENT BUT BOUNCED - see log)
+- google-and-claude-enterprise-users-seats-and-token-costs — SENT. `pitch-ledger.json`: 2026-10-10
+- speciality-food-retailers-and-producers-how-theyd-spend-10k-on-t — SENT. `pitch-ledger.json`: 2026-10-10
 
 ## Sendable — pitch these (1)
 
@@ -36,8 +36,8 @@ Live, not cold, ranked above the tangential band, and with a reply route a human
 
 ### [medium] AI / Workplace Policy / Shadow & Unapproved AI Use
 - **URL:** https://www.sourcee.app/journo-request/employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks
-- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Christopher Mims (author field) — Wall Street Journal columnist (outlet not named in the body; confirmed at his own byline page)
 - **Reply route:** Body says '(DMs open)'; no address, handle or link is printed in the request itself. Route RESOLVED today off his own byline page, not off the request: https://www.linkedin.com/in/christopher-mims-club/ returns HTTP 200 (611,240 bytes), title 'Christopher Mims - The Wall Street Journal | LinkedIn'. Two dead ends recorded so they are not retried as routes: muckrack.com/christopher-mims HTTP 403 (Cloudflare interstitial) and wsj.com/news/author/christopher-mims HTTP 401. LINKEDIN DM — George's lane. Not automatable. PAGE-VERIFIED 2026-10-10 on the request: HTTP 200, email_redacted=False, emails_on_page=none, published_links=Sourcee chrome only.  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** Template: lead with the dated price set behind the blocked-employee workaround (42 of 77 tools quote a monthly price, 33 of those at or under $25/month, median $17.50; monthly vs annual 1.11x-2.53x, median 1.25x over 19 tiers; snapshots re-checked 2026-10-10), state plainly that we are not an employee with a blocked account, and offer the full dated set with sources. Draft: pitch-drafts-2026-10-10
@@ -46,75 +46,107 @@ Live, not cold, ranked above the tangential band, and with a reply route a human
 
 These pages resolve and the requests are unexpired, so they are recorded — but none has both a relevance above the tangential band and a usable route. They are listed for completeness, not as candidates: pitching any of them would mean claiming standing we do not have (see the exclusions in the newest `pitch-drafts-*.md`).
 
+### [low-medium] AI / Future of Work / Jobs & Hiring / Original Data
+- **URL:** https://www.sourcee.app/journo-request/tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring
+- **Posted:** 2d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Seen:** first 2026-10-11, last 2026-10-11 (1x)
+- **Publication:** Tobi Amure (the page's own author field) - freelancer building pitches for Fast Company's Work Life section; his body text says his work runs in Investopedia, TheStreet, Forbes, Inc., Benzinga and FinanceFeeds. Fast Company does not name him on the request.
+- **Reply route:** The page redacts the address ('email me at [email redacted]') and says explicitly 'No DM pitches here on LinkedIn. Email me.' No address, handle or link is published on the request itself (published_links = Sourcee's own author chrome only). ROUTE NOT RESOLVED: six byline pages tried on 2026-10-11 and all six returned HTTP 403 - muckrack.com/tobi-amure (5,693 B), investopedia.com/tobi-amure-5203106 (680,487 B), forbes.com/sites/tobiamure (770 B), thestreet.com/author/tobi-amure (773 B), benzinga.com/author/tobi-amure (5,486 B), inc.com/author/tobi-amure (767 B). Recorded so they are not retried as routes. NOT SENDABLE until an address is published somewhere other than the redacted body.  ·  _no — LinkedIn DM / comment (George)_
+- **Angle:** None drafted - no route. If a route is ever resolved, the only honest angle is the method: we hand-check dated list prices across 77 AI tools and can supply every figure with its source URL and check date (42 of 77 publish a monthly price, 33 at or under $25/month, median $17.50, checked 2026-10-11). Do not present any of it as a workplace-expert credential.
+
 ### [low-medium] AI / Enterprise Adoption / CNBC Series
 - **URL:** https://www.sourcee.app/journo-request/uk-companies-implementing-ai-how-automation-transforms-workdays
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** Lindsay Dodgson (author field) — CNBC (cnbc.com, domain field) · domain cnbc.com
 - **Reply route:** Body: 'you know where to find me [email redacted]'. Address Sourcee-redacted; no handle or link published. NO ROUTE RESOLVED as-is. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True, feed=Y.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** If a route is ever resolved, the only defensible angle is the dated-price half of 'fresh data': 42 of 77 tools quote a monthly price, 33 at or under $25/month, median $17.50; monthly vs annual 1.11x-2.53x, median 1.25x over 19 tiers (snapshots re-checked 2026-10-10). Do NOT claim to be a UK company implementing AI. Excluded this run for want of a route.
 
 ### [low-medium] AI / Legal Sector / Billing & Billable Hour
 - **URL:** https://www.sourcee.app/journo-request/law-firm-lawyers-concrete-ai-implementations-and-billing-impact
-- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-05, last 2026-10-10 (6x)
+- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-05, last 2026-10-11 (7x)
 - **Publication:** Lindsay Dodgson (author field) — CNBC (cnbc.com, domain field) · domain cnbc.com
 - **Reply route:** The body says 'If you'd like to chat: [email redacted]' — Sourcee redacts the address. No author page exists at cnbc.com (/lindsay-dodgson/ and /author/lindsay-dodgson/ both HTTP 404) and the page publishes no alternative route. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none.  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: wants a practising lawyer's own firm evidence. A price-dataset contribution would be claiming standing we do not have, and the body address is redacted with no alternative route on cnbc.com.
 
 ### [low-medium] AI / Workplace Culture / Shadow AI Use
 - **URL:** https://www.sourcee.app/journo-request/employees-conflicted-about-ai-use-generative-ai-workplace-impact
-- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-01, last 2026-10-10 (8x)
+- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-01, last 2026-10-11 (9x)
 - **Publication:** Independent artist/filmmaker (video project; outlet not named)
 - **Reply route:** A Google Form published in the body (docs.google.com/forms/d/e/1FAIpQLSdWsFQ0q\_Mngmu7kGKnLwt4Z-Z4\_Exh5H41eqJ0rjk0t1i1Jg/viewform) or a direct message. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=['https://docs.google.com/forms/d/e/1FAIpQLSdWsFQ0q'].  ·  _unknown — verify the route before sending_
 - **Links published on the page:** https://docs.google.com/forms/d/e/1FAIpQLSdWsFQ0q
 - **Angle:** Template 2 (cost optimization), only if a data contribution is welcome: offer the dated price set behind unmanaged adoption rather than a personal account. Do not claim to be a conflicted employee.
 
+### [low] AI / Startup News Submissions
+- **URL:** https://www.sourcee.app/journo-request/ai-cybersecurity-iot-and-web3-founders-and-operators-news-submissions
+- **Posted:** 2d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Seen:** first 2026-10-11, last 2026-10-11 (1x)
+- **Publication:** Aditya Prakash (the page's own author field) - Morning Tick, a startup-news publication
+- **Reply route:** 'Get in touch: [email redacted]' - Sourcee redacts the address and the page publishes no other handle or link (published_links = Sourcee's own author chrome only). Its one outbound link, lnkd.in/gHZDHvxS, is a Morning Tick 'about us' shortlink, not a reply route. NOT RESOLVED.  ·  _unknown — verify the route before sending_
+- **Angle:** None. No route and no standing.
+
+### [low] Workplace / Pay Transparency / Audio Vox Pop
+- **URL:** https://www.sourcee.app/journo-request/employees-pay-transparency-good-or-bad
+- **Posted:** 2d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Seen:** first 2026-10-11, last 2026-10-11 (1x)
+- **Publication:** Melita Cameron-Wood (the page's own author field) - Business Spotlight Audio
+- **Reply route:** No address, handle or link published on the request (published_links = Sourcee's own author chrome only). NOT RESOLVED.  ·  _unknown — verify the route before sending_
+- **Angle:** None. Audio vox pop from employees; no route.
+
 ### [low] AI / Sales Outreach / Practitioner Experience
 - **URL:** https://www.sourcee.app/journo-request/sales-reps-who-cold-call-and-email-how-ai-changed-outreach
-- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-09, last 2026-10-10 (2x)
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-09, last 2026-10-11 (3x)
 - **Publication:** Issie Lapowsky (author field) — outlet not named in the body
 - **Reply route:** Body: 'I want your personal stories only, please! If you send me a product pitch for your company/your client's company, you will be placed on the naughty list. [email redacted] or Signal at issielapowsky.08'. Address Sourcee-redacted; Signal handle pubd. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True.  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: explicitly anti-pitch; wants reps' personal stories only.
 
 ### [low] AI / Vendor Studio Promo / Podcast Booking
 - **URL:** https://www.sourcee.app/journo-request/enterprise-ai-leaders-and-builders-realworld-deployment-and-strategy
-- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-09, last 2026-10-10 (2x)
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-09, last 2026-10-11 (3x)
 - **Publication:** Bruce Burke (author field) — Neural News Network studio (own promo)
 - **Reply route:** Body: 'Drop a comment below or send a direct message, and let's get you on the studio schedule.' No address, handle or link printed. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=False, emails_on_page=none.  ·  _no — scheduling link (George)_
 - **Angle:** None — excluded: booking promo, not an editorial request.
 
 ### [low] AI / Civic / Voter Experience
 - **URL:** https://www.sourcee.app/journo-request/voters-who-used-ai-to-navigate-ballot-voting-experience
-- **Posted:** 1d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-09, last 2026-10-10 (2x)
+- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-09, last 2026-10-11 (3x)
 - **Publication:** Atlanta Community Press Collective (author field) — atlpresscollective.com · domain atlpresscollective.com
 - **Reply route:** Body: 'Reach out to [email redacted] ATL Press Collective'. Address Sourcee-redacted; no handle or link. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True, emails_on_page=none.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: wants voters' personal voter-experience stories.
 
+### [low] AI / Vendor GTM / Interview Booking
+- **URL:** https://www.sourcee.app/journo-request/anthropic-gtm-leaders-scaling-300k-b2b-clients
+- **Posted:** 3d old (digest (page not probed)) · badge: — · AI-topic feed: no
+- **Seen:** first 2026-10-11, last 2026-10-11 (1x)
+- **Publication:** Tris Tusa (the page's own author field) - an interviewer running a sales/GTM podcast and newsletter; no outlet is named on the request itself
+- **Reply route:** 'give me a shout' - no address, handle or link is published on the request. The two links the page carries, linkedin.com/in/andrewsmith313 and x.com/andy_cb_smith, are Sourcee's own author chrome and are excluded by the verifier's CHROME list. NOT RESOLVED.  ·  _no — LinkedIn DM / comment (George)_
+- **Angle:** None. Do not pitch this without an Anthropic GTM introduction we do not have.
+
 ### [low] Legal / IP / Practitioner Guide
 - **URL:** https://www.sourcee.app/journo-request/patent-attorneys-and-agents-startup-ip-starter-pack
-- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-08, last 2026-10-10 (3x)
+- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-08, last 2026-10-11 (4x)
 - **Publication:** Ptoleme (author field) — no domain named
 - **Reply route:** Body: 'Feel free to comment or message me' with an acknowledgement offer, but no address, handle or link printed. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=n.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants patent practitioners; no spend angle, no route.
 
 ### [low] AI / Hospitality / Practitioner Interviews
 - **URL:** https://www.sourcee.app/journo-request/hotel-and-fandb-supervisors-and-managers-customer-expectations-vs-ai
-- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-09, last 2026-10-10 (2x)
+- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-09, last 2026-10-11 (3x)
 - **Publication:** Nick Teare (author field) — outlet not named in the body
 - **Reply route:** Body: 'Please let me know if you or someone on your team might be interested.' No address, handle or link printed; interviews promised confidential. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=False, emails_on_page=none.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants hospitality supervisors' own interviews.
 
 ### [low] AI / Research Landscape Study / Survey Call
 - **URL:** https://www.sourcee.app/journo-request/researchers-founders-and-funders-ai-transforming-scientific-research
-- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-09, last 2026-10-10 (2x)
+- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-09, last 2026-10-11 (3x)
 - **Publication:** Yarissa M. (author field) — Renaissance Philanthropy, with Google.org support
 - **Reply route:** Body: 'Sign up here: https://lnkd.in/gyCpc-Dh'. That is a participation sign-up form for their own landscape analysis, not a reply route to a reporter; it asks respondents to be interviewed about their science work. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=False.  ·  _no — published booking link https://lnkd.in/gyCpc-Dh (George)_
 - **Links published on the page:** https://lnkd.in/gyCpc-Dh
@@ -122,112 +154,112 @@ These pages resolve and the requests are unexpired, so they are recorded — but
 
 ### [low] AI / Consumer Marketplaces / Seller Experience
 - **URL:** https://www.sourcee.app/journo-request/facebook-marketplace-sellers-ai-listing-photos-and-selling-experience
-- **Posted:** 2d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-09, last 2026-10-10 (2x)
+- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-09, last 2026-10-11 (3x)
 - **Publication:** Rainesford Stauffer (author field) — outlet not named in the body
 - **Reply route:** Body: 'I'm reporting on this and would love to hear about it: [email redacted], or DM me'. Address Sourcee-redacted, no handle or link printed. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True, emails_on_page=none.  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: wants FB Marketplace sellers' own stories.
 
 ### [low] AI / Public-Sector Workforce / Skills & Training
 - **URL:** https://www.sourcee.app/journo-request/aps-hr-leaders-ai-skills-training-and-workforce-planning
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** Joshua Gliddon (author field) — The Mandarin (themandarin.com.au, domain field) · domain themandarin.com.au
 - **Reply route:** Body: 'please drop me a line' with no address, handle or link published; the page's only published links are Sourcee chrome. email_redacted=False but emails_on_page=none. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=Y.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants public-sector HR interviewees; no spend angle and no route.
 
 ### [low] AI / Agile Careers / Podcast Guest Booking
 - **URL:** https://www.sourcee.app/journo-request/scrum-masters-daytoday-and-career-pivots-and-ai-impact
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** Dr. Yvette Jett (author field) — The Dr. Vett Jett Show (vettjett.com, domain field) · domain vettjett.com
 - **Reply route:** Body: 'Send me a message right here on LinkedIn or email me at [email redacted]'. The address is Sourcee-redacted and no handle is printed; no route resolved. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True, emails_on_page=none.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: wants practising Scrum Masters as guests; we hold no such standing.
 
 ### [low] AI / PropTech / Vendor Blog Content Call
 - **URL:** https://www.sourcee.app/journo-request/real-estate-agents-replacing-pdf-property-brochure
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** Lyza G (author field) — Flipbooker blog (flipbooker.com, domain field) · domain flipbooker.com
 - **Reply route:** Body: 'Email [email redacted]'. Address Sourcee-redacted; no handle or link. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: vendor blog promo wanting a real-estate agent voice.
 
 ### [low] AI / Marketing Technology / Self-Promo Spotlight
 - **URL:** https://www.sourcee.app/journo-request/anz-marketers-ai-and-martech-innovation-spotlight
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** RAHUL B. (author field) — KARV Tech Insider (domain not named in the page's domain field)
 - **Reply route:** Body: 'DM me. Let's connect and explore how we can amplify your story.' No handle, address or link published; the page's only published links are Sourcee chrome. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=Y.  ·  _no — platform reply (George)_
 - **Angle:** None — excluded: self-promo spotlight, no editorial data ask and no route.
 
 ### [low] AI / Legal Sector / Access to Justice
 - **URL:** https://www.sourcee.app/journo-request/solicitors-and-barristers-ai-to-expand-pro-bono-capacity
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-08, last 2026-10-10 (3x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-08, last 2026-10-11 (4x)
 - **Publication:** Catherine Baksi (author field) — publication not named
 - **Reply route:** Body: 'please drop me an email at: [email redacted] by the end of this week'. Address Sourcee-redacted; no handle or link. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True, emails_on_page=none.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: wants law firms' own pro-bono AI projects; no spend angle, no route.
 
 ### [low] AI / Labour / Data Training
 - **URL:** https://www.sourcee.app/journo-request/uk-ai-data-trainers-daytoday-work
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-08, last 2026-10-10 (3x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-08, last 2026-10-11 (4x)
 - **Publication:** momitola (author handle) — The Times (thetimes.co.uk, domain field) · domain thetimes.co.uk
 - **Reply route:** Body: 'Ping me a message if you're interested'. No handle, address or link printed. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=n.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants UK data trainers' first-person accounts.
 
 ### [low] AI / Press & Media / Accountability
 - **URL:** https://www.sourcee.app/journo-request/apac-reporters-and-editors-ai-accountability-coverage
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-08, last 2026-10-10 (3x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-08, last 2026-10-11 (4x)
 - **Publication:** Sen Nguyen (author field) — BBC News (bbc.co.uk, domain field) · domain bbc.co.uk
 - **Reply route:** Body: 'Hit me up here or at [email redacted]'. Address Sourcee-redacted; no handle or link. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: wants APAC reporters/editors; no spend angle.
 
 ### [low] AI / UX & IA / Practitioner Interviews
 - **URL:** https://www.sourcee.app/journo-request/early-to-midcareer-information-architects-products-featuring-ai
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-08, last 2026-10-10 (3x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-08, last 2026-10-11 (4x)
 - **Publication:** World Information Architecture Association (author field) — no domain named
 - **Reply route:** No address, handle or link published; the body gives no reply instruction. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=n.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants IA practitioners' own product stories.
 
 ### [low] AI / Martech / Vendor Blog Content Call
 - **URL:** https://www.sourcee.app/journo-request/martech-buyers-ai-impact-on-build-vs-buy-decisions
-- **Posted:** 3d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-08, last 2026-10-10 (3x)
+- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-08, last 2026-10-11 (4x)
 - **Publication:** Lyza G (author field) — Flipbooker blog (flipbooker.com, domain field) · domain flipbooker.com
 - **Reply route:** Body: 'Email [email redacted]'. Address Sourcee-redacted; no handle or link. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: vendor blog promo wanting martech-buyer quotes.
 
 ### [low] AI / Infrastructure / Data-Centre Capacity
 - **URL:** https://www.sourcee.app/journo-request/ai-infrastructure-experts-china-vs-us-datacenter-capacity
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Harriet Weber (author field) — outlet not named in the body
 - **Reply route:** The body publishes a Signal username, 'hew.04', plus an address Sourcee redacts. Signal is a resolved route; the request still asks for expertise we do not hold. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, published_links=Sourcee chrome only.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: no data-centre-capacity expertise. Route (Signal hew.04) recorded so the exclusion can be audited.
 
 ### [low] AI / Legal / Deepfake Liability
 - **URL:** https://www.sourcee.app/journo-request/plaintiffs-attorneys-and-legal-scholars-ai-deepfake-liability
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Mitchell Price (author field) — outlet not named (student podcast)
 - **Reply route:** The body asks respondents to 'comment on this post'; no address, handle or link is published. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, reply_hints=none, published_links=Sourcee chrome only. No route we can use.  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** None — excluded: wants practising attorneys or legal scholars for a student podcast; no spend angle and no route.
 
 ### [low] AI / Emergency Management / Public-Sector Adoption
 - **URL:** https://www.sourcee.app/journo-request/emergency-managers-ai-tools-for-funding-and-staffing-shortfalls
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Jake Bittle (named in the body) — Grist (grist.org, domain field) · domain grist.org
 - **Reply route:** The body prints a phone number (8134664712) and an address Sourcee redacts. Grist's staff page grist.org/staff/jake-bittle/ returns HTTP 404, so no email route resolved. A phone is a voice route, not a written pitch route. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, published_links=Sourcee chrome only.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: wants an emergency manager's own departmental experience.
 
 ### [low] AI / Arts & Community / Data-Centre Siting
 - **URL:** https://www.sourcee.app/journo-request/coweta-county-artists-and-creatives-data-centers-and-ai-infrastructure
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Artist Rights Watch (author field) — outlet not named in the body
 - **Reply route:** An X post tagging named panellists for an in-person symposium panel; the body carries a t.co link and no address or handle for us. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=['https://t.co/8l6CGKC9yq', ...Sourcee chrome]. No route we can use.  ·  _unknown — verify the route before sending_
 - **Links published on the page:** https://t.co/8l6CGKC9yq
@@ -235,48 +267,48 @@ These pages resolve and the requests are unexpired, so they are recorded — but
 
 ### [low] AI / Human-AI Relationships / Documentary
 - **URL:** https://www.sourcee.app/journo-request/swiss-ai-companion-users-emotional-bonds-and-daily-life
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** Leila (author handle) — SRF 'rec.' (srf.ch, domain field) · domain srf.ch
 - **Reply route:** Body: 'You're welcome to send me a private message'. No address, handle or link printed. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=Y.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants Swiss AI-companion users' personal accounts.
 
 ### [low] AI / Labour / Data Annotation
 - **URL:** https://www.sourcee.app/journo-request/ai-data-labelers-in-germany-positive-and-negative-experiences
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** freelance journalist (author handle JulDagg) — FLUTER (fluter.de, domain field) · domain fluter.de
 - **Reply route:** No address, handle or link published in the body; interviews offered anonymously. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=Y.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants German data annotators' first-person accounts.
 
 ### [low] AI / Labour / Data Annotation
 - **URL:** https://www.sourcee.app/journo-request/ai-data-annotators-and-labellers-experience-with-ai-training-data
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** Modupe (author field) — The Times (thetimes.co.uk, domain field) · domain thetimes.co.uk
 - **Reply route:** Body: 'My email is [email redacted]'. Address Sourcee-redacted; no handle or link. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, email_redacted=True.  ·  _no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)_
 - **Angle:** None — excluded: wants annotators' first-person accounts, no spend angle.
 
 ### [low] AI / Mental Health / Self-Diagnosis
 - **URL:** https://www.sourcee.app/journo-request/ai-chatbot-users-and-therapists-selfdiagnosing-mental-health-stories
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** student journalist (author handle yaegrrr) — publication not named
 - **Reply route:** Body: 'feel free to send me a PM or comment below'. No address, handle or link published. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=n.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants users'/therapists' personal accounts.
 
 ### [low] AI / Academia / Media & Identity
 - **URL:** https://www.sourcee.app/journo-request/academics-social-media-and-ai-impact-on-womens-identity-and-selfesteem
-- **Posted:** 4d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-07, last 2026-10-10 (4x)
+- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-07, last 2026-10-11 (5x)
 - **Publication:** Lucy Abbersteen (author field) — publication not named
 - **Reply route:** Body: 'please comment below!' No address, handle or link published; the only way in is a public comment. NO ROUTE RESOLVED. PAGE-VERIFIED 2026-10-10: HTTP 200, live=True, feed=n.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants academic researchers; no route beyond a public comment.
 
 ### [low] AI / Legal & Insurance / Procurement
 - **URL:** https://www.sourcee.app/journo-request/ai-liability-insurers-and-legal-experts-procurement-and-implementation
-- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Ritoban Mukherjee (author field) — ZDNET (zdnet.com, domain field) · domain zdnet.com
 - **Reply route:** The body publishes a Qwoted link, https://lnkd.in/dVu9JK4C (HTTP 200, 5,322 bytes, resolves to LinkedIn), with 'refer to my Qwoted post to pitch any insights'. That is a usable route in principle, but Qwoted's feed needs an authenticated session we do not hold. No address on the page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none.  ·  _no — published booking link https://lnkd.in/dVu9JK4C (George)_
 - **Links published on the page:** https://lnkd.in/dVu9JK4C
@@ -284,8 +316,8 @@ These pages resolve and the requests are unexpired, so they are recorded — but
 
 ### [low] AI / Hiring / Cybersecurity Sector Research
 - **URL:** https://www.sourcee.app/journo-request/uk-cybersecurity-hiring-managers-state-of-hiring-2026-and-ai-impact
-- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Mike Carthy (author field) — CyberHire (outlet not named in body)
 - **Reply route:** The body publishes a survey form, https://tally.so/r/A7VLXe; no address or handle. A survey form collects the sender's data - it is not a reply route for us. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none.  ·  _unknown — verify the route before sending_
 - **Links published on the page:** https://tally.so/r/A7VLXe
@@ -293,40 +325,40 @@ These pages resolve and the requests are unexpired, so they are recorded — but
 
 ### [low] AI / Consumer Behaviour / Emotional Use
 - **URL:** https://www.sourcee.app/journo-request/ai-emotional-support-users-chatbot-therapy-and-journaling
-- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Louise Gill (author field) — outlet not named in the body
 - **Reply route:** Body says 'DM or email me' but prints neither: email_redacted=False and no address, handle or link appears on the page beyond Sourcee chrome. PAGE-VERIFIED 2026-10-10: HTTP 200, emails_on_page=none. No route we can use.  ·  _no — platform reply (George)_
 - **Angle:** None — excluded: wants personal emotional-use accounts; no spend angle, no route.
 
 ### [low] AI / Financial Services / Video Series
 - **URL:** https://www.sourcee.app/journo-request/mortgage-adviser-using-ai-efficiency-and-client-outcomes-video-series
-- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Amy Hannah Loddington (author field) — outlet not named in body
 - **Reply route:** Body: 'drop me an email on [email redacted]' — Sourcee redacts the address and no alternative route is published. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, published_links=Sourcee chrome only.  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: wants a mortgage adviser's own workflow; address redacted, no route.
 
 ### [low] AI / Automotive / Thought-Leadership Placement
 - **URL:** https://www.sourcee.app/journo-request/founders-and-cxos-in-automotive-ai-evs-autonomy-thought-leadership
-- **Posted:** 5d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-06, last 2026-10-10 (5x)
+- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-06, last 2026-10-11 (6x)
 - **Publication:** Poonam Mahajan (author field) — The Autonaut Media (theautonautmedia.com, domain field) · domain theautonautmedia.com
 - **Reply route:** Body: 'Reach out to [email redacted] or [email redacted]' — both addresses are redacted and no alternative is published. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, published_links=Sourcee chrome only.  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: contributed-content invitation, not a source request.
 
 ### [low] AI / Games Industry / Attribution Disputes
 - **URL:** https://www.sourcee.app/journo-request/video-game-developer-falsely-accused-of-using-generative-ai
-- **Posted:** 6d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-05, last 2026-10-10 (6x)
+- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
+- **Seen:** first 2026-10-05, last 2026-10-11 (7x)
 - **Publication:** Chris Kerr (author field) — outlet not named in the body
 - **Reply route:** Body publishes a Signal handle (kerrblimey.43) plus 'Email in bio. DMs open.' PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, reply_hints=['email me'/'DM'], published_links=['https://www.linkedin.com/in/andrewsmith313/', 'https://x.com/andy_cb_smith'] (both Sourcee chrome).  ·  _no — LinkedIn DM / comment (George)_
 - **Angle:** None — excluded: wants a game developer's own accusation experience; no spend angle.
 
 ### [low] AI / Wearables / Legal Industry / Podcast Guest
 - **URL:** https://www.sourcee.app/journo-request/lawyers-and-tech-ethics-experts-ai-wearables-and-legal-journeys
-- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-05, last 2026-10-10 (6x)
+- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-05, last 2026-10-11 (7x)
 - **Publication:** Alexandra Zandamela — Lex & Lace Podcast (podcast guest call)
 - **Reply route:** Published booking link (https://lnkd.in/dcKHYkDR) for the podcast; no email on the page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=['https://lnkd.in/dcKHYkDR', ...].  ·  _no — published booking link https://lnkd.in/dcKHYkDR (George)_
 - **Links published on the page:** https://lnkd.in/dcKHYkDR
@@ -334,24 +366,24 @@ These pages resolve and the requests are unexpired, so they are recorded — but
 
 ### [low] Real Estate / MLS Data Access / LLM Permissions Risk
 - **URL:** https://www.sourcee.app/journo-request/mls-executives-risks-when-agents-grant-mls-access-to-llms
-- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-05, last 2026-10-10 (6x)
+- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-05, last 2026-10-11 (7x)
 - **Publication:** Craig Rowe (author field) — outlet not named in the body
 - **Reply route:** DMs on the original post; no email, handle or link published on the page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=Sourcee chrome only, reply_hints=['DM me']. No route we can use.  ·  _no — platform reply (George)_
 - **Angle:** None — excluded: wants an MLS executive's firsthand permissions account.
 
 ### [low] Real Estate / Marketing Tools / Document Workflow
 - **URL:** https://www.sourcee.app/journo-request/real-estate-agents-and-brokers-switched-from-pdf-brochures
-- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-05, last 2026-10-10 (6x)
+- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-05, last 2026-10-11 (7x)
 - **Publication:** Lyza G (author field) — outlet not named in the body
 - **Reply route:** The body says 'DM me or email [email redacted]' — Sourcee redacts the address and the page publishes no alternative route. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, reply_hints=['DM me'/'email me'].  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: wants a real estate agent's own switching experience.
 
 ### [low] Advertising / AI Audience Discovery / Event Interview
 - **URL:** https://www.sourcee.app/journo-request/advertising-tech-and-media-pros-in-miami-ai-audience-discovery
-- **Posted:** 7d old (page datePublished) · badge: Posted in last 7 days · AI-topic feed: no
-- **Seen:** first 2026-10-05, last 2026-10-10 (6x)
+- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-05, last 2026-10-11 (7x)
 - **Publication:** Kendra Barnett (author field) — outlet not named in the body
 - **Reply route:** Drop a line / DM on the original post; no email, handle or link published on the page beyond a t.co. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=['https://t.co/AEgLhRuQL7', ...]. No route we can use.  ·  _no — platform reply (George)_
 - **Links published on the page:** https://t.co/AEgLhRuQL7
@@ -359,167 +391,142 @@ These pages resolve and the requests are unexpired, so they are recorded — but
 
 ### [low] AI / Storytelling / Sponsor Solicitation
 - **URL:** https://www.sourcee.app/journo-request/storytellers-and-brand-founders-marys-big-30-ai-story-project
-- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-02, last 2026-10-10 (7x)
+- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-02, last 2026-10-11 (8x)
 - **Publication:** Independent creator (author field: Mary's Big 30 project)
 - **Reply route:** Comment or DM on the original post; no email or handle published on the page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=none, reply_hints=['Comment'].  ·  _no — platform reply (George)_
 - **Angle:** None — excluded: creator project soliciting stories and sponsors.
 
 ### [low] AI Agents / Publishing Workflow
 - **URL:** https://www.sourcee.app/journo-request/newsletter-editors-using-ai-agents-news-aggregation-practices
-- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-02, last 2026-10-10 (7x)
+- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-02, last 2026-10-11 (8x)
 - **Publication:** Independent journalist (outlet not named in the body)
 - **Reply route:** No email, handle or link published on the page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=none, reply_hints=none. No route we can use.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: workflow practice call with no spend angle and no route.
 
 ### [low] Education / AI Tools Implementation
 - **URL:** https://www.sourcee.app/journo-request/scottish-teachers-ai-tools-implementation-in-education
-- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-02, last 2026-10-10 (7x)
+- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-02, last 2026-10-11 (8x)
 - **Publication:** Independent journalist (outlet not named in the body)
 - **Reply route:** The body says 'DM or email [email redacted]' — Sourcee redacts the address and the page publishes no alternative route. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, reply_hints=['DM or email'].  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: wrong standing (we are not a Scottish teacher).
 
 ### [low] AI / HR Practice / Cognitive Offloading Policy
 - **URL:** https://www.sourcee.app/journo-request/hr-leaders-company-ai-strategies-and-cognitive-offloading-risk
-- **Posted:** 8d old (page datePublished) · badge: Posted 8 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-05, last 2026-10-10 (6x)
+- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-05, last 2026-10-11 (7x)
 - **Publication:** Katie Jacobs (author field) — CIPD (cipd.co.uk, domain field) · domain cipd.co.uk
 - **Reply route:** No address or handle on the page; the body says 'Hit me up'. No people page exists at cipd.org (/uk/about/people/katie-jacobs/ and the contact page both HTTP 404). PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, reply_hints=none. No route we can use.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: wants an HR leader's own policy example; no spend angle, no route.
 
 ### [low] Engineering Simulation / Agentic AI / Webinar Guest
 - **URL:** https://www.sourcee.app/journo-request/fea-engineers-using-agentic-ai-practitioner-case-study
-- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-01, last 2026-10-10 (8x)
+- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-01, last 2026-10-11 (9x)
 - **Publication:** Independent / Synera webinar series (author not a journalist byline)
 - **Reply route:** No email, handle or link published on the page; the body invites a comment. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=none, reply_hints=['Comment']. No route we can use.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: webinar guest call wanting an engineer's own deployment story.
 
 ### [low] AI / Family / Consumer Behaviour
 - **URL:** https://www.sourcee.app/journo-request/parents-ai-acting-as-pseudoparent-in-kid-questions
-- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-01, last 2026-10-10 (8x)
+- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-01, last 2026-10-11 (9x)
 - **Publication:** Independent writer/journalist (outlet not named in the body)
 - **Reply route:** No email, handle or link published on the page; the body says 'would love to chat'. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=none, reply_hints=none.  ·  _unknown — verify the route before sending_
 - **Angle:** None — excluded: personal testimony call with no spend angle.
 
 ### [low] Consumer Platforms / AI Features
 - **URL:** https://www.sourcee.app/journo-request/fb-marketplace-sellers-ai-photos-and-description-prompts
-- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-02, last 2026-10-10 (7x)
+- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-02, last 2026-10-11 (8x)
 - **Publication:** Independent journalist (outlet not named in the body)
 - **Reply route:** DM the poster, or an address Sourcee redacts; the page publishes no alternative route. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, reply_hints=none.  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: wrong standing and no spend angle.
 
 ### [low] Education / AI Policy / Teacher Testimony
 - **URL:** https://www.sourcee.app/journo-request/k8-and-hs-teachers-using-studentfacing-ai-moratorium-impact
-- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-02, last 2026-10-10 (7x)
+- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-02, last 2026-10-11 (8x)
 - **Publication:** Columbia Journalism School reporting fellow (outlet not named)
 - **Reply route:** DMs on the original post; no email, handle or link published on the page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=none, reply_hints=none. No route we can use.  ·  _no — platform reply (George)_
 - **Angle:** None — excluded: wants a teacher's firsthand moratorium experience.
 
 ### [low] AI Industry Events / Conference Controversy
 - **URL:** https://www.sourcee.app/journo-request/ai-summit-barcelona-attendees-controversy-and-experiences
-- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-02, last 2026-10-10 (7x)
+- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-02, last 2026-10-11 (8x)
 - **Publication:** Independent journalist (outlet not named in the body)
 - **Reply route:** Tag or DM on the original post; no email, handle or link published on the page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=none, reply_hints=['DM me']. No route we can use.  ·  _no — platform reply (George)_
 - **Angle:** None — excluded: attendee testimony call with no spend angle.
 
 ### [low] AI Hardware / Consumer Product Review
 - **URL:** https://www.sourcee.app/journo-request/ai-glasses-owners-users-and-developers-in-india-product-experience
-- **Posted:** 9d old (page datePublished) · badge: Posted 9 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-02, last 2026-10-10 (7x)
+- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
+- **Seen:** first 2026-10-02, last 2026-10-11 (8x)
 - **Publication:** The StyleList (thestylelist.in) — domain named in the body
 - **Reply route:** The body says 'please email us at [email redacted]' — Sourcee redacts the address and the page publishes no alternative route. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, published_links=none.  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
 - **Angle:** None — excluded: wrong standing (we are not an AI-glasses owner/developer).
-
-### [low] Cybersecurity / AI Risk / Expert Availability
-- **URL:** https://www.sourcee.app/journo-request/cybersecurity-expert-ai-nexus-and-security-risks
-- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
-- **Seen:** first 2026-09-30, last 2026-10-10 (9x)
-- **Publication:** Unnamed outlet (posted via #journorequest on X/social); no publication named in the request
-- **Reply route:** Recommendations/DMs via the original #journorequest post. No email published and none redacted on the Sourcee page; no route we can use.  ·  _no — platform reply (George)_
-- **Angle:** None. Off-beat: we do not hold the standing the request asks for (a cybersecurity practitioner; a US emergency physician; a booked radio segment). Do not draft.
-
-### [low] AI / Consumer Experience
-- **URL:** https://www.sourcee.app/journo-request/chatbot-users-experiences-talking-to-ai
-- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-01, last 2026-10-10 (8x)
-- **Publication:** Independent journalist (outlet not named in the body)
-- **Reply route:** DM or reply to the original post; no email published and none redacted. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, reply_hints=['DM me']. The route is the original post, which we cannot identify.  ·  _no — platform reply (George)_
-- **Angle:** None — excluded: no spend angle, no resolvable route.
-
-### [low] AI Security / Governance / Agent Accountability
-- **URL:** https://www.sourcee.app/journo-request/us-ai-security-experts-rogue-ai-agents-hitting-government-sites
-- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-01, last 2026-10-10 (8x)
-- **Publication:** Category A publication via a PR/media-query desk (outlet not named)
-- **Reply route:** DM the poster; no email or handle published on the Sourcee page. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=False, emails_on_page=none, published_links=none, reply_hints=['Comment'].  ·  _no — platform reply (George)_
-- **Angle:** None — excluded: paid placement and wrong standing.
-
-### [low] Real Estate / Document Workflow / Tools
-- **URL:** https://www.sourcee.app/journo-request/real-estate-agents-pdf-brochures-vs-alternatives-agent-workflow
-- **Posted:** 10d old (page datePublished) · badge: Posted 10 days ago · AI-topic feed: no
-- **Seen:** first 2026-10-01, last 2026-10-10 (8x)
-- **Publication:** Independent journalist (outlet not named in the body)
-- **Reply route:** DM the poster, or an address Sourcee redacts; the page publishes no alternative route. PAGE-VERIFIED 2026-10-10: HTTP 200, email_redacted=True, emails_on_page=none, reply_hints=['DM me'].  ·  _no — body address redacted by Sourcee, no route resolved for this request (George: original platform)_
-- **Angle:** None — excluded: wrong standing (we are not a real-estate agent).
 
 ## Cold — only if you have a reason
 
 Older than the 10-day line and never pitched. Not provably abandoned — no renewal signal exists on this source — but every one of these has already passed an ideal send window.
 
-- [high] 33d old — https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns
-- [high] 35d old — https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl
-- [high] 35d old — https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions
-- [high] 81d old — https://www.sourcee.app/journo-request/business-and-technology-leaders-tech-budget-priorities-amid-volatility
-- [high] 141d old — https://www.sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows
-- [medium-high] 28d old — https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences
-- [medium-high] 33d old — https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse
-- [medium-high] 207d old — https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends
-- [medium] 29d old — https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch
-- [medium] 33d old — https://www.sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops
-- [medium] 33d old — https://www.sourcee.app/journo-request/ai-startups-workplace-fraud-detection-expenses-time-theft
-- [medium] 33d old — https://www.sourcee.app/journo-request/marketing-and-content-leaders-aiassisted-work-review-process
-- [medium] 37d old — https://www.sourcee.app/journo-request/ceos-ai-impact-on-ops-culture-and-commercial-strategy
-- [medium] 47d old — https://www.sourcee.app/journo-request/uk-finance-risk-and-regulatory-leaders-ai-explainability-risks
-- [medium] 214d old — https://www.sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study
-- [low-medium] 11d old — https://www.sourcee.app/journo-request/insurance-agents-ai-use-in-personal-lines
-- [medium-low] 21d old — https://www.sourcee.app/journo-request/founders-cutting-ai-use-eliminating-or-reducing-ai-in-business
-- [low-medium] 24d old — https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies
-- [medium-low] 30d old — https://www.sourcee.app/journo-request/tech-policy-experts-california-ai-audit-bills-impact-cios
-- [low-medium] 49d old — https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature
-- [low] 11d old — https://www.sourcee.app/journo-request/us-emergency-physicians-and-paramedics-impact-of-ai-answering-911-calls
-- [low] 11d old — https://www.sourcee.app/journo-request/job-seekers-and-recruiters-ai-recruitment-experiences
-- [low] 12d old — https://www.sourcee.app/journo-request/data-center-operators-and-cloud-buyers-proof-of-deployable-ai-capacity
-- [low] 12d old — https://www.sourcee.app/journo-request/b2b-marketing-leaders-hyperspecialization-to-outcompete-ai
-- [low] 12d old — https://www.sourcee.app/journo-request/ai-practitioners-and-team-leads-real-ai-deployments-failures-and-fixes
-- [low] 18d old — https://www.sourcee.app/journo-request/saas-tools-for-gated-content-lead-gen-and-doc-tracking-q4-roundup
-- [low] 18d old — https://www.sourcee.app/journo-request/engineering-managers-measuring-engineers-when-using-ai
-- [low] 18d old — https://www.sourcee.app/journo-request/ai-hardware-makers-3d-printing-smart-devices-mini-robots-local-ai
-- [low] 19d old — https://www.sourcee.app/journo-request/sales-enablement-saas-tools-proposal-and-deck-engagement-tracking
-- [low] 19d old — https://www.sourcee.app/journo-request/founders-and-leaders-mindsets-and-milestones
-- [low] 19d old — https://www.sourcee.app/journo-request/london-businesses-stopped-using-ai-hiring-tools
-- [low] 19d old — https://www.sourcee.app/journo-request/creative-industry-professionals-podcast-on-ai-impact
-- [low] 19d old — https://www.sourcee.app/journo-request/former-ai-skeptics-changed-views-on-ai-impact
-- [low] 20d old — https://www.sourcee.app/journo-request/survivors-of-ai-and-autonomous-weapons-civilian-impact-testimonies
-- [low] 20d old — https://www.sourcee.app/journo-request/employers-and-recruiters-over-50s-adapting-to-ai
-- [low] 20d old — https://www.sourcee.app/journo-request/data-center-professionals-podcast-guest-ai-and-hyperscale-trends
-- [low] 20d old — https://www.sourcee.app/journo-request/patients-with-exorbitant-hospital-bills-billing-errors-and-overcharges
-- [low] 20d old — https://www.sourcee.app/journo-request/ml-researchers-continuous-learning-fast-weights-and-adapters
-- [low] 20d old — https://www.sourcee.app/journo-request/founders-55-latelife-entrepreneurship-series-1
-- [low] 20d old — https://www.sourcee.app/journo-request/founders-and-entrepreneurs-and-musicians-podcast-guests
-- [low] 21d old — https://www.sourcee.app/journo-request/ai-alignment-researchers-humanai-mutual-understanding
-- [low] 22d old — https://www.sourcee.app/journo-request/companies-that-stopped-emailing-pdfs-new-tools-and-transition
-- [low] 23d old — https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice
-- [low] 23d old — https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact
-- [low] 23d old — https://www.sourcee.app/journo-request/ai-automation-experts-speakers-on-marketing-sales-operations-gains
-- [low] 23d old — https://www.sourcee.app/journo-request/ecommerce-marketers-transparency-in-ai-recommendations-and-conversion
-- [low] 24d old — https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety
+- [high] 34d old — https://www.sourcee.app/journo-request/finops-professionals-agentic-ai-cost-overruns
+- [high] 36d old — https://www.sourcee.app/journo-request/enterprise-ai-leaders-ai-governance-and-agent-sprawl
+- [high] 36d old — https://www.sourcee.app/journo-request/scientists-phd-students-and-postdocs-paying-for-ai-subscriptions
+- [high] 82d old — https://www.sourcee.app/journo-request/business-and-technology-leaders-tech-budget-priorities-amid-volatility
+- [high] 142d old — https://www.sourcee.app/journo-request/ai-saas-users-in-production-integrations-and-autonomous-workflows
+- [high] 163d old — https://www.sourcee.app/journo-request/anthropic-api-users-costs-and-token-burn-increase-since-january
+- [medium-high] 29d old — https://www.sourcee.app/journo-request/anthropic-users-and-business-owners-customer-service-experiences
+- [medium-high] 34d old — https://www.sourcee.app/journo-request/uk-managers-cracked-down-on-gen-z-ai-overuse
+- [medium-high] 208d old — https://www.sourcee.app/journo-request/msp-experts-and-case-studies-ai-ops-and-pricing-and-backup-trends
+- [medium] 30d old — https://www.sourcee.app/journo-request/earlystage-founders-building-saas-and-ai-tools-built-from-scratch
+- [medium] 34d old — https://www.sourcee.app/journo-request/ai-agents-making-money-2026-sales-and-leadgen-workflow-ops
+- [medium] 34d old — https://www.sourcee.app/journo-request/ai-startups-workplace-fraud-detection-expenses-time-theft
+- [medium] 34d old — https://www.sourcee.app/journo-request/marketing-and-content-leaders-aiassisted-work-review-process
+- [medium] 38d old — https://www.sourcee.app/journo-request/ceos-ai-impact-on-ops-culture-and-commercial-strategy
+- [medium] 48d old — https://www.sourcee.app/journo-request/uk-finance-risk-and-regulatory-leaders-ai-explainability-risks
+- [medium] 215d old — https://www.sourcee.app/journo-request/sme-owners-operational-challenges-for-ai-solutions-case-study
+- [low-medium] 12d old — https://www.sourcee.app/journo-request/insurance-agents-ai-use-in-personal-lines
+- [medium-low] 22d old — https://www.sourcee.app/journo-request/founders-cutting-ai-use-eliminating-or-reducing-ai-in-business
+- [low-medium] 25d old — https://www.sourcee.app/journo-request/us-founders-calls-to-slow-ai-development-impact-on-companies
+- [medium-low] 31d old — https://www.sourcee.app/journo-request/tech-policy-experts-california-ai-audit-bills-impact-cios
+- [low-medium] 50d old — https://www.sourcee.app/journo-request/ai-project-builders-youtube-finance-and-lifestyle-channel-feature
+- [low-medium] 96d old — https://www.sourcee.app/journo-request/prompt-engineers-tokenmaxxing-anecdotes
+- [low] 11d old — https://www.sourcee.app/journo-request/cybersecurity-expert-ai-nexus-and-security-risks
+- [low] 11d old — https://www.sourcee.app/journo-request/chatbot-users-experiences-talking-to-ai
+- [low] 11d old — https://www.sourcee.app/journo-request/us-ai-security-experts-rogue-ai-agents-hitting-government-sites
+- [low] 11d old — https://www.sourcee.app/journo-request/real-estate-agents-pdf-brochures-vs-alternatives-agent-workflow
+- [low] 12d old — https://www.sourcee.app/journo-request/us-emergency-physicians-and-paramedics-impact-of-ai-answering-911-calls
+- [low] 12d old — https://www.sourcee.app/journo-request/job-seekers-and-recruiters-ai-recruitment-experiences
+- [low] 13d old — https://www.sourcee.app/journo-request/data-center-operators-and-cloud-buyers-proof-of-deployable-ai-capacity
+- [low] 13d old — https://www.sourcee.app/journo-request/b2b-marketing-leaders-hyperspecialization-to-outcompete-ai
+- [low] 13d old — https://www.sourcee.app/journo-request/ai-practitioners-and-team-leads-real-ai-deployments-failures-and-fixes
+- [low] 19d old — https://www.sourcee.app/journo-request/saas-tools-for-gated-content-lead-gen-and-doc-tracking-q4-roundup
+- [low] 19d old — https://www.sourcee.app/journo-request/engineering-managers-measuring-engineers-when-using-ai
+- [low] 19d old — https://www.sourcee.app/journo-request/ai-hardware-makers-3d-printing-smart-devices-mini-robots-local-ai
+- [low] 20d old — https://www.sourcee.app/journo-request/sales-enablement-saas-tools-proposal-and-deck-engagement-tracking
+- [low] 20d old — https://www.sourcee.app/journo-request/founders-and-leaders-mindsets-and-milestones
+- [low] 20d old — https://www.sourcee.app/journo-request/london-businesses-stopped-using-ai-hiring-tools
+- [low] 20d old — https://www.sourcee.app/journo-request/creative-industry-professionals-podcast-on-ai-impact
+- [low] 20d old — https://www.sourcee.app/journo-request/former-ai-skeptics-changed-views-on-ai-impact
+- [low] 21d old — https://www.sourcee.app/journo-request/survivors-of-ai-and-autonomous-weapons-civilian-impact-testimonies
+- [low] 21d old — https://www.sourcee.app/journo-request/employers-and-recruiters-over-50s-adapting-to-ai
+- [low] 21d old — https://www.sourcee.app/journo-request/data-center-professionals-podcast-guest-ai-and-hyperscale-trends
+- [low] 21d old — https://www.sourcee.app/journo-request/patients-with-exorbitant-hospital-bills-billing-errors-and-overcharges
+- [low] 21d old — https://www.sourcee.app/journo-request/ml-researchers-continuous-learning-fast-weights-and-adapters
+- [low] 21d old — https://www.sourcee.app/journo-request/founders-55-latelife-entrepreneurship-series-1
+- [low] 21d old — https://www.sourcee.app/journo-request/founders-and-entrepreneurs-and-musicians-podcast-guests
+- [low] 22d old — https://www.sourcee.app/journo-request/ai-alignment-researchers-humanai-mutual-understanding
+- [low] 23d old — https://www.sourcee.app/journo-request/companies-that-stopped-emailing-pdfs-new-tools-and-transition
+- [low] 24d old — https://www.sourcee.app/journo-request/ediscovery-lawyers-aiassisted-review-impact-on-practice
+- [low] 24d old — https://www.sourcee.app/journo-request/gen-z-ai-data-annotators-work-experience-and-income-impact
+- [low] 24d old — https://www.sourcee.app/journo-request/ai-automation-experts-speakers-on-marketing-sales-operations-gains
+- [low] 24d old — https://www.sourcee.app/journo-request/ecommerce-marketers-transparency-in-ai-recommendations-and-conversion
+- [low] 25d old — https://www.sourcee.app/journo-request/cybersecurity-companies-and-experts-ai-scams-and-consumer-safety
+- [low] 94d old — https://www.sourcee.app/journo-request/investigative-reporters-openai-training-predatory-dynamic-pricing
 
 ---
 
