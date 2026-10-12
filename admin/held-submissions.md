@@ -270,6 +270,9 @@ analytics script from `umami.bestvid.net` (`bestvid.net` is the cluster's one do
 ask each vendor whether it is related, rather than asserting it is. **One precision to keep:** the
 instrumentation signature does **not** cover `seedaud.io`, which loads no `umami.bestvid.net` script on
 any fetched page — that member rests on the operator's *published* cross-links plus the NS/MX pair.
+*(Re-confirmed 2026-10-12 by fetching the homepages: `aiagentskills.net`, `aitextcleaner.pro`,
+`adhdreading.org` and `m3u8-player.net` all load `umami.bestvid.net`, so `seedaud.io` is the **only**
+member checked that does not — the exception is real, not a missed fetch.)*
 **Eleven of the thirteen rows** have a submission on file (aiagentskills.net, aitextcleaner.pro,
 adhdreading.org, facialharmonyai.com, aimangatranslator.app, digibouquetai.com, wan3video.art and
 aitextwatermarkremover.com, plus **seedaud.io, productshotai.app and musicvideoai.pro, all on
