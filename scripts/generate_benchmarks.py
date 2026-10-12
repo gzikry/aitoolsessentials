@@ -36,7 +36,12 @@ def generate(root: Path) -> Path:
     for row in data.get("arena_text_changes", []):
         name = tool_names.get(row['tool_slug'], row['tool_slug'].replace('-', ' ').title())
         rank_delta = row['new_rank'] - row['old_rank']
-        rank_text = "unchanged" if rank_delta == 0 else f"down {rank_delta}"
+        if rank_delta == 0:
+            rank_text = "unchanged"
+        elif rank_delta > 0:
+            rank_text = f"down {rank_delta}"
+        else:
+            rank_text = f"up {-rank_delta}"
         vote_delta = row['new_votes'] - row['old_votes']
         vote_text = f"{vote_delta:+,}"
         score_text = "unchanged" if not row.get('score_changed') else "changed"
