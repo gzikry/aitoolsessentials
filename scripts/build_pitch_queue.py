@@ -372,6 +372,33 @@ def _newest_drafts() -> str:
     return files[-1].name if files else "pitch-drafts-<none>.md"
 
 
+def _draft_section(slug: str, filename: str | None = None) -> str:
+    """The section that names this slug in a draft file — read off the file, never typed.
+
+    The DRAFTS prose hardcoded a section number for each row ("§2" for the WSJ row, "§3" for the
+    shadow-AI row). On 2026-10-12 the WSJ draft was section 1 and the shadow-AI row was not in the
+    newest draft file at all (it was sent on 2026-10-10 and bounced), so the queue pointed a reader at
+    the wrong section of the right file — the same defect class as the hardcoded draft filename fixed
+    on an earlier run. Returns '' when the file does not name the slug, so the prose must say that
+    rather than cite a section that is not there.
+    """
+    fn = filename or _newest_drafts()
+    try:
+        text = (OUT / fn).read_text(errors="ignore")
+    except OSError:
+        return ""
+    if slug not in text:
+        return ""
+    section = None
+    for line in text.splitlines():
+        m = re.match(r"^#{1,3}\s+(\d+)\.", line.strip())
+        if m:
+            section = m.group(1)
+        if slug in line:
+            return f"§{section} in `{fn}`" if section else f"`{fn}`"
+    return f"`{fn}`"
+
+
 def _carried_runs(slug: str) -> int:
     """How many draft files have carried this request — measured, not asserted.
 
@@ -426,31 +453,61 @@ def _headline_figures() -> str:
             f"over {pairs.get('n')} tiers (built {pairs.get('built')})")
 
 
-def _latest_route_checks() -> dict:
-    """The newest marketing/haro-outreach/route-checks-*.json, read for route byte counts and titles.
+def _norm_route_key(u: str) -> str:
+    """Route keys are compared scheme- and www-stripped, because probes disagree on the prefix."""
+    return re.sub(r"^https?://(?:www\.)?", "", (u or "").strip()).rstrip("/").lower() + "/"
 
-    The DRAFTS prose used to carry hand-typed route evidence from the 2026-10-06 run ("HTTP 200,
-    154,819 bytes", "verified HTTP 200 on 2026-10-06") inside a file rebuilt on a later day — the
-    same defect class as the hardcoded draft filename and figures. The file is written by the run's
-    `_routes_<MMDD>.py` probe and named by date, so the pointer cannot be older than the newest
-    probe on disk. Returns {} rather than inventing a value when no probe exists.
+
+def _latest_route_checks() -> dict:
+    """Every route probe on disk, merged oldest→newest so the newest measurement wins per key.
+
+    Two shapes exist and both must be read. Probes up to 2026-10-10 wrote `routes` as a DICT keyed
+    by the route URL; the 2026-10-11 probe wrote a LIST of {row, route, http, bytes, title, verdict}.
+    `_route_evidence` assumed the dict and the 2026-10-12 build died with `'list' object has no
+    attribute 'get'` before pitch-queue.md was written at all — the queue was unbuildable on the day
+    this monitor exists to produce a send. Both shapes are now normalised to the same
+    scheme-stripped key, and the files are MERGED rather than only the newest being read: the
+    2026-10-11 probe re-measured the LinkedIn route and nothing else, so reading only the newest file
+    would have silently printed "no route probe on disk" for the Raconteur and OPE+ routes that the
+    2026-10-10 probe had verified. Each route keeps the check date of the file it came from.
     """
     files = sorted(OUT.glob("route-checks-*.json"))
-    if not files:
+    merged: dict = {}
+    newest_when = "?"
+    for p in files:
+        try:
+            d = json.loads(p.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        when = d.get("checked") or d.get("date") or "?"
+        newest_when = when
+        routes = d.get("routes")
+        if isinstance(routes, dict):
+            items = [(k, v) for k, v in routes.items() if isinstance(v, dict)]
+        elif isinstance(routes, list):
+            items = [(r.get("route") or r.get("url") or "", r) for r in routes if isinstance(r, dict)]
+        else:
+            continue
+        for k, v in items:
+            if not k:
+                continue
+            v = dict(v)
+            v.setdefault("_checked", when)
+            merged[_norm_route_key(k)] = v
+    if not merged:
         return {}
-    try:
-        return json.loads(files[-1].read_text())
-    except (OSError, json.JSONDecodeError):
-        return {}
+    return {"checked": newest_when, "routes": merged,
+            "_source_file": files[-1].name if files else "?"}
 
 
 def _route_evidence(key: str, label: str) -> str:
-    """One route's verified evidence, phrased for the DRAFTS prose, from the newest probe file."""
+    """One route's verified evidence, phrased for the DRAFTS prose, from the newest probe of it."""
     checks = _latest_route_checks()
-    r = (checks.get("routes") or {}).get(key) or {}
+    routes = checks.get("routes") or {}
+    r = routes.get(_norm_route_key(key)) or routes.get(key) or {}
     if not r:
         return f"{label} (no route probe on disk this run — verify before citing)"
-    when = checks.get("checked", "?")
+    when = r.get("_checked") or checks.get("checked", "?")
     bits = f"HTTP {r.get('http')}, {r.get('bytes'):,} bytes" if isinstance(r.get("bytes"), int) \
         else f"HTTP {r.get('http')}"
     out = f"{label} — route-checks probe {when}: {bits}"
@@ -467,7 +524,7 @@ def _route_checked_date() -> str:
 
 DRAFTS = {
     "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks":
-        f"**SENDABLE — draft ready and UNSENT — `{_newest_drafts()}` §2. Now "
+        f"**SENDABLE — draft ready and UNSENT — {_draft_section('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks') or 'in an earlier dated draft file (not named in the newest one)'}. Now "
         f"{_sent_word(_age_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks'))} old.** "
         "Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ ("
         f"{_route_evidence('linkedin.com/in/christopher-mims-club/', 'LinkedIn byline page')}; "
@@ -476,7 +533,7 @@ DRAFTS = {
         "queue that is both above the tangential band and route-resolved: the Glenn Hansen "
         "seats-and-tokens request was the other, and it was sent 2026-10-10. George's lane.",
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
-        f"**Draft ready and UNSENT — `{_newest_drafts()}` §3. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
+        f"**Draft ready and UNSENT — {_draft_section('fulltime-employees-shadow-ai-use-and-paying-outofpocket') or 'carried in earlier dated draft files, not in the newest one'}. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
         f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
         f"{_carried_runs('fulltime-employees-shadow-ai-use-and-paying-outofpocket')} draft files.** Route: simon.chandler@raconteur.net, "
         f"re-resolved off the live {_route_evidence('raconteur.net/contributors/simon-chandler', '/contributors/simon-chandler page')} "
