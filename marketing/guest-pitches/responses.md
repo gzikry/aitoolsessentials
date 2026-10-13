@@ -1,8 +1,8 @@
-# Guest pitch responses — 2026-09-03 batch (+ 2026-09-22 additions)
+# Guest pitch responses — 2026-09-03 batch (+ 2026-09-22 and 2026-10-13 additions)
 
-Tracking file for the pitches in `pitches-2026-09-22.json` (12 drafts, supersedes the
-10 in `pitches-2026-09-03.json`).
-**Created:** 2026-09-15 · **Re-verified:** 2026-09-29 (cron reminder run). Still no sends logged.
+Tracking file for the pitches in `pitches-2026-10-13.json` (12 drafts, supersedes the
+12 in `pitches-2026-09-22.json` and the 10 in `pitches-2026-09-03.json`).
+**Created:** 2026-09-15 · **Re-verified:** 2026-10-13 (cron reminder run). Still **0 sends** from the Sep-22 batch.
 
 Status legend: `NOT SENT` · `SENT` · `AWAITING` · `REPLIED` · `NO RESPONSE` · `CLOSED`
 
@@ -21,7 +21,76 @@ Status legend: `NOT SENT` · `SENT` · `AWAITING` · `REPLIED` · `NO RESPONSE` 
 | 11 | AIToolsRecap | blog | editor@aitoolsrecap.com ⚠️ "paid review" / sponsored on site | 11 | — | — | — | NOT SENT |
 | 12 | ToolRadar | blog | contact@aitoolradar.io ⚠️ "Submit Tool" / sponsored on site | 12 | — | — | — | NOT SENT |
 
-## Send plan for the week of 2026-09-22 (3 sends)
+## 2026-10-13 — the Cursor figure in every blog draft went stale, and the news hook went up
+
+Cursor's pricing page stopped rendering the standalone ladder. On 2026-10-12 Cursor shipped inside
+**The X Subscription**, a bundle of Cursor, Grok and X Premium:
+
+| The X Subscription | Monthly | Annual |
+|---|---|---|
+| Free | $0 | $0 |
+| Plus | $8/mo | $80/yr ($7/mo) |
+| Premium | $30/mo | $300/yr ($25/mo) |
+| Super | $100/mo | $1,000/yr ($84/mo) |
+| Ultra | $200/mo | $2,000/yr ($167/mo) |
+
+Team seats are Premium $30, Super $100 and Ultra $200 per seat. Verified 2026-10-13 from the
+vendor's own pages: `cursor.com/pricing` (rendered ladder) and `docs.x.ai/x-subscription/pricing`
+(the price list and the team-seat line). xAI's docs are explicit that **existing Cursor, SuperGrok
+and X Premium plans continue and switching is optional**, so nobody is repriced — but the standalone
+Pro $20 / Pro Plus $60 / Teams $40 tiers are no longer on the page.
+
+What that broke, and what was done about it:
+
+- `data/tool_sources.json` — cursor row re-checked 2026-10-13 with the new ladder; the retired digest
+  is preserved in the row's notes rather than deleted. The grok row notes the same unification.
+- `/pricing-watch/` — Cursor row and public change log updated, **live-verified at
+  https://aitoolsessentials.com/pricing-watch/** (row now reads 2026-10-13; the retired
+  "Pro $20/mo, Pro Plus $60/mo" string is gone). Patched in place on purpose: running
+  `generate_pricing_watch.py` alone strips the site-wide structured data, discovery links and share
+  row, which only `daily_content_update.py` re-injects.
+- `scripts/guest_pitch_builder.py` — `verified_overlap_line()` asserted "Cursor Pro is $20/mo". That
+  price no longer exists and it was the only concrete claim in the blog drafts. It now cites only
+  figures stamped on our own page. Fresh batch: **`pitches-2026-10-13.json` (12 drafts, 77 tools)**.
+  Superseded: `pitches-2026-09-03.json`, `pitches-2026-09-22.json` — do not send from them.
+- `admin/newsletter/2026-w42-beehiiv.html` (today's issue, not yet sent — Beehiiv is still locked)
+  carries "Cursor (18 Sep 2026): Pro $20, Pro Plus $60, Ultra $200, Teams $40 a user". That line is
+  now false. Flagged here, not edited: it is another lane's draft and the fix is a re-sync from
+  sources, not a hand-edit.
+
+Blocker status: **none.** Freshness after the fix (2026-10-13): **41 FRESH · 22 UNREADABLE ·
+10 NO_CLAIM · 2 DRIFTED · 2 UNVERIFIED** — `cursor` and `claude` both **FRESH 4/4**. The two
+remaining DRIFTED rows (`aidetector-cx`, `instrumentl`) appear in no draft.
+
+## Send plan for the week of 2026-10-13 (3 sends)
+
+Same three outlets as the Sep-22 plan, but **the first line is now the repricing, not the resource
+offer**. A newsletter that ignores a Grok+Cursor+X bundle is the wrong audience for a pricing
+tracker pitch.
+
+1. **The Decoder** (`hello@the-decoder.com`) — blog, first touch. Draft in
+   `pitches-2026-10-13.json`; its one concrete claim is the X Subscription ladder, checked today.
+   *First line:* "I saw The Decoder is running the ChatGPT-pricing coverage under your own byline
+   rather than sponsored placements — that's the reason I'm writing to you and not to a placement desk."
+2. **Latent Space** (`tips@latent.space`) — podcast, first touch. Editorial route only; `business@`
+   is the sponsorship inbox.
+   *First line:* "Your AI-engineer audience is the one group that actually has to choose between
+   overlapping coding subscriptions, so this may land better here than with a general AI newsletter."
+3. **Ben's Bites** (`team@bensbites.com`) — newsletter, **changed angle required.** Lead with the
+   bundle, not with "here is our resource again."
+   *First line:* "Cursor stopped selling standalone seats on 12 Oct — it now sits on an X
+   Subscription ladder that also carries Grok and X Premium. We re-checked every price on it today
+   and the overlap math changes for anyone stacking an editor seat next to a chat seat."
+
+Optional swap: **ToolChase** (`hello@toolchase.com`) replied 2026-10-08 and is the only warm address
+on the list. A short follow-up offering the bundle breakdown is a cheaper send than a cold
+newsletter re-pitch.
+
+**Do not send to:** `dan@tldr.tech` (guessed address, no published editorial route),
+`contact@aitoolradar.io` and `editor@aitoolsrecap.com` (monetized placement desks),
+`support@therundown.ai` (general support inbox, not editorial).
+
+## Send plan for the week of 2026-09-22 (3 sends) — historical
 
 Newsletters do have the best response rate **in general**, but every newsletter address on
 this list received the identical resource pitch on Sep 3 and drew 0/10 responses. A verbatim
@@ -105,3 +174,4 @@ the angle or skip those addresses.
 | 2026-10-06 | Cron reminder re-verification | **14 days with 0 sends from either batch.** Live MX re-confirmed on the same 5 candidates. **Correction 5 CLEARED** — Pricing Watch now headlines 2026-10-01 (34 rows); freshness 41/23/9/2/1 with `cursor`+`claude` still FRESH. No blocker remains on the 3 sends below. No send. |
 | 2026-10-08 | First reply from the Sep-3 batch logged | **ToolChase (Emre) replied 2026-10-08 13:30+03:00** to the Sep-3 resource pitch — a courteous acknowledgement ("will keep it in mind"), with **no rate card and no placement ask**, unlike Lilach Bullock's $300 offer. ToolChase row corrected from the erroneous "NOT SENT" to `SENT 2026-09-03 · REPLIED 2026-10-08`. Replied 2026-10-08 10:48 UTC correcting our own stale "74 tools" figure to the live 76 and pointing at the per-row checked dates on `/pricing-watch/`; signed AIToolsEssentials. Live MX re-confirmed (smtp.google.com); one Sent record, no duplicate. |
 | 2026-10-08 | Batch status corrected | The weekly report of 2026-09-07 and this file's row 10 both carried ToolChase as "No response/NOT SENT"; the Sep-3 send to `hello@toolchase.com` (Sent 2026-09-03 22:09 UTC) is on record, so the batch's response tally is now **1 of 10**, not 0. |
+| 2026-10-13 | Cron reminder run — found and fixed a false claim, then cleared the send | **21 days with 0 sends from the Sep-22 batch.** Cursor's repricing (The X Subscription, 2026-10-12) invalidated the one concrete figure in every blog draft; fixed at the source (`tool_sources.json` → `/pricing-watch/` live-verified, `guest_pitch_builder.py`). Fresh batch `pitches-2026-10-13.json`. Freshness 40/22/10/3/2, no send blocker. Send plan rewritten to lead with the bundle. No send. |
