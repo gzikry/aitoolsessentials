@@ -33,9 +33,8 @@
       "verified_against": "https://www.copy.ai/prices"
     },
     "cursor": {
-      "date": "2026-09-18",
-      "digest": "Cursor Free includes limited agent requests and Composer access. Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom (cursor.com/pricing, checked 2026-08-25). Cursor Model",
-      "verified_against": "https://cursor.com/pricing"
+      "date": "2026-10-13",
+      "digest": "Cursor is now listed under The X Subscription tiers (cursor.com/pricing, checked 2026-10-13): Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo; team seats use the same monthly figures"
     },
     "deepseek": {
       "date": "2026-10-01",
@@ -508,6 +507,13 @@
       "previous_check": "2026-09-01",
       "new_check": "2026-10-01",
       "note": "NotebookLM: recorded pricing updated since the 2026-09-01 check, re-verified 2026-10-01."
+    },
+    {
+      "slug": "cursor",
+      "detected": "2026-10-13",
+      "previous_check": "2026-09-18",
+      "new_check": "2026-10-13",
+      "note": "Cursor: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-13."
     }
   ],
   "updated": "2026-10-13"

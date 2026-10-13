@@ -37,12 +37,22 @@ def verified_overlap_line() -> str:
     "ChatGPT Pro two tiers $120/$200", "Microsoft 365 +16%") appear nowhere in
     data/tools.json or data/pricing_snapshots.json. Sending unsourced numbers to
     editors is the one error that costs the "verified pricing" angle.
+
+    Replaced 2026-10-13: the prior line asserted "Cursor Pro is $20/mo". On
+    2026-10-13 cursor.com/pricing no longer renders a standalone Pro tier — it
+    lists The X Subscription ladder (Free $0, Plus $8, Premium $30, Super $100,
+    Ultra $200), the 2026-10-12 bundle of Cursor, Grok and X Premium. Sending a
+    retired price to an editor is the same failure as sending an invented one,
+    so this line now cites only figures currently stamped on our own page.
     """
     return (
-        "The pattern is overlap, not duplication: across our tracked tools, "
-        "the coding stack is the most expensive one to double up on — Cursor Pro is "
-        "$20/mo and Claude Max starts at $100/mo (cursor.com and claude.com pricing, "
-        "snapshots dated in our Pricing Watch page)."
+        "The pattern is overlap, not duplication: Cursor no longer sells a standalone "
+        "seat — on our 2026-10-13 check cursor.com/pricing lists The X Subscription "
+        "ladder, Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo and Ultra $200/mo, "
+        "the same tiers that now carry Grok and X Premium. Put a frontier chat seat on "
+        "top and it adds up fast: Claude Max starts at $100/mo (anthropic.com/pricing, "
+        "checked 2026-09-18). The coding-plus-chat stack stays the most expensive one "
+        "to double up on."
     )
 
 # Greeting per outlet. The old code did contact.split("@")[0], which produced
