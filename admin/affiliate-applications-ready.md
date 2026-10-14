@@ -1,7 +1,8 @@
 # Ready-to-Submit Affiliate Applications
 
-Last verified 2026-09-13 PT. Site facts below are real and checkable — do not inflate.
-Site: 736 public pages, 76 reviewed tools, 16 categories, 200 comparisons, 173 guides.
+Last verified 2026-09-13 PT; inventory counts refreshed 2026-10-14 against the site's own
+`/site-status.json`. Site facts below are real and checkable — do not inflate.
+Site: 741 public pages, 77 reviewed tools, 16 categories, 211 comparisons, 181 guides.
 Traffic, stated honestly: ~69 visitors / 223 pageviews per 30 days (early stage, growing).
 
 **Shared answers** (use in every form):
@@ -101,7 +102,7 @@ gates visibility and payment, not placement. Do not rebuild the links.
 | # | Program | Route | Rate | Status |
 |---|---------|-------|------|--------|
 | 0 | PartnerStack network | app.partnerstack.com | — | **DECLINED 2026-09-14** — marketplace access limited ("profile is not a great fit"); existing partnerships unaffected; reapply is dashboard-only, George-only |
-| 1 | Gamma | PartnerStack listing | 25% first year | **approved 2026-09-13; link live 2026-09-13** — https://try.gamma.app/ty4k3o3rpeyd (unaffected by the network limit) |
+| 1 | Gamma | PartnerStack listing | 25% first year — **rate queried 2026-10-14, vendor email claims 30%** | **approved 2026-09-13; link live 2026-09-13, re-verified live 2026-10-14** — https://try.gamma.app/ty4k3o3rpeyd (unaffected by the network limit) |
 | 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | **applied 2026-09-12** — pending review; not cancelled (existing partnerships unaffected) |
 | 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | **closed 2026-09-14** — listing dead and the in-app Marketplace fallback is gone with the network limit |
 | 4 | Browse AI | market.partnerstack.com/artificial-intelligence/browseai | 20% rec. life | listing open (verified 2026-09-14) but **join gated by the 2026-09-14 network limit** |
@@ -117,6 +118,26 @@ Unique link: https://try.gamma.app/ty4k3o3rpeyd
 Commission: 25% for the first year on referred customers (partners@gamma.app / PartnerStack, 2026-09-13 PT).
 Wired on `/tools/gamma/` Visit CTA with `rel="sponsored noopener nofollow"` and the existing review disclosure fineprint. Official pricing/docs/privacy/terms stay on gamma.app. Editorial score and cons unchanged.
 **Caution:** `gammaapp.ai` is a DIFFERENT company from Gamma — do not cite its 50% claim.
+
+**Partner engagement + rate discrepancy 2026-10-14.** `partners@gamma.app` ("How top Gamma partners get clicks",
+2026-10-14 11:10 UTC / 04:10 PT — a PartnerStack campaign sent via SendGrid, signed Justine, Affiliate Consultant)
+reports a month of partner inactivity, restates the same tracking link, and claims **"30% recurring commission for
+1 year"**. That contradicts the same sender's own approval email of 2026-09-13 PT ("You'll earn 25% commission for the
+first year") and the live listing, which carries exactly **one** offer — `percent` value **2500** = 25%, named
+"25% for each signup". The listing JSON was re-read on 2026-10-14 to confirm no 30% offer exists anywhere in it.
+**25%/first-year stays the recorded governing term** (it is the term the tracking link was granted under) and the
+30% figure is carried as unresolved until Gamma confirms in writing. This is a term question, not a placement
+question — no paid placement was sought or offered.
+
+**Reply sent 2026-10-14** — the first outbound message to this partner; Sent Mail carried no prior reply of any
+kind. It gives the site link, honest audience info (last verified Search Console reading, dated, rather than a
+guess at today's), and asks Gamma to confirm which rate is authoritative for the tracked link. No CTA, score,
+public page or admin pack changed for it: the tracking URL on `/tools/gamma/` was re-verified live the same day
+and is unchanged (HTTP 200, `rel="sponsored noopener nofollow"`).
+
+**MX caveat for this domain.** `gamma.app` is Google Workspace and accepts mail for *any* local part — a random
+control address also returned `250` — so the pre-send `RCPT TO` probe proves only that the message will not bounce.
+Do not cite it as evidence that `partners@` is read by a human.
 
 Answers used (reusable for the reference/audience fields if the portal asks again):
 
