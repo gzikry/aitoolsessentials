@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13",
+  "generated_at": "2026-10-14",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -348,9 +348,9 @@
       "official_url": "https://cursor.com/",
       "review_url": "/tools/cursor/",
       "price_label": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
-      "pricing_summary": "Cursor Free includes limited agent requests and Composer access. Pro $20/mo, Pro Plus $60/mo, Ultra $200/mo, Teams $40/user/mo, Enterprise custom (cursor.com/pricing, checked 2026-08-25). Cursor Models pool: Grok 4.6 $2/$6, Composer 2.5 $0.50/$2.50 per 1M tokens.",
+      "pricing_summary": "Cursor is now listed under The X Subscription tiers (cursor.com/pricing, checked 2026-10-13): Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo; team seats use the same monthly figures per seat. The standalone Pro, Pro Plus and Teams tiers no longer appear on the page. xAI documentation (docs.x.ai/x-subscription/pricing, checked 2026-10-13) states existing Cursor, SuperGrok and X Premium plans continue and switching is optional.",
       "pricing_url": "https://cursor.com/pricing",
-      "pricing_checked_date": "2026-09-18",
+      "pricing_checked_date": "2026-10-13",
       "price_confidence": "official_summary",
       "numeric_list_price_usd": null,
       "promotion_mentioned": false,
