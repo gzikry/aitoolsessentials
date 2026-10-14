@@ -122,6 +122,27 @@ Dead ends recorded so they are not retried: muckrack.com/christopher-mims → HT
 **Reply route:** `simon.chandler@raconteur.net` — re-resolved today off the live
 `raconteur.net/contributors/simon-chandler` (HTTP 200, 154,819 bytes; data-part1/2/3 = simon.chandler + raconteur + net; control `/contributors/tom-dennis` HTTP 200 carries tom.dennis + raconteur + net). The older `/author/simon-chandler/` still 404s and must not be cited. **George's lane. Not automatable** — the address is assembled from the byline page's JS triplet, not published in the request body.
 
+**⚠ ROUTE CORRECTION 2026-10-14 — the address above hard-bounced on the send.** The 2026-10-10
+14:20 PT send went to `simon.chandler@raconteur.net` and was refused the same minute: `550 5.1.1
+The email account that you tried to reach does not exist` (Google DSN, `[Gmail]/Trash` msg 69 —
+"Your message wasn't delivered to simon.chandler@raconteur.net"). The address was always an
+inference assembled from a byline-page JS triplet rather than a published one, and the DSN is the
+first delivery evidence for it. That evidence is negative.
+
+Re-probed today (2026-10-14) against `raconteur.net`'s own MX (`aspmx.l.google.com`; `EHLO
+aitoolsessentials.com` → `MAIL FROM` ours → `RCPT TO` each candidate, nothing sent):
+`sb@` → **250**, `id@` → **250**, `simon.chandler@` → **250**, `francesca-cassidy@` → **550**,
+random control `zzcontrol9x7@` → **550**. The control rules out a catch-all, so a 250 still means
+Google holds that mailbox — but note that today's 250 for `simon.chandler@` does **not** overturn
+the 2026-10-10 DSN. RCPT acceptance and delivery are different facts, and that address carries a
+hard bounce on record. Do not read a 250 as proof of a live mailbox.
+
+**Consequence for this row:** the route this draft names is dead. `sb@` and `id@raconteur.net` both
+accept mail today and neither has a bounce on record, but neither owner is identified in our records
+(`id@` matches a *different* Raconteur author, Ian Deering), so neither is a verified route to Simon
+Chandler. Treat the request as unresolved at the route level, and George's to decide — nothing was
+sent from this run, and no pitch in this file was altered.
+
 > Subject: Shadow AI spend — what the out-of-pocket tiers actually cost
 >
 > Hi Simon,
