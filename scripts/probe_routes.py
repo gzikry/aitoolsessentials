@@ -22,6 +22,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -77,6 +78,13 @@ def curl(url: str, timeout: int = 30) -> tuple[str, str]:
 
 def main() -> None:
     union = _load_union()
+    # --add <url> [<url> ...] seeds the union from the command line, so a newly resolved route can be
+    # brought into the probed set deliberately instead of by hand-editing a route-checks file. Seeded
+    # routes are probed once and then live in the union like any other.
+    adds = [a for a in sys.argv[sys.argv.index("--add") + 1:]] if "--add" in sys.argv else []
+    for a in adds:
+        url = a if a.startswith("http") else f"https://{a}"
+        union.setdefault(_key(url), {"label": f"added {date.today().isoformat()}", "url": url})
     today = date.today().isoformat()
     routes: dict = {}
     for k, prev in sorted(union.items()):

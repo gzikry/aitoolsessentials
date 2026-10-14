@@ -42,10 +42,28 @@ REAL_SPEND = re.compile(
     r"(?<![a-z])(pricing|prices?|costs?|spend(?:ing)?|budgets?|subscriptions?|saas|"
     r"licen[cs]es?|seats?|billing|invoices?|credits|procurement|roi|afford)(?![a-z])", re.I)
 
+# Prose-mode AI matcher. AI above is written for SLUGS, where a token must be delimited by
+# hyphens, so it never matches the word "AI" inside a request body and the body-level scan
+# reported a false zero on every run up to and including 2026-10-13. This one is written for
+# prose: word boundaries, no hyphen requirement, plus the two-word forms that only appear in
+# sentences ("generative ai", "machine learning", "large language model").
+AI_PROSE = re.compile(
+    r"\b(ai|a\.i\.|llms?|large language models?|machine learning|generative ai|genai|gen-ai|"
+    r"chatgpts?|chat gpt|claude|gemini|copilot|agentic|chatbots?|anthropic|openai|open-ai|"
+    r"deepseek|mistral|llama|grok|perplexity|midjourney|elevenlabs|nvidia|m365|"
+    r"microsoft 365|salesforce|hubspot|zapier|n8n|databricks|snowflake|hugging face|cohere|"
+    r"runway|grammarly|jasper|synthesia|descript|cursor|windsurf|replit|browse ai|gamma|otter|"
+    r"fireflies)\b", re.I)
+
 
 def ai_hit(slug: str) -> list[str]:
     """Every AI token in a slug — vendor names included."""
     return sorted({m.group(2).lower() for m in AI.finditer(slug)})
+
+
+def prose_ai(text: str) -> list[str]:
+    """Every AI token in a request BODY. Use this, not `AI`, on prose — see AI_PROSE above."""
+    return sorted({m.group(1).lower() for m in AI_PROSE.finditer(text or "")})
 
 
 if __name__ == "__main__":
