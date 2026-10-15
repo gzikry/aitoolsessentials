@@ -76,8 +76,19 @@
 
     var r = S.rank(index, q, MAX);
     if (!r.total) {
-      list.innerHTML = '<li class="ait-hs-note">No matches for “' + S.esc(q) + '”. ' +
-                       '<a href="/tools/">Browse all tools</a></li>';
+      /* A dead end is the worst outcome: the reader assumes the site lacks the thing. Offer the
+         closest entries by name/slug/keyword so a typo ("halo" for "HOL Registry") still lands. */
+      var near = S.suggest(index, q, 4);
+      var inner = '<li class="ait-hs-note">No matches for “' + S.esc(q) + '”' +
+                  (near.length ? ' — did you mean:' : '.') + '</li>';
+      inner += near.map(function (e, i) {
+        return resultRow(e, []).replace('class="ait-hs-item"',
+          'class="ait-hs-item" id="ait-hs-opt-' + i + '"');
+      }).join('');
+      inner += '<li class="ait-hs-all" role="option" id="ait-hs-opt-all" data-all="1">' +
+               'Search everything for “' + S.esc(q) + '”</li>';
+      items = near.slice();
+      list.innerHTML = inner;
       open();
       return;
     }

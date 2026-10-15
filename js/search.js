@@ -82,9 +82,18 @@
   }
 
   function emptyHTML(q) {
+    /* A dead end is the worst outcome: the reader concludes the site does not have the thing.
+       Offer the closest entries by name, slug or keyword so a near-miss spelling still lands. */
+    var near = S.suggest(index, q, 4);
+    var nearHtml = '';
+    if (near.length) {
+      nearHtml = '<p class="sr-didyoumean">Did you mean:</p>' + near.map(function (e) {
+        return entryHTML(e, []);
+      }).join('');
+    }
     return '<div class="sr-empty"><h3>No matches for “' + S.esc(q) + '”</h3>' +
-      '<p>Try a shorter term, or browse <a href="/tools/">all tools</a> and ' +
-      '<a href="/categories/">categories</a>.</p></div>';
+      (nearHtml || '<p>Try a shorter term, or browse <a href="/tools/">all tools</a> and ' +
+      '<a href="/categories/">categories</a>.</p>') + '</div>';
   }
 
   function render() {

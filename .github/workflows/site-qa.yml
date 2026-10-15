@@ -21,6 +21,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Compile generators
         run: python3 -m py_compile scripts/*.py
       - name: Generate site (first pass)
@@ -33,6 +37,8 @@ jobs:
             echo "=== $t ==="
             python3 "$t"
           done
+      - name: Run search relevance guard
+        run: node scripts/test_search_relevance.js
       - name: Capture first-pass output
         run: git diff --binary HEAD > /tmp/generation-first.patch
       - name: Generate site (idempotency pass)

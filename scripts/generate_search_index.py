@@ -44,6 +44,16 @@ STOPWORDS = {
     "the", "and", "for", "with", "that", "this", "from", "your", "you", "are", "was", "were",
     "best", "guide", "tools", "tool", "html", "index", "www", "com", "aitoolsessentials",
     "how", "what", "why", "when", "which", "into", "over", "than", "them", "they", "their",
+    # Filler that leaks out of prose fields (best_for / use_cases / key_features) and would
+    # otherwise occupy keyword slots that a real search term should have.
+    "one", "two", "any", "all", "but", "not", "can", "could", "will", "would", "should", "may",
+    "each", "every", "some", "most", "more", "less", "very", "just", "also", "even", "only",
+    "own", "same", "other", "others", "such", "via", "per", "out", "its", "it", "is", "be",
+    "has", "have", "had", "get", "got", "use", "used", "using", "uses", "make", "makes",
+    "making", "need", "needs", "want", "wants", "work", "works", "working", "help", "helps",
+    "without", "within", "across", "before", "after", "while", "still", "then", "there", "here",
+    "specific", "spanning", "finding", "comparing", "listing", "adding", "following", "checking",
+    "free", "paid", "new", "about", "page", "site", "review", "pricing", "category",
 }
 
 # Path prefix -> result type, longest first so /guides/switch-guides/ beats /guides/.
@@ -141,6 +151,48 @@ def _result_type(rel: str) -> str:
     return "page"
 
 
+# Curated, VERIFIED aliases for terms a reader may reasonably type that appear nowhere in the
+# tool's name, summary or features. Every entry must come from a fact we hold in our own records
+# (the vendor's own About page, the submission, or tool_sources) — never a guess. Keep this small:
+# it exists for operator/company names and older product names, not for keyword stuffing.
+SEARCH_ALIASES = {
+    # Operator is "Hashgraph Online" (a Hedera-ecosystem DAO), named on hol.org's own About and
+    # corroborated by the GitHub org — recorded in admin/held-submissions.md when it was published.
+    # The reader who knows the company types "hashgraph", not "HOL".
+    "hol-registry": ["hashgraph", "hashgraph online", "hol plugins"],
+}
+
+
+def _host_words(url: str) -> list[str]:
+    """Words from a vendor domain, so a reader who types the site they half-remember finds it.
+
+    `hol.org` must be findable by typing "hol.org" or "hol org". The official URL is the single
+    most reliable alias a tool has, and it is already in `tools.json` for every entry.
+    """
+    if not url:
+        return []
+    host = re.sub(r"^https?://", "", str(url)).split("/")[0].lower()
+    host = re.sub(r"^www\.", "", host)
+    stem = host.rsplit(".", 1)[0] if "." in host else host
+    words = [w for w in re.split(r"[.\-]", stem) if len(w) > 1]
+    return words + [host, stem]
+
+
+def _words(text, limit: int = 10) -> list[str]:
+    if not text:
+        return []
+    if isinstance(text, (list, tuple)):
+        text = " ".join(str(x) for x in text)
+    out = []
+    for w in re.split(r"\W+", str(text)):
+        w = w.lower()
+        if len(w) > 2 and w not in STOPWORDS:
+            out.append(w)
+        if len(out) >= limit:
+            break
+    return out
+
+
 def _excluded(rel: str) -> bool:
     if rel in EXCLUDE_FILES:
         return True
@@ -193,9 +245,25 @@ def build(root: Path) -> list[dict]:
                 entry["name"] = tool.get("name") or title
                 entry["category"] = tool.get("category", "")
                 entry["desc"] = (tool.get("best_for") or tool.get("summary") or desc)[:DESC_LIMIT]
-                keywords = [slug.replace("-", " "), "ai tool", "review", "pricing"]
-                keywords += [str(u).replace("-", " ") for u in (tool.get("use_cases") or [])]
-                entry["keywords"] = sorted({k.lower() for k in keywords if k})
+                # Ordered by usefulness so the cap drops the least valuable terms, not whichever
+                # happened to sort last alphabetically. Dedupe preserving order, cap, then sort
+                # only for a deterministic file.
+                kw = []
+                kw += [slug.replace("-", " ")]                 # slug form: "hol registry"
+                kw += _host_words(tool.get("official"))        # the vendor's own domain
+                kw += SEARCH_ALIASES.get(slug, [])             # verified operator/product aliases
+                kw += [tool.get("category", ""), "ai tool", "review", "pricing"]
+                kw += _words(tool.get("key_features"), 10)     # specific, low-noise feature names
+                kw += _words(tool.get("use_cases"), 12)        # split into words, not whole sentences
+                kw += _words(tool.get("best_for"), 8)
+                seen, ordered = set(), []
+                for k in kw:
+                    k = str(k).lower().strip()
+                    if len(k) < 2 or k in seen or k in STOPWORDS:
+                        continue
+                    seen.add(k)
+                    ordered.append(k)
+                entry["keywords"] = sorted(ordered[:26])
                 if tool.get("rating"):
                     entry["rating"] = tool["rating"]
                 if tool.get("price"):
