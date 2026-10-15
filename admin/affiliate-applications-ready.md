@@ -139,6 +139,21 @@ and is unchanged (HTTP 200, `rel="sponsored noopener nofollow"`).
 control address also returned `250` — so the pre-send `RCPT TO` probe proves only that the message will not bounce.
 Do not cite it as evidence that `partners@` is read by a human.
 
+**Second campaign, 2026-10-15 16:51 UTC — no answer, no action, record corrected.** A second PartnerStack
+campaign from the same `partners@gamma.app` ("Your Gamma links are getting attention!", signed Justine)
+restates the same tracking link, repeats the **30% for the first year** claim, and does not address the
+2026-10-14 rate question. It also claims the link "has started receiving clicks" while the 2026-10-14 campaign
+said the partner had been inactive for a month — both are campaign copy, and click volume is **not verifiable
+from our side**: the Plausible API is locked (no active subscription; reported in `marketing/traffic/`) and the
+PartnerStack dashboard is George-only. **No reply sent** — the question was asked 28 minutes after the previous
+campaign and this one adds nothing; 25%/first-year stays the governing term.
+**Record correction (same pass):** the 2026-10-14 reply is a genuine send but Gmail filed it in
+`[Gmail]/Trash` (msg 71, subject `Re: How top Gamma partners get clicks`, 2026-10-14 11:38 UTC), **not** in
+`[Gmail]/Sent Mail` — verified by exporting both folders. A Sent-Mail-only sweep therefore shows no prior reply
+to this partner; cite the send by date + subject and check Trash before ever re-sending. Live re-check the same
+day: `/tools/gamma/` carries `https://try.gamma.app/ty4k3o3rpeyd` with `rel="sponsored noopener nofollow"` on
+both the public URL and the origin.
+
 Answers used (reusable for the reference/audience fields if the portal asks again):
 
 > Our Gamma review (aitoolsessentials.com/tools/gamma/) documents dated pricing, an
