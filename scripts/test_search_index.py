@@ -15,6 +15,7 @@ These assertions make that specific regression loud:
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -89,6 +90,40 @@ def main() -> None:
         name = e.get("name") or ""
         if name.endswith(f"| {SITE_NAME}") or name.endswith(f"— {SITE_NAME}"):
             errors.append(f"result title still carries the site name: {name[:70]!r}")
+
+    # 5. The predictive header search reaches every page that has a header, and the homepage in
+    #    particular. The homepage is rebuilt by enhance_homepage AFTER the sitewide injection, so
+    #    it silently ended up the one page of 749 without the widget — the same trap that dropped
+    #    the nav Search link. A guard on the aggregate would have passed at 748/749.
+    header_pages = [
+        p for p in ROOT.rglob("*.html")
+        if is_public_rel(p.relative_to(ROOT))
+        and not any(part in p.parts for part in ("admin", "go"))
+        and "</header>" in p.read_text(errors="ignore")
+    ]
+    if header_pages:
+        have = [p for p in header_pages if 'id="ait-hs-input"' in p.read_text(errors="ignore")]
+        if len(have) < len(header_pages):
+            miss = [str(p.relative_to(ROOT)) for p in header_pages if p not in have][:5]
+            errors.append(
+                f"predictive header search missing on {len(header_pages) - len(have)} of "
+                f"{len(header_pages)} pages with a header: {miss}"
+            )
+    for asset in ("js/search-core.js", "js/header-search.js", "js/search.js"):
+        if not (ROOT / asset).exists():
+            errors.append(f"search asset missing: {asset}")
+
+    home = (ROOT / "index.html").read_text(errors="ignore") if (ROOT / "index.html").exists() else ""
+    if home:
+        if 'id="ait-hs-input"' not in home:
+            errors.append("homepage has no predictive header search widget")
+        if "/search/" not in home.split("</header>")[0]:
+            errors.append("homepage nav does not link /search/")
+        # Cache-busting matters here: without a version a returning reader keeps running the old
+        # JS after an update, which is how a deployed search change looked like it never shipped.
+        for asset in ("search-core.js", "header-search.js"):
+            if not re.search(rf'/js/{re.escape(asset)}\?v=[0-9a-f]{{8,}}', home):
+                errors.append(f"homepage does not cache-bust {asset}")
 
     if errors:
         raise SystemExit("search index guard failures:\n- " + "\n- ".join(errors[:25]))

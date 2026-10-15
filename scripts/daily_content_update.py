@@ -518,6 +518,15 @@ print('Final indexability pass:', generate_indexability(root))
 from generate_premium_membership import enhance_homepage as _enhance_homepage
 _enhance_homepage(root)
 print('Re-applied homepage voice meta after final metadata pass')
+
+# enhance_homepage rebuilds index.html from its own header template, which discards the
+# sitewide injections added earlier in the run — the nav Search link and the predictive
+# header search both live in the header. Re-apply after it, or the homepage is the one page
+# of 749 without either. (Its nav template also carries the Search link directly, so the two
+# mechanisms agree.)
+from generate_site_discovery import postprocess_header_search as _hdr_search  # noqa: E402
+_hdr_search(root)
+
 _sitemap_urls_final = refresh_sitemap(root)
 print(f'Refreshed final sitemap with {len(_sitemap_urls_final)} URLs')
 # Post-processors can append shared scripts after the earlier cleanup pass.

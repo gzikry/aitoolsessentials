@@ -2,6 +2,7 @@
 """Generate discovery, browser metadata, and trust/navigation surfaces."""
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from datetime import datetime
@@ -289,6 +290,126 @@ def postprocess_search_action(root: Path) -> int:
     return changed
 
 
+HS_MARK_START = "<!-- AIT HEADER SEARCH START -->"
+HS_MARK_END = "<!-- AIT HEADER SEARCH END -->"
+HS_SCRIPTS_MARK = "<!-- AIT HEADER SEARCH SCRIPTS -->"
+HS_STYLE_MARK = "<!-- AIT HEADER SEARCH STYLE -->"
+
+HS_FORM = (
+    HS_MARK_START
+    + '<form class="ait-hs" id="ait-hs" role="search" action="/search/" method="get" autocomplete="off">'
+    + '<span class="ait-hs-ico" aria-hidden="true">\u2315</span>'
+    + '<input class="ait-hs-input" id="ait-hs-input" type="search" name="q" '
+    + 'placeholder="Search tools, guides\u2026" aria-label="Search AIToolsEssentials" '
+    + 'role="combobox" aria-expanded="false" aria-controls="ait-hs-list" aria-autocomplete="list" '
+    + 'autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">'
+    + '<ul class="ait-hs-list" id="ait-hs-list" role="listbox" aria-label="Search suggestions" hidden></ul>'
+    + "</form>"
+    + HS_MARK_END
+)
+
+# Inline so the widget looks identical on all 58 header-nav variants without depending on each
+# page's cached stylesheet version. Scoped under .ait-hs so it cannot touch existing layout.
+HS_CSS = (
+    ".ait-hs{position:relative;display:flex;align-items:center;margin-left:6px}"
+    ".ait-hs-ico{position:absolute;left:10px;font-size:14px;line-height:1;color:#8b90a4;pointer-events:none}"
+    ".ait-hs-input{width:186px;padding:8px 10px 8px 28px;border-radius:9px;border:1px solid #d5d7e2;"
+    "background:#fff;color:#2b2f40;font:inherit;font-size:13px}"
+    ".ait-hs-input::placeholder{color:#9aa0b4}"
+    ".ait-hs-input:focus{outline:2px solid #5e6ad2;outline-offset:1px;border-color:#5e6ad2}"
+    ".ait-hs-list{position:absolute;top:calc(100% + 6px);right:0;width:340px;max-width:86vw;z-index:60;"
+    "margin:0;padding:6px;list-style:none;background:#fff;border:1px solid #dfe1ee;border-radius:12px;"
+    "box-shadow:0 14px 34px rgba(20,22,40,.16);max-height:60vh;overflow:auto}"
+    ".ait-hs-list[hidden]{display:none}"
+    ".ait-hs-item,.ait-hs-all,.ait-hs-note{display:block;padding:8px 10px;border-radius:8px;"
+    "text-decoration:none;color:#2b2f40;cursor:pointer}"
+    ".ait-hs-item:hover,.ait-hs-item.ait-hs-active,.ait-hs-all:hover,.ait-hs-all.ait-hs-active{background:#f2f3fb}"
+    ".ait-hs-type{display:block;font-size:10px;font-weight:800;text-transform:uppercase;"
+    "letter-spacing:.06em;color:#5e6ad2}"
+    ".ait-hs-name{display:block;font-size:14px;font-weight:600;line-height:1.3}"
+    ".ait-hs-name mark{background:#fff2a8;color:inherit;border-radius:2px;padding:0 1px}"
+    ".ait-hs-all{margin-top:4px;border-top:1px solid #eceef7;font-size:12px;color:#5e6ad2;font-weight:600}"
+    ".ait-hs-note{font-size:13px;color:#5c6070}"
+    "@media (max-width:1100px){.ait-hs-input{width:132px}}"
+    "@media (max-width:900px){.ait-hs{display:none}}"
+)
+
+
+def postprocess_header_search(root: Path) -> int:
+    """Add a predictive search box to the header of every page.
+
+    The /search/ page ranks well but a reader has to navigate to it before anything happens, so
+    this starts suggesting on the first keystroke from any page. It reuses `js/search-core.js`,
+    the same ranking engine the full page uses - two surfaces that order results differently would
+    be a bug, because a reader who searched the same term twice would get two different answers.
+
+    Degrades without JavaScript: the widget is a real `<form action="/search/" method="get">` with
+    a named `q` input, so submitting lands on `/search/?q=` and that page renders it server-lessly.
+    JS only adds the dropdown.
+
+    Marker-delimited and rebuilt each run rather than appended, so it is idempotent; the script
+    URLs carry a content hash so a changed JS file busts the browser cache (the previous search
+    change did not, which is why a reader could keep seeing the old page).
+    """
+    core = root / "js" / "search-core.js"
+    head = root / "js" / "header-search.js"
+    if not core.exists() or not head.exists():
+        return 0
+    core_v = hashlib.sha256(core.read_bytes()).hexdigest()[:12]
+    head_v = hashlib.sha256(head.read_bytes()).hexdigest()[:12]
+    scripts = (
+        f'{HS_SCRIPTS_MARK}<script src="/js/search-core.js?v={core_v}" defer></script>'
+        f'<script src="/js/header-search.js?v={head_v}" defer></script>'
+    )
+    style = f"{HS_STYLE_MARK}<style>{HS_CSS}</style>"
+
+    changed = 0
+    for p in sorted(root.rglob("*.html")):
+        rel = p.relative_to(root)
+        if is_working_rel(rel) or not is_public_rel(rel):
+            continue
+        html = p.read_text(errors="ignore")
+        original = html
+
+        # Remove any previous injection first, so a rerun rebuilds rather than stacks.
+        html = re.sub(re.escape(HS_MARK_START) + r".*?" + re.escape(HS_MARK_END), "", html, flags=re.S)
+        html = re.sub(re.escape(HS_SCRIPTS_MARK) + r".*?header-search\.js[^>]*></script>", "", html, flags=re.S)
+        html = re.sub(re.escape(HS_STYLE_MARK) + r"<style>.*?</style>", "", html, flags=re.S)
+
+        if "</header>" not in html or "</body>" not in html:
+            if html != original:
+                p.write_text(html)
+                changed += 1
+            continue
+
+        # Place the box before the header CTA when there is one, so it sits with the nav rather
+        # than after the primary button.
+        cta = re.search(r'<a[^>]*class="[^"]*nav-cta', html)
+        if cta:
+            html = html[: cta.start()] + HS_FORM + html[cta.start():]
+        else:
+            html = html.replace("</header>", HS_FORM + "</header>", 1)
+
+        html = html.replace("</head>", style + "</head>", 1)
+        html = html.replace("</body>", scripts + "</body>", 1)
+
+        # Version the search assets wherever the page references them directly. The /search/ page
+        # loads /js/search.js itself, and without a version a returning reader keeps running the
+        # cached copy after an update — which is exactly why the previous search change could be
+        # deployed and still not be visible.
+        for name, ver in (("search-core.js", core_v), ("search.js", core_v)):
+            html = re.sub(
+                rf'src="/js/{re.escape(name)}(?:\?v=[^"]*)?"',
+                f'src="/js/{name}?v={ver}"',
+                html,
+            )
+
+        if html != original:
+            p.write_text(html)
+            changed += 1
+    return changed
+
+
 def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
     if tools is None:
         tools = json.loads((root / "data/tools.json").read_text())
@@ -314,6 +435,9 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     action_fixed = postprocess_search_action(root)
     if action_fixed:
         print(f"SearchAction target normalised on {action_fixed} pages")
+    hs = postprocess_header_search(root)
+    if hs:
+        print(f"Predictive header search added to {hs} pages")
 
 
 if __name__ == "__main__":
