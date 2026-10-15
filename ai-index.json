@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-14",
-  "tools_count": 77,
+  "tools_count": 78,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -574,6 +574,13 @@
       "category": "Productivity",
       "price": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
       "url": "https://aitoolsessentials.com/tools/aidetector-cx/"
+    },
+    {
+      "name": "HOL Registry",
+      "slug": "hol-registry",
+      "category": "Development",
+      "price": "Free",
+      "url": "https://aitoolsessentials.com/tools/hol-registry/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

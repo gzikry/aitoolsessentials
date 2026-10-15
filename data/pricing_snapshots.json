@@ -344,6 +344,10 @@
     "aidetector-cx": {
       "date": "2026-10-08",
       "digest": "Free 5 introductory checks (1 guest + 4 signed-in), no recurring reset. Pro US$12/mo or US$120/yr (300 credits/mo); Pro Plus US$29/mo or US$290/yr (1,000 credits/mo); Business US$79/mo or US$790/yr (3,000 credits/mo, up to 5 seats). Annual billed upfront, credits granted monthly. Credit costs vary by job: standard detection 1 credit, advanced image/deepfake 4 credits/image, forensic video 6 credits/30s, citation verification 1 credit/5 refs, hallucination checking 2 credits/1,000 words. Verified 2026-10-08."
+    },
+    "hol-registry": {
+      "date": "2026-10-14",
+      "digest": "Free. Browsing the coding-agent plugin catalogue and submitting a public plugin repository cost nothing (catalogue FAQ: \"list your public repository for free\"; live /plugins/llms.txt sells nothing). No paid tier for the catalogue itself; paid credits apply to other HOL registry operations and HOL Guard is priced separately. Verified 2026-10-14."
     }
   },
   "changes": [

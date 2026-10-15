@@ -4190,5 +4190,70 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
     "rating_rationale": "Job fit 4 - AI-content screening is a real editorial and academic need, and multi-modal coverage means one tool covers text, image and video. Output quality 3 - detection is probabilistic and the published benchmark is the vendor's own internal-corpus result, so a score must be read as a signal rather than proof. Adoption 4 - credit pricing starts low, five free checks let a buyer try it without a card, and API/plugin/extension coverage fits real workflows. Cost 3 - credit costs vary sharply by job type and 300 monthly credits go quickly once image or video analysis is involved. The 4.0 reflects genuine breadth in a category where no tool can claim certainty."
+  },
+  {
+    "slug": "hol-registry",
+    "name": "HOL Registry",
+    "category": "Development",
+    "best_for": "discovering and comparing installable Claude Code, Codex, Cursor, and MCP plugins with publisher and trust signals",
+    "price": "Free",
+    "rating": 4.0,
+    "official": "https://hol.org/plugins",
+    "summary": "A free, vendor-scored catalogue of installable coding-agent plugins across Claude Code, Codex, Cursor, MCP, Grok, Kimi Code, DeepSeek Harness, Antigravity CLI, and OpenCode. Genuinely useful for discovery; its security signals are static catalogue scans, not install guarantees.",
+    "use_cases": [
+      "Finding plugins for one specific coding agent (Claude Code, Codex, Cursor, MCP clients)",
+      "Comparing plugins by publisher and verification signals before installing",
+      "Listing your own public plugin repository without paying",
+      "Following new plugin launches inside one ecosystem",
+      "Checking provenance before adding a plugin to an agent config"
+    ],
+    "pros": [
+      "Free to browse and free to submit a listing — stated on its own catalogue FAQ, not just marketing copy",
+      "Operator is named on the site (Hashgraph Online DAO LLC) with a published business address and telephone",
+      "Nine ecosystems in one catalogue, including skills, MCP servers, and apps",
+      "Unusually candid about limits: \"a scan is not a safety guarantee\" appears in the catalogue, not buried",
+      "Sponsored and featured placements are documented as not changing organic rank",
+      "Open-source backing — HOL Guard's core is Apache-2.0 and the org runs 66 public repositories"
+    ],
+    "cons": [
+      "Trust and security scores come from a fallback static catalogue scan, not live exploit testing, so a high score is a weak signal",
+      "Catalogue size disagrees between its own surfaces (243 plugins on the 2026-08-31 catalogue page vs 205 in the current llms.txt)",
+      "No general site-wide Terms of Service page was found — the footer's \"Terms of Service\" opens the HOL Points legal page",
+      "Operator is a Marshall Islands DAO LLC, an offshore jurisdiction, and the domain registrant is privacy-shielded in WHOIS",
+      "Live catalogue HTML sits behind a Cloudflare challenge, which blocks scripted readers and some agent clients",
+      "Community upvotes and GitHub activity are surfaced as proof signals but measure popularity, not quality",
+      "The wider HOL platform is Hedera-backed and some records are written to public chains — permanent and visible by design"
+    ],
+    "key_features": [
+      "One catalogue spanning Claude Code, Codex, Cursor, Grok, Kimi Code, DeepSeek Harness, Antigravity CLI, OpenCode, and MCP",
+      "Trust score blending identity, activity, and verification signals, sortable by newest or featured",
+      "Scanner-backed signals documented publicly, including secret scanning and provenance checks where available",
+      "Per-plugin pages with runtime-specific install commands and named publishers",
+      "Free GitHub-connected submission that opens a pull request on the list the catalogue ingests",
+      "Daily plugin launch feed",
+      "Published plugin-security dataset on Hugging Face stating its own scope and row counts"
+    ],
+    "faq": [
+      [
+        "Is HOL Registry free?",
+        "Yes — browsing is free and submitting a public plugin repository is free. Paid credits apply to other HOL registry operations, and HOL Guard is a separate paid product."
+      ],
+      [
+        "Do the trust scores mean a plugin is safe?",
+        "No, and the site says so itself. Scores come from a fallback static catalogue scan, not a live exploit test, so treat them as one weak signal among several."
+      ],
+      [
+        "How is this different from a plain MCP server list?",
+        "It indexes plugins, skills, MCP servers, and apps per ecosystem, and keeps catalogue plugin counts separate from its Registry Broker agent counts."
+      ],
+      [
+        "Who runs it?",
+        "Hashgraph Online DAO LLC (HOL), a Hedera-ecosystem organisation. It publishes a Marshall Islands business address, a phone number, and support@hol.org."
+      ]
+    ],
+    "trial_checklist": "Use a real task, not a browse: search for one plugin you already run and one gap in your agent setup. Note whether the install command, publisher identity, and trust signals tell you anything you did not already know from the plugin's own repository. Then submit one of your own public repos through the free flow and see what it actually requires. Pay particular attention to the fallback static scan caveat. Compare the result against simply searching GitHub before deciding.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "medium",
+    "rating_rationale": "Job fit 4 - comparing plugins across nine agent ecosystems in one place saves real work when configuring coding agents. Coverage 4 - broad ecosystem support with per-runtime install commands. Transparency 5 - it names its operator, address, phone, and a candid list of what its scores do not mean, which is rare here. Cost 5 - free to browse and free to submit. Held at 4.0 because the security signals are static fallback scans, the catalogue size drifts between its own surfaces, and the only terms link found is the points-program legal page."
   }
 ]

@@ -1864,6 +1864,30 @@
       "affiliate_status": "approved",
       "affiliate": true,
       "sponsored": false
+    },
+    {
+      "slug": "hol-registry",
+      "name": "HOL Registry",
+      "category": "Development",
+      "official_url": "https://hol.org/plugins",
+      "review_url": "/tools/hol-registry/",
+      "price_label": "Free",
+      "pricing_summary": "Free. Browsing the plugin catalogue and submitting a public plugin repository cost nothing - stated in the catalogue's own FAQ (\"list your public repository for free\") and in the live https://hol.org/plugins/llms.txt, which sells nothing. No paid tier exists for the catalogue itself; paid credits apply to other HOL registry operations, and HOL Guard is a separately priced product with its own plans. Verified 2026-10-14 from the live /plugins/llms.txt plus the archived catalogue page, because live catalogue HTML is served behind a Cloudflare challenge and returned 403 to every scripted client.",
+      "pricing_url": "https://hol.org/plugins",
+      "pricing_checked_date": "2026-10-14",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "coding",
+        "automation",
+        "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

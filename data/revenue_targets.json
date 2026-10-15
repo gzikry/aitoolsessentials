@@ -1302,5 +1302,26 @@
     "status": "approved",
     "next_action": "Direct affiliate approved 2026-10-08 (30% recurring). Tracking link wired to the review CTA; monitor dashboard clicks/conversions.",
     "notes": "Direct program, no network intermediary. 30% recurring on eligible subscription payments, lifetime of the customer; monthly and annual plans eligible; 30-day attribution window; 30-day hold; $50 minimum payout (USD, bank transfer via dashboard)."
+  },
+  {
+    "tool_slug": "hol-registry",
+    "tool_name": "HOL Registry",
+    "priority": "low",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Direct vendor programme (michael@hol.org; the site also publishes /guard/affiliates and /sponsor surfaces)"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/hol-registry/"
+    ],
+    "best_audiences": [
+      "developers configuring coding agents",
+      "teams standardising plugin installs across Claude Code, Codex and Cursor",
+      "security-minded agent users"
+    ],
+    "status": "not_started",
+    "next_action": "Email michael@hol.org about affiliate or partner terms (the site publishes a HOL Guard affiliate programme and a sponsor surface but no self-serve catalogue link).",
+    "notes": "Free product: the catalogue costs nothing to browse or submit into, so there is no end-user conversion to monetise. Commercial surfaces found are the HOL Guard affiliate programme (/guard/affiliates) and sponsored placements (/sponsor), which the site says do not change organic rank. No affiliate URL invented."
   }
 ]
