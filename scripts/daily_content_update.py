@@ -519,6 +519,9 @@ from generate_premium_membership import enhance_homepage as _enhance_homepage
 _enhance_homepage(root)
 print('Re-applied homepage voice meta after final metadata pass')
 
+from sponsor_chrome import write_page
+write_page(root)
+
 # enhance_homepage rebuilds index.html from its own header template, which discards the
 # sitewide injections added earlier in the run — the nav Search link and the predictive
 # header search both live in the header. Re-apply after it, or the homepage is the one page
@@ -549,6 +552,10 @@ _final_affiliate = subprocess.run(
 print(_final_affiliate.stdout.strip() or _final_affiliate.stderr.strip())
 if _final_affiliate.returncode:
     raise RuntimeError('Final affiliate wiring failed')
+
+from sponsor_chrome import stamp_site
+stamp_site(root)
+
 print('Re-injected final metadata layers')
 
 # Build the site search index LAST, after every page generator, metadata pass and cleanup has

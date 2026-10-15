@@ -1892,3 +1892,29 @@ body[data-page="home"] .footer[data-footer="slim"] {
 .button[aria-disabled="true"] {
   cursor: not-allowed;
 }
+
+.sponsor-line,
+.sponsor-issue {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px 24px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  position: static;
+  font-size: 13px;
+  color: rgba(0, 0, 0, .52);
+}
+.sponsor-line { border-top: 1px solid rgba(0, 0, 0, .07); }
+.sponsor-line-label {
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.sponsor-line img { height: 28px; width: auto; }
+.sponsor-issue { padding-top: 0; padding-bottom: 8px; }
+@media print {
+  .sponsor-line, .sponsor-issue { display: none !important; }
+}
