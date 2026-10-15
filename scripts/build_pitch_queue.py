@@ -197,14 +197,22 @@ def collect() -> list[dict]:
                 ("category", "category", False),
                 ("journalist_publication", "publication", False),
                 ("query_text", "query_text", True),
-                ("suggested_pitch_template", "angle", True),
+                # `suggested_pitch_template` is refreshed every run by the newest digest (each run
+                # rewrites the route evidence and re-derives the figures inside it), so the newest
+                # value must win outright — NOT the longest. Until 2026-10-15 this field used the
+                # longest-text rule, and the 2026-10-15 build therefore rendered the 2026-10-14
+                # template inside a queue built today: it printed "42 of 77 tools ... snapshots
+                # updated 2026-10-14" while the same file's headline figures read 42 of 78 and
+                # `updated: 2026-10-15`. A stale figure inside a file rebuilt today, produced by the
+                # merge rule rather than by typing — the same defect class as the hardcoded draft
+                # filename and the hardcoded live-row count fixed on earlier runs.
+                ("suggested_pitch_template", "angle", False),
             ):
                 v = (op.get(src) or "").strip()
-                # For the "longest text" fields, `>` kept the OLDER digest's value whenever two
-                # digests carried equal-length text — so a row's `angle` could point at a superseded
-                # draft filename even though the newest digest had already corrected it. Digests are
-                # iterated oldest→newest, so `>=` lets the newest win on a tie while a genuinely
-                # longer older value still wins.
+                # Digests are iterated oldest→newest. For the "longest text" field (`query_text`,
+                # where a later digest may truncate) `>=` lets the newest win on a tie while a
+                # genuinely longer older value still wins. Every other field takes the newest
+                # non-empty value: those are the fields each run rewrites from today's measurement.
                 if v and (longest is False or len(v) >= len(rec[dst])):
                     rec[dst] = v
         digest_urls[day] = with_url
@@ -691,10 +699,10 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
             f"(the 2026-09-29 chrome leak into `published_links`, the 2026-10-01 Google Form read as "
             f"a link route). A row is declared sendable on two facts evidenced separately rather "
             f"than trusted from a digest field: a relevance above the tangential band, and a reply "
-            f"route verified by fetching a page today. Both are named in the row. More than one "
-            f"sendable row at a time has happened exactly once in this monitor's history — the "
-            f"2026-10-10 build, which held two, because a route was resolved off a publication's own "
-            f"site rather than because a find arrived. This build holds {sendable_count}. The live "
+            f"route verified by fetching a page today. Both are named in the row. A build holding "
+            f"more than one sendable row used to be rare — the 2026-10-10 build was the first to "
+            f"hold two, and it did so because a route was resolved off a publication's own site "
+            f"rather than because a new find arrived. This build holds {sendable_count}. The live "
             f"unpitched set is {live_count} rows."
         )
     else:
