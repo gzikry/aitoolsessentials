@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""NEWSLETTER_SEND_ENABLED only produces a hold."""
 
 from __future__ import annotations
 
@@ -8,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from newsletter_hold import Held, hold  # noqa: E402
+from newsletter_hold import Held, hold
 
 
 def main() -> None:

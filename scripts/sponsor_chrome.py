@@ -1,9 +1,3 @@
-"""Sponsor chrome for public pages.
-
-One enrollment or none, from data/sponsor_enrollment.json under the site root.
-SPONSOR_PAYMENT_URL is either a mailto or an https URL.
-"""
-
 from __future__ import annotations
 
 import json
@@ -100,7 +94,7 @@ _HOUSE_ANCHOR = re.compile(
 
 
 class _ConfigError(ValueError):
-    """Raised when the enrollment file or payment URL cannot be shown."""
+    pass
 
 
 class _Slot(Enum):
@@ -182,7 +176,6 @@ class _Node:
 
 
 def write_page(root: Path, env: Mapping[str, str] | None = None) -> None:
-    """Write sponsor/index.html. Does not stamp chrome onto it."""
     runtime = _runtime(root, _chosen_env(env))
     dest = root / "sponsor" / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
@@ -196,7 +189,6 @@ def stamp(
     root: Path | None = None,
     env: Mapping[str, str] | None = None,
 ) -> str:
-    """Merge sponsor chrome into one page. Checkout return is unchanged."""
     if _page_role(rel) is _PageRole.CHARGE_RETURN:
         return html
     if root is None:
@@ -205,7 +197,6 @@ def stamp(
 
 
 def stamp_site(root: Path, env: Mapping[str, str] | None = None) -> int:
-    """Stamp each public page. Returns how many files changed."""
     chosen = _chosen_env(env)
     _runtime(root, chosen)
     changed = 0

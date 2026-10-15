@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Sponsor chrome behaves the way the daily script calls it."""
 
 from __future__ import annotations
 
@@ -10,7 +9,7 @@ from tempfile import TemporaryDirectory
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from sponsor_chrome import stamp, stamp_site, write_page  # noqa: E402
+from sponsor_chrome import stamp, stamp_site, write_page
 
 HOUSE = (
     '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a>'
