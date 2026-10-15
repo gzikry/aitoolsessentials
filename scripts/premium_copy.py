@@ -374,6 +374,7 @@ def homepage_header_html() -> str:
         '<a class="brand home-appear" data-appear="0" href="/" aria-label="AIToolsEssentials home"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>'
         '<nav class="nav-links home-appear" data-appear="1">'
         '<a href="/tools/index.html">Tools</a>'
+        '<a href="/search/">Search</a>'
         '<a href="/stack-audit.html">Stack Audit</a>'
         '<a href="/premium/">Premium</a>'
         '<a href="/subscribe/">Subscribe</a>'

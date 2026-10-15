@@ -296,7 +296,7 @@ def _wrap(title, description, kicker, body, canonical_name):
 <!-- AIT STRUCTURED DATA END -->
 <!-- AIT DISCOVERY LINKS --><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>
 <!-- AIT KNOWLEDGE SCHEMA START -->
-<script type="application/ld+json">{{"@context":"https://***@graph":[{{"@type":"Organization","@id":"{DOMAIN}/#organization","name":"AIToolsEssentials","url":"{DOMAIN}","email":"{EMAIL}","logo":"{DOMAIN}/assets/aitools-bot-mark.svg"}},{{"@type":"WebSite","@id":"{DOMAIN}/#website","url":"{DOMAIN}","name":"AIToolsEssentials","publisher":{{"@id":"{DOMAIN}/#organization"}},"potentialAction":{{"@type":"SearchAction","target":"{DOMAIN}/tools/index.html?q={{search_term_string}}","query-input":"required name=search_term_string"}}}}]}}</script>
+<script type="application/ld+json">{{"@context":"https://***@graph":[{{"@type":"Organization","@id":"{DOMAIN}/#organization","name":"AIToolsEssentials","url":"{DOMAIN}","email":"{EMAIL}","logo":"{DOMAIN}/assets/aitools-bot-mark.svg"}},{{"@type":"WebSite","@id":"{DOMAIN}/#website","url":"{DOMAIN}","name":"AIToolsEssentials","publisher":{{"@id":"{DOMAIN}/#organization"}},"potentialAction":{{"@type":"SearchAction","target":"{DOMAIN}/search/?q={{search_term_string}}","query-input":"required name=search_term_string"}}}}]}}</script>
 <!-- AIT KNOWLEDGE SCHEMA END -->
 </head><body>
 <header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>

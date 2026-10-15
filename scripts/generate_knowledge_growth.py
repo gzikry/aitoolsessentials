@@ -160,7 +160,7 @@ def inject_site_schema(root: Path, tools: list[dict[str, Any]] | None = None) ->
         "@context": "https://schema.org",
         "@graph": [
             {"@type": "Organization", "@id": f"{DOMAIN}/#organization", "name": "AIToolsEssentials", "url": DOMAIN, "email": EMAIL, "logo": f"{DOMAIN}/assets/aitools-bot-mark.svg"},
-            {"@type": "WebSite", "@id": f"{DOMAIN}/#website", "url": DOMAIN, "name": "AIToolsEssentials", "publisher": {"@id": f"{DOMAIN}/#organization"}, "potentialAction": {"@type": "SearchAction", "target": f"{DOMAIN}/tools/index.html?q={{search_term_string}}", "query-input": "required name=search_term_string"}},
+            {"@type": "WebSite", "@id": f"{DOMAIN}/#website", "url": DOMAIN, "name": "AIToolsEssentials", "publisher": {"@id": f"{DOMAIN}/#organization"}, "potentialAction": {"@type": "SearchAction", "target": f"{DOMAIN}/search/?q={{search_term_string}}", "query-input": "required name=search_term_string"}},
         ],
     }
     block = f'\n{marker_start}\n<script type="application/ld+json">{json.dumps(schema, separators=(",", ":"))}</script>\n{marker_end}\n'

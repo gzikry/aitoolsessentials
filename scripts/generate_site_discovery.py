@@ -62,7 +62,7 @@ def generate_opensearch(root: Path) -> None:
   <Description>Search AIToolsEssentials AI tool reviews, stacks, alternatives, and guides.</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image height="16" width="16" type="image/x-icon">{DOMAIN}/favicon.ico</Image>
-  <Url type="text/html" template="{DOMAIN}/tools/index.html?q={{searchTerms}}"/>
+  <Url type="text/html" template="{DOMAIN}/search/?q={{searchTerms}}"/>
 </OpenSearchDescription>
 '''
     (root / "opensearch.xml").write_text(xml)
@@ -214,6 +214,81 @@ def postprocess_head_links(root: Path) -> None:
         p.write_text(html)
 
 
+def postprocess_nav_search(root: Path) -> int:
+    """Put a Search link in the header nav of every page.
+
+    Search existed but was effectively unfindable: `/search/` was linked from 7 pages of 761 and
+    absent from the homepage nav, so the site had a working search nobody could reach. There are
+    58 distinct header-nav variants across the generators, which makes editing each template both
+    large and easy to do half-way, so this inserts the link once, sitewide, after the Tools anchor
+    that every variant already carries.
+
+    Absolute `/search/` is used because the nav's own links are depth-relative in five different
+    forms (`../tools/`, `../../tools/`, `/tools/`, ...) while an absolute path resolves correctly
+    from any directory - the footer already relies on that.
+
+    Idempotent: a page that already links /search/ from its header is left untouched.
+    """
+    link = '<a href="/search/">Search</a>'
+    changed = 0
+    tool_link = re.compile(r'<a[^>]*href="[^"]*tools/(?:index\.html)?"[^>]*>Tools</a>')
+    for p in sorted(root.rglob('*.html')):
+        rel = p.relative_to(root)
+        if is_working_rel(rel) or not is_public_rel(rel):
+            continue
+        html = p.read_text(errors='ignore')
+        # Match the class as a prefix, not an exact attribute: several generators emit
+        # `class="nav-links home-appear"` with animation classes, and requiring the exact
+        # `class="nav-links"` silently skipped them (the services pages and
+        # automation-cost-decoder kept no Search link while 717 others got one).
+        if not re.search(r'<nav[^>]*class="nav-links', html):
+            continue
+        head = html.split('</header>', 1)[0]
+        if re.search(r'href="/search/"', head):
+            continue
+        m = tool_link.search(html)
+        if m:
+            html = html[: m.end()] + link + html[m.end():]
+        else:
+            # A few pages build a task-specific nav with no Tools anchor at all
+            # (automation-cost-decoder/index.html links straight to Zapier/Make/n8n). Put the
+            # link first there rather than skipping the page and leaving it without search.
+            nav = re.search(r'<nav[^>]*class="nav-links[^>]*>', html)
+            if not nav:
+                continue
+            html = html[: nav.end()] + link + html[nav.end():]
+        p.write_text(html)
+        changed += 1
+    return changed
+
+
+def postprocess_search_action(root: Path) -> int:
+    """Normalise the schema.org SearchAction target to the page that actually applies ?q=.
+
+    Every page advertised `/tools/index.html?q={search_term_string}`, but the tools page ignored
+    the query string entirely, so Google's sitelinks search box and the OpenSearch provider both
+    landed on an unfiltered directory. The generators now emit `/search/?q=`, and this pass exists
+    because three pages (`contact.html`, `faq.html`, `services/ai-stack-audit.html`) are
+    hand-maintained with no generator at all - a fix applied only to the generators would leave
+    them wrong forever, with nothing to regenerate them.
+
+    Idempotent: once replaced there is no remaining match.
+    """
+    stale = f'{DOMAIN}/tools/index.html?q={{search_term_string}}'
+    fixed = f'{DOMAIN}/search/?q={{search_term_string}}'
+    changed = 0
+    for p in sorted(root.rglob('*.html')):
+        rel = p.relative_to(root)
+        if is_working_rel(rel) or not is_public_rel(rel):
+            continue
+        html = p.read_text(errors='ignore')
+        if stale not in html:
+            continue
+        p.write_text(html.replace(stale, fixed))
+        changed += 1
+    return changed
+
+
 def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
     if tools is None:
         tools = json.loads((root / "data/tools.json").read_text())
@@ -233,6 +308,12 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     today = today or datetime.today().strftime("%Y-%m-%d")
     generate_status(root, tools, today)
     postprocess_head_links(root)
+    nav_added = postprocess_nav_search(root)
+    if nav_added:
+        print(f"Search nav link added to {nav_added} pages")
+    action_fixed = postprocess_search_action(root)
+    if action_fixed:
+        print(f"SearchAction target normalised on {action_fixed} pages")
 
 
 if __name__ == "__main__":
