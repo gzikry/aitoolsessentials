@@ -242,6 +242,31 @@ click, which is strong for this category.
 
 ---
 
+## Arvow — public program, held submission (2026-10-15)
+
+`arvow.com` submitted through `/submit-tool.html` on 2026-10-15 and is **held pending
+verification** (`admin/held-submissions.md`). Do **not** apply from this note and do **not** wire
+anything: there is no review page for a tracking link to live on, and an approval would not change
+the hold.
+
+The program is public, so these are readable terms rather than an inbound offer — read from
+`arvow.com/affiliates` on **2026-10-15** (not from an email):
+
+- **30% commission, for the life of the referral**, described as uncapped
+- Headline figure on the page is "up to $128.70 on each sale every month, for life" — that is 30%
+  of $429, which is **not a price published on `/pricing`**, so the headline may be stale
+- **90-day cookie, first-touch**
+- Payouts **30 days after the referral, at month end**; **$100 minimum**; paid by **PayPal**
+- Terms §15 rules: no paid ads on brand keywords or the domain name, no self-referrals and no
+  "coworkers", no coupon sites / doorway pages / thin sites, no deceptive promotion
+- The same page advertises a **"Creators Program"** where the vendor pays for content — that is a
+  paid-placement offer and is **declined** under `/legal/trust.html`
+
+If Arvow clears verification and is listed, re-read the terms at application time rather than
+copying these figures forward.
+
+---
+
 ## BLOCKED — do not spend time on these
 
 - **Jasper** — hosts through **Impact**, and our Impact publisher account was rejected on
