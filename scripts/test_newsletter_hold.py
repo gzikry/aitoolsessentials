@@ -7,7 +7,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from newsletter_hold import Held, hold
+from newsletter_hold import (
+    POSTAL_ADDRESS,
+    SENDING_DOMAIN,
+    Held,
+    compliance_footer,
+    hold,
+    subscribe_form,
+)
 
 
 def main() -> None:
@@ -24,14 +31,30 @@ def main() -> None:
         errors.append("no is not disabled")
     if hold({"NEWSLETTER_SEND_ENABLED": "off"}) != Held("disabled"):
         errors.append("off is not disabled")
-    if hold({"NEWSLETTER_SEND_ENABLED": "true"}) != Held("no_transport"):
-        errors.append('true is not Held("no_transport")')
-    if hold({"NEWSLETTER_SEND_ENABLED": "YES"}) != Held("no_transport"):
-        errors.append("YES is not no_transport")
-    if hold({"NEWSLETTER_SEND_ENABLED": " on "}) != Held("no_transport"):
-        errors.append("padded on is not no_transport")
-    if hold({"NEWSLETTER_SEND_ENABLED": "1"}) != Held("no_transport"):
-        errors.append("1 is not no_transport")
+    if hold({"NEWSLETTER_SEND_ENABLED": "true"}) != Held("needs_approval"):
+        errors.append('true without approval is not Held("needs_approval")')
+    if hold({"NEWSLETTER_SEND_ENABLED": "YES"}) != Held("needs_approval"):
+        errors.append("YES without approval is not needs_approval")
+    if hold({"NEWSLETTER_SEND_ENABLED": " on "}) != Held("needs_approval"):
+        errors.append("padded on without approval is not needs_approval")
+    if hold({"NEWSLETTER_SEND_ENABLED": "1"}) != Held("needs_approval"):
+        errors.append("1 without approval is not needs_approval")
+    if hold({"NEWSLETTER_SEND_ENABLED": "true"}, approved=True) != Held("no_transport"):
+        errors.append("approved true is not no_transport")
+    if hold({"NEWSLETTER_SEND_ENABLED": "false"}, approved=True) != Held("disabled"):
+        errors.append("approval does not override a disabled flag")
+    footer = compliance_footer()
+    if POSTAL_ADDRESS not in footer or "Unsubscribe" not in footer:
+        errors.append("compliance footer missing the address or unsubscribe link")
+    if SENDING_DOMAIN != "news.aitoolsessentials.com":
+        errors.append("sending domain is not news.aitoolsessentials.com")
+    form = subscribe_form()
+    if "launching soon" not in form or "disabled" not in form:
+        errors.append("subscribe form is not held")
+    if POSTAL_ADDRESS not in form or "Unsubscribe" not in form:
+        errors.append("subscribe form missing the CAN-SPAM footer")
+    if "double opt-in" not in form.casefold() and "Double opt-in" not in form:
+        errors.append("subscribe form missing double opt-in")
 
     source = Path(__file__).resolve().with_name("newsletter_hold.py").read_text().lower()
     for word in ("beehiiv", "formsubmit", "requests", "urllib", "smtplib"):

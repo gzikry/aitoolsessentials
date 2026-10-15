@@ -44,7 +44,7 @@ Plausible page-level data is not accessible without API auth. Based on site stru
 | Tools directory | `/tools/index.html` | 75 tool review pages; hub for organic discovery. |
 | Articles hub | `/articles` | 173 articles; high topical coverage for long-tail SEO. |
 | Premium | `/premium/` | Redesigned Sep 3–4 (PRs #12–#16). $12/mo Whop membership. |
-| Newsletter | `/newsletter/` | Keep/Cut Weekly; Issue 1 live at `/newsletter/2026-w35.html`. 0 Beehiiv subscribers. |
+| Newsletter | `/newsletter/` | Keep/Cut Weekly; Issue 1 live at `/newsletter/2026-w35.html`. 0 subscribers. |
 | Alternatives hub | `/alternatives/index.html` | 20+ alternative pages; strong SEO structure for "X alternatives" queries. |
 
 ### Site Volume (as of Sep 7)
@@ -183,7 +183,7 @@ Emails also sent Aug 31 to: dan@tldr.tech, support@therundown.ai, cndls@georgeto
 | Outreach emails sent | 10 |
 | Outreach responses | 0 |
 | HARO queries found | 0 |
-| Beehiiv subscribers | 0 |
+| Weekly-list subscribers | 0 |
 | Social posts published | 0 |
 
 ---

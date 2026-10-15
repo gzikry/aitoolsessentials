@@ -234,7 +234,7 @@ Daily digests ran Sep 8–14. The Sep 11 and Sep 12 digests flagged live on-beat
 
 ### Newsletter
 
-Beehiiv publication (Keep/Cut Weekly) remains live with **0 subscribers** and no issue sent this week. There was **1 newsletter conversion event** in the 30-day window (a click on Issue 1, `2026-w35.html`, which drew 1 visitor / 9 pageviews last week) against 5 subscribe-intent events — people move toward the newsletter and the signup does not complete or is not recorded. Beehiiv's subscriber count remains **unverified**: the public API returns 403 without a key and the MCP requires interactive OAuth. It has been reported as "0" for weeks on assumption; treat it as unknown.
+Keep/Cut Weekly remains live with **0 subscribers** and no issue sent this week. There was **1 newsletter conversion event** in the 30-day window (a click on Issue 1, `2026-w35.html`, which drew 1 visitor / 9 pageviews last week) against 5 subscribe-intent events — people move toward the newsletter and the signup does not complete or is not recorded. The subscriber count remains **unverified**: it has been reported as "0" for weeks on assumption; treat it as unknown.
 
 ### Social
 
@@ -278,7 +278,7 @@ No outbound-click events in 30 days on a site built to send readers to vendors. 
 
 The two highest-value free directories, both blocked purely on signup. AlternativeTo is DA ~90. Nothing on the agent side can move these.
 
-### 9. Get the Beehiiv key, or report the count as unknown
+### 9. Report the subscriber count as unknown
 
 Subscriber state cannot be verified programmatically without a key, and "0 subscribers" has been carried forward unverified for weeks. Either a key goes in `.env`, or the report states the figure as unverified.
 
@@ -316,7 +316,7 @@ Subscriber state cannot be verified programmatically without a key, and "0 subsc
 | Editorial placements won | **0** |
 | HARO opportunities pitched | **0** (of several flagged live) |
 | Dead-end domains closed | 5 |
-| Beehiiv subscribers | unknown (reported as 0 for weeks; unverified) |
+| Weekly-list subscribers | unknown (reported as 0 for weeks; unverified) |
 | Social posts published | 0 |
 
 ---

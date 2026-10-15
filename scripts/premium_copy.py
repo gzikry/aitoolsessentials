@@ -162,7 +162,7 @@ def this_week_items() -> list[str]:
 def stays_free_items() -> list[str]:
     return [
         'The public directory of tool reviews and comparisons',
-        'Keep/Cut Weekly — the free Beehiiv email at <a href="/subscribe/">/subscribe/</a>',
+        'Keep/Cut Weekly — the free weekly email at <a href="/subscribe/">/subscribe/</a>',
         'The instant Stack Audit at <a href="/stack-audit.html">/stack-audit.html</a> — no login, stays on your device',
     ]
 

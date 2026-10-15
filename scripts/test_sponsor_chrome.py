@@ -123,7 +123,9 @@ def test_null_enrollment_offer_and_page() -> None:
         _has(offer, 'href="mailto:contact@aitoolsessentials.com"')
         _has(offer, 'href="/css/styles.css"')
         _lacks(offer, "George")
-        _lacks(offer, "$")
+        _has(offer, "$50")
+        _has(offer, "$150")
+        _has(offer, "$200")
         _lacks(offer, "data-sponsor")
         _lacks(offer, "sponsor-line")
         _lacks(offer, 'href="/sponsor/"')
@@ -132,7 +134,9 @@ def test_null_enrollment_offer_and_page() -> None:
         _lacks(stamped, "data-sponsor")
         _lacks(stamped, "sponsor-line")
         _lacks(stamped, "George")
-        _lacks(stamped, "$")
+        _has(stamped, "$50")
+        _has(stamped, "$150")
+        _has(stamped, "$200")
         if stamped.count(HOUSE) != 1:
             raise AssertionError("offer page house link count " + str(stamped.count(HOUSE)))
         once = stamp(PAGE, "tools/acme/index.html", root=root, env={})
@@ -366,11 +370,25 @@ def test_payment_url() -> None:
         write_page(root, {"SPONSOR_PAYMENT_URL": "https://pay.example.com/sponsor"})
         paid = (root / "sponsor" / "index.html").read_text()
         _has(paid, HTTPS_BUTTON)
+        _has(paid, "$50")
+        _has(paid, "$150")
+        _has(paid, "$200")
+        _has(paid, "Newsletter line, 1 issue")
+        _has(paid, "Site bar, 1 month")
+        _has(paid, "Bundle, 1 month")
         _has(paid, QUESTIONS)
         _has(paid, "aitoolsessentials@gmail.com")
         _lacks(paid, MAILTO_BUTTON)
         _lacks(paid, "${")
         _lacks(paid, "George")
+        write_page(
+            root,
+            {"SPONSOR_PAYMENT_URL_ISSUE": "https://pay.example.com/issue"},
+        )
+        mixed = (root / "sponsor" / "index.html").read_text()
+        _has(mixed, 'href="https://pay.example.com/issue"')
+        _has(mixed, MAILTO_BUTTON)
+        _lacks(mixed, "SPONSOR_PAYMENT_URL_ISSUE")
     for bad in (
         "https://pay.example.com/SPONSOR_PAYMENT_URL",
         "SPONSOR_PAYMENT_URL",

@@ -799,8 +799,12 @@ def main():
     subscribe_page = ROOT / 'subscribe/index.html'
     if subscribe_page.exists():
         subscribe_html = subscribe_page.read_text()
-        if 'aitoolsessentials.beehiiv.com/subscribe' not in subscribe_html:
-            errors.append('Subscribe page missing Beehiiv signup URL')
+        if 'beehiiv.com' in subscribe_html.lower():
+            errors.append('Subscribe page must not point at Beehiiv')
+        if 'launching soon' not in subscribe_html.lower():
+            errors.append('Subscribe page must say the in-house list is launching soon')
+        if '1090 West Foothill, Claremont, CA 91711' not in subscribe_html:
+            errors.append('Subscribe page missing the postal address')
         if 'id="digest-form"' in subscribe_html or 'formsubmit.co/ajax' in subscribe_html:
             errors.append('Subscribe page must not wire FormSubmit to the newsletter')
     else:

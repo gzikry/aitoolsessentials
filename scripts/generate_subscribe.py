@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Subscribe page: Beehiiv embed or iframe. Never FormSubmit."""
+"""Subscribe page: in-house form, held until sending is enabled."""
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from newsletter_hold import subscribe_form
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
@@ -15,21 +20,13 @@ def esc(s: object) -> str:
     return str(s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-def beehiiv_block(cfg: dict) -> str:
-    """On-domain Beehiiv capture. Never FormSubmit — that is for intake only."""
-    embed = (cfg.get("embed_html") or "").strip()
-    signup = (cfg.get("signup_url") or "").strip() or "https://aitoolsessentials.beehiiv.com/subscribe"
-    if embed:
-        return f'<div class="score-card"><span>Keep/Cut Weekly</span><h2>Get the free digest.</h2>{embed}</div>'
-    src = esc(signup)
+def signup_block(cfg: dict) -> str:
     logo = esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")
     return f'''<div class="score-card"><span>Keep/Cut Weekly</span>
 <p style="text-align:center"><img src="{logo}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"></p>
 <h2>One email. One week. One cut, if you are lucky.</h2>
-<p>One email a week. What changed, what to keep, and what to cancel before renewal. Weekly only. Hosted on Beehiiv — not FormSubmit.</p>
-<p><a class="button button-blue" href="{src}" rel="noopener external">Get the free email</a></p>
-<iframe src="{src}" title="Keep/Cut Weekly signup" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;min-height:520px;border:0;border-radius:12px;background:#fff;margin-top:16px"></iframe>
-<p class="affiliate-inline">If the form does not load, use the button. Publication: aitoolsessentials.beehiiv.com.</p>
+<p>One email a week. What changed, what to keep, and what to cancel before renewal. Weekly only.</p>
+{subscribe_form()}
 </div>'''
 
 
@@ -41,12 +38,12 @@ def latest_issue(root: Path) -> dict:
 def generate(root: Path) -> int:
     cfg = json.loads((root / "data/newsletter.json").read_text())
     desc = cfg.get("description") or "Free keep/cut digest for AI tool pricing and model changes."
-    block = beehiiv_block(cfg)
+    block = signup_block(cfg)
     issue = latest_issue(root)
     issue_slug = esc(issue.get("slug") or "2026-w35")
     issue_title = esc(issue.get("subject") or "Issue 1")
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Subscribe — Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/subscribe/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
-<section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><img src="{esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"><p class="kicker light">Free weekly email · Beehiiv</p><h1>Keep/Cut Weekly.</h1><p class="subhead">{esc(desc)}</p></div></section>
+<section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><img src="{esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"><p class="kicker light">Free weekly email</p><h1>Keep/Cut Weekly.</h1><p class="subhead">{esc(desc)}</p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">{block}
 <p>Issue 1 is live on the site: <a href="/newsletter/{issue_slug}.html">{issue_title}</a>. This form is the free email. Paid <a href="/premium/">Premium</a> is a separate $12/month Whop membership — do not use checkout for this list. FormSubmit is only for tool submissions and intake.</p>
 </div></section>

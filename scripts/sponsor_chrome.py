@@ -16,6 +16,21 @@ __all__ = ["write_page", "stamp", "stamp_site"]
 
 _ENROLLMENT_FILE = Path("data") / "sponsor_enrollment.json"
 _SPONSOR_MAIL = "aitoolsessentials@gmail.com"
+_PAYMENT_FALLBACK = "SPONSOR_PAYMENT_URL"
+
+
+@dataclass(frozen=True, slots=True)
+class _Tier:
+    label: str
+    price: str
+    env_name: str
+
+
+_TIERS = (
+    _Tier("Newsletter line, 1 issue", "$50", "SPONSOR_PAYMENT_URL_ISSUE"),
+    _Tier("Site bar, 1 month", "$150", "SPONSOR_PAYMENT_URL_BAR"),
+    _Tier("Bundle, 1 month", "$200", "SPONSOR_PAYMENT_URL_BUNDLE"),
+)
 _LABEL = "Sponsored"
 _HOUSE_HREF = "/sponsor/"
 _HOUSE_REL = "nofollow"
@@ -148,7 +163,7 @@ _Payment = _Mailto | _ExternalPay
 @dataclass(frozen=True, slots=True)
 class _Runtime:
     enrollment: _Enrollment | None
-    payment: _Payment
+    tiers: tuple[tuple[_Tier, _Payment], ...]
 
 
 @dataclass(frozen=True, slots=True)
@@ -179,7 +194,7 @@ def write_page(root: Path, env: Mapping[str, str] | None = None) -> None:
     runtime = _runtime(root, _chosen_env(env))
     dest = root / "sponsor" / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(_page_html(runtime.payment))
+    dest.write_text(_page_html(runtime.tiers))
 
 
 def stamp(
@@ -243,10 +258,7 @@ def _runtime(root: Path, env: Mapping[str, str]) -> _Runtime:
         raise _ConfigError("enrollment is required")
     needles = sponsored_href_needles(root)
     enrollment = _enrollment(data["enrollment"], needles)
-    payment = _payment(env)
-    if isinstance(payment, _ExternalPay) and _needle_hit(payment.url, needles):
-        raise _ConfigError("SPONSOR_PAYMENT_URL hits an affiliate needle")
-    return _Runtime(enrollment=enrollment, payment=payment)
+    return _Runtime(enrollment=enrollment, tiers=_tier_payments(env, needles))
 
 
 def _reject_unknown(data: dict, allowed: frozenset[str]) -> None:
@@ -271,24 +283,51 @@ def _enrollment(raw: object, needles: tuple[str, ...]) -> _Enrollment | None:
     return _Enrollment(name=name, pitch=pitch, href=href, logo=logo)
 
 
-def _payment(env: Mapping[str, str]) -> _Payment:
-    raw = env.get("SPONSOR_PAYMENT_URL", "")
-    if raw is None:
-        raw = ""
-    if not isinstance(raw, str):
-        raise _ConfigError("SPONSOR_PAYMENT_URL must be a string")
-    raw = raw.strip()
-    if raw == "":
-        return _Mailto(_SPONSOR_MAIL)
+def _https_payment(text: str, name: str, needles: tuple[str, ...]) -> _ExternalPay:
     # A visible "${...}" fails site validation, and the variable name is not a URL.
-    if "SPONSOR_PAYMENT_URL" in raw or "${" in raw:
-        raise _ConfigError("SPONSOR_PAYMENT_URL is not a finished https URL")
-    _reject_personal_name(raw)
-    if not raw.startswith("https://") or len(raw) <= len("https://"):
-        raise _ConfigError("SPONSOR_PAYMENT_URL must be https")
-    if any(ch.isspace() or ord(ch) < 32 or ch in '<>"\'' for ch in raw):
-        raise _ConfigError("SPONSOR_PAYMENT_URL must be https")
-    return _ExternalPay(raw)
+    if name in text or "${" in text:
+        raise _ConfigError(name + " is not a finished https URL")
+    _reject_personal_name(text)
+    if not text.startswith("https://") or len(text) <= len("https://"):
+        raise _ConfigError(name + " must be https")
+    if any(ch.isspace() or ord(ch) < 32 or ch in '<>"\'' for ch in text):
+        raise _ConfigError(name + " must be https")
+    if _needle_hit(text, needles):
+        raise _ConfigError(name + " hits an affiliate needle")
+    return _ExternalPay(text)
+
+
+def _optional_https(
+    env: Mapping[str, str], name: str, needles: tuple[str, ...]
+) -> _ExternalPay | None:
+    if name not in env:
+        return None
+    raw = env.get(name, "")
+    if raw is None:
+        return None
+    if not isinstance(raw, str):
+        raise _ConfigError(name + " must be a string")
+    text = raw.strip()
+    if text == "":
+        return None
+    return _https_payment(text, name, needles)
+
+
+def _tier_payments(
+    env: Mapping[str, str], needles: tuple[str, ...]
+) -> tuple[tuple[_Tier, _Payment], ...]:
+    fallback = _optional_https(env, _PAYMENT_FALLBACK, needles)
+    rows: list[tuple[_Tier, _Payment]] = []
+    for tier in _TIERS:
+        specific = _optional_https(env, tier.env_name, needles)
+        if specific is not None:
+            payment: _Payment = specific
+        elif fallback is not None:
+            payment = fallback
+        else:
+            payment = _Mailto(_SPONSOR_MAIL)
+        rows.append((tier, payment))
+    return tuple(rows)
 
 
 def _plain(label: str, value: object, *, limit: int) -> str:
@@ -351,11 +390,14 @@ def _logo(raw: object, name: str) -> _Logo | None:
     return _Logo(src=src, alt=alt)
 
 
-def _page_html(payment: _Payment) -> str:
+def _page_html(rows: tuple[tuple[_Tier, _Payment], ...]) -> str:
     blocks = ["<h1>" + _OFFER_TITLE + "</h1>"]
     for paragraph in _OFFER_PARAS:
         blocks.append("<p>" + paragraph + "</p>")
-    blocks.append("<p>" + _payment_anchor(payment) + "</p>")
+    for tier, payment in rows:
+        blocks.append("<h2>" + tier.label + "</h2>")
+        blocks.append("<p>" + tier.price + "</p>")
+        blocks.append("<p>" + _payment_anchor(payment) + "</p>")
     blocks.append(
         '<p>Questions: <a href="mailto:'
         + _SPONSOR_MAIL

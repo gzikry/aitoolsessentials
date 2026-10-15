@@ -169,7 +169,7 @@
       "files": ["scripts/generate_weekly_newsletter.py", "newsletter/index.html"]
     },
     {
-      "phrase": "Subscribe on Beehiiv",
+      "phrase": "Get the free email",
       "rewrite": "Get the free email",
       "files": ["scripts/generate_weekly_newsletter.py", "scripts/generate_subscribe.py"]
     },
@@ -195,7 +195,7 @@
     },
     {
       "phrase": "If Premium membership is activated through Whop…",
-      "rewrite": "Keep/Cut Weekly is a separate free Beehiiv list. The instant Stack Audit stays on your device. If you join Paid Premium through Whop…",
+      "rewrite": "Keep/Cut Weekly is a separate free weekly email. The instant Stack Audit stays on your device. If you join Paid Premium through Whop…",
       "files": ["legal/privacy.html"]
     },
     {

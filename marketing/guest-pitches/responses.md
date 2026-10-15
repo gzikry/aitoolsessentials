@@ -53,7 +53,7 @@ What that broke, and what was done about it:
   price no longer exists and it was the only concrete claim in the blog drafts. It now cites only
   figures stamped on our own page. Fresh batch: **`pitches-2026-10-13.json` (12 drafts, 77 tools)**.
   Superseded: `pitches-2026-09-03.json`, `pitches-2026-09-22.json` — do not send from them.
-- `admin/newsletter/2026-w42-beehiiv.html` (today's issue, not yet sent — Beehiiv is still locked)
+- `admin/newsletter/2026-w42-draft.html` (today's issue, not yet sent — sending is held)
   carries "Cursor (18 Sep 2026): Pro $20, Pro Plus $60, Ultra $200, Teams $40 a user". That line is
   now false. Flagged here, not edited: it is another lane's draft and the fix is a re-sync from
   sources, not a hand-edit.
