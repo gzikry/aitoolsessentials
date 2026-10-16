@@ -127,6 +127,13 @@ ROLES = [
       ("rows", "Survey and free-text analysis inside a spreadsheet"),
       ("grammarly", "Tone and clarity on policy, offer, and announcement copy")],
      "articles/best-ai-tools-for-hr-and-people-ops.html"),
+    ("data-analysts", "Data analysts", "Query and formula drafting, spreadsheet cleanup, and source-grounded reading around the warehouse you already run — with validation staying with the person.",
+     [("rows", "Categorising and tidying messy columns inside the grid"),
+      ("airtable-ai", "Drafting and categorising text across structured records"),
+      ("notebooklm", "Source-grounded synthesis with citations back to the document"),
+      ("perplexity", "Cited lookups for documentation and metric definitions"),
+      ("claude", "Query explanation and review-ready write-ups on long documents")],
+     "articles/best-ai-tools-for-data-analysts.html"),
 ]
 
 
