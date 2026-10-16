@@ -1,0 +1,61 @@
+unique requests: 140
+live (not stale, not pitched): 56
+SENDABLE (live + route + relevance above low): 1
+of those, dropped off the newest digest: 0
+wrote marketing/haro-outreach/pitch-queue.md
+  SEND    6d [low-medium] https://www.sourcee.app/journo-request/tech-and-hr-leaders-ai-at-w
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/painters-and-photog
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/legal-assistants-pa
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/cios-and-ai-leaders
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/companies-and-data-
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/uk-political-analys
+  (not sendable)    1d [low      ] https://www.sourcee.app/journo-request/content-creators-us
+  (not sendable)    2d [low      ] https://www.sourcee.app/journo-request/school-leaders-and-
+  (not sendable)    2d [low      ] https://www.sourcee.app/journo-request/minnesotans-using-c
+  (not sendable)    2d [low      ] https://www.sourcee.app/journo-request/ai-policy-advisor-n
+  (not sendable)    2d [low      ] https://www.sourcee.app/journo-request/uk-and-us-heads-of-
+  (not sendable)    2d [low      ] https://www.sourcee.app/journo-request/ai-companion-users-
+  (not sendable)    2d [low      ] https://www.sourcee.app/journo-request/pro-se-litigants-us
+  (not sendable)    3d [low-medium] https://www.sourcee.app/journo-request/b2b-buyers-procurem
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/global-development-
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/african-founders-bu
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/higher-ed-nonfacult
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/podcast-guests-ai-c
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/ai-infrastructure-p
+  (not sendable)    3d [low      ] https://www.sourcee.app/journo-request/b2b-vendors-buyers-
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/caine-prize-winners
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/software-engineers-
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/manufacturers-and-a
+  (not sendable)    4d [low      ] https://www.sourcee.app/journo-request/uk-baby-boomers-mis
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/hedera-builders-shi
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/production-designer
+  (not sendable)    5d [low      ] https://www.sourcee.app/journo-request/ai-researchers-and-
+  (not sendable)    6d [low      ] https://www.sourcee.app/journo-request/ai-cybersecurity-io
+  (not sendable)    6d [low      ] https://www.sourcee.app/journo-request/employees-pay-trans
+  (not sendable)    7d [low      ] https://www.sourcee.app/journo-request/sales-reps-who-cold
+  (not sendable)    7d [low      ] https://www.sourcee.app/journo-request/enterprise-ai-leade
+  (not sendable)    7d [low      ] https://www.sourcee.app/journo-request/voters-who-used-ai-
+  (not sendable)    7d [low      ] https://www.sourcee.app/journo-request/anthropic-gtm-leade
+  (not sendable)    8d [low      ] https://www.sourcee.app/journo-request/patent-attorneys-an
+  (not sendable)    8d [low      ] https://www.sourcee.app/journo-request/hotel-and-fandb-sup
+  (not sendable)    8d [low      ] https://www.sourcee.app/journo-request/researchers-founder
+  (not sendable)    8d [low      ] https://www.sourcee.app/journo-request/facebook-marketplac
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/aps-hr-leaders-ai-s
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/scrum-masters-dayto
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/real-estate-agents-
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/anz-marketers-ai-an
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/solicitors-and-barr
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/uk-ai-data-trainers
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/apac-reporters-and-
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/early-to-midcareer-
+  (not sendable)    9d [low      ] https://www.sourcee.app/journo-request/martech-buyers-ai-i
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/ai-infrastructure-e
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/plaintiffs-attorney
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/emergency-managers-
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/coweta-county-artis
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/swiss-ai-companion-
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/ai-data-labelers-in
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/ai-data-annotators-
+  (not sendable)   10d [low-medium] https://www.sourcee.app/journo-request/uk-companies-implem
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/ai-chatbot-users-an
+  (not sendable)   10d [low      ] https://www.sourcee.app/journo-request/academics-social-me

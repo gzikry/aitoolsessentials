@@ -1,0 +1,28 @@
+{
+ "checked": "2026-10-16",
+ "routes": {
+  "tobiamure.com/": {
+   "label": "Fast Company draft route - journalist's own site (added 2026-10-14)",
+   "url": "https://tobiamure.com/",
+   "http": "200",
+   "bytes": 58905,
+   "title": "Tobi Amure | Finance &amp; Technology Journalist",
+   "address_verbatim_on_page": 6
+  },
+  "tobiamure.com/contact/": {
+   "label": "tobiamure.com contact page (tested 2026-10-16)",
+   "url": "https://tobiamure.com/contact/",
+   "http": "200",
+   "bytes": 16213,
+   "title": "Hire a Finance &amp; Crypto Writer | Tobi Amure",
+   "address_verbatim_on_page": 5
+  },
+  "linkedin.com/in/christopher-mims-club/": {
+   "label": "Mims LinkedIn byline page",
+   "url": "https://www.linkedin.com/in/christopher-mims-club/",
+   "http": "200",
+   "bytes": 658713,
+   "title": "Christopher Mims - The Wall Street Journal | LinkedIn"
+  }
+ }
+}

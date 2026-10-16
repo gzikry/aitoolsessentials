@@ -1,0 +1,12 @@
+pricing_snapshots.updated: 2026-10-16
+tools.json entries: 78 | snapshots: 78
+
+tools quoting a non-zero monthly price: 42 of 78
+    cheapest paid monthly tier <= $25: 33
+    median cheapest paid monthly tier: $17.50
+    min $4.00 (['khanmigo'])
+
+monthly/annual pairs: n=19 range 1.11x to 2.53x median 1.25x  built 2026-10-08
+
+A) We track 78 AI tools; 42 publish a monthly price, 33 at or under $25/month, median $17.50 (snapshots re-checked 2026-10-16).
+B) Across 19 tiers quoting both monthly and annual-billed monthly, the monthly payer pays 1.11x to 2.53x more, median 1.25x.
