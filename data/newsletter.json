@@ -3,6 +3,7 @@
   "publication_name": "Keep/Cut Weekly",
   "sending_domain": "news.aitoolsessentials.com",
   "signup_url": "/subscribe/",
+  "subscribe_endpoint": "",
   "publication_url": "https://aitoolsessentials.com/newsletter/",
   "status": "held",
   "double_opt_in": true,

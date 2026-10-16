@@ -378,6 +378,7 @@ def homepage_header_html() -> str:
         '<a href="/stack-audit.html">Stack Audit</a>'
         '<a href="/premium/">Premium</a>'
         '<a href="/subscribe/">Subscribe</a>'
+        '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END -->'
         "</nav>"
         f'<a class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a>'
         "</header>"
@@ -390,6 +391,7 @@ def homepage_footer_html() -> str:
         '<footer class="footer" data-footer="slim">'
         "<span>© 2026 AIToolsEssentials</span>"
         '<a href="/tools/index.html">Tools</a>'
+        '<a href="/newsletter/">Keep/Cut Weekly</a>'
         '<a href="/pricing-watch/">Pricing Watch</a>'
         '<a href="/legal/about.html">About</a>'
         f'<a href="mailto:{EMAIL}">Contact</a>'

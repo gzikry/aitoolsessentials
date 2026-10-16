@@ -14,6 +14,8 @@ from datetime import date
 from enhance_structured_data import is_hands_on_published, valid_rating_value
 from site_scope import is_public_rel, is_working_rel
 from affiliate_util import sponsored_href_needles
+from newsletter_hold import subscribe_endpoint
+from sponsor_chrome import production_stripe_test_errors
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -801,8 +803,17 @@ def main():
         subscribe_html = subscribe_page.read_text()
         if 'beehiiv.com' in subscribe_html.lower():
             errors.append('Subscribe page must not point at Beehiiv')
-        if 'launching soon' not in subscribe_html.lower():
-            errors.append('Subscribe page must say the in-house list is launching soon')
+        endpoint = subscribe_endpoint(json.loads((ROOT / 'data' / 'newsletter.json').read_text()).get('subscribe_endpoint', ''))
+        if endpoint:
+            if f'action="{endpoint}"' not in subscribe_html:
+                errors.append('Subscribe page action does not match subscribe_endpoint')
+        else:
+            if 'signups open soon' not in subscribe_html.lower():
+                errors.append('Subscribe page must say signups open soon')
+            if 'mailto:aitoolsessentials@gmail.com' not in subscribe_html:
+                errors.append('Subscribe page must offer aitoolsessentials@gmail.com while signup is closed')
+            if 'action="http' in subscribe_html or 'subscribe.news.aitoolsessentials.com' in subscribe_html:
+                errors.append('Subscribe page must not post before subscribe_endpoint is a workers.dev URL')
         if '1090 West Foothill, Claremont, CA 91711' not in subscribe_html:
             errors.append('Subscribe page missing the postal address')
         if 'id="digest-form"' in subscribe_html or 'formsubmit.co/ajax' in subscribe_html:
@@ -829,6 +840,26 @@ def main():
     newsletter_hub = ROOT / 'newsletter/index.html'
     if newsletter_hub.exists() and 'Sir, you appear' in newsletter_hub.read_text():
         errors.append('Newsletter index still uses the butler Issue 1 teaser')
+    if newsletter_hub.exists():
+        hub_html = newsletter_hub.read_text()
+        for slug, title in (
+            ('2026-w42.html', 'ChatGPT Go is $8 a month'),
+            ('2026-w38.html', 'Sonaopus is $99 once'),
+            ('2026-w35.html', 'The AI bill you forgot to cancel'),
+        ):
+            page = ROOT / 'newsletter' / slug
+            if slug not in hub_html or title not in hub_html:
+                errors.append(f'Newsletter index missing {title}')
+            if not page.exists():
+                errors.append(f'Missing newsletter/{slug}')
+                continue
+            page_html = page.read_text()
+            if title not in page_html or 'newsletter-sheet' not in page_html:
+                errors.append(f'newsletter/{slug} is missing the letter title or sheet')
+            if '1090 West Foothill, Claremont, CA 91711' not in page_html:
+                errors.append(f'newsletter/{slug} missing the postal address')
+            if 'george' in page_html.casefold():
+                errors.append(f'newsletter/{slug} uses a personal name')
 
     # Unrendered template placeholders are visible copy bugs (e.g. a missing f-string).
     leak_hits = []
@@ -1155,6 +1186,8 @@ def main():
             errors.append(f'Sitemap still lists retired paths: {retired_hits}')
     else:
         errors.append('Missing sitemap.xml')
+
+    errors.extend(production_stripe_test_errors(ROOT))
 
     if errors:
         print('Validation failed')

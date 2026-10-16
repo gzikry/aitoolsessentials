@@ -323,7 +323,7 @@ This report's reconciliation in §1 shows why: the 2026-09-14 report read 26/69 
 | Tools tracked | 76 |
 | New public pages this week | 2 |
 | Commits this week | 33 |
-| Beehiiv subscribers | **unknown** — unverifiable without a key; not carried forward as 0 |
+| Weekly-list subscribers | **unknown** — unverifiable without a key; not carried forward as 0 |
 
 ---
 

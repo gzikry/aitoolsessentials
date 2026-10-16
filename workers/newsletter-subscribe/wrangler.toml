@@ -1,0 +1,15 @@
+name = "aitools-newsletter-subscribe"
+main = "worker.js"
+compatibility_date = "2026-10-16"
+
+# Secrets, set with wrangler and never committed:
+#   RESEND_API_KEY
+#   RESEND_SEGMENT_ID
+#   CONFIRM_SECRET
+
+# Deploy prints a https://aitools-newsletter-subscribe.<account>.workers.dev URL.
+# Copy that URL into data/newsletter.json as subscribe_endpoint.
+# aitoolsessentials.com DNS is at Porkbun, so do not attach subscribe.news yet.
+
+[vars]
+FROM_ADDRESS = "Keep/Cut Weekly <weekly@news.aitoolsessentials.com>"

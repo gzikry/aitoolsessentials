@@ -26,7 +26,7 @@ def signup_block(cfg: dict) -> str:
 <p style="text-align:center"><img src="{logo}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"></p>
 <h2>One email. One week. One cut, if you are lucky.</h2>
 <p>One email a week. What changed, what to keep, and what to cancel before renewal. Weekly only.</p>
-{subscribe_form()}
+{subscribe_form(str(cfg.get("subscribe_endpoint") or ""))}
 </div>'''
 
 

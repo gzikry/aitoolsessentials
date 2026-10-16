@@ -8,6 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from newsletter_archive import sync_archive
 from newsletter_hold import compliance_footer
 
 DOMAIN = "https://aitoolsessentials.com"
@@ -167,29 +168,19 @@ def generate(root: Path) -> int:
     out.mkdir(exist_ok=True)
     pack = root / "admin/newsletter"
     pack.mkdir(parents=True, exist_ok=True)
-    cards = []
     for issue in issues:
         slug = issue["slug"]
-        (out / f"{slug}.html").write_text(public_page(issue, cfg))
-        (pack / f"{slug}-draft.html").write_text(draft_html(issue, cfg))
+        public_path = out / f"{slug}.html"
+        existing_public = public_path.read_text(encoding="utf-8") if public_path.is_file() else ""
+        # Issue 1's public page is the editorial with "Morning." A daily run must not replace it.
+        if "Morning." not in existing_public or "newsletter-sheet" not in existing_public:
+            public_path.write_text(public_page(issue, cfg), encoding="utf-8")
+        (pack / f"{slug}-draft.html").write_text(draft_html(issue, cfg), encoding="utf-8")
         (pack / f"{slug}-subject.txt").write_text(
-            f"{issue.get('subject')}\nPREVIEW: {issue.get('preview')}\n"
+            f"{issue.get('subject')}\nPREVIEW: {issue.get('preview')}\n",
+            encoding="utf-8",
         )
-        cards.append(
-            f'<article class="newsletter-issue-card"><p class="newsletter-issue-card-meta">Issue {esc(issue.get("issue"))} · {esc(issue.get("week_label"))}</p><h3><a href="/newsletter/{esc(slug)}.html">{esc(issue.get("subject") or issue.get("week_label"))}</a></h3><p>{esc(issue.get("preview"))}</p></article>'
-        )
-    desc = cfg.get("description") or "Weekly keep/cut newsletter."
-    pub_name = esc(cfg.get("publication_name") or "Keep/Cut Weekly")
-    hub = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main class="newsletter-archive">
-<div class="newsletter-archive-intro">
-<p class="newsletter-name">{pub_name}</p>
-<h1>Past issues.</h1>
-<p>{esc(desc)}</p>
-<p><a class="button button-blue" href="/subscribe/">Get the free email</a></p>
-</div>
-<div class="newsletter-issue-list">{"".join(cards)}</div>
-</main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
-    (out / "index.html").write_text(hub)
+    sync_archive(root)
     return len(issues) + 1
 
 
