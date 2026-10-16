@@ -391,6 +391,7 @@ def homepage_footer_html() -> str:
         '<footer class="footer" data-footer="slim">'
         "<span>© 2026 AIToolsEssentials</span>"
         '<a href="/tools/index.html">Tools</a>'
+        '<a href="/newsletter/">Keep/Cut Weekly</a>'
         '<a href="/pricing-watch/">Pricing Watch</a>'
         '<a href="/legal/about.html">About</a>'
         f'<a href="mailto:{EMAIL}">Contact</a>'
