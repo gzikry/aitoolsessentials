@@ -6,8 +6,8 @@
       "network_status": "limited_marketplace_access",
       "decided": "2026-09-14",
       "evidence": "networkquality@partnerstack.com, \"The status of your PartnerStack Network Application\", 2026-09-14 16:17 UTC (2026-09-14 09:17 PT). Reason given: \"We are working on expanding our Network. Your profile is not a great fit, but may be in the future.\"",
-      "effect": "Cannot join any NEW programs through the PartnerStack Marketplace. Existing partnerships are unaffected, so the approved Gamma tracking link stays live and the pending Descript application is not cancelled. Reapplying is dashboard-only and George-only.",
-      "not_affected": "Gamma (approved 2026-09-13, unique link live), ElevenLabs, Make, Nous / Hermes, Sonaopus — all direct or already-approved.",
+      "effect": "Cannot join any NEW programs through the PartnerStack Marketplace. Existing partnerships are unaffected, so the approved Gamma tracking link stays live - and the Descript application, already submitted before the limit, was approved on 2026-10-16 with its tracking link live. Reapplying is dashboard-only and George-only.",
+      "not_affected": "Gamma (approved 2026-09-13, unique link live), Descript (applied 2026-09-12, approved 2026-10-16, tracking link live), ElevenLabs, Make, Nous / Hermes, Sonaopus — all direct or already-approved.",
       "blocked": "Every NEW program join through the PartnerStack marketplace, including Browse AI (its listing is open and was marked ready_to_apply on 2026-09-14, but the join is now gated by this limit) and the private Grammarly Business group lead. Copy.ai's closed listing is unaffected either way. Notion, Grammarly-via-PartnerStack and other network-hosted vendors are unreachable until the profile is re-approved.",
       "george_action": "Dashboard-only and George-only: sign in at app.partnerstack.com and reapply the Network Profile with corrected/new information. Do not attempt marketplace joins before that."
     }
@@ -161,14 +161,18 @@
     },
     {
       "tool_slug": "descript",
-      "availability": "available",
+      "availability": "approved_publisher_affiliate",
       "program_type": "public affiliate program",
       "network": "PartnerStack",
       "official_program_url": "https://dash.partnerstack.com/application?company=descriptinc&group=affiliates",
-      "application_status": "applied_pending_review",
-      "commission_note": "$25 one-time flat fee per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; PartnerStack; monthly PayPal payouts, no minimum threshold.",
-      "notes": "APPLIED 2026-09-12 via dash.partnerstack.com/application?company=descriptinc&group=affiliates (PartnerStack company slug \"descriptinc\"). $25 one-time per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; monthly PayPal payouts. Approval typically ~1 week, up to 30 days. Traffic stated honestly on the application: ~4,600 impressions / 66 visitors in the trailing 30 days, average position improving 62 -> 44 over three weeks. Descript-relevant pages currently sit at positions 41-83, so near-term signup volume is expected to be under 1/month; the case made was intent (switch and comparison content reaching readers already paying for an audio tool) rather than volume. When approved: add the tracking URL here as affiliate_url - the validator requires that key, not approved_tracking_url - then run scripts/wire_affiliate_links.py so the CTA is actually swapped, or the approval earns nothing. STATUS UPDATE 2026-09-14: PartnerStack limited our marketplace access (network profile not accepted), but its own notice states existing partnerships are not impacted, so this application is not cancelled and no action is needed on the listing itself. Do not submit any further PartnerStack-hosted applications while that limit stands. OFFICIAL HELP PAGE RE-CONFIRMED 2026-10-01 at help.descript.com/connect-with-us/affiliates: the documented flow is unchanged - submit an application, and on approval you receive a unique affiliate link and are emailed a PartnerStack account to access the program dashboard. The page still states applicants can expect an approval email within 14 days. Our application was submitted 2026-09-12 and is 19 days old with no approval or rejection recorded, so the status stays applied_pending_review. No CTA changed - there is still no approved tracking URL to wire.",
-      "applied_date": "2026-09-12"
+      "application_status": "approved",
+      "commission_note": "$25 one-time flat fee per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; PartnerStack; monthly PayPal payouts, no minimum threshold. These are the program-page terms recorded at application time; the 2026-10-16 approval email supplied the referral link only and did not restate a rate, so the rate is unchanged and unconfirmed by the approval itself.",
+      "notes": "APPLIED 2026-09-12 via dash.partnerstack.com/application?company=descriptinc&group=affiliates (PartnerStack company slug \"descriptinc\"). $25 one-time per new subscriber plus 15% recurring for the first 12 months; 30-day cookie; monthly PayPal payouts. Approval typically ~1 week, up to 30 days. Traffic stated honestly on the application: ~4,600 impressions / 66 visitors in the trailing 30 days, average position improving 62 -> 44 over three weeks. Descript-relevant pages currently sit at positions 41-83, so near-term signup volume is expected to be under 1/month; the case made was intent (switch and comparison content reaching readers already paying for an audio tool) rather than volume. When approved: add the tracking URL here as affiliate_url - the validator requires that key, not approved_tracking_url - then run scripts/wire_affiliate_links.py so the CTA is actually swapped, or the approval earns nothing. STATUS UPDATE 2026-09-14: PartnerStack limited our marketplace access (network profile not accepted), but its own notice states existing partnerships are not impacted, so this application is not cancelled and no action is needed on the listing itself. Do not submit any further PartnerStack-hosted applications while that limit stands. OFFICIAL HELP PAGE RE-CONFIRMED 2026-10-01 at help.descript.com/connect-with-us/affiliates: the documented flow is unchanged - submit an application, and on approval you receive a unique affiliate link and are emailed a PartnerStack account to access the program dashboard. The page still states applicants can expect an approval email within 14 days. Our application was submitted 2026-09-12 and is 19 days old with no approval or rejection recorded, so the status stays applied_pending_review. No CTA changed - there is still no approved tracking URL to wire. APPROVED 2026-10-16: affiliates@descript.com \"Welcome to the Descript partner program\" (2026-10-16 13:18 UTC, sent on behalf of Descript via PartnerStack/SendGrid) supplied the unique referral link https://get.descript.com/wvafmtthtkp5. Link verified the same day: a GET resolves (1 redirect, HTTP 200) to https://www.descript.com/ with the partner parameters present - utm_source=affiliate, utm_medium=influencer, pscd=get.descript.com, ps_partner_key=MGVjZWY0Nzk5NDI1 and the matching ps_xid/gsxid - so the link is live and attributable. Wired the same day: tools.json review CTA on /tools/descript/ now points at the tracking URL with rel=\"sponsored noopener nofollow\" plus the disclosure fineprint, and Descript was added to the current-programs list on /legal/affiliate-disclosure.html. The 2026-09-14 PartnerStack marketplace limit did NOT cancel this application: it was already submitted on 2026-09-12 and the network notice stated existing partnerships are unaffected, which the approval 34 days later confirms. That limit still bars NEW marketplace joins (Browse AI), so nothing about it changes. Editorial score, pros and cons unchanged.",
+      "status": "approved",
+      "applied_date": "2026-09-12",
+      "approved_date": "2026-10-16",
+      "approved_tracking_url": "https://get.descript.com/wvafmtthtkp5",
+      "affiliate_url": "https://get.descript.com/wvafmtthtkp5"
     },
     {
       "tool_slug": "copy-ai",
@@ -275,7 +279,6 @@
     "grammarly",
     "jasper",
     "elevenlabs",
-    "descript",
     "gemini"
   ]
 }
