@@ -474,6 +474,41 @@ def test_stripe_preview_and_production_gate() -> None:
             raise AssertionError("a pull request ref was treated as production")
 
 
+def test_homepage_sponsor_link_survives_stamp() -> None:
+    from premium_copy import homepage_header_html
+
+    header = homepage_header_html()
+    if header.count('href="/sponsor/"') != 1 or header.count(">Sponsor us</a>") != 1:
+        raise AssertionError("homepage header does not have one Sponsor us link")
+    if 'class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">Free Stack Audit</a>' not in header:
+        raise AssertionError("homepage header lost the nav CTA")
+    page = "<!doctype html><html><body>" + header + "<main><p>Body</p></main></body></html>"
+    with TemporaryDirectory() as raw:
+        root = Path(raw)
+        _write(root, {"enrollment": None})
+        once = stamp(page, "index.html", root=root, env={})
+        twice = stamp(once, "index.html", root=root, env={})
+        if twice != once:
+            raise AssertionError("second stamp changed the homepage header")
+        if once.count(HOUSE) != 1:
+            raise AssertionError("homepage stamp house link count " + str(once.count(HOUSE)))
+        nav_end = once.find("</nav>")
+        house_at = once.find(HOUSE)
+        cta_at = once.find('class="nav-cta')
+        if not (0 <= house_at < nav_end < cta_at):
+            raise AssertionError("Sponsor us is not inside the nav, ahead of the CTA")
+        if "home-cta-primary" in once:
+            raise AssertionError("header stamp touched a hero CTA")
+    home = (Path(__file__).resolve().parents[1] / "index.html").read_text()
+    if home.count(HOUSE) != 1:
+        raise AssertionError("committed homepage does not have the Sponsor us nav link")
+    hero = home.split('<section class="hero', 1)[1].split("</section>", 1)[0]
+    if "/sponsor/" in hero or "Sponsor us" in hero:
+        raise AssertionError("Sponsor us landed in the hero")
+    if 'class="button home-cta-primary" href="/stack-audit.html"' not in home:
+        raise AssertionError("homepage hero primary CTA changed")
+
+
 def test_stamp_site_walk() -> None:
     with TemporaryDirectory() as raw:
         root = Path(raw)
@@ -535,6 +570,7 @@ def main() -> None:
         test_rejected_enrollment_values,
         test_payment_url,
         test_stripe_preview_and_production_gate,
+        test_homepage_sponsor_link_survives_stamp,
         test_stamp_site_walk,
     )
     errors: list[str] = []
