@@ -15,3 +15,6 @@ npm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+# Per-issue send approval. The file body is the word approved. Never commit one.
+admin/newsletter/*.approved

@@ -802,8 +802,15 @@ def main():
         subscribe_html = subscribe_page.read_text()
         if 'beehiiv.com' in subscribe_html.lower():
             errors.append('Subscribe page must not point at Beehiiv')
-        if 'launching soon' not in subscribe_html.lower():
-            errors.append('Subscribe page must say the in-house list is launching soon')
+        if 'https://subscribe.news.aitoolsessentials.com/' not in subscribe_html:
+            errors.append('Subscribe page must post to the newsletter worker')
+        if 'name="company_website"' not in subscribe_html:
+            errors.append('Subscribe page missing the honeypot')
+        form = subscribe_html.split('id="keep-cut-subscribe"', 1)[-1].split('</form>', 1)[0]
+        if 'disabled' in form:
+            errors.append('Subscribe form must accept an email address')
+        if 'confirm link' not in form.lower():
+            errors.append('Subscribe form must say a confirm link comes first')
         if '1090 West Foothill, Claremont, CA 91711' not in subscribe_html:
             errors.append('Subscribe page missing the postal address')
         if 'id="digest-form"' in subscribe_html or 'formsubmit.co/ajax' in subscribe_html:
@@ -830,6 +837,26 @@ def main():
     newsletter_hub = ROOT / 'newsletter/index.html'
     if newsletter_hub.exists() and 'Sir, you appear' in newsletter_hub.read_text():
         errors.append('Newsletter index still uses the butler Issue 1 teaser')
+    if newsletter_hub.exists():
+        hub_html = newsletter_hub.read_text()
+        for slug, title in (
+            ('2026-w42.html', 'ChatGPT Go is $8 a month'),
+            ('2026-w38.html', 'Sonaopus is $99 once'),
+            ('2026-w35.html', 'The AI bill you forgot to cancel'),
+        ):
+            page = ROOT / 'newsletter' / slug
+            if slug not in hub_html or title not in hub_html:
+                errors.append(f'Newsletter index missing {title}')
+            if not page.exists():
+                errors.append(f'Missing newsletter/{slug}')
+                continue
+            page_html = page.read_text()
+            if title not in page_html or 'newsletter-sheet' not in page_html:
+                errors.append(f'newsletter/{slug} is missing the letter title or sheet')
+            if '1090 West Foothill, Claremont, CA 91711' not in page_html:
+                errors.append(f'newsletter/{slug} missing the postal address')
+            if 'george' in page_html.casefold():
+                errors.append(f'newsletter/{slug} uses a personal name')
 
     # Unrendered template placeholders are visible copy bugs (e.g. a missing f-string).
     leak_hits = []

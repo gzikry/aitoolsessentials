@@ -8,6 +8,7 @@ from typing import Literal
 __all__ = [
     "POSTAL_ADDRESS",
     "SENDING_DOMAIN",
+    "SUBSCRIBE_ENDPOINT",
     "UNSUBSCRIBE_HREF",
     "Held",
     "compliance_footer",
@@ -19,6 +20,7 @@ _ON = frozenset({"1", "true", "yes", "on"})
 
 POSTAL_ADDRESS = "1090 West Foothill, Claremont, CA 91711"
 SENDING_DOMAIN = "news.aitoolsessentials.com"
+SUBSCRIBE_ENDPOINT = "https://subscribe.news.aitoolsessentials.com/"
 UNSUBSCRIBE_HREF = (
     "mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2FCut%20Weekly"
 )
@@ -55,10 +57,13 @@ def compliance_footer() -> str:
 
 def subscribe_form() -> str:
     return (
-        '<form id="keep-cut-subscribe" method="post" action="/subscribe/">'
-        "<p>Keep/Cut Weekly is launching soon. Double opt-in stays off until sending is enabled, and each issue still needs an operator approval before it can leave.</p>"
-        '<p><label>Email <input type="email" name="email" autocomplete="email" disabled></label></p>'
-        '<p><button class="button button-blue" type="submit" disabled>Get the free email</button></p>'
+        '<form id="keep-cut-subscribe" method="post" action="'
+        + SUBSCRIBE_ENDPOINT
+        + '">'
+        "<p>One email a week. We send a confirm link first. The list stays empty until you click it.</p>"
+        '<p><label>Email <input type="email" name="email" autocomplete="email" required></label></p>'
+        '<p class="subscribe-honeypot"><label>Company website <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></p>'
+        '<p><button class="button button-blue" type="submit">Get the free email</button></p>'
         "</form>"
         "<p>" + compliance_footer() + "</p>"
     )

@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from newsletter_hold import (
     POSTAL_ADDRESS,
     SENDING_DOMAIN,
+    SUBSCRIBE_ENDPOINT,
     Held,
     compliance_footer,
     hold,
@@ -49,12 +50,16 @@ def main() -> None:
     if SENDING_DOMAIN != "news.aitoolsessentials.com":
         errors.append("sending domain is not news.aitoolsessentials.com")
     form = subscribe_form()
-    if "launching soon" not in form or "disabled" not in form:
-        errors.append("subscribe form is not held")
+    if SUBSCRIBE_ENDPOINT not in form or 'name="company_website"' not in form:
+        errors.append("subscribe form is missing the worker or the honeypot")
+    if "disabled" in form.split("</form>", 1)[0]:
+        errors.append("subscribe form still disables the email field")
+    if "confirm link" not in form.casefold():
+        errors.append("subscribe form does not describe the confirm link")
     if POSTAL_ADDRESS not in form or "Unsubscribe" not in form:
         errors.append("subscribe form missing the CAN-SPAM footer")
-    if "double opt-in" not in form.casefold() and "Double opt-in" not in form:
-        errors.append("subscribe form missing double opt-in")
+    if SUBSCRIBE_ENDPOINT != "https://subscribe.news.aitoolsessentials.com/":
+        errors.append("subscribe endpoint is not the newsletter host")
 
     source = Path(__file__).resolve().with_name("newsletter_hold.py").read_text().lower()
     for word in ("beehiiv", "formsubmit", "requests", "urllib", "smtplib"):

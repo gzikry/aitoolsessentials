@@ -1,0 +1,12 @@
+name = "aitools-newsletter-subscribe"
+main = "worker.js"
+compatibility_date = "2026-10-16"
+
+# Secrets, set with wrangler and never committed:
+#   RESEND_API_KEY
+#   RESEND_SEGMENT_ID
+#   CONFIRM_SECRET
+
+[vars]
+FROM_ADDRESS = "Keep/Cut Weekly <weekly@news.aitoolsessentials.com>"
+CONFIRM_HOST = "https://subscribe.news.aitoolsessentials.com"
