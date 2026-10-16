@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""Weekly Keep/Cut newsletter: public archive + Beehiiv paste HTML."""
+"""Weekly Keep/Cut newsletter: public archive + held draft HTML."""
 from __future__ import annotations
 
 import json
-import os
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from newsletter_hold import compliance_footer
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
@@ -29,7 +33,7 @@ def listings_html(items: list, public: bool) -> str:
     return "<ul>" + "".join(bits) + "</ul>" if bits else "<p>None recorded this week. Extraordinary restraint.</p>"
 
 
-def beehiiv_html(issue: dict, cfg: dict) -> str:
+def draft_html(issue: dict, cfg: dict) -> str:
     logo = esc(cfg.get("logo_url") or LOGO)
     name = esc(cfg.get("publication_name") or "Keep/Cut Weekly")
     keep = issue.get("keep_one") or {}
@@ -82,7 +86,7 @@ def beehiiv_html(issue: dict, cfg: dict) -> str:
 </td></tr>
 <tr><td style="padding:24px 8px 0;text-align:center;font-size:12px;line-height:1.6;color:#8e8e93;border-top:1px solid #1c1c1e;">
 One email a week. Not a drip. Not a vendor inbox. <a href="{DOMAIN}/legal/affiliate-disclosure.html" style="color:#8e8e93;">Affiliate disclosure</a>. Confirm prices on official pages before you pay.<br>
-Beehiiv adds the unsubscribe link in the footer. We do not send daily mail. FormSubmit is not this list.
+{compliance_footer()}
 </td></tr>
 </table>
 </td></tr></table>
@@ -120,7 +124,7 @@ def public_page(issue: dict, cfg: dict) -> str:
         related_html = (
             ""
             if omit_related
-            else '<p>Related: <a href="/updates/2026-08.html">August digest</a> · <a href="/subscribe/">Get the free email (Beehiiv, weekly only)</a> · <a href="/premium/">Paid Premium</a></p>'
+            else '<p>Related: <a href="/updates/2026-08.html">August digest</a> · <a href="/subscribe/">Get the free email</a> · <a href="/premium/">Paid Premium</a></p>'
         )
         body_html = f'''<section class="newsletter-segment"><p><strong>Standing order.</strong> {esc(issue.get("keep_cut_rule"))}</p></section>
 {pricing_section}
@@ -150,6 +154,7 @@ def public_page(issue: dict, cfg: dict) -> str:
 <div class="newsletter-colophon">
 {verification}
 <p>One email a week. Not a drip. <a href="/subscribe/">Get next week</a> · <a href="/newsletter/">Archive</a>. <a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>.</p>
+<p>{compliance_footer()}</p>
 </div>
 </article>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
@@ -160,19 +165,16 @@ def generate(root: Path) -> int:
     cfg = json.loads((root / "data/newsletter.json").read_text())
     out = root / "newsletter"
     out.mkdir(exist_ok=True)
-    skip_beehiiv = bool(os.getenv("SKIP_BEEHIIV"))
     pack = root / "admin/newsletter"
-    if not skip_beehiiv:
-        pack.mkdir(parents=True, exist_ok=True)
+    pack.mkdir(parents=True, exist_ok=True)
     cards = []
     for issue in issues:
         slug = issue["slug"]
         (out / f"{slug}.html").write_text(public_page(issue, cfg))
-        if not skip_beehiiv:
-            (pack / f"{slug}-beehiiv.html").write_text(beehiiv_html(issue, cfg))
-            (pack / f"{slug}-subject.txt").write_text(
-                f"{issue.get('subject')}\nPREVIEW: {issue.get('preview')}\n"
-            )
+        (pack / f"{slug}-draft.html").write_text(draft_html(issue, cfg))
+        (pack / f"{slug}-subject.txt").write_text(
+            f"{issue.get('subject')}\nPREVIEW: {issue.get('preview')}\n"
+        )
         cards.append(
             f'<article class="newsletter-issue-card"><p class="newsletter-issue-card-meta">Issue {esc(issue.get("issue"))} · {esc(issue.get("week_label"))}</p><h3><a href="/newsletter/{esc(slug)}.html">{esc(issue.get("subject") or issue.get("week_label"))}</a></h3><p>{esc(issue.get("preview"))}</p></article>'
         )

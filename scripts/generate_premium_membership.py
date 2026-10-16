@@ -259,7 +259,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     faqs = [
         ("What do I buy for $12/month?", "Premium is delivered in Whop. You get dated keep/cut research, a monthly decision matrix CSV, a weekly checklist, tool-change alerts, a stack-audit template with a strategy-only written reply within 48 hours, an ROI worksheet, and priority research slots (first 5 complete requests each month)."),
         ("What do I get this week?", "After checkout, open /premium/welcome/. This page cannot verify a charge. If Whop shows the trial or payment succeeded, open the AIToolsEssentials Premium hub, download this week's keep/cut notes and the decision matrix CSV, run the 15-minute checklist, and fill the stack-audit template if you want a written keep/cut reply."),
-        ("What stays free?", "The public directory, Keep/Cut Weekly (the Beehiiv email), and the instant Stack Audit at /stack-audit.html. Do not use the Whop checkout for those."),
+        ("What stays free?", "The public directory, Keep/Cut Weekly, and the instant Stack Audit at /stack-audit.html. Do not use the Whop checkout for those."),
         ("What is not included?", "Implementation, setup, integrations, account access, credentials, or ongoing technical support. Premium does not change public rankings, sponsor labels, or review scores. The /premium/library/ pages on this site are a public preview of the format. They are not gated."),
         ("Is Premium a course, community, or consulting service?", "No. You are buying dated research and a written keep/cut reply. Personalized stack recommendations from the audit template are strategy-only written replies — not hands-on implementation."),
         ("Can vendors pay to change rankings?", "No. Premium does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores."),
@@ -494,7 +494,7 @@ def generate_whop_pack(root: Path, tools: list[dict[str, Any]], today: str) -> N
     write_csv(download_dir / "free-vs-premium-value-matrix.csv", ["Capability", "Free site", "Premium members", "Why it matters"], [
         ["Tool reviews + comparisons", "Yes", "Yes + full decision matrix CSV", "Public is enough for browsing"],
         ["Scorecards / cost calculator / decision brief", "Yes", "Yes", "Free utilities stay free"],
-        ["Keep/Cut Weekly email", "Yes (Beehiiv)", "Yes", "Free newsletter stays free"],
+        ["Keep/Cut Weekly email", "Yes", "Yes", "Free newsletter stays free"],
         ["Instant Stack Audit scorecard", "Yes — /stack-audit.html", "Yes, plus the deeper template + written reply", "Free tool stays free"],
         ["Full decision matrix CSV", "No", "Yes, refreshed from official labels", "Monthly stack decisions"],
         ["AI Stack Audit Template + 48h strategy reply", "No", "Yes", "Turns inventory into keep/cut"],
@@ -934,7 +934,7 @@ def rewrite_homepage_hero_actions(html: str) -> str:
 
 
 def homepage_newsletter_panel(root: Path) -> str:
-    """One Subscribe CTA to the on-site embed. Beehiiv lives on /subscribe/ only."""
+    """One Subscribe CTA. The in-house form lives on /subscribe/ only."""
     cfg = {}
     cfg_path = root / "data/newsletter.json"
     if cfg_path.exists():
@@ -1164,7 +1164,7 @@ def update_pricing_page(root: Path, tools: list[dict[str, Any]]) -> None:
         f'<article class="pricing-card"><p class="eyebrow">Free</p><h3>Directory + Keep/Cut Weekly</h3>'
         f'<p class="pricing-price">$0<span>/forever</span></p><ul class="pricing-features">'
         f'<li>Tool reviews, comparisons, and dated evidence</li>'
-        f'<li>Free Beehiiv email — not a Whop charge</li>'
+        f'<li>Free weekly email — not a Whop charge</li>'
         f'<li>Buyer guides, benchmarks, and scorecards</li>'
         f'<li>This is not Premium</li></ul>'
         f'<a class="button button-blue" href="../tools/index.html">Browse free</a>'
