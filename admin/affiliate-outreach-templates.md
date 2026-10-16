@@ -15,7 +15,7 @@ programs are the path that still works; do not open new network applications unt
 ## Standard application blurb
 
 > AIToolsEssentials (aitoolsessentials.com) is an evidence-first AI tools directory:
-> 76 independently reviewed tools with verified official pricing, dated benchmark
+> 78 independently reviewed tools with verified official pricing, dated benchmark
 > evidence, and buyer guides for specific audiences (agencies, freelancers,
 > developers). We publish honest cons alongside pros — our reviews carry trust
 > because we show tradeoffs.

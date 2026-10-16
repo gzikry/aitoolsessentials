@@ -209,6 +209,12 @@ approved. The 2026-09-14 network limit did not cancel this application — it wa
 the limit and approved 34 days later — but it still bars NEW marketplace joins, so Browse AI
 stays gated. Editorial score, pros and cons unchanged.
 
+**Confirmation reply sent 2026-10-16 13:33 UTC** (`himalaya`, account `aitools`, one record in
+`[Gmail]/Sent Mail`, none in Trash — no duplicate): thanks, links to the live review CTA and the
+disclosure page, asks for the commission rate in writing since the approval restated none, states
+the audience honestly (the same "early growth / applied on intent" case as the application), and
+asks whether dashboard access is issued separately. Signed AIToolsEssentials.
+
 ### Copy.ai — no working public route as of 2026-09-12
 Its PartnerStack listing shows *Request program* with unfilled placeholders, and
 `copyai.partnerstack.com` renders the same dead template. Copy.ai was acquired by Fullcast
