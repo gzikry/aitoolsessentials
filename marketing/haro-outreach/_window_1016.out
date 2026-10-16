@@ -1,0 +1,48 @@
+{
+ "today": "2026-10-16",
+ "sitemap_http": "200",
+ "bytes": 9794638,
+ "count": 40732,
+ "newest": "2026-10-16T03:10:13.000Z",
+ "mark": "2026-10-15T02:50:30.000Z",
+ "window": 94,
+ "ai": 4,
+ "ai_strict": 1,
+ "spend_any": 10,
+ "ai_strict_false_positives": 0,
+ "feed_count": 50,
+ "feed_http": "200",
+ "feed_bytes": 169701,
+ "feed_overlap_with_window": 50
+}
+--- AI-Token window slugs ---
+  2026-10-15T15:47:31.503Z  companies-and-data-buyers-selling-corporate-data-to-train-ai
+  2026-10-15T12:31:10.000Z  uk-political-analysts-disinformation-and-ai-manipulation-in-politics
+  2026-10-15T07:18:04.426Z  cios-and-ai-leaders-ai-infrastructure-day2-ops-and-costs
+  2026-10-15T07:00:08.285Z  content-creators-using-ai-job-losses-and-ethics
+--- AI+spend (with matched tokens) ---
+  2026-10-15T07:18:04.426Z  cios-and-ai-leaders-ai-infrastructure-day2-ops-and-costs   tokens=['cost']
+--- strict hits judged false positives ---
+--- spend-any window slugs ---
+  maryland-family-affordability   2026-10-15T20:21:49.000Z
+  seattle-parents-and-educators-sps-30min-recess-policy   2026-10-15T20:20:41.000Z
+  women-buying-homes-alone-or-with-partner-nonfinancial-costs   2026-10-15T16:14:19.000Z
+  employees-left-unpaid-boss-vanished-on-payday   2026-10-15T15:12:05.809Z
+  underemployed-americans-costofliving-strain-ahead-of-midterms   2026-10-15T14:47:47.000Z
+  foodinsecure-people-with-allergies-affording-allergensafe-food   2026-10-15T14:35:16.000Z
+  small-business-owners-growth-and-pivots-and-pay-transparency   2026-10-15T12:49:36.259Z
+  over65s-and-adult-children-spending-inheritance-on-holidays-skiing   2026-10-15T09:18:22.000Z
+  makers-of-subscriptionfree-security-cameras-and-doorbells-buying-guide   2026-10-15T08:20:04.000Z
+  cios-and-ai-leaders-ai-infrastructure-day2-ops-and-costs   2026-10-15T07:18:04.426Z
+--- platforms ---
+   200   100825 Sourcee (sourcee.app)                    Sourcee - We find the Journo Requests, You get Featured  ckpt=False
+   200   169701 Sourcee AI topic feed                    Ai | Journo Requests  ckpt=False
+   429    31429 HARO (helpareporter.com)                 Vercel Security Checkpoint  ckpt=True
+   429    31433 Connectively (connectively.us)           Vercel Security Checkpoint  ckpt=True
+   404   140415 Source of Sources (sourceofsources.com)  Page Not Found - Source of Sources  ckpt=False
+   404     3266 Qwoted (qwoted.com)                      Error: The page you were looking for doesn't exist (404) | Q  ckpt=False
+   200    12064 MentionMatch (mentionmatch.com)          MentionMatch - Connect B2B Writers with Expert Sources  ckpt=False
+   401       74 Medialyst MCP (medialyst.ai/api/mcp)       ckpt=False
+   200   148208 ResponseSource (responsesource.com)      ResponseSource - Connecting the media  ckpt=False
+--- feed ---
+  50 slugs; overlap with window 50

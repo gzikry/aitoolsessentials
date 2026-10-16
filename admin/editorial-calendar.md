@@ -87,3 +87,11 @@ how-to items and all six audience guides are now shipped; continue with:
 7. How do I know if an AI tool is worth its price? ✅ shipped 2026-10-09 (question-intent, articles/is-an-ai-tool-worth-its-price.html; added to Learn hub)
 8. What should I ask before connecting an AI tool to company data? ✅ shipped 2026-10-09 (question-intent, articles/what-to-ask-before-connecting-ai-to-company-data.html; added to Learn hub)
 
+## Backlog: batch 3 (from 2026-10-16)
+Priority order unchanged: how-to/workflow → audience guides → question-intent.
+9. Building a team AI prompt library that gets used ✅ shipped 2026-10-16 (workflow, articles/how-to-build-a-team-ai-prompt-library.html; added to Learn hub)
+10. Best AI tools for data analysts ✅ shipped 2026-10-16 (audience guide, articles/best-ai-tools-for-data-analysts.html; /best-for/ role `data-analysts` + stack-builder role added)
+Next up: one more workflow piece + one audience guide, then question-intent interleave.
+Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
+
+

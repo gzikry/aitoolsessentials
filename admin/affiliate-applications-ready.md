@@ -62,7 +62,7 @@ template, so the vendor-hosted subdomains are not a working fallback either.
 
 ## STATUS 2026-09-14
 
-**Approved live: Gamma (PartnerStack unique link 2026-09-13). Applied pending: Descript (2026-09-12).**
+**Approved live: Gamma (PartnerStack unique link 2026-09-13) and Descript (PartnerStack unique link 2026-10-16). No program application is outstanding.**
 
 **CHANGED 2026-09-14 — PartnerStack network application was DECLINED, not still pending.**
 `networkquality@partnerstack.com` ("The status of your PartnerStack Network Application",
@@ -103,7 +103,7 @@ gates visibility and payment, not placement. Do not rebuild the links.
 |---|---------|-------|------|--------|
 | 0 | PartnerStack network | app.partnerstack.com | — | **DECLINED 2026-09-14** — marketplace access limited ("profile is not a great fit"); existing partnerships unaffected; reapply is dashboard-only, George-only |
 | 1 | Gamma | PartnerStack listing | 25% first year — **rate queried 2026-10-14, vendor email claims 30%** | **approved 2026-09-13; link live 2026-09-13, re-verified live 2026-10-14** — https://try.gamma.app/ty4k3o3rpeyd (unaffected by the network limit) |
-| 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. | **applied 2026-09-12** — pending review; not cancelled (existing partnerships unaffected) |
+| 2 | Descript | dash.partnerstack.com/application?company=descriptinc | $25 + 15% rec. — program-page terms; the approval email supplied the link only, no rate | **APPROVED 2026-10-16; link live 2026-10-16** — https://get.descript.com/wvafmtthtkp5, wired on /tools/descript/ and named on /legal/affiliate-disclosure.html. The pre-limit application was honoured; the network limit still bars NEW marketplace joins |
 | 3 | Copy.ai | PartnerStack listing not open | 45% rec. 12mo | **closed 2026-09-14** — listing dead and the in-app Marketplace fallback is gone with the network limit |
 | 4 | Browse AI | market.partnerstack.com/artificial-intelligence/browseai | 20% rec. life | listing open (verified 2026-09-14) but **join gated by the 2026-09-14 network limit** |
 | 5 | ElevenLabs | direct | 22% rec. 12mo | approved 2026-08-23 |
@@ -139,6 +139,21 @@ and is unchanged (HTTP 200, `rel="sponsored noopener nofollow"`).
 control address also returned `250` — so the pre-send `RCPT TO` probe proves only that the message will not bounce.
 Do not cite it as evidence that `partners@` is read by a human.
 
+**Second campaign, 2026-10-15 16:51 UTC — no answer, no action, record corrected.** A second PartnerStack
+campaign from the same `partners@gamma.app` ("Your Gamma links are getting attention!", signed Justine)
+restates the same tracking link, repeats the **30% for the first year** claim, and does not address the
+2026-10-14 rate question. It also claims the link "has started receiving clicks" while the 2026-10-14 campaign
+said the partner had been inactive for a month — both are campaign copy, and click volume is **not verifiable
+from our side**: the Plausible API is locked (no active subscription; reported in `marketing/traffic/`) and the
+PartnerStack dashboard is George-only. **No reply sent** — the question was asked 28 minutes after the previous
+campaign and this one adds nothing; 25%/first-year stays the governing term.
+**Record correction (same pass):** the 2026-10-14 reply is a genuine send but Gmail filed it in
+`[Gmail]/Trash` (msg 71, subject `Re: How top Gamma partners get clicks`, 2026-10-14 11:38 UTC), **not** in
+`[Gmail]/Sent Mail` — verified by exporting both folders. A Sent-Mail-only sweep therefore shows no prior reply
+to this partner; cite the send by date + subject and check Trash before ever re-sending. Live re-check the same
+day: `/tools/gamma/` carries `https://try.gamma.app/ty4k3o3rpeyd` with `rel="sponsored noopener nofollow"` on
+both the public URL and the origin.
+
 Answers used (reusable for the reference/audience fields if the portal asks again):
 
 > Our Gamma review (aitoolsessentials.com/tools/gamma/) documents dated pricing, an
@@ -153,7 +168,7 @@ Answers used (reusable for the reference/audience fields if the portal asks agai
 **Audience:** Consultants, marketers, founders, and educators who build decks regularly
 and are choosing between paid presentation tools.
 
-### Descript — APPLIED 2026-09-12 (pending review)
+### Descript — APPROVED 2026-10-16 (link live)
 **Apply:** https://dash.partnerstack.com/application?company=descriptinc&group=affiliates
 (linked from descript.com/affiliate as "Apply Now")
 **Commission:** $25 one-time per new subscriber + 15% recurring for 12 months; 30-day
@@ -178,6 +193,27 @@ ElevenLabs-to-Descript switch guide both reach readers who already pay for an au
 are actively moving. Descript-relevant pages currently sit at positions 41-83, so near-term
 signup volume is expected to be under 1/month — deliberately not overstated, because
 PartnerStack verifies the live site and a misrepresentation rejection is not appealable.
+
+**APPROVED 2026-10-16.** `affiliates@descript.com` ("Welcome to the Descript partner program",
+2026-10-16 13:18 UTC, sent on behalf of Descript via PartnerStack/SendGrid) supplied the unique
+referral link `https://get.descript.com/wvafmtthtkp5` — and nothing else. No rate was restated, so
+the recorded $25 + 15%/12-month figures remain program-page terms unconfirmed by the approval
+itself; ask for written confirmation of the current rate when the PartnerStack dashboard is
+reachable. Link verified the same day: a GET follows one redirect to
+`https://www.descript.com/?utm_medium=influencer&utm_source=affiliate&pscd=get.descript.com` with
+`ps_partner_key=MGVjZWY0Nzk5NDI1` present and HTTP 200, so it is live and attributable.
+Wired the same day: the /tools/descript/ Visit CTA carries the tracking URL with
+`rel="sponsored noopener nofollow"` plus the disclosure fineprint, Descript is named in the
+current-programs list on `/legal/affiliate-disclosure.html`, and the revenue target is set to
+approved. The 2026-09-14 network limit did not cancel this application — it was submitted before
+the limit and approved 34 days later — but it still bars NEW marketplace joins, so Browse AI
+stays gated. Editorial score, pros and cons unchanged.
+
+**Confirmation reply sent 2026-10-16 13:33 UTC** (`himalaya`, account `aitools`, one record in
+`[Gmail]/Sent Mail`, none in Trash — no duplicate): thanks, links to the live review CTA and the
+disclosure page, asks for the commission rate in writing since the approval restated none, states
+the audience honestly (the same "early growth / applied on intent" case as the application), and
+asks whether dashboard access is issued separately. Signed AIToolsEssentials.
 
 ### Copy.ai — no working public route as of 2026-09-12
 Its PartnerStack listing shows *Request program* with unfilled placeholders, and

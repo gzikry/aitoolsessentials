@@ -59,8 +59,9 @@ async function resend(env, path, method, payload) {
 
 async function limited(request) {
   const ip = request.headers.get("cf-connecting-ip") || "unknown";
+  const origin = new URL(request.url).origin;
   const cache = caches.default;
-  const key = new Request(`https://subscribe.news.aitoolsessentials.com/rl/${ip}`);
+  const key = new Request(`${origin}/rl/${encodeURIComponent(ip)}`);
   if (await cache.match(key)) return true;
   await cache.put(key, new Response("1", { headers: { "Cache-Control": "max-age=60" } }));
   return false;
@@ -97,7 +98,7 @@ async function startSignup(request, env) {
 
   const exp = Date.now() + CONFIRM_MS;
   const token = await sign(env.CONFIRM_SECRET, email, exp);
-  const link = `${env.CONFIRM_HOST}/confirm?email=${encoded}&exp=${exp}&token=${token}`;
+  const link = `${new URL(request.url).origin}/confirm?email=${encoded}&exp=${exp}&token=${token}`;
   const mailed = await resend(env, "/emails", "POST", {
     from: env.FROM_ADDRESS,
     to: [email],

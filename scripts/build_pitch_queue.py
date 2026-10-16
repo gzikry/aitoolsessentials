@@ -197,14 +197,22 @@ def collect() -> list[dict]:
                 ("category", "category", False),
                 ("journalist_publication", "publication", False),
                 ("query_text", "query_text", True),
-                ("suggested_pitch_template", "angle", True),
+                # `suggested_pitch_template` is refreshed every run by the newest digest (each run
+                # rewrites the route evidence and re-derives the figures inside it), so the newest
+                # value must win outright — NOT the longest. Until 2026-10-15 this field used the
+                # longest-text rule, and the 2026-10-15 build therefore rendered the 2026-10-14
+                # template inside a queue built today: it printed "42 of 77 tools ... snapshots
+                # updated 2026-10-14" while the same file's headline figures read 42 of 78 and
+                # `updated: 2026-10-15`. A stale figure inside a file rebuilt today, produced by the
+                # merge rule rather than by typing — the same defect class as the hardcoded draft
+                # filename and the hardcoded live-row count fixed on earlier runs.
+                ("suggested_pitch_template", "angle", False),
             ):
                 v = (op.get(src) or "").strip()
-                # For the "longest text" fields, `>` kept the OLDER digest's value whenever two
-                # digests carried equal-length text — so a row's `angle` could point at a superseded
-                # draft filename even though the newest digest had already corrected it. Digests are
-                # iterated oldest→newest, so `>=` lets the newest win on a tie while a genuinely
-                # longer older value still wins.
+                # Digests are iterated oldest→newest. For the "longest text" field (`query_text`,
+                # where a later digest may truncate) `>=` lets the newest win on a tie while a
+                # genuinely longer older value still wins. Every other field takes the newest
+                # non-empty value: those are the fields each run rewrites from today's measurement.
                 if v and (longest is False or len(v) >= len(rec[dst])):
                     rec[dst] = v
         digest_urls[day] = with_url
@@ -357,8 +365,42 @@ def _age_of(slug: str) -> int | None:
     return (_VERIFIED_CACHE.get(slug) or {}).get("days_old")
 
 
+def _state_of(slug: str) -> str:
+    """Whether a row named in the DRAFTS prose is still sendable — measured, not typed.
+
+    The prose branded the WSJ blocked-work-accounts row "SENDABLE" as a literal string. On
+    2026-10-16 that row crossed the 10-day line and left the sendable list, so the queue's own
+    headline count said 1 sendable while its prose said 2 — the same defect class as the hardcoded
+    draft filename and the typed section numbers fixed on earlier runs: a label that records a past
+    state and is never re-derived. Returns the state the row is in today.
+    """
+    age = _age_of(slug)
+    if age is None:
+        return "STATE UNMEASURED — verify before quoting this line"
+    if age > STALE_DAYS:
+        return "ROUTE LIVE, ROW NOW COLD — no longer in the sendable count"
+    return "SENDABLE"
+
+
 def _sent_word(n: int | None) -> str:
     return f"{n}d" if n is not None else "age unmeasured"
+
+
+def _clip_angle(text: str, limit: int = 400) -> str:
+    """Trim an angle to `limit` characters WITHOUT cutting a figure or a word in half.
+
+    The row renderer used `q['angle'][:400]`, which cut the sendable row's angle off at
+    "paying monthly rather than annually costs 1.11x to " — a paste-ready queue whose one
+    actionable row ends in half a multiplier. Truncation now backs up to the last sentence
+    boundary inside the limit, and says so when it does.
+    """
+    t = " ".join((text or "").split())
+    if len(t) <= limit:
+        return t
+    cut = max(t.rfind(". ", 0, limit), t.rfind("; ", 0, limit), t.rfind(" — ", 0, limit))
+    if cut < limit * 0.5:
+        cut = t.rfind(" ", 0, limit)
+    return t[:cut + 1].rstrip() + " […] (full angle in the digest entry for this row)"
 
 
 def _newest_drafts() -> str:
@@ -524,14 +566,21 @@ def _route_checked_date() -> str:
 
 DRAFTS = {
     "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks":
-        f"**SENDABLE — draft ready and UNSENT — {_draft_section('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks') or 'in an earlier dated draft file (not named in the newest one)'}. Now "
+        f"**{_state_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks')} — draft ready and UNSENT — {_draft_section('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks') or 'in an earlier dated draft file (not named in the newest one)'}. Now "
         f"{_sent_word(_age_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks'))} old.** "
         "Route: LinkedIn DM to linkedin.com/in/christopher-mims-club/ ("
         f"{_route_evidence('linkedin.com/in/christopher-mims-club/', 'LinkedIn byline page')}; "
         "the request's own body says '(DMs open)'; muckrack.com/christopher-mims 403 and "
-        "wsj.com/news/author/christopher-mims 401 are dead ends, not routes). The last row in this "
-        "queue that is both above the tangential band and route-resolved: the Glenn Hansen "
-        "seats-and-tokens request was the other, and it was sent 2026-10-10. George's lane.",
+        "wsj.com/news/author/christopher-mims 401 are dead ends, not routes — both last "
+        "re-checked 2026-10-15, the day before this build). "
+        + ("It is still inside the sendable count: the only row here that is both above the "
+           "tangential band and route-resolved — the Glenn Hansen seats-and-tokens request was the "
+           "other, and it was sent 2026-10-10. George's lane."
+           if (_age_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks') or 999) <= STALE_DAYS
+           else "It has left the sendable count: the row is now past the 10-day line and this "
+                "queue no longer ranks it as actionable. The route is not dead and the draft "
+                "named above is still paste-ready — George's call is to send it late or record it "
+                "skipped in `pitch-ledger.json`. Silence is the one option that leaves it drifting."),
     "fulltime-employees-shadow-ai-use-and-paying-outofpocket":
         f"**Draft ready and UNSENT — {_draft_section('fulltime-employees-shadow-ai-use-and-paying-outofpocket') or 'carried in earlier dated draft files, not in the newest one'}. Now {_sent_word(_age_of('fulltime-employees-shadow-ai-use-and-paying-outofpocket'))} "
         f"old, and it crossed the 10-day line on 2026-09-28 unpitched. Carried in "
@@ -691,10 +740,10 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
             f"(the 2026-09-29 chrome leak into `published_links`, the 2026-10-01 Google Form read as "
             f"a link route). A row is declared sendable on two facts evidenced separately rather "
             f"than trusted from a digest field: a relevance above the tangential band, and a reply "
-            f"route verified by fetching a page today. Both are named in the row. More than one "
-            f"sendable row at a time has happened exactly once in this monitor's history — the "
-            f"2026-10-10 build, which held two, because a route was resolved off a publication's own "
-            f"site rather than because a find arrived. This build holds {sendable_count}. The live "
+            f"route verified by fetching a page today. Both are named in the row. A build holding "
+            f"more than one sendable row used to be rare — the 2026-10-10 build was the first to "
+            f"hold two, and it did so because a route was resolved off a publication's own site "
+            f"rather than because a new find arrived. This build holds {sendable_count}. The live "
             f"unpitched set is {live_count} rows."
         )
     else:
@@ -873,7 +922,7 @@ def render(queue: list[dict], ledger: dict) -> str:
         if q["dropped_off"]:
             out.append(f"- **⚠ Dropped off:** {q['dropped_off']} — colder than its age suggests")
         if q["angle"]:
-            out.append(f"- **Angle:** {q['angle'][:400]}")
+            out.append(f"- **Angle:** {_clip_angle(q['angle'])}")
         out.append("")
         return out
 

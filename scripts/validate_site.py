@@ -14,6 +14,7 @@ from datetime import date
 from enhance_structured_data import is_hands_on_published, valid_rating_value
 from site_scope import is_public_rel, is_working_rel
 from affiliate_util import sponsored_href_needles
+from newsletter_hold import subscribe_endpoint
 from sponsor_chrome import production_stripe_test_errors
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -802,15 +803,17 @@ def main():
         subscribe_html = subscribe_page.read_text()
         if 'beehiiv.com' in subscribe_html.lower():
             errors.append('Subscribe page must not point at Beehiiv')
-        if 'https://subscribe.news.aitoolsessentials.com/' not in subscribe_html:
-            errors.append('Subscribe page must post to the newsletter worker')
-        if 'name="company_website"' not in subscribe_html:
-            errors.append('Subscribe page missing the honeypot')
-        form = subscribe_html.split('id="keep-cut-subscribe"', 1)[-1].split('</form>', 1)[0]
-        if 'disabled' in form:
-            errors.append('Subscribe form must accept an email address')
-        if 'confirm link' not in form.lower():
-            errors.append('Subscribe form must say a confirm link comes first')
+        endpoint = subscribe_endpoint(json.loads((ROOT / 'data' / 'newsletter.json').read_text()).get('subscribe_endpoint', ''))
+        if endpoint:
+            if f'action="{endpoint}"' not in subscribe_html:
+                errors.append('Subscribe page action does not match subscribe_endpoint')
+        else:
+            if 'signups open soon' not in subscribe_html.lower():
+                errors.append('Subscribe page must say signups open soon')
+            if 'mailto:aitoolsessentials@gmail.com' not in subscribe_html:
+                errors.append('Subscribe page must offer aitoolsessentials@gmail.com while signup is closed')
+            if 'action="http' in subscribe_html or 'subscribe.news.aitoolsessentials.com' in subscribe_html:
+                errors.append('Subscribe page must not post before subscribe_endpoint is a workers.dev URL')
         if '1090 West Foothill, Claremont, CA 91711' not in subscribe_html:
             errors.append('Subscribe page missing the postal address')
         if 'id="digest-form"' in subscribe_html or 'formsubmit.co/ajax' in subscribe_html:

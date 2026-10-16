@@ -1,11 +1,13 @@
 # Affiliate Application Outreach — AIToolsEssentials
 
 Priority queue (still open): Browse AI, Grammarly, Jasper, Gemini (Google).
-Already approved and wired: ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack).
+Already approved and wired: ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack),
+Descript (PartnerStack, approved 2026-10-16).
 Networks to join first: Impact.com, CJ Affiliate, PartnerStack (covers most SaaS programs).
 **Network status 2026-09-14: Impact rejected (2026-08-25); PartnerStack DECLINED (2026-09-14)** —
 our Network Profile was not accepted and access to *new* Marketplace programs is limited. Existing
-partnerships are unaffected (Gamma's link stays live, Descript's application is not cancelled).
+partnerships are unaffected (Gamma's and Descript's links stay live — Descript's pre-limit
+application was approved 2026-10-16).
 Every remaining marketplace-hosted target — Browse AI, Grammarly Business, Copy.ai — is now gated
 on the network profile, not on the vendor. Reapply is dashboard-only and George-only. Direct
 programs are the path that still works; do not open new network applications until traffic grows.
@@ -13,7 +15,7 @@ programs are the path that still works; do not open new network applications unt
 ## Standard application blurb
 
 > AIToolsEssentials (aitoolsessentials.com) is an evidence-first AI tools directory:
-> 76 independently reviewed tools with verified official pricing, dated benchmark
+> 78 independently reviewed tools with verified official pricing, dated benchmark
 > evidence, and buyer guides for specific audiences (agencies, freelancers,
 > developers). We publish honest cons alongside pros — our reviews carry trust
 > because we show tradeoffs.

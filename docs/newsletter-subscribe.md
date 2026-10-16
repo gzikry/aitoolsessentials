@@ -1,10 +1,8 @@
 # How to collect and send Keep/Cut Weekly
 
-The site on GitHub Pages cannot hide an API key. `/subscribe/` posts the form to a Cloudflare Worker at `https://subscribe.news.aitoolsessentials.com/`. The Worker calls Resend. `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, and `CONFIRM_SECRET` are Wrangler secrets. They do not go in the repo.
+The site on GitHub Pages cannot hide an API key. DNS for `aitoolsessentials.com` is at Porkbun, so a Worker custom domain on `subscribe.news.aitoolsessentials.com` is not available. The form action is the single field `subscribe_endpoint` in `data/newsletter.json`. Leave it as `""` and `/subscribe/` says signups open soon and links `aitoolsessentials@gmail.com`. It does not post.
 
-A signup creates the contact with `unsubscribed` set to true, adds that contact to the segment, and emails an HMAC confirm link that expires in 48 hours. The confirm request sets `unsubscribed` to false. Resend broadcasts skip contacts that are still unsubscribed.
-
-The honeypot field is `company_website`. A value in that field gets the same check-your-email page and does not call Resend. The Worker also keeps one signup per IP per minute in the Cache API.
+A non-empty value is used only when it is an `https` URL on `*.workers.dev`. That is the URL Wrangler assigns at deploy. Any other value, including the Porkbun hostname, is treated as closed.
 
 ## Deploy the Worker
 
@@ -19,9 +17,13 @@ npx wrangler secret put CONFIRM_SECRET
 npx wrangler deploy
 ```
 
-Attach the Worker to `subscribe.news.aitoolsessentials.com`. Cloudflare will offer the DNS record for that hostname. Use that record. Do not invent one.
+`wrangler deploy` prints a URL like `https://aitools-newsletter-subscribe.<account>.workers.dev`. Copy that exact URL into `subscribe_endpoint`, then commit the JSON. The subscribe page form posts there. Confirm links use the same origin, so they keep working on workers.dev.
 
-Until those secrets exist, the form still posts, and the Worker answers that signup is not ready.
+`RESEND_API_KEY`, `RESEND_SEGMENT_ID`, and `CONFIRM_SECRET` are Wrangler secrets. They do not go in the repo.
+
+A signup creates the contact with `unsubscribed` set to true, adds that contact to the segment, and emails an HMAC confirm link that expires in 48 hours. The confirm request sets `unsubscribed` to false. Resend broadcasts skip contacts that are still unsubscribed.
+
+The honeypot field is `company_website`. A value in that field gets the same check-your-email page and does not call Resend. The Worker also keeps one signup per IP per minute in the Cache API.
 
 ## Send one issue
 

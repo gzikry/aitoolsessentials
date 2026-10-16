@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -10,12 +11,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from newsletter_hold import (
     POSTAL_ADDRESS,
     SENDING_DOMAIN,
-    SUBSCRIBE_ENDPOINT,
     Held,
     compliance_footer,
     hold,
+    subscribe_endpoint,
     subscribe_form,
 )
+
+REPO = Path(__file__).resolve().parent.parent
+WORKERS_DEV = "https://aitools-newsletter-subscribe.example.workers.dev/"
 
 
 def main() -> None:
@@ -49,24 +53,42 @@ def main() -> None:
         errors.append("compliance footer missing the address or unsubscribe link")
     if SENDING_DOMAIN != "news.aitoolsessentials.com":
         errors.append("sending domain is not news.aitoolsessentials.com")
-    form = subscribe_form()
-    if SUBSCRIBE_ENDPOINT not in form or 'name="company_website"' not in form:
-        errors.append("subscribe form is missing the worker or the honeypot")
-    if "disabled" in form.split("</form>", 1)[0]:
-        errors.append("subscribe form still disables the email field")
-    if "confirm link" not in form.casefold():
-        errors.append("subscribe form does not describe the confirm link")
-    if POSTAL_ADDRESS not in form or "Unsubscribe" not in form:
+    closed = subscribe_form("")
+    if "Signups open soon." not in closed or "aitoolsessentials@gmail.com" not in closed:
+        errors.append("closed subscribe form missing the soon message")
+    if "<form" in closed or "subscribe.news" in closed:
+        errors.append("closed subscribe form still posts")
+    if POSTAL_ADDRESS not in closed or "Unsubscribe" not in closed:
         errors.append("subscribe form missing the CAN-SPAM footer")
-    if SUBSCRIBE_ENDPOINT != "https://subscribe.news.aitoolsessentials.com/":
-        errors.append("subscribe endpoint is not the newsletter host")
+    dead = subscribe_form("https://subscribe.news.aitoolsessentials.com/")
+    if dead != closed:
+        errors.append("the Porkbun host was accepted as a signup action")
+    opened = subscribe_form(WORKERS_DEV)
+    if f'action="{WORKERS_DEV}"' not in opened:
+        errors.append("open form action is not the workers.dev config value")
+    if 'name="company_website"' not in opened or "confirm link" not in opened.casefold():
+        errors.append("open form missing the honeypot or the confirm copy")
+    if subscribe_endpoint(WORKERS_DEV) != WORKERS_DEV:
+        errors.append("workers.dev URL was rejected")
+    cfg = json.loads((REPO / "data" / "newsletter.json").read_text(encoding="utf-8"))
+    if cfg.get("subscribe_endpoint", "") != "":
+        errors.append("committed subscribe_endpoint is not empty")
+    if subscribe_endpoint(cfg.get("subscribe_endpoint")) != "":
+        errors.append("committed endpoint parsed as open")
+    page = (REPO / "subscribe" / "index.html").read_text(encoding="utf-8")
+    if "Signups open soon." not in page or "mailto:aitoolsessentials@gmail.com" not in page:
+        errors.append("subscribe page is missing the soon message")
+    if "subscribe.news.aitoolsessentials.com" in page or 'action="http' in page:
+        errors.append("subscribe page posts before the endpoint is configured")
 
     source = Path(__file__).resolve().with_name("newsletter_hold.py").read_text().lower()
     for word in ("beehiiv", "formsubmit", "requests", "urllib", "smtplib"):
         if word in source:
             errors.append("newsletter_hold.py contains " + word)
-    chrome = Path(__file__).resolve().with_name("sponsor_chrome.py").read_text()
-    if "newsletter_hold" in chrome or "sponsor_chrome" in source:
+    chrome_path = Path(__file__).resolve().with_name("sponsor_chrome.py")
+    if chrome_path.exists() and (
+        "newsletter_hold" in chrome_path.read_text(encoding="utf-8") or "sponsor_chrome" in source
+    ):
         errors.append("sponsor_chrome and newsletter_hold import each other")
 
     if errors:

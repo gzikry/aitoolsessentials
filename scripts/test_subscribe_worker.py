@@ -15,6 +15,8 @@ def main() -> None:
     toml = (REPO / "workers" / "newsletter-subscribe" / "wrangler.toml").read_text(encoding="utf-8")
     if "re_" in worker or "re_" in toml or "RESEND_API_KEY =" in toml:
         errors.append("worker files contain a secret")
+    if "subscribe.news" in worker or "CONFIRM_HOST" in worker:
+        errors.append("worker still points at subscribe.news")
     if "unsubscribed: true" not in worker or "company_website" not in worker:
         errors.append("worker is missing double opt-in or the honeypot")
     code = """

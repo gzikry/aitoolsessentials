@@ -107,10 +107,13 @@ git push -u origin main
 **Network status 2026-09-14 — both networks closed to us:**
 Impact.com rejected 2026-08-25; PartnerStack declined 2026-09-14 (Marketplace access limited,
 "Network Profile is not a great fit"). Existing PartnerStack partnerships survive: Gamma's
-tracking link is live and Descript's application is still pending. No new marketplace joins.
+tracking link is live and Descript's pre-limit application was approved 2026-10-16 with its link
+live. No new marketplace joins.
 
-**Approved and wired (this is the real list):** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma.
-**Pending:** Descript (applied 2026-09-12).
+**Approved and wired (this is the real list):** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma,
+Descript (2026-10-16).
+**Pending:** none — no program application is outstanding; Browse AI remains gated by the network
+limit, not pending review.
 **Closed / blocked:** Canva (applications closed), Copy.ai (listing dead + marketplace fallback
 gone), Notion (applications closed), Grammarly + Jasper (Impact-dependent), Zapier / Midjourney
 (no open public program), GitHub Copilot / Perplexity / Claude (no publisher commission program).

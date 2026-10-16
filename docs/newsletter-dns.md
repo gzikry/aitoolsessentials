@@ -1,6 +1,6 @@
 # DNS for news.aitoolsessentials.com
 
-Keep/Cut Weekly sends from `news.aitoolsessentials.com` through Resend. The domain is verified. Sending stays off until `NEWSLETTER_SEND_ENABLED` is true, the issue has an approval file, and `scripts/send_keep_cut.py` has `RESEND_API_KEY` plus `RESEND_SEGMENT_ID`. The subscribe Worker is in `docs/newsletter-subscribe.md`.
+Keep/Cut Weekly sends from `news.aitoolsessentials.com` through Resend. The sending domain is verified. Sending stays off until `NEWSLETTER_SEND_ENABLED` is true, the issue has an approval file, and `scripts/send_keep_cut.py` has `RESEND_API_KEY` plus `RESEND_SEGMENT_ID`. Signup hosting is separate and is described in `docs/newsletter-subscribe.md`.
 
 The previous list had no subscribers, so there is no export.
 
@@ -16,4 +16,4 @@ Resend supplies the live record values. The names below are placeholders. Do not
 
 The From address is `weekly@news.aitoolsessentials.com`.
 
-Every draft carries the postal address `1090 West Foothill, Claremont, CA 91711` and an unsubscribe link. `/subscribe/` posts to the Worker, which sends the confirm message. A broadcast replaces the mailto unsubscribe with `{{{RESEND_UNSUBSCRIBE_URL}}}`.
+Every draft carries the postal address `1090 West Foothill, Claremont, CA 91711` and an unsubscribe link. `/subscribe/` stays on the soon message until `subscribe_endpoint` is the workers.dev URL from Wrangler. A broadcast replaces the mailto unsubscribe with `{{{RESEND_UNSUBSCRIBE_URL}}}`.

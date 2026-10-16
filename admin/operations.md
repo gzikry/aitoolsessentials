@@ -59,14 +59,14 @@ python3 scripts/validate_site.py
 **High Priority:** 16 tools
 
 **Apply for:**
-1. Descript (applied 2026-09-12 — pending)
+1. Descript (approved 2026-10-16 — link live)
 2. Jasper (AI writing — blocked on Impact)
 3. Copy.ai (AI copywriting — listing not open)
 4. Midjourney (AI art)
 5. Grammarly (AI writing — blocked on Impact)
 6. etc.
 
-**Approved / live:** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack unique link live 2026-09-13). **Networks: PartnerStack DECLINED 2026-09-14** — marketplace access limited ("profile is not a great fit"); existing partnerships unaffected, no new marketplace joins, reapply is dashboard-only and George-only. Impact rejected 2026-08-25.
+**Approved / live:** ElevenLabs, Make, Nous / Hermes, Sonaopus, Gamma (PartnerStack unique link live 2026-09-13), Descript (PartnerStack unique link live 2026-10-16). **Networks: PartnerStack DECLINED 2026-09-14** — marketplace access limited ("profile is not a great fit"); existing partnerships unaffected, no new marketplace joins, reapply is dashboard-only and George-only. Impact rejected 2026-08-25.
 
 ### Sponsorship Placements
 **File:** `data/sponsor_inventory.json`

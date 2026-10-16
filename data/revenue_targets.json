@@ -27,9 +27,9 @@
       "AI tool buyers",
       "workflow-specific buyers"
     ],
-    "status": "not_started",
-    "next_action": "Application submitted 2026-09-12 and still pending review. The 2026-09-14 PartnerStack network limit does not cancel existing partnerships, so leave the application alone and do not resubmit. When approved: add the tracking URL as affiliate_url, run scripts/wire_affiliate_links.py, then log it.",
-    "notes": "Do not invent affiliate URLs. Use the official URL until approved. Pending, not cancelled - the network limit affects new marketplace joins only."
+    "status": "approved",
+    "next_action": "Approved 2026-10-16. Tracking link https://get.descript.com/wvafmtthtkp5 is wired on the /tools/descript/ Visit CTA (rel=\"sponsored noopener nofollow\" + disclosure fineprint) and Descript is named on /legal/affiliate-disclosure.html. Re-verify the link resolves on each sweep; re-check the recorded $25 + 15%/12-month terms against the PartnerStack dashboard when George is signed in (the approval email supplied the link only, no rate).",
+    "notes": "Approved 2026-10-16 via PartnerStack (application submitted 2026-09-12). Do not invent affiliate URLs - the wired URL is the vendor-issued one. The 2026-09-14 PartnerStack marketplace limit bars NEW marketplace joins only; it did not cancel this pre-existing application. Editorial score and pros/cons unchanged by the approval."
   },
   {
     "tool_slug": "make",
