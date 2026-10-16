@@ -8,29 +8,38 @@ from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
 from typing import Literal
+from urllib.parse import urlsplit
 
 from affiliate_util import sponsored_href_needles
 from site_scope import is_public_rel
 
-__all__ = ["write_page", "stamp", "stamp_site"]
+__all__ = ["production_stripe_test_errors", "stamp", "stamp_site", "write_page"]
 
 _ENROLLMENT_FILE = Path("data") / "sponsor_enrollment.json"
+_PREVIEW_FILE = Path("data") / "sponsor_payment_preview.json"
 _SPONSOR_MAIL = "aitoolsessentials@gmail.com"
 _PAYMENT_FALLBACK = "SPONSOR_PAYMENT_URL"
+_PREVIEW_FLAG = "SPONSOR_PAYMENT_PREVIEW"
+_PRODUCTION_FLAG = "PRODUCTION_BUILD"
+_ALLOW_TEST_FLAG = "ALLOW_STRIPE_TEST_LINKS"
+_ON = frozenset({"1", "true", "yes", "on"})
+_STRIPE_TEST_HOST = "buy.stripe.com"
 
 
 @dataclass(frozen=True, slots=True)
 class _Tier:
+    key: str
     label: str
     price: str
     env_name: str
 
 
 _TIERS = (
-    _Tier("Newsletter line, 1 issue", "$50", "SPONSOR_PAYMENT_URL_ISSUE"),
-    _Tier("Site bar, 1 month", "$150", "SPONSOR_PAYMENT_URL_BAR"),
-    _Tier("Bundle, 1 month", "$200", "SPONSOR_PAYMENT_URL_BUNDLE"),
+    _Tier("issue", "Newsletter line, 1 issue", "$50", "SPONSOR_PAYMENT_URL_ISSUE"),
+    _Tier("bar", "Site bar, 1 month", "$150", "SPONSOR_PAYMENT_URL_BAR"),
+    _Tier("bundle", "Bundle, 1 month", "$200", "SPONSOR_PAYMENT_URL_BUNDLE"),
 )
+_PREVIEW_KEYS = frozenset(tier.key for tier in _TIERS)
 _LABEL = "Sponsored"
 _HOUSE_HREF = "/sponsor/"
 _HOUSE_REL = "nofollow"
@@ -258,7 +267,11 @@ def _runtime(root: Path, env: Mapping[str, str]) -> _Runtime:
         raise _ConfigError("enrollment is required")
     needles = sponsored_href_needles(root)
     enrollment = _enrollment(data["enrollment"], needles)
-    return _Runtime(enrollment=enrollment, tiers=_tier_payments(env, needles))
+    payments = _with_preview(root, env)
+    return _Runtime(
+        enrollment=enrollment,
+        tiers=_tier_payments(payments, needles, _build(payments)),
+    )
 
 
 def _reject_unknown(data: dict, allowed: frozenset[str]) -> None:
@@ -283,7 +296,69 @@ def _enrollment(raw: object, needles: tuple[str, ...]) -> _Enrollment | None:
     return _Enrollment(name=name, pitch=pitch, href=href, logo=logo)
 
 
-def _https_payment(text: str, name: str, needles: tuple[str, ...]) -> _ExternalPay:
+def _flag(env: Mapping[str, str], name: str) -> bool:
+    raw = env.get(name, "")
+    if not isinstance(raw, str):
+        return False
+    return raw.strip().casefold() in _ON
+
+
+def _is_production(env: Mapping[str, str]) -> bool:
+    # GitHub Pages serves committed HTML. A push to main is the live build.
+    if _flag(env, _PRODUCTION_FLAG):
+        return True
+    ref = env.get("GITHUB_REF", "")
+    return isinstance(ref, str) and ref.strip() == "refs/heads/main"
+
+
+@dataclass(frozen=True, slots=True)
+class _Build:
+    production: bool
+    allow_stripe_test: bool
+
+
+def _build(env: Mapping[str, str]) -> _Build:
+    return _Build(
+        production=_is_production(env),
+        allow_stripe_test=_flag(env, _ALLOW_TEST_FLAG),
+    )
+
+
+def _stripe_test_url(text: str) -> bool:
+    parsed = urlsplit(text)
+    return (
+        parsed.scheme == "https"
+        and parsed.netloc == _STRIPE_TEST_HOST
+        and parsed.path.startswith("/test_")
+    )
+
+
+def _with_preview(root: Path, env: Mapping[str, str]) -> dict[str, str]:
+    merged = {key: value for key, value in env.items() if isinstance(value, str)}
+    if not _flag(env, _PREVIEW_FLAG):
+        return merged
+    path = root / _PREVIEW_FILE
+    if not path.is_file():
+        raise _ConfigError("sponsor payment preview file is missing")
+    try:
+        data = json.loads(path.read_text())
+    except json.JSONDecodeError as exc:
+        raise _ConfigError("sponsor payment preview file is not JSON") from exc
+    if not isinstance(data, dict):
+        raise _ConfigError("sponsor payment preview file must be an object")
+    _reject_unknown(data, _PREVIEW_KEYS)
+    for tier in _TIERS:
+        current = merged.get(tier.env_name, "")
+        if isinstance(current, str) and current.strip():
+            continue
+        raw = data.get(tier.key, "")
+        if not isinstance(raw, str) or not raw.strip():
+            raise _ConfigError("preview " + tier.key + " must be an https URL")
+        merged[tier.env_name] = raw.strip()
+    return merged
+
+
+def _https_payment(text: str, name: str, needles: tuple[str, ...], build: _Build) -> _ExternalPay:
     # A visible "${...}" fails site validation, and the variable name is not a URL.
     if name in text or "${" in text:
         raise _ConfigError(name + " is not a finished https URL")
@@ -294,11 +369,13 @@ def _https_payment(text: str, name: str, needles: tuple[str, ...]) -> _ExternalP
         raise _ConfigError(name + " must be https")
     if _needle_hit(text, needles):
         raise _ConfigError(name + " hits an affiliate needle")
+    if _stripe_test_url(text) and build.production and not build.allow_stripe_test:
+        raise _ConfigError(name + " is a Stripe test link")
     return _ExternalPay(text)
 
 
 def _optional_https(
-    env: Mapping[str, str], name: str, needles: tuple[str, ...]
+    env: Mapping[str, str], name: str, needles: tuple[str, ...], build: _Build
 ) -> _ExternalPay | None:
     if name not in env:
         return None
@@ -310,16 +387,16 @@ def _optional_https(
     text = raw.strip()
     if text == "":
         return None
-    return _https_payment(text, name, needles)
+    return _https_payment(text, name, needles, build)
 
 
 def _tier_payments(
-    env: Mapping[str, str], needles: tuple[str, ...]
+    env: Mapping[str, str], needles: tuple[str, ...], build: _Build
 ) -> tuple[tuple[_Tier, _Payment], ...]:
-    fallback = _optional_https(env, _PAYMENT_FALLBACK, needles)
+    fallback = _optional_https(env, _PAYMENT_FALLBACK, needles, build)
     rows: list[tuple[_Tier, _Payment]] = []
     for tier in _TIERS:
-        specific = _optional_https(env, tier.env_name, needles)
+        specific = _optional_https(env, tier.env_name, needles, build)
         if specific is not None:
             payment: _Payment = specific
         elif fallback is not None:
@@ -328,6 +405,22 @@ def _tier_payments(
             payment = _Mailto(_SPONSOR_MAIL)
         rows.append((tier, payment))
     return tuple(rows)
+
+
+def production_stripe_test_errors(
+    root: Path, env: Mapping[str, str] | None = None
+) -> list[str]:
+    source = os.environ if env is None else env
+    if not _is_production(source) or _flag(source, _ALLOW_TEST_FLAG):
+        return []
+    found: list[str] = []
+    for path in sorted(root.rglob("*.html")):
+        rel = path.relative_to(root)
+        if not is_public_rel(rel):
+            continue
+        if "https://buy.stripe.com/test_" in path.read_text(errors="replace"):
+            found.append(rel.as_posix() + " has a Stripe test payment link")
+    return found
 
 
 def _plain(label: str, value: object, *, limit: int) -> str:

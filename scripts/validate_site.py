@@ -14,6 +14,7 @@ from datetime import date
 from enhance_structured_data import is_hands_on_published, valid_rating_value
 from site_scope import is_public_rel, is_working_rel
 from affiliate_util import sponsored_href_needles
+from sponsor_chrome import production_stripe_test_errors
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -1155,6 +1156,8 @@ def main():
             errors.append(f'Sitemap still lists retired paths: {retired_hits}')
     else:
         errors.append('Missing sitemap.xml')
+
+    errors.extend(production_stripe_test_errors(ROOT))
 
     if errors:
         print('Validation failed')

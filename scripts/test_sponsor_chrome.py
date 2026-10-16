@@ -9,7 +9,7 @@ from tempfile import TemporaryDirectory
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from sponsor_chrome import stamp, stamp_site, write_page
+from sponsor_chrome import production_stripe_test_errors, stamp, stamp_site, write_page
 
 HOUSE = (
     '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a>'
@@ -403,6 +403,77 @@ def test_payment_url() -> None:
                 raise AssertionError("bad payment URL was written")
 
 
+ISSUE_URL = "https://buy.stripe.com/test_4gM3cu3EdfFr4xN02r0x202"
+BAR_URL = "https://buy.stripe.com/test_3cIeVc8Yx64R7JZcPd0x200"
+BUNDLE_URL = "https://buy.stripe.com/test_eVq5kCgqZeBnaWb02r0x201"
+
+
+def _stripe_button(url: str) -> str:
+    return (
+        '<a class="button button-blue" href="'
+        + url
+        + '" target="_blank" rel="external noopener nofollow">Sponsor us</a>'
+    )
+
+
+def test_stripe_preview_and_production_gate() -> None:
+    repo = Path(__file__).resolve().parents[1]
+    preview = json.loads((repo / "data" / "sponsor_payment_preview.json").read_text())
+    if preview != {"issue": ISSUE_URL, "bar": BAR_URL, "bundle": BUNDLE_URL}:
+        raise AssertionError("preview config is not the three Stripe test links")
+    with TemporaryDirectory() as raw:
+        root = Path(raw)
+        _write(root, {"enrollment": None})
+        _raises(lambda: write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"}))
+        (root / "data" / "sponsor_payment_preview.json").write_text(json.dumps(preview))
+        write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"})
+        html = (root / "sponsor" / "index.html").read_text()
+        _has(html, _stripe_button(ISSUE_URL))
+        _has(html, _stripe_button(BAR_URL))
+        _has(html, _stripe_button(BUNDLE_URL))
+        _lacks(html, MAILTO_BUTTON)
+        _has(html, QUESTIONS)
+        write_page(root, {})
+        plain = (root / "sponsor" / "index.html").read_text()
+        _has(plain, MAILTO_BUTTON)
+        _lacks(plain, "buy.stripe.com")
+        _raises(
+            lambda: write_page(
+                root,
+                {"SPONSOR_PAYMENT_PREVIEW": "1", "PRODUCTION_BUILD": "1"},
+            )
+        )
+        blocked = (root / "sponsor" / "index.html").read_text()
+        _has(blocked, MAILTO_BUTTON)
+        _lacks(blocked, "buy.stripe.com")
+        if production_stripe_test_errors(root, {"PRODUCTION_BUILD": "1"}):
+            raise AssertionError("mailto page was reported as a Stripe test link")
+        write_page(
+            root,
+            {
+                "SPONSOR_PAYMENT_PREVIEW": "1",
+                "PRODUCTION_BUILD": "1",
+                "ALLOW_STRIPE_TEST_LINKS": "1",
+            },
+        )
+        allowed = (root / "sponsor" / "index.html").read_text()
+        _has(allowed, _stripe_button(ISSUE_URL))
+        _has(allowed, _stripe_button(BAR_URL))
+        _has(allowed, _stripe_button(BUNDLE_URL))
+        hit = production_stripe_test_errors(root, {"PRODUCTION_BUILD": "1"})
+        if hit != ["sponsor/index.html has a Stripe test payment link"]:
+            raise AssertionError("production scan reported " + str(hit))
+        if production_stripe_test_errors(
+            root, {"PRODUCTION_BUILD": "1", "ALLOW_STRIPE_TEST_LINKS": "true"}
+        ):
+            raise AssertionError("allow flag still reported a Stripe test link")
+        main_ref = production_stripe_test_errors(root, {"GITHUB_REF": "refs/heads/main"})
+        if main_ref != ["sponsor/index.html has a Stripe test payment link"]:
+            raise AssertionError("main ref scan reported " + str(main_ref))
+        if production_stripe_test_errors(root, {"GITHUB_REF": "refs/pull/29/merge"}):
+            raise AssertionError("a pull request ref was treated as production")
+
+
 def test_stamp_site_walk() -> None:
     with TemporaryDirectory() as raw:
         root = Path(raw)
@@ -463,6 +534,7 @@ def main() -> None:
         test_newsletter_colophon,
         test_rejected_enrollment_values,
         test_payment_url,
+        test_stripe_preview_and_production_gate,
         test_stamp_site_walk,
     )
     errors: list[str] = []
