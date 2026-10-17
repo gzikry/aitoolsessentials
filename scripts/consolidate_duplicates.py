@@ -234,9 +234,12 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
-# "has moved" ends a title or heading segment only at a pipe, a period,
-# an exclamation mark, a question mark, or the end of the text.
-_MOVED_ENDS = re.compile(r"\bhas moved\s*(?:$|\||[.!?])", re.I)
+# "has moved" is a stub when only punctuation or spaces follow it, up to the
+# end of the text or a separator (| - – — : ·). A word after the phrase is copy.
+_MOVED_ENDS = re.compile(
+    r"\bhas moved(?:\s*[,.!?…:;)\]]*\s*)*(?:$|[|\-–—:·])",
+    re.I,
+)
 _THIS_MOVED = re.compile(r"\bthis (?:page|guide|article) has moved\b", re.I)
 _SHORT_COPY_LIMIT = 180
 _HEADING_TAGS = frozenset({"h1", "h2", "h3", "h4", "h5", "h6"})
@@ -333,7 +336,7 @@ def _norm_copy(text: str) -> str:
 
 
 def _moved_ends_segment(text: str) -> bool:
-    """True when 'has moved' ends a segment at | . ! ? or the end of the text."""
+    """True when only punctuation or spaces follow 'has moved', until the end or a separator."""
     plain = _norm_copy(text)
     return bool(plain) and _MOVED_ENDS.search(plain) is not None
 

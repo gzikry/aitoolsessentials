@@ -6,6 +6,7 @@ import base64
 import json
 import os
 import shutil
+import signal
 import socket
 import struct
 import subprocess
@@ -216,6 +217,7 @@ def _start_chrome(profile: str) -> tuple[subprocess.Popen, int]:
         stdout=subprocess.DEVNULL,
         stderr=subprocess.PIPE,
         text=True,
+        start_new_session=True,
     )
     found: dict[str, int] = {}
     lines: list[str] = []
@@ -235,7 +237,11 @@ def _start_chrome(profile: str) -> tuple[subprocess.Popen, int]:
     reader.start()
     reader.join(20)
     if "port" not in found:
-        proc.kill()
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            proc.kill()
+        proc.wait(timeout=5)
         raise SystemExit("Chrome did not open a debugger port:\n" + "".join(lines))
     return proc, found["port"]
 
@@ -293,14 +299,35 @@ def _measure(ws: _Ws, width: int) -> dict:
 _PORT = 0
 
 
+def _stop_chrome(proc: subprocess.Popen) -> None:
+    if proc.poll() is not None:
+        return
+    try:
+        os.killpg(proc.pid, signal.SIGKILL)
+    except ProcessLookupError:
+        proc.kill()
+    proc.wait(timeout=5)
+
+
+def _remove_profile(profile: str) -> None:
+    for _ in range(5):
+        shutil.rmtree(profile, ignore_errors=True)
+        if not os.path.exists(profile):
+            return
+        time.sleep(0.1)
+    shutil.rmtree(profile)
+
+
 def main() -> None:
     global _PORT
     errors: list[str] = []
     httpd, _PORT = _serve()
     profile = tempfile.mkdtemp(prefix="home-header-")
-    proc, debug_port = _start_chrome(profile)
-    ws = _Ws(_page_socket(debug_port))
+    proc = None
+    ws = None
     try:
+        proc, debug_port = _start_chrome(profile)
+        ws = _Ws(_page_socket(debug_port))
         ws.call("Page.enable")
         for width in WIDTHS:
             layout = _measure(ws, width)
@@ -326,10 +353,23 @@ def main() -> None:
             if width >= 400 and not layout["oneRow"]:
                 errors.append(f"{width}px homepage header wrapped onto a second row")
     finally:
-        ws.close()
-        proc.kill()
-        proc.wait(timeout=5)
-        httpd.shutdown()
+        if ws is not None:
+            try:
+                ws.close()
+            except Exception:
+                pass
+        if proc is not None:
+            try:
+                _stop_chrome(proc)
+            except Exception:
+                pass
+        try:
+            httpd.shutdown()
+        except Exception:
+            pass
+        _remove_profile(profile)
+    if os.path.exists(profile):
+        errors.append(f"Chrome profile was left at {profile}")
     if errors:
         raise SystemExit("\n".join(errors))
 

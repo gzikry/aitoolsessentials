@@ -25,13 +25,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install Chrome
+      - name: Use the preinstalled Chrome
         run: |
-          if ! command -v google-chrome >/dev/null 2>&1 && ! command -v google-chrome-stable >/dev/null 2>&1; then
-            wget -q -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-            sudo apt-get update
-            sudo apt-get install -y /tmp/chrome.deb
+          bin=""
+          for name in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$name" >/dev/null 2>&1; then
+              bin="$(command -v "$name")"
+              break
+            fi
+          done
+          if [ -z "$bin" ]; then
+            echo "Chrome is not installed on this runner."
+            exit 1
           fi
+          echo "Using $bin"
+          "$bin" --version
       - name: Compile generators
         run: python3 -m py_compile scripts/*.py
       - name: Generate site (first pass)
