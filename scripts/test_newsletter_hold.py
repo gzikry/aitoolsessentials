@@ -20,6 +20,7 @@ from newsletter_hold import (
 
 REPO = Path(__file__).resolve().parent.parent
 WORKERS_DEV = "https://aitools-newsletter-subscribe.example.workers.dev/"
+LIVE_ENDPOINT = "https://aitools-newsletter-subscribe.aitoolsessentials.workers.dev"
 
 
 def main() -> None:
@@ -71,15 +72,29 @@ def main() -> None:
     if subscribe_endpoint(WORKERS_DEV) != WORKERS_DEV:
         errors.append("workers.dev URL was rejected")
     cfg = json.loads((REPO / "data" / "newsletter.json").read_text(encoding="utf-8"))
-    if cfg.get("subscribe_endpoint", "") != "":
-        errors.append("committed subscribe_endpoint is not empty")
-    if subscribe_endpoint(cfg.get("subscribe_endpoint")) != "":
-        errors.append("committed endpoint parsed as open")
+    if cfg.get("subscribe_endpoint") != LIVE_ENDPOINT:
+        errors.append("committed subscribe_endpoint is not the live workers.dev URL")
+    if subscribe_endpoint(cfg.get("subscribe_endpoint")) != LIVE_ENDPOINT:
+        errors.append("committed endpoint did not parse as the live workers.dev URL")
+    if cfg.get("send_enabled") is not False:
+        errors.append("send_enabled must stay false")
     page = (REPO / "subscribe" / "index.html").read_text(encoding="utf-8")
-    if "Signups open soon." not in page or "mailto:aitoolsessentials@gmail.com" not in page:
-        errors.append("subscribe page is missing the soon message")
-    if "subscribe.news.aitoolsessentials.com" in page or 'action="http' in page:
-        errors.append("subscribe page posts before the endpoint is configured")
+    if f'action="{LIVE_ENDPOINT}"' not in page:
+        errors.append("subscribe page action is not the live workers.dev URL")
+    if "Signups open soon." in page:
+        errors.append("subscribe page still says signups open soon")
+    if 'name="company_website"' not in page or "confirm link" not in page.casefold():
+        errors.append("subscribe page is missing the honeypot or the confirm copy")
+    if "subscribe.news.aitoolsessentials.com" in page:
+        errors.append("subscribe page posts to the Porkbun host")
+    home = (REPO / "index.html").read_text(encoding="utf-8")
+    panel = home[home.find("AIT HOMEPAGE NEWSLETTER START"): home.find("AIT HOMEPAGE NEWSLETTER END")]
+    if f'action="{LIVE_ENDPOINT}"' not in panel:
+        errors.append("homepage subscribe panel action is not the live workers.dev URL")
+    if "Signups open soon." in panel:
+        errors.append("homepage subscribe panel still says signups open soon")
+    if panel.count('href="/subscribe/">Subscribe free') != 1:
+        errors.append("homepage subscribe panel must keep one Subscribe free link")
 
     source = Path(__file__).resolve().with_name("newsletter_hold.py").read_text().lower()
     for word in ("beehiiv", "formsubmit", "requests", "urllib", "smtplib"):
