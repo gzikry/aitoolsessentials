@@ -5,6 +5,7 @@ from __future__ import annotations
 import os
 import re
 import sys
+from html.parser import HTMLParser
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -233,6 +234,23 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
+# "has moved" is a stub when only punctuation or spaces follow it, up to the
+# end of the text or a separator (| - – — : ·). A word after the phrase is copy.
+_MOVED_ENDS = re.compile(
+    r"\bhas moved(?:\s*[,.!?…:;)\]]*\s*)*(?:$|[|\-–—:·])",
+    re.I,
+)
+_THIS_MOVED = re.compile(r"\bthis (?:page|guide|article) has moved\b", re.I)
+_SHORT_COPY_LIMIT = 180
+_HEADING_TAGS = frozenset({"h1", "h2", "h3", "h4", "h5", "h6"})
+_BLOCK_TAGS = _HEADING_TAGS | frozenset({
+    "p", "div", "li", "section", "article", "main", "blockquote",
+    "td", "th", "figcaption", "dd", "dt", "aside", "header", "footer", "address",
+})
+_VOID_TAGS = frozenset({
+    "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
+    "meta", "source", "track", "wbr",
+})
 _LINK = re.compile(r"""href=["']([^"']+)["']""", re.I)
 _MD_LINK = re.compile(r"\((https://aitoolsessentials\.com/[^)\s]+)\)")
 _JSONLD = re.compile(
@@ -313,6 +331,80 @@ def duplicate_errors(root: Path) -> list[str]:
     return errors
 
 
+def _norm_copy(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _moved_ends_segment(text: str) -> bool:
+    """True when only punctuation or spaces follow 'has moved', until the end or a separator."""
+    plain = _norm_copy(text)
+    return bool(plain) and _MOVED_ENDS.search(plain) is not None
+
+
+def _short_stub_body(text: str) -> bool:
+    """True for a short block that says this page, guide, or article has moved."""
+    plain = _norm_copy(text)
+    if not plain or len(plain) > _SHORT_COPY_LIMIT:
+        return False
+    return _THIS_MOVED.search(plain) is not None
+
+
+class _StubCopyParser(HTMLParser):
+    """Collect title, heading, and short-block text, including nested spans."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.stack: list[list] = []
+        self.titles: list[str] = []
+        self.headings: list[str] = []
+        self.blocks: list[str] = []
+        self.descriptions: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list) -> None:
+        tag = tag.lower()
+        if tag == "meta":
+            attr = {key.lower(): value or "" for key, value in attrs}
+            if attr.get("name", "").lower() == "description" and attr.get("content"):
+                self.descriptions.append(attr["content"])
+            return
+        if tag in _VOID_TAGS:
+            return
+        if tag in {"title"} | _BLOCK_TAGS or self.stack:
+            self.stack.append([tag, []])
+
+    def handle_endtag(self, tag: str) -> None:
+        tag = tag.lower()
+        if tag in _VOID_TAGS or not self.stack:
+            return
+        while self.stack:
+            open_tag, parts = self.stack.pop()
+            text = "".join(parts)
+            if open_tag == "title":
+                self.titles.append(text)
+            elif open_tag in _HEADING_TAGS:
+                self.headings.append(text)
+            elif open_tag in _BLOCK_TAGS:
+                self.blocks.append(text)
+            if self.stack:
+                self.stack[-1][1].append(text)
+            if open_tag == tag:
+                break
+
+    def handle_data(self, data: str) -> None:
+        if self.stack:
+            self.stack[-1][1].append(data)
+
+
+def _page_has_stub_moved_copy(html: str) -> bool:
+    parser = _StubCopyParser()
+    parser.feed(html)
+    parser.close()
+    for text in parser.titles + parser.headings + parser.descriptions:
+        if _moved_ends_segment(text):
+            return True
+    return any(_short_stub_body(text) for text in parser.blocks)
+
+
 def stub_link_errors(root: Path) -> list[str]:
     """Indexable pages must not link to a redirect stub or repeat its moved title."""
     stubs: set[str] = set()
@@ -334,7 +426,7 @@ def stub_link_errors(root: Path) -> list[str]:
         folded = html.casefold()
         if "(moved)" in folded:
             errors.append(f"{rel.as_posix()} still says (moved)")
-        if "has moved" in folded:
+        if _page_has_stub_moved_copy(html):
             errors.append(f"{rel.as_posix()} still says has moved")
         for href in _LINK.findall(html):
             target = _resolve_href(rel, href)
@@ -350,7 +442,7 @@ def stub_link_errors(root: Path) -> list[str]:
         folded = text.casefold()
         if "(moved)" in folded:
             errors.append("llms.txt still says (moved)")
-        if "has moved" in folded:
+        if any(_moved_ends_segment(line) or _short_stub_body(line) for line in text.splitlines()):
             errors.append("llms.txt still says has moved")
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)

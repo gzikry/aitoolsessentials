@@ -25,6 +25,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Use the preinstalled Chrome
+        run: |
+          bin=""
+          for name in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$name" >/dev/null 2>&1; then
+              bin="$(command -v "$name")"
+              break
+            fi
+          done
+          if [ -z "$bin" ]; then
+            echo "Chrome is not installed on this runner."
+            exit 1
+          fi
+          echo "Using $bin"
+          "$bin" --version
       - name: Compile generators
         run: python3 -m py_compile scripts/*.py
       - name: Generate site (first pass)

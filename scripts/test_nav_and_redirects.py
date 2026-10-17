@@ -59,9 +59,35 @@ def main() -> None:
         raise SystemExit("\n".join(errors))
 
 
+def _doc(head: str, body: str) -> str:
+    return f"<!doctype html><html><head>{head}</head><body>{body}</body></html>"
+
+
 def _stub_phrase_and_jsonld() -> list[str]:
-    """A synthetic indexable page must fail on the moved phrase and a stub JSON-LD url."""
+    """Stub titles and short stub bodies fail. Ordinary 'has moved' sentences pass."""
     misses: list[str] = []
+    failures = {
+        "title-pipe.html": _doc("<title>Runway vs Pika has moved | AIToolsEssentials</title>", "<p>Current page.</p>"),
+        "title-bare.html": _doc("<title>Runway vs Pika has moved</title>", "<p>Current page.</p>"),
+        "h1.html": _doc("<title>Compare</title>", "<h1>Runway vs Pika has moved</h1>"),
+        "h1-span.html": _doc("<title>Compare</title>", "<h1><span>Runway vs Pika has moved</span></h1>"),
+        "h2.html": _doc("<title>Compare</title>", "<h2>X has moved.</h2>"),
+        "div.html": _doc("<title>Compare</title>", "<div>This page has moved.</div>"),
+        "guide.html": _doc("<title>Compare</title>", "<p>This guide has moved.</p>"),
+        "title-hyphen.html": _doc("<title>Runway vs Pika has moved - AIToolsEssentials</title>", "<p>Current page.</p>"),
+        "title-comma-ellipsis.html": _doc("<title>Runway vs Pika has moved, …</title>", "<p>Current page.</p>"),
+        "h1-comma.html": _doc("<title>Compare</title>", "<h1>Runway vs Pika has moved,</h1>"),
+        "title-comma-pipe.html": _doc("<title>Runway vs Pika has moved, | AIToolsEssentials</title>", "<p>Current page.</p>"),
+        "title-emdash.html": _doc("<title>has moved — Brand</title>", "<p>Current page.</p>"),
+        "title-ellipsis.html": _doc("<title>has moved…</title>", "<p>Current page.</p>"),
+        "title-colon.html": _doc("<title>has moved: see the current page</title>", "<p>Current page.</p>"),
+        "h1-paren.html": _doc("<title>Compare</title>", "<h1>X (has moved)</h1>"),
+    }
+    passes = {
+        "prose.html": _doc("<title>its pricing page has moved behind a login</title>", "<p>its pricing page has moved behind a login</p>"),
+        "export.html": _doc("<title>The export button has moved to the Pro plan.</title>", "<p>The export button has moved to the Pro plan.</p>"),
+        "comma.html": _doc("<title>pricing has moved, so…</title>", "<h1>pricing has moved, so…</h1>"),
+    }
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         (root / "articles").mkdir()
@@ -73,12 +99,19 @@ def _stub_phrase_and_jsonld() -> list[str]:
             "<!doctype html><html><head>"
             '<script type="application/ld+json">'
             '{"url":"https://aitoolsessentials.com/articles/suno-vs-udio.html"}'
-            "</script></head><body><p>This guide has moved.</p></body></html>",
+            "</script></head><body><p>Still here.</p></body></html>",
             encoding="utf-8",
         )
-        found = "\n".join(stub_link_errors(root))
-        if "index.html still says has moved" not in found:
-            misses.append(f"validator missed has moved: {found}")
+        for name, html in {**failures, **passes}.items():
+            (root / name).write_text(html, encoding="utf-8")
+        found_lines = stub_link_errors(root)
+        found = "\n".join(found_lines)
+        for name in failures:
+            if not any(line.startswith(f"{name} still says has moved") for line in found_lines):
+                misses.append(f"validator missed {name}: {found}")
+        for name in passes:
+            if any(line.startswith(f"{name} ") for line in found_lines):
+                misses.append(f"validator flagged {name}: {found}")
         if "index.html JSON-LD url points at stub articles/suno-vs-udio.html" not in found:
             misses.append(f"validator missed JSON-LD stub url: {found}")
         if "articles/suno-vs-udio.html still says" in found:
