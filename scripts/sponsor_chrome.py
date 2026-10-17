@@ -201,7 +201,8 @@ def write_page(root: Path, env: Mapping[str, str] | None = None) -> None:
     runtime = _runtime(root, _chosen_env(env))
     dest = root / "sponsor" / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(_page_html(runtime.tiers))
+    from asset_rev import stamp_html
+    dest.write_text(stamp_html(_page_html(runtime.tiers), dest, root))
 
 
 def stamp(

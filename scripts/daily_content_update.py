@@ -556,6 +556,9 @@ if _final_affiliate.returncode:
 from sponsor_chrome import stamp_site
 stamp_site(root)
 
+from asset_rev import stamp_tree as _stamp_assets
+print(f'Stamped content hashes on {_stamp_assets(root)} pages')
+
 print('Re-injected final metadata layers')
 
 # Build the site search index LAST, after every page generator, metadata pass and cleanup has
