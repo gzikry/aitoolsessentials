@@ -1507,23 +1507,40 @@ body[data-page="home"] .global-nav[data-nav="slim"] .nav-cta:hover {
     padding: 5px 9px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 380px) {
+  /* The hero CTA is the same destination, so the text link can drop off the row. */
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links a[href="/stack-audit.html"] { display: none; }
+}
+@media (max-width: 480px) {
   body[data-page="home"] .global-nav[data-nav="slim"] {
     flex-wrap: nowrap;
     gap: 4px;
     row-gap: 0;
-    padding: 8px;
+    padding: 8px 6px;
   }
   body[data-page="home"] .global-nav[data-nav="slim"] .nav-links {
     flex-wrap: nowrap;
-    gap: 4px;
+    gap: 3px;
     row-gap: 0;
     font-size: 10px;
     flex: 1 1 auto;
     min-width: 0;
   }
   body[data-page="home"] .global-nav[data-nav="slim"] .nav-links a {
-    padding: 4px 5px;
+    padding: 4px 4px;
+  }
+}
+@media (max-width: 360px) {
+  body[data-page="home"] .global-nav[data-nav="slim"] {
+    padding: 8px 4px;
+    gap: 3px;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links {
+    gap: 2px;
+    font-size: 10px;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links a {
+    padding: 3px 3px;
   }
 }
 

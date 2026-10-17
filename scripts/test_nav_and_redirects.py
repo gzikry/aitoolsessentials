@@ -78,6 +78,7 @@ def _stub_phrase_and_jsonld() -> list[str]:
     passes = {
         "prose.html": _doc("<title>Pricing notes</title>", "<p>its pricing page has moved behind a login</p>"),
         "export.html": _doc("<title>Export</title>", "<p>The export button has moved to the Pro plan.</p>"),
+        "comma.html": _doc("<title>pricing has moved, so…</title>", "<h1>pricing has moved, so…</h1>"),
     }
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
