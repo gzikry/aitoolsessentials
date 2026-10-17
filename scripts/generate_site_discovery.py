@@ -89,7 +89,7 @@ def generate_start_here(root: Path) -> None:
         ("I need a tool now", "Use Tool Finder to narrow the list by workflow, budget, and buyer type.", "/tool-finder.html", "Open Tool Finder"),
         ("I need a full stack", "Use Stack Builder to generate a shareable role-specific stack.", "/stack-builder.html", "Build my stack"),
         ("I need to control cost", "Use the Cost Calculator before subscriptions sprawl, or decode automation billing units for Zapier, Make, and n8n.", "/automation-cost-decoder/", "Decode automation cost"),
-        ("I am paying for overlapping AI tools", "Run the free instant Stack Audit first. Keep/Cut Weekly is the free email. Premium is a separate $12/month Whop membership.", "/stack-audit.html", "Free Stack Audit"),
+        ("I am paying for overlapping AI tools", "Run the free instant Stack Audit first. Keep/Cut Weekly is the free email. Premium is a separate $12/month membership, secure checkout by Stripe.", "/stack-audit.html", "Free Stack Audit"),
         ("I am replacing a tool", "Open the Alternatives hub and compare before switching.", "/alternatives/", "Compare alternatives"),
         ("I want the $12/month membership", "Run the free Stack Audit first. Premium is optional: dated keep/cut pack and a 48-hour written reply in Whop. $12/month — cheaper than one overlapping seat. Code LAUNCH50 for 50% off the first paid month.", "/premium/", "See Premium keep/cut pack"),
         ("I need dated prices", "Open Pricing Watch for official snapshots with checked dates. No invented history.", "/pricing-watch/", "Open Pricing Watch"),
@@ -199,6 +199,14 @@ def ensure_robots(root: Path) -> None:
     p.write_text(text)
 
 
+_DISCOVERY_BLOCK = re.compile(
+    r"""\s*<!-- AIT DISCOVERY LINKS -->(?:<link rel="manifest" href="/site\.webmanifest">)?(?:<link rel="alternate" type="application/rss\+xml" title="AIToolsEssentials updates" href="/feed\.xml">)?(?:<link rel="search" type="application/opensearchdescription\+xml" title="AIToolsEssentials" href="/opensearch\.xml">)?(?:<meta name="theme-color" content="#5e6ad2">)?(?:<script src="/js/discovery\.js(?:\?[^"]*)?" defer></script>)?"""
+)
+_DISCOVERY_SCRIPT = re.compile(
+    r"""\s*<script src="/js/discovery\.js(?:\?[^"]*)?" defer></script>"""
+)
+
+
 def postprocess_head_links(root: Path) -> None:
     marker = "<!-- AIT DISCOVERY LINKS -->"
     links = marker + '<link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>'
@@ -209,7 +217,10 @@ def postprocess_head_links(root: Path) -> None:
         if is_working_rel(p.relative_to(root)):
             continue
         html = p.read_text()
-        html = re.sub(r"\s*<!-- AIT DISCOVERY LINKS -->.*?<script src=\"/js/discovery\.js\" defer></script>", "", html, flags=re.S)
+        # Drop every prior injection, including a versioned script that sits
+        # outside the marker. A second pass must not add another copy.
+        html = _DISCOVERY_BLOCK.sub("", html)
+        html = _DISCOVERY_SCRIPT.sub("", html)
         if "</head>" in html:
             html = html.replace("</head>", links + "</head>", 1)
         p.write_text(html)

@@ -178,7 +178,7 @@ def generate_hub(root: Path, tools: list[dict[str, Any]], today: str, whop: dict
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
 <p class="kicker light">Public Premium preview · not gated</p>
 <h1>Public Premium preview.</h1>
-<p class="subhead">Preview = format only. Paid in Whop = dated pack, alerts, written keep/cut reply, priority research slots. You can read these pages without paying. This site cannot hide them.</p>
+<p class="subhead">Preview = format only. Paid access is the dated pack, alerts, written keep/cut reply, and priority research slots, delivered by email. You can read these pages without paying. This site cannot hide them.</p>
 {lanes_note()}
 <p>{checkout_buttons(whop, buy_page=True, free_audit=True)}</p>
 </div></section>
@@ -521,32 +521,32 @@ def generate_roi(root: Path, today: str, whop: dict[str, Any]) -> None:
 
 def generate_access(root: Path, today: str, whop: dict[str, Any]) -> None:
     desc = (
-        "How to join AIToolsEssentials Premium on Whop, open the member hub, "
-        "and keep the free newsletter and free Stack Audit separate."
+        "How to join AIToolsEssentials Premium with secure checkout by Stripe. "
+        "Access is delivered by email from aitoolsessentials@gmail.com within 24 hours."
     )
-    page = f'''<!doctype html><html lang="en">{head("How to join Premium on Whop", desc, DOMAIN + "/premium/library/how-to-access.html")}
+    page = f'''<!doctype html><html lang="en">{head("How to join Premium", desc, DOMAIN + "/premium/library/how-to-access.html")}
 <body>{header()}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center">
 <p class="kicker light">Paid Premium · how to join</p>
-<h1>Whop is checkout. These pages are a public preview.</h1>
-<p class="subhead">Use the existing Premium checkout. Do not pay for the free newsletter or the free Stack Audit — those stay free. The pack, alerts, written reply, and priority research slots are delivered in Whop.</p>
+<h1>Stripe is checkout. These pages are a public preview.</h1>
+<p class="subhead">Use the Premium checkout. Do not pay for the free newsletter or the free Stack Audit — those stay free. Access is delivered by email from aitoolsessentials@gmail.com within 24 hours.</p>
 {lanes_note()}
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
 <div class="content-hub-grid">
-<article class="content-hub-card"><span>Free</span><h3>Keep/Cut Weekly</h3><p>Free weekly email. No Whop charge.</p><p><a href="/subscribe/">Subscribe free</a></p></article>
+<article class="content-hub-card"><span>Free</span><h3>Keep/Cut Weekly</h3><p>Free weekly email. Not a Premium charge.</p><p><a href="/subscribe/">Subscribe free</a></p></article>
 <article class="content-hub-card"><span>Free</span><h3>Stack Audit</h3><p>Instant scorecard. Stays on your device.</p><p><a href="/stack-audit.html">Run it free</a></p></article>
-<article class="content-hub-card"><span>Paid</span><h3>Premium on Whop</h3><p>{whop["trial_period_days"]}-day trial, then ${whop["price_usd_month"]}/month. Code {esc(whop["promo_code"])} for 50% off the first paid month (new users).</p><p><a href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(whop["price_usd_month"], trial_days=int(whop["trial_period_days"]), promo=str(whop["promo_code"])))}</a></p></article>
+<article class="content-hub-card"><span>Paid</span><h3>Premium</h3><p>{whop["trial_period_days"]}-day trial, then ${whop["price_usd_month"]}/month, secure checkout by Stripe. Use code {esc(whop["promo_code"])} at checkout for 50% off the first paid month (new users).</p><p><a href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(whop["price_usd_month"], trial_days=int(whop["trial_period_days"]), promo=str(whop["promo_code"])))}</a></p></article>
 </div>
 <ol>
-<li>Open the Whop checkout for <strong>AIToolsEssentials Premium</strong>. Product page: <a href="{esc(whop["product_url"])}" rel="external noopener">{esc(whop["product_url"])}</a>.</li>
-<li>Complete the {whop["trial_period_days"]}-day trial or apply <strong>{esc(whop["promo_code"])}</strong> on the first paid month if you are a new user.</li>
-<li>Open the <a href="{esc(whop["hub_url"])}" rel="external noopener">AIToolsEssentials Premium hub</a> with that email. That is where the monthly pack, alerts, written reply, and request thread are delivered.</li>
+<li>Open secure checkout by Stripe for <strong>AIToolsEssentials Premium</strong>.</li>
+<li>Complete the {whop["trial_period_days"]}-day trial. Use code <strong>{esc(whop["promo_code"])}</strong> at checkout for 50% off the first paid month if you are a new customer.</li>
+<li>Check your inbox. Access is delivered by email from aitoolsessentials@gmail.com within 24 hours. That email carries the monthly pack, alerts, written reply, and request thread.</li>
 <li>Use these public preview pages to see the format. There is no login cookie on aitoolsessentials.com that unlocks extra HTML.</li>
-<li>Cancel from your Whop account. All sales are final — no refunds. Research and strategy only.</li>
+<li>Cancel anytime from the link in your Stripe receipt email. All sales are final — no refunds. Research and strategy only.</li>
 </ol>
-<p>After checkout, Whop returns you to <a href="{WELCOME_PATH}">{WELCOME_PATH}</a>. This site cannot verify a charge. Trust the Whop receipt, then open the Premium hub.</p>
-<p>Generated {esc(today)}. Plan id used on site buttons: <code>{esc(whop["plan_id"])}</code> (existing, not newly invented).</p>
+<p>After checkout, Stripe returns you to <a href="{WELCOME_PATH}">{WELCOME_PATH}</a>. This site cannot verify a charge. Trust the Stripe receipt email.</p>
+<p>Generated {esc(today)}.</p>
 </div></section>
 </main>{footer()}{scripts()}</body></html>'''
     (root / "premium" / "library" / "how-to-access.html").write_text(page)

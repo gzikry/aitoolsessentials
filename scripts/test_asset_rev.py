@@ -51,6 +51,16 @@ def test_stamp_rewrites_local_assets_and_is_idempotent() -> None:
             raise AssertionError("external script was rewritten")
         if asset_link_errors(root):
             raise AssertionError(asset_link_errors(root))
+        doubled = (
+            '<script src="/js/site.js?v=old" defer></script>'
+            '<script src="/js/site.js" defer></script>'
+        )
+        once = stamp_html(doubled, page, root)
+        again = stamp_html(once, page, root)
+        if once != again:
+            raise AssertionError("deduped stamp was not idempotent")
+        if once.count("/js/site.js") != 1:
+            raise AssertionError(once)
 
 
 def test_public_assets_carry_the_current_hash() -> None:

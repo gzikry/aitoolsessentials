@@ -1429,11 +1429,22 @@ body[data-page="home"] .global-nav[data-nav="slim"] .nav-cta:hover {
 }
 @media (max-width: 520px) {
   body[data-page="home"] .global-nav[data-nav="slim"] {
+    height: auto;
+    min-height: 48px;
+    flex-wrap: wrap;
+    row-gap: 8px;
     gap: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 14px;
     padding-right: 14px;
   }
   body[data-page="home"] .global-nav[data-nav="slim"] .nav-links {
+    flex: 1 1 0;
+    min-width: 0;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    max-width: 100%;
     gap: 6px;
     font-size: 12px;
   }

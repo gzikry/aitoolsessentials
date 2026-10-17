@@ -22,6 +22,13 @@ _ATTR = re.compile(
 _ASSET_DIRS = frozenset({"css", "js"})
 
 
+def _versioned_page(rel: Path) -> bool:
+    """Public pages, plus the go/ redirect stubs that still load site CSS."""
+    if is_public_rel(rel):
+        return True
+    return bool(rel.parts) and rel.parts[0] == "go"
+
+
 def content_hash(path: Path, cache: dict[Path, str] | None = None) -> str:
     key = path.resolve()
     if cache is not None and key in cache:
@@ -73,6 +80,28 @@ def versioned_ref(
     return f"{bare}?v={content_hash(asset, cache)}{fragment}"
 
 
+_SCRIPT = re.compile(
+    r"""<script\b(?=[^>]*\bsrc=(?P<q>["'])(?P<url>[^"']+)(?P=q))[^>]*>\s*</script>""",
+    re.I,
+)
+
+
+def _dedupe_local_scripts(html: str, page: Path, root: Path) -> str:
+    """Keep the first script tag for each local file. A second stamp must not put it back."""
+    seen: set[Path] = set()
+
+    def keep(match: re.Match[str]) -> str:
+        asset = resolve_local_asset(root, page, match.group("url"))
+        if asset is None:
+            return match.group(0)
+        if asset in seen:
+            return ""
+        seen.add(asset)
+        return match.group(0)
+
+    return _SCRIPT.sub(keep, html)
+
+
 def stamp_html(html: str, page: Path, root: Path, cache: dict[Path, str] | None = None) -> str:
     """Rewrite local stylesheet and script URLs to the current file hash."""
     if cache is None:
@@ -85,7 +114,7 @@ def stamp_html(html: str, page: Path, root: Path, cache: dict[Path, str] | None 
             return match.group(0)
         return f"{match.group('attr')}{match.group('eq')}{match.group('q')}{versioned}{match.group('q')}"
 
-    return _ATTR.sub(repl, html)
+    return _dedupe_local_scripts(_ATTR.sub(repl, html), page, root)
 
 
 def stamp_tree(root: Path) -> int:
@@ -95,7 +124,7 @@ def stamp_tree(root: Path) -> int:
     changed = 0
     for path in sorted(root.rglob("*.html")):
         rel = path.relative_to(root)
-        if not is_public_rel(rel):
+        if not _versioned_page(rel):
             continue
         original = path.read_text(errors="ignore")
         stamped = stamp_html(original, path, root, cache)
@@ -112,7 +141,7 @@ def asset_link_errors(root: Path, limit: int = 8) -> list[str]:
     misses: list[str] = []
     for path in sorted(root.rglob("*.html")):
         rel = path.relative_to(root)
-        if not is_public_rel(rel):
+        if not _versioned_page(rel):
             continue
         html = path.read_text(errors="ignore")
         for match in _ATTR.finditer(html):

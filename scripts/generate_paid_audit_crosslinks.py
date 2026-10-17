@@ -23,6 +23,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from premium_copy import audit_buy_html
+
 MARK_S = "<!-- AIT PAID AUDIT CROSSLINK START -->"
 MARK_E = "<!-- AIT PAID AUDIT CROSSLINK END -->"
 
@@ -55,7 +57,7 @@ def _block(context: str) -> str:
         f'{MARK_S}<section class="score-card"><span>If a scorecard is not enough</span>'
         f'<h2>Written AI Stack Audit — $497, one-time.</h2>'
         f'<p>{body}</p>'
-        f'<p>{cta} <a class="text-link" href="{INTAKE_HREF}" style="margin-left:8px">Start the intake</a></p>'
+        f'<p>{cta} {audit_buy_html()} <a class="text-link" href="{INTAKE_HREF}" style="margin-left:8px">Start the intake</a></p>'
         f'<p class="muted-small">Strategy and written recommendations only. No implementation, no '
         f'account access, no credentials or API keys. Not affiliated with any tool vendor.</p>'
         f'</section>{MARK_E}'
