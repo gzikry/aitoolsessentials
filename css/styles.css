@@ -1507,6 +1507,25 @@ body[data-page="home"] .global-nav[data-nav="slim"] .nav-cta:hover {
     padding: 5px 9px;
   }
 }
+@media (max-width: 390px) {
+  body[data-page="home"] .global-nav[data-nav="slim"] {
+    flex-wrap: nowrap;
+    gap: 4px;
+    row-gap: 0;
+    padding: 8px;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links {
+    flex-wrap: nowrap;
+    gap: 4px;
+    row-gap: 0;
+    font-size: 10px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links a {
+    padding: 4px 5px;
+  }
+}
 
 body[data-page="home"] .home-hero {
   position: relative;

@@ -5,6 +5,7 @@ from __future__ import annotations
 import os
 import re
 import sys
+from html.parser import HTMLParser
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -233,14 +234,19 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
-_STUB_MOVED = re.compile(
-    r"\bthis (?:page|guide|article) has moved\b|\bhas moved(?:\.|\s+to\b)",
-    re.I,
-)
-_TITLE = re.compile(r"<title\b[^>]*>(.*?)</title>", re.I | re.S)
-_META_TAG = re.compile(r"<meta\b[^>]*>", re.I)
-_SHORT_COPY = re.compile(r"<(p|h1|li)\b[^>]*>(.*?)</\1>", re.I | re.S)
+# "has moved" ends a title or heading segment: pipe, punctuation, or the end of the text.
+_MOVED_ENDS = re.compile(r"\bhas moved\s*(?:$|[^\w\s])", re.I)
+_THIS_MOVED = re.compile(r"\bthis (?:page|guide|article) has moved\b", re.I)
 _SHORT_COPY_LIMIT = 180
+_HEADING_TAGS = frozenset({"h1", "h2", "h3", "h4", "h5", "h6"})
+_BLOCK_TAGS = _HEADING_TAGS | frozenset({
+    "p", "div", "li", "section", "article", "main", "blockquote",
+    "td", "th", "figcaption", "dd", "dt", "aside", "header", "footer", "address",
+})
+_VOID_TAGS = frozenset({
+    "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
+    "meta", "source", "track", "wbr",
+})
 _LINK = re.compile(r"""href=["']([^"']+)["']""", re.I)
 _MD_LINK = re.compile(r"\((https://aitoolsessentials\.com/[^)\s]+)\)")
 _JSONLD = re.compile(
@@ -321,28 +327,78 @@ def duplicate_errors(root: Path) -> list[str]:
     return errors
 
 
-def _stub_moved_phrase(text: str) -> bool:
-    """True for a stub title or a short 'this page has moved' line, not ordinary prose."""
-    plain = re.sub(r"\s+", " ", text).strip()
+def _norm_copy(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _moved_ends_segment(text: str) -> bool:
+    """True when 'has moved' ends a title or heading segment."""
+    plain = _norm_copy(text)
+    return bool(plain) and _MOVED_ENDS.search(plain) is not None
+
+
+def _short_stub_body(text: str) -> bool:
+    """True for a short block that says this page, guide, or article has moved."""
+    plain = _norm_copy(text)
     if not plain or len(plain) > _SHORT_COPY_LIMIT:
         return False
-    return _STUB_MOVED.search(plain) is not None
+    return _THIS_MOVED.search(plain) is not None
+
+
+class _StubCopyParser(HTMLParser):
+    """Collect title, heading, and short-block text, including nested spans."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.stack: list[list] = []
+        self.titles: list[str] = []
+        self.headings: list[str] = []
+        self.blocks: list[str] = []
+        self.descriptions: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list) -> None:
+        tag = tag.lower()
+        if tag == "meta":
+            attr = {key.lower(): value or "" for key, value in attrs}
+            if attr.get("name", "").lower() == "description" and attr.get("content"):
+                self.descriptions.append(attr["content"])
+            return
+        if tag in _VOID_TAGS:
+            return
+        if tag in {"title"} | _BLOCK_TAGS or self.stack:
+            self.stack.append([tag, []])
+
+    def handle_endtag(self, tag: str) -> None:
+        tag = tag.lower()
+        if tag in _VOID_TAGS or not self.stack:
+            return
+        while self.stack:
+            open_tag, parts = self.stack.pop()
+            text = "".join(parts)
+            if open_tag == "title":
+                self.titles.append(text)
+            elif open_tag in _HEADING_TAGS:
+                self.headings.append(text)
+            elif open_tag in _BLOCK_TAGS:
+                self.blocks.append(text)
+            if self.stack:
+                self.stack[-1][1].append(text)
+            if open_tag == tag:
+                break
+
+    def handle_data(self, data: str) -> None:
+        if self.stack:
+            self.stack[-1][1].append(data)
 
 
 def _page_has_stub_moved_copy(html: str) -> bool:
-    for title in _TITLE.findall(html):
-        if _stub_moved_phrase(_plain(title)):
+    parser = _StubCopyParser()
+    parser.feed(html)
+    parser.close()
+    for text in parser.titles + parser.headings + parser.descriptions:
+        if _moved_ends_segment(text):
             return True
-    for tag in _META_TAG.findall(html):
-        if not re.search(r"""\bname\s*=\s*["']description["']""", tag, re.I):
-            continue
-        content = re.search(r"""\bcontent\s*=\s*["']([^"']*)["']""", tag, re.I)
-        if content and _stub_moved_phrase(content.group(1)):
-            return True
-    for match in _SHORT_COPY.finditer(html):
-        if _stub_moved_phrase(_plain(match.group(2))):
-            return True
-    return False
+    return any(_short_stub_body(text) for text in parser.blocks)
 
 
 def stub_link_errors(root: Path) -> list[str]:
@@ -382,7 +438,7 @@ def stub_link_errors(root: Path) -> list[str]:
         folded = text.casefold()
         if "(moved)" in folded:
             errors.append("llms.txt still says (moved)")
-        if any(_stub_moved_phrase(line) for line in text.splitlines()):
+        if any(_moved_ends_segment(line) or _short_stub_body(line) for line in text.splitlines()):
             errors.append("llms.txt still says has moved")
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)

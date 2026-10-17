@@ -59,9 +59,26 @@ def main() -> None:
         raise SystemExit("\n".join(errors))
 
 
+def _doc(head: str, body: str) -> str:
+    return f"<!doctype html><html><head>{head}</head><body>{body}</body></html>"
+
+
 def _stub_phrase_and_jsonld() -> list[str]:
-    """A synthetic indexable page must fail on the moved phrase and a stub JSON-LD url."""
+    """Stub titles and short stub bodies fail. Ordinary 'has moved' sentences pass."""
     misses: list[str] = []
+    failures = {
+        "title-pipe.html": _doc("<title>Runway vs Pika has moved | AIToolsEssentials</title>", "<p>Current page.</p>"),
+        "title-bare.html": _doc("<title>Runway vs Pika has moved</title>", "<p>Current page.</p>"),
+        "h1.html": _doc("<title>Compare</title>", "<h1>Runway vs Pika has moved</h1>"),
+        "h1-span.html": _doc("<title>Compare</title>", "<h1><span>Runway vs Pika has moved</span></h1>"),
+        "h2.html": _doc("<title>Compare</title>", "<h2>X has moved.</h2>"),
+        "div.html": _doc("<title>Compare</title>", "<div>This page has moved.</div>"),
+        "guide.html": _doc("<title>Compare</title>", "<p>This guide has moved.</p>"),
+    }
+    passes = {
+        "prose.html": _doc("<title>Pricing notes</title>", "<p>its pricing page has moved behind a login</p>"),
+        "export.html": _doc("<title>Export</title>", "<p>The export button has moved to the Pro plan.</p>"),
+    }
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         (root / "articles").mkdir()
@@ -73,26 +90,18 @@ def _stub_phrase_and_jsonld() -> list[str]:
             "<!doctype html><html><head>"
             '<script type="application/ld+json">'
             '{"url":"https://aitoolsessentials.com/articles/suno-vs-udio.html"}'
-            "</script></head><body><p>This guide has moved.</p></body></html>",
+            "</script></head><body><p>Still here.</p></body></html>",
             encoding="utf-8",
         )
-        (root / "title.html").write_text(
-            "<!doctype html><html><head><title>Guide has moved. | AIToolsEssentials</title></head>"
-            "<body><p>The current comparison is unchanged.</p></body></html>",
-            encoding="utf-8",
-        )
-        (root / "prose.html").write_text(
-            "<!doctype html><html><head><title>Pricing notes</title></head>"
-            "<body><p>its pricing page has moved behind a login</p></body></html>",
-            encoding="utf-8",
-        )
+        for name, html in {**failures, **passes}.items():
+            (root / name).write_text(html, encoding="utf-8")
         found = "\n".join(stub_link_errors(root))
-        if "index.html still says has moved" not in found:
-            misses.append(f"validator missed short stub body: {found}")
-        if "title.html still says has moved" not in found:
-            misses.append(f"validator missed stub title: {found}")
-        if "prose.html" in found:
-            misses.append(f"validator flagged ordinary prose: {found}")
+        for name in failures:
+            if f"{name} still says has moved" not in found:
+                misses.append(f"validator missed {name}: {found}")
+        for name in passes:
+            if name in found:
+                misses.append(f"validator flagged {name}: {found}")
         if "index.html JSON-LD url points at stub articles/suno-vs-udio.html" not in found:
             misses.append(f"validator missed JSON-LD stub url: {found}")
         if "articles/suno-vs-udio.html still says" in found:
