@@ -971,8 +971,10 @@ HOME_FONTS_HREF = (
     "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1"
     "&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
 )
-# CDN caches /css/styles.css for 30 days. Bump when homepage-scoped CSS must ship.
-HOME_CSS_HREF = "css/styles.css?v=20260910a"
+def homepage_css_href(root: Path) -> str:
+    """Stylesheet URL whose query changes when css/styles.css bytes change."""
+    from asset_rev import versioned_ref
+    return versioned_ref(root, root / "index.html", "css/styles.css") or "css/styles.css"
 HOME_CRITICAL_CSS = (
     "html,body{background:#000;color:#f4f5f7}"
     "body[data-page=home] .home-rest{background:#000;color:#f4f5f7}"
@@ -1002,17 +1004,17 @@ def homepage_critical_head() -> str:
     )
 
 
-def apply_homepage_stylesheet(html: str) -> str:
-    """Point the homepage at a cache-busted stylesheet so frosted-band CSS can ship."""
+def apply_homepage_stylesheet(html: str, root: Path) -> str:
+    """Point the homepage at a content-hashed stylesheet so a CSS edit can ship."""
     return re.sub(
         r'<link rel="stylesheet" href="(?:/)?css/styles\.css(?:\?[^"]*)?">',
-        f'<link rel="stylesheet" href="{HOME_CSS_HREF}">',
+        f'<link rel="stylesheet" href="{homepage_css_href(root)}">',
         html,
         count=1,
     )
 
 
-def apply_homepage_critical_head(html: str) -> str:
+def apply_homepage_critical_head(html: str, root: Path) -> str:
     """Force a dark first paint and load Instrument Serif italic on the homepage only."""
     html = re.sub(
         rf"{re.escape(HOME_CRITICAL_START)}.*?{re.escape(HOME_CRITICAL_END)}",
@@ -1026,7 +1028,7 @@ def apply_homepage_critical_head(html: str) -> str:
         html,
         count=1,
     )
-    html = apply_homepage_stylesheet(html)
+    html = apply_homepage_stylesheet(html, root)
     html = re.sub(r"(<head\b[^>]*>)\s*", r"\1", html, count=1, flags=re.I)
     head_open = re.search(r"<head\b[^>]*>", html, flags=re.I)
     if not head_open:
@@ -1038,7 +1040,7 @@ def slim_homepage_html(html: str, root: Path) -> str:
     """Rebuild homepage body to hero + one Premium band + subscribe + slim chrome."""
     load_whop_from_integrations(root)
     html = apply_homepage_voice_meta(html, root=root)
-    html = apply_homepage_critical_head(html)
+    html = apply_homepage_critical_head(html, root)
     head_end = html.find("</head>")
     if head_end == -1:
         return html

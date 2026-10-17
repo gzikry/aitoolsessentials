@@ -16,6 +16,7 @@ from site_scope import is_public_rel, is_working_rel
 from affiliate_util import sponsored_href_needles
 from newsletter_hold import subscribe_endpoint
 from sponsor_chrome import production_stripe_test_errors
+from asset_rev import asset_link_errors
 
 ROOT = Path(__file__).resolve().parents[1]
 _SITE = "https://aitoolsessentials.com"
@@ -1258,6 +1259,7 @@ def main():
     errors.extend(production_stripe_test_errors(ROOT))
     errors.extend(unresolved_canonicals(ROOT))
     errors.extend(double_slash_external_hrefs(ROOT)[:12])
+    errors.extend(asset_link_errors(ROOT))
 
     if errors:
         print('Validation failed')

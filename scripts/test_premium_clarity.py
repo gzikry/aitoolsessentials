@@ -175,6 +175,8 @@ def main() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         tmp_root = Path(tmp)
         (tmp_root / "index.html").write_text(home)
+        (tmp_root / "css").mkdir()
+        (tmp_root / "css" / "styles.css").write_bytes((ROOT / "css" / "styles.css").read_bytes())
         (tmp_root / "data").mkdir()
         (tmp_root / "data" / "voice_rewrites.json").write_text(
             (ROOT / "data" / "voice_rewrites.json").read_text()
