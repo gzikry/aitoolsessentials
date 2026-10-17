@@ -7,7 +7,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-from typing import Literal
+from typing import Literal, Union
 from urllib.parse import urlsplit
 
 from affiliate_util import sponsored_href_needles
@@ -26,7 +26,7 @@ _ON = frozenset({"1", "true", "yes", "on"})
 _STRIPE_TEST_HOST = "buy.stripe.com"
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Tier:
     key: str
     label: str
@@ -129,24 +129,24 @@ class _PageRole(Enum):
     PUBLIC = "public"
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Pitch:
     text: str
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Logo:
     src: str
     alt: str
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Href:
     value: str
     kind: Literal["house", "external"]
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Enrollment:
     name: str
     pitch: _Pitch
@@ -154,26 +154,28 @@ class _Enrollment:
     logo: _Logo | None
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Mailto:
     address: str
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _ExternalPay:
     url: str
 
 
-_Payment = _Mailto | _ExternalPay
+# Runtime alias, not an annotation: PEP 604 `X | Y` on classes needs Python 3.10, and the
+# pipeline also runs on the operator box's python3 (3.9.6). Keep typing.Union here.
+_Payment = Union[_Mailto, _ExternalPay]
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Runtime:
     enrollment: _Enrollment | None
     tiers: tuple[tuple[_Tier, _Payment], ...]
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Tag:
     name: str
     start: int
@@ -310,7 +312,7 @@ def _is_production(env: Mapping[str, str]) -> bool:
     return isinstance(ref, str) and ref.strip() == "refs/heads/main"
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class _Build:
     production: bool
     allow_stripe_test: bool

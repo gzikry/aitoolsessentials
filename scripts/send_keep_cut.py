@@ -22,7 +22,7 @@ _UNSUBSCRIBE = "{{{RESEND_UNSUBSCRIBE_URL}}}"
 Post = Callable[[dict, str], dict]
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class Refused:
     reason: Literal["personal_name", "missing_issue", "missing_footer"]
 

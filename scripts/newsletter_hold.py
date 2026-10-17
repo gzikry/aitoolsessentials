@@ -27,7 +27,7 @@ UNSUBSCRIBE_HREF = (
 _SIGNUP_MAIL = "mailto:aitoolsessentials@gmail.com"
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class Held:
     reason: Literal["disabled", "needs_approval", "no_transport"]
 
