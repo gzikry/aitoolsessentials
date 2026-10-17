@@ -979,6 +979,15 @@ def main():
                 errors.append(f'newsletter/{slug} missing the postal address')
             if 'george' in page_html.casefold():
                 errors.append(f'newsletter/{slug} uses a personal name')
+            if 'newsletter-pager' not in page_html:
+                errors.append(f'newsletter/{slug} missing previous and next links')
+            if 'href="/subscribe/">Get the free email' not in page_html:
+                errors.append(f'newsletter/{slug} missing the subscribe CTA')
+            if slug != '2026-w35.html' and 'not reliably exposed' in page_html:
+                errors.append(f'newsletter/{slug} repeats issue 1 price note')
+            loc = f'https://aitoolsessentials.com/newsletter/{slug}'
+            if loc not in (ROOT / 'sitemap.xml').read_text():
+                errors.append(f'sitemap missing {loc}')
 
     # Unrendered template placeholders are visible copy bugs (e.g. a missing f-string).
     leak_hits = []

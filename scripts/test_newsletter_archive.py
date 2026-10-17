@@ -35,6 +35,23 @@ def main() -> None:
         errors.append("w42 uses a personal name")
     if "1090 West Foothill, Claremont, CA 91711" not in page:
         errors.append("w42 missing the postal address")
+    if "not reliably exposed" in page:
+        errors.append("w42 kept issue 1's price note")
+    if "newsletter-pager-prev" not in page or "Issue 4 · Sonaopus is $99 once" not in page:
+        errors.append("w42 missing the previous issue")
+    if "newsletter-pager-next" in page:
+        errors.append("w42 invented a next issue")
+    if 'href="/subscribe/">Get the free email' not in page:
+        errors.append("w42 missing the subscribe CTA")
+    w38_page = (root / "newsletter" / "2026-w38.html").read_text(encoding="utf-8")
+    if "newsletter-pager-prev" not in w38_page or "newsletter-pager-next" not in w38_page:
+        errors.append("w38 missing prev and next")
+    if 'href="/subscribe/">Get the free email' not in w38_page:
+        errors.append("w38 missing the subscribe CTA")
+    sitemap = (REPO / "sitemap.xml").read_text(encoding="utf-8")
+    for slug in ("2026-w42.html", "2026-w38.html", "2026-w35.html"):
+        if f"https://aitoolsessentials.com/newsletter/{slug}" not in sitemap:
+            errors.append(f"sitemap missing {slug}")
     if (root / "newsletter" / "2026-w35.html").read_text(encoding="utf-8") != before:
         errors.append("issue 1 page changed")
     if "Morning." not in before:
