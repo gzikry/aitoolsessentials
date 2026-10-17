@@ -81,6 +81,20 @@ CASES = [
          "date": "x", "id": "11", "_folder": "[Gmail]/All Mail"},
         False,
     ),
+    (
+        "DEFECT 3: the newsletter's own double opt-in confirmation we triggered",
+        {"from": {"addr": "weekly@news.aitoolsessentials.com"},
+         "subject": "Confirm Keep/Cut Weekly",
+         "date": "2026-10-17 05:16+00:00", "id": "156", "_folder": "[Gmail]/All Mail"},
+        False,
+    ),
+    (
+        "MUST STILL FIRE: a bounce for a newsletter recipient",
+        {"from": {"addr": "mailer-daemon@googlemail.com"},
+         "subject": "Delivery Status Notification (Failure)",
+         "date": "x", "id": "12", "_folder": "[Gmail]/All Mail"},
+        True,
+    ),
 ]
 
 failures = 0

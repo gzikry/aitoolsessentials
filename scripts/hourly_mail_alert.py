@@ -19,7 +19,17 @@ SELF = "aitoolsessentials@gmail.com"
 # Every address we send *as*. Verification requests go out from the site's
 # forwarder alias, and Gmail files a copy of each in All Mail; without this the
 # monitor treats our own outbound mail as incoming and re-alerts on it.
-SELF_ALIASES = {SELF, "contact@aitoolsessentials.com"}
+#
+# `weekly@news.aitoolsessentials.com` is the newsletter's From address. Its only
+# mail into this mailbox is the double opt-in confirmation we trigger ourselves
+# when exercising the signup path — three of those fired as "actionable" on
+# 2026-10-17. Scoped by exact address, not by domain: bounces for newsletter
+# recipients arrive from mailer-daemon and stay actionable.
+SELF_ALIASES = {
+    SELF,
+    "contact@aitoolsessentials.com",
+    "weekly@news.aitoolsessentials.com",
+}
 STATE = Path.home() / ".local" / "state" / "aitoolsessentials" / "hourly-mail.json"
 
 # Platform lifecycle/marketing drips that are never actionable on their own. Matched on the
