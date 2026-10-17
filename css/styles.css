@@ -2055,6 +2055,12 @@ body[data-page="home"] .footer[data-footer="slim"] {
 }
 .sponsor-line img { height: 28px; width: auto; }
 .sponsor-issue { padding-top: 0; padding-bottom: 8px; }
+@media (max-width: 390px) {
+  .article-shell .stub-fallback {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
 @media print {
   .sponsor-line, .sponsor-issue { display: none !important; }
 }

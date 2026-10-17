@@ -4,11 +4,18 @@ from __future__ import annotations
 
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from consolidate_duplicates import PAIRS, duplicate_errors, redirect_stub, stub_link_errors
+from consolidate_duplicates import (
+    PAIRS,
+    _moved_ends_segment,
+    duplicate_errors,
+    redirect_stub,
+    stub_link_errors,
+)
 from site_chrome import CANONICAL_HEADER, header_label_errors
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -82,11 +89,20 @@ def _stub_phrase_and_jsonld() -> list[str]:
         "title-ellipsis.html": _doc("<title>has moved…</title>", "<p>Current page.</p>"),
         "title-colon.html": _doc("<title>has moved: see the current page</title>", "<p>Current page.</p>"),
         "h1-paren.html": _doc("<title>Compare</title>", "<h1>X (has moved)</h1>"),
+        "title-period-more.html": _doc("<title>X has moved. See the current page</title>", "<p>Current page.</p>"),
+        "h1-period-more.html": _doc("<title>Compare</title>", "<h1>X has moved. See the current page</h1>"),
+        "meta-period-more.html": _doc(
+            '<meta name="description" content="X has moved. See the current page"><title>Compare</title>',
+            "<p>Current page.</p>",
+        ),
     }
     passes = {
         "prose.html": _doc("<title>its pricing page has moved behind a login</title>", "<p>its pricing page has moved behind a login</p>"),
         "export.html": _doc("<title>The export button has moved to the Pro plan.</title>", "<p>The export button has moved to the Pro plan.</p>"),
         "comma.html": _doc("<title>pricing has moved, so…</title>", "<h1>pricing has moved, so…</h1>"),
+        "hyphen-on.html": _doc("<title>has moved-on</title>", "<p>Current page.</p>"),
+        "hyphen-in.html": _doc("<title>has moved-in</title>", "<p>Current page.</p>"),
+        "hyphen-prose.html": _doc("<title>Pricing has moved - here's what changed</title>", "<p>Current page.</p>"),
     }
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
@@ -116,6 +132,14 @@ def _stub_phrase_and_jsonld() -> list[str]:
             misses.append(f"validator missed JSON-LD stub url: {found}")
         if "articles/suno-vs-udio.html still says" in found:
             misses.append("validator flagged the redirect stub itself")
+    long_copy = "Pricing notes has moved" + (", " * 20000) + "so the plan changed"
+    started = time.perf_counter()
+    flagged = _moved_ends_segment(long_copy)
+    elapsed = time.perf_counter() - started
+    if flagged:
+        misses.append("a long punctuation run was treated as a stub")
+    if elapsed > 0.2:
+        misses.append(f"a long punctuation run took {elapsed:.3f}s")
     return misses
 
 

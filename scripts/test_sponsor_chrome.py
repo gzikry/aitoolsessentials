@@ -116,6 +116,7 @@ def test_null_enrollment_offer_and_page() -> None:
         _has(offer, MAILTO_BUTTON)
         _has(offer, QUESTIONS)
         _has(offer, "<title>Sponsor AIToolsEssentials</title>")
+        _has(offer, '<link rel="canonical" href="https://aitoolsessentials.com/sponsor/">')
         _has(offer, '<header class="global-nav" data-nav="contained">')
         _has(offer, 'class="article-shell wide"')
         _has(offer, '<main class="sponsor-offer">')

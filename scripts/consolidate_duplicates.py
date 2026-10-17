@@ -174,7 +174,7 @@ def redirect_stub(title: str, winner: str) -> str:
         "</head><body><main><section class=\"scene scene-light\"><div class=\"article-shell\">"
         f"<h1>{safe_title}</h1>"
         "<p>This page has moved. The current page keeps the dated evidence and the affiliate disclosure.</p>"
-        f'<p><a class="button button-blue" href="{dest}">Open the current page</a></p>'
+        f'<p><a class="button button-blue stub-fallback" href="{dest}">Open the current page</a></p>'
         '</div></section></main>'
         '<script src="/js/analytics.js" defer></script>'
         "</body></html>\n"
@@ -234,11 +234,13 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
-# "has moved" is a stub when only punctuation or spaces follow it, up to the
-# end of the text or a separator (| - – — : ·). A word after the phrase is copy.
+# One run of trailing punctuation, then the end or a separator. Nested repeats
+# on that punctuation are exponential, so this stays linear. A period ends the
+# segment even when another sentence follows. A hyphen does not: "moved-on",
+# "moved-in", and "moved - here's" keep going. A spaced hyphen before a capital
+# brand ("moved - AIToolsEssentials") is still a separator.
 _MOVED_ENDS = re.compile(
-    r"\bhas moved(?:\s*[,.!?…:;)\]]*\s*)*(?:$|[|\-–—:·])",
-    re.I,
+    r"(?i:\bhas moved)[\s,!?…:;)\]]*(?:$|[|–—:·.]|-(?=\s+[A-Z]))",
 )
 _THIS_MOVED = re.compile(r"\bthis (?:page|guide|article) has moved\b", re.I)
 _SHORT_COPY_LIMIT = 180
@@ -336,7 +338,7 @@ def _norm_copy(text: str) -> str:
 
 
 def _moved_ends_segment(text: str) -> bool:
-    """True when only punctuation or spaces follow 'has moved', until the end or a separator."""
+    """True when 'has moved' ends at punctuation, the end of the text, or a separator."""
     plain = _norm_copy(text)
     return bool(plain) and _MOVED_ENDS.search(plain) is not None
 
