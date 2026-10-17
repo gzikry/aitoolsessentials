@@ -93,6 +93,14 @@ def main() -> None:
         title = re.search(r"<title[^>]*>(.*?)</title>", raw, re.S | re.I)
         rec = {"label": prev.get("label") or k, "url": url, "http": code, "bytes": len(raw),
                "title": (title.group(1).strip()[:120] if title else "")}
+        # How many times each address appears on the page. A reply route published on a
+        # journalist's own site is only evidence if it is still there, and "verbatim N times"
+        # was a number measured by hand each run until now - the digest that cited it could not
+        # tell a moved address from a re-worded page. Counting it here makes it a measurement.
+        _emails = re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", raw)
+        _counts = {e: raw.count(e) for e in sorted(set(_emails))}
+        if _counts:
+            rec["emails_on_page"] = _counts
         if prev.get("triple"):
             # A byline address assembled from data-part1/2/3 is only evidence if the parts are still
             # on the page; re-read them rather than carrying yesterday's triple forward.
