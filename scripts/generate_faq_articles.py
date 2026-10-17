@@ -430,7 +430,7 @@ ARTICLES['is-an-ai-tool-membership-worth-it.html'] = {
 <li>You want priority research on a specific workflow without hiring a consultant</li>
 </ul>
 <p><a href="../premium/">AIToolsEssentials Premium</a> is built for that case: monthly decision matrix, stack-audit template, weekly checklist, tool-change alert feed, hands-on protocols, ROI calculator, and priority research slots. It is research and strategy only — not implementation, setup, integrations, or account access.</p>
-<p><strong>Price:</strong> 7-day free trial, then $12/month via Whop. Code <strong>LAUNCH50</strong> = 50% off the first paid month for new users. Cancel anytime from Whop. All sales final — no refunds.</p>
+<p><strong>Price:</strong> 7-day free trial, then $12/month, secure checkout by Stripe. Code <strong>LAUNCH50</strong> = 50% off the first paid month for new users. Use code LAUNCH50 at checkout. Cancel anytime from the link in your Stripe receipt email. All sales final — no refunds.</p>
 <h2>How to evaluate any paid membership</h2>
 <ol>
 <li>Does it give dated sources, not undated opinions?</li>

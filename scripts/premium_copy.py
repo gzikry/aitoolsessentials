@@ -7,8 +7,9 @@ help deciding before renewals. $12/month, cheaper than one overlapping
 seat — not another AI subscription.
 
 Public /premium/library/ pages are a preview of the format, not a gated
-member area. Upgrade checkout uses the existing LAUNCH50 promo URL.
-Do not invent plans, prices, trial days, or member counts.
+member area. Checkout is Stripe. LAUNCH50 is typed at checkout.
+Payment links cannot prefill it. Do not invent plans, prices, trial
+days, or member counts.
 """
 from __future__ import annotations
 
@@ -21,9 +22,16 @@ PREVIEW_LABEL = "See a public preview"
 BUY_PAGE_LABEL = "See Premium keep/cut pack"
 FREE_AUDIT_LABEL = "Free Stack Audit"
 FREE_EMAIL_LABEL = "Free Keep/Cut Weekly"
-DEFAULT_HUB_URL = "https://whop.com/joined/aitoolsessentials-premium/"
-DEFAULT_CHECKOUT = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/"
-DEFAULT_CHECKOUT_PROMO = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50"
+ACCESS_EMAIL = "aitoolsessentials@gmail.com"
+STRIPE_PREMIUM_URL = "https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203"
+STRIPE_AUDIT_URL = "https://buy.stripe.com/cNi00ideNbpb8O32az0x204"
+CANCEL_COPY = "Cancel anytime from the link in your Stripe receipt email"
+ACCESS_COPY = (
+    "Access is delivered by email from aitoolsessentials@gmail.com within 24 hours"
+)
+DEFAULT_HUB_URL = "mailto:" + ACCESS_EMAIL
+DEFAULT_CHECKOUT = STRIPE_PREMIUM_URL
+DEFAULT_CHECKOUT_PROMO = STRIPE_PREMIUM_URL
 WELCOME_PATH = "/premium/welcome/"
 
 
@@ -40,27 +48,36 @@ def esc(s: Any) -> str:
 def join_label(price: int | None = None, *, trial_days: int = 7, promo: str = "LAUNCH50") -> str:
     """Upgrade CTA after the free audit. $12/mo stays visible in nearby copy."""
     _ = price
-    return f"Join Premium on Whop — {int(trial_days)}-day trial · {promo}"
+    return f"Join Premium — {int(trial_days)}-day trial · use code {promo} at checkout"
 
 
 def hub_url(whop: dict[str, Any] | None = None) -> str:
-    if whop and whop.get("hub_url"):
-        return str(whop["hub_url"])
+    _ = whop
     return DEFAULT_HUB_URL
 
 
-def primary_checkout_url(whop: dict[str, Any]) -> str:
-    return str(whop.get("checkout_promo_url") or DEFAULT_CHECKOUT_PROMO)
+def primary_checkout_url(whop: dict[str, Any] | None = None) -> str:
+    _ = whop
+    return STRIPE_PREMIUM_URL
 
 
-def plain_checkout_url(whop: dict[str, Any]) -> str:
-    return str(whop.get("checkout_url") or DEFAULT_CHECKOUT)
+def plain_checkout_url(whop: dict[str, Any] | None = None) -> str:
+    _ = whop
+    return STRIPE_PREMIUM_URL
 
 
-def plain_checkout_link(whop: dict[str, Any]) -> str:
+def plain_checkout_link(whop: dict[str, Any] | None = None) -> str:
+    promo = esc(str((whop or {}).get("promo_code") or "LAUNCH50"))
     return (
         f'<a class="checkout-plain-link" href="{esc(plain_checkout_url(whop))}" '
-        'rel="external noopener">Checkout without promo code</a>'
+        f'rel="external noopener">use code {promo} at checkout</a>'
+    )
+
+
+def audit_buy_html() -> str:
+    return (
+        f'<a class="button button-blue" href="{STRIPE_AUDIT_URL}" target="_blank" '
+        'rel="external noopener nofollow">Buy the written audit — $497</a>'
     )
 
 
@@ -69,7 +86,7 @@ def lanes_note() -> str:
         '<p class="affiliate-inline">'
         "The <strong>instant Stack Audit</strong> is free — that is how you find the waste. "
         "<strong>Keep/Cut Weekly</strong> is the free weekly email. "
-        "<strong>Premium</strong> is optional: $12/month on Whop for the dated keep/cut pack "
+        "<strong>Premium</strong> is optional: $12/month, secure checkout by Stripe, for the dated keep/cut pack "
         "and a 48-hour written reply when you want help before renewals. "
         "Cheaper than one overlapping seat. Not another AI subscription."
         "</p>"
@@ -79,10 +96,10 @@ def lanes_note() -> str:
 def path_a_pitch(price: int = 12) -> tuple[str, str, str]:
     """Premium page kicker, h1, subhead. Not “pay $12 to stop paying.”"""
     return (
-        f"Optional Premium · ${int(price)}/month on Whop",
+        f"Optional Premium · ${int(price)}/month, secure checkout by Stripe",
         "The free audit finds the waste. Premium is optional help before you renew.",
         "Run the instant Stack Audit first — no login. If you want a dated keep/cut pack "
-        f"and a written reply within 48 hours, Premium is ${int(price)}/month on Whop. "
+        f"and a written reply within 48 hours, Premium is ${int(price)}/month, secure checkout by Stripe. "
         "That is cheaper than one overlapping seat. It is not another AI subscription. "
         'The <a href="/stack-audit.html">instant Stack Audit</a>, the directory, and '
         '<a href="/newsletter/">Keep/Cut Weekly</a> stay free.',
@@ -100,7 +117,7 @@ def post_audit_upgrade_html(whop: dict[str, Any] | None = None) -> str:
         "<span>Optional next step</span>"
         "<h3>Want a keep/cut pack and a written reply before you renew?</h3>"
         "<p>The scorecard above stays free. Premium is optional: dated keep/cut notes and a "
-        "48-hour written reply in Whop when you want someone to decide with you. "
+        "48-hour written reply by email when you want someone to decide with you. "
         f"${price}/month — cheaper than one overlapping seat, not another AI subscription.</p>"
         f'<p><a class="button button-blue" data-sa-cta href="{href}" rel="external noopener">'
         f"{esc(join_label(price, trial_days=trial, promo=promo))}</a></p>"
@@ -123,7 +140,8 @@ def post_audit_upgrade_html(whop: dict[str, Any] | None = None) -> str:
         "table with money attached, a deep pass on the one bottleneck you ranked, a Monday "
         "action per finding, and a 30-day sequence.</p>"
         '<p><a class="button button-ghost-dark" data-sa-cta href="/services/paid-audit.html">'
-        "What the written audit adds</a>"
+        "What the written audit adds</a> "
+        f"{audit_buy_html()}"
         '<a class="text-link" data-sa-cta href="/services/audit-intake.html" '
         'style="margin-left:8px">Start the intake</a></p>'
         '<p class="sa-note">Strategy and written recommendations only. No implementation, no '
@@ -154,7 +172,7 @@ def what_you_buy_items(n_tools: int) -> list[str]:
 
 def this_week_items() -> list[str]:
     return [
-        "Open this week's keep/cut notes and the decision matrix CSV in Whop",
+        "Open this week's keep/cut notes and the decision matrix CSV from the access email",
         "Run the 15-minute checklist on the tools you already pay for",
         "Fill the stack-audit template if you want a written keep/cut reply",
         "Reply in the request thread if you want a priority research slot",
@@ -182,14 +200,12 @@ def not_included_items() -> list[str]:
 def preview_vs_paid_note() -> str:
     return (
         '<section class="score-card"><span>Public Premium preview</span>'
-        "<h2>Preview = format only. Paid in Whop = the dated pack.</h2>"
+        "<h2>Preview = format only. Paid access is the dated pack.</h2>"
         "<p><strong>Preview</strong> on this site is the format: sample brief, matrix, "
         "checklist, alerts, and worksheets. Pages are not gated. This static site cannot hide HTML.</p>"
-        "<p><strong>Paid in Whop</strong> is the dated pack, tool-change alerts, a written keep/cut reply, "
-        "and priority research slots. After checkout, Whop returns you to "
-        f'<a href="{WELCOME_PATH}">{WELCOME_PATH}</a>. Open the '
-        f'<a href="{esc(DEFAULT_HUB_URL)}" rel="external noopener">AIToolsEssentials Premium hub</a> '
-        "with the email you used at checkout.</p>"
+        "<p><strong>Paid access</strong> is the dated pack, tool-change alerts, a written keep/cut reply, "
+        "and priority research slots. After checkout, Stripe returns you to "
+        f'<a href="{WELCOME_PATH}">{WELCOME_PATH}</a>. {ACCESS_COPY}. {CANCEL_COPY}.</p>'
         "</section>"
     )
 
@@ -198,19 +214,17 @@ def preview_access_note(whop: dict[str, Any]) -> str:
     price = int(whop["price_usd_month"])
     trial = int(whop["trial_period_days"])
     promo = esc(whop["promo_code"])
-    hub = esc(hub_url(whop))
     return (
         '<section class="score-card"><span>Public Premium preview</span>'
-        "<h2>These pages are not gated. Premium is delivered in Whop.</h2>"
+        "<h2>These pages are not gated. Premium is delivered by email.</h2>"
         "<p>You can read this preview without paying. This site is static, so it cannot hide HTML. "
-        f"What you buy for ${price}/month lives in Whop: dated keep/cut research, the monthly "
+        f"What you buy for ${price}/month arrives by email from {esc(ACCESS_EMAIL)}: dated keep/cut research, the monthly "
         "decision matrix CSV, the weekly checklist, tool-change alerts, a stack-audit template "
         "with a strategy-only reply within 48 hours, an ROI worksheet, and priority research slots.</p>"
         f"<p>{trial}-day free trial, then ${price}/month. Code <strong>{promo}</strong> is 50% off "
-        "the first paid month for new users. After checkout, open "
-        f'<a href="{WELCOME_PATH}">{WELCOME_PATH}</a>, then the '
-        f'<a href="{hub}" rel="external noopener">AIToolsEssentials Premium hub</a> '
-        "with the email you used at checkout. The directory, Keep/Cut Weekly, and instant Stack Audit "
+        "the first paid month for new users. Use code {promo} at checkout. After checkout, open "
+        f'<a href="{WELCOME_PATH}">{WELCOME_PATH}</a>. {ACCESS_COPY}. {CANCEL_COPY}. '
+        "The directory, Keep/Cut Weekly, and instant Stack Audit "
         f"stay free. Premium does not include {not_included_phrase()}.</p>"
         f'<p><a class="button button-blue" href="{esc(primary_checkout_url(whop))}" rel="external noopener">'
         f"{esc(join_label(price, trial_days=trial, promo=whop['promo_code']))}</a>"
@@ -243,16 +257,16 @@ def buy_story_cards_html(n_tools: int) -> str:
 
 def deliverable_cards_html(n_tools: int) -> str:
     cards = [
-        ("Dated keep/cut research", "A dated brief on price, plan, and overlap changes for tools you already pay for. Delivered in Whop."),
+        ("Dated keep/cut research", "A dated brief on price, plan, and overlap changes for tools you already pay for. Delivered by email."),
         ("Monthly decision matrix CSV", f"One spreadsheet covering {n_tools} tracked tools: official price labels, category, and what each tool is for."),
         ("Weekly checklist", "Fifteen minutes. Check the tools on your bill. Make one keep, cut, or trial decision."),
-        ("Tool-change alerts", "When a price, plan name, or model changes on a tool you pay for, the alert is in Whop."),
+        ("Tool-change alerts", "When a price, plan name, or model changes on a tool you pay for, the alert arrives by email."),
         ("Stack-audit template + written reply", "Fill the inventory. Send it. You get a strategy-only keep/cut/trial reply within 48 hours. No one logs into your accounts."),
         ("ROI worksheet", "You type your invoices and hours. The page does not invent savings."),
         ("Priority research slots", "The first 5 complete member requests each month become the next brief and CSV."),
     ]
     return "".join(
-        f'<article class="content-hub-card"><span>Delivered in Whop</span>'
+        f'<article class="content-hub-card"><span>Delivered by email</span>'
         f"<h3>{esc(title)}</h3><p>{esc(text)}</p></article>"
         for title, text in cards
     )
@@ -270,7 +284,7 @@ def checkout_buttons(
     trial = int(whop["trial_period_days"])
     promo = str(whop["promo_code"])
     parts = [
-        f'<a class="button button-blue" href="{esc(primary_checkout_url(whop))}" rel="external noopener" data-whop-checkout="{esc(whop["plan_id"])}">{esc(join_label(price, trial_days=trial, promo=promo))}</a>',
+        f'<a class="button button-blue" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=promo))}</a>',
     ]
     if buy_page:
         parts.append(
@@ -297,10 +311,10 @@ def billing_fine_print(whop: dict[str, Any]) -> str:
     trial = int(whop["trial_period_days"])
     promo = esc(whop["promo_code"])
     return (
-        f'<p class="affiliate-inline">{trial}-day free trial, then ${price}/month on the existing '
-        f"AIToolsEssentials Premium checkout. Code <strong>{promo}</strong> is 50% off the first "
-        "paid month for new users. Cancel in Whop. All sales are final — no refunds. "
-        f"Premium is delivered in Whop. Research and strategy only — no {not_included_phrase()}. "
+        f'<p class="affiliate-inline">{trial}-day free trial, then ${price}/month, secure checkout by Stripe. '
+        f"Code <strong>{promo}</strong> is 50% off the first "
+        f"paid month for new users. Use code {promo} at checkout. {CANCEL_COPY}. All sales are final — no refunds. "
+        f"{ACCESS_COPY}. Research and strategy only — no {not_included_phrase()}. "
         "Affiliate or sponsor status never changes recommendations.</p>"
     )
 
@@ -326,14 +340,14 @@ def upsell_module_html(whop: dict[str, Any]) -> str:
     return (
         "<!-- AIT PREMIUM MODULE START -->\n"
         '<section class="newsletter-panel premium-conversion-panel"><div>'
-        f"<span>Optional Premium · ${price}/mo via Whop</span>"
+        f"<span>Optional Premium · ${price}/mo, secure checkout by Stripe</span>"
         "<h2>Want someone to decide with you before a renewal?</h2>"
         f"<p>The free Stack Audit finds the waste. Premium is optional: a dated keep/cut pack, "
-        f"alerts, and a 48-hour written reply in Whop — ${price}/month, cheaper than one overlapping "
+        f"alerts, and a 48-hour written reply by email — ${price}/month, cheaper than one overlapping "
         "seat, not another AI subscription. The directory, Keep/Cut Weekly, and the instant Stack "
         "Audit stay free.</p>"
         f'<p class="affiliate-inline">{trial}-day free trial · then ${price}/month · code {promo} '
-        "for 50% off first paid month · delivered in Whop · research and strategy only · "
+        "for 50% off first paid month · use code LAUNCH50 at checkout · delivered by email · research and strategy only · "
         "affiliate status never changes recommendations.</p>"
         "</div><div class=\"newsletter-actions\">"
         f'<a class="button button-blue" href="{esc(primary_checkout_url(whop))}" rel="external noopener">'
@@ -464,6 +478,7 @@ def homepage_band_html(whop: dict[str, Any]) -> str:
 <p>Two ways to get one. Premium is the ${price}/month keep/cut pack — dated notes and a written reply in 48 hours, usually cheaper than one forgotten seat. If your stack is bigger than a pack can cover, the <a href="/services/paid-audit.html">written AI Stack Audit</a> is $497 one-time.</p>
 <p class="home-premium-actions"><a class="button home-cta-primary" href="/premium/">{BUY_PAGE_LABEL}</a>
 <a href="/services/paid-audit.html">Or see the $497 written audit</a>
+{audit_buy_html()}
 <a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
 </div>
 </section>

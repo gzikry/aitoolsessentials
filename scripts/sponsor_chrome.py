@@ -16,10 +16,9 @@ from site_scope import is_public_rel
 __all__ = ["production_stripe_test_errors", "stamp", "stamp_site", "write_page"]
 
 _ENROLLMENT_FILE = Path("data") / "sponsor_enrollment.json"
-_PREVIEW_FILE = Path("data") / "sponsor_payment_preview.json"
+_PAYMENT_FILE = Path("data") / "sponsor_payment.json"
 _SPONSOR_MAIL = "aitoolsessentials@gmail.com"
 _PAYMENT_FALLBACK = "SPONSOR_PAYMENT_URL"
-_PREVIEW_FLAG = "SPONSOR_PAYMENT_PREVIEW"
 _PRODUCTION_FLAG = "PRODUCTION_BUILD"
 _ALLOW_TEST_FLAG = "ALLOW_STRIPE_TEST_LINKS"
 _ON = frozenset({"1", "true", "yes", "on"})
@@ -268,7 +267,7 @@ def _runtime(root: Path, env: Mapping[str, str]) -> _Runtime:
         raise _ConfigError("enrollment is required")
     needles = sponsored_href_needles(root)
     enrollment = _enrollment(data["enrollment"], needles)
-    payments = _with_preview(root, env)
+    payments = _with_committed(root, env)
     return _Runtime(
         enrollment=enrollment,
         tiers=_tier_payments(payments, needles, _build(payments)),
@@ -334,19 +333,21 @@ def _stripe_test_url(text: str) -> bool:
     )
 
 
-def _with_preview(root: Path, env: Mapping[str, str]) -> dict[str, str]:
+def _with_committed(root: Path, env: Mapping[str, str]) -> dict[str, str]:
+    """Fill empty tier URLs from the committed production map.
+
+    An explicit env URL wins. A missing file leaves the mailto fallback.
+    """
     merged = {key: value for key, value in env.items() if isinstance(value, str)}
-    if not _flag(env, _PREVIEW_FLAG):
-        return merged
-    path = root / _PREVIEW_FILE
+    path = root / _PAYMENT_FILE
     if not path.is_file():
-        raise _ConfigError("sponsor payment preview file is missing")
+        return merged
     try:
         data = json.loads(path.read_text())
     except json.JSONDecodeError as exc:
-        raise _ConfigError("sponsor payment preview file is not JSON") from exc
+        raise _ConfigError("sponsor payment file is not JSON") from exc
     if not isinstance(data, dict):
-        raise _ConfigError("sponsor payment preview file must be an object")
+        raise _ConfigError("sponsor payment file must be an object")
     _reject_unknown(data, _PREVIEW_KEYS)
     for tier in _TIERS:
         current = merged.get(tier.env_name, "")
@@ -354,7 +355,7 @@ def _with_preview(root: Path, env: Mapping[str, str]) -> dict[str, str]:
             continue
         raw = data.get(tier.key, "")
         if not isinstance(raw, str) or not raw.strip():
-            raise _ConfigError("preview " + tier.key + " must be an https URL")
+            raise _ConfigError("payment " + tier.key + " must be an https URL")
         merged[tier.env_name] = raw.strip()
     return merged
 
@@ -493,11 +494,9 @@ def _page_html(rows: tuple[tuple[_Tier, _Payment], ...]) -> str:
         blocks.append("<p>" + tier.price + "</p>")
         blocks.append("<p>" + _payment_anchor(payment) + "</p>")
     blocks.append(
-        '<p>Questions: <a href="mailto:'
+        '<p>Questions? <a href="mailto:'
         + _SPONSOR_MAIL
-        + '">'
-        + _SPONSOR_MAIL
-        + "</a></p>"
+        + '">Email us</a></p>'
     )
     blocks.append("<p>" + _SIGN_OFF + "</p>")
     return (

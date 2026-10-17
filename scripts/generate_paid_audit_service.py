@@ -44,6 +44,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from premium_copy import audit_buy_html
+
 DOMAIN = "https://aitoolsessentials.com"
 
 # The paid tier. Priced to match the delivered reference audit.
@@ -294,7 +296,8 @@ def generate_service_page(root: Path, today: str) -> int:
 <p class="kicker light">Strategy audit · no implementation</p>
 <h1>Know which AI subscriptions to keep, which to cut, and what the bottleneck actually costs you.</h1>
 <p class="subhead">A written audit of the stack you already pay for. Keep/cut/defer decisions with money attached, a direct answer to every workflow you named, and a 30-day plan. ${AUDIT_PRICE_USD} one-time.</p>
-<p><a class="button button-blue" href="/services/audit-intake.html">Start the audit intake</a>
+<p>{audit_buy_html()}
+<a class="button button-ghost-dark" href="/services/audit-intake.html" style="margin-left:8px">Start the audit intake</a>
 <a class="button button-ghost-dark" href="/stack-audit.html" style="margin-left:8px">Try the free instant audit first</a></p>
 <p class="muted-small">Strategy and written recommendations only. We never ask for account access, credentials, or API keys. No fabricated savings — if you leave a cost blank we report it as blank.</p>
 </div></section>
@@ -331,7 +334,8 @@ def generate_service_page(root: Path, today: str) -> int:
 <div class="score-card"><span>Next step</span>
 <h2>Start with the intake.</h2>
 <p>It takes about 15 minutes and needs the systems you pay for, their owners, their costs, and the one bottleneck you want solved first. That is what lets the audit answer with specifics instead of generalities.</p>
-<p><a class="button button-blue" href="/services/audit-intake.html">Start the audit intake</a></p></div>
+<p>{audit_buy_html()}
+<a class="button button-ghost-dark" href="/services/audit-intake.html" style="margin-left:8px">Start the audit intake</a></p></div>
 </div></section>
 </main>{_footer()}{_scripts()}
 <script type="application/ld+json">{json.dumps(service_schema, separators=(",", ":"))}</script>
@@ -408,7 +412,7 @@ def generate_intake_page(root: Path, today: str) -> int:
 <label class="form-check"><input type="checkbox" name="discovery_ack" required> I understand the audit is built from the information above, and that blank fields are reported as unknown rather than estimated.</label>
 
 <p><button class="button button-blue" type="submit">Submit intake</button></p>
-<p class="muted-small">We reply within {AUDIT_INTAKE_SLA} to confirm the audit is buildable and to arrange payment. Nothing is charged from this form.</p>
+<p class="muted-small">We reply within {AUDIT_INTAKE_SLA} to confirm the audit is buildable and to arrange payment. Nothing is charged from this form. {audit_buy_html()}</p>
 </form>
 
 <div class="score-card"><span>What happens next</span><h2>Two steps, no surprises.</h2>
@@ -481,7 +485,8 @@ def generate_sample_page(root: Path, today: str) -> int:
 <div class="score-card"><span>Sections 4-5</span><h2>Monday actions and a 30-day sequence</h2>
 <p>Every finding carries a specific next action with a named owner. The sequence covers weeks 1-4 and ends with a cancel rule so the stack does not drift back.</p></div>
 
-<p><a class="button button-blue" href="/services/audit-intake.html">Start the audit intake</a>
+<p>{audit_buy_html()}
+<a class="button button-ghost-dark" href="/services/audit-intake.html" style="margin-left:8px">Start the audit intake</a>
 <a class="button button-ghost-dark" href="/services/paid-audit.html" style="margin-left:8px">Back to overview</a></p>
 </div></section>
 </main>{_footer()}{_scripts()}</body></html>'''

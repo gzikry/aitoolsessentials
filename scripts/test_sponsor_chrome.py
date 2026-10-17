@@ -23,7 +23,7 @@ HTTPS_BUTTON = (
     'target="_blank" rel="external noopener nofollow">Sponsor us</a>'
 )
 QUESTIONS = (
-    'Questions: <a href="mailto:aitoolsessentials@gmail.com">aitoolsessentials@gmail.com</a>'
+    'Questions? <a href="mailto:aitoolsessentials@gmail.com">Email us</a>'
 )
 PITCH = "Tools you can cancel"
 EXTERNAL_LINE = (
@@ -420,15 +420,21 @@ def _stripe_button(url: str) -> str:
 
 def test_stripe_preview_and_production_gate() -> None:
     repo = Path(__file__).resolve().parents[1]
-    preview = json.loads((repo / "data" / "sponsor_payment_preview.json").read_text())
-    if preview != {"issue": ISSUE_URL, "bar": BAR_URL, "bundle": BUNDLE_URL}:
-        raise AssertionError("preview config is not the three Stripe test links")
+    if (repo / "data" / "sponsor_payment_preview.json").exists():
+        raise AssertionError("data/sponsor_payment_preview.json must not ship on the public site")
+    env_urls = {
+        "SPONSOR_PAYMENT_URL_ISSUE": ISSUE_URL,
+        "SPONSOR_PAYMENT_URL_BAR": BAR_URL,
+        "SPONSOR_PAYMENT_URL_BUNDLE": BUNDLE_URL,
+    }
     with TemporaryDirectory() as raw:
         root = Path(raw)
         _write(root, {"enrollment": None})
-        _raises(lambda: write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"}))
-        (root / "data" / "sponsor_payment_preview.json").write_text(json.dumps(preview))
         write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"})
+        ignored = (root / "sponsor" / "index.html").read_text()
+        _has(ignored, MAILTO_BUTTON)
+        _lacks(ignored, "buy.stripe.com")
+        write_page(root, env_urls)
         html = (root / "sponsor" / "index.html").read_text()
         _has(html, _stripe_button(ISSUE_URL))
         _has(html, _stripe_button(BAR_URL))
@@ -439,12 +445,7 @@ def test_stripe_preview_and_production_gate() -> None:
         plain = (root / "sponsor" / "index.html").read_text()
         _has(plain, MAILTO_BUTTON)
         _lacks(plain, "buy.stripe.com")
-        _raises(
-            lambda: write_page(
-                root,
-                {"SPONSOR_PAYMENT_PREVIEW": "1", "PRODUCTION_BUILD": "1"},
-            )
-        )
+        _raises(lambda: write_page(root, {**env_urls, "PRODUCTION_BUILD": "1"}))
         blocked = (root / "sponsor" / "index.html").read_text()
         _has(blocked, MAILTO_BUTTON)
         _lacks(blocked, "buy.stripe.com")
@@ -453,7 +454,7 @@ def test_stripe_preview_and_production_gate() -> None:
         write_page(
             root,
             {
-                "SPONSOR_PAYMENT_PREVIEW": "1",
+                **env_urls,
                 "PRODUCTION_BUILD": "1",
                 "ALLOW_STRIPE_TEST_LINKS": "1",
             },
@@ -474,6 +475,87 @@ def test_stripe_preview_and_production_gate() -> None:
             raise AssertionError("main ref scan reported " + str(main_ref))
         if production_stripe_test_errors(root, {"GITHUB_REF": "refs/pull/29/merge"}):
             raise AssertionError("a pull request ref was treated as production")
+
+
+LIVE_ISSUE = "https://buy.stripe.com/3cIeVc8Yx64R7JZcPd0x200"
+LIVE_BAR = "https://buy.stripe.com/eVq5kCgqZeBnaWb02r0x201"
+LIVE_BUNDLE = "https://buy.stripe.com/4gM3cu3EdfFr4xN02r0x202"
+LIVE_PAYMENTS = {"issue": LIVE_ISSUE, "bar": LIVE_BAR, "bundle": LIVE_BUNDLE}
+LIVE_QUESTIONS = (
+    'Questions? <a href="mailto:aitoolsessentials@gmail.com">Email us</a>'
+)
+
+
+def _tier_html(html: str, heading: str) -> str:
+    start = html.index("<h2>" + heading + "</h2>")
+    nxt = html.find("<h2>", start + 4)
+    if nxt == -1:
+        nxt = len(html)
+    return html[start:nxt]
+
+
+def _assert_live_tiers(html: str) -> None:
+    issue = _tier_html(html, "Newsletter line, 1 issue")
+    bar = _tier_html(html, "Site bar, 1 month")
+    bundle = _tier_html(html, "Bundle, 1 month")
+    _has(issue, _stripe_button(LIVE_ISSUE))
+    _has(issue, "$50")
+    _lacks(issue, LIVE_BAR)
+    _lacks(issue, LIVE_BUNDLE)
+    _has(bar, _stripe_button(LIVE_BAR))
+    _has(bar, "$150")
+    _lacks(bar, LIVE_ISSUE)
+    _lacks(bar, LIVE_BUNDLE)
+    _has(bundle, _stripe_button(LIVE_BUNDLE))
+    _has(bundle, "$200")
+    _lacks(bundle, LIVE_ISSUE)
+    _lacks(bundle, LIVE_BAR)
+    _has(html, LIVE_QUESTIONS)
+    _lacks(html, "/test_")
+    _lacks(html, MAILTO_BUTTON)
+
+
+def test_live_tier_payment_urls() -> None:
+    repo = Path(__file__).resolve().parents[1]
+    config_path = repo / "data" / "sponsor_payment.json"
+    if not config_path.is_file():
+        raise AssertionError("data/sponsor_payment.json is missing")
+    config = json.loads(config_path.read_text())
+    if config != LIVE_PAYMENTS:
+        raise AssertionError("live payment config is " + str(config))
+    reused = {
+        "issue": ISSUE_URL.replace("/test_", "/"),
+        "bar": BAR_URL.replace("/test_", "/"),
+        "bundle": BUNDLE_URL.replace("/test_", "/"),
+    }
+    if config == reused:
+        raise AssertionError("live config reused the test tier mapping")
+    published = (repo / "sponsor" / "index.html").read_text()
+    _assert_live_tiers(published)
+    with TemporaryDirectory() as raw:
+        root = Path(raw)
+        _write(root, {"enrollment": None})
+        (root / "data" / "sponsor_payment.json").write_text(
+            json.dumps(LIVE_PAYMENTS), encoding="utf-8"
+        )
+        write_page(root, {})
+        _assert_live_tiers((root / "sponsor" / "index.html").read_text())
+        write_page(root, {"PRODUCTION_BUILD": "1"})
+        _assert_live_tiers((root / "sponsor" / "index.html").read_text())
+        write_page(root, {"SPONSOR_PAYMENT_URL_ISSUE": "https://pay.example.com/issue"})
+        mixed = (root / "sponsor" / "index.html").read_text()
+        issue = _tier_html(mixed, "Newsletter line, 1 issue")
+        _has(issue, 'href="https://pay.example.com/issue"')
+        _lacks(issue, LIVE_ISSUE)
+        _has(_tier_html(mixed, "Site bar, 1 month"), _stripe_button(LIVE_BAR))
+        _has(_tier_html(mixed, "Bundle, 1 month"), _stripe_button(LIVE_BUNDLE))
+        bad = dict(LIVE_PAYMENTS)
+        bad["bar"] = BAR_URL
+        (root / "data" / "sponsor_payment.json").write_text(json.dumps(bad), encoding="utf-8")
+        _raises(lambda: write_page(root, {"PRODUCTION_BUILD": "1"}))
+        kept = (root / "sponsor" / "index.html").read_text()
+        _lacks(kept, "/test_")
+        _has(kept, LIVE_BAR)
 
 
 def test_homepage_sponsor_link_survives_stamp() -> None:
@@ -572,6 +654,7 @@ def main() -> None:
         test_rejected_enrollment_values,
         test_payment_url,
         test_stripe_preview_and_production_gate,
+        test_live_tier_payment_urls,
         test_homepage_sponsor_link_survives_stamp,
         test_stamp_site_walk,
     )

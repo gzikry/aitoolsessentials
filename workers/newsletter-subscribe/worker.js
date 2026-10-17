@@ -57,14 +57,16 @@ async function resend(env, path, method, payload) {
   return { ok: response.ok, status: response.status, data };
 }
 
-async function limited(request) {
+export async function limited(request, env) {
+  const limiter = env && env.SIGNUP_LIMIT;
+  if (!limiter || typeof limiter.limit !== "function") return true;
   const ip = request.headers.get("cf-connecting-ip") || "unknown";
-  const origin = new URL(request.url).origin;
-  const cache = caches.default;
-  const key = new Request(`${origin}/rl/${encodeURIComponent(ip)}`);
-  if (await cache.match(key)) return true;
-  await cache.put(key, new Response("1", { headers: { "Cache-Control": "max-age=60" } }));
-  return false;
+  try {
+    const { success } = await limiter.limit({ key: ip });
+    return success !== true;
+  } catch {
+    return true;
+  }
 }
 
 async function startSignup(request, env) {
@@ -79,7 +81,7 @@ async function startSignup(request, env) {
   const kind = classify(fields);
   if (kind === "honeypot") return page("Check your email", "If that address can join, a confirm link is on its way.");
   if (kind === "bad_email") return page("Check the address", "Enter a full email address.");
-  if (await limited(request)) return page("Slow down", "Wait a minute, then try the form again.");
+  if (await limited(request, env)) return page("Slow down", "Wait a minute, then try the form again.");
 
   const email = String(fields.email).trim().toLowerCase();
   const encoded = encodeURIComponent(email);

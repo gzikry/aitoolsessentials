@@ -45,7 +45,7 @@ def generate(root: Path) -> int:
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Subscribe — Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/subscribe/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><img src="{esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"><p class="kicker light">Free weekly email</p><h1>Keep/Cut Weekly.</h1><p class="subhead">{esc(desc)}</p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">{block}
-<p>Issue 1 is live on the site: <a href="/newsletter/{issue_slug}.html">{issue_title}</a>. This form is the free email. Paid <a href="/premium/">Premium</a> is a separate $12/month Whop membership — do not use checkout for this list. FormSubmit is only for tool submissions and intake.</p>
+<p>Issue 1 is live on the site: <a href="/newsletter/{issue_slug}.html">{issue_title}</a>. This form is the free email. Paid <a href="/premium/">Premium</a> is a separate $12/month membership, secure checkout by Stripe — do not use checkout for this list. FormSubmit is only for tool submissions and intake.</p>
 </div></section>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
     out = root / "subscribe"

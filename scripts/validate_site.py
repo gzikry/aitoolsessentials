@@ -19,6 +19,29 @@ from sponsor_chrome import production_stripe_test_errors
 from asset_rev import asset_link_errors
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def customer_whop_checkout_errors(root: Path) -> list[str]:
+    """Every customer HTML page under the site root, including comparisons and tools."""
+    errors: list[str] = []
+    for path in sorted(root.rglob("*")):
+        if path.suffix not in {".html", ".js"}:
+            continue
+        rel = path.relative_to(root)
+        if "admin" in rel.parts:
+            continue
+        if not is_public_rel(rel) and rel.as_posix() != "js/stack-audit.js":
+            continue
+        if "whop.com/checkout" in path.read_text(errors="ignore"):
+            errors.append(rel.as_posix() + " still links to whop.com/checkout")
+    return errors
+
+
+def sponsor_preview_file_errors(root: Path) -> list[str]:
+    path = root / "data" / "sponsor_payment_preview.json"
+    if path.is_file():
+        return ["data/sponsor_payment_preview.json is public and holds Stripe test links"]
+    return []
 _SITE = "https://aitoolsessentials.com"
 _CANONICAL_RELS = (
     re.compile(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', re.I),
@@ -430,8 +453,12 @@ def main():
             errors.append('Stack Audit page missing Premium upsell section')
         if 'keep/cut pack' not in page.lower() and 'written reply' not in page.lower():
             errors.append('Stack Audit page missing Path A keep/cut pack upgrade')
-        if '?promo=LAUNCH50' not in page:
-            errors.append('Stack Audit upgrade CTA must use the LAUNCH50 checkout')
+        if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in page:
+            errors.append('Stack Audit upgrade CTA must use the live Stripe Premium checkout')
+        if 'use code LAUNCH50 at checkout' not in page:
+            errors.append('Stack Audit upgrade CTA must say use code LAUNCH50 at checkout')
+        if '?promo=LAUNCH50' in page:
+            errors.append('Stack Audit must not prefill LAUNCH50')
         if 'You could save' in page:
             errors.append('Stack Audit must not invent savings in the Premium CTA')
         if 'Never changes' not in page and 'never changes' not in page:
@@ -660,10 +687,10 @@ def main():
             errors.append('Homepage #subscribe must be labeled as the free Keep/Cut Weekly email')
         if 'join premium on whop' in subscribe_block.lower() or 'start 7-day' in subscribe_block.lower():
             errors.append('Homepage #subscribe must not look like the paid Premium CTA')
-    if 'Join Premium on Whop — 7-day trial · LAUNCH50' not in home_html:
+    if 'Join Premium — 7-day trial · use code LAUNCH50 at checkout' not in home_html:
         errors.append('Homepage must keep a labeled LAUNCH50 upgrade CTA (not as the hero primary)')
-    if 'https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50' not in home_html:
-        errors.append('Homepage upgrade checkout must use the LAUNCH50 promo URL')
+    if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in home_html:
+        errors.append('Homepage upgrade checkout must use the live Stripe Premium URL')
     hero_match = re.search(r'<section class="hero[^"]*".*?</section>', home_html, flags=re.S)
     hero_html = hero_match.group(0) if hero_match else ''
     if 'hero-device' in home_html or 'device-window' in home_html:
@@ -719,17 +746,17 @@ def main():
     if "You're in" in checkout_html:
         errors.append('checkout/complete must not use confirmation tone')
     welcome_html = (ROOT / 'premium/welcome/index.html').read_text()
-    if 'https://whop.com/joined/aitoolsessentials-premium/' not in welcome_html:
-        errors.append('premium/welcome must use the product hub deep link')
-    if 'https://whop.com/hub"' in welcome_html or "https://whop.com/hub'" in welcome_html:
-        errors.append('premium/welcome still uses generic whop.com/hub')
+    if 'aitoolsessentials@gmail.com' not in welcome_html or '24 hours' not in welcome_html:
+        errors.append('premium/welcome must say access is emailed within 24 hours')
+    if 'whop.com' in welcome_html.lower():
+        errors.append('premium/welcome still points at Whop')
     pricing_html = (ROOT / 'pricing/index.html').read_text()
     if '/stack-audit.html' not in pricing_html:
         errors.append('Pricing page must link the free Stack Audit')
-    if 'Join Premium on Whop — 7-day trial · LAUNCH50' not in pricing_html:
-        errors.append('Pricing page must label the Whop CTA with trial + LAUNCH50')
-    if 'https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50' not in pricing_html:
-        errors.append('Pricing page primary checkout must use the LAUNCH50 promo URL')
+    if 'Join Premium — 7-day trial · use code LAUNCH50 at checkout' not in pricing_html:
+        errors.append('Pricing page must label the Stripe CTA with trial + LAUNCH50')
+    if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in pricing_html:
+        errors.append('Pricing page primary checkout must use the live Stripe Premium URL')
     if 'second product' not in pricing_html.lower() and 'not a second' not in pricing_html.lower():
         errors.append('Pricing page must say the human audit is not a second paid product')
     services_audit = ROOT / 'services/ai-stack-audit.html'
@@ -748,12 +775,12 @@ def main():
         )
         if not preview_ok:
             errors.append('Premium library hub must say the pages are a public preview and not gated')
-        if 'whop.com/checkout/ch_DKm5yxA1OBXoDru' not in library_html:
-            errors.append('Premium library hub must keep the existing Whop Premium checkout URL')
+        if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in library_html:
+            errors.append('Premium library hub must use the live Stripe Premium checkout')
         if 'public premium preview' not in library_html.lower():
             errors.append('Premium library hub must be labeled Public Premium preview')
-        if '?promo=LAUNCH50' not in library_html:
-            errors.append('Premium library hub primary checkout must use LAUNCH50')
+        if 'use code LAUNCH50 at checkout' not in library_html:
+            errors.append('Premium library hub must say use code LAUNCH50 at checkout')
     conversion_hits = list((ROOT).glob('tools/*/index.html'))[:3]
     for sample in conversion_hits:
         text = sample.read_text()
@@ -876,6 +903,8 @@ def main():
         if endpoint:
             if f'action="{endpoint}"' not in subscribe_html:
                 errors.append('Subscribe page action does not match subscribe_endpoint')
+            if f'action="{endpoint}"' not in home_html:
+                errors.append('Homepage subscribe form action does not match subscribe_endpoint')
         else:
             if 'signups open soon' not in subscribe_html.lower():
                 errors.append('Subscribe page must say signups open soon')
@@ -1260,6 +1289,8 @@ def main():
     errors.extend(unresolved_canonicals(ROOT))
     errors.extend(double_slash_external_hrefs(ROOT)[:12])
     errors.extend(asset_link_errors(ROOT))
+    errors.extend(customer_whop_checkout_errors(ROOT))
+    errors.extend(sponsor_preview_file_errors(ROOT))
 
     if errors:
         print('Validation failed')

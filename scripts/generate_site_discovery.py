@@ -89,7 +89,7 @@ def generate_start_here(root: Path) -> None:
         ("I need a tool now", "Use Tool Finder to narrow the list by workflow, budget, and buyer type.", "/tool-finder.html", "Open Tool Finder"),
         ("I need a full stack", "Use Stack Builder to generate a shareable role-specific stack.", "/stack-builder.html", "Build my stack"),
         ("I need to control cost", "Use the Cost Calculator before subscriptions sprawl, or decode automation billing units for Zapier, Make, and n8n.", "/automation-cost-decoder/", "Decode automation cost"),
-        ("I am paying for overlapping AI tools", "Run the free instant Stack Audit first. Keep/Cut Weekly is the free email. Premium is a separate $12/month Whop membership.", "/stack-audit.html", "Free Stack Audit"),
+        ("I am paying for overlapping AI tools", "Run the free instant Stack Audit first. Keep/Cut Weekly is the free email. Premium is a separate $12/month membership, secure checkout by Stripe.", "/stack-audit.html", "Free Stack Audit"),
         ("I am replacing a tool", "Open the Alternatives hub and compare before switching.", "/alternatives/", "Compare alternatives"),
         ("I want the $12/month membership", "Run the free Stack Audit first. Premium is optional: dated keep/cut pack and a 48-hour written reply in Whop. $12/month — cheaper than one overlapping seat. Code LAUNCH50 for 50% off the first paid month.", "/premium/", "See Premium keep/cut pack"),
         ("I need dated prices", "Open Pricing Watch for official snapshots with checked dates. No invented history.", "/pricing-watch/", "Open Pricing Watch"),

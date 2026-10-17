@@ -9,17 +9,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 WHOP = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/"
-WHOP_PROMO = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50"
+PREMIUM_URL = "https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203"
 PRODUCT = "https://whop.com/aitoolsessentials/aitoolsessentials-premium/"
-HUB = "https://whop.com/joined/aitoolsessentials-premium/"
-JOIN_LABEL = "Join Premium on Whop — 7-day trial · LAUNCH50"
+JOIN_LABEL = "Join Premium — 7-day trial · use code LAUNCH50 at checkout"
+ACCESS_EMAIL = "aitoolsessentials@gmail.com"
 
 
 def main() -> None:
     errors: list[str] = []
     cfg = json.loads((ROOT / "data" / "integrations.json").read_text())["whop"]
     if cfg["checkout_url"] != WHOP:
-        errors.append("integrations.json checkout_url drifted from the live Premium checkout")
+        errors.append("integrations.json still records the historical Whop checkout")
     if cfg["product_url"] != PRODUCT:
         errors.append("integrations.json product_url drifted from AIToolsEssentials Premium")
     if int(cfg["price_usd_month"]) != 12:
@@ -28,14 +28,16 @@ def main() -> None:
         errors.append("Do not invent a new Whop plan id")
 
     home = (ROOT / "index.html").read_text()
-    if WHOP_PROMO not in home:
-        errors.append("Homepage missing LAUNCH50 promo checkout on the upgrade path")
+    if PREMIUM_URL not in home:
+        errors.append("Homepage missing the live Stripe Premium checkout")
+    if "promo=LAUNCH50" in home:
+        errors.append("Homepage still prefills LAUNCH50")
     if "$12" not in home:
         errors.append("Homepage must keep $12/mo visible near Premium upgrade copy")
     if home.count(JOIN_LABEL) > 2:
         errors.append("Homepage repeats Join more than mid-page upgrade + footer")
     subscribe = home[home.find('id="subscribe"'): home.find('id="subscribe"') + 1200]
-    if WHOP in subscribe or WHOP_PROMO in subscribe:
+    if "whop.com/checkout" in subscribe:
         errors.append("Homepage #subscribe still contains Whop checkout")
     hero_end = home.find("</section>", home.find('class="hero '))
     hero = home[home.find('class="hero '): hero_end] if 'class="hero ' in home and hero_end != -1 else ""
@@ -71,18 +73,18 @@ def main() -> None:
         errors.append("Checkout complete missing honest Whop wording")
 
     welcome = (ROOT / "premium/welcome/index.html").read_text()
-    if HUB not in welcome:
-        errors.append("Welcome page missing product hub deep link")
-    if "https://whop.com/hub\"" in welcome or "https://whop.com/hub'" in welcome:
-        errors.append("Welcome page still uses generic whop.com/hub")
+    if ACCESS_EMAIL not in welcome or "24 hours" not in welcome:
+        errors.append("Welcome page must say access is emailed within 24 hours")
+    if "whop.com" in welcome.lower():
+        errors.append("Welcome page still points at Whop")
     if "cannot verify a charge" not in welcome.lower():
         errors.append("Welcome page must say this page cannot verify a charge")
 
     stack = (ROOT / "stack-audit.html").read_text()
     if "paid Premium" not in stack.lower() and "Paid Premium" not in stack and "keep/cut pack" not in stack.lower() and "See Premium keep/cut pack" not in stack:
         errors.append("Free Stack Audit page must label paid Premium separately")
-    if WHOP_PROMO not in stack:
-        errors.append("Stack Audit post-result upgrade must use the LAUNCH50 checkout")
+    if PREMIUM_URL not in stack:
+        errors.append("Stack Audit post-result upgrade must use the live Stripe checkout")
     if "You could save" in stack:
         errors.append("Stack Audit must not invent savings in the Premium upgrade CTA")
     if "200 audit" in stack.lower():
@@ -120,23 +122,23 @@ def main() -> None:
         errors.append("Library hub must say it is a public preview / not gated")
     if "format only" not in library_hub.lower():
         errors.append("Library hub must contrast preview format vs paid Whop pack")
-    if HUB not in library_hub and HUB not in (library / "how-to-access.html").read_text():
-        errors.append("Library must use the product hub deep link")
-    if WHOP_PROMO not in library_hub:
-        errors.append("Library hub missing LAUNCH50 promo checkout")
-    if "delivered in Whop" not in library_hub and "delivered in Whop" not in library_hub.replace("\n", " "):
-        if "lives in Whop" not in library_hub and "inside Whop" not in library_hub:
-            errors.append("Library hub must say Premium is delivered in Whop")
+    access_page = (library / "how-to-access.html").read_text()
+    if PREMIUM_URL not in library_hub:
+        errors.append("Library hub missing the live Stripe Premium checkout")
+    if "delivered by email" not in library_hub.lower():
+        errors.append("Library hub must say Premium is delivered by email")
     if "This is the $12/month Whop membership library" in library_hub:
         errors.append("Library hub still sells public HTML as the paid membership")
     if "George" in library_hub:
         errors.append("Library hub must not name George")
 
-    access = (library / "how-to-access.html").read_text()
+    access = access_page
     if "George" in access:
         errors.append("how-to-access.html must not name George")
-    if HUB not in access:
-        errors.append("how-to-access.html missing product hub deep link")
+    if ACCESS_EMAIL not in access or "24 hours" not in access:
+        errors.append("how-to-access.html must say access is emailed within 24 hours")
+    if "whop.com" in access.lower():
+        errors.append("how-to-access.html still points at Whop")
     if "/premium/welcome/" not in access:
         errors.append("how-to-access.html must point post-purchase to /premium/welcome/")
     if "You're in" in access or "Payment confirmed" in access:
@@ -149,10 +151,10 @@ def main() -> None:
         errors.append("Pricing missing labeled Premium checkout")
     if "not a second product" not in pricing.lower() and "not a second paid" not in pricing.lower():
         errors.append("Pricing must say the written reply is not a second product")
-    if WHOP_PROMO not in pricing:
-        errors.append("Pricing missing LAUNCH50 promo checkout URL")
-    if WHOP not in pricing:
-        errors.append("Pricing missing existing Whop checkout URL")
+    if PREMIUM_URL not in pricing:
+        errors.append("Pricing missing the live Stripe Premium checkout")
+    if "whop.com/checkout" in pricing:
+        errors.append("Pricing still links to whop.com/checkout")
 
     sys.path.insert(0, str(ROOT / "scripts"))
     from generate_premium_membership import update_pricing_page
@@ -262,14 +264,14 @@ def main() -> None:
         errors.append("premium/index.html still sells pay $12 to stop paying")
     if JOIN_LABEL not in premium:
         errors.append("premium/index.html missing labeled Premium checkout")
-    if WHOP_PROMO not in premium:
-        errors.append("premium/index.html missing LAUNCH50 promo checkout")
+    if PREMIUM_URL not in premium:
+        errors.append("premium/index.html missing the live Stripe Premium checkout")
     if "George" in premium:
         errors.append("premium/index.html must not name George")
 
     faq = (ROOT / "premium/faq.html").read_text()
-    if HUB not in faq:
-        errors.append("premium/faq.html missing product hub deep link")
+    if ACCESS_EMAIL not in faq and "delivered by email" not in faq.lower():
+        errors.append("premium/faq.html must describe email delivery")
     if "/premium/welcome/" not in faq:
         errors.append("premium/faq.html must point post-purchase to welcome")
     if "You're in" in faq or "Payment confirmed" in faq:
