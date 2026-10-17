@@ -11,6 +11,7 @@ from urllib.parse import quote, unquote, urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from legacy_redirects import LEGACY
+from site_health import run as health_run
 from site_scope import is_public_rel
 from validate_site import site_urls
 
@@ -85,6 +86,11 @@ def main() -> None:
         html = page.read_text(encoding="utf-8", errors="ignore")
         if 'name="robots" content="noindex' in html or 'http-equiv="refresh"' in html:
             errors.append(f"sitemap lists a non-indexable page: {loc}")
+    coverage = health_run(ROOT)["checks"]["coverage"]
+    if not coverage["ok"]:
+        errors.append(
+            f"health coverage treats redirect stubs as reviews: {coverage['orphan_reviews']}"
+        )
     if errors:
         raise SystemExit("\n".join(errors))
 
