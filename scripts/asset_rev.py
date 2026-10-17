@@ -23,8 +23,10 @@ _ASSET_DIRS = frozenset({"css", "js"})
 
 
 def _versioned_page(rel: Path) -> bool:
-    """Public pages, plus the go/ redirect stubs that still load site CSS."""
+    """Public pages, go/ hops, and the quiz stub that still loads site CSS."""
     if is_public_rel(rel):
+        return True
+    if rel.as_posix() == "marketing/linkable-assets/coding-assistant-quiz.html":
         return True
     return bool(rel.parts) and rel.parts[0] == "go"
 

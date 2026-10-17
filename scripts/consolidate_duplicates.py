@@ -104,6 +104,11 @@ def _is_stub(html: str) -> bool:
     return 'http-equiv="refresh"' in html
 
 
+def _is_real_stub(html: str) -> bool:
+    """A redirect stub is noindex and a meta refresh. Indexable pages are not exempt."""
+    return _is_stub(html) and "noindex" in html.casefold()
+
+
 def is_redirect_stub(html: str) -> bool:
     return _is_stub(html)
 
@@ -234,16 +239,17 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
-# One run of trailing punctuation, then the end or a separator. Nested repeats
-# on that punctuation are exponential, so this stays linear. A period ends the
-# segment even when another sentence follows. A hyphen does not: "moved-on",
-# "moved-in", and "moved - here's" keep going. A spaced hyphen before a capital
-# brand ("moved - AIToolsEssentials") is still a separator.
-_MOVED_ENDS = re.compile(
-    r"(?i:\bhas moved)[\s,!?…:;)\]]*(?:$|[|–—:·.]|-(?=\s+[A-Z]))",
-)
+# Titles and headings fail on the phrase itself. Body copy fails only when the
+# whole short block is a stub line. Both patterns are a single left-to-right
+# scan: no nested quantifiers.
+_HAS_MOVED = re.compile(r"has moved", re.I)
+_MOVED_MARK = re.compile(r"\(moved\)", re.I)
 _THIS_MOVED = re.compile(r"\bthis (?:page|guide|article) has moved\b", re.I)
+_SHORT_MOVED_LINE = re.compile(
+    r"(?i)^.*\bhas moved[\s,.!?…:;)\-–—|·]*\Z",
+)
 _SHORT_COPY_LIMIT = 180
+_SHORT_TAGS = frozenset({"p", "li", "div"})
 _HEADING_TAGS = frozenset({"h1", "h2", "h3", "h4", "h5", "h6"})
 _BLOCK_TAGS = _HEADING_TAGS | frozenset({
     "p", "div", "li", "section", "article", "main", "blockquote",
@@ -337,18 +343,22 @@ def _norm_copy(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def _moved_ends_segment(text: str) -> bool:
-    """True when 'has moved' ends at punctuation, the end of the text, or a separator."""
+def _phrase_anywhere(text: str) -> bool:
+    """True when a title or heading says 'has moved' or '(moved)' anywhere."""
     plain = _norm_copy(text)
-    return bool(plain) and _MOVED_ENDS.search(plain) is not None
+    if not plain:
+        return False
+    return _HAS_MOVED.search(plain) is not None or _MOVED_MARK.search(plain) is not None
 
 
-def _short_stub_body(text: str) -> bool:
-    """True for a short block that says this page, guide, or article has moved."""
+def _short_stub_copy(text: str) -> bool:
+    """True for a short block that is a stub sentence or just '<X> has moved'."""
     plain = _norm_copy(text)
     if not plain or len(plain) > _SHORT_COPY_LIMIT:
         return False
-    return _THIS_MOVED.search(plain) is not None
+    if _THIS_MOVED.search(plain) is not None:
+        return True
+    return _SHORT_MOVED_LINE.search(plain) is not None
 
 
 class _StubCopyParser(HTMLParser):
@@ -359,7 +369,7 @@ class _StubCopyParser(HTMLParser):
         self.stack: list[list] = []
         self.titles: list[str] = []
         self.headings: list[str] = []
-        self.blocks: list[str] = []
+        self.blocks: list[tuple[str, str]] = []
         self.descriptions: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list) -> None:
@@ -385,8 +395,8 @@ class _StubCopyParser(HTMLParser):
                 self.titles.append(text)
             elif open_tag in _HEADING_TAGS:
                 self.headings.append(text)
-            elif open_tag in _BLOCK_TAGS:
-                self.blocks.append(text)
+            elif open_tag in _SHORT_TAGS:
+                self.blocks.append((open_tag, text))
             if self.stack:
                 self.stack[-1][1].append(text)
             if open_tag == tag:
@@ -401,10 +411,11 @@ def _page_has_stub_moved_copy(html: str) -> bool:
     parser = _StubCopyParser()
     parser.feed(html)
     parser.close()
-    for text in parser.titles + parser.headings + parser.descriptions:
-        if _moved_ends_segment(text):
-            return True
-    return any(_short_stub_body(text) for text in parser.blocks)
+    if any(_phrase_anywhere(text) for text in parser.titles + parser.headings):
+        return True
+    if any(_short_stub_copy(text) for text in parser.descriptions):
+        return True
+    return any(_short_stub_copy(text) for _tag, text in parser.blocks)
 
 
 def stub_link_errors(root: Path) -> list[str]:
@@ -423,7 +434,7 @@ def stub_link_errors(root: Path) -> list[str]:
         if is_working_rel(rel) or not is_public_rel(rel):
             continue
         html = path.read_text(encoding="utf-8", errors="ignore")
-        if _is_stub(html):
+        if _is_real_stub(html):
             continue
         folded = html.casefold()
         if "(moved)" in folded:
@@ -444,7 +455,7 @@ def stub_link_errors(root: Path) -> list[str]:
         folded = text.casefold()
         if "(moved)" in folded:
             errors.append("llms.txt still says (moved)")
-        if any(_moved_ends_segment(line) or _short_stub_body(line) for line in text.splitlines()):
+        if any(_short_stub_copy(line) for line in text.splitlines()):
             errors.append("llms.txt still says has moved")
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)

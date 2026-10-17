@@ -125,7 +125,7 @@ def generate_stack_pages(root: Path, tools: list[dict[str, Any]]) -> str:
                 f'<h1>{esc(title)}</h1>'
                 '<p>This stack has been consolidated into our full guide, which is longer, '
                 'dated, and kept current.</p>'
-                f'<p><a class="button button-blue" href="{dest}">Open the full guide</a></p>'
+                f'<p><a class="button button-blue stub-fallback" href="{dest}">Open the full guide</a></p>'
                 '</div></section></main></body></html>')
             index_cards.append(
                 f'<article class="content-hub-card"><span>{esc(role)} · {esc(budget)}</span>'

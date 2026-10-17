@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from consolidate_duplicates import (
     PAIRS,
-    _moved_ends_segment,
+    _short_stub_copy,
     duplicate_errors,
     redirect_stub,
     stub_link_errors,
@@ -71,38 +71,65 @@ def _doc(head: str, body: str) -> str:
 
 
 def _stub_phrase_and_jsonld() -> list[str]:
-    """Stub titles and short stub bodies fail. Ordinary 'has moved' sentences pass."""
+    """Titles and headings fail on the phrase. Short stub lines fail. Prose passes.
+
+    'Pricing has moved. Here's what changed' and 'Runway has moved - Pika has not'
+    fail when they are the title. The same sentences pass in body prose. That split
+    is intentional: a real title never needs the phrase.
+    """
     misses: list[str] = []
     failures = {
+        # Z1–Z4. Hyphen tails used to slip through the separator regex.
+        "z1.html": _doc("<title>Runway vs Pika has moved -</title>", "<p>Current page.</p>"),
+        "z2.html": _doc("<title>has moved -- AIToolsEssentials</title>", "<p>Current page.</p>"),
+        "z3.html": _doc("<title>has moved - aitoolsessentials.com</title>", "<p>Current page.</p>"),
+        "z4.html": _doc("<title>has moved -AIToolsEssentials</title>", "<p>Current page.</p>"),
+        # T6. A title that continues after the phrase still fails.
+        "t6.html": _doc("<title>X has moved. See the current page</title>", "<p>Current page.</p>"),
+        "title-bang.html": _doc("<title>X has moved! See the new guide.</title>", "<p>Current page.</p>"),
         "title-pipe.html": _doc("<title>Runway vs Pika has moved | AIToolsEssentials</title>", "<p>Current page.</p>"),
         "title-bare.html": _doc("<title>Runway vs Pika has moved</title>", "<p>Current page.</p>"),
         "h1.html": _doc("<title>Compare</title>", "<h1>Runway vs Pika has moved</h1>"),
         "h1-span.html": _doc("<title>Compare</title>", "<h1><span>Runway vs Pika has moved</span></h1>"),
-        "h2.html": _doc("<title>Compare</title>", "<h2>X has moved.</h2>"),
-        "div.html": _doc("<title>Compare</title>", "<div>This page has moved.</div>"),
-        "guide.html": _doc("<title>Compare</title>", "<p>This guide has moved.</p>"),
-        "title-hyphen.html": _doc("<title>Runway vs Pika has moved - AIToolsEssentials</title>", "<p>Current page.</p>"),
+        "h1-paren.html": _doc("<title>Compare</title>", "<h1>X (has moved)</h1>"),
+        "title-moved-mark.html": _doc("<title>Runway vs Pika (moved)</title>", "<p>Current page.</p>"),
+        # Comma cases. A comma does not save a title or heading.
         "title-comma-ellipsis.html": _doc("<title>Runway vs Pika has moved, …</title>", "<p>Current page.</p>"),
         "h1-comma.html": _doc("<title>Compare</title>", "<h1>Runway vs Pika has moved,</h1>"),
         "title-comma-pipe.html": _doc("<title>Runway vs Pika has moved, | AIToolsEssentials</title>", "<p>Current page.</p>"),
-        "title-emdash.html": _doc("<title>has moved — Brand</title>", "<p>Current page.</p>"),
-        "title-ellipsis.html": _doc("<title>has moved…</title>", "<p>Current page.</p>"),
-        "title-colon.html": _doc("<title>has moved: see the current page</title>", "<p>Current page.</p>"),
-        "h1-paren.html": _doc("<title>Compare</title>", "<h1>X (has moved)</h1>"),
-        "title-period-more.html": _doc("<title>X has moved. See the current page</title>", "<p>Current page.</p>"),
-        "h1-period-more.html": _doc("<title>Compare</title>", "<h1>X has moved. See the current page</h1>"),
-        "meta-period-more.html": _doc(
+        # These two are the body sentences below. As titles they fail on purpose.
+        "title-pricing-changed.html": _doc(
+            "<title>Pricing has moved. Here's what changed</title>",
+            "<p>Current page.</p>",
+        ),
+        "title-runway-pika.html": _doc(
+            "<title>Runway has moved - Pika has not</title>",
+            "<p>Current page.</p>",
+        ),
+        # G1–G7. Stub sentence, or the whole short block is '<X> has moved' plus punctuation.
+        "g1.html": _doc("<title>Compare</title>", "<p>This page has moved.</p>"),
+        "g2.html": _doc("<title>Compare</title>", "<div>This guide has moved.</div>"),
+        "g3.html": _doc("<title>Compare</title>", "<li>This article has moved</li>"),
+        "g4.html": _doc("<title>Compare</title>", "<p>Runway vs Pika has moved.</p>"),
+        "g5.html": _doc("<title>Compare</title>", "<li>Runway vs Pika has moved,</li>"),
+        "g6.html": _doc("<title>Compare</title>", "<div>Runway vs Pika has moved…</div>"),
+        "g7.html": _doc("<title>Compare</title>", "<h2>X has moved.</h2>"),
+    }
+    passes = {
+        "comma.html": _doc("<title>Pricing notes</title>", "<p>pricing has moved, so…</p>"),
+        "export.html": _doc("<title>Export</title>", "<p>The export button has moved to the Pro plan.</p>"),
+        "login.html": _doc("<title>Pricing</title>", "<li>its pricing page has moved behind a login</li>"),
+        "pricing-prose.html": _doc("<title>Pricing</title>", "<p>Pricing has moved. Here's what changed</p>"),
+        "runway-prose.html": _doc("<title>Compare</title>", "<div>Runway has moved - Pika has not</div>"),
+        "hyphen-on.html": _doc("<title>Plans</title>", "<p>The team has moved-on to the new plan.</p>"),
+        "hyphen-in.html": _doc("<title>Layout</title>", "<p>The control has moved-in from the sidebar.</p>"),
+        "meta-prose.html": _doc(
             '<meta name="description" content="X has moved. See the current page"><title>Compare</title>',
             "<p>Current page.</p>",
         ),
-    }
-    passes = {
-        "prose.html": _doc("<title>its pricing page has moved behind a login</title>", "<p>its pricing page has moved behind a login</p>"),
-        "export.html": _doc("<title>The export button has moved to the Pro plan.</title>", "<p>The export button has moved to the Pro plan.</p>"),
-        "comma.html": _doc("<title>pricing has moved, so…</title>", "<h1>pricing has moved, so…</h1>"),
-        "hyphen-on.html": _doc("<title>has moved-on</title>", "<p>Current page.</p>"),
-        "hyphen-in.html": _doc("<title>has moved-in</title>", "<p>Current page.</p>"),
-        "hyphen-prose.html": _doc("<title>Pricing has moved - here's what changed</title>", "<p>Current page.</p>"),
+        "z2-body.html": _doc("<title>Compare</title>", "<p>has moved -- AIToolsEssentials</p>"),
+        "z3-body.html": _doc("<title>Compare</title>", "<p>has moved - aitoolsessentials.com</p>"),
+        "z4-body.html": _doc("<title>Compare</title>", "<div>has moved -AIToolsEssentials</div>"),
     }
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
@@ -132,9 +159,16 @@ def _stub_phrase_and_jsonld() -> list[str]:
             misses.append(f"validator missed JSON-LD stub url: {found}")
         if "articles/suno-vs-udio.html still says" in found:
             misses.append("validator flagged the redirect stub itself")
+    stub = "This page has moved. "
+    exact = stub + ("x" * (180 - len(stub)))
+    over = stub + ("x" * (181 - len(stub)))
+    if len(exact) != 180 or not _short_stub_copy(exact):
+        misses.append("a 180-character stub sentence was not flagged")
+    if len(over) != 181 or _short_stub_copy(over):
+        misses.append("a stub sentence longer than 180 characters was flagged")
     long_copy = "Pricing notes has moved" + (", " * 20000) + "so the plan changed"
     started = time.perf_counter()
-    flagged = _moved_ends_segment(long_copy)
+    flagged = _short_stub_copy(long_copy)
     elapsed = time.perf_counter() - started
     if flagged:
         misses.append("a long punctuation run was treated as a stub")

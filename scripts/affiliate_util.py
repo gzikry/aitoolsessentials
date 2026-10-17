@@ -153,9 +153,11 @@ def hop_page_html(prog: dict[str, Any]) -> str:
 <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+<main><section class="scene scene-light"><div class="article-shell">
 <p>Continuing to Nous Research…</p>
-<p><a href="{dest}" rel="sponsored nofollow noopener">Continue to Nous Research</a> (affiliate / referral link)</p>
-<noscript><p><a href="{dest}" rel="sponsored nofollow noopener">Continue to Nous Research</a></p></noscript>
+<p><a class="stub-fallback" href="{dest}" rel="sponsored nofollow noopener">Continue to Nous Research</a> (affiliate / referral link)</p>
+<noscript><p><a class="stub-fallback" href="{dest}" rel="sponsored nofollow noopener">Continue to Nous Research</a></p></noscript>
+</div></section></main>
 </body>
 </html>
 '''

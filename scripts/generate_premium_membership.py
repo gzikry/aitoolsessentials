@@ -922,11 +922,11 @@ def update_checkout(root: Path) -> None:
 <body>
   <main>
     <section class="scene scene-dark">
-      <div style="max-width:720px;margin:0 auto;padding:92px 28px;text-align:center">
+      <div class="article-shell" style="max-width:720px;margin:0 auto;padding:92px 28px;text-align:center">
         <p class="kicker light">Checkout return</p>
         <h1>This page cannot verify a charge.</h1>
         <p class="subhead">If Stripe shows payment succeeded, continue to the Premium welcome page. This page cannot verify a charge. {ACCESS_COPY}.</p>
-        <p><a class="button button-blue" href="{WELCOME_PATH}">Continue to /premium/welcome/</a></p>
+        <p><a class="button button-blue stub-fallback" href="{WELCOME_PATH}">Continue to /premium/welcome/</a></p>
       </div>
     </section>
   </main>
