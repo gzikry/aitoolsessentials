@@ -401,6 +401,18 @@ incumbent being fronted. The two name questions that *do* need asking explicitly
 rows: the **xAI/Grok** trademark (disclosed clearly by `grokvideogenerator.dev` — credit it) and **Tesla**
 (`teslawraps.design` publishes Tesla model/trim templates with **no** non-affiliation line).
 
+## Published vendor submissions (verified and live - do not re-vet as new)
+
+A submission from a domain in this table is already listed. Check `data/tools.json` for the slug
+before doing any verification work on it; a resubmission is not a new lead and must not be
+re-published or re-asked. Publication is the expected outcome when ownership, pricing and legal
+evidence hold up - a hold is for unresolved questions, not for imperfections. Both outcomes are
+recorded: the hold table above for what is not live, this table for what is.
+
+| Tool | Domain | Published | Submitted by | Notes |
+|---|---|---|---|---|
+| Robylon | robylon.ai | 2026-10-16 | listings@robylon.ai | Vendor submission verified and published the same day, category reclassified from the submitted "Automation" to **AI Agents** on the verified use case. Operator identified in the notice itself (Zooid Tech Inc., San Francisco CA, with a postal address and phone) and corroborated independently by the domain's RDAP registrant matching the named co-founder and CEO; Delaware governing law, a refund policy, output ownership, input rights and a 30-60 day deletion window all read from the live Terms. Two items were published as **cons** rather than held, because neither implicates ownership: the Privacy Policy is dated 2026-04-07 and predates the current product, and the trust centre cited for the SOC 2 Type II and HIPAA claims (`trust.robylon.ai`) returns HTTP 403, so those claims stay vendor-stated. Reply sent 2026-10-17 04:13 UTC ("Your tool is live on AIToolsEssentials - Robylon"), one record in `[Gmail]/Sent Mail` and one in All Mail. Deliverability note: the domain is a Google Workspace **catch-all**, so an RCPT probe returns `250` for the published address and for a random local part alike - the address accepts mail, but the probe cannot confirm a human reads it. Cite this send by date + subject, never by Himalaya id. |
+
 ## Notes for future runs
 
 - **2026-10-16 08:22 UTC — Private Try-On (`privatetryon.com`), a new lead held on operator identity and photo handling; the verification request went to the vendor's own published Gmail (`traxy111@gmail.com`), which is also the submission address.** INBOX msg 147; no prior `privatetryon` / `traxy` hit in the repo, this ledger, or any mail folder (Sent / All Mail / Trash / Spam). **Held on the standard operator gap — but reach it by the shortest path, because this site is otherwise one of the best-disclosed submissions on file.** `/about` is the only page that names anybody, and it names a pseudonym ("created and operated by **Traxy**, an independent creator based in **China**", credited as a positive); `/privacy` and `/terms` name no controller, the Terms carry **no governing-law clause** (word-boundary sweep for `governing` → zero hits site-wide), there is **no output-ownership or licence clause** (`licen*` → zero hits), photo **retention has no period** and no deletion control beyond a statistics toggle, and a **three-way video contradiction** is live (see the method note below). **Three method lessons worth reusing.**
