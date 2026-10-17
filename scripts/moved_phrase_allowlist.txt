@@ -1,4 +1,0 @@
-# Public page paths that may say "has moved" or "(moved)".
-# One path per line. Blank lines and # comments are ignored.
-# Empty: no live page needs an exemption. Mark a paragraph with data-moved-ok
-# before adding a whole page here.

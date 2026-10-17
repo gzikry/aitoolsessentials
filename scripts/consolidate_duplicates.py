@@ -5,6 +5,8 @@ from __future__ import annotations
 import os
 import re
 import sys
+import unicodedata
+from html import unescape
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -239,18 +241,13 @@ def _resolve_href(page: Path, href: str) -> str | None:
 
 
 # Same check as main (5f737e6 / cf0689c): a case-insensitive substring anywhere
-# in the file. With no data-moved-ok marker the scan is that substring, so it
-# cannot miss a phrase main would catch, including JSON-LD name/headline,
-# og/twitter, alt, and aria-label. A data-moved-ok element drops its own
-# subtree before the substring. The allowlist drops a whole page.
+# in the file, so JSON-LD name/headline, og/twitter, alt, and aria-label cannot
+# hide. The only exemption besides a real stub is a path in the allowlist.
+# Whitespace character references become a space first, so has&nbsp;moved matches.
 _MOVED_PHRASE = "has moved"
 _MOVED_MARK = "(moved)"
-_OPT_OUT = "data-moved-ok"
 _ALLOWLIST_NAME = Path("scripts/moved_phrase_allowlist.txt")
-_VOID_TAGS = frozenset({
-    "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
-    "meta", "source", "track", "wbr",
-})
+_WS_ENTITY = re.compile(r"&(?:#x[0-9a-f]+|#\d+|[a-z]+);")
 _LINK = re.compile(r"""href=["']([^"']+)["']""", re.I)
 _MD_LINK = re.compile(r"\((https://aitoolsessentials\.com/[^)\s]+)\)")
 _JSONLD = re.compile(
@@ -331,128 +328,24 @@ def duplicate_errors(root: Path) -> list[str]:
     return errors
 
 
-def _split_tag(folded: str, i: int) -> tuple[int, str, bool, bool, bool]:
-    """Read one tag at '<'. One forward pass. Returns end, name, is_end, opt_out, self_closing."""
-    n = len(folded)
-    j = i + 1
-    is_end = False
-    if j < n and folded[j] == "/":
-        is_end = True
-        j += 1
-    while j < n and folded[j].isspace():
-        j += 1
-    start = j
-    while j < n and (folded[j].isalnum() or folded[j] in ":-"):
-        j += 1
-    name = folded[start:j]
-    opt_out = False
-    quote = ""
-    self_closing = False
-    while j < n:
-        char = folded[j]
-        if quote:
-            if char == quote:
-                quote = ""
-            j += 1
-            continue
-        if char in "\"'":
-            quote = char
-            j += 1
-            continue
-        if char == ">":
-            j += 1
-            break
-        if char == "/":
-            if j + 1 < n and folded[j + 1] == ">":
-                self_closing = True
-                j += 2
-                break
-            j += 1
-            continue
-        if char.isspace():
-            j += 1
-            continue
-        attr_start = j
-        while j < n and not folded[j].isspace() and folded[j] not in "=>/\"'":
-            j += 1
-        if folded[attr_start:j] == _OPT_OUT:
-            opt_out = True
-        while j < n and folded[j].isspace():
-            j += 1
-        if j < n and folded[j] == "=":
-            j += 1
-            while j < n and folded[j].isspace():
-                j += 1
-            if j < n and folded[j] in "\"'":
-                quote = folded[j]
-                j += 1
-            else:
-                while j < n and not folded[j].isspace() and folded[j] != ">":
-                    j += 1
-    return j, name, is_end, opt_out, self_closing
+def _ws_entity(match: re.Match[str]) -> str:
+    """One whitespace character reference becomes one space. Anything else stays."""
+    decoded = unescape(match.group(0))
+    if len(decoded) == 1 and (decoded.isspace() or unicodedata.category(decoded) == "Zs"):
+        return " "
+    return match.group(0)
 
 
-def _without_moved_opt_outs(folded: str) -> str:
-    """Drop each data-moved-ok element, including descendants. Linear in the HTML."""
-    parts: list[str] = []
-    n = len(folded)
-    i = 0
-    skip_name = ""
-    depth = 0
-    while i < n:
-        if folded[i] != "<":
-            nxt = folded.find("<", i)
-            if nxt < 0:
-                nxt = n
-            if depth == 0:
-                parts.append(folded[i:nxt])
-            i = nxt
-            continue
-        if folded.startswith("<!--", i):
-            end = folded.find("-->", i + 4)
-            end = n if end < 0 else end + 3
-            if depth == 0:
-                parts.append(folded[i:end])
-            i = end
-            continue
-        if i + 1 < n and folded[i + 1] in "!?":
-            end = folded.find(">", i + 2)
-            end = n if end < 0 else end + 1
-            if depth == 0:
-                parts.append(folded[i:end])
-            i = end
-            continue
-        end, name, is_end, opt_out, self_closing = _split_tag(folded, i)
-        if end <= i:
-            if depth == 0:
-                parts.append(folded[i])
-            i += 1
-            continue
-        if depth:
-            if name == skip_name and not is_end and not self_closing and name not in _VOID_TAGS:
-                depth += 1
-            elif is_end and name == skip_name:
-                depth -= 1
-            i = end
-            continue
-        if opt_out and not is_end:
-            if self_closing or not name or name in _VOID_TAGS:
-                i = end
-                continue
-            skip_name = name
-            depth = 1
-            i = end
-            continue
-        parts.append(folded[i:end])
-        i = end
-    return "".join(parts)
-
-
-def _phrase_errors(label: str, text: str, *, html: bool) -> list[str]:
-    """Main's substring check. HTML may drop data-moved-ok subtrees first."""
+def _phrase_text(text: str) -> str:
     folded = text.casefold()
-    if html and _OPT_OUT in folded:
-        folded = _without_moved_opt_outs(folded)
+    if "&" not in folded:
+        return folded
+    return _WS_ENTITY.sub(_ws_entity, folded)
+
+
+def _phrase_errors(label: str, text: str) -> list[str]:
+    """Main's substring check, after whitespace entities become a space."""
+    folded = _phrase_text(text)
     errors: list[str] = []
     if _MOVED_MARK in folded:
         errors.append(f"{label} still says (moved)")
@@ -462,6 +355,7 @@ def _phrase_errors(label: str, text: str, *, html: bool) -> list[str]:
 
 
 def _moved_allowlist(root: Path) -> set[str]:
+    """One public path per line. Blank lines and # comments are ignored."""
     path = root / _ALLOWLIST_NAME
     if not path.is_file():
         return set()
@@ -492,8 +386,10 @@ def stub_link_errors(root: Path) -> list[str]:
         html = path.read_text(encoding="utf-8", errors="ignore")
         if _is_real_stub(html):
             continue
-        if rel.as_posix() not in allowed:
-            errors.extend(_phrase_errors(rel.as_posix(), html, html=True))
+        if rel.as_posix() in allowed:
+            print(f"allowlist skip {rel.as_posix()}")
+        else:
+            errors.extend(_phrase_errors(rel.as_posix(), html))
         for href in _LINK.findall(html):
             target = _resolve_href(rel, href)
             if target in stubs:
@@ -505,8 +401,10 @@ def stub_link_errors(root: Path) -> list[str]:
     llms = root / "llms.txt"
     if llms.is_file():
         text = llms.read_text(encoding="utf-8", errors="ignore")
-        if "llms.txt" not in allowed:
-            errors.extend(_phrase_errors("llms.txt", text, html=False))
+        if "llms.txt" in allowed:
+            print("allowlist skip llms.txt")
+        else:
+            errors.extend(_phrase_errors("llms.txt", text))
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)
             if target in stubs:

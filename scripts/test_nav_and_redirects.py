@@ -2,9 +2,11 @@
 """The shared nav and the duplicate-page redirects stay put."""
 from __future__ import annotations
 
+import io
 import sys
 import tempfile
 import time
+from contextlib import redirect_stdout
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -76,7 +78,7 @@ def _meta(attr: str, content: str) -> str:
 
 
 def _stub_phrase_and_jsonld() -> list[str]:
-    """Substring check, plus an explicit opt-out. Cases are written in this file."""
+    """Substring check. A path allowlist is the only exemption besides a real stub."""
     misses: list[str] = []
     compare = "<title>Compare</title>"
     safe = "<p>Current page.</p>"
@@ -127,31 +129,20 @@ def _stub_phrase_and_jsonld() -> list[str]:
         "w-alt.html": _doc(compare, '<img alt="Runway vs Pika has moved">'),
         "w-aria.html": _doc(compare, '<button aria-label="Pricing has moved">Open</button>'),
         "c1.html": _doc(compare, "<!-- This page has moved. --><p>Current page.</p>"),
-        # Prose fails until an element or ancestor opts out. A lookalike attribute does not.
+        # Prose fails. There is no attribute opt-out.
         "export.html": _doc(compare, f"<p>{_PROSE}</p>"),
-        "lookalike.html": _doc(compare, f'<p data-moved-okay>{_PROSE}</p>'),
-        "opt-sibling.html": _doc(
-            compare,
-            f'<p data-moved-ok>{_PROSE}</p><p>This page has moved.</p>',
-        ),
         "refresh-open.html": _doc(
             '<meta http-equiv="refresh" content="0; url=/elsewhere.html"><title>Elsewhere</title>',
             "<p>This page has moved.</p>",
         ),
-        "img-then-bad.html": _doc(
-            compare,
-            '<img data-moved-ok alt="has moved"><p>This page has moved.</p>',
-        ),
+        # Whitespace entities become a space before the substring check.
+        "nbsp.html": _doc(compare, "<p>has&nbsp;moved</p>"),
+        "nbsp-num.html": _doc(compare, "<p>has&#160;moved</p>"),
+        "nbsp-hex.html": _doc(compare, "<p>has&#xa0;moved</p>"),
+        "nbsp-upper.html": _doc("<title>Has&nbsp;Moved</title>", safe),
+        "nbsp-ensp.html": _doc(compare, "<p>has&ensp;moved</p>"),
     }
     passes = {
-        "export-ok.html": _doc(compare, f'<p data-moved-ok>{_PROSE}</p>'),
-        "export-ancestor.html": _doc(compare, f'<section data-moved-ok><p>{_PROSE}</p></section>'),
-        "export-case.html": _doc(compare, f'<p DATA-MOVED-OK>{_PROSE}</p>'),
-        "nested-ok.html": _doc(
-            compare,
-            f'<div data-moved-ok><div>{_PROSE}</div></div><p>Current page.</p>',
-        ),
-        "img-ok.html": _doc(compare, '<img data-moved-ok alt="a>b has moved"><p>Current page.</p>'),
         "clean.html": _doc(compare, safe),
     }
     with tempfile.TemporaryDirectory() as tmp:
@@ -173,11 +164,13 @@ def _stub_phrase_and_jsonld() -> list[str]:
         found_lines = stub_link_errors(root)
         for name, html in failures.items():
             folded = html.casefold()
-            if "has moved" in folded and not any(
+            wants_phrase = "has moved" in folded or name.startswith("nbsp")
+            wants_mark = "(moved)" in folded
+            if wants_phrase and not any(
                 line.startswith(f"{name} still says has moved") for line in found_lines
             ):
                 misses.append(f"validator missed has moved in {name}")
-            if "(moved)" in folded and not any(
+            if wants_mark and not any(
                 line.startswith(f"{name} still says (moved)") for line in found_lines
             ):
                 misses.append(f"validator missed (moved) in {name}")
@@ -208,14 +201,22 @@ def _allowlist_and_llms() -> list[str]:
         (root / "export-allow.html").write_text(prose, encoding="utf-8")
         (root / "nested" / "ok.html").write_text(prose, encoding="utf-8")
         (root / "still-bad.html").write_text(prose, encoding="utf-8")
-        (root / "llms.txt").write_text(_PROSE + "\n", encoding="utf-8")
-        found = stub_link_errors(root)
+        (root / "llms.txt").write_text("has&nbsp;moved\n", encoding="utf-8")
+        printed = io.StringIO()
+        with redirect_stdout(printed):
+            found = stub_link_errors(root)
+        logged = printed.getvalue().splitlines()
         if any(line.startswith("export-allow.html ") or line.startswith("nested/ok.html ") for line in found):
             misses.append(f"allowlist page was flagged: {found}")
+        for path in ("export-allow.html", "nested/ok.html"):
+            if f"allowlist skip {path}" not in logged:
+                misses.append(f"validator did not print allowlist skip {path}: {logged}")
+        if any(line.startswith("allowlist skip still-bad.html") for line in logged):
+            misses.append("validator printed a page it did not skip")
         if not any(line.startswith("still-bad.html still says has moved") for line in found):
             misses.append("allowlist hid a page that is not listed")
         if not any(line.startswith("llms.txt still says has moved") for line in found):
-            misses.append("llms line was not flagged")
+            misses.append("llms nbsp line was not flagged")
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         (root / "llms.txt").write_text("X (moved)\n", encoding="utf-8")
@@ -232,23 +233,16 @@ def _allowlist_and_llms() -> list[str]:
 
 
 def _span_budget() -> list[str]:
-    """Unclosed spans stay linear. The opt-out path has to run, not the fast skip."""
+    """Unclosed spans stay a substring scan."""
     misses: list[str] = []
-    spans = "<span>" * 20000
-    cases = (
-        ("open spans", spans + "has moved", True),
-        ("opt-out spans", '<span data-moved-ok>' + spans + "has moved", False),
-        ("phrase then spans", "has moved" + '<div data-moved-ok>' + spans, True),
-    )
-    for label, html, expect in cases:
-        started = time.perf_counter()
-        found = _phrase_errors("spans.html", html, html=True)
-        elapsed = time.perf_counter() - started
-        flagged = any("has moved" in line for line in found)
-        if flagged != expect:
-            misses.append(f"{label} flagged={flagged}")
-        if elapsed > 1:
-            misses.append(f"{label} took {elapsed:.3f}s")
+    html = ("<span>" * 20000) + "has&nbsp;moved"
+    started = time.perf_counter()
+    found = _phrase_errors("spans.html", html)
+    elapsed = time.perf_counter() - started
+    if not any("has moved" in line for line in found):
+        misses.append("unclosed spans hid has&nbsp;moved")
+    if elapsed > 1:
+        misses.append(f"unclosed spans took {elapsed:.3f}s")
     return misses
 
 
