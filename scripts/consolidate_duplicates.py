@@ -2,13 +2,14 @@
 """Fold duplicate H1 pairs onto one page and leave a noindex redirect stub."""
 from __future__ import annotations
 
+import os
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from site_scope import is_working_rel
+from site_scope import is_public_rel, is_working_rel
 
 DOMAIN = "https://aitoolsessentials.com"
 
@@ -102,6 +103,10 @@ def _is_stub(html: str) -> bool:
     return 'http-equiv="refresh"' in html
 
 
+def is_redirect_stub(html: str) -> bool:
+    return _is_stub(html)
+
+
 def _strip_notes(html: str) -> str:
     return _NOTE.sub("", html)
 
@@ -181,6 +186,57 @@ def _rewrite(html: str) -> str:
     return html
 
 
+def _href_from(page: Path, target: str) -> str:
+    start = page.parent.as_posix()
+    return os.path.relpath(target, start if start != "." else ".").replace("\\", "/")
+
+
+def _rewrite_page(html: str, page: Path) -> str:
+    """Point full paths and same-directory hrefs at the winner."""
+    html = _rewrite(html)
+    for loser, winner, _title in PAIRS:
+        loser_path = Path(loser)
+        if loser_path.parent != page.parent:
+            continue
+        href = _href_from(page, winner)
+        html = re.sub(
+            rf'(href=["\'])(?:\./)?{re.escape(loser_path.name)}(?=["\'?#])',
+            rf"\1{href}",
+            html,
+        )
+    return html
+
+
+def _resolve_href(page: Path, href: str) -> str | None:
+    href = href.split("#", 1)[0].split("?", 1)[0].strip()
+    if not href or href.startswith(("mailto:", "javascript:", "tel:")):
+        return None
+    if href.startswith(("http://", "https://")):
+        prefix = DOMAIN + "/"
+        if not href.startswith(prefix):
+            return None
+        href = href[len(prefix) :]
+    elif href.startswith("/"):
+        href = href[1:]
+    else:
+        base = page.parent.as_posix()
+        href = href if base == "." else base + "/" + href
+    parts: list[str] = []
+    for part in href.split("/"):
+        if part in ("", "."):
+            continue
+        if part == "..":
+            if parts:
+                parts.pop()
+            continue
+        parts.append(part)
+    return "/".join(parts)
+
+
+_LINK = re.compile(r"""href=["']([^"']+)["']""", re.I)
+_MD_LINK = re.compile(r"\((https://aitoolsessentials\.com/[^)\s]+)\)")
+
+
 def consolidate(root: Path) -> int:
     """Fold unique dated or affiliate lines into the winner, then stub the loser."""
     written = 0
@@ -197,8 +253,17 @@ def consolidate(root: Path) -> int:
         if is_working_rel(rel):
             continue
         html = path.read_text(encoding="utf-8", errors="ignore")
-        updated = _rewrite(html)
+        updated = _rewrite_page(html, rel)
         if updated != html:
+            path.write_text(updated, encoding="utf-8")
+            written += 1
+    for name in ("llms.txt",):
+        path = root / name
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        updated = _rewrite(text)
+        if updated != text:
             path.write_text(updated, encoding="utf-8")
             written += 1
     for loser, winner, _title in PAIRS:
@@ -240,4 +305,40 @@ def duplicate_errors(root: Path) -> list[str]:
             errors.append(f"sitemap still lists {loser}")
         if f"https://aitoolsessentials.com/{winner}" not in sitemap:
             errors.append(f"sitemap dropped {winner}")
+    return errors
+
+
+def stub_link_errors(root: Path) -> list[str]:
+    """Indexable pages must not link to a redirect stub or repeat its (moved) title."""
+    stubs: set[str] = set()
+    for path in sorted(root.rglob("*.html")):
+        rel = path.relative_to(root)
+        if is_working_rel(rel) or not path.is_file():
+            continue
+        html = path.read_text(encoding="utf-8", errors="ignore")
+        if _is_stub(html):
+            stubs.add(rel.as_posix())
+    errors: list[str] = []
+    for path in sorted(root.rglob("*.html")):
+        rel = path.relative_to(root)
+        if is_working_rel(rel) or not is_public_rel(rel):
+            continue
+        html = path.read_text(encoding="utf-8", errors="ignore")
+        if _is_stub(html):
+            continue
+        if "(moved)" in html:
+            errors.append(f"{rel.as_posix()} still says (moved)")
+        for href in _LINK.findall(html):
+            target = _resolve_href(rel, href)
+            if target in stubs:
+                errors.append(f"{rel.as_posix()} links to stub {target}")
+    llms = root / "llms.txt"
+    if llms.is_file():
+        text = llms.read_text(encoding="utf-8", errors="ignore")
+        if "(moved)" in text:
+            errors.append("llms.txt still says (moved)")
+        for href in _MD_LINK.findall(text):
+            target = _resolve_href(Path("llms.txt"), href)
+            if target in stubs:
+                errors.append(f"llms.txt links to stub {target}")
     return errors

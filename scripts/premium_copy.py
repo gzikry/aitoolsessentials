@@ -384,10 +384,10 @@ def homepage_hero_html(whop: dict[str, Any]) -> str:
 
 
 def homepage_header_html() -> str:
-    """Same primary nav as every other page. The hero still carries Free Stack Audit."""
-    from site_chrome import canonical_header
+    """Homepage nav from main: Tools, Search, Stack Audit, Premium, Subscribe."""
+    from site_chrome import homepage_header
 
-    return canonical_header()
+    return homepage_header()
 
 
 def homepage_footer_html() -> str:

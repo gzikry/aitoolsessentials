@@ -150,12 +150,35 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     articles_dir = root / 'articles'
     if articles_dir.exists():
         name_key = name.lower().replace(' ', '-')
+        from consolidate_duplicates import PAIRS, is_redirect_stub
+        losers = {loser: winner for loser, winner, _title in PAIRS}
+        seen_hrefs = set()
         for a in sorted(articles_dir.glob('*.html')):
             a_html = a.read_text()
-            if f'/tools/{slug}/' in a_html or f'/{slug}' in a_html:
-                title_match = re.search(r'<title>(.*?)</title>', a_html)
-                title = title_match.group(1).replace(' | AIToolsEssentials', '') if title_match else a.stem.replace('-', ' ').title()
-                article_links.append((a.name, title))
+            rel = f'articles/{a.name}'
+            if rel not in losers and is_redirect_stub(a_html):
+                continue
+            if f'/tools/{slug}/' not in a_html and f'/{slug}' not in a_html and rel not in losers:
+                continue
+            target_rel = losers.get(rel, rel)
+            target = root / target_rel
+            if not target.is_file():
+                continue
+            target_html = target.read_text()
+            if is_redirect_stub(target_html):
+                continue
+            if rel in losers and f'/tools/{slug}/' not in a_html and f'/{slug}' not in a_html:
+                continue
+            title_match = re.search(r'<title>(.*?)</title>', target_html)
+            title = title_match.group(1).replace(' | AIToolsEssentials', '') if title_match else target.stem.replace('-', ' ').title()
+            title = title.replace(' (moved)', '')
+            if '(moved)' in title:
+                continue
+            href = '../../' + target_rel
+            if href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
+            article_links.append((href, title))
     article_links = article_links[:5]
 
     related_html = ''
@@ -171,7 +194,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 
     article_aside_html = ''
     if article_links:
-        items = ''.join(f'<li><a href="../../articles/{fname}">{title[:80]}</a></li>' for fname, title in article_links)
+        items = ''.join(f'<li><a href="{href}">{title[:80]}</a></li>' for href, title in article_links)
         article_aside_html = f'<div class="score-card"><span>Guides &amp; deep dives</span><ul style="margin:0;padding-left:0;list-style:none;display:grid;gap:10px">{items}</ul></div>'
 
     if source_record:
