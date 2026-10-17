@@ -23,7 +23,7 @@ HTTPS_BUTTON = (
     'target="_blank" rel="external noopener nofollow">Sponsor us</a>'
 )
 QUESTIONS = (
-    'Questions: <a href="mailto:aitoolsessentials@gmail.com">aitoolsessentials@gmail.com</a>'
+    'Questions? <a href="mailto:aitoolsessentials@gmail.com">Email us</a>'
 )
 PITCH = "Tools you can cancel"
 EXTERNAL_LINE = (
