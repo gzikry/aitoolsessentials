@@ -47,7 +47,8 @@ def _sitemap_priority_changefreq(rel_path: str) -> tuple[str, str]:
 
 
 def refresh_sitemap(root: Path) -> list[str]:
-    from urllib.parse import quote
+    from html import unescape
+    from urllib.parse import quote, unquote, urlparse
     # Working directories are not public content and must never be in the sitemap.
     excluded_dirs = {'admin', 'marketing', 'scripts', 'content_briefs', 'audit_reports', 'go'}
     sitemap_urls = []
@@ -61,12 +62,20 @@ def refresh_sitemap(root: Path) -> list[str]:
         # Exclude internal, error, checkout-return, redirect, and noindex pages.
         if p.name == '404.html' or 'name="robots" content="noindex' in html_text:
             continue
+        if 'http-equiv="refresh"' in html_text:
+            continue
         if p.name == 'index.html':
             # A root-level index.html has rel.parent == '.', which must not
             # become '/./' (an unresolvable path that also loses homepage priority).
             url = '/' if str(rel.parent) == '.' else f'/{rel.parent}/'
         else:
             url = f'/{rel}'
+        # A URL that declares a different canonical is an alternate, not a sitemap entry.
+        canon = re.search(r'rel="canonical" href="([^"]+)"', html_text)
+        if canon:
+            target = unescape(unquote(urlparse(canon.group(1)).path))
+            if target.rstrip('/') != url.rstrip('/'):
+                continue
         sitemap_urls.append(url)
 
     sitemap = '''<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'''
@@ -560,6 +569,8 @@ from consolidate_duplicates import consolidate as _consolidate_duplicates
 print('Consolidated duplicate pages:', _consolidate_duplicates(root))
 from site_chrome import unify_headers as _unify_headers
 print('Unified headers:', _unify_headers(root))
+from legacy_redirects import write_legacy_redirects as _write_legacy_redirects
+print('Legacy redirects:', _write_legacy_redirects(root))
 _sitemap_urls_final = refresh_sitemap(root)
 print(f'Refreshed sitemap after redirects with {len(_sitemap_urls_final)} URLs')
 
