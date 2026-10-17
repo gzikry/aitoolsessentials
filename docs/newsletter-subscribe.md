@@ -14,7 +14,7 @@ The Worker is deployed at `https://aitools-newsletter-subscribe.aitoolsessential
 - A confirm link minted **before** its contact existed answers "That confirm link did not finish."; minting a fresh link for the same address then confirms. Read a failing old link as a stale link, not as a broken Worker.
 - Test contacts now confirmed in the Resend list, all delivering to the site's own mailbox: `aitoolsessentials@gmail.com` (dot variant), `aitoolsessentials+probe2@gmail.com`, `aitoolsessentials+signuptest@gmail.com`. Remove them in the dashboard before the first broadcast.
 
-Signups are still **closed to the public**: `subscribe_endpoint` stays `""` in `data/newsletter.json`, and `scripts/test_newsletter_hold.py` asserts that. Opening the form is the launch switch — set that field to the URL above, move the test to assert the open state, regenerate, validate, deploy.
+Signups are open to the public. `subscribe_endpoint` is the workers.dev URL above, and `scripts/test_newsletter_hold.py` asserts the live form on `/subscribe/` and the homepage. Sending an issue still requires `NEWSLETTER_SEND_ENABLED` and an approval file.
 
 ## Deploy the Worker
 
