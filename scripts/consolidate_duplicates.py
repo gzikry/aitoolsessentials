@@ -239,22 +239,35 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
-# Titles and headings fail on the phrase itself. Body copy fails only when the
-# whole short block is a stub line. Both patterns are a single left-to-right
-# scan: no nested quantifiers.
+# One left-to-right scan each. No nested quantifiers.
+# Titles and the same fields (og/twitter title, JSON-LD headline, alt, aria-label)
+# fail on the phrase anywhere. Descriptions and llms lines also fail when a
+# separator then the brand or a see/open tail follows. Other blocks fail only
+# on the stub sentence, and only when that block is short.
 _HAS_MOVED = re.compile(r"has moved", re.I)
 _MOVED_MARK = re.compile(r"\(moved\)", re.I)
 _THIS_MOVED = re.compile(r"\bthis (?:page|guide|article) has moved\b", re.I)
 _SHORT_MOVED_LINE = re.compile(
     r"(?i)^.*\bhas moved[\s,.!?…:;)\-–—|·]*\Z",
 )
+# Optional punctuation, then a separator, then the brand or the see/open tail.
+# "--" is tried before a single hyphen so a double hyphen stays one separator.
+_DESCRIPTION_TAIL = re.compile(
+    r"(?i)\bhas moved[\s,;…)\]]*(?:--+|[-–—|·]|[:.!?])\s*"
+    r"(?:aitoolsessentials(?:\.com)?\b|(?:see|open)\s+the\s+(?:new|current)\s+(?:page|guide)\b)",
+)
+_JSON_HEADLINE = re.compile(r'"headline"\s*:\s*"((?:\\.|[^"\\])*)"', re.I)
 _SHORT_COPY_LIMIT = 180
 _SHORT_TAGS = frozenset({"p", "li", "div"})
-_HEADING_TAGS = frozenset({"h1", "h2", "h3", "h4", "h5", "h6"})
-_BLOCK_TAGS = _HEADING_TAGS | frozenset({
-    "p", "div", "li", "section", "article", "main", "blockquote",
-    "td", "th", "figcaption", "dd", "dt", "aside", "header", "footer", "address",
+_THIS_BLOCK_TAGS = frozenset({
+    "section", "article", "blockquote", "td", "main", "figcaption", "aside", "span",
 })
+_HEADING_TAGS = frozenset({"h1", "h2", "h3", "h4", "h5", "h6"})
+_BLOCK_TAGS = _HEADING_TAGS | _SHORT_TAGS | _THIS_BLOCK_TAGS | frozenset({
+    "th", "dd", "dt", "header", "footer", "address",
+})
+_TITLE_META = frozenset({"og:title", "twitter:title"})
+_DESCRIPTION_META = frozenset({"description", "og:description", "twitter:description"})
 _VOID_TAGS = frozenset({
     "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
     "meta", "source", "track", "wbr",
@@ -361,6 +374,24 @@ def _short_stub_copy(text: str) -> bool:
     return _SHORT_MOVED_LINE.search(plain) is not None
 
 
+def _this_moved_short(text: str) -> bool:
+    """The stub sentence inside a short block, span, or bare text node."""
+    plain = _norm_copy(text)
+    if not plain or len(plain) > _SHORT_COPY_LIMIT:
+        return False
+    return _THIS_MOVED.search(plain) is not None
+
+
+def _description_stub(text: str) -> bool:
+    """Short stub line, or has-moved plus a separator and a brand or see/open tail."""
+    plain = _norm_copy(text)
+    if not plain:
+        return False
+    if _DESCRIPTION_TAIL.search(plain) is not None:
+        return True
+    return _short_stub_copy(plain)
+
+
 class _StubCopyParser(HTMLParser):
     """Collect title, heading, and short-block text, including nested spans."""
 
@@ -368,20 +399,34 @@ class _StubCopyParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.stack: list[list] = []
         self.titles: list[str] = []
+        self.titleish: list[str] = []
         self.headings: list[str] = []
         self.blocks: list[tuple[str, str]] = []
+        self.moved_blocks: list[str] = []
+        self.bare: list[str] = []
         self.descriptions: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list) -> None:
         tag = tag.lower()
+        attr = {key.lower(): value or "" for key, value in attrs}
+        label = attr.get("aria-label", "")
+        if label:
+            self.titleish.append(label)
         if tag == "meta":
-            attr = {key.lower(): value or "" for key, value in attrs}
-            if attr.get("name", "").lower() == "description" and attr.get("content"):
-                self.descriptions.append(attr["content"])
+            key = (attr.get("property") or attr.get("name") or "").lower()
+            content = attr.get("content") or ""
+            if content and key in _TITLE_META:
+                self.titleish.append(content)
+            elif content and key in _DESCRIPTION_META:
+                self.descriptions.append(content)
+            return
+        if tag == "img":
+            if attr.get("alt"):
+                self.titleish.append(attr["alt"])
             return
         if tag in _VOID_TAGS:
             return
-        if tag in {"title"} | _BLOCK_TAGS or self.stack:
+        if tag in {"title", "body", "html", "span"} | _BLOCK_TAGS or self.stack:
             self.stack.append([tag, []])
 
     def handle_endtag(self, tag: str) -> None:
@@ -397,23 +442,40 @@ class _StubCopyParser(HTMLParser):
                 self.headings.append(text)
             elif open_tag in _SHORT_TAGS:
                 self.blocks.append((open_tag, text))
+            elif open_tag in _THIS_BLOCK_TAGS:
+                self.moved_blocks.append(text)
             if self.stack:
                 self.stack[-1][1].append(text)
             if open_tag == tag:
                 break
 
     def handle_data(self, data: str) -> None:
-        if self.stack:
-            self.stack[-1][1].append(data)
+        if not self.stack:
+            self.bare.append(data)
+            return
+        self.stack[-1][1].append(data)
+        if self.stack[-1][0] in {"body", "html"}:
+            self.bare.append(data)
+
+
+def _jsonld_headlines(html: str) -> list[str]:
+    headlines: list[str] = []
+    for raw in _JSONLD.findall(html):
+        for match in _JSON_HEADLINE.finditer(raw):
+            headlines.append(match.group(1).replace(r"\"", '"'))
+    return headlines
 
 
 def _page_has_stub_moved_copy(html: str) -> bool:
     parser = _StubCopyParser()
     parser.feed(html)
     parser.close()
-    if any(_phrase_anywhere(text) for text in parser.titles + parser.headings):
+    titleish = parser.titles + parser.headings + parser.titleish + _jsonld_headlines(html)
+    if any(_phrase_anywhere(text) for text in titleish):
         return True
-    if any(_short_stub_copy(text) for text in parser.descriptions):
+    if any(_description_stub(text) for text in parser.descriptions):
+        return True
+    if any(_this_moved_short(text) for text in parser.moved_blocks + parser.bare):
         return True
     return any(_short_stub_copy(text) for _tag, text in parser.blocks)
 
@@ -455,7 +517,7 @@ def stub_link_errors(root: Path) -> list[str]:
         folded = text.casefold()
         if "(moved)" in folded:
             errors.append("llms.txt still says (moved)")
-        if any(_short_stub_copy(line) for line in text.splitlines()):
+        if any(_description_stub(line) for line in text.splitlines()):
             errors.append("llms.txt still says has moved")
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)
