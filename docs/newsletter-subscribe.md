@@ -4,6 +4,18 @@ The site on GitHub Pages cannot hide an API key. DNS for `aitoolsessentials.com`
 
 A non-empty value is used only when it is an `https` URL on `*.workers.dev`. That is the URL Wrangler assigns at deploy. Any other value, including the Porkbun hostname, is treated as closed.
 
+## Verified live — 2026-10-16
+
+The Worker is deployed at `https://aitools-newsletter-subscribe.aitoolsessentials.workers.dev` (HTTP 200), and the whole signup path was re-checked from outside with real requests — no account access, no credentials:
+
+- A signup for three addresses (one plain, two `+`-tagged) each returned "Check your email"; each confirmation arrived from `weekly@news.aitoolsessentials.com`; each confirm link returned "You are confirmed". The deployed Worker therefore has `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `CONFIRM_SECRET` and `FROM_ADDRESS` set — it serves "Signup is not ready" whenever a secret is missing, and that page was never returned.
+- The confirmation mail authenticates: `dkim=pass header.i=@news.aitoolsessentials.com header.s=resend`, `spf=pass … send.news.aitoolsessentials.com`, `dmarc=pass (p=NONE)`. The Resend sending domain is verified and the records are live, even though a plain DNS read of `news.aitoolsessentials.com` TXT/MX still answers with Porkbun's own placeholder host.
+- The honeypot (`company_website`) returns the check-your-email page without calling Resend, and the per-IP limit answers "Slow down" on a second signup inside the same minute. Both confirmed.
+- A confirm link minted **before** its contact existed answers "That confirm link did not finish."; minting a fresh link for the same address then confirms. Read a failing old link as a stale link, not as a broken Worker.
+- Test contacts now confirmed in the Resend list, all delivering to the site's own mailbox: `aitoolsessentials@gmail.com` (dot variant), `aitoolsessentials+probe2@gmail.com`, `aitoolsessentials+signuptest@gmail.com`. Remove them in the dashboard before the first broadcast.
+
+Signups are still **closed to the public**: `subscribe_endpoint` stays `""` in `data/newsletter.json`, and `scripts/test_newsletter_hold.py` asserts that. Opening the form is the launch switch — set that field to the URL above, move the test to assert the open state, regenerate, validate, deploy.
+
 ## Deploy the Worker
 
 You need a Resend segment for Keep/Cut Weekly and an API key that can write contacts and send from `news.aitoolsessentials.com`.
