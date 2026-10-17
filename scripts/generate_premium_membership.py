@@ -51,13 +51,6 @@ WHOP_CHECKOUT_PROMO = STRIPE_PREMIUM_URL
 LEGACY_WHOP_CHECKOUT = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/"
 LEGACY_WHOP_CHECKOUT_PROMO = "https://whop.com/checkout/ch_DKm5yxA1OBXoDru/?promo=LAUNCH50"
 LEGACY_JOIN_LABEL = "Join Premium on Whop — 7-day trial · LAUNCH50"
-CHECKOUT_EXEMPT = {
-    "tools/whop-cli/index.html",
-    "comparisons/whop-cli-vs-zapier-ai.html",
-    "comparisons/n8n-vs-whop-cli.html",
-    "comparisons/make-vs-whop-cli.html",
-    "comparisons/browse-ai-vs-whop-cli.html",
-}
 WHOP_PRODUCT_URL = "https://whop.com/aitoolsessentials/aitoolsessentials-premium/"
 WHOP_HUB = DEFAULT_HUB_URL
 WHOP_PLAN_ID = "plan_FNXWs3suBFwDN"
@@ -1146,7 +1139,7 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     changed = 0
     for rel in targets:
         p = root / rel
-        if not p.exists() or rel in CHECKOUT_EXEMPT:
+        if not p.exists():
             continue
         old = p.read_text()
         if 'name="robots" content="noindex' in old:

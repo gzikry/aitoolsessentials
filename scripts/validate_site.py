@@ -19,29 +19,29 @@ from sponsor_chrome import production_stripe_test_errors
 from asset_rev import asset_link_errors
 
 ROOT = Path(__file__).resolve().parents[1]
-_CHECKOUT_EXEMPT = {
-    "tools/whop-cli/index.html",
-    "comparisons/whop-cli-vs-zapier-ai.html",
-    "comparisons/n8n-vs-whop-cli.html",
-    "comparisons/make-vs-whop-cli.html",
-    "comparisons/browse-ai-vs-whop-cli.html",
-}
 
 
 def customer_whop_checkout_errors(root: Path) -> list[str]:
-    """Customer pages must not send a buyer to whop.com/checkout."""
+    """Every customer HTML page under the site root, including comparisons and tools."""
     errors: list[str] = []
     for path in sorted(root.rglob("*")):
         if path.suffix not in {".html", ".js"}:
             continue
         rel = path.relative_to(root)
-        if "admin" in rel.parts or rel.as_posix() in _CHECKOUT_EXEMPT:
+        if "admin" in rel.parts:
             continue
         if not is_public_rel(rel) and rel.as_posix() != "js/stack-audit.js":
             continue
         if "whop.com/checkout" in path.read_text(errors="ignore"):
             errors.append(rel.as_posix() + " still links to whop.com/checkout")
     return errors
+
+
+def sponsor_preview_file_errors(root: Path) -> list[str]:
+    path = root / "data" / "sponsor_payment_preview.json"
+    if path.is_file():
+        return ["data/sponsor_payment_preview.json is public and holds Stripe test links"]
+    return []
 _SITE = "https://aitoolsessentials.com"
 _CANONICAL_RELS = (
     re.compile(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', re.I),
@@ -1290,6 +1290,7 @@ def main():
     errors.extend(double_slash_external_hrefs(ROOT)[:12])
     errors.extend(asset_link_errors(ROOT))
     errors.extend(customer_whop_checkout_errors(ROOT))
+    errors.extend(sponsor_preview_file_errors(ROOT))
 
     if errors:
         print('Validation failed')

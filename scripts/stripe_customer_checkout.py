@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Rewrite committed customer pages from Whop checkout to the live Stripe links.
 
-Idempotent. Admin packs and Whop CLI review pages are left alone.
+Idempotent. Admin packs stay historical. Whop CLI review pages keep product
+sentences, and only their Premium CTA panel is replaced.
 """
 from __future__ import annotations
 
@@ -124,8 +125,14 @@ def rewrite_customer_markup(text: str) -> str:
     return _insert_audit_buttons(text)
 
 
-def exempt(rel: str) -> bool:
-    return rel.startswith("admin/") or rel in EXEMPT or rel.startswith("tools/whop-cli/")
+def product_review(rel: str) -> bool:
+    return rel in EXEMPT or rel.startswith("tools/whop-cli/")
+
+
+def replace_premium_panel(text: str) -> str:
+    """Swap our Premium CTA and leave the surrounding product review alone."""
+    from generate_premium_membership import inject_before_main_end, premium_upsell_module
+    return inject_before_main_end(text, premium_upsell_module())
 
 
 def apply(root: Path) -> int:
@@ -134,10 +141,13 @@ def apply(root: Path) -> int:
         if path.suffix not in {".html", ".js"}:
             continue
         rel = path.relative_to(root).as_posix()
-        if exempt(rel):
+        if rel.startswith("admin/"):
             continue
         original = path.read_text(errors="ignore")
-        updated = rewrite_customer_markup(original)
+        if product_review(rel):
+            updated = replace_premium_panel(original)
+        else:
+            updated = rewrite_customer_markup(original)
         if updated != original:
             path.write_text(updated)
             changed += 1

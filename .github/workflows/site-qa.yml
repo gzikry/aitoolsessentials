@@ -29,6 +29,8 @@ jobs:
         run: python3 -m py_compile scripts/*.py
       - name: Generate site (first pass)
         run: python3 scripts/daily_content_update.py
+      - name: Fail when generation drifts from committed pages
+        run: python3 scripts/check_generator_drift.py
       - name: Validate first pass
         run: python3 scripts/validate_site.py
       - name: Run unit tests and guards
