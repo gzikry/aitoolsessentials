@@ -91,7 +91,7 @@ Same prompt, different outputs. Midjourney and DALL-E look nothing alike under p
 **X/LinkedIn:**
 Two AI music tools, same brief. One wins on vocals, the other on genre control. Before you pay for both, run the same song test:
 
-→ https://aitoolsessentials.com/articles/suno-vs-udio.html
+→ https://aitoolsessentials.com/comparisons/suno-vs-udio.html
 
 #AI #Music #Suno #Udio
 
@@ -101,7 +101,7 @@ Two AI music tools, same brief. One wins on vocals, the other on genre control. 
 **X/LinkedIn:**
 Same clip, two tools. Runway and Pika take very different approaches to AI video. Keep one:
 
-→ https://aitoolsessentials.com/articles/runway-vs-pika.html
+→ https://aitoolsessentials.com/comparisons/runway-vs-pika.html
 
 #AI #Video #Runway #Pika
 

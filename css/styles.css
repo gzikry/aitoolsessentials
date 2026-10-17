@@ -45,6 +45,10 @@ a:hover { text-decoration: underline; }
 .global-nav .nav-cta { flex: 0 0 auto; }
 .global-nav .ait-hs { flex: 0 1 108px; min-width: 0; max-width: 108px; }
 .global-nav .ait-hs-input { width: 108px !important; }
+@media (min-width: 901px) and (max-width: 1024px) {
+  /* Stop the field shrinking under the placeholder on a full nav row. */
+  .global-nav .ait-hs { flex: 0 0 108px; min-width: 108px; max-width: 108px; }
+}
 .nav-toggle {
   display: none;
   margin-left: 8px;

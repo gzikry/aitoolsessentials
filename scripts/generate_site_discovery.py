@@ -311,7 +311,7 @@ HS_FORM = (
     + '<form class="ait-hs" id="ait-hs" role="search" action="/search/" method="get" autocomplete="off">'
     + '<span class="ait-hs-ico" aria-hidden="true">\u2315</span>'
     + '<input class="ait-hs-input" id="ait-hs-input" type="search" name="q" '
-    + 'placeholder="Search tools, guides\u2026" aria-label="Search AIToolsEssentials" '
+    + 'placeholder="Search\u2026" aria-label="Search AIToolsEssentials" '
     + 'role="combobox" aria-expanded="false" aria-controls="ait-hs-list" aria-autocomplete="list" '
     + 'autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">'
     + '<ul class="ait-hs-list" id="ait-hs-list" role="listbox" aria-label="Search suggestions" hidden></ul>'

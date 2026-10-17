@@ -235,6 +235,11 @@ def _resolve_href(page: Path, href: str) -> str | None:
 
 _LINK = re.compile(r"""href=["']([^"']+)["']""", re.I)
 _MD_LINK = re.compile(r"\((https://aitoolsessentials\.com/[^)\s]+)\)")
+_JSONLD = re.compile(
+    r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+    re.I | re.S,
+)
+_JSON_URL = re.compile(r'"url"\s*:\s*"([^"]+)"')
 
 
 def consolidate(root: Path) -> int:
@@ -309,7 +314,7 @@ def duplicate_errors(root: Path) -> list[str]:
 
 
 def stub_link_errors(root: Path) -> list[str]:
-    """Indexable pages must not link to a redirect stub or repeat its (moved) title."""
+    """Indexable pages must not link to a redirect stub or repeat its moved title."""
     stubs: set[str] = set()
     for path in sorted(root.rglob("*.html")):
         rel = path.relative_to(root)
@@ -326,17 +331,27 @@ def stub_link_errors(root: Path) -> list[str]:
         html = path.read_text(encoding="utf-8", errors="ignore")
         if _is_stub(html):
             continue
-        if "(moved)" in html:
+        folded = html.casefold()
+        if "(moved)" in folded:
             errors.append(f"{rel.as_posix()} still says (moved)")
+        if "has moved" in folded:
+            errors.append(f"{rel.as_posix()} still says has moved")
         for href in _LINK.findall(html):
             target = _resolve_href(rel, href)
             if target in stubs:
                 errors.append(f"{rel.as_posix()} links to stub {target}")
+        for raw in _JSON_URL.findall("\n".join(_JSONLD.findall(html))):
+            target = _resolve_href(rel, raw)
+            if target in stubs:
+                errors.append(f"{rel.as_posix()} JSON-LD url points at stub {target}")
     llms = root / "llms.txt"
     if llms.is_file():
         text = llms.read_text(encoding="utf-8", errors="ignore")
-        if "(moved)" in text:
+        folded = text.casefold()
+        if "(moved)" in folded:
             errors.append("llms.txt still says (moved)")
+        if "has moved" in folded:
+            errors.append("llms.txt still says has moved")
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)
             if target in stubs:

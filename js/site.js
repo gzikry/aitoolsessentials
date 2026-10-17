@@ -1,15 +1,29 @@
 /* AIT site JS: share row + small niceties */
 (function () {
   var buttons = document.querySelectorAll('.nav-toggle');
+  function setOpen(button, open) {
+    var header = button.closest('header');
+    if (!header) return;
+    header.classList.toggle('nav-open', open);
+    button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    button.textContent = open ? 'Close' : 'Menu';
+  }
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {
       var header = this.closest('header');
-      if (!header) return;
-      var open = header.classList.toggle('nav-open');
-      this.setAttribute('aria-expanded', open ? 'true' : 'false');
-      this.textContent = open ? 'Close' : 'Menu';
+      setOpen(this, !(header && header.classList.contains('nav-open')));
     });
   }
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    for (var i = 0; i < buttons.length; i++) {
+      var button = buttons[i];
+      var header = button.closest('header');
+      if (!header || !header.classList.contains('nav-open')) continue;
+      setOpen(button, false);
+      button.focus();
+    }
+  });
 })();
 
 (function () {
