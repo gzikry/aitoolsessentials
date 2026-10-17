@@ -1888,6 +1888,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "robylon",
+      "name": "Robylon",
+      "category": "AI Agents",
+      "official_url": "https://www.robylon.ai/",
+      "review_url": "/tools/robylon/",
+      "price_label": "Free (300 credits/mo) + paid plans from $25/mo; optional live agent seats from $19/seat/mo",
+      "pricing_summary": "Starter free, 300 credits/month (~40 conversations). Pro $25/mo (500 credits), $75 (1,500), $113 (2,500), $158 (3,500). Business $180/mo (4,500 credits), $240 (6,000), $280 (8,000), $300 (10,000). Yearly billing is 10% off, so Pro 500 credits is $22/mo and Business 4,500 is $162/mo. Enterprise quoted. Optional live-agent seats: Basic $19, Advanced $49, Expert $89 per seat per month. Add-ons: extra credits $25 per 1,000, custom domain $49/mo, badge removal $29/mo. Plan figures assume about 7.5 credits per chat, WhatsApp or email conversation; voice calls use credits at a different rate. Verified 2026-10-16 from the live /pricing page and its Markdown twin /pricing.md, whose plan table, credit-tier table, seat table and FAQ all agree with each other and with the pricing page's own copy.",
+      "pricing_url": "https://www.robylon.ai/pricing",
+      "pricing_checked_date": "2026-10-16",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "audio",
+        "marketing",
+        "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }
