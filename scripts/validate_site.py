@@ -190,6 +190,27 @@ def load_json(path):
         return f'{path.relative_to(ROOT)} JSON parse failed: {exc}'
 
 
+OLD_PUBLICATION_NAME = "Keep/Cut Weekly"
+
+
+def publication_name_errors(root: Path) -> list[str]:
+    """Customer html and js must not use the retired publication name."""
+    errors: list[str] = []
+    for path in sorted(root.rglob("*")):
+        if path.suffix.lower() not in {".html", ".js"}:
+            continue
+        rel = path.relative_to(root)
+        if not is_public_rel(rel):
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        if OLD_PUBLICATION_NAME in text:
+            errors.append(f"{rel.as_posix()} still says {OLD_PUBLICATION_NAME}")
+    if len(errors) > 8:
+        extra = len(errors) - 8
+        return errors[:8] + [f"{extra} more customer pages still say {OLD_PUBLICATION_NAME}"]
+    return errors
+
+
 def main():
     errors = []
     for rel in ['data/tools.json','data/tool_sources.json','data/test_cases.json','data/affiliate_programs.json','data/sponsors.json','data/revenue_targets.json','data/sponsor_inventory.json','data/benchmarks.json','data/integrations.json','data/pricing_snapshots.json','data/stack_audit_rules.json','data/stack_audit_catalog.json']:
@@ -670,7 +691,7 @@ def main():
     home_html = (ROOT / 'index.html').read_text()
     subscribe_match = re.search(r'<section[^>]*id="subscribe"[^>]*>.*?</section>', home_html, flags=re.S)
     if not subscribe_match:
-        errors.append('Homepage missing #subscribe Keep/Cut Weekly panel')
+        errors.append('Homepage missing #subscribe Keep, Test, Cut panel')
     else:
         subscribe_block = subscribe_match.group(0)
         if 'whop.com/checkout' in subscribe_block.lower():
@@ -683,8 +704,8 @@ def main():
             errors.append('Homepage #subscribe must not add a second Beehiiv form button')
         if len(re.findall(r'<a\b[^>]*\bbutton\b', subscribe_block)) != 1:
             errors.append('Homepage #subscribe must have exactly one button CTA')
-        if 'keep/cut' not in subscribe_block.lower() and 'weekly' not in subscribe_block.lower():
-            errors.append('Homepage #subscribe must be labeled as the free Keep/Cut Weekly email')
+        if 'keep, test, cut' not in subscribe_block.lower():
+            errors.append('Homepage #subscribe must be labeled as the free Keep, Test, Cut email')
         if 'join premium on whop' in subscribe_block.lower() or 'start 7-day' in subscribe_block.lower():
             errors.append('Homepage #subscribe must not look like the paid Premium CTA')
     if 'Join Premium — 7-day trial · use code LAUNCH50 at checkout' not in home_html:
@@ -1291,6 +1312,7 @@ def main():
     errors.extend(asset_link_errors(ROOT))
     errors.extend(customer_whop_checkout_errors(ROOT))
     errors.extend(sponsor_preview_file_errors(ROOT))
+    errors.extend(publication_name_errors(ROOT))
 
     if errors:
         print('Validation failed')

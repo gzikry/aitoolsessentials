@@ -21,4 +21,4 @@ namespace_id = "847210"
   period = 60
 
 [vars]
-FROM_ADDRESS = "Keep/Cut Weekly <weekly@news.aitoolsessentials.com>"
+FROM_ADDRESS = "Keep, Test, Cut <weekly@news.aitoolsessentials.com>"

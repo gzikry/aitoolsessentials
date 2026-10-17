@@ -32,7 +32,7 @@ export function sameHex(left, right) {
 }
 
 function page(title, message) {
-  const body = `<!doctype html><html lang="en"><meta charset="utf-8"><title>${title}</title><body><main><h1>${title}</h1><p>${message}</p><p><a href="https://aitoolsessentials.com/newsletter/">Keep/Cut Weekly</a></p></main></body></html>`;
+  const body = `<!doctype html><html lang="en"><meta charset="utf-8"><title>${title}</title><body><main><h1>${title}</h1><p>${message}</p><p><a href="https://aitoolsessentials.com/newsletter/">Keep, Test, Cut</a></p></main></body></html>`;
   return new Response(body, { headers: { "content-type": "text/html; charset=utf-8" } });
 }
 
@@ -87,7 +87,7 @@ async function startSignup(request, env) {
   const encoded = encodeURIComponent(email);
   const existing = await resend(env, `/contacts/${encoded}`, "GET");
   if (existing.ok && existing.data.unsubscribed === false) {
-    return page("Already confirmed", "That address is already on Keep/Cut Weekly.");
+    return page("Already confirmed", "That address is already on Keep, Test, Cut.");
   }
   if (!existing.ok) {
     const created = await resend(env, "/contacts", "POST", { email, unsubscribed: true });
@@ -104,8 +104,8 @@ async function startSignup(request, env) {
   const mailed = await resend(env, "/emails", "POST", {
     from: env.FROM_ADDRESS,
     to: [email],
-    subject: "Confirm Keep/Cut Weekly",
-    html: `<p>Confirm Keep/Cut Weekly. Nothing is added until you open this link.</p><p><a href="${link}">Confirm this address</a></p><p>AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711.</p>`,
+    subject: "Confirm Keep, Test, Cut",
+    html: `<p>Confirm Keep, Test, Cut. Nothing is added until you open this link.</p><p><a href="${link}">Confirm this address</a></p><p>AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711.</p>`,
   });
   if (!mailed.ok) return page("Try again", "The confirm message did not send.");
   return page("Check your email", "Open the confirm link. The list stays empty until you do.");
@@ -132,7 +132,7 @@ async function confirm(url, env) {
     unsubscribed: false,
   });
   if (!updated.ok) return page("Try again", "That confirm link did not finish.");
-  return page("You are confirmed", "Keep/Cut Weekly will include this address from the next approved issue.");
+  return page("You are confirmed", "Keep, Test, Cut will include this address from the next approved issue.");
 }
 
 export default {
@@ -142,6 +142,6 @@ export default {
       return startSignup(request, env);
     }
     if (request.method === "GET" && url.pathname === "/confirm") return confirm(url, env);
-    return page("Keep/Cut Weekly", "Use the subscribe form on AIToolsEssentials.");
+    return page("Keep, Test, Cut", "Use the subscribe form on AIToolsEssentials.");
   },
 };

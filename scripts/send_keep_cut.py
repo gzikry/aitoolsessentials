@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from newsletter_hold import POSTAL_ADDRESS, SENDING_DOMAIN, UNSUBSCRIBE_HREF, Held, hold
 
-FROM_ADDRESS = f"Keep/Cut Weekly <weekly@{SENDING_DOMAIN}>"
+FROM_ADDRESS = f"Keep, Test, Cut <weekly@{SENDING_DOMAIN}>"
 _SIGN = "\u2014 AIToolsEssentials"
 _UNSUBSCRIBE = "{{{RESEND_UNSUBSCRIBE_URL}}}"
 Post = Callable[[dict, str], dict]
@@ -104,7 +104,7 @@ def send_issue(
             return Refused("missing_footer")
         raise
     payload = {
-        "name": f"Keep/Cut Weekly {slug}",
+        "name": f"Keep, Test, Cut {slug}",
         "segment_id": segment,
         "from": FROM_ADDRESS,
         "subject": subject,

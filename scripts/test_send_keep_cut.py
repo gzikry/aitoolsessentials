@@ -54,18 +54,18 @@ def main() -> None:
         payload, key = calls[0]
         if key != "test-key":
             errors.append(f"key was {key}")
-        if payload["from"] != FROM_ADDRESS or payload["from"] != "Keep/Cut Weekly <weekly@news.aitoolsessentials.com>":
+        if payload["from"] != FROM_ADDRESS or payload["from"] != "Keep, Test, Cut <weekly@news.aitoolsessentials.com>":
             errors.append(f"from was {payload['from']}")
         if payload["subject"] != "ChatGPT Go is $8 a month":
             errors.append(f"subject was {payload['subject']}")
         if payload["segment_id"] != "seg_test" or payload["send"] is not True:
             errors.append(f"broadcast fields {payload['segment_id']!r} {payload['send']!r}")
-        if payload["name"] != "Keep/Cut Weekly 2026-w42":
+        if payload["name"] != "Keep, Test, Cut 2026-w42":
             errors.append(f"name was {payload['name']}")
         html = payload["html"]
         if "{{{RESEND_UNSUBSCRIBE_URL}}}" not in html:
             errors.append("broadcast missing the Resend unsubscribe URL")
-        if "mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2FCut%20Weekly" in html:
+        if "mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2C%20Test%2C%20Cut" in html:
             errors.append("broadcast still uses the mailto unsubscribe")
         if POSTAL_ADDRESS not in html or "\u2014 AIToolsEssentials" not in html:
             errors.append("broadcast missing the footer or the brand sign-off")

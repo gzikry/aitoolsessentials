@@ -70,7 +70,7 @@ _LOGO_KEYS = frozenset({"src", "alt"})
 _OFFER_TITLE = "Sponsor AIToolsEssentials"
 _OFFER_PARAS = (
     "People come here to decide which AI tools to keep and which to cancel. If your product holds up, this is a good place to be seen.",
-    'What you get: a line at the bottom of every page, and/or a "Sponsored by" line in Keep/Cut Weekly.',
+    'What you get: a line at the bottom of every page, and/or a "Sponsored by" line in Keep, Test, Cut.',
     "What you don't get: a better review. Sponsors are labeled, kept away from scores, and never change a verdict.",
     "One sponsor at a time. We say no to tools we wouldn't use ourselves.",
 )
@@ -79,7 +79,7 @@ _SIGN_OFF = "\u2014 AIToolsEssentials"
 _HEADER = (
     '<header class="global-nav" data-nav="contained"><a class="brand" href="/"><span class="brand-glyph">\u2726</span>'
     "<span>AIToolsEssentials</span></a><nav class=\"nav-links\">"
-    '<a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep/Cut Weekly</a>'
+    '<a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep, Test, Cut</a>'
     '<a href="/subscribe/">Subscribe</a></nav>'
     '<a class="nav-cta" href="/pricing/">Paid Premium</a></header>'
 )

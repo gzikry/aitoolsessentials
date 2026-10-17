@@ -114,7 +114,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     <p class="subhead">Pick the AI tools you already pay for. Enter what they cost, or mark spend unknown. You get a keep/cut call on each one, the tools that duplicate the same job, and a score for how efficiently you spend. Nothing is submitted to a server.</p>
     <p><a class="button button-blue" href="#sa-app">Start the free audit</a>
        <a class="button button-ghost-dark" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a></p>
-    <p class="sa-note" style="margin-top:18px">Free and instant. Keep/Cut Weekly is a separate free email, and Premium is a separate paid option — neither is required for this audit.</p>
+    <p class="sa-note" style="margin-top:18px">Free and instant. Keep, Test, Cut is a separate free email, and Premium is a separate paid option — neither is required for this audit.</p>
   </div>
 </section>
 <section class="scene scene-light content-hub" id="sa-app">
@@ -183,7 +183,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
       <div class="sa-actions">
         <button class="button button-dark" type="button" id="sa-back-2">Edit answers</button>
         <button class="button button-blue" type="button" id="sa-restart">Start over</button>
-        <a class="button button-ghost-dark" data-sa-cta href="/newsletter/">Free Keep/Cut Weekly</a>
+        <a class="button button-ghost-dark" data-sa-cta href="/newsletter/">Free Keep, Test, Cut</a>
         <a class="button button-ghost-dark" data-sa-cta href="/premium/">{BUY_PAGE_LABEL}</a>
       </div>
     </section>

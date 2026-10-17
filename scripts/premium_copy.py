@@ -21,7 +21,7 @@ EMAIL = "contact@aitoolsessentials.com"
 PREVIEW_LABEL = "See a public preview"
 BUY_PAGE_LABEL = "See Premium keep/cut pack"
 FREE_AUDIT_LABEL = "Free Stack Audit"
-FREE_EMAIL_LABEL = "Free Keep/Cut Weekly"
+FREE_EMAIL_LABEL = "Free Keep, Test, Cut"
 ACCESS_EMAIL = "aitoolsessentials@gmail.com"
 STRIPE_PREMIUM_URL = "https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203"
 STRIPE_AUDIT_URL = "https://buy.stripe.com/cNi00ideNbpb8O32az0x204"
@@ -85,7 +85,7 @@ def lanes_note() -> str:
     return (
         '<p class="affiliate-inline">'
         "The <strong>instant Stack Audit</strong> is free — that is how you find the waste. "
-        "<strong>Keep/Cut Weekly</strong> is the free weekly email. "
+        "<strong>Keep, Test, Cut</strong> is the free weekly email. "
         "<strong>Premium</strong> is optional: $12/month, secure checkout by Stripe, for the dated keep/cut pack "
         "and a 48-hour written reply when you want help before renewals. "
         "Cheaper than one overlapping seat. Not another AI subscription."
@@ -102,7 +102,7 @@ def path_a_pitch(price: int = 12) -> tuple[str, str, str]:
         f"and a written reply within 48 hours, Premium is ${int(price)}/month, secure checkout by Stripe. "
         "That is cheaper than one overlapping seat. It is not another AI subscription. "
         'The <a href="/stack-audit.html">instant Stack Audit</a>, the directory, and '
-        '<a href="/newsletter/">Keep/Cut Weekly</a> stay free.',
+        '<a href="/newsletter/">Keep, Test, Cut</a> stay free.',
     )
 
 
@@ -182,7 +182,7 @@ def this_week_items() -> list[str]:
 def stays_free_items() -> list[str]:
     return [
         'The public directory of tool reviews and comparisons',
-        'Keep/Cut Weekly — the free weekly email at <a href="/subscribe/">/subscribe/</a>',
+        'Keep, Test, Cut — the free weekly email at <a href="/subscribe/">/subscribe/</a>',
         'The instant Stack Audit at <a href="/stack-audit.html">/stack-audit.html</a> — no login, stays on your device',
     ]
 
@@ -224,7 +224,7 @@ def preview_access_note(whop: dict[str, Any]) -> str:
         f"<p>{trial}-day free trial, then ${price}/month. Code <strong>{promo}</strong> is 50% off "
         "the first paid month for new users. Use code {promo} at checkout. After checkout, open "
         f'<a href="{WELCOME_PATH}">{WELCOME_PATH}</a>. {ACCESS_COPY}. {CANCEL_COPY}. '
-        "The directory, Keep/Cut Weekly, and instant Stack Audit "
+        "The directory, Keep, Test, Cut, and instant Stack Audit "
         f"stay free. Premium does not include {not_included_phrase()}.</p>"
         f'<p><a class="button button-blue" href="{esc(primary_checkout_url(whop))}" rel="external noopener">'
         f"{esc(join_label(price, trial_days=trial, promo=whop['promo_code']))}</a>"
@@ -325,7 +325,7 @@ def premium_nav_header() -> str:
         "<span>AIToolsEssentials</span></a><nav class=\"nav-links\">"
         '<a href="/tools/index.html">Tools</a>'
         '<a href="/stack-audit.html">Free Stack Audit</a>'
-        '<a href="/newsletter/">Keep/Cut Weekly</a>'
+        '<a href="/newsletter/">Keep, Test, Cut</a>'
         '<a href="/premium/library/">Preview</a>'
         '<a href="/premium/">Premium</a>'
         "</nav>"
@@ -344,7 +344,7 @@ def upsell_module_html(whop: dict[str, Any]) -> str:
         "<h2>Want someone to decide with you before a renewal?</h2>"
         f"<p>The free Stack Audit finds the waste. Premium is optional: a dated keep/cut pack, "
         f"alerts, and a 48-hour written reply by email — ${price}/month, cheaper than one overlapping "
-        "seat, not another AI subscription. The directory, Keep/Cut Weekly, and the instant Stack "
+        "seat, not another AI subscription. The directory, Keep, Test, Cut, and the instant Stack "
         "Audit stay free.</p>"
         f'<p class="affiliate-inline">{trial}-day free trial · then ${price}/month · code {promo} '
         "for 50% off first paid month · use code LAUNCH50 at checkout · delivered by email · research and strategy only · "
@@ -407,7 +407,7 @@ def homepage_footer_html() -> str:
         '<footer class="footer" data-footer="slim">'
         "<span>© 2026 AIToolsEssentials</span>"
         '<a href="/tools/index.html">Tools</a>'
-        '<a href="/newsletter/">Keep/Cut Weekly</a>'
+        '<a href="/newsletter/">Keep, Test, Cut</a>'
         '<a href="/pricing-watch/">Pricing Watch</a>'
         '<a href="/legal/about.html">About</a>'
         f'<a href="mailto:{EMAIL}">Contact</a>'

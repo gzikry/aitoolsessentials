@@ -54,7 +54,7 @@ def main() -> None:
     if (root / "newsletter" / "index.html").read_text(encoding="utf-8") != hub:
         errors.append("second publish changed the index")
     footer = homepage_footer_html()
-    link = '<a href="/newsletter/">Keep/Cut Weekly</a>'
+    link = '<a href="/newsletter/">Keep, Test, Cut</a>'
     if link not in footer:
         errors.append("homepage generator dropped the archive link")
     if link not in (REPO / "index.html").read_text(encoding="utf-8"):
