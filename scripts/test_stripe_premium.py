@@ -14,14 +14,6 @@ JOIN_LABEL = "Join Premium — 7-day trial · use code LAUNCH50 at checkout"
 ACCESS_EMAIL = "aitoolsessentials@gmail.com"
 CANCEL = "Cancel anytime from the link in your Stripe receipt email"
 
-EXEMPT = {
-    "tools/whop-cli/index.html",
-    "comparisons/whop-cli-vs-zapier-ai.html",
-    "comparisons/n8n-vs-whop-cli.html",
-    "comparisons/make-vs-whop-cli.html",
-    "comparisons/browse-ai-vs-whop-cli.html",
-}
-
 CHECKOUT_PAGES = (
     "premium/index.html",
     "index.html",
@@ -32,6 +24,11 @@ CHECKOUT_PAGES = (
     "start-here/index.html",
     "resources/index.html",
     "weekly/index.html",
+    "tools/whop-cli/index.html",
+    "comparisons/whop-cli-vs-zapier-ai.html",
+    "comparisons/n8n-vs-whop-cli.html",
+    "comparisons/make-vs-whop-cli.html",
+    "comparisons/browse-ai-vs-whop-cli.html",
 )
 
 AUDIT_PAGES = (
@@ -83,6 +80,12 @@ def main() -> None:
             errors.append(rel + " still links to whop.com/checkout")
         if "promo=LAUNCH50" in text:
             errors.append(rel + " still prefills LAUNCH50")
+        if rel.startswith(("tools/whop-cli/", "comparisons/")) and JOIN_LABEL not in text:
+            errors.append(rel + " missing the Stripe join label")
+
+    tool_review = (ROOT / "tools/whop-cli/index.html").read_text()
+    if "Is the Whop CLI free?" not in tool_review:
+        errors.append("tools/whop-cli/index.html lost the product review copy")
 
     for rel in AUDIT_PAGES:
         text = (ROOT / rel).read_text()
@@ -103,7 +106,7 @@ def main() -> None:
         if path.suffix not in {".html", ".js"}:
             continue
         rel = path.relative_to(ROOT)
-        if "admin" in rel.parts or rel.as_posix() in EXEMPT:
+        if "admin" in rel.parts:
             continue
         if "whop.com/checkout" in path.read_text(errors="ignore"):
             errors.append(rel.as_posix() + " still links to whop.com/checkout")

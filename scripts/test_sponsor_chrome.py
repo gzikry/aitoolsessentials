@@ -420,15 +420,21 @@ def _stripe_button(url: str) -> str:
 
 def test_stripe_preview_and_production_gate() -> None:
     repo = Path(__file__).resolve().parents[1]
-    preview = json.loads((repo / "data" / "sponsor_payment_preview.json").read_text())
-    if preview != {"issue": ISSUE_URL, "bar": BAR_URL, "bundle": BUNDLE_URL}:
-        raise AssertionError("preview config is not the three Stripe test links")
+    if (repo / "data" / "sponsor_payment_preview.json").exists():
+        raise AssertionError("data/sponsor_payment_preview.json must not ship on the public site")
+    env_urls = {
+        "SPONSOR_PAYMENT_URL_ISSUE": ISSUE_URL,
+        "SPONSOR_PAYMENT_URL_BAR": BAR_URL,
+        "SPONSOR_PAYMENT_URL_BUNDLE": BUNDLE_URL,
+    }
     with TemporaryDirectory() as raw:
         root = Path(raw)
         _write(root, {"enrollment": None})
-        _raises(lambda: write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"}))
-        (root / "data" / "sponsor_payment_preview.json").write_text(json.dumps(preview))
         write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"})
+        ignored = (root / "sponsor" / "index.html").read_text()
+        _has(ignored, MAILTO_BUTTON)
+        _lacks(ignored, "buy.stripe.com")
+        write_page(root, env_urls)
         html = (root / "sponsor" / "index.html").read_text()
         _has(html, _stripe_button(ISSUE_URL))
         _has(html, _stripe_button(BAR_URL))
@@ -439,12 +445,7 @@ def test_stripe_preview_and_production_gate() -> None:
         plain = (root / "sponsor" / "index.html").read_text()
         _has(plain, MAILTO_BUTTON)
         _lacks(plain, "buy.stripe.com")
-        _raises(
-            lambda: write_page(
-                root,
-                {"SPONSOR_PAYMENT_PREVIEW": "1", "PRODUCTION_BUILD": "1"},
-            )
-        )
+        _raises(lambda: write_page(root, {**env_urls, "PRODUCTION_BUILD": "1"}))
         blocked = (root / "sponsor" / "index.html").read_text()
         _has(blocked, MAILTO_BUTTON)
         _lacks(blocked, "buy.stripe.com")
@@ -453,7 +454,7 @@ def test_stripe_preview_and_production_gate() -> None:
         write_page(
             root,
             {
-                "SPONSOR_PAYMENT_PREVIEW": "1",
+                **env_urls,
                 "PRODUCTION_BUILD": "1",
                 "ALLOW_STRIPE_TEST_LINKS": "1",
             },
