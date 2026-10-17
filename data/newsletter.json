@@ -1,6 +1,6 @@
 {
   "provider": "resend",
-  "publication_name": "Keep/Cut Weekly",
+  "publication_name": "Keep, Test, Cut",
   "sending_domain": "news.aitoolsessentials.com",
   "signup_url": "/subscribe/",
   "subscribe_endpoint": "https://aitools-newsletter-subscribe.aitoolsessentials.workers.dev",
@@ -16,9 +16,9 @@
   "embed_html": "",
   "formsubmit_ajax": "https://formsubmit.co/ajax/eb3d1bf5a35125c06383cafa247af931",
   "formsubmit_note": "Not used for the newsletter. FormSubmit remains for submit-tool, test-report, and services intake only.",
-  "subject": "Keep/Cut Weekly signup",
+  "subject": "Keep, Test, Cut signup",
   "description": "One email a week. What changed, what to keep, what to cut. Straight. No daily drip.",
-  "homepage_kicker": "Keep/Cut Weekly · free email",
+  "homepage_kicker": "Keep, Test, Cut · free email",
   "homepage_headline": "One short email a week.",
   "homepage_body": "What changed this week, and what's worth keeping."
 }

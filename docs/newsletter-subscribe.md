@@ -1,4 +1,4 @@
-# How to collect and send Keep/Cut Weekly
+# How to collect and send Keep, Test, Cut
 
 The site on GitHub Pages cannot hide an API key. DNS for `aitoolsessentials.com` is at Porkbun, so a Worker custom domain on `subscribe.news.aitoolsessentials.com` is not available. The form action is the single field `subscribe_endpoint` in `data/newsletter.json`.
 
@@ -18,7 +18,7 @@ Signups are still **closed to the public**: `subscribe_endpoint` stays `""` in `
 
 ## Deploy the Worker
 
-You need a Resend segment for Keep/Cut Weekly and an API key that can write contacts and send from `news.aitoolsessentials.com`.
+You need a Resend segment for Keep, Test, Cut and an API key that can write contacts and send from `news.aitoolsessentials.com`.
 
 From `workers/newsletter-subscribe/`:
 
@@ -52,4 +52,4 @@ The Cache API does not persist on `workers.dev`, so the old `caches.default` cou
 3. Export `NEWSLETTER_SEND_ENABLED=true`.
 4. Run `python3 scripts/send_keep_cut.py <slug>`.
 
-The script posts one Resend broadcast with `send` set to true. The From address is `Keep/Cut Weekly <weekly@news.aitoolsessentials.com>`. The HTML keeps the postal address `1090 West Foothill, Claremont, CA 91711`, the brand sign-off, and `{{{RESEND_UNSUBSCRIBE_URL}}}`. It refuses a draft that contains a personal name, and it does not call Resend when the flag is off or the approval file is missing.
+The script posts one Resend broadcast with `send` set to true. The From address is `Keep, Test, Cut <weekly@news.aitoolsessentials.com>`. The HTML keeps the postal address `1090 West Foothill, Claremont, CA 91711`, the brand sign-off, and `{{{RESEND_UNSUBSCRIBE_URL}}}`. It refuses a draft that contains a personal name, and it does not call Resend when the flag is off or the approval file is missing.

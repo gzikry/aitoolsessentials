@@ -171,7 +171,7 @@ def generate_hub(root: Path, tools: list[dict[str, Any]], today: str, whop: dict
         f"Public preview of the Premium format: dated research brief, {n}-tool decision matrix, "
         "stack-audit template, weekly checklist, tool-change alerts, and ROI worksheet. "
         f"What you buy for ${whop['price_usd_month']}/month is delivered in Whop. "
-        "Keep/Cut Weekly and the instant Stack Audit stay free."
+        "Keep, Test, Cut and the instant Stack Audit stay free."
     )
     page = f'''<!doctype html><html lang="en">{head("Public Premium preview — see the format", desc, DOMAIN + "/premium/library/")}
 <body>{header()}<main>
@@ -348,7 +348,7 @@ def generate_stack_audit_template(root: Path, today: str, whop: dict[str, Any]) 
 <div class="score-card"><span>What stays free</span>
 <ul>
 <li><strong>Free Stack Audit</strong> — instant keep/cut/overlap score on your device. No account.</li>
-<li><strong>Free Keep/Cut Weekly</strong> — one free email a week.</li>
+<li><strong>Free Keep, Test, Cut</strong> — one free email a week.</li>
 <li><strong>Paid Premium</strong> — in Whop: this inventory format, the matrix, alerts, and a written strategy reply after you send the completed inventory. Research only. No logins taken.</li>
 </ul>
 <p><a class="button button-dark" href="/stack-audit.html">Run the free instant audit</a></p>
@@ -534,7 +534,7 @@ def generate_access(root: Path, today: str, whop: dict[str, Any]) -> None:
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">
 <div class="content-hub-grid">
-<article class="content-hub-card"><span>Free</span><h3>Keep/Cut Weekly</h3><p>Free weekly email. Not a Premium charge.</p><p><a href="/subscribe/">Subscribe free</a></p></article>
+<article class="content-hub-card"><span>Free</span><h3>Keep, Test, Cut</h3><p>Free weekly email. Not a Premium charge.</p><p><a href="/subscribe/">Subscribe free</a></p></article>
 <article class="content-hub-card"><span>Free</span><h3>Stack Audit</h3><p>Instant scorecard. Stays on your device.</p><p><a href="/stack-audit.html">Run it free</a></p></article>
 <article class="content-hub-card"><span>Paid</span><h3>Premium</h3><p>{whop["trial_period_days"]}-day trial, then ${whop["price_usd_month"]}/month, secure checkout by Stripe. Use code {esc(whop["promo_code"])} at checkout for 50% off the first paid month (new users).</p><p><a href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(whop["price_usd_month"], trial_days=int(whop["trial_period_days"]), promo=str(whop["promo_code"])))}</a></p></article>
 </div>

@@ -17,7 +17,7 @@ from validate_site import (
     unresolved_canonicals,
 )
 
-ADDRESS = "Keep/Cut Weekly by AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711"
+ADDRESS = "Keep, Test, Cut by AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711"
 UNSUBSCRIBE = "Every email has an unsubscribe link."
 
 

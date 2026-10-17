@@ -1,6 +1,6 @@
 # DNS for news.aitoolsessentials.com
 
-Keep/Cut Weekly sends from `news.aitoolsessentials.com` through Resend. The sending domain is verified. Sending stays off until `NEWSLETTER_SEND_ENABLED` is true, the issue has an approval file, and `scripts/send_keep_cut.py` has `RESEND_API_KEY` plus `RESEND_SEGMENT_ID`. Signup hosting is separate and is described in `docs/newsletter-subscribe.md`.
+Keep, Test, Cut sends from `news.aitoolsessentials.com` through Resend. The sending domain is verified. Sending stays off until `NEWSLETTER_SEND_ENABLED` is true, the issue has an approval file, and `scripts/send_keep_cut.py` has `RESEND_API_KEY` plus `RESEND_SEGMENT_ID`. Signup hosting is separate and is described in `docs/newsletter-subscribe.md`.
 
 The previous list had no subscribers, so there is no export.
 

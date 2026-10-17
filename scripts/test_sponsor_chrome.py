@@ -41,7 +41,7 @@ ISSUE_LINE = (
 )
 OFFER = (
     "People come here to decide which AI tools to keep and which to cancel. If your product holds up, this is a good place to be seen.",
-    'What you get: a line at the bottom of every page, and/or a "Sponsored by" line in Keep/Cut Weekly.',
+    'What you get: a line at the bottom of every page, and/or a "Sponsored by" line in Keep, Test, Cut.',
     "What you don't get: a better review. Sponsors are labeled, kept away from scores, and never change a verdict.",
     "One sponsor at a time. We say no to tools we wouldn't use ourselves.",
 )

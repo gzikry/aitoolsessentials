@@ -4,7 +4,7 @@
     "Speak to the reader, not the tool.",
     "Primary job: help people choose and learn about AI tools with dated evidence. Keep/cut is a useful outcome, not the whole brand.",
     "Say what they keep, cancel, or pay — not operationalize, research layer, or operating model.",
-    "Keep free Keep/Cut Weekly and free Stack Audit clearly free and separate from $12/mo Premium.",
+    "Keep free Keep, Test, Cut and free Stack Audit clearly free and separate from $12/mo Premium.",
     "Do not invent Whop plan IDs, prices, or checkout URLs."
   ],
   "rewrites": [
@@ -195,7 +195,7 @@
     },
     {
       "phrase": "If Premium membership is activated through Whop…",
-      "rewrite": "Keep/Cut Weekly is a separate free weekly email. The instant Stack Audit stays on your device. If you join Paid Premium through Whop…",
+      "rewrite": "Keep, Test, Cut is a separate free weekly email. The instant Stack Audit stays on your device. If you join Paid Premium through Whop…",
       "files": ["legal/privacy.html"]
     },
     {

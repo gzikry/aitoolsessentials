@@ -173,8 +173,8 @@ def generate(root: Path = ROOT) -> Path:
 {''.join(sections)}
 <section class="score-card related-next-steps"><span>Free decision tools</span><h2>Turn a guide into a repeatable evaluation.</h2>
 <p><a class="button button-blue" href="../compare-shortlist.html">Compare shortlist</a><a class="button button-blue" href="../cost-calculator.html" style="margin-left:8px">Estimate cost</a><a class="button button-dark" href="../downloads/ai-tool-evaluation-scorecard.html" style="margin-left:8px">Open scorecard</a></p>
-<p><a href="../press/">Press / cite us</a> · <a href="../methodology/">Methodology</a> · <a href="../evidence/">Evidence ledger</a> · <a href="../newsletter/">Keep/Cut Weekly</a></p></section>
-<section class="newsletter-panel"><div><span>Keep/Cut Weekly</span><h2>One tool to keep. One to cut. One worth testing.</h2>
+<p><a href="../press/">Press / cite us</a> · <a href="../methodology/">Methodology</a> · <a href="../evidence/">Evidence ledger</a> · <a href="../newsletter/">Keep, Test, Cut</a></p></section>
+<section class="newsletter-panel"><div><span>Keep, Test, Cut</span><h2>One tool to keep. One to cut. One worth testing.</h2>
 <p>Get a concise weekly decision brief with pricing changes, overlap warnings, and one practical job to test.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../newsletter/">Read the newsletter</a><a class="button button-dark" href="../premium/">Explore Premium</a></div></section>
 <p class="affiliate-inline">Editorial recommendations are independent. Affiliate participation and paid placement never change rankings or conclusions. <a href="../legal/affiliate-disclosure.html">Disclosure</a>.</p>
 </main><div id="share-row" hidden></div>

@@ -171,7 +171,7 @@ def generate_best_for(root: Path) -> Path:
               "<h2>Use the free Decision Checklist</h2><p>A printable worksheet to score overlap, cost, and trial results before paying.</p></div>"
               '<div class="newsletter-actions"><a class="button button-blue" href="/downloads/ai-stack-decision-checklist.pdf">Download PDF</a>'
               '<a class="button button-dark" href="/decision-brief.html">Get a decision brief</a>'
-              '<a class="button button-dark" href="/newsletter/">Keep/Cut Weekly</a></div></section>'
+              '<a class="button button-dark" href="/newsletter/">Keep, Test, Cut</a></div></section>'
             + "</main>" + FOOTER + '</body></html>')
     out = root / "best-for" / "index.html"
     out.parent.mkdir(exist_ok=True)
@@ -254,7 +254,7 @@ def generate_pricing_report(root: Path, today: str) -> Path:
               '<p>When our verification runs detect an official price change, Premium members hear about it first — before it hits their renewal.</p>'
               '<p><a class="button button-blue" href="/premium/">See Premium</a> '
               '<a class="button button-dark" href="/pricing-watch/">Open the live Pricing Watch</a> '
-              '<a class="button button-ghost-dark" href="/newsletter/">Keep/Cut Weekly</a></p></section>'
+              '<a class="button button-ghost-dark" href="/newsletter/">Keep, Test, Cut</a></p></section>'
               '<p class="benchmark-caveat">Methodology: every figure traces to the vendor\'s official pricing page with a checked date shown in '
               '<a href="/pricing-watch/">AI Pricing Watch</a>. Prices change often — verify on the vendor page before purchase. This report is research, not purchasing advice.</p>'
               '</div></section>'

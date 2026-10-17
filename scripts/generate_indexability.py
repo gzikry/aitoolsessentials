@@ -21,7 +21,7 @@ CITE_MODULE = (
     f'{CITE_START}<section class="score-card related-next-steps"><span>Cite and verify</span>'
     "<h2>Source pages Google can quote.</h2>"
     '<p><a href="/pricing-watch/">Pricing Watch</a> · '
-    '<a href="/newsletter/">Keep/Cut Weekly</a> · '
+    '<a href="/newsletter/">Keep, Test, Cut</a> · '
     '<a href="/press/">Press / cite us</a> · '
     '<a href="/evidence/">Evidence ledger</a> · '
     '<a href="/methodology/">Methodology</a></p>'

@@ -22,7 +22,7 @@ _ON = frozenset({"1", "true", "yes", "on"})
 POSTAL_ADDRESS = "1090 West Foothill, Claremont, CA 91711"
 SENDING_DOMAIN = "news.aitoolsessentials.com"
 UNSUBSCRIBE_HREF = (
-    "mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2FCut%20Weekly"
+    "mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2C%20Test%2C%20Cut"
 )
 _SIGNUP_MAIL = "mailto:aitoolsessentials@gmail.com"
 
@@ -59,7 +59,7 @@ def compliance_footer() -> str:
 def public_colophon_html() -> str:
     """Postal line for the homepage and the newsletter index. Emails carry the unsubscribe link."""
     return (
-        '<span class="footer-colophon">Keep/Cut Weekly by AIToolsEssentials, '
+        '<span class="footer-colophon">Keep, Test, Cut by AIToolsEssentials, '
         + POSTAL_ADDRESS
         + "</span>"
         '<span class="footer-colophon">Every email has an unsubscribe link.</span>'

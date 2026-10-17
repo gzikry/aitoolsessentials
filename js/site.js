@@ -140,7 +140,7 @@
   setTimeout(finish, 2400);
 })();
 
-/* Exit-intent email capture: offer free Stack Audit or Keep/Cut Weekly. */
+/* Exit-intent email capture: offer free Stack Audit or Keep, Test, Cut. */
 (function () {
   var STORAGE_KEY = 'aitoolsessentials.exit_prompt.v1';
   function hasSeen() {
@@ -167,7 +167,7 @@
       '<button class="exit-intent-close" aria-label="Close">&times;</button>' +
       '<p class="kicker light">Free before you go</p>' +
       '<h2>Stop paying for overlapping AI tools.</h2>' +
-      '<p>Get the free instant Stack Audit scorecard — no login, stays on your device. Or subscribe to Keep/Cut Weekly for one email a week on what changed, what to keep, what to cut.</p>' +
+      '<p>Get the free instant Stack Audit scorecard — no login, stays on your device. Or subscribe to Keep, Test, Cut for one email a week on what changed, what to keep, what to cut.</p>' +
       '<div class="exit-intent-actions">' +
       '<a class="button button-blue" href="/stack-audit.html">Run free audit</a> ' +
       '<a class="button button-ghost-dark" href="/subscribe/">Get the free email</a>' +

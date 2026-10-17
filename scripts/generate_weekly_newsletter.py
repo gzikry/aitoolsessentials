@@ -14,7 +14,7 @@ from newsletter_hold import compliance_footer, public_colophon_html
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
 LOGO = f"{DOMAIN}/assets/aitools-bot-logo-256.png"
-HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep/Cut Weekly</a><a href="/subscribe/">Free email</a><a href="/premium/">Paid Premium</a></nav><a class="nav-cta" href="/subscribe/">Get the free email</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep, Test, Cut</a><a href="/subscribe/">Free email</a><a href="/premium/">Paid Premium</a></nav><a class="nav-cta" href="/subscribe/">Get the free email</a></header>'
 FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="/legal/privacy.html">Privacy</a>{public_colophon_html()}</footer>'
 
 
@@ -36,7 +36,7 @@ def listings_html(items: list, public: bool) -> str:
 
 def draft_html(issue: dict, cfg: dict) -> str:
     logo = esc(cfg.get("logo_url") or LOGO)
-    name = esc(cfg.get("publication_name") or "Keep/Cut Weekly")
+    name = esc(cfg.get("publication_name") or "Keep, Test, Cut")
     keep = issue.get("keep_one") or {}
     keep_url = keep.get("url") or ""
     if keep_url.startswith("/"):
@@ -99,7 +99,7 @@ def public_page(issue: dict, cfg: dict) -> str:
     keep = issue.get("keep_one") or {}
     desc = issue.get("preview") or issue.get("lede") or ""
     dek = issue.get("preview") or issue.get("lede") or ""
-    pub_name = esc(cfg.get("publication_name") or "Keep/Cut Weekly")
+    pub_name = esc(cfg.get("publication_name") or "Keep, Test, Cut")
 
     pricing_items = issue.get("pricing_changes") or []
     if pricing_items:

@@ -89,7 +89,7 @@ def main() -> None:
         errors.append("Stack Audit must not invent savings in the Premium upgrade CTA")
     if "200 audit" in stack.lower():
         errors.append("Do not invent audit-count metrics")
-    if "Keep/Cut Weekly" not in stack:
+    if "Keep, Test, Cut" not in stack:
         errors.append("Free Stack Audit page must label the free newsletter")
     if "Which AI tools should you cancel" in stack:
         errors.append("Stack Audit title/meta must not be cancel-only")

@@ -210,7 +210,7 @@ def generate_category_hub(root: Path, tools: list, today: str) -> Path:
 <section class="scene scene-light content-hub"><h2>Browse by category</h2><div class="content-hub-grid">{''.join(cards)}</div></section>
 <!-- AIT SOURCE CITE START --><section class="score-card related-next-steps"><span>Cite and verify</span>
 <h2>Source pages Google can quote.</h2>
-<p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/newsletter/">Keep/Cut Weekly</a> · <a href="/press/">Press / cite us</a> · <a href="/evidence/">Evidence ledger</a> · <a href="/methodology/">Methodology</a></p>
+<p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/newsletter/">Keep, Test, Cut</a> · <a href="/press/">Press / cite us</a> · <a href="/evidence/">Evidence ledger</a> · <a href="/methodology/">Methodology</a></p>
 </section><!-- AIT SOURCE CITE END -->
 </main>
 <div id="share-row" hidden></div>

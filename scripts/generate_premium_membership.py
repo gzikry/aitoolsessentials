@@ -221,7 +221,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     desc = (
         f"The free Stack Audit finds the waste. Premium is optional: a dated keep/cut pack and a "
         f"48-hour written reply by email for ${WHOP_PRICE}/month — cheaper than one overlapping seat, "
-        "not another AI subscription. Directory, Keep/Cut Weekly, and instant Stack Audit stay free."
+        "not another AI subscription. Directory, Keep, Test, Cut, and instant Stack Audit stay free."
     )
     page = f'''<!doctype html><html lang="en">{head("Premium — optional keep/cut pack after the free audit", desc, DOMAIN+"/premium/")}<body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:980px;margin:0 auto;padding:92px 28px 72px;text-align:center"><p class="kicker light">{kicker}</p><h1>{pitch_h1}</h1><p class="subhead">{pitch_sub}</p><p>{checkout_buttons(whop, preview=True, free_audit=True)}</p>{billing_fine_print(whop)}{lanes_note()}</div></section>
@@ -277,7 +277,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
     faqs = [
         ("What do I buy for $12/month?", "Premium is delivered by email from aitoolsessentials@gmail.com within 24 hours. You get dated keep/cut research, a monthly decision matrix CSV, a weekly checklist, tool-change alerts, a stack-audit template with a strategy-only written reply within 48 hours, an ROI worksheet, and priority research slots (first 5 complete requests each month)."),
         ("What do I get this week?", "After checkout, open /premium/welcome/. This page cannot verify a charge. If Stripe shows the trial or payment succeeded, check your email from aitoolsessentials@gmail.com within 24 hours, download this week's keep/cut notes and the decision matrix CSV, run the 15-minute checklist, and fill the stack-audit template if you want a written keep/cut reply."),
-        ("What stays free?", "The public directory, Keep/Cut Weekly, and the instant Stack Audit at /stack-audit.html. Do not use Premium checkout for those."),
+        ("What stays free?", "The public directory, Keep, Test, Cut, and the instant Stack Audit at /stack-audit.html. Do not use Premium checkout for those."),
         ("What is not included?", "Implementation, setup, integrations, account access, credentials, or ongoing technical support. Premium does not change public rankings, sponsor labels, or review scores. The /premium/library/ pages on this site are a public preview of the format. They are not gated."),
         ("Is Premium a course, community, or consulting service?", "No. You are buying dated research and a written keep/cut reply. Personalized stack recommendations from the audit template are strategy-only written replies — not hands-on implementation."),
         ("Can vendors pay to change rankings?", "No. Premium does not change public editorial rankings, sponsor labels, affiliate disclosures, or review scores."),
@@ -292,7 +292,7 @@ def generate_public_pages(root: Path, tools: list[dict[str, Any]], today: str) -
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "AIToolsEssentials Premium",
-        "description": "Paid $12/month membership, secure checkout by Stripe. Dated keep/cut research, monthly decision matrix CSV, weekly checklist, tool-change alerts, stack-audit template with a strategy-only written reply, ROI worksheet, and priority research slots. Delivered by email. Directory, Keep/Cut Weekly, and instant Stack Audit stay free.",
+        "description": "Paid $12/month membership, secure checkout by Stripe. Dated keep/cut research, monthly decision matrix CSV, weekly checklist, tool-change alerts, stack-audit template with a strategy-only written reply, ROI worksheet, and priority research slots. Delivered by email. Directory, Keep, Test, Cut, and instant Stack Audit stay free.",
         "brand": {"@type": "Brand", "name": "AIToolsEssentials"},
         "image": DOMAIN + "/assets/og-ai-tools.jpg",
         "category": "Digital membership",
@@ -511,7 +511,7 @@ def generate_whop_pack(root: Path, tools: list[dict[str, Any]], today: str) -> N
     write_csv(download_dir / "free-vs-premium-value-matrix.csv", ["Capability", "Free site", "Premium members", "Why it matters"], [
         ["Tool reviews + comparisons", "Yes", "Yes + full decision matrix CSV", "Public is enough for browsing"],
         ["Scorecards / cost calculator / decision brief", "Yes", "Yes", "Free utilities stay free"],
-        ["Keep/Cut Weekly email", "Yes", "Yes", "Free newsletter stays free"],
+        ["Keep, Test, Cut email", "Yes", "Yes", "Free newsletter stays free"],
         ["Instant Stack Audit scorecard", "Yes — /stack-audit.html", "Yes, plus the deeper template + written reply", "Free tool stays free"],
         ["Full decision matrix CSV", "No", "Yes, refreshed from official labels", "Monthly stack decisions"],
         ["AI Stack Audit Template + 48h strategy reply", "No", "Yes", "Turns inventory into keep/cut"],
@@ -958,7 +958,7 @@ def homepage_newsletter_panel(root: Path) -> str:
     cfg_path = root / "data/newsletter.json"
     if cfg_path.exists():
         cfg = json.loads(cfg_path.read_text())
-    kicker = esc(cfg.get("homepage_kicker") or "Keep/Cut Weekly · free email")
+    kicker = esc(cfg.get("homepage_kicker") or "Keep, Test, Cut · free email")
     headline = esc(cfg.get("homepage_headline") or "One short email a week.")
     body = esc(cfg.get("homepage_body") or "What changed this week, and what's worth keeping.")
     form = subscribe_form(str(cfg.get("subscribe_endpoint") or ""))
@@ -1159,7 +1159,7 @@ def update_pricing_page(root: Path, tools: list[dict[str, Any]]) -> None:
     html = path.read_text()
     n = len(tools)
     meta = (
-        f'content="You are paying for overlapping AI tools. The directory, Keep/Cut Weekly, '
+        f'content="You are paying for overlapping AI tools. The directory, Keep, Test, Cut, '
         f'and instant Stack Audit stay free. Premium is ${WHOP_PRICE}/month, secure checkout by Stripe: dated '
         f'keep/cut research, monthly CSV, weekly checklist, alerts, and a written keep/cut reply."'
     )
@@ -1167,7 +1167,7 @@ def update_pricing_page(root: Path, tools: list[dict[str, Any]]) -> None:
     hero = (
         f'<p class="kicker light">Pricing</p>'
         f'<h1>You are paying for overlapping AI tools. Here is what is free, and what ${WHOP_PRICE}/month buys.</h1>'
-        f'<p>The directory, <a href="/newsletter/">Keep/Cut Weekly</a>, and the '
+        f'<p>The directory, <a href="/newsletter/">Keep, Test, Cut</a>, and the '
         f'<a href="/stack-audit.html">instant Stack Audit</a> stay free. Premium is ${WHOP_PRICE}/month, secure checkout by Stripe: '
         f'dated keep/cut research, a monthly decision matrix CSV, a weekly checklist, tool-change alerts, '
         f'a stack-audit template with a written keep/cut reply within 48 hours, an ROI worksheet, and '
@@ -1184,7 +1184,7 @@ def update_pricing_page(root: Path, tools: list[dict[str, Any]]) -> None:
     )
     new_grid = (
         f'<div class="pricing-grid">'
-        f'<article class="pricing-card"><p class="eyebrow">Free</p><h3>Directory + Keep/Cut Weekly</h3>'
+        f'<article class="pricing-card"><p class="eyebrow">Free</p><h3>Directory + Keep, Test, Cut</h3>'
         f'<p class="pricing-price">$0<span>/forever</span></p><ul class="pricing-features">'
         f'<li>Tool reviews, comparisons, and dated evidence</li>'
         f'<li>Free weekly email — not a Premium charge</li>'
@@ -1224,7 +1224,7 @@ def update_pricing_page(root: Path, tools: list[dict[str, Any]]) -> None:
     # inserting the trailing space (site-qa idempotency).
     html = re.sub(
         r"<strong>Delivery:</strong>.*?(?=<strong>Scope:)",
-        "<strong>Delivery:</strong> Premium is delivered by email from aitoolsessentials@gmail.com within 24 hours. The <a href=\"/premium/library/\">/premium/library/</a> pages on this site are a public preview of the format and are not gated. Free Keep/Cut Weekly and free Stack Audit are not this membership. ",
+        "<strong>Delivery:</strong> Premium is delivered by email from aitoolsessentials@gmail.com within 24 hours. The <a href=\"/premium/library/\">/premium/library/</a> pages on this site are a public preview of the format and are not gated. Free Keep, Test, Cut and free Stack Audit are not this membership. ",
         html,
         count=1,
         flags=re.S,

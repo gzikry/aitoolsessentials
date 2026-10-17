@@ -180,7 +180,7 @@ def main():
     # 5. Recommendations
     print("\n5. RECOMMENDATIONS:")
     print("   - Add 'Free Stack Audit' CTA to all comparison pages")
-    print("   - Add 'Keep/Cut Weekly' signup to all article pages")
+    print("   - Add 'Keep, Test, Cut' signup to all article pages")
     print("   - Add internal links from tool category pages to /stack-audit.html")
     print("   - Add 'Run free audit' link to /comparisons/best-ai-tools.html")
 

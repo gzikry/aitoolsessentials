@@ -1294,7 +1294,7 @@ def _build_page(fname: str, article: dict) -> str:
 <p class="last-updated">Editorial comparison · Last checked {updated} · <a href="{comparison_href}">Jump to the side-by-side data table</a></p>
 <div class="actions"><a class="button button-blue" href="{comparison_href}">Compare {esc(a_name)} vs {esc(b_name)} data</a><a class="button button-dark" href="../compare-shortlist.html">Build a shortlist</a></div></section>
 <section class="scene scene-light"><article class="article-shell">{article['body']}
-<p style="margin-top:24px;padding:16px;background:#f6f8fa;border-left:3px solid #0071E3"><strong>Related:</strong> <a href="../comparisons/{article['comparison']}">{esc(a_name)} vs {esc(b_name)} comparison</a> · <a href="../tools/{a_slug}/">{esc(a_name)} review</a> · <a href="../tools/{b_slug}/">{esc(b_name)} review</a> · <a href="../newsletter/">Keep/Cut Weekly</a></p>
+<p style="margin-top:24px;padding:16px;background:#f6f8fa;border-left:3px solid #0071E3"><strong>Related:</strong> <a href="../comparisons/{article['comparison']}">{esc(a_name)} vs {esc(b_name)} comparison</a> · <a href="../tools/{a_slug}/">{esc(a_name)} review</a> · <a href="../tools/{b_slug}/">{esc(b_name)} review</a> · <a href="../newsletter/">Keep, Test, Cut</a></p>
 </article></section>
 <section class="newsletter-panel"><div><span>AI Tool Evaluation Scorecard</span><h2>Decide with evidence, not demos</h2>
 <p>Compare candidates on workflow fit, quality, review time, privacy, collaboration, cost, and ROI.</p><p class="affiliate-inline">No email required.</p></div>
