@@ -15,7 +15,7 @@ DOMAIN = "https://aitoolsessentials.com"
 _SIGN = "\u2014 AIToolsEssentials"
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class Letter:
     slug: str
     issue: int
