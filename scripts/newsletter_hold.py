@@ -12,6 +12,7 @@ __all__ = [
     "Held",
     "compliance_footer",
     "hold",
+    "public_colophon_html",
     "subscribe_endpoint",
     "subscribe_form",
 ]
@@ -52,6 +53,16 @@ def compliance_footer() -> str:
         + '. <a href="'
         + UNSUBSCRIBE_HREF
         + '">Unsubscribe</a>'
+    )
+
+
+def public_colophon_html() -> str:
+    """Postal line for the homepage and the newsletter index. Emails carry the unsubscribe link."""
+    return (
+        '<span class="footer-colophon">Keep/Cut Weekly by AIToolsEssentials, '
+        + POSTAL_ADDRESS
+        + "</span>"
+        '<span class="footer-colophon">Every email has an unsubscribe link.</span>'
     )
 
 

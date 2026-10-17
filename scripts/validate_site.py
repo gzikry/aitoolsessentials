@@ -18,6 +18,74 @@ from newsletter_hold import subscribe_endpoint
 from sponsor_chrome import production_stripe_test_errors
 
 ROOT = Path(__file__).resolve().parents[1]
+_SITE = "https://aitoolsessentials.com"
+_CANONICAL_RELS = (
+    re.compile(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']', re.I),
+    re.compile(r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']', re.I),
+)
+_EXTERNAL_HREF = re.compile(r'href=["\'](https?://[^"\'\s]+)["\']', re.I)
+
+
+def external_path_has_double_slash(url: str) -> bool:
+    """True when an external URL has '//' in the path. The scheme slashes do not count."""
+    if "://" not in url:
+        return False
+    rest = url.split("://", 1)[1].split("?", 1)[0].split("#", 1)[0]
+    slash = rest.find("/")
+    if slash < 0:
+        return False
+    return "//" in rest[slash:]
+
+
+def _public_html(root: Path):
+    for path in sorted(root.rglob("*.html")):
+        rel = path.relative_to(root)
+        if any(part.startswith(".") for part in rel.parts) or is_working_rel(rel):
+            continue
+        yield path, rel
+
+
+def site_urls(root: Path) -> set[str]:
+    """URLs GitHub Pages will serve: the html file, and a directory URL for index.html."""
+    found = set()
+    for _path, rel in _public_html(root):
+        found.add(_SITE + "/" + str(rel).replace("\\", "/"))
+        if rel.name == "index.html":
+            directory = "/".join(rel.parts[:-1])
+            found.add(_SITE + "/" + (directory + "/" if directory else ""))
+    return found
+
+
+def unresolved_canonicals(root: Path) -> list[str]:
+    """Internal canonicals that do not match a file Pages will serve."""
+    known = site_urls(root)
+    misses = []
+    for path, rel in _public_html(root):
+        raw = path.read_text(errors="ignore")
+        hrefs = []
+        for pattern in _CANONICAL_RELS:
+            hrefs.extend(pattern.findall(raw))
+        for href in hrefs:
+            if href.startswith(_SITE) and href not in known:
+                misses.append(f"{rel} canonical 404s: {href}")
+    return misses
+
+
+def double_slash_external_hrefs(root: Path) -> list[str]:
+    """External hrefs, and source-data URLs, whose path contains '//'."""
+    hits = []
+    for path, rel in _public_html(root):
+        raw = path.read_text(errors="ignore")
+        for href in _EXTERNAL_HREF.findall(raw):
+            if external_path_has_double_slash(href):
+                hits.append(f"{rel}: {href}")
+    data = root / "data"
+    if data.is_dir():
+        for path in sorted(data.glob("*.json")):
+            for href in re.findall(r"https?://[^\"'\s]+", path.read_text(errors="ignore")):
+                if external_path_has_double_slash(href):
+                    hits.append(f"data/{path.name}: {href}")
+    return hits
 
 # Href fragments that may only ever appear on links issued by a real affiliate program.
 # Defined once at module scope so both the rel=sponsored rule (below) and the outbound-CTA
@@ -1188,6 +1256,8 @@ def main():
         errors.append('Missing sitemap.xml')
 
     errors.extend(production_stripe_test_errors(ROOT))
+    errors.extend(unresolved_canonicals(ROOT))
+    errors.extend(double_slash_external_hrefs(ROOT)[:12])
 
     if errors:
         print('Validation failed')
