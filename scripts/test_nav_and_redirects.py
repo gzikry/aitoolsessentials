@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -50,8 +51,39 @@ def main() -> None:
             errors.append(f"{winner} absorbed the redirect stub")
         if "affiliate" in (ROOT / loser).read_text(encoding="utf-8").casefold() and "affiliate" not in winner_html.casefold():
             errors.append(f"{winner} lost the affiliate disclosure that {loser} carried")
+    site_js = (ROOT / "js/site.js").read_text(encoding="utf-8")
+    if "event.key !== 'Escape'" not in site_js or "button.focus()" not in site_js:
+        errors.append("Escape does not close the menu and return focus to the button")
+    errors.extend(_stub_phrase_and_jsonld())
     if errors:
         raise SystemExit("\n".join(errors))
+
+
+def _stub_phrase_and_jsonld() -> list[str]:
+    """A synthetic indexable page must fail on the moved phrase and a stub JSON-LD url."""
+    misses: list[str] = []
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "articles").mkdir()
+        (root / "articles" / "suno-vs-udio.html").write_text(
+            redirect_stub("Suno vs Udio", "comparisons/suno-vs-udio.html"),
+            encoding="utf-8",
+        )
+        (root / "index.html").write_text(
+            "<!doctype html><html><head>"
+            '<script type="application/ld+json">'
+            '{"url":"https://aitoolsessentials.com/articles/suno-vs-udio.html"}'
+            "</script></head><body><p>This guide has moved.</p></body></html>",
+            encoding="utf-8",
+        )
+        found = "\n".join(stub_link_errors(root))
+        if "index.html still says has moved" not in found:
+            misses.append(f"validator missed has moved: {found}")
+        if "index.html JSON-LD url points at stub articles/suno-vs-udio.html" not in found:
+            misses.append(f"validator missed JSON-LD stub url: {found}")
+        if "articles/suno-vs-udio.html still says" in found:
+            misses.append("validator flagged the redirect stub itself")
+    return misses
 
 
 if __name__ == "__main__":
