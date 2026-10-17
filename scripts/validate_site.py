@@ -265,8 +265,14 @@ def main():
     sponsor_inv = json.loads((ROOT/'data/sponsor_inventory.json').read_text())
     if not isinstance(sponsor_inv, dict) or 'placements' not in sponsor_inv or len(sponsor_inv.get('placements', [])) == 0:
         errors.append('Sponsor inventory is empty')
-    review_pages = {p.stem for p in (ROOT/'tools').glob('*.html') if p.name != 'index.html'}
-    review_pages |= {d.name for d in (ROOT/'tools').iterdir() if d.is_dir() and (d/'index.html').exists()}
+    def _redirect_stub(page: Path) -> bool:
+        return 'http-equiv="refresh"' in page.read_text(errors='ignore')
+
+    review_pages = {p.stem for p in (ROOT/'tools').glob('*.html') if p.name != 'index.html' and not _redirect_stub(p)}
+    review_pages |= {
+        d.name for d in (ROOT/'tools').iterdir()
+        if d.is_dir() and (d/'index.html').exists() and not _redirect_stub(d/'index.html')
+    }
     missing_reviews = sorted(tool_slugs - review_pages)
     extra_reviews = sorted(review_pages - tool_slugs)
     if missing_reviews:
@@ -1212,6 +1218,8 @@ def main():
         if not (tool_dir.is_dir() and page.exists()):
             continue
         html = page.read_text()
+        if 'http-equiv="refresh"' in html:
+            continue
         if re.search(r'<h2>Use cases</h2>\s*<ul>\s*</ul>', html):
             incomplete.append(f'{tool_dir.name}: empty Use cases')
         if re.search(r'<h2>Pros</h2>\s*<ul>\s*</ul>', html):
@@ -1232,6 +1240,8 @@ def main():
         if not (tool_dir.is_dir() and page.exists()):
             continue
         html = page.read_text()
+        if 'http-equiv="refresh"' in html:
+            continue
         if re.search(r'<h2>Overview</h2>\s*<p>\s*</p>', html):
             empty_sections.append(f'{tool_dir.name}: empty Overview')
         if re.search(r'<h2>Key features</h2>\s*<ul>\s*</ul>', html):

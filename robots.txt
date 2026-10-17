@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /checkout/
+Disallow: /go/
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
 Sitemap: https://aitoolsessentials.com/sitemap.xml
 Sitemap: https://aitoolsessentials.com/feed.xml

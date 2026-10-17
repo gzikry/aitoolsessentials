@@ -53,7 +53,10 @@ def run(root: Path) -> dict:
     today=date.today()
     html=list(root.rglob("*.html"))
     public_html=[p for p in html if is_public_rel(p.relative_to(root))]
-    reviews=list((root/"tools").glob("*/index.html"))
+    reviews=[
+        p for p in (root/"tools").glob("*/index.html")
+        if 'http-equiv="refresh"' not in p.read_text(errors="ignore")
+    ]
     missing=[p for p in REQUIRED if not (root/p if p.endswith('.html') else root/p/"index.html").exists()]
     slugs={t.get("slug") for t in tools}
     review_slugs={p.parent.name for p in reviews}
