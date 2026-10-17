@@ -199,14 +199,6 @@ def ensure_robots(root: Path) -> None:
     p.write_text(text)
 
 
-_DISCOVERY_BLOCK = re.compile(
-    r"""\s*<!-- AIT DISCOVERY LINKS -->(?:<link rel="manifest" href="/site\.webmanifest">)?(?:<link rel="alternate" type="application/rss\+xml" title="AIToolsEssentials updates" href="/feed\.xml">)?(?:<link rel="search" type="application/opensearchdescription\+xml" title="AIToolsEssentials" href="/opensearch\.xml">)?(?:<meta name="theme-color" content="#5e6ad2">)?(?:<script src="/js/discovery\.js(?:\?[^"]*)?" defer></script>)?"""
-)
-_DISCOVERY_SCRIPT = re.compile(
-    r"""\s*<script src="/js/discovery\.js(?:\?[^"]*)?" defer></script>"""
-)
-
-
 def postprocess_head_links(root: Path) -> None:
     marker = "<!-- AIT DISCOVERY LINKS -->"
     links = marker + '<link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>'
