@@ -70,7 +70,7 @@ def test_sponsor_page_uses_the_container() -> None:
     page = (ROOT / "sponsor" / "index.html").read_text(encoding="utf-8")
     if "article-shell wide" not in page:
         raise AssertionError("sponsor page has no article shell")
-    if 'data-nav="contained"' not in page:
+    if 'data-nav="contained"' not in page or 'sponsor-offer' not in page:
         raise AssertionError("sponsor nav is not contained")
 
 

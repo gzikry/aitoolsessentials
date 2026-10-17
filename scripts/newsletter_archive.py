@@ -3,8 +3,13 @@
 from __future__ import annotations
 
 import re
+import sys
 from dataclasses import dataclass
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from newsletter_hold import public_colophon_html
 
 DOMAIN = "https://aitoolsessentials.com"
 _SIGN = "\u2014 AIToolsEssentials"
@@ -235,4 +240,4 @@ def sync_archive(root: Path) -> int:
 
 
 def _minimal_index(cards: str) -> str:
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/"><link rel="stylesheet" href="/css/styles.css"></head><body><main class="newsletter-archive"><div class="newsletter-archive-intro"><p class="newsletter-name">Keep/Cut Weekly</p><h1>Past issues.</h1></div><div class="newsletter-issue-list">{cards}</div></main><script src="/js/analytics.js" defer></script></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keep/Cut Weekly | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/"><link rel="stylesheet" href="/css/styles.css"></head><body><main class="newsletter-archive"><div class="newsletter-archive-intro"><p class="newsletter-name">Keep/Cut Weekly</p><h1>Past issues.</h1></div><div class="newsletter-issue-list">{cards}</div></main><footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/newsletter/">Keep/Cut Weekly</a>{public_colophon_html()}</footer><script src="/js/analytics.js" defer></script></body></html>'''

@@ -78,12 +78,10 @@ _OFFER_PARAS = (
 _SIGN_OFF = "\u2014 AIToolsEssentials"
 
 _HEADER = (
-    '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">\u2726</span>'
+    '<header class="global-nav" data-nav="contained"><a class="brand" href="/"><span class="brand-glyph">\u2726</span>'
     "<span>AIToolsEssentials</span></a><nav class=\"nav-links\">"
-    '<a href="/tools/index.html">Tools</a><a href="/stack-builder.html">Stack builder</a>'
-    '<a href="/tool-finder.html">Tool finder</a><a href="/free-ai-tools.html">Free AI tools</a>'
-    '<a href="/alternatives/">Alternatives</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a>'
-    '<a href="/articles/index.html">Guides</a><a href="/deals/">Deals</a></nav>'
+    '<a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep/Cut Weekly</a>'
+    '<a href="/subscribe/">Subscribe</a></nav>'
     '<a class="nav-cta" href="/pricing/">Paid Premium</a></header>'
 )
 _FOOTER = (
@@ -510,9 +508,9 @@ def _page_html(rows: tuple[tuple[_Tier, _Payment], ...]) -> str:
         "</head>\n"
         "<body>\n"
         + _HEADER
-        + "\n<main>\n"
+        + '\n<main class="sponsor-offer">\n<section class="scene scene-light content-hub"><div class="article-shell wide">\n'
         + "\n".join(blocks)
-        + "\n</main>\n"
+        + "\n</div></section>\n</main>\n"
         + _FOOTER
         + "\n</body>\n</html>\n"
     )
