@@ -160,9 +160,9 @@ for item in additions:
         "pricing_checked_date": "2026-08-29",
         "pricing_summary": item.get('price', 'Free + paid plans') + " — official pricing page should be verified before publication.",
         "pricing_url": item.get('official', ''),
-        "docs_url": item.get('official', '') + "/docs/",
-        "privacy_url": item.get('official', '') + "/privacy/",
-        "rights_url": item.get('official', '') + "/terms/",
+        "docs_url": item.get('official', '').rstrip('/') + "/docs/",
+        "privacy_url": item.get('official', '').rstrip('/') + "/privacy/",
+        "rights_url": item.get('official', '').rstrip('/') + "/terms/",
         "verification_notes": "No official source verification has been performed for this record yet. Do not publish unverified pricing or rights claims.",
         "unresolved_claims": [
             "Official pricing, rights, and privacy statements have not been verified.",

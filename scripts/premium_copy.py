@@ -14,6 +14,8 @@ from __future__ import annotations
 
 from typing import Any
 
+from newsletter_hold import public_colophon_html
+
 EMAIL = "contact@aitoolsessentials.com"
 PREVIEW_LABEL = "See a public preview"
 BUY_PAGE_LABEL = "See Premium keep/cut pack"
@@ -397,7 +399,8 @@ def homepage_footer_html() -> str:
         f'<a href="mailto:{EMAIL}">Contact</a>'
         '<a href="/legal/privacy.html">Privacy</a>'
         '<a href="/legal/terms.html">Terms</a>'
-        "</footer>"
+        + public_colophon_html()
+        + "</footer>"
     )
 
 
