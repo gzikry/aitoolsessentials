@@ -16,4 +16,4 @@ Resend supplies the live record values. The names below are placeholders. Do not
 
 The From address is `weekly@news.aitoolsessentials.com`.
 
-Every draft carries the postal address `1090 West Foothill, Claremont, CA 91711` and an unsubscribe link. `/subscribe/` stays on the soon message until `subscribe_endpoint` is the workers.dev URL from Wrangler. A broadcast replaces the mailto unsubscribe with `{{{RESEND_UNSUBSCRIBE_URL}}}`.
+Every draft carries the postal address `1090 West Foothill, Claremont, CA 91711` and an unsubscribe link. `/subscribe/` posts to the workers.dev URL in `subscribe_endpoint`. See `docs/newsletter-subscribe.md`. A broadcast replaces the mailto unsubscribe with `{{{RESEND_UNSUBSCRIBE_URL}}}`.

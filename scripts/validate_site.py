@@ -903,6 +903,8 @@ def main():
         if endpoint:
             if f'action="{endpoint}"' not in subscribe_html:
                 errors.append('Subscribe page action does not match subscribe_endpoint')
+            if f'action="{endpoint}"' not in home_html:
+                errors.append('Homepage subscribe form action does not match subscribe_endpoint')
         else:
             if 'signups open soon' not in subscribe_html.lower():
                 errors.append('Subscribe page must say signups open soon')

@@ -958,7 +958,9 @@ def rewrite_homepage_hero_actions(html: str) -> str:
 
 
 def homepage_newsletter_panel(root: Path) -> str:
-    """One Subscribe CTA. The in-house form lives on /subscribe/ only."""
+    """Post to subscribe_endpoint when it is a workers.dev URL. The page link stays."""
+    from newsletter_hold import subscribe_form
+
     cfg = {}
     cfg_path = root / "data/newsletter.json"
     if cfg_path.exists():
@@ -966,12 +968,14 @@ def homepage_newsletter_panel(root: Path) -> str:
     kicker = esc(cfg.get("homepage_kicker") or "Keep/Cut Weekly · free email")
     headline = esc(cfg.get("homepage_headline") or "One short email a week.")
     body = esc(cfg.get("homepage_body") or "What changed this week, and what's worth keeping.")
+    form = subscribe_form(str(cfg.get("subscribe_endpoint") or ""))
     return f'''<!-- AIT HOMEPAGE NEWSLETTER START -->
 <section id="subscribe" class="newsletter-panel home-newsletter">
 <div>
 <span>{kicker}</span>
 <h2>{headline}</h2>
 <p>{body}</p>
+{form}
 </div>
 <div class="newsletter-actions">
 <a class="button home-cta-ghost" href="/subscribe/">Subscribe free</a>

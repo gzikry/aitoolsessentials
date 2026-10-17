@@ -7,9 +7,18 @@ compatibility_date = "2026-10-16"
 #   RESEND_SEGMENT_ID
 #   CONFIRM_SECRET
 
-# Deploy prints a https://aitools-newsletter-subscribe.<account>.workers.dev URL.
-# Copy that URL into data/newsletter.json as subscribe_endpoint.
+# The live form posts to https://aitools-newsletter-subscribe.aitoolsessentials.workers.dev.
 # aitoolsessentials.com DNS is at Porkbun, so do not attach subscribe.news yet.
+# namespace_id is unique in the Cloudflare account. Change it before deploy if 847210 is taken.
+# The budget is one signup per key per 60 seconds, counted per location.
+
+[[ratelimits]]
+name = "SIGNUP_LIMIT"
+namespace_id = "847210"
+
+  [ratelimits.simple]
+  limit = 1
+  period = 60
 
 [vars]
 FROM_ADDRESS = "Keep/Cut Weekly <weekly@news.aitoolsessentials.com>"
