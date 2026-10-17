@@ -233,6 +233,14 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
+_STUB_MOVED = re.compile(
+    r"\bthis (?:page|guide|article) has moved\b|\bhas moved(?:\.|\s+to\b)",
+    re.I,
+)
+_TITLE = re.compile(r"<title\b[^>]*>(.*?)</title>", re.I | re.S)
+_META_TAG = re.compile(r"<meta\b[^>]*>", re.I)
+_SHORT_COPY = re.compile(r"<(p|h1|li)\b[^>]*>(.*?)</\1>", re.I | re.S)
+_SHORT_COPY_LIMIT = 180
 _LINK = re.compile(r"""href=["']([^"']+)["']""", re.I)
 _MD_LINK = re.compile(r"\((https://aitoolsessentials\.com/[^)\s]+)\)")
 _JSONLD = re.compile(
@@ -313,6 +321,30 @@ def duplicate_errors(root: Path) -> list[str]:
     return errors
 
 
+def _stub_moved_phrase(text: str) -> bool:
+    """True for a stub title or a short 'this page has moved' line, not ordinary prose."""
+    plain = re.sub(r"\s+", " ", text).strip()
+    if not plain or len(plain) > _SHORT_COPY_LIMIT:
+        return False
+    return _STUB_MOVED.search(plain) is not None
+
+
+def _page_has_stub_moved_copy(html: str) -> bool:
+    for title in _TITLE.findall(html):
+        if _stub_moved_phrase(_plain(title)):
+            return True
+    for tag in _META_TAG.findall(html):
+        if not re.search(r"""\bname\s*=\s*["']description["']""", tag, re.I):
+            continue
+        content = re.search(r"""\bcontent\s*=\s*["']([^"']*)["']""", tag, re.I)
+        if content and _stub_moved_phrase(content.group(1)):
+            return True
+    for match in _SHORT_COPY.finditer(html):
+        if _stub_moved_phrase(_plain(match.group(2))):
+            return True
+    return False
+
+
 def stub_link_errors(root: Path) -> list[str]:
     """Indexable pages must not link to a redirect stub or repeat its moved title."""
     stubs: set[str] = set()
@@ -334,7 +366,7 @@ def stub_link_errors(root: Path) -> list[str]:
         folded = html.casefold()
         if "(moved)" in folded:
             errors.append(f"{rel.as_posix()} still says (moved)")
-        if "has moved" in folded:
+        if _page_has_stub_moved_copy(html):
             errors.append(f"{rel.as_posix()} still says has moved")
         for href in _LINK.findall(html):
             target = _resolve_href(rel, href)
@@ -350,7 +382,7 @@ def stub_link_errors(root: Path) -> list[str]:
         folded = text.casefold()
         if "(moved)" in folded:
             errors.append("llms.txt still says (moved)")
-        if "has moved" in folded:
+        if any(_stub_moved_phrase(line) for line in text.splitlines()):
             errors.append("llms.txt still says has moved")
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)

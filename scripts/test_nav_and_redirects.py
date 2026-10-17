@@ -76,9 +76,23 @@ def _stub_phrase_and_jsonld() -> list[str]:
             "</script></head><body><p>This guide has moved.</p></body></html>",
             encoding="utf-8",
         )
+        (root / "title.html").write_text(
+            "<!doctype html><html><head><title>Guide has moved. | AIToolsEssentials</title></head>"
+            "<body><p>The current comparison is unchanged.</p></body></html>",
+            encoding="utf-8",
+        )
+        (root / "prose.html").write_text(
+            "<!doctype html><html><head><title>Pricing notes</title></head>"
+            "<body><p>its pricing page has moved behind a login</p></body></html>",
+            encoding="utf-8",
+        )
         found = "\n".join(stub_link_errors(root))
         if "index.html still says has moved" not in found:
-            misses.append(f"validator missed has moved: {found}")
+            misses.append(f"validator missed short stub body: {found}")
+        if "title.html still says has moved" not in found:
+            misses.append(f"validator missed stub title: {found}")
+        if "prose.html" in found:
+            misses.append(f"validator flagged ordinary prose: {found}")
         if "index.html JSON-LD url points at stub articles/suno-vs-udio.html" not in found:
             misses.append(f"validator missed JSON-LD stub url: {found}")
         if "articles/suno-vs-udio.html still says" in found:
