@@ -150,6 +150,49 @@ def cards_html(letters: list[Letter]) -> str:
     return "".join(card(letter) for letter in letters)
 
 
+_CHROME = re.compile(
+    r"<!-- newsletter-issue-chrome -->.*?<!-- /newsletter-issue-chrome -->",
+    flags=re.S,
+)
+_DONOR_VERIFICATION = re.compile(
+    r"<p>Prices verified from official pages, rechecked 2026-08-25\..*?</p>\s*",
+    flags=re.S,
+)
+
+
+def strip_donor_verification(html: str, letter: Letter) -> str:
+    """Issue 1's price note is copied onto later letters by the page shell. Drop it."""
+    if letter.issue == 1:
+        return html
+    return _DONOR_VERIFICATION.sub("", html, count=1)
+
+
+def _pager_link(kind: str, letter: Letter) -> str:
+    label = "Previous" if kind == "prev" else "Next"
+    return (
+        f'<a class="newsletter-pager-{kind}" href="/newsletter/{esc(letter.slug)}.html">'
+        f"{label} · Issue {letter.issue} · {esc(letter.title)}</a>"
+    )
+
+
+def chrome_html(older: Letter | None, newer: Letter | None) -> str:
+    links = []
+    if older is not None:
+        links.append(_pager_link("prev", older))
+    if newer is not None:
+        links.append(_pager_link("next", newer))
+    nav = '<nav class="newsletter-pager" aria-label="Other issues">' + "".join(links) + "</nav>"
+    cta = '<p class="newsletter-subscribe-cta"><a class="button button-blue" href="/subscribe/">Get the free email</a></p>'
+    return "<!-- newsletter-issue-chrome -->" + nav + cta + "<!-- /newsletter-issue-chrome -->"
+
+
+def apply_chrome(html: str, chrome: str) -> str:
+    html = _CHROME.sub("", html)
+    if "</article>" not in html:
+        raise ValueError("issue page is missing </article>")
+    return html.replace("</article>", chrome + "</article>", 1)
+
+
 def apply_cards(index_html: str, cards: str) -> str:
     updated, count = re.subn(
         r'(<div class="newsletter-issue-list">).*?(</div>)',
@@ -221,15 +264,21 @@ def sync_archive(root: Path) -> int:
     donor_path = out / "2026-w35.html"
     donor = donor_path.read_text(encoding="utf-8") if donor_path.is_file() else ""
     written = 0
+    order = {letter.slug: index for index, letter in enumerate(letters)}
     for letter in letters:
         dest = out / f"{letter.slug}.html"
         existing = dest.read_text(encoding="utf-8") if dest.is_file() else ""
-        if _keep_existing(existing, letter):
-            continue
-        if "newsletter-sheet" not in donor or "Morning." not in donor:
-            raise ValueError("newsletter/2026-w35.html must stay the page shell")
-        dest.write_text(splice_letter(donor, letter), encoding="utf-8")
-        written += 1
+        if not _keep_existing(existing, letter):
+            if "newsletter-sheet" not in donor or "Morning." not in donor:
+                raise ValueError("newsletter/2026-w35.html must stay the page shell")
+            existing = splice_letter(donor, letter)
+            written += 1
+        index = order[letter.slug]
+        older = letters[index + 1] if index + 1 < len(letters) else None
+        newer = letters[index - 1] if index > 0 else None
+        updated = apply_chrome(strip_donor_verification(existing, letter), chrome_html(older, newer))
+        if updated != (dest.read_text(encoding="utf-8") if dest.is_file() else ""):
+            dest.write_text(updated, encoding="utf-8")
     cards = cards_html(letters)
     index = out / "index.html"
     if index.is_file() and 'class="newsletter-issue-list"' in index.read_text(encoding="utf-8"):

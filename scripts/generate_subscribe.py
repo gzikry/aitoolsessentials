@@ -31,6 +31,12 @@ def signup_block(cfg: dict) -> str:
 
 
 def latest_issue(root: Path) -> dict:
+    from newsletter_archive import load_letters
+
+    letters = load_letters(root)
+    if letters:
+        newest = letters[0]
+        return {"slug": newest.slug, "issue": newest.issue, "subject": newest.title}
     issues = json.loads((root / "data/weekly_issues.json").read_text())
     return issues[0] if issues else {}
 
@@ -42,10 +48,12 @@ def generate(root: Path) -> int:
     issue = latest_issue(root)
     issue_slug = esc(issue.get("slug") or "2026-w35")
     issue_title = esc(issue.get("subject") or "Issue 1")
+    issue_number = issue.get("issue")
+    issue_label = f"Issue {issue_number} · {issue_title}" if issue_number else issue_title
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(desc)}"><title>Subscribe — Keep, Test, Cut | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/subscribe/"><link rel="stylesheet" href="/css/styles.css"></head><body>{HEADER}<main>
 <section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><img src="{esc(cfg.get("logo_url") or "/assets/aitools-bot-logo-256.png")}" alt="AIToolsEssentials" width="72" height="72" style="border-radius:18px"><p class="kicker light">Free weekly email</p><h1>Keep, Test, Cut.</h1><p class="subhead">{esc(desc)}</p></div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">{block}
-<p>Issue 1 is live on the site: <a href="/newsletter/{issue_slug}.html">{issue_title}</a>. This form is the free email. Paid <a href="/premium/">Premium</a> is a separate $12/month membership, secure checkout by Stripe — do not use checkout for this list. FormSubmit is only for tool submissions and intake.</p>
+<p>The latest letter is <a href="/newsletter/{issue_slug}.html">{issue_label}</a>. Earlier letters are on the <a href="/newsletter/">archive</a>. This form is the free email. Paid <a href="/premium/">Premium</a> is a separate $12/month membership, secure checkout by Stripe — do not use checkout for this list. FormSubmit is only for tool submissions and intake.</p>
 </div></section>
 </main>{FOOTER}<script src="/js/site.js" defer></script><script src="/js/analytics.js" defer></script></body></html>'''
     out = root / "subscribe"
