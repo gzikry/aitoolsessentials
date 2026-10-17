@@ -511,7 +511,7 @@ def main():
     article_hub = ROOT/'articles/index.html'
     article_pages = {
         p.name for p in (ROOT/'articles').glob('*.html')
-        if p.name != 'index.html'
+        if p.name != 'index.html' and 'http-equiv="refresh"' not in p.read_text()
     }
     if article_hub.exists():
         article_hub_text = article_hub.read_text()
@@ -520,9 +520,6 @@ def main():
         missing_articles = sorted(article_pages - article_hub_link_names)
         if missing_articles:
             errors.append(f'Article pages missing from article hub: {missing_articles}')
-        expected_article_count = f'Showing all {len(article_pages)} guides.'
-        if expected_article_count not in article_hub_text:
-            errors.append(f'Article hub count is stale; expected {len(article_pages)}')
     else:
         errors.append('Missing article hub')
     duplicate_home_links = []
@@ -808,15 +805,16 @@ def main():
         if 'premium-conversion-panel' in text and 'Subscribe on Whop' in text:
             errors.append(f'{sample.relative_to(ROOT)} Premium CTA still says Subscribe on Whop')
     header = home_html.split('</header>', 1)[0]
-    if '/subscribe/' not in header and 'href="subscribe/"' not in header:
-        errors.append('Homepage nav must include Subscribe → /subscribe/')
-    if '/stack-audit.html' not in header:
-        errors.append('Homepage nav must include Stack Audit')
-    if '/premium/' not in header and 'href="premium/"' not in header:
-        errors.append('Homepage nav must include Premium')
-    if '/tools/' not in header:
-        errors.append('Homepage nav must include Tools')
-    for junk in ('Cost calc', 'Shortlist', 'Coding quiz', 'Best AI tools', 'Switching'):
+    for required in (
+        'data-nav="slim"',
+        'href="/stack-audit.html">Stack Audit</a>',
+        'href="/premium/">Premium</a>',
+        'href="/subscribe/">Subscribe</a>',
+        'href="/stack-audit.html">Free Stack Audit</a>',
+    ):
+        if required not in header:
+            errors.append(f'Homepage nav must keep Stack Audit, Premium, and Subscribe ({required})')
+    for junk in ('Cost calc', 'Shortlist', 'Coding quiz'):
         if junk in header:
             errors.append(f'Homepage nav still has fat-nav junk: {junk}')
     main_html = home_html[home_html.find('<main>'): home_html.find('</main>')] if '<main>' in home_html and '</main>' in home_html else ''
@@ -1322,6 +1320,15 @@ def main():
     errors.extend(customer_whop_checkout_errors(ROOT))
     errors.extend(sponsor_preview_file_errors(ROOT))
     errors.extend(publication_name_errors(ROOT))
+    from site_chrome import header_label_errors
+    from consolidate_duplicates import duplicate_errors, stub_link_errors
+    from generate_article_hub import collect as collect_guides
+    errors.extend(header_label_errors(ROOT)[:12])
+    errors.extend(duplicate_errors(ROOT))
+    errors.extend(stub_link_errors(ROOT)[:12])
+    guide_count = len(collect_guides(ROOT))
+    if article_hub.exists() and f'Showing all {guide_count} guides.' not in article_hub.read_text():
+        errors.append(f'Article hub count is stale; expected {guide_count} guides including canonical winners')
 
     if errors:
         print('Validation failed')

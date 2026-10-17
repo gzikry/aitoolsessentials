@@ -1,5 +1,18 @@
 /* AIT site JS: share row + small niceties */
 (function () {
+  var buttons = document.querySelectorAll('.nav-toggle');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      var header = this.closest('header');
+      if (!header) return;
+      var open = header.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+      this.textContent = open ? 'Close' : 'Menu';
+    });
+  }
+})();
+
+(function () {
   var mount = document.getElementById('share-row');
   if (mount && mount.hidden) {
     mount.hidden = false;

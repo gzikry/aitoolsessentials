@@ -29,7 +29,7 @@ def main() -> None:
     archive = (REPO / "newsletter" / "index.html").read_text(encoding="utf-8")
     if f'<p class="newsletter-name">{NEW_NAME}</p>' not in archive:
         errors.append("newsletter archive masthead is not Keep, Test, Cut")
-    if 'href="/newsletter/"' not in archive:
+    if 'href="https://aitoolsessentials.com/newsletter/"' not in archive:
         errors.append("newsletter archive path changed")
     issue = (REPO / "newsletter" / "2026-w35.html").read_text(encoding="utf-8")
     if f'<p class="newsletter-name">{NEW_NAME}</p>' not in issue:

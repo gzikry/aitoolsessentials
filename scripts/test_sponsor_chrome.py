@@ -119,7 +119,7 @@ def test_null_enrollment_offer_and_page() -> None:
         _has(offer, '<header class="global-nav" data-nav="contained">')
         _has(offer, 'class="article-shell wide"')
         _has(offer, '<main class="sponsor-offer">')
-        _has(offer, '<nav class="nav-links">')
+        _has(offer, 'class="nav-links"')
         _has(offer, "</header>")
         _has(offer, '<footer class="footer">')
         _has(offer, 'href="mailto:contact@aitoolsessentials.com"')
@@ -130,7 +130,7 @@ def test_null_enrollment_offer_and_page() -> None:
         _has(offer, "$200")
         _lacks(offer, "data-sponsor")
         _lacks(offer, "sponsor-line")
-        _lacks(offer, 'href="/sponsor/"')
+        _has(offer, 'href="/comparisons/best-ai-tools.html">Best AI tools</a>')
         _lacks(offer, 'data-footer="slim"')
         stamped = stamp(offer, "sponsor/index.html", root=root, env={})
         _lacks(stamped, "data-sponsor")
@@ -564,8 +564,12 @@ def test_homepage_sponsor_link_survives_stamp() -> None:
     header = homepage_header_html()
     if header.count('href="/sponsor/"') != 1 or header.count(">Sponsor us</a>") != 1:
         raise AssertionError("homepage header does not have one Sponsor us link")
+    if 'href="/stack-audit.html">Stack Audit</a>' not in header:
+        raise AssertionError("homepage header lost Stack Audit")
+    if 'href="/premium/">Premium</a>' not in header or 'href="/subscribe/">Subscribe</a>' not in header:
+        raise AssertionError("homepage header lost Premium or Subscribe")
     if 'class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">Free Stack Audit</a>' not in header:
-        raise AssertionError("homepage header lost the nav CTA")
+        raise AssertionError("homepage header lost the Free Stack Audit CTA")
     page = "<!doctype html><html><body>" + header + "<main><p>Body</p></main></body></html>"
     with TemporaryDirectory() as raw:
         root = Path(raw)

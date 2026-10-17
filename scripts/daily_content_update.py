@@ -556,6 +556,13 @@ if _final_affiliate.returncode:
 from sponsor_chrome import stamp_site
 stamp_site(root)
 
+from consolidate_duplicates import consolidate as _consolidate_duplicates
+print('Consolidated duplicate pages:', _consolidate_duplicates(root))
+from site_chrome import unify_headers as _unify_headers
+print('Unified headers:', _unify_headers(root))
+_sitemap_urls_final = refresh_sitemap(root)
+print(f'Refreshed sitemap after redirects with {len(_sitemap_urls_final)} URLs')
+
 from asset_rev import stamp_tree as _stamp_assets
 print(f'Stamped content hashes on {_stamp_assets(root)} pages')
 

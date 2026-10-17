@@ -60,25 +60,66 @@ def classify(filename: str, title: str) -> str:
     return "Workflow & evaluation guides"
 
 
+def _meta(path: Path) -> tuple[str, str]:
+    parser = HeadParser()
+    parser.feed(path.read_text(encoding="utf-8", errors="ignore"))
+    title = clean("".join(parser.title_parts)) or path.stem.replace("-", " ").title()
+    title = re.sub(r"\s+[—|-]\s+AIToolsEssentials.*$", "", title).strip()
+    title = re.sub(r"\s+\(moved\)$", "", title).strip()
+    description = clean(parser.description) or "A practical AIToolsEssentials guide for evaluating AI tools and workflows."
+    return title, description
+
+
 def collect(root: Path) -> list[dict]:
+    """Index real guides. Redirect stubs are not listings; their winners are."""
+    from consolidate_duplicates import PAIRS, is_redirect_stub
+
+    losers = {loser: winner for loser, winner, _title in PAIRS}
     pages = []
+    seen: set[str] = set()
+
+    def add(href: str, url_path: str, filename: str, title: str, description: str) -> None:
+        if url_path in seen or "(moved)" in title or description.lower().startswith("this page has moved"):
+            return
+        seen.add(url_path)
+        pages.append(
+            {
+                "filename": filename,
+                "href": href,
+                "url": f"{DOMAIN}/{url_path}",
+                "title": title,
+                "description": description,
+                "group": classify(filename, title),
+            }
+        )
+
     for path in sorted((root / "articles").glob("*.html")):
         if path.name == "index.html":
             continue
-        parser = HeadParser()
-        parser.feed(path.read_text())
-        title = clean("".join(parser.title_parts)) or path.stem.replace("-", " ").title()
-        title = re.sub(r"\s+[—|-]\s+AIToolsEssentials.*$", "", title).strip()
-        description = clean(parser.description) or "A practical AIToolsEssentials guide for evaluating AI tools and workflows."
-        pages.append(
-            {
-                "filename": path.name,
-                "title": title,
-                "description": description,
-                "group": classify(path.name, title),
-            }
-        )
+        rel = f"articles/{path.name}"
+        html = path.read_text(encoding="utf-8", errors="ignore")
+        if rel in losers or is_redirect_stub(html):
+            continue
+        title, description = _meta(path)
+        add(path.name, rel, path.name, title, description)
+    for loser, winner in losers.items():
+        winner_path = root / winner
+        if not winner_path.is_file():
+            continue
+        winner_html = winner_path.read_text(encoding="utf-8", errors="ignore")
+        if is_redirect_stub(winner_html):
+            continue
+        title, description = _meta(winner_path)
+        href = os_rel(winner)
+        add(href, winner, Path(winner).name, title, description)
     return pages
+
+
+def os_rel(target: str) -> str:
+    """Href from /articles/index.html to a site-relative page."""
+    import os
+
+    return os.path.relpath(target, "articles").replace("\\", "/")
 
 
 def generate(root: Path = ROOT) -> Path:
@@ -103,8 +144,8 @@ def generate(root: Path = ROOT) -> Path:
             continue
         cards = "".join(
             f'''<article class="content-hub-card" data-guide-card data-search="{esc((item['title'] + ' ' + item['description']).lower())}">
-<span>{esc(group)}</span><h3><a href="{esc(item['filename'])}">{esc(item['title'])}</a></h3>
-<p>{esc(item['description'])}</p><a class="text-link" href="{esc(item['filename'])}">Read guide →</a>
+<span>{esc(group)}</span><h3><a href="{esc(item['href'])}">{esc(item['title'])}</a></h3>
+<p>{esc(item['description'])}</p><a class="text-link" href="{esc(item['href'])}">Read guide →</a>
 </article>'''
             for item in items
         )
@@ -124,7 +165,7 @@ def generate(root: Path = ROOT) -> Path:
                 "@type": "ListItem",
                 "position": index,
                 "name": page["title"],
-                "url": f"{DOMAIN}/articles/{page['filename']}",
+                "url": page["url"],
             }
             for index, page in enumerate(pages, start=1)
         ],
