@@ -384,21 +384,10 @@ def homepage_hero_html(whop: dict[str, Any]) -> str:
 
 
 def homepage_header_html() -> str:
-    """Slim homepage header. Tools stays first-class so learning is not buried."""
-    return (
-        '<header class="global-nav" aria-label="Primary navigation" data-nav="slim">'
-        '<a class="brand home-appear" data-appear="0" href="/" aria-label="AIToolsEssentials home"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>'
-        '<nav class="nav-links home-appear" data-appear="1">'
-        '<a href="/tools/index.html">Tools</a>'
-        '<a href="/search/">Search</a>'
-        '<a href="/stack-audit.html">Stack Audit</a>'
-        '<a href="/premium/">Premium</a>'
-        '<a href="/subscribe/">Subscribe</a>'
-        '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END -->'
-        "</nav>"
-        f'<a class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">{FREE_AUDIT_LABEL}</a>'
-        "</header>"
-    )
+    """Same primary nav as every other page. The hero still carries Free Stack Audit."""
+    from site_chrome import canonical_header
+
+    return canonical_header()
 
 
 def homepage_footer_html() -> str:

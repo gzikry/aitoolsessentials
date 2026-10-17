@@ -808,15 +808,15 @@ def main():
         if 'premium-conversion-panel' in text and 'Subscribe on Whop' in text:
             errors.append(f'{sample.relative_to(ROOT)} Premium CTA still says Subscribe on Whop')
     header = home_html.split('</header>', 1)[0]
-    if '/subscribe/' not in header and 'href="subscribe/"' not in header:
-        errors.append('Homepage nav must include Subscribe → /subscribe/')
-    if '/stack-audit.html' not in header:
-        errors.append('Homepage nav must include Stack Audit')
-    if '/premium/' not in header and 'href="premium/"' not in header:
-        errors.append('Homepage nav must include Premium')
-    if '/tools/' not in header:
-        errors.append('Homepage nav must include Tools')
-    for junk in ('Cost calc', 'Shortlist', 'Coding quiz', 'Best AI tools', 'Switching'):
+    for required in (
+        'href="/tools/">Tools</a>',
+        'href="/comparisons/best-ai-tools.html">Best AI tools</a>',
+        'href="/guides/switch-guides/">Switching</a>',
+        'href="/legal/affiliate-disclosure.html">Disclosure</a>',
+    ):
+        if required not in header:
+            errors.append(f'Homepage nav must match the shared nav ({required})')
+    for junk in ('Cost calc', 'Shortlist', 'Coding quiz'):
         if junk in header:
             errors.append(f'Homepage nav still has fat-nav junk: {junk}')
     main_html = home_html[home_html.find('<main>'): home_html.find('</main>')] if '<main>' in home_html and '</main>' in home_html else ''
@@ -1322,6 +1322,10 @@ def main():
     errors.extend(customer_whop_checkout_errors(ROOT))
     errors.extend(sponsor_preview_file_errors(ROOT))
     errors.extend(publication_name_errors(ROOT))
+    from site_chrome import header_label_errors
+    from consolidate_duplicates import duplicate_errors
+    errors.extend(header_label_errors(ROOT)[:12])
+    errors.extend(duplicate_errors(ROOT))
 
     if errors:
         print('Validation failed')

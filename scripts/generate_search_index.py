@@ -214,6 +214,8 @@ def build(root: Path) -> list[dict]:
             continue
 
         page = path.read_text(errors="ignore")
+        if 'name="robots" content="noindex' in page:
+            continue
         title = _title(page)
         if not title:
             continue

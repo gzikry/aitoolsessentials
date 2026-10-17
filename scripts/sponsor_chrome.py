@@ -76,13 +76,12 @@ _OFFER_PARAS = (
 )
 _SIGN_OFF = "\u2014 AIToolsEssentials"
 
-_HEADER = (
-    '<header class="global-nav" data-nav="contained"><a class="brand" href="/"><span class="brand-glyph">\u2726</span>'
-    "<span>AIToolsEssentials</span></a><nav class=\"nav-links\">"
-    '<a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep, Test, Cut</a>'
-    '<a href="/subscribe/">Subscribe</a></nav>'
-    '<a class="nav-cta" href="/pricing/">Paid Premium</a></header>'
-)
+def _offer_header() -> str:
+    from site_chrome import canonical_header
+    return canonical_header(contained=True)
+
+
+_HEADER = _offer_header()
 _FOOTER = (
     '<footer class="footer"><span>\u00a9 2026 AIToolsEssentials</span>'
     '<a href="/advertise/" rel="nofollow">Advertise</a>'

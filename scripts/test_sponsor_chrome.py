@@ -130,7 +130,7 @@ def test_null_enrollment_offer_and_page() -> None:
         _has(offer, "$200")
         _lacks(offer, "data-sponsor")
         _lacks(offer, "sponsor-line")
-        _lacks(offer, 'href="/sponsor/"')
+        _has(offer, 'href="/comparisons/best-ai-tools.html">Best AI tools</a>')
         _lacks(offer, 'data-footer="slim"')
         stamped = stamp(offer, "sponsor/index.html", root=root, env={})
         _lacks(stamped, "data-sponsor")
@@ -564,8 +564,10 @@ def test_homepage_sponsor_link_survives_stamp() -> None:
     header = homepage_header_html()
     if header.count('href="/sponsor/"') != 1 or header.count(">Sponsor us</a>") != 1:
         raise AssertionError("homepage header does not have one Sponsor us link")
-    if 'class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">Free Stack Audit</a>' not in header:
-        raise AssertionError("homepage header lost the nav CTA")
+    if 'class="nav-cta" href="/legal/affiliate-disclosure.html">Disclosure</a>' not in header:
+        raise AssertionError("homepage header lost the shared Disclosure CTA")
+    if 'href="/comparisons/best-ai-tools.html">Best AI tools</a>' not in header:
+        raise AssertionError("homepage header is not the shared nav")
     page = "<!doctype html><html><body>" + header + "<main><p>Body</p></main></body></html>"
     with TemporaryDirectory() as raw:
         root = Path(raw)
