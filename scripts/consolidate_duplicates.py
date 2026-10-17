@@ -5,7 +5,6 @@ from __future__ import annotations
 import os
 import re
 import sys
-from html.parser import HTMLParser
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -239,35 +238,15 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
-# One left-to-right scan each. No nested quantifiers.
-# Titles and the same fields (og/twitter title, JSON-LD headline, alt, aria-label)
-# fail on the phrase anywhere. Descriptions and llms lines also fail when a
-# separator then the brand or a see/open tail follows. Other blocks fail only
-# on the stub sentence, and only when that block is short.
-_HAS_MOVED = re.compile(r"has moved", re.I)
-_MOVED_MARK = re.compile(r"\(moved\)", re.I)
-_THIS_MOVED = re.compile(r"\bthis (?:page|guide|article) has moved\b", re.I)
-_SHORT_MOVED_LINE = re.compile(
-    r"(?i)^.*\bhas moved[\s,.!?…:;)\-–—|·]*\Z",
-)
-# Optional punctuation, then a separator, then the brand or the see/open tail.
-# "--" is tried before a single hyphen so a double hyphen stays one separator.
-_DESCRIPTION_TAIL = re.compile(
-    r"(?i)\bhas moved[\s,;…)\]]*(?:--+|[-–—|·]|[:.!?])\s*"
-    r"(?:aitoolsessentials(?:\.com)?\b|(?:see|open)\s+the\s+(?:new|current)\s+(?:page|guide)\b)",
-)
-_JSON_HEADLINE = re.compile(r'"headline"\s*:\s*"((?:\\.|[^"\\])*)"', re.I)
-_SHORT_COPY_LIMIT = 180
-_SHORT_TAGS = frozenset({"p", "li", "div"})
-_THIS_BLOCK_TAGS = frozenset({
-    "section", "article", "blockquote", "td", "main", "figcaption", "aside", "span",
-})
-_HEADING_TAGS = frozenset({"h1", "h2", "h3", "h4", "h5", "h6"})
-_BLOCK_TAGS = _HEADING_TAGS | _SHORT_TAGS | _THIS_BLOCK_TAGS | frozenset({
-    "th", "dd", "dt", "header", "footer", "address",
-})
-_TITLE_META = frozenset({"og:title", "twitter:title"})
-_DESCRIPTION_META = frozenset({"description", "og:description", "twitter:description"})
+# Same check as main (5f737e6 / cf0689c): a case-insensitive substring anywhere
+# in the file. With no data-moved-ok marker the scan is that substring, so it
+# cannot miss a phrase main would catch, including JSON-LD name/headline,
+# og/twitter, alt, and aria-label. A data-moved-ok element drops its own
+# subtree before the substring. The allowlist drops a whole page.
+_MOVED_PHRASE = "has moved"
+_MOVED_MARK = "(moved)"
+_OPT_OUT = "data-moved-ok"
+_ALLOWLIST_NAME = Path("scripts/moved_phrase_allowlist.txt")
 _VOID_TAGS = frozenset({
     "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
     "meta", "source", "track", "wbr",
@@ -352,132 +331,146 @@ def duplicate_errors(root: Path) -> list[str]:
     return errors
 
 
-def _norm_copy(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip()
-
-
-def _phrase_anywhere(text: str) -> bool:
-    """True when a title or heading says 'has moved' or '(moved)' anywhere."""
-    plain = _norm_copy(text)
-    if not plain:
-        return False
-    return _HAS_MOVED.search(plain) is not None or _MOVED_MARK.search(plain) is not None
-
-
-def _short_stub_copy(text: str) -> bool:
-    """True for a short block that is a stub sentence or just '<X> has moved'."""
-    plain = _norm_copy(text)
-    if not plain or len(plain) > _SHORT_COPY_LIMIT:
-        return False
-    if _THIS_MOVED.search(plain) is not None:
-        return True
-    return _SHORT_MOVED_LINE.search(plain) is not None
-
-
-def _this_moved_short(text: str) -> bool:
-    """The stub sentence inside a short block, span, or bare text node."""
-    plain = _norm_copy(text)
-    if not plain or len(plain) > _SHORT_COPY_LIMIT:
-        return False
-    return _THIS_MOVED.search(plain) is not None
-
-
-def _description_stub(text: str) -> bool:
-    """Short stub line, or has-moved plus a separator and a brand or see/open tail."""
-    plain = _norm_copy(text)
-    if not plain:
-        return False
-    if _DESCRIPTION_TAIL.search(plain) is not None:
-        return True
-    return _short_stub_copy(plain)
-
-
-class _StubCopyParser(HTMLParser):
-    """Collect title, heading, and short-block text, including nested spans."""
-
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.stack: list[list] = []
-        self.titles: list[str] = []
-        self.titleish: list[str] = []
-        self.headings: list[str] = []
-        self.blocks: list[tuple[str, str]] = []
-        self.moved_blocks: list[str] = []
-        self.bare: list[str] = []
-        self.descriptions: list[str] = []
-
-    def handle_starttag(self, tag: str, attrs: list) -> None:
-        tag = tag.lower()
-        attr = {key.lower(): value or "" for key, value in attrs}
-        label = attr.get("aria-label", "")
-        if label:
-            self.titleish.append(label)
-        if tag == "meta":
-            key = (attr.get("property") or attr.get("name") or "").lower()
-            content = attr.get("content") or ""
-            if content and key in _TITLE_META:
-                self.titleish.append(content)
-            elif content and key in _DESCRIPTION_META:
-                self.descriptions.append(content)
-            return
-        if tag == "img":
-            if attr.get("alt"):
-                self.titleish.append(attr["alt"])
-            return
-        if tag in _VOID_TAGS:
-            return
-        if tag in {"title", "body", "html", "span"} | _BLOCK_TAGS or self.stack:
-            self.stack.append([tag, []])
-
-    def handle_endtag(self, tag: str) -> None:
-        tag = tag.lower()
-        if tag in _VOID_TAGS or not self.stack:
-            return
-        while self.stack:
-            open_tag, parts = self.stack.pop()
-            text = "".join(parts)
-            if open_tag == "title":
-                self.titles.append(text)
-            elif open_tag in _HEADING_TAGS:
-                self.headings.append(text)
-            elif open_tag in _SHORT_TAGS:
-                self.blocks.append((open_tag, text))
-            elif open_tag in _THIS_BLOCK_TAGS:
-                self.moved_blocks.append(text)
-            if self.stack:
-                self.stack[-1][1].append(text)
-            if open_tag == tag:
+def _split_tag(folded: str, i: int) -> tuple[int, str, bool, bool, bool]:
+    """Read one tag at '<'. One forward pass. Returns end, name, is_end, opt_out, self_closing."""
+    n = len(folded)
+    j = i + 1
+    is_end = False
+    if j < n and folded[j] == "/":
+        is_end = True
+        j += 1
+    while j < n and folded[j].isspace():
+        j += 1
+    start = j
+    while j < n and (folded[j].isalnum() or folded[j] in ":-"):
+        j += 1
+    name = folded[start:j]
+    opt_out = False
+    quote = ""
+    self_closing = False
+    while j < n:
+        char = folded[j]
+        if quote:
+            if char == quote:
+                quote = ""
+            j += 1
+            continue
+        if char in "\"'":
+            quote = char
+            j += 1
+            continue
+        if char == ">":
+            j += 1
+            break
+        if char == "/":
+            if j + 1 < n and folded[j + 1] == ">":
+                self_closing = True
+                j += 2
                 break
+            j += 1
+            continue
+        if char.isspace():
+            j += 1
+            continue
+        attr_start = j
+        while j < n and not folded[j].isspace() and folded[j] not in "=>/\"'":
+            j += 1
+        if folded[attr_start:j] == _OPT_OUT:
+            opt_out = True
+        while j < n and folded[j].isspace():
+            j += 1
+        if j < n and folded[j] == "=":
+            j += 1
+            while j < n and folded[j].isspace():
+                j += 1
+            if j < n and folded[j] in "\"'":
+                quote = folded[j]
+                j += 1
+            else:
+                while j < n and not folded[j].isspace() and folded[j] != ">":
+                    j += 1
+    return j, name, is_end, opt_out, self_closing
 
-    def handle_data(self, data: str) -> None:
-        if not self.stack:
-            self.bare.append(data)
-            return
-        self.stack[-1][1].append(data)
-        if self.stack[-1][0] in {"body", "html"}:
-            self.bare.append(data)
+
+def _without_moved_opt_outs(folded: str) -> str:
+    """Drop each data-moved-ok element, including descendants. Linear in the HTML."""
+    parts: list[str] = []
+    n = len(folded)
+    i = 0
+    skip_name = ""
+    depth = 0
+    while i < n:
+        if folded[i] != "<":
+            nxt = folded.find("<", i)
+            if nxt < 0:
+                nxt = n
+            if depth == 0:
+                parts.append(folded[i:nxt])
+            i = nxt
+            continue
+        if folded.startswith("<!--", i):
+            end = folded.find("-->", i + 4)
+            end = n if end < 0 else end + 3
+            if depth == 0:
+                parts.append(folded[i:end])
+            i = end
+            continue
+        if i + 1 < n and folded[i + 1] in "!?":
+            end = folded.find(">", i + 2)
+            end = n if end < 0 else end + 1
+            if depth == 0:
+                parts.append(folded[i:end])
+            i = end
+            continue
+        end, name, is_end, opt_out, self_closing = _split_tag(folded, i)
+        if end <= i:
+            if depth == 0:
+                parts.append(folded[i])
+            i += 1
+            continue
+        if depth:
+            if name == skip_name and not is_end and not self_closing and name not in _VOID_TAGS:
+                depth += 1
+            elif is_end and name == skip_name:
+                depth -= 1
+            i = end
+            continue
+        if opt_out and not is_end:
+            if self_closing or not name or name in _VOID_TAGS:
+                i = end
+                continue
+            skip_name = name
+            depth = 1
+            i = end
+            continue
+        parts.append(folded[i:end])
+        i = end
+    return "".join(parts)
 
 
-def _jsonld_headlines(html: str) -> list[str]:
-    headlines: list[str] = []
-    for raw in _JSONLD.findall(html):
-        for match in _JSON_HEADLINE.finditer(raw):
-            headlines.append(match.group(1).replace(r"\"", '"'))
-    return headlines
+def _phrase_errors(label: str, text: str, *, html: bool) -> list[str]:
+    """Main's substring check. HTML may drop data-moved-ok subtrees first."""
+    folded = text.casefold()
+    if html and _OPT_OUT in folded:
+        folded = _without_moved_opt_outs(folded)
+    errors: list[str] = []
+    if _MOVED_MARK in folded:
+        errors.append(f"{label} still says (moved)")
+    if _MOVED_PHRASE in folded:
+        errors.append(f"{label} still says has moved")
+    return errors
 
 
-def _page_has_stub_moved_copy(html: str) -> bool:
-    parser = _StubCopyParser()
-    parser.feed(html)
-    parser.close()
-    titleish = parser.titles + parser.headings + parser.titleish + _jsonld_headlines(html)
-    if any(_phrase_anywhere(text) for text in titleish):
-        return True
-    if any(_description_stub(text) for text in parser.descriptions):
-        return True
-    if any(_this_moved_short(text) for text in parser.moved_blocks + parser.bare):
-        return True
-    return any(_short_stub_copy(text) for _tag, text in parser.blocks)
+def _moved_allowlist(root: Path) -> set[str]:
+    path = root / _ALLOWLIST_NAME
+    if not path.is_file():
+        return set()
+    found: set[str] = set()
+    for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+        entry = line.split("#", 1)[0].strip().lstrip("/")
+        if entry:
+            found.add(entry)
+    return found
 
 
 def stub_link_errors(root: Path) -> list[str]:
@@ -490,6 +483,7 @@ def stub_link_errors(root: Path) -> list[str]:
         html = path.read_text(encoding="utf-8", errors="ignore")
         if _is_stub(html):
             stubs.add(rel.as_posix())
+    allowed = _moved_allowlist(root)
     errors: list[str] = []
     for path in sorted(root.rglob("*.html")):
         rel = path.relative_to(root)
@@ -498,11 +492,8 @@ def stub_link_errors(root: Path) -> list[str]:
         html = path.read_text(encoding="utf-8", errors="ignore")
         if _is_real_stub(html):
             continue
-        folded = html.casefold()
-        if "(moved)" in folded:
-            errors.append(f"{rel.as_posix()} still says (moved)")
-        if _page_has_stub_moved_copy(html):
-            errors.append(f"{rel.as_posix()} still says has moved")
+        if rel.as_posix() not in allowed:
+            errors.extend(_phrase_errors(rel.as_posix(), html, html=True))
         for href in _LINK.findall(html):
             target = _resolve_href(rel, href)
             if target in stubs:
@@ -514,11 +505,8 @@ def stub_link_errors(root: Path) -> list[str]:
     llms = root / "llms.txt"
     if llms.is_file():
         text = llms.read_text(encoding="utf-8", errors="ignore")
-        folded = text.casefold()
-        if "(moved)" in folded:
-            errors.append("llms.txt still says (moved)")
-        if any(_description_stub(line) for line in text.splitlines()):
-            errors.append("llms.txt still says has moved")
+        if "llms.txt" not in allowed:
+            errors.extend(_phrase_errors("llms.txt", text, html=False))
         for href in _MD_LINK.findall(text):
             target = _resolve_href(Path("llms.txt"), href)
             if target in stubs:
