@@ -29,6 +29,10 @@ AI_TOKENS = (
     "scale-ai", "hugging-face", "huggingface", "cohere", "stability-ai", "runway",
     "grammarly", "jasper", "synthesia", "descript", "notion-ai", "canva-ai", "cursor",
     "windsurf", "replit", "v0", "lovable", "browse-ai", "gamma", "otter", "fireflies",
+    # added 2026-10-18: xAI names itself in slugs and bodies without any other AI token. A Memphis
+    # data-centre request carried 'xai' in its slug and scored as a non-AI request for a whole run;
+    # it was found only because every window body is also read.
+    "xai", "x-ai",
 )
 
 AI = re.compile(r"(^|[-/])(" + "|".join(AI_TOKENS) + r")([-/]|$)", re.I)

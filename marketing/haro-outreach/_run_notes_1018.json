@@ -1,0 +1,51 @@
+{
+ "date": "2026-10-18",
+ "contact_append": {
+  "tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring": "SMTP DELIVERABILITY IS NOT VERIFIED, AND THE 2026-10-18 PROBE MUST NOT BE READ AS A YES: an RCPT probe against the domain's own MX (eforward1/2/3.registrar-servers.com) returned 554 5.7.1 'Relay access denied' for hello@tobiamure.com, for a deliberately fake control address AND for postmaster@tobiamure.com, so the gateway refuses every recipient from an outside probe and the result discriminates nothing. The evidence for this route is that he publishes it himself in six places on his own live site, plus a contact form on the same page - not that a probe accepted it. If the email bounces, the form at https://tobiamure.com/contact/ is the fallback route."
+ },
+ "new_rows": {
+  "black-women-in-canada-ai-chatbots-and-healthcare-experiences": {
+   "who": "Maryam Parkar (the page's own author field). No outlet named on the request or in the body; the body is tagged as a STORY CALLOUT.",
+   "category": "AI / Health / Consumer Chatbot Use",
+   "contact": "The body ends 'Please DM me' and publishes no address, handle or link of its own. The only links on the page are Sourcee's own author chrome (linkedin.com/in/andrewsmith313, x.com/andy_cb_smith), which the verifier excludes from published_links; neither is a route to the poster. NOT RESOLVED. The route would be a DM on the poster's own platform.",
+   "relevance": "low",
+   "notes": "A feature on Black women in Canada who used ChatGPT, Gemini or another chatbot to research symptoms or a diagnosis after feeling dismissed by a clinician. The standing bar is being a Black woman in Canada with that personal experience - every source she asks for is a patient, and she says so plainly ('You don't need to be an expert'). AIToolsEssentials is a publisher that prices AI tools; it has no patient story to offer and no standing to supply one. Nothing in the body asks what any AI tool costs. Recorded as an AI-token window slug, relevance low.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "engineering-leaders-leading-people-through-ai-changes": {
+   "who": "Gabe Dunlop (the page's own author field). No outlet named on the request or in the body.",
+   "category": "AI / Engineering Management / Workplace",
+   "contact": "The body ends 'Who should I talk to?' and publishes no address, handle or link. The only links on the page are Sourcee's own author chrome, which the verifier excludes. NOT RESOLVED. The route would be a reply or referral on the poster's own platform.",
+   "relevance": "low",
+   "notes": "He wants to interview 'a couple of engineering leaders' about leading people through AI changes, by phone, with no incentive. The standing bar is being an engineering leader inside a company - we are a two-person publishing operation and have never managed an engineering org. Nothing in the body touches tool cost, seats, subscriptions or software spend. Recorded as an AI-token window slug, relevance low.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "memphis-and-southaven-residents-and-env-advocates-xai-colossus-impact": {
+   "who": "Augustina Boateng (the page's own author field). Domain field: scalawagmag.org - a piece for Scalawag.",
+   "category": "AI / Data-Centre Infrastructure / Local Impact",
+   "contact": "The body says 'DMs are open' and publishes no address, handle or link of its own. The only links on the page are Sourcee's own author chrome, which the verifier excludes. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "A Scalawag piece on Memphis, xAI's Colossus and the communities living alongside the infrastructure powering the AI boom. She wants residents and environmental advocates with firsthand experience of the site. This is data-centre siting and local environmental impact, not what an AI tool costs or what a business pays for one; the standing bar is living next to the facility, which we do not. It reached this digest only because the body-level scan found the xAI mention: its slug carries 'xai', a vendor name that was missing from the AI token list, so the slug filter scored it as a non-AI request. Recorded as a measurement, relevance low.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  }
+ },
+ "new_this_run": [
+  "THREE ROWS ADDED, AND NOT ONE IS A CANDIDATE: the 31-slug window carried 3 AI-token slugs once 'xai' was added to the token list (Black women in Canada and AI chatbots; engineering leaders leading people through AI changes; Memphis & Southaven residents on xAI's Colossus, in Scalawag - the third was invisible at slug level until that fix). All three want a personal or occupational account - a patient, an engineering leader, a resident beside a data centre - and none asks what any AI tool costs. None publishes a route: two say 'DM me', one asks 'Who should I talk to?'.",
+  "THE WINDOW'S AI+SPEND COUNT IS ZERO AT SLUG LEVEL AND ZERO IN SUBSTANCE: 31 slugs, 3 AI-token, 0 AI+spend, 1 spend-only (a Guardian readers' rainout story about spending on food and parking, no AI content). All 31 window bodies were fetched and read - the only check that can back a zero. Three bodies mention AI; none carries a real spend token.",
+  "THE BODY-LEVEL SCAN NOW FINDS WHAT THE SLUG FILTER CANNOT, AND THAT IS THE POINT OF RUNNING IT: 3 AI hits over 31 bodies. Before the 'xai' token fix, one of them (Memphis / xAI Colossus) was invisible at slug level. The earlier body field was computed with the slug matcher, whose hyphen delimiters never match prose, so the body-level AI count was a structural zero on every previous run."
+ ],
+ "why_not_drafted": [
+  "Black women in Canada / AI chatbots wants a Canadian patient's own healthcare story; engineering leaders wants an engineering manager's own change-management account; the Memphis request wants residents beside xAI's Colossus. We are none of those and none of the three publishes a route. A draft with no route and false standing is a file, not a pitch."
+ ],
+ "extra_actions": [
+  "DECIDE ON THE MEDIALYST ACCOUNT OR STOP MEASURING IT. Ten consecutive runs have reported the same 401 on the Medialyst MCP endpoint, and it is the one platform that would widen supply. Opening it needs an OAuth handshake, which is George's lane; if it is not going to be opened, say so and the monitor stops reporting it as the one widening option."
+ ],
+ "defects": [
+  "THE BODY-LEVEL AI SCAN USED THE SLUG MATCHER, SO ITS AI COUNT WAS A STRUCTURAL ZERO. `AI` in scripts/sourcee_terms.py is written for slugs: a token must sit between hyphens or string edges. Applied to a rendered request body it matches almost nothing, and the per-run body scripts (`_bodies_1014.py` ... `_bodies_1017.py`) used it for `ai_tokens_in_body` while using the correct `prose_ai()` only for the separate boolean field. Today's rescan over the same 31 stored bodies found 3 AI hits where the old field reported 0. scripts/haro_bodies.py now uses prose_ai() for every body field and keeps the slug matcher's output in a separate `ai_slug_tokens` key, so the two measurements can never be confused again.",
+  "'XAI' WAS MISSING FROM THE AI TOKEN LIST, AND A REAL AI REQUEST SCORED AS NON-AI BECAUSE OF IT. The Memphis window request names xAI in its slug and in its body; `ai` needs a delimiter, and 'xai' was not a token, so the slug filter recorded it as an unrelated request. It was caught only by the body scan. 'xai' and 'x-ai' are now in AI_TOKENS in the shared module (the same class of gap the module was created for on 2026-10-11, when 'anthropic' was missing and a core-beat request was dropped).",
+  "THE PER-RUN WINDOW, BODY AND DIGEST SCRIPTS ARE NO LONGER HAND-COPIED - THE DEFECT THE 2026-10-17 DIGEST FLAGGED AND DEFERRED FOR THREE RUNS. `_window_MMDD.py`, `_bodies_MMDD.py` and `_digest_MMDD.py` were 40KB copies produced by editing constants, and each copy carried hand-typed counts, ages and route evidence that could silently drift from the pages. They are replaced by scripts/haro_window.py, scripts/haro_bodies.py and scripts/build_digest.py, each taking an explicit run date. Day-specific editorial judgment (new-row relevance notes, the defect log, extra actions) now lives in a small `_run_notes_MMDD.json`; everything measurable is derived at build time.",
+  "THE PROSE SCAN NOW STRIPS URL QUERY STRINGS BEFORE MATCHING, WHICH WAS FLAGGED FOR 'THE NEXT RUN' YESTERDAY AND IS APPLIED TODAY. On 2026-10-17 a YouTube share parameter (`?si=AI-KPLnoV8cIWkS9`) scored a ghost-story request as an AI request. scripts/haro_bodies.py removes URLs from the scanned text first, so a share ID can no longer be read as a topic.",
+  "A NEW ROW BUILT BEFORE ITS PAGE WAS VERIFIED MADE THE DIGEST AND THE QUEUE DISAGREE, AND THE BUILD NOW REFUSES TO DO IT. The first build of this run created the three new rows from the window file while `verified-requests.json` held no record for them, so `_days_old` was null: this digest counted them cold (44 live) while build_pitch_queue.py, which treats an unmeasured age as live, counted 47 live. Both numbers were printed by the same run and neither was labelled uncertain. The three slugs were then verified against their pages (all HTTP 200, 1 day old) and scripts/build_digest.py now exits with the exact verifier command if any new row has no page truth, so the two artefacts cannot diverge silently again.",
+  "A CARRIED ROW CITED YESTERDAY'S PROBE FILE AND YESTERDAY'S SNAPSHOT INSIDE TODAY'S DIGEST. The carry pass rewrote each row's `deadline` from its page but left `contact_method` and the angle untouched, so the one sendable row read 're-probed today in route-checks-2026-10-17.json' and cited 'snapshots updated 2026-10-17' in a 2026-10-18 file - the same class as the 2026-10-17 defect where the route section shipped the previous day's bytes. scripts/build_digest.py now rewrites those artefact citations to today's probe and today's snapshot date when today's route-checks file exists and is stamped today, and names every row it touched in monitor_health.carried_rows_with_stale_evidence_refreshed."
+ ]
+}
