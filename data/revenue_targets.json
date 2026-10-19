@@ -1344,5 +1344,25 @@
   "status": "not_started",
   "next_action": "Email listings@robylon.ai about affiliate or referral terms, naming the /partnership page (resell, implement, build-on and refer) and asking which track fits a content review site. Do not invent an affiliate URL.",
   "notes": "Self-serve B2B SaaS with a free tier and public pricing, so end-user conversion exists in principle, but the buyer is a support organisation rather than an individual, and the review page is a long way from the purchase decision. Priority low until traffic grows. No affiliate URL found or fabricated; the site publishes a partner programme but no tracked consumer affiliate link."
+ },
+ {
+  "tool_slug": "botloadout",
+  "tool_name": "BotLoadout",
+  "priority": "low",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [
+   "Direct vendor sponsorship (botloadout.com/sponsor)"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/botloadout/"
+  ],
+  "best_audiences": [
+   "readers setting up a first Claude, ChatGPT or Grok agent",
+   "small teams standardising agent prompts across platforms"
+  ],
+  "status": "not_started",
+  "next_action": "Email sponsors@botloadout.com in January 2027, when sponsor bookings open, to ask whether the placements carry a referral or affiliate arrangement; no affiliate programme exists today (/affiliates, /partners, /referral and /program all 404).",
+  "notes": "Free product with no paid tier, so there is no commission base yet; the only commerce on the site is newsletter sponsorship and it is not selling until January 2027. Do not invent a tracking URL."
  }
 ]

@@ -352,6 +352,10 @@
     "robylon": {
       "date": "2026-10-16",
       "digest": "Free Starter (300 credits/mo, ~40 conversations). Pro $25/mo for 500 credits, then $75 (1,500), $113 (2,500), $158 (3,500). Business $180/mo for 4,500 credits, then $240 (6,000), $280 (8,000), $300 (10,000). Yearly billing 10% off (Pro 500 credits $22/mo; Business 4,500 credits $162/mo). Enterprise quoted. Optional live-agent seats $19 / $49 / $89 per seat per month. Add-ons: extra credits $25 per 1,000, custom domain $49/mo, badge removal $29/mo. Plan estimates assume ~7.5 credits per chat, WhatsApp or email conversation; voice is charged at a different credit rate. Checked 2026-10-16 against /pricing and /pricing.md, which agree."
+    },
+    "botloadout": {
+      "date": "2026-10-19",
+      "digest": "Free. No paid plans and no checkout: all 97 templates are $0 and the archive downloads without payment or signup. Revenue is newsletter sponsorship only; /sponsor states bookings open January 2027, carries no live Stripe checkout, and asks for an email inquiry instead."
     }
   },
   "changes": [

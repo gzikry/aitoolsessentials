@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-08",
+ "checked_at": "2026-10-19",
  "source_policy": "Official vendor sources only. Missing values remain null or unresolved; no inference.",
  "tools": [
   {
@@ -1163,6 +1163,16 @@
     "The Privacy Policy's last-updated date (7 April 2024) predates the current product surface, including voice, WhatsApp and the browser-automation section of the Terms, so parts of it may describe an earlier service.",
     "Enterprise is quote-only (\"Let's talk\") and per-conversation cost depends on which model answers, so no single headline price exists for the top tier."
    ]
+  },
+  {
+   "slug": "botloadout",
+   "pricing_checked_date": "2026-10-19",
+   "pricing_summary": "No charge and no paid tier. The homepage and library state 'Free. Seriously. FREE', every template is $0, and /downloads/botloadout-all-templates.zip answers a plain GET at 528,585 bytes without a signup or cookie. The only commerce is newsletter sponsorship, sold on /sponsor: that page now reads 'Sponsorship bookings open in January 2027', carries no stripe.com checkout URL, and offers an inquiry form plus email contact instead. Verified 2026-10-19 from /, /templates, /sponsor, /privacy, /terms, /llms.txt, the sitemap (97 template URLs) and the zip itself.",
+   "pricing_url": "https://botloadout.com/sponsor",
+   "docs_url": "https://botloadout.com/templates",
+   "privacy_url": "https://botloadout.com/privacy",
+   "rights_url": "https://botloadout.com/terms",
+   "verification_notes": "Submitted via form by the vendor 2026-10-18 (12:24 UTC), category 'Writing & Productivity' — reclassified to AI Agents, since the product is a library of agent templates rather than a writing tool. Editorial entry written independently. Held 2026-10-18 on three blockers: no privacy notice, no terms and no template licence on a site that collects email addresses. Re-verified 2026-10-19 after the vendor replied: /privacy and /terms both return 200, effective 2026-10-19, naming A13 LLC (Texas LLC, 1101 W 34th St #600, Austin, TX 78705, sponsors@botloadout.com), a commercial-use licence with no attribution and no resale-as-a-library clause, and Texas governing law with Travis County venue. Both are linked in the footer and listed in the sitemap. Count re-verified after the vendor's 'every page now says 97': the sitemap carries 97 /t/ URLs, the library's category counts sum to 97, and the archive holds 388 files for 97 folders. The analytics disclosure matches the shipped markup (Vercel Web Analytics only, no GTM/GA4/Plausible/Clarity). Two vendor claims did not reproduce and are recorded in cons: the per-template 'date added' is not on the template page (only the sitewide 'Updated Oct 14, 2026'), and the newsletter gate is cosmetic — the zip downloads with no signup."
   }
  ]
 }

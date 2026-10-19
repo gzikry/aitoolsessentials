@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-19",
-  "tools_count": 79,
+  "tools_count": 80,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -588,6 +588,13 @@
       "category": "AI Agents",
       "price": "Free (300 credits/mo) + paid plans from $25/mo; optional live agent seats from $19/seat/mo",
       "url": "https://aitoolsessentials.com/tools/robylon/"
+    },
+    {
+      "name": "BotLoadout",
+      "slug": "botloadout",
+      "category": "AI Agents",
+      "price": "Free (97 templates; no paid tier, sponsorship-funded)",
+      "url": "https://aitoolsessentials.com/tools/botloadout/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
