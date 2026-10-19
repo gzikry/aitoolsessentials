@@ -18,3 +18,7 @@ Thumbs.db
 
 # Per-issue send approval. The file body is the word approved. Never commit one.
 admin/newsletter/*.approved
+
+# Sourcee sitemap snapshots: ~10MB/day, re-derivable in one command
+# (python3 scripts/haro_window.py). The window JSON is the artifact that matters.
+marketing/haro-outreach/_sitemap_*.xml

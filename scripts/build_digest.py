@@ -29,17 +29,12 @@ D = S / "marketing/haro-outreach"
 SITE = "https://www.sourcee.app/journo-request/"
 STALE_DAYS = 10
 
-PLATFORM_STATUS = {
-    "Sourcee (sourcee.app)": "accessible",
-    "Sourcee AI topic feed": "accessible",
-    "HARO (helpareporter.com)": "blocked",
-    "Connectively (connectively.us)": "blocked",
-    "Source of Sources (sourceofsources.com)": "not-applicable",
-    "Qwoted (qwoted.com)": "blocked",
-    "MentionMatch (mentionmatch.com)": "pre-launch",
-    "Medialyst MCP (medialyst.ai/api/mcp)": "blocked",
-    "ResponseSource (responsesource.com)": "accessible-but-not-usable",
-}
+# Platform statuses used to be a hand-maintained PLATFORM_STATUS map here. It was never read by
+# anything, and by 2026-10-19 it had drifted: it still said MentionMatch was "pre-launch" after the
+# site had shipped a live product behind an account. Each status now lives in exactly one place -
+# `platforms_checked` below, written beside the probe note it describes - and monitor_health's counts
+# are counted from that list instead of typed.
+
 
 
 def slug_of(url: str) -> str:
@@ -170,7 +165,17 @@ def main() -> None:
             _stale_evidence.append(o["slug"])
 
     # A run-specific correction to a carried row's route prose (e.g. today's SMTP probe result),
-    # applied from _run_notes_MMDD.json rather than by hand-editing the JSON.
+    # applied from _run_notes_MMDD.json rather than by hand-editing the JSON. `contact_append` adds a
+    # sentence and therefore grows the field every run it is used; `contact_replace` supersedes the
+    # route prose outright, which is what a row whose evidence is re-measured each run needs.
+    for slug, full in (notes.get("contact_replace") or {}).items():
+        for i, o in enumerate(opps):
+            if o["slug"] == slug:
+                o = dict(o)
+                o["contact_method"] = full.strip()
+                o["_contact_replaced"] = today
+                opps[i] = o
+                break
     for slug, extra in (notes.get("contact_append") or {}).items():
         for i, o in enumerate(opps):
             if o["slug"] == slug:
@@ -342,10 +347,15 @@ def main() -> None:
          "notes": (f"HTTP {p('Qwoted (qwoted.com)').get('http')} at app.qwoted.com/requests, "
                    f"{p('Qwoted (qwoted.com)').get('bytes', 0):,} bytes; the app needs an authenticated "
                    "session. Not retried.")},
-        {"platform": "MentionMatch (mentionmatch.com)", "status": "pre-launch",
+        {"platform": "MentionMatch (mentionmatch.com)", "status": "account-gated",
          "notes": (f"HTTP {p('MentionMatch (mentionmatch.com)').get('http')}, "
-                   f"{p('MentionMatch (mentionmatch.com)').get('bytes', 0):,} bytes, "
-                   f"'{p('MentionMatch (mentionmatch.com)').get('title')}'. Still a holding page.")},
+                   f"{p('MentionMatch (mentionmatch.com)').get('bytes', 0):,} bytes, title "
+                   f"'{p('MentionMatch (mentionmatch.com)').get('title')}'. THE PRE-LAUNCH FINDING IS NOW "
+                   "STALE: the site no longer serves a holding page. It describes itself as 'MentionMatch "
+                   "connects B2B writers with expert sources' and invites sources to 'Join 8,000+ sources "
+                   "today', and /requests returns the same 12,067-byte SPA shell, so the request list is "
+                   "fetched client-side behind an account. Nothing is browsable from here without a "
+                   "signup, which is George's lane.")},
         {"platform": "Medialyst MCP (medialyst.ai/api/mcp)", "status": "blocked",
          "notes": (f"HTTP {p('Medialyst MCP (medialyst.ai/api/mcp)').get('http')}, "
                    f"{p('Medialyst MCP (medialyst.ai/api/mcp)').get('bytes')} bytes - the MCP endpoint "
@@ -429,10 +439,12 @@ def main() -> None:
         "summary": summary,
         "recommended_actions": actions,
         "monitor_health": {
-            "platforms_accessible": 2,
-            "platforms_accessible_but_not_usable": 1,
-            "platforms_blocked": 5,
-            "platforms_not_applicable": 1,
+            "platforms_accessible": sum(1 for p in platforms_checked if p["status"] == "accessible"),
+            "platforms_accessible_but_not_usable": sum(1 for p in platforms_checked
+                                                       if p["status"] == "accessible-but-not-usable"),
+            "platforms_blocked": sum(1 for p in platforms_checked if p["status"] == "blocked"),
+            "platforms_not_applicable": sum(1 for p in platforms_checked if p["status"] == "not-applicable"),
+            "platforms_account_gated": sum(1 for p in platforms_checked if p["status"] == "account-gated"),
             "core_beat_new_requests": sum(1 for o in NEW if (o.get("relevance") or "low").lower() in
                                           ("high", "medium", "medium-high")),
             "new_ai_token_slugs_in_window": len(window["ai"]),
@@ -450,7 +462,7 @@ def main() -> None:
             "pitches_sent_this_run": 0,
             "sendable_rows": len(sendable),
             "sendable_new_this_run": sum(1 for o in NEW if o["slug"] in {x["slug"] for x in sendable}),
-            "sendable_rows_crossing_tomorrow": len(at_ten),
+            "sendable_rows_crossing_tomorrow": sum(1 for s in at_ten if s in {x["slug"] for x in sendable}),
             "rows_crossed_cold_since_last_digest": len(crossed),
             "rows_at_ten_days_crossing_next_run": len(at_ten),
             "pitch_draft_files_on_disk": len(list(D.glob("pitch-drafts-*.md"))),
