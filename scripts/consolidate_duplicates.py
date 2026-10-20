@@ -5,7 +5,6 @@ from __future__ import annotations
 import os
 import re
 import sys
-import unicodedata
 from html import unescape
 from pathlib import Path
 
@@ -105,9 +104,14 @@ def _is_stub(html: str) -> bool:
     return 'http-equiv="refresh"' in html
 
 
-def _is_real_stub(html: str) -> bool:
-    """A redirect stub is noindex and a meta refresh. Indexable pages are not exempt."""
-    return _is_stub(html) and "noindex" in html.casefold()
+def _is_real_stub(html: str, header_noindex: bool = False) -> bool:
+    """A redirect stub is a meta refresh plus a real noindex directive.
+
+    The word noindex in prose, a comment, or a script does not count. A real
+    directive is a robots or googlebot meta, an X-Robots-Tag meta, or an
+    X-Robots-Tag rule in the site header config.
+    """
+    return _is_stub(html) and (header_noindex or _document_noindex(html))
 
 
 def is_redirect_stub(html: str) -> bool:
@@ -240,14 +244,17 @@ def _resolve_href(page: Path, href: str) -> str | None:
     return "/".join(parts)
 
 
-# Same check as main (5f737e6 / cf0689c): a case-insensitive substring anywhere
-# in the file, so JSON-LD name/headline, og/twitter, alt, and aria-label cannot
-# hide. The only exemption besides a real stub is a path in the allowlist.
-# Whitespace character references become a space first, so has&nbsp;moved matches.
+# Main's check is a case-insensitive substring of the raw file. The same phrases
+# are also checked after entities are decoded in their original spelling, zero-width
+# characters are removed, and Unicode whitespace is collapsed. A real stub or an
+# allowlisted path is the only exemption.
 _MOVED_PHRASE = "has moved"
 _MOVED_MARK = "(moved)"
 _ALLOWLIST_NAME = Path("scripts/moved_phrase_allowlist.txt")
-_WS_ENTITY = re.compile(r"&(?:#x[0-9a-f]+|#\d+|[a-z]+);")
+_ZERO_WIDTH = re.compile(
+    "[\u00ad\u200b-\u200f\u202a-\u202e\u2060-\u2064\ufeff]"
+)
+_WS_RUN = re.compile(r"\s+")
 _LINK = re.compile(r"""href=["']([^"']+)["']""", re.I)
 _MD_LINK = re.compile(r"\((https://aitoolsessentials\.com/[^)\s]+)\)")
 _JSONLD = re.compile(
@@ -328,28 +335,154 @@ def duplicate_errors(root: Path) -> list[str]:
     return errors
 
 
-def _ws_entity(match: re.Match[str]) -> str:
-    """One whitespace character reference becomes one space. Anything else stays."""
-    decoded = unescape(match.group(0))
-    if len(decoded) == 1 and (decoded.isspace() or unicodedata.category(decoded) == "Zs"):
-        return " "
-    return match.group(0)
+def _read_tag_attrs(html: str, i: int) -> tuple[int, dict[str, str]]:
+    """Read one start tag at '<'. One forward pass. Attribute names are lowercased."""
+    n = len(html)
+    j = i + 1
+    while j < n and html[j] not in " \t\r\n/>":
+        j += 1
+    attrs: dict[str, str] = {}
+    while j < n:
+        char = html[j]
+        if char == ">":
+            return j + 1, attrs
+        if char == "/" and j + 1 < n and html[j + 1] == ">":
+            return j + 2, attrs
+        if char.isspace() or char == "/":
+            j += 1
+            continue
+        start = j
+        while j < n and not html[j].isspace() and html[j] not in "=>/\"'":
+            j += 1
+        key = html[start:j].casefold()
+        while j < n and html[j].isspace():
+            j += 1
+        value = ""
+        if j < n and html[j] == "=":
+            j += 1
+            while j < n and html[j].isspace():
+                j += 1
+            if j < n and html[j] in "\"'":
+                quote = html[j]
+                j += 1
+                value_start = j
+                while j < n and html[j] != quote:
+                    j += 1
+                value = html[value_start:j]
+                if j < n:
+                    j += 1
+            else:
+                value_start = j
+                while j < n and not html[j].isspace() and html[j] not in ">/":
+                    j += 1
+                value = html[value_start:j]
+        if key:
+            attrs[key] = value
+    return n, attrs
 
 
-def _phrase_text(text: str) -> str:
-    folded = text.casefold()
-    if "&" not in folded:
-        return folded
-    return _WS_ENTITY.sub(_ws_entity, folded)
+def _tag_boundary(text: str, i: int, name: str) -> bool:
+    end = i + 1 + len(name)
+    return end >= len(text) or text[end] in " \t\r\n/>"
+
+
+def _document_noindex(html: str) -> bool:
+    """True for a robots/googlebot meta or an X-Robots-Tag meta whose content says noindex."""
+    folded = html.casefold()
+    n = len(html)
+    i = 0
+    while i < n:
+        start = folded.find("<", i)
+        if start < 0:
+            return False
+        if folded.startswith("<!--", start):
+            end = folded.find("-->", start + 4)
+            i = n if end < 0 else end + 3
+            continue
+        if folded.startswith("<script", start) and _tag_boundary(folded, start, "script"):
+            end = folded.find("</script", start + 7)
+            i = n if end < 0 else end + 9
+            continue
+        if folded.startswith("<style", start) and _tag_boundary(folded, start, "style"):
+            end = folded.find("</style", start + 6)
+            i = n if end < 0 else end + 8
+            continue
+        if folded.startswith("<meta", start) and _tag_boundary(folded, start, "meta"):
+            end, attrs = _read_tag_attrs(html, start)
+            name = attrs.get("name", "").strip().casefold()
+            http_equiv = attrs.get("http-equiv", "").strip().casefold()
+            content = attrs.get("content", "").casefold()
+            if "noindex" in content and (
+                name in {"robots", "googlebot"} or http_equiv == "x-robots-tag"
+            ):
+                return True
+            i = end
+            continue
+        i = start + 1
+    return False
+
+
+def _x_robots_header_rules(root: Path) -> list[tuple[str, bool]]:
+    """Path rules from a `_headers` file. Indented X-Robots-Tag lines belong to the path above."""
+    path = root / "_headers"
+    if not path.is_file():
+        return []
+    rules: list[tuple[str, bool]] = []
+    current = ""
+    noindex = False
+
+    def flush() -> None:
+        nonlocal current, noindex
+        if current:
+            rules.append((current, noindex))
+        current = ""
+        noindex = False
+
+    for raw in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+        if not raw.strip() or raw.lstrip().startswith("#"):
+            continue
+        if raw[:1].isspace():
+            key, _, value = raw.strip().partition(":")
+            if key.casefold() == "x-robots-tag" and "noindex" in value.casefold():
+                noindex = True
+            continue
+        flush()
+        current = raw.strip()
+        noindex = False
+    flush()
+    return rules
+
+
+def _header_noindex(rules: list[tuple[str, bool]], rel: str) -> bool:
+    rel = rel.lstrip("/")
+    for pattern, noindex in rules:
+        if not noindex:
+            continue
+        pattern = pattern.strip().lstrip("/")
+        if pattern in ("*", "/*"):
+            return True
+        if pattern.endswith("/*") and rel.startswith(pattern[:-1]):
+            return True
+        if rel == pattern:
+            return True
+    return False
+
+
+def _normalized_phrase_text(text: str) -> str:
+    """Decode entities in their original spelling, then fold case and whitespace."""
+    decoded = unescape(text)
+    stripped = _ZERO_WIDTH.sub("", decoded)
+    return _WS_RUN.sub(" ", stripped).casefold()
 
 
 def _phrase_errors(label: str, text: str) -> list[str]:
-    """Main's substring check, after whitespace entities become a space."""
-    folded = _phrase_text(text)
+    """Main's raw substring, and the same phrases after entity and whitespace normalization."""
+    raw = text.casefold()
+    normalized = _normalized_phrase_text(text)
     errors: list[str] = []
-    if _MOVED_MARK in folded:
+    if _MOVED_MARK in raw or _MOVED_MARK in normalized:
         errors.append(f"{label} still says (moved)")
-    if _MOVED_PHRASE in folded:
+    if _MOVED_PHRASE in raw or _MOVED_PHRASE in normalized:
         errors.append(f"{label} still says has moved")
     return errors
 
@@ -378,13 +511,14 @@ def stub_link_errors(root: Path) -> list[str]:
         if _is_stub(html):
             stubs.add(rel.as_posix())
     allowed = _moved_allowlist(root)
+    header_rules = _x_robots_header_rules(root)
     errors: list[str] = []
     for path in sorted(root.rglob("*.html")):
         rel = path.relative_to(root)
         if is_working_rel(rel) or not is_public_rel(rel):
             continue
         html = path.read_text(encoding="utf-8", errors="ignore")
-        if _is_real_stub(html):
+        if _is_real_stub(html, _header_noindex(header_rules, rel.as_posix())):
             continue
         if rel.as_posix() in allowed:
             print(f"allowlist skip {rel.as_posix()}")

@@ -141,10 +141,58 @@ def _stub_phrase_and_jsonld() -> list[str]:
         "nbsp-hex.html": _doc(compare, "<p>has&#xa0;moved</p>"),
         "nbsp-upper.html": _doc("<title>Has&nbsp;Moved</title>", safe),
         "nbsp-ensp.html": _doc(compare, "<p>has&ensp;moved</p>"),
+        "thin.html": _doc(compare, "<p>has&ThinSpace;moved</p>"),
+        "tab.html": _doc(compare, "<p>has&Tab;moved</p>"),
+        "newline.html": _doc(compare, "<p>has&NewLine;moved</p>"),
+        "nbsp-name.html": _doc(compare, "<p>has&NonBreakingSpace;moved</p>"),
+        "nbsp-nosemi.html": _doc(compare, "<p>has&nbspmoved</p>"),
+        "zw-space.html": _doc(compare, "<p>has\u200b moved</p>"),
+        "double-space.html": _doc(compare, "<p>has  moved</p>"),
+        "paren-entity.html": _doc(compare, "<p>&#40;moved&#41;</p>"),
+        # The word noindex is not a directive. A refresh without one stays in scope.
+        "word-noindex.html": _doc(
+            '<meta http-equiv="refresh" content="0; url=/elsewhere.html"><title>Elsewhere</title>',
+            "<p>This note explains noindex redirects.</p><p>This page has moved.</p>",
+        ),
+        "comment-noindex.html": _doc(
+            '<meta http-equiv="refresh" content="0; url=/elsewhere.html"><title>Elsewhere</title>',
+            "<!-- noindex --><p>This page has moved.</p>",
+        ),
+        "script-noindex.html": _doc(
+            '<meta http-equiv="refresh" content="0; url=/elsewhere.html"><title>Elsewhere</title>',
+            '<script>var mode = "noindex";</script><p>This page has moved.</p>',
+        ),
+        "index-follow.html": _doc(
+            '<meta http-equiv="refresh" content="0; url=/elsewhere.html">'
+            '<meta name="robots" content="index,follow"><title>Elsewhere</title>',
+            "<p>This page has moved.</p>",
+        ),
     }
     passes = {
         "clean.html": _doc(compare, safe),
+        "googlebot-stub.html": _doc(
+            '<meta http-equiv="refresh" content="0; url=/elsewhere.html">'
+            '<meta name="googlebot" content="noindex,follow"><title>Elsewhere</title>',
+            "<p>This page has moved.</p>",
+        ),
+        "robots-order.html": _doc(
+            '<meta http-equiv="refresh" content="0; url=/elsewhere.html">'
+            '<meta content="noindex,follow" name="robots"><title>Elsewhere</title>',
+            "<p>This page has moved.</p>",
+        ),
+        "xrobots-meta.html": _doc(
+            '<meta http-equiv="refresh" content="0; url=/elsewhere.html">'
+            '<meta http-equiv="X-Robots-Tag" content="noindex"><title>Elsewhere</title>',
+            "<p>This page has moved.</p>",
+        ),
+        "zw-only.html": _doc(compare, "<p>has\u200bmoved</p>"),
     }
+    normalized_phrase = {
+        "nbsp.html", "nbsp-num.html", "nbsp-hex.html", "nbsp-upper.html", "nbsp-ensp.html",
+        "thin.html", "tab.html", "newline.html", "nbsp-name.html", "nbsp-nosemi.html",
+        "zw-space.html", "double-space.html",
+    }
+    normalized_mark = {"paren-entity.html"}
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         (root / "articles").mkdir()
@@ -164,8 +212,8 @@ def _stub_phrase_and_jsonld() -> list[str]:
         found_lines = stub_link_errors(root)
         for name, html in failures.items():
             folded = html.casefold()
-            wants_phrase = "has moved" in folded or name.startswith("nbsp")
-            wants_mark = "(moved)" in folded
+            wants_phrase = "has moved" in folded or name in normalized_phrase
+            wants_mark = "(moved)" in folded or name in normalized_mark
             if wants_phrase and not any(
                 line.startswith(f"{name} still says has moved") for line in found_lines
             ):
@@ -181,9 +229,37 @@ def _stub_phrase_and_jsonld() -> list[str]:
             misses.append("validator missed JSON-LD stub url")
         if any(line.startswith("articles/suno-vs-udio.html still says") for line in found_lines):
             misses.append("validator flagged the redirect stub itself")
+    misses.extend(_header_noindex_rules())
     misses.extend(_allowlist_and_llms())
     misses.extend(_span_budget())
     misses.extend(_allowlist_file_is_empty())
+    return misses
+
+
+def _header_noindex_rules() -> list[str]:
+    """An X-Robots-Tag rule in `_headers` exempts that refresh page only."""
+    misses: list[str] = []
+    page = _doc(
+        '<meta http-equiv="refresh" content="0; url=/elsewhere.html"><title>Elsewhere</title>',
+        "<p>This page has moved.</p>",
+    )
+    bare = _doc("<title>Compare</title>", "<p>This page has moved.</p>")
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "_headers").write_text(
+            "# site header config\n/only-this.html\n  X-Robots-Tag: noindex, follow\n",
+            encoding="utf-8",
+        )
+        (root / "only-this.html").write_text(page, encoding="utf-8")
+        (root / "other.html").write_text(page, encoding="utf-8")
+        (root / "indexable.html").write_text(bare, encoding="utf-8")
+        found = stub_link_errors(root)
+        if any(line.startswith("only-this.html still says") for line in found):
+            misses.append(f"header noindex did not exempt the refresh page: {found}")
+        if not any(line.startswith("other.html still says has moved") for line in found):
+            misses.append("header rule exempted a different path")
+        if not any(line.startswith("indexable.html still says has moved") for line in found):
+            misses.append("a noindex meta is required; a bare phrase must still fail")
     return misses
 
 
