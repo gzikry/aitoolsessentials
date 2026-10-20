@@ -80,8 +80,7 @@ _FOUNDING = (
     "Use code FOUNDING100 at checkout."
 )
 _ISSUE_HEADING = "Newsletter placements open once the list grows"
-_VERIFIED_HREF = "#verified-listing-link"
-_VERIFIED_TODO = "TODO: replace #verified-listing-link with the Stripe payment link"
+_VERIFIED_HREF = "https://buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205"
 _LOGO_HEIGHT = "28px"
 _SIGN_OFF = "\u2014 AIToolsEssentials"
 
@@ -522,9 +521,10 @@ def _verified_block() -> str:
         "<p>Written decision within one working day. Full refund if declined. "
         "A verified listing never affects reviews, scores, or verdicts.</p>\n"
         "<p>$79 one-time</p>\n"
-        "<!-- " + _VERIFIED_TODO + " -->\n"
-        '<p><a class="button button-blue" id="verified-listing-link" href="'
+        '<p><a class="button button-blue" href="'
         + _VERIFIED_HREF
+        + '" target="_blank" rel="'
+        + _EXTERNAL_REL
         + '">Request a verified listing</a></p>\n'
         "</div>"
     )

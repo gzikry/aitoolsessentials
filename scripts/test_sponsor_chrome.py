@@ -409,6 +409,17 @@ def test_payment_url() -> None:
 ISSUE_URL = "https://buy.stripe.com/test_4gM3cu3EdfFr4xN02r0x202"
 BAR_URL = "https://buy.stripe.com/test_3cIeVc8Yx64R7JZcPd0x200"
 BUNDLE_URL = "https://buy.stripe.com/test_eVq5kCgqZeBnaWb02r0x201"
+VERIFIED_URL = "https://buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205"
+
+
+def _assert_tiers_are_mailto(html: str) -> None:
+    """Sponsor tiers fall back to email. The verified listing keeps its own Checkout link."""
+    _has(html, MAILTO_BUTTON)
+    _has(html, VERIFIED_URL)
+    _lacks(html, "/test_")
+    _lacks(html, ISSUE_URL)
+    _lacks(html, BAR_URL)
+    _lacks(html, BUNDLE_URL)
 
 
 def _stripe_button(url: str) -> str:
@@ -433,23 +444,21 @@ def test_stripe_preview_and_production_gate() -> None:
         _write(root, {"enrollment": None})
         write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"})
         ignored = (root / "sponsor" / "index.html").read_text()
-        _has(ignored, MAILTO_BUTTON)
-        _lacks(ignored, "buy.stripe.com")
+        _assert_tiers_are_mailto(ignored)
         write_page(root, env_urls)
         html = (root / "sponsor" / "index.html").read_text()
         _has(html, _stripe_button(ISSUE_URL))
         _has(html, _stripe_button(BAR_URL))
         _has(html, _stripe_button(BUNDLE_URL))
+        _has(html, VERIFIED_URL)
         _lacks(html, MAILTO_BUTTON)
         _has(html, QUESTIONS)
         write_page(root, {})
         plain = (root / "sponsor" / "index.html").read_text()
-        _has(plain, MAILTO_BUTTON)
-        _lacks(plain, "buy.stripe.com")
+        _assert_tiers_are_mailto(plain)
         _raises(lambda: write_page(root, {**env_urls, "PRODUCTION_BUILD": "1"}))
         blocked = (root / "sponsor" / "index.html").read_text()
-        _has(blocked, MAILTO_BUTTON)
-        _lacks(blocked, "buy.stripe.com")
+        _assert_tiers_are_mailto(blocked)
         if production_stripe_test_errors(root, {"PRODUCTION_BUILD": "1"}):
             raise AssertionError("mailto page was reported as a Stripe test link")
         write_page(
@@ -479,7 +488,8 @@ def test_stripe_preview_and_production_gate() -> None:
 
 
 LIVE_ISSUE = "https://buy.stripe.com/3cIeVc8Yx64R7JZcPd0x200"
-LIVE_BAR = "https://buy.stripe.com/eVq5kCgqZeBnaWb02r0x201"
+LIVE_BAR = "https://buy.stripe.com/7sYdR8eiR64R7JZeXl0x206"
+LIVE_VERIFIED = VERIFIED_URL
 LIVE_BUNDLE = "https://buy.stripe.com/4gM3cu3EdfFr4xN02r0x202"
 LIVE_PAYMENTS = {"issue": LIVE_ISSUE, "bar": LIVE_BAR, "bundle": LIVE_BUNDLE}
 LIVE_QUESTIONS = (
@@ -525,8 +535,14 @@ def _assert_live_tiers(html: str) -> None:
     _has(html, "Written decision within one working day.")
     _has(html, "Full refund if declined.")
     _has(html, "never affects reviews, scores, or verdicts.")
-    _has(html, 'href="#verified-listing-link"')
-    _has(html, "TODO: replace #verified-listing-link with the Stripe payment link")
+    _has(
+        html,
+        '<a class="button button-blue" href="'
+        + LIVE_VERIFIED
+        + '" target="_blank" rel="external noopener nofollow">Request a verified listing</a>',
+    )
+    _lacks(html, "#verified-listing-link")
+    _lacks(html, "TODO: replace")
     _has(html, "new list, launched Oct 2026")
     _has(html, "labeled Sponsored")
     _has(html, "Cancel anytime.")
