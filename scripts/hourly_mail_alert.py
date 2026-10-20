@@ -54,12 +54,25 @@ LIFECYCLE_DRIP_SUBJECTS = {
 
 
 def himalaya(*args: str) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        ["himalaya", *args],
-        capture_output=True,
-        text=True,
-        timeout=90,
-    )
+    # Gmail IMAP occasionally stalls far past 90s on a fresh TLS handshake plus a
+    # 100-envelope fetch; a single transient stall used to surface as
+    # "MAIL MONITOR ERROR" and a non-zero exit with no mail problem at all
+    # (observed 2026-10-20 02:35 UTC on the [Gmail]/All Mail listing). Retry once
+    # on timeout, and keep the generous per-attempt budget. A genuine outage still
+    # fails twice and stays visible.
+    last_error: subprocess.TimeoutExpired | None = None
+    for _attempt in (1, 2):
+        try:
+            return subprocess.run(
+                ["himalaya", *args],
+                capture_output=True,
+                text=True,
+                timeout=240,
+            )
+        except subprocess.TimeoutExpired as exc:
+            last_error = exc
+    assert last_error is not None
+    raise last_error
 
 
 def list_messages(folder: str) -> list[dict]:
