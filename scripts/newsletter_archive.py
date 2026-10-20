@@ -70,7 +70,8 @@ def _clean_fragment(fragment: str) -> str:
 
 
 def parse_draft(html: str, slug: str) -> Letter:
-    issue_match = re.search(r"Issue\s+(\d+)\s+·\s+([^·<]+)", html)
+    visible = re.sub(r"<title[^>]*>.*?</title>", "", html, count=1, flags=re.S | re.I)
+    issue_match = re.search(r"Issue\s+(\d+)\s+·\s+([^·<]+)", visible)
     title_match = re.search(r"<h1[^>]*>(.*?)</h1>", html, flags=re.S)
     if issue_match is None or title_match is None:
         raise ValueError(f"{slug} draft is missing an issue line or title")
@@ -123,18 +124,24 @@ def load_letters(root: Path) -> list[Letter]:
         slug = path.name[: -len("-draft.html")]
         letter = parse_draft(path.read_text(encoding="utf-8"), slug)
         public = root / "newsletter" / f"{slug}.html"
-        if public.is_file() and "Morning." in public.read_text(encoding="utf-8"):
+        if public.is_file():
             letter = _overlay_public(letter, public.read_text(encoding="utf-8"))
         letters.append(letter)
     letters.sort(key=lambda item: item.issue, reverse=True)
     return letters
 
 
+_CARD_DEK_MAX = 140
+
+
 def blurb(dek: str) -> str:
-    stop = dek.find(". ")
+    text = dek.strip()
+    if len(text) <= _CARD_DEK_MAX:
+        return text
+    stop = text.find(". ")
     if stop == -1:
-        return dek
-    return dek[: stop + 1]
+        return text
+    return text[: stop + 1]
 
 
 def card(letter: Letter) -> str:
