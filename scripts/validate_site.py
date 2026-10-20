@@ -608,7 +608,7 @@ def main():
             if 'disclosure' not in page_text and 'affiliate' not in page_text:
                 errors.append(f'{f.relative_to(ROOT)} missing disclosure language')
         for tag, href in p.refs:
-            if href.startswith(('http://','https://','mailto:')):
+            if href.startswith(('http://','https://','mailto:')) or href == '{{{RESEND_UNSUBSCRIBE_URL}}}':
                 continue
             from urllib.parse import unquote
             href_dec = unquote(href)

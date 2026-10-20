@@ -523,7 +523,7 @@ def _verified_block() -> str:
         "A verified listing never affects reviews, scores, or verdicts.</p>\n"
         "<p>$79 one-time</p>\n"
         "<!-- " + _VERIFIED_TODO + " -->\n"
-        '<p><a class="button button-blue" href="'
+        '<p><a class="button button-blue" id="verified-listing-link" href="'
         + _VERIFIED_HREF
         + '">Request a verified listing</a></p>\n'
         "</div>"
