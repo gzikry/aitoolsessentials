@@ -62,7 +62,7 @@ LEGACY = (
     ("categories/Creative & Marketing/index.html", "categories/Creative/", "Creative and marketing AI tools"),
     ("categories/Marketing/index.html", "categories/Creative/", "Marketing AI tools"),
     ("categories/Image Generation/index.html", "categories/Creative/", "Image generation AI tools"),
-    ("categories/Presentations/index.html", "categories/Creative/", "Presentation AI tools"),
+    ("categories/Presentations/index.html", "categories/Productivity/", "Presentation AI tools"),
     ("categories/Email AI/index.html", "categories/Productivity/", "Email AI tools"),
     ("categories/Writing & Productivity/index.html", "categories/Productivity/", "Writing and productivity AI tools"),
     ("categories/Model Hub/index.html", "categories/General AI Assistant/", "Model hub AI tools"),

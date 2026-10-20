@@ -43,7 +43,7 @@ def redirect_stub(title, desc, dest, domain):
         f'<h1>{esc(title)}</h1>'
         f'<p>This page has been consolidated into our full guide, which is longer, '
         f'dated, and kept current.</p>'
-        f'<p><a class="button button-blue" href="{dest}">Open the full guide</a></p>'
+        f'<p><a class="button button-blue stub-fallback" href="{dest}">Open the full guide</a></p>'
         '</div></section></main></body></html>'
     )
 

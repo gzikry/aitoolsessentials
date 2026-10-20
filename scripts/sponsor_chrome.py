@@ -505,6 +505,7 @@ def _page_html(rows: tuple[tuple[_Tier, _Payment], ...]) -> str:
         '<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
         "<title>" + _OFFER_TITLE + "</title>\n"
+        '<link rel="canonical" href="https://aitoolsessentials.com/sponsor/">\n'
         '<link rel="stylesheet" href="/css/styles.css">\n'
         "</head>\n"
         "<body>\n"

@@ -209,7 +209,7 @@ def generate_use_case_pages(root: Path, tools: list[dict[str, Any]]) -> None:
                 f'<h1>{esc(title)}</h1>'
                 f'<p>This guide has been consolidated into our full {esc(title.lower())} page, '
                 f'which is longer, dated, and kept current.</p>'
-                f'<p><a class="button button-blue" href="{dest}">Open the full guide</a></p>'
+                f'<p><a class="button button-blue stub-fallback" href="{dest}">Open the full guide</a></p>'
                 '</div></section></main></body></html>'
             )
             (out / f"{slug}.html").write_text(stub)
