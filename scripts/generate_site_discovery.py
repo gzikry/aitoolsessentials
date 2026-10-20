@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from affiliate_util import inject_nous_referral_module
-from site_scope import is_public_rel, is_working_rel
+from site_scope import is_email_draft, is_public_rel, is_working_rel
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
@@ -216,7 +216,8 @@ def postprocess_head_links(root: Path) -> None:
         rel_parts = p.relative_to(root).parts
         if any(part.startswith(".") for part in rel_parts) or "go" in rel_parts:
             continue
-        if is_working_rel(p.relative_to(root)):
+        rel = p.relative_to(root)
+        if is_working_rel(rel) or is_email_draft(rel):
             continue
         html = p.read_text()
         html = block_re.sub("", html, count=1)

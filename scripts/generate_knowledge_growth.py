@@ -8,7 +8,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from site_scope import is_working_rel
+from site_scope import is_email_draft, is_working_rel
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
@@ -168,7 +168,8 @@ def inject_site_schema(root: Path, tools: list[dict[str, Any]] | None = None) ->
         rel_parts = p.relative_to(root).parts
         if any(part.startswith(".") for part in rel_parts) or "go" in rel_parts:
             continue
-        if is_working_rel(p.relative_to(root)):
+        rel = p.relative_to(root)
+        if is_working_rel(rel) or is_email_draft(rel):
             continue
         html = p.read_text()
         html = re.sub(r"\s*<!-- AIT KNOWLEDGE SCHEMA START -->.*?<!-- AIT KNOWLEDGE SCHEMA END -->\s*", "\n", html, flags=re.S)

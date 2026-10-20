@@ -48,4 +48,4 @@ Got a question about a tool on your card? Write to aitoolsessentials@gmail.com.
 
 You’re getting this because you subscribed to Keep, Test, Cut at aitoolsessentials.com. Past issues: https://aitoolsessentials.com/newsletter/  Get it free: https://aitoolsessentials.com/subscribe/
 Premium is a separate $12/month research membership: https://aitoolsessentials.com/premium/
-AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2C%20Test%2C%20Cut
+AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}

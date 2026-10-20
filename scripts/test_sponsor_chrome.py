@@ -496,7 +496,7 @@ def _tier_html(html: str, heading: str) -> str:
 
 
 def _assert_live_tiers(html: str) -> None:
-    issue = _tier_html(html, "Newsletter line, 1 issue")
+    issue = _tier_html(html, "Newsletter placements open once the list grows")
     bar = _tier_html(html, "Site bar, 1 month")
     bundle = _tier_html(html, "Bundle, 1 month")
     _has(issue, _stripe_button(LIVE_ISSUE))
@@ -514,6 +514,25 @@ def _assert_live_tiers(html: str) -> None:
     _has(html, LIVE_QUESTIONS)
     _lacks(html, "/test_")
     _lacks(html, MAILTO_BUTTON)
+    _has(issue, "Newsletter line, 1 issue.")
+    if html.find("<h2>Site bar, 1 month</h2>") > html.find(
+        "<h2>Newsletter placements open once the list grows</h2>"
+    ):
+        raise AssertionError("newsletter line is still above the site bar")
+    _has(bar, "First 3 sponsors: $50 for month one, then $150/mo, cancel anytime. Use code FOUNDING100 at checkout.")
+    _has(html, "This site is early.")
+    _has(html, "$79 one-time")
+    _has(html, "Written decision within one working day.")
+    _has(html, "Full refund if declined.")
+    _has(html, "never affects reviews, scores, or verdicts.")
+    _has(html, 'href="#verified-listing-link"')
+    _has(html, "TODO: replace #verified-listing-link with the Stripe payment link")
+    _has(html, "new list, launched Oct 2026")
+    _has(html, "labeled Sponsored")
+    _has(html, "Cancel anytime.")
+    _has(html, "40 characters")
+    _has(html, "28px")
+    _lacks(html, "subscribers")
 
 
 def test_live_tier_payment_urls() -> None:
@@ -533,6 +552,7 @@ def test_live_tier_payment_urls() -> None:
         raise AssertionError("live config reused the test tier mapping")
     published = (repo / "sponsor" / "index.html").read_text()
     _assert_live_tiers(published)
+    _has(published, "The directory lists 80 tools.")
     with TemporaryDirectory() as raw:
         root = Path(raw)
         _write(root, {"enrollment": None})
@@ -545,7 +565,7 @@ def test_live_tier_payment_urls() -> None:
         _assert_live_tiers((root / "sponsor" / "index.html").read_text())
         write_page(root, {"SPONSOR_PAYMENT_URL_ISSUE": "https://pay.example.com/issue"})
         mixed = (root / "sponsor" / "index.html").read_text()
-        issue = _tier_html(mixed, "Newsletter line, 1 issue")
+        issue = _tier_html(mixed, "Newsletter placements open once the list grows")
         _has(issue, 'href="https://pay.example.com/issue"')
         _lacks(issue, LIVE_ISSUE)
         _has(_tier_html(mixed, "Site bar, 1 month"), _stripe_button(LIVE_BAR))

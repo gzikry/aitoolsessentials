@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from newsletter_archive import sync_archive
-from newsletter_hold import compliance_footer, public_colophon_html
+from newsletter_hold import compliance_footer, email_compliance_footer, public_colophon_html
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
@@ -87,7 +87,7 @@ def draft_html(issue: dict, cfg: dict) -> str:
 </td></tr>
 <tr><td style="padding:24px 8px 0;text-align:center;font-size:12px;line-height:1.6;color:#8e8e93;border-top:1px solid #1c1c1e;">
 One email a week. Not a drip. Not a vendor inbox. <a href="{DOMAIN}/legal/affiliate-disclosure.html" style="color:#8e8e93;">Affiliate disclosure</a>. Confirm prices on official pages before you pay.<br>
-{compliance_footer()}
+{email_compliance_footer()}
 </td></tr>
 </table>
 </td></tr></table>
