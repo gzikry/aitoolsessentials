@@ -583,6 +583,9 @@ print('Re-injected final metadata layers')
 # run. It was previously built by nothing at all: data/search_index.json had no generator and had
 # drifted to 74 tools and 438 entries against a 78-tool, 748-page site, so search quietly returned
 # a stale subset of the site. Deriving it here means a page is searchable the day it ships.
+from generate_static_comparisons import sync_gamma_category_labels as _sync_gamma_labels
+print('Gamma category labels:', _sync_gamma_labels(root))
+
 from generate_search_index import main as _build_search_index  # noqa: E402
 if _build_search_index() != 0:
     raise RuntimeError('Search index build failed (a catalog tool has no index entry)')
