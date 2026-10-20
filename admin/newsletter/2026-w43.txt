@@ -1,0 +1,51 @@
+KEEP, TEST, CUT · Issue 6 · Tue 20 Oct 2026
+
+Cursor’s $20 Pro is off the page
+Cursor now sells one five-rung ladder. If you already pay for a plan, nothing forces you to move.
+
+THIS WEEK’S CALL: CURSOR
+KEEP: The Cursor plan you already pay for. xAI’s docs (checked 13 Oct) say existing plans continue.
+TEST FIRST: Cursor Plus (https://aitoolsessentials.com/tools/cursor/) at $8/mo (checked 13 Oct). One real week before it replaces anything.
+CUT: Upgrading on reflex to Premium at $30 or Super at $100.
+
+Cursor’s pricing page changed while you weren’t looking. On our 13 Oct 2026 check, cursor.com/pricing (https://aitoolsessentials.com/tools/cursor/) no longer showed the standalone Pro, Pro Plus, and Teams tiers. It showed one ladder called The X Subscription: Free $0, Plus $8 a month, Premium $30, Super $100, Ultra $200. Team seats use the same monthly figures per seat. The ladder was reported on 12 Oct as a bundle of Cursor, Grok, and X Premium.
+
+The old card, from our 25 Aug check, read Pro $20, Pro Plus $60, Ultra $200, and Teams $40 a user. Only Ultra kept its number.
+
+A NEW PAGE ISN’T A NEW BILL
+
+The line that matters is in xAI’s own subscription docs, checked the same day: existing Cursor, SuperGrok, and X Premium plans continue, and switching is optional. So if you pay $20 for Pro today, nobody repriced you. Your renewal date didn’t move. The page you’d land on to upgrade did.
+
+That’s the trap with a ladder redesign. You open billing to check something small, see five rungs with new names, and click the one that sounds closest to what you had. Premium at $30 is $10 more than the Pro you already pay for. Super at $100 sits where nothing used to. Neither price is a reason to touch a seat that already does the job.
+
+THE $8 RUNG IS THE ONE WORTH A WEEK
+
+Plus at $8 a month is the number to test, but know what switching does first. xAI’s docs, re-read on 20 Oct, say that when you switch, eligible monthly and annual plans are cancelled with a prorated refund for unused time. The plan you have doesn’t sit there waiting for you to come back.
+
+So test on the seat you already pay for. For one week, put your real work through it: one feature, one refactor, one bug you’d have fixed anyway. Note every time you hit a limit. We haven’t run Plus hands-on, so we won’t guess how its limits compare. If you barely touched yours, $8 might cover you, and that’s $12 a month back. If you hit a wall most days, stay put.
+
+One more check if you pay for Grok too. SuperGrok was $30 on our 1 Oct check. Paying that next to a separate Cursor seat is exactly where a bundle can hide a cut, so read what each rung includes on the vendor’s page before either one renews.
+
+PRICING WATCH (seats that moved; date = when we checked)
+- Cursor Plus · 13 Oct 2026 · New tier: $8/mo
+- Cursor Premium · 13 Oct 2026 · New tier: $30/mo
+- Cursor Super · 13 Oct 2026 · New tier: $100/mo
+- Cursor Ultra · 13 Oct 2026 · Renamed: $200/mo, same number, now listed under The X Subscription
+Gone from the page: Pro $20, Pro Plus $60, and Teams $40 a user, last listed 25 Aug.
+Full tracker: https://aitoolsessentials.com/pricing-watch/
+
+WORTH A LOOK
+Robylon prices support by the credit, not the seat
+Robylon (https://aitoolsessentials.com/tools/robylon/) joined the directory this week. It’s an AI support platform whose agents work tickets, not just answer them: they look things up in the systems an answer lives in, act through tools built from your APIs, and hand the rest to a person. Official pricing checked 16 Oct 2026: Starter is free with 300 credits a month, Pro starts at $25 for 500 credits, and Business starts at $180 for 4,500.
+
+About 7.5 credits buys one chat or email conversation, and voice burns credits at a different rate. Replay a week of real resolved tickets before you trust the plan’s estimate. The SOC 2 and HIPAA claims are vendor-stated; its trust page wouldn’t load for us.
+
+ONE THING TO DO THIS WEEK
+Open the billing page of every AI tool you pay for and copy the plan name exactly as your last receipt shows it. Then compare it with the live pricing page. If the names don’t match, you’re on a legacy plan, and that’s fine. Leave it alone until you decide on purpose, not because a page got redesigned. Then run the free Stack Audit (https://aitoolsessentials.com/stack-audit.html). It stays in your browser, needs no login, and maps overlap by job.
+
+Got a question about a tool on your card? Write to aitoolsessentials@gmail.com.
+— AIToolsEssentials
+
+You’re getting this because you subscribed to Keep, Test, Cut at aitoolsessentials.com. Past issues: https://aitoolsessentials.com/newsletter/  Get it free: https://aitoolsessentials.com/subscribe/
+Premium is a separate $12/month research membership: https://aitoolsessentials.com/premium/
+AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2C%20Test%2C%20Cut
