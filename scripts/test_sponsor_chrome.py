@@ -543,7 +543,9 @@ def _assert_live_tiers(html: str) -> None:
     )
     _lacks(html, "#verified-listing-link")
     _lacks(html, "TODO: replace")
-    _has(html, "new list, launched Oct 2026")
+    _has(html, "Keep, Test, Cut is a small, early list.")
+    _lacks(html, "launched Oct 2026")
+    _lacks(html, "Oct 2026")
     _has(html, "labeled Sponsored")
     _has(html, "Cancel anytime.")
     _has(html, "40 characters")
@@ -553,6 +555,15 @@ def _assert_live_tiers(html: str) -> None:
 
 def test_live_tier_payment_urls() -> None:
     repo = Path(__file__).resolve().parents[1]
+    sponsors = json.loads((repo / "data" / "sponsors.json").read_text())
+    expected_pricing = {
+        "issue": "$50",
+        "site_bar": "$150/mo. FOUNDING100: first month $50, then $150/mo.",
+        "bundle": "$200/mo",
+        "verified_listing": "$79",
+    }
+    if sponsors.get("pricing") != expected_pricing:
+        raise AssertionError("sponsor price ranges are " + str(sponsors.get("pricing")))
     config_path = repo / "data" / "sponsor_payment.json"
     if not config_path.is_file():
         raise AssertionError("data/sponsor_payment.json is missing")

@@ -537,7 +537,7 @@ def _audience(tool_count: object) -> str:
         listed = "The directory lists the tools with a published review."
     return (
         "<h2>Audience</h2>\n"
-        "<p>" + _EARLY + " " + listed + " Keep, Test, Cut is a new list, launched Oct 2026. "
+        "<p>" + _EARLY + " " + listed + " Keep, Test, Cut is a small, early list. "
         "We do not publish a list size.</p>"
     )
 
