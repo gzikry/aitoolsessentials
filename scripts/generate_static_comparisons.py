@@ -337,6 +337,35 @@ def _covered_pairs(root: Path) -> set:
     return covered
 
 
+def sync_gamma_category_labels(root: Path) -> int:
+    """Gamma card labels follow data/tools.json, matching the Productivity redirect."""
+    tools = json.loads((root / "data/tools.json").read_text())
+    category = next(t["category"] for t in tools if t["slug"] == "gamma")
+    card = re.compile(
+        r'(<span(?:\s+class="category-pill")?>)Presentations(</span>\s*<h3>\s*<a href="[^"]*tools/gamma/">)'
+    )
+    finder = re.compile(
+        r'("slug":\s*"gamma",\s*"name":\s*"Gamma",\s*"category":\s*")Presentations(")'
+    )
+    kicker = re.compile(r"(>Presentations comparison<)")
+    cell = re.compile(r"(<td>)Presentations(</td>)")
+    changed = 0
+    for path in root.rglob("*.html"):
+        if any(part in {".git", "content_briefs"} for part in path.parts):
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        updated = card.sub(rf"\1{category}\2", text)
+        updated = finder.sub(rf"\1{category}\2", updated)
+        name = path.name
+        if name.startswith("gamma-vs-") and path.parent.name == "comparisons":
+            updated = kicker.sub(f">{category} comparison<", updated)
+            updated = cell.sub(rf"\1{category}\2", updated)
+        if updated != text:
+            path.write_text(updated, encoding="utf-8")
+            changed += 1
+    return changed
+
+
 def generate_all(root: Path):
     made = []
     made.append(generate_best_ai_tools(root))

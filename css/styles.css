@@ -1543,6 +1543,42 @@ body[data-page="home"] .global-nav[data-nav="slim"] .nav-cta:hover {
     padding: 3px 3px;
   }
 }
+/* 481–766px was the gap where pills wrapped. Keep one row through 1280px. */
+@media (max-width: 1280px) {
+  body[data-page="home"] .global-nav[data-nav="slim"] {
+    flex-wrap: nowrap;
+    row-gap: 0;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links {
+    flex-wrap: nowrap;
+    row-gap: 0;
+    min-width: 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 766px) {
+  body[data-page="home"] .global-nav[data-nav="slim"] {
+    gap: 6px;
+    padding: 8px 8px;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .brand span:last-child {
+    display: none;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links {
+    gap: 4px;
+    font-size: 11px;
+    flex: 1 1 auto;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .nav-links a {
+    padding: 4px 6px;
+  }
+  body[data-page="home"] .global-nav[data-nav="slim"] .ait-hs,
+  body[data-page="home"] .global-nav[data-nav="slim"] .ait-hs-input {
+    flex: 0 1 64px;
+    width: 64px !important;
+    min-width: 0;
+    max-width: 64px;
+  }
+}
 
 body[data-page="home"] .home-hero {
   position: relative;
@@ -2056,9 +2092,13 @@ body[data-page="home"] .footer[data-footer="slim"] {
 .sponsor-line img { height: 28px; width: auto; }
 .sponsor-issue { padding-top: 0; padding-bottom: 8px; }
 @media (max-width: 390px) {
+  .article-shell:has(.stub-fallback) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .article-shell .stub-fallback {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media print {

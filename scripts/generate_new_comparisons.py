@@ -66,7 +66,7 @@ NEW_COMPARISONS = {
         'bench_keys': [],
     },
     'gamma-vs-canva-ai.html': {
-        'kicker': 'Presentations comparison',
+        'kicker': 'Productivity comparison',
         'a': 'gamma', 'b': 'canva-ai',
         'subhead': 'Narrative-first deck generation against a full design suite with AI features.',
         'bench_keys': [],

@@ -19,7 +19,7 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-WIDTHS = (320, 360, 375, 390, 414, 480)
+WIDTHS = (320, 360, 375, 390, 414, 480, 481, 520, 640, 700, 766, 767, 900, 1024, 1280)
 _CHROME = (
     "google-chrome",
     "google-chrome-stable",
@@ -296,6 +296,45 @@ def _measure(ws: _Ws, width: int) -> dict:
     return value
 
 
+_STUB_MEASURE = r"""
+(() => {
+  const heading = document.querySelector("h1");
+  const body = document.querySelector(".article-shell p");
+  const button = document.querySelector(".stub-fallback");
+  const box = (el) => el ? el.getBoundingClientRect().left : -1;
+  return { headingLeft: box(heading), bodyLeft: box(body), buttonLeft: box(button) };
+})()
+"""
+
+
+def _measure_stub(ws: _Ws, width: int) -> dict:
+    ws.call(
+        "Emulation.setDeviceMetricsOverride",
+        {"width": width, "height": 800, "deviceScaleFactor": 1, "mobile": False},
+    )
+    # A real stub meta-refreshes away before layout can be read. Paint the same
+    # markup in the already-styled homepage document.
+    ws.call(
+        "Runtime.evaluate",
+        {
+            "expression": """
+            document.body.innerHTML = '<main><section class="scene scene-light"><div class="article-shell"><h1>You.com review</h1><p>This page has moved. The current page keeps the dated evidence and the affiliate disclosure.</p><p><a class="button button-blue stub-fallback" href="/tools/you-com/">Open the current page</a></p></div></section></main>';
+            """,
+            "returnByValue": True,
+        },
+    )
+    measured = ws.call(
+        "Runtime.evaluate",
+        {"expression": _STUB_MEASURE, "returnByValue": True},
+        timeout=15,
+    )
+    value = (measured.get("result") or {}).get("value")
+    if not isinstance(value, dict):
+        detail = measured.get("exceptionDetails") or measured
+        raise SystemExit(f"could not measure the stub page at {width}px: {detail}")
+    return value
+
+
 _PORT = 0
 
 
@@ -350,8 +389,24 @@ def main() -> None:
                     )
             if "Sponsor us" not in labels:
                 errors.append(f"{width}px hides Sponsor us")
-            if width >= 400 and not layout["oneRow"]:
-                errors.append(f"{width}px homepage header wrapped onto a second row")
+            if not layout["oneRow"] or float(layout["headerHeight"]) > 72:
+                errors.append(
+                    f"{width}px homepage header wrapped onto a second row"
+                    f" (height {layout['headerHeight']})"
+                )
+        stub = _measure_stub(ws, 375)
+        if stub.get("headingLeft", 0) < 15 or stub.get("bodyLeft", 0) < 15:
+            errors.append(
+                f"stub text is flush: heading {stub.get('headingLeft')} body {stub.get('bodyLeft')}"
+            )
+        if abs(float(stub.get("headingLeft", 0)) - float(stub.get("buttonLeft", -1))) > 2:
+            errors.append(
+                f"stub heading inset {stub.get('headingLeft')} differs from button {stub.get('buttonLeft')}"
+            )
+        if abs(float(stub.get("bodyLeft", 0)) - float(stub.get("buttonLeft", -1))) > 2:
+            errors.append(
+                f"stub body inset {stub.get('bodyLeft')} differs from button {stub.get('buttonLeft')}"
+            )
     finally:
         if ws is not None:
             try:
