@@ -215,6 +215,29 @@ disclosure page, asks for the commission rate in writing since the approval rest
 the audience honestly (the same "early growth / applied on intent" case as the application), and
 asks whether dashboard access is issued separately. Signed AIToolsEssentials.
 
+**2026-10-18: PartnerStack portal orientation received, not answered.** `affiliates@descript.com`,
+"Descript | Using our partner portal, PartnerStack", 2026-10-18 14:30 UTC — an automated
+SendGrid campaign explaining the PartnerStack dashboard (Links / Referrals / Resources / Payouts),
+not a vendor reply and not a question. It restates no commission rate, so the written-rate ask in
+the 2026-10-16 confirmation is **still open**; it also does not answer whether dashboard access is
+issued separately, because the campaign assumes it already is. Recorded only, no reply: replying to
+campaign copy adds nothing to an outbound question already sitting in the thread.
+
+Two chores it names that are **dashboard-only and therefore George's lane** (never attempted here —
+login-gated, no credentials handled):
+
+1. Sign in at `dash.partnerstack.com` and **accept the Descript program's Terms of Service**; the
+   campaign states full dashboard access is gated on that acceptance (it must be accepted per
+   program, and separately for any other program joined).
+2. In **Payouts**, choose and set up a payment provider so accrued rewards can be cashed out
+   monthly. Until that exists, approved referrals accrue but cannot be paid.
+
+Dashboard faults go to `support@partnerstack.com`; program-specific questions go through the
+portal's program-management contact, which the campaign does not publish as an email address.
+Affiliate surfaces re-verified live 2026-10-18 while recording this: `/tools/descript/` returns 200
+with `get.descript.com/wvafmtthtkp5` on the CTA under `rel="sponsored noopener nofollow"`, and
+`/legal/affiliate-disclosure.html` returns 200 naming Descript.
+
 ### Copy.ai — no working public route as of 2026-09-12
 Its PartnerStack listing shows *Request program* with unfilled placeholders, and
 `copyai.partnerstack.com` renders the same dead template. Copy.ai was acquired by Fullcast

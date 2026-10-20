@@ -4321,5 +4321,66 @@
   "hands_on_status": "not_tested",
   "hands_on_priority": "medium",
   "rating_rationale": "Job fit 5 - the job is resolving support conversations rather than answering them, and the product is built around acting through API-built tools and handing off with checks done. Output quality 4 - the vendor publishes specific customer-reported automation rates (85% chat, 80% ticket resolution, over 95% knowledge-base queries) and a named SOC 2 Type II and HIPAA posture, but the cited trust centre returns HTTP 403, so the compliance evidence is stated rather than inspectable. Adoption 4 - self-serve signup with no card, a free tier, public documentation and a published integration list, from a named California entity on a domain registered in January 2024. Cost 4 - $0.20-$0.38 per conversation undercuts per-resolution rivals, but the headline voice and WhatsApp channels sit on Business from $180/month and all payments are non-refundable. 4.3 because provenance and the self-serve path are unusually strong while the compliance evidence surface is not publicly readable."
+ },
+ {
+  "slug": "botloadout",
+  "name": "BotLoadout",
+  "category": "AI Agents",
+  "best_for": "Starting a first Claude, ChatGPT or Grok agent from a worked template instead of writing the system prompt, connectors and setup from scratch",
+  "price": "Free (97 templates; no paid tier, sponsorship-funded)",
+  "rating": 3.9,
+  "official": "https://botloadout.com/",
+  "summary": "A free library of 97 AI agent templates, each published in separate Claude, ChatGPT and Grok versions with the system prompt, the connectors to switch on, a short setup sequence, an example input and output, and stated limits. The full prompt text is public and there is no hosted runtime: the templates are copied into your own account, and the site is funded by newsletter sponsorship rather than subscriptions.",
+  "use_cases": [
+   "Standing up a first inbox-triage, lead-research or meeting-prep agent without prompting from zero",
+   "Comparing how the same job is phrased for Claude, ChatGPT and Grok",
+   "Giving a small team a shared starting point for support, finance or recruiting agents",
+   "Learning agent structure (system prompt, connectors, limits) from worked examples",
+   "Replacing an ad-hoc prompt with one that states its own failure modes"
+  ],
+  "pros": [
+   "97 templates are real and countable: the sitemap lists 97 /t/ pages, the library's category counts sum to 97, and the zip holds 388 files (97 folders of four platform documents)",
+   "Each template states its connectors, setup steps, example input and output and limits, not only a prompt",
+   "Free with no paywall on the text: the same prompts are published in llms-full.txt and the archive downloads without payment",
+   "Operator named in the notices: A13 LLC, a Texas LLC with a postal address and a working contact address",
+   "Template licence is explicit: personal and commercial use including work accounts, no attribution, with reselling the library as a competing collection the only bar",
+   "Privacy notice names its processors (Resend, Vercel), states retention and a deletion route, and discloses cookieless Vercel Web Analytics with its 24-hour visitor hash, matching the script the pages actually load",
+   "Non-affiliation with Anthropic, OpenAI and xAI is stated in the footer and in llms.txt",
+   "Sponsor page publishes its own honesty rule: current subscriber, open and click counts are shared before anyone pays"
+  ],
+  "cons": [
+   "A template library, not a running agent: there is no hosted runtime, account or execution, so you paste the prompt into your own Claude, ChatGPT or Grok and wire the connectors yourself",
+   "The newsletter gate is not enforced: the full zip answers a plain GET with no signup and no cookie, so the 'join to unlock' step is cosmetic",
+   "No paid tier and no roadmap commitment: sponsorship is the only revenue model and bookings do not open until January 2027",
+   "Template pages carry only the sitewide 'Updated Oct 14, 2026' date, not the per-template date added the vendor described",
+   "Two-week-old domain (registered 2026-10-14) with no independent track record, and no third-party testing of any template",
+   "Covers only three platforms: Claude, ChatGPT and Grok"
+  ],
+  "key_features": [
+   "97 agent templates across 11 job categories",
+   "Separate Claude, ChatGPT and Grok version of every template",
+   "System prompt, connectors to enable, setup steps, example input/output and limits per template",
+   "Free zip archive (388 files) and full prompt text in llms-full.txt",
+   "Search and filter by platform, category and recency",
+   "Sponsor-funded: newsletter and site placements, bookings from January 2027"
+  ],
+  "faq": [
+   [
+    "Is BotLoadout free?",
+    "Yes. All 97 templates are $0 and the archive downloads without payment. The site is funded by newsletter sponsorship, and sponsorship bookings do not open until January 2027."
+   ],
+   [
+    "What do I actually get with a template?",
+    "One page per job, with separate Claude, ChatGPT and Grok prompts, the connectors to enable, setup steps, an example input and output, and the template's limits. There is no hosted agent: you paste the prompt into your own account."
+   ],
+   [
+    "Can I use the templates at work?",
+    "The terms allow personal and commercial use, including work accounts, with no attribution. The only restriction is reselling or republishing the library, or a substantial part of it, as a competing template collection."
+   ]
+  ],
+  "trial_checklist": "Run one template against a real task, your own inbox or a live lead list, rather than a sample prompt. Check three things: whether the connectors it asks for exist in the account you actually use, whether the example output matches the format you need, and how much editing the draft needs before it is usable. Record time to first useful output and the number of edits, then run the other platform's version of the same template on the same task. Treat the limits section as the vendor's own statement, not a tested result.",
+  "hands_on_status": "not_tested",
+  "hands_on_priority": "standard",
+  "rating_rationale": "Job fit 4 - 97 templates cover a broad spread of first-agent jobs and each states its connectors, example output and limits, which is more than most prompt libraries offer. Output quality 3 - the prompts are structured and documented, but unverified: nothing has been independently tested and results depend on the reader's own model and connectors. Adoption 4 - free, no account and a public archive make the start cost close to zero. Cost 5 - there is nothing to buy. Trust 3 - operator, licence and privacy notice are now published and specific, but the site is two weeks old with no track record. Weighted to 3.9."
  }
 ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17",
+  "generated_at": "2026-10-19",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -1908,6 +1908,32 @@
         "audio",
         "marketing",
         "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "botloadout",
+      "name": "BotLoadout",
+      "category": "AI Agents",
+      "official_url": "https://botloadout.com/",
+      "review_url": "/tools/botloadout/",
+      "price_label": "Free (97 templates; no paid tier, sponsorship-funded)",
+      "pricing_summary": "No charge and no paid tier. The homepage and library state 'Free. Seriously. FREE', every template is $0, and /downloads/botloadout-all-templates.zip answers a plain GET at 528,585 bytes without a signup or cookie. The only commerce is newsletter sponsorship, sold on /sponsor: that page now reads 'Sponsorship bookings open in January 2027', carries no stripe.com checkout URL, and offers an inquiry form plus email contact instead. Verified 2026-10-19 from /, /templates, /sponsor, /privacy, /terms, /llms.txt, the sitemap (97 template URLs) and the zip itself.",
+      "pricing_url": "https://botloadout.com/sponsor",
+      "pricing_checked_date": "2026-10-19",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "research",
+        "meetings",
+        "automation",
+        "email"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

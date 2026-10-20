@@ -1,0 +1,41 @@
+{
+ "date": "2026-10-19",
+ "contact_replace": {
+  "tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring": "The request body's address is redacted by Sourcee, and the body says plainly 'No DM pitches here on LinkedIn. Email me.' ROUTE: hello@tobiamure.com, published by the journalist himself on his own site. Re-probed today (route-checks-2026-10-19.json): https://tobiamure.com/ HTTP 200, 60,159 bytes, title 'Tobi Amure | Finance & Technology Journalist', the address counted 6 times; https://tobiamure.com/contact/ HTTP 200, 16,636 bytes, the address counted 5 times and a mailto: link beside a contact form - so there are two routes, both George's, and the form is the fallback if the address bounces. DELIVERABILITY IS STILL NOT SMTP-VERIFIED and the 2026-10-18 probe must not be read as a yes: tobiamure.com's MX (eforward1-5.registrar-servers.com) answered 554 5.7.1 Relay access denied for hello@, for a deliberately fake control address AND for postmaster@, so that gateway refuses every recipient from an outside probe and discriminates nothing. The evidence for the route is self-publication on his own live site, not a probe."
+ },
+ "new_rows": {
+  "fb-marketplace-sellers-and-buyers-ai-impact-on-pricing-and-listings": {
+   "who": "No author field resolvable off the page, and no outlet named: the body opens 'A fun reporting request' and closes 'Hoping to chat with people for a story and can protect privacy!' The only self-identifying line is 'Half the stuff in my home came from Marketplace. I love it; that's why I'm so curious about this.'",
+   "category": "AI / Consumer Marketplace / Resale Pricing",
+   "contact": "The body ends '[email redacted] or message me!' - the address is redacted by Sourcee and no handle is published. The page carries no address, link or reply instruction of its own. NOT RESOLVED. The route would be a DM on the poster's own platform.",
+   "relevance": "low",
+   "notes": "She wants FB Marketplace sellers and buyers describing whether AI has changed how they price and list, with the option of anonymity. Two things bar a pitch: the standing bar is selling or buying on Marketplace (our data is vendor list prices for AI tools, not resale), and the slug's 'pricing' token scores as AI+spend while the body asks about the price of second-hand goods, not the price of software. The window's only AI+spend hit is therefore a false positive on our beat. Recorded as an AI-token window slug, relevance low.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "uk-customer-service-workers-daytoday-now-ai-automation-vs-human": {
+   "who": "No author field on the page. Domain field: cnbc.com, and the body is headed 'For CNBC' with the hashtags #journorequest #journorequests and the outlet name 'CNBC' as its last line.",
+   "category": "AI / Workplace Automation / Customer Service",
+   "contact": "The body reads 'Email: [email redacted]' - redacted by Sourcee - and the only other instruction is the edit line 'Only looking for UK-based sources at this time!'. The page carries no address, handle or link of its own. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "A CNBC request for UK customer-service workers to describe a day in the job now: what AI has automated, what still needs a human, what is better and what is worse. The standing bar is doing that job in the UK; we price AI tools and have never worked a customer-service desk. Nothing in the body asks what any tool costs, so there is no data-led angle that is not a change of subject. Recorded as an AI-token window slug, relevance low.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  }
+ },
+ "new_this_run": [
+  "TWO ROWS ADDED, NEITHER A CANDIDATE: the 43-slug window carried 2 AI-token slugs (FB Marketplace sellers and buyers on AI pricing and listings; UK customer-service workers for CNBC on what AI has automated). Both want a first-person account from someone inside the situation - a Marketplace seller, a UK call-centre worker - and neither asks what an AI tool costs. Neither publishes a route; both bodies carry a Sourcee-redacted address and nothing else.",
+  "THE WINDOW'S SINGLE AI+SPEND HIT IS A FALSE POSITIVE, AND SAYING SO IS THE FINDING: 43 slugs, 2 AI-token, 1 AI+spend, 1 spend-only. The AI+spend row is the FB Marketplace request, where 'pricing' means the price of second-hand goods on Marketplace, not the price of software. All 43 window bodies were fetched and read - the only check that can back a zero - and no body asks what an AI tool or seat costs.",
+  "THE FEED AND THE WINDOW MEASURE DIFFERENT THINGS AND BOTH ARE RECORDED: 17 of the 50 slugs in the AI topic feed fall inside today's 43-slug sitemap window, and 0 tracked rows appear in the feed. Feed membership is stored per row and used in no ranking."
+ ],
+ "why_not_drafted": [
+  "FB Marketplace wants a seller's or buyer's own account of AI in resale; CNBC wants a UK customer-service worker's working day. We are neither, and neither publishes a route. A draft with no route and false standing is a file, not a pitch."
+ ],
+ "extra_actions": [
+  "MENTIONMATCH HAS LAUNCHED AND IS STILL CLOSED TO US - THIS IS THE SUPPLY-SIDE CHANGE OF THE RUN. Ten runs reported it as 'pre-launch / still a holding page'. It is not: today it serves HTTP 200 with the title 'MentionMatch - Connect B2B Writers with Expert Sources' and the description 'MentionMatch connects B2B writers with expert sources for unique quotes. Writers get better content, sources get coverage and backlinks. Join 8,000+ sources today.' Its /requests path returns the same 12,067-byte SPA shell, so the list is fetched client-side behind an account. Signing up is a third-party account, which is George's lane; until then this platform contributes nothing and the monitor will report it as account-gated, not pre-launch.",
+  "DECIDE ON THE MEDIALYST ACCOUNT OR SAY STOP. Eleven consecutive runs have now reported the same 401 on the Medialyst MCP endpoint. It and MentionMatch are the only two platforms that would widen supply, and both are closed on an account rather than on the monitor."
+ ],
+ "defects": [
+  "THE PLATFORM STATUS MAP HAD DRIFTED INTO A LIE AND NOTHING READ IT. scripts/build_digest.py carried a hand-maintained PLATFORM_STATUS dict that no code path used; it still labelled MentionMatch 'pre-launch' on the day the site shipped a live product behind an account. A constant nothing reads cannot fail loudly, so it drifts silently. The map is deleted, each status lives only beside the probe note it describes, and monitor_health's platform counts are now counted from platforms_checked instead of typed as 2/1/5/1.",
+  "THE CARRIED SENDABLE ROW'S ROUTE PROSE COULD ONLY GROW. `contact_append` adds a sentence every run it is used, so the Fast Company row's contact field now carries a 2026-10-18 SMTP caveat above today's re-probe. Run notes can now supersede that prose outright with `contact_replace`, and today's file uses it, so the row states today's byte counts, today's address counts and one deliverability caveat instead of an accumulating stack.",
+  "THE RUN'S 10MB SITEMAP WAS BEING COMMITTED EVERY DAY FOR NO REASON. `haro_window.py` writes the full Sourcee sitemap (9.4MB today, ~245,000 loc/lastmod pairs) beside the window JSON, and 25 of those files were tracked - roughly 250MB of raw XML across the monitor's history, all of it re-derivable by one command. The window JSON, which holds the only measurement taken off the sitemap, is still committed; the raw XML is now gitignored, and the existing files are left in place rather than rewriting history."
+ ]
+}
