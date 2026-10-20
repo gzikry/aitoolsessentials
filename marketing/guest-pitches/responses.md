@@ -1,8 +1,10 @@
-# Guest pitch responses — 2026-09-03 batch (+ 2026-09-22 and 2026-10-13 additions)
+# Guest pitch responses — 2026-09-03 batch (+ 2026-09-22, 2026-10-13 and 2026-10-20 additions)
 
-Tracking file for the pitches in `pitches-2026-10-13.json` (12 drafts, supersedes the
-12 in `pitches-2026-09-22.json` and the 10 in `pitches-2026-09-03.json`).
-**Created:** 2026-09-15 · **Re-verified:** 2026-10-13 (cron reminder run). Still **0 sends** from the Sep-22 batch.
+Tracking file for the pitches in `pitches-2026-10-20.json` (12 drafts, supersedes the
+12 in `pitches-2026-10-13.json`, the 12 in `pitches-2026-09-22.json` and the 10 in
+`pitches-2026-09-03.json` — never send from a superseded file).
+**Created:** 2026-09-15 · **Re-verified:** 2026-10-20 (cron reminder run). Still **0 sends**
+from the Sep-22, Oct-13 and Oct-20 batches; Sent folder confirms no pitch mail since 2026-10-13.
 
 Status legend: `NOT SENT` · `SENT` · `AWAITING` · `REPLIED` · `NO RESPONSE` · `CLOSED`
 
@@ -62,7 +64,41 @@ Blocker status: **none.** Freshness after the fix (2026-10-13): **41 FRESH · 22
 10 NO_CLAIM · 2 DRIFTED · 2 UNVERIFIED** — `cursor` and `claude` both **FRESH 4/4**. The two
 remaining DRIFTED rows (`aidetector-cx`, `instrumentl`) appear in no draft.
 
-## Send plan for the week of 2026-10-13 (3 sends)
+## Send plan for the week of 2026-10-20 (2-3 sends)
+
+**28 days, 0 sends.** The Oct-13 plan was never executed — the Sent folder shows only vendor
+submission replies from 10-13 to 10-20. Nothing is blocking the route; the drafts just didn't go out.
+
+The reminder that generated this entry said "start with newsletters — highest response rate."
+That is true of newsletters in general and false of *this* list: the Sep-3 newsletter sends went
+**0/5** (the batch's only reply was a blog, ToolChase), three of the five newsletter addresses are
+unsendable (`dan@tldr.tech` guessed, `support@therundown.ai` a support inbox, `editor@`/`contact@`
+placement desks are separate rows), and the other two were already pitched. So the picks below are
+the two **uncontacted editorial routes** plus one warm follow-up.
+
+1. **The Decoder** — `hello@the-decoder.com`, blog, **first touch.** Best odds on the list: a real
+   editorial address verified from their own `/about`, no prior send, and the draft's one concrete
+   claim (the X Subscription ladder, checked 2026-10-13) is still what `cursor.com/pricing` renders.
+   *Keep the drafted first line:* "I've been following The Decoder — how clearly you mark sponsored
+   posts and keep them separate from editorial."
+2. **Latent Space** — `tips@latent.space`, podcast, **first touch.** `tips@` is the route the show
+   publishes for pitches; `business@` is the sponsorship inbox. Guest format matches their interview
+   show, and the ask is a walkthrough, not a placement.
+   *Add the plan's first line:* "Your AI-engineer audience is the one group that actually has to
+   choose between overlapping coding subscriptions, so this may land better here than with a general
+   AI newsletter."
+3. **ToolChase** — `hello@toolchase.com`, **warm follow-up, not a fresh pitch.** Emre acknowledged on
+   2026-10-08 and we already replied. Send three sentences offering the bundle breakdown; do not
+   re-send the resource offer.
+4. **Ben's Bites** (optional third send) — only with the plan's opening *replacing* the drafted one.
+   The 2026-10-20 draft is still verbatim the Sep-3 resource pitch that drew no reply; paste the
+   bundle line in as the first paragraph or skip the outlet this week.
+
+**Do not send to:** `dan@tldr.tech` (guessed, no published editorial route), `support@therundown.ai`
+(general support), `contact@aitoolradar.io` and `editor@aitoolsrecap.com` (monetized placement
+desks), `team@theneurondaily.com` (already pitched; live newsletter is on `theneuron.ai`).
+
+## Send plan for the week of 2026-10-13 (3 sends) — historical
 
 Same three outlets as the Sep-22 plan, but **the first line is now the repricing, not the resource
 offer**. A newsletter that ignores a Grok+Cursor+X bundle is the wrong audience for a pricing
@@ -163,6 +199,21 @@ the angle or skip those addresses.
    "re-verify pricing against vendor official pages", i.e. **no "weekly" claim remains** in any
    draft, so the one-click-falsifiable sentence is gone from the copy regardless.
 
+6. **Tool count drifted 77 → 80 in the week after the Oct-13 batch — regenerated 2026-10-20.**
+   `pitches-2026-10-13.json` says "We track 77 tools"; `data/tools.json` now has 80 (BotLoadout,
+   Robylon, HOL Registry and others published live in the interim). The builder already derives the
+   number via `tracked_tool_count()`, so the fix is to **regenerate, not hand-edit**: 12 fresh drafts
+   in `pitches-2026-10-20.json` now read 80. Treat any batch older than a few days as suspect on
+   this line — it is the one sentence an editor can check in ten seconds.
+7. **Blog greeting grammar — FIXED 2026-10-20.** The blog template rendered
+   "I've been following {outlet} and appreciate {observation}." against observations that are
+   already full clauses, producing "and appreciate your pricing verification methodology is solid"
+   (ToolChase), "…your editorial independence stands out" (ToolRadar) and "…your directory
+   comparison approach is valuable" (AIToolsRecap). Template now reads
+   "I've been following {outlet} — {observation}." Also fixed the misspelled observation key
+   (`infoDocket` → `infoDOCKET`), which had been silently falling back to a noun fragment
+   ("infoDOCKET — the quality of your coverage."); the fallback is now a full clause.
+
 ## Log
 
 | Date | Action | Notes |
@@ -174,4 +225,4 @@ the angle or skip those addresses.
 | 2026-10-06 | Cron reminder re-verification | **14 days with 0 sends from either batch.** Live MX re-confirmed on the same 5 candidates. **Correction 5 CLEARED** — Pricing Watch now headlines 2026-10-01 (34 rows); freshness 41/23/9/2/1 with `cursor`+`claude` still FRESH. No blocker remains on the 3 sends below. No send. |
 | 2026-10-08 | First reply from the Sep-3 batch logged | **ToolChase (Emre) replied 2026-10-08 13:30+03:00** to the Sep-3 resource pitch — a courteous acknowledgement ("will keep it in mind"), with **no rate card and no placement ask**, unlike Lilach Bullock's $300 offer. ToolChase row corrected from the erroneous "NOT SENT" to `SENT 2026-09-03 · REPLIED 2026-10-08`. Replied 2026-10-08 10:48 UTC correcting our own stale "74 tools" figure to the live 76 and pointing at the per-row checked dates on `/pricing-watch/`; signed AIToolsEssentials. Live MX re-confirmed (smtp.google.com); one Sent record, no duplicate. |
 | 2026-10-08 | Batch status corrected | The weekly report of 2026-09-07 and this file's row 10 both carried ToolChase as "No response/NOT SENT"; the Sep-3 send to `hello@toolchase.com` (Sent 2026-09-03 22:09 UTC) is on record, so the batch's response tally is now **1 of 10**, not 0. |
-| 2026-10-13 | Cron reminder run — found and fixed a false claim, then cleared the send | **21 days with 0 sends from the Sep-22 batch.** Cursor's repricing (The X Subscription, 2026-10-12) invalidated the one concrete figure in every blog draft; fixed at the source (`tool_sources.json` → `/pricing-watch/` live-verified, `guest_pitch_builder.py`). Fresh batch `pitches-2026-10-13.json`. Freshness 40/22/10/3/2, no send blocker. Send plan rewritten to lead with the bundle. No send. |
+| 2026-10-20 | Cron reminder run — 28 days, 0 sends; batch regenerated | Sent folder confirms no pitch mail since 2026-10-13 (only vendor submission replies), so the Oct-13 plan was never executed. Regenerated as `pitches-2026-10-20.json`: tool count re-derived 77 → 80; blog greeting grammar fixed (3 drafts) plus an `infoDOCKET` key typo that had been falling back to a fragment. MX re-confirmed live on the 6 candidate routes (the-decoder.com, latent.space, bensbites.com, toolchase.com, changelog.com, lastweekinai.com). Claims re-checked at source: `cursor` snapshot 2026-10-13 (X Subscription ladder), `claude` 2026-09-18 (Max $100). Send plan rewritten around two uncontacted editorial routes + the ToolChase warm follow-up, because the newsletter-first ordering this reminder suggested is contradicted by the batch's own 0/5 newsletter record. No send. |

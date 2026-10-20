@@ -201,7 +201,7 @@ https://aitoolsessentials.com""",
 
 Hi {contact_name},
 
-I've been following {outlet_name} and appreciate {specific_observation}.
+I've been following {outlet_name} — {specific_observation}.
 
 I wanted to offer a source: AIToolsEssentials reviews AI tools with verified pricing from official pages and dated evidence. We track {tool_count} tools and re-verify pricing against vendor official pages.
 
@@ -246,13 +246,13 @@ def generate_pitches() -> list[dict]:
             "ToolRadar": "your editorial independence stands out",
             "Last Week in AI": "your coverage of AI industry developments is thorough",
             "Changelog / Practical AI": "your technical depth is unmatched",
-            "infoDocket": "your library perspective on information tools is unique",
+            "infoDOCKET": "your library perspective on information tools is unique",
             "AIToolsRecap": "your directory comparison approach is valuable",
             "Latent Space": "your AI-engineer focus and technical depth",
             "The Decoder": "how clearly you mark sponsored posts and keep them separate from editorial",
         }
         
-        specific = specific_observations.get(target["name"], "the quality of your coverage")
+        specific = specific_observations.get(target["name"], "your coverage is consistently thorough")
         salutation = SALUTATIONS.get(
             target["name"], target["contact"].split("@")[0]
         )
