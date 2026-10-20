@@ -409,6 +409,17 @@ def test_payment_url() -> None:
 ISSUE_URL = "https://buy.stripe.com/test_4gM3cu3EdfFr4xN02r0x202"
 BAR_URL = "https://buy.stripe.com/test_3cIeVc8Yx64R7JZcPd0x200"
 BUNDLE_URL = "https://buy.stripe.com/test_eVq5kCgqZeBnaWb02r0x201"
+VERIFIED_URL = "https://buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205"
+
+
+def _assert_tiers_are_mailto(html: str) -> None:
+    """Sponsor tiers fall back to email. The verified listing keeps its own Checkout link."""
+    _has(html, MAILTO_BUTTON)
+    _has(html, VERIFIED_URL)
+    _lacks(html, "/test_")
+    _lacks(html, ISSUE_URL)
+    _lacks(html, BAR_URL)
+    _lacks(html, BUNDLE_URL)
 
 
 def _stripe_button(url: str) -> str:
@@ -433,23 +444,21 @@ def test_stripe_preview_and_production_gate() -> None:
         _write(root, {"enrollment": None})
         write_page(root, {"SPONSOR_PAYMENT_PREVIEW": "1"})
         ignored = (root / "sponsor" / "index.html").read_text()
-        _has(ignored, MAILTO_BUTTON)
-        _lacks(ignored, "buy.stripe.com")
+        _assert_tiers_are_mailto(ignored)
         write_page(root, env_urls)
         html = (root / "sponsor" / "index.html").read_text()
         _has(html, _stripe_button(ISSUE_URL))
         _has(html, _stripe_button(BAR_URL))
         _has(html, _stripe_button(BUNDLE_URL))
+        _has(html, VERIFIED_URL)
         _lacks(html, MAILTO_BUTTON)
         _has(html, QUESTIONS)
         write_page(root, {})
         plain = (root / "sponsor" / "index.html").read_text()
-        _has(plain, MAILTO_BUTTON)
-        _lacks(plain, "buy.stripe.com")
+        _assert_tiers_are_mailto(plain)
         _raises(lambda: write_page(root, {**env_urls, "PRODUCTION_BUILD": "1"}))
         blocked = (root / "sponsor" / "index.html").read_text()
-        _has(blocked, MAILTO_BUTTON)
-        _lacks(blocked, "buy.stripe.com")
+        _assert_tiers_are_mailto(blocked)
         if production_stripe_test_errors(root, {"PRODUCTION_BUILD": "1"}):
             raise AssertionError("mailto page was reported as a Stripe test link")
         write_page(
@@ -479,7 +488,8 @@ def test_stripe_preview_and_production_gate() -> None:
 
 
 LIVE_ISSUE = "https://buy.stripe.com/3cIeVc8Yx64R7JZcPd0x200"
-LIVE_BAR = "https://buy.stripe.com/eVq5kCgqZeBnaWb02r0x201"
+LIVE_BAR = "https://buy.stripe.com/7sYdR8eiR64R7JZeXl0x206"
+LIVE_VERIFIED = VERIFIED_URL
 LIVE_BUNDLE = "https://buy.stripe.com/4gM3cu3EdfFr4xN02r0x202"
 LIVE_PAYMENTS = {"issue": LIVE_ISSUE, "bar": LIVE_BAR, "bundle": LIVE_BUNDLE}
 LIVE_QUESTIONS = (
@@ -496,7 +506,7 @@ def _tier_html(html: str, heading: str) -> str:
 
 
 def _assert_live_tiers(html: str) -> None:
-    issue = _tier_html(html, "Newsletter line, 1 issue")
+    issue = _tier_html(html, "Newsletter placements open once the list grows")
     bar = _tier_html(html, "Site bar, 1 month")
     bundle = _tier_html(html, "Bundle, 1 month")
     _has(issue, _stripe_button(LIVE_ISSUE))
@@ -514,10 +524,46 @@ def _assert_live_tiers(html: str) -> None:
     _has(html, LIVE_QUESTIONS)
     _lacks(html, "/test_")
     _lacks(html, MAILTO_BUTTON)
+    _has(issue, "Newsletter line, 1 issue.")
+    if html.find("<h2>Site bar, 1 month</h2>") > html.find(
+        "<h2>Newsletter placements open once the list grows</h2>"
+    ):
+        raise AssertionError("newsletter line is still above the site bar")
+    _has(bar, "First 3 sponsors: $50 for month one, then $150/mo, cancel anytime. Use code FOUNDING100 at checkout.")
+    _has(html, "This site is early.")
+    _has(html, "$79 one-time")
+    _has(html, "Written decision within one working day.")
+    _has(html, "Full refund if declined.")
+    _has(html, "never affects reviews, scores, or verdicts.")
+    _has(
+        html,
+        '<a class="button button-blue" href="'
+        + LIVE_VERIFIED
+        + '" target="_blank" rel="external noopener nofollow">Request a verified listing</a>',
+    )
+    _lacks(html, "#verified-listing-link")
+    _lacks(html, "TODO: replace")
+    _has(html, "Keep, Test, Cut is a small, early list.")
+    _lacks(html, "launched Oct 2026")
+    _lacks(html, "Oct 2026")
+    _has(html, "labeled Sponsored")
+    _has(html, "Cancel anytime.")
+    _has(html, "40 characters")
+    _has(html, "28px")
+    _lacks(html, "subscribers")
 
 
 def test_live_tier_payment_urls() -> None:
     repo = Path(__file__).resolve().parents[1]
+    sponsors = json.loads((repo / "data" / "sponsors.json").read_text())
+    expected_pricing = {
+        "issue": "$50",
+        "site_bar": "$150/mo. FOUNDING100: first month $50, then $150/mo.",
+        "bundle": "$200/mo",
+        "verified_listing": "$79",
+    }
+    if sponsors.get("pricing") != expected_pricing:
+        raise AssertionError("sponsor price ranges are " + str(sponsors.get("pricing")))
     config_path = repo / "data" / "sponsor_payment.json"
     if not config_path.is_file():
         raise AssertionError("data/sponsor_payment.json is missing")
@@ -533,6 +579,7 @@ def test_live_tier_payment_urls() -> None:
         raise AssertionError("live config reused the test tier mapping")
     published = (repo / "sponsor" / "index.html").read_text()
     _assert_live_tiers(published)
+    _has(published, "The directory lists 80 tools.")
     with TemporaryDirectory() as raw:
         root = Path(raw)
         _write(root, {"enrollment": None})
@@ -545,7 +592,7 @@ def test_live_tier_payment_urls() -> None:
         _assert_live_tiers((root / "sponsor" / "index.html").read_text())
         write_page(root, {"SPONSOR_PAYMENT_URL_ISSUE": "https://pay.example.com/issue"})
         mixed = (root / "sponsor" / "index.html").read_text()
-        issue = _tier_html(mixed, "Newsletter line, 1 issue")
+        issue = _tier_html(mixed, "Newsletter placements open once the list grows")
         _has(issue, 'href="https://pay.example.com/issue"')
         _lacks(issue, LIVE_ISSUE)
         _has(_tier_html(mixed, "Site bar, 1 month"), _stripe_button(LIVE_BAR))

@@ -574,6 +574,9 @@ print('Legacy redirects:', _write_legacy_redirects(root))
 _sitemap_urls_final = refresh_sitemap(root)
 print(f'Refreshed sitemap after redirects with {len(_sitemap_urls_final)} URLs')
 
+from publish_submit_page import publish as _publish_submit
+print('Published submit alias:', _publish_submit(root))
+
 from asset_rev import stamp_tree as _stamp_assets
 print(f'Stamped content hashes on {_stamp_assets(root)} pages')
 

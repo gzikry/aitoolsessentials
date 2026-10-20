@@ -46,6 +46,17 @@ def is_working_rel(rel: Path) -> bool:
     return bool(WORKING_DIRS.intersection(parts))
 
 
+def is_email_draft(rel: Path) -> bool:
+    """True for a newsletter email draft. Site head markup does not belong in it."""
+    parts = rel.parts
+    return (
+        len(parts) >= 3
+        and parts[0] == "admin"
+        and parts[1] == "newsletter"
+        and rel.name.endswith("-draft.html")
+    )
+
+
 def is_public_rel(rel: Path) -> bool:
     """True when a root-relative path is a public, crawlable site page."""
     parts = rel.parts

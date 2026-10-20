@@ -11,6 +11,7 @@ __all__ = [
     "UNSUBSCRIBE_HREF",
     "Held",
     "compliance_footer",
+    "email_compliance_footer",
     "hold",
     "public_colophon_html",
     "subscribe_endpoint",
@@ -53,6 +54,15 @@ def compliance_footer() -> str:
         + '. <a href="'
         + UNSUBSCRIBE_HREF
         + '">Unsubscribe</a>'
+    )
+
+
+def email_compliance_footer() -> str:
+    """Email drafts use Resend's merge tag. Public pages keep the mailto link."""
+    return (
+        "AIToolsEssentials, "
+        + POSTAL_ADDRESS
+        + '. <a href="{{{RESEND_UNSUBSCRIBE_URL}}}">Unsubscribe</a>'
     )
 
 

@@ -11,8 +11,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from newsletter_hold import (
     POSTAL_ADDRESS,
     SENDING_DOMAIN,
+    UNSUBSCRIBE_HREF,
     Held,
     compliance_footer,
+    email_compliance_footer,
     hold,
     subscribe_endpoint,
     subscribe_form,
@@ -52,6 +54,13 @@ def main() -> None:
     footer = compliance_footer()
     if POSTAL_ADDRESS not in footer or "Unsubscribe" not in footer:
         errors.append("compliance footer missing the address or unsubscribe link")
+    if UNSUBSCRIBE_HREF not in footer:
+        errors.append("public footer lost the mailto unsubscribe")
+    emailed = email_compliance_footer()
+    if "{{{RESEND_UNSUBSCRIBE_URL}}}" not in emailed or UNSUBSCRIBE_HREF in emailed:
+        errors.append("email footer is not the Resend unsubscribe URL")
+    if POSTAL_ADDRESS not in emailed:
+        errors.append("email footer missing the postal address")
     if SENDING_DOMAIN != "news.aitoolsessentials.com":
         errors.append("sending domain is not news.aitoolsessentials.com")
     closed = subscribe_form("")

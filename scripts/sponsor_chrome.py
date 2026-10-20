@@ -74,6 +74,14 @@ _OFFER_PARAS = (
     "What you don't get: a better review. Sponsors are labeled, kept away from scores, and never change a verdict.",
     "One sponsor at a time. We say no to tools we wouldn't use ourselves.",
 )
+_EARLY = "This site is early."
+_FOUNDING = (
+    "First 3 sponsors: $50 for month one, then $150/mo, cancel anytime. "
+    "Use code FOUNDING100 at checkout."
+)
+_ISSUE_HEADING = "Newsletter placements open once the list grows"
+_VERIFIED_HREF = "https://buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205"
+_LOGO_HEIGHT = "28px"
 _SIGN_OFF = "\u2014 AIToolsEssentials"
 
 def _offer_header() -> str:
@@ -202,7 +210,7 @@ def write_page(root: Path, env: Mapping[str, str] | None = None) -> None:
     dest = root / "sponsor" / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
     from asset_rev import stamp_html
-    dest.write_text(stamp_html(_page_html(runtime.tiers), dest, root))
+    dest.write_text(stamp_html(_page_html(runtime.tiers, _tool_count(root)), dest, root))
 
 
 def stamp(
@@ -484,14 +492,106 @@ def _logo(raw: object, name: str) -> _Logo | None:
     return _Logo(src=src, alt=alt)
 
 
-def _page_html(rows: tuple[tuple[_Tier, _Payment], ...]) -> str:
+def _tool_count(root: Path):
+    path = root / "data" / "tools.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text())
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(data, list):
+        return None
+    return len(data)
+
+
+def _tier_block(tier: _Tier, payment: _Payment, heading: str = "", note: str = "") -> str:
+    bits = ["<h2>" + (heading or tier.label) + "</h2>"]
+    if note:
+        bits.append("<p>" + note + "</p>")
+    bits.append("<p>" + tier.price + "</p>")
+    bits.append("<p>" + _payment_anchor(payment) + "</p>")
+    return "\n".join(bits)
+
+
+def _verified_block() -> str:
+    return (
+        '<div id="verified-listing">\n'
+        "<h2>Verified listing</h2>\n"
+        "<p>Written decision within one working day. Full refund if declined. "
+        "A verified listing never affects reviews, scores, or verdicts.</p>\n"
+        "<p>$79 one-time</p>\n"
+        '<p><a class="button button-blue" href="'
+        + _VERIFIED_HREF
+        + '" target="_blank" rel="'
+        + _EXTERNAL_REL
+        + '">Request a verified listing</a></p>\n'
+        "</div>"
+    )
+
+
+def _audience(tool_count: object) -> str:
+    if isinstance(tool_count, int):
+        listed = "The directory lists " + str(tool_count) + " tools."
+    else:
+        listed = "The directory lists the tools with a published review."
+    return (
+        "<h2>Audience</h2>\n"
+        "<p>" + _EARLY + " " + listed + " Keep, Test, Cut is a small, early list. "
+        "We do not publish a list size.</p>"
+    )
+
+
+def _media_kit() -> str:
+    return (
+        "<h2>Media kit</h2>\n"
+        "<p>Site bar specs for the line rendered at the bottom of public pages:</p>\n"
+        "<ul>\n"
+        "<li>One sponsor at a time.</li>\n"
+        "<li>The line is labeled Sponsored.</li>\n"
+        "<li>Pitch text is limited to " + str(_PLAIN_LIMIT) + " characters.</li>\n"
+        "<li>An optional logo is " + _LOGO_HEIGHT + " tall.</li>\n"
+        "<li>The link is the sponsor's https URL and uses rel external noopener nofollow.</li>\n"
+        "<li>The newsletter placement is a separate Sponsored by line in Keep, Test, Cut.</li>\n"
+        "</ul>"
+    )
+
+
+def _faq() -> str:
+    return (
+        "<h2>Sponsor FAQ</h2>\n"
+        "<h3>Are placements labeled?</h3>\n"
+        "<p>Yes. The site bar is labeled Sponsored. The newsletter line is labeled Sponsored by.</p>\n"
+        "<h3>Does payment change a review, score, or verdict?</h3>\n"
+        "<p>No. A sponsor never influences reviews, scores, or verdicts.</p>\n"
+        "<h3>Can I cancel?</h3>\n"
+        "<p>Yes. Cancel anytime.</p>"
+    )
+
+
+def _page_html(rows: tuple[tuple[_Tier, _Payment], ...], tool_count: object = None) -> str:
+    by_key = {tier.key: (tier, payment) for tier, payment in rows}
     blocks = ["<h1>" + _OFFER_TITLE + "</h1>"]
     for paragraph in _OFFER_PARAS:
         blocks.append("<p>" + paragraph + "</p>")
-    for tier, payment in rows:
-        blocks.append("<h2>" + tier.label + "</h2>")
-        blocks.append("<p>" + tier.price + "</p>")
-        blocks.append("<p>" + _payment_anchor(payment) + "</p>")
+    blocks.append("<p>" + _EARLY + "</p>")
+    bar_tier, bar_pay = by_key["bar"]
+    blocks.append(_tier_block(bar_tier, bar_pay, note=_FOUNDING))
+    bundle_tier, bundle_pay = by_key["bundle"]
+    blocks.append(_tier_block(bundle_tier, bundle_pay))
+    blocks.append(_verified_block())
+    issue_tier, issue_pay = by_key["issue"]
+    blocks.append(
+        _tier_block(
+            issue_tier,
+            issue_pay,
+            heading=_ISSUE_HEADING,
+            note="Newsletter line, 1 issue.",
+        )
+    )
+    blocks.append(_audience(tool_count))
+    blocks.append(_media_kit())
+    blocks.append(_faq())
     blocks.append(
         '<p>Questions? <a href="mailto:'
         + _SPONSOR_MAIL
