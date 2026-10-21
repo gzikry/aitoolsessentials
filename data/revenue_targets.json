@@ -1444,5 +1444,26 @@
     "status": "not_started",
     "next_action": "Ask support@beadpattern.net for partner terms; the annual-only plans are the commission base.",
     "notes": "Annual plans from $59.99 give a workable commission base, but the operator has not named a processor, so confirm the sale actually completes before agreeing terms."
+  },
+  {
+    "tool_slug": "words-into-music",
+    "tool_name": "Words into Music",
+    "priority": "low",
+    "category": "Audio & Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/words-into-music/"
+    ],
+    "best_audiences": [
+      "people buying a personalised song as a gift",
+      "songwriters wanting a sung demo of finished lyrics",
+      "developers looking for a song-generation API"
+    ],
+    "status": "not_started",
+    "next_action": "Ask contact@wordsintomusic.com whether a partner or referral programme exists; /affiliates and /partners both 404, so a direct ask is the only route.",
+    "notes": "Annual tiers from $59.99 give a workable commission base, but no programme terms are published, so no tracking URL should be assumed or invented."
   }
 ]

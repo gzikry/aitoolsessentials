@@ -2038,6 +2038,31 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "words-into-music",
+      "name": "Words into Music",
+      "category": "Audio & Video",
+      "official_url": "https://wordsintomusic.com/",
+      "review_url": "/tools/words-into-music/",
+      "price_label": "Starter $9.99/mo or $59.99/yr (30 songs/mo); Creator $19.99/mo or $119.99/yr (65); Studio $29.99/mo or $179.99/yr (100); one-time packs 20 songs $9.99, 40 songs $19.99, 90 songs $39.99; one introductory song per verified account",
+      "pricing_summary": "Starter $9.99/month or $59.99 billed annually (30 songs each month); Creator $19.99/month or $119.99 annually (65 songs); Studio $29.99/month or $179.99 annually (100 songs). One-time packs: 20 songs $9.99, 40 songs $19.99, 90 songs $39.99, no subscription required. Annual plans are paid upfront and release the monthly allowance; unused subscription credits expire at the next allowance boundary and do not roll over, while purchased pack credits do not expire. Payments via Stripe; one introductory song for an eligible verified account. The same six figures appear on /pricing/ and in the site's llms.txt.",
+      "pricing_url": "https://wordsintomusic.com/pricing/",
+      "pricing_checked_date": "2026-10-21",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "video",
+        "audio",
+        "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

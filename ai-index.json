@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-21",
-  "tools_count": 84,
+  "tools_count": 85,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -623,6 +623,13 @@
       "category": "Creative",
       "price": "Basic $59.99/yr; Pro $99.99/yr; Max $199.99/yr (annual, credits granted upfront)",
       "url": "https://aitoolsessentials.com/tools/beadpattern/"
+    },
+    {
+      "name": "Words into Music",
+      "slug": "words-into-music",
+      "category": "Audio & Video",
+      "price": "Starter $9.99/mo or $59.99/yr (30 songs/mo); Creator $19.99/mo or $119.99/yr (65); Studio $29.99/mo or $179.99/yr (100); one-time packs 20 songs $9.99, 40 songs $19.99, 90 songs $39.99; one introductory song per verified account",
+      "url": "https://aitoolsessentials.com/tools/words-into-music/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

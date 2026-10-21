@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-19",
+  "checked_at": "2026-10-21",
   "source_policy": "Official vendor sources only. Missing values remain null or unresolved; no inference.",
   "tools": [
     {
@@ -1213,6 +1213,16 @@
       "privacy_url": "https://beadpattern.net/privacy",
       "rights_url": "https://beadpattern.net/terms",
       "verification_notes": "Submitted via form by the vendor 2026-10-20 (14:30 UTC), category 'Creative' (accurate). Editorial entry written independently. One of four products from the same operator, confirmed in writing 2026-10-20 15:34 UTC; its placement also rests on its own published footer cross-links to seedaud.io and productshotai.app. Held on no named operator or processor and a pricing presentation that contradicts itself. Re-verified live 2026-10-21: 'Save 17%' still renders beside the $10.00 to $5.00 (50%) strike, the Subscribe buttons still read 'Alipay / WeChat Pay' above a 'Pay safely and securely with Stripe' footer, and the 'Limited Time Deal / Up to 50% OFF' banner is still present. The 00:00:00:00 countdown recorded on 2026-10-20 did not reproduce on 2026-10-21 - the timer configuration is in the payload but no zeroed timer rendered - so that specific claim is not carried into the listing. PUBLISHED 2026-10-21 with 'no registered company, trading name, postal address or controller identity' and 'no payment processor named' recorded as stated limitations in cons rather than as a gate. PRC governing law and the 90-day log-deletion term are credited in pros."
+    },
+    {
+      "slug": "words-into-music",
+      "pricing_checked_date": "2026-10-21",
+      "pricing_summary": "Starter $9.99/month or $59.99 billed annually (30 songs each month); Creator $19.99/month or $119.99 annually (65 songs); Studio $29.99/month or $179.99 annually (100 songs). One-time packs: 20 songs $9.99, 40 songs $19.99, 90 songs $39.99, no subscription required. Annual plans are paid upfront and release the monthly allowance; unused subscription credits expire at the next allowance boundary and do not roll over, while purchased pack credits do not expire. Payments via Stripe; one introductory song for an eligible verified account. The same six figures appear on /pricing/ and in the site's llms.txt.",
+      "pricing_url": "https://wordsintomusic.com/pricing/",
+      "docs_url": "https://wordsintomusic.com/developers/",
+      "privacy_url": "https://wordsintomusic.com/privacy/",
+      "rights_url": "https://wordsintomusic.com/terms/",
+      "verification_notes": "Submitted via form by the vendor 2026-10-21 21:38 UTC; editorial entry written independently from live pages on 2026-10-21. Pricing read from /pricing/ and cross-checked against the site's own llms.txt, which states the same tiers, annual totals and pack prices. /privacy/ (updated 18 October 2026) and /terms/ (updated 15 October 2026) read in full; the privacy policy names Cloudflare, Convex, Better Auth, Google, IPLocate, Replicate, Stripe, Resend, Migadu and Crisp with their roles, states retention, and lists the Umami event fields. Contact route verified: domain MX is Migadu, contact@wordsintomusic.com returned 250 in an SMTP RCPT probe while a random local part returned 550. Parent brand savuko.com lists the product and names Poland in its own app terms, which the product's terms do not. The '4.7/5 from 241 customer ratings' figure in the footer and JSON-LD is not repeated in this listing because no public source was found."
     }
   ]
 }

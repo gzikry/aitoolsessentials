@@ -4600,5 +4600,74 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4/5 - free photo conversion plus per-colour bead counts and brand-specific palettes is a genuinely useful craft tool, and the retention and ownership terms are better than most. Transparency holds it at 3.9: the operator is unnamed, no processor is identified despite Alipay/WeChat buttons over a Stripe footer, the 'Save 17%' badge contradicts the 50% strike beside it, and the monthly prices are not published anywhere a buyer can read."
+  },
+  {
+    "slug": "words-into-music",
+    "name": "Words into Music",
+    "category": "Audio & Video",
+    "best_for": "Turning a written idea or your own lyrics into a full sung song in five languages, without playing an instrument or booking studio time",
+    "price": "Starter $9.99/mo or $59.99/yr (30 songs/mo); Creator $19.99/mo or $119.99/yr (65); Studio $29.99/mo or $179.99/yr (100); one-time packs 20 songs $9.99, 40 songs $19.99, 90 songs $39.99; one introductory song per verified account",
+    "rating": 4.0,
+    "official": "https://wordsintomusic.com/",
+    "summary": "A browser song generator: describe an idea or paste your own lyrics, choose genre, instruments, vocal style, language (English, Spanish, German, French, Portuguese) and a 60-180 second target length, preview and edit the lyric draft, then generate a recording that stays in a private library and downloads as MP3. Writing tools (lyrics, titles, prompts) cost no song credits, and the same credit balance is exposed through a remote MCP server and an OpenAPI-described REST API plus CLI.",
+    "use_cases": [
+      "Making a personal song for a birthday, wedding or anniversary from a few lines",
+      "Hearing finished lyrics sung as a demo without a session singer",
+      "Wiring song generation into a script or an assistant through the API or MCP server"
+    ],
+    "pros": [
+      "Data-handling disclosure is better than almost anything else in this catalog: Cloudflare, Convex, Better Auth, Google, IPLocate, Replicate, Stripe, Resend, Migadu and Crisp are each named with the role they play, and the analytics section lists the exact events sent while stating Google Analytics, Vercel Analytics and session replay are not enabled",
+      "Output rights are assigned to the buyer for personal or commercial use, inputs stay with the author, and the training statement is specific - no training on the vendor's own models, with the provider caveat spelled out instead of a blanket zero-retention promise",
+      "The published contact address works: contact@wordsintomusic.com accepted mail in an SMTP probe against its own Migadu MX while a random local part was rejected",
+      "Pricing agrees on the pricing page and in the site's own llms.txt - three monthly/annual tiers plus three one-time packs, with the annual 'six months free' arithmetic checkable at $4.99 against $9.99 a month",
+      "Lyric drafts, titles and prompt tools consume no song credits; only a delivered recording does",
+      "Ships an MCP server, an OpenAPI 3.0.3 REST API and a CLI on the same credit balance, which almost no consumer song generator offers",
+      "Refunds and the EU/UK 14-day withdrawal right are stated in the Terms rather than left implicit, and a disliked but correctly delivered song is at least described honestly as a spent credit"
+    ],
+    "cons": [
+      "No registered company, trading name, postal address or governing-law clause appears in its own Terms - the parent brand's app terms at savuko.com name Poland, this product's terms decline to name any jurisdiction",
+      "The footer and the page's structured data carry '4.7/5 from 241 customer ratings' with no source: no review widget renders, and no App Store or Google Play listing for this product is findable, so the figure cannot be checked and is not repeated in this listing",
+      "The domain was registered 2026-10-14, a week before it was submitted, so there is no track record for support, uptime or output consistency yet",
+      "Subscription credits expire at the next monthly allowance boundary and do not roll over; only purchased pack credits persist after cancellation",
+      "A recording you simply dislike still spends a credit - only a confirmed technical failure restores it",
+      "No affiliate or partner programme is published: /affiliates and /partners both return 404",
+      "Lyrics and briefs go to Replicate, and the one-hour removal the policy cites covers API prediction data, not anything the provider may retain under its own terms"
+    ],
+    "key_features": [
+      "Song generation from a written brief or supplied lyrics",
+      "Genre, mood, instrument and vocal-style controls",
+      "Five song languages (English, Spanish, German, French, Portuguese), 60-180 second target length",
+      "Editable lyric draft before generation",
+      "Private library with MP3 download and per-recording delete",
+      "Lyric, song-title and music-prompt writing tools at no song-credit cost",
+      "Remote MCP server for ChatGPT, Claude and Grok",
+      "REST API (OpenAPI 3.0.3) and Node.js CLI with 90-day keys"
+    ],
+    "faq": [
+      [
+        "What does one song credit buy?",
+        "One delivered audio generation, up to about three minutes long. Writing a lyric draft or a title costs nothing, and generating a new take costs another credit. The Terms restore a reserved credit once when a confirmed technical failure prevents delivery."
+      ],
+      [
+        "How much does Words into Music cost?",
+        "Starter is $9.99/month or $59.99/year for 30 songs a month, Creator $19.99/month or $119.99/year for 65, and Studio $29.99/month or $179.99/year for 100. One-time packs are 20 songs for $9.99, 40 for $19.99 and 90 for $39.99. Annual plans are paid upfront and release the allowance monthly."
+      ],
+      [
+        "Can the songs be used commercially?",
+        "The Terms allow personal or commercial use of your output and assign the vendor's transferable rights in it to you, while warning that AI output may not be copyrightable everywhere, may resemble someone else's output, and is not guaranteed to pass streaming or distribution review."
+      ],
+      [
+        "Is there a free trial?",
+        "One introductory song for an eligible verified account rather than a recurring free tier, and a claimed trial is recorded so it cannot be claimed repeatedly."
+      ],
+      [
+        "Who operates the site?",
+        "It is presented as 'a Savuko product', with contact@wordsintomusic.com and contact@savuko.com published. No company, postal address or governing law is named in the product's own terms."
+      ]
+    ],
+    "trial_checklist": "Generate one song from a two-line brief and one from your own lyrics, then check the three things a demo page cannot tell you: whether the vocal pronounces names and non-English words correctly, whether the delivered length lands near the requested duration, and whether editing the lyric draft carries into the recording instead of producing a fresh take you have to pay for.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - a complete browser song generator with five languages, honest credit mechanics, prices published in two places and an MCP/API surface almost no consumer competitor offers. Transparency brings it to 4.0: the data-handling disclosure is stronger than most of this catalog (every processor named with a role, retention stated, output rights assigned, refunds written into the Terms), but the operator is unnamed, its own terms decline to name a governing law while its parent brand's do, and the '4.7/5 from 241 customer ratings' figure in its footer and structured data has no findable source on a domain registered seven days before submission."
   }
 ]

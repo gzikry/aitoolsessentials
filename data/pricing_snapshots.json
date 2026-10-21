@@ -372,6 +372,10 @@
     "beadpattern": {
       "date": "2026-10-21",
       "digest": "Annual only: Basic $59.99/year (2,400 credits), Pro $99.99/year (5,040), Max $199.99/year (12,000), granted upfront. Cards strike $10.00 to $5.00 and similar per-month figures while the badge reads 'Save 17%'; monthly prices are not in the served HTML. Photo conversion free, AI generation 10 credits."
+    },
+    "words-into-music": {
+      "date": "2026-10-21",
+      "digest": "Monthly: Starter $9.99 (30 songs/mo), Creator $19.99 (65), Studio $29.99 (100). Annual: $59.99 / $119.99 / $179.99, paid upfront with monthly allowance release. One-time packs 20 songs $9.99, 40 $19.99, 90 $39.99. Subscription credits expire at each allowance boundary; pack credits do not expire. One introductory song per verified account."
     }
   },
   "changes": [
