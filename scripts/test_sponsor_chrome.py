@@ -579,7 +579,12 @@ def test_live_tier_payment_urls() -> None:
         raise AssertionError("live config reused the test tier mapping")
     published = (repo / "sponsor" / "index.html").read_text()
     _assert_live_tiers(published)
-    _has(published, "The directory lists 80 tools.")
+    # Derive the expected figure from the catalog. Hardcoding it made this guard fail the build on
+    # the first catalog expansion after it was written (80 -> 84 tools), which is the same
+    # count-rot class as a hardcoded literal in a generator: the number, not the behaviour, ages.
+    _catalog = json.loads((repo / "data" / "tools.json").read_text())
+    _tools_len = len(_catalog)
+    _has(published, "The directory lists " + str(_tools_len) + " tools.")
     with TemporaryDirectory() as raw:
         root = Path(raw)
         _write(root, {"enrollment": None})

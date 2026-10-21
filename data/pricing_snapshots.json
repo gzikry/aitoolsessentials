@@ -356,6 +356,22 @@
     "botloadout": {
       "date": "2026-10-19",
       "digest": "Free. No paid plans and no checkout: all 97 templates are $0 and the archive downloads without payment or signup. Revenue is newsletter sponsorship only; /sponsor states bookings open January 2027, carries no live Stripe checkout, and asks for an email inquiry instead."
+    },
+    "ailearnhub": {
+      "date": "2026-10-21",
+      "digest": "Free tier 1 lesson (basic models, Markdown only, no account). Pro $19/month or $190/year with 2,000 credits; Max $49/month or $490/year with 6,000 credits. Monthly figures read from the RSC payload; annual cards state savings of $38 and $98."
+    },
+    "aiproductads": {
+      "date": "2026-10-21",
+      "digest": "Monthly Starter $19.90 and Professional $39.90; annual $191.04 and $383.04. One-time packs 80 credits $9.90, 210 $24.90, 450 $49.90, 960 $99.90, all with struck list prices. Credits charged per second of output: 480p 1, 768p 2, 2K 3."
+    },
+    "tarotai-chat": {
+      "date": "2026-10-21",
+      "digest": "Packs $2.99 / 120 credits, $5.99 / 360, $10.99 / 900, never expiring. Monthly subscriptions $3.99 / 800 credits and $9.90 / 3,000 with no rollover. Per-action credit costs published (single 10, three-card 20, two-paths 30, Celtic Cross 40)."
+    },
+    "beadpattern": {
+      "date": "2026-10-21",
+      "digest": "Annual only: Basic $59.99/year (2,400 credits), Pro $99.99/year (5,040), Max $199.99/year (12,000), granted upfront. Cards strike $10.00 to $5.00 and similar per-month figures while the badge reads 'Save 17%'; monthly prices are not in the served HTML. Photo conversion free, AI generation 10 credits."
     }
   },
   "changes": [
@@ -528,5 +544,5 @@
       "note": "Cursor: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-13."
     }
   ],
-  "updated": "2026-10-20"
+  "updated": "2026-10-21"
 }

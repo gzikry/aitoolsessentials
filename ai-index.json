@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-10-20",
-  "tools_count": 80,
+  "generated": "2026-10-21",
+  "tools_count": 84,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -595,6 +595,34 @@
       "category": "AI Agents",
       "price": "Free (97 templates; no paid tier, sponsorship-funded)",
       "url": "https://aitoolsessentials.com/tools/botloadout/"
+    },
+    {
+      "name": "AILearnHub",
+      "slug": "ailearnhub",
+      "category": "Education",
+      "price": "Free (1 lesson); Pro $19/mo or $190/yr; Max $49/mo or $490/yr",
+      "url": "https://aitoolsessentials.com/tools/ailearnhub/"
+    },
+    {
+      "name": "AIProductAds",
+      "slug": "aiproductads",
+      "category": "Video",
+      "price": "Starter $19.90/mo; Professional $39.90/mo; annual $191.04 and $383.04; one-time packs $9.90-$99.90",
+      "url": "https://aitoolsessentials.com/tools/aiproductads/"
+    },
+    {
+      "name": "TAROTAI.CHAT",
+      "slug": "tarotai-chat",
+      "category": "Creative",
+      "price": "Packs $2.99-$10.99 (one-time); subscriptions $3.99/mo and $9.90/mo",
+      "url": "https://aitoolsessentials.com/tools/tarotai-chat/"
+    },
+    {
+      "name": "BeadPattern",
+      "slug": "beadpattern",
+      "category": "Creative",
+      "price": "Basic $59.99/yr; Pro $99.99/yr; Max $199.99/yr (annual, credits granted upfront)",
+      "url": "https://aitoolsessentials.com/tools/beadpattern/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
