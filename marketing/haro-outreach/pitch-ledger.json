@@ -24,6 +24,12 @@
  },
  "cold_without_a_send": [
   {
+   "date": "2026-10-21",
+   "url": "https://www.sourcee.app/journo-request/tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring, https://www.sourcee.app/journo-request/ai-cybersecurity-iot-and-web3-founders-and-operators-news-submissions, https://www.sourcee.app/journo-request/employees-pay-transparency-good-or-bad",
+   "action": "all three crossed the 10-day line today at 11 days, unpitched; the first of them had a finished draft and a live route",
+   "note": "All three were named in advance by the 2026-10-20 digest as sitting at exactly 10 days, so this is a scheduled crossing and not new information. Two of the three are relevance 'low' with no route and no draft, so the crossing cost nothing. THE ONE THAT MATTERS: tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring (Tobi Amure, sourcing for Fast Company Work Life) was the queue's ONLY sendable row for four consecutive runs; its draft has existed since 2026-10-17 and is unsent through five runs, and its route was re-probed live today (hello@tobiamure.com, counted 6 times on tobiamure.com/ and 5 times on /contact/, both HTTP 200). It is the second row this monitor has lost to the cold line with a paste-ready draft sitting behind it, after the WSJ blocked-work-accounts row on 2026-10-16. A late send is still possible and is the only action left on it: pitch-drafts-2026-10-21.md section 1. Silence leaves it drifting; a ledger entry closes it. THE QUEUE IS NOW AT ZERO SENDABLE for the first time since 2026-09-28."
+  },
+  {
    "date": "2026-10-20",
    "url": "https://www.sourcee.app/journo-request/sales-reps-who-cold-call-and-email-how-ai-changed-outreach, https://www.sourcee.app/journo-request/enterprise-ai-leaders-and-builders-realworld-deployment-and-strategy, https://www.sourcee.app/journo-request/voters-who-used-ai-to-navigate-ballot-voting-experience, https://www.sourcee.app/journo-request/anthropic-gtm-leaders-scaling-300k-b2b-clients",
    "action": "all four crossed the 10-day line today at 11 days, unpitched, none ever drafted, none with a resolved route",
@@ -86,7 +92,7 @@
   {
    "date": "2026-10-10",
    "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "both sent-ready drafts carried and republished again, still unsent \u2014 the shadow-AI one now sits in 20 draft files and the Speciality Food one in 19. Figures re-derived against a snapshot refreshed to 2026-10-10 (77 tools, 42/33/$17.50); the pair file was RE-READ, not rebuilt, because its inputs were last rebuilt on 2026-10-08.",
+   "action": "both sent-ready drafts carried and republished again, still unsent — the shadow-AI one now sits in 20 draft files and the Speciality Food one in 19. Figures re-derived against a snapshot refreshed to 2026-10-10 (77 tools, 42/33/$17.50); the pair file was RE-READ, not rebuilt, because its inputs were last rebuilt on 2026-10-08.",
    "note": "Neither is void. Both pages returned HTTP 200 again today with the request body still served. The shadow-AI route was re-resolved against the live /contributors/simon-chandler page this run (HTTP 200, 154,984 bytes, data-part triple unchanged at simon.chandler+raconteur+net; control /contributors/tom-dennis HTTP 200 carries tom.dennis+raconteur+net; the older /author/simon-chandler/ still 404s), and the Speciality Food route was re-read off specialityfoodmagazine.com/contact (HTTP 200, 59,488 bytes, alongside five other named masthead addresses). The Speciality Food October issue window has closed. What was lost is the ideal window, not the pitch."
   },
   {
@@ -249,14 +255,14 @@
   {
    "date": "2026-09-26",
    "url": "https://www.sourcee.app/journo-request/fulltime-employees-shadow-ai-use-and-paying-outofpocket, https://www.sourcee.app/journo-request/speciality-food-retailers-and-producers-how-theyd-spend-10k-on-tech",
-   "action": "NOT YET CROSSED \u2014 both sendable rows are one day from the line at the same time, for the first time",
-   "note": "Logged in advance rather than after the fact, because this is the one crossing the monitor can still prevent. The shadow-AI request is 9 days old and crosses TOMORROW (2026-09-27); the Speciality Food request is 8 days old and crosses the day after (2026-09-28). Neither has ever been pitched. Each has a finished, paste-ready draft (pitch-drafts-2026-09-26.md sections 1 and 2) and a re-resolved route (simon.chandler@raconteur.net; holly.shackleton@artichokehq.com). The shadow-AI draft has been written and unsent for EIGHT consecutive runs; if it goes cold unanswered it becomes the first high-relevance request this queue has lost to the line with a draft sitting ready \u2014 the same loss as the Anthropic crossing on 2026-09-23, but on the queue's only high-relevance row. build_pitch_queue.py now warns two days ahead instead of only reporting the crossing after it happens."
+   "action": "NOT YET CROSSED — both sendable rows are one day from the line at the same time, for the first time",
+   "note": "Logged in advance rather than after the fact, because this is the one crossing the monitor can still prevent. The shadow-AI request is 9 days old and crosses TOMORROW (2026-09-27); the Speciality Food request is 8 days old and crosses the day after (2026-09-28). Neither has ever been pitched. Each has a finished, paste-ready draft (pitch-drafts-2026-09-26.md sections 1 and 2) and a re-resolved route (simon.chandler@raconteur.net; holly.shackleton@artichokehq.com). The shadow-AI draft has been written and unsent for EIGHT consecutive runs; if it goes cold unanswered it becomes the first high-relevance request this queue has lost to the line with a draft sitting ready — the same loss as the Anthropic crossing on 2026-09-23, but on the queue's only high-relevance row. build_pitch_queue.py now warns two days ahead instead of only reporting the crossing after it happens."
   },
   {
    "date": "2026-09-25",
    "url": "https://www.sourcee.app/journo-request/enterprise-ai-leaders-value-creation-ownership-and-governance",
-   "action": "crossed the 10-day line at 11 days, but as a SEND that got no reply \u2014 not an unsent draft",
-   "note": "Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). Ten days of silence, then it aged past the line. This is the opposite cost to the EdTech and Anthropic crossings: no draft was lost here because the pitch actually went out. Logged so the distinction stays visible \u2014 three requests crossed the cold line in the last three runs and only one of them (Anthropic, 2026-09-23) cost a finished-and-unsent draft."
+   "action": "crossed the 10-day line at 11 days, but as a SEND that got no reply — not an unsent draft",
+   "note": "Pitched 2026-09-15 to hello@foxandspindle.com (msg 171/172). Ten days of silence, then it aged past the line. This is the opposite cost to the EdTech and Anthropic crossings: no draft was lost here because the pitch actually went out. Logged so the distinction stays visible — three requests crossed the cold line in the last three runs and only one of them (Anthropic, 2026-09-23) cost a finished-and-unsent draft."
   },
   {
    "date": "2026-09-25",
@@ -302,6 +308,17 @@
   }
  ],
  "log": [
+  {
+   "date": "2026-10-21",
+   "event": "monitor run - 85-slug window, 5 AI-token (one a slug false positive), 0 AI+spend; 5 rows added; 3 rows crossed cold including the queue's only sendable row; 163 tracked, 49 live, 0 sendable; 0 pitches sent",
+   "detail": "163 tracked (158 carried, all 158 re-verified HTTP 200/live today with every deadline field rebuilt from the page's own badge and datePublished; 5 added from the window, each verified against its own page before the digest would build). 156 unpitched, 49 live, 107 cold, 0 sendable. New window: 85 slugs (newest lastmod 2026-10-21T01:33:30Z against the 2026-10-20 mark 2026-10-20T06:24:19Z), 5 AI-token, 0 AI+spend, 12 spend-only; all 85 bodies fetched and read, 4 mention AI at body level, none of those carries a real spend token. THE FIND IS A LOSS, NOT A REQUEST: the Tobi Amure row turned 11 days old and crossed the cold line, taking the sendable count from 1 to 0 with a finished draft unsent behind it. Mailbox: no reply to any pitch. A from: search over All Mail for each of the six pitch recipients (foxandspindle.com, sherwood.news, epgacceleration.com, artichokehq.com, raconteur.net, tobiamure.com) returns only Jan Suski's 2026-09-18 and 2026-10-11 pair, the second being the acknowledgment that closed that thread; nothing has ever arrived from the other five. Sent Mail's newest is 2026-10-21 13:49 UTC (the AILearnHub/AIProductAds submission confirmation, not a pitch), so no pitch has gone out since 2026-10-10 21:20 UTC. 0 pitches sent this run - sends remain George's lane.",
+   "url": "(no pitch)",
+   "action": "none sent - 0 sendable; the only route-live draft-bearing row (Tobi Amure, Fast Company Work Life) crossed cold today and is a late-send-or-skip call",
+   "to": null,
+   "route": null,
+   "sent_message_id": null,
+   "note": "No pitch sent: sends remain George's lane. CODE CHANGES: (1) scripts/build_pitch_queue.py never had a DRAFTS entry for the Tobi row, and the consequence was structural - a row inside that map gets its prose re-derived every build, a row outside it drops to a cold one-liner the moment it passes 10 days - so on the exact day the monitor's only route-live draft-bearing row crossed, the queue would have stopped naming its draft at all. The entry is added with derived fields (_state_of/_age_of/_draft_section/_carried_runs), so it prints 'ROUTE LIVE, ROW NOW COLD' rather than a typed label that would go stale. (2) _automatable() matched route keywords against raw contact prose, so a sentence that NAMED a route in order to deny it was read as the route: 'NOT RESOLVED as a route' matched the resolved-route branch (b2b-buyers row printed as 'route resolved off the publication's own site'), and 'no scheduling link' matched the booking branch (brand-managers row printed as 'published scheduling link'). Negated sentences are now dropped before keyword matching, which can only remove a claimed route, never invent one. Neither defect changed the sendable count, which is 0 on the measurement."
+  },
   {
    "date": "2026-10-19",
    "event": "monitor run - 43-slug window, 2 AI-token, 1 AI+spend (a false positive: Marketplace resale pricing); 2 rows added; 4 rows crossed cold; 1 sendable, on its last day; no sends",

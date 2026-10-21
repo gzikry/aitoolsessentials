@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-21",
+ "contact_replace": {
+  "tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring": "The request body's address is redacted by Sourcee, and the body says plainly 'No DM pitches here on LinkedIn. Email me.' ROUTE: hello@tobiamure.com, published by the journalist himself on his own site. Re-probed today (route-checks-2026-10-21.json): https://tobiamure.com/ HTTP 200, 62,030 bytes, title 'Tobi Amure | Finance & Technology Journalist', the address counted 6 times; https://tobiamure.com/contact/ HTTP 200, 16,636 bytes, the address counted 5 times beside a mailto: link and a <form class=\"contact-form\"> - so there are two routes, both George's, and the form is the fallback if the address bounces. THE ROW CROSSED THE 10-DAY LINE TODAY at 11 days and left the sendable count, so this is now a late-send-or-record-skipped call, not a queue item. DELIVERABILITY IS STILL NOT SMTP-VERIFIED: tobiamure.com's MX (eforward1-5.registrar-servers.com) answers 554 5.7.1 Relay access denied for hello@, for a deliberately fake control address and for postmaster@, so that gateway refuses every recipient from an outside probe and discriminates nothing. The evidence for the route is self-publication on his own live site, not a probe."
+ },
+ "new_rows": {
+  "brand-managers-ai-to-deepen-customer-insight-and-preserve-humanity": {
+   "who": "Daniel Burstein, for MarketingSherpa - the handle and the publication are both named in the body ('Looking for examples from your experience for @MarketingSherpa article'). The page's author field carries his name and domain marketingsherpa.com.",
+   "category": "AI / Marketing / Customer Insight",
+   "contact": "The body asks for 'examples from your experience' and publishes one link, a t.co to a previous MarketingSherpa article he wrote as a model of what he publishes. No address, no handle of his own, no scheduling link. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "Wants brand managers' first-hand examples of using AI for customer insight 'without losing the human meaning that makes brands matter'. The standing asked for is being a brand manager inside a brand; the output is a MarketingSherpa case-study round-up, which is editorial coverage but sourced from practitioners, not from a price index. Nothing in our dated data answers it. Recorded because it is an AI-token window slug.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "cios-at-gartner-it-symposium-orlando-balancing-ai-risk-and-value": {
+   "who": "Paige Gross - the page's author field. No outlet is named in the body or the domain field; she is reporting from the Gartner IT Symposium/Xpo in Orlando this week.",
+   "category": "AI / Enterprise IT / Conference Reporting",
+   "contact": "The body says 'If you're at the conference and want to connect, drop me a line!' and publishes an lnkd.in short link. No address or personal handle is published; the route is a LinkedIn connection through a short link that cannot be resolved without following it. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "An in-person conference request: she wants CIOs attending Gartner IT Symposium/Xpo in Orlando to talk about AI risk versus value and 'what about technology is keeping you up at night'. The standing is physical presence at a Florida conference this week, which we do not have, and the subject is governance and risk, not what AI costs. Unsatisfiable from here on the standing alone, whatever the beat.",
+   "template": "None. Standing requires being at the conference. NOT DRAFTED."
+  },
+  "estate-agents-and-property-lawyers-disclosure-rules-haunted-homes": {
+   "who": "Natasha Christou - the page's author field. No publication is named in the body or the domain field.",
+   "category": "Property / Consumer Law / Disclosure",
+   "contact": "The body reads 'Please get in touch with me via DM or email at: [email redacted]' - the address is redacted by Sourcee and no handle or link of hers is published. The two links on the page belong to the Sourcee account that republished the request. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "Wants estate agents and property lawyers on what sellers must legally disclose about a property's past, including homes rumoured to be haunted. Why it is in this digest at all: its slug carries an AI token, and it is the one AI-token slug in the window whose BODY never mentions AI - the slug token is a false positive on the phrase and the subject is property disclosure. Off-beat twice over (standing: property professional; subject: conveyancing). No route.",
+   "template": "None. No route, no standing, and the AI token is a slug false positive. NOT DRAFTED."
+  },
+  "product-managers-on-512-engineer-teams-engineers-using-ai": {
+   "who": "Steve Tauber - the page's author field. No publication, domain or outlet is named anywhere in the body.",
+   "category": "AI / Product Management / Team Practice",
+   "contact": "The body's whole ask is 'Please get in touch!' with no address, handle, link or platform named; the page publishes nothing of the poster's own. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "Wants to interview product managers working in teams of about 5-12 engineers where the engineers use AI. The standing is being a PM inside such a team; the subject is team practice, not tool cost. No publication is named, so even with a route the output would be unclear. A body-level AI hit with no route and no standing - recorded, not a candidate.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "bay-area-agentic-ai-builders-agntcon-and-mcpcon-stories": {
+   "who": "Luca Berton, whose podcast Udienza (udienza.com, named in the body and in the page's domain field) is a media partner of AGNTCon + MCPCon North America in San Jose, 22-23 October.",
+   "category": "AI / Podcast / Developer Ecosystem",
+   "contact": "The body says 'If you are in the Bay Area, message me: I want to hear your story' and publishes https://www.udienza.com/. No address or personal handle; the link is the podcast's own site, not a route to the poster. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "A podcast booking, not a journalist request: he will be interviewing agentic-AI and MCP builders on the floor at a two-day San Jose conference. The standing is being a builder at that conference, and the output is a podcast episode rather than coverage. Our asset is vendor list prices, which is not a builder story. No route.",
+   "template": "None. Conference-standing podcast booking with no route. NOT DRAFTED."
+  }
+ },
+ "new_this_run": [
+  "FIVE AI-TOKEN SLUGS, ZERO ON THE COST BEAT, AND THE ZERO IS MEASURED AT BODY LEVEL: the window carried 85 slugs (newest lastmod 2026-10-21T01:33:30Z, against the 2026-10-20 mark 2026-10-20T06:24:19Z), 5 with an AI token, 0 with an AI token plus a real spend token, 12 with a spend token alone. All 85 bodies were fetched and read. Four mention AI in the body and none of those carries a real spend token, so there is no core-beat request in this window.",
+  "THE FIVE ARE STANDING MISSES, AND ONE IS A SLUG FALSE POSITIVE: a MarketingSherpa case-study call wanting brand managers, a Gartner Symposium reporter wanting CIOs who are physically in Orlando this week, a property-disclosure request about haunted houses whose AI token sits in its slug and nowhere in its body, a PM interview call with no publication named, and a podcast booking for builders at AGNTCon/MCPCon in San Jose. Every one asks for a first-person or professional standing we do not hold, and not one asks what an AI tool or seat costs.",
+  "THE FEED IS 100% OVERLAP TODAY (50 of 50 feed slugs inside an 85-slug window) - the third distinct overlap reading this month (40/50 on 2026-10-10, 17/50 on 2026-10-20). It is a rolling newest-slot page, so the overlap moves with posting volume and is recorded per row while being used in no ranking."
+ ],
+ "why_not_drafted": [
+  "The five rows added today are all standable-only-by-someone-else requests with no published route: a brand-manager case-study call, an in-person conference request, a property-disclosure request, a PM interview call with no outlet named, and a conference podcast booking. A draft with no route and false standing is a file, not a pitch."
+ ],
+ "extra_actions": [
+  "THE QUEUE IS AT ZERO SENDABLE FOR THE FIRST TIME SINCE 2026-09-28, AND IT GOT THERE THE SAME WAY IT DID THEN. tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring (Tobi Amure, sourcing for Fast Company Work Life) turned 11 days old today and crossed the cold line with a finished draft behind it, unsent through five runs (pitch-drafts-2026-10-17.md onwards). Its route is live today - hello@tobiamure.com, counted 6 times on tobiamure.com/ and 5 times on /contact/ (HTTP 200, both pages) - so a late send is still possible and is the only action left on it. This is the second row this monitor has lost to the line with a paste-ready draft (the WSJ blocked-work-accounts row crossed the same way on 2026-10-16).",
+  "THE MONITOR'S STRUCTURAL FAILURE IS NOT SUPPLY. 43 flagged opportunities across 29 URLs in the first twelve days produced zero pitches; the queue has carried at least one sendable row with a resolved route on most days since 2026-10-06, and 0 have been sent since the four George authorised on 2026-10-10. Today's run adds nothing sendable and removes the last one, so a queue-only report would read as 'nothing to do' on a day when a send still exists.",
+  "MENTIONMATCH REMAINS ACCOUNT-GATED (HTTP 200, 12,064 bytes, /requests is the same SPA shell behind a signup) and Medialyst's MCP endpoint still returns HTTP 401. Those are the only two platforms that would widen supply, and both are closed on an account, which is George's lane."
+ ],
+ "defects": [
+  "THE QUEUE'S DRAFT BLOCK WOULD HAVE LET TODAY'S ROW VANISH. `DRAFTS` in scripts/build_pitch_queue.py is a hand-maintained map of rows with paste-ready drafts, and the Tobi Amure row was never added to it. Its behaviour is: a row in that map gets prose re-derived every build; a row NOT in it falls to the cold one-line list the moment it crosses 10 days. So on the exact day the monitor's only route-live, draft-bearing row crossed, the queue would have stopped naming its draft at all - a finished pitch dropping out of the artefact George clears, which is the failure mode this monitor is supposed to be fixing, not committing. The row now has a DRAFTS entry built from measured fields (_state_of/_age_of/_draft_section/_carried_runs), so it prints 'ROUTE LIVE, ROW NOW COLD' and names its draft file instead of disappearing. The entry is derived, so it cannot claim 'sendable' after today.",
+  "THE 'ADDRESS COUNTED N TIMES' EVIDENCE IS NOT STABLE ACROSS RUNS AND MUST NOT BE READ AS A TREND. The 2026-10-19 note recorded 5 occurrences of hello@tobiamure.com on tobiamure.com/contact/, the 2026-10-20 note 'corrected' that to 1, and today's probe measures 5 again on the same 16,636-byte page (route-checks-2026-10-21.json). Nothing about the page changed between yesterday and today - the byte count is identical - so at least one of the three readings is an artefact of how the page was fetched, most likely a partial or non-rendered response. Prose that quotes the count as evidence of a live route therefore inherits an unstable number; the durable evidence is presence on a page that returns 200, which is what the digest now says, with the count quoted only as a same-run measurement."
+ ]
+}

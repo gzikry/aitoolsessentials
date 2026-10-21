@@ -270,6 +270,30 @@ def collect() -> list[dict]:
     return list(seen.values())
 
 
+def _positive_contact_text(contact: str) -> str:
+    """Contact prose with negated sentences removed, so a 'no route' reads as no route.
+
+    `_automatable()` matched keywords against the raw `contact_method` prose, and the prose this
+    monitor writes is full of sentences that NAME a route in order to deny it. Two live examples
+    from the 2026-10-21 build, both printed with a route they do not have:
+
+      - `b2b-buyers-...-ai-vendor-research` — the prose ended "NOT RESOLVED as a route." The
+        substring "resolved" matched the resolved-route branch, so the queue told George the
+        route had been "resolved off the publication's own site" on a row that publishes nothing.
+      - `brand-managers-...-preserve-humanity` — the prose said "No address, no handle of his
+        own, no scheduling link." The phrase "scheduling link" matched the booking-link branch,
+        so a route-less row printed as "published scheduling link (George)".
+
+    A sentence carrying a negation is dropped before keyword matching. That can only ever remove
+    a claimed route, never invent one — the safe direction for a field whose job is to tell a
+    human whether there is anything to send to.
+    """
+    parts = re.split(r"(?<=[.!?])\s+", contact or "")
+    keep = [p for p in parts
+            if not re.search(r"\b(no|not|never|without|none|nothing|cannot)\b", p, re.I)]
+    return " ".join(keep).lower()
+
+
 def _automatable(contact: str, rec: dict | None = None) -> str:
     """How the reply has to be sent. Page-verified facts win over the digest's guess.
 
@@ -280,6 +304,10 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
     "email — could be automated" line that made the queue look clearable by machine.
     """
     rec = rec or {}
+    raw = contact or ""
+    c = _positive_contact_text(raw)
+    _denied = bool(re.search(r"\b(?:not resolved|no route|no address|no handle|no scheduling"
+                             r"|redacted|nothing published)\b", raw, re.I))
     if rec.get("email_redacted"):
         # The request body's address is redacted by Sourcee — verified 2026-09-19 that the redaction
         # is real, not display-only: no address survives anywhere in the payload for five sampled
@@ -288,8 +316,7 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
         # named editorial addresses), but only some rows have had that resolved. Say which, because
         # claiming a resolved route on a row that has none is the same class of error as the old
         # "email — could be automated" line.
-        c = (contact or "").lower()
-        if "@" in c or "resolved" in c:
+        if "@" in c or "route resolved" in c:
             return "no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)"
         return "no — body address redacted by Sourcee, no route resolved for this request (George: original platform)"
     emails = rec.get("emails_on_page") or []
@@ -299,7 +326,6 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
         link = rec["published_links"][0]
         if "calendly" in link or "lnkd.in" in link:
             return f"no — published booking link {link} (George)"
-    c = (contact or "").lower()
     # A plain published address carried in `contact_method` — the class of route this queue calls
     # its strongest (resolved off the publication's own site, not off the request page). Until
     # 2026-10-10 this fell through every branch below to "unknown — verify the route before
@@ -312,10 +338,12 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
         return "no — email resolved off the publication's own site (George sends)"
     if "linkedin" in c or "dm the author" in c or "comment on" in c:
         return "no — LinkedIn DM / comment (George)"
-    if "schedule" in c or "scheduling link" in c:
+    if "schedule" in c:
         return "no — scheduling link (George)"
     if "reply to the original" in c or "reddit" in c or "x/twitter" in c or "dm" in c:
         return "no — platform reply (George)"
+    if _denied:
+        return "no — no route published on the page or the publication's site (George: original platform)"
     return "unknown — verify the route before sending"
 
 
@@ -565,6 +593,28 @@ def _route_checked_date() -> str:
 
 
 DRAFTS = {
+    # Added 2026-10-21, the day this row crossed the 10-day line. It had been the queue's only
+    # sendable row for four consecutive runs and was NOT in this map, because the map is
+    # hand-maintained and nobody had added it. The consequence was structural rather than cosmetic:
+    # a row in this map gets its prose re-derived every build, while a row outside it drops to the
+    # cold one-line list the moment it passes 10 days — so on the exact day the monitor's only
+    # route-live, draft-bearing row crossed, the queue stopped naming its draft at all. Fields are
+    # derived (_state_of/_age_of/_draft_section/_carried_runs), so this entry cannot go on claiming
+    # the row is sendable after today.
+    "tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring":
+        f"**{_state_of('tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring')} — draft ready and "
+        f"UNSENT — {_draft_section('tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring') or 'pitch-drafts-2026-10-17.md (not named in the newest file)'}. "
+        f"Now {_sent_word(_age_of('tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring'))} old, "
+        f"carried in {_carried_runs('tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring')} draft files.** "
+        "Route: hello@tobiamure.com, the address the journalist publishes himself on his own site — "
+        f"{_route_evidence('tobiamure.com/', 'tobiamure.com homepage')}, with the contact form on "
+        f"{_route_evidence('tobiamure.com/contact/', 'tobiamure.com/contact')} as the fallback if mail "
+        "bounces. Deliverability is NOT SMTP-verified: the domain's MX answers 554 Relay access denied "
+        "for a real address, a fake control and postmaster@ alike, so that probe discriminates nothing. "
+        "He asks for 'original data, or a survey with its sample size and method' and refuses DM "
+        "pitches, which is why the draft leads with the one measured series we hold. Past the 10-day "
+        "line the send is still possible — a late send or a ledger entry closes it; silence leaves it "
+        "drifting exactly as the WSJ row did on 2026-10-16.",
     "employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks":
         f"**{_state_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks')} — draft ready and UNSENT — {_draft_section('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks') or 'in an earlier dated draft file (not named in the newest one)'}. Now "
         f"{_sent_word(_age_of('employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks'))} old.** "
