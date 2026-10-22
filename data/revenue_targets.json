@@ -1508,5 +1508,26 @@
     "status": "not_started",
     "next_action": "Email geardex.help@gmail.com about partner or referral terms; /affiliates and /partners both return 404 and no programme terms are published, so a direct ask is the only route.",
     "notes": "Subscriptions are $4 to $19 a month ($39 to $179 a year), so commissions are small in absolute terms even at a good rate; the stronger play is audience fit with photography and studio-operations content. No tracking URL exists and none should be invented."
+  },
+  {
+    "tool_slug": "imagesv2",
+    "tool_name": "ImagesV2",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/imagesv2/"
+    ],
+    "best_audiences": [
+      "designers and marketers who need poster text and transparent PNGs without a second tool",
+      "e-commerce sellers producing product and lifestyle imagery",
+      "occasional users who would rather buy non-expiring credits than another subscription"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@imagesv2.ai (a verified working mailbox) about affiliate or referral terms; /affiliates, /affiliate, /referral, /partners and /api/referrals all return 404, so a direct ask is the only route.",
+    "notes": "Plans run $8.40 to $84.90 a month and packs $9.90 to $199.90 one-time, so commissions are small per sale; the stronger play is audience fit with design and e-commerce content. Credits are the billing unit, so a referral's lifetime value depends on repeat pack purchases. No tracking URL exists and none should be invented."
   }
 ]

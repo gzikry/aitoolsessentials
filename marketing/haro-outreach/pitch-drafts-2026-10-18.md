@@ -48,7 +48,7 @@ six places on his own live site — not a probe.
 **Not automatable by policy: sends are George's lane.** It is a plain email, so it *could* be sent over
 SMTP without a human; the monitor does not, and has not.
 
-> Hi Tobi — the denominator first, since it's the thing you said you check: 87 AI tools tracked by hand, 42 with a published monthly price, 33 of those at or under $25/month, median $17.50. Re-checked today, 2026-10-18.
+> Hi Tobi — the denominator first, since it's the thing you said you check: 88 AI tools tracked by hand, 42 with a published monthly price, 33 of those at or under $25/month, median $17.50. Re-checked today, 2026-10-18.
 >
 > Method, in one line: we open each vendor's own pricing page, record the list price, the billing term and the date we saw it, and publish the source URL with every figure. No surveys, no vendor decks.
 >

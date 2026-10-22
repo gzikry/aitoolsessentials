@@ -4823,5 +4823,81 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.3/5 - camera-specific records with the fields that matter for a real kit, receipts and warranties beside the item, loans, maintenance, shoot planning and a working export on every plan, held back by a 25-item free ceiling and weekly-metered AI. Transparency 4.1/5 - the notice names the controller, a postal address and every processor with purpose, analytics runs behind Consent Mode defaulting to denied with an honest Accept All / Reject All banner, prices agree across the structured data, the cards and the billing policy, and the legal set is complete with a resolving cross-reference. Two things keep it off 4.5: the policy describes iPhone and Android apps that do not ship, and retention has no stated window. Overall 4.2 - the top of the range for a product we have not tested, because the disclosures are verifiable rather than merely present."
+  },
+  {
+    "slug": "imagesv2",
+    "name": "ImagesV2",
+    "category": "Creative",
+    "best_for": "Designers, marketers and e-commerce sellers who need finished image assets - posters with readable text, true transparent PNGs, editable SVG and layered PSD - from OpenAI's GPT Image 2 without an OpenAI account, and who would rather buy credits than add another monthly AI subscription",
+    "price": "Free: 3 credits on sign-up (the first image costs 3 instead of 10). Yearly: Starter $49.90/yr (12,000 credits, ~$4.16/mo), Pro $199.90/yr (60,000, ~$16.66/mo), Ultra $499.90/yr (240,000, ~$41.66/mo). Monthly: Starter $8.40 (list $14.90, 1,000 credits), Pro $33.90 (list $39.90, 5,000), Ultra $84.90 (list $99.90, 20,000). One-time packs, credits never expire: Taster $9.90 (500 credits), Starter $39.90 (5,000), Pro $99.90 (20,000), Max $199.90 (50,000). No free trial on paid plans; all purchases final and non-refundable.",
+    "rating": 3.8,
+    "official": "https://imagesv2.ai/",
+    "summary": "A browser image studio built around OpenAI's GPT Image 2, with GPT Image 2.5, GPT Image 1.5/1 and the Nano Banana family switchable behind one credits wallet. Instead of a blank prompt box it ships finished workflows: poster and infographic generation, transparent-background PNGs, editable text and SVG vector export, poster-to-layered-PSD conversion, photo restoration, 360 panoramas, brand kits, app mockups, article illustrations, portrait restyling and a set of social-screenshot generators. Generation costs are shown on the button before you spend - 10 credits per image at Low, 40 at Medium, 110 at High, plus 10 for transparent SVG or PSD output and 20 for image-to-image. You can subscribe or buy credit packs that never expire; either way no OpenAI account or ChatGPT Plus is needed.",
+    "use_cases": [
+      "Producing a poster, ad or slide graphic where the text inside the image has to be readable on the first pass",
+      "Cutting a subject out to a true RGBA transparent PNG for product listings or design work without a second tool",
+      "Vectorising a logo, icon or flat illustration to editable SVG for Figma or Illustrator",
+      "Restoring or annotating an old photo, and batch-producing the same visual in several languages",
+      "Buying credits for occasional work instead of subscribing to a second monthly AI plan"
+    ],
+    "pros": [
+      "Non-affiliation is stated in the legal notices in plain words - \"GPT Image 2 (imagesv2.ai) is an independent third-party tool. We are not affiliated with, endorsed by, or officially connected to OpenAI\" - which matters because the product is branded with OpenAI's model name",
+      "Processors are named with what each one receives: Stripe for payments (card numbers are not stored, only transaction and subscription metadata), Cloudflare and Vercel for CDN and hosting including the edge metadata logged at registration, login and payment, with databases in the US or EU and cross-border transfer disclosed for mainland China users",
+      "Retention is written as periods rather than a phrase: IP address and network/risk signals up to 12 months then aggregated or deleted, payment records at least 5 years for tax and accounting, fraud or legal records longer as required",
+      "The rights section names both the EU GDPR and the PRC Personal Information Protection Law and lists access, rectification, erasure, portability, objection and withdrawal of consent with a stated 30-day response target",
+      "Output ownership is stated without overclaiming: images are the user's \"subject to OpenAI's usage policies\" and the site does not claim ownership of what you generate",
+      "The pricing arithmetic holds up and agrees across surfaces - the /pricing cards, the /zh/pricing mirror and llms.txt carry the same figures, and the per-credit line matches the credit count ($49.90 for 12,000 = $0.0042, $199.90 for 60,000 = $0.0033, $499.90 for 240,000 = $0.0021), with each yearly tier delivering exactly twelve months of the monthly allowance",
+      "Contact routes are real mailboxes, not a forwarder: support@imagesv2.ai and the submitting alex@imagesv2.ai both answered 250 against the domain's own Cloudflare MX while a random local part returned 550 5.1.1, so the domain is not a catch-all",
+      "It is a working application rather than a pre-launch shell: the generator, per-run credit cost, My Works history, model list and 56 internal pages are served live, with no \"sales open after activation\" language anywhere"
+    ],
+    "cons": [
+      "No controller is named on any page - no company, trading name, postal address or company number, only the brand and an email - and the Terms' governing-law clause is circular (\"the laws of the jurisdiction in which imagesv2.ai operates\"), with a binding-arbitration clause that names no seat, so a buyer cannot tell whose consumer law applies",
+      "The privacy policy says \"We do not sell, trade, or otherwise transfer your personal information to outside parties\" except for legal obligations or protecting rights, while the policy page itself loads Google Analytics 4 (G-GC01M2BQCY) and Microsoft Clarity session recording - neither is named in the policy, and neither waits for consent because the site has no consent banner",
+      "Training use is unstated: no page says whether prompts, uploaded source images or outputs are used to train or fine-tune anything, by ImagesV2 or by the model providers it calls",
+      "Generated-image retention is deferred rather than answered - \"governed separately by your plan's image storage terms\" - and no such document is published anywhere on the site",
+      "Paid plans are non-refundable and there is no trial: \"All purchases are final and non-refundable unless otherwise required by law\", credit packs are also non-refundable, a refund policy page does not exist, and the only free path is 3 credits",
+      "Subscription credits expire while one-time pack credits do not: monthly allowances die at the end of each cycle, and a yearly plan arrives as twelve blocks that each expire 30 days after payment, so unused credits in a block are lost",
+      "The promotion presentation is aggressive: an always-on \"Limited-Time 50% OFF\" flash-sale banner with no stated end date, and the monthly cards are shown against crossed-out anchors ($14.90, $39.90, $99.90) that sit above the price actually charged",
+      "The model supply chain is not disclosed: the site says models are \"called on our side\" without naming the API provider or the model snapshot, so a buyer cannot confirm which GPT Image 2 build they get; prompts are capped at 5,000 characters and layered PSD export is labelled beta",
+      "The shipped page source still carries the theme's placeholder footer config - github.com/your-app-name, discord.gg/your-app-name and mailto:support@your-domain.com - even though the rendered footer shows the real support address"
+    ],
+    "key_features": [
+      "GPT Image 2 generation and editing with Low/Medium/High quality tiers and 1-4 images per run",
+      "GPT Image 2.5 (Flare and Sunburst), GPT Image 1.5, GPT Image 1 and the Nano Banana family behind the same credits wallet",
+      "True transparent RGBA PNG export, editable SVG vectorisation and layered PSD conversion (beta)",
+      "Prompt-based inpainting with an uploaded reference image and a paint mask, up to 10 source images",
+      "50+ ready-made prompt templates plus a gallery of worked examples with their outputs",
+      "One-click workflows: posters, infographics, brand kits, app mockups, article illustrations, 360 panoramas, product and ID photos, old photo restoration, photo annotation",
+      "Credits wallet with subscriptions or non-expiring one-time packs, and My Works history",
+      "English plus a Chinese (zh) mirror, with CNY pricing and WeChat Pay advertised for yearly plans and packs"
+    ],
+    "faq": [
+      [
+        "How much does ImagesV2 cost?",
+        "Three ways to buy. Yearly: Starter $49.90 (12,000 credits, about $4.16 a month), Pro $199.90 (60,000), Ultra $499.90 (240,000). Monthly: Starter $8.40 for 1,000 credits, Pro $33.90 for 5,000, Ultra $84.90 for 20,000. One-time packs whose credits never expire: Taster $9.90 (500), Starter $39.90 (5,000), Pro $99.90 (20,000), Max $199.90 (50,000). New accounts get 3 credits, and the first image is charged 3 instead of the normal 10. The pricing page, its Chinese mirror and llms.txt carry the same figures."
+      ],
+      [
+        "Do I need an OpenAI account or ChatGPT Plus?",
+        "No. ImagesV2 calls the models on its own side, so you sign up with an ImagesV2 account and pay in credits. The catch is that you also inherit ImagesV2's terms on refunds, credit expiry and data handling rather than OpenAI's, and the site does not name the API provider it uses or which GPT Image 2 snapshot it serves."
+      ],
+      [
+        "Do credits expire?",
+        "It depends which kind you buy. One-time pack credits never expire. Subscription credits do: each month's allowance expires when that cycle ends, and a yearly plan is delivered as twelve monthly blocks where each block expires 30 days after payment, spent oldest-first. Buying a pack is the only route that keeps its value indefinitely."
+      ],
+      [
+        "Can I get a refund?",
+        "Not as a matter of course. The Terms state that all purchases are final and non-refundable unless required by law, that credit packs are also non-refundable, and there is no refund policy page and no free trial on paid plans. The 3 free credits are the only way to test output before paying."
+      ]
+    ],
+    "trial_checklist": [
+      "Sign up and use the 3 free credits on one real prompt you would actually ship - the first image is charged 3 credits instead of 10, so it costs nothing and shows you text rendering on your own copy",
+      "Run the same prompt at Low and High quality before buying, so you know whether the 4x credit difference is worth it for your use case",
+      "Test the transparent-PNG and SVG add-ons on one image each: both add 10 credits and SVG tracing fails on photographs, so confirm the output opens correctly in Figma, Illustrator or Inkscape first",
+      "If you are choosing a plan, compare a year of credits against a pack on your own monthly volume - yearly credits expire in 30-day blocks, packs never expire",
+      "Decide before paying whether non-refundable is acceptable to you; there is no trial and no refund route once a charge clears"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - the workflow-first framing is genuinely useful (poster text, transparent PNG, SVG, PSD export are the chores people actually reopen another tool for), per-run credit costs are shown before spending, and the credit ladder is priced coherently from $0.0042 down to $0.0021 per credit with a real free path. Transparency 3.4/5 - the legal set is substantive where it counts (named processors with purposes, retention periods, GDPR and PIPL rights with a 30-day target, non-affiliation stated in plain words), but the policy's own \"we do not transfer your personal information to outside parties\" sentence is contradicted by Google Analytics 4 and Microsoft Clarity loading on that very page with no consent gate and no mention in the notice, and no controller or jurisdiction is named anywhere. Job fit minus transparency lands at 3.8, below mid-range because a buyer cannot see who they are contracting with or what happens to their prompts."
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21",
+  "generated_at": "2026-10-22",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2109,6 +2109,32 @@
         "audio",
         "automation",
         "email"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "imagesv2",
+      "name": "ImagesV2",
+      "category": "Creative",
+      "official_url": "https://imagesv2.ai/",
+      "review_url": "/tools/imagesv2/",
+      "price_label": "Free: 3 credits on sign-up (the first image costs 3 instead of 10). Yearly: Starter $49.90/yr (12,000 credits, ~$4.16/mo), Pro $199.90/yr (60,000, ~$16.66/mo), Ultra $499.90/yr (240,000, ~$41.66/mo). Monthly: Starter $8.40 (list $14.90, 1,000 credits), Pro $33.90 (list $39.90, 5,000), Ultra $84.90 (list $99.90, 20,000). One-time packs, credits never expire: Taster $9.90 (500 credits), Starter $39.90 (5,000), Pro $99.90 (20,000), Max $199.90 (50,000). No free trial on paid plans; all purchases final and non-refundable.",
+      "pricing_summary": "Free: 3 credits on sign-up, first image charged 3 credits (normally 10). Yearly (advertised as Save 50% vs monthly): Starter $49.90/year for 12,000 credits (~$4.16/month, $0.0042 per credit), Pro $199.90/year for 60,000 credits (~$16.66/month, $0.0033 per credit), Ultra $499.90/year for 240,000 credits (~$41.66/month, $0.0021 per credit). Monthly: Starter $8.40/month (shown against a $14.90 anchor) for 1,000 credits, Pro $33.90/month (anchor $39.90) for 5,000, Ultra $84.90/month (anchor $99.90) for 20,000. One-time credit packs, credits never expire: Taster $9.90 (anchor $19.90) for 500 credits, Starter $39.90 (anchor $79.80) for 5,000, Pro $99.90 (anchor $199) for 20,000, Max $199.90 (anchor $399.80) for 50,000. Generation cost for GPT Image 2: 10 credits at Low/Standard, 40 at Medium, 110 at High/HD, plus 10 credits each for transparent background, SVG vectorisation or layered PSD, and 20 for image-to-image. Monthly subscription credits expire at the end of each cycle; yearly credits arrive as twelve 30-day blocks; pack credits never expire. No free trial on paid plans; all purchases final and non-refundable. Prices in USD.",
+      "pricing_url": "https://imagesv2.ai/pricing",
+      "pricing_checked_date": "2026-10-22",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "marketing",
+        "automation"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

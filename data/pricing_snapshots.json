@@ -384,6 +384,10 @@
     "geardex": {
       "date": "2026-10-21",
       "digest": "Starter free: 25 gear items, 10 categories, 3 shoot plans, 1 client gallery at 50 MB, 1 gear document, 1 kit on Site, 25 AI actions/week. Pro $4/month or $39/year (saves $9), unlimited gear in 50 categories, 3 galleries at 200 MB, 150 AI actions/week, market price lookup 10/week. Studio $19/month or $179/year (saves $49), 10 seats, all 12 Site themes, Stories, 10 galleries at 10 GB (100 GB total), booking, quotes, contracts, invoices, Studio Agent API, unlimited AI actions. USD, taxes at checkout. No free trial on paid plans; refunds not automatic. llms.txt says older $9/$29 third-party listings are out of date."
+    },
+    "imagesv2": {
+      "date": "2026-10-22",
+      "digest": "Free: 3 credits, first image charged 3. Yearly: Starter $49.90/12,000 credits (~$4.16/mo, $0.0042/credit), Pro $199.90/60,000 (~$16.66/mo), Ultra $499.90/240,000 (~$41.66/mo). Monthly: Starter $8.40 (anchor $14.90) /1,000, Pro $33.90 (anchor $39.90) /5,000, Ultra $84.90 (anchor $99.90) /20,000. Packs (never expire): Taster $9.90/500, Starter $39.90/5,000, Pro $99.90/20,000, Max $199.90/50,000, each shown against a crossed-out anchor. GPT Image 2 costs 10/40/110 credits at Low/Medium/High, +10 transparent/SVG/PSD, +20 image-to-image. Monthly credits expire per cycle; yearly arrives as twelve 30-day blocks. No trial; purchases non-refundable. USD."
     }
   },
   "changes": [
@@ -556,5 +560,5 @@
       "note": "Cursor: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-13."
     }
   ],
-  "updated": "2026-10-21"
+  "updated": "2026-10-22"
 }

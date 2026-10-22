@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-10-21",
-  "tools_count": 87,
+  "generated": "2026-10-22",
+  "tools_count": 88,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -644,6 +644,13 @@
       "category": "Productivity",
       "price": "Starter free (25 gear items, 10 categories, 25 AI actions a week, one 50 MB client gallery, a 3-page site); Pro $4/mo or $39/yr; Studio $19/mo or $179/yr; no free trial on paid plans",
       "url": "https://aitoolsessentials.com/tools/geardex/"
+    },
+    {
+      "name": "ImagesV2",
+      "slug": "imagesv2",
+      "category": "Creative",
+      "price": "Free: 3 credits on sign-up (the first image costs 3 instead of 10). Yearly: Starter $49.90/yr (12,000 credits, ~$4.16/mo), Pro $199.90/yr (60,000, ~$16.66/mo), Ultra $499.90/yr (240,000, ~$41.66/mo). Monthly: Starter $8.40 (list $14.90, 1,000 credits), Pro $33.90 (list $39.90, 5,000), Ultra $84.90 (list $99.90, 20,000). One-time packs, credits never expire: Taster $9.90 (500 credits), Starter $39.90 (5,000), Pro $99.90 (20,000), Max $199.90 (50,000). No free trial on paid plans; all purchases final and non-refundable.",
+      "url": "https://aitoolsessentials.com/tools/imagesv2/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
