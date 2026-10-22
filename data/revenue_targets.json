@@ -1465,5 +1465,26 @@
     "status": "not_started",
     "next_action": "Ask contact@wordsintomusic.com whether a partner or referral programme exists; /affiliates and /partners both 404, so a direct ask is the only route.",
     "notes": "Annual tiers from $59.99 give a workable commission base, but no programme terms are published, so no tracking URL should be assumed or invented."
+  },
+  {
+    "tool_slug": "gatsbyai",
+    "tool_name": "GatsbyAI",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/gatsbyai/"
+    ],
+    "best_audiences": [
+      "creators comparing model output before paying for a video subscription",
+      "small advertisers making short product clips on a daily free allowance",
+      "people animating a still image into a clip without editing software"
+    ],
+    "status": "not_started",
+    "next_action": "Ask support@gatsbyai.app whether a partner, referral or creator programme exists; /affiliates, /partners and /contact all return 404, so a direct ask is the only route.",
+    "notes": "Subscriptions from $19.98 a month and packs from $29.90 give a small but workable commission base. No programme terms are published and no tracking URL should be assumed or invented."
   }
 ]

@@ -2063,6 +2063,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "gatsbyai",
+      "name": "GatsbyAI",
+      "category": "Video",
+      "official_url": "https://gatsbyai.app/",
+      "review_url": "/tools/gatsbyai/",
+      "price_label": "Lite $19.98/mo or $119.88/yr (2,000 credits a month); Pro $39.98/mo or $239.88/yr (5,000); Ultra $77.98/mo or $467.88/yr (10,000); one-time packs 1,500 credits $29.90, 3,000 $49.90, 5,000 $69.90, 8,000 $99.90; two free guest generations a day and 10 daily credits for a signed-in account",
+      "pricing_summary": "Lite $19.98/month or $119.88 billed annually ($9.99/month equivalent, 2,000 credits a month); Pro $39.98/month or $239.88 annually ($19.99 equivalent, 5,000 credits); Ultra $77.98/month or $467.88 annually ($38.99 equivalent, 10,000 credits). The page states the yearly option as 50% off and the arithmetic is exact against twelve times the monthly price. One-time credit packs: 1,500 credits $29.90, 3,000 $49.90, 5,000 $69.90, 8,000 $99.90, valid six months, with 50% bonus credits for active subscribers. Subscription credits refresh to the monthly allowance and do not accumulate; failed generations release reserved daily credits and return charged credits. Free access: two generations a day for guests and 10 daily credits for signed-in accounts, with the default Seedance 2.0 Mini generation costing 5 credits.",
+      "pricing_url": "https://gatsbyai.app/pricing",
+      "pricing_checked_date": "2026-10-21",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "design",
+        "video",
+        "marketing",
+        "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

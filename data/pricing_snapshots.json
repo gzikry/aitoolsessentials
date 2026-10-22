@@ -376,6 +376,10 @@
     "words-into-music": {
       "date": "2026-10-21",
       "digest": "Monthly: Starter $9.99 (30 songs/mo), Creator $19.99 (65), Studio $29.99 (100). Annual: $59.99 / $119.99 / $179.99, paid upfront with monthly allowance release. One-time packs 20 songs $9.99, 40 $19.99, 90 $39.99. Subscription credits expire at each allowance boundary; pack credits do not expire. One introductory song per verified account."
+    },
+    "gatsbyai": {
+      "date": "2026-10-21",
+      "digest": "Monthly: Lite $19.98 (2,000 credits/mo), Pro $39.98 (5,000), Ultra $77.98 (10,000). Annual: $119.88 / $239.88 / $467.88 billed yearly, shown as 50% off and arithmetically exact. One-time packs: 1,500 cr $29.90, 3,000 cr $49.90, 5,000 cr $69.90, 8,000 cr $99.90, six-month validity, +50% credits for subscribers. Subscription credits do not roll over; failed generations release daily credits and return charged credits. Free: two guest generations a day, 10 daily credits signed in, default Seedance 2.0 Mini run 5 credits."
     }
   },
   "changes": [

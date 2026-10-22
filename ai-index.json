@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-21",
-  "tools_count": 85,
+  "tools_count": 86,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -630,6 +630,13 @@
       "category": "Audio & Video",
       "price": "Starter $9.99/mo or $59.99/yr (30 songs/mo); Creator $19.99/mo or $119.99/yr (65); Studio $29.99/mo or $179.99/yr (100); one-time packs 20 songs $9.99, 40 songs $19.99, 90 songs $39.99; one introductory song per verified account",
       "url": "https://aitoolsessentials.com/tools/words-into-music/"
+    },
+    {
+      "name": "GatsbyAI",
+      "slug": "gatsbyai",
+      "category": "Video",
+      "price": "Lite $19.98/mo or $119.88/yr (2,000 credits a month); Pro $39.98/mo or $239.88/yr (5,000); Ultra $77.98/mo or $467.88/yr (10,000); one-time packs 1,500 credits $29.90, 3,000 $49.90, 5,000 $69.90, 8,000 $99.90; two free guest generations a day and 10 daily credits for a signed-in account",
+      "url": "https://aitoolsessentials.com/tools/gatsbyai/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
