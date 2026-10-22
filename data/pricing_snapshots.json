@@ -380,6 +380,10 @@
     "gatsbyai": {
       "date": "2026-10-21",
       "digest": "Monthly: Lite $19.98 (2,000 credits/mo), Pro $39.98 (5,000), Ultra $77.98 (10,000). Annual: $119.88 / $239.88 / $467.88 billed yearly, shown as 50% off and arithmetically exact. One-time packs: 1,500 cr $29.90, 3,000 cr $49.90, 5,000 cr $69.90, 8,000 cr $99.90, six-month validity, +50% credits for subscribers. Subscription credits do not roll over; failed generations release daily credits and return charged credits. Free: two guest generations a day, 10 daily credits signed in, default Seedance 2.0 Mini run 5 credits."
+    },
+    "geardex": {
+      "date": "2026-10-21",
+      "digest": "Starter free: 25 gear items, 10 categories, 3 shoot plans, 1 client gallery at 50 MB, 1 gear document, 1 kit on Site, 25 AI actions/week. Pro $4/month or $39/year (saves $9), unlimited gear in 50 categories, 3 galleries at 200 MB, 150 AI actions/week, market price lookup 10/week. Studio $19/month or $179/year (saves $49), 10 seats, all 12 Site themes, Stories, 10 galleries at 10 GB (100 GB total), booking, quotes, contracts, invoices, Studio Agent API, unlimited AI actions. USD, taxes at checkout. No free trial on paid plans; refunds not automatic. llms.txt says older $9/$29 third-party listings are out of date."
     }
   },
   "changes": [

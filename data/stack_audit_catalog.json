@@ -2089,6 +2089,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "geardex",
+      "name": "GearDex",
+      "category": "Productivity",
+      "official_url": "https://www.geardex.app/",
+      "review_url": "/tools/geardex/",
+      "price_label": "Starter free (25 gear items, 10 categories, 25 AI actions a week, one 50 MB client gallery, a 3-page site); Pro $4/mo or $39/yr; Studio $19/mo or $179/yr; no free trial on paid plans",
+      "pricing_summary": "Starter free: up to 25 gear items in 10 categories, 3 shoot plans, 1 client gallery with 50 MB, 1 gear document, 1 kit on the Site, 25 AI actions a week, QR label per item, CSV import and export. Pro $4/month or $39/year ($3.25/month billed yearly, saving $9): unlimited gear in 50 categories, 3 Site themes and 10 pages with own domain, 3 client galleries at 200 MB each, 150 AI actions a week, market price lookup 10/week. Studio $19/month or $179/year (~$14.92/month billed yearly, saving $49): 10-seat team workspace, all 12 themes, Stories, 10 active galleries at 10 GB each with 100 GB total, booking, quotes, contracts, invoices, Studio Agent API and webhooks, unlimited AI actions. Prices in USD with taxes calculated at checkout. No free trial on paid plans; refunds not automatic. The site's llms.txt states that older third-party listings quoting $9 and $29 are out of date.",
+      "pricing_url": "https://www.geardex.app/pricing",
+      "pricing_checked_date": "2026-10-21",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "coding",
+        "video",
+        "audio",
+        "automation",
+        "email"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

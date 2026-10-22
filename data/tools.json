@@ -4743,5 +4743,85 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - four model families behind one prompt box, per-run credit costs shown up front, a working daily free allowance, credits returned on failure, honest pricing arithmetic and a substantive acceptable-use section. Transparency brings it to 3.8: prices and output rights are clear, but a site that takes card payments names no operator, no jurisdiction, no processor and no retention period, loads Google Analytics on its own privacy page without a consent control, and was three weeks old at submission. That is a disclosure gap rather than a contradiction, which is why it lands at the floor of the normal range instead of below it."
+  },
+  {
+    "slug": "geardex",
+    "name": "GearDex",
+    "category": "Productivity",
+    "best_for": "Photographers, videographers and small studios who need one record of every camera, lens and drone - serials, receipts, values, loans and maintenance - instead of a spreadsheet beside a shared drive",
+    "price": "Starter free (25 gear items, 10 categories, 25 AI actions a week, one 50 MB client gallery, a 3-page site); Pro $4/mo or $39/yr; Studio $19/mo or $179/yr; no free trial on paid plans",
+    "rating": 4.2,
+    "official": "https://www.geardex.app/",
+    "summary": "A camera-specific inventory and studio-operations app: every body, lens, filter, drone and accessory gets a record with serial number, purchase details, condition, storage location, photos, receipts and warranty files, plus loan status and service history. On top of that sit shoot planning with sun and weather, packing and readiness checks, QR labels and scan check-out, value trends and an insurance-ready PDF, and - on Studio - a client CRM, booking, quotes, contracts and invoices. An assistant called Iris answers questions about your own kit, including lens-to-camera mount compatibility, and a free browser tier covers 25 items with export on every plan.",
+    "use_cases": [
+      "Building an insurance-ready record of a kit with serials, receipts and current values before something goes missing",
+      "Tracking which lens, body or light is on loan to whom, and what is due back or due for service",
+      "Packing a shoot from gear you actually own, with call sheets, sun times and weather",
+      "Running a small studio's gear calendar, check-outs and maintenance alongside client jobs and invoices",
+      "Comparing a spreadsheet against a camera-aware tool without paying first"
+    ],
+    "pros": [
+      "The operator is named inside the notice rather than left to a footer: privacy section 1 gives Dylan Andersen, GearDex, 842 St Vincent, Irvine, CA 92618, and the same identity appears on the legal notice and the contact page, with California as the governing law in the Terms",
+      "Every processor is named with its purpose and what it receives - Supabase for database, auth and files; Stripe for billing; Resend for transactional email and client replies; Vercel for hosting; PostHog and Google Analytics for analytics; NVIDIA for the AI features; Tavily for web lookups; Google for Calendar; Google reCAPTCHA on the contact form",
+      "The analytics behaviour matches the written claim: Google Analytics (G-BNVX42Q1BT) is loaded with Consent Mode defaulting analytics_storage and ad_storage to denied and send_page_view false, and the policy says Analytics runs only after you accept analytics cookies - with a working Accept All / Reject All banner and no analytics cookies or storage until you choose",
+      "Prices agree across three independent surfaces on the same day: the Offer array in the pricing page's structured data (0, 4, 39, 19, 179), the plan cards and full limit-by-limit comparison table, and the billing policy which restates $4/$39 and $19/$179 - and the site's llms.txt matches",
+      "The AI data flow is described precisely instead of hedged: what context reaches NVIDIA for Iris chat, Smart Add, receipt reading and the scheduled Pro/Studio suggestion job, that existing serials are not sent for receipt matching and are left out of suggestions, and that NVIDIA's own terms allow it to improve its models with request content - a limit the policy states GearDex does not control",
+      "Billing is written for the buyer rather than for the vendor: no free trial stated plainly, cancellation from Settings to Billing or the Stripe portal, a 14-day past-due grace period, how proration behaves, and a California Automatic Renewal Law notice",
+      "The legal set is complete and internally consistent - /legal/privacy, /legal/terms, /legal/billing and /legal/notice all serve, and the Terms' cross-reference to /legal/billing resolves rather than 404ing",
+      "It is a shipped product with surfaces to audit: the domain was registered 2025-06-28, /download lists Mac 1.3.0 and Windows 1.2.0 with in-app updates, and there is a public issue tracker and notarised release feed at github.com/dylandersen/geardex-public",
+      "Export is first-class on every plan, including the free one: a full account ZIP with records plus uploaded photos, receipts and documents, JSON records, or CSV for all gear or one gear type",
+      "Client money never passes through GearDex: invoices and deposits use the photographer's own Stripe, PayPal, Venmo, Square, Cash App or any https payment link, and the Terms say GearDex is not a party to the client agreement"
+    ],
+    "cons": [
+      "No iOS or Android app ships, although the privacy policy describes both three times - 'the GearDex apps for iPhone, Android and desktop', 'The iPhone and Android apps also ask before Iris first sends anything to NVIDIA', 'The GearDex apps for iPhone and Android don't include analytics' - while /download offers Safari's Add to Home Screen for iPhone, lists no Android app, and no App Store or Play link appears anywhere on the site",
+      "Retention carries no number: the policy says data is removed or anonymised 'within a reasonable period' of account deletion, with no stated window for photos, receipts, backups or analytics",
+      "On Pro and Studio a scheduled AI job sends brand, model, specifications, condition and purchase price to NVIDIA on its own schedule whether or not you ever open Iris; only Starter escapes that if you never start an AI feature",
+      "Iris chat context can include serial numbers, purchase prices, condition and storage locations sent to NVIDIA, whose terms permit using request content to improve its models",
+      "AI is metered weekly rather than generously: 25 actions on Starter, 150 on Pro, 'unlimited' with footnotes on Studio, and market price lookup capped at 10 a week on both paid plans",
+      "The free tier is a real ceiling - 25 gear items, 10 categories, 3 shoot plans, one 50 MB gallery, one gear document and one kit on your site - so a working kit of any size lands on Pro quickly",
+      "Refund position is thin: no free trial, refunds 'not automatic', and the billing policy's money-back guarantee is conditional ('we may offer a time-limited money-back guarantee... where such a guarantee is offered') while the pricing page advertises none, so a buyer should not assume a 30-day window exists",
+      "The submission labelled this 'Writing & Productivity', which does not describe the product; it is a gear-inventory and studio-operations app and is listed under Productivity",
+      "Solo operator - one developer in Irvine, a stated 1 to 2 business day support window, and phone support still described as 'coming to Studio plans'",
+      "Usage claims are the vendor's own and unverified by us (300+ photographers, 6,100+ items tracked, $722K+ managed), and one product page still calls the desktop app 'early access' and names Macs only while /download ships Mac 1.3.0 and Windows 1.2.0",
+      "No affiliate or partner programme is published - /affiliates and /partners return 404 - so there is no commercial relationship to disclose today"
+    ],
+    "key_features": [
+      "Camera-specific records with per-type spec fields (mount, sensor, megapixels for bodies; focal length, aperture, filter size for lenses; FAA registration and Remote ID for drones)",
+      "Serial numbers, purchase details, receipts, warranties and item photos attached to each record, with warranty expiry alerts",
+      "Loans and check-outs with QR labels, scan in and out, due and overdue reminders, and signed loan agreements",
+      "Maintenance history, recurring service schedules and issue flags",
+      "Shoot planning with shot lists, call sheets, sun and moon times, weather and backup plans",
+      "Packing and production-readiness checks built from gear you actually own",
+      "Value tracking, six- and 24-month trends, depreciation method choice, and a one-click insurance PDF",
+      "CSV import with per-type templates and row-level validation; ZIP, JSON or CSV export on every plan",
+      "Iris assistant for plain-English questions about the kit, including lens-to-camera mount compatibility",
+      "Studio tier: client CRM, pipeline inbox, online booking, quotes, contracts with e-signature, invoices via your own payment link, 10-seat team workspace, and the Studio Agent API with webhooks and an MCP adapter"
+    ],
+    "faq": [
+      [
+        "How much does GearDex cost?",
+        "Starter is free with up to 25 gear items in 10 categories, 3 shoot plans, one 50 MB client gallery, one gear document and 25 AI actions a week. Pro is $4 a month or $39 a year; Studio is $19 a month or $179 a year. A year of Pro saves $9 against twelve monthly payments and a year of Studio saves $49. The pricing page's structured data, the plan cards and the billing policy all carry the same figures."
+      ],
+      [
+        "Is there a free trial on the paid plans?",
+        "No. The billing policy states plainly that GearDex does not offer a free trial on paid plans, and that the free Starter tier is the way to evaluate it. Refunds are also not automatic once a billing period has begun, and the money-back guarantee clause is conditional rather than advertised on the pricing page."
+      ],
+      [
+        "Can GearDex replace a gear spreadsheet?",
+        "For a working kit, largely yes: the record holds serial, receipt, value, condition, location, documents, loan status and service history, and a CSV import brings an existing list across with row-level validation. What it adds over a spreadsheet is gear-specific structure - mounts, warranty expiry, loans, maintenance - and what it does not do is appraise your gear: recorded values are your own figures, and the site says plainly that it does not provide insurance or guarantee a claim."
+      ],
+      [
+        "What does GearDex do with the photos and serial numbers I upload?",
+        "Inventory data, including serials, purchase prices, values and receipt files, is stored in the account in the United States with Supabase. AI features send a request to NVIDIA only for Iris chat, Smart Add, AI descriptions, receipt reading, and a scheduled suggestion job on Pro and Studio; the policy lists what each one includes, that existing serials are not sent for receipt matching, and that NVIDIA's terms allow it to improve its models with request content. Starter inventory is not sent unless you start an AI feature."
+      ],
+      [
+        "Does GearDex take a cut of client payments?",
+        "No. Invoices and deposits are paid through the photographer's own payment link with Stripe, PayPal, Venmo, Square, Cash App or any https link, and the Terms state that GearDex is not a party to the client agreement, so disputes and chargebacks sit between the photographer, the client and that provider."
+      ]
+    ],
+    "trial_checklist": "Start on Starter with ten real items rather than a full import: include two similar lens names, one adapter, one borrowed item and one body in for repair, then check that Smart Add keeps model, quantity and ownership distinct and that a deliberately ambiguous model name gets a question rather than a guess. Export once and re-import to confirm serials, purchase dates and documents survive the round trip. Then plan one real shoot and compare your own packing list against GearDex's - mark omitted batteries, wrong mounts and anything flagged unavailable - and ask Iris one compatibility question you can verify against the manufacturer. Only after that does the paid question arise: whether Pro's unlimited items, own domain and 150 weekly AI actions remove work you are actually doing, or whether 25 items was enough.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.3/5 - camera-specific records with the fields that matter for a real kit, receipts and warranties beside the item, loans, maintenance, shoot planning and a working export on every plan, held back by a 25-item free ceiling and weekly-metered AI. Transparency 4.1/5 - the notice names the controller, a postal address and every processor with purpose, analytics runs behind Consent Mode defaulting to denied with an honest Accept All / Reject All banner, prices agree across the structured data, the cards and the billing policy, and the legal set is complete with a resolving cross-reference. Two things keep it off 4.5: the policy describes iPhone and Android apps that do not ship, and retention has no stated window. Overall 4.2 - the top of the range for a product we have not tested, because the disclosures are verifiable rather than merely present."
   }
 ]

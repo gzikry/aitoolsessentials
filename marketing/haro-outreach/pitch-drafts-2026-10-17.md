@@ -43,7 +43,7 @@ routes mail. Six byline pages remain recorded dead ends so they are not retried 
 thestreet.com/author/tobi-amure, benzinga.com/author/tobi-amure, inc.com/author/tobi-amure — all HTTP 403.
 **Technically automatable via SMTP — but sends are George's lane**, so it is a draft, not a send.
 
-> Hi Tobi — the denominator first, since it is the thing you said you check: 86 AI tools tracked, 42 of them with a published monthly price, 33 of those at or under $25/month, median $17.50. Re-checked today, 2026-10-17.
+> Hi Tobi — the denominator first, since it is the thing you said you check: 87 AI tools tracked, 42 of them with a published monthly price, 33 of those at or under $25/month, median $17.50. Re-checked today, 2026-10-17.
 >
 > Method, in one line: we open each vendor's own pricing page by hand, record the list price, the billing term and the date we saw it, and publish the source URL with every figure. No surveys, no vendor-supplied decks.
 >

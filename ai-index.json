@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-21",
-  "tools_count": 86,
+  "tools_count": 87,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -637,6 +637,13 @@
       "category": "Video",
       "price": "Lite $19.98/mo or $119.88/yr (2,000 credits a month); Pro $39.98/mo or $239.88/yr (5,000); Ultra $77.98/mo or $467.88/yr (10,000); one-time packs 1,500 credits $29.90, 3,000 $49.90, 5,000 $69.90, 8,000 $99.90; two free guest generations a day and 10 daily credits for a signed-in account",
       "url": "https://aitoolsessentials.com/tools/gatsbyai/"
+    },
+    {
+      "name": "GearDex",
+      "slug": "geardex",
+      "category": "Productivity",
+      "price": "Starter free (25 gear items, 10 categories, 25 AI actions a week, one 50 MB client gallery, a 3-page site); Pro $4/mo or $39/yr; Studio $19/mo or $179/yr; no free trial on paid plans",
+      "url": "https://aitoolsessentials.com/tools/geardex/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

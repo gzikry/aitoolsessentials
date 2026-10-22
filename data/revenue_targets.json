@@ -1486,5 +1486,27 @@
     "status": "not_started",
     "next_action": "Ask support@gatsbyai.app whether a partner, referral or creator programme exists; /affiliates, /partners and /contact all return 404, so a direct ask is the only route.",
     "notes": "Subscriptions from $19.98 a month and packs from $29.90 give a small but workable commission base. No programme terms are published and no tracking URL should be assumed or invented."
+  },
+  {
+    "tool_slug": "geardex",
+    "tool_name": "GearDex",
+    "priority": "low",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership",
+      "Photography creator partnerships"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/geardex/"
+    ],
+    "best_audiences": [
+      "photographers and videographers moving off a gear spreadsheet",
+      "small studios tracking loans, maintenance and gear value",
+      "rental houses needing check-out, custody and insurance records"
+    ],
+    "status": "not_started",
+    "next_action": "Email geardex.help@gmail.com about partner or referral terms; /affiliates and /partners both return 404 and no programme terms are published, so a direct ask is the only route.",
+    "notes": "Subscriptions are $4 to $19 a month ($39 to $179 a year), so commissions are small in absolute terms even at a good rate; the stronger play is audience fit with photography and studio-operations content. No tracking URL exists and none should be invented."
   }
 ]
