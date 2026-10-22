@@ -1,0 +1,86 @@
+{
+ "new_rows": {
+  "nontech-inhouse-corporate-comms-lead-ai-search-and-discovery-strategy": {
+   "who": "Andrew Birmingham (the page's own author field). No outlet named in the body; he describes the request as 'for a project I'm running' and addresses it to 'my PR and Comms mates'.",
+   "category": "AI / Search & Discovery / Corporate Communications",
+   "contact": "The body says only 'If that sounds like you drop me a line' — no address, handle or link to the poster.",
+   "relevance": "low",
+   "notes": "He wants a non-tech sector, IN-HOUSE corporate comms leader who owns their company's AI search and discovery strategy, and explicitly excludes agencies. AIToolsEssentials is neither in-house nor a comms function: there is no version of this request we could answer without inventing a role. The AI content is the subject of the story, not its budget, so our dated price series does not fit either.",
+   "template": "None. No route, and no standing to claim. NOT DRAFTED."
+  },
+  "anthropic-project-panama-employees-book-digitization-and-ai-training": {
+   "who": "TF1, the French TV network (domain field tf1.fr; the body signs 'TF1'). Reporter not named on the page.",
+   "category": "AI / Training Data / Labour (broadcast)",
+   "contact": "The body says 'Feel free to comment below or reach out to me directly' — the page publishes no address and no handle.",
+   "relevance": "low",
+   "notes": "Wants people who currently or formerly worked at Anthropic on Project Panama, about digitising books to train models. That is first-hand testimony from an insider; we hold none and could only offer commentary on published pricing, which is not what the story is about. Worth recording because it is the only vendor-internals request of the window and the beat may return to training-data economics.",
+   "template": "None. No route, and the ask is insider testimony we do not hold. NOT DRAFTED."
+  },
+  "geopolitical-analysts-and-ai-security-experts-global-hotspots": {
+   "who": "Abdurakhmonov NormuhammadAli, sourcing for the Geosiyosat project (no outlet site named).",
+   "category": "Geopolitics / AI security (adjacent)",
+   "contact": "The body asks readers to 'let me know' or name someone who might be interested; no address, handle or link published.",
+   "relevance": "low",
+   "notes": "A call for geopolitical and defence analysts across Russia-Ukraine, the Middle East, Asia-Pacific and US-China, with AI specialists 'especially welcome'. AI is one parenthetical inside a foreign-policy brief; nothing in it touches tool pricing, seat costs or procurement, which is the only ground we can stand on.",
+   "template": "None. Off-beat and route-less. NOT DRAFTED."
+  },
+  "omaha-hr-representatives-offices-with-written-ai-policies": {
+   "who": "Tim Trudell (the page's own author field). Outlet not named in the body; the request is local to the Omaha area.",
+   "category": "AI / Workplace Policy / HR",
+   "contact": "The body says 'please DM me or have them message me' — no address, handle or link to the poster is printed.",
+   "relevance": "low",
+   "notes": "Wants an Omaha-area HR representative at an office with a WRITTEN AI policy. The geography and the job title are the request: pitching it would mean claiming to be an Omaha HR rep. The nearest thing we hold is a shadow-AI price index, which answers a different question (what staff pay when policy blocks them) and cannot be passed off as an office policy.",
+   "template": "None. Standing impossible (Omaha HR representative). NOT DRAFTED."
+  },
+  "nj-parents-and-teachers-ai-school-surveillance-and-data-practices": {
+   "who": "Nicole Rosenthal, investigative reporter at NJ.com (named in the page's author field; the body signs 'NJ.com').",
+   "category": "AI / Education Surveillance / Data Practices",
+   "contact": "The body says 'DM me or email [email redacted]' — Sourcee redacts the address. No handle and no link to the reporter is published on the request page.",
+   "relevance": "low",
+   "notes": "An investigative piece on AI-enabled surveillance tech in New Jersey schools, wanting parents and teachers who have seen it deployed. The named reporter and a real outlet make this the most credible row of the six, but the standing requirement is a parent or teacher in those districts — a role we cannot occupy. No route is resolvable from the page either: the address is redacted and no byline link is given, so even a correct pitch has nowhere to go without hunting nj.com's own staff pages, which the monitor does not do for a row with no standing.",
+   "template": "None. Standing impossible (NJ parent/teacher) and the address is redacted. NOT DRAFTED."
+  },
+  "digital-artists-aigenerated-posters-flooding-social-feeds": {
+   "who": "Chloe O'Keeffe (the page's own author field). No outlet named; the body carries '#mediarequest #journorequests'.",
+   "category": "AI / Creative Work / Social Platforms",
+   "contact": "The body closes 'DMs open' — no address, handle or link to the poster is printed, and the page publishes no route of its own.",
+   "relevance": "low",
+   "notes": "Wants creatives and artists on AI-generated posters crowding their social feeds. It is a working-conditions and taste story from makers; we publish dated software prices and have no artist testimony to offer. Caught only because the body was read — the slug carries 'aigenerated' as one token, which the slug matcher does not split — so it is recorded here as a body-level hit rather than a slug hit.",
+   "template": "None. No route, no standing. NOT DRAFTED."
+  },
+  "fintech-product-managers-nextgen-aipowered-personal-finance-apps": {
+   "who": "Paul Dus Navis (the page's own author field). Outlet not named; the body is a single line advertising an 'editorial feature'.",
+   "category": "AI / Fintech / Sponsored feature (likely paid placement)",
+   "contact": "The only published route is a LinkedIn short link, https://lnkd.in/gh2gpgwg, which is the feature's own advert link — not a route to a journalist sourcing sources.",
+   "relevance": "low",
+   "notes": "This is not a journalist request in any useful sense: it is an editorial-feature advert ('Looking for editorial feature on ...') pointing at a LinkedIn short link. There is no journalist, no outlet, no deadline and no source call. Recorded so the same slug is recognised next time it recurs, and explicitly NOT to be pitched — paying for placement is a standing decision this monitor does not make.",
+   "template": "None. Paid-placement advert, not a source request. DO NOT PITCH."
+  },
+  "bengaluru-founders-deep-tech-healthcare-biology-housing-and-ai": {
+   "who": "Sikandar (page author field), booking guests for the @dostcast podcast.",
+   "category": "Podcast booking / Bengaluru founders",
+   "contact": "The body says 'Let me know please' — no address, handle or link published.",
+   "relevance": "low",
+   "notes": "A podcast guest call for Bengaluru founders across deep tech, healthcare, biology, housing and AI. AI is one item in a five-item list, and the ask is a founder story from a specific city; we are a review publication with no founder narrative to tell.",
+   "template": "None. Off-beat, no route. NOT DRAFTED."
+  }
+ },
+ "why_not_drafted": [
+  "all six are standing-only calls with no published route — an in-house comms leader, a non-tech-sector comms role, an Anthropic insider, a geopolitical analyst, an Omaha HR representative, an NJ parent/teacher, and a Bengaluru podcast founder. A draft with no route and false standing is a file, not a pitch."
+ ],
+ "new_this_run": [
+  "SIX AI-TOKEN SLUGS, ZERO ON THE COST BEAT, AND THE ZERO IS MEASURED AT BODY LEVEL: today's window carried 96 slugs (newest lastmod 2026-10-22T04:09:50Z against the 2026-10-21 mark 2026-10-21T01:33:30Z), 6 with an AI token, 0 with an AI token plus a real spend token, 8 with a spend token alone. All 96 bodies were fetched and read. Eight bodies mention AI at body level and none of those eight carries a real spend token, so there is no core-beat request in this window either.",
+  "THE SIX ARE STANDING MISSES, NOT FILTER MISSES: a corporate comms leader's AI search strategy, a TF1 request for Anthropic Project Panama staff, a geopolitical-analyst call that mentions AI parenthetically, an Omaha HR policy interview, an NJ.com school-surveillance investigation (real outlet, real reporter, redacted address, wants parents and teachers), and a Bengaluru podcast booking. Every one requires a role we do not hold.",
+  "THE ONE ROW WORTH WATCHING IS THE NJ.COM ONE: Nicole Rosenthal is the only named reporter at a named outlet in the window, and her beat (AI surveillance procurement in schools) is one this site could eventually speak to. It is recorded as low relevance today because the ask is parental/teacher testimony, not data, and her address is redacted — but if she files a second request on district AI spend, that is a route worth resolving by hand."
+ ],
+ "defects": [
+  "THE BODY SCANNER WAS READING SOURCEe'S OWN CHROME AS PUBLISHED ROUTES. `haro_bodies.py` kept its own CHROME tuple and that tuple was missing the two entries `verify_journo_requests.py` had learned (linkedin.com/in/andrewsmith313, x.com/andy_cb_smith), so today's scan wrote those two URLs into `published_links` for all 96 window rows — the same chrome-leak class as the 2026-09-29 queue defect, fixed in one script and left standing in the other. The list now lives once, in `scripts/sourcee_terms.py`, both probes import `is_chrome()`, and today's file was re-scored from its stored payloads: 0 rows leak chrome, 19 carry a real published link.",
+  "THE DIGEST WAS PRINTING TWO AGES FOR ONE ROW. `refresh()` in `scripts/build_digest.py` rebuilt each `deadline` from the page but carried the OLD measurement forward in the prefix, so the 2026-10-21 digest contains rows reading 'Page fetched today: HTTP 200 ... = 1 days. RE-VERIFIED 2026-10-21: ... = 6 days'. One field, two ages, the earlier one wrong. An earlier run's own measurement is now stripped and only the poster's stated cutoff survives.",
+  "THE STALE-FIGURE REPAIR HAD AGED OUT. The template repair matched `of 7[0-9] tools`, which stopped matching when the tool count passed 80, so with today's snapshot at 88 tools and 44 priced the Fast Company row's template still read '42 of 80 tracked AI tools ... 33 of those at or under $25/month'. The pattern now covers the tool count, the sub-$25 count and the median, with no hardcoded digits: 5 carried templates were re-derived this run."
+ ],
+ "extra_actions": [
+  "THE SEND DECISION IS ON TWO CARRIED ROWS, NOT ON TODAY'S WINDOW. Both have a route verified live today and a finished draft, and both are past the 10-day cold line — a late send or a ledger 'skipped' entry closes either one; silence leaves it drifting. (1) tech-and-hr-leaders-ai-at-work-impact-on-jobs-and-hiring — Tobi Amure sourcing for Fast Company Work Life, 12 days, route hello@tobiamure.com (tobiamure.com/ HTTP 200, 62,628 bytes today; contact form at /contact/ as fallback), draft at pitch-drafts-2026-10-22.md section 1. (2) employees-blocked-from-ai-on-work-accounts-automating-tedious-tasks — Christopher Mims, WSJ, 17 days, route LinkedIn DM to linkedin.com/in/christopher-mims-club/ (HTTP 200, 623,445 bytes today), draft at pitch-drafts-2026-10-22.md section 2.",
+  "FIGURES MOVED TODAY: `data/pricing_snapshots.json` refreshed to 88 tools / 44 publishing a monthly price / 35 at or under $25 / median $17.50 (updated 2026-10-22), against 84/43/34/$18.00 quoted in the 2026-10-21 drafts. Any draft in an older dated file quoting 84 tools, 43 priced or $18.00 is stale and must not be sent.",
+  "ROUTE PROBES RE-RUN: 11 recorded routes re-probed today into route-checks-2026-10-22.json. Live: tobiamure.com (200), tobiamure.com/contact (200), linkedin.com/in/christopher-mims-club (200), ope-plus.com announcement and contact (200), raconteur.net/contributors/simon-chandler (200, still publishing the data-part triple), specialityfoodmagazine.com/contact (200). Dead ends unchanged and not to be retried as routes: muckrack.com/christopher-mims 403, wsj.com author page 401, raconteur.net/author/simon-chandler 404."
+ ]
+}

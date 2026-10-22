@@ -60,6 +60,22 @@ AI_PROSE = re.compile(
     r"fireflies)\b", re.I)
 
 
+# Sourcee's own page chrome. None of it is ever a reply route. Kept here, not in each probe script,
+# because the two probes had drifted: `verify_journo_requests.py` learned that the platform's own
+# author links (linkedin.com/in/andrewsmith313, x.com/andy_cb_smith) were chrome and
+# `haro_bodies.py` did not. The 2026-10-22 run wrote `published_links` for all 96 window rows
+# carrying exactly those two URLs — the same chrome-leak class the 2026-09-29 queue defect fixed in
+# one script and left standing in the other.
+CHROME = ("sourcee.app", "vercel", "sentry", "nextjs.org", "schema.org", "w3.org", "gstatic",
+          "google.com/s2", "supabase.co", "redditstatic", "preview.redd.it",
+          "linkedin.com/in/andrewsmith313", "x.com/andy_cb_smith")
+
+
+def is_chrome(url: str) -> bool:
+    """True when a URL found in a page payload is Sourcee's own chrome, not a route."""
+    return any(c in url for c in CHROME)
+
+
 def ai_hit(slug: str) -> list[str]:
     """Every AI token in a slug — vendor names included."""
     return sorted({m.group(2).lower() for m in AI.finditer(slug)})

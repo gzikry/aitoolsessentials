@@ -26,12 +26,11 @@ from pathlib import Path
 SITE_ROOT = Path(__file__).resolve().parent.parent
 D = SITE_ROOT / "marketing" / "haro-outreach"
 sys.path.insert(0, str(SITE_ROOT / "scripts"))
-from sourcee_terms import AI, SPEND, REAL_SPEND, prose_ai  # noqa: E402
+from sourcee_terms import AI, SPEND, REAL_SPEND, prose_ai, is_chrome  # noqa: E402
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0 Safari/537.36")
-CHROME = ("sourcee.app", "vercel", "sentry", "nextjs.org", "schema.org", "w3.org", "gstatic",
-          "google.com/s2", "supabase.co", "redditstatic", "preview.redd.it")
+CHROME = ()  # kept as a name for older callers; the filter now comes from sourcee_terms.is_chrome
 
 
 def field(raw: str, key: str) -> str | None:
@@ -82,7 +81,7 @@ def main() -> None:
         # YouTube share parameter (?si=AI-...), which scored a ghost story as an AI request.
         scan = re.sub(r"https?://\S+", " ", core)
         links = [u for u in sorted(set(re.findall(r"https?://[A-Za-z0-9._~:/?#\[\]@!$&()*+,;=%-]{8,160}", raw)))
-                 if not any(c in u for c in CHROME)]
+                 if not is_chrome(u)]
         rec = {"slug": sl, "url": url, "http": code, "headline": field(raw, "headline"),
                "datePublished": field(raw, "datePublished"),
                "badge": badge.group(1) if badge else None, "author": field(raw, "name"),
@@ -111,6 +110,7 @@ def main() -> None:
     # rows fetched earlier in this same run instead of only to the next run's.
     for rec in bodies.values():
         scan = re.sub(r"https?://\S+", " ", rec.get("core") or "")
+        rec["published_links"] = [u for u in (rec.get("published_links") or []) if not is_chrome(u)]
         rec["ai_tokens_in_body"] = prose_ai(scan)
         rec["ai_prose_in_body"] = prose_ai(scan)
         rec["ai_slug_tokens"] = sorted({mm.group(2).lower() for mm in AI.finditer(rec["slug"])})

@@ -35,10 +35,8 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0 Safari/537.36")
 FEED_URL = "https://www.sourcee.app/topics/ai/journo-requests"
 
-# Sourcee's own chrome appears on every page; none of it is a reply route.
-CHROME = ("sourcee.app", "vercel", "sentry", "nextjs.org", "schema.org", "w3.org", "gstatic",
-          "google.com/s2", "supabase.co", "redditstatic", "preview.redd.it",
-          "linkedin.com/in/andrewsmith313", "x.com/andy_cb_smith")
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from sourcee_terms import CHROME  # noqa: E402
 
 
 def curl(url: str, timeout: int = 30) -> tuple[str, str]:

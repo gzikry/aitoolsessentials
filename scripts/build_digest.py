@@ -83,7 +83,14 @@ def refresh(o: dict, verified: dict, feed: set[str], today: str) -> dict:
     o["_badge"] = badge
     o["_in_ai_topic_feed"] = slug_of(o["url"]) in feed
     old = o.get("deadline", "")
-    prefix = old.split("RE-VERIFIED 2026-")[0].strip() or "No cutoff stated."
+    prefix = old.split("RE-VERIFIED 2026-")[0]
+    # An earlier run's own measurement can sit in the prefix ("Page fetched today: ... = 1 days.").
+    # It was being carried forward verbatim, so the 2026-10-21 digest printed rows reading
+    # "= 1 days. RE-VERIFIED 2026-10-21: ... = 6 days" — one field asserting two different ages at
+    # once, the older one wrong. Only the poster's own stated cutoff survives the strip.
+    prefix = re.sub(r"Page fetched today:.*?= \d+ days?\.", "", prefix)
+    prefix = re.sub(r"PAGE-VERIFIED 20\d{2}-\d{2}-\d{2}:.*$", "", prefix)
+    prefix = " ".join(prefix.split()).strip() or "No cutoff stated."
     o["deadline"] = (
         f"{prefix} RE-VERIFIED {today}: HTTP 200, live=True, badge '{badge}', "
         f"datePublished {rec.get('datePublished')} = {days} days, no expiry notice on the page. "
@@ -184,13 +191,24 @@ def main() -> None:
                 opps[i] = o
                 break
 
-    # A carried template can quote the tool count from the day it was written. Re-derive it: the
-    # queue renders this field straight to George, so a stale count is visible and wrong.
+    # A carried template can quote the tool count, the sub-$25 count or the median from the day it
+    # was written. Re-derive all three: the queue renders this field straight to George, so a stale
+    # figure is visible and wrong. The old pattern was `of 7[0-9] (tools|tracked AI tools)`, which
+    # stopped matching the moment the tool count reached 80 — so on 2026-10-22, with the snapshot at
+    # 88 tools and 44 priced, the Fast Company row's template still read "42 of 80 tracked AI tools
+    # ... 33 at or under $25 ... median $17.50". That is the defect class the ledger records for the
+    # $16.50 series that went out to a real correspondent, reached through a regex that aged out.
     repaired = []
+    n_paid, n_25, med_now = figs["n_paid"], figs["n_25"], figs["median"]
     for i, o in enumerate(opps):
         t = o.get("suggested_pitch_template") or ""
-        new, n = re.subn(r"of 7[0-9] (tools|tracked AI tools)", rf"of {figs['n_tools']} \1", t)
-        if n and new != t:
+        new = t
+        new = re.sub(r"\b\d{2,3} of \d{2,3} (tracked AI tools|tools)", rf"{n_paid} of {figs['n_tools']} \1", new)
+        new = re.sub(r"\b\d{1,3} (?:(of those) )?at or under \$25",
+                     lambda m: f"{n_25} " + (f"{m.group(1)} " if m.group(1) else "") + "at or under $25", new)
+        if med_now != "?":
+            new = re.sub(r"median \$\d+(?:\.\d+)?", f"median ${med_now}", new)
+        if new != t:
             o = dict(o)
             o["suggested_pitch_template"] = new
             o["_figures_repaired"] = sorted(set(o.get("_figures_repaired") or []) | {"suggested_pitch_template"})
@@ -202,7 +220,9 @@ def main() -> None:
 
     def _dl(slug: str) -> str:
         r = verified.get(slug) or {}
-        return (f"No cutoff stated. Page fetched today: HTTP 200, live=True, badge "
+        # Same shape as refresh() writes for carried rows, so tomorrow's run can strip this
+        # measurement out of the prefix instead of stacking a second, stale age next to it.
+        return (f"No cutoff stated. RE-VERIFIED {today}: HTTP 200, live=True, badge "
                 f"'{r.get('badge')}', datePublished {r.get('datePublished')} = {r.get('days_old')} days.")
 
     def contact_evidence(slug: str) -> str:
