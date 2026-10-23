@@ -1592,5 +1592,27 @@
     "status": "not_started",
     "next_action": "Email w1952724273@gmail.com about affiliate, referral or partner terms - no /affiliates, /affiliate, /partners, /referral or /api/referrals page exists, so a direct ask is the only route, and the same message should carry the editorial questions about operator identity, the missing governing-law clause and the policy date that predates the domain registration. Do not invent a tracking URL.",
     "notes": "Economics are thin by construction: a single $6.99 one-time product with no subscription and no upsell ladder means one conversion is worth cents at any plausible commission rate, and the product is seasonal, so treat this as a coverage listing rather than a revenue target. Contact is a free-provider Gmail address; the domain publishes no MX, so a @marigoldpet.com address would not receive mail today and asking for one would be a fabricated blocker."
+  },
+  {
+    "tool_slug": "humanpen",
+    "tool_name": "HumanPen",
+    "priority": "low",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/humanpen/"
+    ],
+    "best_audiences": [
+      "graduate students and researchers preparing a thesis or manuscript for submission",
+      "non-native English academic writers who need citation-style conversion rather than rewriting",
+      "teams translating or condensing long documents while keeping layout",
+      "developers who would rather call the API than upload through the web app"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@humanpen.net about affiliate, referral or partner terms - there is no public affiliate page (/affiliates and /partners both render the sign-in screen), so a direct ask is the only route. Do not invent a tracking URL. The same message carries the two editorial asks: name Google Ads and Microsoft Ads in the privacy policy (or remove the tags) and add a consent control, and name a jurisdiction in the governing-law clause.",
+    "notes": "Economics are plausible but unproven: one-time credit packs from $19 to $249 with a first-purchase discount and no subscription, so a referral is worth a percentage of a single purchase rather than recurring revenue. Site traffic is the constraint, not the offer. The submitted contact is a free-provider Gmail; the domain's own support@humanpen.net was probed and is live, so that is the address to use for the commercial ask. The audience overlaps the academic-integrity debate, so keep any promotion factual and let the listing's stated limits do the work."
   }
 ]

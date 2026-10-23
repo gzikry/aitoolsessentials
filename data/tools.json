@@ -5161,5 +5161,94 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.1/5 - it does one job cleanly and honestly: one photo in, one finished 15-second video with audio out, two aspect ratios, no prompt engineering, no editing, no subscription to forget about, and a Spanish funnel rather than an English-only page with a machine-translated legal footer. It is held below 4.5 by scope: a single seasonal effect, one runtime, four looks, and no second product to grow into. Transparency 3.8/5 - the disclosure set is the strongest part of the site and, unusually, it survives inspection rather than just being present: Google consent defaults ship denied, GA4 loads only on an accepted choice, approved UTM parameters are whitelisted into page_location while order ids are stripped, processors and model names are itemised with retention periods, an Acceptable Use Policy exists, and output rights are stated rather than dodged. The 3.8 is the identity gap: no company, individual, country, postal address or governing-law clause anywhere in the Terms, an effective date one day before the domain was registered, and a Gmail-only support route on a domain with no MX. Nothing in the documentation contradicts the product, which is why this lands at 4.0 rather than at the 3.6-3.8 of the listings whose own policy fights their own head tag."
+  },
+  {
+    "slug": "humanpen",
+    "name": "HumanPen",
+    "category": "Productivity",
+    "best_for": "Writers and researchers who already have a finished Word or PowerPoint file and need the file itself changed - AI phrasing reduced, references converted to a target style, a document cut to a word limit, or a layout-preserving translation - then downloaded again as an editable DOCX or PPTX. The unit of work is a whole document, not pasted text, so it suits a 50,000-word thesis with cross-references and figure numbering. Not a fit for anyone who wants a draft written for them (there is no generation entry point), for non-English humanizing, for assessed work where the institution restricts AI assistance, or for a buyer who needs a named company, country, postal address or a governing law that names a jurisdiction.",
+    "price": "Pay-as-you-go credits, one-time purchase, no subscription: 1,000 credits USD 19, 5,000 USD 79 (marked most popular), 10,000 USD 149, 20,000 USD 249. Every account's first purchase is discounted to USD 9.90 / 49 / 98 / 196 for the same four packs, once per account. New accounts get 100 free credits. Credits never expire and work in the web app and the API. Humanizing costs 100 credits per 1,000 words actually rewritten; citation-format correction is the cheapest operation at 5 credits per 1,000 words. Checkout runs through Waffo (the Privacy Policy also names Creem), each acting as merchant of record; prices are USD and no recurring plan is sold - the Terms state each purchase is a one-time charge.",
+    "rating": 3.9,
+    "official": "https://humanpen.net/",
+    "summary": "HumanPen is a document toolbox that works on files rather than on a text box. You upload a DOCX or PPTX and get the same format back, edited: an AI-phrasing rewriter with two strengths that can import your own Turnitin or iThenticate report and touch only the flagged passages, a citation-format converter covering 12 styles, a shortener that hits a target word count, and a translator for 12 languages that keeps layout, charts and formulas. Billing is metered - you are charged for words actually rewritten, not for the whole file - and credits do not expire, so a 500-word job costs cents instead of a month's subscription. The humanizer is English-only and the vendor says so. There is also a documented REST API, an MCP server and an agent skill. The site is candid to an unusual degree about what the tool is for: the /ethics page states plainly that the humanizer is used to lower detector scores, declines to promise a pass, declines to run its own detector, and the Terms forbid submitting work as your own where an assessment requires independent work.",
+    "use_cases": [
+      "Rewriting AI-drafted passages inside a thesis or report while keeping citations, tables, figure numbering and Word fields intact",
+      "Importing a Turnitin or iThenticate report so only the flagged passages are rewritten and only those words are billed",
+      "Converting an entire reference list and in-text citations to APA 7, MLA 9, Harvard, IEEE, Chicago, Vancouver, AMA, ACS, OSCOLA or GB/T 7714 in one pass",
+      "Cutting a manuscript to a submission word limit without breaking structure or references",
+      "Translating a PDF, DOCX, PPTX, XLSX or EPUB between 12 languages with charts, formulas and page layout preserved",
+      "Running the same four operations over many files through the documented REST API, MCP server or agent skill instead of one paste at a time"
+    ],
+    "pros": [
+      "Genuinely document-level: input and output are the same editable format, and the vendor's stated design rule - numeric values, units, percentages, statistical notation, exhibit numbering, in-text citations and reference entries are protected during a rewrite - is the thing a paste-based humanizer cannot do",
+      "Billing matches the job: 100 credits per 1,000 words actually rewritten, so importing a detection report and rewriting only the flagged passages costs a fraction of the document, and a second pass on still-flagged passages is free",
+      "The commercial model is clean and verifiable: four one-time packs whose prices agree across the rendered pricing page, the site's public packages endpoint and the page metadata, credits that do not expire, and a Terms clause stating each purchase is a one-time charge with no renewal anywhere",
+      "Refund terms are specific rather than decorative: full refund within 14 days on an untouched purchase, credits removed on refund, automatic credit return when a job fails on their side, and an explicit note that consumer-protection rights are not limited",
+      "Output ownership is stated in the user's favour - you retain rights to input and output, no ownership claim is made, and the licence to process ends when the content is deleted",
+      "The /ethics page is the most honest document in this category that we have read: it concedes the humanizer exists to lower detector scores, refuses a detected-or-refunded guarantee, refuses to run its own detector on the grounds that grading your own exam is not persuasive, and says outright that a processed manuscript still counts as AI-assisted for disclosure purposes",
+      "Retention is given as periods and tied to a mechanism - uploaded documents and results deleted 7 days after the job finishes, account deletion within 30 days, payment records kept 7 years - and the site says the 7-day window is enforced by a scheduled sweep rather than by hand",
+      "A real developer surface, documented rather than promised: a published OpenAPI 3.1 schema, a machine-readable API guide, an MCP server and an agent skill, so the same operations run in a script"
+    ],
+    "cons": [
+      "Advertising trackers the privacy policy does not disclose: Google Ads gtag AW-18511954133 and a Microsoft Ads UET (bat.bing.net) tag are injected in the root layout with lazyOnload and fire on every page, including /legal/privacy itself, with remarketing and conversion requests to google.com/rmkt/collect and googleadservices observed - while Privacy Policy section 10 says cookies are only those 'necessary to sign you in and keep the Service working' and 'We do not use them to build advertising profiles', and section 5's processor list mentions no Google or Microsoft",
+      "No consent mechanism at all: there is no cookie banner, no consent-mode call and no way to refuse the ad tags on a site that receives uploaded manuscripts - the policy's section 4 talks about consent as a legal basis the site relies on elsewhere, but nothing on the page asks for it",
+      "No operator identity and no named jurisdiction: the Terms are accepted by 'the HumanPen team', the About page says only 'built and maintained by the HumanPen team', and the governing-law clause is circular - 'the laws of the jurisdiction in which the HumanPen team operates' - so no country, company, company number or postal address appears on any page",
+      "The product is marketed at graded coursework while its own Terms forbid academic dishonesty: /humanize/homework-assignment prices 'a 500-word assignment' and pitches discussion-board posts as text that should 'read like something you typed off the cuff', and /business-solutions sells bulk humanizing to institutions - against Terms section 6, which bars submitting work as your own where an assessment requires independent work. The vendor's stated position is that the institution sets the rules and the user answers for the use; readers in assessed work should treat this as a policy risk, not a study aid",
+      "Effectiveness is unverifiable from outside and the vendor does not claim otherwise - there is no pass-rate figure, no third-party test, and no detector of its own to check against, so the only honest expectation is that the wording changes and the AI involvement does not",
+      "Humanizing is English-only, citation correction and condensing accept DOCX only, and only Turnitin and iThenticate reports can be imported - three scope limits that rule out a fair amount of the use the SEO pages imply",
+      "Three months old (domain registered 2026-07-17) with no independent hands-on review found: the visible footprint is a GitHub org with three repos, one directory review and a twelve.tools badge",
+      "Two endpoints the vendor's own OpenAPI schema documents - GET /v1/health and GET /v1/ready - return 404 on the live API, which is a small but concrete documentation defect for anyone integrating",
+      "No public affiliate or partner page (both routes drop to a sign-in screen), so there is no published referral terms to check"
+    ],
+    "key_features": [
+      "AI-phrasing rewrite of DOCX and PPTX with two strengths, returning the same editable format",
+      "Import an existing Turnitin or iThenticate AI report to rewrite only the flagged passages, or select passages yourself",
+      "Charged on words actually rewritten (100 credits per 1,000 words), with a free second pass on passages a fresh report still flags",
+      "Optional target word range (word_min / word_max) so the output lands inside a submission limit",
+      "Citation-format converter for APA 7, MLA 9, Harvard, IEEE, Chicago (author-date and notes), GB/T 7714, Vancouver, AMA, ACS and OSCOLA at 5 credits per 1,000 words",
+      "Document shortener to a word budget, whole-document or per-passage",
+      "Layout-preserving translator for 12 languages across PDF, DOCX, PPTX, XLSX, EPUB, HTML and plain text",
+      "Documented REST API (OpenAPI 3.1), MCP server and agent skill; credits usable in the app and the API",
+      "Waffo/Creem hosted checkout, one-time credit packs, credits that never expire, 100 free credits at signup",
+      "English and Chinese interfaces with the marketing site mirrored across 11 locales"
+    ],
+    "faq": [
+      [
+        "How much does HumanPen cost?",
+        "Credits are bought in one-time packs: 1,000 for USD 19, 5,000 for USD 79, 10,000 for USD 149 and 20,000 for USD 249, with a once-per-account first purchase at USD 9.90, 49, 98 and 196 respectively. New accounts start with 100 free credits. Humanizing costs 100 credits per 1,000 words actually rewritten, so the entry pack covers about 10,000 words at list price; citation-format correction is 5 credits per 1,000 words. Credits do not expire and there is no subscription - the Terms state each purchase is a one-time charge."
+      ],
+      [
+        "Is there a free trial?",
+        "Not a trial in the usual sense. Signing up grants 100 credits, worth about 1,000 words of humanizing or 20,000 words of citation correction, and that is enough to run a real short document through the pipeline. Beyond that it is pay-as-you-go; there is no time-limited trial and no money-back guarantee tied to a detector result - the vendor explicitly refuses to promise one."
+      ],
+      [
+        "Does it actually get past AI detectors?",
+        "The vendor declines to say so and we cannot verify it. There is no published pass rate, no third-party test, and HumanPen runs no detector of its own - it accepts the Turnitin or iThenticate report your institution issued instead, which is a more honest design than a self-graded score but still leaves the outcome dependent on a detector that changes. Judge it on your own document rather than on the category's usual 'guaranteed to pass' claims, which this vendor explicitly calls out as something it will not make."
+      ],
+      [
+        "What happens to my documents?",
+        "Uploaded documents and results are deleted 7 days after the job finishes, enforced by a scheduled sweep; job records such as file name, word counts and status stay with your account history until you delete the account, which the policy says happens within 30 days. Text is sent to third-party AI model providers for processing, and the policy states neither HumanPen nor those providers use it to train models. Order and payment records are kept 7 years for tax and accounting law."
+      ],
+      [
+        "Who is behind it, and where is it based?",
+        "That is not disclosed. Every page names only 'the HumanPen team'; there is no company, individual, country, postal address or company number, and the governing-law clause refers to 'the jurisdiction in which the HumanPen team operates' without naming one. Support runs through support@humanpen.net, which we confirmed is a working mailbox. Treat the identity gap as a real limitation if you need a counterparty with a legal address."
+      ],
+      [
+        "Can I use it for coursework?",
+        "Read your institution's rules first, because HumanPen's own Terms bar 'submitting work as your own where the substance of an assessment is required to be your independent work', and the /ethics page states that a processed manuscript still counts as AI-assisted where disclosure is required. The vendor markets the tool to students for exactly that coursework use, which is a genuine tension we would rather name than smooth over: the restriction is in the contract and the marketing points the other way."
+      ]
+    ],
+    "trial_checklist": [
+      "Start with the 100 free credits on a document you can afford to lose - a real one of a few hundred words, not a demo paragraph - and compare the output line by line against the input",
+      "Check the thing the vendor claims is protected: numbers, units, percentages, citations, figure numbering and any Word fields or cross-references, before and after",
+      "If you have a Turnitin or iThenticate report, import it rather than rewriting the whole file - that is the workflow the pricing is built around, and only the flagged passages are billed",
+      "Confirm the cost arithmetic before a large job: 100 credits per 1,000 words rewritten means the 20,000-word thesis is roughly 2,000 credits, i.e. the 5,000-credit pack, not the entry pack",
+      "Do not buy a big pack on a promise of passing a detector - there is none, and the vendor says so; buy the smallest pack that covers the document you actually have",
+      "Before uploading anything confidential, note that documents are sent to unnamed third-party model providers, kept 7 days, and that the site loads Google and Microsoft advertising tags with no consent control",
+      "If a job fails, watch that credits come back automatically - the Terms say a failed or cancelled job is never charged - and keep the order number support asks for"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - the workflow is the right shape for the job: whole DOCX/PPTX in, same-format editable file out, metered on words actually rewritten, with a detection-report import that narrows the work and a free second pass. Four operations (rewrite, cite, condense, translate) share one credit balance, the API is published rather than promised, and the pricing ladder is one-time with credits that never expire. It is held below 4.5 by scope limits the vendor states itself (English-only humanizing, DOCX-only for two of the four operations, only two detectable report formats) and by effectiveness that cannot be verified from outside. Transparency 3.6/5 - the legal drafting is unusually good and mostly in the user's favour: output ownership retained, no training use, retention given as periods with the enforcement mechanism named, a specific 14-day unused-credit refund, and an /ethics page that concedes the product's real purpose instead of marketing around it. It scores 3.6 rather than higher because two things do not survive inspection: the cookie section claims only necessary session cookies and no advertising profiles while Google Ads and Microsoft Ads tags fire sitewide with no consent control and are absent from the processor list, and the governing-law clause names no jurisdiction at all while no company, person or address appears anywhere. Nothing here contradicts what the product does, which is why this lands at 3.9 rather than lower."
   }
 ]

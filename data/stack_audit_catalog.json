@@ -2217,6 +2217,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "humanpen",
+      "name": "HumanPen",
+      "category": "Productivity",
+      "official_url": "https://humanpen.net/",
+      "review_url": "/tools/humanpen/",
+      "price_label": "Pay-as-you-go credits, one-time purchase, no subscription: 1,000 credits USD 19, 5,000 USD 79 (marked most popular), 10,000 USD 149, 20,000 USD 249. Every account's first purchase is discounted to USD 9.90 / 49 / 98 / 196 for the same four packs, once per account. New accounts get 100 free credits. Credits never expire and work in the web app and the API. Humanizing costs 100 credits per 1,000 words actually rewritten; citation-format correction is the cheapest operation at 5 credits per 1,000 words. Checkout runs through Waffo (the Privacy Policy also names Creem), each acting as merchant of record; prices are USD and no recurring plan is sold - the Terms state each purchase is a one-time charge.",
+      "pricing_summary": "Pay-as-you-go one-time credit packs, USD, no subscription: 1,000 credits $19, 5,000 $79 (most popular), 10,000 $149, 20,000 $249; a once-per-account first purchase of the same four packs at $9.90 / $49 / $98 / $196; 100 free credits at signup; credits never expire and work in the app and the API. Consumption: 100 credits per 1,000 words rewritten by the humanizer, 5 credits per 1,000 words for citation-format correction. Verified on three surfaces that agree - the rendered /pricing page (four cards, first-purchase prices shown beside list prices), the site's own public endpoint /api/backend/v1/credits/packages?locale=en (eight items: four 'first_*' packs at the discounted cents values and four standard packs at 1900/7900/14900/24900 cents, currency USD, every provider 'waffo', default_provider 'waffo', first_purchase_available true, no recurring flag on any item), and the pricing page metadata ('1,000 credits for $19, or $9.90 on your first purchase'). The Terms state each purchase is a one-time charge and the only mention of a recurring plan is a future conditional ('Credits granted by a future membership plan would expire at the end of each period') in the pricing FAQ, so no subscription price exists to verify and none was recorded.",
+      "pricing_url": "https://humanpen.net/pricing",
+      "pricing_checked_date": "2026-10-23",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "research",
+        "coding",
+        "marketing",
+        "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }
