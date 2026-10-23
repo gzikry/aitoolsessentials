@@ -134,6 +134,14 @@ ROLES = [
       ("perplexity", "Cited lookups for documentation and metric definitions"),
       ("claude", "Query explanation and review-ready write-ups on long documents")],
      "articles/best-ai-tools-for-data-analysts.html"),
+    ("executive-assistants", "Executive assistants", "Inbox and calendar triage, meeting capture, and briefing documents around the mailboxes you already run, with approvals and personnel data staying human.",
+     [("chatgpt", "Drafts, rewrites, and agendas from your own material"),
+      ("claude", "Board packs, contracts, and policy summarising on long documents"),
+      ("shortwave", "Inbox triage inside the mail client you already use"),
+      ("fathom", "Meeting capture with decisions and owners separated"),
+      ("notion-ai", "Principal preferences, briefing notes, and recurring logistics in one place"),
+      ("perplexity", "Cited lookups for venues, travel rules, and supplier ownership")],
+     "articles/best-ai-tools-for-executive-assistants.html"),
 ]
 
 

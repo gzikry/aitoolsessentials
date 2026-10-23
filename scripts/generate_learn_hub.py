@@ -58,6 +58,8 @@ LEARN = [
     ('claude-code-vs-cursor-vs-copilot.html', 'Claude Code vs Cursor vs Copilot', 'Keep one paid coding surface: terminal agent, AI IDE, or inline completions.'),
     ('how-to-build-a-team-ai-prompt-library.html', 'Building a team AI prompt library that gets used', 'Job-named entries, one owner, one review date — and what never goes in a shared prompt.'),
     ('best-ai-tools-for-data-analysts.html', 'Best AI tools for data analysts', 'Query drafting, spreadsheet cleanup, source-grounded reading, and the validation that stays yours.'),
+    ('ai-rfp-proposal-response-workflow.html', 'An AI-assisted RFP and proposal response workflow', 'Approved answers as the source, drafting per requirement, a compliance pass, and the commitments a person owns.'),
+    ('best-ai-tools-for-executive-assistants.html', 'Best AI tools for executive assistants', 'Inbox triage, meeting capture, briefings, and cited research — with approvals and personnel data staying human.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'

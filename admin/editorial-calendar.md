@@ -94,4 +94,10 @@ Priority order unchanged: how-to/workflow → audience guides → question-inten
 Next up: one more workflow piece + one audience guide, then question-intent interleave.
 Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
 
+## Backlog: batch 4 (from 2026-10-23)
+Priority order unchanged: how-to/workflow → audience guides → question-intent.
+11. AI-assisted RFP and proposal response workflow ✅ shipped 2026-10-23 (workflow, articles/ai-rfp-proposal-response-workflow.html; added to Learn hub)
+12. Best AI tools for executive assistants ✅ shipped 2026-10-23 (audience guide, articles/best-ai-tools-for-executive-assistants.html; /best-for/ role `executive-assistants` + stack-builder role added)
+Next up: question-intent interleave (one or two question pages), then another workflow piece.
+
 
