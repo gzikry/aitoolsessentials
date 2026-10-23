@@ -2167,6 +2167,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "money-tracker",
+      "name": "Money Tracker (Expense & Budget)",
+      "category": "Productivity",
+      "official_url": "https://money.quhou123.com/en/",
+      "review_url": "/tools/money-tracker/",
+      "price_label": "Free with ads: manual entry, categories, budgets, charts, reports, multi-currency, split (AA) books and exports all work without paying. Premium is sold only inside the app stores - the vendor's own site publishes no price anywhere in its 45 locales. Apple's listing shows Yearly Premium $29.99 and Monthly Premium $2.99; Google Play lists in-app purchases at $2.99-$29.00 per item. Premium removes ads and adds unlimited AI entry, bill import (CSV, Excel, PDF or images), Android Smart Notification Entry, app lock, more books and accounts, and team books.",
+      "pricing_summary": "Free with ads; Premium is an in-app subscription sold only by the app stores. The vendor's own site publishes no price at all - no currency or price token appears on /en/, /zh-cn/, /zh-tw/, /ja/, /de/ or the root page, and its FAQ describes only an \"optional yearly Premium plan\". Store figures: App Store in-app purchases Yearly Premium $29.99 and Monthly Premium $2.99; Google Play in-app purchases listed as \"$2.99 - $29.00 per item\". No refund policy is published on the vendor's domain (/Info/refundPolicy and /en/refund-policy both 404), so store policy governs billing. Premium unlocks ad removal, unlimited AI entry, bill import, Android Smart Notification Entry, app lock, extra books and team books.",
+      "pricing_url": "https://money.quhou123.com/en/",
+      "pricing_checked_date": "2026-10-22",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "audio"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

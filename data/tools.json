@@ -4994,5 +4994,86 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.1/5 - the toolkit matches what people actually reopen a second app for (background and object removal, upscaling, restoration, colourising), the generator takes reference images and masks rather than prompts alone, per-image cost is low enough that a $9.99 pack covers a real project, and the free 5-credit tier with full-resolution downloads is a genuine try-before-paying path. Transparency 3.1/5 - and it is what holds the score to 3.6, below the 3.8-4.2 band a new entrant normally gets. On the credit side the legal set is well above catalog average: five dated policies, named provider model IDs, retention as periods per data category, legal bases per processing purpose, output ownership, an explicit no-training-without-consent line and a real refund policy. Against that, three defects a reader cannot resolve: the sitewide navigation and a dedicated landing page present GPT Image 2.5 as \"OpenAI's\" model while the Terms, AUP and Privacy name only SparkPix and Nano Banana 2 and never mention OpenAI or GPT, so a buyer cannot tell which model their credits run or whether any OpenAI relationship exists; Google Analytics and Microsoft Clarity load on every page including the privacy policy under a policy that assigns them a consent basis, with no consent mechanism, beside a \"Privacy-first\" badge; and the Terms price an output at 4 credits while the pricing cards' own image counts imply 5. No legal entity, jurisdiction or governing-law clause anywhere is published as a limitation rather than held against them."
+  },
+  {
+    "slug": "money-tracker",
+    "name": "Money Tracker (Expense & Budget)",
+    "category": "Productivity",
+    "best_for": "People who will log spending themselves - by hand, by voice, by photographing a receipt, or on Android by confirming a captured bank notification - and who want budgets and category reports without handing a bank login to an app. Fits solo users and small shared households that want one ledger, multiple currencies and split bills. Not a fit for anyone who needs a documented privacy notice covering financial data, a Terms of Service, or a named AI processor before installing a finance app.",
+    "price": "Free with ads: manual entry, categories, budgets, charts, reports, multi-currency, split (AA) books and exports all work without paying. Premium is sold only inside the app stores - the vendor's own site publishes no price anywhere in its 45 locales. Apple's listing shows Yearly Premium $29.99 and Monthly Premium $2.99; Google Play lists in-app purchases at $2.99-$29.00 per item. Premium removes ads and adds unlimited AI entry, bill import (CSV, Excel, PDF or images), Android Smart Notification Entry, app lock, more books and accounts, and team books.",
+    "rating": 3.5,
+    "official": "https://money.quhou123.com/en/",
+    "summary": "Money Tracker is a mobile expense tracker and budget app for Android and iPhone, published under the Google Play developer account Horoscope365 - the controller is a natural person, Zheng Kui, with a Beijing postal address on the Play developer block. You record income, expenses and transfers by hand, by voice (\"lunch 12\"), by photographing a receipt or bill, or on Android with Premium by confirming a transaction captured from banking or payment app notifications; Premium adds bill import, unlimited AI entry, app lock and extra books. Budgets can be set monthly and per category, with charts, category reports, multiple currencies, separate books, AA split ledgers and shared team books, and data exports to CSV, Excel or PDF. It deliberately does not link to a bank and never asks for bank credentials: without sign-in records stay on the phone, and signing in backs them up to the vendor's own server. Distribution is established rather than nominal - 5M+ Google Play installs at 4.8 stars from roughly 324K reviews, an App Store listing at 4.8 from 414 ratings, both updated in October 2026. The weakness is documentation, not the product: the marketing site publishes no price, links no legal page and prints no contact address, and the only privacy notice sits at an unlinked path that never mentions the financial data, receipt photos, voice clips or notification text the app handles.",
+    "use_cases": [
+      "Logging everyday spending in a few seconds without connecting a bank account or creating a cloud account",
+      "Turning a receipt, bill screenshot or spoken sentence into a transaction, then correcting it before it saves",
+      "Checking how much of a monthly or per-category budget is left, and getting a warning before it is exceeded",
+      "Keeping personal, business and project spending in separate books, with more than one currency",
+      "Splitting a trip, dinner or shared rent in an AA book, or keeping one family or small-team ledger"
+    ],
+    "pros": [
+      "Established, not a launch-week microsite: 5M+ Google Play installs at 4.8 stars from about 324K reviews, an App Store 4.8 from 414 ratings, and both listings updated in October 2026",
+      "No bank linking is a design decision, not marketing: the site, the Play listing and the policy all state that no bank username or password is requested, and the automatic alternative is opt-in, per-entry confirmed and blockable per app",
+      "Publishes the trade-offs on its own FAQ rather than hiding them - which features are Premium-only, that the free tier shows ads, that entries captured from notifications are saved only after confirmation, that data can be exported at any time and deleted from device and cloud in Settings, and that without sign-in the data lives only on that phone",
+      "The price a buyer pays is visible where they pay it: Yearly Premium $29.99 and Monthly Premium $2.99 are printed on the App Store listing, and Google Play shows the in-app purchase range instead of a 'contact us'",
+      "Documented exit and control path: full export to CSV/Excel/PDF, in-app deletion of device and cloud data, and Play's Data safety stating that data is encrypted in transit and deletion can be requested",
+      "The privacy notice does name the third-party SDKs it relies on (Google Play Services, Apple Services, AdMob, Firebase Analytics, Crashlytics, Facebook, Adjust) instead of leaving processors unnamed",
+      "Broad reach for a small operator: 47 languages on the App Store and 45 site locales, with multi-currency, split books and team books"
+    ],
+    "cons": [
+      "The marketing site sells a finance app with no legal shelf at all: no price, no privacy link, no terms link and no contact address on any of its 45 locales - the footer is only \"(c) Money Tracker\". The single privacy notice lives at /Info/privacyPolicy, the URL both stores cite, and nothing on the site links to it",
+      "No Terms of Service exists anywhere on the domain - /terms, /en/terms, /Info/terms, /terms-of-service, /eula and /Info/agreement all 404 - while the privacy notice itself says the terms used \"have the same meanings as in our Terms and Conditions, which are accessible at Money Tracker\"",
+      "The privacy notice never mentions the data the app is built on: transaction amounts and balances (financial information), receipt and bill photographs, voice recordings, or the text of bank and payment app notifications read by Smart Notification Entry - nor the AI provider that processes voice, photos and chat. Google Play's Data safety declares that Financial info is collected; Apple's label declares Purchase History, 'Other User Content', Device ID and User ID linked to you, and Identifiers used to track you",
+      "The notice still describes the product as \"an Ad Supported app\" that is \"provided ... at no cost\", while both stores sell Yearly Premium at $29.99 and Monthly Premium at $2.99",
+      "Its effective date is 2023-03-09, before the AI voice entry, receipt scanning and AI assistant that the site and both stores now advertise, so none of that processing is described or dated",
+      "No retention periods, no controller postal address, no jurisdiction and no governing-law clause appear in the notice; the controller is identifiable only from the Play developer block and the App Store seller field, and the only contact is a personal mailbox",
+      "The CCPA section tells California residents to use a \"Do Not Sell My Personal Information\" section or web page that the operator has not published anywhere on the domain",
+      "Brand clarity is weak for a finance app: \"Money Tracker\" is one of many identically named trackers, the publisher account is named Horoscope365 (the same operator's horoscope site runs at www.quhou123.com), and the App Store description body still calls the product \"Money Manager\" while the store title says Money Tracker",
+      "The site markets only an \"optional yearly Premium plan\"; the $2.99 monthly subscription sold on both stores is not mentioned, so the cheapest paid entry point is invisible until checkout"
+    ],
+    "key_features": [
+      "Manual income, expense and transfer entry with amount, date, category, note and account",
+      "AI entry by voice (\"lunch 12\") and by receipt or bill photo, with review and edit before saving",
+      "Monthly total budget and per-category limits, with overspend reminders and a configurable budget-month start on Premium",
+      "Charts, category breakdowns and monthly reports covering income, expenses and remaining budget",
+      "Multiple currencies with exchange rates, and separate books for personal, business or project spending",
+      "Shared ledgers: AA split books (equal, by amount, shares or percentage, with who-owes-whom), team books and two-person data sharing",
+      "Import from CSV, Excel, PDF or statement images and export to CSV, Excel or PDF (import is Premium)",
+      "Android Smart Notification Entry (Premium) that proposes a transaction from banking or payment app notifications and saves only after confirmation, with per-app blocking",
+      "Optional passcode or fingerprint/Face ID app lock (Premium); no bank linking and no bank credentials",
+      "Cloud backup and sync when signed in (Google, Facebook or Apple), local-only storage when not"
+    ],
+    "faq": [
+      [
+        "How much does Money Tracker cost?",
+        "The app is free to download and its everyday features - manual entry, categories, budgets, charts, reports, multi-currency, split books and exports - work with ads at no cost. Premium removes the ads and adds unlimited AI entry, bill import, Android notification entry, app lock, more books and team books. Premium is sold only by the app stores, and the vendor's own site prints no price: the App Store lists Yearly Premium at $29.99 and Monthly Premium at $2.99, and Google Play shows an in-app purchase range of $2.99-$29.00 per item. Buy in the store whose price you can see, because nothing on the vendor's site quotes one."
+      ],
+      [
+        "Does it connect to my bank?",
+        "No. Money Tracker does not link to a bank and states on its site and store listings that it never asks for a bank username or password. On Android, Premium adds Smart Notification Entry, which reads transaction notifications from banking or payment apps, proposes an entry, and saves it only after you confirm - and individual apps can be blocked from being read. Everything else is manual, voice, photo or statement import."
+      ],
+      [
+        "Where is its privacy policy, and does it cover my financial data?",
+        "There is exactly one notice, at money.quhou123.com/Info/privacyPolicy, which is the URL both store listings cite - the marketing site itself links no legal page. Read it before installing, because it does not cover the app's core data: it lists email, name, phone, gender, passcode, usage data and device identifiers, names its ad and analytics SDKs, and never mentions transaction amounts, balances, receipt photos, voice clips or the notification text Android entry reads. Google Play's Data safety declares that Financial info is collected, so the two surfaces disagree."
+      ],
+      [
+        "Is there a Terms of Service or a refund policy?",
+        "Neither is published. /terms, /en/terms, /Info/terms, /terms-of-service, /eula and /Info/agreement all return 404 on the vendor's domain, even though the privacy notice refers readers to a Terms and Conditions document. Subscriptions are billed and refunded through Apple and Google, so their store policies govern the transaction - but the app-level contract a reader would normally check does not exist."
+      ],
+      [
+        "Who runs it, and is it the same product on both stores?",
+        "Yes. The Play listing (com.freeman.moneymanager) and the App Store listing (id6444122615) are the same app, and the same natural person, Zheng Kui, is the Play developer and the App Store seller; the Play developer block also prints a Beijing postal address and the support address freemanzk@163.com. The publisher account is named Horoscope365, which is also the operator's horoscope site at www.quhou123.com, and the App Store description body still calls the app \"Money Manager\" - both are brand-legibility issues on a finance app rather than signs of two products."
+      ]
+    ],
+    "trial_checklist": [
+      "Install from the store and run one week of real logging before paying anything - enter a few transactions by hand, one by voice and one from a receipt photo, and check the parsed amount, category and date before you save each one",
+      "Decide whether you need cloud sync: without sign-in the records stay on that phone, so test the export (CSV/Excel/PDF) on day one and confirm the file opens - that is your only backup until you create an account",
+      "If you are on Android and considering Premium for notification entry, note which apps it reads and confirm the entries are only saved after you tap to confirm, then block any app you do not want captured",
+      "Read money.quhou123.com/Info/privacyPolicy before you create an account, since the marketing site links nothing and the notice does not describe financial data, receipts, voice or notification content - decide whether a finance app with that documentation is acceptable to you",
+      "Compare the store prices before subscribing: Yearly Premium $29.99 and Monthly Premium $2.99 on the App Store, with the monthly tier invisible on the vendor's own site, and cancel through the store rather than looking for a vendor-side refund policy that does not exist"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.3/5 - this is a mature, genuinely used expense tracker rather than a launch page: 5M+ Play installs at 4.8 stars from about 324K reviews, a 4.8 App Store rating, an October 2026 update, and the features buyers actually reopen a tracker for (fast manual entry, voice and receipt capture that you review before saving, monthly and per-category budgets, charts, multi-currency, split and team books, CSV/Excel/PDF export). The no-bank-linking stance is stated on the site, in both stores and in the policy, and the automatic alternative is opt-in and per-entry confirmed. Transparency 2.5/5 - and it is what holds the score to 3.5, below the 3.8-4.2 band a new entrant gets and below the 4.5+ reserved for proven leaders, because a proven product with undocumented data handling is exactly the case where the score should split the two. The site publishes no price in any of 45 locales, links no legal page and prints no contact address; the only privacy notice is at an unlinked /Info/privacyPolicy, is effective 2023-03-09 (before the AI features it now ships), describes the product as ad-supported \"at no cost\" while both stores sell $29.99/year and $2.99/month, points California users at a 'Do Not Sell My Personal Information' page that does not exist, and - decisively for a finance app - never mentions transaction amounts, balances, receipt photos, voice clips or the notification text its Android capture reads, while Google Play's Data safety declares Financial info is collected and Apple's label declares Purchase History and 'Other User Content' linked to the user. No Terms of Service exists anywhere on the domain although the notice cites one. Both halves are published in cons so the number is auditable; no hands-on test was run, so nothing here claims one."
   }
 ]

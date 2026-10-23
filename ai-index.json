@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-22",
-  "tools_count": 89,
+  "tools_count": 90,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -658,6 +658,13 @@
       "category": "Creative",
       "price": "Free: 5 credits on sign-up (~1 image), no card required, full-resolution downloads. One-time packs only, no subscription: Basic $9.99 (shown against a $12 anchor, \"Save 16%\", 350 credits, advertised as ~70 images), Pro $29.99 (anchor $39.90, \"Save 24%\", 1,200 credits, ~240 images). Paid credits expire 365 days after purchase. Payment is processed by Waffo Pancake.",
       "url": "https://aitoolsessentials.com/tools/retouchia/"
+    },
+    {
+      "name": "Money Tracker (Expense & Budget)",
+      "slug": "money-tracker",
+      "category": "Productivity",
+      "price": "Free with ads: manual entry, categories, budgets, charts, reports, multi-currency, split (AA) books and exports all work without paying. Premium is sold only inside the app stores - the vendor's own site publishes no price anywhere in its 45 locales. Apple's listing shows Yearly Premium $29.99 and Monthly Premium $2.99; Google Play lists in-app purchases at $2.99-$29.00 per item. Premium removes ads and adds unlimited AI entry, bill import (CSV, Excel, PDF or images), Android Smart Notification Entry, app lock, more books and accounts, and team books.",
+      "url": "https://aitoolsessentials.com/tools/money-tracker/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
