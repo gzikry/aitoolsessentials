@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-23",
-  "tools_count": 90,
+  "tools_count": 91,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -665,6 +665,13 @@
       "category": "Productivity",
       "price": "Free with ads: manual entry, categories, budgets, charts, reports, multi-currency, split (AA) books and exports all work without paying. Premium is sold only inside the app stores - the vendor's own site publishes no price anywhere in its 45 locales. Apple's listing shows Yearly Premium $29.99 and Monthly Premium $2.99; Google Play lists in-app purchases at $2.99-$29.00 per item. Premium removes ads and adds unlimited AI entry, bill import (CSV, Excel, PDF or images), Android Smart Notification Entry, app lock, more books and accounts, and team books.",
       "url": "https://aitoolsessentials.com/tools/money-tracker/"
+    },
+    {
+      "name": "Marigold Pet",
+      "slug": "marigold-pet",
+      "category": "Video",
+      "price": "Single price, no tiers and no subscription: USD 6.99 one-time for one 15-second video (portrait 9:16 or landscape 16:9, one of four preset looks, AI-generated synchronised audio, MP4 download). No free tier or trial; the page's samples are the vendor's own renders. Checkout is hosted by Waffo Pancake as merchant of record; applicable tax is shown before payment. The site's own public config endpoint returns price 6.99, currency USD, billing one-time, mode prod - matching /pricing and the homepage.",
+      "url": "https://aitoolsessentials.com/tools/marigold-pet/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

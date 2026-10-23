@@ -396,6 +396,10 @@
     "money-tracker": {
       "date": "2026-10-22",
       "digest": "Free with ads. Premium is an in-app subscription sold only by the app stores; the vendor's site publishes no price in any of its 45 locales. App Store: Yearly Premium $29.99, Monthly Premium $2.99. Google Play: in-app purchases $2.99-$29.00 per item. Premium removes ads and unlocks unlimited AI entry, bill import (CSV/Excel/PDF/images), Android Smart Notification Entry, app lock, extra books and team books. No refund policy published on the vendor's domain; store policy governs billing. Site FAQ still describes only an \"optional yearly Premium plan\" and omits the $2.99 monthly tier."
+    },
+    "marigold-pet": {
+      "date": "2026-10-23",
+      "digest": "Single one-time price, no tiers and no subscription: USD 6.99 for one 15-second AI Halloween pet costume video (portrait 9:16 or landscape 16:9, four preset looks, synchronised AI audio). No free tier and no trial. Tax shown at checkout by Waffo Pancake, merchant of record. Agrees across the homepage, /pricing and the public /api/config endpoint (price 6.99, currency USD, billing one-time, mode prod). No other price token appears on any fetched page."
     }
   },
   "changes": [

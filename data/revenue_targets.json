@@ -1571,5 +1571,26 @@
     "status": "not_started",
     "next_action": "Email kui.zheng@gmail.com (the address given in the submission; the vendor's published support route is freemanzk@163.com and the domain has no MX, so no @quhou123.com address exists) about affiliate or referral terms. No affiliate, partner or referral page exists on the site, so a direct ask is the only route, and the same email should carry the documentation asks: a linked privacy notice that covers financial data, receipts, voice and notification content, a published Terms of Service, and the store prices printed on the site.",
     "notes": "Subscription revenue is $2.99/month or $29.99/year through the stores, so a percentage commission would be small per conversion and the store takes its cut first. Stronger fit is audience relevance with budgeting and no-bank-linking content than raw commission volume. No tracking URL exists and none should be invented."
+  },
+  {
+    "tool_slug": "marigold-pet",
+    "tool_name": "Marigold Pet",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/marigold-pet/"
+    ],
+    "best_audiences": [
+      "pet owners making a one-off seasonal clip for social",
+      "small pet brands and groomers who want a costume video of a customer's animal",
+      "Spanish-speaking pet accounts, given the fully bilingual funnel"
+    ],
+    "status": "not_started",
+    "next_action": "Email w1952724273@gmail.com about affiliate, referral or partner terms - no /affiliates, /affiliate, /partners, /referral or /api/referrals page exists, so a direct ask is the only route, and the same message should carry the editorial questions about operator identity, the missing governing-law clause and the policy date that predates the domain registration. Do not invent a tracking URL.",
+    "notes": "Economics are thin by construction: a single $6.99 one-time product with no subscription and no upsell ladder means one conversion is worth cents at any plausible commission rate, and the product is seasonal, so treat this as a coverage listing rather than a revenue target. Contact is a free-provider Gmail address; the domain publishes no MX, so a @marigoldpet.com address would not receive mail today and asking for one would be a fabricated blocker."
   }
 ]

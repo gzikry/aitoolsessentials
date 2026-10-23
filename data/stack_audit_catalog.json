@@ -2193,6 +2193,30 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "marigold-pet",
+      "name": "Marigold Pet",
+      "category": "Video",
+      "official_url": "https://marigoldpet.com/",
+      "review_url": "/tools/marigold-pet/",
+      "price_label": "Single price, no tiers and no subscription: USD 6.99 one-time for one 15-second video (portrait 9:16 or landscape 16:9, one of four preset looks, AI-generated synchronised audio, MP4 download). No free tier or trial; the page's samples are the vendor's own renders. Checkout is hosted by Waffo Pancake as merchant of record; applicable tax is shown before payment. The site's own public config endpoint returns price 6.99, currency USD, billing one-time, mode prod - matching /pricing and the homepage.",
+      "pricing_summary": "One price, one purchase: USD 6.99 one-time for a single 15-second Halloween pet costume video, portrait 9:16 or landscape 16:9, four preset looks, AI-generated synchronised audio included. No tiers, no credit packs, no free tier, no trial, no subscription and no auto-renewal. Applicable tax shown at checkout by Waffo Pancake, the named merchant of record. Verified on three surfaces that agree: the homepage ('$6.99 - one-time purchase', 'Pay $6.99 and make my video'), /pricing (USD 6.99, 'one-time purchase', 'Billing cycle: one-time ... No recurring charge and no auto-renewal') and the site's own public config endpoint /api/config, which returns price '6.99', currency 'USD', billing 'one-time', provider 'waffo', store 'Binglin Studio', mode 'prod', ready true. No price appears anywhere else on the site, and no subscription price exists to verify.",
+      "pricing_url": "https://marigoldpet.com/pricing",
+      "pricing_checked_date": "2026-10-23",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "video",
+        "audio"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }
