@@ -388,6 +388,10 @@
     "imagesv2": {
       "date": "2026-10-22",
       "digest": "Free: 3 credits, first image charged 3. Yearly: Starter $49.90/12,000 credits (~$4.16/mo, $0.0042/credit), Pro $199.90/60,000 (~$16.66/mo), Ultra $499.90/240,000 (~$41.66/mo). Monthly: Starter $8.40 (anchor $14.90) /1,000, Pro $33.90 (anchor $39.90) /5,000, Ultra $84.90 (anchor $99.90) /20,000. Packs (never expire): Taster $9.90/500, Starter $39.90/5,000, Pro $99.90/20,000, Max $199.90/50,000, each shown against a crossed-out anchor. GPT Image 2 costs 10/40/110 credits at Low/Medium/High, +10 transparent/SVG/PSD, +20 image-to-image. Monthly credits expire per cycle; yearly arrives as twelve 30-day blocks. No trial; purchases non-refundable. USD."
+    },
+    "retouchia": {
+      "date": "2026-10-22",
+      "digest": "Free: 5 credits on sign-up (~1 image), no card, full-resolution downloads. One-time packs only, no subscription: Basic $9.99 (anchor $12, \"Save 16%\", 350 credits, advertised ~70 images), Pro $29.99 (anchor $39.90, \"Save 24%\", 1,200 credits, ~240 images). Paid credits valid 365 days; no coded expiry reminder. Payment via Waffo Pancake. Identical on /pricing, /zh/pricing, /zh-tw/pricing and llms.txt. Note: the cards' own image counts imply 5 credits per output while the Terms state \"Each public output costs 4 credits\"."
     }
   },
   "changes": [

@@ -1529,5 +1529,26 @@
     "status": "not_started",
     "next_action": "Email support@imagesv2.ai (a verified working mailbox) about affiliate or referral terms; /affiliates, /affiliate, /referral, /partners and /api/referrals all return 404, so a direct ask is the only route.",
     "notes": "Plans run $8.40 to $84.90 a month and packs $9.90 to $199.90 one-time, so commissions are small per sale; the stronger play is audience fit with design and e-commerce content. Credits are the billing unit, so a referral's lifetime value depends on repeat pack purchases. No tracking URL exists and none should be invented."
+  },
+  {
+    "tool_slug": "retouchia",
+    "tool_name": "Retouchia",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/retouchia/"
+    ],
+    "best_audiences": [
+      "ecommerce sellers doing their own product photography cleanup",
+      "creators who need occasional one-off edits rather than a monthly editor seat",
+      "people restoring or colourising old family photos"
+    ],
+    "status": "not_started",
+    "next_action": "Email contact@retouchia.com (verified working mailbox: 250 against the domain MX, control 550) about affiliate or referral terms. No /affiliates, /affiliate, /partners or /referral page exists, so a direct ask is the only route, and the same email should carry the editorial questions about the GPT Image 2.5 model attribution.",
+    "notes": "Price points are low ($9.99 and $29.99 one-time), so commission per conversion is small; the stronger play is audience fit with e-commerce and photo-restoration content. Credits expire after 365 days, so repeat purchase depends on a user's volume rather than on recurring billing. No tracking URL exists and none should be invented."
   }
 ]

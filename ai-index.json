@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-22",
-  "tools_count": 88,
+  "tools_count": 89,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -651,6 +651,13 @@
       "category": "Creative",
       "price": "Free: 3 credits on sign-up (the first image costs 3 instead of 10). Yearly: Starter $49.90/yr (12,000 credits, ~$4.16/mo), Pro $199.90/yr (60,000, ~$16.66/mo), Ultra $499.90/yr (240,000, ~$41.66/mo). Monthly: Starter $8.40 (list $14.90, 1,000 credits), Pro $33.90 (list $39.90, 5,000), Ultra $84.90 (list $99.90, 20,000). One-time packs, credits never expire: Taster $9.90 (500 credits), Starter $39.90 (5,000), Pro $99.90 (20,000), Max $199.90 (50,000). No free trial on paid plans; all purchases final and non-refundable.",
       "url": "https://aitoolsessentials.com/tools/imagesv2/"
+    },
+    {
+      "name": "Retouchia",
+      "slug": "retouchia",
+      "category": "Creative",
+      "price": "Free: 5 credits on sign-up (~1 image), no card required, full-resolution downloads. One-time packs only, no subscription: Basic $9.99 (shown against a $12 anchor, \"Save 16%\", 350 credits, advertised as ~70 images), Pro $29.99 (anchor $39.90, \"Save 24%\", 1,200 credits, ~240 images). Paid credits expire 365 days after purchase. Payment is processed by Waffo Pancake.",
+      "url": "https://aitoolsessentials.com/tools/retouchia/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

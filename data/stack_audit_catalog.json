@@ -2141,6 +2141,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "retouchia",
+      "name": "Retouchia",
+      "category": "Creative",
+      "official_url": "https://retouchia.com/",
+      "review_url": "/tools/retouchia/",
+      "price_label": "Free: 5 credits on sign-up (~1 image), no card required, full-resolution downloads. One-time packs only, no subscription: Basic $9.99 (shown against a $12 anchor, \"Save 16%\", 350 credits, advertised as ~70 images), Pro $29.99 (anchor $39.90, \"Save 24%\", 1,200 credits, ~240 images). Paid credits expire 365 days after purchase. Payment is processed by Waffo Pancake.",
+      "pricing_summary": "Free: 5 credits on sign-up, advertised as ~1 image, no card required, full-resolution downloads on the free tier. Paid: two one-time packs only, no subscription - Basic $9.99 for 350 credits (shown against a $12 anchor, \"Save 16%\") and Pro $29.99 for 1,200 credits (against a $39.90 anchor, \"Save 24%\"). The cards advertise ~70 images from 350 credits and ~240 from 1,200, i.e. 5 credits per image, while the Terms state \"Each public output costs 4 credits\". Paid credits are valid 365 days from purchase (Terms section 6, Refund Policy section 1, and the \"Credits valid for 1 year\" line on each card); the Terms state no coded expiry reminder is sent. No monthly or yearly plan is sold. Payment card data is processed by Waffo Pancake. Prices in USD and identical on /pricing, /zh/pricing, /zh-tw/pricing and llms.txt.",
+      "pricing_url": "https://retouchia.com/pricing",
+      "pricing_checked_date": "2026-10-22",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "marketing",
+        "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }
