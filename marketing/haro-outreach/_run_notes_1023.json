@@ -1,0 +1,73 @@
+{
+ "new_rows": {
+  "fanvue-chatters-nsfw-ai-model-experiences": {
+   "who": "Dazed magazine (domain field dazeddigital.com); the page's author field is the handle 'Dazedjourno', so no individual byline.",
+   "category": "AI / NSFW Creator Economy / Platform Labour",
+   "contact": "The body says 'please DM me'; no address, handle or link is published on the page.",
+   "relevance": "low",
+   "notes": "Wants chatters who work NSFW AI models on Fanvue to go on record about the job. That is first-hand testimony from a platform worker; we hold none, and our dated price set says nothing about what a chatter is paid or what a Fanvue creator subscription costs. AI is the subject of the story, not its budget.",
+   "template": "None. No route published, and no standing to claim. NOT DRAFTED."
+  },
+  "couples-letting-ai-dictate-relationship-emotions-and-intimacy": {
+   "who": "Luke Chafer, The Sun (domain field thesun.co.uk; the body signs 'The Sun').",
+   "category": "AI / Consumer Behaviour / Relationships (tabloid)",
+   "contact": "The body says 'I am available here or at [email redacted]' - Sourcee redacts the address and the page publishes no other handle or link.",
+   "relevance": "low",
+   "notes": "Wants one couple who let AI direct their relationship, or whom ChatGPT talked into a break-up. Personal testimony we do not hold, for a paid tabloid feature. No price or spend angle anywhere in the body: 'payment for your time' is the only money word and it is the subject's fee, not a software cost.",
+   "template": "None. No route, and the ask is first-person experience we cannot supply. NOT DRAFTED."
+  },
+  "people-recreating-iconic-runway-looks-halloween-costume-story": {
+   "who": "Alexandra Hildreth (the page's own author field). No outlet named.",
+   "category": "Fashion / Halloween (NOT AI - false positive)",
+   "contact": "The body asks 'Would love to chat for a story' and publishes no address, handle or link.",
+   "relevance": "low",
+   "notes": "FALSE POSITIVE, recorded so the count is honest: the slug matched the 'runway' AI token and the body-level scan matched the same word, but this is a FASHION runway - 'an iconic runway look (ex: Shalom Harlow for McQueen)'. The body contains no AI reference of any kind. Cost the monitor one row of noise, nothing else; both the slug token and AI_PROSE now carry a guard (see monitor_defects_fixed_this_run).",
+   "template": "None. Not an AI request at all. NOT DRAFTED."
+  },
+  "claude-users-anthropic-public-benefit-fund-trust-and-job-impact": {
+   "who": "Ryan Moeller (the page's own author field). No outlet named; the body reads as a LinkedIn community post.",
+   "category": "AI / Anthropic Governance / Value Distribution (adjacent)",
+   "contact": "No route of any kind: the body names no channel, the page publishes no address or booking link, and it is not even an email-wall request. The two social URLs that appear in the raw payload are Sourcee's own footer chrome rather than the poster's profile - both were found on three unrelated request pages today (boston-soccer-parents, couples-letting-ai, rig-hse-officers), which is why they sit in the shared CHROME filter. They are NOT a route to this journalist, and are deliberately not written out here because a bare handle string in this field is what has twice made a route-less row read as sendable.",
+   "relevance": "low-medium",
+   "notes": "The closest of the window to our beat without being on it. It asks Claude users whether Anthropic's new Public Benefit Fund (5% of shares, plus 2% per 50% value step, board-controlled, no lobbying) earns their trust or reads as IPO positioning, and whether users should direct the money. Our dated Claude seat and token prices would be a genuine data point on 'every time you use Claude you build Anthropic's value', but the ask is for personal takes and the hottest ones get featured - it is an engagement post, not an evidence request, and we are not a Claude user giving testimony. Recorded because the fund is a spend-adjacent story the beat may return to.",
+   "template": "None. No route, and the ask is opinion, not data. NOT DRAFTED."
+  },
+  "founders-and-ctos-production-ai-tradeoffs-in-healthcare-and-fintech": {
+   "who": "Bryan Dennstedt, 'AI with Bry' podcast (domain field bry.net).",
+   "category": "AI / Podcast Guest Call / Healthcare & Fintech",
+   "contact": "The page publishes no address, handle or link; the body says 'I'd love to hear from you' with no channel named. Sourcee redacted the address in the body.",
+   "relevance": "low",
+   "notes": "A podcast booking call for founders, CTOs and operators with production AI experience in healthcare and fintech. We are a publisher with a price dataset, not an operator with a production deployment to discuss - the one thing we could speak to (what the AI stack costs) is not among the topics he lists.",
+   "template": "None. No route, and we are not the guest profile. NOT DRAFTED."
+  },
+  "students-and-professionals-balancing-ai-use-and-human-focus": {
+   "who": "KimberMarie Faircloth, The Limitation Game (no domain field set; the body signs the project name).",
+   "category": "AI / Human Focus / Interview Call",
+   "contact": "The body says 'Comment below or DM me - please!'; no address, handle or link published on the page.",
+   "relevance": "low",
+   "notes": "Wants students, business owners, attorneys and professors to describe how they keep a human balance while using AI, for small interviews. Personal practice, not spend; we have no individual to put forward and no data on how people balance use.",
+   "template": "None. No route, and the ask is personal testimony. NOT DRAFTED."
+  },
+  "parish-event-organizers-aigenerated-flyers-scourge-or-timesaver": {
+   "who": "Zoey Maraist (the page's own author field). No outlet named; the body says 'an article I'm writing'.",
+   "category": "AI / Faith Communities / Design Tools",
+   "contact": "The page publishes no address, handle or link, and the body names no channel at all.",
+   "relevance": "low",
+   "notes": "Parish event organizers on whether AI-generated flyers help or hurt. Consumer design-tool sentiment in a community we have no standing in; the only money in it would be a design-tool subscription, which is a different product class from the tools we price and would be a stretch to claim.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "rig-hse-officers-aienabled-camera-trial-outcomes": {
+   "who": "Roxana Shirkhorshidi (the page's own author field). No outlet named.",
+   "category": "AI / Industrial HSE / Computer Vision",
+   "contact": "The body says 'Share your thoughts in the comments - or, if you'd prefer to talk, send me a message'; no address, handle or link published.",
+   "relevance": "low",
+   "notes": "Oil-and-gas HSE officers on what happened after AI camera trials on rigs. Industrial deployment experience we do not hold; no software price angle in the body, and rig HSE camera contracts are not in our dataset.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  }
+ },
+ "defects": [
+  "AI_PROSE carried the bare vendor name 'runway', which is also an ordinary English noun: the body-level scan flagged people-recreating-iconic-runway-looks-halloween-costume-story (a FASHION runway, 'an iconic runway look (ex: Shalom Harlow for McQueen)') as an AI hit, and the slug token did the same, so a non-AI request entered the new-row list. Fixed in scripts/sourcee_terms.py: the prose matcher now requires 'runway' to be followed by gen-N, ml or ai, so 'Runway Gen-3' still matches and 'iconic runway look' does not. The slug token 'runway' is kept because slugs delimit tokens by hyphens and 'runway-ml' / 'runway-gen3' are the only shapes seen; today's affected row is recorded in the digest with a false-positive note rather than deleted, so the count stays honest.",
+  "Route hygiene re-confirmed rather than assumed: linkedin.com/in/andrewsmith313 and x.com/andy_cb_smith are in the shared CHROME filter because they appear on EVERY request page (checked today on three unrelated rows), i.e. they are Sourcee's own footer, not the poster's profile. They must not be read as a DM route for any row, including today's Claude/Public Benefit Fund row, whose author is Ryan Moeller."
+ ],
+ "extra": {}
+}

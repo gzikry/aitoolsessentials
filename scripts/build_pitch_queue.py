@@ -953,6 +953,67 @@ def render(queue: list[dict], ledger: dict) -> str:
         "",
     ]
 
+    def _route_hint(q: dict) -> str:
+        """The one string a sender needs, pulled out of the route prose.
+
+        The contact field carries paragraphs of evidence (how the address was resolved, what was
+        re-probed, which dead ends were ruled out). A "send these now" section that hides the actual
+        address inside that prose is the friction this section exists to remove.
+        """
+        c = q.get("contact") or ""
+        m = re.search(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", c)
+        if m:
+            return m.group(0)
+        m = re.search(r"https?://(?:www\.)?linkedin\.com/in/[A-Za-z0-9\-_%]+", c)
+        if m:
+            return m.group(0)
+        return ""
+
+    # The queue's headline is "sendable", which is defined by the 10-day heuristic. That is the
+    # right number for ranking, and the wrong one for a person with twenty minutes: on 2026-10-23
+    # it read 0 while two rows had a finished draft behind a page and a route that both answered
+    # HTTP 200 that morning. Three consecutive runs wrote drafts for those rows and stopped, because
+    # nothing in the file said "this is the thing to do". This section is derived, not typed: a row
+    # appears only when its page is live today AND the newest draft file already names it.
+    _newest_txt = ""
+    try:
+        _newest_txt = (OUT / _newest_drafts()).read_text(errors="ignore")
+    except OSError:
+        pass
+
+    def _has_real_draft(url: str) -> bool:
+        """True only when the newest draft file opens a pitch for this URL.
+
+        A bare slug match is not membership: the 2026-10-23 file names seven off-beat rows in its
+        "why there is no third draft" section, and matching on the slug alone listed all seven as
+        sendable-with-a-draft. A drafted row is the one the file links as its **Source:**, which is
+        the same marker `build_digest.py` uses to count drafted rows.
+        """
+        slug = _canon(url).rsplit("/", 1)[-1]
+        return bool(re.search(r"\*\*Source:\*\*\s*https?://(?:www\.)?sourcee\.app/journo-request/"
+                              + re.escape(slug) + r"(?![a-z0-9\-])", _newest_txt))
+
+    late_send = [q for q in live if q.get("page_live") and _has_real_draft(q["url"])]
+    late_send.sort(key=key)
+    if late_send:
+        lines += [
+            f"## Send these now ({len(late_send)}) — late, not dead",
+            "",
+            f"Each row below has a finished, paste-ready pitch in `{_newest_drafts()}` and a page that "
+            f"served the request today. They sit past the {STALE_DAYS}-day line, which is this "
+            "monitor's own heuristic and not the platform's: no page on this source has ever carried "
+            "an expiry. A send, or a `skipped` entry in `pitch-ledger.json`, closes each one. A fourth "
+            "rewrite of the same draft does not.",
+            "",
+        ]
+        for q in late_send:
+            route = _route_hint(q)
+            lines.append(
+                f"- **{_draft_section(_canon(q['url']).rsplit('/', 1)[-1]) or _newest_drafts()}** — {q['url']} — "
+                f"{int(q['days_old']) if q['days_old'] is not None else '?'}d old, page live today"
+                + (f", route `{route}`" if route else ", route named in the draft"))
+        lines += [""]
+
     def _row(q: dict) -> list[str]:
         age = f"{q['days_old']:.0f}d old" if q["days_old"] is not None else "age unknown"
         out = [

@@ -56,7 +56,12 @@ AI_PROSE = re.compile(
     r"chatgpts?|chat gpt|claude|gemini|copilot|agentic|chatbots?|anthropic|openai|open-ai|"
     r"deepseek|mistral|llama|grok|perplexity|midjourney|elevenlabs|nvidia|m365|"
     r"microsoft 365|salesforce|hubspot|zapier|n8n|databricks|snowflake|hugging face|cohere|"
-    r"runway|grammarly|jasper|synthesia|descript|cursor|windsurf|replit|browse ai|gamma|otter|"
+    # "runway" alone is also a fashion runway. On 2026-10-23 the bare name flagged
+    # people-recreating-iconic-runway-looks-halloween-costume-story ("an iconic runway look
+    # (ex: Shalom Harlow for McQueen)") as an AI hit and pulled a costume story into the new-row
+    # list. The product name is only ever written with a model suffix in prose, so require one.
+    r"(?:runway\s*(?:gen-?\d|ml|ai))|grammarly|jasper|synthesia|descript|cursor|windsurf|replit|"
+    r"browse ai|gamma|otter|"
     r"fireflies)\b", re.I)
 
 
