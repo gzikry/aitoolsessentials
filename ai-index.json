@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-24",
-  "tools_count": 93,
+  "tools_count": 94,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -37,11 +37,144 @@
   ],
   "tool_reviews": [
     {
+      "name": "BotLoadout",
+      "slug": "botloadout",
+      "category": "AI Agents",
+      "price": "Free (97 templates; no paid tier, sponsorship-funded)",
+      "url": "https://aitoolsessentials.com/tools/botloadout/"
+    },
+    {
+      "name": "Catch",
+      "slug": "catch-ai",
+      "category": "AI Agents",
+      "price": "$99/month billed monthly (10-day free trial; cancel anytime)",
+      "url": "https://aitoolsessentials.com/tools/catch-ai/"
+    },
+    {
+      "name": "Hermes Agent",
+      "slug": "hermes-agent",
+      "category": "AI Agents",
+      "price": "Open source + model/provider costs",
+      "url": "https://aitoolsessentials.com/tools/hermes-agent/"
+    },
+    {
+      "name": "OpenClaw",
+      "slug": "openclaw",
+      "category": "AI Agents",
+      "price": "Open source + model/provider and hosting costs",
+      "url": "https://aitoolsessentials.com/tools/openclaw/"
+    },
+    {
+      "name": "Robylon",
+      "slug": "robylon",
+      "category": "AI Agents",
+      "price": "Free (300 credits/mo) + paid plans from $25/mo; optional live agent seats from $19/seat/mo",
+      "url": "https://aitoolsessentials.com/tools/robylon/"
+    },
+    {
+      "name": "TypingMind",
+      "slug": "typingmind",
+      "category": "AI Agents",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/typingmind/"
+    },
+    {
       "name": "Adobe Podcast",
       "slug": "adobe-enhance-speech",
       "category": "Audio & Video",
       "price": "Free plan with published daily limits; Premium via official 30-day trial \u2014 no public USD list price on the plans page during this check",
       "url": "https://aitoolsessentials.com/tools/adobe-enhance-speech/"
+    },
+    {
+      "name": "Descript",
+      "slug": "descript",
+      "category": "Audio & Video",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/descript/"
+    },
+    {
+      "name": "ElevenLabs",
+      "slug": "elevenlabs",
+      "category": "Audio & Video",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/elevenlabs/"
+    },
+    {
+      "name": "Riverside",
+      "slug": "riverside-fm",
+      "category": "Audio & Video",
+      "price": "Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom",
+      "url": "https://aitoolsessentials.com/tools/riverside-fm/"
+    },
+    {
+      "name": "Speechify",
+      "slug": "speechify",
+      "category": "Audio & Video",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/speechify/"
+    },
+    {
+      "name": "Suno",
+      "slug": "suno",
+      "category": "Audio & Video",
+      "price": "Free plan; Pro $8/mo ($96/yr); Premier $24/mo ($288/yr) (annual billing)",
+      "url": "https://aitoolsessentials.com/tools/suno/"
+    },
+    {
+      "name": "Tunii",
+      "slug": "tunii",
+      "category": "Audio & Video",
+      "price": "Free 10 trial min + 5 min/week; one-time packs: $4.99/30 min, $9.99/90 min, $24.99/300 min",
+      "url": "https://aitoolsessentials.com/tools/tunii/"
+    },
+    {
+      "name": "Udio",
+      "slug": "udio",
+      "category": "Audio & Video",
+      "price": "Free plan; Standard $8/mo ($96/yr); Pro $24/mo ($288/yr) (annual billing)",
+      "url": "https://aitoolsessentials.com/tools/udio/"
+    },
+    {
+      "name": "Words into Music",
+      "slug": "words-into-music",
+      "category": "Audio & Video",
+      "price": "Starter $9.99/mo or $59.99/yr (30 songs/mo); Creator $19.99/mo or $119.99/yr (65); Studio $29.99/mo or $179.99/yr (100); one-time packs 20 songs $9.99, 40 songs $19.99, 90 songs $39.99; one introductory song per verified account",
+      "url": "https://aitoolsessentials.com/tools/words-into-music/"
+    },
+    {
+      "name": "Browse AI",
+      "slug": "browse-ai",
+      "category": "Automation",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/browse-ai/"
+    },
+    {
+      "name": "Make",
+      "slug": "make",
+      "category": "Automation",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/make/"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n",
+      "category": "Automation",
+      "price": "Free self-hosted + paid cloud",
+      "url": "https://aitoolsessentials.com/tools/n8n/"
+    },
+    {
+      "name": "Whop CLI",
+      "slug": "whop-cli",
+      "category": "Automation",
+      "price": "Free (Whop platform fees apply on sales)",
+      "url": "https://aitoolsessentials.com/tools/whop-cli/"
+    },
+    {
+      "name": "Zapier AI",
+      "slug": "zapier-ai",
+      "category": "Automation",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/zapier-ai/"
     },
     {
       "name": "Adobe Firefly",
@@ -58,67 +191,11 @@
       "url": "https://aitoolsessentials.com/tools/aibase/"
     },
     {
-      "name": "AIDetector.cx",
-      "slug": "aidetector-cx",
-      "category": "Productivity",
-      "price": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
-      "url": "https://aitoolsessentials.com/tools/aidetector-cx/"
-    },
-    {
-      "name": "AILearnHub",
-      "slug": "ailearnhub",
-      "category": "Education",
-      "price": "Free (1 lesson); Pro $19/mo or $190/yr; Max $49/mo or $490/yr",
-      "url": "https://aitoolsessentials.com/tools/ailearnhub/"
-    },
-    {
-      "name": "AIProductAds",
-      "slug": "aiproductads",
-      "category": "Video",
-      "price": "Starter $19.90/mo; Professional $39.90/mo; annual $191.04 and $383.04; one-time packs $9.90-$99.90",
-      "url": "https://aitoolsessentials.com/tools/aiproductads/"
-    },
-    {
-      "name": "Airtable AI",
-      "slug": "airtable-ai",
-      "category": "Productivity",
-      "price": "Paid plan availability varies",
-      "url": "https://aitoolsessentials.com/tools/airtable-ai/"
-    },
-    {
-      "name": "AllVideoAI",
-      "slug": "allvideoai",
-      "category": "Video",
-      "price": "Free tier + credit plans from $17/month",
-      "url": "https://aitoolsessentials.com/tools/allvideoai/"
-    },
-    {
       "name": "BeadPattern",
       "slug": "beadpattern",
       "category": "Creative",
       "price": "Basic $59.99/yr; Pro $99.99/yr; Max $199.99/yr (annual, credits granted upfront)",
       "url": "https://aitoolsessentials.com/tools/beadpattern/"
-    },
-    {
-      "name": "Bolt.new",
-      "slug": "bolt-new",
-      "category": "Development",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/bolt-new/"
-    },
-    {
-      "name": "BotLoadout",
-      "slug": "botloadout",
-      "category": "AI Agents",
-      "price": "Free (97 templates; no paid tier, sponsorship-funded)",
-      "url": "https://aitoolsessentials.com/tools/botloadout/"
-    },
-    {
-      "name": "Browse AI",
-      "slug": "browse-ai",
-      "category": "Automation",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/browse-ai/"
     },
     {
       "name": "Canva AI",
@@ -128,193 +205,11 @@
       "url": "https://aitoolsessentials.com/tools/canva-ai/"
     },
     {
-      "name": "Catch",
-      "slug": "catch-ai",
-      "category": "AI Agents",
-      "price": "$99/month billed monthly (10-day free trial; cancel anytime)",
-      "url": "https://aitoolsessentials.com/tools/catch-ai/"
-    },
-    {
-      "name": "ChatGPT",
-      "slug": "chatgpt",
-      "category": "General AI Assistant",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/chatgpt/"
-    },
-    {
-      "name": "Claude",
-      "slug": "claude",
-      "category": "General AI Assistant",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/claude/"
-    },
-    {
-      "name": "CoCounsel Legal",
-      "slug": "cocounsel",
-      "category": "Legal",
-      "price": "Sales-quoted; official Westlaw Advantage with CoCounsel Essentials starts at $415.35/month",
-      "url": "https://aitoolsessentials.com/tools/cocounsel/"
-    },
-    {
       "name": "Copy.ai",
       "slug": "copy-ai",
       "category": "Creative",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/copy-ai/"
-    },
-    {
-      "name": "Cursor",
-      "slug": "cursor",
-      "category": "Development",
-      "price": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
-      "url": "https://aitoolsessentials.com/tools/cursor/"
-    },
-    {
-      "name": "DeepSeek",
-      "slug": "deepseek",
-      "category": "General AI Assistant",
-      "price": "Free + API pricing",
-      "url": "https://aitoolsessentials.com/tools/deepseek/"
-    },
-    {
-      "name": "Descript",
-      "slug": "descript",
-      "category": "Audio & Video",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/descript/"
-    },
-    {
-      "name": "Microsoft Dragon Copilot",
-      "slug": "dragon-copilot",
-      "category": "Healthcare",
-      "price": "Sales-assisted Microsoft licensing; no self-serve public list price",
-      "url": "https://aitoolsessentials.com/tools/dragon-copilot/"
-    },
-    {
-      "name": "ElevenLabs",
-      "slug": "elevenlabs",
-      "category": "Audio & Video",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/elevenlabs/"
-    },
-    {
-      "name": "Fathom",
-      "slug": "fathom",
-      "category": "Meetings",
-      "price": "Free + paid team plans",
-      "url": "https://aitoolsessentials.com/tools/fathom/"
-    },
-    {
-      "name": "Fireflies.ai",
-      "slug": "fireflies",
-      "category": "Meetings",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/fireflies/"
-    },
-    {
-      "name": "Gamma",
-      "slug": "gamma",
-      "category": "Productivity",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/gamma/"
-    },
-    {
-      "name": "GatsbyAI",
-      "slug": "gatsbyai",
-      "category": "Video",
-      "price": "Lite $19.98/mo or $119.88/yr (2,000 credits a month); Pro $39.98/mo or $239.88/yr (5,000); Ultra $77.98/mo or $467.88/yr (10,000); one-time packs 1,500 credits $29.90, 3,000 $49.90, 5,000 $69.90, 8,000 $99.90; two free guest generations a day and 10 daily credits for a signed-in account",
-      "url": "https://aitoolsessentials.com/tools/gatsbyai/"
-    },
-    {
-      "name": "GearDex",
-      "slug": "geardex",
-      "category": "Productivity",
-      "price": "Starter free (25 gear items, 10 categories, 25 AI actions a week, one 50 MB client gallery, a 3-page site); Pro $4/mo or $39/yr; Studio $19/mo or $179/yr; no free trial on paid plans",
-      "url": "https://aitoolsessentials.com/tools/geardex/"
-    },
-    {
-      "name": "Gemini",
-      "slug": "gemini",
-      "category": "General AI Assistant",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/gemini/"
-    },
-    {
-      "name": "GitHub Copilot",
-      "slug": "github-copilot",
-      "category": "Development",
-      "price": "Paid plans",
-      "url": "https://aitoolsessentials.com/tools/github-copilot/"
-    },
-    {
-      "name": "Grammarly",
-      "slug": "grammarly",
-      "category": "Productivity",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/grammarly/"
-    },
-    {
-      "name": "Grantable",
-      "slug": "grantable",
-      "category": "Nonprofit",
-      "price": "Free $0 with 5 chat messages/day; Starter $50/mo; Pro $150/mo; qualifying 501(c)(3)s under ~$500K get 50% off for 1 year ($25/$75)",
-      "url": "https://aitoolsessentials.com/tools/grantable/"
-    },
-    {
-      "name": "Grok",
-      "slug": "grok",
-      "category": "General AI Assistant",
-      "price": "Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo; API from $1\u2013$6 per 1M tokens",
-      "url": "https://aitoolsessentials.com/tools/grok/"
-    },
-    {
-      "name": "Harvey",
-      "slug": "harvey",
-      "category": "Legal",
-      "price": "Sales-assisted demo / quote; no self-serve public list price",
-      "url": "https://aitoolsessentials.com/tools/harvey/"
-    },
-    {
-      "name": "Heidi Health",
-      "slug": "heidi-health",
-      "category": "Healthcare",
-      "price": "Free + paid Clinician and Teams plans",
-      "url": "https://aitoolsessentials.com/tools/heidi-health/"
-    },
-    {
-      "name": "Hermes Agent",
-      "slug": "hermes-agent",
-      "category": "AI Agents",
-      "price": "Open source + model/provider costs",
-      "url": "https://aitoolsessentials.com/tools/hermes-agent/"
-    },
-    {
-      "name": "HeyGen",
-      "slug": "heygen",
-      "category": "Video",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/heygen/"
-    },
-    {
-      "name": "HOL Registry",
-      "slug": "hol-registry",
-      "category": "Development",
-      "price": "Free",
-      "url": "https://aitoolsessentials.com/tools/hol-registry/"
-    },
-    {
-      "name": "HtmlSlides",
-      "slug": "htmlslides",
-      "category": "Productivity",
-      "price": "Free + Pro $9.90/mo (launch offer) + credit packs from $1",
-      "url": "https://aitoolsessentials.com/tools/htmlslides/"
-    },
-    {
-      "name": "HumanPen",
-      "slug": "humanpen",
-      "category": "Productivity",
-      "price": "Pay-as-you-go credits, one-time purchase, no subscription: 1,000 credits USD 19, 5,000 USD 79 (marked most popular), 10,000 USD 149, 20,000 USD 249. Every account's first purchase is discounted to USD 9.90 / 49 / 98 / 196 for the same four packs, once per account. New accounts get 100 free credits. Credits never expire and work in the web app and the API. Humanizing costs 100 credits per 1,000 words actually rewritten; citation-format correction is the cheapest operation at 5 credits per 1,000 words. Checkout runs through Waffo (the Privacy Policy also names Creem), each acting as merchant of record; prices are USD and no recurring plan is sold - the Terms state each purchase is a one-time charge.",
-      "url": "https://aitoolsessentials.com/tools/humanpen/"
     },
     {
       "name": "Ideogram",
@@ -331,32 +226,11 @@
       "url": "https://aitoolsessentials.com/tools/imagesv2/"
     },
     {
-      "name": "Instrumentl",
-      "slug": "instrumentl",
-      "category": "Nonprofit",
-      "price": "Discover $299/mo billed annually ($349 monthly); Pre-Award $499/$579; Full Lifecycle $999/$1,159; Enterprise custom; 14-day free trial",
-      "url": "https://aitoolsessentials.com/tools/instrumentl/"
-    },
-    {
       "name": "Jasper",
       "slug": "jasper",
       "category": "Creative",
       "price": "Paid plans",
       "url": "https://aitoolsessentials.com/tools/jasper/"
-    },
-    {
-      "name": "Khanmigo",
-      "slug": "khanmigo",
-      "category": "Education",
-      "price": "Teacher tools officially free in supported locales; learners/families $4/month or $44/year; district tools by quote",
-      "url": "https://aitoolsessentials.com/tools/khanmigo/"
-    },
-    {
-      "name": "Landlord Studio",
-      "slug": "landlord-studio",
-      "category": "Property Management",
-      "price": "Go Free for up to 3 units; Pro $12/mo or $144/year; Pro Plus $28/mo or $366/year; 14-day Pro trial",
-      "url": "https://aitoolsessentials.com/tools/landlord-studio/"
     },
     {
       "name": "Leonardo AI",
@@ -366,11 +240,67 @@
       "url": "https://aitoolsessentials.com/tools/leonardo-ai/"
     },
     {
-      "name": "LM Studio",
-      "slug": "lm-studio",
-      "category": "Local AI",
-      "price": "Free local use + optional pay-as-you-go cloud models",
-      "url": "https://aitoolsessentials.com/tools/lm-studio/"
+      "name": "Midjourney",
+      "slug": "midjourney",
+      "category": "Creative",
+      "price": "Paid plans",
+      "url": "https://aitoolsessentials.com/tools/midjourney/"
+    },
+    {
+      "name": "Retouchia",
+      "slug": "retouchia",
+      "category": "Creative",
+      "price": "Free: 5 credits on sign-up (~1 image), no card required, full-resolution downloads. One-time packs only, no subscription: Basic $9.99 (shown against a $12 anchor, \"Save 16%\", 350 credits, advertised as ~70 images), Pro $29.99 (anchor $39.90, \"Save 24%\", 1,200 credits, ~240 images). Paid credits expire 365 days after purchase. Payment is processed by Waffo Pancake.",
+      "url": "https://aitoolsessentials.com/tools/retouchia/"
+    },
+    {
+      "name": "TAROTAI.CHAT",
+      "slug": "tarotai-chat",
+      "category": "Creative",
+      "price": "Packs $2.99-$10.99 (one-time); subscriptions $3.99/mo and $9.90/mo",
+      "url": "https://aitoolsessentials.com/tools/tarotai-chat/"
+    },
+    {
+      "name": "TheFaceRating",
+      "slug": "thefacerating",
+      "category": "Creative",
+      "price": "Free on-device scan with no account. Paid reports are one-time purchases, not subscriptions: Starter USD 7.99, Pro USD 16.99, VIP USD 24.99, listed identically on the homepage plan cards, the results-page paywall and Terms section 6. Studio credit packs are stated in the Terms only - 10 credits for USD 9.99 and 30 credits for USD 19.99, one credit per rating plus render, credits do not expire. Checkout is a live Stripe session (verified 2026-10-24: cs_live session for 'TheFaceRating Starter Report' at USD 7.99, merchant Vban LLC, Apple Pay and Google Pay offered); applicable tax shows at checkout. Free AI colour analyses are capped at two per day per hashed IP address.",
+      "url": "https://aitoolsessentials.com/tools/thefacerating/"
+    },
+    {
+      "name": "Bolt.new",
+      "slug": "bolt-new",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/bolt-new/"
+    },
+    {
+      "name": "CCC (Claude Command Center)",
+      "slug": "claude-command-center",
+      "category": "Development",
+      "price": "Free: USD 0, with no tiers, no paid plan, no seat count and no account for the local app. Licensed FSL-1.1-MIT (copyright 2026 Amir Fish), which is source-available rather than OSI open source: you may use, copy, modify and redistribute it for any Permitted Purpose, a Competing Use is barred, and each version converts to the MIT license on its second anniversary. Downloads are a 3.6 MB notarized and Apple-signed DMG, a Homebrew tap (amirfish1/tap/ccc), a curl installer for macOS/Linux and a PowerShell installer for Windows. The optional CCC Cloud phone relay is account-based; no price appears for it on any fetched page either. No page on the site carries a price token other than $0.",
+      "url": "https://aitoolsessentials.com/tools/claude-command-center/"
+    },
+    {
+      "name": "Cursor",
+      "slug": "cursor",
+      "category": "Development",
+      "price": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
+      "url": "https://aitoolsessentials.com/tools/cursor/"
+    },
+    {
+      "name": "GitHub Copilot",
+      "slug": "github-copilot",
+      "category": "Development",
+      "price": "Paid plans",
+      "url": "https://aitoolsessentials.com/tools/github-copilot/"
+    },
+    {
+      "name": "HOL Registry",
+      "slug": "hol-registry",
+      "category": "Development",
+      "price": "Free",
+      "url": "https://aitoolsessentials.com/tools/hol-registry/"
     },
     {
       "name": "Lovable",
@@ -380,11 +310,32 @@
       "url": "https://aitoolsessentials.com/tools/lovable/"
     },
     {
-      "name": "Luma AI",
-      "slug": "luma-ai",
-      "category": "Video",
-      "price": "Plus $30/month, Pro $90/month, Ultra $300/month",
-      "url": "https://aitoolsessentials.com/tools/luma-ai/"
+      "name": "Replit AI",
+      "slug": "replit-ai",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/replit-ai/"
+    },
+    {
+      "name": "v0",
+      "slug": "v0",
+      "category": "Development",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/v0/"
+    },
+    {
+      "name": "AILearnHub",
+      "slug": "ailearnhub",
+      "category": "Education",
+      "price": "Free (1 lesson); Pro $19/mo or $190/yr; Max $49/mo or $490/yr",
+      "url": "https://aitoolsessentials.com/tools/ailearnhub/"
+    },
+    {
+      "name": "Khanmigo",
+      "slug": "khanmigo",
+      "category": "Education",
+      "price": "Teacher tools officially free in supported locales; learners/families $4/month or $44/year; district tools by quote",
+      "url": "https://aitoolsessentials.com/tools/khanmigo/"
     },
     {
       "name": "MagicSchool",
@@ -394,18 +345,39 @@
       "url": "https://aitoolsessentials.com/tools/magicschool/"
     },
     {
-      "name": "Make",
-      "slug": "make",
-      "category": "Automation",
+      "name": "ChatGPT",
+      "slug": "chatgpt",
+      "category": "General AI Assistant",
       "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/make/"
+      "url": "https://aitoolsessentials.com/tools/chatgpt/"
     },
     {
-      "name": "Marigold Pet",
-      "slug": "marigold-pet",
-      "category": "Video",
-      "price": "Single price, no tiers and no subscription: USD 6.99 one-time for one 15-second video (portrait 9:16 or landscape 16:9, one of four preset looks, AI-generated synchronised audio, MP4 download). No free tier or trial; the page's samples are the vendor's own renders. Checkout is hosted by Waffo Pancake as merchant of record; applicable tax is shown before payment. The site's own public config endpoint returns price 6.99, currency USD, billing one-time, mode prod - matching /pricing and the homepage.",
-      "url": "https://aitoolsessentials.com/tools/marigold-pet/"
+      "name": "Claude",
+      "slug": "claude",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/claude/"
+    },
+    {
+      "name": "DeepSeek",
+      "slug": "deepseek",
+      "category": "General AI Assistant",
+      "price": "Free + API pricing",
+      "url": "https://aitoolsessentials.com/tools/deepseek/"
+    },
+    {
+      "name": "Gemini",
+      "slug": "gemini",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/gemini/"
+    },
+    {
+      "name": "Grok",
+      "slug": "grok",
+      "category": "General AI Assistant",
+      "price": "Free tier; SuperGrok $30/mo; SuperGrok Plus $100/mo; API from $1\u2013$6 per 1M tokens",
+      "url": "https://aitoolsessentials.com/tools/grok/"
     },
     {
       "name": "Meta AI",
@@ -415,20 +387,6 @@
       "url": "https://aitoolsessentials.com/tools/meta-ai/"
     },
     {
-      "name": "Microsoft Copilot",
-      "slug": "microsoft-copilot",
-      "category": "Productivity",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/microsoft-copilot/"
-    },
-    {
-      "name": "Midjourney",
-      "slug": "midjourney",
-      "category": "Creative",
-      "price": "Paid plans",
-      "url": "https://aitoolsessentials.com/tools/midjourney/"
-    },
-    {
       "name": "Mistral Le Chat",
       "slug": "mistral-le-chat",
       "category": "General AI Assistant",
@@ -436,32 +394,60 @@
       "url": "https://aitoolsessentials.com/tools/mistral-le-chat/"
     },
     {
-      "name": "Money Tracker (Expense & Budget)",
-      "slug": "money-tracker",
-      "category": "Productivity",
-      "price": "Free with ads: manual entry, categories, budgets, charts, reports, multi-currency, split (AA) books and exports all work without paying. Premium is sold only inside the app stores - the vendor's own site publishes no price anywhere in its 45 locales. Apple's listing shows Yearly Premium $29.99 and Monthly Premium $2.99; Google Play lists in-app purchases at $2.99-$29.00 per item. Premium removes ads and adds unlimited AI entry, bill import (CSV, Excel, PDF or images), Android Smart Notification Entry, app lock, more books and accounts, and team books.",
-      "url": "https://aitoolsessentials.com/tools/money-tracker/"
+      "name": "Poe",
+      "slug": "poe",
+      "category": "General AI Assistant",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/poe/"
     },
     {
-      "name": "n8n",
-      "slug": "n8n",
-      "category": "Automation",
-      "price": "Free self-hosted + paid cloud",
-      "url": "https://aitoolsessentials.com/tools/n8n/"
+      "name": "Microsoft Dragon Copilot",
+      "slug": "dragon-copilot",
+      "category": "Healthcare",
+      "price": "Sales-assisted Microsoft licensing; no self-serve public list price",
+      "url": "https://aitoolsessentials.com/tools/dragon-copilot/"
     },
     {
-      "name": "NotebookLM",
-      "slug": "notebooklm",
-      "category": "Research",
-      "price": "Free",
-      "url": "https://aitoolsessentials.com/tools/notebooklm/"
+      "name": "Heidi Health",
+      "slug": "heidi-health",
+      "category": "Healthcare",
+      "price": "Free + paid Clinician and Teams plans",
+      "url": "https://aitoolsessentials.com/tools/heidi-health/"
     },
     {
-      "name": "Notion AI",
-      "slug": "notion-ai",
-      "category": "Productivity",
-      "price": "Paid add-on / included in some plans",
-      "url": "https://aitoolsessentials.com/tools/notion-ai/"
+      "name": "OpenEvidence",
+      "slug": "openevidence",
+      "category": "Healthcare",
+      "price": "Free for healthcare professionals, per official homepage",
+      "url": "https://aitoolsessentials.com/tools/openevidence/"
+    },
+    {
+      "name": "CoCounsel Legal",
+      "slug": "cocounsel",
+      "category": "Legal",
+      "price": "Sales-quoted; official Westlaw Advantage with CoCounsel Essentials starts at $415.35/month",
+      "url": "https://aitoolsessentials.com/tools/cocounsel/"
+    },
+    {
+      "name": "Harvey",
+      "slug": "harvey",
+      "category": "Legal",
+      "price": "Sales-assisted demo / quote; no self-serve public list price",
+      "url": "https://aitoolsessentials.com/tools/harvey/"
+    },
+    {
+      "name": "Spellbook",
+      "slug": "spellbook",
+      "category": "Legal",
+      "price": "Custom per-seat subscription; no public self-serve price list on the official homepage",
+      "url": "https://aitoolsessentials.com/tools/spellbook/"
+    },
+    {
+      "name": "LM Studio",
+      "slug": "lm-studio",
+      "category": "Local AI",
+      "price": "Free local use + optional pay-as-you-go cloud models",
+      "url": "https://aitoolsessentials.com/tools/lm-studio/"
     },
     {
       "name": "Ollama",
@@ -478,18 +464,18 @@
       "url": "https://aitoolsessentials.com/tools/open-webui/"
     },
     {
-      "name": "OpenClaw",
-      "slug": "openclaw",
-      "category": "AI Agents",
-      "price": "Open source + model/provider and hosting costs",
-      "url": "https://aitoolsessentials.com/tools/openclaw/"
+      "name": "Fathom",
+      "slug": "fathom",
+      "category": "Meetings",
+      "price": "Free + paid team plans",
+      "url": "https://aitoolsessentials.com/tools/fathom/"
     },
     {
-      "name": "OpenEvidence",
-      "slug": "openevidence",
-      "category": "Healthcare",
-      "price": "Free for healthcare professionals, per official homepage",
-      "url": "https://aitoolsessentials.com/tools/openevidence/"
+      "name": "Fireflies.ai",
+      "slug": "fireflies",
+      "category": "Meetings",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/fireflies/"
     },
     {
       "name": "Otter.ai",
@@ -499,53 +485,88 @@
       "url": "https://aitoolsessentials.com/tools/otter-ai/"
     },
     {
-      "name": "Perplexity",
-      "slug": "perplexity",
-      "category": "Research",
+      "name": "Grantable",
+      "slug": "grantable",
+      "category": "Nonprofit",
+      "price": "Free $0 with 5 chat messages/day; Starter $50/mo; Pro $150/mo; qualifying 501(c)(3)s under ~$500K get 50% off for 1 year ($25/$75)",
+      "url": "https://aitoolsessentials.com/tools/grantable/"
+    },
+    {
+      "name": "Instrumentl",
+      "slug": "instrumentl",
+      "category": "Nonprofit",
+      "price": "Discover $299/mo billed annually ($349 monthly); Pre-Award $499/$579; Full Lifecycle $999/$1,159; Enterprise custom; 14-day free trial",
+      "url": "https://aitoolsessentials.com/tools/instrumentl/"
+    },
+    {
+      "name": "AIDetector.cx",
+      "slug": "aidetector-cx",
+      "category": "Productivity",
+      "price": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
+      "url": "https://aitoolsessentials.com/tools/aidetector-cx/"
+    },
+    {
+      "name": "Airtable AI",
+      "slug": "airtable-ai",
+      "category": "Productivity",
+      "price": "Paid plan availability varies",
+      "url": "https://aitoolsessentials.com/tools/airtable-ai/"
+    },
+    {
+      "name": "Gamma",
+      "slug": "gamma",
+      "category": "Productivity",
       "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/perplexity/"
+      "url": "https://aitoolsessentials.com/tools/gamma/"
     },
     {
-      "name": "Pika",
-      "slug": "pika",
-      "category": "Video",
-      "price": "Free $0 (packs only); Starter $8/mo; Creator $28/mo; Fancy $76/mo (annual billing; $10/$35/$95 monthly)",
-      "url": "https://aitoolsessentials.com/tools/pika/"
+      "name": "GearDex",
+      "slug": "geardex",
+      "category": "Productivity",
+      "price": "Starter free (25 gear items, 10 categories, 25 AI actions a week, one 50 MB client gallery, a 3-page site); Pro $4/mo or $39/yr; Studio $19/mo or $179/yr; no free trial on paid plans",
+      "url": "https://aitoolsessentials.com/tools/geardex/"
     },
     {
-      "name": "Poe",
-      "slug": "poe",
-      "category": "General AI Assistant",
+      "name": "Grammarly",
+      "slug": "grammarly",
+      "category": "Productivity",
       "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/poe/"
+      "url": "https://aitoolsessentials.com/tools/grammarly/"
     },
     {
-      "name": "Replit AI",
-      "slug": "replit-ai",
-      "category": "Development",
+      "name": "HtmlSlides",
+      "slug": "htmlslides",
+      "category": "Productivity",
+      "price": "Free + Pro $9.90/mo (launch offer) + credit packs from $1",
+      "url": "https://aitoolsessentials.com/tools/htmlslides/"
+    },
+    {
+      "name": "HumanPen",
+      "slug": "humanpen",
+      "category": "Productivity",
+      "price": "Pay-as-you-go credits, one-time purchase, no subscription: 1,000 credits USD 19, 5,000 USD 79 (marked most popular), 10,000 USD 149, 20,000 USD 249. Every account's first purchase is discounted to USD 9.90 / 49 / 98 / 196 for the same four packs, once per account. New accounts get 100 free credits. Credits never expire and work in the web app and the API. Humanizing costs 100 credits per 1,000 words actually rewritten; citation-format correction is the cheapest operation at 5 credits per 1,000 words. Checkout runs through Waffo (the Privacy Policy also names Creem), each acting as merchant of record; prices are USD and no recurring plan is sold - the Terms state each purchase is a one-time charge.",
+      "url": "https://aitoolsessentials.com/tools/humanpen/"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "slug": "microsoft-copilot",
+      "category": "Productivity",
       "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/replit-ai/"
+      "url": "https://aitoolsessentials.com/tools/microsoft-copilot/"
     },
     {
-      "name": "Retouchia",
-      "slug": "retouchia",
-      "category": "Creative",
-      "price": "Free: 5 credits on sign-up (~1 image), no card required, full-resolution downloads. One-time packs only, no subscription: Basic $9.99 (shown against a $12 anchor, \"Save 16%\", 350 credits, advertised as ~70 images), Pro $29.99 (anchor $39.90, \"Save 24%\", 1,200 credits, ~240 images). Paid credits expire 365 days after purchase. Payment is processed by Waffo Pancake.",
-      "url": "https://aitoolsessentials.com/tools/retouchia/"
+      "name": "Money Tracker (Expense & Budget)",
+      "slug": "money-tracker",
+      "category": "Productivity",
+      "price": "Free with ads: manual entry, categories, budgets, charts, reports, multi-currency, split (AA) books and exports all work without paying. Premium is sold only inside the app stores - the vendor's own site publishes no price anywhere in its 45 locales. Apple's listing shows Yearly Premium $29.99 and Monthly Premium $2.99; Google Play lists in-app purchases at $2.99-$29.00 per item. Premium removes ads and adds unlimited AI entry, bill import (CSV, Excel, PDF or images), Android Smart Notification Entry, app lock, more books and accounts, and team books.",
+      "url": "https://aitoolsessentials.com/tools/money-tracker/"
     },
     {
-      "name": "Riverside",
-      "slug": "riverside-fm",
-      "category": "Audio & Video",
-      "price": "Free $0 with 2 hours one-off multi-track; Pro $24/mo billed annually ($29 monthly, $288/year); Grow $34/$39; Webinar $79/$99; Business custom",
-      "url": "https://aitoolsessentials.com/tools/riverside-fm/"
-    },
-    {
-      "name": "Robylon",
-      "slug": "robylon",
-      "category": "AI Agents",
-      "price": "Free (300 credits/mo) + paid plans from $25/mo; optional live agent seats from $19/seat/mo",
-      "url": "https://aitoolsessentials.com/tools/robylon/"
+      "name": "Notion AI",
+      "slug": "notion-ai",
+      "category": "Productivity",
+      "price": "Paid add-on / included in some plans",
+      "url": "https://aitoolsessentials.com/tools/notion-ai/"
     },
     {
       "name": "Rows",
@@ -553,13 +574,6 @@
       "category": "Productivity",
       "price": "Free + paid plans",
       "url": "https://aitoolsessentials.com/tools/rows/"
-    },
-    {
-      "name": "Runway",
-      "slug": "runway",
-      "category": "Video",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/runway/"
     },
     {
       "name": "Shortwave",
@@ -583,39 +597,11 @@
       "url": "https://aitoolsessentials.com/tools/sonaopus/"
     },
     {
-      "name": "Speechify",
-      "slug": "speechify",
-      "category": "Audio & Video",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/speechify/"
-    },
-    {
-      "name": "Spellbook",
-      "slug": "spellbook",
-      "category": "Legal",
-      "price": "Custom per-seat subscription; no public self-serve price list on the official homepage",
-      "url": "https://aitoolsessentials.com/tools/spellbook/"
-    },
-    {
-      "name": "Suno",
-      "slug": "suno",
-      "category": "Audio & Video",
-      "price": "Free plan; Pro $8/mo ($96/yr); Premier $24/mo ($288/yr) (annual billing)",
-      "url": "https://aitoolsessentials.com/tools/suno/"
-    },
-    {
-      "name": "Synthesia",
-      "slug": "synthesia",
-      "category": "Video",
-      "price": "Paid plans",
-      "url": "https://aitoolsessentials.com/tools/synthesia/"
-    },
-    {
-      "name": "TAROTAI.CHAT",
-      "slug": "tarotai-chat",
-      "category": "Creative",
-      "price": "Packs $2.99-$10.99 (one-time); subscriptions $3.99/mo and $9.90/mo",
-      "url": "https://aitoolsessentials.com/tools/tarotai-chat/"
+      "name": "Landlord Studio",
+      "slug": "landlord-studio",
+      "category": "Property Management",
+      "price": "Go Free for up to 3 units; Pro $12/mo or $144/year; Pro Plus $28/mo or $366/year; 14-day Pro trial",
+      "url": "https://aitoolsessentials.com/tools/landlord-studio/"
     },
     {
       "name": "TenantCloud",
@@ -625,53 +611,18 @@
       "url": "https://aitoolsessentials.com/tools/tenantcloud/"
     },
     {
-      "name": "TheFaceRating",
-      "slug": "thefacerating",
-      "category": "Creative",
-      "price": "Free on-device scan with no account. Paid reports are one-time purchases, not subscriptions: Starter USD 7.99, Pro USD 16.99, VIP USD 24.99, listed identically on the homepage plan cards, the results-page paywall and Terms section 6. Studio credit packs are stated in the Terms only - 10 credits for USD 9.99 and 30 credits for USD 19.99, one credit per rating plus render, credits do not expire. Checkout is a live Stripe session (verified 2026-10-24: cs_live session for 'TheFaceRating Starter Report' at USD 7.99, merchant Vban LLC, Apple Pay and Google Pay offered); applicable tax shows at checkout. Free AI colour analyses are capped at two per day per hashed IP address.",
-      "url": "https://aitoolsessentials.com/tools/thefacerating/"
+      "name": "NotebookLM",
+      "slug": "notebooklm",
+      "category": "Research",
+      "price": "Free",
+      "url": "https://aitoolsessentials.com/tools/notebooklm/"
     },
     {
-      "name": "Tunii",
-      "slug": "tunii",
-      "category": "Audio & Video",
-      "price": "Free 10 trial min + 5 min/week; one-time packs: $4.99/30 min, $9.99/90 min, $24.99/300 min",
-      "url": "https://aitoolsessentials.com/tools/tunii/"
-    },
-    {
-      "name": "TypingMind",
-      "slug": "typingmind",
-      "category": "AI Agents",
+      "name": "Perplexity",
+      "slug": "perplexity",
+      "category": "Research",
       "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/typingmind/"
-    },
-    {
-      "name": "Udio",
-      "slug": "udio",
-      "category": "Audio & Video",
-      "price": "Free plan; Standard $8/mo ($96/yr); Pro $24/mo ($288/yr) (annual billing)",
-      "url": "https://aitoolsessentials.com/tools/udio/"
-    },
-    {
-      "name": "v0",
-      "slug": "v0",
-      "category": "Development",
-      "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/v0/"
-    },
-    {
-      "name": "Whop CLI",
-      "slug": "whop-cli",
-      "category": "Automation",
-      "price": "Free (Whop platform fees apply on sales)",
-      "url": "https://aitoolsessentials.com/tools/whop-cli/"
-    },
-    {
-      "name": "Words into Music",
-      "slug": "words-into-music",
-      "category": "Audio & Video",
-      "price": "Starter $9.99/mo or $59.99/yr (30 songs/mo); Creator $19.99/mo or $119.99/yr (65); Studio $29.99/mo or $179.99/yr (100); one-time packs 20 songs $9.99, 40 songs $19.99, 90 songs $39.99; one introductory song per verified account",
-      "url": "https://aitoolsessentials.com/tools/words-into-music/"
+      "url": "https://aitoolsessentials.com/tools/perplexity/"
     },
     {
       "name": "You.com",
@@ -681,11 +632,67 @@
       "url": "https://aitoolsessentials.com/tools/you-com/"
     },
     {
-      "name": "Zapier AI",
-      "slug": "zapier-ai",
-      "category": "Automation",
+      "name": "AIProductAds",
+      "slug": "aiproductads",
+      "category": "Video",
+      "price": "Starter $19.90/mo; Professional $39.90/mo; annual $191.04 and $383.04; one-time packs $9.90-$99.90",
+      "url": "https://aitoolsessentials.com/tools/aiproductads/"
+    },
+    {
+      "name": "AllVideoAI",
+      "slug": "allvideoai",
+      "category": "Video",
+      "price": "Free tier + credit plans from $17/month",
+      "url": "https://aitoolsessentials.com/tools/allvideoai/"
+    },
+    {
+      "name": "GatsbyAI",
+      "slug": "gatsbyai",
+      "category": "Video",
+      "price": "Lite $19.98/mo or $119.88/yr (2,000 credits a month); Pro $39.98/mo or $239.88/yr (5,000); Ultra $77.98/mo or $467.88/yr (10,000); one-time packs 1,500 credits $29.90, 3,000 $49.90, 5,000 $69.90, 8,000 $99.90; two free guest generations a day and 10 daily credits for a signed-in account",
+      "url": "https://aitoolsessentials.com/tools/gatsbyai/"
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "category": "Video",
       "price": "Free + paid plans",
-      "url": "https://aitoolsessentials.com/tools/zapier-ai/"
+      "url": "https://aitoolsessentials.com/tools/heygen/"
+    },
+    {
+      "name": "Luma AI",
+      "slug": "luma-ai",
+      "category": "Video",
+      "price": "Plus $30/month, Pro $90/month, Ultra $300/month",
+      "url": "https://aitoolsessentials.com/tools/luma-ai/"
+    },
+    {
+      "name": "Marigold Pet",
+      "slug": "marigold-pet",
+      "category": "Video",
+      "price": "Single price, no tiers and no subscription: USD 6.99 one-time for one 15-second video (portrait 9:16 or landscape 16:9, one of four preset looks, AI-generated synchronised audio, MP4 download). No free tier or trial; the page's samples are the vendor's own renders. Checkout is hosted by Waffo Pancake as merchant of record; applicable tax is shown before payment. The site's own public config endpoint returns price 6.99, currency USD, billing one-time, mode prod - matching /pricing and the homepage.",
+      "url": "https://aitoolsessentials.com/tools/marigold-pet/"
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "category": "Video",
+      "price": "Free $0 (packs only); Starter $8/mo; Creator $28/mo; Fancy $76/mo (annual billing; $10/$35/$95 monthly)",
+      "url": "https://aitoolsessentials.com/tools/pika/"
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "category": "Video",
+      "price": "Free + paid plans",
+      "url": "https://aitoolsessentials.com/tools/runway/"
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "category": "Video",
+      "price": "Paid plans",
+      "url": "https://aitoolsessentials.com/tools/synthesia/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

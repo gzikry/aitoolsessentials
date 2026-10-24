@@ -1635,5 +1635,26 @@
     "status": "not_started",
     "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
     "notes": "Do not invent affiliate URLs. Use official URL until approved."
+  },
+  {
+    "tool_slug": "claude-command-center",
+    "tool_name": "CCC (Claude Command Center)",
+    "priority": "low",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/claude-command-center/"
+    ],
+    "best_audiences": [
+      "developers running several coding agents in parallel on one machine",
+      "solo builders and small engineering teams who want a local, auditable control surface",
+      "readers already using Claude Code or Codex who keep losing sessions in terminal tabs"
+    ],
+    "status": "not_started",
+    "next_action": "Do not plan on commission economics: the product is free with no paid tier, so there is no sale to take a share of and no affiliate programme exists (no /affiliates, /partners or /referral page on the site). The only commercial conversation worth having is a sponsored placement or a referral arrangement if CCC ever ships a paid tier, so ask once whether one is planned, and treat this listing as coverage and citation value rather than a revenue target. Never invent a tracking URL.",
+    "notes": "Free, source-available, single-maintainer project, so the realistic upside is audience and citation rather than revenue. The vendor is unusually reachable for a technical correction - the repository is pushed daily and issues are open - which makes a follow-up about the missing privacy policy and terms page more likely to land than the same ask to a commercial vendor. Contact routes: amir.fish@gmail.com in the submission and amir@amirfish.com published on amirfish.ai, whose domain publishes MX."
   }
 ]

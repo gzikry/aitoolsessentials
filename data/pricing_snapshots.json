@@ -408,6 +408,10 @@
     "thefacerating": {
       "date": "2026-10-24",
       "digest": "Free on-device scan; one-time reports Starter USD 7.99 / Pro USD 16.99 / VIP USD 24.99, 'no subscription' on all three. Agrees across the homepage cards, the results-page paywall and Terms section 6; live Stripe checkout reached at USD 7.99 with merchant Vban LLC. Studio credit packs priced only in the Terms: 10 credits USD 9.99, 30 credits USD 19.99. Free colour analyses limited to two per day per hashed IP. No subscription tier exists."
+    },
+    "claude-command-center": {
+      "date": "2026-10-24",
+      "digest": "Free, $0. No tiers, no paid plan, no seat count, no account for the local app, and no price token anywhere on the site other than the '$0' free-model choice. License FSL-1.1-MIT (copyright 2026 Amir Fish): Permitted Purpose use, no Competing Use, MIT on each version's second anniversary. Distribution verified obtainable: ccc.dmg answers 200 at 3,614,187 bytes (application/octet-stream) and the amirfish1/homebrew-tap ccc formula answers 200. Optional account-based CCC Cloud relay publishes no price. Version 5.39.0 released 2026-10-18."
     }
   },
   "changes": [
