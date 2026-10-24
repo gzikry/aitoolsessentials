@@ -415,14 +415,34 @@ def main() -> None:
         actions.append("NO SENDABLE ROW THIS RUN — every live row is off-beat, route-less, or below "
                        "the relevance bar. Do not draft from this window.")
     if NEW:
-        actions.append(f"DO NOT DRAFT TODAY'S {len(NEW)} NEW ROWS: "
-                       + "; ".join(spec for spec in (notes.get("why_not_drafted") or ["see relevance_notes"])))
-    actions.append(
-        "NO REPLY HAS ARRIVED TO ANY PITCH. Mailbox checked today: the newest inbound from any pitch "
-        "recipient remains Jan Suski's 2026-10-11 06:57 UTC acknowledgment, which closed the "
-        "Amplemarket thread. Nothing has come from foxandspindle.com, sherwood.news, "
-        "epgacceleration.com, artichokehq.com or raconteur.net at any point."
-    )
+        # The label here used to be "DO NOT DRAFT TODAY'S N NEW ROWS" — a typed instruction that
+        # became wrong the first time a new row WAS drafted (2026-10-24: the Business Insider row
+        # was the run's only sendable row and is drafted in pitch-drafts-2026-10-24.md §1). The
+        # list itself is editorial, but whether it was drafted is measured from the draft files.
+        actions.append(
+            f"NEW ROWS ADDED THIS RUN ({len(NEW)}): "
+            + "; ".join(notes.get("why_not_drafted") or ["see relevance_notes"])
+            + f". Drafted from this run's new rows: {len([o for o in NEW if o['slug'] in {x['slug'] for x in sendable}])}."
+        )
+    # The reply sentence and the reply count used to be typed into this script: a fixed paragraph
+    # asserting that no reply had ever arrived and naming one acknowledgment, plus a literal
+    # `replies_to_date: 1`. Both are facts about the mailbox that move without this script being
+    # edited, which is the defect class the digests keep logging. They are now read from the ledger.
+    replies = {u: str(v) for u, v in (led.get("reply_status") or {}).items()
+               if str(v).strip().upper().startswith("REPLIED")}
+    reply_checked = led.get("reply_status_checked") or today
+    if replies:
+        actions.append(
+            f"REPLIES ON RECORD: {len(replies)} of {len(pitched)} sent pitches have drawn a reply — "
+            + "; ".join(f"{slug_of(u)} ({v.split('.')[0][:180]})" for u, v in replies.items())
+            + f". Ledger reply status last checked {reply_checked}; re-check the mailbox before "
+              "treating any thread as open or closed."
+        )
+    else:
+        actions.append(
+            f"NO REPLY HAS ARRIVED TO ANY PITCH. Mailbox checked {reply_checked}; ledger records "
+            f"{len(pitched)} sent pitch(es) and {len(replies)} replies."
+        )
     actions.extend(notes.get("extra_actions") or [])
 
     out = {
@@ -487,8 +507,8 @@ def main() -> None:
             "rows_at_ten_days_crossing_next_run": len(at_ten),
             "pitch_draft_files_on_disk": len(list(D.glob("pitch-drafts-*.md"))),
             "rows_named_in_a_draft_file": len(drafted),
-            "replies_to_date": 1,
-            "reply_status_checked": today,
+            "replies_to_date": len(replies),
+            "reply_status_checked": reply_checked,
             "reply_outstanding_amplemarket_thread": False,
             "shadow_ai_tools_tracked": figs["n_tools"],
             "shadow_ai_monthly_priced_tools": figs["n_paid"],

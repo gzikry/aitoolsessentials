@@ -1,0 +1,40 @@
+{
+ "new_rows": {
+  "employees-at-european-orgs-switch-from-us-ai-provider-to-mistral": {
+   "who": "Thibault Spirlet, tech reporter in Business Insider's London office (the page's domain field is businessinsider.com; the body signs 'Thibault Spirlet, Business Insider').",
+   "category": "AI / Vendor Switching / Procurement, Sovereignty & Cost Trade-offs",
+   "contact": "The request body's address is redacted by Sourcee ('please email me at [email redacted]'), and the page publishes no link of its own. ROUTE FOUND: the reporter's own Business Insider byline page publishes the address as a mailto link — businessinsider.com/author/thibault-spirlet (HTTP 200, title 'Thibault Spirlet - Business Insider', measured and recorded in route-checks-2026-10-24.json; the probe finds tspirlet@businessinsider.com 5 times in the page markup, alongside group-subscriptions@ and support@). Address published: tspirlet@businessinsider.com. Fallbacks published on the same page: linkedin.com/in/thibault-spirlet/ and x.com/ThibaultSpirlet. The page also states his beat is 'AI's impact on the workplace, job and cognitive skills', which is narrower than the switch story he is sourcing here.",
+   "relevance": "medium",
+   "notes": "The one on-beat row the window produced. He wants employees at European organisations who have moved, or are considering moving, from OpenAI or Anthropic to Mistral, and one of the four things he lists as a trade-off is cost. We cannot supply the testimony — we are a price-tracking publisher, not an employee of a switching org, and the draft says so in the first line. What we can supply is the dated per-seat price difference he would otherwise estimate: Mistral Le Chat Pro $14.99/month excluding taxes (checked 2026-09-18) against Claude Pro $20 month-to-month or $17 on annual prepay (checked 2026-09-18) and ChatGPT Plus $20/month (checked 2026-10-01). Recorded as medium rather than high precisely because the ask is first-hand experience and our contribution is the cost side only; a reporter sourcing testimony may not want a dataset, and the draft does not pretend otherwise.",
+   "template": "Offer the measured cost side of the switch, not testimony: state in the first sentence that we are a publisher with a dated price set and not an employee of a switching org. Then the per-seat comparison — Mistral Le Chat Pro $14.99/month excluding taxes (checked 2026-09-18) versus Claude Pro at $20 month-to-month or $17 on annual prepay (checked 2026-09-18) and ChatGPT Plus at $20/month (checked 2026-10-01) — and the wider denominator: 44 of 93 tracked AI tools publish a monthly price, 35 of those at or under $25/month, median $17.50, every figure carrying its check date (snapshots updated 2026-10-24); paying monthly rather than annually costs 1.11x to 2.53x, median 1.25x over 19 tiers. Route: email to tspirlet@businessinsider.com, published on his own byline page — George's lane."
+  },
+  "uk-and-eu-sports-retail-supply-chain-leaders-retail-ai-at-scale": {
+   "who": "Katie Howard (the page's own author field) sourcing panellists for SupplyChainTalk, the podcast she runs; no outlet domain field is set on the page.",
+   "category": "AI / Supply-Chain Operations / Podcast Panel Booking",
+   "contact": "No route published: the body says 'I'd love to hear from you' and 'tag them in the comments or drop me a message', but the page carries no address, handle or link of its own.",
+   "relevance": "low",
+   "notes": "A panellist call, not a sources call: she wants UK or EU supply chain, procurement and logistics professionals working in sports retail (18 Nov episode) and any supply-chain practitioner (9 Dec episode) to sit on a recorded panel. We are neither — we price software, we do not run a supply chain — and the ask is a booked appearance rather than a quote or a dataset. The AI content is real (agents and copilots across forecasting, inventory, replenishment), so the row is recorded, but there is nothing here we can honestly contribute and no channel to contribute it through.",
+   "template": "None. No route published and we are not the panellist profile. NOT DRAFTED."
+  },
+  "founders-and-cofounders-fortnightly-founder-qanda": {
+   "who": "Lauren Hargreaves, Remobi (named in the body; no outlet domain field on the page).",
+   "category": "Founders / Community Q&A (AI mention incidental)",
+   "contact": "No route published: the body says 'answer in writing, or we jump on a call' and 'Tag a...', but the page carries no address, handle or link.",
+   "relevance": "low",
+   "notes": "Body-level 'ai' hit only, and incidental: the single AI reference is a past interviewee described as 'an AI radio app', not a question about AI spend or tooling. The request itself is a standing founder Q&A for Remobi's community of senior technologists — a first-person founder story we do not have and would have to invent to answer. Recorded so the body-level count stays honest; not an AI-budget request.",
+   "template": "None. No route, and the ask is a founder story we cannot supply. NOT DRAFTED."
+  }
+ },
+ "defects": [
+  "TWO PROSE FACTS IN THIS SCRIPT WERE STILL TYPED, NOT DERIVED: `recommended_actions` ended with a hardcoded sentence asserting that no reply had ever arrived, naming Jan Suski's 2026-10-11 acknowledgment, and `monitor_health.replies_to_date` was the literal 1. Both would have gone stale silently the first time a journalist replied — the exact defect class this monitor has logged for hand-typed counts, in the one field George reads to decide whether a pitch landed. Both are now read from `pitch-ledger.json`'s `reply_status` map: replies_to_date counts entries whose value starts with REPLIED, and the action sentence names those rows and the ledger's own reply_status_checked date instead of asserting a fixed outcome.",
+  "Route discovery was asserted per row from the request page alone. It is now checked against the publication's own byline page, which is where this run's only usable route came from: businessinsider.com/author/thibault-spirlet serves the mailto tspirlet@businessinsider.com that the Sourcee request redacts. The route was added to route-checks-2026-10-24.json so tomorrow's union probe re-checks it instead of it living only in prose."
+ ],
+ "why_not_drafted": [
+  "employees-at-european-orgs-switch-from-us-ai-provider-to-mistral — DRAFTED, pitch-drafts-2026-10-24.md §1: the only new row above the tangential band, and the only one with a route resolved to a published address (tspirlet@businessinsider.com off his own Business Insider byline page)",
+  "uk-and-eu-sports-retail-supply-chain-leaders-retail-ai-at-scale — not drafted: a SupplyChainTalk panellist booking for supply-chain practitioners, we are not one, and the page publishes no address, handle or link",
+  "founders-and-cofounders-fortnightly-founder-qanda — not drafted: a standing founder Q&A whose only AI reference is an app named in an anecdote; no spend angle, no route"
+ ],
+ "extra_actions": [
+  "MAILBOX CHECKED TODAY (himalaya, IMAP account 'aitools', newest 60 envelopes plus a sender sweep): no inbound from any pitch recipient. The newest message from any journalist-pitch address remains Jan Suski's 2026-10-11 06:57 UTC acknowledgment, which closed the Amplemarket thread. Inbound since then is vendor and listing traffic only (FormSubmit submissions, Synthesia press office 2026-10-23, Descript/PartnerStack, Lilach Bullock's 2026-10-19 close on a newsletter-placement thread — not a HARO pitch). Nothing from businessinsider.com, tobiamure.com, raconteur.net, foxandspindle.com, sherwood.news or epgacceleration.com at any point."
+ ]
+}

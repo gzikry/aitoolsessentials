@@ -760,6 +760,38 @@ def _pitched_value(url: str) -> str:
 
 
 
+def _sendable_history() -> tuple[str, str, int]:
+    """(previous run's sendable count, date of the last non-zero before it, consecutive zero runs).
+
+    The sendable branch of `_draft_index()` used to open with a typed sentence — "Every build before
+    the 2026-10-06 run reported 0" — which was true when it was written and false by 2026-10-21,
+    when the queue reached zero sendable again for four consecutive runs. A paragraph about history
+    that no longer matches the files on disk is the same defect as a typed count: it is read as
+    measurement. Every digest on disk records `monitor_health.sendable`, so the history is counted
+    from those instead of remembered.
+    """
+    rows: list[tuple[str, int]] = []
+    for p in sorted(OUT.glob("digest-*.json")):
+        try:
+            d = json.loads(p.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        c = (d.get("monitor_health") or {}).get("sendable")
+        if isinstance(c, int):
+            rows.append((p.stem.replace("digest-", ""), c))
+    if not rows:
+        return ("?", "never", 0)
+    prev = rows[-1][1]
+    zeros, last_nonzero = 0, "never"
+    for day, c in reversed(rows[:-1]):
+        if c == 0:
+            zeros += 1
+        else:
+            last_nonzero = day
+            break
+    return (str(prev), last_nonzero, zeros)
+
+
 def _draft_index(live_count: int, sendable_count: int) -> str:
     """The carried-drafts block, with every date-sensitive claim re-derived at build time.
 
@@ -783,18 +815,21 @@ def _draft_index(live_count: int, sendable_count: int) -> str:
     if sendable_count:
         # A non-zero sendable count is the state this monitor spent eleven runs failing to reach.
         # It must never be reported through prose that says otherwise, so the two states carry
-        # different text rather than one paragraph with a number spliced in.
+        # different text rather than one paragraph with a number spliced in. The history sentence is
+        # counted from the digests on disk (see _sendable_history), not remembered.
+        _prev_sendable, _last_nonzero, _zero_run = _sendable_history()
+        if _last_nonzero == "never":
+            _hist = (f"No earlier digest on disk reported a non-zero sendable count "
+                     f"({_zero_run} runs at zero before this one).")
+        else:
+            _hist = (f"The previous run reported {_prev_sendable}; the last run before it with a "
+                     f"non-zero count was {_last_nonzero}, with {_zero_run} consecutive zero "
+                     f"run(s) in between.")
         state = (
-            f"**THE QUEUE IS AT {sendable_count} SENDABLE.** Every build before the 2026-10-06 run "
-            f"reported 0, and twice that 0 was a genuine measurement after a defect had been fixed "
-            f"(the 2026-09-29 chrome leak into `published_links`, the 2026-10-01 Google Form read as "
-            f"a link route). A row is declared sendable on two facts evidenced separately rather "
-            f"than trusted from a digest field: a relevance above the tangential band, and a reply "
-            f"route verified by fetching a page today. Both are named in the row. A build holding "
-            f"more than one sendable row used to be rare — the 2026-10-10 build was the first to "
-            f"hold two, and it did so because a route was resolved off a publication's own site "
-            f"rather than because a new find arrived. This build holds {sendable_count}. The live "
-            f"unpitched set is {live_count} rows."
+            f"**THE QUEUE HOLDS {sendable_count} SENDABLE ROW(S).** A row is declared sendable on "
+            f"two facts evidenced separately rather than trusted from a digest field: a relevance "
+            f"above the tangential band, and a reply route verified by fetching a page today. Both "
+            f"are named in the row. {_hist} The live unpitched set is {live_count} rows."
         )
     else:
         state = (
@@ -996,14 +1031,23 @@ def render(queue: list[dict], ledger: dict) -> str:
     late_send = [q for q in live if q.get("page_live") and _has_real_draft(q["url"])]
     late_send.sort(key=key)
     if late_send:
+        _n_late = sum(1 for q in late_send if (q.get("days_old") or 0) > STALE_DAYS)
+        _n_fresh = len(late_send) - _n_late
+        _scope = (
+            (f"{_n_fresh} is inside the {STALE_DAYS}-day line and {_n_late} sit past it. The line is "
+             "this monitor's own heuristic, not the platform's: no page on this source has ever "
+             "carried an expiry, so a past-line row is late, not dead.") if _n_late and _n_fresh else
+            (f"All {len(late_send)} sit past the {STALE_DAYS}-day line, which is this monitor's own "
+             "heuristic and not the platform's: no page on this source has ever carried an expiry, "
+             "so they are late, not dead.") if _n_late else
+            (f"All {len(late_send)} are inside the {STALE_DAYS}-day line.")
+        )
         lines += [
-            f"## Send these now ({len(late_send)}) — late, not dead",
+            f"## Send these now ({len(late_send)}) — a finished draft and a live route",
             "",
             f"Each row below has a finished, paste-ready pitch in `{_newest_drafts()}` and a page that "
-            f"served the request today. They sit past the {STALE_DAYS}-day line, which is this "
-            "monitor's own heuristic and not the platform's: no page on this source has ever carried "
-            "an expiry. A send, or a `skipped` entry in `pitch-ledger.json`, closes each one. A fourth "
-            "rewrite of the same draft does not.",
+            f"served the request today. {_scope} A send, or a `skipped` entry in `pitch-ledger.json`, "
+            "closes each one. A rewrite of the same draft does not.",
             "",
         ]
         for q in late_send:
