@@ -404,6 +404,10 @@
     "humanpen": {
       "date": "2026-10-23",
       "digest": "Pay-as-you-go one-time credit packs, no subscription: 1,000 credits $19, 5,000 $79 (most popular), 10,000 $149, 20,000 $249, each with a once-per-account first-purchase price of $9.90 / $49 / $98 / $196. 100 free credits at signup; credits never expire and work in the app and the API. Consumption 100 credits per 1,000 words rewritten, 5 credits per 1,000 words for citation correction. USD, merchant of record Waffo (Privacy Policy also names Creem). Agrees across the rendered /pricing page, the public /api/backend/v1/credits/packages endpoint (eight items, no recurring flag) and the page metadata; the pack cards are client-rendered, so the ladder is not visible in the served HTML."
+    },
+    "thefacerating": {
+      "date": "2026-10-24",
+      "digest": "Free on-device scan; one-time reports Starter USD 7.99 / Pro USD 16.99 / VIP USD 24.99, 'no subscription' on all three. Agrees across the homepage cards, the results-page paywall and Terms section 6; live Stripe checkout reached at USD 7.99 with merchant Vban LLC. Studio credit packs priced only in the Terms: 10 credits USD 9.99, 30 credits USD 19.99. Free colour analyses limited to two per day per hashed IP. No subscription tier exists."
     }
   },
   "changes": [
@@ -576,5 +580,5 @@
       "note": "Cursor: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-13."
     }
   ],
-  "updated": "2026-10-23"
+  "updated": "2026-10-24"
 }
