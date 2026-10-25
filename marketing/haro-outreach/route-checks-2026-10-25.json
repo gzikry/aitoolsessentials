@@ -1,0 +1,126 @@
+{
+ "checked": "2026-10-25",
+ "routes": {
+  "businessinsider.com/author/thibault-spirlet/": {
+   "label": "Thibault Spirlet (Business Insider) byline page \u2014 mailto tspirlet@businessinsider.com",
+   "url": "https://www.businessinsider.com/author/thibault-spirlet",
+   "http": "200",
+   "bytes": 326719,
+   "title": "Thibault Spirlet - Business Insider",
+   "emails_on_page": {
+    "group-subscriptions@businessinsider.com": 1,
+    "support@businessinsider.com": 1,
+    "tspirlet@businessinsider.com": 5
+   }
+  },
+  "linkedin.com/in/christopher-mims-club/": {
+   "label": "Mims LinkedIn byline page",
+   "url": "https://www.linkedin.com/in/christopher-mims-club/",
+   "http": "200",
+   "bytes": 563095,
+   "title": "Christopher Mims - The Wall Street Journal | LinkedIn"
+  },
+  "muckrack.com/christopher-mims/": {
+   "label": "Mims Muck Rack profile (recorded dead end)",
+   "url": "https://www.muckrack.com/christopher-mims",
+   "http": "403",
+   "bytes": 5680,
+   "title": "Just a moment..."
+  },
+  "ope-plus.com/2024/02/13/announcing-ope/19236/": {
+   "label": "OPE+ 'Announcing OPE+' - carries the editor's address",
+   "url": "https://ope-plus.com/2024/02/13/announcing-ope/19236",
+   "http": "200",
+   "bytes": 151469,
+   "title": "Announcing OPE+ | OPE+Landscape",
+   "emails_on_page": {
+    "ghansen@epgacceleration.com": 2
+   }
+  },
+  "ope-plus.com/contact-us/": {
+   "label": "OPE+ contact page - editorial domain",
+   "url": "https://ope-plus.com/contact-us",
+   "http": "200",
+   "bytes": 114552,
+   "title": "Contact Us | OPE+Landscape",
+   "emails_on_page": {
+    "-prainito@epgacceleration.com": 4,
+    "almenarr@epgacceleration.com": 2,
+    "bethridge@epgacceleration.com": 2,
+    "customerservice@epgacceleration.com": 2,
+    "dvoll@epgacceleration.com": 2,
+    "info@epgacceleration.com": 2,
+    "jjuda-prainito@epgacceleration.com": 2,
+    "jjuda-prainito@epgmediallc.com": 2,
+    "lzigan@epgacceleration.com": 1,
+    "lzigan@epgmediallc.com": 1,
+    "voll@epgacceleration.com": 3
+   }
+  },
+  "raconteur.net/author/simon-chandler/": {
+   "label": "Raconteur legacy /author/simon-chandler/",
+   "url": "https://raconteur.net/author/simon-chandler/",
+   "http": "404",
+   "bytes": 139404,
+   "title": "Page not found - Raconteur"
+  },
+  "raconteur.net/contributors/simon-chandler/": {
+   "label": "Raconteur simon.chandler contributor",
+   "url": "https://raconteur.net/contributors/simon-chandler",
+   "http": "200",
+   "bytes": 153951,
+   "title": "Simon Chandler, Author at Raconteur",
+   "triple": "simon.chandler+raconteur+net"
+  },
+  "raconteur.net/contributors/tom-dennis/": {
+   "label": "Raconteur tom.dennis control",
+   "url": "https://raconteur.net/contributors/tom-dennis",
+   "http": "200",
+   "bytes": 154027,
+   "title": "Tom Dennis, Author at Raconteur",
+   "triple": "tom.dennis+raconteur+net"
+  },
+  "specialityfoodmagazine.com/contact/": {
+   "label": "Speciality Food contact",
+   "url": "https://www.specialityfoodmagazine.com/contact",
+   "http": "200",
+   "bytes": 59488,
+   "title": "Contact Us | Speciality Food Magazine",
+   "emails_on_page": {
+    "charlotte.smith-jarvis@artichokehq.com": 3,
+    "holly.shackleton@artichokehq.com": 3,
+    "jessica.brett@artichokehq.com": 3,
+    "louise.barnes@artichokehq.com": 6,
+    "sam.reubin@artichokehq.com": 3,
+    "subscriptions@artichokehq.com": 2
+   }
+  },
+  "tobiamure.com/": {
+   "label": "Fast Company draft route - journalist's own site (added 2026-10-14)",
+   "url": "https://tobiamure.com/",
+   "http": "200",
+   "bytes": 62818,
+   "title": "Tobi Amure, CFEI\u00ae | Finance &amp; Technology Journalist",
+   "emails_on_page": {
+    "hello@tobiamure.com": 6
+   }
+  },
+  "tobiamure.com/contact/": {
+   "label": "tobiamure.com contact page (tested 2026-10-16)",
+   "url": "https://tobiamure.com/contact/",
+   "http": "200",
+   "bytes": 17905,
+   "title": "Contact Tobi Amure | Finance &amp; Technology Journalist",
+   "emails_on_page": {
+    "hello@tobiamure.com": 5
+   }
+  },
+  "wsj.com/news/author/christopher-mims/": {
+   "label": "Mims WSJ author page (recorded dead end)",
+   "url": "https://www.wsj.com/news/author/christopher-mims",
+   "http": "401",
+   "bytes": 768,
+   "title": "wsj.com"
+  }
+ }
+}

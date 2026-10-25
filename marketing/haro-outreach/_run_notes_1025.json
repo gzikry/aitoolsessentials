@@ -1,0 +1,22 @@
+{
+ "date": "2026-10-25",
+ "new_rows": {
+  "people-using-ai-for-social-advice-communication-and-connection-impact": {
+   "who": "Trisha Mahajan, for TOI Digital (The Times of India) - the outlet is named in the body ('I'm working on a story for TOI DIGITAL', closing line 'The Times of India') and the author field carries her name; the page's domain field is indiatimes.com.",
+   "category": "AI / Consumer Behaviour / Social Connection",
+   "contact": "The body says 'Please reply to this post, DM me or email me ([email redacted])'. Sourcee redacts the address, the page publishes no link or handle of hers, and no address appears anywhere on the page. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "Wants people who use AI (ChatGPT named in the body) for social advice - awkward conversations, reading emotions, resolving conflicts - and their views on whether it makes them better at communicating or worse at connecting. Off-beat for this monitor: the ask is personal testimony about relationships, and the standing it requires is being that kind of user. Nothing in our dated price set answers it, and there is no route off the page. Recorded because it is an AI-token window slug, not because it is a candidate.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "video-teams-using-claude-and-remotion-agentic-video-editing": {
+   "who": "Enrico Tartarotti (page author field). No outlet, no domain: the domain field is empty and the body names no publication - this is an individual sourcing for his own project.",
+   "category": "AI / Video Production / Agentic Tooling",
+   "contact": "The body publishes one link, a t.co shortener (https://t.co/4ZzXXpfAC4) with the instruction '(please add a few lines about who you are)'. The page publishes no address and no personal handle; the destination behind the shortener was not resolved, so the route is the post itself. NOT RESOLVED.",
+   "relevance": "low",
+   "notes": "Wants teams (not solo operators) making video with Claude, Remotion or other agentic video editing, to talk about collaborative workflows. Adjacent to our beat only in that it names Claude; the question is production workflow, not licence cost, seats or spend, and the standing asked for is being on such a team. No route we can use off the page. Recorded because it is an AI-token window slug.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  }
+ },
+ "window_note": "34-slug window, 2 AI-token slugs (both recorded above, neither a candidate), 0 AI+spend, 1 spend-only slug (retail-business-owners-cost-cuts-that-hurt-profitability - a podcast episode write-up about commercial-lease cost cuts, not a request: no ask, no route, no AI question; correctly outside the AI-token set). All 34 window bodies fetched and read in full. Body-level AI scan found exactly the same two rows as the slug filter, so the window produced no body-only hit this run."
+}
