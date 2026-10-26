@@ -1,0 +1,50 @@
+KEEP, TEST, CUT · Issue 7 · 27 Oct 2026
+
+v0’s $20 tier is closed to new signups
+Vercel’s $20 individual rung is closing and Replit’s free Starter tier is off the page. Don’t pay for two prompt-to-app builders at once.
+
+THIS WEEK’S CALL: AI APP BUILDERS
+KEEP: Legacy v0 (https://aitoolsessentials.com/tools/v0/) Premium ($20/mo) if you already hold it, or one active builder.
+TEST FIRST: Bolt.new (https://aitoolsessentials.com/tools/bolt-new/) Free (1M tokens/mo) or Lovable (https://aitoolsessentials.com/tools/lovable/) Free (5 daily credits), checked 25 Oct.
+CUT: A second paid app-builder seat sitting idle between prototypes.
+
+Prompt-to-app builders are tightening the bottom of their pricing pages. On our 25 Oct 2026 check of v0.app/docs/pricing (https://aitoolsessentials.com/tools/v0/), Vercel’s $20 a month Premium tier is marked as being sunsetted and is no longer available to new users. New signups jump straight from Free to Plus at $30 per user a month, or Business at $100 per user. And v0’s Free tier no longer gives new accounts a recurring $5 monthly credit: new users get a one-time $5 signup grant and a 7-message daily limit, while existing Free users keep their monthly $5.
+
+Replit (https://aitoolsessentials.com/tools/replit-ai/) made a similar move on its entry rung. On our 25 Oct check of replit.com/pricing, the public table lists only Core at $20 a month ($18 billed annually), Pro at $100 ($90 billed annually), and Enterprise. The free Starter tier from our 21 Aug check is off the page.
+
+WHY THE $20 SEAT IS DISAPPEARING
+
+If you already hold v0 Premium at $20 or an older v0 Free account with the recurring $5 allowance, sit tight. Cancelling a legacy tier means you cannot buy it back; returning later costs $30 a month on Plus for $30 in monthly credits. Watch the quiet catch on v0’s higher rung, too: Business costs $100 per user a month, yet includes the same $30 in monthly credits per user as Plus. The extra $70 buys training-data opt-out and team controls, not more generation capacity. And if you connect a ChatGPT (https://aitoolsessentials.com/tools/chatgpt/) Plus or Pro plan to v0 to cover eligible OpenAI model responses, v0 still requires a positive v0 credit balance and deducts a platform fee in credits on every request.
+
+FOUR BUILDERS IS THREE TOO MANY
+
+Where people bleed money in this category is keeping v0, Replit Core, Bolt.new (https://aitoolsessentials.com/tools/bolt-new/), and Lovable (https://aitoolsessentials.com/tools/lovable/) active at the same time because each one kicked off a weekend prototype two months ago. Checked 25 Oct 2026, Bolt.new Pro is $25 a month ($18/mo billed $216 annually) for 10M tokens with rollover, and Lovable Pro is $25 a month ($21/mo billed annually) for 100 monthly credits plus 5 daily build credits across unlimited workspace users.
+
+Keep at most one paid builder for the prototype you are shipping this month. If you only spin up a UI once a quarter, Bolt.new’s Free tier (1M tokens a month, 300K daily limit) and Lovable’s Free tier (5 daily credits, up to 30 a month) remain open. Export finished code to GitHub and cancel idle builders before renewal.
+
+PRICING WATCH (seats people stack; date = when we checked)
+- v0 · 25 Oct 2026 · Tier sunset: Free $0 ($5 once for new users) · Premium $20/mo closed to new signups · Plus $30/user/mo · Business $100/user/mo
+- Replit · 25 Oct 2026 · Starter off page: Core $20/mo ($18 annual) · Pro $100/mo ($90 annual) · Enterprise custom
+- Bolt.new · 25 Oct 2026 · Verified: Free $0 (1M tokens/mo) · Pro $25/mo ($18 annual, $216/yr) · Teams $30/mo ($27 annual)
+- Lovable · 25 Oct 2026 · Verified: Free $0 (5 daily credits, 30/mo cap) · Pro $25/mo ($21 annual) · Business $50/mo ($42 annual)
+Watch the credit expiry windows: v0 monthly credits expire after 65 days; Lovable monthly credits expire after 2 months.
+Full tracker: https://aitoolsessentials.com/pricing-watch/
+Seat calculator: https://aitoolsessentials.com/compare/ai-app-builders/
+
+WORTH A LOOK
+GearDex is $4 a month for working photographers
+GearDex (https://aitoolsessentials.com/tools/geardex/) joined the directory this week. It’s a camera-gear inventory, shoot-planning, and client-gallery app with an assistant (Iris) built around studio records: serial numbers, warranties, loan check-outs, call sheets, and insurance PDFs. Official pricing checked 25 Oct 2026: Starter is free (25 items, 3 shoot plans, one 50 MB gallery, a 3-page site, 25 AI actions/week). Pro is $4/month ($39/year) for unlimited gear, custom domain, 3 galleries, and 150 AI actions/week. Studio is $19/month ($179/year).
+
+Clients pay through your own Stripe or PayPal link with zero platform cut. Paid plans have no free trial and no automatic refunds, so test on Starter first.
+
+ONE THING TO DO THIS WEEK
+Check the credit dashboard on every AI app builder you pay for. Unused monthly credits expire after 65 days on v0 and after two months on Lovable, and v0 locks purchased credits if your paid plan lapses. If a builder hasn’t shipped a commit in 30 days, sync the repo to GitHub and cancel before renewal. Then run the free Stack Audit (https://aitoolsessentials.com/stack-audit.html). It stays in your browser, needs no login, and maps overlap by job.
+
+Price the seats you still pay for in the App-Builder Seat and Credit-Burn Calculator (https://aitoolsessentials.com/compare/ai-app-builders/). It stays in your browser and shows the annual cost of a second paid seat.
+
+Got a question about a tool on your card? Write to aitoolsessentials@gmail.com.
+— AIToolsEssentials
+
+You’re getting this because you subscribed to Keep, Test, Cut at aitoolsessentials.com. Past issues: https://aitoolsessentials.com/newsletter/  Get it free: https://aitoolsessentials.com/subscribe/
+Premium is a separate $12/month research membership: https://aitoolsessentials.com/premium/
+AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}
