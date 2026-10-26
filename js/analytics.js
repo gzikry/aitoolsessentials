@@ -51,6 +51,34 @@
     return null;
   }
 
+  // Cloudflare Web Analytics. Free, unlimited, cookieless — and it works on this domain WITHOUT
+  // moving DNS to Cloudflare, which matters because DNS is on Porkbun and the site is on GitHub
+  // Pages. Verified rather than assumed: the beacon posts to cloudflareinsights.com/cdn-cgi/rum, an
+  // absolutely addressed Cloudflare host, NOT to a /cdn-cgi/ path on our own domain that would only
+  // exist behind their proxy.
+  //
+  // An empty token means DISABLED — no script tag, no third-party request, nothing to disclose.
+  // To turn it on: Cloudflare dashboard -> Web Analytics -> Add a site -> hostname -> Manage site,
+  // copy the token, paste it here. Steps are in admin/analytics-free-replacement.md.
+  var CF_WA = { token: '', version: '2024.11.0' };
+
+  function startCloudflareWebAnalytics() {
+    if (!CF_WA.token) return;
+    if (window._aitools_cfwa_started) return;
+    window._aitools_cfwa_started = true;
+    var b = document.createElement('script');
+    b.type = 'module';
+    b.defer = true;
+    b.crossOrigin = 'anonymous';
+    b.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    b.setAttribute('data-cf-beacon', JSON.stringify({
+      version: CF_WA.version,
+      token: CF_WA.token,
+      spa: 2
+    }));
+    document.head.appendChild(b);
+  }
+
   // Only actually track when the page is served from the real domain (not localhost/preview)
   if (location.hostname === SITE_HOST || location.hostname === 'www.' + SITE_HOST) {
     window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments); };
@@ -60,6 +88,7 @@
       if (!window._aitools_plausible_init) {
         window._aitools_plausible_init = true;
         document.head.appendChild(s);
+        startCloudflareWebAnalytics();
         document.addEventListener('click', function (e) {
           var el = e.target.closest && e.target.closest('a[href]');
           if (!el) return;
