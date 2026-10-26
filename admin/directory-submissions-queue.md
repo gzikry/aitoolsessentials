@@ -68,6 +68,34 @@ declaring it dead again — the earlier verdict may have been a stale path.
 - **SaaSHub** — approved 2026-09-28. Listing completed and verified 2026-09-27 (features,
   platforms, screenshots, description count, Verify click). Do not re-submit or email.
 
+## Evaluated and declined
+
+- **FoundrList** (`foundrlist.com`) — inbound invitation 2026-10-26
+  (`ghostyai@foundrlist.com`, Resend/SES campaign). **Declined: neither tier clears
+  the "free *and* dofollow" rule.** Verified on the live site the same day:
+  - **Free launch — $0 but nofollow.** Permanent product page, one week on the launch
+    board, scheduled **at least 4 weeks out**, no card required. Qualifying requires
+    either a **FoundrList badge on our site** (a sitewide reciprocal outbound link) or
+    upvoting 3 launches and commenting on 1.
+  - **Paid launches — dofollow, but purchased.** $29 (7-day featured) / $49 (14-day,
+    or $39/wk) / $99 (30-day, or $79/mo), one-time, live the same day; add-ons
+    newsletter $25, blog post $99, "SEO Boost… 50 directories" $278, "Boost Pro Max"
+    $403, home-feed ads $49–$99. Buying a dofollow link is a link scheme, and the site
+    publishes "No pay-to-rank listings" — same answer already given to MemeBurn,
+    ToolScout, techsy.io, zplatform.ai and SaaSHub Priority+ ($75).
+  - **Submission is account-gated** (`/submit` → `/agent` → `/signup`), so it would be
+    George-only regardless.
+  - Claims in the mail (DR 73, 100,000+ monthly visitors, 7,000 newsletter founders)
+    are **the vendor's own and unverified**; their pricing FAQ says outright "Reach
+    numbers on this page are estimates" and that they do not guarantee traffic,
+    rankings or AI citations. Domain registered 2025-11-24 (Cloudflare NS), legal
+    pages `/legal/privacy`, `/legal/terms`, `/legal/editorial-policy` all 200 —
+    a real directory, just not a free dofollow one.
+  - Not currently listed there (`/tools/aitoolsessentials` 404, site search returns
+    nothing). **No reply sent:** bulk campaign with `List-Unsubscribe`, no question
+    that needs an answer, and not submitting *is* the decline. Revisit only if the
+    free tier drops the badge requirement **and** turns the site link dofollow.
+
 ## Copy assets
 
 SaaSHub holds the submission kit (logo URL, name, tagline, description, image URLs) on any
