@@ -1,0 +1,34 @@
+{
+ "date": "2026-10-26",
+ "new_rows": {
+  "people-using-llms-as-companions-emotional-support-stories": {
+   "who": "Rose Guingrich, PhD (the page's author field). The body names the two people actually collecting: Kim Shirin Cupal, a journalist and audio producer, working with Hilke Schellmann on a mini-podcast series for Jennifer Strong's SHIFT podcast, funded by the Pulitzer Center. No publication domain on the page.",
+   "category": "AI / Companion Chatbots / Personal Testimony (podcast sourcing)",
+   "contact": "The body publishes two live channels and redacts the third: Reddit u/KimCupal and Discord kimcupal are printed verbatim in the request body, while the email is platform-redacted ('Email: [email redacted]'). The page itself publishes no link, and the raw payload carries no address. ROUTE CLASS THAT IS NEW FOR THIS MONITOR: a named Reddit handle read straight off the request body - usable without any signup, unlike the LinkedIn DMs which need George's session. NOT VERIFIED: no page was fetched to confirm the handle exists or is still active; a Reddit profile probe was not run this pass, so treat the handle as published-but-unconfirmed.",
+   "relevance": "low",
+   "notes": "The body is unambiguous about the ask: first-person stories from people who use AI companions or otherwise use LLMs for social and emotional support, for a Pulitzer-funded mini-series on SHIFT. That is testimony we cannot supply - we publish a dated price set, and we have never interviewed a companion-chatbot user. It is on-beat for the subject (consumer AI subscription behaviour) and off-beat for the standing: answering it would mean inventing a personal story, which is the one thing this monitor will not do. Recorded because it is a body-level AI hit (slug tokens are absent: no 'ai', 'llm' or 'chatbot' in the slug) and because the Reddit route is worth knowing about for a future request where the ask is data rather than testimony.",
+   "template": "None. The ask is first-person experience and we would have to invent it. NOT DRAFTED."
+  },
+  "sound-artists-and-field-recordists-run-radio-aarhus-open-call": {
+   "who": "Run_Radio (author field) - RUN RADIO, a music radio station and sound archive in Aarhus, Denmark, run with the Institute for X.",
+   "category": "Arts / Open Call (false positive - not AI)",
+   "contact": "Email is platform-redacted ([email redacted]) and the page publishes no link or handle. The body asks for a downloadable transfer link by email. NOT RESOLVED and not worth resolving: the call is for field recordings, DJ mixes and sound art.",
+   "relevance": "low",
+   "notes": "Body-level 'ai' hit is a substring false positive, not an AI request: the matcher caught 'ai' inside ordinary words (the body scans for the two-letter token, not the concept). The request is an open call for audio submissions to a Danish radio archive - no AI question, no spend question, no route. Recorded only so the body-level AI count in this digest is auditable rather than silently dropped; it is not a candidate and never was.",
+   "template": "None. Not an AI request and no route. NOT DRAFTED."
+  }
+ },
+ "window_note": "33-slug window (newest lastmod 2026-10-26T03:23:19Z against the 2026-10-25 mark 2026-10-25T03:20:47Z), 0 AI-token slugs, 0 AI+spend, 0 spend-only slugs - the first window in the recorded history of this monitor with no AI token at all, and the weakest supply day on record. All 33 window bodies fetched and read in full. The body-level scan found exactly two AI hits and both are recorded above: one genuine (the SHIFT podcast companion-story call, which has no AI token in its slug) and one substring false positive (RUN RADIO). No spend-token row came out of the window at all. The AI-topic feed also produced nothing new: all 50 slugs in it are already tracked or already excluded, so the day adds zero candidates, which is why the queue below is unchanged in composition and only moved in age.",
+ "defects": [
+  "FEED DROP-OFF WAS NOT BEING RECORDED AS A COLDNESS SIGNAL: the Business Insider row (employees-at-european-orgs-switch-from-us-ai-provider-to-mistral) was in the AI-topic feed on 2026-10-24 and 2026-10-25 and is ABSENT from today's 50-slug feed while its page still serves 200. Under this monitor's own stated rule - 'a request that has stopped appearing in the feed is colder than its age suggests' - a row that leaves the feed while staying live has to be marked, or the queue keeps ranking it as though it were still being promoted. The row is annotated in this run's ledger note and in the draft file rather than left to be inferred from a 'feed: no' field nobody reads.",
+  "The window probe reports 0 AI-token hits and that number is true of slugs only: 'people-using-llms-as-companions-emotional-support-stories' is an AI request with no AI token in its slug (it says 'llms' and 'companions'). The body scan is what caught it. Any run that trusted the slug count alone would have reported a clean window and missed the only on-topic request of the day."
+ ],
+ "why_not_drafted": [
+  "people-using-llms-as-companions-emotional-support-stories - not drafted: the ask is your own story of using an AI companion, and we have no such story to tell; the Reddit route is recorded for future data-shaped requests",
+  "sound-artists-and-field-recordists-run-radio-aarhus-open-call - not drafted: an audio open call, not an AI request; the 'ai' hit is a substring artefact"
+ ],
+ "extra_actions": [
+  "MAILBOX CHECKED TODAY (himalaya, IMAP account 'aitools', INBOX newest 25 envelopes plus a from-address sweep of every pitch recipient ever used): no inbound from any pitch recipient. Newest inbound is FoundrList's 2026-10-26 13:13Z listing reply (directory business, not a pitch) above a run of FormSubmit tool submissions and Synthesia's 2026-10-23 press-office note. The from-sweep over businessinsider.com, tobiamure.com, raconteur.net, foxandspindle.com, sherwood.news, epgacceleration.com, artichokehq.com and jansuski.com returns exactly two messages, both Jan Suski's (2026-09-18 and the 2026-10-11 acknowledgment that closed that thread). No new reply to any pitch since 2026-10-11; the Business Insider pitch has now been unsent for three days with no reply to check.",
+  "ROUTE PROBE: scripts/probe_routes.py re-probed all 12 recorded routes today (route-checks-2026-10-26.json). Live and unchanged: businessinsider.com/author/thibault-spirlet (HTTP 200, 326,718 bytes), tobiamure.com and /contact (200, 62,818 and 17,905 bytes), linkedin.com/in/christopher-mims-club (200). Dead ends reconfirmed, not routes: muckrack.com/christopher-mims 403, wsj.com/news/author/christopher-mims 401, raconteur.net/author/simon-chandler 404."
+ ]
+}

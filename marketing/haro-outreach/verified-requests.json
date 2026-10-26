@@ -3391,5 +3391,41 @@
   "published_links": [],
   "reply_hints": [],
   "checked": "2026-10-25"
+ },
+ "people-using-llms-as-companions-emotional-support-stories": {
+  "url": "https://www.sourcee.app/journo-request/people-using-llms-as-companions-emotional-support-stories",
+  "slug": "people-using-llms-as-companions-emotional-support-stories",
+  "http": "200",
+  "live": true,
+  "headline": "People Using LLMs as Companions - Emotional Support Stories",
+  "datePublished": "2026-10-26T00:36:13.301+00:00",
+  "days_old": 0,
+  "badge": "Posted in last 7 days",
+  "domain": null,
+  "in_ai_topic_feed": true,
+  "email_redacted": true,
+  "emails_on_page": [],
+  "published_links": [],
+  "reply_hints": [],
+  "checked": "2026-10-26"
+ },
+ "sound-artists-and-field-recordists-run-radio-aarhus-open-call": {
+  "url": "https://www.sourcee.app/journo-request/sound-artists-and-field-recordists-run-radio-aarhus-open-call",
+  "slug": "sound-artists-and-field-recordists-run-radio-aarhus-open-call",
+  "http": "200",
+  "live": true,
+  "headline": "Sound Artists & Field Recordists - RUN RADIO Aarhus Open Call",
+  "datePublished": "2026-10-25T10:27:04+00:00",
+  "days_old": 1,
+  "badge": "Posted in last 7 days",
+  "domain": null,
+  "in_ai_topic_feed": true,
+  "email_redacted": true,
+  "emails_on_page": [],
+  "published_links": [],
+  "reply_hints": [
+   "Comment"
+  ],
+  "checked": "2026-10-26"
  }
 }
