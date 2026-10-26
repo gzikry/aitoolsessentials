@@ -10,9 +10,8 @@
       "verified_against": "https://airtable.com/pricing"
     },
     "bolt-new": {
-      "date": "2026-09-18",
-      "digest": "Free: $0, public and private projects, 300,000-token daily limit, 1 million tokens/month, 10 MB uploads, Bolt-branded hosting, up to 333,000 web requests, and unlimited databases. Pro: $25/month, no d",
-      "verified_against": "https://bolt.new/pricing"
+      "date": "2026-10-25",
+      "digest": "Free: $0, public and private projects, 300,000-token daily limit, 1 million tokens/month, 10 MB uploads, Bolt-branded hosting, up to 333,000 web requests, and unlimited databases. Pro: $25/month, or $"
     },
     "canva-ai": {
       "date": "2026-10-01",
@@ -97,8 +96,8 @@
       "digest": "Official individual pricing lists Free with 150 Fast Tokens daily; Essential at US$12/month with 8,500 Fast Tokens/month and a 25,500-token rollover-bank cap; Premium at US$30/month with 25,000 Fast T"
     },
     "lovable": {
-      "date": "2026-10-01",
-      "digest": "Free includes 5 daily build credits, capped at 30 per month, plus monthly grants of 20 Cloud credits and 4 credits for AI features in user-built apps. Pro is $25/month per workspace, shared across unl"
+      "date": "2026-10-25",
+      "digest": "Free is $0 with 5 daily build credits, capped at 30 per month. Pro is $25/month, or $21/month billed annually, per workspace, shared across unlimited users, with 100 monthly credits plus 5 daily build"
     },
     "make": {
       "date": "2026-10-01",
@@ -145,10 +144,8 @@
       "verified_against": "https://poe.com/subscription_plans"
     },
     "replit-ai": {
-      "date": "2026-09-21",
-      "digest": "Core: $20/month, or $18/month billed annually (up to 30 hours of Agent chat on Free Mode, up to 60 projects, $20 towards most powerful models, plan mode, unlimited workspaces). Pro: $100/month, or $90/month billed annually (10 parallel agents, premium support, $100 towards most powerful models, up to 15 collaborators, up to 50 viewers, 28-day database rollback). Enterprise: custom pricing, custom seat limits, SSO/SAML, single-tenant. Official page now lists only Core, Pro and Enterprise; a free Starter tier is not shown. Prices subject to tax by location. Re-verified 2026-09-21 from replit.com/pricing.",
-      "superseded_digest": "Starter is free with daily Agent credits, free daily usage, one published live project, and a built-in database. Core is $25 monthly or $20/month billed annually, includes two parallel agents and $25 ",
-      "superseded_date": "2026-08-21"
+      "date": "2026-10-25",
+      "digest": "Official US pricing checked 2026-10-25: Core $20/month ($18/month billed annually) with up to 30 hours of Agent chat on Free Mode, up to 60 projects and $20 towards most powerful models; Pro $100/mont"
     },
     "runway": {
       "date": "2026-09-18",
@@ -166,9 +163,8 @@
       "verified_against": "https://www.synthesia.io/pricing"
     },
     "v0": {
-      "date": "2026-09-18",
-      "digest": "Free: $0/month, $5 monthly credits, 7-message daily limit. Premium: $20/month with $20 monthly credits, but is being sunset and is unavailable to new users. Plus: $30/user/month with $30 monthly credi",
-      "verified_against": "https://v0.app/docs/pricing"
+      "date": "2026-10-25",
+      "digest": "Free is $0. New accounts get a one-time $5 signup credit and a 7-message daily limit; existing Free accounts keep a recurring $5 monthly credit. Legacy Premium is $20/month and is closed to new signup"
     },
     "you-com": {
       "date": "2026-10-01",
@@ -586,6 +582,34 @@
       "previous_check": "2026-09-18",
       "new_check": "2026-10-13",
       "note": "Cursor: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-13."
+    },
+    {
+      "slug": "bolt-new",
+      "detected": "2026-10-26",
+      "previous_check": "2026-09-18",
+      "new_check": "2026-10-25",
+      "note": "Bolt.new: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-25."
+    },
+    {
+      "slug": "lovable",
+      "detected": "2026-10-26",
+      "previous_check": "2026-10-01",
+      "new_check": "2026-10-25",
+      "note": "Lovable: recorded pricing updated since the 2026-10-01 check, re-verified 2026-10-25."
+    },
+    {
+      "slug": "replit-ai",
+      "detected": "2026-10-26",
+      "previous_check": "2026-09-21",
+      "new_check": "2026-10-25",
+      "note": "Replit AI: recorded pricing updated since the 2026-09-21 check, re-verified 2026-10-25."
+    },
+    {
+      "slug": "v0",
+      "detected": "2026-10-26",
+      "previous_check": "2026-09-18",
+      "new_check": "2026-10-25",
+      "note": "v0: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-25."
     }
   ],
   "updated": "2026-10-26"

@@ -966,6 +966,7 @@ def main():
     if newsletter_hub.exists():
         hub_html = newsletter_hub.read_text()
         for slug, title in (
+            ('2026-w44.html', 'v0’s $20 tier is closed to new signups'),
             ('2026-w43.html', 'Cursor’s $20 Pro is off the page'),
             ('2026-w42.html', 'ChatGPT Go is $8 a month'),
             ('2026-w38.html', 'Sonaopus is $99 once'),

@@ -1953,7 +1953,7 @@
     "name": "Bolt.new",
     "category": "Development",
     "best_for": "Prompt-to-app prototyping in the browser",
-    "price": "Free + paid plans",
+    "price": "Free $0 (1M tokens/mo, 300K daily); Pro $25/mo ($18/mo annual, $216/yr, 10M tokens); Teams $30/mo ($27 annual)",
     "rating": 4.2,
     "official": "https://bolt.new/",
     "summary": "A browser-based AI development environment for quickly creating and iterating on web apps from prompts.",
@@ -1984,7 +1984,7 @@
     "faq": [
       [
         "Is Bolt.new free?",
-        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+        "Yes. Checked 25 Oct 2026: Free is $0 with 1 million tokens a month and a 300,000-token daily limit. Pro is $25/mo ($18/mo billed annually, $216/year) for 10 million tokens with rollover. Teams is $30/mo ($27 billed annually)."
       ],
       [
         "Does Bolt host my app?",
@@ -1998,7 +1998,7 @@
     "trial_checklist": "Use a real task involving rapid prototypes—not a demo prompt. Verify whether prompt-to-full-stack app in browser (no local setup) materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to production hardening required so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Job fit 4 - prompt-to-working-app prototyping answers a real need for validating an idea before committing engineering time. Output quality 4 - impressive first-pass output for demos, clearly not production code. Adoption 5 - nothing to install, which makes it the fastest path from idea to something shareable. Cost 4 - free tier plus reasonable paid plans. Capped at 4.2 because production hardening is mandatory and prompting skill noticeably changes results."
+    "rating_rationale": "Job fit 4 - prompt-to-working-app prototyping answers a real need for validating an idea before committing engineering time. Output quality 4 - impressive first-pass output for demos, clearly not production code. Adoption 5 - nothing to install, which makes it the fastest path from idea to something shareable. Cost 4 - Free is $0 for 1 million tokens a month; Pro is $25/mo ($18 billed annually) for 10 million tokens with rollover. Capped at 4.2 because production hardening is mandatory and prompting skill noticeably changes results."
   },
   {
     "slug": "claude-command-center",
@@ -2270,7 +2270,7 @@
     "name": "Lovable",
     "category": "Development",
     "best_for": "AI app generation for product prototypes and front-end experiences",
-    "price": "Free + paid plans",
+    "price": "Free $0 (5 daily credits, 30/mo cap); Pro $25/mo ($21 annual, 100 monthly + 5 daily credits); Business $50/mo ($42 annual)",
     "rating": 4.2,
     "official": "https://lovable.dev/",
     "summary": "An AI app builder focused on turning prompts into working web app prototypes and product interfaces.",
@@ -2309,20 +2309,20 @@
       ],
       [
         "Lovable vs Bolt?",
-        "Lovable for guided simplicity with real backend; Bolt for finer stack control. See our AI app builders guide."
+        "Lovable for guided simplicity with real backend; Bolt for finer stack control. Checked 25 Oct 2026, both Pro seats are $25/mo. See the app-builder credit-burn calculator before you pay for both."
       ]
     ],
     "trial_checklist": "Use a real task involving mvp prototypes—not a demo prompt. Verify whether chat-to-app with instant visual preview materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to generated apps need technical review so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Job fit 4 - turning a prompt into a designed, shareable product surface suits founders and non-engineers validating an interface. Output quality 4 - visually stronger than most prompt-to-app tools, but generated apps need technical review before real users touch them. Adoption 5 - accessible to people who have never set up a dev environment, which is its main audience. Cost 4 - free tier plus affordable paid plans. Held at 4.2 because scaling anything generated here still requires engineering discipline."
+    "rating_rationale": "Job fit 4 - turning a prompt into a designed, shareable product surface suits founders and non-engineers validating an interface. Output quality 4 - visually stronger than most prompt-to-app tools, but generated apps need technical review before real users touch them. Adoption 5 - accessible to people who have never set up a dev environment, which is its main audience. Cost 4 - Free is 5 daily credits capped at 30 a month; Pro is $25/mo ($21 annual) for 100 monthly credits plus 5 daily credits, and those monthly credits expire after 2 months. Held at 4.2 because scaling anything generated here still requires engineering discipline."
   },
   {
     "slug": "replit-ai",
     "name": "Replit AI",
     "category": "Development",
     "best_for": "Building and deploying apps from a browser-based development environment",
-    "price": "Free + paid plans",
+    "price": "Core $20/mo ($18 annual); Pro $100/mo ($90 annual); Enterprise custom",
     "rating": 4.3,
     "official": "https://replit.com/ai",
     "summary": "AI coding assistance inside Replit for prototyping, explaining, debugging, and shipping browser-based projects.",
@@ -2353,7 +2353,7 @@
     "faq": [
       [
         "What does Replit cost?",
-        "See the official pricing summary and source links above. Plan names, limits, and regional prices can change."
+        "Checked 25 Oct 2026: the public table lists Core at $20/mo ($18 billed annually), Pro at $100/mo ($90 billed annually), and Enterprise. The free Starter tier is off the page."
       ],
       [
         "Is Replit good for beginners?",
@@ -2367,14 +2367,14 @@
     "trial_checklist": "Use a real task involving web prototypes—not a demo prompt. Verify whether full ide + hosting + database in one platform materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to complex production work needs engineering review. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Job fit 4 - prototyping, explaining, and debugging in the browser covers learning and early-stage building in one place. Output quality 4 - competent assistance for browser-scale projects. Adoption 5 - no local setup, and beginners can be productive immediately, which is rare. Cost 4 - free tier with paid plans for heavier use. Capped at 4.3 because production-grade work needs engineering review and the platform fit constrains where projects can go."
+    "rating_rationale": "Job fit 4 - prototyping, explaining, and debugging in the browser covers learning and early-stage building in one place. Output quality 4 - competent assistance for browser-scale projects. Adoption 5 - no local setup, and beginners can be productive immediately, which is rare. Cost 4 - Core is $20/mo ($18 billed annually) and Pro is $100/mo; the public pricing page no longer lists a Starter tier. Capped at 4.3 because production-grade work needs engineering review and the platform fit constrains where projects can go."
   },
   {
     "slug": "v0",
     "name": "v0",
     "category": "Development",
     "best_for": "Generating React/UI components and product interfaces",
-    "price": "Free + paid plans",
+    "price": "Free $0 ($5 one-time signup credit); legacy Premium $20/mo closed to new signups; Plus $30/user/mo; Business $100/user/mo",
     "rating": 4.3,
     "official": "https://v0.dev/",
     "summary": "Vercel’s AI interface generator for UI components, React patterns, and rapid frontend iteration.",
@@ -2404,8 +2404,8 @@
     ],
     "faq": [
       [
-        "What is v0 for?",
-        "Generating polished React/Tailwind interfaces fast — a front-end accelerator."
+        "What does v0 cost?",
+        "Checked 25 Oct 2026: Free is $0. New accounts get a one-time $5 signup credit and a 7-message daily limit; existing Free accounts keep a recurring $5 monthly credit. Legacy Premium at $20/mo is closed to new signups. Plus is $30/user/mo and Business is $100/user/mo, both with a $30 monthly credit allowance. Monthly credits expire after 65 days."
       ],
       [
         "Can v0 build backends?",
@@ -2419,7 +2419,7 @@
     "trial_checklist": "Use a real task involving ui components—not a demo prompt. Verify whether generates production-grade react/tailwind/shadcn ui materially reduces editing or setup time. Record output quality, time to a publishable result, and total plan usage. Pay particular attention to needs integration into real codebase so factor that into your monthly budget. Repeat the same task in at least one alternative before deciding.",
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
-    "rating_rationale": "Job fit 4 - generating UI components and React patterns answers a specific, frequent frontend need. Output quality 5 - the strongest UI generation in this set, producing modern component code rather than screenshots. Adoption 4 - fast to get value if you already work in React and Vercel's ecosystem. Cost 4 - free tier plus reasonable paid plans. Held at 4.3 because output still has to be integrated into a real codebase and it is not a full product process on its own."
+    "rating_rationale": "Job fit 4 - generating UI components and React patterns answers a specific, frequent frontend need. Output quality 5 - the strongest UI generation in this set, producing modern component code rather than screenshots. Adoption 4 - fast to get value if you already work in React and Vercel's ecosystem. Cost 4 - new accounts start on Free with a one-time $5 credit; legacy Premium at $20 is closed to new signups, and Plus is $30/user/mo for a $30 monthly credit allowance. Held at 4.3 because output still has to be integrated into a real codebase and it is not a full product process on its own."
   },
   {
     "slug": "ailearnhub",

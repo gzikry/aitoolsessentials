@@ -468,8 +468,17 @@ for _path in root.rglob('*'):
         _new = _text
         for _old, _replacement in _inventory_replacements.items():
             _new = _new.replace(_old, _replacement)
-        for _rx, _fn in _inventory_regex:
-            _new = _rx.sub(_fn, _new)
+        # The validator ignores admin, marketing, and scripts when it checks
+        # catalog-size claims, including dated HARO notes such as "the 94-tool
+        # set in the 2026-10-25 draft". Rewriting those would turn a historical
+        # count into the current catalog size.
+        _skip_claim_rewrite = any(
+            part in {'admin', 'marketing', 'scripts'}
+            for part in _path.relative_to(root).parts
+        )
+        if not _skip_claim_rewrite:
+            for _rx, _fn in _inventory_regex:
+                _new = _rx.sub(_fn, _new)
         if _path.suffix == '.html':
             _new = re.sub(
                 r'href="(?:/|(?:\.\./)*)index\.html([#?][^"]*)?"',
@@ -481,6 +490,9 @@ for _path in root.rglob('*'):
     except (UnicodeDecodeError, OSError):
         continue
 print(f'Refreshed inventory copy for {_current_count} tools')
+
+from generate_app_builder_hub import generate as generate_app_builder_hub
+print('Generated app-builder pricing hub:', generate_app_builder_hub(root))
 
 # Final metadata pass: downstream generators can rewrite head sections, so restore
 # structured data, discovery links, and knowledge schema after every other pass.

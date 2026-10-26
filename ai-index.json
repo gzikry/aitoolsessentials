@@ -271,7 +271,7 @@
       "name": "Bolt.new",
       "slug": "bolt-new",
       "category": "Development",
-      "price": "Free + paid plans",
+      "price": "Free $0 (1M tokens/mo, 300K daily); Pro $25/mo ($18/mo annual, $216/yr, 10M tokens); Teams $30/mo ($27 annual)",
       "url": "https://aitoolsessentials.com/tools/bolt-new/"
     },
     {
@@ -306,21 +306,21 @@
       "name": "Lovable",
       "slug": "lovable",
       "category": "Development",
-      "price": "Free + paid plans",
+      "price": "Free $0 (5 daily credits, 30/mo cap); Pro $25/mo ($21 annual, 100 monthly + 5 daily credits); Business $50/mo ($42 annual)",
       "url": "https://aitoolsessentials.com/tools/lovable/"
     },
     {
       "name": "Replit AI",
       "slug": "replit-ai",
       "category": "Development",
-      "price": "Free + paid plans",
+      "price": "Core $20/mo ($18 annual); Pro $100/mo ($90 annual); Enterprise custom",
       "url": "https://aitoolsessentials.com/tools/replit-ai/"
     },
     {
       "name": "v0",
       "slug": "v0",
       "category": "Development",
-      "price": "Free + paid plans",
+      "price": "Free $0 ($5 one-time signup credit); legacy Premium $20/mo closed to new signups; Plus $30/user/mo; Business $100/user/mo",
       "url": "https://aitoolsessentials.com/tools/v0/"
     },
     {

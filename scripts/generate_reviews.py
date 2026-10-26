@@ -189,6 +189,8 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     comp_html = ''
     for fname, label in comp_links:
         comp_html += f'<a class="text-link" href="../../comparisons/{fname}">{label}</a><br>\n'
+    if slug in {'v0', 'bolt-new', 'lovable', 'replit-ai'}:
+        comp_html = '<a class="text-link" href="/compare/ai-app-builders/">v0 vs Bolt.new vs Lovable vs Replit</a><br>\n' + comp_html
     if not comp_html:
         comp_html = '<a class="text-link" href="../../comparisons/best-ai-tools.html">All AI tool comparisons</a>\n'
 
@@ -301,6 +303,10 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     automation_decoder_block = ''
     if category in automation_decoder_categories:
         automation_decoder_block = f'''<section class="score-card"><span>Automation billing decoder</span><h2>Translate this workflow into billing units.</h2><p>Estimate Zapier tasks, Make credits, and n8n executions for the same monthly run volume before comparing plan prices.</p><p><a class="button button-blue" href="/automation-cost-decoder/">Open the free decoder</a></p></section>\n'''
+
+    app_builder_block = ''
+    if slug in {'v0', 'bolt-new', 'lovable', 'replit-ai'}:
+        app_builder_block = '''<section class="score-card"><span>App-builder seats</span><h2>Price the duplicate seat before it renews.</h2><p>Legacy v0 Premium is $20 a month and closed to new signups. Replit no longer lists a free Starter tier. Bolt.new Pro is $25 a month and Lovable Pro is $25 a month. Keep one paid builder, or test the free tiers first.</p><p><a class="button button-blue" href="/compare/ai-app-builders/">Open the credit-burn calculator</a></p></section>\n'''
 
     visit_href = official
     visit_rel = 'external noopener nofollow'
@@ -430,6 +436,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <section class="newsletter-cta"><div class="cta-grid"><div class="cta-content"><h3>Choose with evidence, not hype.</h3><p>Use the free scorecard for your own trial, then check the benchmark hub for versioned external evidence.</p><div class="cta-actions"><a class="cta-button" href="../../downloads/ai-tool-evaluation-scorecard.html">Download the free scorecard</a><a class="cta-secondary" href="../../benchmarks/">Open benchmarks</a></div></div><div class="cta-actions" style="margin-top:12px"><a class="cta-button" href="../../newsletter/">Read Keep, Test, Cut</a><a class="cta-secondary" href="../../premium/">Paid Premium · $12/mo</a><a class="cta-secondary" href="../../press/">Press / cite us</a></div></div></section>
 
 {automation_decoder_block}
+{app_builder_block}
 </main>
 <footer class="footer">
 <span>© 2026 AIToolsEssentials</span>
