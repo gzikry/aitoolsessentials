@@ -1656,5 +1656,26 @@
     "status": "not_started",
     "next_action": "Do not plan on commission economics: the product is free with no paid tier, so there is no sale to take a share of and no affiliate programme exists (no /affiliates, /partners or /referral page on the site). The only commercial conversation worth having is a sponsored placement or a referral arrangement if CCC ever ships a paid tier, so ask once whether one is planned, and treat this listing as coverage and citation value rather than a revenue target. Never invent a tracking URL.",
     "notes": "Free, source-available, single-maintainer project, so the realistic upside is audience and citation rather than revenue. The vendor is unusually reachable for a technical correction - the repository is pushed daily and issues are open - which makes a follow-up about the missing privacy policy and terms page more likely to land than the same ask to a commercial vendor. Contact routes: amir.fish@gmail.com in the submission and amir@amirfish.com published on amirfish.ai, whose domain publishes MX."
+  },
+  {
+    "tool_slug": "trybestspecs",
+    "tool_name": "TryBestSpecs",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/trybestspecs/"
+    ],
+    "best_audiences": [
+      "people buying glasses online who want to preview frames on their own face first",
+      "eyewear retailers and opticians who could embed or link a try-on step",
+      "readers comparing frame shapes for their face shape"
+    ],
+    "status": "not_started",
+    "next_action": "Email the vendor about affiliate or partner terms; no programme is published today (/affiliates, /affiliate, /partners and /referral all 404), so ask in the next reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
+    "notes": "Commission economics are unproven: packs are USD 2.99-14.99 one-time with a one-credit free tier, so any sane commission is pennies per conversion. Priority stays low until traffic grows. The realistic commercial conversation is a sponsored placement or a partnership with an eyewear retailer, not a revenue share on credits."
   }
 ]

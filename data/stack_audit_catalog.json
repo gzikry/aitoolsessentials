@@ -2294,6 +2294,31 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "trybestspecs",
+      "name": "TryBestSpecs",
+      "category": "Creative",
+      "official_url": "https://www.trybestspecs.com/",
+      "review_url": "/tools/trybestspecs/",
+      "price_label": "One-time credit packs, no subscription: 10 credits USD 2.99, 30 credits USD 6.99 and 100 credits USD 14.99, each card showing a struck-through list price of USD 4.99 / 9.99 / 24.99. Credits never expire and each try-on costs 1 credit, so the packs buy 10, 30 or 100 generations; the per-credit arithmetic on the page reconciles (about USD 0.30, 0.23 and 0.15). Signup grants 1 credit, which is the entire free tier. The served plan payload marks every pack interval \"one-time\" with valid_days 0 and carries no recurring flag; the payment providers listed are Stripe and Creem. Verified 2026-10-25 from the rendered /pricing page and the plan payload embedded in it; the Chinese mirror /zh/pricing shows the same three packs at the same dollar prices.",
+      "pricing_summary": "One-time credit packs only, no subscription: 10 credits USD 2.99, 30 credits USD 6.99, 100 credits USD 14.99, each card showing a struck-through list price of USD 4.99 / 9.99 / 24.99. 1 credit per try-on, credits never expire (valid_days 0), 1 free credit at signup. The plan payload embedded in /pricing marks every pack interval \"one-time\" with payment_providers [stripe, creem] and no recurring flag; /zh/pricing shows the same three packs at the same dollar prices. No other price token appears on the homepage, /about-us, /contact-us, /blog or either legal page, and no public config or products endpoint exists to cross-check (every /api/* path probed returns 404). Checkout itself was not reached: an account is required to buy, and no purchase, signup or payment step was attempted.",
+      "pricing_url": "https://www.trybestspecs.com/pricing",
+      "pricing_checked_date": "2026-10-25",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "automation",
+        "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

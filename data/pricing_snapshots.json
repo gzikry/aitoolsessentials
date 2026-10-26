@@ -412,6 +412,10 @@
     "claude-command-center": {
       "date": "2026-10-24",
       "digest": "Free, $0. No tiers, no paid plan, no seat count, no account for the local app, and no price token anywhere on the site other than the '$0' free-model choice. License FSL-1.1-MIT (copyright 2026 Amir Fish): Permitted Purpose use, no Competing Use, MIT on each version's second anniversary. Distribution verified obtainable: ccc.dmg answers 200 at 3,614,187 bytes (application/octet-stream) and the amirfish1/homebrew-tap ccc formula answers 200. Optional account-based CCC Cloud relay publishes no price. Version 5.39.0 released 2026-10-18."
+    },
+    "trybestspecs": {
+      "date": "2026-10-25",
+      "digest": "One-time credit packs, no subscription: 10 credits USD 2.99, 30 credits USD 6.99, 100 credits USD 14.99, with struck-through list prices of USD 4.99 / 9.99 / 24.99 shown on all three cards. 1 credit per try-on (AI try-on, own-frame try-on or extra recommendations), credits never expire (valid_days 0), 1 free credit at signup. The plan payload embedded in the rendered /pricing page marks every pack interval \"one-time\" with valid_days 0 and payment_providers [\"stripe\",\"creem\"], and carries no recurring flag. /zh/pricing shows the same three packs at the same dollar prices, but quotes per-credit rates in yuan. No public config or products endpoint exists to cross-check (all /api/* probed paths 404), and checkout requires an account that was not created."
     }
   },
   "changes": [

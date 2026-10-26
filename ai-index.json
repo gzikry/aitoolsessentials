@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-25",
-  "tools_count": 94,
+  "tools_count": 95,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -693,6 +693,13 @@
       "category": "Video",
       "price": "Paid plans",
       "url": "https://aitoolsessentials.com/tools/synthesia/"
+    },
+    {
+      "name": "TryBestSpecs",
+      "slug": "trybestspecs",
+      "category": "Creative",
+      "price": "One-time credit packs, no subscription: 10 credits USD 2.99, 30 credits USD 6.99 and 100 credits USD 14.99, each card showing a struck-through list price of USD 4.99 / 9.99 / 24.99. Credits never expire and each try-on costs 1 credit, so the packs buy 10, 30 or 100 generations; the per-credit arithmetic on the page reconciles (about USD 0.30, 0.23 and 0.15). Signup grants 1 credit, which is the entire free tier. The served plan payload marks every pack interval \"one-time\" with valid_days 0 and carries no recurring flag; the payment providers listed are Stripe and Creem. Verified 2026-10-25 from the rendered /pricing page and the plan payload embedded in it; the Chinese mirror /zh/pricing shows the same three packs at the same dollar prices.",
+      "url": "https://aitoolsessentials.com/tools/trybestspecs/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

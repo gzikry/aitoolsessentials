@@ -5432,5 +5432,87 @@
     "hands_on_status": "protocol_ready_not_published",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4 - training, enablement, and explainer videos with avatars and templates is a repeated enterprise need, not a one-off. Output quality 4 - enterprise-grade consistency and repeatable templates, deliberately not cinematic. Adoption 4 - straightforward for L&D teams already producing this content. Cost 3 - paid-only with enterprise licensing. Held at 4.2 because it is unsuited to cinematic creative and avatar use needs governance."
+  },
+  {
+    "slug": "trybestspecs",
+    "name": "TryBestSpecs",
+    "category": "Creative",
+    "best_for": "Anyone picking frames online who wants to see a specific shape, colour and material on their own face before ordering, and who is willing to make an account and buy a small credit pack for a batch of renders. The middle pack is the one that makes sense if you plan to compare several styles. Not a fit for readers who want an anonymity-first try-on with no account and no stored history, who need a real fitting or prescription advice rather than a style preview, who want a free trial long enough to judge output on their own face, or who need a named company and a stated jurisdiction before paying.",
+    "price": "One-time credit packs, no subscription: 10 credits USD 2.99, 30 credits USD 6.99 and 100 credits USD 14.99, each card showing a struck-through list price of USD 4.99 / 9.99 / 24.99. Credits never expire and each try-on costs 1 credit, so the packs buy 10, 30 or 100 generations; the per-credit arithmetic on the page reconciles (about USD 0.30, 0.23 and 0.15). Signup grants 1 credit, which is the entire free tier. The served plan payload marks every pack interval \"one-time\" with valid_days 0 and carries no recurring flag; the payment providers listed are Stripe and Creem. Verified 2026-10-25 from the rendered /pricing page and the plan payload embedded in it; the Chinese mirror /zh/pricing shows the same three packs at the same dollar prices.",
+    "rating": 3.7,
+    "official": "https://www.trybestspecs.com/",
+    "summary": "TryBestSpecs turns one selfie into a glasses try-on. The measuring step runs in the browser: the shipped bundle loads MediaPipe's FaceLandmarker with the GPU delegate, and its geometry feeds a face-shape classification (round, square, oval, heart, long, diamond) plus a skin-tone read that together drive the frame recommendations. Rendering the recommended frames onto your photo is a server-side AI step, and so is own-frame mode, where you upload a picture of frames you already own. Results land in an automatic history you can revisit, compare side by side, download in high resolution and share. Everything sits behind an account: signup grants 1 credit, each try-on costs 1 credit, and further credits come as one-time packs of 10, 30 or 100 that never expire. The interface, the guides and the legal pages are published in English and Chinese.",
+    "use_cases": [
+      "Previewing rectangular, cat-eye, round, aviator, rimless and clear frames on your own photo before buying online or in a shop",
+      "Comparing several frames side by side from a single face analysis instead of re-uploading for each one",
+      "Trying frames you already own or have shortlisted, by uploading a picture of the frame itself in own-frame mode",
+      "Getting a second opinion by sharing a render before committing to a purchase",
+      "Chinese-speaking buyers: the whole funnel, including pricing and the legal pages, is mirrored at /zh"
+    ],
+    "pros": [
+      "The measuring pass really is client-side rather than merely described that way: the shipped bundle initialises MediaPipe's FaceLandmarker with the GPU delegate in the browser and feeds the resulting geometry into the classification, so the face measurement itself sends nothing. The two third-party fetches it needs (the WASM from cdn.jsdelivr.net and the model from storage.googleapis.com) carry no image.",
+      "The sale model is one-time and says so in machine-readable form, not just in copy: every pack in the served plan payload is interval \"one-time\" with valid_days 0 (never expires) and there is no recurring flag anywhere in the configuration.",
+      "The pricing arithmetic holds up: 30 credits at about USD 0.23 each and 100 at USD 0.15 both reconcile against the card prices, and the 1-credit-per-try-on rule is repeated consistently on the homepage, the pricing page, the FAQ and its structured data.",
+      "There is real editorial content behind the product: roughly 40 dated guides on face shapes, frame styles and try-on questions, published in both languages, which is what makes a recommendation like \"browline frames for a long face\" legible to someone who has never shopped by shape.",
+      "A legal set exists, is dated (Privacy Policy and Terms of Service both 28 April 2026) and both pages print the support address. That address is a live route, not decoration: the domain's own Cloudflare MX answers 250 for support@trybestspecs.com and 550 5.1.1 \"Address does not exist\" for a random local part, so it is a real mailbox and not a catch-all.",
+      "The Terms draw the medical line clearly - results are \"for reference only\" and \"not medical, optometry, ophthalmology, or professional fitting advice\" - and require the rights to any photo you upload, including other people's.",
+      "The product is narrow and describable in one sentence: no prompt box, no timeline, no editing suite and no upsell ladder beyond the three packs."
+    ],
+    "cons": [
+      "The privacy promise on the page contradicts the product on the same page. The upload box says \"Your photo and camera are used only for this try-on\", and the FAQ - also emitted as FAQPage structured data - answers \"Will my photo be saved?\" with \"Your photo is used only for this session's analysis and try-on generation. We don't use it for training or share it.\" Yet the same homepage advertises \"History - Every try-on is saved automatically. Revisit, compare, and share with friends\", the About page offers to \"Save and compare different eyewear styles\", the pricing page sells downloadable high-res renders, and the Privacy Policy retains information \"for as long as reasonably necessary\" and names \"cloud databases, AI model providers, ... object storage\" as processors. A face photo is precisely the input where session-only and retained are not the same offer.",
+      "Advertising and session-recording tags fire on every page, including the privacy policy itself, with no consent step: the root layout injects Google's gtag loader for Ads id AW-18136694057 and Microsoft Clarity project x12jqf0qok with strategy lazyOnload. The policy mentions only \"necessary cookies\" and unnamed \"analytics tools\", never Google Ads or Clarity, and the site carries no cookie or consent interface of any kind.",
+      "Training use is unstated where it matters: the word \"train\" appears nowhere in the Privacy Policy or the Terms, while the Terms grant a licence to process uploads \"for providing, operating, maintaining, and improving the service\" - broader than the FAQ's flat \"we don't use it for training\".",
+      "No operator identity and no governing law: no company, individual, country, postal address or company number appears on any fetched page, and the Terms contain no governing-law, jurisdiction, dispute or arbitration clause, so a buyer cannot see who the counterparty is or which law applies.",
+      "Processors are unnamed and retention has no period: the policy cites \"third-party service providers such as cloud databases, AI model providers, email delivery services, payment providers, object storage, and analytics tools\" without naming one, and retention is \"as long as reasonably necessary\" rather than a number of days.",
+      "Nothing states who owns the rendered try-on image. The Terms confirm you keep your uploads and protect the vendor's site, code, design and \"AI workflow\", but no clause assigns rights in the generated render.",
+      "There is no refund policy page (/refund-policy and /refunds both 404) and the Terms say consumed credits and \"completed digital services\" are \"generally non-refundable\", with no cooling-off or withdrawal statement for EU or UK buyers.",
+      "All three packs display a struck-through list price (USD 4.99, 9.99, 24.99) against a lower current price, so the discount is permanent rather than an offer; only the Starter card's \"First-time pick\" label hints at anything conditional.",
+      "The Chinese mirror mixes currencies - /zh/pricing shows the same dollar totals but quotes the per-credit cost in yuan (about 0.66 and 0.60) - and the shipped configuration also carries CNY amounts (9.9, 19.9, 59.9) that the page never displays.",
+      "The free tier is a single credit and the only samples are the vendor's own renders, so output quality on your own face cannot be judged before paying.",
+      "Privacy Policy and Terms both refer to \"subscriptions\" and \"paid plans\" as possible purchases although only one-time packs are sold, which leaves the sale model looser in the legal text than on the pricing page."
+    ],
+    "key_features": [
+      "Selfie upload or in-browser camera capture, no app install",
+      "Face-shape classification across round, square, oval, heart, long and diamond, plus a skin-tone read used in the recommendations",
+      "AI render of recommended frames on your own photo, with side-by-side comparison of several styles",
+      "Own-frame mode: upload a picture of frames you already own and see them on your face",
+      "Automatic history - every try-on is saved and can be revisited, compared, downloaded in high resolution or shared",
+      "Credit metering at 1 credit per try-on, with packs of 10 / 30 / 100 that never expire",
+      "Bilingual interface and content in English and Chinese, pricing and legal pages included",
+      "Roughly 40 published eyewear guides covering face shapes and frame styles"
+    ],
+    "faq": [
+      [
+        "What does TryBestSpecs actually do?",
+        "It reads your face from one photo and puts glasses on it. MediaPipe face landmarks are measured in the browser, the site classifies your face shape and skin tone, recommends frame shapes and then renders those frames onto your photo with an AI model. You can compare several results side by side, try frames you already own in own-frame mode, and download or share a render. The output is a style preview - the Terms state it is not optometry or fitting advice."
+      ],
+      [
+        "How much does it cost?",
+        "One-time credit packs, no subscription: 10 credits for USD 2.99, 30 for USD 6.99 and 100 for USD 14.99, with list prices of USD 4.99 / 9.99 / 24.99 shown struck through. Each try-on costs 1 credit and credits never expire. Signup grants 1 credit, so there is one free try-on and no timed trial."
+      ],
+      [
+        "Will my photo be kept?",
+        "The site says two different things, and we record the contradiction rather than resolving it in the vendor's favour. The upload box says the photo is used only for this try-on and the FAQ says only for the session, but the same page advertises an automatic history you can revisit and share, and the Privacy Policy retains data \"for as long as reasonably necessary\" and passes it to unnamed AI model and storage providers. Assume the photo and the renders are stored until the vendor states a retention period."
+      ],
+      [
+        "Does it give optometry or prescription advice?",
+        "No, and the Terms say so plainly: results are \"for reference only\" and \"not medical, optometry, ophthalmology, or professional fitting advice\". It previews how a frame shape may look; it does not measure your prescription, pupillary distance or physical fit. Check real fit and lens requirements with an optician."
+      ],
+      [
+        "Who runs it, and what law applies?",
+        "No company, individual, country or postal address is published anywhere on the site, and the Terms name no governing law. The only contact is support@trybestspecs.com, which is a working mailbox. Treat the counterparty as unidentified until the operator says otherwise."
+      ]
+    ],
+    "trial_checklist": [
+      "Use the single free credit on the frame shape you are actually considering, not on the widest possible demo - the question worth answering is whether the render looks like you in that frame",
+      "Judge the render against a real photo of yourself wearing a similar frame, not against the vendor's showcase images, which are its own samples",
+      "Check the two things a flat overlay usually gets wrong: do the frames sit at your brow line and pupil height, and are the lens reflections and shadows plausible in your lighting",
+      "Download one render before you buy a pack, and confirm the file is the resolution you would actually show someone",
+      "If you plan to spend more than one pack, test own-frame mode on a frame you already own first - that is the workflow the product is really for, and it is where upload limits or bad cropping show up",
+      "Before paying, read the refund line in the Terms (consumed credits are non-refundable and there is no refund page) and decide whether a one-time purchase of 30 or 100 credits is safer than the entry pack"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - the product is the right shape for the job: one photo in, several frame renders out, a client-side measurement pass that does not leak the photo, own-frame mode for frames you already own, and an automatic history to compare against. Pricing is one-time with credits that never expire, the per-credit arithmetic is honest, and roughly 40 dated guides give the recommendations something to stand on. It is held below 4.5 by scope (a style preview with no fit or prescription dimension), by a free tier of exactly one try-on, and by output quality that cannot be verified from outside without paying. Transparency 3.2/5, and this is what pulls the number to 3.7 rather than the 4.0+ the product would otherwise earn: a face-image tool tells users in its upload box and its structured-data FAQ that the photo is used only for that session and never shared, while the same page advertises an automatic saved history, the policy retains data indefinitely and hands it to unnamed model providers, and Google Ads plus Microsoft Clarity tags fire on the privacy policy itself with no consent step. Add no named controller, no governing law, no named processor, no retention period, no output-ownership clause and no refund page, and the documentation gap lands below the 3.8-4.2 band this catalog normally gives an unproven but real entrant - though well above a site whose pricing describes a different product, which is not the case here."
   }
 ]

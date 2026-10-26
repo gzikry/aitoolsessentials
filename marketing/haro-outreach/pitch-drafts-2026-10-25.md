@@ -14,7 +14,7 @@ three carry figures re-derived today so they can go out from this one document.
 `data/pricing_snapshots.json` (`updated: 2026-10-25`) yields **44 with a published monthly price, 35
 of those at or under $25/month, median $17.50**. Monthly vs annual: **1.11x to 2.53x, median 1.25x
 over 19 tiers** (`data/monthly_annual_pairs.json`, built 2026-10-16).
-**Superseded — do not reuse:** the 93-tool / 40-of-31 / $16.50 sets in drafts before 2026-10-22, and
+**Superseded — do not reuse:** the 95-tool / 40-of-31 / $16.50 sets in drafts before 2026-10-22, and
 the `1.21x–2.53x, median 1.33x` pair claim sent to Jan Suski on 2026-09-18 and corrected on 2026-10-10.
 
 ---
