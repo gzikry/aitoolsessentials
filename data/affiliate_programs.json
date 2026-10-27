@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-01",
+  "checked_at": "2026-10-27",
   "policy": "Only official vendor or official network sources are recorded. Available does not mean approved. Official product links remain on reviews until a real approved tracking URL is supplied.",
   "network_accounts": {
     "partnerstack": {
@@ -7,7 +7,7 @@
       "decided": "2026-09-14",
       "evidence": "networkquality@partnerstack.com, \"The status of your PartnerStack Network Application\", 2026-09-14 16:17 UTC (2026-09-14 09:17 PT). Reason given: \"We are working on expanding our Network. Your profile is not a great fit, but may be in the future.\"",
       "effect": "Cannot join any NEW programs through the PartnerStack Marketplace. Existing partnerships are unaffected, so the approved Gamma tracking link stays live - and the Descript application, already submitted before the limit, was approved on 2026-10-16 with its tracking link live. Reapplying is dashboard-only and George-only.",
-      "not_affected": "Gamma (approved 2026-09-13, unique link live), Descript (applied 2026-09-12, approved 2026-10-16, tracking link live), ElevenLabs, Make, Nous / Hermes, Sonaopus — all direct or already-approved.",
+      "not_affected": "Gamma (approved 2026-09-13, unique link live), Descript (applied 2026-09-12, approved 2026-10-16, tracking link live), ElevenLabs, Make, Nous / Hermes, Sonaopus, Synthesia (approved 2026-10-27, direct via link), and CustomGPT.ai (approved 2026-10-27, FirstPromoter) — all direct, already-approved, or on a network other than PartnerStack.",
       "blocked": "Every NEW program join through the PartnerStack marketplace, including Browse AI (its listing is open and was marked ready_to_apply on 2026-09-14, but the join is now gated by this limit) and the private Grammarly Business group lead. Copy.ai's closed listing is unaffected either way. Notion, Grammarly-via-PartnerStack and other network-hosted vendors are unreachable until the profile is re-approved.",
       "george_action": "Dashboard-only and George-only: sign in at app.partnerstack.com and reapply the Network Profile with corrected/new information. Do not attempt marketplace joins before that."
     }
@@ -272,6 +272,38 @@
       "affiliate_url": "https://aidetector.cx/ai-checker-for-bloggers?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84",
       "commission_note": "30% recurring commission on eligible subscription payments, continuing for the lifetime of the referred customer; monthly and annual plans both eligible. 30-day attribution window; 30-day commission holding period; $50 minimum payout (USD, bank transfer via affiliate dashboard). Account activated in writing 2026-10-08.",
       "notes": "Tracking links: https://aidetector.cx/ai-checker-for-bloggers?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84 (product-specific, recommended) and https://aidetector.cx/signup?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84 (general). Review published 2026-10-08 after the vendor cleared both publication blockers (training-use contradiction; unlabelled named testimonials). Score, pros and cons remain editorial; no paid placement."
+    },
+    {
+      "tool_slug": "synthesia",
+      "availability": "approved_publisher_affiliate",
+      "program_type": "affiliate",
+      "network": "Synthesia direct",
+      "official_program_url": "https://www.synthesia.io/?via=george-zikry",
+      "application_status": "approved",
+      "commission_note": null,
+      "notes": "Approved 2026-10-27. The vendor-issued tracking URL is https://www.synthesia.io/?via=george-zikry. A GET the same day returned HTTP 200 at that URL. No commission rate and no separate program page were included with the approval, so none is recorded and official_program_url is the tracking URL itself. Public CTAs use /go/synthesia/. The hop holds the via URL. Pricing, docs, privacy, and terms stay editorial source links. Editorial score unchanged.",
+      "status": "approved",
+      "approved_date": "2026-10-27",
+      "approved_tracking_url": "https://www.synthesia.io/?via=george-zikry",
+      "affiliate_url": "https://www.synthesia.io/?via=george-zikry",
+      "url": "https://www.synthesia.io/?via=george-zikry",
+      "partner": true
+    },
+    {
+      "tool_slug": "customgpt",
+      "availability": "approved_publisher_affiliate",
+      "program_type": "affiliate",
+      "network": "FirstPromoter",
+      "official_program_url": "https://customgpt.ai/partners/",
+      "application_status": "approved",
+      "commission_note": "Public program page checked 2026-10-27 at https://customgpt.ai/partners/: Standard 15% for 2 years (0-30 referred customers, 30-day cookie), Premium 18% for 2 years (31-55 customers, 30-day cookie), Master 20% for 2 years (56+ customers, 60-day cookie). PayPal payouts, net 30, minimum $10, payout date the 30th. The approval supplied the FirstPromoter link only and did not state which tier this account is on, so no single rate is recorded as ours.",
+      "notes": "Approved 2026-10-27. Tracking URL https://customgpt.ai/?fpr=george-881fd5 uses the FirstPromoter fpr parameter. A GET the same day returned HTTP 200. The public program page does not name FirstPromoter. Public CTAs use /go/customgpt/. The hop holds the fpr URL. Pricing, docs, privacy, and terms stay editorial source links. The affiliate approval does not assign the editorial score.",
+      "status": "approved",
+      "approved_date": "2026-10-27",
+      "approved_tracking_url": "https://customgpt.ai/?fpr=george-881fd5",
+      "affiliate_url": "https://customgpt.ai/?fpr=george-881fd5",
+      "url": "https://customgpt.ai/?fpr=george-881fd5",
+      "partner": true
     }
   ],
   "priority_application_queue": [

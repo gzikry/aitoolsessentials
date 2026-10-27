@@ -24,7 +24,7 @@ assert.strictEqual(row(free, "descript").monthlyCents, 0);
 assert.strictEqual(row(free, "descript").verdict, "Keep");
 assert.strictEqual(row(free, "elevenlabs").monthlyCents, null);
 assert.strictEqual(row(free, "heygen").rel, "external noopener");
-assert.strictEqual(row(free, "synthesia").rel, "external noopener");
+assert.strictEqual(row(free, "synthesia").rel, "sponsored nofollow noopener");
 assert.strictEqual(free.rows.map((item) => item.name).join(","), "Descript,ElevenLabs,HeyGen,Synthesia,Runway,Midjourney");
 assert.strictEqual(row(free, "runway").covers, false);
 assert.strictEqual(row(free, "runway").monthlyCents, null);
@@ -210,7 +210,7 @@ def main() -> None:
         'href="/go/elevenlabs/" rel="sponsored nofollow noopener"',
         'href="/go/descript/" rel="sponsored nofollow noopener"',
         'href="/go/heygen/" rel="external noopener"',
-        'href="/go/synthesia/" rel="external noopener"',
+        'href="/go/synthesia/" rel="sponsored nofollow noopener"',
     ):
         if needle not in voice:
             raise SystemExit(f"voice hub missing {needle}")

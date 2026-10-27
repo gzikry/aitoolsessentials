@@ -112,6 +112,9 @@ CURATED_USE_CASES = {
     "hermes-agent": ["local", "automation"],
     "typingmind": ["local", "writing"],
     "catch-ai": ["email", "meetings", "automation"],
+    # RAG agents on the customer's documents. Do not infer writing/coding/data
+    # from "credit card", "no-code", or "data processing agreement".
+    "customgpt": ["research", "automation"],
 }
 
 

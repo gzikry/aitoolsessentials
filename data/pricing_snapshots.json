@@ -420,6 +420,11 @@
     "rapvideo-ai": {
       "date": "2026-10-27",
       "digest": "Free: one short preview for some new accounts, at vendor discretion. Monthly: Basic $29.90/100 credits (card says 8 videos), Pro $49.90/200 (16), Agency $99.90/480 (40); plan credits reset monthly and expire. Yearly badged 'up to 44% off'; only Basic published in served HTML at $299/yr for 120 videos (~17% off), Pro/Agency yearly JS-only. One-time packs, never expire: Single $9.99/12 credits (1 video), Trio $19.99/36 (3), Crew $49/120 (10), Studio $99/300 (25), Label $199/720 (60). Renders: Seedance 2.0 Mini 5 (480p) / 10 (720p), Fast 8/17, Pro 10/20/50, Seedance 2.5 Ultra 17/37/93; standard 12s 720p = 10 credits, Original remake = 12. Failed renders refunded. Unused packs refundable in 7 days. USD via Stripe."
+    },
+    "customgpt": {
+      "date": "2026-10-27",
+      "digest": "Standard $99/mo ($89/mo annual: 10 agents, 1,000 queries/mo, 5,000 docs/agent, 3 seats); Premium $499/mo ($449/mo annual: 25 agents, 5,000 queries/mo, 20,000 docs/agent, 5 seats); Enterprise custom; 7-day trial requires card.",
+      "verified_against": "https://customgpt.ai/pricing"
     }
   },
   "changes": [
@@ -632,6 +637,13 @@
       "previous_check": null,
       "new_check": "2026-10-27",
       "note": "RapVideo AI: first recorded pricing for a new listing, verified 2026-10-27 from the served pricing page and its four locale mirrors; yearly Pro/Agency figures are client-rendered and remain unrecorded."
+    },
+    {
+      "slug": "customgpt",
+      "detected": "2026-10-27",
+      "previous_check": null,
+      "new_check": "2026-10-27",
+      "note": "CustomGPT.ai: first recorded pricing for a new listing, verified 2026-10-27 from the pricing page (Standard, Premium, Enterprise, and the monthly add-on list)."
     }
   ],
   "updated": "2026-10-27"

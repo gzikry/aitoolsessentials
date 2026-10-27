@@ -111,7 +111,7 @@ def generate(root: Path) -> Path:
 </section>
 <section class="scene scene-light">
 <div class="article-shell wide">
-<p class="affiliate-inline">ElevenLabs and Descript buttons are partner links. HeyGen, Synthesia, Runway, and Midjourney buttons go to the official site with our campaign tag. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
+<p class="affiliate-inline">ElevenLabs, Descript, and Synthesia buttons are partner links. HeyGen, Runway, and Midjourney buttons go to the official site with our campaign tag. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
 <form id="calculator" class="ledger-sheet voice-calc">
 <h2>Finished minutes and Gen-4 seconds</h2>
 <div class="ledger-seats">
@@ -123,7 +123,7 @@ def generate(root: Path) -> Path:
 <p class="score-note">Minutes price Descript media time and Midjourney Fast GPU time. Seconds price Runway at 12 Gen-4.5 credits each. B-roll retakes are often 3x–5x.</p>
 </form>
 <div id="voice-result" class="ledger-sheet" aria-live="polite"></div>
-<p class="ledger-cta"><a class="button button-blue" href="/go/elevenlabs/" rel="sponsored nofollow noopener">ElevenLabs</a> <a class="button button-blue" href="/go/descript/" rel="sponsored nofollow noopener">Descript</a> <a class="button button-blue" href="/go/heygen/" rel="external noopener">HeyGen</a> <a class="button button-blue" href="/go/synthesia/" rel="external noopener">Synthesia</a> <a class="button button-blue" href="/go/runway/" rel="external noopener">Runway</a> <a class="button button-blue" href="/go/midjourney/" rel="external noopener">Midjourney</a></p>
+<p class="ledger-cta"><a class="button button-blue" href="/go/elevenlabs/" rel="sponsored nofollow noopener">ElevenLabs</a> <a class="button button-blue" href="/go/descript/" rel="sponsored nofollow noopener">Descript</a> <a class="button button-blue" href="/go/heygen/" rel="external noopener">HeyGen</a> <a class="button button-blue" href="/go/synthesia/" rel="sponsored nofollow noopener">Synthesia</a> <a class="button button-blue" href="/go/runway/" rel="external noopener">Runway</a> <a class="button button-blue" href="/go/midjourney/" rel="external noopener">Midjourney</a></p>
 <h2>Questions</h2>
 <div class="faq-list">{faqs}</div>
 <p>Reviews: <a href="/tools/elevenlabs/">ElevenLabs</a>, <a href="/tools/descript/">Descript</a>, <a href="/tools/heygen/">HeyGen</a>, <a href="/tools/synthesia/">Synthesia</a>, <a href="/tools/runway/">Runway</a>, <a href="/tools/midjourney/">Midjourney</a>. Sources: <a href="https://elevenlabs.io/pricing" rel="external noopener">ElevenLabs pricing</a>, <a href="https://descript.com/pricing" rel="external noopener">Descript pricing</a>, <a href="https://www.heygen.com/pricing" rel="external noopener">HeyGen pricing</a>, <a href="https://www.synthesia.io/pricing" rel="external noopener">Synthesia pricing</a>, <a href="https://runwayml.com/pricing" rel="external noopener">Runway pricing</a>, <a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" rel="external noopener">Midjourney plans</a>.</p>
