@@ -152,7 +152,7 @@ def generate(root: Path) -> Path:
 </table></div>
 <h2>Questions</h2>
 <div class="faq-list">{''.join(faqs)}</div>
-<p>Price a live workload in the <a href="/compare/ai-coding-assistants/">coding assistant calculator</a>, the <a href="/compare/ai-app-builders/">app-builder calculator</a>, the <a href="/compare/ai-video-avatar-cost/">voice and video minute calculator</a>, or the <a href="/compare/automation-task-calculator/">automation task calculator</a>. The full dated log is <a href="/pricing-watch/">Pricing Watch</a>.</p>
+<p>Price a live workload in the <a href="/compare/ai-coding-assistants/">coding assistant calculator</a>, the <a href="/compare/ai-app-builders/">app-builder calculator</a>, the <a href="/compare/ai-video-avatar-cost/">voice and video minute calculator</a>, the <a href="/compare/automation-task-calculator/">automation task calculator</a>, or the <a href="/compare/ai-presentation-cost/">deck cost calculator</a>. <a href="/pricing-watch/credit-traps/">Credit traps</a> lists expiry windows and locks. The full dated log is <a href="/pricing-watch/">Pricing Watch</a>.</p>
 </div>
 </section>
 </main>

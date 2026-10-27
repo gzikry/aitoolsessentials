@@ -19,6 +19,8 @@ def main() -> None:
         "scripts/test_app_builder_hub.py",
         "scripts/test_coding_assistant_hub.py",
         "scripts/test_submit_alias.py",
+        "scripts/test_newsletter_archive.py",
+        "scripts/test_wave4.py",
     ):
         proc = subprocess.run([sys.executable, script], cwd=ROOT)
         if proc.returncode:

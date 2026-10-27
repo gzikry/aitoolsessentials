@@ -160,7 +160,7 @@ def generate_best_ai_tools(root: Path):
         '</div></section>'
         '<section class="scene scene-light comparison-section"><div class="article-shell wide">'
         '<h2>Calculators</h2>'
-        '<p><a href="/compare/ai-coding-assistants/">Coding seats</a>, <a href="/compare/ai-app-builders/">app builders</a>, <a href="/compare/ai-video-avatar-cost/">voice and video minutes</a>, and <a href="/compare/automation-task-calculator/">automation task burn</a>. <a href="/price-changes/">Price changes</a> lists the credit clocks.</p>'
+        '<p><a href="/compare/ai-coding-assistants/">Coding seats</a>, <a href="/compare/ai-app-builders/">app builders</a>, <a href="/compare/ai-video-avatar-cost/">voice and video minutes</a>, <a href="/compare/automation-task-calculator/">automation task burn</a>, and <a href="/compare/ai-presentation-cost/">deck cost</a>. <a href="/pricing-watch/credit-traps/">Credit traps</a> lists expiry windows and locks. <a href="/price-changes/">Price changes</a> lists the credit clocks.</p>'
         '<h2>Best AI tools by category</h2>'
         '<p>This is a living shortlist, not a claim that the AI market is finite. AIToolsEssentials will keep expanding and pruning tools based on adoption, buyer intent, practical usefulness, and monetization fit.</p>'
         f'{"".join(cat_rows)}'

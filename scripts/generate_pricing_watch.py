@@ -168,6 +168,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <tbody>{rows}</tbody></table></div>
 {watch_html}
 {change_html}
+<p><a href="/pricing-watch/credit-traps/">Credit expiry and lock tracker</a> lists the verified windows. <a href="/compare/ai-presentation-cost/">Deck cost</a> prices a presentation seat from the checked pages.</p>
 <p class="affiliate-inline" style="margin-top:16px">Methodology: snapshots come from each vendor's official pricing page on the date shown; we never infer or estimate missing values. This page is informational — always confirm final pricing with the vendor before purchasing.</p>
 </div></section>
 </main>

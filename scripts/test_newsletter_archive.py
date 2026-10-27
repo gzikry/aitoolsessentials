@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import shutil
 import sys
 import tempfile
@@ -74,10 +75,24 @@ def main() -> None:
     for slug in ("2026-w44.html", "2026-w43.html", "2026-w42.html", "2026-w38.html", "2026-w35.html"):
         if f"https://aitoolsessentials.com/newsletter/{slug}" not in sitemap:
             errors.append(f"sitemap missing {slug}")
-    if (root / "newsletter" / "2026-w35.html").read_text(encoding="utf-8") != before:
-        errors.append("issue 1 page changed")
-    if "Morning." not in before:
+    issue1 = (root / "newsletter" / "2026-w35.html").read_text(encoding="utf-8")
+
+    def _body(html: str) -> str:
+        match = re.search(
+            r'<div class="newsletter-body">(.*)</div>\s*<div class="newsletter-colophon">',
+            html,
+            flags=re.S,
+        )
+        return match.group(1) if match else ""
+
+    if _body(issue1) != _body(before):
+        errors.append("issue 1 body changed")
+    if "Morning." not in issue1:
         errors.append("issue 1 fixture lost Morning.")
+    if 'href="/newsletter/">← All past issues' not in issue1:
+        errors.append("issue 1 missing the archive back-link")
+    if 'href="/newsletter/">← All past issues' not in w44_page:
+        errors.append("w44 missing the archive back-link")
     hub = (root / "newsletter" / "index.html").read_text(encoding="utf-8")
     w44 = hub.find("/newsletter/2026-w44.html")
     w43 = hub.find("/newsletter/2026-w43.html")
@@ -100,6 +115,12 @@ def main() -> None:
         errors.append(f"w44 title parsed as {parsed44.title!r}")
     if "Sonaopus is $99 once" not in hub or "The AI bill you forgot to cancel" not in hub:
         errors.append("archive index dropped an issue")
+    if "Issues 2 and 3 were not published." not in hub:
+        errors.append("archive index skipped the unpublished gap")
+    if "call-pill-keep" not in hub or "call-pill-test" not in hub or "call-pill-cut" not in hub:
+        errors.append("archive index missing keep/test/cut pills")
+    if 'href="/subscribe/"' not in hub:
+        errors.append("archive index missing the subscribe page")
     first = (root / "newsletter" / "2026-w42.html").read_bytes()
     sync_archive(root)
     if (root / "newsletter" / "2026-w42.html").read_bytes() != first:
@@ -110,6 +131,8 @@ def main() -> None:
     link = '<a href="/newsletter/">Keep, Test, Cut</a>'
     if link not in footer:
         errors.append("homepage generator dropped the archive link")
+    if '<a href="/newsletter/">Newsletter</a>' not in footer:
+        errors.append("homepage generator dropped the Newsletter link")
     if link not in (REPO / "index.html").read_text(encoding="utf-8"):
         errors.append("homepage footer missing the archive link")
     if errors:

@@ -506,6 +506,12 @@ print('Generated voice-video calculator:', generate_voice_video_hub(root))
 from generate_automation_task_hub import generate as generate_automation_task_hub
 print('Generated automation calculator:', generate_automation_task_hub(root))
 
+from generate_presentation_hub import generate as generate_presentation_hub
+print('Generated presentation calculator:', generate_presentation_hub(root))
+
+from generate_credit_traps import generate as generate_credit_traps
+print('Generated credit-trap tracker:', generate_credit_traps(root))
+
 from generate_affiliate_router import generate as generate_affiliate_router
 print('Generated affiliate router:', generate_affiliate_router(root))
 

@@ -38,6 +38,7 @@ CANONICAL_HEADER = (
     '<a href="/articles/learn.html">Learn</a>'
     '<a href="/guides/switch-guides/">Switching</a>'
     '<a href="/price-changes/">Price changes</a>'
+    '<a href="/newsletter/">Newsletter</a>'
     '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END -->'
     "</nav>"
     + _FORM
@@ -108,6 +109,7 @@ _LABELS = (
     'href="/benchmarks/">Benchmarks</a>',
     'href="/articles/learn.html">Learn</a>',
     'href="/guides/switch-guides/">Switching</a>',
+    'href="/newsletter/">Newsletter</a>',
     'href="/sponsor/" rel="nofollow">Sponsor us</a>',
     'href="/legal/affiliate-disclosure.html">Disclosure</a>',
     'class="nav-toggle"',
@@ -171,6 +173,7 @@ def unify_headers(root: Path) -> int:
             updated = _HEADER_RE.sub(replacement, html, count=1)
         if rel.as_posix() in FOOTER_SPONSOR_PAGES:
             updated = _restore_footer_sponsor(updated)
+        updated = _ensure_newsletter_footer(updated)
         if updated != html:
             path.write_text(updated, encoding="utf-8")
             changed += 1
@@ -195,8 +198,19 @@ def header_label_errors(root: Path) -> list[str]:
         missing = [label for label in labels if label not in html]
         if missing:
             errors.append(f"{rel.as_posix()} nav missing {missing[0]}")
+        if "<footer" in html and 'href="/newsletter/">Newsletter</a>' not in html:
+            errors.append(f"{rel.as_posix()} footer is missing Newsletter")
         if rel.as_posix() in FOOTER_SPONSOR_PAGES:
             footer = html[html.rfind("<footer") :]
             if 'href="/sponsor/"' not in footer or "Sponsor us" not in footer:
                 errors.append(f"{rel.as_posix()} footer is missing Sponsor us")
     return errors
+
+
+_NEWSLETTER_FOOTER = '<a href="/newsletter/">Newsletter</a>'
+
+
+def _ensure_newsletter_footer(html: str) -> str:
+    if _NEWSLETTER_FOOTER in html or "<footer" not in html:
+        return html
+    return html.replace("</footer>", _NEWSLETTER_FOOTER + "</footer>", 1)

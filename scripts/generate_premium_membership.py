@@ -962,12 +962,24 @@ def homepage_newsletter_panel(root: Path) -> str:
     headline = esc(cfg.get("homepage_headline") or "One short email a week.")
     body = esc(cfg.get("homepage_body") or "What changed this week, and what's worth keeping.")
     form = subscribe_form(str(cfg.get("subscribe_endpoint") or ""))
+    from newsletter_archive import load_letters
+
+    letters = load_letters(root)
+    if letters:
+        newest = letters[0]
+        latest = (
+            f'<p><a href="/newsletter/{esc(newest.slug)}.html">Latest issue: {esc(newest.title)}</a></p>'
+            '<p><a href="/newsletter/">Browse all past issues →</a></p>'
+        )
+    else:
+        latest = '<p><a href="/newsletter/">Browse all past issues →</a></p>'
     return f'''<!-- AIT HOMEPAGE NEWSLETTER START -->
 <section id="subscribe" class="newsletter-panel home-newsletter">
 <div>
 <span>{kicker}</span>
 <h2>{headline}</h2>
 <p>{body}</p>
+{latest}
 {form}
 </div>
 <div class="newsletter-actions">
