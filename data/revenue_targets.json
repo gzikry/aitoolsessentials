@@ -1677,5 +1677,26 @@
     "status": "not_started",
     "next_action": "Email the vendor about affiliate or partner terms; no programme is published today (/affiliates, /affiliate, /partners and /referral all 404), so ask in the next reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
     "notes": "Commission economics are unproven: packs are USD 2.99-14.99 one-time with a one-credit free tier, so any sane commission is pennies per conversion. Priority stays low until traffic grows. The realistic commercial conversation is a sponsored placement or a partnership with an eyewear retailer, not a revenue share on credits."
+  },
+  {
+    "tool_slug": "genjutsu-ai",
+    "tool_name": "Genjutsu AI",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/genjutsu-ai/"
+    ],
+    "best_audiences": [
+      "creators making trend-shaped short video who need a clip recreated with their own cast",
+      "small agencies producing social content for consumer brands",
+      "product and e-commerce marketers who want a vehicle or product swapped into an existing scene"
+    ],
+    "status": "not_started",
+    "next_action": "Email the vendor about affiliate or partner terms; no program is published today (/affiliates, /affiliate, /partners, /referral and /ambassador all 404), so ask in the publication reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
+    "notes": "Commission economics are unproven at this price ladder: entry is $29.9/month or $99 one-time, so a 20-30% share is single-digit dollars per conversion and the free tier converts on 18 credits. Priority stays low until traffic grows; the realistic commercial conversation is a sponsored placement or a partner deal, not a revenue share on credits."
   }
 ]

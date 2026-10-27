@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-10-27",
-  "tools_count": 95,
+  "generated": "2026-10-26",
+  "tools_count": 96,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -700,6 +700,13 @@
       "category": "Creative",
       "price": "One-time credit packs, no subscription: 10 credits USD 2.99, 30 credits USD 6.99 and 100 credits USD 14.99, each card showing a struck-through list price of USD 4.99 / 9.99 / 24.99. Credits never expire and each try-on costs 1 credit, so the packs buy 10, 30 or 100 generations; the per-credit arithmetic on the page reconciles (about USD 0.30, 0.23 and 0.15). Signup grants 1 credit, which is the entire free tier. The served plan payload marks every pack interval \"one-time\" with valid_days 0 and carries no recurring flag; the payment providers listed are Stripe and Creem. Verified 2026-10-25 from the rendered /pricing page and the plan payload embedded in it; the Chinese mirror /zh/pricing shows the same three packs at the same dollar prices.",
       "url": "https://aitoolsessentials.com/tools/trybestspecs/"
+    },
+    {
+      "name": "Genjutsu AI",
+      "slug": "genjutsu-ai",
+      "category": "Video",
+      "price": "Free tier: 18 one-time signup credits, watermarked previews and downloads, roughly 3 images or 1 short clip, plus a weekly check-in worth up to 60 credits across the reward cycle. Subscriptions billed monthly: Starter $29.9 for 800 credits/month, Pro $49.9 for 1,800, Business $99.9 for 4,000. Billed yearly (the price printed on the card): Starter $100.0 a year, shown as $8.3/month, 2,400 credits/year; Pro $360.0 a year, shown as $30.0/month against a struck-through $49.9, 21,600 credits/year; Business $599.0 a year, shown as $49.9/month against a struck-through $99.9, 48,000 credits/year. One-time packs under the Pay once tab, credits never expire: Flex $99 for 2,000 credits, Starter Pack $199.9 for 4,900, Pro Pack $499.9 for 19,900. Subscription credits expire each period; card prices are USD before tax. Refund requests within 72 hours, calculated pro rata on unused purchased credits minus actual non-returned processing fees capped at 6% of the order. Read on 2026-10-26 from the rendered /pricing page on all three tabs; the plan figures are not literals in the served HTML, so they were captured from the rendered page rather than a price-token sweep.",
+      "url": "https://aitoolsessentials.com/tools/genjutsu-ai/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

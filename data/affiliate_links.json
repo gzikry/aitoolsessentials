@@ -860,6 +860,15 @@
       "public_href": "/go/trybestspecs/",
       "partner": false
     },
+    "genjutsu-ai": {
+      "name": "Genjutsu AI",
+      "slug": "genjutsu-ai",
+      "official": "https://aigenjutsu.app/",
+      "destination": "https://aigenjutsu.app/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/genjutsu-ai/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

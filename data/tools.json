@@ -5514,5 +5514,89 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - the product is the right shape for the job: one photo in, several frame renders out, a client-side measurement pass that does not leak the photo, own-frame mode for frames you already own, and an automatic history to compare against. Pricing is one-time with credits that never expire, the per-credit arithmetic is honest, and roughly 40 dated guides give the recommendations something to stand on. It is held below 4.5 by scope (a style preview with no fit or prescription dimension), by a free tier of exactly one try-on, and by output quality that cannot be verified from outside without paying. Transparency 3.2/5, and this is what pulls the number to 3.7 rather than the 4.0+ the product would otherwise earn: a face-image tool tells users in its upload box and its structured-data FAQ that the photo is used only for that session and never shared, while the same page advertises an automatic saved history, the policy retains data indefinitely and hands it to unnamed model providers, and Google Ads plus Microsoft Clarity tags fire on the privacy policy itself with no consent step. Add no named controller, no governing law, no named processor, no retention period, no output-ownership clause and no refund page, and the documentation gap lands below the 3.8-4.2 band this catalog normally gives an unproven but real entrant - though well above a site whose pricing describes a different product, which is not the case here."
+  },
+  {
+    "slug": "genjutsu-ai",
+    "name": "Genjutsu AI",
+    "category": "Video",
+    "best_for": "Creators making trend-shaped short video who already have a performance worth copying and photos of the people, pets or products to put in it - the preset library does the prompt work and the workspace shows a credit estimate before you generate. Good fit for a two-person duet, a pet dance, a car or product swap, or a group scene where each photo has a labelled role. Not a fit for anyone who needs a named company, a stated jurisdiction and a retention period before paying, for work where an exact likeness or an unchanged background is contractual, for text-to-video alone (the AI Video Maker page covers that at a much higher credit cost), or for anyone unwilling to upload photos of real people to an unidentified operator.",
+    "price": "Free tier: 18 one-time signup credits, watermarked previews and downloads, roughly 3 images or 1 short clip, plus a weekly check-in worth up to 60 credits across the reward cycle. Subscriptions billed monthly: Starter $29.9 for 800 credits/month, Pro $49.9 for 1,800, Business $99.9 for 4,000. Billed yearly (the price printed on the card): Starter $100.0 a year, shown as $8.3/month, 2,400 credits/year; Pro $360.0 a year, shown as $30.0/month against a struck-through $49.9, 21,600 credits/year; Business $599.0 a year, shown as $49.9/month against a struck-through $99.9, 48,000 credits/year. One-time packs under the Pay once tab, credits never expire: Flex $99 for 2,000 credits, Starter Pack $199.9 for 4,900, Pro Pack $499.9 for 19,900. Subscription credits expire each period; card prices are USD before tax. Refund requests within 72 hours, calculated pro rata on unused purchased credits minus actual non-returned processing fees capped at 6% of the order. Read on 2026-10-26 from the rendered /pricing page on all three tabs; the plan figures are not literals in the served HTML, so they were captured from the rendered page rather than a price-token sweep.",
+    "rating": 3.9,
+    "official": "https://aigenjutsu.app/",
+    "summary": "Genjutsu AI is a browser workspace for rebuilding a clip with different people, pets or products. You pick a trend preset from a library of dances, sporting moments, cinematic scenes and pet bits, or upload your own 4-30 second reference video, then add photos for the roles you want to replace; the site calls the two modes motion transfer and object swap. Generation runs on third-party video models - Kling 2.6 and 3.0 Motion Control, Wan 2.2 Animate Move and Animate Replace, Seedance 2.0 and 2.5 - with image models covering the still half of the site, and one credit balance pays for both. Google sign-in grants 18 starting credits (about three images or one short clip) with watermarked downloads; subscriptions run $29.9-$99.9 a month billed monthly, or $100-$599 a year, and one-time packs of 2,000 / 4,900 / 19,900 credits do not expire.",
+    "use_cases": [
+      "Recreating a dance or performance trend with your own people in the lead role instead of the original cast",
+      "Putting a pet into a human performance bit, where the preset labels which photo fills which role",
+      "Swapping a vehicle, product or prop into an existing scene for a short product ad or a social post",
+      "Group and duet scenes where each uploaded photo is assigned a role and the choreography has to stay intact",
+      "Testing a trend before committing to a shoot: load the preset, check the credit estimate, generate one version and compare",
+      "Using the wider workspace when you need plain text-to-video or image-to-video rather than a recreation - priced separately per model and setting"
+    ],
+    "pros": [
+      "The preset library is the useful part: each trend ships with its reference clip and labelled photo roles, so a recreation is a few uploads rather than a prompt-writing exercise",
+      "The FAQ names the actual models and their ceilings - Kling 2.6 and 3.0 Motion Control at 720p and 1080p, Wan 2.2 Animate Move and Replace at 480p, 580p and 720p, Seedance 2.0 and 2.5 with 2-15 and 4-30 second reference ranges - and says plainly that backgrounds, hands, reflections and fast movement can vary",
+      "Affiliation is disclosed rather than implied, and in the strongest form we have seen on a model-named site: the footer of every page, the machine-readable llms.txt, the pricing page and a dedicated /higgsfield-genjutsu page all state that it is independent of Higgsfield, and that page adds \"this page does not claim the same engine or a complete feature match\"",
+      "The acceptable-use policy is specific where this category usually is not: face swaps are prohibited, and so are non-consensual impersonation, sexualised content and anything involving minors, with an explicit requirement that you hold consent for any likeness you upload",
+      "The refund policy is substantive rather than decorative: a 72-hour request window, a pro-rata calculation on unused purchased credits, processing fees capped at 6% and itemised before you confirm, and a sentence saying no administration fee is added",
+      "Analytics sit behind a consent control the policy describes: Google Analytics, Plausible and Microsoft Clarity are gated on an analytics choice, with URL fragments and arbitrary query parameters stripped before measurement",
+      "One credit balance covers image, video and motion transfer, and the workspace shows an estimated credit cost before you generate",
+      "Output ownership is stated in the Terms, not left to implication: you keep rights in your inputs and own the outputs generated for your account"
+    ],
+    "cons": [
+      "No controller, company or jurisdiction is named anywhere. The privacy policy's controller block reads only \"Company : AI Genjutsu\", which is the brand; there is no registered entity, postal address or natural person, no /about or /contact page, and no Organization structured data. The Terms then make the gap circular: disputes are governed by \"the laws of the jurisdiction where AI Genjutsu is established\", which names no jurisdiction. This is our main reservation on a paid product that takes portrait photos and reference videos",
+      "Retention is a phrase, not a period. Generation records \"including prompts, portrait uploads, reference videos, and outputs, are retained according to product settings and operational needs\", and finished files \"may be retained for a limited window\" before becoming unavailable links. Logs carry no period either, and self-service account deletion is switched off - the policy says so outright and routes deletion to the support address, with no completion email",
+      "Whether uploads train models is unstated. The only training sentence in the policy is scoped to Google sign-in data (\"We do not sell Google Sign-In data ... or use it to train AI models\"), while the Terms license inputs and outputs \"to provide, secure, and improve the Service\". A buyer uploading a face and a reference clip deserves a plain answer about model training",
+      "Processors are described by function, not by company, with one exception. Stripe is named in the Terms; hosting, CDN, email, support, analytics and \"AI and model-processing providers\" are not, so a reader cannot tell which model vendor receives their clip, or what the actual cross-border route is beyond \"appropriate safeguards\"",
+      "The Terms are dated 2026-09-28, ten days before the domain was registered on 2026-10-08, while the Privacy Policy (2026-10-09) and Refund Policy (2026-10-10) postdate it. That reads like a carried-over template date; we asked which one is authoritative",
+      "The annual Starter plan is worse value per credit than the monthly Starter plan, and nothing on the page says so. $100.0 a year buys 2,400 credits, about $0.042 each, while $29.9 a month buys 800 credits a month, about $0.037 each - roughly 11% more per credit for paying a year up front, at a quarter of the monthly credit flow. Pro and Business annual plans are genuinely cheaper than their monthly stickers, which makes the Starter case easy to miss",
+      "The \"up to N videos\" on each card assumes about 18 credits per clip, which is a short, low-resolution motion-transfer job. The AI Video Maker's default Seedance 2.5 setting (720p, 5 seconds) estimated 119 credits on 2026-10-26, so a Pro month is about 15 clips at that setting rather than the 100 printed on the card",
+      "The brand is the name of a third-party model. Higgsfield released a video-to-video model called Genjutsu on 2026-08-31, and this site sells motion transfer on Kling, Wan and Seedance under that name - disclosed, and explicitly not claimed to be the same engine, but a buyer searching the model name will land on one of at least eight lookalike domains registered between 2026-09-30 and 2026-10-11, each on its own infrastructure",
+      "The domain was 19 days old at submission and there are no independent reviews or community reports yet. The free 18 credits are enough for one short clip at the cheapest motion-transfer setting, not one at the default setting, and free downloads are watermarked"
+    ],
+    "key_features": [
+      "Motion transfer: a reference video supplies the performance, your photos supply the new cast",
+      "Object swap: replace a vehicle, product, prop or outfit inside a supported video-edit workflow",
+      "Trend preset library across dance, camera, pets, fashion, performance, action, cinematic, sports, gestures and basic moves, each with labelled photo roles",
+      "Own-clip upload, 4-30 seconds on the homepage studio and 2-30 seconds inside the video workspace, with up to 30 photos",
+      "Model matrix: Kling 2.6 Motion Control, Kling 3.0 Motion Control, Wan 2.2 Animate Move, Wan 2.2 Animate Replace, Seedance 2.0 and Seedance 2.5",
+      "Match photo and Match video settings for Kling, choosing whether character orientation follows the still or the clip",
+      "Optional custom prompt, off by default, with the preset's own prompt used otherwise",
+      "Image side of the same workspace: GPT Image 2, Nano Banana Pro and other image models on the same credit balance",
+      "Per-job estimated credit cost shown before generation, with generation history and downloads in My creations",
+      "Google sign-in, credit balance, weekly check-in rewards and a Stripe checkout"
+    ],
+    "faq": [
+      [
+        "What is Genjutsu AI and is it Higgsfield's Genjutsu?",
+        "No. Genjutsu is the name of a video-to-video model Higgsfield released on 2026-08-31; this site is an independent service that sells motion transfer and object swap on other vendors' models, and says so in its footer, its llms.txt and on a dedicated page headed \"Higgsfield Genjutsu Alternative\" which states it does not claim the same engine. The models it actually runs are Kling 2.6 and 3.0 Motion Control, Wan 2.2 Animate Move and Replace, and Seedance 2.0 and 2.5, with image models on the same credit balance."
+      ],
+      [
+        "How much does it cost?",
+        "Monthly subscriptions are Starter $29.9 for 800 credits, Pro $49.9 for 1,800 and Business $99.9 for 4,000. Annual billing is Starter $100.0 a year for 2,400 credits, Pro $360.0 for 21,600 and Business $599.0 for 48,000. One-time packs are $99 for 2,000 credits, $199.9 for 4,900 and $499.9 for 19,900, and those never expire. The free tier is 18 signup credits with watermarked downloads."
+      ],
+      [
+        "How many videos do I actually get?",
+        "Fewer than the plan cards suggest. Each card's \"up to N videos\" works out at about 18 credits a clip, which is a short low-resolution motion-transfer job. The site's own estimator quoted 119 credits for a 720p five-second Seedance 2.5 clip, so a Pro month at that setting is roughly 15 clips rather than 100. Check the estimate in the workspace before you generate."
+      ],
+      [
+        "What happens to my photos and clips?",
+        "The site is explicit that it stores them and vague about for how long. Generation records including portrait uploads and reference videos are \"retained according to product settings and operational needs\", outputs may be kept \"for a limited window\", and there is no self-service deletion - you email support and the policy warns there is no completion email. Whether uploads are used for model training is not stated for anything except Google sign-in data."
+      ],
+      [
+        "Who runs it and where are they?",
+        "That is not disclosed. The privacy policy names the controller only as \"Company : AI Genjutsu\", which is the brand; there is no registered entity, address or jurisdiction, and the Terms' governing-law clause points at \"the jurisdiction where AI Genjutsu is established\" without naming one. Payment runs through Stripe."
+      ]
+    ],
+    "trial_checklist": [
+      "Spend the 18 free credits on the one workflow you actually need, and note the estimate first: at the default Seedance 2.5 720p/5s setting a single clip was quoted at 119 credits, so the free balance will not cover it - switch to a short, low-resolution Kling motion-control job to test inside the free tier",
+      "Judge the output on the two things motion transfer usually breaks: whether the new face stays consistent through fast movement, and whether hands, reflections and background edges hold",
+      "Compare one preset against your own uploaded clip. Presets are the product's best case; your own footage is what you will actually use",
+      "Download the free render and check the watermark and resolution before deciding, since watermark-free downloads are the paid feature",
+      "Before paying anything, pick monthly rather than annual if you are testing: the annual Starter plan costs more per credit than the monthly one, and annual credits arrive as a full-year balance that expires by period",
+      "Ask support@aigenjutsu.app, in writing, who the operator is, how long portrait photos and reference videos are kept, and whether uploads are used for model training - the pages do not say, and the answer is the difference between a usable tool and an unmanageable one for client work"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - the workspace does the thing it advertises, with a preset library that removes the hardest part of a motion-transfer job (finding the clip and knowing which photo fills which role), an honest model matrix naming Kling, Wan and Seedance and their resolution ceilings, a visible credit estimate, and a refund policy with real arithmetic behind it. It is held below 4.5 by a free tier that is one short clip, by per-clip costs that run well above the plan cards' own maths, and by output quality we cannot verify from outside without paying. Transparency 3.5/5, and this is what pulls the entry to 3.9: no controller, company or jurisdiction is named anywhere and the governing-law clause is circular; retention carries no period and self-service deletion is switched off; model training is unstated for the photos and clips that are the product's input; processors are named by function except Stripe; and the Terms are dated ten days before the domain existed. Against that, the site discloses non-affiliation with Higgsfield in five places, forbids face swaps and non-consensual impersonation, gates analytics behind a consent control, and publishes a refund calculation rather than a promise - which is why this sits at the bottom of the 3.8-4.2 band for a real but unproven entrant rather than below it."
   }
 ]

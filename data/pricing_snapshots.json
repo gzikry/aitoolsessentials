@@ -412,6 +412,10 @@
     "trybestspecs": {
       "date": "2026-10-25",
       "digest": "One-time credit packs, no subscription: 10 credits USD 2.99, 30 credits USD 6.99, 100 credits USD 14.99, with struck-through list prices of USD 4.99 / 9.99 / 24.99 shown on all three cards. 1 credit per try-on (AI try-on, own-frame try-on or extra recommendations), credits never expire (valid_days 0), 1 free credit at signup. The plan payload embedded in the rendered /pricing page marks every pack interval \"one-time\" with valid_days 0 and payment_providers [\"stripe\",\"creem\"], and carries no recurring flag. /zh/pricing shows the same three packs at the same dollar prices, but quotes per-credit rates in yuan. No public config or products endpoint exists to cross-check (all /api/* probed paths 404), and checkout requires an account that was not created."
+    },
+    "genjutsu-ai": {
+      "date": "2026-10-26",
+      "digest": "Monthly: Starter $29.9 / 800 credits, Pro $49.9 / 1,800, Business $99.9 / 4,000. Yearly: Starter $100.0/yr ($8.3/mo shown) / 2,400 credits, Pro $360.0/yr ($30.0/mo, struck-through $49.9) / 21,600, Business $599.0/yr ($49.9/mo, struck-through $99.9) / 48,000. Pay once, credits never expire: Flex $99 / 2,000, Starter Pack $199.9 / 4,900, Pro Pack $499.9 / 19,900. Free: 18 signup credits, watermarked downloads, weekly check-in up to 60 credits. Refund window 72 hours, pro rata on unused purchased credits, processing fees capped at 6%. Figures captured from the rendered tabs (not present as literals in the served HTML). The annual Starter plan costs ~$0.042/credit against ~$0.037 on the monthly plan, i.e. more per credit for a yearly commitment; the cards' \"up to N videos\" assumes ~18 credits/clip while the AI Video Maker quoted 119 credits for 720p/5s Seedance 2.5 on 2026-10-26."
     }
   },
   "changes": [
@@ -610,7 +614,14 @@
       "previous_check": "2026-09-18",
       "new_check": "2026-10-25",
       "note": "v0: recorded pricing updated since the 2026-09-18 check, re-verified 2026-10-25."
+    },
+    {
+      "slug": "genjutsu-ai",
+      "detected": "2026-10-26",
+      "previous_check": null,
+      "new_check": "2026-10-26",
+      "note": "Genjutsu AI: first recorded pricing for a new listing, verified 2026-10-26 from the rendered pricing page (monthly, yearly and pay-once tabs)."
     }
   ],
-  "updated": "2026-10-27"
+  "updated": "2026-10-26"
 }

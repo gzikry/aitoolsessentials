@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27",
+  "generated_at": "2026-10-26",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2313,6 +2313,32 @@
         "coding",
         "automation",
         "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "genjutsu-ai",
+      "name": "Genjutsu AI",
+      "category": "Video",
+      "official_url": "https://aigenjutsu.app/",
+      "review_url": "/tools/genjutsu-ai/",
+      "price_label": "Free tier: 18 one-time signup credits, watermarked previews and downloads, roughly 3 images or 1 short clip, plus a weekly check-in worth up to 60 credits across the reward cycle. Subscriptions billed monthly: Starter $29.9 for 800 credits/month, Pro $49.9 for 1,800, Business $99.9 for 4,000. Billed yearly (the price printed on the card): Starter $100.0 a year, shown as $8.3/month, 2,400 credits/year; Pro $360.0 a year, shown as $30.0/month against a struck-through $49.9, 21,600 credits/year; Business $599.0 a year, shown as $49.9/month against a struck-through $99.9, 48,000 credits/year. One-time packs under the Pay once tab, credits never expire: Flex $99 for 2,000 credits, Starter Pack $199.9 for 4,900, Pro Pack $499.9 for 19,900. Subscription credits expire each period; card prices are USD before tax. Refund requests within 72 hours, calculated pro rata on unused purchased credits minus actual non-returned processing fees capped at 6% of the order. Read on 2026-10-26 from the rendered /pricing page on all three tabs; the plan figures are not literals in the served HTML, so they were captured from the rendered page rather than a price-token sweep.",
+      "pricing_summary": "Three tabs on one /pricing page, all read rendered on 2026-10-26 because the plan figures are not literals in the served HTML. Monthly billing: Starter $29.9 for 800 credits/month, Pro $49.9 for 1,800, Business $99.9 for 4,000. Yearly billing: Starter $100.0/year shown as $8.3/month for 2,400 credits/year, Pro $360.0/year shown as $30.0/month against a struck-through $49.9 for 21,600 credits/year, Business $599.0/year shown as $49.9/month against a struck-through $99.9 for 48,000 credits/year. Pay once: Flex Pack $99 for 2,000 credits, Starter Pack $199.9 for 4,900, Pro Pack $499.9 for 19,900; one-time credits never expire while subscription credits expire each period. Free Basic tier: 18 one-time signup credits, watermarked previews and downloads, roughly 3 images or 1 short clip, plus a weekly check-in worth up to 60 credits across the reward cycle. Banners read \"Save up to 50%\" with per-plan badges of 40% OFF (Save $238.8) on Pro and 50% OFF (Save $599.8) on Business; those two reconcile against the struck-through monthly prices, but the annual Starter plan has no anchor and costs more per credit than the monthly Starter. Refunds: 72-hour request window, pro rata on unused purchased credits, actual non-returned processing fees capped at 6%. Two internal arithmetic checks recorded rather than resolved: the cards' \"up to N videos\" works out at about 18 credits per clip, while the AI Video Maker's default Seedance 2.5 setting (720p, 5s) estimated 119 credits on the same day; and the annual Starter's 2,400 credits are 200 a month against 800 on the monthly plan. Card prices are USD before tax. No public config or products endpoint exists to cross-check (/api/config/public and /api/payment/products both 404), and checkout was not reached - no account, signup or purchase was attempted.",
+      "pricing_url": "https://aigenjutsu.app/pricing",
+      "pricing_checked_date": "2026-10-26",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "marketing"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,
