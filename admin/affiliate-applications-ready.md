@@ -238,6 +238,35 @@ Affiliate surfaces re-verified live 2026-10-18 while recording this: `/tools/des
 with `get.descript.com/wvafmtthtkp5` on the CTA under `rel="sponsored noopener nofollow"`, and
 `/legal/affiliate-disclosure.html` returns 200 naming Descript.
 
+> **Correction, 2026-10-27: the review page does not carry the tracking URL any more, and that is not
+> a regression.** Approved programs are now wired through the `/go/<slug>/` noindex hop
+> (`scripts/wire_affiliate_links.py` — "Point approved-partner CTAs at `/go/<slug>/`"), which holds the
+> partner URL. `/tools/descript/` carries exactly one `href="/go/descript/"` and `/go/descript/`
+> carries the tracking URL twice (meta refresh plus a fallback anchor under
+> `rel="sponsored nofollow noopener"`). An audit that greps the review page for `get.descript.com`
+> will report it unwired and be wrong — follow the hop. The 2026-10-18 sentence above describes the
+> pre-hop wiring and should not be read as the current mechanism.
+
+**2026-10-27: "Your Descript link is getting some activity!" — automated campaign, recorded, not answered.**
+`affiliates@descript.com`, 2026-10-27 22:03 UTC (PartnerStack via SendGrid), claims clicks have already
+been earned on the referral link, restates `https://get.descript.com/wvafmtthtkp5` unchanged, and invites
+a short program-feedback survey. It is campaign copy, not a vendor reply and not a question, and it
+restates **no commission rate** — so the written-rate ask from the 2026-10-16 confirmation is **still
+open**. No reply sent: answering campaign copy adds nothing to a question already sitting in the thread.
+
+**The click claim is not verifiable from our side, and is recorded that way.** The Plausible API is
+locked (`402 — site is locked due to missing active subscription`) and the PartnerStack dashboard is
+operator-only, so the only corroborating sources are unavailable; our own previews and bots also hit a
+hop page. Do not carry "clicks are coming in" into any report as measured traffic.
+
+**What the mail does establish is that the hop works.** Re-verified live 2026-10-27 (cache-busted):
+`/tools/descript/` **200** with exactly one `href="/go/descript/"`; `/go/descript/` **200** carrying
+`get.descript.com/wvafmtthtkp5` twice; `/legal/affiliate-disclosure.html` **200** naming Descript.
+
+**The two dashboard chores below are now the binding constraint on ever being paid** — clicks without
+accepted program terms and a payout provider accrue nothing payable. Both are George-only; nothing was
+attempted here.
+
 ### Copy.ai — no working public route as of 2026-09-12
 Its PartnerStack listing shows *Request program* with unfilled placeholders, and
 `copyai.partnerstack.com` renders the same dead template. Copy.ai was acquired by Fullcast
