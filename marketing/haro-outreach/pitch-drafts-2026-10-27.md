@@ -51,8 +51,11 @@ but it is a plain email address, not a DM and not a form.
   recorded in `route-checks-2026-10-27.json`; the page publishes a `mailto:` link and the address
   appears **5 times** in the markup.
 - Fallbacks on the same page: `linkedin.com/in/thibault-spirlet/`, `x.com/ThibaultSpirlet`.
-- Deliverability not SMTP-verified — no probe was run against the BI mailbox and one would not
-  discriminate anyway.
+- Deliverability: SMTP RCPT TO probe run today against all three of BI's Google Workspace MX
+  (`aspmx.l.google.com`, `alt1`, `alt2`) answered **250 2.1.5 OK** for `tspirlet@`, for a fabricated
+  control address and for `postmaster@` alike — so it rules out a domain-level rejection and nothing
+  more. Google accepts at RCPT and rejects later, so this is not evidence the mailbox exists; a bounce
+  is the only real evidence, and the byline `mailto:` is the evidence that it is his published address.
 - **Shortest path to a sent pitch in the entire queue: one email, no form, no login.**
 
 **Subject:** `Mistral vs US providers: the per-seat numbers, dated`
