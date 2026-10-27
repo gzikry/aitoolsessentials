@@ -229,7 +229,7 @@ def _nav() -> str:
 
 
 def _header() -> str:
-    return (f'<header class="site-header"><a class="brand" href="/">✦AIToolsEssentials</a>'
+    return (f'<header class="site-header"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>'
             f'{_nav()}</header>')
 
 

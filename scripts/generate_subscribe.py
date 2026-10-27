@@ -12,7 +12,7 @@ from newsletter_hold import subscribe_form
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
-HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep, Test, Cut</a><a href="/subscribe/">Free email</a><a href="/premium/">Paid Premium</a></nav><a class="nav-cta" href="/subscribe/">Get the free email</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/newsletter/">Keep, Test, Cut</a><a href="/subscribe/">Free email</a><a href="/premium/">Paid Premium</a></nav><a class="nav-cta" href="/subscribe/">Get the free email</a></header>'
 FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="/legal/privacy.html">Privacy</a></footer>'
 
 

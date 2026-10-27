@@ -990,7 +990,7 @@ def _homepage_scripts(_html: str) -> str:
 HOME_CRITICAL_START = "<!-- AIT HOME CRITICAL START -->"
 HOME_CRITICAL_END = "<!-- AIT HOME CRITICAL END -->"
 HOME_FONTS_HREF = (
-    "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1"
+    "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1"
     "&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
 )
 def homepage_css_href(root: Path) -> str:
@@ -998,19 +998,17 @@ def homepage_css_href(root: Path) -> str:
     from asset_rev import versioned_ref
     return versioned_ref(root, root / "index.html", "css/styles.css") or "css/styles.css"
 HOME_CRITICAL_CSS = (
-    "html,body{background:#000;color:#f4f5f7}"
-    "body[data-page=home] .home-rest{background:#000;color:#f4f5f7}"
-    "body[data-page=home] .home-learn{background:#000;color:#f4f5f7}"
+    "html,body{background:#FAF8F5;color:#111315}"
+    "body[data-page=home] .home-hero{background:#FAF8F5;color:#111315}"
+    "body[data-page=home] .home-rest{background:#FAF8F5;color:#111315}"
+    "body[data-page=home] .home-learn{background:#FAF8F5;color:#111315}"
     "body[data-page=home] .home-learn-card{"
-    "background:linear-gradient(180deg,rgba(36,38,46,.68),rgba(10,11,14,.82));"
-    "border:1px solid rgba(255,255,255,.14)}"
-    "body[data-page=home] .home-premium-band{background:transparent;color:#f4f5f7}"
+    "background:#FFFFFF;border:1px solid #E2DFD7;border-radius:6px;box-shadow:none}"
+    "body[data-page=home] .home-premium-band{background:transparent;color:#111315}"
     "body[data-page=home] .home-premium-band>div{"
-    "background:linear-gradient(180deg,rgba(36,38,46,.68),rgba(10,11,14,.82));"
-    "border:1px solid rgba(255,255,255,.14);"
-    "box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}"
+    "background:#FFFFFF;border:1px solid #E2DFD7;border-radius:6px;box-shadow:none}"
     "body[data-page=home] .home-premium-band p,"
-    "body[data-page=home] .home-premium-band .kicker{color:rgba(244,245,247,.84)}"
+    "body[data-page=home] .home-premium-band .kicker{color:#111315}"
 )
 
 
@@ -1046,7 +1044,7 @@ def apply_homepage_critical_head(html: str, root: Path) -> str:
     )
     html = re.sub(
         r'<meta name="theme-color" content="[^"]*">',
-        '<meta name="theme-color" content="#000000">',
+        '<meta name="theme-color" content="#FAF8F5">',
         html,
         count=1,
     )

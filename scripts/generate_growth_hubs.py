@@ -3,7 +3,7 @@
 from pathlib import Path
 import json
 
-HEADER = '''<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/tool-finder.html">Tool finder</a><a href="/free-ai-tools.html">Free AI tools</a><a href="/alternatives/index.html">Alternatives</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/categories/index.html">Categories</a><a href="/articles/index.html">Guides</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>'''
+HEADER = '''<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/tool-finder.html">Tool finder</a><a href="/free-ai-tools.html">Free AI tools</a><a href="/alternatives/index.html">Alternatives</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/categories/index.html">Categories</a><a href="/articles/index.html">Guides</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>'''
 FOOTER = '''<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/advertise/index.html" rel="nofollow">Advertise</a><a href="/submit-tool.html" rel="nofollow">Submit a tool</a><a href="/community/test-report.html" rel="nofollow">Report your results</a><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:contact@aitoolsessentials.com">Contact</a><a href="/legal/about.html">About</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a></footer>'''
 
 def card(t):

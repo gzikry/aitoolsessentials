@@ -299,7 +299,7 @@ def _wrap(title, description, kicker, body, canonical_name):
 <script type="application/ld+json">{{"@context":"https://***@graph":[{{"@type":"Organization","@id":"{DOMAIN}/#organization","name":"AIToolsEssentials","url":"{DOMAIN}","email":"{EMAIL}","logo":"{DOMAIN}/assets/aitools-bot-mark.svg"}},{{"@type":"WebSite","@id":"{DOMAIN}/#website","url":"{DOMAIN}","name":"AIToolsEssentials","publisher":{{"@id":"{DOMAIN}/#organization"}},"potentialAction":{{"@type":"SearchAction","target":"{DOMAIN}/search/?q={{search_term_string}}","query-input":"required name=search_term_string"}}}}]}}</script>
 <!-- AIT KNOWLEDGE SCHEMA END -->
 </head><body>
-<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>
 <a href="../articles/learn.html">Learn</a><a href="../guides/switch-guides/">Switching</a></nav>
 <a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>

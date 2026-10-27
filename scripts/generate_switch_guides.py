@@ -218,7 +218,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <script type="application/ld+json">__FAQ_SCHEMA__</script>
 
 </head><body>
-<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/decision-brief.html">Decision brief</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
+<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/decision-brief.html">Decision brief</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
 <main>
 <section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:88px 28px 64px;text-align:center">
 <p class="kicker">Migration guide · Updated {today}</p>
@@ -265,7 +265,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <link rel="canonical" href="{DOMAIN}/guides/switch-guides/">
 <link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="/css/share.css">
 </head><body>
-<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
+<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
 <main>
 <section class="scene scene-dark"><div style="max-width:900px;margin:0 auto;padding:88px 28px 64px;text-align:center">
 <p class="kicker">Switch guides</p><h1>Already paying? Switch smart, not fast.</h1>

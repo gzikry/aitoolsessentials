@@ -14,7 +14,7 @@ from stack_audit_lib import build_catalog, catalog_index
 
 DOMAIN = "https://aitoolsessentials.com"
 HEADER = (
-    '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span>'
+    '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span>'
     '<span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a>'
     '<a href="/stack-builder.html">Stack builder</a><a href="/cost-calculator.html">Cost calculator</a>'
     '<a href="/decision-brief.html">Decision brief</a><a href="/stack-audit.html" aria-current="page">Stack audit</a>'

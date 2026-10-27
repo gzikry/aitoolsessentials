@@ -63,7 +63,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="/css/share.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebApplication","name":"{title}","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}},"url":"https://aitoolsessentials.com/decision-brief.html","publisher":{{"@type":"Organization","name":"AIToolsEssentials"}}}}</script>
 </head><body>
-<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/stack-builder.html">Stack builder</a><a href="/tool-finder.html">Tool finder</a><a href="/alternatives/">Alternatives</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
+<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/stack-builder.html">Stack builder</a><a href="/tool-finder.html">Tool finder</a><a href="/alternatives/">Alternatives</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
 <main>
 <section class="scene scene-dark"><div style="max-width:940px;margin:0 auto;padding:88px 28px 64px;text-align:center">
 <p class="kicker">Decision brief generator</p>

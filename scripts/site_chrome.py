@@ -26,7 +26,7 @@ _FORM = (
 
 CANONICAL_HEADER = (
     '<header class="global-nav">'
-    '<a class="brand" href="/"><span class="brand-glyph">\u2726</span><span>AIToolsEssentials</span></a>'
+    '<a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>'
     '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>'
     '<nav class="nav-links" id="site-nav">'
     '<a href="/tools/">Tools</a>'
@@ -49,7 +49,7 @@ CANONICAL_HEADER = (
 HOMEPAGE_HEADER = (
     '<header class="global-nav" aria-label="Primary navigation" data-nav="slim">'
     '<a class="brand home-appear" data-appear="0" href="/" aria-label="AIToolsEssentials home">'
-    '<span class="brand-glyph">\u2726</span><span>AIToolsEssentials</span></a>'
+    '<span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>'
     '<nav class="nav-links home-appear" data-appear="1">'
     '<a href="/tools/">Tools</a>'
     '<a href="/search/">Search</a>'
