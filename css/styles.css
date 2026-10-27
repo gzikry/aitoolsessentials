@@ -2332,7 +2332,8 @@ body.ledger-page .kicker,
 body.ledger-page .kicker.light {
   color: #111315;
 }
-body.ledger-page h1 {
+body.ledger-page h1,
+body.ledger-page section.scene.scene-dark.ledger-mast h1 {
   font-family: Newsreader, Georgia, "Times New Roman", serif;
   font-weight: 650;
   letter-spacing: -0.03em;

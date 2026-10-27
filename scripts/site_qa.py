@@ -22,6 +22,8 @@ def main() -> None:
         "scripts/test_newsletter_archive.py",
         "scripts/test_wave4.py",
         "scripts/test_wave5.py",
+        "scripts/test_wave6.py",
+        "scripts/test_spend_calculators.py",
     ):
         proc = subprocess.run([sys.executable, script], cwd=ROOT)
         if proc.returncode:

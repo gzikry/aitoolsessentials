@@ -25,7 +25,43 @@ assert.strictEqual(row(free, "descript").verdict, "Keep");
 assert.strictEqual(row(free, "elevenlabs").monthlyCents, null);
 assert.strictEqual(row(free, "heygen").rel, "external noopener");
 assert.strictEqual(row(free, "synthesia").rel, "external noopener");
-assert.strictEqual(free.savingsAnnualCents, 0);
+assert.strictEqual(free.rows.map((item) => item.name).join(","), "Descript,ElevenLabs,HeyGen,Synthesia,Runway,Midjourney");
+assert.strictEqual(row(free, "runway").covers, false);
+assert.strictEqual(row(free, "runway").monthlyCents, null);
+assert.strictEqual(row(free, "midjourney").tier, "Basic");
+assert.strictEqual(row(free, "midjourney").monthlyCents, 1000);
+assert.strictEqual(free.savingsAnnualCents, 12000);
+
+const clip = voice.priceVoice({ minutes: 60, seconds: 10, retake: 1, clone: false });
+assert.strictEqual(row(clip, "runway").tier, "Standard");
+assert.strictEqual(row(clip, "runway").monthlyCents, 1500);
+assert.strictEqual(row(clip, "runway").credits, 120);
+assert.strictEqual(row(clip, "runway").rel, "external noopener");
+
+const standardEdge = voice.priceVoice({ minutes: 60, seconds: 52, retake: 1, clone: false });
+assert.strictEqual(row(standardEdge, "runway").credits, 624);
+assert.strictEqual(row(standardEdge, "runway").tier, "Standard");
+assert.strictEqual(row(standardEdge, "runway").monthlyCents, 1500);
+
+const proClip = voice.priceVoice({ minutes: 60, seconds: 53, retake: 1, clone: false });
+assert.strictEqual(row(proClip, "runway").tier, "Pro");
+assert.strictEqual(row(proClip, "runway").monthlyCents, 3500);
+
+const broll = voice.priceVoice({ minutes: 100, seconds: 40, retake: 5, clone: false });
+assert.strictEqual(broll.generatedSeconds, 200);
+assert.strictEqual(broll.demandedMinutes, 500);
+assert.strictEqual(row(broll, "runway").credits, 2400);
+assert.strictEqual(row(broll, "runway").tier, "Max");
+assert.strictEqual(row(broll, "runway").monthlyCents, 9500);
+assert.strictEqual(row(broll, "midjourney").tier, "Standard");
+assert.strictEqual(row(broll, "midjourney").monthlyCents, 3000);
+
+const stealth = voice.priceVoice({ minutes: 60, seconds: 10, retake: 1, clone: true });
+assert.strictEqual(row(stealth, "midjourney").tier, "Pro");
+assert.strictEqual(row(stealth, "midjourney").monthlyCents, 6000);
+assert.strictEqual(row(stealth, "midjourney").rel, "external noopener");
+assert.ok(row(stealth, "runway").note.indexOf("Turbo") !== -1);
+assert.ok(row(stealth, "runway").note.indexOf("does not price Turbo") !== -1);
 
 const hobby = voice.priceVoice({ minutes: 60, retake: 2, clone: false });
 assert.strictEqual(hobby.demandedMinutes, 120);
@@ -148,7 +184,12 @@ def main() -> None:
     for needle in (
         'id="voice-minutes"',
         'id="voice-retake"',
+        'id="voice-seconds"',
         'id="voice-clone"',
+        "Runway",
+        "Midjourney",
+        'href="/go/runway/" rel="external noopener"',
+        'href="/go/midjourney/" rel="external noopener"',
         'href="/go/elevenlabs/" rel="sponsored nofollow noopener"',
         'href="/go/descript/" rel="sponsored nofollow noopener"',
         'href="/go/heygen/" rel="external noopener"',

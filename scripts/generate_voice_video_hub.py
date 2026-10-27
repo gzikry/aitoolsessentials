@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Voice and avatar minute calculator. Minutes price a plan only for Descript."""
+"""Voice, avatar, Runway, and Midjourney calculator.
+
+Minutes price Descript and Midjourney Fast GPU time. A separate seconds
+box prices Runway at the published Gen-4.5 rate of 12 credits per second.
+"""
 from __future__ import annotations
 
 import html
@@ -11,11 +15,12 @@ from site_chrome import CANONICAL_HEADER
 
 DOMAIN = "https://aitoolsessentials.com"
 PATH = "/compare/ai-video-avatar-cost/"
-TITLE = "AI Voice & Video Minute / Credit Overage Calculator"
+TITLE = "Voice, Avatar, Runway, and Midjourney Credit Ledger"
 DESCRIPTION = (
-    "Compare ElevenLabs, Descript, HeyGen, and Synthesia from the checked "
-    "pricing summaries. Finished minutes pick a Descript media-hour plan. "
-    "Credit tools stay unconverted, because no credit-per-minute rate is published."
+    "Price ElevenLabs, Descript, HeyGen, Synthesia, Runway, and Midjourney "
+    "from the checked summaries. Minutes pick a Descript media-hour plan and "
+    "a Midjourney Fast GPU plan. Gen-4 seconds pick a Runway credit seat at "
+    "12 credits per second. ElevenLabs, HeyGen, and Synthesia stay unconverted."
 )
 
 FAQS = [
@@ -29,7 +34,15 @@ FAQS = [
     ),
     (
         "Does a custom voice or studio avatar change the price?",
-        "ElevenLabs, Descript, and HeyGen do not publish a separate clone fee on the checked pages, so the toggle does not add one. Synthesia's checked pricing text puts unlimited Personal Avatars on Enterprise, which is custom, so the toggle moves that row off the $29 Starter seat.",
+        "ElevenLabs, Descript, and HeyGen do not publish a separate clone fee on the checked pages, so the toggle does not add one. Synthesia's checked pricing text puts unlimited Personal Avatars on Enterprise, which is custom, so the toggle moves that row off the $29 Starter seat. The same toggle is Midjourney Stealth Mode: Basic ($10, 3.3 Fast hours) and Standard ($30, 15 Fast hours plus unlimited Relax) leave images public, so Stealth moves the row to Pro at $60 for 30 Fast hours, or Mega at $120 for 60.",
+    ),
+    (
+        "How does Runway turn a clip into a monthly seat?",
+        "The 18 Sep 2026 pricing page says Gen-4.5 costs 12 credits per generated second. Standard is $15 for 625 credits, about 52 seconds. Pro is $35 for 2,250 credits. Max is $95 for 9,500 credits, with up to one month of rollover. Retakes multiply the seconds first, which is how a 10-second clip at 5x still fits Standard (600 credits) and a 40-second clip at 5x moves to Max (2,400 credits). The page does not publish a Turbo credits-per-second rate, so Turbo is not priced. Max is not a relaxed unlimited plan.",
+    ),
+    (
+        "How do Midjourney Fast hours use the minutes box?",
+        "One finished minute is one Fast GPU minute. Basic covers 3.3 hours (198 minutes) at $10. Standard covers 15 hours at $30 and adds unlimited Relax image generations, which this sheet does not convert into Fast time. Pro covers 30 hours at $60. Mega covers 60 hours at $120. Unused Fast time does not roll over. Annual billing is 20% lower and is not the figure used here.",
     ),
 ]
 
@@ -90,28 +103,30 @@ def generate(root: Path) -> Path:
 <main>
 <section class="scene scene-dark ledger-mast">
 <div style="max-width:880px;margin:0 auto;padding:72px 28px 36px">
-<p class="kicker light">Pricing check · Sep 2026</p>
+<p class="kicker light">Pricing check · Sep–Oct 2026</p>
 <h1>{_esc(TITLE)}</h1>
-<p class="subhead">Finished minutes pick a plan only where the vendor meters media hours. A credit balance is not a minute, and this page does not invent the conversion.</p>
+<p class="subhead">Voice minutes, avatar credits, Runway Gen-4.5 seconds, and Midjourney Fast GPU hours sit on one sheet. A credit balance without a published per-minute rate stays unconverted.</p>
 <p><a class="button button-blue" href="#calculator">Price the minutes</a> <a class="button button-ledger" href="/price-changes/">Price changes</a></p>
 </div>
 </section>
 <section class="scene scene-light">
 <div class="article-shell wide">
-<p class="affiliate-inline">ElevenLabs and Descript buttons are partner links. HeyGen and Synthesia buttons go to the official site with our campaign tag. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
+<p class="affiliate-inline">ElevenLabs and Descript buttons are partner links. HeyGen, Synthesia, Runway, and Midjourney buttons go to the official site with our campaign tag. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
 <form id="calculator" class="ledger-sheet voice-calc">
-<h2>Finished minutes</h2>
+<h2>Finished minutes and Gen-4 seconds</h2>
 <div class="ledger-seats">
 <label>Minutes / month <input id="voice-minutes" type="number" min="0" max="6000" value="60"></label>
-<label>Retakes <select id="voice-retake"><option value="1">1x</option><option value="2">2x</option><option value="3">3x</option></select></label>
-<label><input id="voice-clone" type="checkbox"> Custom voice clone / studio avatar</label>
+<label>Gen-4 seconds <input id="voice-seconds" type="number" min="0" max="3600" value="10"></label>
+<label>Retakes <select id="voice-retake"><option value="1">1x</option><option value="2">2x</option><option value="3">3x</option><option value="4">4x</option><option value="5">5x</option></select></label>
+<label><input id="voice-clone" type="checkbox"> Private mode: studio avatar or Midjourney Stealth</label>
 </div>
+<p class="score-note">Minutes price Descript media time and Midjourney Fast GPU time. Seconds price Runway at 12 Gen-4.5 credits each. B-roll retakes are often 3x–5x.</p>
 </form>
 <div id="voice-result" class="ledger-sheet" aria-live="polite"></div>
-<p class="ledger-cta"><a class="button button-blue" href="/go/elevenlabs/" rel="sponsored nofollow noopener">ElevenLabs</a> <a class="button button-blue" href="/go/descript/" rel="sponsored nofollow noopener">Descript</a> <a class="button button-blue" href="/go/heygen/" rel="external noopener">HeyGen</a> <a class="button button-blue" href="/go/synthesia/" rel="external noopener">Synthesia</a></p>
+<p class="ledger-cta"><a class="button button-blue" href="/go/elevenlabs/" rel="sponsored nofollow noopener">ElevenLabs</a> <a class="button button-blue" href="/go/descript/" rel="sponsored nofollow noopener">Descript</a> <a class="button button-blue" href="/go/heygen/" rel="external noopener">HeyGen</a> <a class="button button-blue" href="/go/synthesia/" rel="external noopener">Synthesia</a> <a class="button button-blue" href="/go/runway/" rel="external noopener">Runway</a> <a class="button button-blue" href="/go/midjourney/" rel="external noopener">Midjourney</a></p>
 <h2>Questions</h2>
 <div class="faq-list">{faqs}</div>
-<p>Reviews: <a href="/tools/elevenlabs/">ElevenLabs</a>, <a href="/tools/descript/">Descript</a>, <a href="/tools/heygen/">HeyGen</a>, <a href="/tools/synthesia/">Synthesia</a>. Sources: <a href="https://elevenlabs.io/pricing" rel="external noopener">ElevenLabs pricing</a>, <a href="https://descript.com/pricing" rel="external noopener">Descript pricing</a>, <a href="https://www.heygen.com/pricing" rel="external noopener">HeyGen pricing</a>, <a href="https://www.synthesia.io/pricing" rel="external noopener">Synthesia pricing</a>.</p>
+<p>Reviews: <a href="/tools/elevenlabs/">ElevenLabs</a>, <a href="/tools/descript/">Descript</a>, <a href="/tools/heygen/">HeyGen</a>, <a href="/tools/synthesia/">Synthesia</a>, <a href="/tools/runway/">Runway</a>, <a href="/tools/midjourney/">Midjourney</a>. Sources: <a href="https://elevenlabs.io/pricing" rel="external noopener">ElevenLabs pricing</a>, <a href="https://descript.com/pricing" rel="external noopener">Descript pricing</a>, <a href="https://www.heygen.com/pricing" rel="external noopener">HeyGen pricing</a>, <a href="https://www.synthesia.io/pricing" rel="external noopener">Synthesia pricing</a>, <a href="https://runwayml.com/pricing" rel="external noopener">Runway pricing</a>, <a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" rel="external noopener">Midjourney plans</a>.</p>
 {receipt_footer_html()}
 </div>
 </section>
@@ -134,15 +149,16 @@ def generate(root: Path) -> Path:
   function render() {{
     var result = calc.priceVoice({{
       minutes: document.getElementById("voice-minutes").value,
+      seconds: document.getElementById("voice-seconds").value,
       retake: document.getElementById("voice-retake").value,
       clone: document.getElementById("voice-clone").checked
     }});
     var rows = result.rows.map(function (row) {{
-      var price = row.monthlyCents == null ? "Not priced from minutes" : calc.money(row.monthlyCents) + "/mo";
+      var price = row.monthlyCents == null ? (row.unpriced || "Not priced from minutes") : calc.money(row.monthlyCents) + "/mo";
       var tone = row.verdict === "Keep" ? "keep" : row.verdict === "Switch" ? "cut" : "test";
       return "<tr><th>" + row.name + "</th><td>" + row.tier + "</td><td>" + price + "</td><td>" + row.meter + "</td><td>" + row.expiry + "</td><td><span class=\\"ledger-stamp ledger-" + tone + "\\">" + row.verdict + "</span></td><td><a class=\\"button button-blue\\" href=\\"" + row.href + "\\" rel=\\"" + row.rel + "\\">Open " + row.name + "</a><p>" + row.note + "</p></td></tr>";
     }}).join("");
-    document.getElementById("voice-result").innerHTML = "<p class=\\"ledger-kicker\\">" + result.demandedMinutes + " media minutes after " + result.retake + "x</p><div class=\\"table-wrap\\"><table class=\\"ledger-table\\"><thead><tr><th>Tool</th><th>Plan</th><th>Monthly</th><th>Meter</th><th>Rollover</th><th>Call</th><th></th></tr></thead><tbody>" + rows + "</tbody></table></div>";
+    document.getElementById("voice-result").innerHTML = "<p class=\\"ledger-kicker\\">" + result.demandedMinutes + " media or Fast minutes · " + result.generatedSeconds + " Gen-4.5 seconds after " + result.retake + "x</p><div class=\\"table-wrap\\"><table class=\\"ledger-table\\"><thead><tr><th>Tool</th><th>Plan</th><th>Monthly</th><th>Meter</th><th>Rollover</th><th>Call</th><th></th></tr></thead><tbody>" + rows + "</tbody></table></div>";
   }}
   document.getElementById("calculator").addEventListener("input", render);
   document.getElementById("calculator").addEventListener("change", render);
