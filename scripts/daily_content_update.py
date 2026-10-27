@@ -619,6 +619,9 @@ _audit_fixed = _audit_html.replace("button-ghost-dark", "button-ledger")
 if _audit_fixed != _audit_html:
     _audit_page.write_text(_audit_fixed, encoding="utf-8")
 
+from inject_ledger_pages import inject as _inject_ledger_pages
+print('Ledger pages:', _inject_ledger_pages(root))
+
 from asset_rev import stamp_tree as _stamp_assets
 print(f'Stamped content hashes on {_stamp_assets(root)} pages')
 

@@ -2294,3 +2294,196 @@ section.scene.scene-dark.ledger-mast .button-ghost-dark:hover {
 .trap-tools { display: flex; flex-wrap: wrap; gap: 8px 14px; }
 .trap-hit { background: #fff8e8; }
 tr[hidden] { display: none; }
+
+/* Tool, comparison, switch-guide, and category pages. Homepage stays off this class. */
+body.ledger-page {
+  background: #FAF8F5;
+  color: #111315;
+}
+body.ledger-page .scene-dark,
+body.ledger-page .scene-light,
+body.ledger-page .review-hero,
+body.ledger-page .hero,
+body.ledger-page .comparison-section,
+body.ledger-page .directory-section,
+body.ledger-page .content-hub,
+body.ledger-page .product-grid-section,
+body.ledger-page .category-related-section,
+body.ledger-page .guide-strip,
+body.ledger-page .article-hero {
+  background: #FAF8F5;
+  color: #111315;
+}
+body.ledger-page .scene-dark h1,
+body.ledger-page .scene-dark h2,
+body.ledger-page .scene-dark h3,
+body.ledger-page .scene-dark p,
+body.ledger-page .scene-dark li,
+body.ledger-page .scene-dark .kicker,
+body.ledger-page .scene-dark .kicker.light,
+body.ledger-page .scene-dark .subhead,
+body.ledger-page .review-hero h1,
+body.ledger-page .review-hero p,
+body.ledger-page .review-hero .kicker,
+body.ledger-page .hero h1,
+body.ledger-page .hero p,
+body.ledger-page .subhead,
+body.ledger-page .kicker,
+body.ledger-page .kicker.light {
+  color: #111315;
+}
+body.ledger-page h1 {
+  font-family: Newsreader, Georgia, "Times New Roman", serif;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  color: #111315;
+}
+body.ledger-page .kicker,
+body.ledger-page .kicker.light,
+body.ledger-page .last-updated,
+body.ledger-page .official-source-card > span,
+body.ledger-page .directory-card dt,
+body.ledger-page .directory-card dd,
+body.ledger-page .score-card span,
+body.ledger-page .score-card strong,
+body.ledger-page .ledger-kicker {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+body.ledger-page .kicker,
+body.ledger-page .kicker.light,
+body.ledger-page .ledger-kicker {
+  color: #1E40AF;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+body.ledger-page .subhead,
+body.ledger-page .review-hero > p:not(.kicker):not(.affiliate-inline) {
+  color: rgba(17, 19, 21, .72);
+}
+body.ledger-page .compact-hero {
+  min-height: 0;
+}
+body.ledger-page .directory-card,
+body.ledger-page .score-card,
+body.ledger-page .content-hub-card,
+body.ledger-page .official-source-card,
+body.ledger-page .review-content,
+body.ledger-page .tool-pick,
+body.ledger-page .comparison-evidence,
+body.ledger-page .product-tile,
+body.ledger-page .guide-card,
+body.ledger-page .table-wrap,
+body.ledger-page .conversion-verdict-bar,
+body.ledger-page .decision-grid > div,
+body.ledger-page .content-tool-card,
+body.ledger-page .review-mini-card {
+  background: #fff;
+  border: 1px solid #D8D2C5;
+  border-radius: 4px;
+  box-shadow: none;
+}
+body.ledger-page .directory-card:hover,
+body.ledger-page .content-hub-card:hover,
+body.ledger-page .score-card:hover,
+body.ledger-page .button-blue:hover {
+  transform: none;
+  box-shadow: none;
+}
+body.ledger-page .conversion-verdict-bar {
+  background: #fff;
+  border-color: #111315;
+}
+body.ledger-page .conversion-verdict-bar strong,
+body.ledger-page .conversion-verdict-bar p,
+body.ledger-page .conversion-verdict-bar span {
+  color: #111315;
+}
+body.ledger-page .table-wrap table,
+body.ledger-page table {
+  border-collapse: collapse;
+}
+body.ledger-page th,
+body.ledger-page td {
+  border-bottom: 1px solid #D8D2C5;
+  border-right: 1px solid #D8D2C5;
+  color: #111315;
+  background: #fff;
+}
+body.ledger-page th {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #111315;
+  background: #FAF8F5;
+}
+body.ledger-page .directory-toolbar input,
+body.ledger-page .official-source-links a {
+  border: 1px solid #D8D2C5;
+  border-radius: 4px;
+  box-shadow: none;
+  background: #fff;
+}
+body.ledger-page .button-dark,
+body.ledger-page .button-dark:hover,
+body.ledger-page .button-ghost-dark,
+body.ledger-page .button-ghost-dark:hover,
+body.ledger-page .scene-dark .button-ghost-dark,
+body.ledger-page .scene-dark .button-ghost-dark:hover,
+body.ledger-page .newsletter-panel .button-ghost-dark,
+body.ledger-page .newsletter-panel .button-ghost-dark:hover,
+body.ledger-page .newsletter-panel .button-dark,
+body.ledger-page .newsletter-panel .button-dark:hover {
+  color: #111315;
+  background: #fff;
+  border: 1px solid #111315;
+  border-radius: 4px;
+  box-shadow: none;
+}
+body.ledger-page .button-blue,
+body.ledger-page .button-blue:hover {
+  background: #156E3F;
+  color: #fff;
+  box-shadow: none;
+}
+body.ledger-page .newsletter-panel {
+  background: #fff;
+  color: #111315;
+  border: 1px solid #111315;
+  border-radius: 4px;
+  box-shadow: none;
+}
+body.ledger-page .newsletter-panel span,
+body.ledger-page .newsletter-panel h2,
+body.ledger-page .newsletter-panel p,
+body.ledger-page .newsletter-panel .button-secondary {
+  color: #111315;
+  background: transparent;
+}
+body.ledger-page .ledger-calc-callout {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto 28px;
+  padding: 16px 18px;
+  background: #fff;
+  color: #111315;
+  border: 1px solid #111315;
+  border-radius: 4px;
+}
+body.ledger-page .ledger-calc-callout p { margin: 0 0 8px; }
+body.ledger-page .ledger-calc-callout p:last-child { margin-bottom: 0; }
+body.ledger-page .ledger-calc-callout a {
+  color: #1E40AF;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+body.ledger-page .ledger-calc-links {
+  margin: 8px 0;
+  padding-left: 18px;
+}
+body.ledger-page .ledger-calc-links li {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
