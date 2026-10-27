@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from dataclasses import dataclass
@@ -144,17 +145,141 @@ def blurb(dek: str) -> str:
     return text[: stop + 1]
 
 
-def card(letter: Letter) -> str:
+_CALLOUT_LABELS = (
+    ("KEEP", re.compile(r"<strong>\s*KEEP\.</strong>\s*(.*?)</p>", re.S | re.I)),
+    ("TEST", re.compile(r"<strong>\s*TEST(?:\s+FIRST)?\.</strong>\s*(.*?)</p>", re.S | re.I)),
+    ("CUT", re.compile(r"<strong>\s*CUT\.</strong>\s*(.*?)</p>", re.S | re.I)),
+)
+
+# Fragments that already appear in the letter. Used when the issue has no KEEP./TEST./CUT. labels.
+_QUOTED_CALLS = {
+    5: {
+        "KEEP": "Keep the seat that finishes your weekly work.",
+        "TEST": "Run the same real brief in Free ChatGPT and in the Claude seat you already renew.",
+        "CUT": "One cut to watch:",
+    },
+    4: {
+        "KEEP": "Keep the one profession you actually do every week.",
+        "TEST": "eight free generations",
+        "CUT": "Do not stack Sonaopus",
+    },
+    1: {
+        "KEEP": "These are meaningfully different tools",
+        "TEST": "Test it against your actual presentation workflow before you add a seat.",
+        "CUT": "If you have Cursor, you probably don't need Copilot",
+    },
+}
+
+
+def _clip(text: str, limit: int = 180) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= limit:
+        return text
+    dot = text.find(". ")
+    if 40 <= dot <= limit:
+        return text[: dot + 1]
+    cut = text[:limit].rsplit(" ", 1)[0].rstrip(".,;:")
+    return (cut or text[:limit]).rstrip() + "…"
+
+
+def _sentence_containing(plain: str, fragment: str) -> str:
+    start = plain.find(fragment)
+    if start < 0:
+        return ""
+    head = plain[:start]
+    boundary = max(head.rfind(". "), head.rfind("! "), head.rfind("? "), head.rfind(".” "), head.rfind(".”"))
+    begin = 0
+    if boundary >= 0:
+        begin = boundary
+        while begin < start and plain[begin] in ".!?\"'”’ ":
+            begin += 1
+    tail = plain[begin:]
+    match = re.match(r".+?(?:[.!?][\"”']?(?:\s|$)|$)", tail)
+    text = match.group(0).strip() if match else tail.strip()
+    if fragment not in text:
+        tail = plain[start:]
+        match = re.match(r".+?(?:[.!?][\"”']?(?:\s|$)|$)", tail)
+        text = match.group(0).strip() if match else tail.strip()
+    return _clip(text)
+
+
+def _quote_text(body: str, fragment: str) -> str:
+    for match in re.finditer(r"<p[^>]*>(.*?)</p>", body, flags=re.S):
+        plain = _plain(match.group(1))
+        if fragment in plain:
+            return _sentence_containing(plain, fragment)
+    return ""
+
+
+def issue_body(root: Path, letter: Letter) -> str:
+    path = root / "newsletter" / f"{letter.slug}.html"
+    if path.is_file():
+        html = path.read_text(encoding="utf-8")
+        match = re.search(
+            r'<div class="newsletter-body">(.*)</div>\s*<div class="newsletter-colophon">',
+            html,
+            flags=re.S,
+        )
+        if match:
+            return match.group(1)
+    return letter.body
+
+
+def callouts(root: Path, letter: Letter) -> dict[str, str]:
+    """Keep / Test / Cut lines already printed in the issue. Nothing is invented."""
+    body = issue_body(root, letter)
+    found: dict[str, str] = {}
+    for key, pattern in _CALLOUT_LABELS:
+        match = pattern.search(body)
+        if match:
+            found[key] = _clip(_plain(match.group(1)))
+    for key, fragment in _QUOTED_CALLS.get(letter.issue, {}).items():
+        if key in found:
+            continue
+        quoted = _quote_text(body, fragment)
+        if quoted:
+            found[key] = quoted
+    for key, name in (("KEEP", "Keep"), ("TEST", "Test"), ("CUT", "Cut")):
+        if key in found:
+            continue
+        match = re.search(rf"<h2[^>]*>\s*{name}\s*</h2>\s*<p>(.*?)</p>", body, flags=re.S | re.I)
+        if match:
+            found[key] = _clip(_plain(match.group(1)))
+    return found
+
+
+def _pills(found: dict[str, str]) -> str:
+    bits = []
+    for key, tone in (("KEEP", "keep"), ("TEST", "test"), ("CUT", "cut")):
+        text = found.get(key)
+        if not text:
+            continue
+        bits.append(f'<span class="call-pill call-pill-{tone}"><b>{key}</b> {esc(text)}</span>')
+    if not bits:
+        return ""
+    return '<p class="call-pills">' + "".join(bits) + "</p>"
+
+
+def card(root: Path, letter: Letter) -> str:
     return (
         '<article class="newsletter-issue-card">'
         f'<p class="newsletter-issue-card-meta">Issue {letter.issue} · {esc(letter.when)}</p>'
         f'<h3><a href="/newsletter/{esc(letter.slug)}.html">{esc(letter.title)}</a></h3>'
-        f"<p>{esc(blurb(letter.dek))}</p></article>"
+        f"<p>{esc(blurb(letter.dek))}</p>"
+        f"{_pills(callouts(root, letter))}</article>"
     )
 
 
-def cards_html(letters: list[Letter]) -> str:
-    return "".join(card(letter) for letter in letters)
+def cards_html(root: Path, letters: list[Letter]) -> str:
+    published = {letter.issue for letter in letters}
+    chunks: list[str] = []
+    for letter in letters:
+        chunks.append(card(root, letter))
+        if letter.issue == 4 and 2 not in published and 3 not in published:
+            chunks.append('<p class="newsletter-gap">Issues 2 and 3 were not published.</p>')
+    if 2 not in published and 3 not in published and 4 not in published:
+        chunks.append('<p class="newsletter-gap">Issues 2 and 3 were not published.</p>')
+    return "".join(chunks)
 
 
 _CHROME = re.compile(
@@ -188,9 +313,10 @@ def chrome_html(older: Letter | None, newer: Letter | None) -> str:
         links.append(_pager_link("prev", older))
     if newer is not None:
         links.append(_pager_link("next", newer))
+    back = '<p class="newsletter-archive-back"><a href="/newsletter/">← All past issues</a></p>'
     nav = '<nav class="newsletter-pager" aria-label="Other issues">' + "".join(links) + "</nav>"
     cta = '<p class="newsletter-subscribe-cta"><a class="button button-blue" href="/subscribe/">Get the free email</a></p>'
-    return "<!-- newsletter-issue-chrome -->" + nav + cta + "<!-- /newsletter-issue-chrome -->"
+    return "<!-- newsletter-issue-chrome -->" + back + nav + cta + "<!-- /newsletter-issue-chrome -->"
 
 
 def apply_chrome(html: str, chrome: str) -> str:
@@ -286,14 +412,73 @@ def sync_archive(root: Path) -> int:
         updated = apply_chrome(strip_donor_verification(existing, letter), chrome_html(older, newer))
         if updated != (dest.read_text(encoding="utf-8") if dest.is_file() else ""):
             dest.write_text(updated, encoding="utf-8")
-    cards = cards_html(letters)
     index = out / "index.html"
-    if index.is_file() and 'class="newsletter-issue-list"' in index.read_text(encoding="utf-8"):
-        index.write_text(apply_cards(index.read_text(encoding="utf-8"), cards), encoding="utf-8")
-    else:
-        index.write_text(_minimal_index(cards), encoding="utf-8")
+    index.write_text(archive_index(root, letters), encoding="utf-8")
     return written
 
 
-def _minimal_index(cards: str) -> str:
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Keep, Test, Cut | AIToolsEssentials</title><link rel="canonical" href="{DOMAIN}/newsletter/"><link rel="stylesheet" href="/css/styles.css"></head><body><main class="newsletter-archive"><div class="newsletter-archive-intro"><p class="newsletter-name">Keep, Test, Cut</p><h1>Past issues.</h1></div><div class="newsletter-issue-list">{cards}</div></main><footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/newsletter/">Keep, Test, Cut</a>{public_colophon_html()}</footer><script src="/js/analytics.js" defer></script></body></html>'''
+def _subscribe_endpoint(root: Path) -> str:
+    path = root / "data" / "newsletter.json"
+    if not path.is_file():
+        return ""
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return ""
+    return str(payload.get("subscribe_endpoint") or "")
+
+
+def archive_index(root: Path, letters: list[Letter]) -> str:
+    from newsletter_hold import subscribe_form
+    from site_chrome import CANONICAL_HEADER
+
+    form = subscribe_form(_subscribe_endpoint(root))
+    cards = cards_html(root, letters)
+    description = "Past Keep, Test, Cut issues, with the keep, test, and cut line from each published letter."
+    return f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{esc(description)}">
+<title>Past issues — Keep, Test, Cut | AIToolsEssentials</title>
+<link rel="canonical" href="{DOMAIN}/newsletter/">
+<meta property="og:title" content="Past issues — Keep, Test, Cut | AIToolsEssentials">
+<meta property="og:description" content="{esc(description)}">
+<meta property="og:url" content="{DOMAIN}/newsletter/">
+<meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+{CANONICAL_HEADER}
+<main>
+<section class="scene scene-dark ledger-mast">
+<div style="max-width:880px;margin:0 auto;padding:72px 28px 36px">
+<p class="newsletter-name">Keep, Test, Cut</p>
+<p class="kicker light">Keep, Test, Cut</p>
+<h1>Past issues.</h1>
+<p class="subhead">Every letter that was actually published. Each card keeps that week’s keep, test, and cut line so you can scan the call before you open it.</p>
+</div>
+</section>
+<section class="scene scene-light">
+<div class="article-shell wide">
+<h2>Get the next letter</h2>
+{form}
+<p><a href="/subscribe/">Subscribe page</a></p>
+<h2>Published issues</h2>
+<div class="newsletter-issue-list">{cards}</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<span>© 2026 AIToolsEssentials</span>
+<a href="/newsletter/">Newsletter</a>
+<a href="/newsletter/">Keep, Test, Cut</a>
+<a href="/subscribe/">Free email</a>
+<a href="/legal/privacy.html">Privacy</a>
+{public_colophon_html()}
+</footer>
+<script src="/js/site.js" defer></script>
+</body>
+</html>
+'''

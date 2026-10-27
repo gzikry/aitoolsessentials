@@ -2255,3 +2255,42 @@ section.scene.scene-dark.ledger-mast .button-ghost-dark:hover {
   border-radius: 6px;
   font: inherit;
 }
+.call-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 0; }
+.call-pill, .trap-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid #E2DFD7;
+  border-radius: 999px;
+  background: #fff;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #111315;
+}
+.call-pill-keep, .trap-pill-rollover { color: #0F6E56; }
+.call-pill-test, .trap-pill-unstated, .trap-pill-other { color: #1E40AF; }
+.call-pill-cut, .trap-pill-expiry90, .trap-pill-lock, .trap-pill-reset { color: #B42318; }
+.trap-pill-annual { color: #111315; }
+.newsletter-issue-card {
+  margin: 0 0 16px;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #E2DFD7;
+  border-radius: 4px;
+}
+.newsletter-gap { color: rgba(17,19,21,.72); }
+.newsletter-archive-back { margin: 0 0 12px; }
+.trap-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.trap-filters button {
+  font: inherit;
+  color: #111315;
+  background: #fff;
+  border: 1px solid #E2DFD7;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.trap-filters button.is-on { color: #fff; background: #111315; border-color: #111315; }
+.trap-tools { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.trap-hit { background: #fff8e8; }
+tr[hidden] { display: none; }

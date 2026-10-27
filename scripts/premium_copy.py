@@ -399,7 +399,7 @@ def homepage_hero_html(whop: dict[str, Any]) -> str:
         <h1><span class="home-line home-appear" data-appear="3">Stop paying for overlapping AI seats.</span> <span class="home-line home-deck home-appear" data-appear="4">The seat that fits the job — not the <em>hype</em>.</span></h1>
         <p class="subhead home-appear" data-appear="4">Real seat math, credit-expiration traps, and side-by-side switch guides tested on production workloads. Dated evidence, not a ranking you can buy.</p>
         {actions}
-        <p class="hero-secondary-links"><a href="#bill-slasher">30-second bill</a><a href="/compare/ai-coding-assistants/">Coding seats</a><a href="/compare/ai-app-builders/">App builders</a><a href="/compare/ai-video-avatar-cost/">Voice &amp; video</a><a href="/compare/automation-task-calculator/">Automation burn</a><a href="/price-changes/">Price changes</a></p>
+        <p class="hero-secondary-links"><a href="#bill-slasher">30-second bill</a><a href="/compare/ai-coding-assistants/">Coding seats</a><a href="/compare/ai-app-builders/">App builders</a><a href="/compare/ai-video-avatar-cost/">Voice &amp; video</a><a href="/compare/automation-task-calculator/">Automation burn</a><a href="/compare/ai-presentation-cost/">Deck cost</a><a href="/pricing-watch/credit-traps/">Credit traps</a><a href="/price-changes/">Price changes</a></p>
       </div>
     </section>'''
 
@@ -417,6 +417,7 @@ def homepage_footer_html() -> str:
         '<footer class="footer" data-footer="slim">'
         "<span>© 2026 AIToolsEssentials</span>"
         '<a href="/tools/index.html">Tools</a>'
+        '<a href="/newsletter/">Newsletter</a>'
         '<a href="/newsletter/">Keep, Test, Cut</a>'
         '<a href="/pricing-watch/">Pricing Watch</a>'
         '<a href="/legal/about.html">About</a>'
@@ -472,6 +473,8 @@ def homepage_learn_html() -> str:
 <a href="/compare/ai-coding-assistants/">Coding assistant cost</a>
 <a href="/compare/ai-video-avatar-cost/">Voice and video minutes</a>
 <a href="/compare/automation-task-calculator/">Automation burn</a>
+<a href="/compare/ai-presentation-cost/">Deck cost</a>
+<a href="/pricing-watch/credit-traps/">Credit traps</a>
 <a href="/articles/">Articles</a>
 <a href="/alternatives/">Alternatives</a>
 </p>
