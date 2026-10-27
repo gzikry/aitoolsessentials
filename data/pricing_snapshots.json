@@ -423,7 +423,7 @@
     },
     "customgpt": {
       "date": "2026-10-27",
-      "digest": "Checked 2026-10-27 at https://customgpt.ai/pricing. Every plan starts with a 7-day free trial; the FAQ says a credit card is required and the selected plan is charged when the trial ends. Standard is ",
+      "digest": "Standard $99/mo ($89/mo annual: 10 agents, 1,000 queries/mo, 5,000 docs/agent, 3 seats); Premium $499/mo ($449/mo annual: 25 agents, 5,000 queries/mo, 20,000 docs/agent, 5 seats); Enterprise custom; 7-day trial requires card.",
       "verified_against": "https://customgpt.ai/pricing"
     }
   },

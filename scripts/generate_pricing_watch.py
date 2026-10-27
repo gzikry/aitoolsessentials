@@ -23,6 +23,49 @@ def _load(root: Path) -> dict[str, Any]:
     return src
 
 
+def pricing_digest(summary: str, limit: int = 200) -> str:
+    """Snapshot text that keeps the sentence stating the plan prices.
+
+    A hard 200-character cut is what left CustomGPT.ai as "Standard is ".
+    When that cut misses a dollar amount, or splits the sentence that contains
+    the first one, keep through the end of that sentence (within a short
+    extension). Summaries that already show a price inside the cap stay on
+    the historical prefix so existing snapshots are not rewritten.
+    """
+    text = " ".join((summary or "").split())
+    if len(text) <= limit:
+        return text
+    window = text[:limit]
+    price_at = text.find("$")
+    if price_at < 0:
+        return window
+    sentence_end = -1
+    for mark in ".!?":
+        pos = text.find(mark, price_at)
+        if pos != -1 and (sentence_end == -1 or pos < sentence_end):
+            sentence_end = pos
+    if sentence_end == -1:
+        return window
+    end = sentence_end + 1
+    if price_at >= limit or (price_at < limit < end <= limit + 280):
+        return text[:end].strip()
+    return window
+
+
+def _lead_now_states_price(previous: str, summary: str, current: str) -> bool:
+    """True when a rewritten summary now leads with prices the stored cut missed.
+
+    Does not touch snapshots whose 200-character prefix is still the stored
+    digest. Those stay as recorded even when a later sentence holds a price.
+    """
+    if "$" in (previous or "") or "$" not in current:
+        return False
+    flat = " ".join((summary or "").split())
+    if previous and flat.startswith(previous):
+        return False
+    return "$" in flat[:200]
+
+
 def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str | None = None) -> int:
     tools_list: list[dict[str, Any]] = tools if tools is not None else json.loads((root / "data/tools.json").read_text())
     today = today or datetime.today().strftime("%Y-%m-%d")
@@ -42,7 +85,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
     changelog = store.setdefault("changes", [])
     for slug, rec in records.items():
         prev = snapshots.get(slug)
-        cur_digest = (rec.get("pricing_summary") or "")[:200]
+        cur_digest = pricing_digest(rec.get("pricing_summary") or "")
         cur_date = rec.get("pricing_checked_date") or ""
         # A change entry is only credible if the re-check moved FORWARD in time and the recorded
         # evidence text actually differs. Two guards, both earned:
@@ -73,6 +116,12 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
         elif cur_date > (prev.get("date") or ""):
             # Same evidence re-confirmed on a later date: advance the date only.
             snapshots[slug] = {"date": cur_date, "digest": cur_digest}
+        elif prev.get("digest") != cur_digest and _lead_now_states_price(prev.get("digest") or "", rec.get("pricing_summary") or "", cur_digest):
+            # Same check date. The stored cut dropped the prices. Refresh the
+            # digest only — this is our snapshot text, not a new vendor check.
+            updated = dict(prev)
+            updated["digest"] = cur_digest
+            snapshots[slug] = updated
     store["updated"] = today
     SNAPSHOT_PATH.write_text(json.dumps(store, indent=2) + "\n")
 
