@@ -107,13 +107,13 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
 <body>
 {HEADER}
 <main>
-<section class="scene scene-dark">
+<section class="scene scene-dark ledger-mast">
   <div style="max-width:920px;margin:0 auto;padding:88px 28px 64px;text-align:center">
     <p class="kicker">Free stack audit · no login · stays on your device</p>
     <h1>Paying twice for AI tools? Find out in two minutes.</h1>
     <p class="subhead">Pick the AI tools you already pay for. Enter what they cost, or mark spend unknown. You get a keep/cut call on each one, the tools that duplicate the same job, and a score for how efficiently you spend. Nothing is submitted to a server.</p>
     <p><a class="button button-blue" href="#sa-app">Start the free audit</a>
-       <a class="button button-ghost-dark" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a></p>
+       <a class="button button-ledger" href="/premium/" style="margin-left:8px">{BUY_PAGE_LABEL}</a></p>
     <p class="sa-note" style="margin-top:18px">Free and instant. Keep, Test, Cut is a separate free email, and Premium is a separate paid option — neither is required for this audit.</p>
   </div>
 </section>
@@ -131,6 +131,19 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     <section class="score-card sa-panel" id="sa-step-1">
       <h2>Select the tools you already have</h2>
       <p>Search the directory or add a custom tool. Limit {catalog["rules"]["max_tools"]} tools so share links stay short.</p>
+      <div class="sa-preset" role="group" aria-label="1-click preset stacks">
+        <p class="sa-note">1-click preset stacks fill published point prices and open the Keep/Cut receipt. Google AI Pro is $19.99, so the generalist stack is $59.99. Agency Automation uses Zapier Team at $69/month billed annually and Notion Plus at $10, which is a limited AI trial.</p>
+        <button class="button button-ledger" type="button" data-preset="vibe">Indie Vibe-Coder ($110/mo)</button>
+        <button class="button button-ledger" type="button" data-preset="creator">Creator Audio &amp; Video ($95/mo)</button>
+        <button class="button button-ledger" type="button" data-preset="agency">Agency Automation ($149/mo)</button>
+        <button class="button button-ledger" type="button" data-preset="chat">Triple-Chat Generalist ($59.99/mo)</button>
+      </div>
+      <label class="sa-field" for="sa-paste">Paste Billing / Receipt Lines</label>
+      <textarea class="sa-paste" id="sa-paste" rows="4" placeholder="OPENAI *CHATGPT PLUS&#10;ANTHROPIC&#10;CURSOR AI"></textarea>
+      <div class="sa-actions">
+        <button class="button button-blue" type="button" id="sa-paste-apply">Match receipt lines</button>
+      </div>
+      <p id="sa-paste-note" class="sa-note"></p>
       <label class="sa-field" for="sa-search">Search tools</label>
       <input class="sa-search" id="sa-search" type="search" placeholder="Search by name or category" autocomplete="off">
       <div id="sa-chips" class="sa-chips" aria-label="Selected tools"></div>
@@ -174,6 +187,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
           <button class="button button-dark" type="button" id="sa-json">Download JSON</button>
           <button class="button button-dark" type="button" id="sa-csv">Download CSV</button>
           <button class="button button-dark" type="button" id="sa-text">Download text</button>
+          <button class="button button-blue" type="button" id="sa-copy-receipt">Copy My Stack Receipt (for X / Reddit)</button>
           <button class="button button-dark" type="button" id="sa-save-local">Save on this device</button>
           <button class="button button-dark" type="button" id="sa-load-local">Load local save</button>
         </div>
@@ -199,6 +213,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
 </body>
 </html>
 '''
+    html = html.replace("button-ghost-dark", "button-ledger")
     out = root / "stack-audit.html"
     out.write_text(html)
     return out

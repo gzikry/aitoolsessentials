@@ -2226,3 +2226,32 @@ section.scene.scene-dark.ledger-mast .button-ghost-dark:hover {
   background: #FFFFFF;
   border-color: #1E40AF;
 }
+.button-ledger {
+  color: #111315;
+  background: #fff;
+  border: 1px solid #E2DFD7;
+  border-radius: 6px;
+  box-shadow: none;
+}
+.button-ledger:hover {
+  color: #1E40AF;
+  background: #fff;
+  border-color: #1E40AF;
+  text-decoration: none;
+}
+.price-alert {
+  margin: 18px 0;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #E2DFD7;
+  border-radius: 6px;
+  color: #111315;
+}
+.price-alert p { margin: 0 0 10px; }
+.price-alert input[type="email"] {
+  margin-left: 8px;
+  padding: 8px 10px;
+  border: 1px solid #E2DFD7;
+  border-radius: 6px;
+  font: inherit;
+}

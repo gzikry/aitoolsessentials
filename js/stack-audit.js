@@ -335,13 +335,140 @@
     }
   }
 
+  var PRESETS = {
+    vibe: {
+      label: "Indie Vibe-Coder ($110/mo)",
+      tools: [
+        { slug: "cursor", name: "Cursor", amount: 30, note: "Cursor Premium is $30/month for new AI users. Plus is $8. Checked 2026-10-13." },
+        { slug: "claude", name: "Claude", amount: 20, note: "Claude Pro month-to-month is $20. The $200 annual prepay is not used here." },
+        { slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." },
+        { slug: "replit-ai", name: "Replit", amount: 20, note: "Replit Core is $20/month. Checked 2026-10-25." },
+        { slug: "github-copilot", name: "GitHub Copilot", amount: 10, note: "GitHub Copilot Pro is $10/month. Checked 2026-10-01." },
+        { slug: "midjourney", name: "Midjourney", amount: 10, note: "Midjourney Basic is $10/month. Checked 2026-10-01." }
+      ]
+    },
+    creator: {
+      label: "Creator Audio & Video ($95/mo)",
+      tools: [
+        { slug: "elevenlabs", name: "ElevenLabs", amount: 22, note: "ElevenLabs Creator list price is $22/month. Checked 2026-09-18." },
+        { slug: "descript", name: "Descript", amount: 24, note: "Descript Hobbyist is $24/month. Checked 2026-09-18." },
+        { slug: "heygen", name: "HeyGen", amount: 29, note: "HeyGen Creator is $29/month. Checked 2026-09-18." },
+        { slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." }
+      ]
+    },
+    agency: {
+      label: "Agency Automation ($149/mo)",
+      tools: [
+        { slug: "zapier-ai", name: "Zapier", amount: 69, note: "Zapier Team is $69/month billed annually. Checked 2026-09-18." },
+        { slug: "make", name: "Make", amount: 21, note: "Make Pro is $21/month at the displayed 10,000-credit tier. Checked 2026-10-01." },
+        { slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." },
+        { slug: "claude", name: "Claude", amount: 20, note: "Claude Pro month-to-month is $20." },
+        { slug: "notion-ai", name: "Notion", amount: 10, note: "Notion Plus is $10/member/month with a limited AI trial. Business, which includes Notion Agent, is $20. Checked 2026-09-18." },
+        { slug: "gamma", name: "Gamma", amount: 9, note: "Gamma Plus is $9/seat/month equivalent, $108/seat billed annually. Checked 2026-10-01." }
+      ]
+    },
+    chat: {
+      label: "Triple-Chat Generalist ($59.99/mo)",
+      tools: [
+        { slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." },
+        { slug: "claude", name: "Claude", amount: 20, note: "Claude Pro month-to-month is $20." },
+        { slug: "gemini", name: "Gemini", amount: 19.99, note: "Google AI Pro is $19.99/month. Checked 2026-09-18." }
+      ]
+    }
+  };
+
+  var RECEIPT_RULES = [
+    { re: /\b(?:OPENAI|CHATGPT)\b/i, slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." },
+    { re: /\b(?:ANTHROPIC|CLAUDE)\b/i, slug: "claude", name: "Claude", amount: 20, note: "Claude Pro month-to-month is $20. The $200 annual prepay is not used here." },
+    { re: /\bCURSOR\b/i, slug: "cursor", name: "Cursor", amount: 30, note: "Cursor Premium is $30/month for new AI users. Plus is $8. Checked 2026-10-13." },
+    { re: /\b(?:VERCEL|V0)\b/i, slug: "v0", name: "v0", amount: 30, note: "v0 Plus is $30 per user per month. Legacy Premium at $20 is closed to new signups. Checked 2026-10-25." },
+    { re: /\bDESCRIPT\b/i, slug: "descript", name: "Descript", amount: 24, note: "Descript Hobbyist is $24/month. Checked 2026-09-18." },
+    { re: /\bELEVEN\s*LABS\b/i, slug: "elevenlabs", name: "ElevenLabs", amount: 22, note: "ElevenLabs Creator list price is $22/month. The $11 first month is a promo. Checked 2026-09-18." },
+    { re: /\bZAPIER\b/i, slug: "zapier-ai", name: "Zapier", amount: null, note: "Professional starts at $19.99/month billed annually. The task pack is unpublished, so spend stays unknown." },
+    { re: /\bMAKE(?:\.COM)?\b/i, slug: "make", name: "Make", amount: 12, note: "Make Core is $12/month at the displayed 10,000-credit tier. Checked 2026-10-01." },
+    { re: /\bHEYGEN\b/i, slug: "heygen", name: "HeyGen", amount: 29, note: "HeyGen Creator is $29/month. Checked 2026-09-18." },
+    { re: /\bSYNTHESIA\b/i, slug: "synthesia", name: "Synthesia", amount: 29, note: "Synthesia Starter is $29/month. Checked 2026-09-18." },
+    { re: /\bLOVABLE\b/i, slug: "lovable", name: "Lovable", amount: 25, note: "Lovable Pro is $25/month. Checked 2026-10-25." },
+    { re: /\bREPLIT\b/i, slug: "replit-ai", name: "Replit", amount: 20, note: "Replit Core is $20/month. Checked 2026-10-25." },
+    { re: /\bGAMMA\b/i, slug: "gamma", name: "Gamma", amount: 9, note: "Gamma Plus is $9/seat/month equivalent, $108/seat billed annually. Checked 2026-10-01." },
+    { re: /\bMIDJOURNEY\b/i, slug: "midjourney", name: "Midjourney", amount: 10, note: "Midjourney Basic is $10/month. Checked 2026-10-01." },
+    { re: /\bNOTION\b/i, slug: "notion-ai", name: "Notion", amount: 20, note: "Notion Business is $20/member/month and includes Notion Agent. Plus is $10 with a limited AI trial. Checked 2026-09-18." },
+    { re: /\bPERPLEXITY\b/i, slug: "perplexity", name: "Perplexity", amount: null, note: "A consumer Pro or Max dollar price is not on the checked page. Spend stays unknown." },
+    { re: /\bWINDSURF\b/i, slug: "c:windsurf", name: "Windsurf", amount: 20, note: "Windsurf Pro is $20/month on the 2026-10-26 pricing check. It is not a directory tool, so this line is custom." },
+    { re: /\bCOPILOT\b/i, slug: "github-copilot", name: "GitHub Copilot", amount: 10, note: "GitHub Copilot Pro is $10/month. Checked 2026-10-01." }
+  ];
+
+  function toolRecord(spec) {
+    var rec = BY_SLUG[spec.slug] || {};
+    var amount = spec.amount == null ? null : finiteAmount(spec.amount);
+    return {
+      slug: spec.slug,
+      name: spec.name || rec.name || spec.slug,
+      spend_kind: amount == null ? "unknown" : "monthly",
+      amount: amount,
+      seats: 1,
+      weekly: true,
+      unique: false,
+      use_cases: normalizeUse(rec.suggested_use_cases || []),
+      capabilities_known: String(spec.slug).indexOf("c:") === 0 ? false : !!rec.capabilities_known,
+      price_confidence: rec.price_confidence || "missing",
+      price_note: spec.note || ""
+    };
+  }
+
+  function toolsFromPreset(id) {
+    var preset = PRESETS[id];
+    if (!preset) return [];
+    return preset.tools.map(toolRecord);
+  }
+
+  function presetMonthly(id) {
+    var preset = PRESETS[id];
+    if (!preset) return null;
+    var sum = 0;
+    preset.tools.forEach(function (tool) { sum += tool.amount; });
+    return Math.round(sum * 100) / 100;
+  }
+
+  function matchReceipt(text) {
+    var found = {};
+    var order = [];
+    function add(spec) {
+      if (!spec || found[spec.slug]) return;
+      found[spec.slug] = toolRecord(spec);
+      order.push(spec.slug);
+    }
+    String(text || "").split(/\r?\n/).forEach(function (line) {
+      if (/\bMICROSOFT\b/i.test(line) && /\bCOPILOT\b/i.test(line) && !/\bGITHUB\b/i.test(line)) {
+        add({ slug: "microsoft-copilot", name: "Microsoft Copilot", amount: null, note: "The checked page does not publish a dependable consumer price. Spend stays unknown." });
+        return;
+      }
+      RECEIPT_RULES.forEach(function (rule) {
+        if (rule.re.test(line)) add(rule);
+      });
+    });
+    return order.map(function (slug) { return found[slug]; });
+  }
+
+  function receiptLine(monthly, count, annual) {
+    var m = (Math.round(Number(monthly) * 100) / 100).toFixed(2);
+    var y = (Math.round(Number(annual) * 100) / 100).toFixed(2);
+    var n = parseInt(count, 10) || 0;
+    return "Audited my AI stack on AIToolsEssentials: $" + m + "/mo across " + n + " tools -> $" + y + "/yr duplicate overlap. https://aitoolsessentials.com/stack-audit.html";
+  }
+
   var Engine = {
     monthlySpend: monthlySpend,
     evaluate: evaluate,
     encodeFragment: encodeFragment,
     decodeFragment: decodeFragment,
     sanitizeName: sanitizeName,
-    overlapPairs: overlapPairs
+    overlapPairs: overlapPairs,
+    PRESETS: PRESETS,
+    toolsFromPreset: toolsFromPreset,
+    presetMonthly: presetMonthly,
+    matchReceipt: matchReceipt,
+    receiptLine: receiptLine
   };
   root.StackAuditEngine = Engine;
   if (typeof module !== "undefined" && module.exports) module.exports = Engine;
@@ -652,6 +779,63 @@
     document.getElementById("sa-json").addEventListener("click", function () { download("stack-audit.json", exportJSON(), "application/json"); });
     document.getElementById("sa-csv").addEventListener("click", function () { download("stack-audit.csv", exportCSV(), "text/csv"); });
     document.getElementById("sa-text").addEventListener("click", function () { download("stack-audit.txt", exportText(), "text/plain"); });
+    document.querySelectorAll("[data-preset]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = btn.getAttribute("data-preset");
+        var tools = toolsFromPreset(id);
+        if (!tools.length) return;
+        markStarted();
+        state.selected = tools.slice(0, MAX_TOOLS);
+        persistSession();
+        showError("");
+        renderGrid();
+        renderChips();
+        renderConfig();
+        renderResults();
+        setStep(3);
+        announce((PRESETS[id] && PRESETS[id].label ? PRESETS[id].label : "Preset") + " loaded.");
+      });
+    });
+    var pasteBtn = document.getElementById("sa-paste-apply");
+    if (pasteBtn) pasteBtn.addEventListener("click", function () {
+      var box = document.getElementById("sa-paste");
+      var matched = matchReceipt(box ? box.value : "");
+      if (!matched.length) return showError("No tools matched those receipt lines.");
+      markStarted();
+      matched.forEach(function (tool) {
+        var idx = state.selected.findIndex(function (item) { return item.slug === tool.slug; });
+        if (idx === -1) {
+          if (state.selected.length >= MAX_TOOLS) return;
+          state.selected.push(tool);
+        } else {
+          state.selected[idx].name = tool.name;
+          state.selected[idx].spend_kind = tool.spend_kind;
+          state.selected[idx].amount = tool.amount;
+          state.selected[idx].weekly = true;
+          state.selected[idx].price_note = tool.price_note;
+        }
+      });
+      persistSession();
+      showError("");
+      renderGrid();
+      renderChips();
+      var note = document.getElementById("sa-paste-note");
+      if (note) {
+        note.textContent = "Matched " + matched.length + ": " + matched.map(function (tool) {
+          var spend = monthlySpend(tool);
+          return tool.name + (spend == null ? " (spend unknown)" : " ($" + spend.toFixed(2) + "/mo)");
+        }).join(", ") + ".";
+      }
+      announce("Receipt lines applied. Continue to spend and use cases to review the amounts.");
+    });
+    var copyReceipt = document.getElementById("sa-copy-receipt");
+    if (copyReceipt) copyReceipt.addEventListener("click", function () {
+      var result = evaluate(state.selected);
+      var text = receiptLine(result.cost.monthly, state.selected.length, result.savings.annual);
+      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+        announce("Stack receipt copied.");
+      }, function () { window.prompt("Copy this receipt:", text); });
+    });
     document.getElementById("sa-save-local").addEventListener("click", function () {
       try {
         localStorage.setItem(LOCAL_KEY, JSON.stringify({ selected: state.selected, savedAt: new Date().toISOString() }));

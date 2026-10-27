@@ -886,6 +886,15 @@
       "affiliate_url": "",
       "public_href": "/go/claude-code/",
       "partner": false
+    },
+    "zapier": {
+      "name": "Zapier",
+      "slug": "zapier",
+      "official": "https://zapier.com/pricing",
+      "destination": "https://zapier.com/pricing?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/zapier/",
+      "partner": false
     }
   }
 }

@@ -159,6 +159,8 @@ def generate_best_ai_tools(root: Path):
         f'<p class="subhead">A revenue-ready comparison page covering {len(tools)} important AI products across assistants, search, creative, coding, automation, meetings, and productivity.</p>'
         '</div></section>'
         '<section class="scene scene-light comparison-section"><div class="article-shell wide">'
+        '<h2>Calculators</h2>'
+        '<p><a href="/compare/ai-coding-assistants/">Coding seats</a>, <a href="/compare/ai-app-builders/">app builders</a>, <a href="/compare/ai-video-avatar-cost/">voice and video minutes</a>, and <a href="/compare/automation-task-calculator/">automation task burn</a>. <a href="/price-changes/">Price changes</a> lists the credit clocks.</p>'
         '<h2>Best AI tools by category</h2>'
         '<p>This is a living shortlist, not a claim that the AI market is finite. AIToolsEssentials will keep expanding and pruning tools based on adoption, buyer intent, practical usefulness, and monetization fit.</p>'
         f'{"".join(cat_rows)}'
