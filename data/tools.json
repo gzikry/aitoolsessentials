@@ -5598,5 +5598,81 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - the workspace does the thing it advertises, with a preset library that removes the hardest part of a motion-transfer job (finding the clip and knowing which photo fills which role), an honest model matrix naming Kling, Wan and Seedance and their resolution ceilings, a visible credit estimate, and a refund policy with real arithmetic behind it. It is held below 4.5 by a free tier that is one short clip, by per-clip costs that run well above the plan cards' own maths, and by output quality we cannot verify from outside without paying. Transparency 3.5/5, and this is what pulls the entry to 3.9: no controller, company or jurisdiction is named anywhere and the governing-law clause is circular; retention carries no period and self-service deletion is switched off; model training is unstated for the photos and clips that are the product's input; processors are named by function except Stripe; and the Terms are dated ten days before the domain existed. Against that, the site discloses non-affiliation with Higgsfield in five places, forbids face swaps and non-consensual impersonation, gates analytics behind a consent control, and publishes a refund calculation rather than a promise - which is why this sits at the bottom of the 3.8-4.2 band for a real but unproven entrant rather than below it."
+  },
+  {
+    "slug": "rapvideo-ai",
+    "name": "RapVideo AI",
+    "category": "Creative",
+    "best_for": "People who want the Hotel Lobby / rap-duo trend video of themselves or a friend without filming anything, plus anyone making a birthday, anniversary, roast or small-business rap from two phone photos, who would rather buy credits per video than take on another monthly AI subscription",
+    "price": "Free preview: some new accounts are offered one short low-resolution preview at the vendor's discretion (no card, no trial on paid plans). Monthly plans, credits reset each month and unused credits expire: Basic $29.90/mo (100 credits, shown on the card as 8 videos), Pro $49.90/mo (200 credits, 16 videos), Agency $99.90/mo (480 credits, 40 videos). Yearly plans renew automatically and are badged 'up to 44% off', but only the Basic yearly figure is in the served HTML ($299/yr for 120 videos, about 17% below monthly); Pro and Agency yearly prices need JavaScript. One-time packs, credits never expire: Single $9.99 (12 credits, 1 video), Trio $19.99 (36 credits, 3 videos), Crew $49 (120 credits, 10 videos), Studio $99 (300 credits, 25 videos), Label $199 (720 credits, 60 videos). A standard 12-second 720p render costs 10 credits; faster Seedance 2.0 tiers cost 8-20 and Seedance 2.5 Ultra up to 93 at 1080p. Failed, timed-out or safety-blocked renders are refunded automatically. USD, charged by Stripe.",
+    "rating": 3.7,
+    "official": "https://rapvideoai.com/",
+    "summary": "RapVideo AI turns one or two uploaded photos into a short vertical rap video: it writes the lyrics around whatever topic you type, generates the beat and the vocals, and renders the people from your photos lip-synced on a stage you pick. The default Hotel Lobby (orange) stage in 'Original remake' mode recreates the real trend recording and choreography with your faces; the other stages make an original AI rap instead. Everything is paid in credits - 10 for a standard 12-second 720p render, more for the faster or higher-resolution Seedance models - either as one-time packs that never expire or as a monthly plan whose credits reset each month. Samples render in about two to three minutes, download as watermark-free MP4 in 9:16, square or widescreen, and a render that fails or is blocked by a safety filter is not charged. The site is a single-purpose studio built around this one job, with roughly 200 trend and guide pages around it.",
+    "use_cases": [
+      "Making the Hotel Lobby / rap-duo trend video with your own or a friend's face, in vertical 9:16 for TikTok, Reels or Shorts",
+      "A birthday, anniversary or friendly roast delivered as a rap instead of a card",
+      "A short promo clip for a small business where the owner 'raps' the offer",
+      "Pet, family or tribute messages assembled from a single photo",
+      "Checking whether a per-video credit pack is cheaper than a monthly AI video subscription for occasional use"
+    ],
+    "pros": [
+      "The legal pages name the processors that actually touch a photo, by company rather than by category: Kie.ai running ByteDance Seedance models for the render, OpenAI for the lyrics, Cloudflare for storage and delivery, Railway for servers and database, Stripe for payment and Google for sign-in - rarer than it should be in this product class",
+      "Training use is stated in the negative in plain words - 'We do not use your photos or videos to train AI models' - and repeated in the ToS as a promise to process uploads only to provide the service",
+      "The likeness and minors rules are written for exactly the abuse this product invites: you must be a person in the photo or have every person's agreement, children only with a parent or guardian, no celebrities or strangers, and no use to impersonate, sexualise or defame anyone",
+      "The refund policy gives real terms: failed, timed-out or safety-blocked renders are refunded automatically, an unused pack is refundable in full inside 7 days and a partly used one for its unused credits, and a subscription charge inside 7 days if none of that period's credits were used",
+      "Non-affiliation is stated twice and specifically - the ToS says 'We are not affiliated with any artist, label or brand mentioned on the Service', and the Hotel Lobby guide names Migos, Quavo, Takeoff, Offset, COLORS and the song's rights holders",
+      "The trend-video risk most sites in this niche hide is disclosed in the FAQ instead: 'Original remake' uses the real Hotel Lobby recording, so 'platforms may mute, limit or remove them', with the New song stages offered as the safe path",
+      "Plan credit expiry is disclosed before purchase, including the unusual yearly rule (one twelfth of the yearly credits each month, expiring monthly), so a buyer can work out the real per-video cost",
+      "No fake scarcity: no countdown timer and no 'limited-time' banner on the pricing page (the 'countdown' strings in the shipped bundle are OTP resend labels), and the free preview is described honestly as at the vendor's discretion"
+    ],
+    "cons": [
+      "No registered company, trading name, postal address, named data controller or governing-law clause appears anywhere - the ToS runs from liability (§10) to changes (§11) to contact (§12) with no jurisdiction at all, and the only identity on the site is the brand name in the footer",
+      "The headline price claim contradicts the site's own numbers: a homepage value card and the pricing page <title> and og:title say 'About $1 a song', while the hero and the FAQ say 'about $2.99 a song on the Basic plan' and the cheapest pack works out at $3.32 a video",
+      "The Basic plan's own video count disagrees with the rest of the site: the pricing card reads '100 credits / month · 8 videos' while the studio line says '10 songs a month for $29.90', and the stated 10-credit standard song divides 100 credits into 10",
+      "Plans and packs are sized at roughly 12 credits a video (36 credits for 3, 120 for 10, 300 for 25, 720 for 60) while the same page says a standard 12-second 720p song is 10 credits, so one page quotes two per-video credit rates",
+      "'Yearly up to 44% off' is advertised without the figures: only the Basic yearly price ($299 for 120 videos, about 17% below the monthly rate) appears in the served HTML, so the 44% claim cannot be checked from the page without switching the JavaScript toggle",
+      "Google Analytics 4 (G-GLWNKQXXM1), Microsoft Clarity (yr9wgy5s80) and PostHog all load on every page - including /privacy-policy, /terms-of-service and /refund-policy themselves - while the privacy policy has no analytics section, no cookie section and no consent gate; 'aggregated usage data' is the only mention",
+      "Retention is a policy rather than a period: photos and videos stay 'until you delete them or ask us to delete' and the AI providers are said to keep processed files 'for a limited time under their own policies', with no length stated",
+      "The 'Original remake' stages recreate the real Hotel Lobby recording and choreography over the user's faces, which the site itself warns platforms may mute, limit or remove; buying those credits does not settle the underlying rights",
+      "The name is nearly identical to a separate live competitor: rapvideo.ai - Roman/Bristol Cloudflare nameservers, Zoho mail, its own credit pricing and its own Wan 3.0/Seedance stack, registered 2026-10-02, three days after this domain - sells the same Hotel Lobby rap-video product as 'RapVideo.ai'. They are not one operator, but a reader searching the name can land on either",
+      "SEO plumbing is thin for a site with roughly 200 pages: sitemap.xml lists only the homepage and llms.txt is a four-line stub"
+    ],
+    "key_features": [
+      "Two-photo intake (one person per photo) or a single photo of both, plus a solo mode",
+      "Four stages - Hotel Lobby (orange), Luxury Lobby, Studio Booth and Street Cypher - in 'Original remake' (the real trend recording) or 'New song' (an original AI rap) mode",
+      "AI lyric writing from a typed topic, names and occasion, in whatever language the topic is written in",
+      "Seedance 2.0 Mini/Fast/Pro and Seedance 2.5 Ultra renders at 480p, 720p and 1080p, 5-15 seconds (up to 30 on Ultra), vertical/square/widescreen",
+      "Per-render credit cost shown before you commit, with automatic refunds for failed, timed-out or safety-blocked renders",
+      "Gift links that split paid credits into shares other people claim into their own accounts",
+      "Watermark-free HD MP4 download, My videos history, credits and billing pages, and zh/es/fr/de locale mirrors"
+    ],
+    "faq": [
+      [
+        "How much does RapVideo AI cost?",
+        "Two ways to buy. One-time packs whose credits never expire: Single $9.99 (12 credits, one video), Trio $19.99 (36 credits, three videos), Crew $49 (120 credits, ten), Studio $99 (300 credits, 25), Label $199 (720 credits, 60). Monthly plans: Basic $29.90 (100 credits, shown as 8 videos), Pro $49.90 (200 credits, 16), Agency $99.90 (480 credits, 40), with plan credits resetting each month. A standard 12-second 720p render is 10 credits; faster and higher-resolution models cost more, up to 93 credits at 1080p on Seedance 2.5 Ultra. Yearly plans are badged 'up to 44% off'; the only yearly figure published without JavaScript is Basic at $299 for 120 videos."
+      ],
+      [
+        "Is it the real Hotel Lobby song?",
+        "Depends on the stage. 'Original remake' uses the real Hotel Lobby recording and choreography with your faces on the two rappers, and the site warns that platforms may mute, limit or remove those videos. The other stages make a 'New song': an original AI rap and beat in a similar energetic style. The vendor states it is independent and not affiliated with Migos, Quavo, Takeoff, Offset, COLORS or the song's rights holders."
+      ],
+      [
+        "Do I have to be in the video, and can I use one photo?",
+        "You need one clear front-facing photo per person, or a single photo of both of you. Solo mode makes a one-person rap. You must be a person in the photo or have every person's agreement, children may only appear with a parent or guardian, and the terms forbid uploading celebrities, public figures or strangers."
+      ],
+      [
+        "Do credits expire, and what happens if a render fails?",
+        "Pack credits never expire. Plan credits arrive each month and expire at the end of that month - including yearly plans, which receive one twelfth of their yearly credits each month. A render that fails, times out or is blocked by the safety filter is refunded automatically; a finished video you simply do not like is not a failed render. Unused pack credits can be refunded within 7 days of purchase."
+      ]
+    ],
+    "trial_checklist": [
+      "Make one video from your own two photos on the default Hotel Lobby stage before buying anything - if the free preview is offered, use it, and check the face likeness on a phone screen rather than a desktop monitor",
+      "Watch the lip-sync on a render with a longer line of lyrics: the hard failure mode for this product class is a face that drifts or a mouth that runs ahead of the vocal",
+      "Decide which stage you actually want first, because 'Original remake' costs 12 credits and carries the platform-removal risk the FAQ describes, while the New song stages cost 10 and do not",
+      "Price the pack you would buy against the monthly plan at your real volume: at 10-12 credits a song, Label is about $3.32 a video while Basic works out near $2.99, so the subscription only wins if you use most of its credits every month",
+      "Note what you cannot get today: there is no refund page for a finished video you dislike, no named company to contract with, and no published retention period on the vendor's side beyond 'until you delete it'"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.4/5 - this is a real, working single-purpose studio rather than a wrapper: it serves finished sample MP4s from its own storage, shows the credit cost of the exact render before you commit, refunds failed renders, and its FAQ answers the awkward questions (the real Hotel Lobby recording, platform takedowns, why you cannot upload your own song). The legal pages are the strongest part of the site: named AI processors, an explicit no-training statement, likeness and minors rules written for this abuse case, and a refund policy with actual windows. Transparency 3.2/5 brings the score down to 3.7 - three of the site's own numbers disagree with each other ('About $1 a song' in a homepage card and the pricing page title against 'about $2.99 a song' and a $3.32 cheapest pack; '8 videos' on the Basic card against '10 songs a month'; plan and pack sizes built on 12 credits a video against a stated 10-credit standard render), a 44%-off yearly badge has no checkable yearly prices behind it, GA4 plus Microsoft Clarity plus PostHog load on the privacy policy that mentions no analytics provider or cookies at all, and no company, controller, address or governing law is named anywhere. A buyer can price the product from this page, but cannot verify the headline saving or learn who they are contracting with."
   }
 ]

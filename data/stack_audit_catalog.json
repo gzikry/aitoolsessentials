@@ -2345,6 +2345,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "rapvideo-ai",
+      "name": "RapVideo AI",
+      "category": "Creative",
+      "official_url": "https://rapvideoai.com/",
+      "review_url": "/tools/rapvideo-ai/",
+      "price_label": "Free preview: some new accounts are offered one short low-resolution preview at the vendor's discretion (no card, no trial on paid plans). Monthly plans, credits reset each month and unused credits expire: Basic $29.90/mo (100 credits, shown on the card as 8 videos), Pro $49.90/mo (200 credits, 16 videos), Agency $99.90/mo (480 credits, 40 videos). Yearly plans renew automatically and are badged 'up to 44% off', but only the Basic yearly figure is in the served HTML ($299/yr for 120 videos, about 17% below monthly); Pro and Agency yearly prices need JavaScript. One-time packs, credits never expire: Single $9.99 (12 credits, 1 video), Trio $19.99 (36 credits, 3 videos), Crew $49 (120 credits, 10 videos), Studio $99 (300 credits, 25 videos), Label $199 (720 credits, 60 videos). A standard 12-second 720p render costs 10 credits; faster Seedance 2.0 tiers cost 8-20 and Seedance 2.5 Ultra up to 93 at 1080p. Failed, timed-out or safety-blocked renders are refunded automatically. USD, charged by Stripe.",
+      "pricing_summary": "Free: one short low-resolution preview for some new accounts, at the vendor's discretion. Monthly plans (credits reset monthly, unused expire): Basic $29.90/mo for 100 credits (card shows 8 videos), Pro $49.90/mo for 200 credits (16 videos), Agency $99.90/mo for 480 credits (40 videos). Yearly: badged 'up to 44% off' and auto-renewing; the only yearly figure in the served HTML is Basic at $299/year for 120 videos (about 17% below the monthly rate, ~$24.92/mo), while Pro and Agency yearly prices render only after the client-side toggle. One-time packs, credits never expire: Single $9.99 (12 credits, 1 video), Trio $19.99 (36 credits, 3 videos), Crew $49 (120 credits, 10 videos), Studio $99 (300 credits, 25 videos), Label $199 (720 credits, 60 videos). Render costs: Seedance 2.0 Mini 5 credits at 480p / 10 at 720p; Fast 8 / 17; Pro 10 / 20 / 50; Seedance 2.5 Ultra 17 / 37 / 93. Standard 12-second 720p song = 10 credits; Original remake stages = 12 credits. Failed, timed-out or safety-blocked renders refunded automatically; unused pack credits refundable inside 7 days. USD via Stripe.",
+      "pricing_url": "https://rapvideoai.com/pricing",
+      "pricing_checked_date": "2026-10-27",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "video",
+        "automation",
+        "local"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

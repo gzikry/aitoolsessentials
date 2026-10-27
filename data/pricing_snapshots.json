@@ -416,6 +416,10 @@
     "genjutsu-ai": {
       "date": "2026-10-26",
       "digest": "Monthly: Starter $29.9 / 800 credits, Pro $49.9 / 1,800, Business $99.9 / 4,000. Yearly: Starter $100.0/yr ($8.3/mo shown) / 2,400 credits, Pro $360.0/yr ($30.0/mo, struck-through $49.9) / 21,600, Business $599.0/yr ($49.9/mo, struck-through $99.9) / 48,000. Pay once, credits never expire: Flex $99 / 2,000, Starter Pack $199.9 / 4,900, Pro Pack $499.9 / 19,900. Free: 18 signup credits, watermarked downloads, weekly check-in up to 60 credits. Refund window 72 hours, pro rata on unused purchased credits, processing fees capped at 6%. Figures captured from the rendered tabs (not present as literals in the served HTML). The annual Starter plan costs ~$0.042/credit against ~$0.037 on the monthly plan, i.e. more per credit for a yearly commitment; the cards' \"up to N videos\" assumes ~18 credits/clip while the AI Video Maker quoted 119 credits for 720p/5s Seedance 2.5 on 2026-10-26."
+    },
+    "rapvideo-ai": {
+      "date": "2026-10-27",
+      "digest": "Free: one short preview for some new accounts, at vendor discretion. Monthly: Basic $29.90/100 credits (card says 8 videos), Pro $49.90/200 (16), Agency $99.90/480 (40); plan credits reset monthly and expire. Yearly badged 'up to 44% off'; only Basic published in served HTML at $299/yr for 120 videos (~17% off), Pro/Agency yearly JS-only. One-time packs, never expire: Single $9.99/12 credits (1 video), Trio $19.99/36 (3), Crew $49/120 (10), Studio $99/300 (25), Label $199/720 (60). Renders: Seedance 2.0 Mini 5 (480p) / 10 (720p), Fast 8/17, Pro 10/20/50, Seedance 2.5 Ultra 17/37/93; standard 12s 720p = 10 credits, Original remake = 12. Failed renders refunded. Unused packs refundable in 7 days. USD via Stripe."
     }
   },
   "changes": [
@@ -621,6 +625,13 @@
       "previous_check": null,
       "new_check": "2026-10-26",
       "note": "Genjutsu AI: first recorded pricing for a new listing, verified 2026-10-26 from the rendered pricing page (monthly, yearly and pay-once tabs)."
+    },
+    {
+      "slug": "rapvideo-ai",
+      "detected": "2026-10-27",
+      "previous_check": null,
+      "new_check": "2026-10-27",
+      "note": "RapVideo AI: first recorded pricing for a new listing, verified 2026-10-27 from the served pricing page and its four locale mirrors; yearly Pro/Agency figures are client-rendered and remain unrecorded."
     }
   ],
   "updated": "2026-10-27"

@@ -869,6 +869,15 @@
       "public_href": "/go/genjutsu-ai/",
       "partner": false
     },
+    "rapvideo-ai": {
+      "name": "RapVideo AI",
+      "slug": "rapvideo-ai",
+      "official": "https://rapvideoai.com/",
+      "destination": "https://rapvideoai.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/rapvideo-ai/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

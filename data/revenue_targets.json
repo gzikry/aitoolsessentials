@@ -1698,5 +1698,26 @@
     "status": "not_started",
     "next_action": "Email the vendor about affiliate or partner terms; no program is published today (/affiliates, /affiliate, /partners, /referral and /ambassador all 404), so ask in the publication reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
     "notes": "Commission economics are unproven at this price ladder: entry is $29.9/month or $99 one-time, so a 20-30% share is single-digit dollars per conversion and the free tier converts on 18 credits. Priority stays low until traffic grows; the realistic commercial conversation is a sponsored placement or a partner deal, not a revenue share on credits."
+  },
+  {
+    "tool_slug": "rapvideo-ai",
+    "tool_name": "RapVideo AI",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/rapvideo-ai/"
+    ],
+    "best_audiences": [
+      "creators chasing the Hotel Lobby / rap-duo trend for TikTok, Reels and Shorts",
+      "people buying novelty birthday, anniversary and roast videos",
+      "small businesses making a short promo rap"
+    ],
+    "status": "not_started",
+    "next_action": "Email alex@imagesv2.ai (the submission contact and a verified working mailbox on the operator's other domain) about affiliate or partner terms; /affiliates and /api/affiliate both return 404 on rapvideoai.com, so a direct ask is the only route.",
+    "notes": "Per-video revenue is small - $3 to $10 a render, or $29.90 to $99.90 a month - so commission per sale is low and the value is trend traffic rather than lifetime spend. Credits are the billing unit and packs never expire, so repeat purchase is not guaranteed. No tracking URL exists and none should be invented."
   }
 ]

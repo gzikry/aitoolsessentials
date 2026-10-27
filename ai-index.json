@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-27",
-  "tools_count": 96,
+  "tools_count": 97,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -707,6 +707,13 @@
       "category": "Video",
       "price": "Free tier: 18 one-time signup credits, watermarked previews and downloads, roughly 3 images or 1 short clip, plus a weekly check-in worth up to 60 credits across the reward cycle. Subscriptions billed monthly: Starter $29.9 for 800 credits/month, Pro $49.9 for 1,800, Business $99.9 for 4,000. Billed yearly (the price printed on the card): Starter $100.0 a year, shown as $8.3/month, 2,400 credits/year; Pro $360.0 a year, shown as $30.0/month against a struck-through $49.9, 21,600 credits/year; Business $599.0 a year, shown as $49.9/month against a struck-through $99.9, 48,000 credits/year. One-time packs under the Pay once tab, credits never expire: Flex $99 for 2,000 credits, Starter Pack $199.9 for 4,900, Pro Pack $499.9 for 19,900. Subscription credits expire each period; card prices are USD before tax. Refund requests within 72 hours, calculated pro rata on unused purchased credits minus actual non-returned processing fees capped at 6% of the order. Read on 2026-10-26 from the rendered /pricing page on all three tabs; the plan figures are not literals in the served HTML, so they were captured from the rendered page rather than a price-token sweep.",
       "url": "https://aitoolsessentials.com/tools/genjutsu-ai/"
+    },
+    {
+      "name": "RapVideo AI",
+      "slug": "rapvideo-ai",
+      "category": "Creative",
+      "price": "Free preview: some new accounts are offered one short low-resolution preview at the vendor's discretion (no card, no trial on paid plans). Monthly plans, credits reset each month and unused credits expire: Basic $29.90/mo (100 credits, shown on the card as 8 videos), Pro $49.90/mo (200 credits, 16 videos), Agency $99.90/mo (480 credits, 40 videos). Yearly plans renew automatically and are badged 'up to 44% off', but only the Basic yearly figure is in the served HTML ($299/yr for 120 videos, about 17% below monthly); Pro and Agency yearly prices need JavaScript. One-time packs, credits never expire: Single $9.99 (12 credits, 1 video), Trio $19.99 (36 credits, 3 videos), Crew $49 (120 credits, 10 videos), Studio $99 (300 credits, 25 videos), Label $199 (720 credits, 60 videos). A standard 12-second 720p render costs 10 credits; faster Seedance 2.0 tiers cost 8-20 and Seedance 2.5 Ultra up to 93 at 1080p. Failed, timed-out or safety-blocked renders are refunded automatically. USD, charged by Stripe.",
+      "url": "https://aitoolsessentials.com/tools/rapvideo-ai/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
