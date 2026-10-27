@@ -846,10 +846,10 @@
       "name": "Synthesia",
       "slug": "synthesia",
       "official": "https://www.synthesia.io/",
-      "destination": "https://www.synthesia.io/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
-      "affiliate_url": "",
+      "destination": "https://www.synthesia.io/?via=george-zikry",
+      "affiliate_url": "https://www.synthesia.io/?via=george-zikry",
       "public_href": "/go/synthesia/",
-      "partner": false
+      "partner": true
     },
     "trybestspecs": {
       "name": "TryBestSpecs",
@@ -877,6 +877,15 @@
       "affiliate_url": "",
       "public_href": "/go/rapvideo-ai/",
       "partner": false
+    },
+    "customgpt": {
+      "name": "CustomGPT.ai",
+      "slug": "customgpt",
+      "official": "https://customgpt.ai/",
+      "destination": "https://customgpt.ai/?fpr=george-881fd5",
+      "affiliate_url": "https://customgpt.ai/?fpr=george-881fd5",
+      "public_href": "/go/customgpt/",
+      "partner": true
     },
     "windsurf": {
       "name": "Windsurf",

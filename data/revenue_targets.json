@@ -1428,14 +1428,18 @@
     "category": "Video",
     "recommended_networks_to_check": [],
     "search_queries": [],
-    "target_pages": [],
+    "target_pages": [
+      "/tools/synthesia/",
+      "/go/synthesia/",
+      "/compare/ai-video-avatar-cost/"
+    ],
     "best_audiences": [
       "AI tool buyers",
       "workflow-specific buyers"
     ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
+    "status": "approved",
+    "next_action": "Approved 2026-10-27. Public CTAs use /go/synthesia/, which holds https://www.synthesia.io/?via=george-zikry. No commission rate was supplied, so none is recorded. Re-verify the hop on each sweep.",
+    "notes": "Approved 2026-10-27. Do not invent a commission rate. The wired URL is the vendor-issued via link. Editorial score unchanged."
   },
   {
     "tool_slug": "tarotai-chat",
@@ -1719,5 +1723,26 @@
     "status": "not_started",
     "next_action": "Email alex@imagesv2.ai (the submission contact and a verified working mailbox on the operator's other domain) about affiliate or partner terms; /affiliates and /api/affiliate both return 404 on rapvideoai.com, so a direct ask is the only route.",
     "notes": "Per-video revenue is small - $3 to $10 a render, or $29.90 to $99.90 a month - so commission per sale is low and the value is trend traffic rather than lifetime spend. Credits are the billing unit and packs never expire, so repeat purchase is not guaranteed. No tracking URL exists and none should be invented."
+  },
+  {
+    "tool_slug": "customgpt",
+    "tool_name": "CustomGPT.ai",
+    "priority": "medium",
+    "category": "AI Agents",
+    "recommended_networks_to_check": [
+      "FirstPromoter"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/customgpt/",
+      "/go/customgpt/"
+    ],
+    "best_audiences": [
+      "teams putting a chatbot on their own documents",
+      "support and knowledge-base buyers comparing query caps"
+    ],
+    "status": "approved",
+    "next_action": "Approved 2026-10-27. Public CTAs use /go/customgpt/, which holds https://customgpt.ai/?fpr=george-881fd5. The public program page lists 15%, 18%, and 20% tiers; this account's tier was not stated on approval, so do not report a single rate.",
+    "notes": "Approved 2026-10-27 via FirstPromoter. Program page: https://customgpt.ai/partners/. Do not invent a tier. The editorial score is from the 2026-10-27 pricing page and is not part of the approval."
   }
 ]

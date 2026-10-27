@@ -5674,5 +5674,63 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.4/5 - this is a real, working single-purpose studio rather than a wrapper: it serves finished sample MP4s from its own storage, shows the credit cost of the exact render before you commit, refunds failed renders, and its FAQ answers the awkward questions (the real Hotel Lobby recording, platform takedowns, why you cannot upload your own song). The legal pages are the strongest part of the site: named AI processors, an explicit no-training statement, likeness and minors rules written for this abuse case, and a refund policy with actual windows. Transparency 3.2/5 brings the score down to 3.7 - three of the site's own numbers disagree with each other ('About $1 a song' in a homepage card and the pricing page title against 'about $2.99 a song' and a $3.32 cheapest pack; '8 videos' on the Basic card against '10 songs a month'; plan and pack sizes built on 12 credits a video against a stated 10-credit standard render), a 44%-off yearly badge has no checkable yearly prices behind it, GA4 plus Microsoft Clarity plus PostHog load on the privacy policy that mentions no analytics provider or cookies at all, and no company, controller, address or governing law is named anywhere. A buyer can price the product from this page, but cannot verify the headline saving or learn who they are contracting with."
+  },
+  {
+    "slug": "customgpt",
+    "name": "CustomGPT.ai",
+    "category": "AI Agents",
+    "best_for": "a no-code agent on their own documents, with a published query cap and a document limit, who can judge answer quality during the 7-day card-required trial",
+    "price": "Standard $99/month or $89/month billed annually (10 agents, 1,000 queries/month, 5,000 documents per agent, 60 million words, 3 seats). Premium $499/month or $449/month billed annually (25 agents, 5,000 queries/month, 20,000 documents per agent, 300 million words, 5 seats, auto-sync, branding removal). Enterprise custom. Every published plan starts with a 7-day trial that requires a credit card and then charges the selected plan. Checked 2026-10-27.",
+    "rating": 3.3,
+    "official": "https://customgpt.ai/",
+    "summary": "CustomGPT.ai sells no-code agents built on a customer's own documents. The pricing page checked on 2026-10-27 lists Standard at $99/month ($89 billed annually) and Premium at $499/month ($449 billed annually), plus a custom Enterprise plan. Both published tiers start with a 7-day trial that requires a credit card and charges the selected plan when the trial ends. This listing records those published limits. It does not treat the affiliate approval as a product score, and no hands-on result is published.",
+    "use_cases": [
+      "A support or help-center agent grounded in the team's own documents",
+      "Indexing a business website, helpdesk, or knowledge base, which the comparison table lists on Standard",
+      "A small team share: 3 seats on Standard or 5 on Premium",
+      "Checking, during the 7-day trial, whether answers cite the uploaded documents before the card is charged"
+    ],
+    "pros": [
+      "The pricing page publishes concrete limits — agents, documents per agent, words stored, and queries per month — instead of a single unnamed seat",
+      "Annual billing is stated as 10% off, and the comparison table prints the annual equivalents: Standard $89/month and Premium $449/month",
+      "Citations and sources are listed as included on Standard, Premium, and Enterprise",
+      "The pricing page's organization schema names CustomGPT Inc., founder Alden Do Rosario, and a Needham, Massachusetts street address",
+      "A public affiliate program page exists at /partners/ and states its commission ladder, cookie windows, and PayPal payout rule"
+    ],
+    "cons": [
+      "The 7-day trial requires a credit card, and the pricing FAQ says the selected plan is charged automatically when the trial ends",
+      "Premium is five times the Standard monthly price, and branding removal plus website auto-sync are listed on Premium, not Standard",
+      "Extra queries are listed at $375/month for 2,500 queries, so going past the included cap is expensive relative to the $99 plan",
+      "The comparison table says 90+ languages and the FAQ on the same page says 92+; this record does not pick one",
+      "The page says responses are not used for training and that SOC 2 Type 2 and GDPR are included. Those lines were not checked against the privacy policy text in this pass",
+      "Refunds, per the pricing FAQ, apply only to the current subscription charge, not to prior-month overages or added charges",
+      "No hands-on result is published, so answer quality on a real document set is unassessed"
+    ],
+    "key_features": [
+      "Standard: 10 agents, 1,000 queries/month, 5,000 documents per agent, 60 million words, 3 team members, RAG API",
+      "Premium: 25 agents, 5,000 queries/month, 20,000 documents per agent, 300 million words, 5 team members, website auto-sync, remove CustomGPT.ai branding",
+      "Enterprise: custom limits, with SSO, role-based access, and a data processing agreement listed on that tier",
+      "7-day trial of the selected Standard or Premium plan",
+      "Citations listed on every published plan",
+      "Add-ons on the same page: 2,500 extra queries for $375/month, 300 million extra words for $300/month, 100,000 extra documents for $100/month, 25 extra agents for $100/month, 5 extra seats for $100/month"
+    ],
+    "faq": [
+      [
+        "How much does CustomGPT.ai cost?",
+        "The pricing FAQ checked on 2026-10-27 says Standard is $99 a month (10 agents and 1,000 queries) and Premium is $499 a month (25 agents and 5,000 queries), with 10% off when billed annually ($89 and $449). Enterprise is custom. Both published tiers start with a 7-day trial."
+      ],
+      [
+        "Does the free trial charge a card?",
+        "Yes. The pricing FAQ says a credit card is required to start the trial, and that the selected plan is charged automatically when the 7 days end. Cancel from the billing page before then if you stop."
+      ],
+      [
+        "What happens at the query limit?",
+        "The pricing FAQ says agents stop responding to new queries when the monthly query limit is reached. A query already in progress still completes. Standard includes 1,000 queries a month and Premium 5,000. The same page lists 2,500 extra queries at $375/month."
+      ]
+    ],
+    "trial_checklist": "Use the 7-day trial on one real document set you already trust, not a demo corpus. Before the card is charged, check whether answers cite the document you uploaded, what the agent says when the documents do not cover the question, and whether 1,000 Standard queries covers a normal week. Cancel from the billing page before day 7 if you stop, because the pricing FAQ says the selected plan is charged automatically when the trial ends. Do not assume the $99 plan includes branding removal or website auto-sync; the comparison table puts those on Premium.",
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Editorial reading of the public pricing page on 2026-10-27, not a hands-on result, and the FirstPromoter approval is not part of the mark. Job fit 4 — the page describes no-code agents on the customer's own documents, with a per-agent document cap, an account-level word store, and a monthly query cap. Output quality 3 — citations are listed as included, but this page did not run a document set, and the page's anti-hallucination ranking is the vendor's claim. Adoption 3 — a 7-day trial is stated, and it requires a credit card that the FAQ says is charged automatically when the trial ends. Cost 3 — Standard is $99/month ($89 billed annually) and the next published tier is Premium at $499/month ($449 annually), with extra queries listed at $375/month. Held at 3.3."
   }
 ]

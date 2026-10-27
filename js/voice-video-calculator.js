@@ -251,7 +251,7 @@
           expiry: "The checked pricing summary does not state a credit rollover rule.",
           note: "Checked " + CHECKED.synthesia + ": the pricing text puts unlimited Personal Avatars on Enterprise, which is custom. Starter is $29/month with 1,200 credits when you are not pricing a personal avatar. This page does not invent a clone add-on.",
           href: "/go/synthesia/",
-          rel: "external noopener"
+          rel: "sponsored nofollow noopener"
         })
         : creditRow({
           slug: "synthesia",
@@ -261,7 +261,7 @@
           expiry: "The checked pricing summary does not state a credit rollover rule.",
           note: "Checked " + CHECKED.synthesia + ": Basic $0 / 1,200 credits a month, Starter $29 / 1,200 credits, Creator $89 / 3,600 credits. No credit-per-minute rate is in that summary.",
           href: "/go/synthesia/",
-          rel: "external noopener"
+          rel: "sponsored nofollow noopener"
         }),
       runwayRow(generatedSeconds),
       midjourneyRow(demanded, clone)
