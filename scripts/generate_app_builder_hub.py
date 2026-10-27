@@ -240,6 +240,8 @@ def generate(root: Path) -> Path:
 <div class="faq-list">{_faq_html()}</div>
 
 <p>Issue 7 of Keep, Test, Cut, 27 Oct 2026, walks through the same check. <a href="/newsletter/2026-w44.html">Read the letter</a>. Then run the <a href="/stack-audit.html">Stack Audit</a> for the rest of the card.</p>
+<p><a href="/go/v0/">Try v0</a> · <a href="/go/bolt-new/">Try Bolt.new</a> · <a href="/go/lovable/">Try Lovable</a> · <a href="/go/replit-ai/">Try Replit</a></p>
+{__import__('ledger_offers').receipt_footer_html()}
 </div>
 </section>
 </main>

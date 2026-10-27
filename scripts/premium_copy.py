@@ -447,6 +447,8 @@ def homepage_learn_html() -> str:
 </div>
 <p class="home-learn-more">
 <a href="/pricing-watch/">Pricing Watch</a>
+<a href="/price-changes/">Price changes</a>
+<a href="/compare/ai-coding-assistants/">Coding assistant cost</a>
 <a href="/articles/">Articles</a>
 <a href="/alternatives/">Alternatives</a>
 </p>

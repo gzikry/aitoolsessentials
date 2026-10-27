@@ -981,6 +981,7 @@ def _homepage_scripts(_html: str) -> str:
     """Stable script block so a second enhance_homepage pass is a no-diff."""
     return (
         '<script src="js/site.js" defer></script>'
+        '<script src="/js/homepage-bill-slasher.js" defer></script>'
         '<script src="/js/cookie-consent.js" defer></script>'
         '<script src="js/analytics.js" defer></script>'
     )
@@ -1057,6 +1058,63 @@ def apply_homepage_critical_head(html: str, root: Path) -> str:
     return html[: head_open.end()] + homepage_critical_head() + html[head_open.end():]
 
 
+def homepage_bill_slasher_html(root: Path) -> str:
+    """Ivory receipt under the hero. A second email form, not a second #subscribe."""
+    from newsletter_hold import subscribe_endpoint
+
+    from ledger_offers import DISCLOSURE, receipt_footer_html
+
+    cfg_path = root / "data" / "newsletter.json"
+    endpoint = ""
+    if cfg_path.exists():
+        endpoint = subscribe_endpoint(str(json.loads(cfg_path.read_text()).get("subscribe_endpoint") or ""))
+    if endpoint:
+        form = (
+            f'<form id="bill-cut-sheet" method="post" action="{endpoint}">'
+            "<p><label>Email <input type=\"email\" name=\"email\" autocomplete=\"email\" required></label></p>"
+            '<p class="subscribe-honeypot"><label>Company website <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></p>'
+            '<p><button class="button button-blue" type="submit">Email me the cut sheet</button></p>'
+            "</form>"
+        )
+    else:
+        form = '<p>Email <a href="mailto:aitoolsessentials@gmail.com">aitoolsessentials@gmail.com</a> for the cut sheet.</p>'
+    seats = (
+        ("chatgpt", "ChatGPT Plus $20"),
+        ("claude", "Claude Pro $20"),
+        ("claude-max", "Claude Code Max $100"),
+        ("claude-code", "Claude Code $20"),
+        ("cursor", "Cursor Pro $20"),
+        ("copilot", "GitHub Copilot $10"),
+        ("windsurf", "Windsurf $15"),
+        ("v0", "v0 $20"),
+        ("bolt", "Bolt.new $25"),
+        ("lovable", "Lovable $25"),
+        ("replit", "Replit Core $20"),
+        ("perplexity", "Perplexity Pro $20"),
+        ("midjourney", "Midjourney $10"),
+        ("elevenlabs", "ElevenLabs $22"),
+        ("descript", "Descript $24"),
+        ("notion", "Notion AI $10"),
+    )
+    boxes = "".join(
+        f'<label><input type="checkbox" name="bill-seat" value="{value}"> {label}</label>'
+        for value, label in seats
+    )
+    return (
+        '<section class="ledger-sheet" id="bill-slasher-section" aria-labelledby="bill-slasher-heading">'
+        '<p class="ledger-kicker">30-second bill</p>'
+        '<h2 id="bill-slasher-heading">What are you paying for twice?</h2>'
+        "<p>Tap the seats on the card. Overlap waste is 12 times the extra seat in the same job. "
+        "Grandfathered prices stay on this receipt. New-buyer list prices are on the calculators.</p>"
+        f'<form id="bill-slasher"><div class="ledger-seats">{boxes}</div></form>'
+        '<div id="bill-result" aria-live="polite"></div>'
+        f"<p>{DISCLOSURE}</p>"
+        + form
+        + receipt_footer_html()
+        + "</section>"
+    )
+
+
 def slim_homepage_html(html: str, root: Path) -> str:
     """Rebuild homepage body to hero + one Premium band + subscribe + slim chrome."""
     load_whop_from_integrations(root)
@@ -1072,6 +1130,8 @@ def slim_homepage_html(html: str, root: Path) -> str:
         + homepage_header_html()
         + "\n\n  <main>\n"
         + homepage_hero_html(_whop_dict())
+        + "\n"
+        + homepage_bill_slasher_html(root)
         + '\n<div class="home-rest">\n'
         + homepage_learn_html()
         + homepage_band_html(_whop_dict()).rstrip()

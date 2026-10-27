@@ -97,6 +97,12 @@ def sponsored_href_needles(root: Path) -> tuple[str, ...]:
         "/go/nous/",
         "portal.nousresearch.com/r/",
     ]
+    for slug, prog in approved_programs(root).items():
+        public = (prog.get("public_href") or f"/go/{slug}/").strip()
+        if not public.endswith("/"):
+            public += "/"
+        if public not in needles:
+            needles.append(public)
     for prog in approved_programs(root).values():
         for url in (
             public_affiliate_href(prog),

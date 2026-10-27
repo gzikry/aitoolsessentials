@@ -5,7 +5,6 @@ when run as a function; can also run standalone."""
 import json
 import re
 from pathlib import Path
-from urllib.parse import urlparse
 
 DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
@@ -22,16 +21,7 @@ def _source_record(root: Path, slug: str):
     return next((x for x in data.get('tools', []) if x.get('slug') == slug), None)
 
 
-def _same_host(left: str, right: str) -> bool:
-    def host(url: str) -> str:
-        return urlparse(url).netloc.replace('www.', '').lower()
-    try:
-        return bool(left) and bool(right) and host(left) == host(right)
-    except Exception:
-        return False
-
-
-def _official_source_html(record, prog=None) -> str:
+def _official_source_html(record, _prog=None) -> str:
     if not record:
         return '<div class="official-source-card pending"><span>Source status</span><strong>Official verification pending</strong><p>Verify the vendor pricing and policy pages before purchasing.</p></div>'
     labels = [('Official pricing', 'pricing_url'), ('Product documentation', 'docs_url'), ('Privacy / data use', 'privacy_url'), ('Rights / terms', 'rights_url')]
@@ -41,11 +31,6 @@ def _official_source_html(record, prog=None) -> str:
         if not href:
             continue
         rel = 'external noopener'
-        if label == 'Official pricing' and prog:
-            aff = public_affiliate_href(prog)
-            if aff.startswith('http') and _same_host(aff, href):
-                href = aff
-                rel = 'sponsored noopener nofollow'
         link_bits.append(f'<a href="{href}" target="_blank" rel="{rel}">{label} ↗</a>')
     links = ''.join(link_bits)
     unresolved = ''.join(f'<li>{x}</li>' for x in record.get('unresolved_claims', []))
@@ -191,6 +176,8 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
         comp_html += f'<a class="text-link" href="../../comparisons/{fname}">{label}</a><br>\n'
     if slug in {'v0', 'bolt-new', 'lovable', 'replit-ai'}:
         comp_html = '<a class="text-link" href="/compare/ai-app-builders/">v0 vs Bolt.new vs Lovable vs Replit</a><br>\n' + comp_html
+    if slug in {'cursor', 'github-copilot', 'claude'}:
+        comp_html = '<a class="text-link" href="/compare/ai-coding-assistants/">Cursor, Claude Code, Copilot, and Windsurf prices</a><br>\n' + comp_html
     if not comp_html:
         comp_html = '<a class="text-link" href="../../comparisons/best-ai-tools.html">All AI tool comparisons</a>\n'
 
@@ -307,6 +294,10 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     app_builder_block = ''
     if slug in {'v0', 'bolt-new', 'lovable', 'replit-ai'}:
         app_builder_block = '''<section class="score-card"><span>App-builder seats</span><h2>Price the duplicate seat before it renews.</h2><p>Legacy v0 Premium is $20 a month and closed to new signups. Replit no longer lists a free Starter tier. Bolt.new Pro is $25 a month and Lovable Pro is $25 a month. Keep one paid builder, or test the free tiers first.</p><p><a class="button button-blue" href="/compare/ai-app-builders/">Open the credit-burn calculator</a></p></section>\n'''
+
+    coding_calc_block = ''
+    if slug in {'cursor', 'github-copilot', 'claude'}:
+        coding_calc_block = '''<section class="score-card"><span>Coding seats</span><h2>Price the coding seat before the other one renews.</h2><p>Cursor, Claude Code, GitHub Copilot, and Windsurf do not publish a dollar per prompt. The calculator picks the published plan for the workload and leaves overage at $0.</p><p><a class="button button-blue" href="/compare/ai-coding-assistants/">Open the coding-assistant calculator</a></p></section>\n'''
 
     visit_href = official
     visit_rel = 'external noopener nofollow'
@@ -437,6 +428,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 
 {automation_decoder_block}
 {app_builder_block}
+{coding_calc_block}
 </main>
 <footer class="footer">
 <span>© 2026 AIToolsEssentials</span>

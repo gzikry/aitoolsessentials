@@ -1,0 +1,882 @@
+{
+  "utm": {
+    "utm_source": "aitoolsessentials",
+    "utm_medium": "calculator",
+    "utm_campaign": "keep_test_cut"
+  },
+  "links": {
+    "botloadout": {
+      "name": "BotLoadout",
+      "slug": "botloadout",
+      "official": "https://botloadout.com/",
+      "destination": "https://botloadout.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/botloadout/",
+      "partner": false
+    },
+    "catch-ai": {
+      "name": "Catch",
+      "slug": "catch-ai",
+      "official": "https://www.catchagent.ai/",
+      "destination": "https://www.catchagent.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/catch-ai/",
+      "partner": false
+    },
+    "hermes-agent": {
+      "name": "Hermes Agent",
+      "slug": "hermes-agent",
+      "official": "https://hermes-agent.nousresearch.com/docs/",
+      "destination": "https://portal.nousresearch.com/r/george-zikry",
+      "affiliate_url": "https://portal.nousresearch.com/r/george-zikry",
+      "public_href": "/go/nous/",
+      "partner": true
+    },
+    "openclaw": {
+      "name": "OpenClaw",
+      "slug": "openclaw",
+      "official": "https://docs.openclaw.ai/",
+      "destination": "https://docs.openclaw.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/openclaw/",
+      "partner": false
+    },
+    "robylon": {
+      "name": "Robylon",
+      "slug": "robylon",
+      "official": "https://www.robylon.ai/",
+      "destination": "https://www.robylon.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/robylon/",
+      "partner": false
+    },
+    "typingmind": {
+      "name": "TypingMind",
+      "slug": "typingmind",
+      "official": "https://www.typingmind.com/",
+      "destination": "https://www.typingmind.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/typingmind/",
+      "partner": false
+    },
+    "adobe-enhance-speech": {
+      "name": "Adobe Podcast",
+      "slug": "adobe-enhance-speech",
+      "official": "https://podcast.adobe.com/en/plans",
+      "destination": "https://podcast.adobe.com/en/plans?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/adobe-enhance-speech/",
+      "partner": false
+    },
+    "descript": {
+      "name": "Descript",
+      "slug": "descript",
+      "official": "https://www.descript.com/",
+      "destination": "https://get.descript.com/wvafmtthtkp5",
+      "affiliate_url": "https://get.descript.com/wvafmtthtkp5",
+      "public_href": "/go/descript/",
+      "partner": true
+    },
+    "elevenlabs": {
+      "name": "ElevenLabs",
+      "slug": "elevenlabs",
+      "official": "https://elevenlabs.io/",
+      "destination": "https://try.elevenlabs.io/xs6witq7izqe",
+      "affiliate_url": "https://try.elevenlabs.io/xs6witq7izqe",
+      "public_href": "/go/elevenlabs/",
+      "partner": true
+    },
+    "riverside-fm": {
+      "name": "Riverside",
+      "slug": "riverside-fm",
+      "official": "https://riverside.com/",
+      "destination": "https://riverside.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/riverside-fm/",
+      "partner": false
+    },
+    "speechify": {
+      "name": "Speechify",
+      "slug": "speechify",
+      "official": "https://speechify.com/",
+      "destination": "https://speechify.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/speechify/",
+      "partner": false
+    },
+    "suno": {
+      "name": "Suno",
+      "slug": "suno",
+      "official": "https://suno.com",
+      "destination": "https://suno.com?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/suno/",
+      "partner": false
+    },
+    "tunii": {
+      "name": "Tunii",
+      "slug": "tunii",
+      "official": "https://tunii.net/",
+      "destination": "https://tunii.net/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/tunii/",
+      "partner": false
+    },
+    "udio": {
+      "name": "Udio",
+      "slug": "udio",
+      "official": "https://udio.com",
+      "destination": "https://udio.com?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/udio/",
+      "partner": false
+    },
+    "words-into-music": {
+      "name": "Words into Music",
+      "slug": "words-into-music",
+      "official": "https://wordsintomusic.com/",
+      "destination": "https://wordsintomusic.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/words-into-music/",
+      "partner": false
+    },
+    "browse-ai": {
+      "name": "Browse AI",
+      "slug": "browse-ai",
+      "official": "https://www.browse.ai/",
+      "destination": "https://www.browse.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/browse-ai/",
+      "partner": false
+    },
+    "make": {
+      "name": "Make",
+      "slug": "make",
+      "official": "https://www.make.com/",
+      "destination": "https://www.make.com/en/register?pc=aitoolsessentials",
+      "affiliate_url": "https://www.make.com/en/register?pc=aitoolsessentials",
+      "public_href": "/go/make/",
+      "partner": true
+    },
+    "n8n": {
+      "name": "n8n",
+      "slug": "n8n",
+      "official": "https://n8n.io/",
+      "destination": "https://n8n.io/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/n8n/",
+      "partner": false
+    },
+    "whop-cli": {
+      "name": "Whop CLI",
+      "slug": "whop-cli",
+      "official": "https://whop.com/",
+      "destination": "https://whop.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/whop-cli/",
+      "partner": false
+    },
+    "zapier-ai": {
+      "name": "Zapier AI",
+      "slug": "zapier-ai",
+      "official": "https://zapier.com/ai",
+      "destination": "https://zapier.com/ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/zapier-ai/",
+      "partner": false
+    },
+    "adobe-firefly": {
+      "name": "Adobe Firefly",
+      "slug": "adobe-firefly",
+      "official": "https://www.adobe.com/products/firefly.html",
+      "destination": "https://www.adobe.com/products/firefly.html?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/adobe-firefly/",
+      "partner": false
+    },
+    "aibase": {
+      "name": "AIBase",
+      "slug": "aibase",
+      "official": "https://aibase.art/",
+      "destination": "https://aibase.art/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/aibase/",
+      "partner": false
+    },
+    "beadpattern": {
+      "name": "BeadPattern",
+      "slug": "beadpattern",
+      "official": "https://beadpattern.net/",
+      "destination": "https://beadpattern.net/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/beadpattern/",
+      "partner": false
+    },
+    "canva-ai": {
+      "name": "Canva AI",
+      "slug": "canva-ai",
+      "official": "https://www.canva.com/ai/",
+      "destination": "https://www.canva.com/ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/canva-ai/",
+      "partner": false
+    },
+    "copy-ai": {
+      "name": "Copy.ai",
+      "slug": "copy-ai",
+      "official": "https://www.copy.ai/",
+      "destination": "https://www.copy.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/copy-ai/",
+      "partner": false
+    },
+    "ideogram": {
+      "name": "Ideogram",
+      "slug": "ideogram",
+      "official": "https://ideogram.ai",
+      "destination": "https://ideogram.ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/ideogram/",
+      "partner": false
+    },
+    "imagesv2": {
+      "name": "ImagesV2",
+      "slug": "imagesv2",
+      "official": "https://imagesv2.ai/",
+      "destination": "https://imagesv2.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/imagesv2/",
+      "partner": false
+    },
+    "jasper": {
+      "name": "Jasper",
+      "slug": "jasper",
+      "official": "https://www.jasper.ai/",
+      "destination": "https://www.jasper.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/jasper/",
+      "partner": false
+    },
+    "leonardo-ai": {
+      "name": "Leonardo AI",
+      "slug": "leonardo-ai",
+      "official": "https://leonardo.ai/",
+      "destination": "https://leonardo.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/leonardo-ai/",
+      "partner": false
+    },
+    "midjourney": {
+      "name": "Midjourney",
+      "slug": "midjourney",
+      "official": "https://www.midjourney.com/",
+      "destination": "https://www.midjourney.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/midjourney/",
+      "partner": false
+    },
+    "retouchia": {
+      "name": "Retouchia",
+      "slug": "retouchia",
+      "official": "https://retouchia.com/",
+      "destination": "https://retouchia.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/retouchia/",
+      "partner": false
+    },
+    "tarotai-chat": {
+      "name": "TAROTAI.CHAT",
+      "slug": "tarotai-chat",
+      "official": "https://tarotai.chat/",
+      "destination": "https://tarotai.chat/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/tarotai-chat/",
+      "partner": false
+    },
+    "thefacerating": {
+      "name": "TheFaceRating",
+      "slug": "thefacerating",
+      "official": "https://thefacerating.com/",
+      "destination": "https://thefacerating.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/thefacerating/",
+      "partner": false
+    },
+    "bolt-new": {
+      "name": "Bolt.new",
+      "slug": "bolt-new",
+      "official": "https://bolt.new/",
+      "destination": "https://bolt.new/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/bolt-new/",
+      "partner": false
+    },
+    "claude-command-center": {
+      "name": "CCC (Claude Command Center)",
+      "slug": "claude-command-center",
+      "official": "https://ccc.amirfish.ai/",
+      "destination": "https://ccc.amirfish.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/claude-command-center/",
+      "partner": false
+    },
+    "cursor": {
+      "name": "Cursor",
+      "slug": "cursor",
+      "official": "https://cursor.com/",
+      "destination": "https://cursor.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/cursor/",
+      "partner": false
+    },
+    "github-copilot": {
+      "name": "GitHub Copilot",
+      "slug": "github-copilot",
+      "official": "https://github.com/features/copilot",
+      "destination": "https://github.com/features/copilot?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/github-copilot/",
+      "partner": false
+    },
+    "hol-registry": {
+      "name": "HOL Registry",
+      "slug": "hol-registry",
+      "official": "https://hol.org/plugins",
+      "destination": "https://hol.org/plugins?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/hol-registry/",
+      "partner": false
+    },
+    "lovable": {
+      "name": "Lovable",
+      "slug": "lovable",
+      "official": "https://lovable.dev/",
+      "destination": "https://lovable.dev/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/lovable/",
+      "partner": false
+    },
+    "replit-ai": {
+      "name": "Replit AI",
+      "slug": "replit-ai",
+      "official": "https://replit.com/ai",
+      "destination": "https://replit.com/ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/replit-ai/",
+      "partner": false
+    },
+    "v0": {
+      "name": "v0",
+      "slug": "v0",
+      "official": "https://v0.dev/",
+      "destination": "https://v0.dev/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/v0/",
+      "partner": false
+    },
+    "ailearnhub": {
+      "name": "AILearnHub",
+      "slug": "ailearnhub",
+      "official": "https://ailearnhub.net/",
+      "destination": "https://ailearnhub.net/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/ailearnhub/",
+      "partner": false
+    },
+    "khanmigo": {
+      "name": "Khanmigo",
+      "slug": "khanmigo",
+      "official": "https://www.khanmigo.ai/teachers",
+      "destination": "https://www.khanmigo.ai/teachers?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/khanmigo/",
+      "partner": false
+    },
+    "magicschool": {
+      "name": "MagicSchool",
+      "slug": "magicschool",
+      "official": "https://www.magicschool.ai/",
+      "destination": "https://www.magicschool.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/magicschool/",
+      "partner": false
+    },
+    "chatgpt": {
+      "name": "ChatGPT",
+      "slug": "chatgpt",
+      "official": "https://chatgpt.com/",
+      "destination": "https://chatgpt.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/chatgpt/",
+      "partner": false
+    },
+    "claude": {
+      "name": "Claude",
+      "slug": "claude",
+      "official": "https://claude.ai/",
+      "destination": "https://claude.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/claude/",
+      "partner": false
+    },
+    "deepseek": {
+      "name": "DeepSeek",
+      "slug": "deepseek",
+      "official": "https://www.deepseek.com/",
+      "destination": "https://www.deepseek.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/deepseek/",
+      "partner": false
+    },
+    "gemini": {
+      "name": "Gemini",
+      "slug": "gemini",
+      "official": "https://gemini.google.com/",
+      "destination": "https://gemini.google.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/gemini/",
+      "partner": false
+    },
+    "grok": {
+      "name": "Grok",
+      "slug": "grok",
+      "official": "https://grok.com/",
+      "destination": "https://grok.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/grok/",
+      "partner": false
+    },
+    "meta-ai": {
+      "name": "Meta AI",
+      "slug": "meta-ai",
+      "official": "https://www.meta.ai/",
+      "destination": "https://www.meta.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/meta-ai/",
+      "partner": false
+    },
+    "mistral-le-chat": {
+      "name": "Mistral Le Chat",
+      "slug": "mistral-le-chat",
+      "official": "https://chat.mistral.ai/",
+      "destination": "https://chat.mistral.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/mistral-le-chat/",
+      "partner": false
+    },
+    "poe": {
+      "name": "Poe",
+      "slug": "poe",
+      "official": "https://poe.com/",
+      "destination": "https://poe.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/poe/",
+      "partner": false
+    },
+    "dragon-copilot": {
+      "name": "Microsoft Dragon Copilot",
+      "slug": "dragon-copilot",
+      "official": "https://www.microsoft.com/en-us/health-solutions/clinical-workflow/dragon-copilot",
+      "destination": "https://www.microsoft.com/en-us/health-solutions/clinical-workflow/dragon-copilot?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/dragon-copilot/",
+      "partner": false
+    },
+    "heidi-health": {
+      "name": "Heidi Health",
+      "slug": "heidi-health",
+      "official": "https://www.heidihealth.com/",
+      "destination": "https://www.heidihealth.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/heidi-health/",
+      "partner": false
+    },
+    "openevidence": {
+      "name": "OpenEvidence",
+      "slug": "openevidence",
+      "official": "https://www.openevidence.com/",
+      "destination": "https://www.openevidence.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/openevidence/",
+      "partner": false
+    },
+    "cocounsel": {
+      "name": "CoCounsel Legal",
+      "slug": "cocounsel",
+      "official": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
+      "destination": "https://legal.thomsonreuters.com/en/products/cocounsel-legal?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/cocounsel/",
+      "partner": false
+    },
+    "harvey": {
+      "name": "Harvey",
+      "slug": "harvey",
+      "official": "https://www.harvey.ai/",
+      "destination": "https://www.harvey.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/harvey/",
+      "partner": false
+    },
+    "spellbook": {
+      "name": "Spellbook",
+      "slug": "spellbook",
+      "official": "https://spellbook.com/",
+      "destination": "https://spellbook.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/spellbook/",
+      "partner": false
+    },
+    "lm-studio": {
+      "name": "LM Studio",
+      "slug": "lm-studio",
+      "official": "https://lmstudio.ai/",
+      "destination": "https://lmstudio.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/lm-studio/",
+      "partner": false
+    },
+    "ollama": {
+      "name": "Ollama",
+      "slug": "ollama",
+      "official": "https://ollama.com/",
+      "destination": "https://ollama.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/ollama/",
+      "partner": false
+    },
+    "open-webui": {
+      "name": "Open WebUI",
+      "slug": "open-webui",
+      "official": "https://docs.openwebui.com/",
+      "destination": "https://docs.openwebui.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/open-webui/",
+      "partner": false
+    },
+    "fathom": {
+      "name": "Fathom",
+      "slug": "fathom",
+      "official": "https://fathom.video/",
+      "destination": "https://fathom.video/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/fathom/",
+      "partner": false
+    },
+    "fireflies": {
+      "name": "Fireflies.ai",
+      "slug": "fireflies",
+      "official": "https://fireflies.ai/",
+      "destination": "https://fireflies.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/fireflies/",
+      "partner": false
+    },
+    "otter-ai": {
+      "name": "Otter.ai",
+      "slug": "otter-ai",
+      "official": "https://otter.ai/",
+      "destination": "https://otter.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/otter-ai/",
+      "partner": false
+    },
+    "grantable": {
+      "name": "Grantable",
+      "slug": "grantable",
+      "official": "https://www.grantable.co/",
+      "destination": "https://www.grantable.co/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/grantable/",
+      "partner": false
+    },
+    "instrumentl": {
+      "name": "Instrumentl",
+      "slug": "instrumentl",
+      "official": "https://www.instrumentl.com/",
+      "destination": "https://www.instrumentl.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/instrumentl/",
+      "partner": false
+    },
+    "aidetector-cx": {
+      "name": "AIDetector.cx",
+      "slug": "aidetector-cx",
+      "official": "https://aidetector.cx/",
+      "destination": "https://aidetector.cx/ai-checker-for-bloggers?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84",
+      "affiliate_url": "https://aidetector.cx/ai-checker-for-bloggers?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84",
+      "public_href": "/go/aidetector-cx/",
+      "partner": true
+    },
+    "airtable-ai": {
+      "name": "Airtable AI",
+      "slug": "airtable-ai",
+      "official": "https://www.airtable.com/platform/ai",
+      "destination": "https://www.airtable.com/platform/ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/airtable-ai/",
+      "partner": false
+    },
+    "gamma": {
+      "name": "Gamma",
+      "slug": "gamma",
+      "official": "https://gamma.app/",
+      "destination": "https://try.gamma.app/ty4k3o3rpeyd",
+      "affiliate_url": "https://try.gamma.app/ty4k3o3rpeyd",
+      "public_href": "/go/gamma/",
+      "partner": true
+    },
+    "geardex": {
+      "name": "GearDex",
+      "slug": "geardex",
+      "official": "https://www.geardex.app/",
+      "destination": "https://www.geardex.app/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/geardex/",
+      "partner": false
+    },
+    "grammarly": {
+      "name": "Grammarly",
+      "slug": "grammarly",
+      "official": "https://www.grammarly.com/",
+      "destination": "https://www.grammarly.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/grammarly/",
+      "partner": false
+    },
+    "htmlslides": {
+      "name": "HtmlSlides",
+      "slug": "htmlslides",
+      "official": "https://www.htmlslides.ai",
+      "destination": "https://www.htmlslides.ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/htmlslides/",
+      "partner": false
+    },
+    "humanpen": {
+      "name": "HumanPen",
+      "slug": "humanpen",
+      "official": "https://humanpen.net/",
+      "destination": "https://humanpen.net/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/humanpen/",
+      "partner": false
+    },
+    "microsoft-copilot": {
+      "name": "Microsoft Copilot",
+      "slug": "microsoft-copilot",
+      "official": "https://copilot.microsoft.com/",
+      "destination": "https://copilot.microsoft.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/microsoft-copilot/",
+      "partner": false
+    },
+    "money-tracker": {
+      "name": "Money Tracker (Expense & Budget)",
+      "slug": "money-tracker",
+      "official": "https://money.quhou123.com/en/",
+      "destination": "https://money.quhou123.com/en/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/money-tracker/",
+      "partner": false
+    },
+    "notion-ai": {
+      "name": "Notion AI",
+      "slug": "notion-ai",
+      "official": "https://www.notion.com/product/ai",
+      "destination": "https://www.notion.com/product/ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/notion-ai/",
+      "partner": false
+    },
+    "rows": {
+      "name": "Rows",
+      "slug": "rows",
+      "official": "https://rows.com/",
+      "destination": "https://rows.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/rows/",
+      "partner": false
+    },
+    "shortwave": {
+      "name": "Shortwave",
+      "slug": "shortwave",
+      "official": "https://www.shortwave.com/",
+      "destination": "https://www.shortwave.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/shortwave/",
+      "partner": false
+    },
+    "slack-ai": {
+      "name": "Slack AI",
+      "slug": "slack-ai",
+      "official": "https://slack.com/features/ai",
+      "destination": "https://slack.com/features/ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/slack-ai/",
+      "partner": false
+    },
+    "sonaopus": {
+      "name": "Sonaopus",
+      "slug": "sonaopus",
+      "official": "https://sonaopus.com/",
+      "destination": "https://sonaopus.com/?ref=58448483",
+      "affiliate_url": "https://sonaopus.com/?ref=58448483",
+      "public_href": "/go/sonaopus/",
+      "partner": true
+    },
+    "landlord-studio": {
+      "name": "Landlord Studio",
+      "slug": "landlord-studio",
+      "official": "https://www.landlordstudio.com/pricing",
+      "destination": "https://www.landlordstudio.com/pricing?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/landlord-studio/",
+      "partner": false
+    },
+    "tenantcloud": {
+      "name": "TenantCloud",
+      "slug": "tenantcloud",
+      "official": "https://www.tenantcloud.com/",
+      "destination": "https://www.tenantcloud.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/tenantcloud/",
+      "partner": false
+    },
+    "notebooklm": {
+      "name": "NotebookLM",
+      "slug": "notebooklm",
+      "official": "https://notebooklm.google.com/",
+      "destination": "https://notebooklm.google.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/notebooklm/",
+      "partner": false
+    },
+    "perplexity": {
+      "name": "Perplexity",
+      "slug": "perplexity",
+      "official": "https://www.perplexity.ai/",
+      "destination": "https://www.perplexity.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/perplexity/",
+      "partner": false
+    },
+    "you-com": {
+      "name": "You.com",
+      "slug": "you-com",
+      "official": "https://you.com/",
+      "destination": "https://you.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/you-com/",
+      "partner": false
+    },
+    "aiproductads": {
+      "name": "AIProductAds",
+      "slug": "aiproductads",
+      "official": "https://aiproductads.app/",
+      "destination": "https://aiproductads.app/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/aiproductads/",
+      "partner": false
+    },
+    "allvideoai": {
+      "name": "AllVideoAI",
+      "slug": "allvideoai",
+      "official": "https://allvideoai.com/",
+      "destination": "https://allvideoai.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/allvideoai/",
+      "partner": false
+    },
+    "gatsbyai": {
+      "name": "GatsbyAI",
+      "slug": "gatsbyai",
+      "official": "https://gatsbyai.app/",
+      "destination": "https://gatsbyai.app/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/gatsbyai/",
+      "partner": false
+    },
+    "heygen": {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "official": "https://www.heygen.com/",
+      "destination": "https://www.heygen.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/heygen/",
+      "partner": false
+    },
+    "luma-ai": {
+      "name": "Luma AI",
+      "slug": "luma-ai",
+      "official": "https://lumalabs.ai",
+      "destination": "https://lumalabs.ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/luma-ai/",
+      "partner": false
+    },
+    "marigold-pet": {
+      "name": "Marigold Pet",
+      "slug": "marigold-pet",
+      "official": "https://marigoldpet.com/",
+      "destination": "https://marigoldpet.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/marigold-pet/",
+      "partner": false
+    },
+    "pika": {
+      "name": "Pika",
+      "slug": "pika",
+      "official": "https://pika.art",
+      "destination": "https://pika.art?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/pika/",
+      "partner": false
+    },
+    "runway": {
+      "name": "Runway",
+      "slug": "runway",
+      "official": "https://runwayml.com/",
+      "destination": "https://runwayml.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/runway/",
+      "partner": false
+    },
+    "synthesia": {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "official": "https://www.synthesia.io/",
+      "destination": "https://www.synthesia.io/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/synthesia/",
+      "partner": false
+    },
+    "trybestspecs": {
+      "name": "TryBestSpecs",
+      "slug": "trybestspecs",
+      "official": "https://www.trybestspecs.com/",
+      "destination": "https://www.trybestspecs.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/trybestspecs/",
+      "partner": false
+    },
+    "windsurf": {
+      "name": "Windsurf",
+      "slug": "windsurf",
+      "official": "https://windsurf.com/pricing",
+      "destination": "https://windsurf.com/pricing?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/windsurf/",
+      "partner": false
+    },
+    "claude-code": {
+      "name": "Claude Code",
+      "slug": "claude-code",
+      "official": "https://www.anthropic.com/pricing",
+      "destination": "https://www.anthropic.com/pricing?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/claude-code/",
+      "partner": false
+    }
+  }
+}

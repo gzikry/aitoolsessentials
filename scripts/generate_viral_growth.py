@@ -180,6 +180,14 @@ def generate_badges(root: Path, tools: list[dict[str, Any]]) -> None:
   <title>{label} review on AIToolsEssentials</title>
 </svg>'''
         (badge_dir / f"{slug}.svg").write_text(svg)
+    audited = '''<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" role="img" aria-label="Audited on AI Tools Essentials">
+  <rect width="220" height="48" fill="#FAF8F5"/>
+  <rect width="220" height="48" fill="none" stroke="#111315" stroke-width="1"/>
+  <rect width="6" height="48" fill="#156E3F"/>
+  <text x="16" y="20" font-family="Georgia,Times New Roman,serif" font-size="12" fill="#111315">Audited on</text>
+  <text x="16" y="36" font-family="Georgia,Times New Roman,serif" font-size="14" font-weight="700" fill="#111315">AI Tools Essentials</text>
+</svg>'''
+    (badge_dir / "audited.svg").write_text(audited)
     top = sorted(tools, key=lambda t: float(t.get("rating", 0) or 0), reverse=True)[:12]
     badges = "".join(f'<article class="content-hub-card"><span>{esc(t["category"])}</span><h3>{esc(t["name"])}</h3><div class="vendor-badge-preview"><strong>Reviewed on AIToolsEssentials</strong><small>{esc(t.get("rating"))}/5 editorial score</small></div><textarea readonly>&lt;a href="{DOMAIN}/tools/{t["slug"]}/" rel="noopener"&gt;&lt;img alt="Reviewed on AIToolsEssentials" src="{DOMAIN}/badges/{t["slug"]}.svg"&gt;&lt;/a&gt;</textarea><a class="button button-blue small" href="/tools/{t["slug"]}/">Review page</a></article>' for t in top)
     all_note = '<p class="muted-small">Every listed tool has a badge. Ask us for yours if it is not shown: <a href="mailto:' + EMAIL + '">' + EMAIL + '</a></p>'
@@ -202,7 +210,14 @@ def generate_badges(root: Path, tools: list[dict[str, Any]]) -> None:
         'link to our review because it is an independent record of their pricing and trade-offs.</p>'
         f'<p><a class="text-link" href="/legal/trust.html">How we treat directory listings →</a></p></div>'
     )
-    page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Vendor Badges — Reviewed AI Tool Badges", "Vendors can link to their AIToolsEssentials review with transparent, editorially-labeled badges.", DOMAIN+"/badges/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:880px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Vendor badges</p><h1>Give reviewed tools a reason to link back.</h1><p class="subhead">Transparent badges for vendors who want to point buyers to independent review pages. No paid ranking implied.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Editorial rules</span><p>Badges link to review pages and may not imply endorsement beyond the exact text shown. Sponsored placements remain separately labeled.</p></div>{all_note}<div class="content-hub-grid">{badges}</div>{directory_note}</div></section></main>{FOOTER}{scripts()}</body></html>'
+    audited_note = (
+        '<div class="score-card"><span>Verified fast-track</span><h2>Audited on AI Tools Essentials</h2>'
+        '<p>Accepted $79 reviews can embed this mark. It links to the site. It is not a score and it does not rank the tool.</p>'
+        f'<p><img alt="Audited on AI Tools Essentials" src="{DOMAIN}/badges/audited.svg" width="220" height="48"></p>'
+        '<textarea readonly>&lt;a href="https://aitoolsessentials.com/"&gt;&lt;img alt="Audited on AI Tools Essentials" src="https://aitoolsessentials.com/badges/audited.svg" width="220" height="48"&gt;&lt;/a&gt;</textarea>'
+        '<p><a href="/submit-tool.html">Submit a tool</a></p></div>'
+    )
+    page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Vendor Badges — Reviewed AI Tool Badges", "Vendors can link to their AIToolsEssentials review with transparent, editorially-labeled badges.", DOMAIN+"/badges/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:880px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Vendor badges</p><h1>Give reviewed tools a reason to link back.</h1><p class="subhead">Transparent badges for vendors who want to point buyers to independent review pages. No paid ranking implied.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Editorial rules</span><p>Badges link to review pages and may not imply endorsement beyond the exact text shown. Sponsored placements remain separately labeled.</p></div>{audited_note}{all_note}<div class="content-hub-grid">{badges}</div>{directory_note}</div></section></main>{FOOTER}{scripts()}</body></html>'
     out = root / "badges" / "index.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(page)
