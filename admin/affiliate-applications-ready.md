@@ -112,6 +112,8 @@ gates visibility and payment, not placement. Do not rebuild the links.
 | 8 | Sonaopus | Gumroad | 40% one-time | approved 2026-09-13 |
 | 9 | AIDetector.cx | direct (partnerships@aidetector.cx) | 30% recurring | **VERIFICATION SENT 2026-10-06 — await reply before publishing.** Terms confirmed by the vendor in writing on 2026-10-06 (mail `partnerships@`, 13:46 −05:00): 30% recurring on eligible subscription payments, **30-day attribution window**, **30-day commission holding period**, **$50 minimum payout in USD**, own tracked link + affiliate dashboard, complimentary testing credits. Account registered and verified under aitoolsessentials@gmail.com 2026-10-03 (Sent msgs 190, 191). **Reply sent 2026-10-06 (Sent msg 211)** — it states the 30% recurring / 30-day cookie / 30-day hold / $50 USD payout back to them for confirmation, declines paid placement per `/legal/trust.html`, and raises nine items from our own read of the live site. Open blockers, highest first: (1) **training-use contradiction** — `/detector` says "We do not use submitted content to train or fine-tune our models" while `/privacy` §2 says "Analysis text may be used in anonymized, aggregated form to train detection models unless you opt out in your account settings", with the §5 opt-out scoped to "Enterprise and Professional plan users" only; (2) **unverified named testimonials** on `/detector` attributed to named staff at Forbes, Stripe, HubSpot and Nature Portfolio with no illustrative/early-access label; (3) **"SOC-2 Type II Certified" in the footer vs "SOC 2-aligned controls" in the body**; (4) **98.7% / 1.2s / 12.4M+ / 142+ country marketing figures**, absent from their own benchmark page, which reports precision 0.97 / recall 0.94 / F1 0.955 / FPR 1.2% on a 400-doc internal corpus; (5) **Paystack in Privacy §1 vs Stripe in the Cookie Policy** for self-serve checkout; (6) retention — analysis results 12 months default, no stated path for the submitted text itself; (7) confirm AI Checker for Bloggers at 30 credits/report means 10 reports/month on Pro's 300; (8) whether the 30% covers annual plans and recurs on renewals "for the lifetime of the customer" as `/affiliate-hub` states; (9) **name in active commercial use on other domains** — aidetector.com (registered **2017-09-21**), aidetector.net, aidetector.ai (2016) — not squatting (aidetector.cx registered 2026-06-03), but any listing must carry the exact domain. **TRACKED LINK RECEIVED 2026-10-08 (mail `partnerships@aidetector.cx` 11:09 −05:00 / 16:09 UTC); access confirmed in writing; still NOT publishable — the two blocker questions were explicitly deferred by the vendor.** The mail activates the account, adds **300 complimentary credits**, and supplies the tracked link **`https://aidetector.cx/ai-checker-for-bloggers?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84`** (general signup `https://aidetector.cx/signup?aff=e3b5c457-…`); resolves item (8) affirmatively — **"annual subscriptions remain part of the affiliate commission program"** — and restates the plan matrix (Pro $12/mo 300 cr or $120/yr; Pro Plus $29/mo 1,000 cr or $290/yr; Business $79/mo 3,000 cr or $790/yr), matching the prices I read from the SPA bundle on 2026-10-06. **Verified live today (2026-10-08): the link follows the `aidetector.cx` → `www.aidetector.cx` 308 and returns 200 on `/ai-checker-for-bloggers`, title "AI Checker for Bloggers | AIDetector.cx".** On the blockers the vendor wrote that the product-policy and claim-verification points "should be treated separately from the affiliate setup" and that we should publish only what we can independently support — i.e. **the two publication blockers are deferred, not answered.** Re-checked the live site today and **both are unchanged:** (1) `/detector` still reads "We do not use submitted content to train or fine-tune our models" while `/privacy` §2 still reads "Analysis text may be used in anonymized, aggregated form to train detection models unless you opt out in your account settings" with §5 still scoping the opt-out to "Enterprise and Professional plan users"; (2) the `/detector` testimonials still name Forbes / Stripe / HubSpot / Nature Portfolio staff with no illustrative or early-access label. **Reply sent 2026-10-08 (Sent msg 219)** — thanks, logs the now-confirmed terms and link, declines to publish while those two are open, offers to publish crediting the genuine positives (their own conservative benchmark figures, stated output ownership, named legal set and California governing law), and re-states the remaining six non-blocking items. *2026-10-08 RESOLVED — TOOL PUBLISHED.* The vendor's second reply (10:55 −07:00) shipped the fixes: `/privacy` §3 now states *submitted analysis text is not used to train or fine-tune detection models **on any plan*** (old anonymized-training sentence and the Enterprise/Professional-scoped §5 opt-out both gone), and the four named Forbes/Stripe/HubSpot/Nature Portfolio testimonials were **removed** from `/detector`; the SOC-2 footer claim and the 98.7/12.4M/142+ figures were also removed. Re-checked live the same day before publishing. **Listing live: https://aitoolsessentials.com/tools/aidetector-cx/ (rating 4.0, category Productivity).** The 30% recurring tracked link `…/ai-checker-for-bloggers?aff=e3b5c457-…` is wired to the review CTA (`rel="sponsored noopener nofollow"`, disclosure fineprint) and AIDetector.cx is named on `/legal/affiliate-disclosure.html`. Open (non-blocking): Paystack named for billing on `/privacy` vs Stripe named on `/cookies`. **Registry surfaces confirmed complete 2026-10-10 — the earlier note that the link had nowhere to be wired was stale: `affiliate_programs.json` carries `aidetector-cx` (status `approved`, network Direct, tracked URL `…?aff=e3b5c457-…`), and the review CTA and `/legal/affiliate-disclosure.html` both carry the program, so no wiring work remains.** Mail auth note: the 2026-10-06 mail is Gmail-hosted (`mail.gmail.com`, DKIM pass `gappssmtp.com`, header `Date: 13:46:34 -0500`) with `spf=none` and `dmarc=fail` — treat the address as the mailbox but do not treat sender identity as cryptographically proven for any future payment instruction. |
 
+| 10 | CustomGPT.ai | direct self-serve — FirstPromoter program at `customgpt.firstpromoter.com` | tiered **15%** (0–25 customers) / **18%** (26–55) / **20%** (56+), each "for 2 years"; 30-day cookie, 60-day at the 20% tier; **$1,500 bonus** for 20+ customers in a month | **APPROVED 2026-10-27** (welcome mail from `affiliate@customgpt.ai`, 22:57 UTC / 15:57 PT). Link recorded, **NOT wired and NOT in `data/affiliate_programs.json`** — CustomGPT.ai is not in `data/tools.json`, so there is no review page for a tracking link to live on |
+
 ### Gamma — APPROVED 2026-09-13 / LINK LIVE 2026-09-13
 Program: https://market.partnerstack.com/artificial-intelligence/gammaapp
 Unique link: https://try.gamma.app/ty4k3o3rpeyd
@@ -352,6 +354,57 @@ The program is public, so these are readable terms rather than an inbound offer 
 
 If Arvow clears verification and is listed, re-read the terms at application time rather than
 copying these figures forward.
+
+---
+
+## CustomGPT.ai — APPROVED 2026-10-27 (link recorded; no listing, nothing wired)
+
+Inbound: `Hira @ CustomGPT <affiliate@customgpt.ai>`, subject "Welcome to the CustomGPT.ai
+Affiliate Program 👋", **2026-10-27 22:57 UTC / 15:57 PT**, sent through Customer.io; footer
+carries the operator's postal address **169 Mohawk Path, Holliston, MA 01746**.
+
+**Terms as stated in the mail** (not yet re-read from a network dashboard):
+
+- **15%** commission for **0–25 customers**, **18%** for **26–55**, **20%** for **56+**, each
+  paid "for 2 years"
+- **30-day cookie** at the 15%/18% tiers; **60-day cookie** at the 20% tier
+- **$1,500 bonus** for referring 20+ customers in a single month
+
+The public `/affiliate-program/` page (fetched 2026-10-27, title "Earn 20% for 24 Months")
+advertises only the top tier — the headline is the 56+-customer rate, not the entry rate, so do
+not quote "20%" as what a first referral pays.
+
+**Tracked link:** `https://customgpt.ai/?fpr=george-881fd5` — fetched 2026-10-27, **HTTP 200**, no
+redirect (FirstPromoter sets the attribution cookie client-side). The `george-881fd5` handle
+implies a self-serve FirstPromoter signup completed under George's account rather than an
+application we submitted — no such application exists anywhere in this repo, so **do not record
+this as one of our applications**.
+
+**Access is George-only.** A `support@firstpromoter.com` "Verification Code" mail arrived the
+same minute (22:59 UTC) for the `customgpt.firstpromoter.com` dashboard login. Login codes are
+never entered by the agent, and none is needed to use the link — the dashboard gates only stats,
+status tracking and payouts.
+
+**Nothing was wired, and this is deliberate.** CustomGPT.ai is **not in `data/tools.json`** (97
+tools, checked 2026-10-27), so there is no review page for a tracking link to live on and
+`data/affiliate_programs.json` was left untouched. An approval is a commercial event; it does not
+create an editorial listing, and a listing created to monetise a link would contradict
+`/legal/trust.html`. If a listing is ever wanted it needs the full vendor-submission pass.
+
+**Pricing context read from `/pricing/` on 2026-10-27** (for a future decision, not a listing):
+Standard **$99/mo** ($89/mo equivalent billed annually — "save $120 annually"), Premium
+**$499/mo** ($449/mo annually — "save $600"), Enterprise custom; **7-day free trial** on every
+plan; 1,000 queries/month on Standard, 5,000 on Premium; white-labelling and the AI model
+selector start at Premium/Enterprise.
+
+**Not read in this pass:** `/privacy-policy/` and `/terms-of-service/` both return 200 and both
+carry "Last updated October 21, 2026", but the bodies render client-side and the served HTML
+carried only site chrome — operator entity, retention, subprocessors, training-use and governing
+law are **unverified**. A listing would have to read them properly first.
+
+**Category note:** no current slug covers a custom-knowledge-base / RAG chatbot builder (keyword
+scan of slug + name + summary across all 97 tools), so a listing would open a new category rather
+than join an existing one.
 
 ---
 
