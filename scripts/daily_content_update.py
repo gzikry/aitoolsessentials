@@ -500,6 +500,12 @@ print('Generated coding-assistant pricing hub:', generate_coding_assistant_hub(r
 from generate_price_changes import generate as generate_price_changes
 print('Generated price-change tracker:', generate_price_changes(root))
 
+from generate_voice_video_hub import generate as generate_voice_video_hub
+print('Generated voice-video calculator:', generate_voice_video_hub(root))
+
+from generate_automation_task_hub import generate as generate_automation_task_hub
+print('Generated automation calculator:', generate_automation_task_hub(root))
+
 from generate_affiliate_router import generate as generate_affiliate_router
 print('Generated affiliate router:', generate_affiliate_router(root))
 
@@ -597,6 +603,15 @@ print(f'Refreshed sitemap after redirects with {len(_sitemap_urls_final)} URLs')
 
 from publish_submit_page import publish as _publish_submit
 print('Published submit alias:', _publish_submit(root))
+
+from inject_price_alerts import inject as _inject_price_alerts
+print('Price-hike alerts:', _inject_price_alerts(root))
+
+_audit_page = root / "stack-audit.html"
+_audit_html = _audit_page.read_text(encoding="utf-8")
+_audit_fixed = _audit_html.replace("button-ghost-dark", "button-ledger")
+if _audit_fixed != _audit_html:
+    _audit_page.write_text(_audit_fixed, encoding="utf-8")
 
 from asset_rev import stamp_tree as _stamp_assets
 print(f'Stamped content hashes on {_stamp_assets(root)} pages')

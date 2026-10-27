@@ -140,7 +140,7 @@ def generate(root: Path = ROOT) -> Path:
 </div></section>
 <section class="scene scene-light"><div class="article-shell wide">
 <h2>Calculators</h2>
-<p><a href="/compare/ai-coding-assistants/">Coding assistant cost</a> prices Cursor, Claude Code, Copilot, and Windsurf. <a href="/compare/ai-app-builders/">App-builder credit burn</a> prices v0, Bolt.new, Lovable, and Replit. <a href="/price-changes/">Price changes</a> lists the credit clocks.</p>
+<p><a href="/compare/ai-coding-assistants/">Coding assistant cost</a> prices Cursor, Claude Code, Copilot, and Windsurf. <a href="/compare/ai-app-builders/">App-builder credit burn</a> prices v0, Bolt.new, Lovable, and Replit. <a href="/compare/ai-video-avatar-cost/">Voice and video minutes</a> prices ElevenLabs, Descript, HeyGen, and Synthesia. <a href="/compare/automation-task-calculator/">Automation task burn</a> prices Zapier, Make, and n8n. <a href="/price-changes/">Price changes</a> lists the credit clocks.</p>
 </div></section>
 <section class="scene scene-light"><div class="article-shell wide">
 <p class="kicker light">Find a matchup</p><h2>Search the comparison library</h2>

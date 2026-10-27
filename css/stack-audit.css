@@ -20,6 +20,16 @@
 .sa-custom { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 14px; }
 .sa-custom input { padding: 12px 14px; border-radius: 10px; border: 1px solid #d5d7e2; font: inherit; }
 .sa-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.sa-preset { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.sa-paste {
+  width: 100%;
+  min-height: 88px;
+  padding: 10px 12px;
+  border: 1px solid #E2DFD7;
+  border-radius: 6px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+}
 .scene-light .sa-wrap .button-dark,
 .scene-light .sa-wrap .button-ghost-dark {
   background: #fff;

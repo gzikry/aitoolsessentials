@@ -30,6 +30,11 @@ EXTRAS = (
         "name": "Claude Code",
         "official": "https://www.anthropic.com/pricing",
     },
+    {
+        "slug": "zapier",
+        "name": "Zapier",
+        "official": "https://zapier.com/pricing",
+    },
 )
 
 
