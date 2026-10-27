@@ -7,7 +7,7 @@ from pathlib import Path
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
-HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/change-radar/">Change radar</a><a href="/pricing-watch/">Pricing Watch</a><a href="/articles/index.html">Guides</a><a href="/premium/">Premium</a></nav><a class="nav-cta" href="/premium/">Premium</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/change-radar/">Change radar</a><a href="/pricing-watch/">Pricing Watch</a><a href="/articles/index.html">Guides</a><a href="/premium/">Premium</a></nav><a class="nav-cta" href="/premium/">Premium</a></header>'
 FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="/legal/about.html">About</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a></footer>'
 
 

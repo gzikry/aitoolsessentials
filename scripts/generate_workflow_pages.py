@@ -16,7 +16,7 @@ from typing import Any
 
 DOMAIN = "https://aitoolsessentials.com"
 EMAIL = "contact@aitoolsessentials.com"
-HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/use-cases/">Use cases</a><a href="/workflows/">Workflows</a><a href="/fit-interview/">Fit interview</a><a href="/pricing-watch/">Pricing Watch</a><a href="/evidence/">Evidence</a></nav><a class="nav-cta" href="/premium/">Premium</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/use-cases/">Use cases</a><a href="/workflows/">Workflows</a><a href="/fit-interview/">Fit interview</a><a href="/pricing-watch/">Pricing Watch</a><a href="/evidence/">Evidence</a></nav><a class="nav-cta" href="/premium/">Premium</a></header>'
 FOOTER = f'<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/advertise/index.html" rel="nofollow">Advertise</a><a href="/submit-tool.html" rel="nofollow">Submit a tool</a><a href="/community/test-report.html" rel="nofollow">Report your results</a><a href="/badges/">Badges</a><a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:{EMAIL}">Contact</a><a href="/legal/about.html">About</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a></footer>'
 
 

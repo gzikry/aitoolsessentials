@@ -1285,7 +1285,7 @@ def _build_page(fname: str, article: dict) -> str:
 <script type="application/ld+json">{article_schema}</script>
 <link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><script src="/js/discovery.js" defer></script>
 </head><body>
-<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links"><a href="../tools/">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/">Categories</a><a href="./">Guides</a><a href="../benchmarks/">Benchmarks</a><a href="learn.html">Learn</a><a href="../guides/switch-guides/">Switching</a></nav>
 <a class="nav-cta" href="../newsletter/">Free newsletter</a></header>
 <main>

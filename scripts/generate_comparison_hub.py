@@ -129,11 +129,11 @@ def generate(root: Path = ROOT) -> Path:
 <link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml">
 <script src="/js/discovery.js" defer></script>
 </head><body>
-<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links"><a href="../tools/">Tools</a><a href="best-ai-tools.html">Best AI tools</a><a href="../categories/">Categories</a><a href="../articles/">Guides</a><a href="../benchmarks/">Benchmarks</a><a href="../guides/switch-guides/">Switching</a></nav>
 <a class="nav-cta" href="../newsletter/">Free newsletter</a></header>
 <main>
-<section class="scene scene-dark hero compact-hero"><div class="hero-copy"><p class="kicker">Comparison library</p>
+<section class="scene scene-dark ledger-mast hero compact-hero"><div class="hero-copy"><p class="kicker">Comparison library</p>
 <h1>Choose the right AI tool before you pay.</h1>
 <p class="subhead">Browse {len(pages)} buyer matchups organized by job. Each comparison connects current pricing, official evidence, workflow fit, and a repeatable trial checklist.</p>
 <div class="actions"><a class="button button-blue" href="../compare-shortlist.html">Compare your shortlist</a><a class="button button-dark" href="../downloads/ai-tool-evaluation-scorecard.html">Open free scorecard</a><a class="button button-dark" href="../pricing-watch/" style="margin-left:8px">Pricing Watch</a></div>

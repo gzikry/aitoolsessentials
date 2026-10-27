@@ -174,9 +174,9 @@ def generate(root: Path) -> Path:
 </style>
 </head>
 <body>
-<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a></header>
+<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a></header>
 <main>
-<section class="scene scene-dark">
+<section class="scene scene-dark ledger-mast">
 <div style="max-width:880px;margin:0 auto;padding:86px 28px 68px">
 <p class="kicker light">Pricing check · 25 Oct 2026</p>
 <h1>{TITLE}</h1>

@@ -13,6 +13,8 @@ days, or member counts.
 """
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from typing import Any
 
 from newsletter_hold import public_colophon_html
@@ -321,7 +323,7 @@ def billing_fine_print(whop: dict[str, Any]) -> str:
 
 def premium_nav_header() -> str:
     return (
-        '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span>'
+        '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span>'
         "<span>AIToolsEssentials</span></a><nav class=\"nav-links\">"
         '<a href="/tools/index.html">Tools</a>'
         '<a href="/stack-audit.html">Free Stack Audit</a>'
@@ -369,16 +371,35 @@ def homepage_hero_actions_html(whop: dict[str, Any]) -> str:
     )
 
 
+def homepage_dateline_html() -> str:
+    """Issue bar. Counts come from the catalog so the masthead cannot drift from the directory."""
+    root = Path(__file__).resolve().parents[1]
+    tools = json.loads((root / "data" / "tools.json").read_text(encoding="utf-8"))
+    ledgers = sum(
+        1
+        for path in (root / "comparisons").glob("*.html")
+        if "-vs-" in path.name
+    )
+    return (
+        '<p class="home-dateline">INDEPENDENT AI SPEND &amp; TEARDOWN DESK'
+        " · UPDATED OCT 26, 2026"
+        f" · {len(tools)} TOOLS AUDITED"
+        f" · {ledgers} HEAD-TO-HEAD LEDGERS"
+        " · ZERO PAID RANKINGS</p>"
+    )
+
+
 def homepage_hero_html(whop: dict[str, Any]) -> str:
     """Copy-first homepage hero. Choose/learn with dated evidence first. No decorative device card."""
     actions = homepage_hero_actions_html(whop)
     return f'''    <section class="hero home-hero scene scene-dark">
-      <div class="home-hero-grain" aria-hidden="true"></div>
       <div class="hero-copy">
+        {homepage_dateline_html()}
         <p class="home-kicker home-appear" data-appear="2">Dated reviews, comparisons, and a free stack check</p>
-        <h1><span class="home-line home-appear" data-appear="3">Find AI tools that fit</span> <span class="home-line home-appear" data-appear="4">the job — not the <em>hype</em>.</span></h1>
-        <p class="subhead home-appear" data-appear="4">Learn what fits with dated evidence, or run a free Stack Audit to see what&apos;s overlapping and what&apos;s worth keeping.</p>
+        <h1><span class="home-line home-appear" data-appear="3">Stop paying for overlapping AI seats.</span> <span class="home-line home-deck home-appear" data-appear="4">The seat that fits the job — not the <em>hype</em>.</span></h1>
+        <p class="subhead home-appear" data-appear="4">Real seat math, credit-expiration traps, and side-by-side switch guides tested on production workloads. Dated evidence, not a ranking you can buy.</p>
         {actions}
+        <p class="hero-secondary-links"><a href="#bill-slasher">30-second bill</a><a href="/compare/ai-coding-assistants/">Coding seats</a><a href="/compare/ai-app-builders/">App builders</a><a href="/price-changes/">Price changes</a></p>
       </div>
     </section>'''
 

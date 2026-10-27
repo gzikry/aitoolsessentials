@@ -201,7 +201,7 @@ def generate(root: Path) -> Path:
 <body>
 {CANONICAL_HEADER}
 <main>
-<section class="scene scene-dark">
+<section class="scene scene-dark ledger-mast">
 <div style="max-width:880px;margin:0 auto;padding:86px 28px 68px">
 <p class="kicker light">Pricing check · 26 Oct 2026</p>
 <h1>{_esc(TITLE)}</h1>

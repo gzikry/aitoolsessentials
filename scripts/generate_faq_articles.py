@@ -73,7 +73,7 @@ ARTICLES = {
 <p>Full evaluation criteria live in <a href="how-to-choose-an-ai-tool.html">our choosing framework</a>.</p>'''},
 }
 
-HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../pricing-watch/">Pricing Watch</a>\n</nav><a class="nav-cta" href="../newsletter/">Keep, Test, Cut</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="../index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../pricing-watch/">Pricing Watch</a>\n</nav><a class="nav-cta" href="../newsletter/">Keep, Test, Cut</a></header>'
 FOOTER = '''<footer class="footer">
     <span>© 2026 AIToolsEssentials</span>
     <a href="../advertise/index.html" rel="nofollow">Advertise</a>

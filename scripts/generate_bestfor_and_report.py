@@ -24,7 +24,7 @@ def _esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/guides/switch-guides/">Switching</a><a href="/pricing-watch/">Pricing Watch</a><a href="/benchmarks/">Benchmarks</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/premium/">Premium</a></header>'
+HEADER = '<header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/guides/switch-guides/">Switching</a><a href="/pricing-watch/">Pricing Watch</a><a href="/benchmarks/">Benchmarks</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/premium/">Premium</a></header>'
 FOOTER = '<footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="/legal/about.html">About</a><a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a><a href="/legal/corrections.html">Corrections</a><a href="mailto:contact@aitoolsessentials.com">Contact</a></footer>'
 
 

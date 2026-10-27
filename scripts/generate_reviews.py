@@ -335,7 +335,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 </head>
 <body>
 <header class="global-nav">
-<a class="brand" href="../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<a class="brand" href="../index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links">
 <a href="../tools/index.html">Tools</a>
 <a href="../../fit-interview/">Fit interview</a>

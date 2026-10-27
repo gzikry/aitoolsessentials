@@ -69,7 +69,7 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 </head>
 <body>
 <header class="global-nav">
-<a class="brand" href="../../index.html"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<a class="brand" href="../../index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links">
 <a href="../../tools/index.html">Tools</a>
 <a href="../../comparisons/best-ai-tools.html">Best AI tools</a>
@@ -195,7 +195,7 @@ def generate_category_hub(root: Path, tools: list, today: str) -> Path:
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
-<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">✦</span><span>AIToolsEssentials</span></a>
+<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>
 <nav class="nav-links"><a href="../tools/">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="./">Categories</a><a href="../articles/">Guides</a><a href="../benchmarks/">Benchmarks</a><a href="../guides/switch-guides/">Switching</a></nav>
 <a class="nav-cta" href="../newsletter/">Free newsletter</a></header>
 <main>
