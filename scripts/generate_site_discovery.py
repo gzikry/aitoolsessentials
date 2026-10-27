@@ -166,7 +166,7 @@ def generate_status(root: Path, tools: list[dict[str, Any]], today: str) -> None
     status_path = root / "status" / "index.html"
     existing_status = status_path.read_text() if status_path.exists() else ""
     preserved_head_blocks = []
-    for pattern in (r'<!-- AIT DISCOVERY LINKS -->[^\n]*?(?:<meta name="theme-color" content="#5e6ad2">|<script src="/js/discovery\.js(?:\?[^"]*)?" defer></script>)', r'<!-- AIT KNOWLEDGE SCHEMA START -->.*?<!-- AIT KNOWLEDGE SCHEMA END -->', r'<!-- AIT STRUCTURED DATA START -->.*?<!-- AIT STRUCTURED DATA END -->'):
+    for pattern in (r'<!-- AIT DISCOVERY LINKS -->[^\n]*?(?:<meta name="theme-color" content="#(?:5e6ad2|FAF8F5)">|<script src="/js/discovery\.js(?:\?[^"]*)?" defer></script>)', r'<!-- AIT KNOWLEDGE SCHEMA START -->.*?<!-- AIT KNOWLEDGE SCHEMA END -->', r'<!-- AIT STRUCTURED DATA START -->.*?<!-- AIT STRUCTURED DATA END -->'):
         preserved_head_blocks.extend(re.findall(pattern, existing_status, flags=re.S))
     page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Site Status", "Machine-readable and human-readable status snapshot for AIToolsEssentials coverage, feeds, utilities, and editorial boundaries.", DOMAIN+"/status/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:920px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Site status</p><h1>Coverage and freshness snapshot.</h1><p class="subhead">A transparent status page for what the site tracks and how to verify updates.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell"><div class="score-card"><span>Generated {esc(today)}</span><h2>{len(tools)} tools · {html_count} HTML pages</h2><p>Feeds, sitemap, stack utilities, alternatives pages, and correction modules are generated through the static pipeline.</p><p><span style="font-weight:700">Evidence freshness:</span> {pricing_checked}/{len(source_records)} pricing records checked on {esc(latest_label)} · {max(0, len(source_records) - pricing_checked - undated_or_invalid)} older records · {undated_or_invalid} undated/invalid · {hardware_records} hardware records.</p><p><a class="button button-blue" href="/site-status.json">View JSON status</a><a class="button button-blue" href="/changelog/" style="margin-left:8px">View changelog</a></p></div></div></section></main>{FOOTER}{scripts()}</body></html>'
     if preserved_head_blocks:
@@ -209,7 +209,7 @@ def postprocess_head_links(root: Path) -> None:
     # script -> insert one canonical block is idempotent for both the clean and the
     # double-inserted state.
     block_re = re.compile(
-        r'[ \t]*<!-- AIT DISCOVERY LINKS -->[^\n]*?<meta name="theme-color" content="#5e6ad2">'
+        r'[ \t]*<!-- AIT DISCOVERY LINKS -->[^\n]*?<meta name="theme-color" content="#(?:5e6ad2|FAF8F5)">'
     )
     script_re = re.compile(r'[ \t]*<script src="/js/discovery\.js(?:\?[^"]*)?" defer></script>')
     for p in root.rglob("*.html"):
@@ -220,7 +220,7 @@ def postprocess_head_links(root: Path) -> None:
         if is_working_rel(rel) or is_email_draft(rel):
             continue
         html = p.read_text()
-        html = block_re.sub("", html, count=1)
+        html = block_re.sub("", html)
         html = script_re.sub("", html)
         if "</head>" in html:
             html = html.replace("</head>", links + "</head>", 1)
