@@ -31,6 +31,29 @@ assert.strictEqual(row(base, "runway").rel, "external noopener");
 assert.strictEqual(row(base, "midjourney").tier, "Basic");
 assert.strictEqual(row(base, "midjourney").monthlyCents, 1000);
 assert.strictEqual(row(base, "midjourney").rel, "external noopener");
+assert.strictEqual(row(base, "descript").verdict, "Keep");
+assert.strictEqual(row(base, "elevenlabs").verdict, "Test");
+assert.strictEqual(row(base, "heygen").verdict, "Test");
+assert.strictEqual(row(base, "synthesia").verdict, "Test");
+assert.strictEqual(row(base, "runway").verdict, "Keep");
+assert.strictEqual(row(base, "midjourney").verdict, "Keep");
+assert.strictEqual(base.keepSlug, "descript");
+assert.strictEqual(base.savingsAnnualCents, 0);
+
+const idle = voice.priceVoice({ minutes: 60, seconds: 0, retake: 1, clone: false });
+assert.strictEqual(row(idle, "runway").tier, "No clip");
+assert.strictEqual(row(idle, "runway").monthlyCents, 0);
+assert.strictEqual(row(idle, "runway").verdict, "Cut");
+assert.strictEqual(row(idle, "descript").verdict, "Keep");
+assert.notStrictEqual(row(idle, "descript").verdict, "Switch");
+assert.strictEqual(row(idle, "midjourney").verdict, "Keep");
+assert.strictEqual(idle.savingsAnnualCents, 0);
+
+const noFast = voice.priceVoice({ minutes: 0, seconds: 10, retake: 1, clone: false });
+assert.strictEqual(row(noFast, "midjourney").tier, "No Fast time");
+assert.strictEqual(row(noFast, "midjourney").verdict, "Cut");
+assert.strictEqual(row(noFast, "runway").verdict, "Keep");
+assert.strictEqual(row(noFast, "descript").verdict, "Keep");
 
 const edge = voice.priceVoice({ minutes: 60, seconds: 52, retake: 1, clone: false });
 assert.strictEqual(row(edge, "runway").credits, 624);
@@ -65,8 +88,12 @@ assert.strictEqual(row(longFast, "midjourney").monthlyCents, 12000);
 const over = voice.priceVoice({ minutes: 4000, seconds: 900, retake: 1, clone: false });
 assert.strictEqual(row(over, "runway").covers, false);
 assert.strictEqual(row(over, "runway").monthlyCents, null);
+assert.strictEqual(row(over, "runway").verdict, "Cut");
 assert.strictEqual(row(over, "midjourney").covers, false);
 assert.strictEqual(row(over, "midjourney").monthlyCents, null);
+assert.strictEqual(row(over, "midjourney").verdict, "Cut");
+assert.strictEqual(row(retakes, "runway").verdict, "Keep");
+assert.strictEqual(row(retakes, "midjourney").verdict, "Keep");
 
 console.log("priceVoice ok");
 """

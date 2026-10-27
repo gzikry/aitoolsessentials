@@ -155,7 +155,7 @@ def generate(root: Path) -> Path:
     }});
     var rows = result.rows.map(function (row) {{
       var price = row.monthlyCents == null ? (row.unpriced || "Not priced from minutes") : calc.money(row.monthlyCents) + "/mo";
-      var tone = row.verdict === "Keep" ? "keep" : row.verdict === "Switch" ? "cut" : "test";
+      var tone = row.verdict === "Keep" ? "keep" : (row.verdict === "Switch" || row.verdict === "Cut") ? "cut" : "test";
       return "<tr><th>" + row.name + "</th><td>" + row.tier + "</td><td>" + price + "</td><td>" + row.meter + "</td><td>" + row.expiry + "</td><td><span class=\\"ledger-stamp ledger-" + tone + "\\">" + row.verdict + "</span></td><td><a class=\\"button button-blue\\" href=\\"" + row.href + "\\" rel=\\"" + row.rel + "\\">Open " + row.name + "</a><p>" + row.note + "</p></td></tr>";
     }}).join("");
     document.getElementById("voice-result").innerHTML = "<p class=\\"ledger-kicker\\">" + result.demandedMinutes + " media or Fast minutes · " + result.generatedSeconds + " Gen-4.5 seconds after " + result.retake + "x</p><div class=\\"table-wrap\\"><table class=\\"ledger-table\\"><thead><tr><th>Tool</th><th>Plan</th><th>Monthly</th><th>Meter</th><th>Rollover</th><th>Call</th><th></th></tr></thead><tbody>" + rows + "</tbody></table></div>";

@@ -266,13 +266,26 @@
       runwayRow(generatedSeconds),
       midjourneyRow(demanded, clone)
     ];
-    var priced = rows.filter(function (row) { return row.covers && row.monthlyCents != null; });
+    // Voice and avatar seats share one workload. Runway seconds and Midjourney
+    // Fast hours are separate jobs, so they do not enter this cheapest pool.
+    var voiceSlugs = { descript: 1, elevenlabs: 1, heygen: 1, synthesia: 1 };
+    var priced = rows.filter(function (row) {
+      return voiceSlugs[row.slug] && row.covers && row.monthlyCents != null;
+    });
     priced.sort(function (a, b) { return a.monthlyCents - b.monthlyCents; });
     rows.forEach(function (row) { row.verdict = "Test"; });
     if (priced.length) {
       priced[0].verdict = "Keep";
       priced.slice(1).forEach(function (row) { row.verdict = "Switch"; });
     }
+    rows.forEach(function (row) {
+      if (row.slug === "runway") {
+        row.verdict = generatedSeconds > 0 && row.covers ? "Keep" : "Cut";
+      }
+      if (row.slug === "midjourney") {
+        row.verdict = demanded > 0 && row.covers ? "Keep" : "Cut";
+      }
+    });
     var keep = priced[0] || null;
     return {
       minutes: minutes,

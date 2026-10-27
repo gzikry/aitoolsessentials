@@ -28,15 +28,32 @@ assert.strictEqual(row(free, "synthesia").rel, "external noopener");
 assert.strictEqual(free.rows.map((item) => item.name).join(","), "Descript,ElevenLabs,HeyGen,Synthesia,Runway,Midjourney");
 assert.strictEqual(row(free, "runway").covers, false);
 assert.strictEqual(row(free, "runway").monthlyCents, null);
+assert.strictEqual(row(free, "runway").verdict, "Cut");
 assert.strictEqual(row(free, "midjourney").tier, "Basic");
 assert.strictEqual(row(free, "midjourney").monthlyCents, 1000);
-assert.strictEqual(free.savingsAnnualCents, 12000);
+assert.strictEqual(row(free, "midjourney").verdict, "Keep");
+assert.strictEqual(row(free, "elevenlabs").verdict, "Test");
+assert.strictEqual(free.keepSlug, "descript");
+assert.strictEqual(free.savingsAnnualCents, 0);
 
 const clip = voice.priceVoice({ minutes: 60, seconds: 10, retake: 1, clone: false });
 assert.strictEqual(row(clip, "runway").tier, "Standard");
 assert.strictEqual(row(clip, "runway").monthlyCents, 1500);
 assert.strictEqual(row(clip, "runway").credits, 120);
 assert.strictEqual(row(clip, "runway").rel, "external noopener");
+assert.strictEqual(row(clip, "descript").verdict, "Keep");
+assert.strictEqual(row(clip, "runway").verdict, "Keep");
+assert.strictEqual(row(clip, "midjourney").verdict, "Keep");
+assert.strictEqual(row(clip, "elevenlabs").verdict, "Test");
+assert.strictEqual(clip.savingsAnnualCents, 0);
+
+const idle = voice.priceVoice({ minutes: 60, seconds: 0, retake: 1, clone: false });
+assert.strictEqual(row(idle, "runway").tier, "No clip");
+assert.strictEqual(row(idle, "runway").monthlyCents, 0);
+assert.strictEqual(row(idle, "runway").verdict, "Cut");
+assert.strictEqual(row(idle, "descript").verdict, "Keep");
+assert.strictEqual(row(idle, "midjourney").verdict, "Keep");
+assert.strictEqual(idle.savingsAnnualCents, 0);
 
 const standardEdge = voice.priceVoice({ minutes: 60, seconds: 52, retake: 1, clone: false });
 assert.strictEqual(row(standardEdge, "runway").credits, 624);
