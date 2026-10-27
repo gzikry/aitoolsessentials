@@ -1,0 +1,102 @@
+{
+ "date": "2026-10-27",
+ "new_rows": {
+  "excorporate-privacy-lead-built-privacy-and-ai-consultancy": {
+   "who": "Aakash Suri (the page's author field). No publication on the page - the domain field is empty.",
+   "category": "AI / Privacy Governance / NOT A REQUEST (founder milestone post)",
+   "contact": "The page publishes no address, handle, link or form. The body is a first-person anniversary post about leaving corporate employment, not a call for sources.",
+   "relevance": "low",
+   "notes": "This is not a journo request at all: it is a LinkedIn-style '12 months since I left corporate' post that Sourcee ingested. There is no ask, no deadline, no reporter and no route. Recorded only because the slug carries AI tokens and the body matched at body level, so the window's AI count stays auditable. Nothing to pitch.",
+   "template": "None. Not a request - no ask and no route. NOT DRAFTED."
+  },
+  "students-whose-professors-allow-ai-ai-use-in-coursework": {
+   "who": "Reddit handle 'LegitimateOil90' (the page's author field). Says they are a journalism student. No publication named.",
+   "category": "AI / Higher Education / Student Testimony",
+   "contact": "The page publishes no address, handle beyond the author field, or link. The body asks respondents to 'send me a message or comment' - a platform reply on Sourcee itself, which is not a route we hold credentials for.",
+   "relevance": "low",
+   "notes": "Wants students whose professors permit AI in coursework, for interview. We are a publisher with a price dataset, not a student: answering would mean inventing standing we do not have, which is the one thing this monitor will not do. Also the weakest route class seen - a platform reply from an unverified student account.",
+   "template": "None. Wants student testimony; no route. NOT DRAFTED."
+  },
+  "admissions-leaders-and-researchers-measuring-judgment-amid-ai": {
+   "who": "Dr. Aviva Legatt, contributing to Forbes (the page's domain field is forbes.com).",
+   "category": "AI / Higher Education Admissions / Judgment Assessment",
+   "contact": "The body says 'please reply to me directly' and the page publishes no address, handle or link. Platform reply only; no route resolved.",
+   "relevance": "low",
+   "notes": "A Forbes call for admissions leaders, faculty and assessment researchers on whether judgment can be measured in an AI era. Our data is tool pricing - it does not answer a measurement question, and we hold no standing as an admissions leader. The one mention of 'cost' in the body is about assessment-tool equity, not the per-seat list prices we publish.",
+   "template": "None. Wants admissions leaders and assessment researchers; no route. NOT DRAFTED."
+  },
+  "carleton-students-ai-dating-advice-impact-on-dating-experience": {
+   "who": "Reddit handle 'Individual_Hawk_5754' (author field), a reporter for The Charlatan, Carleton University's independent newspaper (domain field charlatan.ca).",
+   "category": "AI / Consumer Behaviour / Student Testimony",
+   "contact": "No address, handle or link published. The body asks for a DM: 'send me a DM and we can arrange a time'. Platform reply only.",
+   "relevance": "low",
+   "notes": "Wants Carleton students who have used AI for dating advice. First-person testimony from a student cohort we are not part of, and no route. Off-beat for our price data twice over - wrong subject and wrong standing.",
+   "template": "None. Student testimony only; no route. NOT DRAFTED."
+  },
+  "celebrity-agents-how-i-manage-my-money-series": {
+   "who": "Emily Braeger, The i Paper (the page's author field and domain theipaper.com).",
+   "category": "Personal Finance / Celebrity Agents / Interview Series",
+   "contact": "The body's address is platform-redacted ('Please email me at [email redacted]'). The page publishes no link or handle. No route resolved; the i Paper's own contact page was not probed for a byline address this run.",
+   "relevance": "low",
+   "notes": "Looking for celebrity agents for an existing 'How I Manage My Money' interview series. We are neither an agent nor an individual with a celebrity client list; there is no data angle - the series is personal finance testimony. The slug's AI token is incidental (the request is not about AI at all), which is why it is recorded as a low and not as a window find.",
+   "template": "None. Wants celebrity agents; address redacted; no route. NOT DRAFTED."
+  },
+  "former-software-engineers-turned-traders-pivot-after-layoff-or-ai": {
+   "who": "Thibault Spirlet, tech reporter, Business Insider London (page author field 'Thibault_SpirletBI', domain businessinsider.com). THE SAME REPORTER as this queue's one sendable row.",
+   "category": "AI / Careers / Software Engineers Turned Traders",
+   "contact": "The body's address is platform-redacted ('please email me at [email redacted]'), but this reporter's address is already resolved off his own byline page and RE-PROBED TODAY: businessinsider.com/author/thibault-spirlet HTTP 200, 326,570 bytes, tspirlet@businessinsider.com published in a mailto link and 5 times in the markup (route-checks-2026-10-27.json). Automatable? No - George's lane.",
+   "relevance": "low",
+   "notes": "THE ROW THAT MATTERS TODAY IS THIS ONE'S BYLINE, NOT ITS ASK. The ask is first-person testimony from ex-software-engineers now trading full time, including previous salary and current earnings - we cannot answer it and must not try. What it establishes is a fact the queue could not previously evidence: as of 2026-10-26T11:46Z this reporter is ACTIVELY SOURCING, which means he is reading his inbox. Our 4-day-old Mistral cost pitch to him is therefore not a stale ask sitting in a dead mailbox - it is arriving while he is commissioning two pieces. That is the strongest argument yet for sending it today, and it is the reason this run stages the draft rather than only writing it.",
+   "template": "None for this row's ask (wants trader testimony we do not have). Its byline route is reused by the Mistral draft, pitch-drafts-2026-10-27.md section 1."
+  },
+  "ai-companies-in-utilities-and-construction-frontline-safety-and-workload": {
+   "who": "Lindsay Dodgson, CNBC (page author field, domain cnbc.com).",
+   "category": "AI / Blue-Collar AI Adoption / Utilities & Construction",
+   "contact": "The body's address is platform-redacted. No link, handle or form published; no route resolved.",
+   "relevance": "low",
+   "notes": "Wants AI companies deploying tools into utilities, construction and infrastructure to speak about frontline safety and workload. We are a review and pricing publisher, not an AI vendor - there is no standing here at all, and the one adjacent figure we hold (what these tools list at per seat) is not what a CNBC piece about worker safety needs.",
+   "template": "None. Wants AI vendors; address redacted; no route. NOT DRAFTED."
+  },
+  "members-club-and-hospitality-pros-in-hong-kong-postcovid-trends": {
+   "who": "Reddit-style handle 'Hihellohi' (the page's author field). No publication named.",
+   "category": "Hospitality / Video Sourcing (body-level AI hit, slug has no AI token)",
+   "contact": "No address, link or handle published. The body asks for on-camera or voice-note interviews; platform reply only.",
+   "relevance": "low",
+   "notes": "Body-level AI hit only: AI adoption in hospitality is one of several topics in an educational video, and the ask is for members-club members and hotel staff to appear on camera. We are neither, and no route exists. Recorded so the body-level AI count is auditable, not as a candidate.",
+   "template": "None. Wants on-camera hospitality testimony; no route. NOT DRAFTED."
+  },
+  "canadian-health-innovators-voices-of-innovation-canada-nov-16": {
+   "who": "Glenn Lanteigne (author field). A book series ('Voices of Innovation', Canadian edition), no publication domain.",
+   "category": "Healthcare / Book Contribution Call (body-level AI hit)",
+   "contact": "No address, link or handle published on the page; the call is to participate in a book, with a stated deadline of 2026-11-16.",
+   "relevance": "low",
+   "notes": "Body-level AI hit on a healthcare-innovation book call, not an AI-spend or tooling request. It carries a real stated deadline (2026-11-16, an extension) - the first hard deadline this monitor has recorded in weeks - but the ask is contributed chapters from clinicians and health-system leaders. No standing, no route.",
+   "template": "None. Book contribution call for clinicians; no route. NOT DRAFTED."
+  }
+ },
+ "why_not_drafted": [
+  "every one of the 9 new rows is relevance 'low' and asks for first-person testimony or institutional standing we do not have (students, celebrity agents, admissions leaders, ex-engineers now trading, AI vendors, hospitality staff, clinicians)",
+  "none of the 9 publishes a usable reply route: 4 redact the address, 5 publish nothing at all, and not one carries a byline page we could resolve an address off this run",
+  "the one row with a known route - former-software-engineers-turned-traders - is Thibault Spirlet's, and his ask is trader testimony, not pricing; his route is used instead by the Mistral draft in section 1"
+ ],
+ "new_this_run": [
+  "excorporate-privacy-lead-built-privacy-and-ai-consultancy - not a request; a founder milestone post",
+  "students-whose-professors-allow-ai-ai-use-in-coursework - student testimony, no route",
+  "admissions-leaders-and-researchers-measuring-judgment-amid-ai - Forbes, admissions leaders, no route",
+  "carleton-students-ai-dating-advice-impact-on-dating-experience - Charlatan, students, no route",
+  "celebrity-agents-how-i-manage-my-money-series - the i Paper, celebrity agents, address redacted",
+  "former-software-engineers-turned-traders-pivot-after-layoff-or-ai - Business Insider / Thibault Spirlet, testimony, route known",
+  "ai-companies-in-utilities-and-construction-frontline-safety-and-workload - CNBC, AI vendors, address redacted",
+  "members-club-and-hospitality-pros-in-hong-kong-postcovid-trends - body-level AI hit, on-camera testimony, no route",
+  "canadian-health-innovators-voices-of-innovation-canada-nov-16 - body-level AI hit, book call with a 2026-11-16 deadline, no route"
+ ],
+ "extra_actions": [
+  "SEND pitch-drafts-2026-10-27.md section 1 (Business Insider / Thibault Spirlet, 4 days old, relevance medium) to tspirlet@businessinsider.com. It is a plain email with no form and no login: the shortest path to a sent pitch in this queue. A draft is staged in Gmail Drafts with today's figures, so the send is one click - open Drafts, read it, send.",
+  "The same reporter posted a NEW request on 2026-10-26T11:46Z, so he is actively commissioning and reading his inbox today. This is the best moment this row will ever have.",
+  "Sections 2 and 3 are the two standing late sends (Tobi Amure / Fast Company Work Life at hello@tobiamure.com, 17 days; Christopher Mims / WSJ via LinkedIn DM, 22 days). Both routes re-probed live today. Send late or record skipped in pitch-ledger.json - silence leaves them drifting, and neither will be drafted again."
+ ],
+ "defects": [
+  "Mailbox sweep: the earlier from-address loop in this session used a mis-quoted query and returned zero for every sender INCLUDING jansuski.com, which the ledger records as having replied twice. A control query against [Gmail]/All Mail proved the search works and returned both of Jan Suski's messages (msgs 234 and 305). The sweep was re-run with the query passed as separate arguments and an explicit All Mail folder; every other pitch recipient returns nothing, which is now a measured zero rather than a quoting artefact. Anyone re-running this check must include a positive control.",
+  "The Gmail draft staged on 2026-10-23 (uid 29, subject 'The $17.50 median: method and denominator first', To hello@tobiamure.com) was still sitting unsent four days later with a 2026-10-23 figure set inside it. It has been left in place but is now SUPERSEDED by pitch-drafts-2026-10-27.md section 2: sending it unedited would send aged numbers. Staging a draft is not a send and this run's staging is recorded as such."
+ ]
+}
