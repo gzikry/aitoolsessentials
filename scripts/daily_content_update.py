@@ -621,6 +621,9 @@ if _audit_fixed != _audit_html:
 
 from inject_ledger_pages import inject as _inject_ledger_pages
 print('Ledger pages:', _inject_ledger_pages(root))
+# The alias must stay a root-absolute copy of the form. Ledger chrome is
+# applied to submit-tool.html above, then copied so the two pages match.
+print('Republished submit alias:', _publish_submit(root))
 
 from asset_rev import stamp_tree as _stamp_assets
 print(f'Stamped content hashes on {_stamp_assets(root)} pages')

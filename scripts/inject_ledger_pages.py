@@ -3,7 +3,8 @@
 
 Generators rewrite <body> on every pass. This runs after them, and before the
 asset hash stamp, so the class and the callout survive a second pipeline run.
-Homepage, premium, and the calculator hubs stay off body.ledger-page.
+The homepage stays off body.ledger-page. Utility pages, including premium,
+the voice calculator, and the articles index, get the class and no callout.
 """
 from __future__ import annotations
 
@@ -62,6 +63,21 @@ CATEGORY_HUB = {
     "Audio & Video": "voice",
 }
 ALIASES = {"zapier": "zapier-ai", "otter": "otter-ai", "copilot": "github-copilot"}
+UTILITY_PAGES = frozenset({
+    "submit-tool.html",
+    "submit/index.html",
+    "methodology/index.html",
+    "pricing-watch/index.html",
+    "legal/about.html",
+    "advertise/index.html",
+    "premium/index.html",
+    "stack-audit.html",
+    "newsletter/index.html",
+    "price-changes/index.html",
+    "articles/index.html",
+    "compare/ai-video-avatar-cost/index.html",
+})
+DARK_INLINE = re.compile(r"(background(?:-color)?\s*:\s*)#000(?:000)?\b", re.I)
 
 
 def _catalog(root: Path) -> dict[str, dict]:
@@ -131,7 +147,7 @@ def _fallback_sentence(kind: str) -> str:
 
 
 def _callout(kind: str, path: Path, by_slug: dict[str, dict]) -> str | None:
-    if kind in {"guide", "category", "tool-index"}:
+    if kind in {"guide", "category", "tool-index", "utility"}:
         return None
     if kind == "comparison-index" or path.name == "best-ai-tools.html":
         return _directory_callout()
@@ -160,10 +176,12 @@ def _kind(path: Path, root: Path) -> str | None:
         return "tool"
     if rel.startswith("comparisons/") and path.parent == root / "comparisons" and path.suffix == ".html":
         return "comparison-index" if path.name == "index.html" else "comparison"
-    if rel.startswith("guides/switch-guides/") and path.suffix == ".html":
+    if rel.startswith("guides/") and path.suffix == ".html":
         return "guide"
     if rel.startswith("categories/") and path.name == "index.html":
         return "category"
+    if rel in UTILITY_PAGES:
+        return "utility"
     return None
 
 
@@ -215,6 +233,8 @@ def inject(root: Path) -> int:
             continue
         updated = _add_class(text)
         updated = THEME_RE.sub(r"\1#FAF8F5\2", updated)
+        updated = updated.replace("\u2726", "")
+        updated = DARK_INLINE.sub(r"\1#FAF8F5", updated)
         block = _callout(kind, path, by_slug)
         if block:
             updated = _insert(updated, block)
