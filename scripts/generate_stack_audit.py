@@ -189,6 +189,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     </section>
   </div>
 </section>
+<section class="ledger-sheet"><h2>Already on a team plan?</h2>{__import__('ledger_offers').receipt_footer_html()}</section>
 </main>
 {FOOTER}
 <script type="application/json" id="sa-catalog">{payload}</script>

@@ -138,7 +138,8 @@
       "<h3>Test First</h3>" + list(result.test, "No free tier to test.") +
       "<h3>Cut</h3>" + list(result.cut, cutEmpty) +
       "<h3>Credit-expiry risk</h3>" + list(result.expiry, "") +
-      "<p>" + result.reason + "</p>"
+      "<p>" + result.reason + "</p>" +
+      '<p><a href="/go/v0/">Try v0</a> · <a href="/go/bolt-new/">Try Bolt.new</a> · <a href="/go/lovable/">Try Lovable</a> · <a href="/go/replit-ai/">Try Replit</a></p>'
     );
   }
 

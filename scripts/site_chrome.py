@@ -37,6 +37,7 @@ CANONICAL_HEADER = (
     '<a href="/benchmarks/">Benchmarks</a>'
     '<a href="/articles/learn.html">Learn</a>'
     '<a href="/guides/switch-guides/">Switching</a>'
+    '<a href="/price-changes/">Price changes</a>'
     '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END -->'
     "</nav>"
     + _FORM

@@ -494,6 +494,15 @@ print(f'Refreshed inventory copy for {_current_count} tools')
 from generate_app_builder_hub import generate as generate_app_builder_hub
 print('Generated app-builder pricing hub:', generate_app_builder_hub(root))
 
+from generate_coding_assistant_hub import generate as generate_coding_assistant_hub
+print('Generated coding-assistant pricing hub:', generate_coding_assistant_hub(root))
+
+from generate_price_changes import generate as generate_price_changes
+print('Generated price-change tracker:', generate_price_changes(root))
+
+from generate_affiliate_router import generate as generate_affiliate_router
+print('Generated affiliate router:', generate_affiliate_router(root))
+
 # Final metadata pass: downstream generators can rewrite head sections, so restore
 # structured data, discovery links, and knowledge schema after every other pass.
 subprocess.run(['python3', str(root / 'scripts' / 'enhance_structured_data.py')], check=True)

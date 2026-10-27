@@ -139,6 +139,10 @@ def generate(root: Path = ROOT) -> Path:
 <div class="actions"><a class="button button-blue" href="../compare-shortlist.html">Compare your shortlist</a><a class="button button-dark" href="../downloads/ai-tool-evaluation-scorecard.html">Open free scorecard</a><a class="button button-dark" href="../pricing-watch/" style="margin-left:8px">Pricing Watch</a></div>
 </div></section>
 <section class="scene scene-light"><div class="article-shell wide">
+<h2>Calculators</h2>
+<p><a href="/compare/ai-coding-assistants/">Coding assistant cost</a> prices Cursor, Claude Code, Copilot, and Windsurf. <a href="/compare/ai-app-builders/">App-builder credit burn</a> prices v0, Bolt.new, Lovable, and Replit. <a href="/price-changes/">Price changes</a> lists the credit clocks.</p>
+</div></section>
+<section class="scene scene-light"><div class="article-shell wide">
 <p class="kicker light">Find a matchup</p><h2>Search the comparison library</h2>
 <label for="comparison-filter">Filter by tool or matchup</label>
 <input id="comparison-filter" type="search" placeholder="Try ChatGPT, Cursor, automation…" style="width:100%;max-width:720px;padding:14px 16px;border:1px solid #c7c7cc;border-radius:12px;font:inherit">

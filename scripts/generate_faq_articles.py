@@ -644,6 +644,6 @@ ARTICLES['claude-code-vs-cursor-vs-copilot.html'] = {
 <li>Read training and retention terms before annual billing.</li>
 <li>Keep one primary. Add a second only if it owns a different weekly job.</li>
 </ol>
-<p>Related: <a href="cursor-vs-copilot-which-to-pay-for.html">Cursor vs Copilot</a>, <a href="evaluating-ai-coding-tools-team-rollout.html">team rollout checklist</a>, <a href="../comparisons/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot</a>.</p>
+<p>Related: <a href="cursor-vs-copilot-which-to-pay-for.html">Cursor vs Copilot</a>, <a href="evaluating-ai-coding-tools-team-rollout.html">team rollout checklist</a>, <a href="../comparisons/cursor-vs-github-copilot.html">Cursor vs GitHub Copilot</a>. Price the same workload for Cursor, Claude Code, Copilot, and Windsurf in the <a href="/compare/ai-coding-assistants/">coding-assistant pricing calculator</a>.</p>
 <p>If you already pay for two coding seats, use <a href="../premium/">Premium</a> coding shortlist and stack audit. 7-day trial; code <strong>LAUNCH50</strong> for 50% off the first paid month (new users).</p>
 '''}
