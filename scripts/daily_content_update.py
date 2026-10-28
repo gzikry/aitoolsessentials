@@ -512,6 +512,12 @@ print('Generated presentation calculator:', generate_presentation_hub(root))
 from generate_credit_traps import generate as generate_credit_traps
 print('Generated credit-trap tracker:', generate_credit_traps(root))
 
+from generate_embeds import generate as generate_embeds
+print('Generated embeds:', generate_embeds(root, tools))
+
+from generate_outreach_kit import generate as generate_outreach_kit
+print('Generated outreach kit:', generate_outreach_kit(root))
+
 from generate_affiliate_router import generate as generate_affiliate_router
 print('Generated affiliate router:', generate_affiliate_router(root))
 

@@ -7,6 +7,15 @@
 <title>TheFaceRating: AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="https://aitoolsessentials.com/tools/thefacerating/">
 <link rel="stylesheet" href="../../css/styles.css?v=7bed9675442f">
+
+<style>
+.cite-drawer{margin:28px auto;max-width:980px;padding:16px 18px;background:#FAF8F5;color:#111315;border:1px solid #111315}
+.cite-drawer summary{cursor:pointer;font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;font-size:13px}
+.cite-drawer textarea{width:100%;min-height:72px;margin:6px 0 8px;padding:8px;border:1px solid #D8D2C5;background:#fff;color:#111315;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
+.cite-drawer button{margin:0 0 14px;border:1px solid #111315;background:#111315;color:#FAF8F5;padding:6px 10px;font:12px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer}
+.cite-drawer label{display:block;margin-top:8px;font-size:13px}
+</style>
+
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TheFaceRating", "applicationCategory": "Creative", "description": "TheFaceRating turns one selfie into a face rating. Google's MediaPipe face mesh places 478 landmarks in the browser, the site levels the head on the iris line and scores 11 proportions into a single 0-100 harmony number, then names the face shape across six prototypes and shows symmetry, canthal tilt, facial thirds and width-to-height ratio against a reference band. It also returns a celebrity bone-structure 'twin' as a percentage. The free scan needs no account, and we confirmed by running it that the measuring step sends nothing: landmarks, ratios and the result page are produced with no outbound request. The paid report adds 14 try-on renders on the buyer's own photo - six hairstyles, four necklines, four eyewear frames - plus a 12-season colour palette, a styling guide and, on Pro and VIP, a 30-day plan, a PDF and Studio credits for rating any look you find. Colour analysis is the one step that needs the photo, and the site asks for it with an unticked consent choice that can be declined while still returning full geometry results. Reports are sold by Vban LLC, a Wyoming company, under Wyoming law.", "url": "https://aitoolsessentials.com/tools/thefacerating/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free on-device scan with no account. Paid reports are one-time purchases, not subscriptions: Starter USD 7.99, Pro USD 16.99, VIP USD 24.99, listed identically on the homepage plan cards, the results-page paywall and Terms section 6. Studio credit packs are stated in the Terms only - 10 credits for USD 9.99 and 30 credits for USD 19.99, one credit per rating plus render, credits do not expire. Checkout is a live Stripe session (verified 2026-10-24: cs_live session for 'TheFaceRating Starter Report' at USD 7.99, merchant Vban LLC, Apple Pay and Google Pay offered); applicable tax shows at checkout. Free AI colour analyses are capped at two per day per hashed IP address."}, "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": "https://aitoolsessentials.com/"}, "sameAs": "https://thefacerating.com/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the free face rating actually free, and does it upload my photo?", "acceptedAnswer": {"@type": "Answer", "text": "Both parts check out. No account is needed, and when we ran the scan in a logged browser the measuring step made no outbound request at all - the 478 landmarks, the score and the full results page were produced with the network untouched. The next step, which saves the scan behind a link, posted only a sha256 hash of the image, the geometry object and the celebrity match. A photo is uploaded only if you accept the separate colour-analysis consent or buy a report."}}, {"@type": "Question", "name": "What do the paid reports cost?", "acceptedAnswer": {"@type": "Answer", "text": "USD 7.99 for Starter, 16.99 for Pro and 24.99 for VIP, each a one-time payment with no subscription or auto-renewal. The same three prices appear on the homepage cards, on the results-page paywall and in Terms section 6, and the paywall opens a live Stripe session at that amount with Vban LLC as merchant. Studio credits are sold separately, 10 for USD 9.99 or 30 for USD 19.99 according to the Terms."}}, {"@type": "Question", "name": "What happens to my face data?", "acceptedAnswer": {"@type": "Answer", "text": "The free scan is local. If you consent to colour analysis, or buy a report, a compressed copy (at most 1280 pixels on the long edge) goes to Cloudflare storage and to Google Gemini for the colour season and try-on renders; OpenAI receives text only, never the photo. Uploaded selfies are deleted within 2 hours, free results within 48 hours, paid reports and renders 12 months after purchase, and the policy states the data is never sold, never used for advertising and never used to train models."}}, {"@type": "Question", "name": "How seriously should I take the score?", "acceptedAnswer": {"@type": "Answer", "text": "As a styling prompt, not a verdict. The number is a weighted average of 11 geometric proportions, each scored against a classical reference band, and the site itself says lighting, angle and lens change the result and that attractiveness is broader than geometry. The 'Top 2%' labels on individual features come from the scanner's own reference set; no percentile methodology is published."}}, {"@type": "Question", "name": "Can I get a refund, and who do I contact?", "acceptedAnswer": {"@type": "Answer", "text": "Terms section 7 promises to fix a report or render that fails and to refund it if it cannot be fixed, and preserves your statutory consumer rights. The catch is the contact route: every address the site publishes is on thefacerating.com, and that domain has no mail exchanger, so privacy@thefacerating.com does not accept mail as of our 2026-10-24 check. Until the vendor publishes a working mailbox, treat the purchase as one you may have to resolve through the address they used to submit the site."}}, {"@type": "Question", "name": "Can I use it on someone else's photo?", "acceptedAnswer": {"@type": "Answer", "text": "No. The Terms require you to upload only photos of yourself or of an adult who has given permission, bar photos of anyone under 18, and forbid using the service to rate, mock or identify other people or to deceive with the generated images. Renders may be shared on social media but are licensed for personal, non-commercial use."}}]}</script>
 <link rel="stylesheet" href="../../css/share.css?v=74b611b77130">
@@ -27,7 +36,7 @@
 <p class="kicker light">Creative</p>
 <h1>TheFaceRating review</h1>
 <p>TheFaceRating turns one selfie into a face rating. Google's MediaPipe face mesh places 478 landmarks in the browser, the site levels the head on the iris line and scores 11 proportions into a single 0-100 harmony number, then names the face shape across six prototypes and shows symmetry, canthal tilt, facial thirds and width-to-height ratio against a reference band. It also returns a celebrity bone-structure 'twin' as a percentage. The free scan needs no account, and we confirmed by running it that the measuring step sends nothing: landmarks, ratios and the result page are produced with no outbound request. The paid report adds 14 try-on renders on the buyer's own photo - six hairstyles, four necklines, four eyewear frames - plus a 12-season colour palette, a styling guide and, on Pro and VIP, a 30-day plan, a PDF and Studio credits for rating any look you find. Colour analysis is the one step that needs the photo, and the site asks for it with an unticked consent choice that can be declined while still returning full geometry results. Reports are sold by Vban LLC, a Wyoming company, under Wyoming law.</p>
-<p class="last-updated">Editorial review · Updated 2026-10-27 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
+<p class="last-updated">Editorial review · Updated 2026-10-28 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
 </section>
 <!-- AIT CALCULATOR CALLOUT START -->
 <aside class="ledger-calc-callout">
@@ -119,6 +128,47 @@
 <details><summary>Can I get a refund, and who do I contact?</summary><p>Terms section 7 promises to fix a report or render that fails and to refund it if it cannot be fixed, and preserves your statutory consumer rights. The catch is the contact route: every address the site publishes is on thefacerating.com, and that domain has no mail exchanger, so privacy@thefacerating.com does not accept mail as of our 2026-10-24 check. Until the vendor publishes a working mailbox, treat the purchase as one you may have to resolve through the address they used to submit the site.</p></details>
 <details><summary>Can I use it on someone else's photo?</summary><p>No. The Terms require you to upload only photos of yourself or of an adult who has given permission, bar photos of anyone under 18, and forbid using the service to rate, mock or identify other people or to deceive with the generated images. Renders may be shared on social media but are licensed for personal, non-commercial use.</p></details>
 </div>
+
+<details class="cite-drawer" id="cite-audit">
+<summary>Cite or embed this audit</summary>
+<p>The badge links to this review. It is a dated price receipt, not a ranking and not a paid placement.</p>
+<p><img alt="AUDITED BY AI TOOLS ESSENTIALS — TheFaceRating" src="/badges/thefacerating.svg" width="360" height="108"></p>
+<label>HTML badge snippet
+<textarea readonly data-cite-box>&lt;a href=&quot;https://aitoolsessentials.com/tools/thefacerating/?utm_source=badge_embed&quot;&gt;&lt;img alt=&quot;AUDITED BY AI TOOLS ESSENTIALS — TheFaceRating&quot; src=&quot;https://aitoolsessentials.com/badges/thefacerating.svg&quot; width=&quot;360&quot; height=&quot;108&quot;&gt;&lt;/a&gt;</textarea></label>
+<button type="button" data-cite-copy>Copy HTML</button>
+<label>Markdown badge snippet
+<textarea readonly data-cite-box>[![AUDITED BY AI TOOLS ESSENTIALS — TheFaceRating](https://aitoolsessentials.com/badges/thefacerating.svg)](https://aitoolsessentials.com/tools/thefacerating/?utm_source=badge_embed)</textarea></label>
+<button type="button" data-cite-copy>Copy Markdown</button>
+<label>Editorial citation
+<textarea readonly data-cite-box>TheFaceRating, audited OCT 2026 by AI Tools Essentials: Free on-device scan with no account. Paid…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/thefacerating/</textarea></label>
+<button type="button" data-cite-copy>Copy citation</button>
+<label>BibTeX
+<textarea readonly data-cite-box>@misc{aitoolsessentials_thefacerating_2026,
+  title = {TheFaceRating pricing audit},
+  author = {{AIToolsEssentials}},
+  year = {2026},
+  url = {https://aitoolsessentials.com/tools/thefacerating/},
+  note = {TheFaceRating, audited OCT 2026 by AI Tools Essentials: Free on-device scan with no account. Paid…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/thefacerating/}
+}</textarea></label>
+<button type="button" data-cite-copy>Copy BibTeX</button>
+</details>
+<script>
+document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var box = button.previousElementSibling && button.previousElementSibling.querySelector("textarea");
+    if (!box) return;
+    var done = function () { button.textContent = "Copied"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(box.value).then(done);
+    } else {
+      box.select();
+      document.execCommand("copy");
+      done();
+    }
+  });
+});
+</script>
+
 </article>
 
 <aside class="review-aside">
@@ -177,7 +227,7 @@
 <a href="../../submit-tool.html" rel="nofollow">Submit a tool</a>
 <a href="../../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
 <a href="mailto:contact@aitoolsessentials.com">Contact</a>
-<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a></footer>
+<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a><a href="/embeds/">Embeds</a></footer>
 <script src="../../js/site.js?v=505d3293d6b1" defer></script>
 <script src="../../js/analytics.js?v=00855b06fbaf" defer></script>
 <script src="../../js/cookie-consent.js?v=5fb7d8beb19d" defer></script>

@@ -7,6 +7,15 @@
 <title>GearDex: AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="https://aitoolsessentials.com/tools/geardex/">
 <link rel="stylesheet" href="../../css/styles.css?v=7bed9675442f">
+
+<style>
+.cite-drawer{margin:28px auto;max-width:980px;padding:16px 18px;background:#FAF8F5;color:#111315;border:1px solid #111315}
+.cite-drawer summary{cursor:pointer;font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;font-size:13px}
+.cite-drawer textarea{width:100%;min-height:72px;margin:6px 0 8px;padding:8px;border:1px solid #D8D2C5;background:#fff;color:#111315;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
+.cite-drawer button{margin:0 0 14px;border:1px solid #111315;background:#111315;color:#FAF8F5;padding:6px 10px;font:12px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer}
+.cite-drawer label{display:block;margin-top:8px;font-size:13px}
+</style>
+
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "GearDex", "applicationCategory": "Productivity", "description": "A camera-specific inventory and studio-operations app: every body, lens, filter, drone and accessory gets a record with serial number, purchase details, condition, storage location, photos, receipts and warranty files, plus loan status and service history. On top of that sit shoot planning with sun and weather, packing and readiness checks, QR labels and scan check-out, value trends and an insurance-ready PDF, and - on Studio - a client CRM, booking, quotes, contracts and invoices. An assistant called Iris answers questions about your own kit, including lens-to-camera mount compatibility, and a free browser tier covers 25 items with export on every plan.", "url": "https://aitoolsessentials.com/tools/geardex/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Starter free (25 gear items, 10 categories, 25 AI actions a week, one 50 MB client gallery, a 3-page site); Pro $4/mo or $39/yr; Studio $19/mo or $179/yr; no free trial on paid plans"}, "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": "https://aitoolsessentials.com/"}, "sameAs": "https://www.geardex.app/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does GearDex cost?", "acceptedAnswer": {"@type": "Answer", "text": "Starter is free with up to 25 gear items in 10 categories, 3 shoot plans, one 50 MB client gallery, one gear document and 25 AI actions a week. Pro is $4 a month or $39 a year; Studio is $19 a month or $179 a year. A year of Pro saves $9 against twelve monthly payments and a year of Studio saves $49. The pricing page's structured data, the plan cards and the billing policy all carry the same figures."}}, {"@type": "Question", "name": "Is there a free trial on the paid plans?", "acceptedAnswer": {"@type": "Answer", "text": "No. The billing policy states plainly that GearDex does not offer a free trial on paid plans, and that the free Starter tier is the way to evaluate it. Refunds are also not automatic once a billing period has begun, and the money-back guarantee clause is conditional rather than advertised on the pricing page."}}, {"@type": "Question", "name": "Can GearDex replace a gear spreadsheet?", "acceptedAnswer": {"@type": "Answer", "text": "For a working kit, largely yes: the record holds serial, receipt, value, condition, location, documents, loan status and service history, and a CSV import brings an existing list across with row-level validation. What it adds over a spreadsheet is gear-specific structure - mounts, warranty expiry, loans, maintenance - and what it does not do is appraise your gear: recorded values are your own figures, and the site says plainly that it does not provide insurance or guarantee a claim."}}, {"@type": "Question", "name": "What does GearDex do with the photos and serial numbers I upload?", "acceptedAnswer": {"@type": "Answer", "text": "Inventory data, including serials, purchase prices, values and receipt files, is stored in the account in the United States with Supabase. AI features send a request to NVIDIA only for Iris chat, Smart Add, AI descriptions, receipt reading, and a scheduled suggestion job on Pro and Studio; the policy lists what each one includes, that existing serials are not sent for receipt matching, and that NVIDIA's terms allow it to improve its models with request content. Starter inventory is not sent unless you start an AI feature."}}, {"@type": "Question", "name": "Does GearDex take a cut of client payments?", "acceptedAnswer": {"@type": "Answer", "text": "No. Invoices and deposits are paid through the photographer's own payment link with Stripe, PayPal, Venmo, Square, Cash App or any https link, and the Terms state that GearDex is not a party to the client agreement, so disputes and chargebacks sit between the photographer, the client and that provider."}}]}</script>
 <link rel="stylesheet" href="../../css/share.css?v=74b611b77130">
@@ -27,7 +36,7 @@
 <p class="kicker light">Productivity</p>
 <h1>GearDex review</h1>
 <p>A camera-specific inventory and studio-operations app: every body, lens, filter, drone and accessory gets a record with serial number, purchase details, condition, storage location, photos, receipts and warranty files, plus loan status and service history. On top of that sit shoot planning with sun and weather, packing and readiness checks, QR labels and scan check-out, value trends and an insurance-ready PDF, and - on Studio - a client CRM, booking, quotes, contracts and invoices. An assistant called Iris answers questions about your own kit, including lens-to-camera mount compatibility, and a free browser tier covers 25 items with export on every plan.</p>
-<p class="last-updated">Editorial review · Updated 2026-10-27 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
+<p class="last-updated">Editorial review · Updated 2026-10-28 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
 </section>
 <!-- AIT CALCULATOR CALLOUT START -->
 <aside class="ledger-calc-callout">
@@ -122,6 +131,47 @@
 <details><summary>What does GearDex do with the photos and serial numbers I upload?</summary><p>Inventory data, including serials, purchase prices, values and receipt files, is stored in the account in the United States with Supabase. AI features send a request to NVIDIA only for Iris chat, Smart Add, AI descriptions, receipt reading, and a scheduled suggestion job on Pro and Studio; the policy lists what each one includes, that existing serials are not sent for receipt matching, and that NVIDIA's terms allow it to improve its models with request content. Starter inventory is not sent unless you start an AI feature.</p></details>
 <details><summary>Does GearDex take a cut of client payments?</summary><p>No. Invoices and deposits are paid through the photographer's own payment link with Stripe, PayPal, Venmo, Square, Cash App or any https link, and the Terms state that GearDex is not a party to the client agreement, so disputes and chargebacks sit between the photographer, the client and that provider.</p></details>
 </div>
+
+<details class="cite-drawer" id="cite-audit">
+<summary>Cite or embed this audit</summary>
+<p>The badge links to this review. It is a dated price receipt, not a ranking and not a paid placement.</p>
+<p><img alt="AUDITED BY AI TOOLS ESSENTIALS — GearDex" src="/badges/geardex.svg" width="360" height="108"></p>
+<label>HTML badge snippet
+<textarea readonly data-cite-box>&lt;a href=&quot;https://aitoolsessentials.com/tools/geardex/?utm_source=badge_embed&quot;&gt;&lt;img alt=&quot;AUDITED BY AI TOOLS ESSENTIALS — GearDex&quot; src=&quot;https://aitoolsessentials.com/badges/geardex.svg&quot; width=&quot;360&quot; height=&quot;108&quot;&gt;&lt;/a&gt;</textarea></label>
+<button type="button" data-cite-copy>Copy HTML</button>
+<label>Markdown badge snippet
+<textarea readonly data-cite-box>[![AUDITED BY AI TOOLS ESSENTIALS — GearDex](https://aitoolsessentials.com/badges/geardex.svg)](https://aitoolsessentials.com/tools/geardex/?utm_source=badge_embed)</textarea></label>
+<button type="button" data-cite-copy>Copy Markdown</button>
+<label>Editorial citation
+<textarea readonly data-cite-box>GearDex, audited OCT 2026 by AI Tools Essentials: Pro $4/month or $39/year ($3.25/month billed…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/geardex/</textarea></label>
+<button type="button" data-cite-copy>Copy citation</button>
+<label>BibTeX
+<textarea readonly data-cite-box>@misc{aitoolsessentials_geardex_2026,
+  title = {GearDex pricing audit},
+  author = {{AIToolsEssentials}},
+  year = {2026},
+  url = {https://aitoolsessentials.com/tools/geardex/},
+  note = {GearDex, audited OCT 2026 by AI Tools Essentials: Pro $4/month or $39/year ($3.25/month billed…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/geardex/}
+}</textarea></label>
+<button type="button" data-cite-copy>Copy BibTeX</button>
+</details>
+<script>
+document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var box = button.previousElementSibling && button.previousElementSibling.querySelector("textarea");
+    if (!box) return;
+    var done = function () { button.textContent = "Copied"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(box.value).then(done);
+    } else {
+      box.select();
+      document.execCommand("copy");
+      done();
+    }
+  });
+});
+</script>
+
 </article>
 
 <aside class="review-aside">
@@ -182,7 +232,7 @@
 <a href="../../submit-tool.html" rel="nofollow">Submit a tool</a>
 <a href="../../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
 <a href="mailto:contact@aitoolsessentials.com">Contact</a>
-<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a></footer>
+<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a><a href="/embeds/">Embeds</a></footer>
 <script src="../../js/site.js?v=505d3293d6b1" defer></script>
 <script src="../../js/analytics.js?v=00855b06fbaf" defer></script>
 <script src="../../js/cookie-consent.js?v=5fb7d8beb19d" defer></script>

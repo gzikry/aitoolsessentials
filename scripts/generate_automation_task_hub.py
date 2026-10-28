@@ -99,6 +99,7 @@ def generate(root: Path) -> Path:
 <section class="scene scene-light">
 <div class="article-shell wide">
 <p class="affiliate-inline">The Make button is a partner link. Zapier and n8n buttons go to the official site with our campaign tag. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
+<p><a href="/embed/automation-task-calculator/">Embed this calculator</a> · <a href="/embeds/">All embeds and badges</a></p>
 <form id="calculator" class="ledger-sheet">
 <h2>Workflow shape</h2>
 <div class="ledger-seats">

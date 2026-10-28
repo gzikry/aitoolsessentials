@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="google-site-verification" content="OzzGs2QF4v6zSBd9uO95NGgSPH5B598E6DPtcjRNn_4"><meta name="impact-site-verification" content="972313e6-cecc-47f0-aea2-c99b4364ee09">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Coding seat price embed from the AI Tools Essentials audited price ledger.">
+<title>Coding seat price embed | AIToolsEssentials</title>
+<link rel="canonical" href="https://aitoolsessentials.com/embed/ai-coding-assistants/">
+
+<style>
+html,body{margin:0;background:#FAF8F5;color:#111315}
+body{font:15px/1.4 Newsreader,Georgia,serif;padding:12px 14px 0}
+h1{font-size:22px;line-height:1.15;margin:0 0 8px}
+form,label{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px}
+.seats{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;margin:0 0 8px}
+label{display:flex;gap:6px;align-items:center}
+input,select{font:inherit;border:1px solid #111315;background:#fff;color:#111315}
+#result{border-top:1px solid #D8D2C5;padding-top:8px;min-height:120px}
+#result p{margin:4px 0}
+#result a{color:#111315}
+.embed-bar{position:sticky;bottom:0;margin:8px -14px 0;padding:8px 14px;background:#111315;color:#FAF8F5;font:11px/1.35 "IBM Plex Mono",ui-monospace,monospace}
+.embed-bar a{color:#FAF8F5}
+</style>
+<!-- AIT STRUCTURED DATA START -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aitoolsessentials.com/"},{"@type":"ListItem","position":2,"name":"Coding seat price embed","item":"https://aitoolsessentials.com/embed/ai-coding-assistants/"}]}</script>
+<!-- AIT STRUCTURED DATA END -->
+<!-- AIT DISCOVERY LINKS --><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js?v=1a3af36ec1e9" defer></script>
+<!-- AIT KNOWLEDGE SCHEMA START -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aitoolsessentials.com/#organization","name":"AIToolsEssentials","url":"https://aitoolsessentials.com","email":"contact@aitoolsessentials.com","logo":"https://aitoolsessentials.com/assets/aitools-bot-mark.svg"},{"@type":"WebSite","@id":"https://aitoolsessentials.com/#website","url":"https://aitoolsessentials.com","name":"AIToolsEssentials","publisher":{"@id":"https://aitoolsessentials.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://aitoolsessentials.com/search/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
+<!-- AIT KNOWLEDGE SCHEMA END -->
+<link rel="stylesheet" href="../../css/share.css?v=74b611b77130">
+<meta property="og:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://aitoolsessentials.com/assets/og-ai-tools.jpg"></head>
+<body>
+<main>
+<h1>Coding seat price</h1>
+<form id="embed-coding" class="seats">
+<label>Seats <input id="seats" type="number" min="1" max="50" value="5"></label>
+<label>Prompts / day <input id="prompts" type="number" min="1" max="200" value="20"></label>
+<label><input id="frontier" type="checkbox"> Frontier models</label>
+<label><input id="annual" type="checkbox"> Annual where published</label>
+</form>
+<div id="result" aria-live="polite"></div>
+</main>
+<div id="share-row" hidden></div>
+  <footer class="embed-bar">Source: AI Tools Essentials Audited Price Ledger → <a href="/compare/ai-coding-assistants/">Full 99-tool breakdown</a> · <a href="/compare/ai-coding-assistants/">Coding calculator</a> · <a href="/newsletter/">Newsletter</a> · <a href="/embeds/">Embeds</a><a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a><a href="mailto:contact@aitoolsessentials.com">Contact</a><!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END --></footer>
+
+<script src="/js/coding-assistant-calculator.js?v=9b0c20700463"></script>
+<script>
+
+var form = document.getElementById("embed-coding");
+var out = document.getElementById("result");
+var hops = { cursor: "cursor", claude: "claude", copilot: "github-copilot", windsurf: "windsurf" };
+function paint() {
+  var result = window.CodingAssistantCalc.quote({
+    seats: document.getElementById("seats").value,
+    prompts: document.getElementById("prompts").value,
+    frontier: document.getElementById("frontier").checked,
+    annual: document.getElementById("annual").checked
+  });
+  out.innerHTML = result.tools.map(function (tool) {
+    return "<p>" + tool.verdict + " · " + tool.name + " " + tool.tier + " · " +
+      window.CodingAssistantCalc.money(tool.totalMonthlyCents) + "/mo · " +
+      "<a href=\"/go/" + hops[tool.id] + "/\" rel=\"external noopener\">Open</a></p>";
+  }).join("");
+}
+form.addEventListener("input", paint);
+form.addEventListener("change", paint);
+paint();
+
+</script>
+<script src="../../js/site.js?v=505d3293d6b1" defer></script>
+<script src="../../js/cookie-consent.js?v=5fb7d8beb19d" defer></script>
+<script src="../../js/analytics.js?v=00855b06fbaf" defer></script>
+</body>
+</html>
