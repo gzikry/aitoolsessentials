@@ -31,8 +31,10 @@ pricing audit and the hosted newsprint badge. All nine recipient domains resolve
   feature requests, and other feedback are all logged for the team." It answers nothing and
   routes paid-plan customers to in-app support and `billing@`; it offers no marketing or press
   route. **No reply sent and none owed** — answering a no-reply desk is noise. The note reached
-  support, not growth, so if the badge is worth pursuing the honest next step is a press or
-  marketing contact found independently, not a second mail to this address.
+  support, not growth, and the site publishes no alternative: `/contact` and `/press` both 404,
+  `/about` carries no address, and `/terms` prints only `support@shortwave.com` (the same
+  mailbox). So there is no second route to try and no follow-up to schedule; a badge request here
+  ends with the acknowledgement unless they choose to answer from a human address.
 
 ## Defect found and fixed in this pass
 
