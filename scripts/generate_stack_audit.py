@@ -39,6 +39,23 @@ def esc(value: Any) -> str:
     )
 
 
+def _go_index(root: Path) -> dict[str, dict[str, str]]:
+    path = root / "data" / "affiliate_links.json"
+    links: dict[str, Any] = {}
+    if path.is_file():
+        links = json.loads(path.read_text(encoding="utf-8")).get("links") or {}
+    out: dict[str, dict[str, str]] = {}
+    for slug, entry in links.items():
+        href = str(entry.get("public_href") or "")
+        if not href and (root / "go" / slug / "index.html").is_file():
+            href = f"/go/{slug}/"
+        if not href:
+            continue
+        rel = "sponsored nofollow noopener" if entry.get("partner") else "external noopener"
+        out[slug] = {"href": href, "rel": rel}
+    return out
+
+
 def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     today = catalog.get("generated_at") or date.today().isoformat()
     count = len(catalog.get("tools", []))
@@ -63,6 +80,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
         "description": desc,
         "publisher": {"@type": "Organization", "name": "AIToolsEssentials"},
     }, separators=(",", ":"))
+    go_index = _go_index(root)
     payload = json.dumps({
         "generated_at": catalog["generated_at"],
         "policy": catalog["policy"],
@@ -83,6 +101,8 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
                 "suggested_use_cases": item["suggested_use_cases"],
                 "capability_confidence": item["capability_confidence"],
                 "capabilities_known": item["capabilities_known"],
+                "go_href": (go_index.get(item["slug"]) or {}).get("href") or "",
+                "go_rel": (go_index.get(item["slug"]) or {}).get("rel") or "",
             }
             for item in catalog["tools"]
         ],
@@ -132,19 +152,26 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
     <section class="score-card sa-panel" id="sa-step-1">
       <h2>Select the tools you already have</h2>
       <p>Search the directory or add a custom tool. Limit {catalog["rules"]["max_tools"]} tools so share links stay short.</p>
-      <div class="sa-preset" role="group" aria-label="1-click preset stacks">
-        <p class="sa-note">1-click preset stacks fill published point prices and open the Keep/Cut receipt. Google AI Pro is $19.99, so the generalist stack is $59.99. Agency Automation uses Zapier Team at $69/month billed annually and Notion Plus at $10, which is a limited AI trial.</p>
+      <div class="sa-preset" data-testid="preset-stacks" role="group" aria-label="1-tap preset stacks">
+        <p class="sa-note">1-tap preset stacks fill published point prices and open the Keep/Cut receipt. Google AI Pro is $19.99, so the generalist stack is $59.99. Agency Automation uses Zapier Team at $69/month billed annually and Notion Plus at $10, which is a limited AI trial. Cursor’s published new-user seat is Premium at $30, not a Pro sticker. Perplexity and Zapier stay unknown where the checked page has no single consumer sticker.</p>
         <button class="button button-ledger" type="button" data-preset="vibe">Indie Vibe-Coder ($110/mo)</button>
         <button class="button button-ledger" type="button" data-preset="creator">Creator Audio &amp; Video ($95/mo)</button>
         <button class="button button-ledger" type="button" data-preset="agency">Agency Automation ($149/mo)</button>
         <button class="button button-ledger" type="button" data-preset="chat">Triple-Chat Generalist ($59.99/mo)</button>
+        <button class="button button-ledger" type="button" data-preset="vibe-coder">Vibe-Coder Stack</button>
+        <button class="button button-ledger" type="button" data-preset="creator-voice">Creator Video &amp; Voice Stack</button>
+        <button class="button button-ledger" type="button" data-preset="founder">Founder &amp; Support Stack</button>
       </div>
-      <label class="sa-field" for="sa-paste">Paste Billing / Receipt Lines</label>
-      <textarea class="sa-paste" id="sa-paste" rows="4" placeholder="OPENAI *CHATGPT PLUS&#10;ANTHROPIC&#10;CURSOR AI"></textarea>
-      <div class="sa-actions">
-        <button class="button button-blue" type="button" id="sa-paste-apply">Match receipt lines</button>
-      </div>
-      <p id="sa-paste-note" class="sa-note"></p>
+      <details class="sa-paste-box" data-testid="billing-paste-box">
+        <summary>Paste your credit card statement lines</summary>
+        <label class="sa-field" for="sa-paste">Paste Billing / Receipt Lines</label>
+        <textarea class="sa-paste" id="sa-paste" rows="4" placeholder="OPENAI *CHATGPT&#10;ANTHROPIC&#10;CURSOR&#10;GITHUB&#10;ELEVENLABS"></textarea>
+        <div class="sa-actions">
+          <button class="button button-blue" type="button" id="sa-paste-apply">Match receipt lines</button>
+        </div>
+        <p id="sa-paste-note" class="sa-note"></p>
+        <p class="sa-note">Matching stays in this browser. Nothing in the box is sent.</p>
+      </details>
       <label class="sa-field" for="sa-search">Search tools</label>
       <input class="sa-search" id="sa-search" type="search" placeholder="Search by name or category" autocomplete="off">
       <div id="sa-chips" class="sa-chips" aria-label="Selected tools"></div>
@@ -205,6 +232,7 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
   </div>
 </section>
 <section class="ledger-sheet"><h2>Already on a team plan?</h2>{__import__('ledger_offers').receipt_footer_html()}</section>
+<!-- AIT PARTNER HOPS START --><!-- AIT PARTNER HOPS END -->
 </main>
 {FOOTER}
 <script type="application/json" id="sa-catalog">{payload}</script>

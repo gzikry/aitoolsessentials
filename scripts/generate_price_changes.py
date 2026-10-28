@@ -152,6 +152,7 @@ def generate(root: Path) -> Path:
 </table></div>
 <h2>Questions</h2>
 <div class="faq-list">{''.join(faqs)}</div>
+<article class="score-card" id="credit-trap-card"><span>Credit traps</span><h2>The AI Credit Expiry, Rollover &amp; Downgrade-Lock Tracker</h2><p>The dated rows above are the list changes. The ledger filters the expiry window, the cancel lock, and the effective cost after unused credits.</p><p><a class="button button-blue" href="/pricing-watch/credit-traps/">Open the credit-trap ledger</a></p></article>
 <p>Price a live workload in the <a href="/compare/ai-coding-assistants/">coding assistant calculator</a>, the <a href="/compare/ai-app-builders/">app-builder calculator</a>, the <a href="/compare/ai-video-avatar-cost/">voice and video minute calculator</a>, the <a href="/compare/automation-task-calculator/">automation task calculator</a>, or the <a href="/compare/ai-presentation-cost/">deck cost calculator</a>. <a href="/pricing-watch/credit-traps/">Credit traps</a> lists expiry windows and locks. The full dated log is <a href="/pricing-watch/">Pricing Watch</a>.</p>
 </div>
 </section>

@@ -1845,6 +1845,7 @@ body[data-page="home"] .home-learn-cards {
   gap: 12px;
   text-align: left;
 }
+body[data-page="home"] .home-learn-card-wide { grid-column: 1 / -1; }
 body[data-page="home"] .home-learn-card {
   display: flex;
   flex-direction: column;
@@ -2269,8 +2270,10 @@ section.scene.scene-dark.ledger-mast .button-ghost-dark:hover {
 }
 .call-pill-keep, .trap-pill-rollover { color: #0F6E56; }
 .call-pill-test, .trap-pill-unstated, .trap-pill-other { color: #1E40AF; }
-.call-pill-cut, .trap-pill-expiry90, .trap-pill-lock, .trap-pill-reset { color: #B42318; }
-.trap-pill-annual { color: #111315; }
+.call-pill-cut, .trap-pill-expiry90, .trap-pill-lock, .trap-pill-reset, .trap-pill-meter { color: #B42318; }
+.trap-pill-annual, .trap-pill-longroll { color: #0F6E56; }
+.trap-effective { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; white-space: nowrap; }
+#waste-calc input[type="range"] { width: min(280px, 100%); accent-color: #111315; }
 .newsletter-issue-card {
   margin: 0 0 16px;
   padding: 16px 18px;
