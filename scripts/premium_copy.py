@@ -433,6 +433,13 @@ def homepage_learn_html() -> str:
     """Compact choose/learn strip. Real existing URLs only. No Premium CTA."""
     cards = (
         (
+            "/pricing-watch/credit-traps/",
+            "Credit expiry ledger",
+            "65-day clocks, cancel locks, and what a half-used seat actually costs.",
+            "Open the tracker",
+            "home-learn-card home-learn-card-wide",
+        ),
+        (
             "/articles/chatgpt-vs-claude-which-is-better.html",
             "ChatGPT vs Claude",
             "Which assistant fits the week's work, not the brand.",
@@ -452,12 +459,12 @@ def homepage_learn_html() -> str:
         ),
     )
     card_html = "".join(
-        f'<a class="home-learn-card" href="{esc(href)}">'
-        f"<h3>{esc(title)}</h3>"
-        f"<p>{esc(line)}</p>"
-        f'<span class="home-learn-card-link">{esc(cta)}</span>'
+        f'<a class="{esc(card[4] if len(card) > 4 else "home-learn-card")}" href="{esc(card[0])}">'
+        f"<h3>{esc(card[1])}</h3>"
+        f"<p>{esc(card[2])}</p>"
+        f'<span class="home-learn-card-link">{esc(card[3])}</span>'
         "</a>"
-        for href, title, line, cta in cards
+        for card in cards
     )
     return f"""<!-- AIT HOMEPAGE LEARN START -->
 <section class="scene scene-dark home-learn" aria-labelledby="home-learn-heading">

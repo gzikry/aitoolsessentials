@@ -50,6 +50,13 @@ EMBEDS = (
         "script": "/js/customer-support-calculator.js",
         "href": "/embed/customer-support-cost.html",
     },
+    {
+        "slug": "credit-traps",
+        "title": "Credit expiry ledger",
+        "canonical_calc": "/pricing-watch/credit-traps/",
+        "calc_label": "Credit traps",
+        "href": "/embed/credit-traps.html",
+    },
 )
 
 STYLE = """
@@ -346,7 +353,10 @@ def generate(root: Path, tools: list[dict] | None = None) -> int:
     from generate_customer_support_hub import embed_page
     support = root / "embed" / "customer-support-cost.html"
     support.write_text(embed_page(root), encoding="utf-8")
+    from generate_credit_traps import embed_page as credit_embed_page
+    credit = root / "embed" / "credit-traps.html"
+    credit.write_text(credit_embed_page(root), encoding="utf-8")
     hub = root / "embeds" / "index.html"
     hub.parent.mkdir(parents=True, exist_ok=True)
     hub.write_text(_hub(root, tools, count), encoding="utf-8")
-    return len(pages) + 2
+    return len(pages) + 3

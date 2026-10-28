@@ -374,6 +374,40 @@
         { slug: "claude", name: "Claude", amount: 20, note: "Claude Pro month-to-month is $20." },
         { slug: "gemini", name: "Gemini", amount: 19.99, note: "Google AI Pro is $19.99/month. Checked 2026-09-18." }
       ]
+    },
+    "vibe-coder": {
+      label: "Vibe-Coder Stack",
+      tools: [
+        { slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." },
+        { slug: "claude", name: "Claude", amount: 20, note: "Claude Pro month-to-month is $20." },
+        { slug: "cursor", name: "Cursor", amount: 30, note: "Cursor Premium is $30/month for new AI users. The standalone Pro tier is not on the checked page. Checked 2026-10-13." },
+        { slug: "github-copilot", name: "GitHub Copilot", amount: 10, note: "GitHub Copilot Pro is $10/month. Checked 2026-10-01." },
+        { slug: "lovable", name: "Lovable", amount: 25, note: "Lovable Pro is $25/month. Checked 2026-10-25." },
+        { slug: "v0", name: "v0", amount: 30, note: "v0 Plus is $30 per user per month. Checked 2026-10-25." }
+      ]
+    },
+    "creator-voice": {
+      label: "Creator Video & Voice Stack",
+      tools: [
+        { slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." },
+        { slug: "midjourney", name: "Midjourney", amount: 10, note: "Midjourney Basic is $10/month. Checked 2026-10-01." },
+        { slug: "runway", name: "Runway", amount: 15, note: "Runway Standard is $15/month. Checked 2026-09-18." },
+        { slug: "elevenlabs", name: "ElevenLabs", amount: 22, note: "ElevenLabs Creator list price is $22/month. Checked 2026-09-18." },
+        { slug: "descript", name: "Descript", amount: 24, note: "Descript Hobbyist is $24/month. Checked 2026-09-18." },
+        { slug: "synthesia", name: "Synthesia", amount: 29, note: "Synthesia Starter is $29/month. Checked 2026-09-18." }
+      ]
+    },
+    founder: {
+      label: "Founder & Support Stack",
+      tools: [
+        { slug: "chatgpt", name: "ChatGPT", amount: 20, note: "ChatGPT Plus is $20/month. Checked 2026-10-01." },
+        { slug: "perplexity", name: "Perplexity", amount: null, note: "A consumer Pro or Max dollar price is not on the checked page. Spend stays unknown." },
+        { slug: "notion-ai", name: "Notion", amount: 20, note: "Notion Business is $20/member/month and includes Notion Agent. Checked 2026-09-18." },
+        { slug: "customgpt", name: "CustomGPT.ai", amount: 99, note: "CustomGPT.ai Standard is $99/month. Checked 2026-10-27." },
+        { slug: "c:intercom-fin", name: "Intercom Fin", amount: null, note: "Fin outcomes are $0.99. Not a directory tool, so this line is custom. Checked 2026-10-28." },
+        { slug: "make", name: "Make", amount: 12, note: "Make Core is $12/month at the displayed 10,000-credit tier. Checked 2026-10-01." },
+        { slug: "zapier-ai", name: "Zapier", amount: null, note: "Professional starts at $19.99/month billed annually. The task pack is unpublished, so spend stays unknown." }
+      ]
     }
   };
 
@@ -395,7 +429,13 @@
     { re: /\bNOTION\b/i, slug: "notion-ai", name: "Notion", amount: 20, note: "Notion Business is $20/member/month and includes Notion Agent. Plus is $10 with a limited AI trial. Checked 2026-09-18." },
     { re: /\bPERPLEXITY\b/i, slug: "perplexity", name: "Perplexity", amount: null, note: "A consumer Pro or Max dollar price is not on the checked page. Spend stays unknown." },
     { re: /\bWINDSURF\b/i, slug: "c:windsurf", name: "Windsurf", amount: 20, note: "Windsurf Pro is $20/month on the 2026-10-26 pricing check. It is not a directory tool, so this line is custom." },
-    { re: /\bCOPILOT\b/i, slug: "github-copilot", name: "GitHub Copilot", amount: 10, note: "GitHub Copilot Pro is $10/month. Checked 2026-10-01." }
+    { re: /\bCOPILOT\b/i, slug: "github-copilot", name: "GitHub Copilot", amount: 10, note: "GitHub Copilot Pro is $10/month. Checked 2026-10-01." },
+    { re: /\bGITHUB\b/i, slug: "github-copilot", name: "GitHub Copilot", amount: 10, note: "GitHub Copilot Pro is $10/month. Checked 2026-10-01." },
+    { re: /\bRUNWAY\b/i, slug: "runway", name: "Runway", amount: 15, note: "Runway Standard is $15/month. Checked 2026-09-18." },
+    { re: /\bCUSTOMGPT\b/i, slug: "customgpt", name: "CustomGPT.ai", amount: 99, note: "CustomGPT.ai Standard is $99/month. Checked 2026-10-27." },
+    { re: /\bCANVA\b/i, slug: "canva-ai", name: "Canva AI", amount: null, note: "Canva Free is US$0/year for one person. Pro is US$144/year. The checked page does not print a month-to-month sticker, so spend stays unknown." },
+    { re: /\bGRAMMARLY\b/i, slug: "grammarly", name: "Grammarly", amount: null, note: "The directory price is Free + paid plans. No single sticker is entered." },
+    { re: /\bOTTER(?:\.AI)?\b/i, slug: "otter-ai", name: "Otter.ai", amount: null, note: "The directory price is Free + paid plans. No single sticker is entered." }
   ];
 
   function toolRecord(spec) {
@@ -426,7 +466,13 @@
     var preset = PRESETS[id];
     if (!preset) return null;
     var sum = 0;
-    preset.tools.forEach(function (tool) { sum += tool.amount; });
+    var any = false;
+    preset.tools.forEach(function (tool) {
+      if (tool.amount == null) return;
+      any = true;
+      sum += tool.amount;
+    });
+    if (!any) return null;
     return Math.round(sum * 100) / 100;
   }
 
@@ -619,8 +665,25 @@
     var clusterHtml = result.clusters.length ? result.clusters.map(function (c) {
       return '<article class="score-card"><span>Overlap cluster</span><h3>' + esc(c.names.join(" · ")) + "</h3><p>Shared use cases: " + esc(c.shared.map(labelOf).join(", ") || "none named") + ".</p>" + (c.uncertain ? "<p class=\"sa-note\">Uncertainty: at least one tool is missing catalog capability data, so this overlap is based only on the use cases you selected.</p>" : "<p class=\"sa-note\">Overlap is based on normalized shared use cases, not directory category alone.</p>") + "</article>";
     }).join("") : '<p class="sa-note">No pairwise use-case overlap detected in this selection.</p>';
+    function toolLinks(slug) {
+      var rec = BY_SLUG[slug] || {};
+      var parts = [];
+      if (slug === "c:intercom-fin") {
+        parts.push('<a href="/compare/ai-customer-support-cost/">Support fees</a>');
+      } else if (rec.review_url) {
+        parts.push('<a href="' + esc(rec.review_url) + '">Audit</a>');
+      } else if (validSlug(slug) && slug.indexOf("c:") !== 0) {
+        parts.push('<a href="/tools/' + esc(slug) + '/">Audit</a>');
+      }
+      if (rec.go_href) {
+        parts.push('<a href="' + esc(rec.go_href) + '" rel="' + esc(rec.go_rel || "external noopener") + '">Open</a>');
+      } else if (validSlug(slug) && slug.indexOf("c:") !== 0) {
+        parts.push('<a href="/go/' + esc(slug) + '/" rel="external noopener">Open</a>');
+      }
+      return parts.length ? '<p class="sa-rec-links">' + parts.join(" · ") + "</p>" : "";
+    }
     var recHtml = result.recommendations.map(function (rec) {
-      return '<article class="score-card sa-rec"><span class="sa-rec-action ' + actionClass(rec.action) + '">' + esc(rec.action) + "</span><div><strong>" + esc(rec.name) + "</strong><p>" + esc(rec.why) + "</p></div></article>";
+      return '<article class="score-card sa-rec"><span class="sa-rec-action ' + actionClass(rec.action) + '">' + esc(rec.action) + "</span><div><strong>" + esc(rec.name) + "</strong><p>" + esc(rec.why) + "</p>" + toolLinks(rec.slug) + "</div></article>";
     }).join("");
     var factorHtml = result.score.factors.map(function (f) {
       var sign = f.points > 0 ? "+" : "";
@@ -819,6 +882,9 @@
       showError("");
       renderGrid();
       renderChips();
+      renderConfig();
+      renderResults();
+      setStep(3);
       var note = document.getElementById("sa-paste-note");
       if (note) {
         note.textContent = "Matched " + matched.length + ": " + matched.map(function (tool) {
@@ -826,7 +892,9 @@
           return tool.name + (spend == null ? " (spend unknown)" : " ($" + spend.toFixed(2) + "/mo)");
         }).join(", ") + ".";
       }
-      announce("Receipt lines applied. Continue to spend and use cases to review the amounts.");
+      var receipt = document.getElementById("sa-results");
+      if (receipt && receipt.scrollIntoView) receipt.scrollIntoView({ block: "start" });
+      announce("Receipt lines applied. Savings receipt is below.");
     });
     var copyReceipt = document.getElementById("sa-copy-receipt");
     if (copyReceipt) copyReceipt.addEventListener("click", function () {

@@ -217,6 +217,7 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
 <tbody>{rows}</tbody></table></div>
 {watch_html}
 {change_html}
+<article class="score-card" id="credit-trap-card"><span>Credit traps</span><h2>The AI Credit Expiry, Rollover &amp; Downgrade-Lock Tracker</h2><p>Filter monthly resets, 60–65 day expiry, cancel locks, attempted-vs-resolved meters, and long validity. Slide utilization from 25% to 100% and read the effective cost of a seat you do not finish.</p><p><a class="button button-blue" href="/pricing-watch/credit-traps/">Open the credit-trap ledger</a></p></article>
 <p><a href="/pricing-watch/credit-traps/">Credit expiry and lock tracker</a> lists the verified windows. <a href="/compare/ai-presentation-cost/">Deck cost</a> prices a presentation seat from the checked pages.</p>
 <p class="affiliate-inline" style="margin-top:16px">Methodology: snapshots come from each vendor's official pricing page on the date shown; we never infer or estimate missing values. This page is informational — always confirm final pricing with the vendor before purchasing.</p>
 </div></section>
