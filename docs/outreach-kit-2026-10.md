@@ -3,6 +3,7 @@
 Catalog size when this file was generated: 99.
 Calculator lines are one workload each. They are not a claim that the tool wins every job.
 Directory blocks are ready-to-submit copy. They are not a record that the form was sent.
+Every vendor note ends with the house sign-off. Outbound mail signs as AIToolsEssentials — never a personal name, never a personal address in the body.
 
 ## Vendor notes
 
@@ -22,6 +23,9 @@ Badge: https://aitoolsessentials.com/badges/descript.svg
 HTML: <a href="https://aitoolsessentials.com/tools/descript/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Descript" src="https://aitoolsessentials.com/badges/descript.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Runway
@@ -40,6 +44,9 @@ Badge: https://aitoolsessentials.com/badges/runway.svg
 HTML: <a href="https://aitoolsessentials.com/tools/runway/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Runway" src="https://aitoolsessentials.com/badges/runway.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Midjourney
@@ -58,6 +65,9 @@ Badge: https://aitoolsessentials.com/badges/midjourney.svg
 HTML: <a href="https://aitoolsessentials.com/tools/midjourney/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Midjourney" src="https://aitoolsessentials.com/badges/midjourney.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Make
@@ -76,6 +86,9 @@ Badge: https://aitoolsessentials.com/badges/make.svg
 HTML: <a href="https://aitoolsessentials.com/tools/make/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Make" src="https://aitoolsessentials.com/badges/make.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### GitHub Copilot
@@ -94,6 +107,9 @@ Badge: https://aitoolsessentials.com/badges/github-copilot.svg
 HTML: <a href="https://aitoolsessentials.com/tools/github-copilot/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — GitHub Copilot" src="https://aitoolsessentials.com/badges/github-copilot.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### ChatGPT
@@ -112,6 +128,9 @@ Badge: https://aitoolsessentials.com/badges/chatgpt.svg
 HTML: <a href="https://aitoolsessentials.com/tools/chatgpt/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — ChatGPT" src="https://aitoolsessentials.com/badges/chatgpt.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Claude
@@ -130,6 +149,9 @@ Badge: https://aitoolsessentials.com/badges/claude.svg
 HTML: <a href="https://aitoolsessentials.com/tools/claude/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Claude" src="https://aitoolsessentials.com/badges/claude.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### ElevenLabs
@@ -148,6 +170,9 @@ Badge: https://aitoolsessentials.com/badges/elevenlabs.svg
 HTML: <a href="https://aitoolsessentials.com/tools/elevenlabs/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — ElevenLabs" src="https://aitoolsessentials.com/badges/elevenlabs.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Cursor
@@ -166,6 +191,9 @@ Badge: https://aitoolsessentials.com/badges/cursor.svg
 HTML: <a href="https://aitoolsessentials.com/tools/cursor/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Cursor" src="https://aitoolsessentials.com/badges/cursor.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Gemini
@@ -184,6 +212,9 @@ Badge: https://aitoolsessentials.com/badges/gemini.svg
 HTML: <a href="https://aitoolsessentials.com/tools/gemini/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Gemini" src="https://aitoolsessentials.com/badges/gemini.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Perplexity
@@ -202,6 +233,9 @@ Badge: https://aitoolsessentials.com/badges/perplexity.svg
 HTML: <a href="https://aitoolsessentials.com/tools/perplexity/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Perplexity" src="https://aitoolsessentials.com/badges/perplexity.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Suno
@@ -220,6 +254,9 @@ Badge: https://aitoolsessentials.com/badges/suno.svg
 HTML: <a href="https://aitoolsessentials.com/tools/suno/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Suno" src="https://aitoolsessentials.com/badges/suno.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Grok
@@ -238,6 +275,9 @@ Badge: https://aitoolsessentials.com/badges/grok.svg
 HTML: <a href="https://aitoolsessentials.com/tools/grok/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Grok" src="https://aitoolsessentials.com/badges/grok.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Microsoft Copilot
@@ -256,6 +296,9 @@ Badge: https://aitoolsessentials.com/badges/microsoft-copilot.svg
 HTML: <a href="https://aitoolsessentials.com/tools/microsoft-copilot/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Microsoft Copilot" src="https://aitoolsessentials.com/badges/microsoft-copilot.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Shortwave
@@ -274,6 +317,9 @@ Badge: https://aitoolsessentials.com/badges/shortwave.svg
 HTML: <a href="https://aitoolsessentials.com/tools/shortwave/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Shortwave" src="https://aitoolsessentials.com/badges/shortwave.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### NotebookLM
@@ -292,6 +338,9 @@ Badge: https://aitoolsessentials.com/badges/notebooklm.svg
 HTML: <a href="https://aitoolsessentials.com/tools/notebooklm/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — NotebookLM" src="https://aitoolsessentials.com/badges/notebooklm.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### TypingMind
@@ -310,6 +359,9 @@ Badge: https://aitoolsessentials.com/badges/typingmind.svg
 HTML: <a href="https://aitoolsessentials.com/tools/typingmind/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — TypingMind" src="https://aitoolsessentials.com/badges/typingmind.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Zapier AI
@@ -328,6 +380,9 @@ Badge: https://aitoolsessentials.com/badges/zapier-ai.svg
 HTML: <a href="https://aitoolsessentials.com/tools/zapier-ai/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Zapier AI" src="https://aitoolsessentials.com/badges/zapier-ai.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Adobe Firefly
@@ -346,6 +401,9 @@ Badge: https://aitoolsessentials.com/badges/adobe-firefly.svg
 HTML: <a href="https://aitoolsessentials.com/tools/adobe-firefly/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Adobe Firefly" src="https://aitoolsessentials.com/badges/adobe-firefly.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Canva AI
@@ -364,6 +422,9 @@ Badge: https://aitoolsessentials.com/badges/canva-ai.svg
 HTML: <a href="https://aitoolsessentials.com/tools/canva-ai/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Canva AI" src="https://aitoolsessentials.com/badges/canva-ai.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Ideogram
@@ -382,6 +443,9 @@ Badge: https://aitoolsessentials.com/badges/ideogram.svg
 HTML: <a href="https://aitoolsessentials.com/tools/ideogram/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Ideogram" src="https://aitoolsessentials.com/badges/ideogram.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Khanmigo
@@ -400,6 +464,9 @@ Badge: https://aitoolsessentials.com/badges/khanmigo.svg
 HTML: <a href="https://aitoolsessentials.com/tools/khanmigo/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Khanmigo" src="https://aitoolsessentials.com/badges/khanmigo.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Ollama
@@ -418,6 +485,9 @@ Badge: https://aitoolsessentials.com/badges/ollama.svg
 HTML: <a href="https://aitoolsessentials.com/tools/ollama/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Ollama" src="https://aitoolsessentials.com/badges/ollama.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Grammarly
@@ -436,6 +506,9 @@ Badge: https://aitoolsessentials.com/badges/grammarly.svg
 HTML: <a href="https://aitoolsessentials.com/tools/grammarly/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Grammarly" src="https://aitoolsessentials.com/badges/grammarly.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ### Rows
@@ -454,6 +527,9 @@ Badge: https://aitoolsessentials.com/badges/rows.svg
 HTML: <a href="https://aitoolsessentials.com/tools/rows/?utm_source=badge_embed"><img alt="AUDITED BY AI TOOLS ESSENTIALS — Rows" src="https://aitoolsessentials.com/badges/rows.svg" width="360" height="108"></a>
 
 If a figure on the review is stale, reply with the official pricing URL and we will re-check it.
+
+— AIToolsEssentials
+https://aitoolsessentials.com
 ```
 
 ## Directories, newsletters, and posts

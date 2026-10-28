@@ -102,6 +102,9 @@ def _vendor_note(row: dict) -> str:
         f"Badge: {badge}\n"
         f"HTML: {embed}\n\n"
         f"If a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+        f"\n"
+        f"— AIToolsEssentials\n"
+        f"{DOMAIN}\n"
     )
 
 
@@ -219,6 +222,7 @@ def _markdown(packet: dict) -> str:
         f"Catalog size when this file was generated: {packet['catalog_count']}.",
         "Calculator lines are one workload each. They are not a claim that the tool wins every job.",
         "Directory blocks are ready-to-submit copy. They are not a record that the form was sent.",
+        "Every vendor note ends with the house sign-off. Outbound mail signs as AIToolsEssentials — never a personal name, never a personal address in the body.",
         "",
         "## Vendor notes",
         "",
@@ -253,3 +257,8 @@ def generate(root: Path) -> Path:
     doc.parent.mkdir(parents=True, exist_ok=True)
     doc.write_text(_markdown(packet), encoding="utf-8")
     return data_path
+
+
+if __name__ == "__main__":
+    root = Path(__file__).resolve().parents[1]
+    print("Generated outreach kit:", generate(root))
