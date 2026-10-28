@@ -1034,7 +1034,8 @@ def render(queue: list[dict], ledger: dict) -> str:
         _n_late = sum(1 for q in late_send if (q.get("days_old") or 0) > STALE_DAYS)
         _n_fresh = len(late_send) - _n_late
         _scope = (
-            (f"{_n_fresh} is inside the {STALE_DAYS}-day line and {_n_late} sit past it. The line is "
+            (f"{_n_fresh} {'is' if _n_fresh == 1 else 'are'} inside the {STALE_DAYS}-day line and "
+             f"{_n_late} {'sits' if _n_late == 1 else 'sit'} past it. The line is "
              "this monitor's own heuristic, not the platform's: no page on this source has ever "
              "carried an expiry, so a past-line row is late, not dead.") if _n_late and _n_fresh else
             (f"All {len(late_send)} sit past the {STALE_DAYS}-day line, which is this monitor's own "

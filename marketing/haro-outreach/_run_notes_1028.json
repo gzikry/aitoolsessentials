@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-28",
+  "new_rows": {
+    "us-solopreneurs-ai-eliminated-or-delayed-first-hire-forbes": {
+      "who": "Alison Coleman, Forbes senior contributor (page author field 'Alison Coleman', domain forbes.com; her Forbes bio, read through search 2026-10-28, says she is a freelance journalist and founder of Coleman Media Ltd. covering entrepreneurs and their startups).",
+      "category": "AI / Small Business / First-Hire Substitution",
+      "contact": "The body's address is platform-redacted ('email: [email redacted]'), and the page publishes no link or handle. ROUTE RESOLVED OFF HER OWN SITE, not guessed: https://www.alisoncoleman.co.uk/contact-me/ returns HTTP 200, 28,082 bytes, title 'Contact me : Alison Coleman', and prints in visible body text 'Email: alison@alisoncoleman.co.uk', 'Twitter: @alisonbcoleman', 'Skype: alisonbcoleman', beside a Contact Form 7 form (action /contact-me/#wpcf7-f52-p21-o1) as the fallback; her homepage https://www.alisoncoleman.co.uk/ returns HTTP 200, 21,396 bytes, title 'Alison Coleman'. Both recorded in route-checks-2026-10-28.json. alisoncoleman.co.uk MX = Google Workspace (aspmx.l.google.com first). Forbes' own byline page https://www.forbes.com/sites/alisoncoleman/ answers HTTP 403 (770 bytes) to us, so her own site is the only readable route. Email to a published address - a human send, George's lane.",
+      "relevance": "medium",
+      "notes": "NEW AND FRESH: posted 2026-10-27T12:57Z, page-read today as 1 day old, HTTP 200, badge 'Posted in last 7 days', in today's AI-topic feed, and the only row in today's window with both a live page and a resolved route. The ask is first-person testimony from US one-person businesses that used AI to eliminate or delay a first hire - we cannot supply the testimony, and the draft says so. What we can supply is the cost half of the same substitution with dates: of the 99 AI tools we track, 44 publish a monthly per-seat price, 35 of those at or under $25, median $17.50 (data/pricing_snapshots.json updated 2026-10-28). That is the arithmetic behind 'AI instead of a first hire'. DRAFTED - pitch-drafts-2026-10-28.md section 1.",
+      "template": "Lead with the measured substitute cost, not a description of the site: 'Of the 99 AI tools we price, 44 publish a monthly per-seat price; 35 of those sit at or under $25, median $17.50 (checked 2026-10-28).' Then state plainly what we cannot give her (first-person testimony from a switching business) and offer the price set as background with check dates and vendor URLs on every figure. Offer the Forbes bootstrapped-founder request on the same email - same reporter, same arithmetic, one send."
+    },
+    "us-founders-bootstrapped-despite-vc-revenue-growth-and-ai-impact": {
+      "who": "Alison Coleman, Forbes (page author field; domain field is empty, and the two requests were posted seven minutes apart so they are one commissioning pass - the sibling request carries forbes.com).",
+      "category": "AI / Founders / Bootstrapping & Capital Substitution",
+      "contact": "Address platform-redacted ('[email redacted]'); no link or handle on the page. Same reporter as the solopreneur request above, so the route is the same one already resolved and re-probed today: alison@alisoncoleman.co.uk published in visible text on https://www.alisoncoleman.co.uk/contact-me/ (HTTP 200, 28,082 bytes, route-checks-2026-10-28.json), with the site's contact form as fallback. George's lane.",
+      "relevance": "medium",
+      "notes": "Posted 2026-10-27T12:50Z, 1 day old, in today's AI-topic feed, HTTP 200. It asks founders who can 'quantify how AI has reduced the capital/headcount needed to build their company' - a quantified-cost ask, which is the one kind we can answer, but the answer must come from our price set rather than from a founder's own P&L we do not have. Posted seven minutes before the solopreneur request by the same reporter: both are covered by one email. NOT DRAFTED SEPARATELY - deliberately, because two emails to one reporter in the same hour is the fastest way to be filtered; the solopreneur draft names this request explicitly in its second paragraph.",
+      "template": "None of its own - covered by pitch-drafts-2026-10-28.md section 1, which names both of Alison Coleman's open requests in one email."
+    },
+    "users-who-linked-bank-and-brokerage-accounts-to-llms-ai-finance": {
+      "who": "Genna Contino, MarketWatch (page author field; domain marketwatch.com).",
+      "category": "AI / Consumer Finance / Linked Accounts Testimony",
+      "contact": "The body's address is platform-redacted ('Email me at [email redacted]'). The page publishes no link, handle or form. No route resolved this run; marketwatch.com was not probed for a byline address because the ask is not one we can answer.",
+      "relevance": "low",
+      "notes": "Posted 2026-10-27T23:07Z, 0 days old, in today's AI-topic feed, HTTP 200. Wants personal stories from people who connected a bank or brokerage account to an LLM for a MarketWatch story. That is first-person consumer testimony about a behaviour we do not practise or measure, and there is no spend angle: our data is what AI tools list at, not what users hand an LLM access to. Answering would mean inventing standing. NOT DRAFTED.",
+      "template": "None. Consumer testimony only; address redacted; no route. NOT DRAFTED."
+    },
+    "musicians-artists-writers-and-creators-ai-impact-on-creativity": {
+      "who": "Chloe Bishop (page author field). No publication on the page - the domain field is empty, and the body says 'for a feature I am pitching'.",
+      "category": "AI / Creative Work / Testimony",
+      "contact": "The page publishes no address, handle, link or form at all. A platform reply on Sourcee itself, which is not a route we hold credentials for.",
+      "relevance": "low",
+      "notes": "Posted 2026-10-27T17:42Z, 0 days old, in today's AI-topic feed, HTTP 200. Asks musicians, artists, writers, content creators and students whether AI enhances or replaces creativity. Opinion testimony from creative practitioners with no publication attached and no route - the weakest combination the monitor sees. NOT DRAFTED.",
+      "template": "None. Opinion testimony; no publication; no route. NOT DRAFTED."
+    },
+    "ai-startup-founders-and-marketers-b2b-marketing-as-show-business": {
+      "who": "Shalaka Kulkarni, LiveMint (page author field and body '@livemint'; domain livemint.com).",
+      "category": "AI / B2B Marketing / Startup Branding",
+      "contact": "No address, handle, link or form is published on the page; the body names the publication and nothing else. No route resolved.",
+      "relevance": "low",
+      "notes": "Posted 2026-10-27T11:45Z, 1 day old, in today's AI-topic feed, HTTP 200. Wants AI startup founders and marketers on whether B2B marketing has become 'show business' - cafés, experiences, merch. We are a review and pricing publisher, not an AI startup marketing team, and no figure we hold speaks to event spend. The slug's AI token is the only connection. NOT DRAFTED.",
+      "template": "None. Marketing-practice testimony; no route. NOT DRAFTED."
+    },
+    "literary-writers-thoughts-on-lit-mags-funny-deep-frustrated": {
+      "who": "Becky Tuch (page author field), writing for her Thursday column at Lit Mag News.",
+      "category": "Publishing / Literary Magazines / Body-level AI hit only",
+      "contact": "No address, link, handle or form published on the page. Platform reply only.",
+      "relevance": "low",
+      "notes": "Posted 2026-10-27T22:58Z, 0 days old, HTTP 200. Included because it is a body-level AI hit the slug filter cannot see: the only AI mention is the columnist joking 'Maybe I should get an AI bot to write a piece for me. Just kidding.' The ask is literary writers' views on lit mags - no AI subject, no spend, no route. Recorded so the run's body-level count stays auditable, not as a candidate.",
+      "template": "None. The AI token is a joke in the copy; no ask, no route. NOT DRAFTED."
+    }
+  },
+  "new_this_run": [
+    "us-solopreneurs-ai-eliminated-or-delayed-first-hire-forbes - Forbes / Alison Coleman, 1d, THE DAY'S ONLY DRAFTABLE FIND (route resolved off her own site)",
+    "us-founders-bootstrapped-despite-vc-revenue-growth-and-ai-impact - same reporter, seven minutes apart, covered by the same email",
+    "users-who-linked-bank-and-brokerage-accounts-to-llms-ai-finance - MarketWatch consumer testimony, no route",
+    "musicians-artists-writers-and-creators-ai-impact-on-creativity - no publication, no route",
+    "ai-startup-founders-and-marketers-b2b-marketing-as-show-business - LiveMint marketing practice, no route",
+    "literary-writers-thoughts-on-lit-mags-funny-deep-frustrated - body-level AI hit only (the AI mention is a joke), no route"
+  ],
+  "why_not_drafted": [
+    "five of the six new rows are relevance 'low' and ask for first-person testimony or institutional standing we do not have (consumer bank-linked accounts, creative practitioners, AI startup marketers, literary columnists)",
+    "the sixth (Forbes bootstrapped founders) is draftable but shares a reporter and an hour with the solopreneur request, so one email covers both rather than two"
+  ],
+  "extra_actions": [
+    "SEND pitch-drafts-2026-10-28.md section 1 (Forbes / Alison Coleman, 1 day old, relevance medium) to alison@alisoncoleman.co.uk - the address she prints herself on alisoncoleman.co.uk/contact-me/, with that page's contact form as the fallback. It covers both of her open requests (solopreneur first-hire and bootstrapped founders) in one email, so one send closes two rows.",
+    "SEND section 2 (Business Insider / Thibault Spirlet, 5 days old) to tspirlet@businessinsider.com, or record it skipped. Nothing else in the live set beats it on relevance-plus-route, but it is the sixth consecutive run carrying it.",
+    "Section 3 is the standing late-send decision (Tobi Amure / Fast Company Work Life, 18 days old): send late or write a skipped entry in pitch-ledger.json. A fourth rewrite of it is not an option this monitor should offer again.",
+    "The two drafts staged in [Gmail]/Drafts on 2026-10-27 (uids 45 and 46) were confirmed present today but carry the 97-tool figure set from the 2026-10-27 snapshot. Both were re-staged from today's drafts file against data/tools.json (99 tools) and data/pricing_snapshots.json updated 2026-10-28, so no aged figure is sitting behind a send button."
+  ],
+  "defects": [
+    "Staged Gmail drafts are the one artefact nothing verified: uids 45 and 46 were written on 2026-10-27 and the ledger recorded them as staged, but no script re-read them, so the 97-tool figure set sat in the mailbox through a dataset refresh that moved the count to 99. Caught today by reading both drafts back; both re-staged. Anything that lives outside the repo can drift from repo data, so a staged draft now has to be re-written from the current draft file every run it survives.",
+    "verify_journo_requests.py's default URL list is built from pitch-queue.md, the digests and the ledger, so today's six new window slugs had no page truth at all and build_digest.py would have aborted (it now fails loudly on a new row with no measured age). They were passed explicitly, and the run's page truth is complete at 204 records - but the default path still cannot see a request posted since the last digest, which is exactly what the freshest finds are."
+  ]
+}
