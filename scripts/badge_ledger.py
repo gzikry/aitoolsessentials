@@ -56,11 +56,11 @@ def short_price(tool: dict[str, Any], source: dict[str, Any] | None) -> str:
         else:
             start = summary.rfind(" ", 0, max(0, dollar - 18))
             start = 0 if start < 0 else start + 1
-        return _clip(summary[start:], 78)
+        return _clip(summary[start:], 46)
     if price:
-        return _clip(price, 78)
+        return _clip(price, 46)
     if summary:
-        return _clip(summary, 78)
+        return _clip(summary, 46)
     return "See the dated review"
 
 
@@ -68,7 +68,7 @@ def trap_status(slug: str) -> str:
     hits = [row for row in TRAPS if row.get("slug") == slug]
     if not hits:
         return "Not in the credit-trap ledger"
-    return _clip(str(hits[0].get("rule") or ""), 46)
+    return _clip(str(hits[0].get("rule") or ""), 50)
 
 
 def badge_svg(tool: dict[str, Any], source: dict[str, Any] | None) -> str:
@@ -82,10 +82,10 @@ def badge_svg(tool: dict[str, Any], source: dict[str, Any] | None) -> str:
   <rect x="0.5" y="0.5" width="359" height="107" fill="none" stroke="#111315"/>
   <rect width="8" height="108" fill="#156E3F"/>
   <text x="18" y="20" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="0.08em" fill="#156E3F">{xml(STAMP)}</text>
+  <text x="342" y="20" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="#111315">{xml(month)}</text>
   <text x="18" y="44" font-family="Newsreader, Georgia, serif" font-size="{name_size}" font-weight="700" fill="#111315">{xml(name)}</text>
   <text x="18" y="66" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="#111315">{xml(price)}</text>
   <text x="18" y="86" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#111315">{xml(trap)}</text>
-  <text x="342" y="86" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="#111315">{xml(month)}</text>
   <line x1="18" y1="74" x2="342" y2="74" stroke="#D8D2C5"/>
 </svg>
 '''

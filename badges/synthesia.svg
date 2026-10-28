@@ -3,9 +3,9 @@
   <rect x="0.5" y="0.5" width="359" height="107" fill="none" stroke="#111315"/>
   <rect width="8" height="108" fill="#156E3F"/>
   <text x="18" y="20" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="0.08em" fill="#156E3F">AUDITED BY AI TOOLS ESSENTIALS</text>
+  <text x="342" y="20" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="#111315">SEP 2026</text>
   <text x="18" y="44" font-family="Newsreader, Georgia, serif" font-size="16" font-weight="700" fill="#111315">Synthesia</text>
-  <text x="18" y="66" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="#111315">Basic is $0 with 1,200 credits/month. Starter is displayed at $29/month with…</text>
+  <text x="18" y="66" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="#111315">Basic is $0 with 1,200 credits/month.…</text>
   <text x="18" y="86" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#111315">The checked pricing summary does not state a…</text>
-  <text x="342" y="86" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" fill="#111315">SEP 2026</text>
   <line x1="18" y1="74" x2="342" y2="74" stroke="#D8D2C5"/>
 </svg>

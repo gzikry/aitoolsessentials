@@ -229,9 +229,8 @@ function paint() {
     webhookPercent: document.getElementById("webhook").value
   });
   out.innerHTML = result.rows.map(function (row) {
-    var dollars = row.monthlyCents == null ? "no published cover" : window.AutomationTaskCalc.money(row.monthlyCents);
-    var unit = row.currency === "EUR" ? " EUR" : "";
-    return "<p>" + row.verdict + " · " + row.name + " " + row.tier + " · " + dollars + unit +
+    var dollars = window.AutomationTaskCalc.money(row.monthlyCents, row.currency);
+    return "<p>" + row.verdict + " · " + row.name + " " + row.tier + " · " + dollars +
       " · <a href=\"" + row.href + "\" rel=\"" + row.rel + "\">Open</a></p>";
   }).join("");
 }
@@ -276,8 +275,9 @@ document.getElementById("badge-tool").addEventListener("change", fillBadge);
 fillBadge();
 document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
   button.addEventListener("click", function () {
-    var box = button.previousElementSibling;
-    if (!box || box.tagName !== "TEXTAREA") return;
+    var prev = button.previousElementSibling;
+    var box = prev && prev.tagName === "TEXTAREA" ? prev : (prev ? prev.querySelector("textarea") : null);
+    if (!box) return;
     var done = function () { button.textContent = "Copied"; };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(box.value).then(done);
     else { box.select(); document.execCommand("copy"); done(); }

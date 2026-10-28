@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,6 +42,13 @@ def test_embed_pages() -> None:
     coding = (ROOT / "embed" / "ai-coding-assistants" / "index.html").read_text(encoding="utf-8")
     if "external noopener" not in coding or "sponsored" in coding:
         raise AssertionError("coding embed must not mark non-partners sponsored")
+    auto = (ROOT / "embed" / "automation-task-calculator" / "index.html").read_text(encoding="utf-8")
+    if "money(row.monthlyCents, row.currency)" not in auto:
+        raise AssertionError("automation embed must pass row.currency into money()")
+    if ' " EUR"' in auto or " EUR" in auto:
+        raise AssertionError("automation embed must not suffix a second EUR label")
+    if 'prev.tagName === "TEXTAREA"' not in hub or 'prev.querySelector("textarea")' not in hub:
+        raise AssertionError("embeds hub copy handler must read a textarea or a label wrapping one")
 
 
 def test_badges() -> None:
@@ -61,6 +69,16 @@ def test_badges() -> None:
             raise AssertionError(f"{tool['slug']} name")
         if "#FAF8F5" not in svg:
             raise AssertionError(f"{tool['slug']} paper")
+        if 'x="342" y="20" text-anchor="end"' not in svg:
+            raise AssertionError(f"{tool['slug']} month is not on the header row")
+        if 'y="86" text-anchor="end"' in svg:
+            raise AssertionError(f"{tool['slug']} month still sits on the trap line")
+        price = html.unescape(re.search(r'y="66"[^>]*>([^<]*)<', svg).group(1))
+        trap = html.unescape(re.search(r'y="86"[^>]*>([^<]*)<', svg).group(1))
+        if len(price) > 46:
+            raise AssertionError(f"{tool['slug']} price is {len(price)} characters")
+        if len(trap) > 50:
+            raise AssertionError(f"{tool['slug']} trap is {len(trap)} characters")
 
 
 def test_cite_drawer() -> None:

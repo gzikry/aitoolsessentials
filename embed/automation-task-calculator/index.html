@@ -57,9 +57,8 @@ function paint() {
     webhookPercent: document.getElementById("webhook").value
   });
   out.innerHTML = result.rows.map(function (row) {
-    var dollars = row.monthlyCents == null ? "no published cover" : window.AutomationTaskCalc.money(row.monthlyCents);
-    var unit = row.currency === "EUR" ? " EUR" : "";
-    return "<p>" + row.verdict + " · " + row.name + " " + row.tier + " · " + dollars + unit +
+    var dollars = window.AutomationTaskCalc.money(row.monthlyCents, row.currency);
+    return "<p>" + row.verdict + " · " + row.name + " " + row.tier + " · " + dollars +
       " · <a href=\"" + row.href + "\" rel=\"" + row.rel + "\">Open</a></p>";
   }).join("");
 }
