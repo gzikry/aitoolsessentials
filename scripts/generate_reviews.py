@@ -10,6 +10,7 @@ DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
 
 from affiliate_util import approved_programs, public_affiliate_href, product_links_module, NOUS_OFFER
+from badge_ledger import CITE_STYLE, cite_drawer_html
 from enhance_structured_data import software_schema_for_tool, valid_rating_value
 
 
@@ -330,6 +331,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <title>{name}: AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/tools/{slug}/">
 <link rel="stylesheet" href="../css/styles.css">
+<!-- CITE STYLE -->
 <script type="application/ld+json">{schema}</script>
 {f'<script type="application/ld+json">{faq_schema}</script>' if faq_schema else ''}
 </head>
@@ -401,6 +403,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 {best_plan_html}<h2>Frequently asked questions</h2>
 <div class="faq-list">
 {faq_html}</div>
+{cite_drawer_html(tool, source_record)}
 </article>
 
 <aside class="review-aside">
@@ -442,6 +445,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 </body>
 </html>'''
 
+    html = html.replace("<!-- CITE STYLE -->", CITE_STYLE)
     out = root / 'tools' / slug / 'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)

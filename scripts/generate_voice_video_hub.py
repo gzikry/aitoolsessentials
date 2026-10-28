@@ -112,6 +112,7 @@ def generate(root: Path) -> Path:
 <section class="scene scene-light">
 <div class="article-shell wide">
 <p class="affiliate-inline">ElevenLabs, Descript, and Synthesia buttons are partner links. HeyGen, Runway, and Midjourney buttons go to the official site with our campaign tag. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
+<p><a href="/embed/ai-video-avatar-cost/">Embed this calculator</a> · <a href="/embeds/">All embeds and badges</a></p>
 <form id="calculator" class="ledger-sheet voice-calc">
 <h2>Finished minutes and Gen-4 seconds</h2>
 <div class="ledger-seats">

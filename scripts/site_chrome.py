@@ -174,6 +174,7 @@ def unify_headers(root: Path) -> int:
         if rel.as_posix() in FOOTER_SPONSOR_PAGES:
             updated = _restore_footer_sponsor(updated)
         updated = _ensure_newsletter_footer(updated)
+        updated = _ensure_embeds_footer(updated)
         if updated != html:
             path.write_text(updated, encoding="utf-8")
             changed += 1
@@ -214,3 +215,12 @@ def _ensure_newsletter_footer(html: str) -> str:
     if _NEWSLETTER_FOOTER in html or "<footer" not in html:
         return html
     return html.replace("</footer>", _NEWSLETTER_FOOTER + "</footer>", 1)
+
+
+_EMBEDS_FOOTER = '<a href="/embeds/">Embeds</a>'
+
+
+def _ensure_embeds_footer(html: str) -> str:
+    if _EMBEDS_FOOTER in html or "<footer" not in html:
+        return html
+    return html.replace("</footer>", _EMBEDS_FOOTER + "</footer>", 1)

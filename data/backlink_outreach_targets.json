@@ -1,0 +1,331 @@
+{
+  "generated_from": "data/tools.json plus the public calculator workloads recorded in scripts/generate_outreach_kit.py",
+  "catalog_count": 99,
+  "vendor_notifications": [
+    {
+      "tool_slug": "descript",
+      "tool_name": "Descript",
+      "category": "Audio & Video",
+      "review_url": "https://aitoolsessentials.com/tools/descript/",
+      "badge_svg": "https://aitoolsessentials.com/badges/descript.svg",
+      "calculator_url": "https://aitoolsessentials.com/compare/ai-video-avatar-cost/",
+      "calculator_workload": "60 finished minutes, 10 Gen-4.5 seconds, 1 retake, private mode off",
+      "calculator_result": "Keep on the voice pool at the Free tier ($0). Runway and Midjourney are separate jobs and are not in this pool.",
+      "email": "Subject: Descript pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Descript. The badge below links to the review. It is not a ranking and not a paid placement.\n\nOn /compare/ai-video-avatar-cost/ at this workload (60 finished minutes, 10 Gen-4.5 seconds, 1 retake, private mode off): Keep on the voice pool at the Free tier ($0). Runway and Midjourney are separate jobs and are not in this pool. Comparison: https://aitoolsessentials.com/compare/ai-video-avatar-cost/\n\nReview: https://aitoolsessentials.com/tools/descript/\nBadge: https://aitoolsessentials.com/badges/descript.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/descript/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Descript\" src=\"https://aitoolsessentials.com/badges/descript.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "runway",
+      "tool_name": "Runway",
+      "category": "Video",
+      "review_url": "https://aitoolsessentials.com/tools/runway/",
+      "badge_svg": "https://aitoolsessentials.com/badges/runway.svg",
+      "calculator_url": "https://aitoolsessentials.com/compare/ai-video-avatar-cost/",
+      "calculator_workload": "10 generated seconds of Gen-4.5 (12 credits per second)",
+      "calculator_result": "Keep on its own row at Standard ($15, 625 credits). It does not compete with the voice seats.",
+      "email": "Subject: Runway pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Runway. The badge below links to the review. It is not a ranking and not a paid placement.\n\nOn /compare/ai-video-avatar-cost/ at this workload (10 generated seconds of Gen-4.5 (12 credits per second)): Keep on its own row at Standard ($15, 625 credits). It does not compete with the voice seats. Comparison: https://aitoolsessentials.com/compare/ai-video-avatar-cost/\n\nReview: https://aitoolsessentials.com/tools/runway/\nBadge: https://aitoolsessentials.com/badges/runway.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/runway/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Runway\" src=\"https://aitoolsessentials.com/badges/runway.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "midjourney",
+      "tool_name": "Midjourney",
+      "category": "Creative",
+      "review_url": "https://aitoolsessentials.com/tools/midjourney/",
+      "badge_svg": "https://aitoolsessentials.com/badges/midjourney.svg",
+      "calculator_url": "https://aitoolsessentials.com/compare/ai-video-avatar-cost/",
+      "calculator_workload": "60 minutes of Fast GPU time, Stealth off",
+      "calculator_result": "Keep on its own row at Basic ($10, 3.3 Fast hours). It does not compete with the voice seats.",
+      "email": "Subject: Midjourney pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Midjourney. The badge below links to the review. It is not a ranking and not a paid placement.\n\nOn /compare/ai-video-avatar-cost/ at this workload (60 minutes of Fast GPU time, Stealth off): Keep on its own row at Basic ($10, 3.3 Fast hours). It does not compete with the voice seats. Comparison: https://aitoolsessentials.com/compare/ai-video-avatar-cost/\n\nReview: https://aitoolsessentials.com/tools/midjourney/\nBadge: https://aitoolsessentials.com/badges/midjourney.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/midjourney/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Midjourney\" src=\"https://aitoolsessentials.com/badges/midjourney.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "make",
+      "tool_name": "Make",
+      "category": "Automation",
+      "review_url": "https://aitoolsessentials.com/tools/make/",
+      "badge_svg": "https://aitoolsessentials.com/badges/make.svg",
+      "calculator_url": "https://aitoolsessentials.com/compare/automation-task-calculator/",
+      "calculator_workload": "3 workflows, 5 steps, 4 runs a day, 100% webhooks",
+      "calculator_result": "Keep at Core. Zapier has no published dollar at this volume (Professional floor does not cover it). n8n Starter stays in euros and is not converted.",
+      "email": "Subject: Make pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Make. The badge below links to the review. It is not a ranking and not a paid placement.\n\nOn /compare/automation-task-calculator/ at this workload (3 workflows, 5 steps, 4 runs a day, 100% webhooks): Keep at Core. Zapier has no published dollar at this volume (Professional floor does not cover it). n8n Starter stays in euros and is not converted. Comparison: https://aitoolsessentials.com/compare/automation-task-calculator/\n\nReview: https://aitoolsessentials.com/tools/make/\nBadge: https://aitoolsessentials.com/badges/make.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/make/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Make\" src=\"https://aitoolsessentials.com/badges/make.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "github-copilot",
+      "tool_name": "GitHub Copilot",
+      "category": "Development",
+      "review_url": "https://aitoolsessentials.com/tools/github-copilot/",
+      "badge_svg": "https://aitoolsessentials.com/badges/github-copilot.svg",
+      "calculator_url": "https://aitoolsessentials.com/compare/ai-coding-assistants/",
+      "calculator_workload": "5 seats, 20 prompts a day, balanced models, monthly billing",
+      "calculator_result": "The coding hub states Copilot Pro is the lowest published subscription for that profile. Overage is not added, because GitHub does not publish credits per prompt.",
+      "email": "Subject: GitHub Copilot pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of GitHub Copilot. The badge below links to the review. It is not a ranking and not a paid placement.\n\nOn /compare/ai-coding-assistants/ at this workload (5 seats, 20 prompts a day, balanced models, monthly billing): The coding hub states Copilot Pro is the lowest published subscription for that profile. Overage is not added, because GitHub does not publish credits per prompt. Comparison: https://aitoolsessentials.com/compare/ai-coding-assistants/\n\nReview: https://aitoolsessentials.com/tools/github-copilot/\nBadge: https://aitoolsessentials.com/badges/github-copilot.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/github-copilot/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 GitHub Copilot\" src=\"https://aitoolsessentials.com/badges/github-copilot.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "chatgpt",
+      "tool_name": "ChatGPT",
+      "category": "General AI Assistant",
+      "review_url": "https://aitoolsessentials.com/tools/chatgpt/",
+      "badge_svg": "https://aitoolsessentials.com/badges/chatgpt.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: ChatGPT pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of ChatGPT. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/chatgpt/\n\nReview: https://aitoolsessentials.com/tools/chatgpt/\nBadge: https://aitoolsessentials.com/badges/chatgpt.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/chatgpt/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 ChatGPT\" src=\"https://aitoolsessentials.com/badges/chatgpt.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "claude",
+      "tool_name": "Claude",
+      "category": "General AI Assistant",
+      "review_url": "https://aitoolsessentials.com/tools/claude/",
+      "badge_svg": "https://aitoolsessentials.com/badges/claude.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Claude pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Claude. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/claude/\n\nReview: https://aitoolsessentials.com/tools/claude/\nBadge: https://aitoolsessentials.com/badges/claude.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/claude/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Claude\" src=\"https://aitoolsessentials.com/badges/claude.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "elevenlabs",
+      "tool_name": "ElevenLabs",
+      "category": "Audio & Video",
+      "review_url": "https://aitoolsessentials.com/tools/elevenlabs/",
+      "badge_svg": "https://aitoolsessentials.com/badges/elevenlabs.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: ElevenLabs pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of ElevenLabs. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/elevenlabs/\n\nReview: https://aitoolsessentials.com/tools/elevenlabs/\nBadge: https://aitoolsessentials.com/badges/elevenlabs.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/elevenlabs/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 ElevenLabs\" src=\"https://aitoolsessentials.com/badges/elevenlabs.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "cursor",
+      "tool_name": "Cursor",
+      "category": "Development",
+      "review_url": "https://aitoolsessentials.com/tools/cursor/",
+      "badge_svg": "https://aitoolsessentials.com/badges/cursor.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Cursor pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Cursor. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/cursor/\n\nReview: https://aitoolsessentials.com/tools/cursor/\nBadge: https://aitoolsessentials.com/badges/cursor.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/cursor/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Cursor\" src=\"https://aitoolsessentials.com/badges/cursor.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "gemini",
+      "tool_name": "Gemini",
+      "category": "General AI Assistant",
+      "review_url": "https://aitoolsessentials.com/tools/gemini/",
+      "badge_svg": "https://aitoolsessentials.com/badges/gemini.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Gemini pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Gemini. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/gemini/\n\nReview: https://aitoolsessentials.com/tools/gemini/\nBadge: https://aitoolsessentials.com/badges/gemini.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/gemini/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Gemini\" src=\"https://aitoolsessentials.com/badges/gemini.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "perplexity",
+      "tool_name": "Perplexity",
+      "category": "Research",
+      "review_url": "https://aitoolsessentials.com/tools/perplexity/",
+      "badge_svg": "https://aitoolsessentials.com/badges/perplexity.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Perplexity pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Perplexity. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/perplexity/\n\nReview: https://aitoolsessentials.com/tools/perplexity/\nBadge: https://aitoolsessentials.com/badges/perplexity.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/perplexity/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Perplexity\" src=\"https://aitoolsessentials.com/badges/perplexity.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "suno",
+      "tool_name": "Suno",
+      "category": "Audio & Video",
+      "review_url": "https://aitoolsessentials.com/tools/suno/",
+      "badge_svg": "https://aitoolsessentials.com/badges/suno.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Suno pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Suno. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/suno/\n\nReview: https://aitoolsessentials.com/tools/suno/\nBadge: https://aitoolsessentials.com/badges/suno.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/suno/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Suno\" src=\"https://aitoolsessentials.com/badges/suno.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "grok",
+      "tool_name": "Grok",
+      "category": "General AI Assistant",
+      "review_url": "https://aitoolsessentials.com/tools/grok/",
+      "badge_svg": "https://aitoolsessentials.com/badges/grok.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Grok pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Grok. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/grok/\n\nReview: https://aitoolsessentials.com/tools/grok/\nBadge: https://aitoolsessentials.com/badges/grok.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/grok/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Grok\" src=\"https://aitoolsessentials.com/badges/grok.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "microsoft-copilot",
+      "tool_name": "Microsoft Copilot",
+      "category": "Productivity",
+      "review_url": "https://aitoolsessentials.com/tools/microsoft-copilot/",
+      "badge_svg": "https://aitoolsessentials.com/badges/microsoft-copilot.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Microsoft Copilot pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Microsoft Copilot. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/microsoft-copilot/\n\nReview: https://aitoolsessentials.com/tools/microsoft-copilot/\nBadge: https://aitoolsessentials.com/badges/microsoft-copilot.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/microsoft-copilot/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Microsoft Copilot\" src=\"https://aitoolsessentials.com/badges/microsoft-copilot.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "shortwave",
+      "tool_name": "Shortwave",
+      "category": "Productivity",
+      "review_url": "https://aitoolsessentials.com/tools/shortwave/",
+      "badge_svg": "https://aitoolsessentials.com/badges/shortwave.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Shortwave pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Shortwave. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/shortwave/\n\nReview: https://aitoolsessentials.com/tools/shortwave/\nBadge: https://aitoolsessentials.com/badges/shortwave.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/shortwave/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Shortwave\" src=\"https://aitoolsessentials.com/badges/shortwave.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "notebooklm",
+      "tool_name": "NotebookLM",
+      "category": "Research",
+      "review_url": "https://aitoolsessentials.com/tools/notebooklm/",
+      "badge_svg": "https://aitoolsessentials.com/badges/notebooklm.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: NotebookLM pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of NotebookLM. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/notebooklm/\n\nReview: https://aitoolsessentials.com/tools/notebooklm/\nBadge: https://aitoolsessentials.com/badges/notebooklm.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/notebooklm/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 NotebookLM\" src=\"https://aitoolsessentials.com/badges/notebooklm.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "typingmind",
+      "tool_name": "TypingMind",
+      "category": "AI Agents",
+      "review_url": "https://aitoolsessentials.com/tools/typingmind/",
+      "badge_svg": "https://aitoolsessentials.com/badges/typingmind.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: TypingMind pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of TypingMind. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/typingmind/\n\nReview: https://aitoolsessentials.com/tools/typingmind/\nBadge: https://aitoolsessentials.com/badges/typingmind.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/typingmind/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 TypingMind\" src=\"https://aitoolsessentials.com/badges/typingmind.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "zapier-ai",
+      "tool_name": "Zapier AI",
+      "category": "Automation",
+      "review_url": "https://aitoolsessentials.com/tools/zapier-ai/",
+      "badge_svg": "https://aitoolsessentials.com/badges/zapier-ai.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Zapier AI pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Zapier AI. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/zapier-ai/\n\nReview: https://aitoolsessentials.com/tools/zapier-ai/\nBadge: https://aitoolsessentials.com/badges/zapier-ai.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/zapier-ai/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Zapier AI\" src=\"https://aitoolsessentials.com/badges/zapier-ai.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "adobe-firefly",
+      "tool_name": "Adobe Firefly",
+      "category": "Creative",
+      "review_url": "https://aitoolsessentials.com/tools/adobe-firefly/",
+      "badge_svg": "https://aitoolsessentials.com/badges/adobe-firefly.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Adobe Firefly pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Adobe Firefly. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/adobe-firefly/\n\nReview: https://aitoolsessentials.com/tools/adobe-firefly/\nBadge: https://aitoolsessentials.com/badges/adobe-firefly.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/adobe-firefly/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Adobe Firefly\" src=\"https://aitoolsessentials.com/badges/adobe-firefly.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "canva-ai",
+      "tool_name": "Canva AI",
+      "category": "Creative",
+      "review_url": "https://aitoolsessentials.com/tools/canva-ai/",
+      "badge_svg": "https://aitoolsessentials.com/badges/canva-ai.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Canva AI pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Canva AI. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/canva-ai/\n\nReview: https://aitoolsessentials.com/tools/canva-ai/\nBadge: https://aitoolsessentials.com/badges/canva-ai.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/canva-ai/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Canva AI\" src=\"https://aitoolsessentials.com/badges/canva-ai.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "ideogram",
+      "tool_name": "Ideogram",
+      "category": "Creative",
+      "review_url": "https://aitoolsessentials.com/tools/ideogram/",
+      "badge_svg": "https://aitoolsessentials.com/badges/ideogram.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Ideogram pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Ideogram. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/ideogram/\n\nReview: https://aitoolsessentials.com/tools/ideogram/\nBadge: https://aitoolsessentials.com/badges/ideogram.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/ideogram/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Ideogram\" src=\"https://aitoolsessentials.com/badges/ideogram.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "khanmigo",
+      "tool_name": "Khanmigo",
+      "category": "Education",
+      "review_url": "https://aitoolsessentials.com/tools/khanmigo/",
+      "badge_svg": "https://aitoolsessentials.com/badges/khanmigo.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Khanmigo pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Khanmigo. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/khanmigo/\n\nReview: https://aitoolsessentials.com/tools/khanmigo/\nBadge: https://aitoolsessentials.com/badges/khanmigo.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/khanmigo/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Khanmigo\" src=\"https://aitoolsessentials.com/badges/khanmigo.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "ollama",
+      "tool_name": "Ollama",
+      "category": "Local AI",
+      "review_url": "https://aitoolsessentials.com/tools/ollama/",
+      "badge_svg": "https://aitoolsessentials.com/badges/ollama.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Ollama pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Ollama. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/ollama/\n\nReview: https://aitoolsessentials.com/tools/ollama/\nBadge: https://aitoolsessentials.com/badges/ollama.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/ollama/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Ollama\" src=\"https://aitoolsessentials.com/badges/ollama.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "grammarly",
+      "tool_name": "Grammarly",
+      "category": "Productivity",
+      "review_url": "https://aitoolsessentials.com/tools/grammarly/",
+      "badge_svg": "https://aitoolsessentials.com/badges/grammarly.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Grammarly pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Grammarly. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/grammarly/\n\nReview: https://aitoolsessentials.com/tools/grammarly/\nBadge: https://aitoolsessentials.com/badges/grammarly.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/grammarly/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Grammarly\" src=\"https://aitoolsessentials.com/badges/grammarly.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    },
+    {
+      "tool_slug": "rows",
+      "tool_name": "Rows",
+      "category": "Productivity",
+      "review_url": "https://aitoolsessentials.com/tools/rows/",
+      "badge_svg": "https://aitoolsessentials.com/badges/rows.svg",
+      "calculator_url": null,
+      "calculator_workload": null,
+      "calculator_result": null,
+      "email": "Subject: Rows pricing audit on AI Tools Essentials\n\nHello,\n\nWe published a dated pricing audit of Rows. The badge below links to the review. It is not a ranking and not a paid placement.\n\nThis note does not claim a calculator win. The review is the dated price record. Review: https://aitoolsessentials.com/tools/rows/\n\nReview: https://aitoolsessentials.com/tools/rows/\nBadge: https://aitoolsessentials.com/badges/rows.svg\nHTML: <a href=\"https://aitoolsessentials.com/tools/rows/?utm_source=badge_embed\"><img alt=\"AUDITED BY AI TOOLS ESSENTIALS \u2014 Rows\" src=\"https://aitoolsessentials.com/badges/rows.svg\" width=\"360\" height=\"108\"></a>\n\nIf a figure on the review is stale, reply with the official pricing URL and we will re-check it.\n"
+    }
+  ],
+  "directories": [
+    {
+      "name": "Hacker News Show HN",
+      "url": "https://news.ycombinator.com/submit",
+      "canonical": "https://aitoolsessentials.com/embeds/",
+      "copy": "Show HN: audited price badges and four embeddable AI cost calculators\n\nWe publish dated price receipts for the tools in the catalog (https://aitoolsessentials.com/tools/) and four browser calculators that do not invent a per-token rate. Vendors can embed the badge; the iframe calculators are at https://aitoolsessentials.com/embeds/."
+    },
+    {
+      "name": "Reddit r/SaaS",
+      "url": "https://www.reddit.com/r/SaaS/",
+      "canonical": "https://aitoolsessentials.com/compare/ai-coding-assistants/",
+      "copy": "Data post: published coding-seat prices, not a token estimate.\n\nCursor, Claude Code, GitHub Copilot, and Windsurf do not publish a dollar per prompt. The calculator picks the published plan for the workload and leaves overage at $0. https://aitoolsessentials.com/compare/ai-coding-assistants/"
+    },
+    {
+      "name": "Reddit r/LocalLLaMA",
+      "url": "https://www.reddit.com/r/LocalLLaMA/",
+      "canonical": "https://aitoolsessentials.com/local-ai-planner/",
+      "copy": "Local workbench planner plus the audited price ledger for hosted seats you might drop.\n\nhttps://aitoolsessentials.com/local-ai-planner/ plans memory and model size. The hosted-seat overlap receipt is the bill slasher embed: https://aitoolsessentials.com/embed/ai-bill-slasher/"
+    },
+    {
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com/",
+      "canonical": "https://aitoolsessentials.com/embeds/",
+      "copy": "AI Tools Essentials \u2014 audited price badges and embeddable cost calculators.\n\nDated official prices, a badge vendors can embed, and four calculators (coding seats, voice and video minutes, automation tasks, overlap bill). https://aitoolsessentials.com/embeds/"
+    },
+    {
+      "name": "AlternativeTo",
+      "url": "https://alternativeto.net/",
+      "canonical": "https://aitoolsessentials.com/",
+      "copy": "Independent pricing ledger for AI tools. Reviews cite the official pricing page and the check date. Not a ranked marketplace. https://aitoolsessentials.com/"
+    },
+    {
+      "name": "G2",
+      "url": "https://www.g2.com/",
+      "canonical": "https://aitoolsessentials.com/legal/editorial-methodology.html",
+      "copy": "Methodology: editorial scores are not hands-on lab results and are not for sale. https://aitoolsessentials.com/legal/editorial-methodology.html"
+    },
+    {
+      "name": "Dev.to",
+      "url": "https://dev.to/",
+      "canonical": "https://aitoolsessentials.com/compare/ai-coding-assistants/",
+      "copy": "Canonical syndication: AI coding assistant list prices.\n\nOriginal: https://aitoolsessentials.com/compare/ai-coding-assistants/\nDo not republish the calculator as a token bill. Prompts are not converted into tokens."
+    },
+    {
+      "name": "Hashnode",
+      "url": "https://hashnode.com/",
+      "canonical": "https://aitoolsessentials.com/embeds/",
+      "copy": "Canonical syndication: embed the audited price badge or a 480px calculator.\n\nHub: https://aitoolsessentials.com/embeds/\nBadge URLs look like https://aitoolsessentials.com/badges/<slug>.svg and link back with utm_source=badge_embed."
+    }
+  ]
+}

@@ -7,6 +7,15 @@
 <title>Retouchia: AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="https://aitoolsessentials.com/tools/retouchia/">
 <link rel="stylesheet" href="../../css/styles.css?v=7bed9675442f">
+
+<style>
+.cite-drawer{margin:28px auto;max-width:980px;padding:16px 18px;background:#FAF8F5;color:#111315;border:1px solid #111315}
+.cite-drawer summary{cursor:pointer;font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;font-size:13px}
+.cite-drawer textarea{width:100%;min-height:72px;margin:6px 0 8px;padding:8px;border:1px solid #D8D2C5;background:#fff;color:#111315;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
+.cite-drawer button{margin:0 0 14px;border:1px solid #111315;background:#111315;color:#FAF8F5;padding:6px 10px;font:12px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer}
+.cite-drawer label{display:block;margin-top:8px;font-size:13px}
+</style>
+
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Retouchia", "applicationCategory": "Creative", "description": "Retouchia is a browser photo editor that puts several third-party image models behind one credits wallet. You upload an image, type an instruction such as \"remove background\", \"erase object\" or \"enhance quality\", choose a model and resolution, and download the result. It covers quality enhancement, deblurring, background and object removal, upscaling, old-photo restoration, scratch removal, colourisation, smart crop, black-and-white conversion and format conversion, with dedicated pages for upscaling, object removal, photo restoration and a GPT Image 2.5 landing page. There is a 5-credit free tier and two one-time packs - $9.99 for 350 credits and $29.99 for 1,200 - with no subscription, credits valid 365 days. Generation runs on third-party providers that the Terms name explicitly (APIMart and APIModels, serving SparkPix and Nano Banana 2), with prompt screening and output moderation before delivery, and failed or blocked runs restore the credits.", "url": "https://aitoolsessentials.com/tools/retouchia/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free: 5 credits on sign-up (~1 image), no card required, full-resolution downloads. One-time packs only, no subscription: Basic $9.99 (shown against a $12 anchor, \"Save 16%\", 350 credits, advertised as ~70 images), Pro $29.99 (anchor $39.90, \"Save 24%\", 1,200 credits, ~240 images). Paid credits expire 365 days after purchase. Payment is processed by Waffo Pancake."}, "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": "https://aitoolsessentials.com/"}, "sameAs": "https://retouchia.com/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does Retouchia cost?", "acceptedAnswer": {"@type": "Answer", "text": "Five free credits on sign-up, then two one-time packs: Basic at $9.99 for 350 credits and Pro at $29.99 for 1,200 credits, both valid 365 days. There is no subscription. The cards advertise the packs against $12 and $39.90 anchors at 16% and 24% off, and the en, zh and zh-tw pricing pages carry the same figures. Unused credits from a pack are refundable within 7 days; consumed credits are not."}}, {"@type": "Question", "name": "Is there a subscription?", "acceptedAnswer": {"@type": "Answer", "text": "No. The Terms say \"We sell one-time credit packs only. We do not offer subscriptions\", and the Refund Policy repeats it. Credits expire 365 days after purchase and the site does not send an expiry reminder."}}, {"@type": "Question", "name": "Which AI models does it use?", "acceptedAnswer": {"@type": "Answer", "text": "This is the part to check before you buy. The Terms and the Acceptable Use Policy name SparkPix (model IDs sparkpix-image and sparkpix-image-edit on APIModels) and Nano Banana 2 (gemini-3.1-flash-image-preview on APIMart, nanobanana2 on APIModels). The navigation on every page and a dedicated landing page instead advertise GPT Image 2.5 and call it \"OpenAI's\" model, and no legal page mentions GPT or OpenAI, and no page carries an OpenAI non-affiliation statement."}}, {"@type": "Question", "name": "Does it train on my images or prompts?", "acceptedAnswer": {"@type": "Answer", "text": "It says no: the Terms state it \"does not use your Input to train models unless you give separate, explicit consent\", and note that the product has no training-opt-in control - so there is no training by default. The input licence is limited to processing your file to run the service."}}, {"@type": "Question", "name": "What happens to my uploads?", "acceptedAnswer": {"@type": "Answer", "text": "Reference assets expire after 1 hour and generated results after 7 days, both removed by a scheduled Cloudflare cleanup, and the policy is explicit that an expired result URL does not necessarily delete the underlying record. Prompts, generation records and stored result URLs are kept until you request deletion by email. There is no self-serve delete or export."}}, {"@type": "Question", "name": "Who owns the images I generate?", "acceptedAnswer": {"@type": "Answer", "text": "You do. Terms section 9 says AI images generated from your prompts belong to you and may be used for any lawful purpose the Acceptable Use Policy allows, while the Retouchia name, software and marks stay with the site."}}, {"@type": "Question", "name": "Can I get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "In three cases: a pack with none of its credits used within 7 days, a duplicate charge from a billing error, or an EU/UK/Australian first-purchase withdrawal right exercised before first use. Consumed credits are not refunded. A failed or blocked generation restores credits, which the site states is not a money refund."}}]}</script>
 <link rel="stylesheet" href="../../css/share.css?v=74b611b77130">
@@ -27,7 +36,7 @@
 <p class="kicker light">Creative</p>
 <h1>Retouchia review</h1>
 <p>Retouchia is a browser photo editor that puts several third-party image models behind one credits wallet. You upload an image, type an instruction such as "remove background", "erase object" or "enhance quality", choose a model and resolution, and download the result. It covers quality enhancement, deblurring, background and object removal, upscaling, old-photo restoration, scratch removal, colourisation, smart crop, black-and-white conversion and format conversion, with dedicated pages for upscaling, object removal, photo restoration and a GPT Image 2.5 landing page. There is a 5-credit free tier and two one-time packs - $9.99 for 350 credits and $29.99 for 1,200 - with no subscription, credits valid 365 days. Generation runs on third-party providers that the Terms name explicitly (APIMart and APIModels, serving SparkPix and Nano Banana 2), with prompt screening and output moderation before delivery, and failed or blocked runs restore the credits.</p>
-<p class="last-updated">Editorial review · Updated 2026-10-27 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
+<p class="last-updated">Editorial review · Updated 2026-10-28 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
 </section>
 <!-- AIT CALCULATOR CALLOUT START -->
 <aside class="ledger-calc-callout">
@@ -124,6 +133,47 @@
 <details><summary>Who owns the images I generate?</summary><p>You do. Terms section 9 says AI images generated from your prompts belong to you and may be used for any lawful purpose the Acceptable Use Policy allows, while the Retouchia name, software and marks stay with the site.</p></details>
 <details><summary>Can I get a refund?</summary><p>In three cases: a pack with none of its credits used within 7 days, a duplicate charge from a billing error, or an EU/UK/Australian first-purchase withdrawal right exercised before first use. Consumed credits are not refunded. A failed or blocked generation restores credits, which the site states is not a money refund.</p></details>
 </div>
+
+<details class="cite-drawer" id="cite-audit">
+<summary>Cite or embed this audit</summary>
+<p>The badge links to this review. It is a dated price receipt, not a ranking and not a paid placement.</p>
+<p><img alt="AUDITED BY AI TOOLS ESSENTIALS — Retouchia" src="/badges/retouchia.svg" width="360" height="108"></p>
+<label>HTML badge snippet
+<textarea readonly data-cite-box>&lt;a href=&quot;https://aitoolsessentials.com/tools/retouchia/?utm_source=badge_embed&quot;&gt;&lt;img alt=&quot;AUDITED BY AI TOOLS ESSENTIALS — Retouchia&quot; src=&quot;https://aitoolsessentials.com/badges/retouchia.svg&quot; width=&quot;360&quot; height=&quot;108&quot;&gt;&lt;/a&gt;</textarea></label>
+<button type="button" data-cite-copy>Copy HTML</button>
+<label>Markdown badge snippet
+<textarea readonly data-cite-box>[![AUDITED BY AI TOOLS ESSENTIALS — Retouchia](https://aitoolsessentials.com/badges/retouchia.svg)](https://aitoolsessentials.com/tools/retouchia/?utm_source=badge_embed)</textarea></label>
+<button type="button" data-cite-copy>Copy Markdown</button>
+<label>Editorial citation
+<textarea readonly data-cite-box>Retouchia, audited OCT 2026 by AI Tools Essentials: two one-time packs only, no subscription - Basic $9.99 for 350 credits…. Paid credits are valid 365 days from purchase.. Source: https://aitoolsessentials.com/tools/retouchia/</textarea></label>
+<button type="button" data-cite-copy>Copy citation</button>
+<label>BibTeX
+<textarea readonly data-cite-box>@misc{aitoolsessentials_retouchia_2026,
+  title = {Retouchia pricing audit},
+  author = {{AIToolsEssentials}},
+  year = {2026},
+  url = {https://aitoolsessentials.com/tools/retouchia/},
+  note = {Retouchia, audited OCT 2026 by AI Tools Essentials: two one-time packs only, no subscription - Basic $9.99 for 350 credits…. Paid credits are valid 365 days from purchase.. Source: https://aitoolsessentials.com/tools/retouchia/}
+}</textarea></label>
+<button type="button" data-cite-copy>Copy BibTeX</button>
+</details>
+<script>
+document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var box = button.previousElementSibling && button.previousElementSibling.querySelector("textarea");
+    if (!box) return;
+    var done = function () { button.textContent = "Copied"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(box.value).then(done);
+    } else {
+      box.select();
+      document.execCommand("copy");
+      done();
+    }
+  });
+});
+</script>
+
 </article>
 
 <aside class="review-aside">
@@ -182,7 +232,7 @@
 <a href="../../submit-tool.html" rel="nofollow">Submit a tool</a>
 <a href="../../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
 <a href="mailto:contact@aitoolsessentials.com">Contact</a>
-<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a></footer>
+<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a><a href="/embeds/">Embeds</a></footer>
 <script src="../../js/site.js?v=505d3293d6b1" defer></script>
 <script src="../../js/analytics.js?v=00855b06fbaf" defer></script>
 <script src="../../js/cookie-consent.js?v=5fb7d8beb19d" defer></script>

@@ -7,6 +7,15 @@
 <title>HumanPen: AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="https://aitoolsessentials.com/tools/humanpen/">
 <link rel="stylesheet" href="../../css/styles.css?v=7bed9675442f">
+
+<style>
+.cite-drawer{margin:28px auto;max-width:980px;padding:16px 18px;background:#FAF8F5;color:#111315;border:1px solid #111315}
+.cite-drawer summary{cursor:pointer;font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;font-size:13px}
+.cite-drawer textarea{width:100%;min-height:72px;margin:6px 0 8px;padding:8px;border:1px solid #D8D2C5;background:#fff;color:#111315;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
+.cite-drawer button{margin:0 0 14px;border:1px solid #111315;background:#111315;color:#FAF8F5;padding:6px 10px;font:12px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer}
+.cite-drawer label{display:block;margin-top:8px;font-size:13px}
+</style>
+
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "HumanPen", "applicationCategory": "Productivity", "description": "HumanPen is a document toolbox that works on files rather than on a text box. You upload a DOCX or PPTX and get the same format back, edited: an AI-phrasing rewriter with two strengths that can import your own Turnitin or iThenticate report and touch only the flagged passages, a citation-format converter covering 12 styles, a shortener that hits a target word count, and a translator for 12 languages that keeps layout, charts and formulas. Billing is metered - you are charged for words actually rewritten, not for the whole file - and credits do not expire, so a 500-word job costs cents instead of a month's subscription. The humanizer is English-only and the vendor says so. There is also a documented REST API, an MCP server and an agent skill. The site is candid to an unusual degree about what the tool is for: the /ethics page states plainly that the humanizer is used to lower detector scores, declines to promise a pass, declines to run its own detector, and the Terms forbid submitting work as your own where an assessment requires independent work.", "url": "https://aitoolsessentials.com/tools/humanpen/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Pay-as-you-go credits, one-time purchase, no subscription: 1,000 credits USD 19, 5,000 USD 79 (marked most popular), 10,000 USD 149, 20,000 USD 249. Every account's first purchase is discounted to USD 9.90 / 49 / 98 / 196 for the same four packs, once per account. New accounts get 100 free credits. Credits never expire and work in the web app and the API. Humanizing costs 100 credits per 1,000 words actually rewritten; citation-format correction is the cheapest operation at 5 credits per 1,000 words. Checkout runs through Waffo (the Privacy Policy also names Creem), each acting as merchant of record; prices are USD and no recurring plan is sold - the Terms state each purchase is a one-time charge."}, "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": "https://aitoolsessentials.com/"}, "sameAs": "https://humanpen.net/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does HumanPen cost?", "acceptedAnswer": {"@type": "Answer", "text": "Credits are bought in one-time packs: 1,000 for USD 19, 5,000 for USD 79, 10,000 for USD 149 and 20,000 for USD 249, with a once-per-account first purchase at USD 9.90, 49, 98 and 196 respectively. New accounts start with 100 free credits. Humanizing costs 100 credits per 1,000 words actually rewritten, so the entry pack covers about 10,000 words at list price; citation-format correction is 5 credits per 1,000 words. Credits do not expire and there is no subscription - the Terms state each purchase is a one-time charge."}}, {"@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Not a trial in the usual sense. Signing up grants 100 credits, worth about 1,000 words of humanizing or 20,000 words of citation correction, and that is enough to run a real short document through the pipeline. Beyond that it is pay-as-you-go; there is no time-limited trial and no money-back guarantee tied to a detector result - the vendor explicitly refuses to promise one."}}, {"@type": "Question", "name": "Does it actually get past AI detectors?", "acceptedAnswer": {"@type": "Answer", "text": "The vendor declines to say so and we cannot verify it. There is no published pass rate, no third-party test, and HumanPen runs no detector of its own - it accepts the Turnitin or iThenticate report your institution issued instead, which is a more honest design than a self-graded score but still leaves the outcome dependent on a detector that changes. Judge it on your own document rather than on the category's usual 'guaranteed to pass' claims, which this vendor explicitly calls out as something it will not make."}}, {"@type": "Question", "name": "What happens to my documents?", "acceptedAnswer": {"@type": "Answer", "text": "Uploaded documents and results are deleted 7 days after the job finishes, enforced by a scheduled sweep; job records such as file name, word counts and status stay with your account history until you delete the account, which the policy says happens within 30 days. Text is sent to third-party AI model providers for processing, and the policy states neither HumanPen nor those providers use it to train models. Order and payment records are kept 7 years for tax and accounting law."}}, {"@type": "Question", "name": "Who is behind it, and where is it based?", "acceptedAnswer": {"@type": "Answer", "text": "That is not disclosed. Every page names only 'the HumanPen team'; there is no company, individual, country, postal address or company number, and the governing-law clause refers to 'the jurisdiction in which the HumanPen team operates' without naming one. Support runs through support@humanpen.net, which we confirmed is a working mailbox. Treat the identity gap as a real limitation if you need a counterparty with a legal address."}}, {"@type": "Question", "name": "Can I use it for coursework?", "acceptedAnswer": {"@type": "Answer", "text": "Read your institution's rules first, because HumanPen's own Terms bar 'submitting work as your own where the substance of an assessment is required to be your independent work', and the /ethics page states that a processed manuscript still counts as AI-assisted where disclosure is required. The vendor markets the tool to students for exactly that coursework use, which is a genuine tension we would rather name than smooth over: the restriction is in the contract and the marketing points the other way."}}]}</script>
 <link rel="stylesheet" href="../../css/share.css?v=74b611b77130">
@@ -27,7 +36,7 @@
 <p class="kicker light">Productivity</p>
 <h1>HumanPen review</h1>
 <p>HumanPen is a document toolbox that works on files rather than on a text box. You upload a DOCX or PPTX and get the same format back, edited: an AI-phrasing rewriter with two strengths that can import your own Turnitin or iThenticate report and touch only the flagged passages, a citation-format converter covering 12 styles, a shortener that hits a target word count, and a translator for 12 languages that keeps layout, charts and formulas. Billing is metered - you are charged for words actually rewritten, not for the whole file - and credits do not expire, so a 500-word job costs cents instead of a month's subscription. The humanizer is English-only and the vendor says so. There is also a documented REST API, an MCP server and an agent skill. The site is candid to an unusual degree about what the tool is for: the /ethics page states plainly that the humanizer is used to lower detector scores, declines to promise a pass, declines to run its own detector, and the Terms forbid submitting work as your own where an assessment requires independent work.</p>
-<p class="last-updated">Editorial review · Updated 2026-10-27 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
+<p class="last-updated">Editorial review · Updated 2026-10-28 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
 </section>
 <!-- AIT CALCULATOR CALLOUT START -->
 <aside class="ledger-calc-callout">
@@ -120,6 +129,47 @@
 <details><summary>Who is behind it, and where is it based?</summary><p>That is not disclosed. Every page names only 'the HumanPen team'; there is no company, individual, country, postal address or company number, and the governing-law clause refers to 'the jurisdiction in which the HumanPen team operates' without naming one. Support runs through support@humanpen.net, which we confirmed is a working mailbox. Treat the identity gap as a real limitation if you need a counterparty with a legal address.</p></details>
 <details><summary>Can I use it for coursework?</summary><p>Read your institution's rules first, because HumanPen's own Terms bar 'submitting work as your own where the substance of an assessment is required to be your independent work', and the /ethics page states that a processed manuscript still counts as AI-assisted where disclosure is required. The vendor markets the tool to students for exactly that coursework use, which is a genuine tension we would rather name than smooth over: the restriction is in the contract and the marketing points the other way.</p></details>
 </div>
+
+<details class="cite-drawer" id="cite-audit">
+<summary>Cite or embed this audit</summary>
+<p>The badge links to this review. It is a dated price receipt, not a ranking and not a paid placement.</p>
+<p><img alt="AUDITED BY AI TOOLS ESSENTIALS — HumanPen" src="/badges/humanpen.svg" width="360" height="108"></p>
+<label>HTML badge snippet
+<textarea readonly data-cite-box>&lt;a href=&quot;https://aitoolsessentials.com/tools/humanpen/?utm_source=badge_embed&quot;&gt;&lt;img alt=&quot;AUDITED BY AI TOOLS ESSENTIALS — HumanPen&quot; src=&quot;https://aitoolsessentials.com/badges/humanpen.svg&quot; width=&quot;360&quot; height=&quot;108&quot;&gt;&lt;/a&gt;</textarea></label>
+<button type="button" data-cite-copy>Copy HTML</button>
+<label>Markdown badge snippet
+<textarea readonly data-cite-box>[![AUDITED BY AI TOOLS ESSENTIALS — HumanPen](https://aitoolsessentials.com/badges/humanpen.svg)](https://aitoolsessentials.com/tools/humanpen/?utm_source=badge_embed)</textarea></label>
+<button type="button" data-cite-copy>Copy Markdown</button>
+<label>Editorial citation
+<textarea readonly data-cite-box>HumanPen, audited OCT 2026 by AI Tools Essentials: 1,000 credits $19, 5,000 $79 (most popular), 10,000 $149, 20,000 $249; a…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/humanpen/</textarea></label>
+<button type="button" data-cite-copy>Copy citation</button>
+<label>BibTeX
+<textarea readonly data-cite-box>@misc{aitoolsessentials_humanpen_2026,
+  title = {HumanPen pricing audit},
+  author = {{AIToolsEssentials}},
+  year = {2026},
+  url = {https://aitoolsessentials.com/tools/humanpen/},
+  note = {HumanPen, audited OCT 2026 by AI Tools Essentials: 1,000 credits $19, 5,000 $79 (most popular), 10,000 $149, 20,000 $249; a…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/humanpen/}
+}</textarea></label>
+<button type="button" data-cite-copy>Copy BibTeX</button>
+</details>
+<script>
+document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var box = button.previousElementSibling && button.previousElementSibling.querySelector("textarea");
+    if (!box) return;
+    var done = function () { button.textContent = "Copied"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(box.value).then(done);
+    } else {
+      box.select();
+      document.execCommand("copy");
+      done();
+    }
+  });
+});
+</script>
+
 </article>
 
 <aside class="review-aside">
@@ -180,7 +230,7 @@
 <a href="../../submit-tool.html" rel="nofollow">Submit a tool</a>
 <a href="../../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
 <a href="mailto:contact@aitoolsessentials.com">Contact</a>
-<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a></footer>
+<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a><a href="/embeds/">Embeds</a></footer>
 <script src="../../js/site.js?v=505d3293d6b1" defer></script>
 <script src="../../js/analytics.js?v=00855b06fbaf" defer></script>
 <script src="../../js/cookie-consent.js?v=5fb7d8beb19d" defer></script>

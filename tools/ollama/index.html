@@ -7,6 +7,15 @@
 <title>Ollama: AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="https://aitoolsessentials.com/tools/ollama/">
 <link rel="stylesheet" href="../../css/styles.css?v=7bed9675442f">
+
+<style>
+.cite-drawer{margin:28px auto;max-width:980px;padding:16px 18px;background:#FAF8F5;color:#111315;border:1px solid #111315}
+.cite-drawer summary{cursor:pointer;font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;font-size:13px}
+.cite-drawer textarea{width:100%;min-height:72px;margin:6px 0 8px;padding:8px;border:1px solid #D8D2C5;background:#fff;color:#111315;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
+.cite-drawer button{margin:0 0 14px;border:1px solid #111315;background:#111315;color:#FAF8F5;padding:6px 10px;font:12px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer}
+.cite-drawer label{display:block;margin-top:8px;font-size:13px}
+</style>
+
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Ollama", "applicationCategory": "Local AI", "description": "A local model runtime and API that makes it straightforward to download, run, and integrate open models on a computer, with optional cloud access.", "url": "https://aitoolsessentials.com/tools/ollama/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free local runtime + optional cloud plans"}, "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": "https://aitoolsessentials.com/"}, "sameAs": "https://ollama.com/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does Ollama send local prompts to the cloud?", "acceptedAnswer": {"@type": "Answer", "text": "Ollama's FAQ distinguishes local runs from cloud-hosted models; verify the current mode, model path, and account settings for the workflow you are using."}}, {"@type": "Question", "name": "Is Ollama completely free?", "acceptedAnswer": {"@type": "Answer", "text": "Running models on your own hardware is not subscription-metered, but hardware, electricity, model licenses, and optional cloud usage are separate considerations."}}, {"@type": "Question", "name": "What should I test first?", "acceptedAnswer": {"@type": "Answer", "text": "Test the exact model, context length, latency, RAM/VRAM use, and output quality on one real task rather than assuming a model name predicts performance."}}]}</script>
 <link rel="stylesheet" href="../../css/share.css?v=74b611b77130">
@@ -27,7 +36,7 @@
 <p class="kicker light">Local AI</p>
 <h1>Ollama review</h1>
 <p>A local model runtime and API that makes it straightforward to download, run, and integrate open models on a computer, with optional cloud access.</p>
-<p class="last-updated">Editorial review · Updated 2026-10-27 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
+<p class="last-updated">Editorial review · Updated 2026-10-28 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
 </section>
 <!-- AIT CALCULATOR CALLOUT START -->
 <aside class="ledger-calc-callout">
@@ -100,6 +109,47 @@
 <details><summary>Is Ollama completely free?</summary><p>Running models on your own hardware is not subscription-metered, but hardware, electricity, model licenses, and optional cloud usage are separate considerations.</p></details>
 <details><summary>What should I test first?</summary><p>Test the exact model, context length, latency, RAM/VRAM use, and output quality on one real task rather than assuming a model name predicts performance.</p></details>
 </div>
+
+<details class="cite-drawer" id="cite-audit">
+<summary>Cite or embed this audit</summary>
+<p>The badge links to this review. It is a dated price receipt, not a ranking and not a paid placement.</p>
+<p><img alt="AUDITED BY AI TOOLS ESSENTIALS — Ollama" src="/badges/ollama.svg" width="360" height="108"></p>
+<label>HTML badge snippet
+<textarea readonly data-cite-box>&lt;a href=&quot;https://aitoolsessentials.com/tools/ollama/?utm_source=badge_embed&quot;&gt;&lt;img alt=&quot;AUDITED BY AI TOOLS ESSENTIALS — Ollama&quot; src=&quot;https://aitoolsessentials.com/badges/ollama.svg&quot; width=&quot;360&quot; height=&quot;108&quot;&gt;&lt;/a&gt;</textarea></label>
+<button type="button" data-cite-copy>Copy HTML</button>
+<label>Markdown badge snippet
+<textarea readonly data-cite-box>[![AUDITED BY AI TOOLS ESSENTIALS — Ollama](https://aitoolsessentials.com/badges/ollama.svg)](https://aitoolsessentials.com/tools/ollama/?utm_source=badge_embed)</textarea></label>
+<button type="button" data-cite-copy>Copy Markdown</button>
+<label>Editorial citation
+<textarea readonly data-cite-box>Ollama, audited OCT 2026 by AI Tools Essentials: Free $0 with pay-as-you-go usage credits; Pro $20/month or $200/year billed…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/ollama/</textarea></label>
+<button type="button" data-cite-copy>Copy citation</button>
+<label>BibTeX
+<textarea readonly data-cite-box>@misc{aitoolsessentials_ollama_2026,
+  title = {Ollama pricing audit},
+  author = {{AIToolsEssentials}},
+  year = {2026},
+  url = {https://aitoolsessentials.com/tools/ollama/},
+  note = {Ollama, audited OCT 2026 by AI Tools Essentials: Free $0 with pay-as-you-go usage credits; Pro $20/month or $200/year billed…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/ollama/}
+}</textarea></label>
+<button type="button" data-cite-copy>Copy BibTeX</button>
+</details>
+<script>
+document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var box = button.previousElementSibling && button.previousElementSibling.querySelector("textarea");
+    if (!box) return;
+    var done = function () { button.textContent = "Copied"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(box.value).then(done);
+    } else {
+      box.select();
+      document.execCommand("copy");
+      done();
+    }
+  });
+});
+</script>
+
 </article>
 
 <aside class="review-aside">
@@ -155,7 +205,7 @@
 <a href="../../submit-tool.html" rel="nofollow">Submit a tool</a>
 <a href="../../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
 <a href="mailto:contact@aitoolsessentials.com">Contact</a>
-<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a></footer>
+<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a><a href="/embeds/">Embeds</a></footer>
 <script src="../../js/site.js?v=505d3293d6b1" defer></script>
 <script src="../../js/analytics.js?v=00855b06fbaf" defer></script>
 <script src="../../js/cookie-consent.js?v=5fb7d8beb19d" defer></script>

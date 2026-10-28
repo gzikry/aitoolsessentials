@@ -162,34 +162,27 @@ def generate_stack_gallery(root: Path, tools: list[dict[str, Any]]) -> None:
 
 
 def generate_badges(root: Path, tools: list[dict[str, Any]]) -> None:
-    # Emit an embeddable SVG badge for every listed tool so vendors can link back.
+    # Emit an embeddable audited-pricing SVG for every listed tool.
+    from badge_ledger import badge_svg, audited_stamp_svg
+
     badge_dir = root / "badges"
     badge_dir.mkdir(exist_ok=True)
-    accent = "#0071E3"
+    sources = {}
+    source_path = root / "data" / "tool_sources.json"
+    if source_path.exists():
+        payload = json.loads(source_path.read_text())
+        sources = {row.get("slug"): row for row in payload.get("tools", [])}
     for t in tools:
-        slug = t["slug"]
-        rating = t.get("rating", "")
-        label = esc(t["name"])
-        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="200" height="54" role="img" aria-label="Reviewed on AIToolsEssentials">
-  <rect width="200" height="54" rx="8" fill="#ffffff"/>
-  <rect width="200" height="54" rx="8" fill="none" stroke="{accent}" stroke-width="1.5"/>
-  <rect width="6" height="54" fill="{accent}"/>
-  <text x="16" y="22" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#111111">Reviewed on</text>
-  <text x="16" y="37" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="{accent}">AIToolsEssentials</text>
-  <text x="184" y="37" text-anchor="end" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#555555">{esc(rating)}/5</text>
-  <title>{label} review on AIToolsEssentials</title>
-</svg>'''
-        (badge_dir / f"{slug}.svg").write_text(svg)
-    audited = '''<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" role="img" aria-label="Audited on AI Tools Essentials">
-  <rect width="220" height="48" fill="#FAF8F5"/>
-  <rect width="220" height="48" fill="none" stroke="#111315" stroke-width="1"/>
-  <rect width="6" height="48" fill="#156E3F"/>
-  <text x="16" y="20" font-family="Georgia,Times New Roman,serif" font-size="12" fill="#111315">Audited on</text>
-  <text x="16" y="36" font-family="Georgia,Times New Roman,serif" font-size="14" font-weight="700" fill="#111315">AI Tools Essentials</text>
-</svg>'''
-    (badge_dir / "audited.svg").write_text(audited)
+        (badge_dir / f"{t['slug']}.svg").write_text(badge_svg(t, sources.get(t["slug"])))
+    (badge_dir / "audited.svg").write_text(audited_stamp_svg())
     top = sorted(tools, key=lambda t: float(t.get("rating", 0) or 0), reverse=True)[:12]
-    badges = "".join(f'<article class="content-hub-card"><span>{esc(t["category"])}</span><h3>{esc(t["name"])}</h3><div class="vendor-badge-preview"><strong>Reviewed on AIToolsEssentials</strong><small>{esc(t.get("rating"))}/5 editorial score</small></div><textarea readonly>&lt;a href="{DOMAIN}/tools/{t["slug"]}/" rel="noopener"&gt;&lt;img alt="Reviewed on AIToolsEssentials" src="{DOMAIN}/badges/{t["slug"]}.svg"&gt;&lt;/a&gt;</textarea><a class="button button-blue small" href="/tools/{t["slug"]}/">Review page</a></article>' for t in top)
+    badges = "".join(
+        f'<article class="content-hub-card"><span>{esc(t["category"])}</span><h3>{esc(t["name"])}</h3>'
+        f'<img alt="AUDITED BY AI TOOLS ESSENTIALS — {esc(t["name"])}" src="/badges/{t["slug"]}.svg" width="360" height="108">'
+        f'<textarea readonly>&lt;a href="{DOMAIN}/tools/{t["slug"]}/?utm_source=badge_embed"&gt;&lt;img alt="AUDITED BY AI TOOLS ESSENTIALS — {esc(t["name"])}" src="{DOMAIN}/badges/{t["slug"]}.svg" width="360" height="108"&gt;&lt;/a&gt;</textarea>'
+        f'<a class="button button-blue small" href="/tools/{t["slug"]}/">Review page</a></article>'
+        for t in top
+    )
     all_note = '<p class="muted-small">Every listed tool has a badge. Ask us for yours if it is not shown: <a href="mailto:' + EMAIL + '">' + EMAIL + '</a></p>'
     # Third-party verification is a separate block from vendor badges. Deliberately no
     # reciprocal image: a directory badge we hold is evidence about OUR listing, not
@@ -212,9 +205,9 @@ def generate_badges(root: Path, tools: list[dict[str, Any]]) -> None:
     )
     audited_note = (
         '<div class="score-card"><span>Verified fast-track</span><h2>Audited on AI Tools Essentials</h2>'
-        '<p>Accepted $79 reviews can embed this mark. It links to the site. It is not a score and it does not rank the tool.</p>'
-        f'<p><img alt="Audited on AI Tools Essentials" src="{DOMAIN}/badges/audited.svg" width="220" height="48"></p>'
-        '<textarea readonly>&lt;a href="https://aitoolsessentials.com/"&gt;&lt;img alt="Audited on AI Tools Essentials" src="https://aitoolsessentials.com/badges/audited.svg" width="220" height="48"&gt;&lt;/a&gt;</textarea>'
+        '<p>The stamp links to the site. It is not a score and it does not rank the tool. Per-tool badges are on each review and on the <a href="/embeds/">embeds hub</a>.</p>'
+        f'<p><img alt="AUDITED BY AI TOOLS ESSENTIALS" src="{DOMAIN}/badges/audited.svg" width="320" height="64"></p>'
+        '<textarea readonly>&lt;a href="https://aitoolsessentials.com/embeds/"&gt;&lt;img alt="AUDITED BY AI TOOLS ESSENTIALS" src="https://aitoolsessentials.com/badges/audited.svg" width="320" height="64"&gt;&lt;/a&gt;</textarea>'
         '<p><a href="/submit-tool.html">Submit a tool</a></p></div>'
     )
     page = f'<!doctype html><html lang="en">{head("AIToolsEssentials Vendor Badges — Reviewed AI Tool Badges", "Vendors can link to their AIToolsEssentials review with transparent, editorially-labeled badges.", DOMAIN+"/badges/")}<body>{HEADER}<main><section class="scene scene-dark"><div style="max-width:880px;margin:0 auto;padding:86px 28px 68px;text-align:center"><p class="kicker light">Vendor badges</p><h1>Give reviewed tools a reason to link back.</h1><p class="subhead">Transparent badges for vendors who want to point buyers to independent review pages. No paid ranking implied.</p></div></section><section class="scene scene-light content-hub"><div class="article-shell wide"><div class="score-card"><span>Editorial rules</span><p>Badges link to review pages and may not imply endorsement beyond the exact text shown. Sponsored placements remain separately labeled.</p></div>{audited_note}{all_note}<div class="content-hub-grid">{badges}</div>{directory_note}</div></section></main>{FOOTER}{scripts()}</body></html>'

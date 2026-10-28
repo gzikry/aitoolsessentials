@@ -1115,7 +1115,8 @@ def homepage_bill_slasher_html(root: Path) -> str:
         '<p class="ledger-kicker">30-second bill</p>'
         '<h2 id="bill-slasher-heading">What are you paying for twice?</h2>'
         "<p>Tap the seats on the card. Overlap waste is 12 times the extra seat in the same job. "
-        "Grandfathered prices stay on this receipt. New-buyer list prices are on the calculators.</p>"
+        "Grandfathered prices stay on this receipt. New-buyer list prices are on the calculators. "
+        '<a href="/embed/ai-bill-slasher/">Embed this bill</a> · <a href="/embeds/">All embeds and badges</a></p>'
         f'<form id="bill-slasher"><div class="ledger-seats">{boxes}</div></form>'
         '<div id="bill-result" aria-live="polite"></div>'
         f"<p>{DISCLOSURE}</p>"

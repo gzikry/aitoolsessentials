@@ -7,6 +7,15 @@
 <title>CCC (Claude Command Center): AI Tool Review — AIToolsEssentials</title>
 <link rel="canonical" href="https://aitoolsessentials.com/tools/claude-command-center/">
 <link rel="stylesheet" href="../../css/styles.css?v=7bed9675442f">
+
+<style>
+.cite-drawer{margin:28px auto;max-width:980px;padding:16px 18px;background:#FAF8F5;color:#111315;border:1px solid #111315}
+.cite-drawer summary{cursor:pointer;font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;font-size:13px}
+.cite-drawer textarea{width:100%;min-height:72px;margin:6px 0 8px;padding:8px;border:1px solid #D8D2C5;background:#fff;color:#111315;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
+.cite-drawer button{margin:0 0 14px;border:1px solid #111315;background:#111315;color:#FAF8F5;padding:6px 10px;font:12px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer}
+.cite-drawer label{display:block;margin-top:8px;font-size:13px}
+</style>
+
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "CCC (Claude Command Center)", "applicationCategory": "Development", "description": "CCC (Claude Command Center) is a local dashboard for people running several coding agents at once. Instead of owning execution, it reads each engine's on-disk state as the source of truth, so a session you started in a terminal, resumed by hand or launched headless outside the dashboard still shows up on the board - that is the difference between a dashboard and a second place you have to remember to work from. On top of the board it adds a needs-attention lane that flags sessions ending on a real question, a per-session context meter, plan-usage and rate-limit projections, a Kanban with a project tree and an infinite Flow canvas, group chats between agents, a work queue with verify-to-close receipts, git worktrees per task, and an optional fallback that keeps a limit-hit session running on a $0 model. The stack is deliberately plain: a stdlib-only Python server bound to 127.0.0.1 and a no-build vanilla-JS UI, with readable JSON state under ~/.claude/command-center/. Claude Code is first-class; Codex, Cursor, Antigravity, Kilo Code, Kimi Code, OpenCode and Devin spawn and ingest with documented gaps. Version 5.39.0 shipped 2026-10-18 and the repository was pushed the same day this review was written.", "url": "https://aitoolsessentials.com/tools/claude-command-center/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free: USD 0, with no tiers, no paid plan, no seat count and no account for the local app. Licensed FSL-1.1-MIT (copyright 2026 Amir Fish), which is source-available rather than OSI open source: you may use, copy, modify and redistribute it for any Permitted Purpose, a Competing Use is barred, and each version converts to the MIT license on its second anniversary. Downloads are a 3.6 MB notarized and Apple-signed DMG, a Homebrew tap (amirfish1/tap/ccc), a curl installer for macOS/Linux and a PowerShell installer for Windows. The optional CCC Cloud phone relay is account-based; no price appears for it on any fetched page either. No page on the site carries a price token other than $0."}, "publisher": {"@type": "Organization", "name": "AIToolsEssentials", "url": "https://aitoolsessentials.com/"}, "sameAs": "https://ccc.amirfish.ai/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does CCC cost?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing. The local dashboard is free at $0 with no tiers, no paid plan and no account, and the license (FSL-1.1-MIT) permits use, copying, modification and redistribution for any purpose other than building a competing product, with each version converting to MIT on its second anniversary. The optional CCC Cloud phone relay is account-based, and no price for it appears on any page fetched during this review."}}, {"@type": "Question", "name": "Is CCC really local, and what does it send home?", "acceptedAnswer": {"@type": "Answer", "text": "The app is local: it runs a stdlib-only Python server bound to 127.0.0.1 and keeps readable JSON state in ~/.claude/command-center/. It does send one anonymous beacon at most once per day containing the schema version, the app version, the platform string and two booleans saying whether this is the first beacon of the ISO week and of the month - no identifier, no prompts, no transcripts, no paths, no token or session counts. CCC_TELEMETRY_DISABLED=1 turns it off entirely. The website itself loads cookieless PostHog with memory-only persistence and no autocapture."}}, {"@type": "Question", "name": "Can I run it on a team or a shared machine?", "acceptedAnswer": {"@type": "Answer", "text": "Not safely as a shared service. The server has no authentication and no per-user accounts: anything that can reach the port can spawn sessions and, because headless spawns use --dangerously-skip-permissions, can run commands as your user. The vendor's advice is loopback only, or a trusted private network such as Tailscale, and chmod 700 on ~/.claude/command-center/ on a shared machine. For a team, treat it as a per-developer tool, not a control plane."}}, {"@type": "Question", "name": "Which coding agents does it actually support?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code is first-class. Codex, Cursor, Antigravity, Kilo Code, Kimi Code, OpenCode and Devin spawn and ingest with documented gaps, and the site says so rather than implying uniform support. The macOS app is the most complete path; Linux is headless and Windows installs through a PowerShell script."}}, {"@type": "Question", "name": "Do I need to hand over my Claude subscription or API key?", "acceptedAnswer": {"@type": "Answer", "text": "No. CCC runs your installed claude command, which reads its own login, and the vendor's docs/tos-boundary.md says the login token is never sent to the free router, another provider, CCC telemetry or another machine, and is never copied between machines. Free-model spawns strip ANTHROPIC_API_KEY, CLAUDE_CODE_OAUTH_TOKEN and CLAUDE_CODE_SESSION_KEY from the child process first."}}]}</script>
 <link rel="stylesheet" href="../../css/share.css?v=74b611b77130">
@@ -27,7 +36,7 @@
 <p class="kicker light">Development</p>
 <h1>CCC (Claude Command Center) review</h1>
 <p>CCC (Claude Command Center) is a local dashboard for people running several coding agents at once. Instead of owning execution, it reads each engine's on-disk state as the source of truth, so a session you started in a terminal, resumed by hand or launched headless outside the dashboard still shows up on the board - that is the difference between a dashboard and a second place you have to remember to work from. On top of the board it adds a needs-attention lane that flags sessions ending on a real question, a per-session context meter, plan-usage and rate-limit projections, a Kanban with a project tree and an infinite Flow canvas, group chats between agents, a work queue with verify-to-close receipts, git worktrees per task, and an optional fallback that keeps a limit-hit session running on a $0 model. The stack is deliberately plain: a stdlib-only Python server bound to 127.0.0.1 and a no-build vanilla-JS UI, with readable JSON state under ~/.claude/command-center/. Claude Code is first-class; Codex, Cursor, Antigravity, Kilo Code, Kimi Code, OpenCode and Devin spawn and ingest with documented gaps. Version 5.39.0 shipped 2026-10-18 and the repository was pushed the same day this review was written.</p>
-<p class="last-updated">Editorial review · Updated 2026-10-27 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
+<p class="last-updated">Editorial review · Updated 2026-10-28 · <a href="../../legal/testing-protocol.html">Hands-on result not yet published</a></p>
 </section>
 <!-- AIT CALCULATOR CALLOUT START -->
 <aside class="ledger-calc-callout">
@@ -127,6 +136,47 @@
 <details><summary>Which coding agents does it actually support?</summary><p>Claude Code is first-class. Codex, Cursor, Antigravity, Kilo Code, Kimi Code, OpenCode and Devin spawn and ingest with documented gaps, and the site says so rather than implying uniform support. The macOS app is the most complete path; Linux is headless and Windows installs through a PowerShell script.</p></details>
 <details><summary>Do I need to hand over my Claude subscription or API key?</summary><p>No. CCC runs your installed claude command, which reads its own login, and the vendor's docs/tos-boundary.md says the login token is never sent to the free router, another provider, CCC telemetry or another machine, and is never copied between machines. Free-model spawns strip ANTHROPIC_API_KEY, CLAUDE_CODE_OAUTH_TOKEN and CLAUDE_CODE_SESSION_KEY from the child process first.</p></details>
 </div>
+
+<details class="cite-drawer" id="cite-audit">
+<summary>Cite or embed this audit</summary>
+<p>The badge links to this review. It is a dated price receipt, not a ranking and not a paid placement.</p>
+<p><img alt="AUDITED BY AI TOOLS ESSENTIALS — CCC (Claude Command Center)" src="/badges/claude-command-center.svg" width="360" height="108"></p>
+<label>HTML badge snippet
+<textarea readonly data-cite-box>&lt;a href=&quot;https://aitoolsessentials.com/tools/claude-command-center/?utm_source=badge_embed&quot;&gt;&lt;img alt=&quot;AUDITED BY AI TOOLS ESSENTIALS — CCC (Claude Command Center)&quot; src=&quot;https://aitoolsessentials.com/badges/claude-command-center.svg&quot; width=&quot;360&quot; height=&quot;108&quot;&gt;&lt;/a&gt;</textarea></label>
+<button type="button" data-cite-copy>Copy HTML</button>
+<label>Markdown badge snippet
+<textarea readonly data-cite-box>[![AUDITED BY AI TOOLS ESSENTIALS — CCC (Claude Command Center)](https://aitoolsessentials.com/badges/claude-command-center.svg)](https://aitoolsessentials.com/tools/claude-command-center/?utm_source=badge_embed)</textarea></label>
+<button type="button" data-cite-copy>Copy Markdown</button>
+<label>Editorial citation
+<textarea readonly data-cite-box>CCC (Claude Command Center), audited OCT 2026 by AI Tools Essentials: the homepage carries only &#x27;$0&#x27; (the free-model choice), and /captain/…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/claude-command-center/</textarea></label>
+<button type="button" data-cite-copy>Copy citation</button>
+<label>BibTeX
+<textarea readonly data-cite-box>@misc{aitoolsessentials_claude_command_center_2026,
+  title = {CCC (Claude Command Center) pricing audit},
+  author = {{AIToolsEssentials}},
+  year = {2026},
+  url = {https://aitoolsessentials.com/tools/claude-command-center/},
+  note = {CCC (Claude Command Center), audited OCT 2026 by AI Tools Essentials: the homepage carries only &#x27;$0&#x27; (the free-model choice), and /captain/…. Not in the credit-trap ledger. Source: https://aitoolsessentials.com/tools/claude-command-center/}
+}</textarea></label>
+<button type="button" data-cite-copy>Copy BibTeX</button>
+</details>
+<script>
+document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var box = button.previousElementSibling && button.previousElementSibling.querySelector("textarea");
+    if (!box) return;
+    var done = function () { button.textContent = "Copied"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(box.value).then(done);
+    } else {
+      box.select();
+      document.execCommand("copy");
+      done();
+    }
+  });
+});
+</script>
+
 </article>
 
 <aside class="review-aside">
@@ -185,7 +235,7 @@
 <a href="../../submit-tool.html" rel="nofollow">Submit a tool</a>
 <a href="../../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>
 <a href="mailto:contact@aitoolsessentials.com">Contact</a>
-<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a></footer>
+<a href="../../legal/about.html">About</a><a href="../../legal/privacy.html">Privacy</a><a href="../../legal/terms.html">Terms</a><a href="../../legal/corrections.html">Corrections</a><a href="/embeds/">Embeds</a></footer>
 <script src="../../js/site.js?v=505d3293d6b1" defer></script>
 <script src="../../js/analytics.js?v=00855b06fbaf" defer></script>
 <script src="../../js/cookie-consent.js?v=5fb7d8beb19d" defer></script>
