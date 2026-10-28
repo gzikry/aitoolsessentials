@@ -887,6 +887,15 @@
       "public_href": "/go/customgpt/",
       "partner": true
     },
+    "umevo": {
+      "name": "UMEVO",
+      "slug": "umevo",
+      "official": "https://umevo.ai/",
+      "destination": "https://umevo.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/umevo/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

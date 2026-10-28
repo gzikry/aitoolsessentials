@@ -5732,5 +5732,86 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Editorial reading of the public pricing page on 2026-10-27, not a hands-on result, and the FirstPromoter approval is not part of the mark. Job fit 4 — the page describes no-code agents on the customer's own documents, with a per-agent document cap, an account-level word store, and a monthly query cap. Output quality 3 — citations are listed as included, but this page did not run a document set, and the page's anti-hallucination ranking is the vendor's claim. Adoption 3 — a 7-day trial is stated, and it requires a credit card that the FAQ says is charged automatically when the trial ends. Cost 3 — Standard is $99/month ($89 billed annually) and the next published tier is Premium at $499/month ($449 annually), with extra queries listed at $375/month. Held at 3.3."
+  },
+  {
+    "slug": "umevo",
+    "name": "UMEVO",
+    "category": "Meetings",
+    "best_for": "People who want a small physical recorder for in-person meetings and phone calls instead of a bot that joins the call as a participant, and who would rather buy hardware once than add another monthly AI subscription in year one",
+    "price": "Hardware, one-time purchase in USD from UMEVO's own Shopify store: Note $79 (64GB), Note Plus $109 on sale against a $169 list price (badged '35% off' on a Fall Sale banner whose countdown renders 00:00:00 and states no end date), Note ONE $159 on sale against $179, magnetic case $20, 3-in-1 accessory kit $20, plus a $5 shipping line item. AI minutes depend on which model you buy. Note Plus: Max plan free for year one (unlimited transcription under fair-use terms), then the free Starter plan at 400 transcription minutes a month; from year two that page offers 'Pro $2.50/mo or Max $5.83/mo, billed annually' and minute packs of 120/600/3,000/6,000 minutes at $0.59/$2.59/$10.99/$19.99. Note ONE: 30,000 transcription minutes a month for the first 3 months after activation, then free Starter at 400/month, with Pro $7.99/mo or $69.99/yr (1,800 min/mo), MAX $19.99/mo or $149.99/yr (unlimited) and packs of 120/600/3,000/6,000 minutes at $2.49/$9.49/$44.99/$79.99. The two product pages' ladders do not agree with each other. Minute packs are valid for 2 years; plan minutes reset monthly and free minutes do not carry over. Note ($79) includes no AI plan at all - recording works, transcription follows the companion app's free Starter tier or a paid upgrade. Language count is plan-gated on the Note ONE table: 114 languages on Starter and Pro, 140+ on MAX.",
+    "rating": 3.5,
+    "official": "https://umevo.ai/",
+    "summary": "UMEVO sells three small magnetic voice recorders - Note ($79), Note Plus ($109) and Note ONE ($159) - that capture in-person meetings and phone calls and hand the audio to a phone app that transcribes it, labels speakers, summarises, translates and builds mind maps. It is the opposite trade to Otter, Fireflies or Fathom: those send a bot into a video call and are free or cheap to start, while UMEVO sells you a device and nothing joins the call, so the other party sees a recorder on the table rather than a participant in the attendee list. Note Plus transcribes live inside the companion app, which is a third-party product called AI DVR Link; Note ONE transfers over Wi-Fi and generates the notes after upload. Year one is the cheap part of the AI cost on Note Plus, because the Max plan is included; from year two the free tier drops to 400 minutes a month and the paid ladder that applies to you is the thing to check before buying, since the two product pages currently quote different prices for it.",
+    "use_cases": [
+      "Recording in-person meetings, interviews and lectures where no laptop or bot can join",
+      "Capturing phone calls on an iPhone or Android handset - the specific job meeting-bot software cannot do at all",
+      "Producing transcripts and speaker-labelled summaries in a second language without a monthly subscription",
+      "Field interviews, site visits and door-to-door work where a phone recording is awkward or intrusive",
+      "Buying one device for a team member who needs notes but will not adopt another SaaS per-seat cost in year one"
+    ],
+    "pros": [
+      "The operator is a real, checkable company: UME Technology Inc. of Denver, Colorado registration 20251272831, incorporated March 2025 and in good standing, selling from its own store with a US office address in the footer, 12-month replacement warranty, 30-day no-reason return and worldwide free shipping all stated on the product pages",
+      "The plan ladder is published per model instead of hidden - minutes per month, the year-two fallback to 400 free minutes, the annual equivalents in dollars per month, and the language count per tier (114 on Starter and Pro, 140+ on MAX) all appear on the Note ONE page before purchase",
+      "It tells buyers that AI minutes cost money after year one rather than pretending the device is a one-off: the Note Plus page has a 'Transcription Limits & Pricing' block explaining both the paid upgrade and the pay-as-you-go pack route, and states that unused free minutes do not carry over",
+      "The footer-linked privacy notice discloses the third-party app layer by name - section 10 states that Note Plus 'works with AI DVR Link, a third-party companion app' and that uploads may be processed by the app provider and its service providers - which most hardware vendors in this category never do",
+      "Output ownership is granted to the buyer in writing: the EULA published in the store's terms assigns 'all intellectual property rights to the work products you produce using the software or with its help' to the user",
+      "The hardware is not bricked by the AI plan: on the Note, and after the free minutes run out on the others, recording continues and the buyer chooses whether to pay for transcription",
+      "The product is honest about the split between the models - real-time transcription is a Note Plus feature, and the Note ONE documentation says transcription happens after the recording is transferred, rather than selling both on the same wording"
+    ],
+    "cons": [
+      "The counterparty contradicts itself across two live Terms pages. The footer-linked /pages/terms-of-service says the platform is 'operated by UME Technology Inc.', while the store's own policy page /policies/terms-of-service opens by naming 'Huasengdi Technology Co., Ltd.' of 30 N Gould St, Ste R, Sheridan, WY as the administrator of the app and the entity 'accountable for the data you provide' under the EULA. Both say the agreement is governed by 'the laws of the United States' without naming a state. The vendor has confirmed in writing that UME Technology Inc. is the seller and operator of the AI service, that the Denver address is current and that Colorado law governs - but that answer is not on either page yet",
+      "Two privacy notices disagree on the single most important disclosure for a recorder: the footer version (/pages/privacy-protection-policy, section 10) names AI DVR Link and states that uploads may be processed by the app provider and its service providers, while the store policy (/policies/privacy-policy) omits the companion app entirely and names a 1560 Broadway address the vendor now says is out of date",
+      "The privacy policy that covers the app that actually processes your recordings is not linked from any page on umevo.ai. It exists at record.szaicy.com (Dongguan Kinghal Electronic Technology Co., Ltd., data stored in the US, about one month of retention after account cancellation, deletion requests to Sales@kinghal.com) and the vendor supplied the URL only when asked - so the only published retention period for audio and transcripts sits on a third-party domain the buyer is never sent to",
+      "No page states whether recordings or transcripts are used to train models. The vendor answered 'no' in writing; the site's own privacy notices and terms contain no training clause in either direction",
+      "The two product pages quote different prices for the same paid tiers. Note ONE lists Pro at $7.99/mo or $69.99/yr with 1,800 minutes and MAX at $19.99/mo or $149.99/yr as unlimited, and packs at $2.49/$9.49/$44.99/$79.99; the Note Plus page lists 'Pro $2.50/mo or Max $5.83/mo, billed annually' - both described as unlimited - and the same four packs at $0.59/$2.59/$10.99/$19.99, roughly a quarter of the Note ONE figures",
+      "The Note ONE feature list says 'Transcription in 140+ languages' while its own plan table gates 140+ to MAX and gives 114 languages on Starter and Pro, so the headline number is the top tier's",
+      "Every product page runs a countdown timer that renders 00 DAY 00 HOUR 00 MIN 00 SEC under a 'FALL SALE: 35% OFF - LIMITED TIME ONLY' banner, with no end date published on the page or on request, so the deadline is decorative",
+      "Nothing on the product pages warns about recording consent or call-recording law - for a device whose selling point is capturing other people's voices, including phone calls, that warning appears only in one blog article about one-party and all-party consent states",
+      "The submission quoted Note Plus at $119 and offered 'real-time transcription in 140+ languages' without qualification; the store price is $109, real-time transcription is Note Plus only, and 140+ languages is a MAX-plan figure",
+      "No hands-on testing yet. Trustpilot carries 2.9 from two reviews, which is too small a sample to read either way, so the device's real-world accuracy and battery life remain unverified by us"
+    ],
+    "key_features": [
+      "Three models: Note $79 (64GB, 5 languages of real-time translation in 59 languages via GPT-4o), Note Plus $109 (64GB, real-time transcription, NOTE and CALL modes for in-person and phone-call capture, pairs with the AI DVR Link app), Note ONE $159 (64GB, Wi-Fi file transfer, up to 40 hours of continuous recording, notes generated after upload)",
+      "Magnetic form factor with a magnetic ring and case so it clips behind a phone or to clothing",
+      "Two recording modes on the Plus and ONE - an in-person mode and a call mode that captures both sides of a phone conversation",
+      "Companion app does transcription, speaker identification, summaries, mind maps, text translation, template-based notes and an 'Ask AI' query over your own recordings",
+      "Exports to TXT, DOCX and PDF; web app for editing from a browser",
+      "AI plan ladder by model: Note Plus includes the Max plan for year one then falls back to 400 free minutes a month; Note ONE gives 30,000 minutes a month for 3 months then 400; the Note has no included plan",
+      "Accessories sold separately: magnetic carrying case $20, official 3-in-1 kit $20",
+      "Ships worldwide free, 30-day no-reason return, 12-month replacement warranty"
+    ],
+    "faq": [
+      [
+        "What does UMEVO cost, and what does the AI cost after year one?",
+        "The hardware is a one-time purchase: Note $79, Note Plus $109 against a $169 list price, Note ONE $159 against $179, plus $20 for a case or accessory kit and a $5 shipping line. AI minutes are separate after the included period. Note Plus includes the Max plan free for year one, then drops to the free Starter plan at 400 transcription minutes a month; Note ONE gives 30,000 minutes a month for three months, then the same 400 free minutes. Paid tiers and minute packs are published on both product pages, but the two pages quote different figures for them - $7.99/$19.99 a month on Note ONE against 'Pro $2.50/mo or Max $5.83/mo billed annually' on Note Plus - so confirm which applies to the model you are buying before checkout."
+      ],
+      [
+        "Where do my recordings actually go?",
+        "Into the companion phone app, and the app for Note Plus is a third party: AI DVR Link, developed by Dongguan Kinghal Electronic Technology Co., Ltd., not by UMEVO. UMEVO's footer privacy notice says so in section 10, and that app's own policy states data is stored in the United States and retained about one month after you cancel your account. Note ONE generates notes after the recording is transferred over Wi-Fi rather than live. Two things are not on umevo.ai at all: a stated retention period for audio and transcripts on UMEVO's own side, and any statement about model training - the vendor told us in writing that recordings are not used to train models, but no published page says it."
+      ],
+      [
+        "Who is the seller, and which law applies?",
+        "The site gives three answers, and we are recording the contradiction rather than resolving it in the vendor's favour. The footer Terms name UME Technology Inc.; the store policy page for terms names Huasengdi Technology Co., Ltd. of Sheridan, Wyoming as the administrator and the entity accountable for data under the EULA; and both governing-law clauses say 'the laws of the United States' without naming a state. UME Technology Inc. is a real Colorado company (registration 20251272831, in good standing) and the vendor has confirmed in writing that it is the seller and operator, that 1312 17th St, Unit 2955, Denver is the current address and that Colorado law governs. Until that reaches the pages, treat the contracting party as UME Technology Inc. on the vendor's written word, not on the terms you are asked to accept."
+      ],
+      [
+        "Can it record phone calls, and is that legal where I live?",
+        "The Plus and ONE have a dedicated call mode that captures both sides of a phone conversation, which is the job meeting bots cannot do at all. Legality is on you: call-recording rules differ by state and country, several US states require every party to consent, and some countries require it of all parties regardless of where you are calling from. The product pages and the terms carry no consent warning at all - the only mention on the site is a blog post about one-party and all-party consent laws - so check your jurisdiction before recording anyone."
+      ],
+      [
+        "How does this compare with Otter, Fireflies or Fathom?",
+        "Those are meeting bots: they join your video call as a participant, produce a transcript, and are free or inexpensive to start. UMEVO is a physical recorder that captures rooms and phone calls, costs $79-$159 up front, and puts nothing in the attendee list. If your meetings are on Zoom or Teams with a laptop open, a meeting bot is cheaper and easier. If the conversations that matter happen in a room, on a phone call, or somewhere a laptop would be intrusive, a recorder is the only one of the two that can do the job."
+      ]
+    ],
+    "trial_checklist": [
+      "Decide first whether your meetings are on video calls or in rooms - if they are on video calls, a free meeting bot does this job and the hardware is the wrong purchase",
+      "Before buying, open both the Note Plus and Note ONE pages and note which paid tier and pack price each quotes; the figures differ by roughly 4x and you want the one that will apply to your model after the included period",
+      "Check the year-one vs year-two AI cost on the model you are buying: Note Plus is unlimited in year one but falls to 400 minutes a month after, and the Note includes no AI plan at all",
+      "Test the call-recording mode on a call you own both ends of, in your own jurisdiction, before recording anyone else - and check whether your state requires all-party consent",
+      "Watch the real-time versus after-the-fact difference in the first week: Note Plus transcribes live in the app, Note ONE produces notes only after the Wi-Fi transfer, which changes whether you can rely on it during a meeting",
+      "Log your actual minutes for one month against the 400-minute free tier before paying for a plan - heavy meeting users will cross it in a week, occasional users may never need to pay"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - this is a real hardware business with a checkable Colorado entity (registration 20251272831, good standing), its own store with live prices, published warranty and return terms, and a plan ladder published per model instead of hidden behind a sales call; it does the one job meeting bots cannot (phone calls and rooms), and it states on the product page that AI minutes cost money after year one. Transparency brings it to 3.5/5. A reader cannot tell today who they are contracting with: the footer terms name UME Technology Inc. while the store's terms page names Huasengdi Technology Co., Ltd. of Wyoming as the entity accountable for their data, both governing-law clauses name no state, the two privacy notices disagree on whether a third-party app processes their recordings, the policy that governs that app is not linked from the site, no page states training use, and the two product pages quote plan and pack prices roughly 4x apart. Each of those is fixable in an afternoon and the vendor has already confirmed the correct answers in writing; the score reflects the pages a buyer reads today, not the intent."
   }
 ]

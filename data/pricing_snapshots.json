@@ -425,6 +425,10 @@
       "date": "2026-10-27",
       "digest": "Standard $99/mo ($89/mo annual: 10 agents, 1,000 queries/mo, 5,000 docs/agent, 3 seats); Premium $499/mo ($449/mo annual: 25 agents, 5,000 queries/mo, 20,000 docs/agent, 5 seats); Enterprise custom; 7-day trial requires card.",
       "verified_against": "https://customgpt.ai/pricing"
+    },
+    "umevo": {
+      "date": "2026-10-27",
+      "digest": "Hardware one-time: Note $79, Note Plus $109 (reg $169, '35% off' sale, countdown shows 00:00:00, no end date), Note ONE $159 (reg $179), magnetic case $20, 3-in-1 kit $20, $5 shipping line. AI: Note Plus includes Max free for year 1 then free Starter 400 min/mo; Note ONE 30,000 min/mo for 3 months then 400 min/mo. Paid ladders as published, and they disagree: Note ONE Pro $7.99/mo or $69.99/yr (1,800 min), MAX $19.99/mo or $149.99/yr (unlimited), packs 120/600/3,000/6,000 min at $2.49/$9.49/$44.99/$79.99; Note Plus page quotes Pro $2.50/mo or Max $5.83/mo billed annually and the same packs at $0.59/$2.59/$10.99/$19.99. Packs valid 2 years; plan minutes reset monthly. Languages 114 Starter/Pro, 140+ MAX. Note ($79) has no AI plan. USD via Shopify."
     }
   },
   "changes": [

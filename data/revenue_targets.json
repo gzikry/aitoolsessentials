@@ -1744,5 +1744,26 @@
     "status": "approved",
     "next_action": "Approved 2026-10-27. Public CTAs use /go/customgpt/, which holds https://customgpt.ai/?fpr=george-881fd5. The public program page lists 15%, 18%, and 20% tiers; this account's tier was not stated on approval, so do not report a single rate.",
     "notes": "Approved 2026-10-27 via FirstPromoter. Program page: https://customgpt.ai/partners/. Do not invent a tier. The editorial score is from the 2026-10-27 pricing page and is not part of the approval."
+  },
+  {
+    "tool_slug": "umevo",
+    "tool_name": "UMEVO",
+    "priority": "low",
+    "category": "Meetings",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/umevo/"
+    ],
+    "best_audiences": [
+      "people who record in-person meetings, lectures and site visits and want hardware rather than a meeting bot",
+      "professionals who need call recording that a video-call bot cannot do",
+      "buyers comparing a one-time device purchase against a per-seat meeting-notes subscription"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@umevo.ai (and umetech2025@gmail.com, the submission contact) about the published Affiliate/Creators partnership: /pages/affiliate-creators exists but publishes no rate, stating that 'commission, attribution, codes, and settlement are confirmed by email' and that it is a human-led email process rather than a portal. Ask for commission, cookie window and payout terms; do not invent a tracking URL.",
+    "notes": "Hardware margin business: a $79-$159 one-time device with a small recurring AI tail, so commission per sale can be materially higher than the $2-$10 per-render tools in this catalog if the vendor offers a percentage. Year-one AI is included on Note Plus, which means repeat purchases are unlikely and the recurring commission is thin. Editorial verdict stays independent of any commercial terms."
   }
 ]

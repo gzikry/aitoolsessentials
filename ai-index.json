@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-10-27",
-  "tools_count": 98,
+  "tools_count": 99,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -721,6 +721,13 @@
       "category": "AI Agents",
       "price": "Standard $99/month or $89/month billed annually (10 agents, 1,000 queries/month, 5,000 documents per agent, 60 million words, 3 seats). Premium $499/month or $449/month billed annually (25 agents, 5,000 queries/month, 20,000 documents per agent, 300 million words, 5 seats, auto-sync, branding removal). Enterprise custom. Every published plan starts with a 7-day trial that requires a credit card and then charges the selected plan. Checked 2026-10-27.",
       "url": "https://aitoolsessentials.com/tools/customgpt/"
+    },
+    {
+      "name": "UMEVO",
+      "slug": "umevo",
+      "category": "Meetings",
+      "price": "Hardware, one-time purchase in USD from UMEVO's own Shopify store: Note $79 (64GB), Note Plus $109 on sale against a $169 list price (badged '35% off' on a Fall Sale banner whose countdown renders 00:00:00 and states no end date), Note ONE $159 on sale against $179, magnetic case $20, 3-in-1 accessory kit $20, plus a $5 shipping line item. AI minutes depend on which model you buy. Note Plus: Max plan free for year one (unlimited transcription under fair-use terms), then the free Starter plan at 400 transcription minutes a month; from year two that page offers 'Pro $2.50/mo or Max $5.83/mo, billed annually' and minute packs of 120/600/3,000/6,000 minutes at $0.59/$2.59/$10.99/$19.99. Note ONE: 30,000 transcription minutes a month for the first 3 months after activation, then free Starter at 400/month, with Pro $7.99/mo or $69.99/yr (1,800 min/mo), MAX $19.99/mo or $149.99/yr (unlimited) and packs of 120/600/3,000/6,000 minutes at $2.49/$9.49/$44.99/$79.99. The two product pages' ladders do not agree with each other. Minute packs are valid for 2 years; plan minutes reset monthly and free minutes do not carry over. Note ($79) includes no AI plan at all - recording works, transcription follows the companion app's free Starter tier or a paid upgrade. Language count is plan-gated on the Note ONE table: 114 languages on Starter and Pro, 140+ on MAX.",
+      "url": "https://aitoolsessentials.com/tools/umevo/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
