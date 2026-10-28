@@ -437,6 +437,37 @@ would burn the retry. Revisit around **20–30 visits/day** as previously record
 
 ---
 
+## UMEVO (`umevo.ai`) — direct program, terms received 2026-10-27, NOT applied
+
+The vendor volunteered these terms by email on **2026-10-27 23:33 PDT** (`umetech2025@gmail.com`,
+Cc `support@umevo.ai`, "Re: UMEVO is live on AIToolsEssentials - and what I published as
+limitations"), answering our request in the 2026-10-28 03:37 UTC send. Each figure below was then
+re-read on the vendor's own pages rather than taken from the mail:
+
+- **Commission:** $5.00 USD per qualifying referral (a hardware sale attributed to the link). Their
+  portal's public page states the same: "Join now and earn a $5.00 commission on each referral you
+  make."
+- **Attribution:** 90-day cookie window (portal page: "90-day Cookie Duration").
+- **Signup / tracking:** `https://affiliate.umevo.ai/` — "NO joining fee", applications reviewed
+  "within our next working days". Signup needs an account, so this is **George's lane**, like every
+  other account creation.
+- **Settlement:** paid against attributed sales through the portal once the order clears the return
+  window. No payout threshold, method or schedule was stated.
+- **Creator lane, declined:** `/pages/affiliate-creators` offers fixed-fee content and
+  fee-plus-performance deals ("Commission, attribution, codes, and settlement are confirmed by
+  email"). Paid content is **against our editorial rules** — the rule already published on
+  `/legal/trust.html` where the SaaSHub Priority+ and Premium placements were declined — so the
+  referral lane is the only one we can take, and taking it does not change the editorial verdict.
+
+**Status: not applied, nothing wired.** `data/affiliate_programs.json` was not touched (an entry
+needs an approved tracking URL; none exists) and no URL was invented. Economics, stated plainly: $5
+per hardware sale is the best per-conversion figure in this file, but against ~12 organic visitors a
+month it is not a revenue line — it is a cheap option to hold. Next action if George wants it: create
+the `affiliate.umevo.ai` account with the site mailbox, send the approved tracking URL back here, then
+follow "After approval (per program)" below.
+
+---
+
 ## After approval (per program)
 
 1. Add the tracking URL and `application_status: approved` to `data/affiliate_programs.json`.
