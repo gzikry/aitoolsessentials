@@ -32,6 +32,7 @@ HUBS = {
     "voice": ("/compare/ai-video-avatar-cost/", "voice and video minute cost ledger"),
     "auto": ("/compare/automation-task-calculator/", "automation task burn ledger"),
     "deck": ("/compare/ai-presentation-cost/", "presentation and deck cost ledger"),
+    "support": ("/compare/ai-customer-support-cost/", "AI support resolution-fee ledger"),
 }
 SLUG_HUB = {
     "cursor": "coding",
@@ -56,6 +57,8 @@ SLUG_HUB = {
     "synthesia": "voice",
     "runway": "voice",
     "midjourney": "voice",
+    "customgpt": "support",
+    "robylon": "support",
 }
 CATEGORY_HUB = {
     "Automation": "auto",
@@ -76,6 +79,7 @@ UTILITY_PAGES = frozenset({
     "price-changes/index.html",
     "articles/index.html",
     "compare/ai-video-avatar-cost/index.html",
+    "compare/ai-customer-support-cost/index.html",
 })
 DARK_INLINE = re.compile(r"(background(?:-color)?\s*:\s*)#000(?:000)?\b", re.I)
 

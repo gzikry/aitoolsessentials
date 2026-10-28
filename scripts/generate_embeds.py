@@ -42,6 +42,14 @@ EMBEDS = (
         "calc_label": "Automation calculator",
         "script": "/js/automation-task-calculator.js",
     },
+    {
+        "slug": "customer-support-cost",
+        "title": "Support resolution fee",
+        "canonical_calc": "/compare/ai-customer-support-cost/",
+        "calc_label": "Support calculator",
+        "script": "/js/customer-support-calculator.js",
+        "href": "/embed/customer-support-cost.html",
+    },
 )
 
 STYLE = """
@@ -245,7 +253,7 @@ def _hub(root: Path, tools: list[dict], count: int) -> str:
     previews = []
     snippets = []
     for item in EMBEDS:
-        src = f"/embed/{item['slug']}/"
+        src = item.get("href") or f"/embed/{item['slug']}/"
         iframe = f'<iframe src="{DOMAIN}{src}" title="{item["title"]}" width="100%" height="480" style="border:1px solid #111315;background:#FAF8F5"></iframe>'
         previews.append(
             f'<article class="content-hub-card"><h2>{esc(item["title"])}</h2>'
@@ -301,7 +309,7 @@ document.querySelectorAll("[data-cite-copy]").forEach(function (button) {
 <div class="article-shell wide">
 <p class="kicker">Embeds</p>
 <h1>Free embeddable AI cost calculators and audited badges</h1>
-<p>Four calculators and {count} tool badges. Each iframe is 480 pixels tall. The badge links back to the review. Partner buttons inside a widget use the same hop as the full calculator.</p>
+<p>{len(EMBEDS)} calculators and {count} tool badges. Each iframe is 480 pixels tall. The badge links back to the review. Partner buttons inside a widget use the same hop as the full calculator.</p>
 <h2>Calculators</h2>
 <div class="content-hub-grid">{''.join(previews)}</div>
 <h2>Audited badges</h2>
@@ -335,7 +343,10 @@ def generate(root: Path, tools: list[dict] | None = None) -> int:
         dest = root / "embed" / slug / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html_page, encoding="utf-8")
+    from generate_customer_support_hub import embed_page
+    support = root / "embed" / "customer-support-cost.html"
+    support.write_text(embed_page(root), encoding="utf-8")
     hub = root / "embeds" / "index.html"
     hub.parent.mkdir(parents=True, exist_ok=True)
     hub.write_text(_hub(root, tools, count), encoding="utf-8")
-    return len(pages) + 1
+    return len(pages) + 2

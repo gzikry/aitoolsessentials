@@ -1,0 +1,71 @@
+{
+  "checked": "2026-10-28",
+  "reopen_assumption": "When the retry toggle is on, this page treats 25% of resolved tickets as a second billable event. That 25% is this page's assumption, not a vendor statistic. It is applied only where a published rule bills the new event.",
+  "intercom": {
+    "outcome_cents": 99,
+    "essential_annual_cents": 2900,
+    "standalone_minimum_outcomes": 50,
+    "sources": [
+      "https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes",
+      "https://www.intercom.com/help/en/articles/8344190-pricing-faqs",
+      "https://fin.ai/pricing"
+    ],
+    "notes": "Fin outcomes are $0.99. A return to the same conversation is not charged. Standalone Fin has no seat fee and a 50-outcome monthly minimum. With Intercom, the Essential plan is $29 per seat per month on annual billing and at least one full seat is required. A monthly Essential seat price was not in that FAQ extract, so this row prices the annual seat."
+  },
+  "zendesk": {
+    "plans": {
+      "team": {
+        "name": "Suite Team",
+        "annual_cents": 5500,
+        "monthly_cents": 6900,
+        "included_per_agent": 5,
+        "copilot": false
+      },
+      "pro": {
+        "name": "Suite Professional",
+        "annual_cents": 11500,
+        "monthly_cents": 14900,
+        "included_per_agent": 10,
+        "copilot": true
+      }
+    },
+    "committed_cents": 150,
+    "payg_cents": 200,
+    "copilot_annual_cents": 5000,
+    "sources": ["https://www.zendesk.com/pricing/"],
+    "notes": "Suite Team is $55 per agent per month billed annually or $69 monthly, with 5 automated resolutions per agent each month. Suite Professional is $115 annually or $149 monthly, with 10. Extra resolutions are $1.50 committed or $2.00 pay-as-you-go. Copilot is $50 per agent per month paid yearly on Professional and higher. A reopen rule was not on the pricing page, so the retry toggle does not add Zendesk outcomes."
+  },
+  "tidio": {
+    "free_one_time_conversations": 50,
+    "packs_monthly": [
+      {"conversations": 50, "cents": 3900},
+      {"conversations": 100, "cents": 7500},
+      {"conversations": 200, "cents": 14000},
+      {"conversations": 300, "cents": 21000},
+      {"conversations": 500, "cents": 35000},
+      {"conversations": 750, "cents": 52500},
+      {"conversations": 1000, "cents": 70000}
+    ],
+    "annual_entry_cents": 3250,
+    "sources": [
+      "https://www.tidio.com/pricing/",
+      "https://help.tidio.com/hc/en-us/articles/13924459295900-The-Lyro-AI-agent-limit"
+    ],
+    "notes": "The free 50 Lyro conversations are one-time and do not renew, so they are not subtracted from a monthly bill. The official pricing page shows annual entry at $32.50 per month for the starting pack (two months free) and says a new thread after inactivity counts again. The monthly pack ladder above is the public calculator's published steps; above 1,000 conversations the page says contact sales, so this row stays unpriced."
+  },
+  "customgpt": {
+    "standard_cents": 9900,
+    "standard_queries": 1000,
+    "premium_cents": 49900,
+    "premium_queries": 5000,
+    "extra_queries": 2500,
+    "extra_cents": 37500,
+    "sources": ["https://customgpt.ai/pricing"],
+    "checked": "2026-10-27",
+    "notes": "Standard is $99 per month with 1,000 queries. Premium is $499 per month with 5,000 queries. There is no per-resolution fee. Extra queries are $375 per month for 2,500. A customer reply counts as another query when the retry toggle is on."
+  },
+  "enterprise": {
+    "sources": ["https://www.ada.cx/", "https://sierra.ai/"],
+    "notes": "Ada and Sierra do not publish a per-resolution list price. Third-party contract write-ups are not used as a bill. This row stays unpriced so a quote can be compared with the self-serve totals."
+  }
+}

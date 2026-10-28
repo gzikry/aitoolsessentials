@@ -512,6 +512,9 @@ print('Generated presentation calculator:', generate_presentation_hub(root))
 from generate_credit_traps import generate as generate_credit_traps
 print('Generated credit-trap tracker:', generate_credit_traps(root))
 
+from generate_customer_support_hub import generate as generate_customer_support_hub
+print('Generated support calculator:', generate_customer_support_hub(root))
+
 from generate_embeds import generate as generate_embeds
 print('Generated embeds:', generate_embeds(root, tools))
 
