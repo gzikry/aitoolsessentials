@@ -106,10 +106,10 @@
     }
     var zdMonthly = zdBase + zdRes + zdCopilot;
 
-    var lyroCount = inflated(resolved, reopen);
+    var lyroCount = inflated(tickets, reopen);
     var pack = tidioPack(lyroCount, pricing);
     var tidioMonthly = pack ? pack.cents : null;
-    var gptQueries = inflated(resolved, reopen);
+    var gptQueries = inflated(tickets, reopen);
     var gpt = customgptCost(gptQueries, pricing);
 
     var rows = [
@@ -145,8 +145,8 @@
         resolutionCents: tidioMonthly,
         trapCents: 0,
         detail: pack
-          ? "Monthly pack of " + pack.conversations + " Lyro conversations covers " + lyroCount + ". The free 50 do not renew, so they are not deducted."
-          : "Above 1,000 Lyro conversations the pricing page says contact sales. This row is not given a dollar.",
+          ? "Lyro counts " + lyroCount + " attempted inbound tickets, not only the " + resolved + " resolutions. Monthly pack of " + pack.conversations + ". The free 50 do not renew, so they are not deducted."
+          : "Lyro counts attempted inbound tickets. Above 1,000 the pricing page says contact sales, so this row is not given a dollar.",
         href: "https://www.tidio.com/pricing/",
         rel: "external noopener",
         linkLabel: "Official pricing"
@@ -158,7 +158,7 @@
         baseCents: gpt.base,
         resolutionCents: 0,
         trapCents: gpt.trap,
-        detail: gpt.tier + " subscription. Queries counted: " + gptQueries + ". Included: " + gpt.included + ". Extra query packs: " + gpt.packs + ". No per-resolution fee.",
+        detail: gpt.tier + " subscription. Queries counted: " + gptQueries + " attempted inbound tickets, not only the " + resolved + " resolutions. Included: " + gpt.included + ". Extra query packs: " + gpt.packs + ". No per-resolution fee.",
         href: "/go/customgpt/",
         rel: "sponsored nofollow noopener",
         partner: true,

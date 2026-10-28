@@ -25,7 +25,7 @@ FAQS = [
     ),
     (
         "Why is Tidio's free 50 not subtracted every month?",
-        "Tidio's help center says the 50 free Lyro conversations are one-time and do not reset. A new thread after inactivity counts as another conversation. The monthly bill is the smallest published pack that covers the conversations, and volume above 1,000 is left unpriced.",
+        "Tidio Lyro and CustomGPT.ai consume a conversation or query for each inbound ticket the AI attempts, including tickets that escalate without a resolution. Fin and Zendesk bill only resolved outcomes. The free 50 Lyro conversations are one-time and are not deducted. Volume above 1,000 Lyro conversations is left unpriced.",
     ),
     (
         "Is CustomGPT.ai a per-resolution product?",
@@ -98,6 +98,7 @@ def _form(compact: bool) -> str:
 <label>Human seats <input name="seats" type="number" min="1" max="50" value="2"></label>
 <label><input name="reopen" type="checkbox"> Retry / re-open inflation</label>
 </div>
+<p class="score-note">Fin and Zendesk bill on resolved outcomes. Tidio Lyro and CustomGPT.ai consume quota on attempted inbound tickets. The retry toggle adds 25% to that attempted volume. It does not add a second Fin or Zendesk outcome.</p>
 <p>
 <button type="button" data-support-preset="solo">Solo SaaS</button>
 <button type="button" data-support-preset="ecom">Growing E-Com</button>

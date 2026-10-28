@@ -23,7 +23,7 @@ assert.strictEqual(by.customgpt.partner, true);
 assert.strictEqual(by.customgpt.href, "/go/customgpt/");
 assert.strictEqual(by.intercom.monthlyCents, 2 * 2900 + 360 * 99);
 assert.strictEqual(by.zendesk.monthlyCents, 2 * 5500 + (360 - 10) * 200);
-assert.strictEqual(by.tidio.monthlyCents, 35000);
+assert.strictEqual(by.tidio.monthlyCents, 70000);
 assert.strictEqual(by.enterprise.monthlyCents, null);
 assert.ok(by.customgpt.rank < by.intercom.rank);
 
@@ -37,12 +37,12 @@ const before = Object.fromEntries(quiet.rows.map((row) => [row.id, row]));
 const again = Object.fromEntries(reopen.rows.map((row) => [row.id, row]));
 assert.strictEqual(again.intercom.monthlyCents, before.intercom.monthlyCents);
 assert.strictEqual(again.zendesk.monthlyCents, before.zendesk.monthlyCents);
-assert.strictEqual(before.tidio.monthlyCents, 3900);
-assert.strictEqual(again.tidio.monthlyCents, 7500);
+assert.strictEqual(before.tidio.monthlyCents, 7500);
+assert.strictEqual(again.tidio.monthlyCents, 14000);
 
 const scale = calc.priceSupport({ tickets: 12000, rate: 60, seats: 18, finMode: "desk", zdPlan: "team", zdBilling: "annual", zdResolution: "payg" }, pricing);
 const gpt = scale.rows.filter((row) => row.id === "customgpt")[0];
-assert.strictEqual(gpt.monthlyCents, 49900 + 37500);
+assert.strictEqual(gpt.monthlyCents, 49900 + 3 * 37500);
 assert.strictEqual(scale.rows.filter((row) => row.id === "tidio")[0].monthlyCents, null);
 """
 
@@ -59,6 +59,8 @@ def main() -> None:
     traps = (ROOT / "pricing-watch" / "credit-traps" / "index.html").read_text(encoding="utf-8")
     custom = (ROOT / "tools" / "customgpt" / "index.html").read_text(encoding="utf-8")
     for needle, page, label in (
+        ("consume quota on attempted inbound tickets", hub, "hub"),
+        ("consume quota on attempted inbound tickets", embed, "embed"),
         ('id="support-calc"', hub, "hub"),
         ("Copy shareable receipt link", hub, "hub"),
         ("Embed this calculator", hub, "hub"),
