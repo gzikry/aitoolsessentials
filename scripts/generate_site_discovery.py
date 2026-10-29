@@ -38,8 +38,8 @@ def generate_manifest(root: Path) -> None:
         "start_url": "/?source=pwa",
         "scope": "/",
         "display": "standalone",
-        "background_color": "#08090a",
-        "theme_color": "#5e6ad2",
+        "background_color": "#FAF8F5",
+        "theme_color": "#FAF8F5",
         "categories": ["productivity", "business", "education"],
         "icons": [
             {"src": "/assets/aitools-bot-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"},
@@ -201,7 +201,7 @@ def ensure_robots(root: Path) -> None:
 
 def postprocess_head_links(root: Path) -> None:
     marker = "<!-- AIT DISCOVERY LINKS -->"
-    links = marker + '<link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>'
+    links = marker + '<link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#FAF8F5"><script src="/js/discovery.js" defer></script>'
     # The content-hash pass rewrites this to `/js/discovery.js?v=<hash>`, so both patterns must
     # tolerate an optional query string. Matching the block only as far as the theme-color meta
     # (same line) keeps the match from running into unrelated markup, and the separate script
@@ -220,6 +220,12 @@ def postprocess_head_links(root: Path) -> None:
         if is_working_rel(rel) or is_email_draft(rel):
             continue
         html = p.read_text()
+        html = re.sub(
+            r'(<meta\s+name="theme-color"\s+content=")#5e6ad2(")',
+            r"\1#FAF8F5\2",
+            html,
+            flags=re.I,
+        )
         html = block_re.sub("", html)
         html = script_re.sub("", html)
         if "</head>" in html:
