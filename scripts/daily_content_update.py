@@ -292,7 +292,7 @@ brief = f'''# Daily Content Brief — {today}
 ## Summary
 - Tools reviewed: {len(tools)}
 - Category buyer guides: {len(set(t['category'] for t in tools))}
-- Total HTML pages: {len(sitemap_urls)}
+- Total HTML pages: {len(list(root.rglob('*.html')))}
 - Sitemap URLs: {len(sitemap_urls)}
 - Benchmark snapshot: {benchmark_data['snapshot_date']} ({benchmark_age} days old)
 - Benchmark refresh due: {'YES' if benchmark_age > benchmark_data.get('policy', {}).get('staleness_days', 30) else 'No'}
