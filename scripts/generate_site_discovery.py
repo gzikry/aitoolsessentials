@@ -38,8 +38,8 @@ def generate_manifest(root: Path) -> None:
         "start_url": "/?source=pwa",
         "scope": "/",
         "display": "standalone",
-        "background_color": "#08090a",
-        "theme_color": "#5e6ad2",
+        "background_color": "#FAF8F5",
+        "theme_color": "#FAF8F5",
         "categories": ["productivity", "business", "education"],
         "icons": [
             {"src": "/assets/aitools-bot-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"},
@@ -201,7 +201,7 @@ def ensure_robots(root: Path) -> None:
 
 def postprocess_head_links(root: Path) -> None:
     marker = "<!-- AIT DISCOVERY LINKS -->"
-    links = marker + '<link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#5e6ad2"><script src="/js/discovery.js" defer></script>'
+    links = marker + '<link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="application/rss+xml" title="AIToolsEssentials updates" href="/feed.xml"><link rel="search" type="application/opensearchdescription+xml" title="AIToolsEssentials" href="/opensearch.xml"><meta name="theme-color" content="#FAF8F5"><script src="/js/discovery.js" defer></script>'
     # The content-hash pass rewrites this to `/js/discovery.js?v=<hash>`, so both patterns must
     # tolerate an optional query string. Matching the block only as far as the theme-color meta
     # (same line) keeps the match from running into unrelated markup, and the separate script
@@ -220,6 +220,12 @@ def postprocess_head_links(root: Path) -> None:
         if is_working_rel(rel) or is_email_draft(rel):
             continue
         html = p.read_text()
+        html = re.sub(
+            r'(<meta\s+name="theme-color"\s+content=")#5e6ad2(")',
+            r"\1#FAF8F5\2",
+            html,
+            flags=re.I,
+        )
         html = block_re.sub("", html)
         html = script_re.sub("", html)
         if "</head>" in html:
@@ -324,24 +330,24 @@ HS_FORM = (
 # page's cached stylesheet version. Scoped under .ait-hs so it cannot touch existing layout.
 HS_CSS = (
     ".ait-hs{position:relative;display:flex;align-items:center;margin-left:6px}"
-    ".ait-hs-ico{position:absolute;left:10px;font-size:14px;line-height:1;color:#8b90a4;pointer-events:none}"
-    ".ait-hs-input{width:186px;padding:8px 10px 8px 28px;border-radius:9px;border:1px solid #d5d7e2;"
-    "background:#fff;color:#2b2f40;font:inherit;font-size:13px}"
-    ".ait-hs-input::placeholder{color:#9aa0b4}"
-    ".ait-hs-input:focus{outline:2px solid #5e6ad2;outline-offset:1px;border-color:#5e6ad2}"
+    ".ait-hs-ico{position:absolute;left:8px;font-size:14px;line-height:1;color:#111315;pointer-events:none}"
+    ".ait-hs-input{width:186px;padding:6px 8px 6px 24px;border-radius:0;border:0;border-bottom:1px solid #111315;"
+    "background:transparent;color:#111315;font:inherit;font-size:13px}"
+    ".ait-hs-input::placeholder{color:rgba(17,19,21,.55)}"
+    ".ait-hs-input:focus{outline:2px solid #8C2F2B;outline-offset:2px;border-color:#111315}"
     ".ait-hs-list{position:absolute;top:calc(100% + 6px);right:0;width:340px;max-width:86vw;z-index:60;"
-    "margin:0;padding:6px;list-style:none;background:#fff;border:1px solid #dfe1ee;border-radius:12px;"
-    "box-shadow:0 14px 34px rgba(20,22,40,.16);max-height:60vh;overflow:auto}"
+    "margin:0;padding:6px;list-style:none;background:#FAF8F5;border:1px solid #111315;border-radius:0;"
+    "box-shadow:none;max-height:60vh;overflow:auto}"
     ".ait-hs-list[hidden]{display:none}"
-    ".ait-hs-item,.ait-hs-all,.ait-hs-note{display:block;padding:8px 10px;border-radius:8px;"
-    "text-decoration:none;color:#2b2f40;cursor:pointer}"
-    ".ait-hs-item:hover,.ait-hs-item.ait-hs-active,.ait-hs-all:hover,.ait-hs-all.ait-hs-active{background:#f2f3fb}"
-    ".ait-hs-type{display:block;font-size:10px;font-weight:800;text-transform:uppercase;"
-    "letter-spacing:.06em;color:#5e6ad2}"
+    ".ait-hs-item,.ait-hs-all,.ait-hs-note{display:block;padding:8px 10px;border-radius:0;"
+    "text-decoration:none;color:#111315;cursor:pointer}"
+    ".ait-hs-item:hover,.ait-hs-item.ait-hs-active,.ait-hs-all:hover,.ait-hs-all.ait-hs-active{background:#F7F5F0}"
+    ".ait-hs-type{display:block;font-size:10px;font-weight:700;text-transform:uppercase;"
+    "letter-spacing:.06em;color:#8C2F2B}"
     ".ait-hs-name{display:block;font-size:14px;font-weight:600;line-height:1.3}"
     ".ait-hs-name mark{background:#fff2a8;color:inherit;border-radius:2px;padding:0 1px}"
-    ".ait-hs-all{margin-top:4px;border-top:1px solid #eceef7;font-size:12px;color:#5e6ad2;font-weight:600}"
-    ".ait-hs-note{font-size:13px;color:#5c6070}"
+    ".ait-hs-all{margin-top:4px;border-top:1px solid #D8D2C5;font-size:12px;color:#8C2F2B;font-weight:600}"
+    ".ait-hs-note{font-size:13px;color:rgba(17,19,21,.72)}"
     "@media (max-width:1100px){.ait-hs-input{width:132px}}"
     "@media (max-width:900px){.ait-hs{display:none}}"
 )

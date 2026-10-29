@@ -82,7 +82,7 @@ _FOUNDING = (
 _ISSUE_HEADING = "Newsletter placements open once the list grows"
 _VERIFIED_HREF = "https://buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205"
 _LOGO_HEIGHT = "28px"
-_SIGN_OFF = "\u2014 AIToolsEssentials"
+_SIGN_OFF = "AIToolsEssentials"
 
 def _offer_header() -> str:
     from site_chrome import canonical_header
@@ -509,7 +509,7 @@ def _tier_block(tier: _Tier, payment: _Payment, heading: str = "", note: str = "
     bits = ["<h2>" + (heading or tier.label) + "</h2>"]
     if note:
         bits.append("<p>" + note + "</p>")
-    bits.append("<p>" + tier.price + "</p>")
+    bits.append('<p class="ledger-price">' + tier.price + "</p>")
     bits.append("<p>" + _payment_anchor(payment) + "</p>")
     return "\n".join(bits)
 
@@ -520,7 +520,7 @@ def _verified_block() -> str:
         "<h2>Verified listing</h2>\n"
         "<p>Written decision within one working day. Full refund if declined. "
         "A verified listing never affects reviews, scores, or verdicts.</p>\n"
-        "<p>$79 one-time</p>\n"
+        '<p class="ledger-price">$79 one-time</p>\n'
         '<p><a class="button button-blue" href="'
         + _VERIFIED_HREF
         + '" target="_blank" rel="'

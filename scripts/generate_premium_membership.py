@@ -1001,10 +1001,7 @@ def _homepage_scripts(_html: str) -> str:
 
 HOME_CRITICAL_START = "<!-- AIT HOME CRITICAL START -->"
 HOME_CRITICAL_END = "<!-- AIT HOME CRITICAL END -->"
-HOME_FONTS_HREF = (
-    "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1"
-    "&family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap"
-)
+HOME_SERIF = '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif'
 def homepage_css_href(root: Path) -> str:
     """Stylesheet URL whose query changes when css/styles.css bytes change."""
     from asset_rev import versioned_ref
@@ -1021,17 +1018,15 @@ HOME_CRITICAL_CSS = (
     "background:#FFFFFF;border:1px solid #E2DFD7;border-radius:6px;box-shadow:none}"
     "body[data-page=home] .home-premium-band p,"
     "body[data-page=home] .home-premium-band .kicker{color:#111315}"
+    f"body[data-page=home] h1{{font-family:{HOME_SERIF}}}"
 )
 
 
 def homepage_critical_head() -> str:
-    """First-paint dark canvas + homepage fonts. Idempotent marker pair."""
+    """First-paint paper and a system serif. No remote font request."""
     return (
         f"{HOME_CRITICAL_START}"
         f'<style id="ait-home-critical">{HOME_CRITICAL_CSS}</style>'
-        '<link rel="preconnect" href="https://fonts.googleapis.com">'
-        '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-        f'<link href="{HOME_FONTS_HREF}" rel="stylesheet">'
         f"{HOME_CRITICAL_END}"
     )
 
@@ -1047,7 +1042,7 @@ def apply_homepage_stylesheet(html: str, root: Path) -> str:
 
 
 def apply_homepage_critical_head(html: str, root: Path) -> str:
-    """Force a dark first paint and load Instrument Serif italic on the homepage only."""
+    """Paint the homepage on paper and name the system serif in the critical head."""
     html = re.sub(
         rf"{re.escape(HOME_CRITICAL_START)}.*?{re.escape(HOME_CRITICAL_END)}",
         "",

@@ -54,6 +54,10 @@ def main() -> None:
             errors.append(f"css missing {needle}")
     if ".scene-dark { background: var(--black); color: var(--white); }" not in css:
         errors.append("global scene-dark was restyled")
+    if "fonts.googleapis.com" in css:
+        errors.append("css loads a Google font")
+    if "Iowan Old Style" not in css:
+        errors.append("css missing the system serif stack")
 
     cfg = json.loads(_read("data/newsletter.json"))
     if cfg.get("send_enabled") is not False:

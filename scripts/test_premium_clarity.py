@@ -203,8 +203,8 @@ def main() -> None:
             errors.append("enhance_homepage must not emit a Beehiiv form button on the homepage")
         if first_home.count('href="/subscribe/">Subscribe free') != 1:
             errors.append("enhance_homepage must keep exactly one Subscribe free button")
-        if "<em>" not in first_home or "Instrument+Serif" not in first_home:
-            errors.append("enhance_homepage must keep an Instrument Serif H1 accent")
+        if "<em>" not in first_home or "Iowan Old Style" not in first_home or "fonts.googleapis.com" in first_home:
+            errors.append("enhance_homepage must accent one H1 phrase with a system serif and must not load Google fonts")
         if "home-cta-primary" not in first_home or 'href="/stack-audit.html">Free Stack Audit' not in first_home:
             errors.append("enhance_homepage must keep Stack Audit as the solid primary CTA")
         if "hero-device" in first_home or "device-window" in first_home:

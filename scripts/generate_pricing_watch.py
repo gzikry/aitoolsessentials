@@ -197,18 +197,18 @@ def generate(root: Path, tools: list[dict[str, Any]] | None = None, today: str |
     html = f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Verified AI tool pricing snapshots with a checked date for every figure across {len(tools_list)} tools, a public log of recorded pricing updates, and Premium member price alerts.">
-<title>AI Pricing Watch — Verified Price Snapshots &amp; Changes — AIToolsEssentials</title>
+<title>AI Pricing Watch, verified price snapshots | AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/pricing-watch/">
-<meta property="og:title" content="AI Pricing Watch — AIToolsEssentials"><meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
+<meta property="og:title" content="AI Pricing Watch, AIToolsEssentials"><meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
 <link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="/css/share.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"AI Pricing Watch","description":"Verified AI tool pricing snapshots and a public log of recorded pricing updates.","dateModified":"{today}","publisher":{{"@type":"Organization","name":"AIToolsEssentials"}}}}</script>
 </head><body>
 <header class="global-nav"><a class="brand" href="/index.html"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="/tools/index.html">Tools</a><a href="/comparisons/best-ai-tools.html">Best AI tools</a><a href="/alternatives/">Alternatives</a><a href="/guides/switch-guides/">Switching</a><a href="/pricing-index/">Pricing index</a><a href="/evidence/">Evidence ledger</a><a href="/resources/">Resources</a></nav><a class="nav-cta" href="/pricing/">Premium</a></header>
 <main>
-<section class="scene scene-dark"><div style="max-width:900px;margin:0 auto;padding:88px 28px 64px;text-align:center">
+<section class="scene scene-dark ledger-mast"><div style="max-width:900px;margin:0 auto;padding:48px 0 28px;text-align:left">
 <p class="kicker">Pricing watch · Baseline verified {checked_at}</p>
 <h1>Know when AI prices move.</h1>
-<p class="subhead">Every AI tool's pricing below traces to its official vendor page with a checked date — no scraped guesses. Future re-checks that detect changes land in the public change log. Premium members get alerted first.</p>
+<p class="subhead">Every figure below comes from the vendor's own pricing page, with the date we checked it. We do not guess a missing price. When a re-check finds a change, it lands in the public log.</p>
 <p><a class="button button-blue" href="/premium/">Get price alerts with Premium</a><a class="button button-ghost-dark" href="/newsletter/" style="margin-left:8px">Keep, Test, Cut</a></p>
 </div></section>
 <section class="scene scene-light content-hub"><div class="article-shell wide">

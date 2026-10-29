@@ -893,8 +893,8 @@ def main():
         errors.append('Homepage hero missing the dated-reviews kicker')
     if 'dated evidence' not in hero_html.lower():
         errors.append('Homepage hero must lead with dated evidence, not cancel-only')
-    if '<em>' not in hero_html or 'Instrument+Serif' not in home_head:
-        errors.append('Homepage must load Instrument Serif italic and accent one H1 phrase with <em>')
+    if '<em>' not in hero_html or 'Iowan Old Style' not in home_head or 'fonts.googleapis.com' in home_head:
+        errors.append('Homepage must accent one H1 phrase with a system serif and must not load Google fonts')
     if not re.search(r'href="(?:/)?css/styles\.css\?v=', home_head):
         errors.append('Homepage stylesheet must be cache-busted so frosted Premium CSS can ship')
     if 'ait-home-critical' not in home_head or 'home-premium-band>div' not in home_head.replace(' ', ''):

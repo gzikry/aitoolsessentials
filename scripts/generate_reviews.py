@@ -256,35 +256,36 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
     same_cat_n = len([x for x in tools if x['slug'] != slug and category in x.get('category', '')])
     compare_names = ', '.join(r['name'] for r in related[:3])
     compare_para = (
-        f"Within {category.lower()}, {name} goes up against {compare_names}"
+        f"In {category.lower()}, {name} sits next to {compare_names}"
         f"{f' and {same_cat_n - 3} others' if same_cat_n > 3 else ''}. "
-        f"Its edge is {tool.get('pros', ['its core workflow'])[0].lower().rstrip('.')}. "
-        f"Weigh that against the cons above — especially: {tool.get('cons', ['pricing'])[0].lower().rstrip('.')} — "
-        f"then check our side-by-side comparisons for task-level results before you commit."
+        f"The useful part is {tool.get('pros', ['its core workflow'])[0].lower().rstrip('.')}. "
+        f"The part to price first is {tool.get('cons', ['pricing'])[0].lower().rstrip('.')}. "
+        f"Read the side-by-side before you pay for a second seat."
     )
 
     best_plan_html = ''
     if best_plan:
         best_plan_html = f'<div class="best-plan-card"><span>Our recommendation</span><strong>{best_plan}</strong></div>\n'
     buying_decision_html = (
-        f'<div class="decision-grid">'
-        f'<div><strong>Choose {name} when</strong><p>{tool.get("best_for", "its core workflow")} is the repeated job you need to improve.</p></div>'
-        f'<div><strong>Compare first when</strong><p>{tool.get("cons", ["The trade-offs affect your workflow"])[0]}.</p></div>'
-        f'<div><strong>Before paying</strong><p>Run the trial checklist above and verify the current plan limit on the official pricing page.</p></div>'
-        f'</div>'
+        f'<table class="ledger-table">'
+        f'<tbody>'
+        f'<tr><th>Keep it when</th><td>{tool.get("best_for", "its core workflow")} is the job you repeat.</td></tr>'
+        f'<tr><th>Test first when</th><td>{tool.get("cons", ["The trade-offs affect your workflow"])[0]}.</td></tr>'
+        f'<tr><th>Before you pay</th><td>Run the trial checklist and check the current plan limit on the official pricing page.</td></tr>'
+        f'</tbody></table>'
     )
 
     pro1 = tool.get('pros', ['It delivers on its core promise'])[0]
     con1 = tool.get('cons', ['Costs can grow with usage'])[0].lower().rstrip('.')
     if rating is not None:
         verdict_html = (
-            f'<p><strong>Bottom line:</strong> {name} has an AIToolsEssentials editorial score of {rating}/5. '
-            f'{pro1}. The main trade-off to weigh: {con1}.</p>'
+            f'<p><strong>The call:</strong> {name} has an AIToolsEssentials editorial score of {rating}/5. '
+            f'{pro1}. Price this before you renew: {con1}.</p>'
         )
     else:
         verdict_html = (
-            f'<p><strong>Bottom line:</strong> {name} does not yet have a published AIToolsEssentials editorial score. '
-            f'{pro1}. The main trade-off to weigh: {con1}.</p>'
+            f'<p><strong>The call:</strong> {name} does not yet have a published AIToolsEssentials editorial score. '
+            f'{pro1}. Price this before you renew: {con1}.</p>'
         )
 
     automation_decoder_categories = {'Automation', 'Browser Automation', 'Productivity', 'AI Agents'}
@@ -328,7 +329,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{summary}">
-<title>{name}: AI Tool Review — AIToolsEssentials</title>
+<title>{name} review | AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/tools/{slug}/">
 <link rel="stylesheet" href="../css/styles.css">
 <!-- CITE STYLE -->
@@ -395,7 +396,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 
 <h2>Verdict</h2>
 {verdict_html}
-<p>Test it against one real task from your workflow this week — that tells you more than any review.</p>
+<p>Run one real task from your work this week. That tells you more than this review.</p>
 <h2>How {name} compares</h2>
 <p>{compare_para}</p>
 <h2>How we evaluated</h2>
