@@ -1,0 +1,13 @@
+ts	phase	decision	why	evidence	result
+2026-10-29T18:10:00Z	frame	Restyle through shared CSS and the generators, and keep the strings the tests already pin	George asked for a paper and receipt site without hand-editing a thousand HTML files, and the test suite already locks URLs, Stripe, and the homepage phrases	css/styles.css	predicate set
+2026-10-29T18:12:00Z	frame	Skip a second design bakeoff	The visual direction was already specified: paper, ink, one accent, system serif, ledger rules	user brief	skipped arena
+2026-10-29T18:15:00Z	harness	Saved desktop and mobile shots of the six pages before any edit	So the PR can show the old brochure layout against the new one	/opt/cursor/artifacts/screenshots/before-home-desktop.png	12 before shots
+2026-10-29T18:22:00Z	tokens	Dropped the Google font import and set Iowan Old Style, system-ui, and ui-monospace	The brief allows system or self-hosted fonts only	css/styles.css:1	fonts.googleapis.com gone from styles.css
+2026-10-29T18:24:00Z	tokens	One accent, oxblood #8C2F2B, with ink buttons and keep/test/cut only on stamps	Blue buttons plus green buttons were two brand colors	css/styles.css	--accent #8C2F2B
+2026-10-29T18:26:00Z	layout	Homepage hero sits left and the 30-second bill sits in the right column	A centered poster was the AI-brochure tell	body[data-page=home] main grid in css/styles.css	desktop home shot
+2026-10-29T18:28:00Z	copy	Rewrote touched headings and decks in the generators and left LAUNCH50, FOUNDING100, and the pinned H1 phrases	Those strings are the payment and voice contract	scripts/premium_copy.py	tests green
+2026-10-29T18:30:00Z	guards	Homepage tests now fail if a Google font returns, and they still require the em accent and Iowan Old Style	The old guard required Instrument Serif, which fought the brief	scripts/test_wave5.py	wave5 ok
+2026-10-29T18:32:00Z	dark	Did not add an automatic dark theme	Most colors are hardcoded hex, so a partial dark theme would fail contrast	css/styles.css	light paper only
+2026-10-29T18:36:00Z	verify	Second site generation matched the first	CI compares two generator passes	cmp /tmp/generation-e.patch /tmp/generation-f.patch	IDEMPOTENT
+2026-10-29T18:38:00Z	verify	validate_site.py, site_qa.py, every scripts/test_*.py, and the two node guards passed	The brief requires the repo QA	scripts/validate_site.py	Validation passed
+2026-10-29T18:39:00Z	verify	Homepage header stayed one row from 320px to 1280px	That fit is a hard constraint	scripts/test_home_header_fit.py	HEADER:0

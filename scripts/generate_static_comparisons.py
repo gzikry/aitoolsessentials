@@ -169,7 +169,7 @@ def generate_best_ai_tools(root: Path):
         f'{cards}'
         '</div></div></section>'
     )
-    page = _wrap('Best AI Tools — AIToolsEssentials', 'The best AI tools organized by category, workflow fit, and practical use case.', 'Best AI tools', body, 'best-ai-tools.html')
+    page = _wrap('Best AI tools | AIToolsEssentials', 'The best AI tools organized by category, workflow fit, and practical use case.', 'Best AI tools', body, 'best-ai-tools.html')
     (root / 'comparisons' / 'best-ai-tools.html').write_text(page)
     return 'best-ai-tools.html'
 
@@ -204,7 +204,7 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         '<tr><th>Price</th>' + ''.join(f'<td>{_e(TOOLS[s].get("price","Free + paid plans"))}</td>' for s in slugs) + '</tr>'
         '<tr><th>AIToolsEssentials editorial score</th>' + ''.join(f'<td>{_e(str(TOOLS[s].get("rating","")))}/5</td>' for s in slugs) + '</tr>'
     )
-    score_note = '<p class="score-note">Scores are editorial product assessments — job fit, likely output quality, ease of adoption, and operational cost — not lab benchmarks, and no tool here has a published hands-on result. <a href="../legal/editorial-methodology.html">How we score</a>.</p>'
+    score_note = '<p class="score-note">Scores are editorial product assessments of job fit, likely output quality, ease of adoption, and operational cost. They are not lab benchmarks, and no tool here has a published hands-on result. <a href="../legal/editorial-methodology.html">How we score</a>.</p>'
     cards = ''.join(_source_card(s, TOOLS[s]['name']) for s in slugs)
     review_links = ' '.join(f'<a class="button button-blue" href="../tools/{s}/">Read {_e(TOOLS[s]["name"])} review</a>' for s in slugs)
     bench = _bench_section(set(slugs))
@@ -218,10 +218,10 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         + score_note +
         '<section class="comparison-evidence"><h2>Evidence status</h2><div class="decision-grid">' + cards + '</div>' + bench + '</section>'
         f'{lineup}'
-        '<h2>How to decide</h2>'
-        '<p>Match each platform to your actual workflow constraints. Run one real workflow in each finalist before paying.</p>'
-        '<h2>Quick recommendation</h2>'
-        '<p>Use the trial checklist on each review page and the free scorecard to record time-to-result, corrections needed, and monthly cost at your expected volume before committing to a plan.</p>'
+        '<h2>How you should decide</h2>'
+        '<p>Run one job you already do in each finalist before you pay. Write down the time, the edits, and the monthly bill.</p>'
+        '<h2>Before you commit</h2>'
+        '<p>Use the trial checklist on each review and the free scorecard. Record time, corrections, and the monthly cost at the volume you actually expect.</p>'
         f'<p>{review_links} <a class="button button-dark" href="../downloads/ai-tool-evaluation-scorecard.html">Open scorecard</a></p>'
         '</div></section>'
         '<section class="newsletter-panel"><div><span>AI Tool Evaluation Scorecard</span>'
@@ -242,7 +242,7 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         '<p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/evidence/">Evidence ledger</a> · <a href="/methodology/">Methodology</a> · <a href="/press/">Press / cite us</a> · <a href="/newsletter/">Keep, Test, Cut</a></p></section>'
         f'{_premium_module()}'
     )
-    page = _wrap(f'{title} — AIToolsEssentials', subhead, kicker, body, fname)
+    page = _wrap(f'{title} | AIToolsEssentials', subhead, kicker, body, fname)
     (root / 'comparisons' / fname).write_text(page)
     return fname
 

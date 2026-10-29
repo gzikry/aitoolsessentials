@@ -441,9 +441,9 @@ def archive_index(root: Path, letters: list[Letter]) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{esc(description)}">
-<title>Past issues — Keep, Test, Cut | AIToolsEssentials</title>
+<title>Past issues, Keep, Test, Cut | AIToolsEssentials</title>
 <link rel="canonical" href="{DOMAIN}/newsletter/">
-<meta property="og:title" content="Past issues — Keep, Test, Cut | AIToolsEssentials">
+<meta property="og:title" content="Past issues, Keep, Test, Cut | AIToolsEssentials">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{DOMAIN}/newsletter/">
 <meta property="og:image" content="{DOMAIN}/assets/og-ai-tools.jpg">
@@ -453,11 +453,11 @@ def archive_index(root: Path, letters: list[Letter]) -> str:
 {CANONICAL_HEADER}
 <main>
 <section class="scene scene-dark ledger-mast">
-<div style="max-width:880px;margin:0 auto;padding:72px 28px 36px">
+<div style="max-width:880px;margin:0 auto;padding:48px 0 28px;text-align:left">
 <p class="newsletter-name">Keep, Test, Cut</p>
 <p class="kicker light">Keep, Test, Cut</p>
 <h1>Past issues.</h1>
-<p class="subhead">Every letter that was actually published. Each card keeps that week’s keep, test, and cut line so you can scan the call before you open it.</p>
+<p class="subhead">Every letter that was actually published. Each row keeps that week's keep, test, and cut line so you can scan the call before you open it.</p>
 </div>
 </section>
 <section class="scene scene-light">

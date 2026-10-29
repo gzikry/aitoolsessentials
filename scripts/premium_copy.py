@@ -396,8 +396,8 @@ def homepage_hero_html(whop: dict[str, Any]) -> str:
       <div class="hero-copy">
         {homepage_dateline_html()}
         <p class="home-kicker home-appear" data-appear="2">Dated reviews, comparisons, and a free stack check</p>
-        <h1><span class="home-line home-appear" data-appear="3">Stop paying for overlapping AI seats.</span> <span class="home-line home-deck home-appear" data-appear="4">The seat that fits the job — not the <em>hype</em>.</span></h1>
-        <p class="subhead home-appear" data-appear="4">Real seat math, credit-expiration traps, and side-by-side switch guides tested on production workloads. Dated evidence, not a ranking you can buy.</p>
+        <h1><span class="home-line home-appear" data-appear="3">Stop paying for overlapping AI seats.</span> <span class="home-line home-deck home-appear" data-appear="4">Pick the seat that fits the job, not the <em>hype</em>.</span></h1>
+        <p class="subhead home-appear" data-appear="4">You get dated evidence on the price, the credit clock, and the overlap. Check the date before you renew.</p>
         {actions}
         <p class="hero-secondary-links"><a href="#bill-slasher">30-second bill</a><a href="/compare/ai-coding-assistants/">Coding seats</a><a href="/compare/ai-app-builders/">App builders</a><a href="/compare/ai-video-avatar-cost/">Voice &amp; video</a><a href="/compare/automation-task-calculator/">Automation burn</a><a href="/compare/ai-presentation-cost/">Deck cost</a><a href="/compare/ai-customer-support-cost/">Support fees</a><a href="/pricing-watch/credit-traps/">Credit traps</a><a href="/price-changes/">Price changes</a></p>
       </div>
@@ -448,7 +448,7 @@ def homepage_learn_html() -> str:
         (
             "/articles/cursor-vs-github-copilot-deep-comparison.html",
             "Cursor vs GitHub Copilot",
-            "An IDE agent or inline completions — pick one paid seat.",
+            "An IDE agent or inline completions. Pick one paid seat.",
             "Read the comparison",
         ),
         (
@@ -470,7 +470,7 @@ def homepage_learn_html() -> str:
 <section class="scene scene-dark home-learn" aria-labelledby="home-learn-heading">
 <div class="home-learn-inner">
 <p class="home-learn-kicker">Learn</p>
-<h2 id="home-learn-heading">Choose with <em>dated evidence</em> — then keep or cut overlap.</h2>
+<h2 id="home-learn-heading">Choose with <em>dated evidence</em>, then keep or cut the overlap.</h2>
 <div class="home-learn-cards">
 {card_html}
 </div>
@@ -500,7 +500,7 @@ def homepage_band_html(whop: dict[str, Any]) -> str:
 <section class="scene scene-dark home-premium-band">
 <div>
 <p class="kicker light">Want a second opinion before you renew?</p>
-<p>Two ways to get one. Premium is the ${price}/month keep/cut pack — dated notes and a written reply in 48 hours, usually cheaper than one forgotten seat. If your stack is bigger than a pack can cover, the <a href="/services/paid-audit.html">written AI Stack Audit</a> is $497 one-time.</p>
+<p>Two ways to get one. Premium is the ${price}/month keep/cut pack. You get dated notes and a written reply in 48 hours, usually cheaper than one forgotten seat. If your stack is bigger than a pack can cover, the <a href="/services/paid-audit.html">written AI Stack Audit</a> is $497 one-time.</p>
 <p class="home-premium-actions"><a class="button home-cta-primary" href="/premium/">{BUY_PAGE_LABEL}</a>
 <a href="/services/paid-audit.html">Or see the $497 written audit</a>
 {audit_buy_html()}

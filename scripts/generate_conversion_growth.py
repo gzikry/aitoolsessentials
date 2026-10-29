@@ -398,17 +398,31 @@ def postprocess(root: Path, tools: list[dict[str, Any]]) -> None:
     for p in (root / "stacks").glob("*.html"):
         p.write_text(inject_script(p.read_text()))
 
-    # Comparison verdict bars.
+    # Comparison index. One ruled list, rewritten on every pass so it stays idempotent.
     marker = "<!-- AIT VERDICT BAR START -->"
+    end = "<!-- AIT VERDICT BAR END -->"
+    bar = (
+        f"\n{marker}\n"
+        '<section class="conversion-verdict-bar">'
+        '<p class="ledger-kicker">Before you pay</p>'
+        '<ul class="ledger-lines">'
+        "<li><span>Verdict</span> Read this page, then check the current price.</li>"
+        '<li><span>Cost</span> <a href="/cost-calculator.html">Estimate the stack</a></li>'
+        '<li><span>Shortlist</span> <a href="/compare-shortlist.html">Save the contenders</a></li>'
+        "</ul></section>\n"
+        f"{end}\n"
+    )
+    marked = re.compile(re.escape(marker) + r".*?" + re.escape(end), re.S)
     for p in (root / "comparisons").glob("*.html"):
         html = p.read_text()
         if marker in html:
-            continue
-        title = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
-        title_text = re.sub(r"<.*?>", "", title.group(1)).strip() if title else "this comparison"
-        bar = f'\n{marker}\n<section class="conversion-verdict-bar"><div><span>Best first step</span><strong>Read the verdict</strong><p>Use this page to shortlist, then verify pricing.</p></div><div><span>Cost check</span><strong>Estimate stack cost</strong><p><a href="/cost-calculator.html">Open calculator</a></p></div><div><span>Decision loop</span><strong>Save contenders</strong><p><a href="/compare-shortlist.html">Compare shortlist</a></p></div></section>\n<!-- AIT VERDICT BAR END -->\n'
-        html = html.replace("<main>", "<main>" + bar, 1) if "<main>" in html else html.replace("<body>", "<body>" + bar, 1)
-        p.write_text(html)
+            updated = marked.sub(bar.strip("\n"), html, count=1)
+        elif "<main>" in html:
+            updated = html.replace("<main>", "<main>" + bar, 1)
+        else:
+            updated = html.replace("<body>", "<body>" + bar, 1)
+        if updated != html:
+            p.write_text(updated)
 
     # Review correction/trust modules.
     corr_start = "<!-- AIT CORRECTION MODULE START -->"
