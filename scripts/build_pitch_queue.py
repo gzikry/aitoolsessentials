@@ -48,6 +48,10 @@ STALE_DAYS = 10
 RELEVANCE_RANK = {"high": 0, "medium-high": 0.5, "medium": 1, "low-medium": 2, "medium-low": 2,
                   "low": 3, "tangential": 4, "unknown": 5}
 
+# A published address inside a row's route prose. Sourcee's placeholder ("[email redacted]") has no
+# `@`, so it can never be mistaken for one.
+_ADDR = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
 
 def _rel_rank(label: str) -> float:
     """Rank a (possibly messy) relevance label, never silently dropping it below 'low'."""
@@ -316,6 +320,25 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
         # named editorial addresses), but only some rows have had that resolved. Say which, because
         # claiming a resolved route on a row that has none is the same class of error as the old
         # "email — could be automated" line.
+        #
+        # The test reads the RAW text for an address, not the negation-filtered one. `_positive_contact_text`
+        # drops any sentence carrying a negation word, and this monitor's own route prose is written as
+        # "ROUTE RESOLVED OFF HER OWN SITE, not guessed: alison@alisoncoleman.co.uk published on ..." and
+        # "... the page publishes no link or handle" — so on 2026-10-29 the Forbes and Business Insider rows
+        # printed "no route resolved for this request" directly beneath their resolved address, telling George
+        # the two most sendable rows in the queue had nothing to send to. A real address in the prose is a
+        # fact regardless of what else the sentence says about it.
+        found = [a for a in _ADDR.findall(raw) if "redacted" not in a.lower()]
+        if found:
+            return (f"no — body address redacted by Sourcee; route resolved off the publication's own "
+                    f"site: {found[0]} (George sends)")
+        # A LinkedIn handle in the prose is a route too, and the same negation filter can drop the
+        # sentence that names it while leaving the branch below to print "no route resolved" on a row
+        # that told George exactly where to send a DM (2026-10-29: the Business Today row).
+        handle = re.search(r"(?:in\.)?linkedin\.com/in/[A-Za-z0-9\-]+", raw, re.I)
+        if handle:
+            return (f"no — body address redacted by Sourcee; LinkedIn DM route named in the row: "
+                    f"{handle.group(0)} (George sends)")
         if "@" in c or "route resolved" in c:
             return "no — body address redacted by Sourcee; route resolved off the publication's own site (George sends)"
         return "no — body address redacted by Sourcee, no route resolved for this request (George: original platform)"

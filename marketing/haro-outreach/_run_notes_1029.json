@@ -1,0 +1,102 @@
+{
+ "new_rows": {
+  "buyers-and-sellers-without-agents-diy-property-sale-experience": {
+   "who": "Anna (page author field 'Anna_the_journo'), a producer on the SBS TV show 'Insight' (sbs.com.au, named in the body).",
+   "category": "Consumer / Property / DIY Sale (not AI)",
+   "relevance": "low",
+   "contact": "Platform reply only: the body says 'Feel free to comment or DM' on the Reddit thread Sourcee ingested; the handle in the author field is the only identifier. No address, no link.",
+   "notes": "In the candidate list only because the slug tripped the AI token matcher on the substring in 'DIY'. Nothing in the body is about AI: it is an Australian TV producer looking for people who bought or sold a house without an agent. NOT DRAFTED - wrong beat and no route.",
+   "template": "None. Off-beat and route-less. NOT DRAFTED."
+  },
+  "editors-creatives-and-graphic-designers-ai-impact-documentary": {
+   "who": "An unnamed studio (page author field 'your_pro_Designer'); no publication, no masthead, no company named in the body.",
+   "category": "Media / Creative Work / Unpaid Documentary Recruitment",
+   "relevance": "low",
+   "contact": "Comment on the originating post only - the page publishes no address, handle or link, and the body asks people to 'show us your day, a clip of you telling us about your story'.",
+   "notes": "This is not a source request, it is an unpaid crew-and-contributor call: 'we starting out, right now we cannot pay anyone', asking for editors, speakers, script readers, writers, sound design and graphic designers to hand over video and a signed permission document. We are neither a creative worker with an AI grievance nor a production supplier. NOT DRAFTED.",
+   "template": "None. Unpaid crew call, wrong side of the camera, no route. NOT DRAFTED."
+  },
+  "ai-researchers-founders-and-tech-ceos-retirement-plans-amid-ai-risk": {
+   "who": "Thibault Spirlet, tech reporter in Business Insider's London office (domain field businessinsider.com; the body is signed as a Business Insider call for sources).",
+   "category": "AI / Personal Finance / Existential-Risk Testimony",
+   "relevance": "low",
+   "contact": "Address redacted in the body ('email me at [email redacted] before Friday'). The same reporter's byline route is already resolved and re-probed today: businessinsider.com/author/thibault-spirlet (HTTP 200, 328,800 bytes, tspirlet@businessinsider.com published in a mailto link) - route-checks-2026-10-29.json.",
+   "notes": "THE SIGNAL, NOT THE ROW: this is a second Spirlet request inside 72 hours (2026-10-26T11:46Z traders, 2026-10-28T16:43Z this one), which is direct evidence that his inbox is open and he is commissioning this week - that is why his carried Mistral row is worth sending today rather than tomorrow. As a row it is undraftable: he wants people who personally believe AI may end humanity within a decade, and we do not hold that position, so a pitch would be testimony we cannot give. NOT DRAFTED.",
+   "template": "None. Requires holding an existential-risk position we do not hold. NOT DRAFTED - but the reporter is live, see the Business Insider row."
+  },
+  "canadian-skilled-trades-workers-ai-impact-on-manufacturing": {
+   "who": "Andrea Wahbe (page author field); no publication named anywhere in the body.",
+   "category": "AI / Manufacturing / Skilled Trades",
+   "relevance": "low",
+   "contact": "DM only: 'Please DM me if interested.' No address, no link, no handle published.",
+   "notes": "Two sentences, no publication, no deadline, no route. She wants experts on AI in Canada's skilled trades and manufacturing; we price AI software and have no manufacturing or trades standing. NOT DRAFTED.",
+   "template": "None. No publication, no route, wrong standing. NOT DRAFTED."
+  },
+  "character-ai-users-emotional-attachment-and-loneliness": {
+   "who": "A Reddit user (page author field 'Melodic-Phrase-3303'), self-described journalist, no publication named.",
+   "category": "AI / Consumer Chatbots / First-Person Testimony",
+   "relevance": "low",
+   "contact": "Reply on the originating thread; no address or link published.",
+   "notes": "Wants anonymous first-person accounts from heavy c.ai users about loneliness and emotional attachment - testimony we cannot supply and would not want to. NOT DRAFTED.",
+   "template": "None. Testimony request, no route. NOT DRAFTED."
+  },
+  "ai-trainers-and-researchers-workplace-ai-adoption-and-training": {
+   "who": "Vidhya Das, Business Today (India Today group) - the page's own domain field is businesstoday.in and the body signs 'Business Today'; her author page businesstoday.in/author/vidhya-das returns HTTP 200 (662,049 bytes) with the title 'Trainee Sub Editor'.",
+   "category": "AI / Workplace Adoption / Training & Skills",
+   "relevance": "medium",
+   "contact": "Address redacted ('You can also email me at [email redacted]'). Published routes: comment on the LinkedIn post, or DM her - handle resolved as in.linkedin.com/in/vidya-das through search on 2026-10-29 (profile title 'Trainee Sub Editor | Business Today | India Today group'), NOT off the request page; LinkedIn answers HTTP 999 to this monitor's probe, so the handle is search-resolved rather than page-verified. Her Business Today author page publishes no email.",
+   "notes": "The freshest on-beat row of the window: 1 day old, in the AI-topic feed, and about workplace AI adoption and the skills needed to use the tools well - our core subject. What she asks for is trainers, researchers and technology professionals; what we actually hold is a dated price census of the tools employees are being told to adopt, which is the procurement half of the same story (adoption is cheap enough per seat to happen without training or approval). Drafted as section 3 of pitch-drafts-2026-10-29.md on that basis, with the fit stated plainly in the pitch rather than overstated.",
+   "template": "Data-led: median cheapest paid tier $17.50/seat/month across the 44 of 99 tracked tools that publish a monthly price, 35 of those at or under $25 - i.e. per-seat cost is low enough that adoption outruns training. Signed AIToolsEssentials, under 200 words. See pitch-drafts-2026-10-29.md section 3."
+  },
+  "gcc-founders-and-entrepreneurs-ai-collaboration-and-data-sovereignty": {
+   "who": "Ornella Nett (page author field); the body is a promotional write-up of a feature on Lenks.ai and Rawan Almogbil, with a LinkedIn link (lnkd.in/dD9PhQZj).",
+   "category": "AI / Founder Feature Promotion (not a request)",
+   "relevance": "low",
+   "contact": "DM the author on LinkedIn; the only link on the page is the article itself.",
+   "notes": "Same defect class as the 2026-10-27 excorporate-privacy-lead row: this is not a journalist request, it is a published founder-profile piece with a closing 'if you're a founder... I'd love to hear from you' attached to an interview-feature offer. Nothing asked for, no deadline, and the offer is visibility for a founder story, not sourcing. NOT DRAFTED.",
+   "template": "None. Not a request. NOT DRAFTED."
+  },
+  "rig-hse-staff-aienabled-cameras-trial-outcomes": {
+   "who": "Roxana Shirkhorshidi (page author field); no publication named.",
+   "category": "AI / Oil & Gas / HSE Computer Vision",
+   "relevance": "low",
+   "contact": "Comment on the post or send a message: 'Share your thoughts in the comments - or, if you'd prefer to talk, send me a message'. No address or handle published.",
+   "notes": "A genuinely well-written request and the day's clearest body-level AI hit that the slug matcher would have missed (the token survives only as 'aienabled'). She wants rig HSE staff and drilling crews who ran AI camera trials. We have no operational oil-and-gas standing. NOT DRAFTED.",
+   "template": "None. Right shape, wrong standing, no route. NOT DRAFTED."
+  },
+  "dairy-companies-and-startups-aipowered-livestock-health-and-nutrition": {
+   "who": "Ankit Saproo (page author field); no publication named.",
+   "category": "AI / Agritech / Dairy Livestock",
+   "relevance": "low",
+   "contact": "Reach out via the post - the body says 'Kindly reach out'; no address, link or handle published.",
+   "notes": "Wants dairy companies and agritech startups deploying AI for livestock health and nutrition. No route, no publication, and no standing for us. NOT DRAFTED.",
+   "template": "None. Off-beat and route-less. NOT DRAFTED."
+  }
+ },
+ "new_this_run": [
+  "buyers-and-sellers-without-agents-diy-property-sale-experience - SBS 'Insight' TV producer, Australian DIY property sales, no AI in the body (slug-only token match), relevance low.",
+  "editors-creatives-and-graphic-designers-ai-impact-documentary - unpaid documentary crew/contributor call, no pay, no publication, relevance low.",
+  "ai-researchers-founders-and-tech-ceos-retirement-plans-amid-ai-risk - Thibault Spirlet / Business Insider, 0d; he is commissioning again inside 72 hours, which is the reason his carried Mistral row is sendable today; the row itself needs existential-risk testimony we do not have.",
+  "canadian-skilled-trades-workers-ai-impact-on-manufacturing - Andrea Wahbe, no publication, DM-only, relevance low.",
+  "character-ai-users-emotional-attachment-and-loneliness - anonymous user testimony, no route, relevance low.",
+  "ai-trainers-and-researchers-workplace-ai-adoption-and-training - Vidhya Das / Business Today, 1d, in the AI feed, workplace adoption and skills; DRAFTED as section 3.",
+  "gcc-founders-and-entrepreneurs-ai-collaboration-and-data-sovereignty - founder-feature promo post, not a request, relevance low.",
+  "rig-hse-staff-aienabled-cameras-trial-outcomes - Roxana Shirkhorshidi, rig HSE AI camera trials, no publication, no route, relevance low.",
+  "dairy-companies-and-startups-aipowered-livestock-health-and-nutrition - Ankit Saproo, dairy AI, no route, relevance low."
+ ],
+ "why_not_drafted": [
+  "8 of the 9 new rows are relevance low and each fails on a different axis: three ask for first-person testimony we cannot give (character-ai users, an unpaid documentary crew call, and Spirlet's existential-risk retirement story), three publish no route and cover beats where we have no standing (Canadian trades, rig HSE cameras, dairy livestock), one is not a request at all (GCC founder-feature promo), and one has no AI in its body at all (SBS DIY property sales, a slug-substring false positive)",
+  "the ninth is drafted: Vidhya Das / Business Today, the window's only fresh on-beat AI row"
+ ],
+ "extra_actions": [
+  "THE ONE THING GEORGE HAS TO DO: send section 1 of pitch-drafts-2026-10-29.md to alison@alisoncoleman.co.uk. One email closes TWO live Forbes requests (solopreneurs whose AI use changed the first hire; bootstrapped founders who can quantify the capital/headcount AI saved), both 2 days old, both HTTP 200 today, and the address is published in visible text on her own contact page (HTTP 200, 28,116 bytes, route-checks-2026-10-29.json). Every other row in this queue is either colder or route-weaker.",
+  "WHAT CHANGED SINCE YESTERDAY, AND IT IS THE ARGUMENT FOR SENDING THE BUSINESS INSIDER DRAFT NOW: Thibault Spirlet posted a NEW Business Insider request at 2026-10-28T16:43Z (AI researchers and founders who fear an AI apocalypse and how that changes their retirement saving), his second inside 72 hours after the 2026-10-26T11:46Z traders one. His Mistral row is now 6 days old and out of the feed, but the reporter is demonstrably reading his inbox this week. The draft (section 2) opens on exactly that, and its route was re-probed live today (businessinsider.com/author/thibault-spirlet, HTTP 200, 328,800 bytes, tspirlet@businessinsider.com in a mailto link).",
+  "FEED MEMBERSHIP HAS STOPPED DISCRIMINATING, AND THE DIGEST NOW SAYS SO: 86 slugs entered the sitemap window in ~24 hours against a 50-slot AI-topic feed, so turnover is under half a day and only 1 of the 54 tracked live rows appears in the feed. Earlier runs read feed-exit as 'colder than its age suggests'; that inference is no longer supported by the supply rate and this run does not lean on it. Age still comes from each page's own datePublished.",
+  "STAGED GMAIL DRAFTS FROM 2026-10-28 (uids 48 Forbes, 49 Business Insider, 50 Fast Company) were re-read this run and still carry today's figures (99 tools, 44 monthly-priced, 35 at or under $25, median $17.50 - the snapshot was re-stamped 2026-10-29 with the same values), so none is stale behind a send button. Nothing was sent: every route in this queue is an email, a DM or a platform reply, all George's lane."
+ ],
+ "defects": [
+  "No code change was needed today: haro_window.py, haro_bodies.py, verify_journo_requests.py, probe_routes.py, build_digest.py and build_pitch_queue.py all ran unmodified and produced today's artifacts end to end, so this run's digest is derived rather than hand-typed for the second consecutive run.",
+  "MONITOR FINDING, NOT A CODE DEFECT: one live row (rig-hse-staff-aienabled-cameras-trial-outcomes) carries its AI token only as the squashed slug 'aienabled' and is invisible to the slug matcher; it was caught by the body scan. The body scan is therefore still load-bearing and must keep running on every window rather than being skipped on quiet days.",
+  "A false positive was found in the other direction: buyers-and-sellers-without-agents-diy-property-sale-experience entered the candidate list on an 'ai' substring inside 'DIY' and is not an AI request at all. Both directions are cheap to read past because every candidate body is fetched, but the token matcher is not a classifier and the digests should keep saying so."
+ ]
+}
