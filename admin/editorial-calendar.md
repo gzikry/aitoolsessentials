@@ -98,6 +98,8 @@ Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot 
 Priority order unchanged: how-to/workflow → audience guides → question-intent.
 11. AI-assisted RFP and proposal response workflow ✅ shipped 2026-10-23 (workflow, articles/ai-rfp-proposal-response-workflow.html; added to Learn hub)
 12. Best AI tools for executive assistants ✅ shipped 2026-10-23 (audience guide, articles/best-ai-tools-for-executive-assistants.html; /best-for/ role `executive-assistants` + stack-builder role added)
-Next up: question-intent interleave (one or two question pages), then another workflow piece.
+13. Should you pay monthly or annual for AI tools? ✅ shipped 2026-10-30 (question-intent, articles/monthly-vs-annual-ai-plans.html; added to Learn hub)
+14. What are AI credits? ✅ shipped 2026-10-30 (question-intent, articles/what-are-ai-credits.html; added to Learn hub)
+Next up: another workflow piece (the how-to lane). Question-intent interleave is done for batch 4.
 
 
