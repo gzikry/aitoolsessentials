@@ -896,6 +896,51 @@
       "public_href": "/go/umevo/",
       "partner": false
     },
+    "faceloria": {
+      "name": "Faceloria",
+      "slug": "faceloria",
+      "official": "https://www.faceloria.com/",
+      "destination": "https://www.faceloria.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/faceloria/",
+      "partner": false
+    },
+    "layergrab": {
+      "name": "LayerGrab",
+      "slug": "layergrab",
+      "official": "https://layergrab.com/",
+      "destination": "https://layergrab.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/layergrab/",
+      "partner": false
+    },
+    "crowdwisdomtrading": {
+      "name": "CrowdWisdomTrading",
+      "slug": "crowdwisdomtrading",
+      "official": "https://www.crowdwisdomtrading.com",
+      "destination": "https://www.crowdwisdomtrading.com?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/crowdwisdomtrading/",
+      "partner": false
+    },
+    "dreamlock": {
+      "name": "Dreamlock",
+      "slug": "dreamlock",
+      "official": "https://dreamlock.app/",
+      "destination": "https://dreamlock.app/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/dreamlock/",
+      "partner": false
+    },
+    "reeltada": {
+      "name": "ReelTada",
+      "slug": "reeltada",
+      "official": "https://reeltada.com/",
+      "destination": "https://reeltada.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/reeltada/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

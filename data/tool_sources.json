@@ -1369,6 +1369,51 @@
         "Whether a retention period and a training-use statement will be published on umevo.ai itself: the vendor confirmed ~1 month after account cancellation (via the third-party Kinghal policy) and 'no training' in writing, but no umevo.ai page states either, and the Kinghal policy is linked from nowhere on the site.",
         "Whether the Note Plus page's 'Pro $2.50/mo / Max $5.83/mo' and its pack prices are stale copy from an earlier plan or a genuine second ladder."
       ]
+    },
+    {
+      "slug": "faceloria",
+      "pricing_checked_date": "2026-11-02",
+      "pricing_summary": "Free instant face analysis; Full Face Report $16.99 one-time ('One-time payment - No subscription'), processed by Waffo. Checked 2026-11-02 on https://www.faceloria.com/pricing.",
+      "pricing_url": "https://www.faceloria.com/pricing",
+      "privacy_url": "https://www.faceloria.com/privacy",
+      "docs_url": "https://www.faceloria.com/pricing",
+      "verification_notes": "Submitted via form 2026-11-02 09:41 UTC (contact field a third-party mail.grokbot.com alias; site publishes support@faceloria.com on Cloudflare Email Routing). Editorial entry written independently from live pages: pricing, privacy (updated 2026-10-26), terms, cookie policy, acceptable use all 200. Processors named in policy (Waffo, Cloudflare R2, Google Sign-In); source photos auto-deleted within 48h per policy. No controller/entity/jurisdiction named; analytics scripts (pvuv.ai Plausible-compatible + plausible.io) load on all pages but policy mentions analytics only generically. Registered 2026-09-14 (Spaceship); NS lars/nola - a pair in no other ledger row."
+    },
+    {
+      "slug": "layergrab",
+      "pricing_checked_date": "2026-11-02",
+      "pricing_summary": "Subscriptions: Basic $12/mo for 1,200 credits (~120 layers), Premium $36/mo for 3,600 credits (~450 layers), yearly saves 31%. One-time packs: $20/1,800 credits, $60/6,600 credits (pack credits expire per FAQ). 10 credits/layer on Basic, 8 on Premium. Checked 2026-11-02 on https://layergrab.com/pricing (worked cost examples on-page).",
+      "pricing_url": "https://layergrab.com/pricing",
+      "privacy_url": "https://layergrab.com/privacy",
+      "docs_url": "https://layergrab.com/pricing",
+      "verification_notes": "Submitted via form 2026-10-31 05:55 UTC (contact BlaiseZiemehudfv@hotmail.com; site publishes contact@layergrab.com mailto, MX = Cloudflare Email Routing). Editorial entry written independently from live pages. Chrome Web Store extension verified live (cfkdlnfbbdbihhpbmciigdpbbpeinapa). Privacy names Google sign-in + Chrome Limited Use; uploads 'not sold, not used to train our own models'; the AI model partner is unnamed ('our processing partner'). No entity/jurisdiction/refund page/contact page. Registered 2026-09-27 (Cloudflare registrar); NS eric/reza - not the s07811005141 cluster pair (damon/violet); img2layers.org was unreachable for a text-similarity check, so no cluster claim is made."
+    },
+    {
+      "slug": "crowdwisdomtrading",
+      "pricing_checked_date": "2026-11-02",
+      "pricing_summary": "Free: weekly outlook email + 20 free setups, no card. Pay as you go: $9.99 one-time for 10 setup credits. Pro $29.99/mo incl. taxes via Whop checkout, cancel anytime; yearly $179.99/yr ('saves 50%' vs $359.88 monthly-billed). Checked 2026-11-02 on https://www.crowdwisdomtrading.com/pricing.",
+      "pricing_url": "https://www.crowdwisdomtrading.com/pricing",
+      "privacy_url": "https://www.crowdwisdomtrading.com/privacy",
+      "docs_url": "https://www.crowdwisdomtrading.com/llms.txt",
+      "verification_notes": "Submitted via form 2026-10-31 12:11 UTC by gilad@crowdwisdomtrading.com (Zoho MX, deliverable). Editorial entry written independently from live pages. Terms name the operator Tsuroni LTD, laws of the State of Israel, Tel Aviv-Yafo exclusive jurisdiction, ILS 400 liability-floor cap; privacy drafted to GDPR/CCPA categories; risk disclaimers throughout ('educational research', 'past performance does not guarantee future results'). No third-party trackers found on any fetched page. Domain registered 2014-02-11 (GoDaddy). '21,576+ pro traders' is a self-published vendor claim, unverifiable."
+    },
+    {
+      "slug": "dreamlock",
+      "pricing_checked_date": "2026-11-02",
+      "pricing_summary": "Free tier forever: unlimited capture, 3 painted dream cards/week, 10 questions. Dreamlock Plus $4.99/mo or $39.99/yr (7-day free trial on annual), billed via Apple In-App Purchase, price shown in app before purchase. Checked 2026-11-02 on https://dreamlock.app/.",
+      "pricing_url": "https://dreamlock.app/",
+      "privacy_url": "https://dreamlock.app/privacy",
+      "docs_url": "https://dreamlock.app/llms.txt",
+      "verification_notes": "Submitted via form 2026-10-31 13:11 UTC by costelgn@gmail.com; site publishes hello@dreamlock.app (AWS SES MX). Editorial entry written independently from live pages plus the App Store listing (seller named: Andrii Zagoruiko; App Privacy 'Data Not Linked to You'). Policy names the exact subprocessor path (Vercel relay -> Anthropic Claude for text, OpenAI image model from scene description only), states no advertising/training use with API-terms reasoning, and accurately discloses the two analytics scripts (Ahrefs cookieless + GA4) found in markup. Terms: Delaware governing law; Apple IAP billing/cancellation. Registered 2026-07-29 (Name.com); NS Vercel."
+    },
+    {
+      "slug": "reeltada",
+      "pricing_checked_date": "2026-11-02",
+      "pricing_summary": "One-time packs only, no subscription: Starter $9.90/10 credits, Creator $29.90/40, Studio $59.90/100; standard template = 10 credits/generation, premium templates 30; failed generations auto-refund credits. Pricing meta description advertises 'starting at $6.89' (promo) vs the $9.90 list price. Checked 2026-11-02 across /pricing (meta), the refund policy (pack table) and the terms ($ tokens).",
+      "pricing_url": "https://reeltada.com/pricing",
+      "privacy_url": "https://reeltada.com/privacy-policy",
+      "rights_url": "https://reeltada.com/refund-policy",
+      "verification_notes": "Submitted via form 2026-11-02 09:41 UTC by support@reeltada.com (MX = Cloudflare Email Routing); summary self-described as 'suggested by ReelTada's AI assistant'. Editorial entry written independently from live pages. Legal set complete (privacy, terms, refund; AUP-grade content rules in terms) but refund policy carries a leftover template brand ('Bby Wow credit packs') - cited to the vendor. No operator identity/jurisdiction; privacy names no processors/retention/training stance; three analytics hosts (Plausible, CF Insights, self-hosted analysis.gaolong.site, Dnspod NS, registered 2026-10-12) load sitewide unnamed. Domain registered 2026-10-20 (Spaceship); NS blakely/nolan - a pair in no other ledger row. Already listed on third-party directories (aicoming.net, getai.business, withaitools.com, indietools.app)."
     }
   ]
 }

@@ -5813,5 +5813,295 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - this is a real hardware business with a checkable Colorado entity (registration 20251272831, good standing), its own store with live prices, published warranty and return terms, and a plan ladder published per model instead of hidden behind a sales call; it does the one job meeting bots cannot (phone calls and rooms), and it states on the product page that AI minutes cost money after year one. Transparency brings it to 3.5/5. A reader cannot tell today who they are contracting with: the footer terms name UME Technology Inc. while the store's terms page names Huasengdi Technology Co., Ltd. of Wyoming as the entity accountable for their data, both governing-law clauses name no state, the two privacy notices disagree on whether a third-party app processes their recordings, the policy that governs that app is not linked from the site, no page states training use, and the two product pages quote plan and pack prices roughly 4x apart. Each of those is fixable in an afternoon and the vendor has already confirmed the correct answers in writing; the score reflects the pages a buyer reads today, not the intent."
+  },
+  {
+    "slug": "faceloria",
+    "name": "Faceloria",
+    "category": "Creative",
+    "best_for": "People curious about face-shape analysis who want a structured facial-measurement report rather than a horoscope-style app: upload one front-facing photo, get a face-shape category, width-to-height ratio and vertical-balance measurements for free, then decide whether the $16.99 one-time Full Report (4-week styling action plan and PDF) is worth it. Not a fit for anyone who needs a named company, jurisdiction or refund policy before paying, or for anyone who finds a 0-100 attractiveness score unhelpful - that framing is part of the product.",
+    "price": "Free instant face-shape analysis with basic measurements. Full Face Report $16.99 one-time (site states 'One-time payment - No subscription'), processed by Waffo. Verified 2026-11-02 on /pricing.",
+    "rating": 3.8,
+    "official": "https://www.faceloria.com/",
+    "summary": "Faceloria runs an AI face analysis in the browser: you upload a front-facing photo and get a face-shape category, symmetry and proportion measurements, plus an optional one-time Full Report with a styling action plan. The pitch leans on a 0-100 'attractiveness score' alongside the geometry, and the site itself frames results as informational. The operation is unusually transparent about the data path for a face tool: payments are handled by Waffo, source photos sit in Cloudflare R2 and are automatically deleted within 48 hours, and a complete legal set (privacy, terms, cookie and acceptable-use pages) is in place with a recent update date. The weak spots are identity and analytics: no company, controller or governing law is named anywhere, and the pages load a Plausible-compatible analytics script from pvuv.ai while the privacy policy says only that analytics 'run only when enabled by deployment configuration'.",
+    "use_cases": [
+      "Checking a measured face-shape category before a haircut or styling decision",
+      "Getting objective facial proportion measurements (width-to-height ratio, vertical balance) from one photo",
+      "A one-time $16.99 detailed report with a 4-week action plan instead of a recurring beauty-app subscription"
+    ],
+    "pros": [
+      "Source-photo handling is verifiable and specific: uploads are stored in Cloudflare R2 and automatically deleted within 48 hours, stated plainly in the privacy policy",
+      "The payment processor (Waffo), storage (Cloudflare R2) and auth provider (Google Sign-In) are all named, which most small face-analysis sites never do",
+      "Genuinely one-time pricing - the Full Report is $16.99 with an explicit 'no subscription' statement, so nothing renews against a card later",
+      "A complete legal set exists (privacy, terms, cookie policy, acceptable use), with the privacy policy updated 2026-10-26 - days before our check"
+    ],
+    "cons": [
+      "No controller, company or jurisdiction is named anywhere: the footer reads only '(c) 2026 Faceloria', the privacy policy names no legal entity, and the terms never state a governing law - a reader has no one to hold accountable",
+      "Analytics under-disclosed: every page (including the privacy and terms pages) loads a Plausible-compatible tracker from www.pvuv.ai plus plausible.io, while the policy only mentions analytics 'when enabled by deployment configuration' and names neither",
+      "The headline framing is a 0-100 attractiveness score, which may not suit everyone; the site itself qualifies results as informational rather than objective judgments",
+      "Refund terms are not published (no refund-policy page), which matters less on a one-time $16.99 purchase but is still a gap"
+    ],
+    "key_features": [
+      "Free instant face-shape analysis from a single front-facing photo",
+      "Facial measurements including width-to-height ratio and vertical balance",
+      "One-time $16.99 Full Face Report with a 4-week styling action plan and PDF export",
+      "Automatic deletion of uploaded source photos within 48 hours",
+      "No account required for the free analysis; Google Sign-In for account features"
+    ],
+    "faq": [
+      [
+        "Does Faceloria keep my uploaded photos?",
+        "The privacy policy says source photos uploaded for the Full Report are stored in Cloudflare R2 and automatically deleted within 48 hours of upload. We verified that sentence on 2026-11-02; we did not independently verify the deletion itself."
+      ],
+      [
+        "Is Faceloria a subscription?",
+        "No. The analysis is free, and the Full Face Report is a $16.99 one-time payment - the pricing page states 'One-time payment - No subscription'."
+      ],
+      [
+        "What data does Faceloria collect?",
+        "Per its policy: upload photos (deleted within 48 hours), email and payment details handled via Waffo, account/session data if you sign in with Google, and analytics. Note the policy names no analytics provider while the pages load a Plausible-compatible script."
+      ]
+    ],
+    "trial_checklist": [
+      "Run the free analysis with a photo you would not mind a stranger seeing - the result lands before any payment",
+      "Confirm the 48-hour deletion claim matches what you are comfortable uploading",
+      "Before buying the $16.99 report, preview the sample report structure on the site so you know what the full version adds",
+      "Screenshot your results page - with no named company behind the site, your own records are the remedy if support goes quiet"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.0/5 - it does the narrow job it advertises (face-shape category plus measurements, one cheap one-time report) and the photo-handling disclosure is the strongest we have seen from a face-analysis microsite. Transparency brings it to 3.8: no controller, no jurisdiction, no governing law, refund terms unpublished, and an analytics stack visible on the pages that the policy does not name."
+  },
+  {
+    "slug": "layergrab",
+    "name": "LayerGrab",
+    "category": "Creative",
+    "best_for": "Designers, ecommerce sellers and social-media editors who need to pull one element off a flat image - a product, a poster's text, a sticker - as a clean transparent layer without opening desktop software. The Chrome extension (right-click any image on the web) is the fastest version of the job. Not a fit for anyone who needs a named company and a refund policy before paying, or for bulk API automation (no developer API is offered).",
+    "price": "Freemium. Subscriptions: Basic $12/month for 1,200 credits (~120 layers), Premium $36/month for 3,600 credits (~450 layers), yearly billing saves 31%. One-time credit packs: $20 for 1,800 credits, $60 for 6,600 credits (pack credits expire - see their FAQ). Each image-to-layers split costs 10 credits on Basic, 8 on Premium. Verified 2026-11-02 on /pricing.",
+    "rating": 3.8,
+    "official": "https://layergrab.com/",
+    "summary": "LayerGrab splits a flat image into editable, named layers with AI: upload or right-click an image, get each element (text, products, graphics) on its own transparent layer with the background filled in behind them, and export PNG, ZIP or a layered PSD. It works in the browser, a Chrome extension (listed on the Chrome Web Store), and - per its privacy page - Photoshop, Figma and Sketch plugins. The credit math is spelled out with worked examples on the pricing page (a 10-layer poster at 10 credits per layer on Basic costs $1.10). The gaps are identity and consumer paperwork: no company or jurisdiction is named anywhere, there is no refund policy page and no contact page, and the AI model doing the splitting is described only as 'our processing partner'.",
+    "use_cases": [
+      "Pulling a product off a flat photo for an ecommerce listing without re-shooting",
+      "Extracting text or graphic elements from posters and banners as transparent PNGs",
+      "Converting a JPG/PNG into a layered PSD for further editing",
+      "Grabbing elements off any web image via the Chrome side panel"
+    ],
+    "pros": [
+      "The pricing page shows real arithmetic - each plan states credits, approximate layers, and a worked 'what a split costs' example, so cost per job is calculable before signup",
+      "Both subscription and one-time pack routes exist, so occasional users are not forced into a monthly plan",
+      "A published Chrome Web Store extension with real install surface, plus Photoshop/Figma/Sketch plugin claims - more verifiable footprint than similar micro-sites",
+      "Privacy page is specific about Google sign-in data and Chrome Web Store Limited Use compliance, and states uploads are not sold and not used to train its own models"
+    ],
+    "cons": [
+      "No operator identity anywhere: no company, individual, jurisdiction or governing law in the short terms page, and no postal address",
+      "No refund policy page (the URL 404s) and no contact page - the only published route is a mailto in the footer",
+      "The AI model provider is unnamed ('our processing partner'), so image-handling terms beyond LayerGrab itself cannot be assessed",
+      "Pack credits expire (per its own FAQ note) while the cadence rules live across several pages - read the FAQ before buying a bulk pack",
+      "Its image-to-layers concept is shared by several held or low-quality entrants; this one distinguishes itself with a real extension and named-data handling, but the space is crowded"
+    ],
+    "key_features": [
+      "AI image-to-layers splitting with named, transparent layers and background fill-in",
+      "PNG, ZIP and layered PSD export",
+      "Chrome extension with right-click 'Split this image into layers' in the side panel",
+      "Web app plus Photoshop, Figma and Sketch plugins (per its privacy page)",
+      "Credit pricing with worked per-layer math on the pricing page"
+    ],
+    "faq": [
+      [
+        "What does a LayerGrab split cost?",
+        "Each split costs 10 credits on the Basic plan ($12/month for 1,200 credits) and 8 credits on Premium ($36/month for 3,600 credits) - about $0.10 and $0.08 per credit respectively. One-time packs run $20 for 1,800 credits and $60 for 6,600."
+      ],
+      [
+        "Does LayerGrab keep or train on my images?",
+        "Its privacy page says images are sent to 'an AI model operated by our processing partner' to be split, and that uploads are not sold and not used to train its own models. The partner is not named and no retention period is stated, so sensitive client work deserves caution."
+      ],
+      [
+        "Is there a free option?",
+        "The homepage advertises freemium access (free credits to try the splitter); paid plans start at $12/month and one-time packs at $20."
+      ]
+    ],
+    "trial_checklist": [
+      "Run one real client image through the free credits before paying - edge quality on hair and shadows is the differentiator",
+      "Check the FAQ for the pack-expiry rule before buying a $60 bulk pack",
+      "Test the Chrome extension on a real web image if that is the workflow you want",
+      "Keep your own copies of outputs - there is no refund policy to fall back on"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.0/5 - the tool does one job, prices it transparently with calculable unit costs, and has a verifiable Chrome Web Store footprint. Transparency brings it to 3.8: no named operator, no governing law, no refund page, an unnamed model partner, and expiring pack credits that the pricing page pushes to the FAQ."
+  },
+  {
+    "slug": "crowdwisdomtrading",
+    "name": "CrowdWisdomTrading",
+    "category": "Research",
+    "best_for": "Self-directed retail traders who want a curated second opinion: aggregated setups from experienced traders with entry, stop and target levels spelled out, plus a free weekly outlook to sample before paying. You still place the trade at your own broker - it never touches your money. Not a fit for anyone who wants execution, managed funds, or regulatory-grade advice; its own terms tell you to verify outputs with licensed professionals.",
+    "price": "Free: weekly outlook email plus 20 free setups after signup, no card. Pay-as-you-go: $9.99 for 10 setup credits, one-time, no subscription. Pro: $29.99/month (taxes included at checkout) via Whop checkout, cancel anytime; yearly billing $179.99/year (advertised as 'saves 50%' against $359.88). Verified 2026-11-02 on /pricing.",
+    "rating": 4.0,
+    "official": "https://www.crowdwisdomtrading.com",
+    "summary": "CrowdWisdomTrading aggregates publicly shared views from experienced traders into daily and weekly research setups, each with an entry price, a stop and a target. It positions itself against Discord trading groups by grading every call in public, misses included, and it operates as research only - you execute at your own broker. The corporate disclosure is the best we have seen from a small submission in months: the terms name Tsuroni LTD as the operator, set Israeli governing law with Tel Aviv-Yafo courts, cap liability at a stated amount, and the privacy policy is drafted to GDPR/CCPA expectations with named retention logic for billing records. It loads no third-party trackers. The caution is the usual one for this product class: the 'pro traders' count and the public track record are self-published figures we cannot verify, and the terms themselves say the outputs are educational research, not investment advice.",
+    "use_cases": [
+      "Sampling 20 free trade setups (entry/stop/target) before paying anything",
+      "A weekly aggregated outlook email as a second opinion alongside your own research",
+      "Paying $9.99 once for 10 setups instead of committing to a $29.99/month subscription"
+    ],
+    "pros": [
+      "Named operator and real legal footing: Tsuroni LTD, laws of the State of Israel, Tel Aviv-Yafo courts, and a stated liability cap - rare among one-person research sites",
+      "A genuinely usable free tier (weekly outlook plus 20 free setups, no card) and a $9.99 one-time pack route, so the subscription is not forced",
+      "Finance-risk disclaimers are on the record throughout - substantial-risk warnings, past-performance language, and an instruction to verify outputs with licensed professionals",
+      "No third-party trackers found on any page we fetched, and the privacy policy is drafted against GDPR/CCPA categories with stated retention logic"
+    ],
+    "cons": [
+      "The headline '21,576+ pro traders' and the public track record are self-published figures that cannot be independently verified - treat them as marketing until proven",
+      "It is aggregated research, not advice and not execution: the value depends entirely on the unnamed contributors' inputs, and the aggregation methodology is not detailed",
+      "Payments run through Whop checkout rather than a mainstream merchant page, which some buyers will find unfamiliar",
+      "The aggregation uses AI on public posts; the terms themselves direct you to official market data and licensed professionals before acting"
+    ],
+    "key_features": [
+      "Daily and weekly trade setups with entry, stop and target on each",
+      "Public track record that includes graded misses (vendor claim)",
+      "Free tier: weekly outlook email plus 20 free setups, no card required",
+      "Pay-as-you-go setup credits ($9.99/10) alongside the Pro subscription",
+      "Q&A with contributing traders and long-term 'Value Wisdom' analysis"
+    ],
+    "faq": [
+      [
+        "Is CrowdWisdomTrading financial advice?",
+        "No. Its own terms describe the output as educational research, warn that trading involves substantial risk, state that past performance does not guarantee future results, and instruct users to verify outputs with official market data and licensed professionals. You place your own trades at your own broker."
+      ],
+      [
+        "What does CrowdWisdomTrading cost?",
+        "Free weekly outlook plus 20 setups after signup. A one-time $9.99 pack buys 10 setup credits with no subscription. Pro is $29.99/month with taxes included, billed yearly at $179.99 (advertised as half the monthly-billed total)."
+      ],
+      [
+        "Who is behind CrowdWisdomTrading?",
+        "The terms name Tsuroni LTD as the operating company, governed by the laws of the State of Israel with exclusive jurisdiction in Tel Aviv-Yafo courts. The domain has been registered since 2014."
+      ]
+    ],
+    "trial_checklist": [
+      "Use the 20 free setups first and log each one's entry/stop/target against what actually happened - the free tier exists for exactly this test",
+      "Read the graded track record yourself rather than the headline trader count",
+      "Decide pay-as-you-go vs Pro only after you know how many setups a month you actually act on",
+      "Remember it is research, not signals-with-execution: position sizing and risk are still yours"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.0/5 for what it is - aggregated discretionary setups with honest free-sampling and pay-as-you-go routes - backed by the strongest corporate disclosure we have seen from a small vendor (named LTD, jurisdiction, liability cap, no trackers). Held at 4.0 because the trader-count and track-record figures are self-published and unverifiable, and the product's value rests on contributors a reader cannot assess."
+  },
+  {
+    "slug": "dreamlock",
+    "name": "Dreamlock",
+    "category": "Productivity",
+    "best_for": "iPhone users who want to capture a dream in seconds at 3 AM - mumble a voice note, Face ID keeps the journal locked, and wake to a written retelling with a painted card and symbol notes. The free tier (unlimited capture, 3 painted cards a week, 10 questions) is enough to decide. Not a fit for Android users (iPhone only), or for anyone who wants their notes to never leave the device - interpretation requires a server round-trip to Anthropic and OpenAI, which the policy states plainly.",
+    "price": "Free tier forever: unlimited dream capture, 3 painted dream cards per week, 10 questions. Dreamlock Plus: $4.99/month or $39.99/year (7-day free trial on the annual plan), billed by Apple In-App Purchase, cancelable in iOS Settings. Verified 2026-11-02 on the homepage.",
+    "rating": 4.1,
+    "official": "https://dreamlock.app/",
+    "summary": "Dreamlock is a private dream journal for iPhone: record a half-asleep voice note, and the app transcribes it, writes a retelling with symbols and interpretation, and paints a dream card. Face ID locks the journal, there is no account to create, and iCloud sync is optional and encrypted. The data-flow disclosure is the standout: the policy names the exact pipeline (a small Vercel relay forwards the transcribed text to Anthropic's Claude for the writing and OpenAI's image model for the card, with only a scene description sent for the painting), states the data is never used for advertising or training, and accurately disclosed the two analytics scripts (cookieless Ahrefs and GA4) that we independently found in the page heads. The App Store page names the individual seller, and the terms set Delaware governing law. What keeps it below the top tier: it is a small new single-platform app, interpretation requires a server round-trip by design, and the seller is a natural person with no company structure.",
+    "use_cases": [
+      "Capturing a dream by voice in seconds without fully waking up",
+      "A Face ID-locked private journal with no account signup",
+      "Getting an AI-written interpretation and painted keepsake card for each dream",
+      "Spotting recurring symbols via the personal symbol index (Plus)"
+    ],
+    "pros": [
+      "The privacy policy names its subprocessor pipeline exactly - Vercel relay, Anthropic Claude for the text, OpenAI image model receiving only a scene description - and states the data is never used for advertising or model training, with the API terms reasoning included",
+      "The analytics disclosure matches reality: the policy names Ahrefs (cookieless) and Google Analytics 4, and that is exactly what loads in the page head - a rare match between policy and markup",
+      "No account required and Face ID locking by default; optional iCloud sync is encrypted under your own Apple ID",
+      "The seller is identified by name on the App Store page, terms set Delaware governing law, and billing is Apple IAP (cancel in iOS Settings, refund through Apple)"
+    ],
+    "cons": [
+      "iPhone only - there is no Android or web journaling surface beyond the site's free interpreter demo",
+      "Dream text leaves the device for interpretation by design (disclosed honestly, but a reader who wants fully local processing should look elsewhere)",
+      "A small new single-developer app: no company structure, and long-term maintenance rides on one named individual",
+      "The free tier's 3 painted cards per week is tight if you journal daily - heavy users will hit the Plus paywall quickly"
+    ],
+    "key_features": [
+      "Voice-first dream capture with transcription",
+      "AI retelling with symbols and interpretation per dream",
+      "Painted dream card per entry (3/week free, unlimited on Plus)",
+      "Face ID lock, no account, optional encrypted iCloud sync",
+      "Personal symbol index and pattern tracking (Plus)",
+      "Free web dream interpreter on the site"
+    ],
+    "faq": [
+      [
+        "Does Dreamlock send my dreams to a server?",
+        "Yes - and it says so plainly: the transcribed text goes over an encrypted connection to a small Vercel relay, then to Anthropic (writes the card) and OpenAI (paints the image from a short scene description only). The policy states the data is never used for advertising or training, and both vendors' API terms prohibit training on it."
+      ],
+      [
+        "What does Dreamlock cost?",
+        "Free forever tier: unlimited capture, 3 painted cards a week, 10 questions. Plus is $4.99/month or $39.99/year with a 7-day free trial on annual, billed through Apple - pricing is shown in the app before purchase."
+      ],
+      [
+        "Do I need an account?",
+        "No. The journal is Face ID-locked on-device, with optional encrypted iCloud sync under your Apple ID."
+      ]
+    ],
+    "trial_checklist": [
+      "Use the free tier for a full week of mornings first - 3 painted cards is enough to judge interpretation quality",
+      "Test the 3 AM flow: voice note in the dark, Face ID unlock, card by morning",
+      "Read the Vercel/Anthropic/OpenAI data path in the privacy policy and decide if a server round-trip is acceptable for your journal",
+      "If upgrading, take the annual plan's 7-day trial and cancel in iOS Settings if the symbol index does not earn the $39.99"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - voice-first capture, on-device lock, no account, and a painted keepsake are exactly the job, and the free tier is a real test route. Transparency is unusually good (named subprocessor pipeline with API-terms reasoning, honest analytics disclosure that matched our markup inspection, named seller, Delaware law) but it is a new single-developer iPhone-only app, which keeps the score at 4.1."
+  },
+  {
+    "slug": "reeltada",
+    "name": "ReelTada",
+    "category": "Video",
+    "best_for": "Social video creators who want to turn one or two photos into a trend-shaped vertical short for TikTok, Reels or Shorts without filming or editing - pick a live template, upload, download. One-time credit packs mean no subscription hangs over you. Not a fit for anyone who needs a named company, published retention terms or a stated model provider before uploading photos, or for professional editing work (no timeline editor, no developer API).",
+    "price": "One-time video credit packs only, no subscription: Starter $9.90 for 10 credits, Creator $29.90 for 40 credits, Studio $59.90 for 100 credits. A standard template generation costs 10 credits; premium templates (e.g. Baby Lip Sync) cost 30. The pricing meta description advertises packs 'starting at $6.89' - a promotional entry price against the $9.90 list figure. Credits are returned if a generation fails. Verified 2026-11-02 on /pricing and the refund policy.",
+    "rating": 3.6,
+    "official": "https://reeltada.com/",
+    "summary": "ReelTada turns one or two photos into a ready-to-post vertical video using trend-ready AI templates for TikTok, Instagram Reels and YouTube Shorts. It sells only one-time credit packs - no subscription - and returns credits when a generation fails, which the refund policy states in writing. The legal set exists (privacy, terms, refund) and the content rules in the terms are unusually specific. The weaknesses trail the trend-microsite class: no operator identity or jurisdiction anywhere, the privacy policy names no processors, no retention period and no training-use statement, three analytics scripts load on every page (Plausible, Cloudflare Insights, and a self-hosted script from analysis.gaolong.site) with none of them named in the policy, and its own refund policy still calls the product 'Bby Wow' - a template leftover from another brand.",
+    "use_cases": [
+      "Turning a single photo into a trending-format vertical video for TikTok/Reels/Shorts",
+      "Producing a themed short (e.g. lip-sync or dance template) without filming",
+      "One-off seasonal or reaction clips where a credit pack beats another monthly subscription"
+    ],
+    "pros": [
+      "Strictly one-time pricing - no subscription exists, and packs are clearly priced ($9.90/$29.90/$59.90 for 10/40/100 credits)",
+      "Failed generations return credits, stated in the refund policy rather than implied",
+      "The terms' content prohibitions are specific (non-consensual imagery, exploitation, synthetic sexual content), which is more than most trend sites publish",
+      "A complete legal page set (privacy, terms, refund) exists with a recent update date"
+    ],
+    "cons": [
+      "No operator identity, company or governing law appears anywhere on the site",
+      "The refund policy still references 'Bby Wow credit packs' - a leftover brand name from the template this legal set was copied from - which undermines confidence in the paperwork",
+      "Privacy policy names no processors, gives no retention period, and says nothing about training use of uploaded photos",
+      "Three analytics scripts (Plausible, Cloudflare Insights, a self-hosted tracker from analysis.gaolong.site) load on every page including the legal pages, and none are named in the policy",
+      "The pricing meta description advertises a $6.89 entry point while the listed Starter pack is $9.90 - a promotional gap worth knowing before checkout"
+    ],
+    "key_features": [
+      "Photo-to-vertical-video generation from trend templates for TikTok, Reels and Shorts",
+      "One-time credit packs only (10/40/100 credits), no subscription",
+      "Standard template at 10 credits per generation; premium templates at 30",
+      "Credits returned automatically on failed generations",
+      "Content moderation rules and reporting flow in the terms"
+    ],
+    "faq": [
+      [
+        "Is ReelTada a subscription?",
+        "No. It sells one-time credit packs only: $9.90 for 10 credits, $29.90 for 40, $59.90 for 100. A standard template generation costs 10 credits."
+      ],
+      [
+        "What happens if a ReelTada generation fails?",
+        "Per its refund policy, credits for a failed generation are returned to your account automatically."
+      ],
+      [
+        "Who operates ReelTada?",
+        "No company, individual or jurisdiction is named on any page we checked - you are dealing with an unidentified operator, which the listing reflects."
+      ]
+    ],
+    "trial_checklist": [
+      "Start with the smallest $9.90 pack - one standard template video is exactly 10 credits, so the pack buys one real test",
+      "Upload only photos you are comfortable sharing with an unidentified operator that publishes no retention period",
+      "Note the $6.89 promotional price in the pricing meta description vs the $9.90 list price before paying",
+      "Check the generated video for template artifacts before buying a larger pack"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 3.9/5 - the one-job tool works as advertised and the no-subscription, credits-back-on-failure mechanics are reader-friendly. Transparency brings it to 3.6: an unidentified operator, a privacy policy that answers none of the processing questions, three unnamed analytics hosts on the legal pages, a leftover template brand ('Bby Wow') in the refund policy, and a promotional $6.89 entry claim against a $9.90 list price."
   }
 ]

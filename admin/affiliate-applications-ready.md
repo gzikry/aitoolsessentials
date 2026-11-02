@@ -442,6 +442,15 @@ link is byte-identical to the one already on `/go/customgpt/`.
   promotional copy in front of readers alongside a listing that carries honest cons and a 3.3 score.
   The commercial relationship does not change the editorial verdict.
 
+**2026-10-30 + 2026-11-01: two more automated CustomGPT.ai campaign mails — recorded, not answered.**
+Same sender (`affiliate@customgpt.ai`, "Hira @ CustomGPT" display), same 22:57 UTC send slot, same tracked
+link already wired at `/go/customgpt/`. The 10-30 mail ("MIT Trusts Us...So Will Your Audience", All Mail)
+name-drops a customer to borrow authority for the pitch; the 11-01 mail ("How to Make an Extra $1500 Every
+Month", filed by Gmail into `[Gmail]/Trash`) leads with an earnings figure. Neither restates commission,
+cookie, payout or plan terms, so nothing is re-wired; both are campaign copy with an unsubscribe link, not
+vendor replies, and the "$1500/month" headline is marketing, not a verified payout figure — never carry it
+into a listing or report. No reply sent, matching the 10-28 disposition.
+
 ---
 
 ## BLOCKED — do not spend time on these

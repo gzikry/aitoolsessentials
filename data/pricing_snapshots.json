@@ -429,6 +429,26 @@
     "umevo": {
       "date": "2026-10-27",
       "digest": "Hardware one-time: Note $79, Note Plus $109 (reg $169, '35% off' sale, countdown shows 00:00:00, no end date), Note ONE $159 (reg $179), magnetic case $20, 3-in-1 kit $20, $5 shipping line. AI: Note Plus includes Max free for year 1 then free Starter 400 min/mo; Note ONE 30,000 min/mo for 3 months then 400 min/mo. Paid ladders as published, and they disagree: Note ONE Pro $7.99/mo or $69.99/yr (1,800 min), MAX $19.99/mo or $149.99/yr (unlimited), packs 120/600/3,000/6,000 min at $2.49/$9.49/$44.99/$79.99; Note Plus page quotes Pro $2.50/mo or Max $5.83/mo billed annually and the same packs at $0.59/$2.59/$10.99/$19.99. Packs valid 2 years; plan minutes reset monthly. Languages 114 Starter/Pro, 140+ MAX. Note ($79) has no AI plan. USD via Shopify."
+    },
+    "faceloria": {
+      "date": "2026-11-02",
+      "digest": "Full Face Report $16.99 one-time, no subscription (Waffo checkout); instant face-shape analysis free. Verified on /pricing 2026-11-02."
+    },
+    "layergrab": {
+      "date": "2026-11-02",
+      "digest": "Basic $12/mo (1,200 credits, ~120 layers), Premium $36/mo (3,600 credits, ~450 layers), yearly -31%; one-time packs $20/1,800 and $60/6,600 credits (pack credits expire). 10 credits/layer Basic, 8 Premium. Verified on /pricing 2026-11-02."
+    },
+    "crowdwisdomtrading": {
+      "date": "2026-11-02",
+      "digest": "Free weekly outlook + 20 setups; $9.99 one-time 10-credit pack; Pro $29.99/mo incl. taxes (Whop), $179.99/year ('saves 50%'). Verified on /pricing 2026-11-02."
+    },
+    "dreamlock": {
+      "date": "2026-11-02",
+      "digest": "Free tier (unlimited capture, 3 painted cards/week, 10 questions); Plus $4.99/mo or $39.99/yr (7-day annual trial), Apple IAP. Verified on homepage 2026-11-02."
+    },
+    "reeltada": {
+      "date": "2026-11-02",
+      "digest": "One-time packs $9.90/10, $29.90/40, $59.90/100 credits; standard template 10 credits, premium 30; failed generations refund credits; meta advertises $6.89 promo entry. Verified on /pricing + refund policy 2026-11-02."
     }
   },
   "changes": [
@@ -650,5 +670,5 @@
       "note": "CustomGPT.ai: first recorded pricing for a new listing, verified 2026-10-27 from the pricing page (Standard, Premium, Enterprise, and the monthly add-on list)."
     }
   ],
-  "updated": "2026-10-30"
+  "updated": "2026-11-02"
 }

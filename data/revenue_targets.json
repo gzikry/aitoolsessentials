@@ -1765,5 +1765,106 @@
     "status": "not_started",
     "next_action": "Email support@umevo.ai (and umetech2025@gmail.com, the submission contact) about the published Affiliate/Creators partnership: /pages/affiliate-creators exists but publishes no rate, stating that 'commission, attribution, codes, and settlement are confirmed by email' and that it is a human-led email process rather than a portal. Ask for commission, cookie window and payout terms; do not invent a tracking URL.",
     "notes": "Hardware margin business: a $79-$159 one-time device with a small recurring AI tail, so commission per sale can be materially higher than the $2-$10 per-render tools in this catalog if the vendor offers a percentage. Year-one AI is included on Note Plus, which means repeat purchases are unlikely and the recurring commission is thin. Editorial verdict stays independent of any commercial terms."
+  },
+  {
+    "tool_slug": "faceloria",
+    "tool_name": "Faceloria",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/faceloria/"
+    ],
+    "best_audiences": [
+      "readers comparing face-analysis and styling-report tools",
+      "creators making glow-up/style content"
+    ],
+    "status": "not_started",
+    "next_action": "Email the vendor about affiliate or partner terms; no program is published (/affiliates etc. not present), so ask in the publication reply. Never invent affiliate URLs; keep the official URL until an approved program exists.",
+    "notes": "One-time $16.99 report economics - a percentage bounty on a $16.99 one-time product is small; priority low until traffic grows."
+  },
+  {
+    "tool_slug": "layergrab",
+    "tool_name": "LayerGrab",
+    "priority": "medium",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/layergrab/"
+    ],
+    "best_audiences": [
+      "ecommerce sellers doing product-photo cutouts",
+      "designers and social editors extracting elements from flat images"
+    ],
+    "status": "not_started",
+    "next_action": "Ask for affiliate terms in the publication reply: the /pricing page already advertises a referral arrangement ('earn 20% of every payment from people who sign up through it, for life, paid in credits or in cash by PayPal'), so a program exists in some form - confirm enrollment route and terms rather than inventing a tracking URL.",
+    "notes": "Vendor's own pricing page advertises a 20%-for-life referral payout (credits or cash via PayPal). Recurring subscription base ($12/$36 monthly) makes this the best affiliate prospect of the 2026-11-02 batch."
+  },
+  {
+    "tool_slug": "crowdwisdomtrading",
+    "tool_name": "CrowdWisdomTrading",
+    "priority": "low",
+    "category": "Research",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership",
+      "Whop marketplace"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/crowdwisdomtrading/"
+    ],
+    "best_audiences": [
+      "self-directed retail traders",
+      "readers comparing trade research/subscription communities"
+    ],
+    "status": "not_started",
+    "next_action": "Email the founder (gilad@) about partner terms in the publication reply; checkout runs through Whop, so a Whop-side affiliate route may exist. Never invent affiliate URLs.",
+    "notes": "Recurring $29.99/mo product with real legal footing; finance-adjacent, so keep the editorial verdict visibly independent of any commercial terms."
+  },
+  {
+    "tool_slug": "dreamlock",
+    "tool_name": "Dreamlock",
+    "priority": "low",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/dreamlock/"
+    ],
+    "best_audiences": [
+      "iPhone users journaling or tracking sleep/dreams",
+      "readers comparing private AI journal apps"
+    ],
+    "status": "not_started",
+    "next_action": "Email costelgn@gmail.com in the publication reply whether any partner/referral arrangement exists; Apple IAP billing leaves little margin for web affiliate payouts. Never invent affiliate URLs.",
+    "notes": "IAP economics - Apple takes its cut, so a meaningful web affiliate program is unlikely; priority low."
+  },
+  {
+    "tool_slug": "reeltada",
+    "tool_name": "ReelTada",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/reeltada/"
+    ],
+    "best_audiences": [
+      "social video creators batching trend-format shorts",
+      "small agencies doing reactive/trend content"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@reeltada.com about partner terms in the publication reply; no program published. Never invent affiliate URLs.",
+    "notes": "One-time-pack economics ($9.90-$59.90) cap affiliate value; the operator's unidentified status and templated legal set mean any commercial relationship needs the vendor identified first."
   }
 ]
