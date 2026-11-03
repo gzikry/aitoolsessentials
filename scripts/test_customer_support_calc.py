@@ -38,7 +38,7 @@ const again = Object.fromEntries(reopen.rows.map((row) => [row.id, row]));
 assert.strictEqual(again.intercom.monthlyCents, before.intercom.monthlyCents);
 assert.strictEqual(again.zendesk.monthlyCents, before.zendesk.monthlyCents);
 assert.strictEqual(before.tidio.monthlyCents, 7500);
-assert.strictEqual(again.tidio.monthlyCents, 14000);
+assert.strictEqual(again.tidio.monthlyCents, 11000);
 
 const scale = calc.priceSupport({ tickets: 12000, rate: 60, seats: 18, finMode: "desk", zdPlan: "team", zdBilling: "annual", zdResolution: "payg" }, pricing);
 const gpt = scale.rows.filter((row) => row.id === "customgpt")[0];

@@ -285,7 +285,7 @@
       "name": "Cursor",
       "slug": "cursor",
       "category": "Development",
-      "price": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
+      "price": "Free $0; Plus $8/mo; Premium $30/mo; Super $100/mo; Ultra $200/mo; Teams $30+/user/mo",
       "url": "https://aitoolsessentials.com/tools/cursor/"
     },
     {
@@ -425,7 +425,7 @@
       "name": "CoCounsel Legal",
       "slug": "cocounsel",
       "category": "Legal",
-      "price": "Sales-quoted; official Westlaw Advantage with CoCounsel Essentials starts at $415.35/month",
+      "price": "Sales-quoted; Westlaw Advantage starts at $288.60/month",
       "url": "https://aitoolsessentials.com/tools/cocounsel/"
     },
     {
@@ -502,7 +502,7 @@
       "name": "AIDetector.cx",
       "slug": "aidetector-cx",
       "category": "Productivity",
-      "price": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
+      "price": "Free (5 trial checks) + Pro $10/mo billed annually ($120/yr) - Pro Plus $24.17/mo ($290/yr) - Business $65.83/mo ($790/yr)",
       "url": "https://aitoolsessentials.com/tools/aidetector-cx/"
     },
     {
@@ -761,7 +761,7 @@
       "name": "ReelTada",
       "slug": "reeltada",
       "category": "Video",
-      "price": "One-time video credit packs only, no subscription: Starter $9.90 for 10 credits, Creator $29.90 for 40 credits, Studio $59.90 for 100 credits. A standard template generation costs 10 credits; premium templates (e.g. Baby Lip Sync) cost 30. The pricing meta description advertises packs 'starting at $6.89' - a promotional entry price against the $9.90 list figure. Credits are returned if a generation fails. Verified 2026-11-02 on /pricing and the refund policy.",
+      "price": "One-time video credit packs only, no subscription: Starter $6.89 for 10 credits, Creator $22.89 for 40 credits, Studio $46.89 for 90 credits. A standard template generation costs 10 credits; the Baby Lip Sync template costs 30. Failed generations return the credits used. Checked 2026-11-03 on https://reeltada.com/pricing.",
       "url": "https://aitoolsessentials.com/tools/reeltada/"
     },
     {

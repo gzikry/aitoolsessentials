@@ -30,7 +30,7 @@ def build_feed(changes: list[dict]) -> str:
     ET.SubElement(channel, 'language').text = 'en'
     ET.SubElement(channel, 'lastBuildDate').text = datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S +0000')
     
-    for change in changes[:20]:
+    for change in reversed(changes[-20:]):
         entry = ET.SubElement(channel, 'item')
         tool = change.get('slug', 'unknown').replace('-', ' ').title()
         ET.SubElement(entry, 'title').text = f"Price change detected: {tool}"

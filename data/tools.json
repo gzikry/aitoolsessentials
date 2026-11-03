@@ -2099,7 +2099,7 @@
     "name": "Cursor",
     "category": "Development",
     "best_for": "AI-assisted coding in an editor with agent modes, cloud agents, and Cursor's own Grok/Composer models",
-    "price": "Free tier; Pro $20/mo; Pro+ $60/mo; Ultra $200/mo; Teams $40/user/mo",
+    "price": "Free $0; Plus $8/mo; Premium $30/mo; Super $100/mo; Ultra $200/mo; Teams $30+/user/mo",
     "rating": 4.6,
     "official": "https://cursor.com/",
     "summary": "Developer-focused AI editor with its own frontier models (Grok 4.6 jointly trained with xAI, Composer 2.5), agent requests, cloud agents, and Bugbot code review.",
@@ -3187,7 +3187,7 @@
     "name": "CoCounsel Legal",
     "category": "Legal",
     "best_for": "Westlaw- and Practical Law-grounded legal research, document analysis, and drafting",
-    "price": "Sales-quoted; official Westlaw Advantage with CoCounsel Essentials starts at $415.35/month",
+    "price": "Sales-quoted; Westlaw Advantage starts at $288.60/month",
     "rating": 4.3,
     "official": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
     "summary": "Thomson Reuters’ legal AI assistant grounded in Westlaw content and Practical Law guidance. Official product pages describe research, analysis, and drafting; an official Westlaw plans page lists a starting price for the Westlaw Advantage with CoCounsel Essentials bundle.",
@@ -3210,13 +3210,13 @@
     "key_features": [
       "Official product: CoCounsel Legal",
       "Grounded in Westlaw content, Practical Law, and organization knowledge",
-      "Official Westlaw plans page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month",
+      "Official Westlaw plans page lists Westlaw Advantage starting at $288.60/month",
       "Vendor pages describe Word, Outlook, and Teams integrations and a no-training-on-customer-data statement"
     ],
     "faq": [
       [
         "How much does CoCounsel cost?",
-        "Thomson Reuters’ official Westlaw plans page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages remain sales-quoted. Third-party seat figures are not official list prices."
+        "Thomson Reuters’ official Westlaw plans page lists Westlaw Advantage starting at $288.60/month. Broader CoCounsel Legal packages remain sales-quoted. Third-party seat figures are not official list prices."
       ],
       [
         "Does CoCounsel replace Westlaw?",
@@ -3749,7 +3749,7 @@
     "name": "AIDetector.cx",
     "category": "Productivity",
     "best_for": "Screening text, images, video and voice for AI-generation signals before publication or submission",
-    "price": "Free (5 trial checks) + Pro $12/mo ($120/yr) - Pro Plus $29/mo ($290/yr) - Business $79/mo ($790/yr)",
+    "price": "Free (5 trial checks) + Pro $10/mo billed annually ($120/yr) - Pro Plus $24.17/mo ($290/yr) - Business $65.83/mo ($790/yr)",
     "rating": 4.0,
     "official": "https://aidetector.cx/",
     "affiliate_url": "https://aidetector.cx/ai-checker-for-bloggers?aff=e3b5c457-7d5e-41a5-ab62-8977dfaf7f84",
@@ -6051,7 +6051,7 @@
     "name": "ReelTada",
     "category": "Video",
     "best_for": "Social video creators who want to turn one or two photos into a trend-shaped vertical short for TikTok, Reels or Shorts without filming or editing - pick a live template, upload, download. One-time credit packs mean no subscription hangs over you. Not a fit for anyone who needs a named company, published retention terms or a stated model provider before uploading photos, or for professional editing work (no timeline editor, no developer API).",
-    "price": "One-time video credit packs only, no subscription: Starter $9.90 for 10 credits, Creator $29.90 for 40 credits, Studio $59.90 for 100 credits. A standard template generation costs 10 credits; premium templates (e.g. Baby Lip Sync) cost 30. The pricing meta description advertises packs 'starting at $6.89' - a promotional entry price against the $9.90 list figure. Credits are returned if a generation fails. Verified 2026-11-02 on /pricing and the refund policy.",
+    "price": "One-time video credit packs only, no subscription: Starter $6.89 for 10 credits, Creator $22.89 for 40 credits, Studio $46.89 for 90 credits. A standard template generation costs 10 credits; the Baby Lip Sync template costs 30. Failed generations return the credits used. Checked 2026-11-03 on https://reeltada.com/pricing.",
     "rating": 3.6,
     "official": "https://reeltada.com/",
     "summary": "ReelTada turns one or two photos into a ready-to-post vertical video using trend-ready AI templates for TikTok, Instagram Reels and YouTube Shorts. It sells only one-time credit packs - no subscription - and returns credits when a generation fails, which the refund policy states in writing. The legal set exists (privacy, terms, refund) and the content rules in the terms are unusually specific. The weaknesses trail the trend-microsite class: no operator identity or jurisdiction anywhere, the privacy policy names no processors, no retention period and no training-use statement, three analytics scripts load on every page (Plausible, Cloudflare Insights, and a self-hosted script from analysis.gaolong.site) with none of them named in the policy, and its own refund policy still calls the product 'Bby Wow' - a template leftover from another brand.",
