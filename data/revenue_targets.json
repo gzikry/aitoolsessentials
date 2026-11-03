@@ -1866,5 +1866,25 @@
     "status": "not_started",
     "next_action": "Email support@reeltada.com about partner terms in the publication reply; no program published. Never invent affiliate URLs.",
     "notes": "One-time-pack economics ($9.90-$59.90) cap affiliate value; the operator's unidentified status and templated legal set mean any commercial relationship needs the vendor identified first."
+  },
+  {
+    "tool_slug": "pawheadshots",
+    "tool_name": "PawHeadshots",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/pawheadshots/"
+    ],
+    "best_audiences": [
+      "pet owners buying one-off novelty gifts",
+      "pet-brand and rescue social accounts"
+    ],
+    "status": "not_started",
+    "next_action": "Ask Vban LLC in the publication reply whether they run an affiliate or partner program; no program is published on the site. Never invent affiliate URLs.",
+    "notes": "One-time $19.90/$29.90 packs cap affiliate value at a few dollars a sale, and the operator publishes no partner page. Any commercial relationship also needs the company's jurisdiction and address, which the site does not carry."
   }
 ]

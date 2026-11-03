@@ -2547,6 +2547,31 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "pawheadshots",
+      "name": "PawHeadshots",
+      "category": "Creative",
+      "official_url": "https://pawheadshots.com/",
+      "review_url": "/tools/pawheadshots/",
+      "price_label": "One-time only, no subscription: Superstar Pack $19.90 (36 ultra-HD images - 30 included looks plus 6 styles you pick - with Employee ID, PawkedIn profile and Pet Resume); Me & My Human Pack $29.90 (30 portraits of you with your pet, 30 transparent PNG cutouts, menswear or womenswear). USD; checkout adds local sales tax or VAT. Verified 2026-11-02 on the homepage pricing section and /studio.",
+      "pricing_summary": "One-time packs only, no subscription: Superstar Pack $19.90 (36 ultra-HD images: 30 included looks + 6 styles chosen, plus Employee ID, PawkedIn profile and Pet Resume); Me & My Human Pack $29.90 (30 owner-plus-pet portraits, 30 transparent PNG cutouts). USD, local tax/VAT added at checkout. Checked 2026-11-02 on the homepage pricing section and /studio - the site has no /pricing route (404).",
+      "pricing_url": "https://pawheadshots.com/",
+      "pricing_checked_date": "2026-11-02",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "design",
+        "marketing",
+        "email"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

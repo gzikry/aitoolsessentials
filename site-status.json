@@ -2,12 +2,12 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "last_generated": "2026-11-02",
-  "tools_tracked": 104,
-  "html_pages": 1030,
+  "tools_tracked": 105,
+  "html_pages": 1048,
   "evidence_freshness": {
-    "pricing_records": 104,
+    "pricing_records": 105,
     "latest_pricing_checked": "2026-11-02",
-    "pricing_checked_on_latest_date": 5,
+    "pricing_checked_on_latest_date": 6,
     "pricing_older_than_latest": 99,
     "pricing_undated_or_invalid": 0
   },

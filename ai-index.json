@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-02",
-  "tools_count": 104,
+  "tools_count": 105,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -763,6 +763,13 @@
       "category": "Video",
       "price": "One-time video credit packs only, no subscription: Starter $9.90 for 10 credits, Creator $29.90 for 40 credits, Studio $59.90 for 100 credits. A standard template generation costs 10 credits; premium templates (e.g. Baby Lip Sync) cost 30. The pricing meta description advertises packs 'starting at $6.89' - a promotional entry price against the $9.90 list figure. Credits are returned if a generation fails. Verified 2026-11-02 on /pricing and the refund policy.",
       "url": "https://aitoolsessentials.com/tools/reeltada/"
+    },
+    {
+      "name": "PawHeadshots",
+      "slug": "pawheadshots",
+      "category": "Creative",
+      "price": "One-time only, no subscription: Superstar Pack $19.90 (36 ultra-HD images - 30 included looks plus 6 styles you pick - with Employee ID, PawkedIn profile and Pet Resume); Me & My Human Pack $29.90 (30 portraits of you with your pet, 30 transparent PNG cutouts, menswear or womenswear). USD; checkout adds local sales tax or VAT. Verified 2026-11-02 on the homepage pricing section and /studio.",
+      "url": "https://aitoolsessentials.com/tools/pawheadshots/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

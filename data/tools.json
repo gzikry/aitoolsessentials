@@ -6103,5 +6103,81 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 3.9/5 - the one-job tool works as advertised and the no-subscription, credits-back-on-failure mechanics are reader-friendly. Transparency brings it to 3.6: an unidentified operator, a privacy policy that answers none of the processing questions, three unnamed analytics hosts on the legal pages, a leftover template brand ('Bby Wow') in the refund policy, and a promotional $6.89 entry claim against a $9.90 list price."
+  },
+  {
+    "slug": "pawheadshots",
+    "name": "PawHeadshots",
+    "category": "Creative",
+    "best_for": "Cat and dog owners who want a comedy headshot pack out of one phone photo - 30 fixed looks plus 6 styles you choose, with a matching Employee ID, PawkedIn profile and printable Pet Resume - as a single $19.90 one-time purchase; a $29.90 'Me & My Human' pack does 30 portraits of you and your pet together. Not a fit if you need to see the results before paying (there is no preview), if you expect the files to be stored for you (they are deleted 7 days after purchase), or if you need a company address and governing-law clause before you buy.",
+    "price": "One-time only, no subscription: Superstar Pack $19.90 (36 ultra-HD images - 30 included looks plus 6 styles you pick - with Employee ID, PawkedIn profile and Pet Resume); Me & My Human Pack $29.90 (30 portraits of you with your pet, 30 transparent PNG cutouts, menswear or womenswear). USD; checkout adds local sales tax or VAT. Verified 2026-11-02 on the homepage pricing section and /studio.",
+    "rating": 4.0,
+    "official": "https://pawheadshots.com/",
+    "summary": "PawHeadshots turns one photo of a dog or cat into 36 AI portraits: all 30 of its fixed comedy looks (Vacation Mode, Gym Bro, Shark Attack, Renaissance Noble and so on) plus six styles you choose, with a printable Employee ID, a PawkedIn parody profile and a one-page Pet Resume bundled in. A second pack renders 30 portraits of you with your pet in the same scenes. It is a novelty product, and the paperwork is unusually complete for a four-day-old domain: the operator is named as Vban LLC in both policies, every processor is named by company (Cloudflare for hosting, storage and order email; fal.ai running OpenAI and Google models; Stripe and Link as merchant of record), retention is given as periods rather than phrases, photos are explicitly excluded from AI training, and the pack carries commercial rights. The gaps are identity detail and buyer protection rather than honesty: no postal address, no jurisdiction and no governing-law clause, no /about, /contact, /cookies or /refund route, no preview before payment, and images that are deleted after seven days whether or not you downloaded them.",
+    "use_cases": [
+      "Making a joke headshot set of a pet for social posts, cards or a family group chat",
+      "Producing a novelty Employee ID, PawkedIn profile and printable Pet Resume in one purchase",
+      "Getting portraits of an owner and their pet together in the same 30 scenes",
+      "Replacing a paid photo shoot for a pet-brand or rescue social account",
+      "Testing whether AI preserves a specific animal's markings before committing to a bigger shoot"
+    ],
+    "pros": [
+      "Operator is named, not hidden: both the privacy policy and the terms state 'PawHeadshots is run by Vban LLC', which most tools in this class never do",
+      "Processors are named by company and by role - Cloudflare (hosting, storage, order email), fal.ai running OpenAI and Google models, Stripe and Link as merchant of record - and the policy warns that fal.ai's own retention is separate from the site's schedule",
+      "Retention is given as periods, not adjectives: original uploads deleted within 3 days, finished images after 7 days, IP-based counters within a day or two, order records kept for tax and accounting",
+      "Training use is stated plainly and consistently in the policy ('we don't use them to train AI models') and the FAQ ('We never use your photos to train AI')",
+      "The pack carries commercial rights for prints, social posts or a pet's own business, and the terms say those rights end if the order is fully refunded - an unusually clear position for a novelty product",
+      "Analytics disclosure matches what actually loads: the policy names Cloudflare Web Analytics as cookieless, and the Cloudflare beacon is the only tracker on the pages we fetched - no unnamed GA4 or Plausible",
+      "Pricing is consistent across four surfaces (hero, pricing section, FAQ, terms): one-time, no subscription, no countdown timer, no annual toggle hiding a higher figure",
+      "The terms carry the clauses a human-plus-pet product needs: 18+ only, photos of people must be of you, no photos of children, and only photos you have the right to use",
+      "Real product surface rather than a landing page: 68 sitemap URLs including /studio, a breed directory with per-breed pages, a pet-resume builder and per-breed resume templates"
+    ],
+    "cons": [
+      "No postal address, jurisdiction or governing law anywhere: Vban LLC is named but never located, and a whole-page sweep of the terms finds no 'governing law', 'jurisdiction', 'courts' or arbitration language - if an order goes wrong you have a company name and an inbox, nothing more",
+      "No /about, /contact, /cookies or /refund route exists (all 404): the only contact is a mailto to support@pawheadshots.com, and refunds live in a single 24-hour clause in the terms rather than a published policy",
+      "Images are deleted 7 days after purchase and cannot be restored, with uploads gone in 3 - a buyer who loses the order email or misses the window loses the pack, and the vendor says so instead of offering storage",
+      "No preview before payment - the site answers 'Can I see a preview first?' with 'There's no preview... your images are made once you've paid', so you cannot judge whether your pet's markings survived before spending $19.90",
+      "Refunds are narrow by design: remake or refund only if images are missing or the order failed, reported within 24 hours, and 'we don't offer refunds after 24 hours or for any other reason' unless local law overrides",
+      "No operating history and no independent user reports: the domain was registered 2026-10-30, four days before the submission, so nothing third-party corroborates the delivery times or the likeness claim",
+      "AI results vary and the site says so - faces, markings, hair and clothing may not match your photo - and the Pet Resume is a novelty document ('a playful award, not an official certification'), not something a landlord has to accept"
+    ],
+    "key_features": [
+      "One photo in, 36 images out: all 30 fixed looks plus 6 styles the buyer picks",
+      "Me & My Human mode: 30 portraits of owner and pet together, with transparent PNG cutouts",
+      "Bundled Employee ID, PawkedIn parody profile and printable one-page Pet Resume",
+      "Breed directory with per-breed headshot and resume-template pages (dogs and cats)",
+      "One-time packs only - $19.90 and $29.90 - no subscription or credit system",
+      "Stated deletion schedule: uploads within 3 days, finished images after 7 days"
+    ],
+    "faq": [
+      [
+        "Is PawHeadshots a subscription?",
+        "No. It sells two one-time packs, $19.90 for the 36-image Superstar Pack and $29.90 for the Me & My Human portraits, and the FAQ answers 'Is this a subscription?' with 'Nope. You pay once.' We found no recurring plan, credit expiry or renewal term anywhere on the site."
+      ],
+      [
+        "What happens to the photo I upload?",
+        "The privacy policy says uploads are used only to check suitability and render the images, are never used to train AI models, and are deleted from storage automatically within 3 days. Finished images are deleted 7 days after purchase and cannot be restored. We verified those sentences on 2026-11-02; we did not independently verify the deletion itself."
+      ],
+      [
+        "Who operates PawHeadshots?",
+        "The privacy policy and terms both say 'PawHeadshots is run by Vban LLC', with support@pawheadshots.com as the contact. No address, state of organization or governing-law clause is published - that omission is recorded in this listing rather than held against the vendor."
+      ],
+      [
+        "Can I get a refund?",
+        "Only in a narrow window: the terms offer a remake or refund if images are missing or the order failed, reported within 24 hours of purchase, and state that refunds are not offered after 24 hours or for other reasons unless local law requires it."
+      ],
+      [
+        "Can I use the images commercially?",
+        "Yes. The terms grant personal and commercial use of the images in your pack - prints, social posts, even a pet's own business - provided the order was not refunded. You remain responsible for how you use them."
+      ]
+    ],
+    "trial_checklist": [
+      "Upload a photo you would not mind a stranger seeing, and check the result keeps your pet's distinctive markings before buying anything",
+      "Download all 36 images the same evening - the vendor deletes them 7 days after purchase and cannot restore them",
+      "Keep the order email and the /api/orders link it points to; there is no account library to fall back on",
+      "If anything is missing or failed, email support@pawheadshots.com within 24 hours - that is the only refund window the terms allow"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - one clearly stated product at a stated price, delivered through a real studio flow (68 sitemap URLs including breed and resume pages) with a live checkout route, and photo-plus-payment handling documented in more detail than most tools in this catalog. Transparency holds it at 4.0 rather than higher: Vban LLC is named in both policies and every processor is named by company, but no postal address, jurisdiction or governing-law clause appears, there is no /about, /contact, /cookies or /refund route, there is no preview before payment, and the 7-day image deletion is a limit a buyer only meets after paying. It is not scored lower because none of that is contradicted anywhere on the site - the paperwork matches the product - but there is also no operating history: the domain was registered 2026-10-30 and no independent user reports exist."
   }
 ]

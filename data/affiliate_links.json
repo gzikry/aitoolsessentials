@@ -941,6 +941,15 @@
       "public_href": "/go/reeltada/",
       "partner": false
     },
+    "pawheadshots": {
+      "name": "PawHeadshots",
+      "slug": "pawheadshots",
+      "official": "https://pawheadshots.com/",
+      "destination": "https://pawheadshots.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/pawheadshots/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",
