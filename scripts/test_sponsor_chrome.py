@@ -162,6 +162,37 @@ def test_null_enrollment_offer_and_page() -> None:
             raise AssertionError("offer page lost its copy")
 
 
+def test_return_pages_are_receipts() -> None:
+    with TemporaryDirectory() as raw:
+        root = Path(raw)
+        _write(root, {"enrollment": ENROLLED})
+        write_page(root, {})
+        page = (root / "sponsor" / "thanks" / "index.html").read_text()
+        _has(page, "<h1>Payment received.</h1>")
+        _has(page, 'name="robots" content="noindex,follow"')
+        _has(page, 'href="https://aitoolsessentials.com/sponsor/thanks/"')
+        _has(page, "aitoolsessentials@gmail.com")
+        _has(page, "with your pitch, logo, and link")
+        _has(page, "We approve the creative before placement.")
+        _has(page, "Placements are always labeled Sponsored.")
+        _has(page, "$50 newsletter issue")
+        _has(page, "$150/mo site bar")
+        _has(page, "$200 bundle")
+        _lacks(page, "buy.stripe.com")
+        _lacks(page, "George")
+        _lacks(page, "data-sponsor")
+        if stamp(page, "sponsor/thanks/index.html", root=root, env={}) != page:
+            raise AssertionError("sponsor thanks page was stamped")
+        if stamp(page, "services/audit-thanks/index.html", root=root, env={}) != page:
+            raise AssertionError("audit thanks page was stamped")
+        if stamp(CHARGE, "checkout/complete/index.html", root=root, env={}) != CHARGE:
+            raise AssertionError("premium return was stamped")
+    committed = (Path(__file__).resolve().parents[1] / "sponsor" / "thanks" / "index.html").read_text()
+    _has(committed, "Payment received")
+    _has(committed, 'name="robots" content="noindex')
+    _has(committed, "Placements are always labeled Sponsored.")
+
+
 def test_checkout_is_unchanged() -> None:
     with TemporaryDirectory() as raw:
         root = Path(raw)
@@ -702,6 +733,7 @@ def test_stamp_site_walk() -> None:
 def main() -> None:
     tests = (
         test_null_enrollment_offer_and_page,
+        test_return_pages_are_receipts,
         test_checkout_is_unchanged,
         test_house_link_cleanup_and_footer_fallback,
         test_enrolled_line_after_footer,

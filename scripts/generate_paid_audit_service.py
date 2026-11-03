@@ -44,7 +44,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from premium_copy import audit_buy_html
+from premium_copy import ACCESS_EMAIL, audit_buy_html
 
 DOMAIN = "https://aitoolsessentials.com"
 
@@ -200,10 +200,12 @@ def _esc(s: str) -> str:
             .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def _head(title: str, desc: str, canonical: str) -> str:
+def _head(title: str, desc: str, canonical: str, robots: str = "") -> str:
+    robot = f'<meta name="robots" content="{robots}">' if robots else ""
     return (
         '<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-        f'<meta name="description" content="{_esc(desc)}">'
+        + robot
+        + f'<meta name="description" content="{_esc(desc)}">'
         f'<title>{_esc(title)}</title>'
         f'<link rel="canonical" href="{canonical}">'
         f'<meta property="og:title" content="{_esc(title)}">'
@@ -528,6 +530,34 @@ def generate_structure_page(root: Path, today: str) -> int:
     return 1
 
 
+def generate_thanks_page(root: Path, today: str) -> int:
+    """Post-payment return for the written audit. Not a second sales page."""
+    del today
+    out = root / "services" / "audit-thanks"
+    out.mkdir(parents=True, exist_ok=True)
+    desc = (
+        f"Payment received for the ${AUDIT_PRICE_USD} Written AI Stack Audit. "
+        f"Send your tool list and goals to {ACCESS_EMAIL}."
+    )
+    title = "Payment received — Written AI Stack Audit"
+    page = f'''<!doctype html><html lang="en">{_head(title, desc, DOMAIN + "/services/audit-thanks/", robots="noindex,follow")}<body>
+{_header()}<main>
+<section class="scene scene-light"><div class="article-shell">
+<p class="kicker">Written AI Stack Audit</p>
+<h1>Payment received.</h1>
+<p class="subhead">${AUDIT_PRICE_USD}, one-time. This is the return for the written audit.</p>
+<div class="score-card"><span>What we need from you</span><h2>Your tool list and your goals.</h2>
+<p>Send them to <a href="mailto:{ACCESS_EMAIL}">{ACCESS_EMAIL}</a>. List the AI tools you pay for and the workflows you want addressed. If you do not know a cost or a renewal date, write unknown. We report blanks as blank.</p></div>
+<div class="score-card"><span>What happens next</span><h2>We confirm the audit is buildable, then we write it.</h2>
+<p>Once we have your tool list and goals, we confirm the audit is buildable within {AUDIT_INTAKE_SLA}. The written audit follows within {AUDIT_TURNAROUND} of that confirmation. It includes a direct answer to every workflow you named, a keep/cut/defer table priced with your own numbers, a deep pass on the bottleneck you ranked, a Monday action per finding, and a 30-day sequence.</p></div>
+<p><a class="button button-blue" href="mailto:{ACCESS_EMAIL}">Email your tool list and goals</a></p>
+<p class="muted-small">Strategy and written recommendations only. No implementation, no account access, no credentials or API keys.</p>
+</div></section>
+</main>{_footer()}{_scripts()}</body></html>'''
+    (out / "index.html").write_text(page)
+    return 1
+
+
 def generate_all(root: Path, today: str) -> dict[str, int]:
     stats = {
         "paid_audit": generate_service_page(root, today),
@@ -535,6 +565,7 @@ def generate_all(root: Path, today: str) -> dict[str, int]:
         "received": generate_received_page(root, today),
         "sample": generate_sample_page(root, today),
         "standard": generate_structure_page(root, today),
+        "thanks": generate_thanks_page(root, today),
     }
     return stats
 

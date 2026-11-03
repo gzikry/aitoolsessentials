@@ -89,6 +89,7 @@ FOOTER_SPONSOR_PAGES = (
     "guides/official/index.html",
     "guides/official/qwen/index.html",
     "services/audit-intake.html",
+    "services/audit-thanks/index.html",
     "services/audit-standard.html",
     "services/intake-received.html",
     "services/paid-audit.html",

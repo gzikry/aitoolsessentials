@@ -43,7 +43,12 @@ _LABEL = "Sponsored"
 _HOUSE_HREF = "/sponsor/"
 _HOUSE_REL = "nofollow"
 _EXTERNAL_REL = "external noopener nofollow"
-_CHARGE_RETURN = "checkout/complete/index.html"
+# Premium stays on /checkout/complete/. Sponsor and written-audit payments
+# return to their own receipts. None of these is stamped with a sponsor line.
+_PREMIUM_RETURN = "checkout/complete/index.html"
+_SPONSOR_RETURN = "sponsor/thanks/index.html"
+_AUDIT_RETURN = "services/audit-thanks/index.html"
+_CHARGE_RETURNS = frozenset({_PREMIUM_RETURN, _SPONSOR_RETURN, _AUDIT_RETURN})
 _PLAIN_LIMIT = 40
 
 _NAV_START = "<!-- AIT SPONSOR NAV START -->"
@@ -211,6 +216,9 @@ def write_page(root: Path, env: Mapping[str, str] | None = None) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     from asset_rev import stamp_html
     dest.write_text(stamp_html(_page_html(runtime.tiers, _tool_count(root)), dest, root))
+    thanks = root / _SPONSOR_RETURN
+    thanks.parent.mkdir(parents=True, exist_ok=True)
+    thanks.write_text(stamp_html(_sponsor_thanks_html(), thanks, root))
 
 
 def stamp(
@@ -254,7 +262,7 @@ def _repo_root() -> Path:
 
 
 def _page_role(rel: str) -> _PageRole:
-    if rel == _CHARGE_RETURN:
+    if rel in _CHARGE_RETURNS:
         return _PageRole.CHARGE_RETURN
     return _PageRole.PUBLIC
 
@@ -606,6 +614,67 @@ def _page_html(rows: tuple[tuple[_Tier, _Payment], ...], tool_count: object = No
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
         "<title>" + _OFFER_TITLE + "</title>\n"
         '<link rel="canonical" href="https://aitoolsessentials.com/sponsor/">\n'
+        '<link rel="stylesheet" href="/css/styles.css">\n'
+        "</head>\n"
+        "<body>\n"
+        + _HEADER
+        + '\n<main class="sponsor-offer">\n<section class="scene scene-light content-hub"><div class="article-shell wide">\n'
+        + "\n".join(blocks)
+        + "\n</div></section>\n</main>\n"
+        + _FOOTER
+        + "\n</body>\n</html>\n"
+    )
+
+
+_THANKS_TITLE = "Payment received — sponsorship"
+_THANKS_DESC = (
+    "Payment received for a $50 newsletter issue, the $150/mo site bar, or the $200 bundle. "
+    "Reply with your pitch, logo, and link. We approve the creative before placement. "
+    "Placements are labeled Sponsored."
+)
+
+
+def _sponsor_thanks_html() -> str:
+    blocks = [
+        "<h1>Payment received.</h1>",
+        "<p>This return is for a $50 newsletter issue, the $150/mo site bar, or the $200 bundle.</p>",
+        "<h2>What to send</h2>",
+        (
+            "<p>Reply to <a href=\"mailto:"
+            + _SPONSOR_MAIL
+            + "\">"
+            + _SPONSOR_MAIL
+            + "</a> with your pitch, logo, and link.</p>"
+        ),
+        (
+            "<p>Pitch text is limited to "
+            + str(_PLAIN_LIMIT)
+            + " characters. An optional logo is "
+            + _LOGO_HEIGHT
+            + " tall. The link is your https URL.</p>"
+        ),
+        "<h2>Before placement</h2>",
+        "<p>We approve the creative before placement.</p>",
+        "<p>Placements are always labeled Sponsored.</p>",
+        "<p>A sponsor never influences reviews, scores, or verdicts.</p>",
+        (
+            '<p><a class="button button-blue" href="mailto:'
+            + _SPONSOR_MAIL
+            + '">Email your pitch, logo, and link</a></p>'
+        ),
+        '<p><a href="/sponsor/">Sponsorship details</a></p>',
+        "<p>" + _SIGN_OFF + "</p>",
+    ]
+    return (
+        "<!doctype html>\n"
+        '<html lang="en">\n'
+        "<head>\n"
+        '<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        '<meta name="robots" content="noindex,follow">\n'
+        '<meta name="description" content="' + _THANKS_DESC + '">\n'
+        "<title>" + _THANKS_TITLE + "</title>\n"
+        '<link rel="canonical" href="https://aitoolsessentials.com/sponsor/thanks/">\n'
         '<link rel="stylesheet" href="/css/styles.css">\n'
         "</head>\n"
         "<body>\n"
