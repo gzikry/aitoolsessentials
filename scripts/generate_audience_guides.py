@@ -78,9 +78,11 @@ GUIDES = {
         'slugs':['harvey','spellbook','cocounsel','claude','perplexity','microsoft-copilot'],
         'angle': ('Legal buyers start with privilege, not features. Harvey is the quote-based enterprise '
                   'platform for firms and in-house teams. Spellbook is Word-native contract review and drafting. '
-                  'CoCounsel Legal is Thomson Reuters’ Westlaw- and Practical Law-grounded assistant; the only '
-                  'official dollar figure recorded here is Westlaw Advantage with CoCounsel Essentials starting '
-                  'at $415.35/month. Consumer chat tiers are the wrong place for client-identifiable files. '
+                  'CoCounsel Legal is Thomson Reuters’ Westlaw- and Practical Law-grounded assistant. '
+                  'The official Westlaw plans page, checked 2026-11-03, lists Westlaw Advantage starting at '
+                  '$288.60/month. The older Westlaw Advantage with CoCounsel Essentials price of $415.35/month '
+                  'is not on that page. Broader CoCounsel Legal packages remain sales-quoted. '
+                  'Consumer chat tiers are the wrong place for client-identifiable files. '
                   'Verify every citation in a primary research product before advice or filing.'),
     },
     'best-ai-tools-for-teachers.html': {

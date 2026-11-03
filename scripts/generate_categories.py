@@ -52,7 +52,8 @@ def generate_category_page(root: Path, cat: str, cat_tools: list, tools: list, t
 
     from urllib.parse import quote
     other_cats = sorted({t2['category'] for t2 in tools if t2['category'] != cat})
-    pills = ''.join(f'<a class="guide-pill" href="../{quote(c, safe="")}/">{c}</a>' for c in other_cats[:8])
+    # Literal paths: the internal-link audit matches hrefs without decoding %20 or &amp;.
+    pills = ''.join(f'<a class="guide-pill" href="../{c}/">{c}</a>' for c in other_cats[:8])
     related_categories = f'<div class="category-related"><p class="kicker light">Explore related categories</p><div class="guide-pills">{pills}</div></div>'
 
     html = f'''<!doctype html>
@@ -152,7 +153,7 @@ def generate_category_hub(root: Path, tools: list, today: str) -> Path:
     for i, cat in enumerate(cats, start=1):
         cat_tools = sorted(by_cat[cat], key=lambda x: -x.get('rating', 0))
         n = len(cat_tools)
-        href = quote(cat, safe='') + '/'
+        href = cat + '/'
         mini = ''.join(
             f'<a class="text-link" href="../tools/{t["slug"]}/">{htmlesc(t["name"])} ›</a>'
             for t in cat_tools[:3]

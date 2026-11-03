@@ -10,6 +10,7 @@ Scans all HTML pages, builds a link graph, and identifies:
 from __future__ import annotations
 
 import re
+import sys
 from collections import defaultdict
 from pathlib import Path
 from urllib.parse import urljoin
@@ -108,6 +109,41 @@ def find_orphan_pages(pages: list[Path], reverse_graph: dict) -> list[str]:
             orphans.append(url)
     return orphans
 
+
+def intentional_orphan_reason(url: str, html: str) -> str | None:
+    """Pages that stay unlinked on purpose.
+
+    /404.html is the error page. /shortlist.html is opened only by the
+    client-side widget in js/site.js after a reader saves a tool; static HTML
+    deliberately does not link an empty shortlist. Moved pages are noindex
+    refresh stubs, and indexable pages are not allowed to link to those stubs.
+    /go/ hops are also noindex refreshes, but they are the public partner path
+    and are linked from the matching tool and category pages.
+    """
+    if url == "/404.html":
+        return "error page"
+    if url == "/shortlist.html":
+        return "client-side shortlist widget only"
+    if url.startswith("/go/"):
+        return None
+    if 'http-equiv="refresh"' in html and "noindex" in html:
+        return "redirect stub"
+    return None
+
+
+def classify_orphans(pages: list[Path], orphans: list[str]) -> tuple[list[str], list[tuple[str, str]]]:
+    """Split orphans into pages that need a link and pages left unlinked on purpose."""
+    html_by_url = {get_page_url(page): page.read_text(encoding="utf-8", errors="ignore") for page in pages}
+    unexpected: list[str] = []
+    intentional: list[tuple[str, str]] = []
+    for url in orphans:
+        reason = intentional_orphan_reason(url, html_by_url.get(url, ""))
+        if reason:
+            intentional.append((url, reason))
+        else:
+            unexpected.append(url)
+    return unexpected, intentional
+
 def audit_conversion_pages(reverse_graph: dict) -> dict:
     """Check how many internal links point to conversion pages."""
     results = {}
@@ -142,7 +178,7 @@ def find_link_opportunities(graph: dict, reverse_graph: dict) -> list[dict]:
     
     return opportunities
 
-def main():
+def main() -> int:
     print("Internal Linking Audit")
     print("=" * 50)
     
@@ -153,9 +189,13 @@ def main():
     
     # 1. Orphan pages
     orphans = find_orphan_pages(pages, reverse_graph)
-    print(f"\n1. ORPHAN PAGES ({len(orphans)}):")
-    for orphan in orphans[:10]:
+    unexpected, intentional = classify_orphans(pages, orphans)
+    print(f"\n1. UNEXPECTED ORPHANS ({len(unexpected)}):")
+    for orphan in unexpected:
         print(f"   - {orphan}")
+    print(f"\n1b. INTENTIONAL ORPHANS ({len(intentional)}):")
+    for orphan, reason in intentional:
+        print(f"   - {orphan} ({reason})")
     
     # 2. Conversion page audit
     print("\n2. CONVERSION PAGE INBOUND LINKS:")
@@ -183,6 +223,11 @@ def main():
     print("   - Add 'Keep, Test, Cut' signup to all article pages")
     print("   - Add internal links from tool category pages to /stack-audit.html")
     print("   - Add 'Run free audit' link to /comparisons/best-ai-tools.html")
+    if unexpected:
+        print(f"\nunexpected orphans: {len(unexpected)}")
+        return 1
+    print("\nunexpected orphans: 0")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

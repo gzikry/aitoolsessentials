@@ -23,7 +23,7 @@
     },
     "claude": {
       "date": "2026-09-18",
-      "digest": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2–150 users and lists Standard seats at $20 per seat per month ",
+      "digest": "Claude Free is $0. Pro is $17 per month with a $200 annual prepayment or $20 month-to-month. Max starts at $100 per month. Team supports 2\u2013150 users and lists Standard seats at $20 per seat per month ",
       "verified_against": "https://www.anthropic.com/pricing"
     },
     "copy-ai": {
@@ -123,7 +123,7 @@
     },
     "n8n": {
       "date": "2026-10-01",
-      "digest": "Starter: €20/month billed annually for 2,500 workflow executions with unlimited steps and 1,600 Assistant credits/month. Pro: €50/month billed annually for 10,000 executions with either 4,000 or up to"
+      "digest": "Starter: \u20ac20/month billed annually for 2,500 workflow executions with unlimited steps and 1,600 Assistant credits/month. Pro: \u20ac50/month billed annually for 10,000 executions with either 4,000 or up to"
     },
     "notion-ai": {
       "date": "2026-09-18",
@@ -215,11 +215,11 @@
     },
     "harvey": {
       "date": "2026-10-01",
-      "digest": "Harvey’s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported."
+      "digest": "Harvey\u2019s official homepage does not publish a self-serve consumer price list. The primary CTA is Request a Demo / contact sales. No official USD seat price is reported."
     },
     "spellbook": {
       "date": "2026-10-01",
-      "digest": "Spellbook’s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as"
+      "digest": "Spellbook\u2019s official homepage does not publish a self-serve consumer price list. Official comparison materials describe custom per-seat annual subscriptions. No unverified dollar figure is reported as"
     },
     "cocounsel": {
       "date": "2026-11-03",

@@ -9,8 +9,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from urllib.parse import quote
-
 from affiliate_util import approved_programs
 
 DOMAIN = "https://aitoolsessentials.com"
@@ -122,7 +120,7 @@ def generate(root: Path, tools: list[dict] | None = None, today: str | None = No
     count = len(loaded)
     categories = sorted({t.get("category", "") for t in loaded})
     pills = "".join(
-        f'<a class="guide-pill" href="/categories/{quote(cat, safe="")}/">{esc(cat)}</a>'
+        f'<a class="guide-pill" href="/categories/{cat}/">{esc(cat)}</a>'
         for cat in categories
     )
     cards = "\n".join(
