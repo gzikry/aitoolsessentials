@@ -8,6 +8,8 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
+from page_ctas import keepcut_signup
+
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://aitoolsessentials.com"
 
@@ -218,6 +220,7 @@ def generate(root: Path = ROOT) -> Path:
 <section class="newsletter-panel"><div><span>Keep, Test, Cut</span><h2>One tool to keep. One to cut. One worth testing.</h2>
 <p>Get a concise weekly decision brief with pricing changes, overlap warnings, and one practical job to test.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../newsletter/">Read the newsletter</a><a class="button button-dark" href="../premium/">Explore Premium</a></div></section>
 <p class="affiliate-inline">Editorial recommendations are independent. Affiliate participation and paid placement never change rankings or conclusions. <a href="../legal/affiliate-disclosure.html">Disclosure</a>.</p>
+{keepcut_signup()}
 </main><div id="share-row" hidden></div>
 <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="../advertise/" rel="nofollow">Advertise</a><a href="../submit-tool.html" rel="nofollow">Submit a tool</a><a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:contact@aitoolsessentials.com">Contact</a><a href="../legal/about.html">About</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a></footer>
 <script>

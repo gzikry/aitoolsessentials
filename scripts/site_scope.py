@@ -32,6 +32,9 @@ WORKING_DIRS = frozenset({
     'scripts',
     'content_briefs',
     'audit_reports',
+    # Generator fragments, not published pages. The orphan audit and the
+    # chrome passes must not treat them as HTML documents.
+    'templates',
 })
 
 # What the sitemap excludes: working dirs, internal admin tools, redirect stubs.

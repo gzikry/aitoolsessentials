@@ -5,6 +5,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from page_ctas import keepcut_signup
+
 GUIDES = {
     'best-ai-tools-for-freelancers.html': {
         'kicker': 'Audience guide', 'audience': 'freelancers',
@@ -689,7 +691,7 @@ def generate(root: Path) -> int:
 <p class="monetization-note">Official product links remain in place until affiliate programs are approved and verified.</p>
 </article></section>
 <section class="newsletter-panel"><div><span>AI Tool Evaluation Scorecard</span><h2>Decide with evidence, not demos</h2><p>Compare candidates on workflow fit, quality, review time, privacy, collaboration, cost, and ROI.</p><p class="affiliate-inline">No email required. No newsletter signup.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../downloads/ai-tool-evaluation-scorecard.html">Open scorecard</a><a class="button button-dark" href="../benchmarks/">See benchmark evidence</a></div></section>
-
+{keepcut_signup()}
 </main><div id="share-row" hidden></div>
   {FOOTER}</body></html>'''
         (articles_dir/fname).write_text(page)

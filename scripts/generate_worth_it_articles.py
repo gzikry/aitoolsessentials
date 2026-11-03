@@ -9,6 +9,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from page_ctas import keepcut_signup
+
 ROOT = Path(__file__).resolve().parents[1]
 
 ARTICLES: dict[str, dict] = {}
@@ -581,6 +583,7 @@ def generate(root: Path = ROOT) -> list[str]:
 <main><section class="scene scene-light article-hero"><p class="kicker light">Straight answer</p><h1>{H.escape(a['title'])}</h1><p>{H.escape(a['desc'])}</p><div class="actions"><a class="button button-blue" href="../pricing-watch/">Check current prices</a><a class="button button-dark" href="learn.html">More guides</a></div></section>
 <section class="scene scene-light"><article class="article-shell">{a['body']}</article></section>
 <section class="newsletter-panel"><div><span>AI Tool Evaluation Scorecard</span><h2>Decide with evidence, not demos</h2><p>Compare candidates on workflow fit, quality, review time, privacy, collaboration, cost, and ROI.</p><p class="affiliate-inline">No email required.</p></div><div class="newsletter-actions"><a class="button button-blue" href="../downloads/ai-tool-evaluation-scorecard.html">Open scorecard</a><a class="button button-dark" href="../premium/">Premium research</a></div></section>
+{keepcut_signup()}
 </main><div id="share-row" hidden></div>
 <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="../advertise/" rel="nofollow">Advertise</a><a href="../submit-tool.html" rel="nofollow">Submit a tool</a><a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:contact@aitoolsessentials.com">Contact</a><a href="../legal/about.html">About</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a></footer><script src="../js/site.js" defer></script><script src="../js/analytics.js" defer></script></body></html>'''
         p.write_text(page)

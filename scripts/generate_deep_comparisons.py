@@ -13,6 +13,8 @@ import json
 import re
 from pathlib import Path
 
+from page_ctas import keepcut_signup
+
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://aitoolsessentials.com"
 MARKER_START = "<!-- AIT DEEP COMPARISON CROSS-LINKS START -->"
@@ -1299,6 +1301,7 @@ def _build_page(fname: str, article: dict) -> str:
 <section class="newsletter-panel"><div><span>AI Tool Evaluation Scorecard</span><h2>Decide with evidence, not demos</h2>
 <p>Compare candidates on workflow fit, quality, review time, privacy, collaboration, cost, and ROI.</p><p class="affiliate-inline">No email required.</p></div>
 <div class="newsletter-actions"><a class="button button-blue" href="../downloads/ai-tool-evaluation-scorecard.html">Open scorecard</a><a class="button button-dark" href="../premium/">Premium research</a></div></section>
+{keepcut_signup()}
 </main><div id="share-row" hidden></div>
 <footer class="footer"><span>© 2026 AIToolsEssentials</span><a href="../advertise/" rel="nofollow">Advertise</a><a href="../submit-tool.html" rel="nofollow">Submit a tool</a><a href="../legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a><a href="mailto:contact@aitoolsessentials.com">Contact</a><a href="../legal/about.html">About</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/terms.html">Terms</a></footer>
 <script src="../js/site.js" defer></script><script src="../js/analytics.js" defer></script></body></html>'''
