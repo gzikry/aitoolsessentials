@@ -2821,3 +2821,87 @@ body[data-page="home"] .home-learn h2 { margin-left: 0; margin-right: 0; }
 .submit-lanes { display: block; }
 .submit-lane { border-radius: 0; background: transparent; }
 .submit-lane + .submit-lane { border-top: 1px solid var(--ink); }
+
+/* Comparison and article CTAs. Same paper, ink rule, and flat button as the receipt redesign. */
+.page-cta {
+  width: min(1100px, calc(100% - 32px));
+  margin: 28px auto 56px;
+  padding: 28px 32px 18px;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  box-shadow: none;
+}
+.page-cta h2 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.page-cta p {
+  max-width: 68ch;
+  color: var(--ink);
+}
+.page-cta .button,
+.page-cta .button-blue,
+.page-cta .button-blue:hover {
+  border-radius: 4px;
+  box-shadow: none;
+  transform: none;
+}
+.page-cta .button-blue {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+}
+.page-cta .button-blue:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+.page-cta input[type="email"] {
+  display: inline-block;
+  width: min(280px, 100%);
+  margin: 8px 0 0 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+.page-cta a:not(.button) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.run-free-audit { margin: 16px 0 0; }
+.run-free-audit a {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.run-free-audit a:hover { color: #6E2420; }
+@media (max-width: 640px) {
+  .page-cta {
+    width: min(1100px, calc(100% - 24px));
+    padding: 22px 18px 12px;
+    margin: 20px auto 36px;
+  }
+  .page-cta input[type="email"] {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+  .page-cta .button { width: 100%; }
+}
+@media print {
+  .page-cta, .run-free-audit { display: none !important; }
+}

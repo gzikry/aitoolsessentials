@@ -5,6 +5,8 @@ import json
 import re
 from pathlib import Path
 
+from page_ctas import free_stack_audit_cta, run_free_audit_link
+
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = 'https://aitoolsessentials.com'
 EMAIL = 'contact@aitoolsessentials.com'
@@ -157,6 +159,7 @@ def generate_best_ai_tools(root: Path):
         '<p class="kicker">Best AI tools</p>'
         f'<h1>The practical AI shortlist for 2026.</h1>'
         f'<p class="subhead">A revenue-ready comparison page covering {len(tools)} important AI products across assistants, search, creative, coding, automation, meetings, and productivity.</p>'
+        f'{run_free_audit_link()}'
         '</div></section>'
         '<section class="scene scene-light comparison-section"><div class="article-shell wide">'
         '<h2>Calculators</h2>'
@@ -168,6 +171,7 @@ def generate_best_ai_tools(root: Path):
         '<section class="scene scene-light comparison-section"><div class="article-shell wide"><h2>Top 20 tools</h2><div class="directory-grid" style="max-width:980px">'
         f'{cards}'
         '</div></div></section>'
+        f'{free_stack_audit_cta()}'
     )
     page = _wrap('Best AI tools | AIToolsEssentials', 'The best AI tools organized by category, workflow fit, and practical use case.', 'Best AI tools', body, 'best-ai-tools.html')
     (root / 'comparisons' / 'best-ai-tools.html').write_text(page)
@@ -241,6 +245,7 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         '<section class="score-card related-next-steps"><span>Related</span><h3>Next reads</h3>'
         '<p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/evidence/">Evidence ledger</a> · <a href="/methodology/">Methodology</a> · <a href="/press/">Press / cite us</a> · <a href="/newsletter/">Keep, Test, Cut</a></p></section>'
         f'{_premium_module()}'
+        f'{free_stack_audit_cta()}'
     )
     page = _wrap(f'{title} | AIToolsEssentials', subhead, kicker, body, fname)
     (root / 'comparisons' / fname).write_text(page)

@@ -50,7 +50,7 @@ def refresh_sitemap(root: Path) -> list[str]:
     from html import unescape
     from urllib.parse import quote, unquote, urlparse
     # Working directories are not public content and must never be in the sitemap.
-    excluded_dirs = {'admin', 'marketing', 'scripts', 'content_briefs', 'audit_reports', 'go'}
+    excluded_dirs = {'admin', 'marketing', 'scripts', 'content_briefs', 'audit_reports', 'go', 'templates'}
     sitemap_urls = []
     for p in sorted(root.rglob('*.html')):
         if '.hermes' in p.parts:
@@ -648,6 +648,9 @@ print('Gamma category labels:', _sync_gamma_labels(root))
 
 from generate_internal_links import apply as _apply_internal_links
 print('Internal links:', _apply_internal_links(root))
+
+from page_ctas import inject as _inject_page_ctas
+print('Page CTAs:', _inject_page_ctas(root))
 
 from generate_search_index import main as _build_search_index  # noqa: E402
 if _build_search_index() != 0:
