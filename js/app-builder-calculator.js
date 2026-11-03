@@ -139,7 +139,8 @@
       "<h3>Cut</h3>" + list(result.cut, cutEmpty) +
       "<h3>Credit-expiry risk</h3>" + list(result.expiry, "") +
       "<p>" + result.reason + "</p>" +
-      '<p><a href="/go/v0/">Try v0</a> · <a href="/go/bolt-new/">Try Bolt.new</a> · <a href="/go/lovable/">Try Lovable</a> · <a href="/go/replit-ai/">Try Replit</a></p>'
+      '<p><a href="/go/v0/" rel="external noopener">Try v0</a> · <a href="/go/bolt-new/" rel="external noopener">Try Bolt.new</a> · <a href="/go/lovable/" rel="external noopener">Try Lovable</a> · <a href="/go/replit-ai/" rel="external noopener">Try Replit</a></p>' +
+      '<p class="ledger-disclosure">Some outbound links may earn a partner commission at no cost to you. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</p>'
     );
   }
 
