@@ -30,6 +30,27 @@ def tracked_tool_count() -> int:
         return 0
 
 
+def pricing_checked_date(slug: str, default: str) -> str:
+    """Return the live checked date for a snapshot, so the pitch cannot date-drift.
+
+    The overlap line hardcoded "on our 2026-10-13 check" and "checked 2026-09-18".
+    Both figures get re-verified by the daily run, so the sentences aged into
+    false statements within days of a re-check. Derive the date from
+    data/tool_sources.json the same way tracked_tool_count() derives the count.
+    """
+    try:
+        data = json.loads((SITE_ROOT / "data" / "tool_sources.json").read_text())
+        items = data.get("sources") or data.get("tools") or data
+        if isinstance(items, dict):
+            items = list(items.values())
+        for item in items:
+            if isinstance(item, dict) and item.get("slug") == slug:
+                return item.get("pricing_checked_date") or default
+    except Exception:  # noqa: BLE001
+        pass
+    return default
+
+
 def verified_overlap_line() -> str:
     """One overlap claim built only from figures in our own verified snapshots.
 
@@ -45,13 +66,15 @@ def verified_overlap_line() -> str:
     retired price to an editor is the same failure as sending an invented one,
     so this line now cites only figures currently stamped on our own page.
     """
+    cursor_date = pricing_checked_date("cursor", "2026-10-13")
+    claude_date = pricing_checked_date("claude", "2026-09-18")
     return (
         "The pattern is overlap, not duplication: Cursor no longer sells a standalone "
-        "seat — on our 2026-10-13 check cursor.com/pricing lists The X Subscription "
+        f"seat — on our {cursor_date} check cursor.com/pricing lists The X Subscription "
         "ladder, Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo and Ultra $200/mo, "
         "the same tiers that now carry Grok and X Premium. Put a frontier chat seat on "
         "top and it adds up fast: Claude Max starts at $100/mo (anthropic.com/pricing, "
-        "checked 2026-09-18). The coding-plus-chat stack stays the most expensive one "
+        f"checked {claude_date}). The coding-plus-chat stack stays the most expensive one "
         "to double up on."
     )
 
