@@ -646,6 +646,9 @@ print('Re-injected final metadata layers')
 from generate_static_comparisons import sync_gamma_category_labels as _sync_gamma_labels
 print('Gamma category labels:', _sync_gamma_labels(root))
 
+from generate_internal_links import apply as _apply_internal_links
+print('Internal links:', _apply_internal_links(root))
+
 from generate_search_index import main as _build_search_index  # noqa: E402
 if _build_search_index() != 0:
     raise RuntimeError('Search index build failed (a catalog tool has no index entry)')
