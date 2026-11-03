@@ -1,0 +1,49 @@
+KEEP, TEST, CUT · Issue 8 · Tue 3 Nov 2026
+
+Synthesia’s $9 Starter lasts one month
+Synthesia cut its Starter renewal from $29 to $19 and put $9 on the first month. You still need only one AI avatar seat.
+
+THIS WEEK’S CALL: AI AVATAR VIDEO
+KEEP: One avatar seat you render with weekly: HeyGen (https://aitoolsessentials.com/tools/heygen/) Creator ($29/mo, checked 18 Sep) or Synthesia Starter.
+TEST FIRST: Synthesia (https://aitoolsessentials.com/tools/synthesia/) Basic (free, 500 credits/mo), then Starter at $9 for month one and $19 after, checked 3 Nov.
+CUT: A second avatar seat kept for one old translation job.
+
+Synthesia’s pricing page now leads with first-month numbers. On our 3 Nov 2026 check of synthesia.io/pricing (https://aitoolsessentials.com/tools/synthesia/), Starter is $9 for the first month and $19 a month after that, with 1,250 credits a month. Pro is $49 for the first month, then $89, with 6,000 credits. Basic stays free at 500 credits a month. Enterprise is custom.
+
+This one’s a real cut, not just a promo. On 18 Sep the same page printed Starter at $29 with 1,200 credits. So the rung that cost $29 now renews at $19 with a few more credits. The page doesn’t state a rollover rule, though. Treat unused credits as gone at month end until it does.
+
+THE SECOND BILL IS THE REAL PRICE
+
+Pro is where the intro math bites. Going from $49 to $89 is $40 more a month, from the second bill on. The yearly toggle says you save up to 4 months, but our check found the annual cards and the FAQ totals on that page don’t agree, so we haven’t printed an annual figure. Get the annual total in writing at checkout before you prepay anything.
+
+Read the use rules before you plan a campaign around it, too. Synthesia’s acceptable-use policy restricts paid social ads with stock avatars unless it gives written consent. If ads are the job, you need Synthesia’s written OK, a custom avatar with the person’s consent, or a different tool.
+
+TWO AVATAR SEATS DO THE SAME JOB
+
+HeyGen (https://aitoolsessentials.com/tools/heygen/) sits right next to it. Checked 18 Sep 2026, HeyGen Creator is $29 a month or $24 billed annually for 600 credits, Pro starts at $49 for 1,000 credits, and Business is $149 plus $20 per extra seat. Free-plan output is licensed for personal, non-commercial evaluation only, so client work needs a paid plan. And HeyGen’s self-serve terms allow training on your content unless you request the opt-out.
+
+Where people overspend is paying for both, because one handled a translation and the other a training module last spring. Both clone a presenter. Both translate. Both bill in credits. Run your real script through Synthesia’s free 500 credits first, keep the seat whose terms fit your content, and cancel the other before it renews.
+
+PRICING WATCH (Seats whose official pages moved this week. Date is when we checked.)
+- Synthesia · 3 Nov 2026 · Intro price: Basic $0 (500 credits/mo) · Starter $9 first month, then $19/mo (1,250 credits) · Pro $49 first month, then $89/mo (6,000 credits) · Enterprise custom
+- ReelTada · 3 Nov 2026 · Price cut: One-time packs: Starter $6.89 (10 credits) · Creator $22.89 (40) · Studio $46.89 (90). The 2 Nov list prices of $9.90, $29.90 and $59.90 are off the page
+- AIDetector.cx · 3 Nov 2026 · Annual-only cards: Pro $10/mo billed annually ($120/yr) · Pro Plus $24.17/mo ($290/yr) · Business $65.83/mo ($790/yr). The $12, $29 and $79 monthly stickers are gone
+- Cursor · 3 Nov 2026 · Teams $30+: Free $0 · Plus $8/mo · Premium $30/mo · Super $100/mo · Ultra $200/mo · Teams $30+/user/mo
+Synthesia states no credit rollover rule. HeyGen was last checked 18 Sep 2026.
+Full tracker: https://aitoolsessentials.com/pricing-watch/
+
+WORTH A LOOK
+LayerGrab is $12 a month for image layers
+LayerGrab (https://aitoolsessentials.com/tools/layergrab/) splits a flat image into named, transparent layers and exports PNG, ZIP, or a layered PSD, from the browser or a Chrome extension. Official pricing checked 2 Nov 2026: Basic is $12 a month for 1,200 credits (about 120 layers), Premium is $36 a month for 3,600 credits (about 450 layers), and yearly billing saves 31%. One-time packs are $20 for 1,800 credits or $60 for 6,600. A layer costs 10 credits on Basic and 8 on Premium.
+
+The paperwork is thin: no named operator, no refund page, and pack credits expire per its FAQ. Run one real image through the free credits before you pay.
+
+ONE THING TO DO THIS WEEK
+Open every AI video tool you pay for and write down two numbers: the renewal price after any intro month, and the credits left this cycle. Synthesia’s $9 Starter renews at $19, and its $49 Pro renews at $89. If a seat hasn’t rendered a video in 30 days, download your finished files and cancel before the next charge. Then run the free Stack Audit (https://aitoolsessentials.com/stack-audit.html). It stays in your browser, needs no login, and maps overlap by job.
+
+Got a question about a tool on your card? Write to aitoolsessentials@gmail.com.
+— AIToolsEssentials
+
+You’re getting this because you subscribed to Keep, Test, Cut at aitoolsessentials.com. Past issues: https://aitoolsessentials.com/newsletter/  Get it free: https://aitoolsessentials.com/subscribe/
+Premium is a separate $12/month research membership: https://aitoolsessentials.com/premium/
+AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}

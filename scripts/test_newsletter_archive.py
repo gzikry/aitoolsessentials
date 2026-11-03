@@ -50,10 +50,19 @@ def main() -> None:
     if "Issue 6 · 20 Oct 2026" not in w43_page or "Cursor’s $20 Pro is off the page" not in w43_page:
         errors.append("w43 missing the issue line or headline")
     w44_page = (root / "newsletter" / "2026-w44.html").read_text(encoding="utf-8")
-    if "newsletter-pager-next" in w44_page:
-        errors.append("w44 invented a newer issue")
+    if 'href="/newsletter/2026-w45.html"' not in w44_page or "Next · Issue 8 ·" not in w44_page:
+        errors.append("w44 missing the next issue")
     if "Previous · Issue 6 · Cursor’s $20 Pro is off the page" not in w44_page:
         errors.append("w44 missing the previous issue")
+    w45_page = (root / "newsletter" / "2026-w45.html").read_text(encoding="utf-8")
+    if "newsletter-pager-next" in w45_page:
+        errors.append("w45 invented a newer issue")
+    if "Previous · Issue 7 · v0’s $20 tier is closed to new signups" not in w45_page:
+        errors.append("w45 missing the previous issue")
+    if "Issue 8 · 3 Nov 2026" not in w45_page or "Synthesia’s $9 Starter lasts one month" not in w45_page:
+        errors.append("w45 missing the issue line or headline")
+    if "{{{RESEND_UNSUBSCRIBE_URL}}}" in w45_page:
+        errors.append("w45 published the send placeholder")
     if "Issue 7 · 27 Oct 2026" not in w44_page or "v0’s $20 tier is closed to new signups" not in w44_page:
         errors.append("w44 missing the issue line or headline")
     if 'href="/compare/ai-app-builders/"' not in w44_page:
@@ -72,7 +81,7 @@ def main() -> None:
     if 'href="/subscribe/">Get the free email' not in w38_page:
         errors.append("w38 missing the subscribe CTA")
     sitemap = (REPO / "sitemap.xml").read_text(encoding="utf-8")
-    for slug in ("2026-w44.html", "2026-w43.html", "2026-w42.html", "2026-w38.html", "2026-w35.html"):
+    for slug in ("2026-w45.html", "2026-w44.html", "2026-w43.html", "2026-w42.html", "2026-w38.html", "2026-w35.html"):
         if f"https://aitoolsessentials.com/newsletter/{slug}" not in sitemap:
             errors.append(f"sitemap missing {slug}")
     issue1 = (root / "newsletter" / "2026-w35.html").read_text(encoding="utf-8")
@@ -93,14 +102,23 @@ def main() -> None:
         errors.append("issue 1 missing the archive back-link")
     if 'href="/newsletter/">← All past issues' not in w44_page:
         errors.append("w44 missing the archive back-link")
+    if 'href="/newsletter/">← All past issues' not in w45_page:
+        errors.append("w45 missing the archive back-link")
+    if "george" in w45_page.casefold():
+        errors.append("w45 uses a personal name")
+    if "1090 West Foothill, Claremont, CA 91711" not in w45_page:
+        errors.append("w45 missing the postal address")
     hub = (root / "newsletter" / "index.html").read_text(encoding="utf-8")
+    w45 = hub.find("/newsletter/2026-w45.html")
     w44 = hub.find("/newsletter/2026-w44.html")
     w43 = hub.find("/newsletter/2026-w43.html")
     w42 = hub.find("/newsletter/2026-w42.html")
     w38 = hub.find("/newsletter/2026-w38.html")
     w35 = hub.find("/newsletter/2026-w35.html")
-    if not (0 <= w44 < w43 < w42 < w38 < w35):
-        errors.append(f"archive order is {w44}, {w43}, {w42}, {w38}, {w35}")
+    if not (0 <= w45 < w44 < w43 < w42 < w38 < w35):
+        errors.append(f"archive order is {w45}, {w44}, {w43}, {w42}, {w38}, {w35}")
+    if "Synthesia cut its Starter renewal from $29 to $19 and put $9 on the first month. You still need only one AI avatar seat." not in hub:
+        errors.append("archive index dropped the issue 8 dek")
     if "Cursor now sells one five-rung ladder. If you already pay for a plan, nothing forces you to move." not in hub:
         errors.append("archive index dropped the issue 6 dek")
     if "which coding subscription to keep" in hub:
@@ -113,6 +131,11 @@ def main() -> None:
         errors.append(f"w44 draft parsed as issue {parsed44.issue} {parsed44.when!r}")
     if parsed44.title != "v0’s $20 tier is closed to new signups":
         errors.append(f"w44 title parsed as {parsed44.title!r}")
+    parsed45 = parse_draft((REPO / "admin" / "newsletter" / "2026-w45-draft.html").read_text(encoding="utf-8"), "2026-w45")
+    if parsed45.when != "Tue 3 Nov 2026" or parsed45.issue != 8:
+        errors.append(f"w45 draft parsed as issue {parsed45.issue} {parsed45.when!r}")
+    if parsed45.title != "Synthesia’s $9 Starter lasts one month":
+        errors.append(f"w45 title parsed as {parsed45.title!r}")
     if "Sonaopus is $99 once" not in hub or "The AI bill you forgot to cancel" not in hub:
         errors.append("archive index dropped an issue")
     if "Issues 2 and 3 were not published." not in hub:
