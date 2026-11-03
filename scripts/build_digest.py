@@ -132,6 +132,19 @@ def main() -> None:
     plat = {p["platform"]: p for p in window["platforms"]}
     figs = derive_figures()
 
+    # Page truth must have been MEASURED today, not merely cached. `refresh()` rewrites a carried
+    # row's deadline to "RE-VERIFIED <today>: ... = N days" from whatever verified-requests.json
+    # holds; on 2026-11-03 the cache still carried 2026-10-29 ages, so a digest built before the
+    # sweep would have asserted today's date beside a five-day-old age ("1 days" for a 6-day-old
+    # request) - the same defect class as the digest text the ages were moved off in the first place.
+    stale_truth = [o["slug"] for o in prev["opportunities"]
+                   if (verified.get(slug_of(o["url"])) or {}).get("checked") != today]
+    if stale_truth:
+        raise SystemExit(
+            f"{len(stale_truth)} carried row(s) have no page truth measured today "
+            f"({', '.join(stale_truth[:5])}{'...' if len(stale_truth) > 5 else ''}) - run "
+            f"`python3 scripts/verify_journo_requests.py` before building the digest")
+
     opps = [refresh(o, verified, FEED, today) for o in prev["opportunities"]]
     for o in opps:
         o.setdefault("slug", slug_of(o["url"]))
@@ -468,7 +481,7 @@ def main() -> None:
             (f"Nothing expired on its page: all {n_carried} carried URLs and the {len(NEW)} new ones "
              "returned HTTP 200 with the request body still served. An expiry has never once been "
              "observed on this source, so the absence of an expiry notice is weak evidence recorded as such."),
-            (f"ROWS CROSSED THE {STALE_DAYS}-DAY LINE SINCE YESTERDAY: {len(crossed)}."
+            (f"ROWS CROSSED THE {STALE_DAYS}-DAY LINE SINCE THE PREVIOUS DIGEST ({prev_day}): {len(crossed)}."
              + (" " + "; ".join(crossed) + "." if crossed else " No row crossed.")),
             (f"{len(at_ten)} ROW(S) SIT AT EXACTLY {STALE_DAYS} DAYS AND CROSS TOMORROW: "
              + "; ".join(at_ten) + "." if at_ten

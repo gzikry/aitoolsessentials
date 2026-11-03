@@ -1,0 +1,219 @@
+{
+ "new_rows": {
+  "cios-and-cisos-steps-to-address-ai-orphans": {
+   "who": "Kelsey Ziser, Senior Editor at InformationWeek (page domain informationweek.com; the body signs 'InformationWeek'). Her author page https://www.informationweek.com/author/kelsey-ziser returns HTTP 200, 587,272 bytes, title 'Kelsey Ziser | Senior Editor, InformationWeek'.",
+   "category": "AI / Enterprise Governance / Agent Sprawl",
+   "relevance": "medium",
+   "contact": "Body redacts the address ('Email: [email redacted]'). Route resolved OFF HER PUBLICATION'S OWN AUTHOR PAGE, not guessed: informationweek.com/author/kelsey-ziser HTTP 200 today, 587,272 bytes, publishing Kelsey.ziser@informationweek.com (both casings, twice in the markup) - route-checks-2026-11-03.json. HARD DEADLINE: 'Deadline for interviews is Wednesday EOD' = 2026-11-04, i.e. tomorrow. The only other link on the page is lnkd.in/eECBX7_D, a LinkedIn post about the earlier piece (login-walled, not a reply route).",
+   "notes": "The freshest on-beat-adjacent row of a five-day window and the only time-boxed one in the queue: AI orphans, defined on the page as 'AI agents that are abandoned by their human users or aren't associated with a human's identity'. We are not a CIO or a CISO and the draft says so in its first line rather than implying standing. What we do hold is the procurement mechanism that produces orphans at the seat level: per-seat AI pricing is small enough to be bought departmentally with no identity owner attached. That is the quantified half of her question, not the governance half. Drafted as section 2 of pitch-drafts-2026-11-03.md on that basis.",
+   "template": "Data-led: 44 of 105 tracked AI tools publish a monthly per-seat price, 35 of those at or under $25, median $16.50 (checked 2026-11-03) - cheap enough per seat to be bought without an owner, which is where orphans start. Signed AIToolsEssentials, under 200 words. See pitch-drafts-2026-11-03.md section 2."
+  },
+  "midlife-professionals-career-regret": {
+   "who": "Suzanne Reilley, sourcing for Business Insider (page domain businessinsider.com; the body says 'Would you like to be featured in Business Insider?').",
+   "category": "AI-Adjacent / Personal Career Testimony",
+   "relevance": "low",
+   "contact": "The body publishes an UNREDACTED address in plain text: 'suzanne [dot] reilley @ gmail [dot] com' - the only request in this window that states a usable address itself. It asks for 'a concise 1-2 paragraph pitch with specific details about your story'.",
+   "notes": "A route-rich, ask-unusable row, recorded so the pattern is visible: six personal-story topics (mid-life career regret; 'I work in AI and I'm burned out'; IPO aftermath; inheritance; side hustle; a Sweetgreen manager on $200K) and every one of them wants lived experience. We are a publisher with a price dataset; we have no burnout story and no career regret to sell. The one adjacent topic - burnout inside AI work - would need first-person testimony we cannot supply. NOT DRAFTED despite the published address.",
+   "template": "None. Personal testimony we do not have. NOT DRAFTED."
+  },
+  "uk-recruiters-ai-impact-on-billing-and-candidate-matching": {
+   "who": "Lindsay Dodgson, CNBC (page domain cnbc.com; the body signs '#journorequest #journorequests CNBC').",
+   "category": "AI / Recruitment Industry / Billing",
+   "relevance": "low",
+   "contact": "Address redacted in the body ('Get in touch if that's you [email redacted]'); the page publishes no other address, handle or link.",
+   "notes": "Wants UK recruitment professionals on how AI is changing what the industry bills. Right shape for a spend story, wrong standing: we cover AI tool pricing from the buyer side, never recruitment-agency billing. No route either, so it could not be sent even if the standing were there. NOT DRAFTED.",
+   "template": "None. No UK recruiter standing and no route. NOT DRAFTED."
+  },
+  "bank-and-brokerage-users-ai-tools-managing-personal-finances": {
+   "who": "genna, writing for MarketWatch (page domain marketwatch.com; the body says 'for a @MarketWatch story').",
+   "category": "AI / Consumer Finance Tools / Testimony",
+   "relevance": "low",
+   "contact": "Address redacted ('Email me at [email redacted]'); nothing else published.",
+   "notes": "Consumer testimony about connecting a bank or brokerage account to an AI chatbot. We price AI tools but hold no consumer-account stories and no finance-tool test data, and the address is redacted, so there is neither standing nor route. NOT DRAFTED.",
+   "template": "None. Consumer testimony, no route. NOT DRAFTED."
+  },
+  "former-muse-users-gave-up-on-ai-agents": {
+   "who": "Katie Notopoulos (page author field; no publication named anywhere in the body).",
+   "category": "AI Agents / Churn & Abandonment",
+   "relevance": "low",
+   "contact": "No address, handle or link on the page; the body ends 'I want to hear from you.....' with nothing to reply to.",
+   "notes": "The most on-theme low row of the window - users who tried an AI agent and gave up is our Keep/Test/Cut subject - and it is unusable as written: it asks for first-person churn testimony and publishes no route at all. Worth noting as a beat signal (a reporter hunting abandonment stories), not as a candidate. NOT DRAFTED.",
+   "template": "None. Testimony request with no route. NOT DRAFTED."
+  },
+  "startup-founders-deciding-first-marketing-tests-on-tight-runway": {
+   "who": "MarketBrain OS (page author field); no publication named, and the account reads as a vendor's content operation rather than a newsroom.",
+   "category": "Startups / Marketing Spend",
+   "relevance": "low",
+   "contact": "No route published: the post asks founders to 'tell us how you're deciding' and provides no address, handle or link.",
+   "notes": "A spend-token hit, not an AI request in substance - it is about which marketing test to run first on a lean budget. Wrong subject (marketing tests, not software spend) and no route. NOT DRAFTED.",
+   "template": "None. Off-beat and route-less. NOT DRAFTED."
+  },
+  "marketers-and-creators-using-ai-agents-timesaving-wins": {
+   "who": "A Reddit user (page author field 'Fun_Grapefruit7182'), collecting stories for 'a podcast I'm working on at my company'; no publication named.",
+   "category": "AI Agents / Creator Workflows",
+   "relevance": "low",
+   "contact": "Reply to the originating post only ('If you're interested, let me know and I'll send you a DM request'); no handle, address or link beyond the thread.",
+   "notes": "Asks which agent saved the most time, with examples (SEO audits, campaign reports, competitor monitoring). The only route is a reply on the source thread, and the output is a company podcast we would be a guest on, not a citation. NOT DRAFTED.",
+   "template": "None. Podcast guest call on a Reddit thread, no route. NOT DRAFTED."
+  },
+  "multifamily-professionals-ai-adoption-and-employee-chatbot-use": {
+   "who": "Daniel Paulino (page author field); no publication named - the audience is the multifamily property industry.",
+   "category": "AI / Property Management Adoption",
+   "relevance": "low",
+   "contact": "DM only ('please message me privately'); no address, handle or link published.",
+   "notes": "A pulse-check on whether multifamily firms encourage AI chatbot use or leave employees to figure it out. Adjacent to our adoption thesis but the standing asked for is inside a property-management org, which we do not have, and no route is published. NOT DRAFTED.",
+   "template": "None. Wrong standing, no route. NOT DRAFTED."
+  },
+  "canadian-ai-and-tech-companies-government-picking-winners-and-losers": {
+   "who": "Terry Newman (page author field); no publication named.",
+   "category": "AI / Policy / Canada",
+   "relevance": "low",
+   "contact": "'My DMs are open' - but no handle, address or link is published, so there is nothing to open.",
+   "notes": "Wants Canadian AI and tech companies' views on industrial policy. Not our geography, not our subject, and the DM invitation has no address attached. NOT DRAFTED.",
+   "template": "None. Off-beat, no route. NOT DRAFTED."
+  },
+  "founders-and-inclusion-leads-future-of-work-and-ai-impact": {
+   "who": "Sheryl Miller (page author field), booking guests for her LinkedIn Live 'Friday Morning Live' diary for 2027.",
+   "category": "Future of Work / Guest Booking (not a source request)",
+   "relevance": "low",
+   "contact": "'Please tag them in the comments' - a comment route on the original post; no address or handle published.",
+   "notes": "Not a journalist sourcing request at all: it is a guest-booking call for a LinkedIn Live series. A spend token ('price') put it in the candidate list; nothing in it asks for data or a quote. NOT DRAFTED.",
+   "template": "None. Guest booking, not a request. NOT DRAFTED."
+  },
+  "carleton-students-ai-use-in-dating-advice": {
+   "who": "A reporter for The Charlatan, Carleton University's independent student newspaper (page domain charlatan.ca).",
+   "category": "AI / Student Life / Testimony",
+   "relevance": "low",
+   "contact": "DM only ('send me a DM and we can arrange a time'); no address, handle or link published.",
+   "notes": "A 0d student-paper request for students who used AI for dating advice. Needs enrolment and lived experience we do not have; no route published. Note this is a DIFFERENT request from the carried 'Carleton Students - AI Impact on Dating Experiences' row already tracked at 9d - same campus, different call. NOT DRAFTED.",
+   "template": "None. Student testimony, no route. NOT DRAFTED."
+  },
+  "young-adults-1835-ai-impact-on-comingofage": {
+   "who": "A Reddit user (page author field 'coolskeleton96_'), self-described writer, no publication named.",
+   "category": "AI / Culture / First-Person Essay",
+   "relevance": "low",
+   "contact": "Reply on the originating thread; no address, handle or link published.",
+   "notes": "A personal essay about coming of age during AI proliferation, sourced from 18-35s. Testimony we cannot give and a route that does not exist on the page. NOT DRAFTED.",
+   "template": "None. Testimony request, no route. NOT DRAFTED."
+  },
+  "people-with-ai-psychosis-firsthand-accounts": {
+   "who": "An anonymous Reddit account (page author field 'helloiamareporter'), self-described reporter, no publication named.",
+   "category": "AI / Mental Health / Sensitive Testimony",
+   "relevance": "low",
+   "contact": "DMs only ('please reach out to me in the DMs'); no handle, address or link published.",
+   "notes": "Firsthand accounts of AI psychosis. Sensitive personal testimony, no publication, no route. Excluded on standing and route in the same breath. NOT DRAFTED.",
+   "template": "None. Sensitive testimony, no route. NOT DRAFTED."
+  },
+  "new-authors-ai-market-dilution-and-fair-use-impact-on-writing": {
+   "who": "Sarosha (named in the body), a law student writing a note for her school's law review; page author field 'Matcha_Vintage10'.",
+   "category": "AI / Copyright / Academic",
+   "relevance": "low",
+   "contact": "DM only through the originating thread; no address or link published.",
+   "notes": "Student law-review research on market dilution in AI training cases, wanting new authors' perspectives. Academic, wrong standing, no route. NOT DRAFTED.",
+   "template": "None. Academic research request, no route. NOT DRAFTED."
+  },
+  "ut-austin-students-ai-trump-crypto-ads-on-game-livestreams": {
+   "who": "A Daily Texan reporter (page domain dailytexanonline.com).",
+   "category": "AI / Student Media / Ad Fraud",
+   "relevance": "low",
+   "contact": "Reply on the originating thread; no address, handle or link published.",
+   "notes": "Student eyewitnesses to AI-generated crypto scam ads on game livestreams. Student paper, student testimony, no route. NOT DRAFTED.",
+   "template": "None. Student testimony, no route. NOT DRAFTED."
+  },
+  "current-ucla-students-and-faculty-ai-impact-on-majors": {
+   "who": "Thoun Thant Nandi with Max Benedetti, working with Prof. Daniel Schwalbe-Koda at UCLA; no publication named.",
+   "category": "AI / Higher Education / Campus Research",
+   "relevance": "low",
+   "contact": "'Comment \"Coffee\" below or send me a DM'; explicitly 'Open to current UCLA students and faculty only'. No address or link.",
+   "notes": "A campus mapping project restricted on the page to UCLA students and faculty, which excludes us by the poster's own terms - the clearest self-exclusion in the window. NOT DRAFTED.",
+   "template": "None. Explicitly campus-only, no route. NOT DRAFTED."
+  },
+  "uk-law-experts-and-ai-safety-researchers-chatbotaided-crime": {
+   "who": "Deborah Boyle, a Social Change Initiative journalism fellow (named in the body); no publication.",
+   "category": "AI / Law / Podcast",
+   "relevance": "low",
+   "contact": "No address, handle or link published; the body asks to 'speak with any law experts and AI safety researchers in the UK'.",
+   "notes": "A podcast on chatbots as accessories to crime, wanting UK lawyers and AI-safety researchers. Wrong standing (we are neither) and no route. NOT DRAFTED.",
+   "template": "None. Wrong standing, no route. NOT DRAFTED."
+  },
+  "designers-on-large-teams-evolving-design-systems-dive-radio": {
+   "who": "A designer-host (page author field 'Michael Riddering' is named in the body as co-host), sourcing for the Dive Radio live stream; no publication named.",
+   "category": "AI / Design Systems / Live Stream",
+   "relevance": "low",
+   "contact": "DM only ('DM me what you're actually doing and seeing for Thursday's Dive Radio'); no handle, address or link published.",
+   "notes": "Designers on large teams and how design systems are changing around AI agents. Body-level AI hit with no route; wrong standing (design practice, not tool cost). NOT DRAFTED.",
+   "template": "None. Wrong standing, no route. NOT DRAFTED."
+  },
+  "world-model-researchers-applications-in-robotics": {
+   "who": "Matthew S. Smith, writing for the Association for Advancing Automation (named in the body); no domain on the page.",
+   "category": "AI / Robotics Research",
+   "relevance": "low",
+   "contact": "'Let's connect' - no address, handle or link published.",
+   "notes": "Wants world-model researchers working on robotics. Research standing we do not have, and no route. NOT DRAFTED.",
+   "template": "None. Research standing, no route. NOT DRAFTED."
+  },
+  "global-and-european-marketing-leaders-investment-and-ops-challenges": {
+   "who": "An unnamed attendee (no author field, no publication), posting a Web Summit Lisbon meeting list.",
+   "category": "Networking / Web Summit (not a source request)",
+   "relevance": "low",
+   "contact": "No route published: it is a list of people the poster wants to meet at a conference.",
+   "notes": "Not a journalist request: a conference-networking post ('I'm heading to #WebSummit in Lisbon next week, and I'm especially looking to meet...'). A spend token ('pricing') put it in the candidate list. NOT DRAFTED.",
+   "template": "None. Not a request. NOT DRAFTED."
+  },
+  "aussie-travellers-1861-hotel-tech-abandoned-bookings-and-ai-concerns": {
+   "who": "A freelance copywriter (page author field 'sezen711') sourcing interviewees 'for a few media pitches for a leading hotel commerce platform'.",
+   "category": "PR Subcontracting / Travel Tech (not a source request)",
+   "relevance": "low",
+   "contact": "Comment or DM on the original post; no address, handle or link published. The buyer is an unnamed hotel platform, not a publication.",
+   "notes": "A PR contractor recruiting case-study subjects for a vendor client, not a journalist sourcing for a story. No publication to be cited in, no route, wrong subject. NOT DRAFTED.",
+   "template": "None. Vendor case-study recruitment, not a request. NOT DRAFTED."
+  },
+  "freelance-journalists-automation-feature-pitches": {
+   "who": "Rachel Courtland, MIT Technology Review (page domain technologyreview.com; the body is a call from the magazine).",
+   "category": "Commissioning Call (not a source request)",
+   "relevance": "low",
+   "contact": "Pitch guide and print-pitch address behind https://lnkd.in/ghW8vbiT; pitches due Friday 2026-11-13.",
+   "notes": "The reverse direction from everything else in this queue: MIT Technology Review is BUYING freelance features on an Automation theme, not sourcing experts to quote. We do not write for other outlets, so there is nothing to send. Recorded because an AI-token slug on a real masthead looks like a lead and is not one. NOT DRAFTED.",
+   "template": "None. Commissioning call, not a source request. NOT DRAFTED."
+  }
+ },
+ "new_this_run": [
+  "cios-and-cisos-steps-to-address-ai-orphans - Kelsey Ziser / InformationWeek, 0d, the window's only time-boxed row (Wednesday EOD = 2026-11-04) and the only new row rated medium; route resolved off her InformationWeek author page, Kelsey.ziser@informationweek.com.",
+  "midlife-professionals-career-regret - Suzanne Reilley / Business Insider, 4d, the only row in the window that states an unredacted address in its own body (suzanne[dot]reilley[at]gmail[dot]com); six personal-story topics, none of which we can answer. Route without a usable ask.",
+  "uk-recruiters-ai-impact-on-billing-and-candidate-matching - Lindsay Dodgson / CNBC, 1d, UK recruitment billing, address redacted, no recruiter standing.",
+  "bank-and-brokerage-users-ai-tools-managing-personal-finances - genna / MarketWatch, 4d, consumer AI-finance testimony, address redacted.",
+  "former-muse-users-gave-up-on-ai-agents - Katie Notopoulos, 0d, agent-churn testimony, no publication named, no route: a beat signal rather than a candidate.",
+  "startup-founders-deciding-first-marketing-tests-on-tight-runway - MarketBrain OS vendor account, 4d, marketing-spend process, no route.",
+  "marketers-and-creators-using-ai-agents-timesaving-wins - Reddit, 4d, company-podcast guest call, no route.",
+  "multifamily-professionals-ai-adoption-and-employee-chatbot-use - Daniel Paulino, 4d, property-management adoption pulse check, DM only.",
+  "canadian-ai-and-tech-companies-government-picking-winners-and-losers - Terry Newman, 4d, Canadian industrial policy, 'DMs open' with no handle.",
+  "founders-and-inclusion-leads-future-of-work-and-ai-impact - Sheryl Miller, 5d, LinkedIn Live 2027 guest booking, not a source request.",
+  "carleton-students-ai-use-in-dating-advice - The Charlatan, 0d, student testimony, DM only (distinct from the tracked Carleton dating-experiences row at 9d).",
+  "young-adults-1835-ai-impact-on-comingofage - Reddit essayist, 1d, coming-of-age testimony, no route.",
+  "people-with-ai-psychosis-firsthand-accounts - anonymous Reddit reporter, 3d, AI-psychosis testimony, no route.",
+  "new-authors-ai-market-dilution-and-fair-use-impact-on-writing - law student Sarosha, 4d, law-review research, no route.",
+  "ut-austin-students-ai-trump-crypto-ads-on-game-livestreams - Daily Texan, 4d, student eyewitnesses to AI scam ads, no route.",
+  "current-ucla-students-and-faculty-ai-impact-on-majors - UCLA campus project, 5d, excludes non-UCLA respondents by its own terms.",
+  "uk-law-experts-and-ai-safety-researchers-chatbotaided-crime - Deborah Boyle, 5d, podcast on chatbot-aided crime, no route.",
+  "designers-on-large-teams-evolving-design-systems-dive-radio - Dive Radio, 0d, body-level AI hit with no slug token, DM only.",
+  "world-model-researchers-applications-in-robotics - Matthew S. Smith / A3, 0d, robotics research, no route.",
+  "global-and-european-marketing-leaders-investment-and-ops-challenges - Web Summit networking post, 1d, not a request.",
+  "aussie-travellers-1861-hotel-tech-abandoned-bookings-and-ai-concerns - PR subcontractor for a hotel platform, 0d, vendor case-study recruitment, not a request.",
+  "freelance-journalists-automation-feature-pitches - Rachel Courtland / MIT Technology Review, 0d, a commissioning call buying features, not sourcing sources."
+ ],
+ "why_not_drafted": [
+  "20 of the 22 new rows ask for first-person testimony, institutional standing or a campus/industry affiliation we do not have, and 17 of those publish no usable reply route at all",
+  "one publishes an unredacted address in its own body but only wants personal career/burnout stories (midlife-professionals-career-regret)",
+  "two are not source requests at all (a Web Summit networking post and a PR contractor recruiting vendor case studies), and two more are the reverse direction - a magazine buying freelance features and a LinkedIn Live booking guests",
+  "the single draftable new row is the InformationWeek AI-orphans call, drafted as section 2 of pitch-drafts-2026-11-03.md"
+ ],
+ "defects": [
+  "build_digest.py now REFUSES to build when a carried row's page truth was not measured today: refresh() stamps 'RE-VERIFIED <today>' on whatever age verified-requests.json holds, and this run's cache still carried 2026-10-29 ages, so a digest built before the sweep would have printed today's date beside a five-day-old age ('1 days' for a 6-day-old request). The check names the stale rows and the command to run.",
+  "verify_journo_requests.py silently discarded unrecognised flags: passing --help fell through to 'no arguments' and launched a full 218-URL sweep, which is how this run first discovered it. It now prints usage for -h/--help and exits non-zero on any unknown option."
+ ],
+ "extra_actions": [
+  "WINDOW IS FIVE DAYS, NOT ONE: no run happened between 2026-10-29 and 2026-11-03, so this sitemap window spans 309 slugs (18 AI-token, 1 AI+spend, 20 body-level AI hits) rather than the ~90 a daily run sees. All 309 bodies were fetched and read.",
+  "NEW ROUTE RESOLVED AND PROBED: informationweek.com/author/kelsey-ziser, HTTP 200, 587,272 bytes, publishing Kelsey.ziser@informationweek.com - added to the probed set with `probe_routes.py --add` so tomorrow's run re-checks it like any other route (route-checks-2026-11-03.json).",
+  "PLATFORM PROBES CHANGED TODAY AND THE CHANGE IS COSMETIC: HARO's homepage answered HTTP 200 (68,365 bytes) and Connectively's answered HTTP 200 (186,769 bytes) for the first time in this monitor's history, but both are marketing shells - HARO's homepage now offers only 'Subscribe for free daily media queries' with no public query list, and Connectively's /queries still answers HTTP 429 behind a Vercel checkpoint. The email wall has not moved; only the landing page's status code has."
+ ]
+}

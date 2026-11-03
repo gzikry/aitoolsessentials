@@ -170,6 +170,16 @@ def main() -> None:
         except json.JSONDecodeError:
             cache = {}
 
+    # Unknown flags used to be silently discarded: `--help` fell through to "no arguments" and
+    # launched a full 218-URL sweep (killed by SIGPIPE on 2026-11-03 while the operator was asking
+    # for usage). Refuse them instead of guessing what was meant.
+    if any(a in ("-h", "--help") for a in sys.argv[1:]):
+        print(__doc__)
+        return
+    unknown = [a for a in sys.argv[1:] if a.startswith("-") and a != "--refresh-feed"]
+    if unknown:
+        raise SystemExit(f"unknown option(s) {unknown}; usage: {sys.argv[0]} [slug|url ...] [--refresh-feed]")
+
     args = [a for a in sys.argv[1:] if not a.startswith("-")]
     if args:
         urls = [a if a.startswith("http") else f"https://www.sourcee.app/journo-request/{a}" for a in args]
