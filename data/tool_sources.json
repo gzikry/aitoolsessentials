@@ -111,15 +111,14 @@
     },
     {
       "slug": "cursor",
-      "pricing_checked_date": "2026-10-13",
-      "pricing_summary": "Cursor is now listed under The X Subscription tiers (cursor.com/pricing, checked 2026-10-13): Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo; team seats use the same monthly figures per seat. The standalone Pro, Pro Plus and Teams tiers no longer appear on the page. xAI documentation (docs.x.ai/x-subscription/pricing, checked 2026-10-13) states existing Cursor, SuperGrok and X Premium plans continue and switching is optional.",
+      "pricing_checked_date": "2026-11-03",
+      "pricing_summary": "Cursor is listed under The X Subscription tiers (cursor.com/pricing, checked 2026-11-03): Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo. Teams is listed at $30+/user/month. The standalone Pro and Pro Plus tiers do not appear on the page. xAI documentation (docs.x.ai/x-subscription/pricing, checked 2026-10-13) states existing Cursor, SuperGrok and X Premium plans continue and switching is optional.",
       "pricing_url": "https://cursor.com/pricing",
       "docs_url": "https://docs.cursor.com/models-and-pricing",
       "privacy_url": "https://cursor.com/privacy",
       "rights_url": "https://cursor.com/terms-of-service",
-      "verification_notes": "The official Terms state that Anysphere will not use Content to train, or allow a third party to train, AI models unless the user explicitly agrees. The Privacy Policy identifies limited exceptions for security review, explicitly submitted feedback, or explicit training consent. Privacy Mode is available on free and paid individual plans; Cursor says that when enabled it will not train on the user's data and applies contractual and technical controls to model providers. Users retain their rights in Inputs, and Anysphere assigns to users any right, title, and interest it has in Suggestions. Official documentation describes Cursor as a coding agent for understanding codebases, planning and building features, fixing bugs, reviewing changes, and using integrations, MCP, rules, skills, hooks, cloud agents, and CLI workflows. Re-checked 2026-10-13: the standalone Pro, Pro Plus and Teams tiers that the 2026-08-25 check reported are no longer rendered on cursor.com/pricing. The page now shows the unified The X Subscription ladder (Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo), reported on 2026-10-12 as a bundle of Cursor, Grok and X Premium. xAI's own subscription documentation states that existing Cursor, SuperGrok and X Premium plans continue and that switching is optional, so legacy subscribers are not repriced. Previous digest retained here for reference only: Free with limited agent requests and Composer access; Pro $20/mo; Pro Plus $60/mo; Ultra $200/mo; Teams $40/user/mo; Enterprise custom (checked 2026-08-25).",
+      "verification_notes": "The official Terms state that Anysphere will not use Content to train, or allow a third party to train, AI models unless the user explicitly agrees. The Privacy Policy identifies limited exceptions for security review, explicitly submitted feedback, or explicit training consent. Privacy Mode is available on free and paid individual plans; Cursor says that when enabled it will not train on the user's data and applies contractual and technical controls to model providers. Users retain their rights in Inputs, and Anysphere assigns to users any right, title, and interest it has in Suggestions. Official documentation describes Cursor as a coding agent for understanding codebases, planning and building features, fixing bugs, reviewing changes, and using integrations, MCP, rules, skills, hooks, cloud agents, and CLI workflows. Re-checked 2026-10-13: the standalone Pro, Pro Plus and Teams tiers that the 2026-08-25 check reported are no longer rendered on cursor.com/pricing. The page now shows the unified The X Subscription ladder (Free $0, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo), reported on 2026-10-12 as a bundle of Cursor, Grok and X Premium. xAI's own subscription documentation states that existing Cursor, SuperGrok and X Premium plans continue and that switching is optional, so legacy subscribers are not repriced. Previous digest retained here for reference only: Free with limited agent requests and Composer access; Pro $20/mo; Pro Plus $60/mo; Ultra $200/mo; Teams $40/user/mo; Enterprise custom (checked 2026-08-25). Re-checked 2026-11-03: Free, Plus, Premium, Super, and Ultra prices are unchanged, and Teams is listed at $30+/user/month. Pro and Pro Plus still do not appear.",
       "unresolved_claims": [
-        "The pricing UI exposes a Teams Premium option with 5x Standard Agent limits, but its price was not reliably exposed in the official page's static content, so no price is reported.",
         "The public Terms assign Anysphere's rights in Suggestions but do not provide a blanket warranty that generated code is non-infringing or expressly guarantee commercial suitability."
       ],
       "checked_at": "2026-08-25"
@@ -552,8 +551,8 @@
     },
     {
       "slug": "synthesia",
-      "pricing_checked_date": "2026-09-18",
-      "pricing_summary": "Basic is $0 with 1,200 credits/month. Starter is displayed at $29/month with 1,200 credits/month, or $18/month billed yearly with 14,500 credits/year. Creator is displayed at $89/month with 3,600 credits/month, or $64/month billed yearly with 44,000 credits/year. Enterprise has custom pricing and credits, unlimited video minutes subject to its terms, 240+ stock avatars, and unlimited Personal Avatars subject to reasonable consumption and compute.",
+      "pricing_checked_date": "2026-11-03",
+      "pricing_summary": "Checked 2026-11-03 at https://www.synthesia.io/pricing. Basic is $0 per month with 500 credits/month. Starter is $9 for the first month and $19 per month after that, with 1,250 credits/month. Pro is $49 for the first month and $89 per month after that, with 6,000 credits/month. The served page also lists higher monthly credit rungs on the Pro card and a yearly toggle that says save up to 4 months. It does not print the 2026-09-18 figures of $29 Starter, $18 yearly, 1,200 Starter credits, $64 Creator yearly, or 14,500 and 44,000 yearly credits. Enterprise pricing is custom. No rollover rule is stated.",
       "pricing_url": "https://www.synthesia.io/pricing",
       "docs_url": "https://docs.synthesia.io/docs/personal-avatars",
       "privacy_url": "https://www.synthesia.io/legal/privacy-policy",
@@ -771,13 +770,13 @@
     },
     {
       "slug": "cocounsel",
-      "pricing_checked_date": "2026-09-18",
-      "pricing_summary": "Thomson Reuters’ official Westlaw plans-and-pricing page lists Westlaw Advantage with CoCounsel Essentials starting at $415.35/month. Broader CoCounsel Legal packages are sales-quoted and vary by jurisdiction coverage, seats, and term. No unofficial third-party seat figures are treated as official list prices.",
+      "pricing_checked_date": "2026-11-03",
+      "pricing_summary": "Checked 2026-11-03 at https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing. Westlaw Advantage, described as next-gen AI legal research with Deep Research, starts at $288.60/month. Westlaw Edge with AI-Assisted Research starts at $170.95/month. The previously recorded Westlaw Advantage with CoCounsel Essentials price of $415.35/month is not on this page. CoCounsel Legal is presented without a self-serve list price. Broader packages remain sales-quoted.",
       "pricing_url": "https://legal.thomsonreuters.com/en/c/westlaw/plans-and-pricing",
       "docs_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
       "privacy_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
       "rights_url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
-      "verification_notes": "Official CoCounsel Legal product page describes Westlaw- and Practical Law-grounded research, analysis, and drafting, plus Word/Outlook/Teams integrations and a statement that customer data is not used to train underlying models. The $415.35/month figure is the official starting-at price for the named Westlaw Advantage with CoCounsel Essentials bundle observed on 2026-08-26, not a complete firmwide quote.",
+      "verification_notes": "Official CoCounsel Legal product page describes Westlaw- and Practical Law-grounded research, analysis, and drafting, plus Word/Outlook/Teams integrations and a statement that customer data is not used to train underlying models. The $415.35/month Westlaw Advantage with CoCounsel Essentials figure was on the plans page on 2026-08-26. On 2026-11-03 that page starts Westlaw Advantage at $288.60/month and Westlaw Edge with AI-Assisted Research at $170.95/month, and it does not show $415.35. Neither figure is a complete firmwide quote.",
       "unresolved_claims": [
         "Standalone CoCounsel Legal seat pricing remains sales-configured.",
         "Starting-at Westlaw bundle prices can be personalized by jurisdiction, attorney count, and term.",
@@ -1115,8 +1114,8 @@
     },
     {
       "slug": "aidetector-cx",
-      "pricing_checked_date": "2026-10-08",
-      "pricing_summary": "Free: 5 introductory checks total (1 guest + 4 signed-in), no recurring reset. Pro US$12/month or US$120/year - 300 credits/month. Pro Plus US$29/month or US$290/year - 1,000 credits/month. Business US$79/month or US$790/year - 3,000 credits/month with up to 5 team seats. Annual billing is charged upfront and grants credits monthly on the renewal cycle. Credit costs vary by job: standard text/image/video detection 1 credit, advanced image & deepfake analysis 4 credits/image, forensic video & deepfake 6 credits per 30s, citation verification 1 credit per 5 references, hallucination checking 2 credits per 1,000 words. Verified 2026-10-08 from /pricing plus the shipped /assets/index-*.js monthlyPrice literals (12/29/79), which agree.",
+      "pricing_checked_date": "2026-11-03",
+      "pricing_summary": "Checked 2026-11-03 at https://aidetector.cx/pricing. Free: 5 introductory checks total (1 guest + 4 signed-in), no recurring reset. The plan cards show annual billing: Pro $10/month billed annually ($120/year) with 300 credits/month; Pro Plus $24.17/month billed annually ($290/year) with 1,000 credits/month; Business $65.83/month billed annually ($790/year) with 3,000 credits/month. The 2026-10-08 month-to-month stickers of $12, $29, and $79 were not on the served page. Credit top-ups on the same page: 500 credits $15, 1,000 $25, 2,500 $50, and 5,000 $90. Agency Unlimited is $2,500 for one year.",
       "pricing_url": "https://aidetector.cx/pricing",
       "docs_url": "https://aidetector.cx/api/docs",
       "privacy_url": "https://aidetector.cx/privacy",
@@ -1408,8 +1407,8 @@
     },
     {
       "slug": "reeltada",
-      "pricing_checked_date": "2026-11-02",
-      "pricing_summary": "One-time packs only, no subscription: Starter $9.90/10 credits, Creator $29.90/40, Studio $59.90/100; standard template = 10 credits/generation, premium templates 30; failed generations auto-refund credits. Pricing meta description advertises 'starting at $6.89' (promo) vs the $9.90 list price. Checked 2026-11-02 across /pricing (meta), the refund policy (pack table) and the terms ($ tokens).",
+      "pricing_checked_date": "2026-11-03",
+      "pricing_summary": "Checked 2026-11-03 at https://reeltada.com/pricing. One-time packs only, no subscription: Starter $6.89 for 10 credits, Creator $22.89 for 40 credits, Studio $46.89 for 90 credits. Standard templates use 10 credits per generation. The 37-second Baby Lip Sync video uses 30 credits. Failed generations return the credits used for that attempt. The $9.90, $29.90, and $59.90 list prices recorded on 2026-11-02 are not on the page. Prices are USD.",
       "pricing_url": "https://reeltada.com/pricing",
       "privacy_url": "https://reeltada.com/privacy-policy",
       "rights_url": "https://reeltada.com/refund-policy",

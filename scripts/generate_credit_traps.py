@@ -74,7 +74,7 @@ TRAPS = [
     {
         "slug": "synthesia",
         "name": "Synthesia",
-        "checked": "2026-09-18",
+        "checked": "2026-11-03",
         "kind": "unstated",
         "rule": "The checked pricing summary does not state a credit rollover or reset rule.",
     },
@@ -247,16 +247,16 @@ TRAPS = [
     {
         "slug": "cursor",
         "name": "Cursor",
-        "checked": "2026-10-13",
+        "checked": "2026-11-03",
         "kind": "annual",
-        "rule": "The standalone Pro, Pro Plus and Teams tiers no longer appear on the page.",
+        "rule": "The standalone Pro and Pro Plus tiers do not appear. Teams is listed at $30+/user/month.",
     },
     {
         "slug": "windsurf",
         "name": "Windsurf",
-        "checked": "2026-10-26",
+        "checked": "2026-11-03",
         "kind": "annual",
-        "rule": "March 2026 replaced prompt credits with a daily and weekly quota. An existing Pro subscriber at $15/mo keeps that price.",
+        "rule": "Pro is $20/month. Max is $200/month. Teams is $80/month plus $40 per full dev seat. The page does not state a $15 price for existing subscribers.",
     },
     {
         "slug": "replit-ai",
@@ -282,9 +282,9 @@ TRAPS = [
     {
         "slug": "synthesia",
         "name": "Synthesia",
-        "checked": "2026-09-18",
+        "checked": "2026-11-03",
         "kind": "other",
-        "rule": "Starter lists 1,200 credits/month, or 14,500 credits/year when billed yearly. Creator lists 3,600 credits/month, or 44,000 credits/year. These are credits, not video minutes. The checked summary does not state a rollover rule.",
+        "rule": "Starter is $9 for the first month, then $19/month, with 1,250 credits/month. Pro is $49 for the first month, then $89/month, with 6,000 credits/month. The checked page does not state a rollover rule.",
     },
     {
         "slug": "customgpt",
@@ -356,7 +356,7 @@ SEAT_CENTS = {
     ("midjourney", "reset"): 1000,
     ("suno", "reset"): 800,
     ("ideogram", "reset"): 1500,
-    ("synthesia", "other"): 2900,
+    ("synthesia", "other"): 1900,
     ("customgpt", "meter"): 9900,
 }
 
@@ -371,7 +371,7 @@ SEAT_NOTE = {
     ("midjourney", "reset"): "Basic list $10/mo",
     ("suno", "reset"): "Pro list $8/mo",
     ("ideogram", "reset"): "Plus $15/mo billed annually",
-    ("synthesia", "other"): "Starter list $29/mo",
+    ("synthesia", "other"): "Starter list $19/mo after a $9 first month",
     ("customgpt", "meter"): "Standard list $99/mo",
 }
 
@@ -651,7 +651,7 @@ def generate(root: Path) -> Path:
 {_signup(root)}
 <p><a href="/subscribe/">Subscribe page</a></p>
 </aside>
-<p>Make’s checked line is the end of the subscription term, not a monthly reset. Zapier, HeyGen, Synthesia, and Descript do not state a rollover rule on the checked page, so this ledger does not invent one. n8n prices stay in euros. ElevenLabs states rollover only while the subscription remains active. Lovable states that monthly credits expire two months after issue. A one-month annual window and a cancel wipe are not on that page. UMEVO publishes pay-as-you-go packs and says unused free minutes do not carry over. It does not state a 2-year validity window, so it stays out of the long-rollover filter. Synthesia’s 1,200 and 3,600 figures are monthly credits. CustomGPT Premium on the checked pricing file is $499 per month.</p>
+<p>Make’s checked line is the end of the subscription term, not a monthly reset. Zapier, HeyGen, Synthesia, and Descript do not state a rollover rule on the checked page, so this ledger does not invent one. n8n prices stay in euros. ElevenLabs states rollover only while the subscription remains active. Lovable states that monthly credits expire two months after issue. A one-month annual window and a cancel wipe are not on that page. UMEVO publishes pay-as-you-go packs and says unused free minutes do not carry over. It does not state a 2-year validity window, so it stays out of the long-rollover filter. Synthesia’s 1,250 and 6,000 figures are monthly credits. CustomGPT Premium on the checked pricing file is $499 per month.</p>
 </div>
 </section>
 </main>

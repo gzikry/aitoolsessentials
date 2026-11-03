@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-28",
+  "checked": "2026-11-03",
   "reopen_assumption": "Fin and Zendesk bill resolved outcomes only. Tidio Lyro and CustomGPT.ai consume a conversation or query for each inbound ticket attempted. When the retry toggle is on, this page adds 25% to that attempted volume. The 25% is this page's assumption, not a vendor statistic. It does not add a second Fin or Zendesk outcome.",
   "intercom": {
     "outcome_cents": 99,
@@ -40,6 +40,7 @@
     "packs_monthly": [
       {"conversations": 50, "cents": 3900},
       {"conversations": 100, "cents": 7500},
+      {"conversations": 150, "cents": 11000},
       {"conversations": 200, "cents": 14000},
       {"conversations": 300, "cents": 21000},
       {"conversations": 500, "cents": 35000},
@@ -51,7 +52,7 @@
       "https://www.tidio.com/pricing/",
       "https://help.tidio.com/hc/en-us/articles/13924459295900-The-Lyro-AI-agent-limit"
     ],
-    "notes": "Lyro consumes a conversation for each inbound ticket attempted, not only resolved ones. The free 50 Lyro conversations are one-time and do not renew, so they are not subtracted from a monthly bill. The official pricing page shows annual entry at $32.50 per month for the starting pack (two months free) and says a new thread after inactivity counts again. The monthly pack ladder above is the public calculator's published steps; above 1,000 conversations the page says contact sales, so this row stays unpriced."
+    "notes": "Lyro consumes a conversation for each inbound ticket attempted, not only resolved ones. The free 50 Lyro conversations are one-time and do not renew, so they are not subtracted from a monthly bill. The official pricing page shows annual entry at $32.50 per month for the starting pack (two months free) and says a new thread after inactivity counts again. Checked 2026-11-03, the public calculator's monthly ladder adds a 150-conversation step at $110 between the $75 and $140 packs. Above 1,000 conversations the page says contact sales, so this row stays unpriced."
   },
   "customgpt": {
     "standard_cents": 9900,

@@ -68,9 +68,9 @@ ROWS = [
     (
         "Windsurf",
         "/price-changes/",
-        "26 Oct 2026",
+        "3 Nov 2026",
         "New Pro is $20/mo. Max is $200/mo and cannot be shared. Teams is $40 per full seat with an $80 minimum. Enterprise is custom, not a $60 list price.",
-        "March 2026 replaced prompt credits with a daily and weekly quota. An existing Pro subscriber at $15/mo keeps that price. Add-on credits converted at $0.04 were not a new public meter.",
+        "The pricing page checked 2026-11-03 lists Pro at $20/month, Max at $200/month, and Teams at $80/month plus $40 per full dev seat. It does not state a $15 price for existing subscribers.",
     ),
 ]
 

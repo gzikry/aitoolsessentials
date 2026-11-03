@@ -210,7 +210,7 @@ def generate(root: Path) -> Path:
 <main>
 <section class="scene scene-dark ledger-mast">
 <div style="max-width:880px;margin:0 auto;padding:72px 28px 36px">
-<p class="kicker light">Pricing check · Oct 2026</p>
+<p class="kicker light">Pricing check · Nov 2026</p>
 <h1>{_esc(TITLE)}</h1>
 <p class="subhead">Seat floors, per-resolution fees, and one flat subscription. A vendor without a public rate is left blank.</p>
 <p><a class="button button-blue" href="#support-calc">Price the tickets</a> <a class="button button-ledger" href="/embeds/">Embeds</a></p>
