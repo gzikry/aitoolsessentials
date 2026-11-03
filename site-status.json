@@ -6,9 +6,9 @@
   "html_pages": 1048,
   "evidence_freshness": {
     "pricing_records": 105,
-    "latest_pricing_checked": "2026-11-02",
-    "pricing_checked_on_latest_date": 6,
-    "pricing_older_than_latest": 99,
+    "latest_pricing_checked": "2026-11-03",
+    "pricing_checked_on_latest_date": 5,
+    "pricing_older_than_latest": 100,
     "pricing_undated_or_invalid": 0
   },
   "hardware_records": 5,

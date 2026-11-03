@@ -2285,7 +2285,7 @@
       "pricing_checked_date": "2026-11-03",
       "price_confidence": "official_summary",
       "numeric_list_price_usd": null,
-      "promotion_mentioned": false,
+      "promotion_mentioned": true,
       "suggested_use_cases": [
         "video"
       ],
@@ -2534,7 +2534,7 @@
       "pricing_checked_date": "2026-11-03",
       "price_confidence": "official_summary",
       "numeric_list_price_usd": null,
-      "promotion_mentioned": true,
+      "promotion_mentioned": false,
       "suggested_use_cases": [
         "writing",
         "coding",
