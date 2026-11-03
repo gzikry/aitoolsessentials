@@ -665,6 +665,34 @@
     var clusterHtml = result.clusters.length ? result.clusters.map(function (c) {
       return '<article class="score-card"><span>Overlap cluster</span><h3>' + esc(c.names.join(" · ")) + "</h3><p>Shared use cases: " + esc(c.shared.map(labelOf).join(", ") || "none named") + ".</p>" + (c.uncertain ? "<p class=\"sa-note\">Uncertainty: at least one tool is missing catalog capability data, so this overlap is based only on the use cases you selected.</p>" : "<p class=\"sa-note\">Overlap is based on normalized shared use cases, not directory category alone.</p>") + "</article>";
     }).join("") : '<p class="sa-note">No pairwise use-case overlap detected in this selection.</p>';
+    var partnerHops = {
+      "/go/elevenlabs/": 1,
+      "/go/make/": 1,
+      "/go/gamma/": 1,
+      "/go/descript/": 1,
+      "/go/aidetector-cx/": 1,
+      "/go/sonaopus/": 1,
+      "/go/nous/": 1
+    };
+    var partnerSlugs = {
+      elevenlabs: "/go/elevenlabs/",
+      make: "/go/make/",
+      gamma: "/go/gamma/",
+      descript: "/go/descript/",
+      "aidetector-cx": "/go/aidetector-cx/",
+      sonaopus: "/go/sonaopus/",
+      "hermes-agent": "/go/nous/"
+    };
+    function openLink(href, rel) {
+      var hop = href.charAt(href.length - 1) === "/" ? href : href + "/";
+      var partner = !!partnerHops[hop];
+      var useRel = partner ? "sponsored nofollow noopener" : (rel || "external noopener");
+      var html = '<a href="' + esc(hop) + '" rel="' + esc(useRel) + '">Open</a>';
+      if (partner) {
+        html += ' <span class="ledger-disclosure">Some outbound links may earn a partner commission at no cost to you. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</span>';
+      }
+      return html;
+    }
     function toolLinks(slug) {
       var rec = BY_SLUG[slug] || {};
       var parts = [];
@@ -676,9 +704,11 @@
         parts.push('<a href="/tools/' + esc(slug) + '/">Audit</a>');
       }
       if (rec.go_href) {
-        parts.push('<a href="' + esc(rec.go_href) + '" rel="' + esc(rec.go_rel || "external noopener") + '">Open</a>');
+        parts.push(openLink(rec.go_href, rec.go_rel || "external noopener"));
+      } else if (partnerSlugs[slug]) {
+        parts.push(openLink(partnerSlugs[slug], "sponsored nofollow noopener"));
       } else if (validSlug(slug) && slug.indexOf("c:") !== 0) {
-        parts.push('<a href="/go/' + esc(slug) + '/" rel="external noopener">Open</a>');
+        parts.push(openLink("/go/" + slug + "/", "external noopener"));
       }
       return parts.length ? '<p class="sa-rec-links">' + parts.join(" · ") + "</p>" : "";
     }
