@@ -74,6 +74,8 @@ UTILITY_PAGES = frozenset({
     "legal/about.html",
     "advertise/index.html",
     "premium/index.html",
+    "sponsor/thanks/index.html",
+    "services/audit-thanks/index.html",
     "stack-audit.html",
     "newsletter/index.html",
     "price-changes/index.html",

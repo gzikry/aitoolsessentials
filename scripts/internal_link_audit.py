@@ -128,6 +128,10 @@ def intentional_orphan_reason(url: str, html: str) -> str | None:
         return None
     if 'http-equiv="refresh"' in html and "noindex" in html:
         return "redirect stub"
+    # Stripe returns here. The receipt is noindex and is not a page we link
+    # from the rest of the site. /checkout/complete/ stays the Premium return.
+    if url in {"/sponsor/thanks/", "/services/audit-thanks/"} and 'name="robots" content="noindex' in html:
+        return "post-payment receipt"
     return None
 
 

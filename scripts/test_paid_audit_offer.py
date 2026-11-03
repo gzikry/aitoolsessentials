@@ -149,6 +149,29 @@ def main() -> None:
                 "leave the homepage would only ever see the $12 membership"
             )
 
+    thanks = ROOT / "services" / "audit-thanks" / "index.html"
+    if not thanks.exists():
+        errors.append("missing post-payment page: services/audit-thanks/index.html")
+    else:
+        html = thanks.read_text(errors="ignore")
+        if 'name="robots" content="noindex' not in html:
+            errors.append("services/audit-thanks/ must be noindex")
+        if 'rel="canonical" href="https://aitoolsessentials.com/services/audit-thanks/"' not in html:
+            errors.append("audit-thanks canonical is not /services/audit-thanks/")
+        for needle in (
+            "Payment received",
+            "aitoolsessentials@gmail.com",
+            "Your tool list and your goals",
+            "1 business day",
+            "5 business days",
+            "$497",
+            "What happens next",
+        ):
+            if needle not in html:
+                errors.append(f"audit-thanks missing {needle}")
+        if "buy.stripe.com" in html:
+            errors.append("audit-thanks must not restart checkout")
+
     if errors:
         raise SystemExit("paid audit guard failures:\n- " + "\n- ".join(errors))
     print("paid audit guard ok")
