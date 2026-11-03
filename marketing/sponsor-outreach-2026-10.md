@@ -78,6 +78,52 @@ snapshot digest. The site has repositioned around "GTM AI Platform" but still se
 `[Gmail]/All Mail` (newest 60), `[Gmail]/Spam` or `[Gmail]/Trash` as of 2026-10-23. `support@sembly.ai` is a support queue rather than a marketing inbox —
 expect silence from that one rather than reading it as disinterest.
 
+## 2026-11-03 batch — 4 sends, 11:35–11:36 UTC (03:35–03:36 PT)
+
+Same template and prices as the 2026-10-23 batch. All four are in `[Gmail]/Sent Mail`; cite by date +
+subject, not by Himalaya id.
+
+| Recipient | Product | Review live? | MX |
+|---|---|---|---|
+| sales@magai.co | Magai | no (prospect pitch) | Google Workspace |
+| contact@saner.ai | Saner.ai | no (prospect pitch) | Google Workspace |
+| info@krisp.ai | Krisp | no (prospect pitch) | Google Workspace — **local part dead, see bounce** |
+| contact@opus.pro | Opus Clip | no (prospect pitch) | Lark (`mx1–3.larksuite.com`) |
+
+All four recipient domains publish MX. MX is not deliverability: `info@krisp.ai` still hard-failed
+(DSN below) on a domain whose MX is Google Workspace.
+
+## Delivery failure — info@krisp.ai (final)
+
+DSN `[Gmail]/All Mail` 2026-11-03 03:36 PT (the only DSN that day in All Mail, Spam or Trash):
+**`5.1.3` — "The email account that you tried to reach does not exist"** (`NoSuchUser`) for
+`info@krisp.ai`.
+
+- MX resolves to Google Workspace (`aspmx.l.google.com` + four alt hosts) and port 25 reaches it.
+- RCPT probe returned **`250 2.1.5 OK` for `support@`, `press@`, `marketing@`, `hello@`, `sales@`,
+  `partners@` AND for a random local part** — the domain answers at RCPT for anything
+  (accept-then-filter), so the probe cannot confirm any mailbox here. Same uninformative-affirmative
+  case as `copy.ai` and `webrsolution.com`. Gmail's hard failure on the specific local part is the
+  stronger evidence; do not read the `250` as "deliverable".
+- Addresses actually published: `info@krisp.ai` (homepage), `support@krisp.ai` and
+  `security@krisp.ai` (decoded from `data-cfemail` tokens on `/privacy-policy/`). `/contact/` is a hub
+  page with **no form and no address** on it, `/press/` and `/newsroom/` both 404.
+- **No re-send made.** The only candidates are a support queue and a security queue, and a sponsorship
+  pitch belongs in neither — a second send would land in the wrong inbox and read as spam. This is the
+  same call the `media@copy.ai` bounce got on 2026-10-23.
+
+Incidental revenue finding while handling the bounce: `krisp.ai/partners/` runs a public affiliate
+program — "Affiliates earn up to 30% recurring commission for 12 months", 90-day cookie, free to
+join, signup routed to `partners.dub.co/krisp/creators`. Recorded in
+`admin/affiliate-applications-ready.md`; no review page exists for Krisp yet, so nothing was wired.
+
+## Replies received — 2026-11-03 batch
+
+- **Opus Clip** (`contact@opus.pro`, 11:37 UTC, `Re: Opus Clip on AIToolsEssentials…`) — automated
+  support acknowledgement: "Thanks for getting in touch! We've received your message", plus a pointer
+  to their in-dashboard support widget. **Not an answer to the ask.** No reply sent, on the same rule
+  that applied to Synthesia and Luma AI: an autoresponder is not a correspondent.
+
 ## Next actions
 
 1. Watch for human replies to the 2026-10-23 batch; any reply that names terms is a revenue lead for the

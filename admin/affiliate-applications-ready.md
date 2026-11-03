@@ -513,6 +513,25 @@ follow "After approval (per program)" below.
 
 ---
 
+## Krisp (`krisp.ai`) — prospect program found 2026-11-03, NOT applied, no listing
+
+Found while handling a bounced sponsor pitch to `info@krisp.ai` (see
+`marketing/sponsor-outreach-2026-10.md`). Krisp is **not** in the catalog, so no review page exists and
+nothing can be wired until one does.
+
+- **Program page:** `https://krisp.ai/partners/` (200). "The Krisp Partner Program is free to join and
+  open to affiliates, creators, and brands." Its own copy: "Affiliates earn up to **30% recurring
+  commission for 12 months**", "**90 day cookie**".
+- **Signup:** routed to `https://partners.dub.co/krisp/creators` (Dub Partners network). Needs an
+  account — **George's lane**, not this job's.
+- **Creator lane:** the same page lists a "Creator" track for influencers; any paid-content
+  arrangement is declined under `/legal/trust.html`, same as UMEVO.
+- **Status:** not applied, `data/affiliate_programs.json` untouched, no URL invented. If a Krisp review
+  is ever published, this is the program to apply to — 30% recurring for 12 months is the best
+  recurring figure on file.
+
+---
+
 ## After approval (per program)
 
 1. Add the tracking URL and `application_status: approved` to `data/affiliate_programs.json`.
