@@ -216,11 +216,23 @@ def main() -> None:
     for i, o in enumerate(opps):
         t = o.get("suggested_pitch_template") or ""
         new = t
-        new = re.sub(r"\b\d{2,3} of \d{2,3} (tracked AI tools|tools)", rf"{n_paid} of {figs['n_tools']} \1", new)
+        # Three phrasings of the same figure live in the carried templates, and a pattern that
+        # matched only one of them left the other two quoting superseded numbers straight into the
+        # queue: on 2026-11-05 the Business Today row still read "median cheapest paid tier
+        # $17.50/seat/month across the 44 of 99 tracked tools" because the old regexes required
+        # "99 tools"/"99 tracked AI tools" and "median $N" with the dollar sign immediately after
+        # the word. Both are now matched by shape, not by the exact wording of the day they were
+        # written.
+        new = re.sub(r"\b\d{2,3} of \d{2,3} ((?:tracked )?(?:AI )?tools)\b",
+                     rf"{n_paid} of {figs['n_tools']} \1", new)
+        new = re.sub(r"\b\d{2,3} AI tools we price\b", f"{figs['n_tools']} AI tools we price", new)
         new = re.sub(r"\b\d{1,3} (?:(of those) )?at or under \$25",
                      lambda m: f"{n_25} " + (f"{m.group(1)} " if m.group(1) else "") + "at or under $25", new)
         if med_now != "?":
-            new = re.sub(r"median \$\d+(?:\.\d+)?", f"median ${med_now}", new)
+            new = re.sub(r"median[^$\n]{0,40}\$\d+(?:\.\d+)?",
+                         lambda m: re.sub(r"\$\d+(?:\.\d+)?$", f"${med_now}", m.group(0)), new)
+        if figs["snapshot_updated"] != "?":
+            new = re.sub(r"\(checked 20\d{2}-\d{2}-\d{2}\)", f"(checked {figs['snapshot_updated']})", new)
         if new != t:
             o = dict(o)
             o["suggested_pitch_template"] = new
@@ -255,6 +267,7 @@ def main() -> None:
     # The judgment fields come from the run notes; nothing about the page is typed.
     existing = {o["slug"] for o in opps}
     NEW: list[dict] = []
+    dead_new: list[str] = []
     candidates = [s for s, _lm in window["ai"]]
     for s, r in bodies.items():
         # Every body-level AI hit is considered, whether or not its slug carried a token: the slug
@@ -265,7 +278,18 @@ def main() -> None:
     for s in candidates:
         if s in existing:
             continue
-        if (verified.get(s) or {}).get("days_old") is None:
+        _rec = verified.get(s) or {}
+        if _rec.get("live") is False:
+            # Measured dead before it was ever tracked. On 2026-11-05 Sourcee began serving 404 for
+            # requests that answered 200 in the previous digest (44 carried rows and 2 window rows in
+            # one day, all also gone from the sitemap), so a window slug can die between the sitemap
+            # pull and the verification pass. Such a row is recorded and skipped, never added: adding
+            # it would put a dead URL in the queue, and raising (the branch below) would make the
+            # whole digest unbuildable because of a request nobody can answer anyway.
+            print(f"  - {s} answered HTTP {_rec.get('http')} at verification — not added (page dead)")
+            dead_new.append(s)
+            continue
+        if _rec.get("days_old") is None:
             # A new row with no page-verified age is listed by the queue as live with "age unknown"
             # and counted cold by this digest — the two artefacts disagree, silently. Fail instead:
             # scripts/verify_journo_requests.py accepts slugs as arguments and takes seconds.
@@ -458,6 +482,9 @@ def main() -> None:
         )
     actions.extend(notes.get("extra_actions") or [])
 
+    dead_rows = [o for o in opps if o.get("_page_live") is False]
+    _prev_age = {p.get("slug"): p.get("_days_old") for p in prev["opportunities"]}
+
     out = {
         "date": today,
         "monitor": "HARO / Sourcee journalist-request monitor for AIToolsEssentials",
@@ -467,9 +494,12 @@ def main() -> None:
             "Ages are read off each request page (JSON-LD datePublished plus the rendered 'Posted ... ago' "
             "badge), never off the digest text, and every carried row's deadline field was rewritten this "
             f"run from the page itself. All {n_carried} carried URLs plus the {len(NEW)} rows added today "
-            "were re-fetched and read today: HTTP 200 for every one, body still served, no expiry notice. "
-            "No request has ever been seen to expire on this source, so 'deadline' means the poster's own "
-            "stated cutoff or a measured age, never an observed expiry. FEED MEMBERSHIP IS NOT A FRESHNESS "
+            f"were re-fetched today: {n_carried - len([o for o in opps if o.get('_page_live') is False])} "
+            "of the carried rows serve HTTP 200 with the body still present, and "
+            f"{len([o for o in opps if o.get('_page_live') is False])} now answer HTTP 404 with the slug "
+            "removed from the sitemap — the first expiries this monitor has ever observed on this source "
+            "(before today the standing finding was that no page carried an expiry). 'deadline' still "
+            "means the poster's own stated cutoff or a measured age. FEED MEMBERSHIP IS NOT A FRESHNESS "
             f"SIGNAL: the AI topic page carries {window['feed_count']} slugs and "
             f"{window['feed_overlap_with_window']} of them are inside today's {len(window['window'])}-slug "
             f"sitemap window; {len(tracked_in_feed)} tracked row(s) appear in it."
@@ -478,9 +508,18 @@ def main() -> None:
         "opportunities": opps,
         "new_this_run": notes.get("new_this_run") or [],
         "expired_this_run": [
-            (f"Nothing expired on its page: all {n_carried} carried URLs and the {len(NEW)} new ones "
-             "returned HTTP 200 with the request body still served. An expiry has never once been "
-             "observed on this source, so the absence of an expiry notice is weak evidence recorded as such."),
+            ((f"{len(dead_rows)} REQUEST(S) EXPIRED SINCE THE {prev_day} DIGEST — each answered HTTP 200 "
+              "that day and now answers HTTP 404, with its slug removed from the sitemap. This is the "
+              "first observed expiry on this source: every previous digest recorded that no page carried "
+              "an expiry and treated 'late send' as the only risk. " + "; ".join(
+                  f"{o['slug']} (was {_prev_age.get(o['slug'])}d)" for o in
+                  sorted(dead_rows, key=lambda x: _prev_age.get(x["slug"]) or 999)) + ".")
+             if dead_rows else
+             (f"Nothing expired on its page: all {n_carried} carried URLs and the {len(NEW)} new ones "
+              "returned HTTP 200 with the request body still served.")),
+            (f"{len(dead_new)} WINDOW ROW(S) DIED BETWEEN THE SITEMAP PULL AND VERIFICATION AND WERE NOT "
+             f"ADDED: {'; '.join(dead_new)}." if dead_new else
+             "0 window rows died between the sitemap pull and verification."),
             (f"ROWS CROSSED THE {STALE_DAYS}-DAY LINE SINCE THE PREVIOUS DIGEST ({prev_day}): {len(crossed)}."
              + (" " + "; ".join(crossed) + "." if crossed else " No row crossed.")),
             (f"{len(at_ten)} ROW(S) SIT AT EXACTLY {STALE_DAYS} DAYS AND CROSS TOMORROW: "
@@ -506,6 +545,8 @@ def main() -> None:
             "body_level_ai_hits": len(ai_prose),
             "body_level_ai_plus_spend_hits": ai_prose_spend,
             "new_rows_added_to_tracking": len(NEW),
+            "new_rows_dead_before_tracking": len(dead_new),
+            "carried_rows_expired_this_run": len(dead_rows),
             "tracked_urls": len(opps),
             "unpitched": len(unpitched),
             "live_unpitched": len(live),

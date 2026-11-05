@@ -1,0 +1,166 @@
+{
+ "new_rows": {
+  "anthropic-employees-company-decisionmaking-and-workplace-impact": {
+   "who": "Cory Weinberg, business reporter in San Francisco covering Anthropic for The New York Times (page domain nytimes.com; the body introduces himself as having 'started this week at The New York Times').",
+   "category": "AI / Inside AI Companies / Workplace Testimony",
+   "relevance": "low",
+   "contact": "Body redacts the email ('Introductions and ideas: [email redacted]') and offers 'Sensitive conversations and tips: cweinberg.91 on Signal'. The page publishes no address, no handle and no mailto.",
+   "notes": "Addressed to Anthropic employees, i.e. inside a company we have no standing in. The Signal handle is a real route, but a pitch from a price-census publisher to a reporter staffing up a company beat has nothing to offer: he wants how decisions get made inside Anthropic, not what a seat costs. Recorded, not drafted.",
+   "template": "None. No standing and no ask we can answer. NOT DRAFTED."
+  },
+  "current-and-former-jpmorgan-chase-employees-layoffs-and-ai-and-outsourcing": {
+   "who": "An independent reporter posting as 'gingercloudqueen' with no named publication (page carries no domain field); the body says they are 'developing an article' about workforce change at JPMorgan Chase.",
+   "category": "AI / Employment Testimony",
+   "relevance": "low",
+   "contact": "No address, no handle, no link on the page: 'you can message me privately' is all it says, and the platform reply is the only route.",
+   "notes": "Wants current or former JPMorgan Chase employees describing their own layoffs, outsourcing and AI-driven role changes. Neither a route nor an ask we can answer; first-person testimony from inside one bank.",
+   "template": "None. NOT DRAFTED."
+  },
+  "ai-policy-experts-tech-influence-on-midterms-tonight": {
+   "who": "Calder McHugh (page carries no publication domain); the body assumes off-record and gives the Signal handle cmchugh.12.",
+   "category": "AI Policy / Election Night",
+   "relevance": "low",
+   "contact": "Signal cmchugh.12 in the body. No email, no link.",
+   "notes": "A same-evening call for AI-policy comment on the 2026 midterms, posted 2026-11-03T20:18Z. The date it was written for has passed, which is the closest thing to a content expiry this source produces - recorded as expired-by-content rather than live. No price or procurement angle in any case.",
+   "template": "None. Expired by its own framing. NOT DRAFTED."
+  },
+  "retail-workers-and-managers-instore-ai-impact-holiday-season": {
+   "who": "Issie Lapowsky, Bloomberg Businessweek columnist (page domain bloomberg.com).",
+   "category": "AI / Retail Work / Businessweek Column",
+   "relevance": "low",
+   "contact": "Body redacts the email ('[email redacted]') and gives Signal 'issielapowsky.08'. The page publishes no address.",
+   "notes": "Explicitly excludes product pitches: 'I'm interested in personal stories, not product pitches, please (only exception is if you have a retailer using your product who will talk to me)'. That exception is the only shape we could meet and we hold no such customer. Wants retail workers and managers, not a price dataset.",
+   "template": "None. The ask excludes us by its own words. NOT DRAFTED."
+  },
+  "generative-ai-documentation-experts-business-document-fraud-risk": {
+   "who": "John P. Mello Jr. (page carries no publication domain); the body is two lines and a shortened link.",
+   "category": "AI / Document Fraud",
+   "relevance": "low",
+   "contact": "One link, https://lnkd.in/gA_ZUdyE (LinkedIn shortener, login-walled) - not a reply route. No address or handle.",
+   "notes": "Seeks experts in AI-generated business documents and fraud risk. No route, no beat overlap: nothing in our data measures document authenticity.",
+   "template": "None. NOT DRAFTED."
+  },
+  "founders-selling-to-nurses-nurse-adoption-and-clinical-ai": {
+   "who": "Payton Babb Sy, BSN RN, reporting for Nurse.org (page domain nurse.org) from HLTH Las Vegas, Nov 15-18.",
+   "category": "AI / Healthcare / Nurse Adoption",
+   "relevance": "low",
+   "contact": "No address, no handle, no link on the page. Offers 'a handful of coffee chat slots' on the HLTH show floor.",
+   "notes": "Wants founders who sell to nurses and clinicians about clinical AI adoption. Off-beat and venue-bound; no route on the page and no cost question.",
+   "template": "None. NOT DRAFTED."
+  },
+  "newsletter-publishers-and-creators-state-of-newsletters-report-2027": {
+   "who": "Taylor Cromwell, beehiiv (page domain beehiiv.com), assembling beehiiv's annual State of Newsletters report.",
+   "category": "Newsletter Industry / Survey",
+   "relevance": "low",
+   "contact": "A Tally form: https://tally.so/r/rDDdP2. No email, no handle.",
+   "notes": "Closest thing in the window to our own shape - we publish a newsletter - but it is a respondent survey, not a source request, and its questions are about media-business expansion and monetisation experiments, not AI tool costs. The form is the only route and it takes no pitch. Beehiiv is also a platform we deliberately no longer use (deleted 2026-10), so answering its report would not be independent.",
+   "template": "None. Survey, not a request. NOT DRAFTED."
+  },
+  "dallas-insurance-executives-private-capital-ai-rbc-reforms": {
+   "who": "Lee Harris, insurance correspondent at the Financial Times (page domain ft.com).",
+   "category": "AI / Insurance / Financial Times",
+   "relevance": "low",
+   "contact": "Body redacts the email ('drop me a line here or at [email redacted]'); the platform reply is the only listed route.",
+   "notes": "Insurance-sector meetings coverage (NAIC): private capital, RBC and statutory accounting, cat risk, managed-care pricing. 'Pricing' here is insurance pricing, not software pricing. No route and no overlap.",
+   "template": "None. NOT DRAFTED."
+  },
+  "job-seekers-in-ireland-aiautomated-job-applications-experience": {
+   "who": "Alex Meehan (page carries no publication domain).",
+   "category": "AI / Job Seeking",
+   "relevance": "low",
+   "contact": "No address, handle or link; the post asks people to reply or quote-tweet.",
+   "notes": "Wants people in Ireland who automate job applications with AI. Testimony-only, no route, no cost question.",
+   "template": "None. NOT DRAFTED."
+  },
+  "biometrics-and-computer-vision-experts-proving-humanity-in-digital-age": {
+   "who": "Victoria Woollaston, commissioned by E&T Magazine (theiet.org) for a feature on proving humanity.",
+   "category": "AI / Biometrics / Feature",
+   "relevance": "low",
+   "contact": "Body redacts the email; the page publishes no address or handle.",
+   "notes": "Wants biometrics and computer-vision engineers plus the philosophical angle. Expert-only call with no route; nothing in our data measures identity verification.",
+   "template": "None. NOT DRAFTED."
+  },
+  "retail-executives-nrf-nyc-retail-media-supply-chain-and-ai": {
+   "who": "Sharon Yourell Lawlor, 'The Modern Shopper Strategist', writing on rethinkretail.com; self-described NRF Retail Voice for 2027.",
+   "category": "Retail / NRF / Vendor Commentary",
+   "relevance": "low",
+   "contact": "Three lnkd.in links (e7SJAe2t, eJhsknGA, eMPXeNiZ) - LinkedIn shorteners, login-walled, and they point at her own NRF commentary.",
+   "notes": "Not a source request: a conference-preview post inviting retail executives to meet at NRF. No ask, and its links are promotion rather than a reply route.",
+   "template": "None. NOT a request. NOT DRAFTED."
+  },
+  "ai-chatbot-therapy-users-mental-health-support-experiences": {
+   "who": "A fourth-year journalism student at UP Diliman posting as 'gelasfieldnotes' (no publication domain).",
+   "category": "AI / Mental Health / Student Project",
+   "relevance": "low",
+   "contact": "No address or handle on the page; asks for a DM or an email that the body does not print.",
+   "notes": "Student story seeking people who use AI chatbots for therapy. Excluded by its own terms (interviewees, not sources) and it publishes no route.",
+   "template": "None. NOT DRAFTED."
+  },
+  "regulators-and-compliance-experts-consumer-ai-mental-wellbeing": {
+   "who": "Stephen Gilbert, part of the Consumer AI and Mental Wellbeing Commission (no publication domain on the page); co-signatories named include Chelsea Clinton and Sandra Bucci.",
+   "category": "AI Governance / Commission Evidence Call",
+   "relevance": "low",
+   "contact": "Three bit.ly links: evidence submission (4dUpzOY), commission page (4ilFhnq), announcement (4zWrdYW). No email or handle.",
+   "notes": "A call for regulatory and compliance evidence to a commission. Not a journalist request, and the submission route wants regulatory expertise we do not hold.",
+   "template": "None. NOT DRAFTED."
+  },
+  "designers-and-creators-balancing-bills-family-and-meaningful-work": {
+   "who": "Tommy Geoco (no publication domain on the page); recording a podcast episode with @ridd_design.",
+   "category": "AI / Design / Podcast",
+   "relevance": "low",
+   "contact": "No address, handle or link on the page; asks listeners to reply to the post.",
+   "notes": "Podcast episode asking designers how they balance bills, family and meaningful work, with 'what all of this costs' meaning personal cost, not software cost. No route, no datable ask.",
+   "template": "None. NOT DRAFTED."
+  },
+  "uk-job-hunters-12-months-job-market-climate-and-ai": {
+   "who": "Fatima O (no publication domain on the page).",
+   "category": "AI / UK Labour Market",
+   "relevance": "low",
+   "contact": "No address, handle or link; hashtag-only post.",
+   "notes": "Wants UK job hunters who have been searching 12+ months. Testimony-only and route-less.",
+   "template": "None. NOT DRAFTED."
+  },
+  "ai-data-center-operators-midterm-vote-backlash-impact": {
+   "who": "Jon Swartz, TechStrong Group (page domain techstronggroup.com).",
+   "category": "AI / Data Centres / Deadline News",
+   "relevance": "low",
+   "contact": "Body redacts the email ('Please DM me or email [email redacted]'); the platform DM is the listed route.",
+   "notes": "A same-day news story on data-centre backlash after the midterm results, posted 2026-11-04T14:48Z. Deadline-shaped and already past; wants operators, not a price census.",
+   "template": "None. NOT DRAFTED."
+  },
+  "freelancers-small-businesses-and-employees-falsely-accused-of-ai-use": {
+   "who": "Suzanne Bearne, freelance journalist writing from Berlin (no publication domain on the page; she is a regular byline in UK national titles).",
+   "category": "AI / False Accusations / Testimony",
+   "relevance": "low",
+   "contact": "No address or link; 'DMs are open' on the platform, which is the only route.",
+   "notes": "Wants people accused of using AI when they had not - a testimony call, on or off the record. We are a publisher, not an accused worker, and the body asks for 'what happened, when, and any consequences'. Recorded because the theme is on-beat-adjacent (AI attribution), but there is no cost angle and no route beyond a platform DM.",
+   "template": "None. NOT DRAFTED."
+  },
+  "canadian-real-estate-agents-foreign-buyer-ban-ending-jan-1-2027": {
+   "who": "Courtney Zwicker, Real Estate Magazine (page domain realestatemagazine.ca).",
+   "category": "Real Estate / Canada / Sector Request",
+   "relevance": "low",
+   "contact": "Publishes an address in obfuscated plain text: courtney(at)realestatemagazine(dot)ca - a usable route, unlike most rows in this window.",
+   "notes": "A route-rich, subject-unrelated row: Canadian agents on the foreign-buyer ban ending 2027-01-01. Recorded so the pattern stays visible - a published route is not an ask we can answer, and no AI or spend question appears anywhere in the body.",
+   "template": "None. Route exists, standing does not. NOT DRAFTED."
+  }
+ },
+ "new_this_run": [
+  "18 rows added, every AI-token slug in the 201-slug two-day window (2026-11-03T03:36Z -> 2026-11-05T11:18Z) plus every body-level AI hit the slug filter cannot see.",
+  "0 new rows are core-beat AI+spend. The window produced 0 AI+spend slugs for the second consecutive run; the 13 spend-token slugs are all consumer cost-of-living (rent, Botox, BNPL, freezer food, gold loans).",
+  "1 new row publishes a usable address (canadian-real-estate-agents, courtney(at)realestatemagazine(dot)ca) and its subject has nothing to do with us - the route/ask mismatch is the pattern of the week.",
+  "2 new rows are not source requests at all (a NRF conference-preview post and a newsletter-industry respondent survey)."
+ ],
+ "why_not_drafted": [
+  "18 new rows this run, 0 drafted: 0 ask about AI tool costs, and 13 of the 18 publish no reply route at all",
+  "the 5 with a route (Signal handles at NYT/Bloomberg/Midterms, a Tally form, an obfuscated magazine address) fail on the ask, not the route",
+  "2 are deadline-shaped and already past (midterms-evening comment; a same-day data-centre story posted 2026-11-04)"
+ ],
+ "defects": [
+  "No monitor run happened on 2026-11-04: _window_1104.json, _bodies_1104.json and _verify_1104.log were all written, but the run never produced a digest, so its 124-slug window was never digested. Today's window was therefore taken from the 2026-11-03 mark rather than the 2026-11-04 one, covering both days (201 slugs), and the 11-04 bodies were reused rather than re-fetched. Nothing was lost, but the gap is recorded because a digest-less run leaves rows untracked and the next build_digest would silently carry nothing from that day."
+ ],
+ "extra_actions": [
+  "The 2026-11-03 draft to InformationWeek (Kelsey Ziser) carried a hard deadline of 2026-11-04 EOD and was NOT sent. The deadline has passed; the draft in Gmail (uid 52) must be deleted rather than left as a clickable stale artefact, and the row recorded as expired in pitch-ledger.json so it stops ranking.",
+  "The Forbes draft to Alison Coleman (Gmail uid 51) is still staged and its two rows are now 9 days old - inside the 10-day line for one more day. That is today's send."
+ ]
+}

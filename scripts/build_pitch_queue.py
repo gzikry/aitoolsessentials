@@ -400,6 +400,35 @@ RENEWAL_CAVEAT = ("Sourcee publishes no renewal signal: on the 300 most recently
                   "claimed here. Cold means old and unpitched, not provably abandoned.")
 
 
+def _expiry_note() -> str:
+    """Whether requests have actually been observed to die, read off the newest digest.
+
+    Written as a function because the caveat above was true for two months and then stopped being
+    true: on 2026-11-05 forty-four requests that the 2026-11-03 digest had re-verified live answered
+    HTTP 404 and were gone from the sitemap. A typed paragraph asserting "nothing expires here" would
+    have gone on telling George that a late send was safe while the pages were dying. The count comes
+    from the digest's own measurement; if no digest carries the field, nothing is claimed.
+    """
+    digests = sorted(OUT.glob("digest-*.json"))
+    for p in reversed(digests):
+        try:
+            d = json.loads(p.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        n = (d.get("monitor_health") or {}).get("carried_rows_expired_this_run")
+        if n is None:
+            continue
+        day = d.get("date", p.stem.replace("digest-", ""))
+        if n == 0:
+            return f"**No expiry observed in the {day} run** — every carried page still served its request body."
+        return (f"**Requests DO expire on this source, and it was measured on {day}: {n} requests that the "
+                f"previous digest had re-verified live now answer HTTP 404 and have been deleted from the "
+                "sitemap.** Before that, this monitor asserted the opposite (no page had ever expired), so "
+                "treat a 'late send' as a race with deletion rather than a plan: the row can disappear "
+                "between two runs that are a day apart.")
+    return "**Expiry has never been measured by this monitor.**"
+
+
 # A request can sit in the queue for days while a draft for it already exists: the FinOps request
 # was the queue's #1 on 2026-09-17 with a finished draft in pitch-drafts-2026-09-17.md and was never
 # sent, and it crossed into cold on 2026-09-19. Naming which rows are already written is the one
@@ -466,30 +495,38 @@ def _newest_drafts() -> str:
 
 
 def _draft_section(slug: str, filename: str | None = None) -> str:
-    """The section that names this slug in a draft file — read off the file, never typed.
+    """The numbered draft section that OPENS a pitch for this slug — read off the file, never typed.
 
     The DRAFTS prose hardcoded a section number for each row ("§2" for the WSJ row, "§3" for the
     shadow-AI row). On 2026-10-12 the WSJ draft was section 1 and the shadow-AI row was not in the
     newest draft file at all (it was sent on 2026-10-10 and bounced), so the queue pointed a reader at
     the wrong section of the right file — the same defect class as the hardcoded draft filename fixed
-    on an earlier run. Returns '' when the file does not name the slug, so the prose must say that
-    rather than cite a section that is not there.
+    on an earlier run. Returns '' when no file opens a numbered section for the slug, so the prose
+    must say that rather than cite a section that is not there.
+
+    Files are searched newest→oldest and only a NUMBERED section (`## N.`) counts. A bare mention is
+    not a draft: on 2026-11-05 the Mims row was named in the newest file's "still open past the line"
+    list, and a plain slug match pointed George at §2 of that file — which is the Business Today
+    draft. The scan therefore requires the numbered heading AND the slug's own Source line inside it.
     """
-    fn = filename or _newest_drafts()
-    try:
-        text = (OUT / fn).read_text(errors="ignore")
-    except OSError:
-        return ""
-    if slug not in text:
-        return ""
-    section = None
-    for line in text.splitlines():
-        m = re.match(r"^#{1,3}\s+(\d+)\.", line.strip())
-        if m:
-            section = m.group(1)
-        if slug in line:
-            return f"§{section} in `{fn}`" if section else f"`{fn}`"
-    return f"`{fn}`"
+    files = [OUT / filename] if filename else sorted(OUT.glob("pitch-drafts-*.md"), reverse=True)
+    for f in files:
+        try:
+            text = f.read_text(errors="ignore")
+        except OSError:
+            continue
+        if slug not in text:
+            continue
+        section = None
+        for line in text.splitlines():
+            m = re.match(r"^#{1,3}\s+(\d+)\.", line.strip())
+            if m:
+                section = m.group(1)
+                continue
+            if section and slug in line and f"/journo-request/{slug}" in line:
+                return f"§{section} in `{f.name}`"
+        # fall through to older files: this one only mentions the slug
+    return ""
 
 
 def _carried_runs(slug: str) -> int:
@@ -946,7 +983,12 @@ def _sendable(q: dict) -> bool:
 def render(queue: list[dict], ledger: dict) -> str:
     live = [q for q in queue if q["url"] not in ledger.get("pitched", {})]
     live = [q for q in live if q["url"] not in ledger.get("skipped", {})]
-    fresh = [q for q in live if not q["stale"]]
+    # A dead page is not live, whatever its age field says: when a request 404s, verified-requests.json
+    # has no datePublished left to measure, `stale` comes out False, and every expired row was counted
+    # into the headline's "live" figure. On 2026-11-05 that put 44 deleted requests into a count George
+    # reads as candidates. They are split out and reported as expired instead.
+    expired = [q for q in live if q.get("page_live") is False]
+    fresh = [q for q in live if not q["stale"] and q.get("page_live") is not False]
     stale = [q for q in live if q["stale"]]
 
     def key(q):
@@ -985,7 +1027,7 @@ def render(queue: list[dict], ledger: dict) -> str:
         "",
         f"Built {date.today().isoformat()} from {len(queue)} unique requests across the digest "
         f"history. **{len(sendable)} sendable**, {len(fresh)} live, {len(stale)} cold "
-        f"(> {STALE_DAYS} days and unpitched).",
+        f"(> {STALE_DAYS} days and unpitched), {len(expired)} expired on the platform.",
         "",
         "*\"Sendable\" is the number that matters and the one the headline used to hide: a live page "
         "is not a candidate. A row counts as sendable only when it is live, not cold, not dropped "
@@ -999,6 +1041,8 @@ def render(queue: list[dict], ledger: dict) -> str:
         "first-seen date and showed a 190-day-old request as 8 days old.",
         "",
         f"**No renewal signal exists on this source.** {RENEWAL_CAVEAT}",
+        "",
+        _expiry_note(),
         "",
         "**Every pitch here needs a human send.** HARO and Connectively sit behind an email wall, "
         "Qwoted and Medialyst need authenticated sessions, and Sourcee redacts the requester's own "
@@ -1187,7 +1231,8 @@ def main() -> None:
     queue = collect()
     ledger = _load_ledger()
     QUEUE_MD.write_text(render(queue, ledger))
-    live = [q for q in queue if not q["stale"] and q["url"] not in ledger.get("pitched", {})]
+    live = [q for q in queue if not q["stale"] and q.get("page_live") is not False
+            and q["url"] not in ledger.get("pitched", {})]
     live = [q for q in live if q["url"] not in ledger.get("skipped", {})]
     sendable = [q for q in live if _sendable(q)]
     print(f"unique requests: {len(queue)}")
