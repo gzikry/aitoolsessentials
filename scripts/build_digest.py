@@ -204,6 +204,20 @@ def main() -> None:
                 opps[i] = o
                 break
 
+    # `suggested_pitch_template` (rendered as the row's Angle) ends with a pointer to the draft file
+    # that opened the pitch on the day it was written, and nothing rewrites that pointer — so on
+    # 2026-11-06 the Business Today row still told a reader to open section 3 of the 2026-10-29 file
+    # while today's draft is section 2 of a new one. The figure repair above rewrites numbers, not
+    # citations. `angle_replace` supersedes the whole field when a run has re-drafted the row.
+    for slug, full in (notes.get("angle_replace") or {}).items():
+        for i, o in enumerate(opps):
+            if o["slug"] == slug:
+                o = dict(o)
+                o["suggested_pitch_template"] = full.strip()
+                o["_angle_replaced"] = today
+                opps[i] = o
+                break
+
     # A carried template can quote the tool count, the sub-$25 count or the median from the day it
     # was written. Re-derive all three: the queue renders this field straight to George, so a stale
     # figure is visible and wrong. The old pattern was `of 7[0-9] (tools|tracked AI tools)`, which
@@ -482,8 +496,38 @@ def main() -> None:
         )
     actions.extend(notes.get("extra_actions") or [])
 
+    # Dead rows are carried forever, so "expired this run" cannot be "rows that are dead now": a
+    # row that 404'd yesterday is still in `opps` with _page_live False today, and counting it again
+    # told George on 2026-11-06 that 44 requests had expired that morning when the 2026-11-05 digest
+    # had already recorded exactly those 44 as dead (44 of 44 overlap, measured). The same miscount
+    # made the age column print "was Noned" for every one of them, because a 404 page has no
+    # datePublished left to carry. The baseline is the previous digest's own page verdict.
     dead_rows = [o for o in opps if o.get("_page_live") is False]
     _prev_age = {p.get("slug"): p.get("_days_old") for p in prev["opportunities"]}
+    _prev_live = {p.get("slug"): p.get("_page_live") for p in prev["opportunities"]}
+    newly_dead = [o for o in dead_rows if _prev_live.get(o["slug"]) is not False]
+    already_dead = [o for o in dead_rows if _prev_live.get(o["slug"]) is False]
+
+    def _expiry_line() -> str:
+        if newly_dead:
+            line = (f"{len(newly_dead)} REQUEST(S) EXPIRED SINCE THE {prev_day} DIGEST — each answered "
+                    "HTTP 200 that day and now answers HTTP 404, with its slug removed from the "
+                    "sitemap. "
+                    + "; ".join(f"{o['slug']} (was {_prev_age.get(o['slug'])}d)" for o in
+                                sorted(newly_dead, key=lambda x: _prev_age.get(x["slug"]) or 999))
+                    + ".")
+            if already_dead:
+                line += (f" A further {len(already_dead)} row(s) recorded dead by the {prev_day} "
+                         "digest are still 404 and still absent from the sitemap; they are carried "
+                         "as dead, not counted as a new wave.")
+            return line
+        if already_dead:
+            return (f"NO REQUEST THAT THE {prev_day} DIGEST RECORDED AS LIVE HAS EXPIRED SINCE IT WAS "
+                    f"BUILT. The {len(already_dead)} rows it recorded as 404 answered 404 again today "
+                    "and remain absent from the sitemap — dead rows are carried, not re-counted, so a "
+                    "stable 404 is not a new expiry event.")
+        return (f"Nothing expired on its page: all {n_carried} carried URLs and the {len(NEW)} new ones "
+                "returned HTTP 200 with the request body still served.")
 
     out = {
         "date": today,
@@ -508,15 +552,7 @@ def main() -> None:
         "opportunities": opps,
         "new_this_run": notes.get("new_this_run") or [],
         "expired_this_run": [
-            ((f"{len(dead_rows)} REQUEST(S) EXPIRED SINCE THE {prev_day} DIGEST — each answered HTTP 200 "
-              "that day and now answers HTTP 404, with its slug removed from the sitemap. This is the "
-              "first observed expiry on this source: every previous digest recorded that no page carried "
-              "an expiry and treated 'late send' as the only risk. " + "; ".join(
-                  f"{o['slug']} (was {_prev_age.get(o['slug'])}d)" for o in
-                  sorted(dead_rows, key=lambda x: _prev_age.get(x["slug"]) or 999)) + ".")
-             if dead_rows else
-             (f"Nothing expired on its page: all {n_carried} carried URLs and the {len(NEW)} new ones "
-              "returned HTTP 200 with the request body still served.")),
+            _expiry_line(),
             (f"{len(dead_new)} WINDOW ROW(S) DIED BETWEEN THE SITEMAP PULL AND VERIFICATION AND WERE NOT "
              f"ADDED: {'; '.join(dead_new)}." if dead_new else
              "0 window rows died between the sitemap pull and verification."),
@@ -546,7 +582,8 @@ def main() -> None:
             "body_level_ai_plus_spend_hits": ai_prose_spend,
             "new_rows_added_to_tracking": len(NEW),
             "new_rows_dead_before_tracking": len(dead_new),
-            "carried_rows_expired_this_run": len(dead_rows),
+            "carried_rows_expired_this_run": len(newly_dead),
+            "carried_rows_still_expired": len(already_dead),
             "tracked_urls": len(opps),
             "unpitched": len(unpitched),
             "live_unpitched": len(live),

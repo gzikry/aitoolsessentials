@@ -416,9 +416,18 @@ def _expiry_note() -> str:
         except (OSError, json.JSONDecodeError):
             continue
         n = (d.get("monitor_health") or {}).get("carried_rows_expired_this_run")
+        still = (d.get("monitor_health") or {}).get("carried_rows_still_expired")
         if n is None:
             continue
         day = d.get("date", p.stem.replace("digest-", ""))
+        if n == 0 and still:
+            # "No expiry observed" is only true when nothing is dead. The 2026-11-06 run inherited 44
+            # rows that had 404'd the day before; reporting "every carried page still served its
+            # request body" beside them is the same defect class as a typed count, one layer deeper.
+            return (f"**No NEW expiry in the {day} run — but {still} carried requests are already dead.** "
+                    f"Each answered HTTP 404 again and remains absent from the sitemap; the {day} digest "
+                    "did not record a fresh wave. The rule stands: a row can disappear between two runs a "
+                    "day apart, so a live row is worth sending today.")
         if n == 0:
             return f"**No expiry observed in the {day} run** — every carried page still served its request body."
         return (f"**Requests DO expire on this source, and it was measured on {day}: {n} requests that the "

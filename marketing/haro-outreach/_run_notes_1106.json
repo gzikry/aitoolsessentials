@@ -1,0 +1,107 @@
+{
+ "new_this_run": [
+  "10 rows added: the 6 AI-token slugs in the 53-slug window (2026-11-05T11:18Z -> 2026-11-06T02:09Z) plus the 4 body-level AI hits the slug filter cannot see (a doctoral-writing call, a postcolonial-citizenship debate, a handwriting-in-business debate, a CISO developer-protection deep-dive).",
+  "0 new rows are core-beat AI+spend - the third consecutive window at zero. The 3 spend-token slugs are a deaf-access hearing-tech cost call, a SaaS landing-page advertorial and a Christmas-commercial homeowner call; none asks what an AI tool costs.",
+  "0 of the 10 new rows publishes an email address. Four redact it, four publish only a lnkd.in shortlink, two publish nothing at all.",
+  "1 new row is a deadline rather than a beat: REALTOR Magazine's NAR NXT call is on the ground 2026-11-06 to 11-08, so it is already half past.",
+  "The window is the weakest supply day since 2026-11-01: 53 slugs, 6 AI tokens, 0 AI+spend, and not one ask about what a tool costs."
+ ],
+ "new_rows": {
+  "people-with-friends-and-coworkers-who-disagree-on-ai-managing-tension": {
+   "who": "CNBC Make It - reporter not named on the page; page domain cnbc.com",
+   "category": "AI / Social and Workplace Tension",
+   "contact": "The body asks for a DM or an email and redacts the address ('please DM or email me ([email redacted])'). No handle, address or link is published on the page and none was resolved off cnbc.com. NOT RESOLVED as a route.",
+   "relevance": "low",
+   "notes": "Wants first-hand testimony from people whose friends, roommates or coworkers disagree with them about AI. We have a price dataset, not a personal story, and answering would mean inventing one. Off-beat for us on the ask and routeless besides.",
+   "template": "None. No standing and no route. NOT DRAFTED."
+  },
+  "doctoral-candidates-and-phd-holders-dissertation-writing-strategies": {
+   "who": "A doctoral mentor and dissertation editor (individual call, not a publication); no outlet named",
+   "category": "Academia / Writing Process",
+   "contact": "The page publishes no address, handle or link of its own, and says 'invite' without a route. NOT RESOLVED as a route.",
+   "relevance": "low",
+   "notes": "A doctoral mentor collecting candidates' writing strategies for their own research. Nothing to do with AI tool costs; the AI token is incidental to the call. Not a journalism request and not answerable by us.",
+   "template": "None. No standing and no route. NOT DRAFTED."
+  },
+  "early-career-workers-future-of-work-and-ai": {
+   "who": "The Future Collective, with Henley Business School - research report; no named reporter",
+   "category": "Future of Work / Early-Career Research",
+   "contact": "Asks early-career workers to volunteer for a one-hour interview; no address, handle or form is published on the page. NOT RESOLVED as a route.",
+   "relevance": "low",
+   "notes": "Wants graduates, apprentices and entry-level workers as interview subjects for a Henley Business School report. We are neither, and the report asks how work should change - not what tools cost. Off-beat on the ask.",
+   "template": "None. No standing and no route. NOT DRAFTED."
+  },
+  "ai-and-virtual-influencer-creators-index-submission": {
+   "who": "An AI/virtual-influencer index; no publication or reporter named",
+   "category": "Not a source request - directory submission",
+   "contact": "A t.co shortlink is the only route; the page publishes no address or handle. NOT a reply route for a pitch.",
+   "relevance": "low",
+   "notes": "This is a submission call for an index of AI influencers, not a reporting request. Nothing to answer, and we do not make or manage an AI influencer.",
+   "template": "None. Not a source request. NOT DRAFTED."
+  },
+  "nar-nxt-safety-and-cybersecurity-experts-gen-ai-cybersecurity": {
+   "who": "Tracey 'the Safety Lady' Hawkins for REALTOR Magazine (magazine.realtor); covering NAR NXT in New Orleans",
+   "category": "PropTech / Real-Estate Cybersecurity",
+   "contact": "The body says 'Comment below, send me a message, or email [email redacted]' - the address is redacted and no handle or link is published on the page. NOT RESOLVED as a route.",
+   "relevance": "low",
+   "notes": "Wants proptech vendors and safety experts on the NAR NXT show floor between 2026-11-06 and 11-08 for a real-estate safety series. We are not a proptech vendor and are not at the conference; the window is already open and closes in two days.",
+   "template": "None. No standing, no route, and the event window is now. NOT DRAFTED."
+  },
+  "ai-policy-expert-possible-pause-on-ai-in-us": {
+   "who": "Daily Mail (dailymail.co.uk) - reporter not named on the page",
+   "category": "AI Policy / Regulation",
+   "contact": "The body says 'DM me or email me: [email redacted]'. No handle or address is published on the page and none was resolved off dailymail.co.uk. NOT RESOLVED as a route.",
+   "relevance": "low",
+   "notes": "Wants an AI policy expert to comment on a possible US pause on AI development. We publish a dated price census; we hold no policy standing and would be overstating it to answer. Routeless as well.",
+   "template": "None. No standing and no route. NOT DRAFTED."
+  },
+  "data-center-workers-and-ai-execs-ban-ai-expansion-until-safety-rules": {
+   "who": "Business Spotlight / ZEIT SPRACHEN - Head-to-Head debate feature; no reporter named",
+   "category": "AI Infrastructure / Regulation Debate",
+   "contact": "The page publishes a lnkd.in shortlink to the poster's Qwoted profile plus 'drop me a DM'. No address or handle is readable from this end. NOT RESOLVED as a route.",
+   "relevance": "low",
+   "notes": "Wants exactly two named interview partners holding opposing views on banning AI datacentre expansion until worker-safety rules land, each with a high-res headshot, and states it will check for AI-generated answers. A yes/no debating position is not a price census, and taking a side on datacentre regulation is not our standing.",
+   "template": "None. No standing and no usable route. NOT DRAFTED."
+  },
+  "cisos-and-senior-cybersecurity-leaders-protecting-developers": {
+   "who": "The Stack (thestack.co) - security title; reporter not named on the page",
+   "category": "AI / Developer Security and Supply Chain",
+   "contact": "The body asks security leaders how they protect developers, and publishes no address, handle or link of its own. NOT RESOLVED as a route.",
+   "relevance": "low",
+   "notes": "The closest new row to our beat - it opens on a developer compromised while installing 'a popular AI coding tool' - but the ask is how security functions protect developers upstream, and a dated pricing census does not answer it. Recorded rather than drafted: pitching it would be an off-ask email with no route behind it.",
+   "template": "None. Off-ask and routeless. NOT DRAFTED."
+  },
+  "postcolonial-scholars-and-former-coloniser-officials-citizenship-debate": {
+   "who": "Business Spotlight / ZEIT SPRACHEN - Head-to-Head debate feature",
+   "category": "Not AI - citizenship debate",
+   "contact": "A lnkd.in shortlink is published; no address or handle. NOT a route to a pitch we could send.",
+   "relevance": "low",
+   "notes": "Body-level AI hit only because the page chrome mentions AI somewhere; the request itself is a two-sided debate on former colonisers granting citizenship. Nothing to do with us.",
+   "template": "None. Off-beat. NOT DRAFTED."
+  },
+  "business-leaders-and-educators-headtohead-handwriting-in-business": {
+   "who": "Business Spotlight / ZEIT SPRACHEN - Head-to-Head debate feature",
+   "category": "Not AI - handwriting in business",
+   "contact": "A lnkd.in shortlink is published; no address or handle. NOT a route to a pitch we could send.",
+   "relevance": "low",
+   "notes": "Body-level AI hit only; the request is a two-sided debate on whether children should still be taught handwriting. Nothing to do with AI tool costs.",
+   "template": "None. Off-beat. NOT DRAFTED."
+  }
+ },
+ "why_not_drafted": [
+  "10 new rows this run, 0 drafted: not one asks what an AI tool, seat or subscription costs - the third consecutive window at 0 AI+spend",
+  "0 of the 10 publishes an email address: 4 redact it, 4 publish only a lnkd.in shortlink, 2 publish nothing at all",
+  "the 2 most on-beat (The Stack on developers compromised via an AI coding tool; Daily Mail on an AI pause) fail on standing, not on route - we would be claiming a security or policy voice we do not have"
+ ],
+ "defects": [
+  "No new defect. The queue renderer's zero-sendable paragraph still asserts that every row with a relevance above the tangential band and a resolved route has crossed the 10-day line, which is now contradicted by two live rows at 10d and 9d; the sendable branch is what runs today, so the paragraph is not printed.",
+  "The `_expiry_note()` function asserts that the 44 expiries were the first this monitor had observed and that 'before that, this monitor asserted the opposite'. True as history, but the sentence is now typed prose about a moving state: today a further 44 rows died and the note still speaks only about the 2026-11-05 measurement. Recorded, not fixed this run."
+ ],
+ "extra_actions": [
+  "The Forbes draft to Alison Coleman (Gmail uid 53) is still staged and both its rows are now 10 days old - today is the last day either sits inside the 10-day line. The staged body says 'As of 2026-11-05'; rewrite it from pitch-drafts-2026-11-06.md section 1 before sending.",
+  "Business Today / Vidhya Das is 9 days old and is a LinkedIn DM, so nothing can be staged for it. It crosses the line tomorrow."
+ ],
+ "angle_replace": {
+  "ai-trainers-and-researchers-workplace-ai-adoption-and-training": "Data-led: median cheapest paid tier $16.50/seat/month across the 44 of 105 tracked tools that publish a monthly price, 35 of those at or under $25 (snapshot checked 2026-11-06) - i.e. per-seat cost is low enough that adoption outruns the training question. Signed AIToolsEssentials, 163 words including the signature. DRAFTED as section 2 of pitch-drafts-2026-11-06.md and UNSENT; the route is a LinkedIn DM, so nothing can be staged."
+ }
+}
