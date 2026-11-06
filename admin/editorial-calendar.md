@@ -102,4 +102,11 @@ Priority order unchanged: how-to/workflow → audience guides → question-inten
 14. What are AI credits? ✅ shipped 2026-10-30 (question-intent, articles/what-are-ai-credits.html; added to Learn hub)
 Next up: another workflow piece (the how-to lane). Question-intent interleave is done for batch 4.
 
+## Backlog: batch 5 (from 2026-11-06)
+Priority order unchanged: how-to/workflow → audience guides → question-intent.
+15. Prepping a sales call with AI without inventing facts ✅ shipped 2026-11-06 (workflow, articles/ai-sales-call-prep-workflow.html; added to Learn hub)
+16. Best AI tools for photographers ✅ shipped 2026-11-06 (audience guide, articles/best-ai-tools-for-photographers.html; /best-for/ role `photographers` + stack-builder role added)
+Next up: one question-intent piece, then another workflow piece.
+Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
+
 

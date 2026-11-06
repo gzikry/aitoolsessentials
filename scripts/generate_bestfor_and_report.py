@@ -142,6 +142,14 @@ ROLES = [
       ("notion-ai", "Principal preferences, briefing notes, and recurring logistics in one place"),
       ("perplexity", "Cited lookups for venues, travel rules, and supplier ownership")],
      "articles/best-ai-tools-for-executive-assistants.html"),
+    ("photographers", "Photographers", "Retouching, frame expansion, concept work, and client-facing design, with licensing and disclosure treated as part of the job.",
+     [("adobe-firefly", "Generative fill and frame expansion inside the Adobe workflow"),
+      ("retouchia", "Batch portrait retouching sold as one-time credit packs"),
+      ("midjourney", "Concept imagery, moodboards, and backdrop references before a shoot"),
+      ("leonardo-ai", "Canvas inpainting and outpainting with a usable free tier"),
+      ("canva-ai", "Client guides, price sheets, and social crops"),
+      ("chatgpt", "Client communication, shot lists, and package descriptions")],
+     "articles/best-ai-tools-for-photographers.html"),
 ]
 
 

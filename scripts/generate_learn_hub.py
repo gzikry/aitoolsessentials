@@ -62,6 +62,8 @@ LEARN = [
     ('best-ai-tools-for-executive-assistants.html', 'Best AI tools for executive assistants', 'Inbox triage, meeting capture, briefings, and cited research — with approvals and personnel data staying human.'),
     ('monthly-vs-annual-ai-plans.html', 'Should you pay monthly or annual for AI tools?', 'When the annual discount earns the lock-in, when monthly is insurance, and the terms to read before you prepay.'),
     ('what-are-ai-credits.html', 'What are AI credits?', 'What one credit buys, why it varies by tool and action, rollover and top-ups, and how to estimate your real monthly burn.'),
+    ('ai-sales-call-prep-workflow.html', 'Prepping a sales call with AI without inventing facts', 'Cited research first, synthesis from your own notes second, and a call plan where every guess is labelled.'),
+    ('best-ai-tools-for-photographers.html', 'Best AI tools for photographers', 'Retouching, frame expansion, concept work, and client-facing design — with licensing and disclosure treated as part of the job.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
