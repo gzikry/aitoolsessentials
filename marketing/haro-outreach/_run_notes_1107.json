@@ -1,0 +1,84 @@
+{
+ "new_this_run": [
+  "7 rows added: the 6 AI-token slugs in the 60-slug window (2026-11-06T02:09Z -> 2026-11-06T23:31Z) plus 1 body-level AI hit the slug filter cannot see (a B2B sales-rep deal-story call for The Follow Up newsletter).",
+  "0 new rows are core-beat AI+spend - the fourth consecutive window at zero. The 3 spend-token window slugs are UK infrastructure cost overruns (a podcast episode announcement, not a request), Dhanteras gold shopping budgets in Hyderabad, and a Billings Gazette comment on a Senate race; none asks what an AI tool, seat or subscription costs. The digest's body-level AI+spend count of 2 is word-level and both are false positives: 'budget isn't there' in the adoption call and 'SaaS' in the sales-rep deal call - neither asks what a tool costs.",
+  "0 of the 7 new rows publishes an email address. One redacts it, one publishes only a t.co shortlink, five publish nothing at all.",
+  "Every new row asks for a persona we are not: a crypto-blog operator, a business owner whose team resists AI, a woman replaced by AI, Barcelona founders, a celebrity PR, people who use AI for relationship advice, a B2B rep with a war story."
+ ],
+ "new_rows": {
+  "human-behind-ai-crypto-agent-agentwritten-crypto-blogs": {
+   "who": "CryptoBloggers - a crypto blog network soliciting agent-written posts; no reporter or outlet masthead named",
+   "category": "AI / Content Submission (not a press request)",
+   "contact": "The body publishes only a t.co shortlink (https://t.co/KZyXLXRgYP) and no address or handle. NOT a reply route for us.",
+   "relevance": "low",
+   "notes": "A pitch for agent-written crypto blogs, not a journalist sourcing request. No spend angle and no standing.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "business-owners-and-leaders-team-resistance-to-ai-adoption": {
+   "who": "Not named on the page; the body advertises 'National media coverage opp!' with no outlet or byline",
+   "category": "AI / SMB Adoption",
+   "contact": "The body says 'Hit me up!' and publishes no address, handle or link. NOT a reply route.",
+   "relevance": "low-medium",
+   "notes": "The only new row with a budget sentence ('Maybe the budget isn't there?'), which is why it is banded above low - but it asks for a business owner losing an internal adoption fight, and we are a price census, not an operator with a team.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "woman-replaced-by-ai-and-recruitment-expert-ai-job-loss-case-study": {
+   "who": "A weekly magazine - reporter, title and publication not named on the page; page domain not exposed",
+   "category": "AI / Jobs and Displacement",
+   "contact": "The body says 'Please email me on [email redacted]' - Sourcee redacts it, and the page publishes no handle, link or publication site to resolve it from.",
+   "relevance": "low",
+   "notes": "Case-study call for a woman whose job AI replaced plus a recruitment expert. Testimony only; nothing in it touches tool cost.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "ai-founders-and-investors-in-barcelona-podcast-and-company-visit-guests": {
+   "who": "AI & Business Club at EADA Business School, Barcelona - podcast and company-visit programming; no reporter named",
+   "category": "AI / Podcast Guest Booking",
+   "contact": "The body asks readers to 'DM me' or comment; no handle is published and Sourcee redacts nothing because there is no address in the body.",
+   "relevance": "low",
+   "notes": "Guest booking for a business-school club. Requires being a founder, investor or operator; we are none of the three.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "prs-and-agents-celebrities-national-titles-interview-slots": {
+   "who": "Not named on the page - a #journorequest for celebrity interviews across national titles",
+   "category": "Not a source request - celebrity booking",
+   "contact": "The body says 'DM me'; no handle, address or outlet is published. NOT a reply route.",
+   "relevance": "low",
+   "notes": "Addressed to PRs and agents representing famous people. Off-beat in the strongest sense; recorded so the window is fully accounted for.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "ai-users-and-relationship-therapists-dating-conflicts-breakups": {
+   "who": "Not named on the page; a feature on AI in romantic relationships, no outlet or byline",
+   "category": "AI / Consumer Behaviour",
+   "contact": "The body asks for a 'DM me'; no address, handle or link is published.",
+   "relevance": "low",
+   "notes": "Wants people who used AI for relationship advice and therapists who treat it. Consumer-behaviour testimony, not a tool-cost story.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "b2b-tech-and-software-sales-reps-and-leaders-real-customer-deal-lessons": {
+   "who": "The Follow Up - a newsletter for B2B sales professionals (40,000+ subscribers per the body); writer not named",
+   "category": "B2B Sales / Deal Stories",
+   "contact": "The body says 'send me a DM or comment below'; no address, handle or newsletter URL is published.",
+   "relevance": "low",
+   "notes": "Body-level AI hit only ('especially SaaS, cybersecurity, AI, cloud'). Asks a sales rep for a real customer deal story - we have no sales-rep war story and no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  }
+ },
+ "why_not_drafted": [
+  "7 new rows this run, 0 drafted: not one asks what an AI tool, seat or subscription costs - the fourth consecutive window at 0 AI+spend",
+  "0 of the 7 publishes an email address: 1 redacts it, 1 publishes only a t.co shortlink, 5 publish nothing at all",
+  "the closest to our beat (business owners whose team resists AI adoption, with a 'budget isn't there' line) fails on standing, not on route - we are a price census, not an operator with a resistant team"
+ ],
+ "angle_replace": {
+  "ai-trainers-and-researchers-workplace-ai-adoption-and-training": "Data-led: median cheapest paid tier $16.50/seat/month across the 44 of 105 tracked tools that publish a monthly price, 35 of those at or under $25 (snapshot checked 2026-11-07) - i.e. per-seat cost is low enough that adoption outruns the training question. Signed AIToolsEssentials, 158 words including the signature. DRAFTED as section 1 of pitch-drafts-2026-11-07.md; it is the only row still inside the 10-day line today and it crosses tomorrow."
+ },
+ "defects": [
+  "No new defect found in the scripts this run. One observation: the three rows the 2026-11-06 digest called sendable are now 10, 11 and 11 days old, so the queue's sendable count falls from 3 to 1 without a single request being answered - the count is falling because time passes, not because anything is sent or recorded. That is the monitor's structural condition, not a bug, and this run's report names it instead of dressing it up.",
+  "The Forbes pair crossed the 10-day line overnight (11d) while both pages still answer HTTP 200 and the route alison@alisoncoleman.co.uk re-probed live today. A queue that only ranks 'live' rows would drop the two best-matched requests this monitor has ever held; they are therefore carried in the draft file as a late send, with the crossing stated."
+ ],
+ "extra_actions": [
+  "Forbes draft to Alison Coleman is staged in [Gmail]/Drafts as uid 55, saved today and re-read to confirm 'As of 2026-11-07'; the superseded 2026-11-06 draft (uid 54) was deleted so only one version exists. One email closes both Forbes rows. Sending remains George's.",
+  "Business Today / Vidhya Das is a LinkedIn DM, so nothing can be staged in the mailbox for it. It is 10 days old today and crosses the line tomorrow.",
+  "Mailbox swept today with the jansuski.com positive control returning 2 known messages: zero non-control inbound, so zero replies to any pitch since 2026-10-11.",
+  "Route probe re-ran over all 15 recorded routes today: alisoncoleman.co.uk/contact-me/ HTTP 200 (28,082 bytes), tobiamure.com/ HTTP 200 (63,370 bytes), linkedin.com/in/christopher-mims-club/ HTTP 200 (654,042 bytes), wsj.com author page still 401, muckrack still 403."
+ ]
+}
