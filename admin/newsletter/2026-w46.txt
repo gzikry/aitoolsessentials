@@ -1,0 +1,47 @@
+KEEP, TEST, CUT · Issue 9 · Tue 10 Nov 2026
+
+Otter’s monthly Pro costs twice the annual rate
+Meeting note-takers charge monthly payers up to double. Fathom’s free plan records without a cap, so most people need one paid seat or none.
+
+THIS WEEK’S CALL: AI MEETING NOTES
+KEEP: One note-taker whose summaries you read. Fathom (https://aitoolsessentials.com/tools/fathom/) Free ($0, unlimited recording, checked 18 Sep) covers most solo work.
+TEST FIRST: Fireflies.ai (https://aitoolsessentials.com/tools/fireflies/) Pro at $18 monthly for one month before its $10 annual rate, checked 18 Sep.
+CUT: A second bot in the same meetings.
+
+Count the meeting bots on your card. On our 18 Sep 2026 check of the official pages, Otter.ai (https://aitoolsessentials.com/tools/otter-ai/) Pro is $16.99 a user a month billed monthly, or $8.33 billed annually. Fireflies.ai Pro is $18 a seat monthly or $10 annually. Fathom Premium is $20 a user monthly or $16 annually. That’s the same job three times: join the call, transcribe it, write the summary.
+
+Those dates are seven weeks old, and we’re saying so on purpose. We haven’t re-checked these three pages since, so confirm the number at checkout before you prepay anything.
+
+MONTHLY BILLING IS THE EXPENSIVE WAY TO FIND OUT
+
+Otter’s monthly Pro rate is about double its annual one. Twelve monthly bills come to $203.88. Twelve months at the $8.33 annual rate come to $99.96. Fireflies is $216 against $120 on the same math. Fathom’s gap is smaller, $240 against $192.
+
+So monthly billing only makes sense for the first month or two, while you find out whether you read the summaries at all. If you do, move to annual. If you don’t, cancel. Otter’s page also showed a temporary Business promo on the day we checked. We don’t print promo figures as list prices, and you shouldn’t plan a year around one either.
+
+TWO BOTS IN ONE CALL IS A CUT
+
+Before you pay at all, look at the free rungs. Fathom’s free plan lists unlimited recording, transcription and storage with instant AI summaries. Fireflies Free lists unlimited transcription and summaries, but only 400 minutes of storage per team. Otter Basic is 300 minutes a month, 30 minutes per conversation.
+
+The stack that wastes money is a paid Otter seat left over from an old project plus a Fathom bot your team installed. Both join. Both send a summary. Your client sees two recorders in the attendee list. Keep the one whose summaries you actually open, and read its training terms first: Otter says it trains its own models on de-identified recordings, Fathom may train on de-identified data unless you opt out, and Fireflies says it doesn’t train on meeting content. Cancel the other before it renews. Whichever you keep, the consent notice is still your job. All three terms put it on you.
+
+PRICING WATCH (No page we track moved after our 3 Nov checks. These two moved that day and missed last week’s table.)
+- Windsurf · 3 Nov 2026 · New tier: Pro $20/mo · Max $200/mo, can’t be shared · Teams from $80/mo · Enterprise custom. No price is printed for existing subscribers
+- CoCounsel Legal · 3 Nov 2026 · Renamed: Westlaw Advantage from $288.60/mo · Westlaw Edge with AI-Assisted Research from $170.95/mo. The $415.35 Westlaw Advantage with CoCounsel Essentials bundle (26 Aug) is off the page; standalone CoCounsel is sales-quoted
+Otter.ai, Fireflies.ai and Fathom were last checked 18 Sep 2026.
+Full tracker: https://aitoolsessentials.com/pricing-watch/
+
+WORTH A LOOK
+UMEVO puts the note-taker on the table
+UMEVO (https://aitoolsessentials.com/tools/umevo/) sells small magnetic voice recorders for in-person meetings and phone calls, so no bot joins anything. Checked 27 Oct 2026 against its store: Note is $79, Note Plus is $109 against a $169 compare-at, and Note ONE is $159 against $179, plus a $5 shipping line. Note Plus includes the Max AI plan for year one, then drops to 400 free minutes a month.
+
+The catch: the Note Plus and Note ONE pages quote different paid plans, roughly 4x apart, and the sale countdown shows no end date. Buy one only if your meetings happen in rooms.
+
+ONE THING TO DO THIS WEEK
+Pull last month’s card statement and search for Otter, Fireflies, Fathom, and any other bot that joins your calls. Next to each, write whether it bills monthly or annually and the date it renews. If two of them sat in the same meetings, keep the one whose summary you opened last and cancel the other before its next charge. Then run the free Stack Audit (https://aitoolsessentials.com/stack-audit.html). It stays in your browser, needs no login, and maps overlap by job.
+
+Got a question about a tool on your card? Write to aitoolsessentials@gmail.com.
+— AIToolsEssentials
+
+You’re getting this because you subscribed to Keep, Test, Cut at aitoolsessentials.com. Past issues: https://aitoolsessentials.com/newsletter/  Get it free: https://aitoolsessentials.com/subscribe/
+Premium is a separate $12/month research membership: https://aitoolsessentials.com/premium/
+AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}

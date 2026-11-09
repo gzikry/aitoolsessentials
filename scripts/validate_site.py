@@ -966,6 +966,7 @@ def main():
     if newsletter_hub.exists():
         hub_html = newsletter_hub.read_text()
         for slug, title in (
+            ('2026-w46.html', 'Otter’s monthly Pro costs twice the annual rate'),
             ('2026-w45.html', 'Synthesia’s $9 Starter lasts one month'),
             ('2026-w44.html', 'v0’s $20 tier is closed to new signups'),
             ('2026-w43.html', 'Cursor’s $20 Pro is off the page'),
