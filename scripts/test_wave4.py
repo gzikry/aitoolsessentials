@@ -123,7 +123,7 @@ def main() -> None:
         errors.append("traps page invented a rollover rule")
 
     archive_html = archive.read_text(encoding="utf-8")
-    for slug in ("2026-w45.html", "2026-w44.html", "2026-w43.html", "2026-w42.html", "2026-w38.html", "2026-w35.html"):
+    for slug in ("2026-w46.html", "2026-w45.html", "2026-w44.html", "2026-w43.html", "2026-w42.html", "2026-w38.html", "2026-w35.html"):
         _need(archive_html, f"/newsletter/{slug}", errors, "archive")
     _need(archive_html, "Issues 2 and 3 were not published.", errors, "archive")
     _need(archive_html, 'name="company_website"', errors, "archive")
@@ -140,15 +140,20 @@ def main() -> None:
     _need(issue, 'href="/newsletter/">← All past issues', errors, "issue 7")
     _need(issue, "Previous · Issue 6 ·", errors, "issue 7")
     _need(issue, "Next · Issue 8 ·", errors, "issue 7")
-    latest = (ROOT / "newsletter" / "2026-w45.html").read_text(encoding="utf-8")
-    _need(latest, 'href="/newsletter/">← All past issues', errors, "issue 8")
-    _need(latest, "Previous · Issue 7 ·", errors, "issue 8")
+    issue8 = (ROOT / "newsletter" / "2026-w45.html").read_text(encoding="utf-8")
+    _need(issue8, 'href="/newsletter/">← All past issues', errors, "issue 8")
+    _need(issue8, "Previous · Issue 7 ·", errors, "issue 8")
+    _need(issue8, "Next · Issue 9 ·", errors, "issue 8")
+    latest = (ROOT / "newsletter" / "2026-w46.html").read_text(encoding="utf-8")
+    _need(latest, 'href="/newsletter/">← All past issues', errors, "issue 9")
+    _need(latest, "Previous · Issue 8 ·", errors, "issue 9")
     if "newsletter-pager-next" in latest:
-        errors.append("issue 8 invented a next issue")
+        errors.append("issue 9 invented a next issue")
 
     sub_html = subscribe.read_text(encoding="utf-8")
     _need(sub_html, "ledger-mast", errors, "subscribe")
     _need(sub_html, "Recent issues", errors, "subscribe")
+    _need(sub_html, "/newsletter/2026-w46.html", errors, "subscribe")
     _need(sub_html, "/newsletter/2026-w45.html", errors, "subscribe")
     _need(sub_html, "/newsletter/2026-w44.html", errors, "subscribe")
     _need(sub_html, "aitools-newsletter-subscribe.aitoolsessentials.workers.dev", errors, "subscribe")
@@ -160,7 +165,7 @@ def main() -> None:
 
     home_html = home.read_text(encoding="utf-8")
     _need(home_html, 'href="/newsletter/">Browse all past issues →', errors, "home")
-    _need(home_html, 'href="/newsletter/2026-w45.html"', errors, "home")
+    _need(home_html, 'href="/newsletter/2026-w46.html"', errors, "home")
     _need(home_html, 'href="/compare/ai-presentation-cost/"', errors, "home")
     _need(home_html, 'href="/pricing-watch/credit-traps/"', errors, "home")
     _need(home_html, 'href="/newsletter/">Newsletter</a>', errors, "home")

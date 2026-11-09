@@ -110,6 +110,25 @@ def main() -> None:
         subject = (REPO / "admin" / "newsletter" / "2026-w45-subject.txt").read_text(encoding="utf-8").strip()
         if subject != "Synthesia’s $9 Starter lasts one month":
             errors.append(f"w45 subject was {subject!r}")
+    draft46 = (REPO / "admin" / "newsletter" / "2026-w46-draft.html").read_text(encoding="utf-8")
+    try:
+        html = email_html(draft46)
+    except ValueError as exc:
+        errors.append(f"w46 draft refused: {exc}")
+    else:
+        if "{{{RESEND_UNSUBSCRIBE_URL}}}" not in html:
+            errors.append("w46 broadcast missing the Resend unsubscribe URL")
+        if POSTAL_ADDRESS not in html or "\u2014 AIToolsEssentials" not in html:
+            errors.append("w46 broadcast missing the footer or the brand sign-off")
+        if "george" in html.casefold():
+            errors.append("w46 broadcast uses a personal name")
+        if "mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2C%20Test%2C%20Cut" in html:
+            errors.append("w46 broadcast still uses the mailto unsubscribe")
+        subject = (REPO / "admin" / "newsletter" / "2026-w46-subject.txt").read_text(encoding="utf-8").strip()
+        if subject != "Otter’s monthly Pro costs twice the annual rate":
+            errors.append(f"w46 subject was {subject!r}")
+    if (REPO / "admin" / "newsletter" / "2026-w46.approved").exists():
+        errors.append("w46 approval file must not be committed")
     if errors:
         raise SystemExit("\n".join(errors))
 
