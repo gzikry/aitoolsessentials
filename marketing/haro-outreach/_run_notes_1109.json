@@ -1,0 +1,30 @@
+{
+ "new_this_run": [
+  "1 row added from a 27-slug sitemap window (2026-11-08T00:14Z -> 2026-11-09T02:31Z): 1 AI-token slug, 0 AI+spend slugs, 2 spend-only slugs at slug level. All 27 window bodies were fetched and read (27 of 27, _bodies_1109.json): 1 body-level AI hit, 4 body-level spend hits, 0 body-level AI+real-spend hits.",
+  "The single AI-token slug is a podcast-booking call: Nashpunkforge.com is assembling podcasters and LinkedIn Live creators for episode topics ('What is the latest in AI', resume reviews, online stores), asked to 'DM me or reach out in the comments'. It is on-beat in wording and off-beat in ask - it wants hosts, not a price dataset - and the address is redacted, so there is no route. Recorded, relevance low, not drafted.",
+  "This is the sixth consecutive window at zero core-beat supply. The body scan found the AI token in exactly the one slug that carried it, so the zero is a fact about the window and not a keyword miss; the four spend-token bodies are an MSP customer-service call, a hard-drive cost call for archivists, a founders' testing-ideas call ('seat' in a subscription aside) and a student-loan repayment call - none about software budgets, none with AI. Supply on this source has not merely thinned; for six days it has not produced one request we can answer."
+ ],
+ "new_rows": {
+  "podcasters-and-linkedin-live-creators-tech-and-ai-and-career-topics": {
+   "who": "Nashpunk Forge (nashpunkforge.com) - no reporter named; the call is a booking sheet for podcast and LinkedIn Live guests.",
+   "category": "AI / Podcast booking",
+   "contact": "Page says 'DM me or reach out in the comments'; email is platform-redacted ([email redacted]) and no LinkedIn handle or profile URL is published. No resolvable route.",
+   "relevance": "low",
+   "notes": "Wants podcasters and LinkedIn Live hosts to book as guests on tech/AI/career episodes. We are a price-data publisher, not a host, and the page publishes no address or handle to answer to. Off-beat in ask despite AI in the title; recorded so the window is fully accounted for, not drafted.",
+   "template": "None. No route and no standing as a podcast guest. NOT DRAFTED."
+  }
+ },
+ "why_not_drafted": [
+  "the window's only AI row is a podcast booking call (above) - nothing to draft from supply for the sixth run running",
+  "the queue's two route-bearing rows inside the cold line are both carried drafts (Forbes / Alison Coleman at 13d with a published email; Business Today / Vidhya Das at 12d with a LinkedIn DM); today's work on them is refreshing the figures and the snapshot date, which pitch-drafts-2026-11-09.md does",
+  "every other live row inside 20 days is relevance low with no resolved route - see pitch-queue.md"
+ ],
+ "extra_actions": [
+  "TWO SENDS REMAIN OPEN AND BOTH ARE IN pitch-drafts-2026-11-09.md: (1) one email to alison@alisoncoleman.co.uk closes BOTH Forbes rows (us-solopreneurs-ai-eliminated-or-delayed-first-hire-forbes and us-founders-bootstrapped-despite-vc-revenue-growth-and-ai-impact, both 13d, pages HTTP 200 today); (2) one LinkedIn DM to linkedin.com/in/vidya-das covers ai-trainers-and-researchers-workplace-ai-adoption-and-training (12d, relevance medium). The Forbes email is staged in [Gmail]/Drafts as uid 57, rewritten today from the draft file, so it is one click. The DM cannot be staged.",
+  "DEADLINE CHECK ON BOTH: neither page carries an expiry notice and both still read 'Posted in last 7 days'/'Posted ... ago' with HTTP 200 today, so the page is live - but these are late sends by 2-3 days past this monitor's 10-day cold line. A late send is still a send; silence closes nothing."
+ ],
+ "defects": [
+  "FIXED IN scripts/build_pitch_queue.py: `days_old` inside verified-requests.json is a RELATIVE quantity frozen at probe time, and the queue trusted it verbatim. A row last probed on 2026-10-25 still reads days_old 0 today while it is a fortnight old, so any run that builds the queue without re-verifying every row understates ages and ranks stale rows as fresh. Hit live this run while listing live rows: retail-business-owners-cost-cuts-that-hurt-profitability read as 0d from a 2026-10-25 probe (it is 15d). The queue now recomputes the age from the page's own datePublished against today's date and records which probe date the datePublished came from; the cached value is only a fallback when datePublished is unparseable or absent. Today's own numbers are unchanged because all 265 carried rows were re-probed this morning - the fix removes the trap for the next gap day, which is the shape that produced the five-day gap before 2026-11-03.",
+  "NOT FIXED, still measured: `_sendable()` in build_digest.py tests (age <= 10d, relevance above low, route present) with no deadline term, so a request whose own stated cutoff has passed inside the ten days still scores sendable. Carried from the 2026-11-08 run unchanged; it needs the deadline field parsed across all rows first."
+ ]
+}

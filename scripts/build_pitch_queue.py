@@ -231,9 +231,28 @@ def collect() -> list[dict]:
         v = _verified_for(rec["url"], verified)
         # Age: the page's own datePublished beats anything the digest text claimed. The digest
         # fallback is only used when the page has not been probed at all.
-        if v.get("days_old") is not None:
+        #
+        # `days_old` inside verified-requests.json is a RELATIVE quantity frozen at probe time.
+        # A row last probed on 2026-10-25 still carries days_old 0 today while it is a fortnight
+        # old, so trusting it verbatim understates every age on a day whose verification sweep did
+        # not cover the row (measured 2026-11-09 on retail-business-owners-cost-cuts-that-hurt-
+        # profitability: cached 0d from a 2026-10-25 probe, actually 15d). The age is therefore
+        # recomputed from the page's own datePublished against today, and the probe date is kept
+        # so a consumer can see how old the page fact itself is.
+        _pub = v.get("datePublished")
+        if _pub:
+            try:
+                _dt = datetime.fromisoformat(str(_pub).replace("Z", "+00:00"))
+                if _dt.tzinfo is None:
+                    _dt = _dt.replace(tzinfo=timezone.utc)
+                rec["days_old"] = (datetime.now(timezone.utc) - _dt).total_seconds() / 86400
+                rec["age_source"] = f"page datePublished (page probed {v.get('checked', '?')})"
+            except ValueError:
+                rec["days_old"] = float(v["days_old"]) if v.get("days_old") is not None else None
+                rec["age_source"] = "page datePublished unparseable (cached age)"
+        elif v.get("days_old") is not None:
             rec["days_old"] = float(v["days_old"])
-            rec["age_source"] = "page datePublished"
+            rec["age_source"] = f"page datePublished (cached, probed {v.get('checked', '?')})"
         else:
             rec["days_old"] = _days_old(rec["deadline"], rec["first_seen"])
             rec["age_source"] = "digest (page not probed)"
