@@ -456,6 +456,10 @@
     "pawheadshots": {
       "date": "2026-11-02",
       "digest": "One-time only, no subscription: Superstar Pack $19.90 (36 images: 30 looks + 6 chosen styles, plus Employee ID, PawkedIn profile, Pet Resume); Me & My Human Pack $29.90 (30 owner+pet portraits, 30 transparent PNGs). No credit system, no monthly or annual plan, no countdown. Verified 2026-11-02 on the homepage pricing section, /studio, /me-and-my-human and the terms ('Packs are one-time purchases, with no subscription'); the site has no /pricing route."
+    },
+    "dreammmer": {
+      "date": "2026-11-09",
+      "digest": "Subscriptions, monthly or yearly: Starter $29/mo for 1,500 credits/month ($243.60 yearly, shown as $20.30/mo), Pro $99/mo for 6,000 ($712.80 yearly, $59.40/mo), Studio $299/mo for 18,000 plus 1,000 free 1K/2K images a month ($1,794 yearly, $149.50/mo); each card shows the monthly figure and the annual total struck through against an always-on 'Save up to 50%' badge. One-time pack: 60,000 credits for $999, badged 'Save 30%' with no reference price anywhere. 50 free sign-up credits, one time, no card. Subscription credits reset monthly and do not roll over; pack credits and the 1,000-credit first-subscription gift never expire; failed generations refunded automatically. Waffo (merchant of record) or PayPal. Verified 2026-11-09 on /pricing (server-rendered) and /api/config/public (initial_credits_amount 50, commerce_checkout_enabled true)."
     }
   },
   "changes": [

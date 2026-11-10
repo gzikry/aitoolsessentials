@@ -2572,6 +2572,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "dreammmer",
+      "name": "DREAMMMER",
+      "category": "Creative",
+      "official_url": "https://dreammmer.com/",
+      "review_url": "/tools/dreammmer/",
+      "price_label": "Subscriptions, monthly or yearly: Starter $29/mo for 1,500 credits ($20.30/mo on the $243.60 yearly plan), Pro $99/mo for 6,000 credits ($59.40/mo on $712.80 yearly), Studio $299/mo for 18,000 credits plus 1,000 free 1K/2K images a month on any model ($149.50/mo on $1,794 yearly). One-time credit pack: 60,000 credits for $999, never expires. 50 free sign-up credits, one time, no card. Subscription credits expire when the next monthly allowance arrives and do not roll over; pack credits and the 1,000-credit first-subscription gift never expire. Failed or refused generations are refunded in credits automatically. USD before local tax; Waffo (merchant of record) or PayPal. Verified 2026-11-09 on /pricing and /api/config/public.",
+      "pricing_summary": "Subscriptions: Starter $29/mo for 1,500 credits/month ($348 billed yearly, $20.30/mo shown), Pro $99/mo for 6,000 credits ($1,188 yearly, $59.40/mo), Studio $299/mo for 18,000 credits plus 1,000 free 1K/2K images a month ($3,588 yearly, $149.50/mo). One-time credit pack: 60,000 credits for $999, badged 'Save 30%' with no reference price shown. 50 free sign-up credits, one time, no card. Subscription credits expire when the next monthly allowance arrives and do not roll over; pack credits and the 1,000-credit first-subscription gift never expire; failed or refused generations are refunded automatically. USD before local tax; Waffo (merchant of record) and PayPal. All figures read from the served /pricing HTML on 2026-11-09 - the plan cards are server-rendered, so no browser was needed - and the free-credit grant was cross-checked against /api/config/public, which returns initial_credits_amount 50 and commerce_checkout_enabled true.",
+      "pricing_url": "https://dreammmer.com/pricing",
+      "pricing_checked_date": "2026-11-09",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "design",
+        "video",
+        "audio",
+        "marketing"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

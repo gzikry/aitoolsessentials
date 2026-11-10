@@ -6179,5 +6179,103 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - one clearly stated product at a stated price, delivered through a real studio flow (68 sitemap URLs including breed and resume pages) with a live checkout route, and photo-plus-payment handling documented in more detail than most tools in this catalog. Transparency holds it at 4.0 rather than higher: Vban LLC is named in both policies and every processor is named by company, but no postal address, jurisdiction or governing-law clause appears, there is no /about, /contact, /cookies or /refund route, there is no preview before payment, and the 7-day image deletion is a limit a buyer only meets after paying. It is not scored lower because none of that is contradicted anywhere on the site - the paperwork matches the product - but there is also no operating history: the domain was registered 2026-10-30 and no independent user reports exist."
+  },
+  {
+    "slug": "dreammmer",
+    "name": "DREAMMMER",
+    "category": "Creative",
+    "best_for": "Marketers, designers and small teams who want one subscription that reaches GPT Image, Nano Banana, Seedream, Qwen, Grok, Kling, Veo, Seedance and MiniMax models without buying each one - an agent writes the prompt and picks the model, 50 free sign-up credits, then $29-$299 a month or a $999 one-time pack. Not a fit if you need a named company or a governing-law clause before you pay, if you expect work made on the free tier to stay private (it can be published in the showcase with its prompts and reference images), or if you need subscription credits to roll over month to month.",
+    "price": "Subscriptions, monthly or yearly: Starter $29/mo for 1,500 credits ($20.30/mo on the $243.60 yearly plan), Pro $99/mo for 6,000 credits ($59.40/mo on $712.80 yearly), Studio $299/mo for 18,000 credits plus 1,000 free 1K/2K images a month on any model ($149.50/mo on $1,794 yearly). One-time credit pack: 60,000 credits for $999, never expires. 50 free sign-up credits, one time, no card. Subscription credits expire when the next monthly allowance arrives and do not roll over; pack credits and the 1,000-credit first-subscription gift never expire. Failed or refused generations are refunded in credits automatically. USD before local tax; Waffo (merchant of record) or PayPal. Verified 2026-11-09 on /pricing and /api/config/public.",
+    "rating": 4.0,
+    "official": "https://dreammmer.com/",
+    "summary": "DREAMMMER is a browser AI image and video editor built around an agent rather than a model picker: you describe the result, it writes the English prompt, chooses among GPT Image 2.5, Nano Banana 2.1, Seedream 5.0, Qwen Image 3.0, Grok Imagine, Kling 3.0, Veo 3.1, Seedance 2.5 and MiniMax H3, and you refine in the same thread while every step is mapped on a canvas. Eleven one-click tools (background remove, upscale, object remover, photo restore, clothes and background changer, expand) sit in front of the same credit meter, and a public showcase publishes real prompts with the model and credit cost behind each result. The commercial terms are unusually clear for a four-month-old product: you own what you create, the site states it does not train its own models on your uploads, failed generations refund credits automatically, and there is a written 7-day refund window with a 20% usage cap. What is missing is identity and data detail rather than honesty: no registered company is named anywhere, there is no governing-law clause, the policy promises to say how long data is kept and never gives a period, and Google Analytics loads on the privacy policy itself while the policy names no analytics vendor.",
+    "use_cases": [
+      "Making product, poster and social visuals from a plain-language brief without choosing a model or writing a prompt",
+      "Editing an existing photo - swapping a background or outfit, removing an object, restoring an old print, upscaling - and continuing to refine the result in chat",
+      "Producing 6-second image-to-video clips at 480p or 720p without a separate video subscription",
+      "Comparing GPT Image, Nano Banana, Seedream, Qwen and Grok on the same idea before committing to a workflow",
+      "Small teams that want one credit balance across eleven image models and seven video models instead of five subscriptions",
+      "Creators who want to copy a worked prompt from a real published conversation rather than a marketing sample"
+    ],
+    "pros": [
+      "One credit balance across eleven image models and seven video models, including current GPT Image 2.5 variants, Nano Banana 2.1/Pro, Seedream 5.0 Pro, Qwen Image 3.0 Pro, Grok Imagine 2.0, Kling 3.0, Veo 3.1 and MiniMax H3 - the breadth is the product, and the model comparison table prices each one per output",
+      "Output ownership is granted in plain words ('you own the images and videos you create, and you may use them for personal or commercial purposes'), and the licence you give the site is scoped to running the service",
+      "Training use is denied for the site's own models ('We do not use your uploads or creations to train AI models of our own'), which is a narrower claim than 'never trained' but an honest one",
+      "Failed or refused generations return their credits automatically, and the refund policy is written as a rule rather than a favour: full refund within 7 days if no more than 20% of the purchase's credits were used, replies in 2 business days",
+      "A real postal address is published in the privacy policy footer - 1703, Chengjiaye Estate, Yangmei Road, Bantian Subdistrict, Longgang District, Shenzhen 518129, China - where many tools in this class publish none",
+      "Checkout is live rather than announced: the public config endpoint reports commerce_checkout_enabled and paypal_checkout_enabled true with Waffo as the default provider, and the terms name Waffo as merchant of record and PayPal for PayPal payments",
+      "The showcase is verifiable evidence, not stock art: each card carries the full prompt, the model that ran it and the credits it cost, and the numbers match the pricing table's per-model rates",
+      "Per-task credit cost is shown before you send, tools are priced per edit (7 credits), and Studio's 1,000 free 1K/2K images a month is stated with its limits rather than as 'unlimited'",
+      "Content-safety processing is described in unusual detail for this class - what is sent, what is retained (categories plus a file link; only a hash of text) and that a human may review flagged items"
+    ],
+    "cons": [
+      "No company, trading name or legal entity is named on any page. The privacy policy gives a Shenzhen street address and nothing else, so a buyer cannot tell whether they are contracting with a company or an individual",
+      "No governing-law, jurisdiction, arbitration or venue clause in the Terms - the only 'laws of' phrase is 'your rights as a consumer under the laws of your country'",
+      "The privacy policy's own lede promises to explain 'how long it is kept' and then gives no retention period at all: uploads, prompts and generated results are kept for an unstated time, and deletion is described only as what happens when you close the account",
+      "Google Analytics (G-VRDQ11V636) loads on every page including /privacy-policy and /terms-of-service, with no consent banner anywhere on the site, while the policy mentions cookies only as 'small data files ... to remember preferences' and names no analytics vendor",
+      "Processors are described only by category - 'AI model, storage, payment, email and content-safety providers' - so the content-safety vendor that sees every prompt, upload and result is unnamed, as are the hosting and storage providers",
+      "The third-party training question is left open by wording: the denial covers the site's 'own' models, and nothing says what OpenAI, Google, ByteDance, xAI, Kuaishou, Alibaba or MiniMax do with prompts and uploads under their own terms",
+      "Work made with free credits can be published in the public showcase, prompts and reference images included, under a non-exclusive worldwide licence, and the clause applies to conversations created before it was added - disclosed, but a real surprise for anyone who tries the free tier with a personal photo",
+      "Monthly subscription credits expire when the next allowance arrives and do not roll over, so the effective price rises for anyone who does not spend the full allowance",
+      "Every plan shows a struck-through list price against an always-on 'Save up to 50%' badge ($29 to $20.30, $348 to $243.60, $99 to $59.40, $1,188 to $712.80, $299 to $149.50, $3,588 to $1,794), and the credit pack is badged 'Save 30%' with no reference price shown anywhere",
+      "The per-image figures in the copy and llms.txt price credits above what the plans charge - 7 credits 'about $0.16' and 10 credits 'about $0.23' work out at roughly $0.023 a credit, while the plans and the pack run $0.0166 to $0.0193 - so the examples overstate cost by 20-38% rather than understate it",
+      "Sign-in is Google-only (email_auth_enabled, email_verification_enabled and password_reset_enabled are all false in the public config), while the Chinese landing copy still tells visitors to verify their email to receive 50 credits - a locale and feature mismatch between the two storefronts",
+      "No non-affiliation statement on the English pages even though the site resells models branded OpenAI, Google, ByteDance, xAI and Kuaishou; the Chinese landing copy does disclaim it ('Dreammmer is an independent product, not the ByteDance, BytePlus or Seedream official site')",
+      "The /cookies and /acceptable-use routes exist but serve the Privacy Policy and the Terms respectively, in both / and /zh, so there is no standalone cookie or acceptable-use document behind those URLs",
+      "The public contact routes to a catch-all mailbox: support@ and privacy@ both accept mail, but so does a random local part, so delivery is confirmed and a human reading it is not"
+    ],
+    "key_features": [
+      "Agent chat that writes the prompt, picks the model and iterates on the result in the same conversation",
+      "Infinite canvas that maps every request, prompt, render and revision as linked cards, with branching from any node",
+      "Eleven image models and seven video models behind one credit balance, priced per output in a comparison table",
+      "Eleven one-click tools: background remover, upscaler, object remover, photo restore, background changer, clothes changer, image expander and more, each opening into the chat for further edits",
+      "Image-to-video at 480p (24 credits) and 720p (48 credits) for 6-second clips, with longer and 1080p clips in the agent chat",
+      "Reference-image workflows: keep what matters, change what does not, with one or several references",
+      "Public showcase of published conversations with the full prompt, model and credit cost on each card",
+      "Templates for product photos, portraits, posters and effects",
+      "English and Chinese storefronts, both with their own pricing and legal pages",
+      "Failed and refused generations refunded automatically in credits"
+    ],
+    "faq": [
+      [
+        "What is DREAMMMER?",
+        "A browser AI image and video editor where an agent writes the prompt and picks the model. You describe the result, it chooses among models such as GPT Image 2.5, Nano Banana 2.1/Pro, Seedream 5.0, Qwen Image 3.0, Grok Imagine 2.0, Kling 3.0, Veo 3.1 and MiniMax H3, returns images or short videos, and you refine in the same thread. Eleven one-click tools handle common edits, and every step is mapped on a canvas you can branch from."
+      ],
+      [
+        "How much does DREAMMMER cost?",
+        "Subscriptions are Starter $29/mo for 1,500 credits, Pro $99/mo for 6,000 and Studio $299/mo for 18,000 plus 1,000 free 1K/2K images a month; the yearly plans work out at $20.30, $59.40 and $149.50 a month when paid as $243.60, $712.80 and $1,794. There is also a one-time 60,000-credit pack for $999 that never expires. New accounts get 50 credits once, without a card. Subscription credits reset monthly and do not roll over; pack credits do not expire."
+      ],
+      [
+        "Is there a free plan?",
+        "A one-time grant of 50 sign-up credits, not a recurring free tier. At 7 to 10 credits for most 1K images that is roughly five to seven generations; 2K and 4K output needs a paid plan, and downloads from an account that has never purchased carry a small DREAMMMER mark. Failed generations return their credits."
+      ],
+      [
+        "Who owns the images I create?",
+        "As between you and DREAMMMER, you do, and the terms allow personal or commercial use subject to the model's own terms and third-party rights. The site takes only the licence it needs to store, process and display your work, and says it does not train its own models on your uploads. It does not say what the underlying model providers do with prompts and images, so check their terms if that matters to you."
+      ],
+      [
+        "Can I get a refund?",
+        "Yes, within 7 days of a credit pack, a new subscription or a renewal, if you have used no more than 20% of the credits that purchase added. After 7 days or past that usage it is case by case. Email support@dreammmer.com from your sign-in address; the policy promises a reply within 2 business days and card refunds back through Waffo within 5-10 business days."
+      ],
+      [
+        "Will my uploads be published?",
+        "If your account has never made a purchase, the work you create with free credits may be featured in the public showcase after review, and a featured case can include the prompts, the reference images you uploaded and the results, under a non-exclusive worldwide licence - with no name or email attached. Once the account has purchased, nothing further is featured without permission, and you can ask for a case to be removed."
+      ],
+      [
+        "Who operates DREAMMMER?",
+        "The site does not say. No company, trading name or legal entity appears on any page; the privacy policy publishes only a postal address in Shenzhen, Guangdong, China, and the terms contain no governing-law or jurisdiction clause. That is the single biggest gap in an otherwise unusually clear legal set."
+      ]
+    ],
+    "trial_checklist": [
+      "Use the 50 sign-up credits on the model you actually intend to use - the comparison table shows per-output credit cost per model, and testing the cheapest model tells you nothing about the expensive one",
+      "Upload a personal photo only after reading the showcase clause: on an account that has never purchased, free-credit work can be published with its prompts and reference images",
+      "Generate the same brief on two models (for example Nano Banana 2.1 and GPT Image 2.5 Flare) and compare text rendering and identity retention, which is where the models actually differ",
+      "Check the credit cost shown before you send against the per-image figures on the homepage: the site's 'about $0.16' examples price credits above the plan rates, so the real cost per image on a plan is lower",
+      "If you plan to subscribe, decide monthly versus yearly knowing subscription credits reset monthly - an unused allowance is lost, while a one-time pack never expires",
+      "Before paying a full year, confirm the thing you need is on the plan you chose: 2K and 4K output and upscaling need a paid plan, and Studio's 1,000 free images are 1K/2K only"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.4/5 - this is the shape the job needs: one credit balance across eleven current image models and seven video models, an agent that writes the prompt instead of leaving the model choice to the buyer, one-click tools that feed back into the same conversation, a canvas that records lineage, per-task cost shown before sending, failed generations refunded, output ownership granted and a written 7-day refund window with a usage cap. It is not 4.5+ because no result here has been verified hands-on, the free tier is 50 credits once rather than recurring, and the model breadth makes quality vary per model. Transparency 3.4/5, and that is what pulls the score to 4.0: the legal set is real and specific about ownership, training on the site's own models, content-safety handling and refunds, and it publishes a postal address - but it names no company at all, has no governing-law clause, promises a retention period in its own lede and gives none, and loads Google Analytics on the privacy policy itself while naming no analytics vendor and showing no consent banner. Add a free-tier showcase licence that publishes prompts and reference images, always-on struck-through list prices, and per-image examples priced 20-38% above the real plan rate. Each of those is recorded in cons rather than held against publication, because none of them prevents a reader from knowing what they are buying."
   }
 ]

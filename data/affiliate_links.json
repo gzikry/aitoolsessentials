@@ -950,6 +950,15 @@
       "public_href": "/go/pawheadshots/",
       "partner": false
     },
+    "dreammmer": {
+      "name": "DREAMMMER",
+      "slug": "dreammmer",
+      "official": "https://dreammmer.com/",
+      "destination": "https://dreammmer.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/dreammmer/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

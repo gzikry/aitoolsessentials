@@ -1886,5 +1886,25 @@
     "status": "not_started",
     "next_action": "Ask Vban LLC in the publication reply whether they run an affiliate or partner program; no program is published on the site. Never invent affiliate URLs.",
     "notes": "One-time $19.90/$29.90 packs cap affiliate value at a few dollars a sale, and the operator publishes no partner page. Any commercial relationship also needs the company's jurisdiction and address, which the site does not carry."
+  },
+  {
+    "tool_slug": "dreammmer",
+    "tool_name": "DREAMMMER",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/dreammmer/"
+    ],
+    "best_audiences": [
+      "marketers and small creative teams paying monthly for AI image and video",
+      "designers comparing image models before committing"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether DREAMMMER runs an affiliate or partner program; /affiliates, /affiliate, /partners and /referral all 404 and no program is published. Never invent affiliate URLs.",
+    "notes": "Subscription pricing ($29-$299/mo) makes this the best affiliate shape of the recent Creative batch if a program exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive."
   }
 ]
