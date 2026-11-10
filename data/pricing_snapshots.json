@@ -464,6 +464,10 @@
     "accuratescribe": {
       "date": "2026-11-09",
       "digest": "Free tier: partial transcripts and basic features, no card. One paid plan, unlimited: $9.99/month billed annually at $119.99/year, or $19.99 month-to-month. Both cards list 'Unlimited transcription usage', 'Unlimited subtitle generation', files up to 10 hours each, 99.8% accuracy (unqualified), 134+ languages, speaker identification and DOCX/PDF/SRT/VTT/TXT/CSV export. Each card carries a live 09:59:59 countdown and a 'New Customer Offer' label; the annual card strikes $239.88-type list pricing behind a 'Save 50%' badge. Same three figures on the /ar/pricing locale mirror. PayPal named on the page. Refund policy is explicitly non-refundable 'regardless of whether the service has been used'."
+    },
+    "makifyai": {
+      "date": "2026-11-10",
+      "digest": "Free: 30 sign-up credits + 7-day check-in credits, no card. Starter Pass 40 credits / 7 days / $4.99. Subscriptions monthly: Basic $11.90 / 100 credits, Standard $29.90 / 300, Pro slider $59.90 (750) to $159.90 (2,300). Annual: Basic $118.80 ($9.90/mo, 1,800 credits), Standard $238.80 ($19.90/mo, 4,800), Pro $358.80-$958.80 ($29.90-$79.90/mo, 10,800-38,400) - discounts of 17%, 33% and 50% against 12 monthly payments. One-time packs valid 6 months: 80 cr $9.90, 150 $19.90, 250 $29.90, 400 $39.90, 650 $59.90, 900 $79.90, 1,200 $99.90, 2,500 $199. Subscriber top-ups valid 6 months: 300 $29.90, 1,500 $119, 4,500 $349, 8,500 $649, 12,500 $899. Per-model credit costs published on the same page (GPT Image 2 3 credits/image, GPT Image 2.5/2.6 4, Nano Banana Pro 8, Seedance 2.0 Fast 50 credits/5s, Seedance 2.5 125/5s, MiniMax H3 25/5s, Wan 2.7 720p 20/5s). Subscription credits reset each period and do not roll over; pack credits expire after 6 months. Refunds: 3 calendar days and 50 paid credits or fewer, net of a 2-10% processing fee. Standing '-50%' promo badge on every page. USD, with CNY/EUR/SGD columns in the same config."
     }
   },
   "changes": [
@@ -720,5 +724,5 @@
       "note": "Cursor: recorded pricing updated since the 2026-10-13 check, re-verified 2026-11-03."
     }
   ],
-  "updated": "2026-11-09"
+  "updated": "2026-11-10"
 }

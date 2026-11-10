@@ -968,6 +968,15 @@
       "public_href": "/go/accuratescribe/",
       "partner": false
     },
+    "makifyai": {
+      "name": "Makify AI",
+      "slug": "makifyai",
+      "official": "https://makifyai.com/",
+      "destination": "https://makifyai.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/makifyai/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

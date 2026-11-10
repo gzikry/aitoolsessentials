@@ -1927,5 +1927,26 @@
     "status": "not_started",
     "next_action": "A programme is already published at /affiliate - 40% on subscriptions, weekly Friday payouts by PayPal or bank - so the ask is for the signup route and tracking link rather than whether terms exist. Signup needs an account, which is the operator's lane; never invent an affiliate URL.",
     "notes": "Strongest affiliate shape in this batch: a $119.99/year and $19.99/month single plan at 40% recurring beats most Creative listings for payout, and the programme page is already live. Held pending signup terms only; nothing wired into affiliate_programs.json."
+  },
+  {
+    "tool_slug": "makifyai",
+    "tool_name": "Makify AI",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/makifyai/"
+    ],
+    "best_audiences": [
+      "e-commerce sellers producing listing and ad images in volume",
+      "small marketing teams replacing stock photography with generated product scenes",
+      "creators already paying for several image-model subscriptions at once"
+    ],
+    "status": "not_started",
+    "next_action": "No affiliate or partner page exists - /affiliate, /affiliates, /partners, /referral and /program all 404 on 2026-11-10 - so the ask is whether a partner or reseller programme exists and, if it does, for terms and a tracking link. Never invent an affiliate URL.",
+    "notes": "Subscription-led revenue shape: $118.80-$958.80 annual plans sit above $9.90-$199 one-time packs, so a recurring commission would be worth more than a pack sale if the vendor offers one. Listing carries known disclosure gaps (no controller, retention or training statement; tags before consent), which belong in the cons rather than the commercial ask."
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09",
+  "generated_at": "2026-11-10",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2618,6 +2618,32 @@
         "video",
         "audio",
         "meetings"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "makifyai",
+      "name": "Makify AI",
+      "category": "Creative",
+      "official_url": "https://makifyai.com/",
+      "review_url": "/tools/makifyai/",
+      "price_label": "Free: 30 sign-up credits plus 7-day check-in credits, no card required. Starter Pass: 40 credits valid 7 days for $4.99. Subscriptions, monthly: Basic $11.90 (100 credits/month), Standard $29.90 (300), Pro slider $59.90 (750) up to $159.90 (2,300). Billed annually: Basic $118.80/year ($9.90/mo, 1,800 credits), Standard $238.80 ($19.90/mo, 4,800), Pro $358.80-$958.80/year ($29.90-$79.90/mo, 10,800-38,400). One-time packs, valid 6 months: 80 credits $9.90, 150 $19.90, 250 $29.90, 400 $39.90, 650 $59.90, 900 $79.90, 1,200 $99.90, 2,500 $199. Subscriber-only top-ups, valid 6 months: 300 $29.90, 1,500 $119, 4,500 $349, 8,500 $649, 12,500 $899. Per-generation cost is published per model on /pricing (GPT Image 2 3 credits/image, Nano Banana Pro 8, Seedance 2.0 Fast 50 credits per 5s, Seedance 2.5 125 per 5s, MiniMax H3 25 per 5s). Annual cards show 17%, 33% and 50% off the monthly equivalents and the site carries a standing '-50%' promo badge. USD. Verified 2026-11-10 on /pricing, /zh/pricing and the plan config shipped in the page.",
+      "pricing_summary": "Free: 30 sign-up credits plus 7-day check-in credits, no card required. Starter Pass: 40 credits valid 7 days for $4.99. Subscriptions, monthly: Basic $11.90 (100 credits/month), Standard $29.90 (300), Pro slider $59.90 (750) up to $159.90 (2,300). Billed annually: Basic $118.80/year ($9.90/mo, 1,800 credits), Standard $238.80 ($19.90/mo, 4,800), Pro $358.80-$958.80/year ($29.90-$79.90/mo, 10,800-38,400). One-time packs, valid 6 months: 80 credits $9.90, 150 $19.90, 250 $29.90, 400 $39.90, 650 $59.90, 900 $79.90, 1,200 $99.90, 2,500 $199. Subscriber-only top-ups, valid 6 months: 300 $29.90, 1,500 $119, 4,500 $349, 8,500 $649, 12,500 $899. Per-generation cost is published per model on /pricing (GPT Image 2 3 credits/image, Nano Banana Pro 8, Seedance 2.0 Fast 50 credits per 5s, Seedance 2.5 125 per 5s, MiniMax H3 25 per 5s). Annual cards show 17%, 33% and 50% off the monthly equivalents and the site carries a standing '-50%' promo badge. USD. Verified 2026-11-10 on /pricing, /zh/pricing and the plan config shipped in the page.",
+      "pricing_url": "https://makifyai.com/pricing",
+      "pricing_checked_date": "2026-11-10",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "design",
+        "video",
+        "marketing",
+        "data"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

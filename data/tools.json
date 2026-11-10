@@ -6380,5 +6380,92 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - the shape is right for the job and simpler than most of the category: one unlimited plan instead of a minutes meter, 134+ languages, speaker identification, SRT/VTT subtitles beside DOCX/PDF export, 10-hour files, and distribution that suggests a product rather than a landing page (docs subdomain, iOS, Chrome, Microsoft Store, ChatGPT and Google Workspace apps, 12,103 sitemap URLs, live since November 2024). The privacy policy is a genuine strength: it names its processors by company, gives real retention periods instead of a phrase, and denies training on uploads including by processors. It is not higher because nothing here has been tested hands-on, the transcript-ownership language is a licence rather than a grant, and unlimited claims price the risk of a fair-use throttle the site does not document. Transparency 3.0/5, and that is what brings the score to 3.6: no company, controller, address or governing-law clause appears anywhere, the refund policy is non-refundable 'regardless of whether the service has been used', every pricing card runs a permanent countdown on a 'New Customer Offer', a 'Trusted by industry leaders' band displays Apple, Netflix, Google, Meta and Amazon marks without saying what the relationship is, and the 99.8% accuracy figure is unqualified on the pricing card while the FAQ hedges it to 'with clear audio'. The operator relationship is disclosed in cons rather than treated as this listing's failure: AccurateScribe is the two-year-old parent of WhisperTranscribe.ai and WhisperTranscript.ai, both held pending verification."
+  },
+  {
+    "slug": "makifyai",
+    "name": "Makify AI",
+    "category": "Creative",
+    "best_for": "E-commerce sellers, small marketing teams and creators who turn existing product shots into listing images, ads, mockups and social graphics without a designer - one browser workspace over GPT Image 2.5/2.6, the Nano Banana 2.x family, Seedream 5.0 and FLUX 3, with 30 free credits on sign-up and one-time packs from $9.90. A sensible fit if you want per-image credit control instead of a fixed subscription and will read the refund rule before paying: 3 calendar days, 50 paid credits or fewer, minus a 2-10% processing fee. Not a fit if you need to know who the data controller is, how long uploaded product photos are kept, or that your outputs are licensed for commercial use before you upload client material - no privacy notice on the site names a controller, address or retention period, training use is never mentioned, and the Terms decline to guarantee commercial usability even though the marketing copy says a commercial licence is included.",
+    "price": "Free: 30 sign-up credits plus 7-day check-in credits, no card required. Starter Pass: 40 credits valid 7 days for $4.99. Subscriptions, monthly: Basic $11.90 (100 credits/month), Standard $29.90 (300), Pro slider $59.90 (750) up to $159.90 (2,300). Billed annually: Basic $118.80/year ($9.90/mo, 1,800 credits), Standard $238.80 ($19.90/mo, 4,800), Pro $358.80-$958.80/year ($29.90-$79.90/mo, 10,800-38,400). One-time packs, valid 6 months: 80 credits $9.90, 150 $19.90, 250 $29.90, 400 $39.90, 650 $59.90, 900 $79.90, 1,200 $99.90, 2,500 $199. Subscriber-only top-ups, valid 6 months: 300 $29.90, 1,500 $119, 4,500 $349, 8,500 $649, 12,500 $899. Per-generation cost is published per model on /pricing (GPT Image 2 3 credits/image, Nano Banana Pro 8, Seedance 2.0 Fast 50 credits per 5s, Seedance 2.5 125 per 5s, MiniMax H3 25 per 5s). Annual cards show 17%, 33% and 50% off the monthly equivalents and the site carries a standing '-50%' promo badge. USD. Verified 2026-11-10 on /pricing, /zh/pricing and the plan config shipped in the page.",
+    "rating": 3.5,
+    "official": "https://makifyai.com/",
+    "summary": "Makify AI is a browser workspace for prompt-driven image editing and generation with a product-photography focus: upload a JPG, PNG or WebP up to 30MB, describe the change in plain English, and get product scenes, listing images, ads, mockups and infographics, exported at 1K or 2K and up to 4K on models that support it. The same credit balance buys short video, and the pricing page publishes the credit cost for each model and each 5-second clip rather than leaving it to be discovered at checkout. The site is a rebrand of AI GPT Image - it announces the change in-app and keeps 'AI GPT Image' as an alternate name in its structured data - and it runs on third-party models it names and disclaims affiliation with, including OpenAI's GPT Image line, Google's Nano Banana family, ByteDance's Seedream and Seedance, FLUX, Qwen, Kling and MiniMax. Pricing is unusually consistent for this category: the subscription ladder, the one-time pack ladder and the per-model credit costs reconcile with each other, and the 17%/33%/50% annual discounts match the monthly equivalents. What the site does not answer is who is accountable and how long uploads live. The footer names ARKELUMA LLC, but no privacy notice names a controller, address, jurisdiction or retention period, the Terms point governing law at 'the jurisdiction in which makifyai.com operates', training use is not mentioned anywhere, and analytics plus Microsoft advertising tags fire on first load with no consent banner rendered.",
+    "use_cases": [
+      "Turning phone photos of stock into clean white-background listing images for a marketplace",
+      "Producing ad and social variants in several aspect ratios from one existing product shot",
+      "Replacing or rebuilding a background around a product without masking it by hand",
+      "Changing the text on packaging, labels or price tags with a prompt instead of a design file",
+      "Upscaling small marketplace images to 1K/2K, or 4K on the models that support it",
+      "Building product scenes, mockups and lifestyle shots without booking a studio",
+      "Making a short product video clip from a still image and a prompt",
+      "Testing several image models on the same edit without opening separate accounts"
+    ],
+    "pros": [
+      "Thirty free credits on sign-up with no card, plus 7-day check-in credits - enough to judge the editor on a real product shot before paying",
+      "Pricing that reconciles: monthly and annual subscription ladders, one-time packs and per-model credit costs agree with each other, so cost per image is computable rather than guessed",
+      "One workspace across GPT Image 2.5/2.6, Nano Banana 2/2.1/Pro, Seedream 5.0, FLUX 3, Qwen Image 3.0, Ideogram 4.0 and Grok Imagine for images, plus Seedance 2.5, MiniMax H3, Kling 4.0 and Wan 3.0 for video",
+      "Non-affiliation is stated explicitly and twice - the footer paragraph and Terms section 8 name OpenAI, Google, xAI, ByteDance, Black Forest Labs, Alibaba, MiniMax, Ideogram, Kuaishou, Luma AI, PixVerse, Recraft, Midjourney and Stability AI, and say model names are used descriptively",
+      "A complete legal set is live and dated: privacy policy and Terms of Service both updated 11 October 2026, refund policy 14 August 2026, all reachable from the footer of every page",
+      "Refund terms are stated as rules rather than adjectives: 3 calendar days, 50 paid credits or fewer, renewals counted as new payments, free and bonus credits excluded from the count, review in 3-5 business days",
+      "The content policy covers the hard cases for a likeness-capable editor - NSFW, CSAM, deepfakes and impersonation, third-party likeness consent, jailbreak attempts - with a named abuse-reporting address",
+      "The rebrand from AI GPT Image is handled openly, with an in-app notice telling existing users their account, credits and creations moved with the new name"
+    ],
+    "cons": [
+      "No data controller, postal address or jurisdiction inside the privacy policy; the only identity on the site is the footer line 'operated by ARKELUMA LLC'. A business-directory snippet places an ARKELUMA LLC in Sheridan, Wyoming, but that record itself was behind a security check on 2026-11-10, so incorporation date and standing are unconfirmed",
+      "Terms section 13 defers to 'the laws of the jurisdiction in which makifyai.com operates' and to binding arbitration 'in accordance with applicable laws' without naming either, which leaves a buyer with nothing to rely on",
+      "No retention period for uploaded images or generated outputs appears in the privacy policy or the Terms - a real gap for a product whose input is client product photography",
+      "Training use is unstated: a whole-word sweep of the homepage, pricing, privacy policy, Terms and refund policy returns zero occurrences of 'train', so neither permission nor prohibition is given",
+      "Processors are described only by category ('payment processing services', 'AI model and content processing services', 'cloud infrastructure'), so neither the model providers that receive uploaded images nor the payment processor is named anywhere",
+      "Analytics and advertising tags fire before any consent choice and no consent banner rendered on a clean headless load on 2026-11-10: GA4 (G-CDGZN0YSBE) plus a DoubleClick hit, Microsoft Clarity (xtk49ey6wl), Bing UET (c.bing.com) and the Cloudflare Insights beacon all loaded and set _ga, _ga_CDGZN0YSBE, MUID, SRM_B, ANONCHK and CLID. The bundle ships a consent dialog whose own 'Cookie policy' target (/cookie-policy, /cookies) returns 404; because the component exists, we ask rather than assert it never appears to a reader",
+      "A device-fingerprint identifier is written to localStorage and cookies as device_fingerprint (alongside attribution_session_id) and is never mentioned in the privacy policy",
+      "The commercial-licence promise does not survive into the Terms: the homepage and pricing FAQ say paid plans 'include a commercial license', while Terms section 6 says 'We do not guarantee that any output is eligible for copyright protection or can be used commercially in every situation' and grants no licence over outputs",
+      "Refunds are approved net of a 2-10% processing fee for 'payment gateway transaction costs', which the refund policy discloses but the pricing FAQ's refund answer does not",
+      "Deleting an account permanently blocks that email address from registering or signing in again, so a trial account is a one-shot decision"
+    ],
+    "key_features": [
+      "Prompt-based editing of an uploaded JPG, PNG or WebP up to 30MB",
+      "Image models in one workspace: GPT Image 2.5/2.6/2/1.5, Nano Banana 2/2.1/Pro/Pro Lite, Seedream 5.0 Pro/Lite, FLUX 3, Qwen Image 3.0, Ideogram 4.0, Grok Imagine Image 2.0, Z-Image",
+      "Video generation from text, image or reference: Seedance 2.5/2.0/Fast/Mini, MiniMax H3, Kling 4.0, Wan 3.0, FLUX 3 Video",
+      "Image-to-image with reference images, object and background replacement, and text-aware generation",
+      "Task presets for product/ecommerce, marketing and ads, text and layout, portrait, and quick fixes",
+      "Upscale to 1K or 2K and up to 4K on supported models, plus expand, restore, background removal and vector conversion",
+      "Prompt library and example gallery with copyable prompts",
+      "Credit-based billing with a published per-model cost table on the pricing page",
+      "Five locales: English, Simplified Chinese, Traditional Chinese, Japanese, and partial Korean",
+      "Chrome extension ('Image Makify') for editing from the browser toolbar"
+    ],
+    "faq": [
+      [
+        "What is Makify AI?",
+        "A browser-based AI image editor and generator aimed at product and marketing visuals. You upload a JPG, PNG or WebP up to 30MB, describe the edit in plain English, and it returns product scenes, listing images, ads, mockups and infographics using third-party models including OpenAI's GPT Image line, Google's Nano Banana family, Seedream 5.0 and FLUX 3. The same credit balance also buys short videos from Seedance, MiniMax, Kling and Wan. It was previously sold as AI GPT Image, and the in-app notice confirms existing accounts and credits moved across."
+      ],
+      [
+        "How much does Makify AI cost?",
+        "Free to start with 30 sign-up credits and additional 7-day check-in credits. Subscriptions run $11.90/month (Basic, 100 credits/month) and $29.90 (Standard, 300), with a Pro slider from $59.90 (750) to $159.90 (2,300); billed annually those become $118.80, $238.80 and $358.80-$958.80 a year, which is 17%, 33% and 50% below the monthly equivalents. One-time packs run from $9.90 for 80 credits to $199 for 2,500 and expire after 6 months, and subscribers can buy top-ups from $29.90 for 300 credits to $899 for 12,500. A one-week Starter Pass of 40 credits costs $4.99."
+      ],
+      [
+        "How are credits used up?",
+        "Per generation, at a rate published on the pricing page for each model and setting: 3 credits for a GPT Image 2 image, 4 for GPT Image 2.5/2.6 variants, 8 for Nano Banana Pro, and 25 to 125 credits per 5-second video clip depending on model. The pricing page states the same billing engine charges the account, so the table and the deduction should match - our reading is that the ladder is consistent, but nothing here has been tested hands-on."
+      ],
+      [
+        "Can I use the images commercially?",
+        "The marketing copy says yes on paid plans: the homepage says paid plans 'include a commercial license for your store, ads and client work' and the pricing FAQ repeats it. The Terms do not carry that promise - section 6 says whether an output can be used 'depends on applicable law, your inputs, the rights of third parties, and the terms of the third-party models involved' and that 'we do not guarantee that any output is eligible for copyright protection or can be used commercially in every situation'. Treat the commercial licence as unconfirmed in writing until the vendor says which document governs, especially for client deliverables."
+      ],
+      [
+        "Who runs Makify AI, and how long are my uploads kept?",
+        "The footer of every page says the site is 'operated by ARKELUMA LLC'; no other identity appears. The privacy policy names no controller, postal address or governing law, states no retention period for uploads or outputs, and never says whether submitted images are used for training. Contact is support@makifyai.com (the submission also used contact@makifyai.com, and the domain's Cloudflare mail routing accepts both). If you are uploading client product photography, get retention in writing before you start."
+      ]
+    ],
+    "trial_checklist": [
+      "Spend the 30 free credits on one real product photo from your own catalogue, with the same prompt you would give your current tool, and compare the two outputs side by side before buying anything",
+      "Run the identical edit on two models - GPT Image 2 at 3 credits and Nano Banana Pro at 8 - and note whether the extra cost buys a better result on your product type",
+      "Test text: rewrite a price or a label on the packaging. 'Perfect text rendering' is the marketing claim, and text is where image models usually fail",
+      "Export at 1K and 2K and check the file against your marketplace's spec; 4K is only available on models that support it, so confirm yours is one",
+      "Read the refund rule before paying: 3 calendar days, 50 paid credits or fewer, with a 2-10% processing fee deducted if approved. Buy the smallest pack ($9.90 for 80 credits) for the first paid test",
+      "If you will upload client material, email support@makifyai.com first and ask for the retention period and the model providers that receive the images - neither is published"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 3.9/5 - the shape suits the job: one workspace spanning the image models people actually compare (GPT Image, Nano Banana, Seedream, FLUX, Qwen, Ideogram), a product-photography task library, video on the same credit balance, 30 free credits with no card, and a pricing ladder whose monthly, annual, pack and per-model figures reconcile - which is rarer in this category than it should be. Transparency brings the score to 3.5: the operator is named only as ARKELUMA LLC in the footer, the privacy policy has no controller, address, jurisdiction or retention period, training use is never mentioned, processors are named only by category, GA4, DoubleClick, Microsoft Clarity and Bing UET fire on first load with no consent banner rendered while the bundle ships an unused consent dialog pointing at a 404, a device fingerprint is stored without disclosure, and the 'commercial license' promised in the marketing copy is disclaimed in the Terms. Nothing here has been tested hands-on; the product-quality judgement rests on the shipped app, the published task library and the example gallery."
   }
 ]
