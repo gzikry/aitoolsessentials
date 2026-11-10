@@ -237,7 +237,10 @@ def main() -> None:
         # "99 tools"/"99 tracked AI tools" and "median $N" with the dollar sign immediately after
         # the word. Both are now matched by shape, not by the exact wording of the day they were
         # written.
-        new = re.sub(r"\b\d{2,3} of \d{2,3} ((?:tracked )?(?:AI )?tools)\b",
+        # "44 of the 105 AI tools" (the Forbes row's phrasing) never matched the old pattern,
+        # which had no optional "the", so that template carried a superseded count and median
+        # into the queue for days. The article is optional here, not required.
+        new = re.sub(r"\b\d{2,3} of (?:the )?\d{2,3} ((?:tracked )?(?:AI )?tools)\b",
                      rf"{n_paid} of {figs['n_tools']} \1", new)
         new = re.sub(r"\b\d{2,3} AI tools we price\b", f"{figs['n_tools']} AI tools we price", new)
         new = re.sub(r"\b\d{1,3} (?:(of those) )?at or under \$25",
@@ -245,8 +248,20 @@ def main() -> None:
         if med_now != "?":
             new = re.sub(r"median[^$\n]{0,40}\$\d+(?:\.\d+)?",
                          lambda m: re.sub(r"\$\d+(?:\.\d+)?$", f"${med_now}", m.group(0)), new)
+            # A template can also carry seat arithmetic derived from the median ("five seats on
+            # that median is about $16.00 a year" — the Forbes row, where a prior run's figure was
+            # off by a factor of sixty). Recompute every such clause from today's median rather
+            # than leave a wrong number in a field the queue prints to the sender.
+            _words = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+                      "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+            def _seat_year(m: re.Match) -> str:
+                n = _words.get(m.group(1).lower(), 5)
+                return f"{m.group(1)} seats{m.group(2)}${n * float(med_now) * 12:,.0f} a year"
+            new = re.sub(r"\b(one|two|three|four|five|six|seven|eight|nine|ten) seats?"
+                         r"(\b[^.]{0,60}?)\$\d+(?:\.\d+)? a year", _seat_year, new)
         if figs["snapshot_updated"] != "?":
-            new = re.sub(r"\(checked 20\d{2}-\d{2}-\d{2}\)", f"(checked {figs['snapshot_updated']})", new)
+            new = re.sub(r"\((?:snapshot )?checked 20\d{2}-\d{2}-\d{2}\)",
+                         f"(snapshot checked {figs['snapshot_updated']})", new)
         if new != t:
             o = dict(o)
             o["suggested_pitch_template"] = new
@@ -443,10 +458,16 @@ def main() -> None:
                   sorted(sendable, key=age))
         if sendable else "none"
     )
+    _dead_all = [o for o in opps if o.get("_page_live") is False]
+    _dead_unpitched = [o for o in _dead_all
+                       if o["slug"] not in sent_slugs and o["slug"] not in skipped_slugs]
     summary = (
-        f"{len(opps)} tracked requests ({n_carried} carried and all {n_carried} re-verified live, "
+        f"{len(opps)} tracked requests ({n_carried} carried, all re-fetched today: "
+        f"{n_carried - len(_dead_all)} still serving and {len(_dead_all)} answering 404; "
         f"{len(NEW)} added this run, {len(pitched)} pitched, {len(skipped)} deliberately skipped). "
-        f"Of the {len(unpitched)} unpitched, {len(live)} are live and {len(cold)} are cold. "
+        f"Of the {len(unpitched)} unpitched, {len(live)} are live, "
+        f"{len(cold) - len(_dead_unpitched)} are cold and {len(_dead_unpitched)} are dead on the "
+        f"platform. "
         f"Sendable: {sendable_txt}. The window produced {len(window['window'])} slugs with "
         f"{len(window['ai'])} AI-token and {len(window['ai_strict'])} AI+spend; "
         f"{len(ai_prose)} window bodies mention AI at body level and {ai_prose_spend} of those also "

@@ -869,7 +869,7 @@ def _sendable_history() -> tuple[str, str, int]:
             rows.append((p.stem.replace("digest-", ""), c))
     if not rows:
         return ("?", "never", 0)
-    prev = rows[-1][1]
+    prev = rows[-2][1] if len(rows) >= 2 else rows[-1][1]
     zeros, last_nonzero = 0, "never"
     for day, c in reversed(rows[:-1]):
         if c == 0:
@@ -1074,10 +1074,10 @@ def render(queue: list[dict], ledger: dict) -> str:
         "",
         "**Every pitch here needs a human send.** HARO and Connectively sit behind an email wall, "
         "Qwoted and Medialyst need authenticated sessions, and Sourcee redacts the requester's own "
-        "address in the request body. That is why 43 flagged opportunities produced zero pitches. "
-        "Reply routes are named per row — including addresses resolved off the *publication's* own "
-        "site (a byline page or an editorial contact page), which is now the strongest route class "
-        "in this queue.",
+        "address in the request body. That is the friction that produced zero sends from the first "
+        "43 flagged opportunities. Reply routes are named per row — including addresses resolved off "
+        "the *publication's* own site (a byline page or an editorial contact page), which is now the "
+        "strongest route class in this queue.",
         "",
         _draft_index(len(fresh), len(sendable)),
         "",
@@ -1094,7 +1094,7 @@ def render(queue: list[dict], ledger: dict) -> str:
         m = re.search(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", c)
         if m:
             return m.group(0)
-        m = re.search(r"https?://(?:www\.)?linkedin\.com/in/[A-Za-z0-9\-_%]+", c)
+        m = re.search(r"(?:https?://)?(?:www\.)?linkedin\.com/in/[A-Za-z0-9\-_%]+", c)
         if m:
             return m.group(0)
         return ""
@@ -1124,7 +1124,11 @@ def render(queue: list[dict], ledger: dict) -> str:
                               + re.escape(slug) + r"(?![a-z0-9\-])", _newest_txt))
 
     late_send = [q for q in live if q.get("page_live") and _has_real_draft(q["url"])]
-    late_send.sort(key=key)
+    # A to-do list ranks by what to do first, not by relevance band: on 2026-11-10 this sort put the
+    # only fresh sendable row (0d, low-medium) last, behind two 13/14-day late sends with a higher
+    # band. Sendable first, then age.
+    late_send.sort(key=lambda q: (0 if _sendable(q) else 1,
+                                  q["days_old"] if q["days_old"] is not None else 999))
     if late_send:
         _n_late = sum(1 for q in late_send if (q.get("days_old") or 0) > STALE_DAYS)
         _n_fresh = len(late_send) - _n_late
@@ -1138,6 +1142,12 @@ def render(queue: list[dict], ledger: dict) -> str:
              "so they are late, not dead.") if _n_late else
             (f"All {len(late_send)} are inside the {STALE_DAYS}-day line.")
         )
+        _lead = (f"**{len(late_send)} finished draft{'s' if len(late_send) != 1 else ''} "
+                 f"{'are' if len(late_send) != 1 else 'is'} ready to send now — 'Send these now' "
+                 f"below names each route; {sum(1 for q in late_send if _sendable(q))} of them "
+                 f"{'are' if sum(1 for q in late_send if _sendable(q)) != 1 else 'is'} inside the "
+                 f"{STALE_DAYS}-day line.**")
+        lines[4:4] = [_lead, ""]
         lines += [
             f"## Send these now ({len(late_send)}) — a finished draft and a live route",
             "",
@@ -1155,7 +1165,7 @@ def render(queue: list[dict], ledger: dict) -> str:
         lines += [""]
 
     def _row(q: dict) -> list[str]:
-        age = f"{q['days_old']:.0f}d old" if q["days_old"] is not None else "age unknown"
+        age = f"{int(q['days_old'])}d old" if q["days_old"] is not None else "age unknown"
         out = [
             f"### [{q['relevance']}] {q['category'] or '(uncategorised)'}",
             f"- **URL:** {q['url']}",
@@ -1226,7 +1236,7 @@ def render(queue: list[dict], ledger: dict) -> str:
                   "signal exists on this source — but every one of these has already passed an ideal "
                   "send window.", ""]
         for q in stale:
-            age = f"{q['days_old']:.0f}d old" if q["days_old"] is not None else "age unknown"
+            age = f"{int(q['days_old'])}d old" if q["days_old"] is not None else "age unknown"
             lines.append(f"- [{q['relevance']}] {age} — {q['url']}")
         lines.append("")
 
@@ -1235,7 +1245,7 @@ def render(queue: list[dict], ledger: dict) -> str:
         lines += ["## Dropped off the feed", "",
                   "Still fetching, but absent from the newest digest — colder than the age says.", ""]
         for q in dropped:
-            age = f"{q['days_old']:.0f}d old" if q["days_old"] is not None else "age unknown"
+            age = f"{int(q['days_old'])}d old" if q["days_old"] is not None else "age unknown"
             lines.append(f"- [{q['relevance']}] {age} — {q['dropped_off']} — {q['url']}")
         lines.append("")
 
@@ -1270,12 +1280,12 @@ def main() -> None:
     print(f"wrote {QUEUE_MD.relative_to(SITE_ROOT)}")
     for q in sorted(sendable, key=lambda x: (0 if x["in_latest"] else 1, _rel_rank(x["relevance"]),
                                              x["days_old"] if x["days_old"] is not None else 999)):
-        age = f"{q['days_old']:.0f}d" if q["days_old"] is not None else "?"
+        age = f"{int(q['days_old'])}d" if q["days_old"] is not None else "?"
         print(f"  SEND {age:>5} [{q['relevance']:<9}] {q['url'][:66]}")
     for q in sorted(live, key=lambda x: x["days_old"] if x["days_old"] is not None else 999):
         if q in sendable:
             continue
-        age = f"{q['days_old']:.0f}d" if q["days_old"] is not None else "?"
+        age = f"{int(q['days_old'])}d" if q["days_old"] is not None else "?"
         print(f"  (not sendable) {age:>5} [{q['relevance']:<9}] {q['url'][:58]}")
 
 

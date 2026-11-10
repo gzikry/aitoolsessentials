@@ -1,0 +1,31 @@
+{
+ "new_this_run": [
+  "1 row added from a 116-slug sitemap window (2026-11-09T02:31Z -> 2026-11-10T03:58Z): 12 AI-token slugs, 2 AI+spend slugs at slug level, 116 window bodies fetched and read (_bodies_1110.json). 12 bodies carry an AI token; 2 carry an AI token plus a spend token, and both are false positives on reading (a Microsoft-partner podcast booking that says 'chair'/'seat', and a UK fashion-scam consumer call whose 'cost' is a return postage fee). 0 body-level AI+real-spend hits on our beat.",
+  "The one row added is InformationWeek / Kelsey Ziser, a CIO source call covering 2027 goals, the RAM shortage, the 'SaaSpocalypse', temporary AI deployments and physical AI. It is the first request in seven windows with a real AI-spend question in it ('temporary AI tool' deployment, SaaS pricing pressure), and the first in that stretch whose contact route resolves: her InformationWeek author page publishes kelsey.ziser@informationweek.com as a mailto link (HTTP 200, 578,961 bytes, probed today). Relevance is recorded as low-medium, not high: she asks for CIOs and we are a price-data publisher, so the pitch may offer the dated seat-price numbers behind the SaaSpocalypse question and must say plainly that we are not a CIO.",
+  "The other 11 AI-token rows were read and excluded, not silently dropped: an esoteric-AI podcast booking (no address), a game-industry call about labelling generative AI in games, an ABC Australia request for Jensen Huang himself, a TribLive job-seeker call, a Microsoft-partner podcast booking, an AEC data-licensing call, a founders' 'fun little project' profile request, a non-tech AI-impact call aimed at AI companies, a UK fashion-scam consumer story, a cybersecurity/reverse-engineering call, and a consultants' role-change call. None is about tool pricing, subscription spend or procurement, and none publishes a usable route."
+ ],
+ "new_rows": {
+  "cios-2027-goals-ram-shortage-saaspocalypse-temp-ai-physical-ai": {
+   "who": "InformationWeek (informationweek.com) - Kelsey Ziser, Senior Editor, named in the page's author field.",
+   "category": "AI / Enterprise Spend / SaaS Pricing Pressure",
+   "contact": "Route resolved OFF the request page: kelsey.ziser@informationweek.com, published as a mailto link on her InformationWeek author page (https://www.informationweek.com/author/kelsey-ziser, route-checks probe 2026-11-10: HTTP 200, 578,961 bytes, title 'Kelsey Ziser | Senior Editor, InformationWeek'). The request page itself publishes no address and no link.",
+   "relevance": "low-medium",
+   "notes": "She is assembling CIO sources for upcoming InformationWeek stories on 2027 goals, the RAM shortage, the SaaSpocalypse, temporary AI deployments and physical AI. Two of those five topics are pricing questions we hold dated evidence on: the monthly-vs-annual premium (1.11x to 2.53x, median 1.25x over 19 same-tier pairs) is the arithmetic behind 'temporary AI tool' trials, and the seat-price census is the baseline for a SaaS-pricing-collapse story. Recorded low-medium, not high, because the ask is for CIO commentary and we are not a CIO; any pitch must offer data and say so explicitly rather than claim standing.",
+   "template": "Email to kelsey.ziser@informationweek.com. Subject: 'The seat-price numbers behind the SaaSpocalypse question'. Open with one measured number from the 2026-11-10 snapshot (45 of 108 tracked AI tools publish a monthly price, median cheapest paid seat $16.00), give the monthly-vs-annual premium (1.11x-2.53x, median 1.25x over 19 tiers, asserted 2026-10-16), state plainly that we are a price census and not a CIO, and offer the dated dataset free for the SaaSpocalypse or temporary-AI piece. Under 200 words, signed AIToolsEssentials."
+  }
+ },
+ "why_not_drafted": [
+  "the 11 excluded AI-token rows are off-beat asks (podcast bookings, consumer scams, a CEO interview request, role-change interviews) with no tool-pricing question and, in most cases, no route",
+  "the queue's two carried drafts (Forbes / Alison Coleman at 14d, Business Today / Vidhya Das at 13d) remain live and are re-drafted today with the 2026-11-10 figures; both are late sends but neither page carries an expiry",
+  "nothing else inside 20 days has both a relevance above the tangential band and a resolved route - see pitch-queue.md"
+ ],
+ "extra_actions": [
+  "THREE SENDS ARE READY IN pitch-drafts-2026-11-10.md: (1) InformationWeek / Kelsey Ziser, 0d, email kelsey.ziser@informationweek.com, the only FRESH sendable row; (2) Forbes / Alison Coleman, 14d, email alison@alisoncoleman.co.uk, one send closes BOTH Forbes rows (solopreneurs and bootstrapped founders); (3) Business Today / Vidhya Das, 13d, LinkedIn DM to linkedin.com/in/vidya-das.",
+  "The Forbes email is staged in [Gmail]/Drafts and is re-staged today from the draft file with the 2026-11-10 figures; the old draft carrying 105 tools / median $16.50 is deleted so only one version exists. The other two cannot be staged: one is an email that must be sent from the new draft, the other is a LinkedIn DM with no mailbox artefact.",
+  "Mailbox re-checked today with jansuski.com as a positive control (two known messages returned): zero replies from any pitch recipient. Nothing has been sent since 2026-10-11."
+ ],
+ "defects": [
+  "FIXED IN scripts/build_pitch_queue.py: the headline led with 'sendable' (0 for twelve consecutive runs) while the two rows a person could actually send were buried in a later section. The lead line now names the send-now count and the route class before the sendable number, so the first sentence answers 'what do I do' rather than 'how many fresh rows are there'.",
+  "NOT FIXED, still measured: `_sendable()` ranks 'low-medium' above the tangential band, so an adjacent row with a published author-page email now counts as sendable. That is the intended definition (relevance above low plus a usable route), but a reader should not take 'sendable' to mean the reporter asked for us specifically; the row's relevance notes and the draft itself say otherwise."
+ ]
+}
