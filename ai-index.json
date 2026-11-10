@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-09",
-  "tools_count": 106,
+  "tools_count": 107,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -777,6 +777,13 @@
       "category": "Creative",
       "price": "Subscriptions, monthly or yearly: Starter $29/mo for 1,500 credits ($20.30/mo on the $243.60 yearly plan), Pro $99/mo for 6,000 credits ($59.40/mo on $712.80 yearly), Studio $299/mo for 18,000 credits plus 1,000 free 1K/2K images a month on any model ($149.50/mo on $1,794 yearly). One-time credit pack: 60,000 credits for $999, never expires. 50 free sign-up credits, one time, no card. Subscription credits expire when the next monthly allowance arrives and do not roll over; pack credits and the 1,000-credit first-subscription gift never expire. Failed or refused generations are refunded in credits automatically. USD before local tax; Waffo (merchant of record) or PayPal. Verified 2026-11-09 on /pricing and /api/config/public.",
       "url": "https://aitoolsessentials.com/tools/dreammmer/"
+    },
+    {
+      "name": "AccurateScribe.ai",
+      "slug": "accuratescribe",
+      "category": "Audio & Video",
+      "price": "Free tier: partial transcripts and basic features, no card. One paid plan, unlimited: $9.99/month billed annually at $119.99/year, or $19.99 month-to-month; both cards advertise unlimited transcription, files up to 10 hours each, speaker identification and 134+ languages. USD; PayPal shown on the pricing page. Verified 2026-11-09 on /pricing and on the /ar/pricing locale mirror, which carries the same three figures ($9.99, $119.99, $19.99).",
+      "url": "https://aitoolsessentials.com/tools/accuratescribe/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

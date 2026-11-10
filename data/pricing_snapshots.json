@@ -460,6 +460,10 @@
     "dreammmer": {
       "date": "2026-11-09",
       "digest": "Subscriptions, monthly or yearly: Starter $29/mo for 1,500 credits/month ($243.60 yearly, shown as $20.30/mo), Pro $99/mo for 6,000 ($712.80 yearly, $59.40/mo), Studio $299/mo for 18,000 plus 1,000 free 1K/2K images a month ($1,794 yearly, $149.50/mo); each card shows the monthly figure and the annual total struck through against an always-on 'Save up to 50%' badge. One-time pack: 60,000 credits for $999, badged 'Save 30%' with no reference price anywhere. 50 free sign-up credits, one time, no card. Subscription credits reset monthly and do not roll over; pack credits and the 1,000-credit first-subscription gift never expire; failed generations refunded automatically. Waffo (merchant of record) or PayPal. Verified 2026-11-09 on /pricing (server-rendered) and /api/config/public (initial_credits_amount 50, commerce_checkout_enabled true)."
+    },
+    "accuratescribe": {
+      "date": "2026-11-09",
+      "digest": "Free tier: partial transcripts and basic features, no card. One paid plan, unlimited: $9.99/month billed annually at $119.99/year, or $19.99 month-to-month. Both cards list 'Unlimited transcription usage', 'Unlimited subtitle generation', files up to 10 hours each, 99.8% accuracy (unqualified), 134+ languages, speaker identification and DOCX/PDF/SRT/VTT/TXT/CSV export. Each card carries a live 09:59:59 countdown and a 'New Customer Offer' label; the annual card strikes $239.88-type list pricing behind a 'Save 50%' badge. Same three figures on the /ar/pricing locale mirror. PayPal named on the page. Refund policy is explicitly non-refundable 'regardless of whether the service has been used'."
     }
   },
   "changes": [

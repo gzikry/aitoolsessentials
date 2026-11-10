@@ -2598,6 +2598,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "accuratescribe",
+      "name": "AccurateScribe.ai",
+      "category": "Audio & Video",
+      "official_url": "https://accuratescribe.ai/",
+      "review_url": "/tools/accuratescribe/",
+      "price_label": "Free tier: partial transcripts and basic features, no card. One paid plan, unlimited: $9.99/month billed annually at $119.99/year, or $19.99 month-to-month; both cards advertise unlimited transcription, files up to 10 hours each, speaker identification and 134+ languages. USD; PayPal shown on the pricing page. Verified 2026-11-09 on /pricing and on the /ar/pricing locale mirror, which carries the same three figures ($9.99, $119.99, $19.99).",
+      "pricing_summary": "Free tier: partial transcripts and basic features, no card. One paid plan, unlimited: $9.99/month billed annually at $119.99/year, or $19.99 month-to-month; both cards advertise unlimited transcription, files up to 10 hours each, speaker identification and 134+ languages. USD; PayPal shown on the pricing page. Verified 2026-11-09 on /pricing and on the /ar/pricing locale mirror, which carries the same three figures ($9.99, $119.99, $19.99).",
+      "pricing_url": "https://accuratescribe.ai/pricing",
+      "pricing_checked_date": "2026-11-09",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "video",
+        "audio",
+        "meetings"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

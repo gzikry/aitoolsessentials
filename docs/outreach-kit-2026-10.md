@@ -1,6 +1,6 @@
 # Outreach kit — October 2026
 
-Catalog size when this file was generated: 106.
+Catalog size when this file was generated: 107.
 Calculator lines are one workload each. They are not a claim that the tool wins every job.
 Directory blocks are ready-to-submit copy. They are not a record that the form was sent.
 Every vendor note ends with the house sign-off. Outbound mail signs as AIToolsEssentials — never a personal name, never a personal address in the body.

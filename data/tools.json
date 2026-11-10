@@ -6277,5 +6277,107 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.4/5 - this is the shape the job needs: one credit balance across eleven current image models and seven video models, an agent that writes the prompt instead of leaving the model choice to the buyer, one-click tools that feed back into the same conversation, a canvas that records lineage, per-task cost shown before sending, failed generations refunded, output ownership granted and a written 7-day refund window with a usage cap. It is not 4.5+ because no result here has been verified hands-on, the free tier is 50 credits once rather than recurring, and the model breadth makes quality vary per model. Transparency 3.4/5, and that is what pulls the score to 4.0: the legal set is real and specific about ownership, training on the site's own models, content-safety handling and refunds, and it publishes a postal address - but it names no company at all, has no governing-law clause, promises a retention period in its own lede and gives none, and loads Google Analytics on the privacy policy itself while naming no analytics vendor and showing no consent banner. Add a free-tier showcase licence that publishes prompts and reference images, always-on struck-through list prices, and per-image examples priced 20-38% above the real plan rate. Each of those is recorded in cons rather than held against publication, because none of them prevents a reader from knowing what they are buying."
+  },
+  {
+    "slug": "accuratescribe",
+    "name": "AccurateScribe.ai",
+    "category": "Audio & Video",
+    "best_for": "Solo transcribers, podcasters, journalists, students and small teams who want one flat unlimited plan instead of a minutes meter - $9.99 a month billed yearly or $19.99 monthly, 134+ languages, speaker identification, subtitles and DOCX/PDF/SRT export, free to try on partial transcripts. A good fit if you transcribe a few hours a week and would rather not track a credit balance. Not a fit if you need a named counterparty or governing law before you pay, if you expect any refund after purchase (the policy is non-refundable even if the service is unused), or if you need a per-minute rate for very high volume - the same operator's WhisperTranscribe.ai and WhisperTranscript.ai brands sell meters, both of which are held pending verification rather than listed.",
+    "price": "Free tier: partial transcripts and basic features, no card. One paid plan, unlimited: $9.99/month billed annually at $119.99/year, or $19.99 month-to-month; both cards advertise unlimited transcription, files up to 10 hours each, speaker identification and 134+ languages. USD; PayPal shown on the pricing page. Verified 2026-11-09 on /pricing and on the /ar/pricing locale mirror, which carries the same three figures ($9.99, $119.99, $19.99).",
+    "rating": 3.6,
+    "official": "https://accuratescribe.ai/",
+    "summary": "AccurateScribe.ai is a transcription and subtitle service that turns audio or video into text in 134+ languages, with speaker identification, SRT/VTT subtitle output and export to DOCX, PDF, TXT and CSV. Its commercial model is unusually simple for this class: a free tier that returns partial transcripts, then one unlimited plan at $9.99 a month billed yearly ($119.99) or $19.99 month-to-month, rather than the minutes-metered ladders most competitors sell. The product has been live since November 2024 and is distributed well beyond the website - a docs subdomain, an iOS app, a Chrome extension, a Microsoft Store listing, a ChatGPT app and a Google Workspace add-on - and its privacy policy is unusually specific about the parts that matter: original uploads are deleted after processing, extracted audio is kept 30 days, transcripts stay under the account holder's control, and it states that recordings and transcripts are not used to train its own or third parties' models and are not human-reviewed. What the site does not say is who runs it: no company, postal address, jurisdiction or governing-law clause appears on any page, the refund policy is 'final and non-refundable, regardless of whether the service has been used', and the pricing page runs a permanent countdown on a 'New Customer Offer' alongside a corporate-logo band it describes as customers.",
+    "use_cases": [
+      "Turning one or two recorded interviews a week into editable text without keeping a minutes balance in view",
+      "Burning subtitles into social video with SRT/VTT output in 134+ languages",
+      "Transcribing lectures, conference talks or long recordings up to 10 hours in a single file",
+      "Labelling who said what in multi-speaker interviews and panel recordings with speaker identification",
+      "Exporting straight into DOCX or PDF for a client deliverable rather than reformatting a TXT",
+      "Trying transcription at zero cost - the free tier returns partial transcripts and basic features without a card",
+      "Running transcription from a phone (iOS app), a browser extension, the Microsoft Store app, a ChatGPT app or Google Workspace"
+    ],
+    "pros": [
+      "One unlimited plan instead of a minutes meter: $9.99/mo billed annually at $119.99/year or $19.99 month-to-month, so cost does not move with usage - the opposite of the tiered 14,400 / 72,000 / 360,000-minute ladders its sibling brands sell",
+      "The privacy policy answers the questions this category usually dodges, in the policy body rather than a marketing page: original uploads are automatically deleted after processing, extracted MP3s are retained 30 days by default, transcript text stays in the account for the holder to manage and delete, and deletion is described as permanent with no backups",
+      "Training use is denied explicitly and extended to processors: 'We do not use this content to train, fine-tune, evaluate or improve our own or third parties' AI models, and we do not permit third-party service providers processing this content on our behalf to use it for those purposes'",
+      "Subprocessors are named by company rather than by category - Firebase (Google LLC), Mixpanel, Google Analytics and OpenAI - with links to each one's privacy policy, which is more than most tools in this catalog publish",
+      "A complete legal set actually exists and returns 200: privacy, terms, return policy, subscription terms, copyright statement, DMCA notice, disclaimer and an intellectual-property-rights page",
+      "Real distribution beyond the website: docs.accuratescribe.ai documentation, an iOS app, a Chrome extension, a Microsoft Store app, a ChatGPT app and a Google Workspace Marketplace add-on - a reasonable proxy for a product that works rather than a landing page",
+      "Free tier is genuinely usable for evaluation: partial transcripts and basic features with no card, and the site says so plainly rather than hiding it behind a trial clock",
+      "Published affiliate programme at 40% commission with weekly Friday payouts by PayPal or bank - a real commercial lane, and the strongest affiliate shape in this batch"
+    ],
+    "cons": [
+      "No company, legal entity, postal address or named controller appears on any page of the site. The footer reads only '(c) 2026 AccurateScribe.ai. All rights reserved.', so a buyer cannot tell whether they are contracting with a company or an individual",
+      "No governing-law, jurisdiction, arbitration or venue clause anywhere in the Terms - a deliberate omission rather than an oversight, since the terms page runs a section headed 'Governing Law and Non-Excludable Provisions' whose body never names a law or a country",
+      "The refund policy is absolute: 'all purchases are final and non-refundable, regardless of whether the service has been used', and 'Once a new billing cycle has started, no refunds can be issued - even if the service has not been used'. No cooling-off window is offered, which a consumer in the UK or EU may not be able to sign away for a digital service",
+      "Every pricing card runs a live countdown ('09 : 59 : 59') beside a 'New Customer Offer' label, and the annual card pairs a struck-through total with a 'Save 50%' badge that never expires - permanent urgency rather than a dated promotion",
+      "A 'Trusted by industry leaders worldwide' band displays Apple, Netflix, Zoom, Microsoft, Fox, Google, YouTube, Meta and Amazon marks with no caption saying what the relationship is. If those companies are not customers, the band implies endorsements the site cannot evidence",
+      "The 99.8% accuracy figure appears unqualified on the pricing card ('99.8% accuracy in transcription & subtitles') and on the subtitle generator, while the FAQ hedges it to 'with clear audio' and admits accuracy varies with accents and poor quality. No benchmark, sample size or test set is published behind either version",
+      "This is one of three brands run by the same operator, submitted in the same two-minute window: WhisperTranscribe.ai and WhisperTranscript.ai share its legal template (Terms 0.90-0.92 similarity), its tool route set, its Zoho MX triple, its hosting address and its registrar, and this site's own .com redirects here. Both Whisper brands are held pending verification, so this listing is not an endorsement of them",
+      "The Terms grant only 'a limited, non-exclusive license' to use the service and to 'download and store your transcription results'; there is no affirmative statement that the transcript belongs to you, unlike tools that grant output ownership in plain words",
+      "Checkout could not be exercised without creating an account, so the purchase path - including which payment processor actually settles a subscription - was not verified end to end; the pricing page names PayPal and the bundle carries adapters for several processors, which is what the code supports rather than what is configured"
+    ],
+    "key_features": [
+      "Transcription in 134+ languages, with translation into 130+ languages",
+      "Speaker identification on multi-speaker recordings",
+      "Subtitle generation with SRT and VTT export, plus DOCX, PDF, TXT and CSV",
+      "Files up to 10 hours each and up to 5GB",
+      "Transcribe from a file, from a public URL, from a live recording, or from the screen recorder",
+      "Convert audio and video to MP3 or WAV",
+      "One unlimited paid plan - no minutes metering on the consumer tier",
+      "Free tier returning partial transcripts and basic features without a card",
+      "Apps across web, iOS, Chrome extension, Microsoft Store, ChatGPT and Google Workspace",
+      "Public documentation at docs.accuratescribe.ai, including an llms-full.txt for machine readers",
+      "40% affiliate programme with weekly payouts"
+    ],
+    "faq": [
+      [
+        "What is AccurateScribe.ai?",
+        "A transcription and subtitle service. You upload audio or video (up to 10 hours and 5GB per file), paste a public URL, or record in the browser, and it returns text in 134+ languages with speaker identification and export to DOCX, PDF, TXT, CSV, SRT or VTT. It also converts media to MP3/WAV and includes a screen recorder that transcribes what it captures. It has been live since November 2024 and ships as a web app, an iOS app, a Chrome extension, a Microsoft Store app, a ChatGPT app and a Google Workspace add-on."
+      ],
+      [
+        "How much does AccurateScribe.ai cost?",
+        "One paid plan, unlimited: $9.99/month billed annually at $119.99/year, or $19.99 month-to-month. There is no minutes allowance to track on either - 'Unlimited transcription usage' and 'Unlimited subtitle generation' are listed on both cards. A free tier returns partial transcripts and basic features without a card. The same three figures ($9.99, $119.99, $19.99) appear on the /ar/pricing locale mirror as on the English page. PayPal is named on the pricing page."
+      ],
+      [
+        "Is there a free plan?",
+        "Yes, but it is a restricted one rather than a full trial: the FAQ describes it as letting free users 'view partial transcripts and use basic features'. That is enough to judge accuracy on your own audio; it is not enough to produce a finished transcript."
+      ],
+      [
+        "Who owns my transcripts?",
+        "You keep your rights in the recordings, files and transcripts you upload or generate - the Terms say 'You retain your rights to the recordings, files and transcripts you upload'. But the licence the site takes is thin on the output side: it grants you 'a limited, non-exclusive license' to use the service and to download and store results, and does not state affirmatively that the transcript is yours to license onward. If you need output ownership in writing for client work, ask them before you rely on it."
+      ],
+      [
+        "Does AccurateScribe train AI models on my recordings?",
+        "It says no, and extends the denial to its processors: 'We do not use this content to train, fine-tune, evaluate or improve our own or third parties' AI models, and we do not permit third-party service providers processing this content on our behalf to use it for those purposes.' It also states there is no human review of recordings or transcripts. What it does not state is what OpenAI - named as its AI service provider - does with the audio under OpenAI's own terms."
+      ],
+      [
+        "How long are my files kept?",
+        "The policy gives actual periods rather than a phrase: original uploads are deleted automatically after processing completes; MP3 files extracted or generated during processing are retained 30 days by default and then deleted; transcript text and the audio associated with results stay in your account for you to manage and delete, and the policy says the 30-day default does not apply to them. Deletion is described as permanent, with no backups."
+      ],
+      [
+        "Can I get a refund?",
+        "No. The return policy is explicit that 'all purchases are final and non-refundable, regardless of whether the service has been used', and that 'canceling a subscription does not generate a refund for the current billing period'. You can cancel at any time to stop future renewals. If you are in the UK or EU, a blanket no-refund term on a digital service may not be enforceable against you, but nothing on the site offers a cooling-off period - test on the free tier before paying."
+      ],
+      [
+        "Who runs AccurateScribe.ai?",
+        "The site does not say. No company name, registered address, jurisdiction or governing-law clause appears on any page, and the footer carries only a copyright line. The operator also runs WhisperTranscribe.ai and WhisperTranscript.ai - the three share a legal template, a tool route set, a mail provider, a hosting address and a registrar, and accuratescribe.com redirects to this domain - and both Whisper brands are held from listing pending verification of their names and of a single-listing-or-several decision."
+      ],
+      [
+        "Does AccurateScribe have an affiliate programme?",
+        "Yes, and it is published on the site: 40% commission on subscriptions, payouts weekly on Fridays by PayPal or bank, no follower requirement, and real-time conversion analytics. The page also states 'Our partners earn an average of $10,000+ monthly', which is an earnings claim with no basis published behind it."
+      ]
+    ],
+    "trial_checklist": [
+      "Start on the free tier with one real file from your own workflow, not a demo clip - partial transcripts are enough to judge whether the speaker labels and punctuation hold up on your audio",
+      "Run the same file through two languages you actually need if you work multilingually; the language list is broad but per-language model quality is not documented, and the FAQ admits some languages offer several model options including ones tuned for noisy audio",
+      "Time a 45-60 minute recording end to end. 'Results within minutes' is the claim; on a long file the upload, queue and export steps are what decide whether this fits a deadline",
+      "Check the export you actually deliver in - SRT and VTT for captions, DOCX when a client wants an editable file - rather than judging the on-screen transcript",
+      "Before paying a year at $119.99, decide whether you want annual or monthly: at $9.99/mo annual versus $19.99 monthly the saving is real, but the refund policy is non-refundable even if unused, so a year is a commitment rather than a trial",
+      "Do not rely on this for client work without asking, in writing, who owns the transcript - the Terms grant you a limited licence rather than an ownership statement, and no counterparty is named on the site"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - the shape is right for the job and simpler than most of the category: one unlimited plan instead of a minutes meter, 134+ languages, speaker identification, SRT/VTT subtitles beside DOCX/PDF export, 10-hour files, and distribution that suggests a product rather than a landing page (docs subdomain, iOS, Chrome, Microsoft Store, ChatGPT and Google Workspace apps, 12,103 sitemap URLs, live since November 2024). The privacy policy is a genuine strength: it names its processors by company, gives real retention periods instead of a phrase, and denies training on uploads including by processors. It is not higher because nothing here has been tested hands-on, the transcript-ownership language is a licence rather than a grant, and unlimited claims price the risk of a fair-use throttle the site does not document. Transparency 3.0/5, and that is what brings the score to 3.6: no company, controller, address or governing-law clause appears anywhere, the refund policy is non-refundable 'regardless of whether the service has been used', every pricing card runs a permanent countdown on a 'New Customer Offer', a 'Trusted by industry leaders' band displays Apple, Netflix, Google, Meta and Amazon marks without saying what the relationship is, and the 99.8% accuracy figure is unqualified on the pricing card while the FAQ hedges it to 'with clear audio'. The operator relationship is disclosed in cons rather than treated as this listing's failure: AccurateScribe is the two-year-old parent of WhisperTranscribe.ai and WhisperTranscript.ai, both held pending verification."
   }
 ]

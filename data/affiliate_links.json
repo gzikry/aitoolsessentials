@@ -959,6 +959,15 @@
       "public_href": "/go/dreammmer/",
       "partner": false
     },
+    "accuratescribe": {
+      "name": "AccurateScribe.ai",
+      "slug": "accuratescribe",
+      "official": "https://accuratescribe.ai/",
+      "destination": "https://accuratescribe.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/accuratescribe/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

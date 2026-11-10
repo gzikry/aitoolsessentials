@@ -1906,5 +1906,26 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether DREAMMMER runs an affiliate or partner program; /affiliates, /affiliate, /partners and /referral all 404 and no program is published. Never invent affiliate URLs.",
     "notes": "Subscription pricing ($29-$299/mo) makes this the best affiliate shape of the recent Creative batch if a program exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive."
+  },
+  {
+    "tool_slug": "accuratescribe",
+    "tool_name": "AccurateScribe.ai",
+    "priority": "low",
+    "category": "Audio & Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/accuratescribe/"
+    ],
+    "best_audiences": [
+      "podcasters and journalists transcribing interviews weekly",
+      "students and academics working through lecture recordings",
+      "small teams that want one flat transcription plan instead of a minutes meter"
+    ],
+    "status": "not_started",
+    "next_action": "A programme is already published at /affiliate - 40% on subscriptions, weekly Friday payouts by PayPal or bank - so the ask is for the signup route and tracking link rather than whether terms exist. Signup needs an account, which is the operator's lane; never invent an affiliate URL.",
+    "notes": "Strongest affiliate shape in this batch: a $119.99/year and $19.99/month single plan at 40% recurring beats most Creative listings for payout, and the programme page is already live. Held pending signup terms only; nothing wired into affiliate_programs.json."
   }
 ]

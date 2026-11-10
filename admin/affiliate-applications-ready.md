@@ -546,3 +546,12 @@ nothing can be wired until one does.
 If declined for low traffic: reply asking for early-partner consideration, cite the concrete
 page count and dated-evidence approach, and reapply in 30 days. Never misstate traffic —
 several networks check the live site, and a misrepresentation rejection is not appealable.
+
+## AccurateScribe.ai — published programme, not applied (2026-11-09)
+
+- **Tool:** AccurateScribe.ai — `https://accuratescribe.ai` — published at `/tools/accuratescribe/` (3.6/5) on 2026-11-09.
+- **Programme page:** `https://accuratescribe.ai/affiliate` returns 200 and publishes terms openly.
+- **Terms as read on the page:** **40% commission** on paid subscriptions; **payouts weekly on Fridays**, by PayPal or bank; commissions calculated on actual payments excluding tax; "no follower requirement"; real-time conversion analytics.
+- **Status: not applied.** Signup needs an account, which is George's lane. Nothing was written to `data/affiliate_programs.json` and **no tracking URL was invented** — that file needs a real `affiliate_url` before wiring.
+- **Claim to re-check before quoting:** the page states "Our partners earn an average of $10,000+ monthly" with no basis published behind it. Do not repeat that figure as fact in any listing, post, or pitch.
+- **Related:** the same operator runs `whispertranscribe.ai` and `whispertranscript.ai`, both held in `admin/held-submissions.md` — check for a programme on those only if they clear the hold.
