@@ -1,0 +1,121 @@
+{
+ "new_this_run": [
+  "0 rows added from a 101-slug sitemap window (2026-11-10T03:58Z -> 2026-11-11T03:48Z): 11 AI-token slugs, 0 AI+spend slugs at slug level, 4 spend-only slugs (all consumer personal finance: discount pricing, credit-card minimum payments, wedding budget, a food subscription). All 101 window bodies were fetched (101/101 HTTP 200) and read; 11 carry an AI token in the prose (10 of the 11 slug hits plus one body-level-only hit, the telecom-sovereignty essay, which carries 'AI' and 'cost' and is the window's only body-level AI+real-spend match - a false positive on our beat, since its 'cost' is network-architecture cost, not tool spend). 0 body-level AI+real-spend hits on tool pricing, subscription spend or procurement.",
+  "This is the second consecutive window with nothing on-beat and the third run in a row whose queue is unchanged in substance. Every one of the 11 AI rows asks for testimony, standing or a person we are not: women deeptech founders (India/global, address redacted), two Facebook Marketplace user calls (consumer testimony, Bluesky handle only), UK AI founders facing compute/grid constraints (Alison Coleman), griefbot creators for a podcast (address redacted), a UK recruitment expert for a national paper (PR-platform pitch link), Irish jobseekers who resent AI in hiring on principle, a labor-economics project on automation's unintended consequences, sales leaders who use AI on calls, design-led AI practitioners willing to be interviewed, and a CISO/cybersecurity-founder call that says 'rest please stay away'.",
+  "The one row worth naming: uk-ai-founders-compute-datacentre-and-grid-constraints is Alison Coleman's THIRD request in fifteen days - the same Forbes senior contributor whose two US calls (solopreneurs whose first hire AI removed; bootstrapped founders) carry our only finished Forbes draft. That is evidence, not an opportunity: she is commissioning on multiple beats in the week the draft would land. It is recorded relevance low and is deliberately NOT pitched, because we have no compute or data-centre data and one reporter's inbox should get one pitch, not two on the same day."
+ ],
+ "new_rows": {
+  "women-founders-deeptech-startups-biotech-space-ai-robotics": {
+   "who": "YourStory (yourstory.com) - Rekha Balakrishnan, named in the page's author field.",
+   "category": "AI / Startup Sourcing",
+   "contact": "The request body's address is redacted by Sourcee.",
+   "relevance": "low",
+   "notes": "Wants introductions to women founders building deeptech (biotech, space, semiconductors, robotics, AI, advanced materials, climate). We are a price-data publisher, not a founder, and cannot make introductions we do not have. No route, no standing.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "facebook-marketplace-users-ai-impact-on-buying-and-selling": {
+   "who": "Rainesford Stauffer, freelance journalist, named in the page's author field; no publication stated.",
+   "category": "AI / Consumer",
+   "contact": "The page publishes no address and no link; the body opens with a Bluesky handle (@obicynkenobi.bsky.social), which is a source she was already writing to, not a reply route for us.",
+   "relevance": "low",
+   "notes": "A direct outreach message to a specific Marketplace user about AI and buying/selling, reprinted here by Sourcee. Not an open call, no beat for a price census, no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "uk-ai-founders-compute-datacentre-and-grid-constraints": {
+   "who": "Alison Coleman, Forbes senior contributor (entrepreneurs and startups) - named in the page's author field. The page names no publication; the attribution comes from her Forbes byline, which is the same reporter behind the two carried Forbes rows.",
+   "category": "AI / Infrastructure Sourcing",
+   "contact": "The request body's address is redacted by Sourcee. Her address is already resolved off her own site for the two carried Forbes calls - alison@alisoncoleman.co.uk, published on alisoncoleman.co.uk/contact-me/ (route-checks-2026-11-11.json: HTTP 200, 28,112 bytes) - and that resolution is NOT used for this row.",
+   "relevance": "low",
+   "notes": "UK AI founders facing compute availability, data-centre capacity and grid limits, including those hosting abroad. We hold no compute, capacity or grid data at all, and we are not a UK AI founder, so there is nothing to offer. Recorded because it is direct evidence that this reporter is commissioning this week: it is her third request since 2026-10-27, and the two US ones already have a finished, unsent draft behind a live route. One reporter gets one pitch - the Forbes email - so this row is deliberately excluded from the queue rather than counted as a new opportunity.",
+   "template": "None. Deliberately not drafted: no data, no standing, and one pitch per reporter. The two Forbes rows it sits beside are drafted at pitch-drafts-2026-11-11.md section 2."
+  },
+  "ai-griefbot-creators-mimicking-deceased-loved-ones-doubletake": {
+   "who": "WORLD (world.wng.org) - 'Doubletake' podcast, host Les Sillars, named in the body.",
+   "category": "AI / Podcast Sourcing",
+   "contact": "The request body's address is redacted by Sourcee. The page publishes no link.",
+   "relevance": "low",
+   "notes": "Wants people who created an AI chatbot of a deceased relative. First-hand testimony we cannot give and would not manufacture. No route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "uk-recruitment-expert-advice-on-losing-jobs-to-ai": {
+   "who": "Pitch & Shout, a PR request account; no publication named on the page.",
+   "category": "AI / PR Request",
+   "contact": "One link published on the page: https://t.co/U6uparVncd, which the body describes as the pitch route ('Pitch here').",
+   "relevance": "low",
+   "notes": "A recruitment expert to advise UK readers worried about losing roles to AI. We are not a recruiter and hold no placement data. The route is a PR-platform pitch, not a mailbox, and the ask is for advice, not evidence.",
+   "template": "None. No standing. NOT DRAFTED."
+  },
+  "facebook-marketplace-users-ai-agents-impact-on-feed-spam-and-privacy": {
+   "who": "Rainesford Stauffer, freelance journalist, named in the page's author field; no publication stated.",
+   "category": "AI / Consumer",
+   "contact": "The page publishes no address and no link; 'DMs open' with no handle given.",
+   "relevance": "low",
+   "notes": "Wants Marketplace users to talk about AI agents, feed spam and privacy, urgently. Consumer experience we do not have; no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "jobseekers-in-ireland-resenting-ai-in-hiring-on-principle": {
+   "who": "Alex Meehan, named in the page's author field; no publication stated.",
+   "category": "AI / Labour",
+   "contact": "The page publishes no address and no link; 'drop me a message' with no handle given.",
+   "relevance": "low",
+   "notes": "Jobseekers in Ireland who object to AI in hiring on principle. Testimony request with a geographic gate; no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "labor-economists-unintended-consequences-of-automation": {
+   "who": "Gavin Clarke, named in the page's author field; no publication stated.",
+   "category": "AI / Labour Economics",
+   "contact": "The page publishes no address, handle or link of its own; the body says 'drop me a line' and gives nothing to drop it to.",
+   "relevance": "low-medium",
+   "notes": "The only new row with a genuine hook: the brief explicitly asks where automation 'introduce[s] unexpected costs', and we hold dated evidence on what AI tooling actually costs once billing terms are read properly - the monthly-vs-annual premium is 1.11x to 2.53x, median 1.25x over 19 same-tier pairs (asserted 2026-10-16), which is a real and under-reported cost of adoption. Recorded low-medium rather than medium because the project is about labour economics and historical automation, not software procurement, and because a 'drop me a line' with no address is not a route. Not drafted: there is nothing to send it to.",
+   "template": "None. No route resolved. If a route is found, the angle is the annual-billing premium as an unrecognised adoption cost - 1.11x to 2.53x, median 1.25x over 19 same-tier pairs, asserted 2026-10-16 - offered as data, not as labour-economics expertise."
+  },
+  "sales-leaders-and-ai-sales-tool-builders-ai-during-sales-calls": {
+   "who": "Peter O., writing for The Growth Signal, named in the body.",
+   "category": "AI / Sales Tools",
+   "contact": "The page publishes no address, handle or link of its own.",
+   "relevance": "low",
+   "notes": "Wants sales leaders and AI sales-tool builders on how AI helps during calls. We publish seat prices, not sales-call outcomes, and hold no sales-tool telemetry. No route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "designled-ai-practitioners-where-ai-transformations-stall": {
+   "who": "Sebastian Nause-Blüml, writing a public fieldnotes guide; named in the post.",
+   "category": "AI / Transformation",
+   "contact": "The page publishes no address and no link; asks people to tag or message him.",
+   "relevance": "low",
+   "notes": "Interview request for 8-10 people who lead AI initiatives, for an open write-up in December. A testimonial ask with a standing gate we do not meet, and no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "cybersecurity-founder-and-ciso-ai-infra-ceo-scandal-risk-and-governance": {
+   "who": "Times Internet (timesinternet.in) - Vaishnavi D., named in the page's author field.",
+   "category": "AI / Security Governance",
+   "contact": "The request body's address is redacted by Sourcee; the page publishes no link.",
+   "relevance": "low",
+   "notes": "Wants a cybersecurity founder, governance expert, trade lawyer or CISO, and says explicitly 'rest please stay away'. We match none of the four. No route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "telecom-policy-experts-international-telecom-sovereignty-research": {
+   "who": "Dean Bubley, telecom analyst (Disruptive Analysis), named in the page's author field; published as a guest blog for techUK's Cloud and Infrastructure Week.",
+   "category": "AI / Telecom Policy",
+   "contact": "One link published on the page: https://lnkd.in/egE8qFYa, a LinkedIn short link to his own article. The page publishes no address.",
+   "relevance": "low",
+   "notes": "The window's only body-level 'AI + cost' match and a false positive on our beat: the essay argues telecoms needs its own sovereignty framework distinct from data-residency, cloud and AI-model rules, and its 'cost' is the cost of ripping out OSS/BSS software, not tool spend. It is an analyst publishing his own argument, not a reporter sourcing one, and the single link is to his article rather than to him. Recorded so the body scan's hit is accounted for rather than dropped.",
+   "template": "None. No route to the author and no standing on telecom sovereignty. NOT DRAFTED."
+  }
+ },
+ "why_not_drafted": [
+  "no new row in the window is about AI tool pricing, seat costs, subscription spend or procurement - the 11 AI asks are testimony, standing and person-specific calls, and 4 of them redact the address",
+  "labor-economists-unintended-consequences-of-automation is the only new row with a real data hook (unexpected costs of automation) and it publishes no contact route at all",
+  "uk-ai-founders-compute-datacentre-and-grid-constraints is the same reporter as the two Forbes drafts and is deliberately not pitched - one reporter, one pitch",
+  "the three drafts in pitch-drafts-2026-11-11.md are the queue's live rows with a finished pitch and a resolved route: InformationWeek (1d, fresh), Forbes (15d, late, one email closes two requests), Business Today (14d, late, LinkedIn DM)"
+ ],
+ "extra_actions": [
+  "THREE SENDS ARE READY IN pitch-drafts-2026-11-11.md: (1) InformationWeek / Kelsey Ziser, 1d, email kelsey.ziser@informationweek.com - the only row inside the 10-day line, and the only fresh on-beat request this monitor has had since 2026-11-09; (2) Forbes / Alison Coleman, 15d, email alison@alisoncoleman.co.uk, one send closes BOTH Forbes rows; (3) Business Today / Vidhya Das, 14d, LinkedIn DM to linkedin.com/in/vidya-das.",
+  "Alison Coleman posted a third request TODAY (UK AI founders, compute and grid constraints). That does not create a fourth pitch - we hold no compute data - but it is the strongest evidence yet that the Forbes email lands in an inbox she is working this week rather than into silence, and the draft's second paragraph says so without claiming anything about her.",
+  "The Forbes email is re-staged in [Gmail]/Drafts from today's draft file by scripts/stage_pitch_drafts.py, which refuses to stage a draft whose tool count or median disagrees with data/ (108 tools / median $16.00 today).",
+  "Mailbox re-checked 2026-11-11 with jansuski.com as a positive control (two known messages, 234 and 305 returned): zero replies from all nine other recipient domains. Nothing has been sent since 2026-10-10."
+ ],
+ "defects": [
+  "FIXED IN scripts/probe_routes.py: the script had no argument parser, so `--help` launched a full 15-route probe instead of printing usage - the same defect class the 2026-11-03 run fixed in scripts/verify_journo_requests.py. It now prints usage on -h/--help and refuses unknown flags.",
+  "NOT FIXED, still measured: 8 of the 11 AI-token rows in this window publish no email, no handle and no link, so the 'route' field for them can only say that nothing is there. That is an honest zero, not a missing measurement."
+ ]
+}

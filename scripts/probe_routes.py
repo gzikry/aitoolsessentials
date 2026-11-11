@@ -77,7 +77,17 @@ def curl(url: str, timeout: int = 30) -> tuple[str, str]:
 
 
 def main() -> None:
+    # This script had no argument handling at all, so `--help` fell through to a full probe of every
+    # route in the union — 15 live HTTP requests to satisfy a question about usage. Same defect class
+    # as the one fixed in scripts/verify_journo_requests.py on 2026-11-03: refuse, do not guess.
+    if any(a in ("-h", "--help") for a in sys.argv[1:]):
+        print(__doc__)
+        return
+    unknown = [a for a in sys.argv[1:] if a.startswith("-") and a != "--add"]
+    if unknown:
+        raise SystemExit(f"unknown option(s) {unknown}; usage: {sys.argv[0]} [--add URL ...]")
     union = _load_union()
+
     # --add <url> [<url> ...] seeds the union from the command line, so a newly resolved route can be
     # brought into the probed set deliberately instead of by hand-editing a route-checks file. Seeded
     # routes are probed once and then live in the union like any other.
