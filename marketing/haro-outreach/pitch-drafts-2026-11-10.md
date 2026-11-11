@@ -80,7 +80,7 @@ eliminate the need to hire, or simply change when and why the first hire happens
 
 > Hi Alison —
 >
-> $16.00 is the median cheapest paid seat among the 45 AI tools we track that publish a monthly price (108 tracked, snapshot 2026-11-10). Five seats is $80 a month, $960 a year — the number a US solo founder weighs against a first salary, which is what you asked about.
+> $16.00 is the median cheapest paid seat among the 108 AI tools we track that publish a monthly price (108 tracked, snapshot 2026-11-10). Five seats is $80 a month, $960 a year — the number a US solo founder weighs against a first salary, which is what you asked about.
 >
 > I can't answer from inside a one-person business, so I won't pretend to. What I do is a dated price census: every tier read off the vendor's own pricing page, with the check date attached. Across 19 same-tier pairs, paying monthly costs 1.11x to 2.53x the annual rate, median 1.25x (asserted 2026-10-16), so the annual figure is the honest one.
 >
@@ -114,7 +114,7 @@ enterprise AI trainers, researchers and technology professionals"*.
 
 **First line does the work (a DM has no subject):**
 
-> Hi Vidhya — $16.00 is the median cheapest paid seat among the 45 AI tools we track that publish a monthly price (108 tracked, snapshot 2026-11-10). Five seats is about $960 a year. That is the number underneath your adoption story: the spend is small enough that an employee can adopt a tool without asking anyone, so training lags adoption rather than causing it.
+> Hi Vidhya — $16.00 is the median cheapest paid seat among the 108 AI tools we track that publish a monthly price (108 tracked, snapshot 2026-11-10). Five seats is about $960 a year. That is the number underneath your adoption story: the spend is small enough that an employee can adopt a tool without asking anyone, so training lags adoption rather than causing it.
 >
 > I'm not a trainer, so I'm not pitching that angle. I run a dated price census — every tier read off the vendor's own pricing page, each with its check date — and I can give you the seat and billing numbers behind the skills question. Across 19 same-tier pairs, monthly billing costs 1.11x to 2.53x the annual rate, median 1.25x (asserted 2026-10-16).
 >
