@@ -468,6 +468,10 @@
     "makifyai": {
       "date": "2026-11-10",
       "digest": "Free: 30 sign-up credits + 7-day check-in credits, no card. Starter Pass 40 credits / 7 days / $4.99. Subscriptions monthly: Basic $11.90 / 100 credits, Standard $29.90 / 300, Pro slider $59.90 (750) to $159.90 (2,300). Annual: Basic $118.80 ($9.90/mo, 1,800 credits), Standard $238.80 ($19.90/mo, 4,800), Pro $358.80-$958.80 ($29.90-$79.90/mo, 10,800-38,400) - discounts of 17%, 33% and 50% against 12 monthly payments. One-time packs valid 6 months: 80 cr $9.90, 150 $19.90, 250 $29.90, 400 $39.90, 650 $59.90, 900 $79.90, 1,200 $99.90, 2,500 $199. Subscriber top-ups valid 6 months: 300 $29.90, 1,500 $119, 4,500 $349, 8,500 $649, 12,500 $899. Per-model credit costs published on the same page (GPT Image 2 3 credits/image, GPT Image 2.5/2.6 4, Nano Banana Pro 8, Seedance 2.0 Fast 50 credits/5s, Seedance 2.5 125/5s, MiniMax H3 25/5s, Wan 2.7 720p 20/5s). Subscription credits reset each period and do not roll over; pack credits expire after 6 months. Refunds: 3 calendar days and 50 paid credits or fewer, net of a 2-10% processing fee. Standing '-50%' promo badge on every page. USD, with CNY/EUR/SGD columns in the same config."
+    },
+    "aiimagetoprompt": {
+      "date": "2026-11-12",
+      "digest": "Free, no paid tier: no account, no card, no credits (homepage, FAQ, Terms and llms.txt agree). The /pricing route is unreplaced ShipAny boilerplate - Starter $99/mo ($89 annual-billed) for 100 credits, Standard $199 ($169) for 200, Premium $299 ($249) for 300, all 'Get ShipAny' and bundling a NextJS starter kit / Supabase / Vercel - and /zh/pricing repeats it in Chinese; /docs is ShipAny's own dev documentation. Nothing on the site charges for prompt generation. Checked 2026-11-12."
     }
   },
   "changes": [
@@ -724,5 +728,5 @@
       "note": "Cursor: recorded pricing updated since the 2026-10-13 check, re-verified 2026-11-03."
     }
   ],
-  "updated": "2026-11-11"
+  "updated": "2026-11-12"
 }

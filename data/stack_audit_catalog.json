@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11",
+  "generated_at": "2026-11-12",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2644,6 +2644,32 @@
         "video",
         "marketing",
         "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "aiimagetoprompt",
+      "name": "AI Image to Prompt",
+      "category": "Creative",
+      "official_url": "https://aiimagetoprompt.org/",
+      "review_url": "/tools/aiimagetoprompt/",
+      "price_label": "Free, with no paid tier for this tool: the homepage, FAQ, Terms and llms.txt all describe it as free to use with no account, no download and no credit card. Note that the site's own /pricing route does not describe this product - it still serves the ShipAny SaaS-boilerplate price list (Starter $99/mo or $89/mo billed annually for 100 credits, Standard $199 or $169 for 200, Premium $299 or $249 for 300, each 'Get ShipAny' and bundling a NextJS boilerplate, Supabase storage and Vercel deploy), and /zh/pricing carries the same ladder in Chinese, while /docs serves ShipAny's own developer documentation. The tool itself takes no payment. Verified 2026-11-12 on /, /pricing, /zh/pricing, /privacy-policy, /terms-of-service, /llms.txt, /sitemap.xml and /docs.",
+      "pricing_summary": "Free with no paid tier for this tool: the homepage, FAQ, Terms and llms.txt all state no account, no download and no credit card. The site's /pricing route belongs to a different product - the ShipAny SaaS boilerplate - and lists Starter $99/month ($89/month billed annually) for 100 credits, Standard $199 ($169) for 200 and Premium $299 ($249) for 300, each with a 'Get ShipAny' button and bundling a NextJS starter kit, Supabase storage and Vercel deploy; /zh/pricing repeats the same ladder in Chinese. Nothing on the site charges for prompt generation, and /refund-policy returns 404 because there is no transaction. Verified 2026-11-12.",
+      "pricing_url": "https://aiimagetoprompt.org/pricing",
+      "pricing_checked_date": "2026-11-12",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "design",
+        "video",
+        "marketing",
+        "automation"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

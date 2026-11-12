@@ -1948,5 +1948,26 @@
     "status": "not_started",
     "next_action": "No affiliate or partner page exists - /affiliate, /affiliates, /partners, /referral and /program all 404 on 2026-11-10 - so the ask is whether a partner or reseller programme exists and, if it does, for terms and a tracking link. Never invent an affiliate URL.",
     "notes": "Subscription-led revenue shape: $118.80-$958.80 annual plans sit above $9.90-$199 one-time packs, so a recurring commission would be worth more than a pack sale if the vendor offers one. Listing carries known disclosure gaps (no controller, retention or training statement; tags before consent), which belong in the cons rather than the commercial ask."
+  },
+  {
+    "tool_slug": "aiimagetoprompt",
+    "tool_name": "AI Image to Prompt",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/aiimagetoprompt/"
+    ],
+    "best_audiences": [
+      "creators who already have reference images and need written prompts for Midjourney, Flux or Stable Diffusion",
+      "design and marketing teams standardising a visual direction from moodboards",
+      "hobbyists learning prompt structure from their own photographs"
+    ],
+    "status": "not_started",
+    "next_action": "The product is free and no partner surface exists - /affiliates, /affiliate and /api/affiliate all 404 on 2026-11-12 - so there is no commission to earn on a generation and no link to wire. The only commercial question worth asking is whether the vendor plans a paid tier or a partner programme once the ShipAny boilerplate pricing page is replaced; ask that in the publication reply rather than inventing an affiliate URL.",
+    "notes": "Zero revenue surface today: free tool, no checkout, no affiliate page. Do not treat the /pricing route's $99-$299 figures as this vendor's price list - they are the ShipAny boilerplate's own plans for a different product. Revisit only if a paid tier appears."
   }
 ]

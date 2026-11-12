@@ -977,6 +977,15 @@
       "public_href": "/go/makifyai/",
       "partner": false
     },
+    "aiimagetoprompt": {
+      "name": "AI Image to Prompt",
+      "slug": "aiimagetoprompt",
+      "official": "https://aiimagetoprompt.org/",
+      "destination": "https://aiimagetoprompt.org/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/aiimagetoprompt/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

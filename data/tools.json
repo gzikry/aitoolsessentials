@@ -6467,5 +6467,90 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 3.9/5 - the shape suits the job: one workspace spanning the image models people actually compare (GPT Image, Nano Banana, Seedream, FLUX, Qwen, Ideogram), a product-photography task library, video on the same credit balance, 30 free credits with no card, and a pricing ladder whose monthly, annual, pack and per-model figures reconcile - which is rarer in this category than it should be. Transparency brings the score to 3.5: the operator is named only as ARKELUMA LLC in the footer, the privacy policy has no controller, address, jurisdiction or retention period, training use is never mentioned, processors are named only by category, GA4, DoubleClick, Microsoft Clarity and Bing UET fire on first load with no consent banner rendered while the bundle ships an unused consent dialog pointing at a 404, a device fingerprint is stored without disclosure, and the 'commercial license' promised in the marketing copy is disclaimed in the Terms. Nothing here has been tested hands-on; the product-quality judgement rests on the shipped app, the published task library and the example gallery."
+  },
+  {
+    "slug": "aiimagetoprompt",
+    "name": "AI Image to Prompt",
+    "category": "Creative",
+    "best_for": "Creators and small teams who already have a reference image and need a written brief for it: illustrators testing an art direction, designers producing concept variants, marketers fixing a campaign's visual language from a moodboard, and hobbyists learning how image prompts are structured. It fits the free-and-anonymous case well - no account, eight output languages, model-specific formatting for Midjourney, Stable Diffusion, Flux and Nano Banana - and it fits someone who wants one editable paragraph rather than four variants at once. It is a poor fit if you need to know who operates the site, what law governs it, or what anything costs: there is no company, controller, postal address or named jurisdiction anywhere, the only address published is a personal Gmail, the pricing page belongs to a different product, and six five-star testimonials from named people carry no evidence they are real.",
+    "price": "Free, with no paid tier for this tool: the homepage, FAQ, Terms and llms.txt all describe it as free to use with no account, no download and no credit card. Note that the site's own /pricing route does not describe this product - it still serves the ShipAny SaaS-boilerplate price list (Starter $99/mo or $89/mo billed annually for 100 credits, Standard $199 or $169 for 200, Premium $299 or $249 for 300, each 'Get ShipAny' and bundling a NextJS boilerplate, Supabase storage and Vercel deploy), and /zh/pricing carries the same ladder in Chinese, while /docs serves ShipAny's own developer documentation. The tool itself takes no payment. Verified 2026-11-12 on /, /pricing, /zh/pricing, /privacy-policy, /terms-of-service, /llms.txt, /sitemap.xml and /docs.",
+    "rating": 3.2,
+    "official": "https://aiimagetoprompt.org/",
+    "summary": "AI Image to Prompt is a free browser tool that reads an uploaded image and writes the text prompt that would recreate something like it, formatted for the image model you name. You supply a JPG, PNG or WebP up to 8MB by drag-and-drop, file picker, clipboard paste or public image URL, pick an output style (General, Nano Banana, Flux, Midjourney with comma-separated descriptors and parameters, or Stable Diffusion with tags and a suggested negative prompt), and optionally an output language from eight options, then copy an editable result. A text-to-prompt mode handles the same job without an image, and a prompt history is kept in the browser. No account is required and the site says uploads are deleted after processing, with generation run through kie.ai on Cloudflare infrastructure. It describes visible elements - subject, setting, composition, perspective, lighting, palette, style, mood - and the site is explicit that it does not recover the original hidden prompt behind an AI image, only a reproduction-oriented approximation. Verification was read-only: the /api/generate route is live and rejects an empty body with 400 {\"error\":\"no_image\"}, but no generation was run, so output quality is not assessed here.",
+    "use_cases": [
+      "Reverse-engineering the style of a reference image into a pasteable Midjourney prompt with --ar and style parameters",
+      "Producing a Stable Diffusion positive prompt plus a suggested negative prompt for a ComfyUI workflow",
+      "Writing a campaign's visual direction from a moodboard image so a team can brief a generator consistently",
+      "Turning a concept-art reference into a descriptive brief for game or illustration asset iteration",
+      "Learning how subject, lighting, camera and palette are described by converting photos to prompts and editing the result",
+      "Getting a prompt in Spanish, Japanese, Korean or another of the eight interface languages without translating by hand"
+    ],
+    "pros": [
+      "Genuinely free end to end - no account, no card, no credit balance, and the FAQ, Terms and llms.txt agree with each other about that",
+      "Model-specific output rather than one generic paragraph: Midjourney gets comma-separated descriptors and parameters, Stable Diffusion gets tags plus a suggested negative prompt, Flux and Nano Banana get their own phrasing",
+      "Four input routes (drag-and-drop, file picker, clipboard paste, image URL) plus a separate text-to-prompt mode, so it covers the job even without a reference file",
+      "Eight output languages selectable in the tool, not just an English-only interface",
+      "The site states the limitation plainly instead of overselling it: the FAQ says it 'generates a close, similar prompt rather than the exact original' because 'the true prompt behind an AI image cannot be known for certain'",
+      "Privacy notice is specific where it counts for this product class - it names kie.ai as the AI processing provider and Cloudflare as infrastructure, gives retention as a period (images deleted after generation, server logs up to 30 days, prompts in browser local storage only) and states that the user keeps rights to uploads and generated prompts",
+      "Prompt history stays in the browser's local storage rather than on a server, which matches what the notice claims",
+      "The processing endpoint is live and validates input (400 no_image on an empty POST), so this is not a mock-up form"
+    ],
+    "cons": [
+      "The pricing page describes a different product: /pricing and /zh/pricing serve the ShipAny SaaS-boilerplate ladder ($99/$199/$299 monthly, or $89/$169/$249 billed annually, each button reading 'Get ShipAny' and bundling a NextJS starter kit, Supabase storage and Vercel deploy), and /docs is ShipAny's developer documentation - so anyone who opens Pricing learns nothing about this tool and is offered someone else's software. Both routes are unlinked from the nav, the footer and the sitemap, which makes them leftovers rather than a live offer, but they are served at 200 and can be reached and indexed",
+      "Google Analytics 4 (G-LEMFVNKE14) loads from googletagmanager on the homepage, the /pricing route and /docs while the privacy policy states 'We use essential cookies only to ensure the proper functioning of the website. We do not use tracking or advertising cookies.' No consent gate or cookie banner renders anywhere on the site",
+      "Six five-star testimonials with personal names and job titles (Maya Chen, Liam Torres, Sofia Almeida, Daniel Weber, Priya Nair, Kenji Watanabe) appear under 'Loved by Creators Who Use Image to Prompt Daily' on a site registered 2026-07-05, with no attribution, no source, no verification note and no 'illustrative' disclaimer. Nothing distinguishes them from invented copy, and the same block is served in both language versions. They are not marked up as Review or AggregateRating schema, so at least they are not feeding structured data",
+      "No operator identity and no jurisdiction: the Terms' governing-law clause says only 'applicable laws, without regard to conflict of law provisions', and there is no company name, registration number, postal address or named controller on any page. The only address published is a personal Gmail (phamhungfalcon787133@gmail.com) in both the privacy policy and the Terms, which is different from the contact@aiimagetoprompt.org address supplied on the submission form",
+      "The 'not used for training' assurance runs through a third party the site does not quote: it says the image is sent to kie.ai 'for prompt generation' and tells the reader to 'refer to their privacy policy for details on their data handling practices', so the no-training promise is only as good as kie.ai's terms, which are not summarised or linked by name of policy",
+      "The image-deletion claim is stated, not evidenced: 'deleted immediately after the AI model generates the prompt' and 'temporarily stored in our cloud storage' are both asserted without a retention mechanism or a deletion control the user can invoke",
+      "Two product routes are unmaintained boilerplate rather than a design decision: the same ShipAny defaults also expose /api/get-user-info and /api/update-invite, account and invite endpoints for a product that requires no account",
+      "No refund, cancellation or billing policy exists anywhere (there is nothing to pay for, so this is only a completeness point), and /contact, /about, /faq and /refund-policy all return 404 - the FAQ is an on-page section, not a route",
+      "Nothing was tested hands-on: output accuracy, the claimed Fast/Advance detail levels and the eight output languages are taken from the served copy, not from running a generation"
+    ],
+    "key_features": [
+      "Image to prompt from file upload, clipboard paste or public image URL (PNG, JPG, WebP up to 8MB)",
+      "Five output styles: General, Nano Banana, Flux, Midjourney (descriptors plus parameters) and Stable Diffusion (tags plus suggested negative prompt)",
+      "Text-to-prompt mode for starting from a written idea instead of a reference image",
+      "Eight output languages: English, Chinese, Spanish, French, German, Japanese, Korean and Portuguese",
+      "Editable generated prompt with one-click copy, plus in-browser prompt history",
+      "No account, no download, no credit card - the free claim is consistent across the homepage, FAQ, Terms and llms.txt",
+      "Processing through kie.ai with Cloudflare hosting, both named in the privacy policy",
+      "Read-only route check: POST /api/generate returns 400 no_image on an empty body, so the generator is wired up"
+    ],
+    "faq": [
+      [
+        "Is AI Image to Prompt actually free?",
+        "Yes, and the claim is consistent across the homepage, the FAQ, the Terms and llms.txt: no account, no download and no credit card. The caution is that the site's /pricing route does not describe this tool at all - it still serves the ShipAny SaaS-boilerplate plans ($99/$199/$299 per month, or $89/$169/$249 billed annually) with 'Get ShipAny' buttons. Treat the tool as free and ignore that route until the vendor replaces it."
+      ],
+      [
+        "Does it recover the original prompt behind an AI-generated image?",
+        "No, and the site says so itself: it 'generates a close, similar prompt rather than the exact original', because 'the true prompt behind an AI image cannot be known for certain'. What you get is a description of visible elements - subject, setting, composition, perspective, lighting, palette, style and mood - written in the format your target model prefers."
+      ],
+      [
+        "Which image models does the output target?",
+        "Five styles are selectable: a General prompt that works across models, Nano Banana, Flux, Midjourney (comma-separated descriptors with parameters) and Stable Diffusion (tags plus a suggested negative prompt). The site also lists ChatGPT and Gemini as destinations for the general style. Prompt history is kept in browser local storage, not on a server."
+      ],
+      [
+        "What happens to my uploaded image?",
+        "The privacy policy states that uploads are temporarily stored to process the request and deleted immediately after the prompt is generated, that generated prompts stay in browser local storage rather than on the server, and that server logs are kept for up to 30 days. The image is sent to kie.ai for processing, which the notice names and then defers to for that provider's own handling - so the deletion and no-training assurances depend on kie.ai's terms as well as this site's."
+      ],
+      [
+        "Who operates the site, and what law applies?",
+        "Neither is stated. There is no company name, registration number, postal address or named controller on any page, and the governing-law clause reads only 'applicable laws, without regard to conflict of law provisions'. The only published address is a personal Gmail in the privacy policy and Terms. If you need a contracting counterparty before uploading client material, that is the item to resolve first."
+      ],
+      [
+        "Are the customer testimonials on the homepage verified?",
+        "Not that we can see. Six five-star quotes from named people with job titles are presented without any source, link, date or disclaimer, on a site registered 2026-07-05. We publish this as an unverified claim rather than as evidence of use."
+      ]
+    ],
+    "trial_checklist": [
+      "Run the same reference image through General, Midjourney and Stable Diffusion styles and check whether the Stable Diffusion output actually contains the negative prompt it promises rather than a label only",
+      "Test one photo and one illustration: vision descriptions tend to be strongest on photographs and vaguest on stylised or abstract art, and that gap decides whether the tool is useful for your references",
+      "Confirm the deletion claim for your own case before uploading anything confidential - the policy says images are deleted after generation and sent to kie.ai, so treat client material as leaving your control until you have read kie.ai's terms too",
+      "Check the output language you actually work in by switching to it and generating, rather than trusting the menu - a translated prompt can lose the model-specific parameter format",
+      "Ignore the /pricing route entirely unless the vendor replaces it; if cost matters, note that nothing here is chargeable and that the page's $99-$299 plans belong to a different product"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 3.9/5 - the tool covers the job cleanly and for free: four input routes, five model-specific output styles including the Stable Diffusion negative prompt, eight output languages, editable output with in-browser history, and no account or card, with the processing endpoint live enough to reject a bad request. The notice also names its AI processor and states retention as periods, which is better than most of this category. Transparency brings the score to 3.2, below every other tool in the catalog: the /pricing and /zh/pricing routes serve a different company's product (the ShipAny SaaS boilerplate, $99-$299 per month) and /docs serves its documentation, so a reader who opens Pricing is offered software that is not this tool; GA4 G-LEMFVNKE14 loads on the homepage while the privacy policy says the site uses essential cookies only and no tracking cookies; six named five-star testimonials have no evidence behind them; no company, controller, address or jurisdiction exists anywhere and the Terms' governing law is 'applicable laws'; and the no-training assurance is delegated to kie.ai without quoting it. Nothing here was tested hands-on - the judgement rests on the served pages and the live endpoint's error response."
   }
 ]

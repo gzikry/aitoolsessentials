@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-11-11",
-  "tools_count": 108,
+  "generated": "2026-11-12",
+  "tools_count": 109,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -791,6 +791,13 @@
       "category": "Creative",
       "price": "Free: 30 sign-up credits plus 7-day check-in credits, no card required. Starter Pass: 40 credits valid 7 days for $4.99. Subscriptions, monthly: Basic $11.90 (100 credits/month), Standard $29.90 (300), Pro slider $59.90 (750) up to $159.90 (2,300). Billed annually: Basic $118.80/year ($9.90/mo, 1,800 credits), Standard $238.80 ($19.90/mo, 4,800), Pro $358.80-$958.80/year ($29.90-$79.90/mo, 10,800-38,400). One-time packs, valid 6 months: 80 credits $9.90, 150 $19.90, 250 $29.90, 400 $39.90, 650 $59.90, 900 $79.90, 1,200 $99.90, 2,500 $199. Subscriber-only top-ups, valid 6 months: 300 $29.90, 1,500 $119, 4,500 $349, 8,500 $649, 12,500 $899. Per-generation cost is published per model on /pricing (GPT Image 2 3 credits/image, Nano Banana Pro 8, Seedance 2.0 Fast 50 credits per 5s, Seedance 2.5 125 per 5s, MiniMax H3 25 per 5s). Annual cards show 17%, 33% and 50% off the monthly equivalents and the site carries a standing '-50%' promo badge. USD. Verified 2026-11-10 on /pricing, /zh/pricing and the plan config shipped in the page.",
       "url": "https://aitoolsessentials.com/tools/makifyai/"
+    },
+    {
+      "name": "AI Image to Prompt",
+      "slug": "aiimagetoprompt",
+      "category": "Creative",
+      "price": "Free, with no paid tier for this tool: the homepage, FAQ, Terms and llms.txt all describe it as free to use with no account, no download and no credit card. Note that the site's own /pricing route does not describe this product - it still serves the ShipAny SaaS-boilerplate price list (Starter $99/mo or $89/mo billed annually for 100 credits, Standard $199 or $169 for 200, Premium $299 or $249 for 300, each 'Get ShipAny' and bundling a NextJS boilerplate, Supabase storage and Vercel deploy), and /zh/pricing carries the same ladder in Chinese, while /docs serves ShipAny's own developer documentation. The tool itself takes no payment. Verified 2026-11-12 on /, /pricing, /zh/pricing, /privacy-policy, /terms-of-service, /llms.txt, /sitemap.xml and /docs.",
+      "url": "https://aitoolsessentials.com/tools/aiimagetoprompt/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
