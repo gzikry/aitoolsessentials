@@ -262,6 +262,13 @@ def main() -> None:
         if figs["snapshot_updated"] != "?":
             new = re.sub(r"\((?:snapshot )?checked 20\d{2}-\d{2}-\d{2}\)",
                          f"(snapshot checked {figs['snapshot_updated']})", new)
+            # A template can also name the snapshot date in prose — "one measured number from the
+            # 2026-11-10 snapshot" — which the parenthetical repair above never matched. On
+            # 2026-11-12 the InformationWeek row printed today's tool count (109) beside a
+            # two-day-old snapshot date in the same sentence: a stale figure inside a file
+            # rebuilt today, reached through the date rather than the number.
+            new = re.sub(r"\b(from|in) the (20\d{2}-\d{2}-\d{2}) snapshot",
+                         lambda m: f"{m.group(1)} the {figs['snapshot_updated']} snapshot", new)
         if new != t:
             o = dict(o)
             o["suggested_pitch_template"] = new

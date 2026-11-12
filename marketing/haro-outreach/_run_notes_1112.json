@@ -1,0 +1,101 @@
+{
+ "new_this_run": [
+  "9 rows added from a 97-slug sitemap window (2026-11-11T03:48Z -> 2026-11-12T03:42Z): 8 AI-token slugs, 0 AI+spend slugs at slug level, 4 spend-only slugs (all consumer money: concert tickets, moving abroad, wellness retreats, and one CNBC small-business cyber-risk call whose 'affordable' is the spend token, not an AI price question). All 97 window bodies were fetched (97/97 HTTP 200) and read; 8 carry an AI token in the prose at body level, one of them (the CNBC call) with no AI token in its slug, which is why the body scan runs at all.",
+  "Nothing in the window is on-beat for a price census: the nine asks are airline ramp and gate crews (job stories), a podcast launch inviting guests (not a request for data), Wired's call for teachers and school administrators on AI in school devices and student wellbeing, accountants who deliberately DO NOT use AI, a business-school report contribution closing 2026-11-15 (institutions only), people who have been interviewed by an AI interviewer, a Nova Scotia documentary seeking residents and AI experts, Express Computer's call for Indian CIOs/founders/investors on sovereign AI, and CNBC's small-business cyber-risk call. Not one asks what an AI tool costs, and five publish no route for us at all.",
+  "The CNBC row is the only one with a published non-email route (Signal handle ssubin.51 on the page, address redacted) and is recorded for that reason rather than as a candidate - we are not a small business buying cyber insurance. The business-school row is the only one in the window with a stated deadline (submissions close 2026-11-15) and it is closed to us by its own terms: it asks business schools to contribute, not vendors or publishers."
+ ],
+ "new_rows": {
+  "ramp-crews-and-gate-agents-hardest-and-best-job-moments": {
+   "who": "Plan0gram (plan0gram.com/bs) - the byline on the page; no publication named.",
+   "category": "AI / Labour Testimony",
+   "contact": "No address, handle or link published on the request page.",
+   "relevance": "low",
+   "notes": "A call for airline ramp crews and gate agents to describe the hardest and best parts of the job, prompted by the poster's own flying history. No AI content in the body at all; it entered the candidate list because 'agents' matched the slug token set. Not our beat, no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "innovators-and-changemakers-neuroscience-ai-future-of-work": {
+   "who": "Pamela Cowan, Build Resilience International - the byline on the page; no publication named.",
+   "category": "AI / Podcast Promo",
+   "contact": "No address, handle or link published on the request page.",
+   "relevance": "low",
+   "notes": "A launch announcement for a podcast ('Wired for What's Next') that invites guests and listeners. It is a promotional post rather than a journalist request, carries no deadline, no reply route and no data question. Recorded so the zero in this window is accounted for, not silently dropped.",
+   "template": "None. Promo post, no route. NOT DRAFTED."
+  },
+  "teachers-and-school-leaders-ai-in-school-devices-student-wellbeing": {
+   "who": "Wired (wired.com) - domain field on the page; the author field carries a display name, not a byline.",
+   "category": "AI / Education Testimony",
+   "contact": "The request body's address is redacted by Sourcee ('Hit me up at [email redacted]'). The page publishes no link or handle of its own.",
+   "relevance": "low",
+   "notes": "Wants teachers and education administrators on how AI built into school equipment affects student mental health and wellbeing. First-person testimony from inside a school; we hold price data, not classroom experience. No route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "accountants-and-bookkeepers-who-dont-use-ai-why-they-opt-out": {
+   "who": "Debra Kilsheimer - the byline on the page; no publication named.",
+   "category": "AI / Adoption Testimony",
+   "contact": "The body invites a comment or a private message on the platform the post came from; no address published on the request page.",
+   "relevance": "low",
+   "notes": "Wants 5-10 accountants and bookkeepers who have chosen not to use AI, to explain why. A first-person opt-out story, not a data story: our price census describes what tools cost, not why a practitioner refused one. No route (a platform comment is not a reply channel we hold).",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "business-schools-ai-applications-in-teaching-and-operations-jan-2027": {
+   "who": "Kevin Anselmo, writing for the American Association of Colleges and Universities (aacu.org) report 'A Framework for Artificial Intelligence in Business Education', led by Tawnya Means.",
+   "category": "AI / Higher Education",
+   "contact": "Two lnkd.in links on the page: the submission route (lnkd.in/eb-r8aBc) and the current report (lnkd.in/eDD2p8ek). No email address.",
+   "relevance": "low",
+   "notes": "Asks business schools to submit examples of AI in teaching, faculty development and institutional operations for a January 2027 report. Submissions close 2026-11-15 - the only stated deadline in this window - and the call is closed to us by its own terms: it wants institutions, not a pricing publisher. Recorded with its deadline because a deadline is the one thing this monitor can use to tell a live request from a dead one.",
+   "template": "None. Institutional call, not our standing. NOT DRAFTED."
+  },
+  "job-candidates-interviewed-by-ai-interview-experience": {
+   "who": "Not named on the page - the author field is a single display name, no publication stated.",
+   "category": "AI / Hiring Testimony",
+   "contact": "No address, handle or link published on the request page.",
+   "relevance": "low",
+   "notes": "One line asking to speak to candidates who have been interviewed by an AI interviewer. No route, no publication, no data question.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "nova-scotia-residents-near-ai-data-centre-community-impact": {
+   "who": "Joshua Saunders and Justin White, A Venturesome Production - a documentary team, byline on the page; no publication.",
+   "category": "AI / Documentary Sourcing",
+   "contact": "The request body's address is redacted by Sourcee ('Please reach out directly or email: [email redacted]'). The page publishes four lnkd.in links, all to the film's own trailer and social accounts - promotion, not a reply route.",
+   "relevance": "low",
+   "notes": "A documentary teaser seeking Nova Scotia residents, government, business leaders and AI experts around a data-centre protest. We hold no compute or data-centre data and are not a local source; a film's social links are not a reply route for a pitch.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "indian-cios-founders-investors-and-policymakers-sovereign-ai-challenges": {
+   "who": "Ankit Anand, Express Computer (expresscomputer.in) - domain on the page; the body also signs Srikanth RP, Nivedan Prakash and Sayantan Mondal.",
+   "category": "AI / Enterprise Policy",
+   "contact": "The body says 'reach out via LinkedIn DM or at [email redacted]'; the address is platform-redacted and no handle of his own is published on the page.",
+   "relevance": "low",
+   "notes": "Wants Indian CIOs, founders, investors and policymakers on the technological, financial and infrastructural challenges of sovereign AI. We are none of those and hold no India-specific infrastructure data. The 'financial' challenge it names is capital and infrastructure, not tool spend - a false positive on our beat.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "small-businesses-aidriven-cyber-risks-and-affordable-protections": {
+   "who": "Samantha J. Subin, CNBC (cnbc.com) - domain and byline on the page.",
+   "category": "AI / Small Business Risk",
+   "contact": "The request body's address is redacted by Sourcee, but the page publishes a Signal handle: ssubin.51. No email and no LinkedIn link on the page.",
+   "relevance": "low",
+   "notes": "Wants small businesses on how AI is changing cyber risk and what protection they can afford. The spend token is 'affordable' and the subject is security budgets, not AI tool pricing; we are not a small business with an incident story. The Signal handle is a real route, which is why this row is recorded in full rather than as a one-liner - it is the only non-email route in the window, and it still has nothing on-beat to carry.",
+   "template": "None. Route exists (Signal ssubin.51) but no standing and no on-beat data. NOT DRAFTED."
+  }
+ },
+ "why_not_drafted": [
+  "airline ramp and gate crews (no AI, no route)",
+  "a podcast launch inviting guests (promo post, no route)",
+  "Wired: teachers on AI in school devices (testimony, address redacted)",
+  "accountants who deliberately do not use AI (testimony, no route)",
+  "business schools contributing to a Jan-2027 AAC&U report (institutions only, closes 2026-11-15)",
+  "people interviewed by an AI interviewer (no route, no publication)",
+  "a Nova Scotia data-centre documentary (film promo, address redacted)",
+  "Express Computer: Indian CIOs on sovereign AI (no standing, address redacted)",
+  "CNBC: small-business AI cyber risk (Signal route, but security budgets rather than tool prices)"
+ ],
+ "contact_replace": {
+  "cios-2027-goals-ram-shortage-saaspocalypse-temp-ai-physical-ai": "Route resolved OFF the request page, not guessed: kelsey.ziser@informationweek.com, published as a mailto link on her InformationWeek author page https://www.informationweek.com/author/kelsey-ziser (route-checks-2026-11-12.json: HTTP 200, 579,778 bytes, title 'Kelsey Ziser | Senior Editor, InformationWeek'). The request page itself publishes no address and no link. The send is George's: no plain mailbox on a request page has ever been ours to write to unattended. Deliverability is not SMTP-verified - only a bounce proves anything.",
+  "ai-trainers-and-researchers-workplace-ai-adoption-and-training": "Address redacted ('You can also email me at [email redacted]'). Route: LinkedIn DM to in.linkedin.com/in/vidya-das. Handle CONFIRMED 2026-11-12 by search snippet, not by rendered page: the profile title reads 'Trainee Sub Editor | Business Today | India Today group', matching her Business Today author page (businesstoday.in/author/vidya-das, HTTP 200, title 'Trainee Sub Editor'). A direct fetch of the profile remains blocked - LinkedIn answers HTTP 999 to this monitor's probe - so the confirmation is snippet-level. Her LinkedIn feed carries a post promoting her own Business Today article on AI at work, so the byline is active on the beat. The request page itself publishes no address. George's lane."
+ },
+ "extra_actions": [
+  "CARRIED ROWS: all 279 were re-fetched today. 0 newly dead since the 2026-11-11 digest; the 44 rows that went 404 on 2026-11-05 are still 404 and still absent from the sitemap (third consecutive run, carried as dead, not re-counted).",
+  "SENDABLE SET UNCHANGED IN SUBSTANCE: the freshest on-beat row is still InformationWeek / Kelsey Ziser (2d today), with the Forbes pair (Alison Coleman, 16d) and Business Today / Vidhya Das (15d) behind it. All three pages answer HTTP 200 today and all three routes re-probed live this run: informationweek.com/author/kelsey-ziser (HTTP 200), alisoncoleman.co.uk/contact-me/ (HTTP 200, address in visible text), tobiamure.com (HTTP 200) for the Fast Company late send, plus linkedin.com/in/christopher-mims-club (HTTP 200) for the WSJ late send."
+ ],
+ "defects": []
+}
