@@ -1,0 +1,137 @@
+{
+ "new_this_run": [
+  "12 rows added from a 93-slug sitemap window (2026-11-12T03:42Z -> 2026-11-13T03:15Z): 12 AI-token slugs, 1 AI+spend slug at slug level (companies-switched-from-token-ai-pricing-outcomebased-contracts, matched token 'pricing'), 7 spend-only slugs (none about software spend: a crypto-paid energy salary story, a healthcare marketing budget study, a Thanksgiving parade, a student-loans piece, a startup revenue call, a stalled-renovation story). All 93 window bodies were fetched and read at body level.",
+  "The window produced nothing sendable. The single on-beat-ish row is Agam Shah's call for companies that have ABANDONED token-based AI pricing for outcome-based contracts: 'Only those who have made switches, no SMEs.' We are a price census, not a company that switched, so the one thing he asks for is the one thing we cannot supply, and the page publishes no address, handle or link. Recorded, not drafted.",
+  "Everything else in the window is either testimony from inside a job (MSP owners, manufacturing IT leaders, EV insiders, job seekers, retail execs, software engineers), a podcast guest call (C-suite Podcast, Coding Chats, Berlin/London/SF founders), or a news reaction to Jensen Huang's resignation (USA Today, ISMG, Inc.). Four of those publish 'Signal @handle' or a LinkedIn/dm route but all require standing we do not have. The AI-avatar ZDNET call and the midterm-voter call are US-workplace and US-electorate asks respectively.",
+  "The window's headline event is Jensen Huang's resignation: four of the twelve AI rows are the same story from four outlets (USA Today, ISMG, Inc., a frontier-AI panel). None asks about tool costs. A price census has nothing to add to a leadership-succession story, so none of the four was drafted even though two carry a Signal handle."
+ ],
+ "new_rows": {
+  "companies-switched-from-token-ai-pricing-outcomebased-contracts": {
+   "who": "Agam Shah, named in the page's author field; no publication stated on the page.",
+   "category": "AI / Pricing Models",
+   "contact": "The page publishes no address, handle or link of its own, and the body names no contact route. Sourcee's redaction is not the reason: there is simply no route on the page.",
+   "relevance": "medium",
+   "notes": "On-beat topic and the closest thing in the window to our dataset: AI pricing moving from tokens to outcomes. But the ask is explicitly first-hand ('Only those who have made switches, no SMEs'), and we have never switched a contract, so answering would mean claiming standing we do not have. Our pricing snapshots record list prices and monthly/annual billing, not contract structures, so we could not even supply a proxy figure. No route to send to in any case.",
+   "template": "None. No route, and the ask excludes us by its own terms. NOT DRAFTED."
+  },
+  "job-seekers-postai-interviews-and-recruiters-ai-interview-impact": {
+   "who": "Jordan Friedman, named in the page's author field; no publication stated.",
+   "category": "AI / Hiring Testimony",
+   "contact": "The body says 'comment or DM'; the page publishes no handle or link to either.",
+   "relevance": "low",
+   "notes": "Wants job seekers who sat AI interviews and recruiters who run them. First-person testimony; we hold price data. No route published.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "midsize-manufacturing-it-leaders-ai-impact-on-tasks-teams-governance": {
+   "who": "Dan Tynan, named in the page's author field; domain freshworks.com.",
+   "category": "AI / Enterprise IT Testimony",
+   "contact": "One shortlink published on the page: https://lnkd.in/gjjANXqs (not resolved; the page states no address).",
+   "relevance": "low",
+   "notes": "Freshworks series on AI in midsize manufacturing IT. Wants practitioners inside industrial firms, 'not generalists', which excludes a price census by name. Research closes end of next week, so the only deadline in the window is this one and it is not addressed to us.",
+   "template": "None. Standing explicitly excluded. NOT DRAFTED."
+  },
+  "employees-using-ai-avatars-training-and-support-zdnet": {
+   "who": "Radhika Rajkumar, named in the page's author field; domain zdnet.com.",
+   "category": "AI / Workplace Adoption",
+   "contact": "The body asks readers to reply 'in the comments'; the page publishes no address or handle.",
+   "relevance": "low",
+   "notes": "ZDNET wants workplaces that use AI avatars or AI simulation for training and support. Employer-side testimony only; we are neither an employer using avatars nor able to speak to it. No route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "us-retail-executives-agentic-ai-shopping-in-ecommerce": {
+   "who": "Russell Goldsmith, named in the page's author field; no publication stated (the body describes 'our own channel, the c-suite podcast').",
+   "category": "AI / Podcast Guest Call",
+   "contact": "The page publishes no address, handle or link; the body invites guest pitches without a route.",
+   "relevance": "low",
+   "notes": "A podcast episode call for US retail executives on agentic AI in ecommerce, posted alongside an AWS re:Invent episode. Guest booking for retail execs. No data question, no route.",
+   "template": "None. Not our standing, no route. NOT DRAFTED."
+  },
+  "frontier-ai-industry-insiders-huang-resignation-impact-and-next-steps": {
+   "who": "Greta Reich, named in the page's author field; domain usatoday.com.",
+   "category": "AI / Industry News Reaction",
+   "contact": "The body's email is redacted by Sourcee. A Signal handle is published in the body: gretareich.19.",
+   "relevance": "low",
+   "notes": "Reaction to Jensen Huang's resignation from frontier-AI industry insiders. The Signal handle makes this routable in principle, but we have no insider standing and nothing to say about leadership succession. Recorded for the route evidence, not as a candidate.",
+   "template": "None. Routable but off-beat. NOT DRAFTED."
+  },
+  "ai-leader-jensen-huang-resignation-ai-policy-and-china": {
+   "who": "Emilia David, named in the page's author field; domain ismg.io (Information Security Media Group).",
+   "category": "AI / Policy News Reaction",
+   "contact": "The body's email is redacted by Sourcee; the page publishes no other route.",
+   "relevance": "low",
+   "notes": "Same Huang resignation story, policy-and-China angle, for ISMG. Wants named AI-industry figures. No route, off-beat.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "midterm-voters-on-ai-data-center-measure-why-they-voted": {
+   "who": "Ginny Hogan, named in the page's author field; no publication stated.",
+   "category": "AI / Voter Testimony",
+   "contact": "The body's email is redacted by Sourcee; no other route published.",
+   "relevance": "low",
+   "notes": "Wants people who voted on an AI data-centre ballot measure. Electorate testimony; we hold no voting angle. No route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "ai-startup-founders-jensen-huang-resignation-impact-and-opensource": {
+   "who": "Aaron Mok, named in the page's author field; domain inc.com.",
+   "category": "AI / Industry News Reaction",
+   "contact": "The body's email is redacted by Sourcee; no other route published.",
+   "relevance": "low",
+   "notes": "Inc. wants AI startup founders on what Huang's departure means for their business. Founder testimony; we are a publisher, not a founder. No route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "msp-owners-resellers-and-integrators-ai-ops-security-and-supply-chain": {
+   "who": "Victoria Durgin, named in the page's author field; domain channelinsider.com.",
+   "category": "AI / Channel Partner Testimony",
+   "contact": "The body's email is redacted by Sourcee. It also offers 'message me here', which is a platform reply on Sourcee itself, and an in-person meeting at an Ingram event.",
+   "relevance": "low",
+   "notes": "Channel Insider sourcing MSP owners, resellers and integrators for written stories and a podcast, ongoing rather than a single deadline. Standing is channel-partner operator; we are not one. The platform-reply route is real but the ask is not.",
+   "template": "None. Wrong standing, no draft."
+  },
+  "berlin-london-and-sf-ai-founders-and-tech-execs-podcast-tech-landscape": {
+   "who": "Sowmya Guru, named in the page's author field; no publication stated.",
+   "category": "AI / Podcast Guest Call",
+   "contact": "The body asks for 'comments' and mentions people in them; no address, handle or link is published.",
+   "relevance": "low",
+   "notes": "Virtual podcast looking for AI founders and engineering execs in Berlin, London and San Francisco. Guest booking, no data question, no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "individuals-and-small-businesses-accused-of-using-ai-false-allegations": {
+   "who": "Suzanne Bearne, named in the page's author field; no publication stated (the body says 'a national').",
+   "category": "AI / Consumer Testimony",
+   "contact": "The body says 'DM me'; no handle or link is published on the page.",
+   "relevance": "low",
+   "notes": "Wants people wrongly accused of using AI (book covers, reports, articles). First-person grievance testimony; nothing we hold is usable and no route is published.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "ev-industry-employees-insider-stories-and-source-protection": {
+   "who": "Suvrat Kothari, named in the page's author field; domain insideevs.com.",
+   "category": "EV / Whistleblower Call",
+   "contact": "The body's email is redacted by Sourcee. A Signal handle is published: @suvratk.13.",
+   "relevance": "low",
+   "notes": "Body-level AI hit with no AI token in the slug: the request is an EV-industry insider/whistleblower call whose prose mentions AI only in a passage about AI scraping journalism. Not an AI request at all. Caught by the body scan, correctly judged off-beat.",
+   "template": "None. Not an AI request, no standing. NOT DRAFTED."
+  },
+  "parents-of-students-with-loans-managing-cost-and-sacrifices-ipaper": {
+   "who": "Maria Shahid, named in the page's author field; domain inews.co.uk.",
+   "category": "Consumer Finance / Case Study",
+   "contact": "The body's email is redacted by Sourcee; the body also says 'message me here' (a platform reply).",
+   "relevance": "low",
+   "notes": "Body-level AI hit with no AI token in the slug: a two-part case-study call whose first item is a legal-tech comment request on AI in the first-tier tribunal, and whose headline ask is parents managing student-loan costs. Neither is a tool-price question and neither has our standing.",
+   "template": "None. Off-beat on both items. NOT DRAFTED."
+  },
+  "software-engineers-and-leaders-one-practical-engineering-question": {
+   "who": "John Crickett, named in the page's author field; no publication stated (Coding Chats podcast).",
+   "category": "AI / Podcast Guest Call",
+   "contact": "The page publishes no address, handle or link of its own.",
+   "relevance": "low",
+   "notes": "Podcast guest call, one practical engineering question per guest. AI appears only as sample question topics (reviewing AI-generated code, interviewing in the age of AI). No data question, no route.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  }
+ },
+ "narrative": [
+  "Third consecutive window with nothing on-beat. The finding is now stable enough to state plainly: the AI topic feed is dominated by news-reaction calls (four outlets on one resignation) and by first-person testimony asks, and a dated price census is a source for none of them.",
+  "The carried queue is where the sends are, and it has not moved because nothing has been sent. The InformationWeek row is now 4 days old and still live; it is the only row inside the 10-day line with both an on-beat angle and a resolved direct address."
+ ],
+ "contact_replace": {
+  "cios-2027-goals-ram-shortage-saaspocalypse-temp-ai-physical-ai": "Route resolved OFF the request page, not guessed: kelsey.ziser@informationweek.com, published as a mailto link on her InformationWeek author page https://www.informationweek.com/author/kelsey-ziser (route-checks-2026-11-13.json: HTTP 200, 579,285 bytes, title 'Kelsey Ziser | Senior Editor, InformationWeek'). The request page itself publishes no address and no link. The send is George's: no plain mailbox on a request page has ever been ours to write to unattended. Deliverability is not SMTP-verified - only a bounce proves anything."
+ }
+}
