@@ -488,6 +488,32 @@ incumbent being fronted. The two name questions that *do* need asking explicitly
 rows: the **xAI/Grok** trademark (disclosed clearly by `grokvideogenerator.dev` — credit it) and **Tesla**
 (`teslawraps.design` publishes Tesla model/trim templates with **no** non-affiliation line).
 
+## Operator cluster: `ninazhao4@gmail.com` — IsThisImageAI + W Chews (2026-11-13)
+
+Two submissions, one minute apart, one contact address, one operator. Both held on 2026-11-13 after
+independent verification, and answered in **one combined request**: "IsThisImageAI and W Chews
+submissions - a few questions before we list them", 2026-11-13 11:10 UTC, to `ninazhao4@gmail.com`
+cc `support@isthisimageai.io` and `support@wchews.app` (one record in `[Gmail]/Sent Mail`; cite by
+date + subject, not by Himalaya id). No prior `isthisimageai`, `wchews` or `ninazhao4` hit in the
+repo, the ledger, or any mail folder (Sent / All Mail / Trash swept before writing).
+
+**Operator evidence, graded — infrastructure plus the submission address, not a published cross-link.**
+Both domains resolve to the **same NS pair** (`launch1.spaceship.net` / `launch2.spaceship.net`), the
+**same MX pair** (`mx1.efwd.spaceship.net` / `mx2.efwd.spaceship.net`, Spaceship email forwarding),
+and the **same A record** (`2.31.174.32`); both check out through **Waffo** (Waffo.com Limited is the
+merchant of record); both submitted from one address. Neither site links to the other, so this is
+"are you related?" evidence rather than the vendor's own disclosure. **The MX is a catch-all:** an
+SMTP `RCPT TO` against `mx1.efwd.spaceship.net` returns `250 2.1.5 Ok` for `support@` **and** for a
+random local part on both domains, so the probe cannot confirm a human reads either mailbox.
+
+| Submission | Domain | Held since | Request sent to | Status |
+|---|---|---|---|---|
+| IsThisImageAI | isthisimageai.io | 2026-11-13 | ninazhao4@gmail.com (cc support@isthisimageai.io) | **Request sent 2026-11-13 11:10 UTC**, combined with W Chews. Awaiting reply — (1) **name overlap with a live incumbent: `isthisimage.ai`** (registered **2026-07-15**, Cloudflare, Stripe, its own `/about`, per-generator breakdown, Starter $9.99 / Pro $39 / Business $299 per month) sells the identical product under the same brand string "IsThisImageAI" / "Is This Image AI", while the submitted domain was registered **2026-11-02**; ask relationship + rights, do not treat as squatting; (2) **no legal entity, individual operator, address or governing law** on `/privacy` or `/terms` (no `/about`, 404); (3) accuracy basis of the confidence score; (4) copy: homepage FAQ lists HEIC conditionally while `/ai-image-checker` lists it supported; `/refunds` 404 but the footer "Refunds" link is `/terms#refunds` (works). **Verified positives:** the free checker works — one real check on a 256×256 synthetic PNG returned "Likely real 99%" with one reason shown and four withheld, and the counter moved 20 → 19 ("No sign-up"); pricing consistent across `/`, `/pricing` and `/terms` — Free 20 images/month, **Pro $3.99/mo 150 images, Max $9.99/mo 1,000, API $29.99/mo 12,000 calls**; Privacy names **Waffo Pancake** (payments) and **Resend** (sign-in mail), states images are held in memory and deleted after scoring, keeps verdict/heatmap text ≤1 hour, hashes IP for the free counter, says plainly "we do not use your images to train a model", and gives a 30-day rights response; `/terms#refunds` gives a **7-day, ≤10%-usage first-payment refund**; the FAQ says a result is "an estimate, not proof"; no third-party tracker on any fetched page. |
+| W Chews | wchews.app | 2026-11-13 | ninazhao4@gmail.com (cc support@wchews.app) | **Request sent 2026-11-13 11:10 UTC** — the same single email as the row above. Awaiting reply — (1) **no legal entity, operator, address or governing law** on `/privacy`, `/terms` or `/aup` (no `/about`, `/contact`, both 404); (2) **training use unstated and the licence is broad** — Privacy sends photos to "our video-generation provider" with no named company and no period, while the Terms licence the upload "to operate, secure, and improve the service"; (3) **likeness consent rests on the uploader's warranty alone** for a product that animates a real person's face — no attestation, no stated takedown path or response time for a reported non-consensual video; (4) **refunds undefined** — Terms "case by case through support", homepage "failed generation refunds the credits spent", no window, against the sister site's stated 7-day rule; (5) **cash referral programme undocumented** — $2 / $5 paid in cash on a friend's purchase, no written terms, eligibility, payout schedule or tax position; (6) **"Limited launch offer" with no end date** — is $9.90 / $24.90 standing or introductory? **Verified positives:** checkout is live — the Waffo product pages render **$9.90 "Buy 1 Get 1" (2 videos, one-time)** and **$24.90 "Buy 3 Get 2" (5 videos)**, with "Waffo.com Limited" disclosed as reseller and merchant of record; prices match the homepage and `/terms`; the **AUP prohibits NCII, minors, CSAM and deceptive impersonation** explicitly and the Terms require the right to upload; **Kling AI is disclosed** in the footer, the Terms and the AUP; a failed generation refunds the credits spent. Name family checked: `wchews.com` is a Netlify login redirect (not a competing product), `wchews.ai/.co/.io` do not resolve, and the site already disclaims the cat-food homophone — **no name gate here**. |
+
+**Do not publish either row until the operator answers items 1, 2, 3 and 6.** The remaining items are
+publishable as open questions / `cons` if the operator declines to answer them.
+
 ## Published vendor submissions (verified and live - do not re-vet as new)
 
 A submission from a domain in this table is already listed. Check `data/tools.json` for the slug
