@@ -109,4 +109,11 @@ Priority order unchanged: how-to/workflow → audience guides → question-inten
 Next up: one question-intent piece, then another workflow piece.
 Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
 
+## Backlog: batch 6 (from 2026-11-13)
+Priority order unchanged: how-to/workflow → audience guides → question-intent.
+17. Reviewing AI drafts before they ship ✅ shipped 2026-11-13 (workflow, articles/review-ai-drafts-before-publishing.html; added to Learn hub)
+18. Do you need an AI agent, or just automation? ✅ shipped 2026-11-13 (question-intent, articles/ai-agents-vs-automation.html; added to Learn hub)
+Next up: one audience guide, then another workflow piece. Guides hub count is 190.
+Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
+
 
