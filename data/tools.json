@@ -6552,5 +6552,87 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 3.9/5 - the tool covers the job cleanly and for free: four input routes, five model-specific output styles including the Stable Diffusion negative prompt, eight output languages, editable output with in-browser history, and no account or card, with the processing endpoint live enough to reject a bad request. The notice also names its AI processor and states retention as periods, which is better than most of this category. Transparency brings the score to 3.2, below every other tool in the catalog: the /pricing and /zh/pricing routes serve a different company's product (the ShipAny SaaS boilerplate, $99-$299 per month) and /docs serves its documentation, so a reader who opens Pricing is offered software that is not this tool; GA4 G-LEMFVNKE14 loads on the homepage while the privacy policy says the site uses essential cookies only and no tracking cookies; six named five-star testimonials have no evidence behind them; no company, controller, address or jurisdiction exists anywhere and the Terms' governing law is 'applicable laws'; and the no-training assurance is delegated to kie.ai without quoting it. Nothing here was tested hands-on - the judgement rests on the served pages and the live endpoint's error response."
+  },
+  {
+    "slug": "agentmsgr",
+    "name": "AgentMsgr",
+    "category": "AI Agents",
+    "best_for": "People who already pay for agents on more than one platform - a Grok Bot agent, a Meta Muse agent, a ChatGPT dot, Claude, Hermes, OpenClaw, or a bot they built themselves - and want them in one thread that can work on the same task instead of five apps. It fits a free start (3 agents, 1 group chat, 100 messages a day, no card) and an agency pattern of one room per client. It is not a fit if you need a named company, a governing-law clause or a published refund term before you pay, if you need search across messages or phone notifications today (both are marked coming soon on the paid card), or if you want one subscription that rents several models - AgentMsgr runs no AI and every reply bills on the agent's own platform.",
+    "price": "Free $0: up to 3 agents, 1 group chat, 100 messages a day, 250 MB for files, full message history, installable on an iPhone home screen. Pro: $10.49 a month at launch against a $29.99 list price (the '65% off' badge checks out - 29.99 x 0.35 = 10.49), unlimited agents and group chats, 150 messages an hour and 3,000 a week, 5 GB for files. Only messages you type count; agents' replies do not. Paid through Stripe checkout in the app or arranged directly, cancelled from Manage billing, with Pro running to the end of the paid period. A Teams tier is shown as 'Later' and is not sold. USD; no card for the free plan. Verified 2026-11-13.",
+    "rating": 3.9,
+    "official": "https://agentmsgr.com/",
+    "summary": "AgentMsgr is a messaging app for AI agents you already run elsewhere. You connect an agent by pasting one pairing message into its own app: it joins over MCP with its own key, or by email as the backup route, because every chat also has its own address. From then on you text it like a contact, one-to-one or in a group chat where every agent sees the whole thread, can be @mentioned individually, and can build on what the others said - agents from different companies in one room, which none of their own apps allow. AgentMsgr runs no AI of its own, so each reply bills on that agent's platform and nothing is added to its usage except the messages you type. A second MCP endpoint lets your own Claude, ChatGPT, Grok or Perplexity post briefs and read replies as you, with an Allow / read-only choice. The MCP server is MIT-licensed on GitHub and the app is a browser build that installs to an iPhone home screen. The disclosure set is unusually candid for a six-day-old product - named processors, real retention periods, an admin-access statement - while the commercial documents are still thin: no company named anywhere, no governing law, no refund policy, and no statement on training use.",
+    "use_cases": [
+      "Putting a Grok Bot agent, a Meta Muse agent and a ChatGPT dot in one thread so one can plan and another can execute",
+      "Texting an email-only or MCP-connected agent from a phone without building a chat interface",
+      "Running per-client rooms in an agency, each with that client's agents, files and approvals in one place",
+      "Having your own Claude or ChatGPT post a brief into a room, read the agents' answers back, and stay the planner",
+      "Sending a screenshot, document or short video into several agents at once instead of repeating the upload",
+      "Trying the cross-platform agent workflow free - 3 agents, 1 group chat, 100 messages a day, no card"
+    ],
+    "pros": [
+      "The positioning is honest and specific: the site says plainly that it is not a multi-AI chat app, runs no AI, and charges nothing for AI, so each reply bills on the agent's own plan rather than a resold model",
+      "Non-affiliation is stated in the footer, on the about page, in Terms section 1 and in llms.txt - Meta, SpaceXSI (formerly xAI), Anthropic and OpenAI, with their product names acknowledged as trademarks",
+      "Unusually specific privacy engineering for a launch-week product: named processors (Cloudflare for hosting, email delivery and Workers AI; Anthropic for the contact-form spam check; X for ad tracking), real retention periods (files until you delete the chat or account, unsent uploads one day, direct-connect links 24 hours, host backups up to 30 days, visitor counters 90 days), an administrator-access statement, and in-app deletion of any agent, any chat or the whole account",
+      "Anti-abuse design is documented rather than asserted: an agent must reply to a one-time invitation before it receives any message, mail from unmatched senders waits in a review list instead of reaching a chat, and incoming mail failing SPF, DKIM or DMARC is never shown as an agent's reply",
+      "The MCP server is open source under MIT at github.com/agentmsgr/agentmsgr-mcp and was pushed the day of this check - a verifiable integration surface rather than a black box, with separate endpoints for agents and for your own assistant including a read-only option",
+      "Pricing arithmetic checks and the not-yet-shipped items are labelled on the Pro card itself ('coming soon' beside search, phone notifications and room templates) rather than buried, and sign-up is open with no invite and no card (/api/config returns signup_mode 'open')",
+      "Ownership of your content is stated in plain words - 'Your messages are yours' - with the licence scoped to storing, processing and delivering them so the service works, and nothing more"
+    ],
+    "cons": [
+      "Six days old: the domain was registered 2026-11-07, the about page says the product launched in November 2026, and there is no independent review, testing or user report anywhere - the 123 blog posts in a 128-URL sitemap are content written around a product this new",
+      "No company, trading name, postal address or named controller appears on any page. The about page says 'Made by AgentMsgr, an independent company' and then names no company, so a buyer cannot tell whether they are contracting with a business or an individual",
+      "No governing-law, jurisdiction, arbitration or venue clause in the Terms - 'jurisdiction' and 'governing' appear zero times, the only legal reference being 'to the extent the law allows' in the liability section",
+      "No refund policy at all: /refund-policy returns 404, the word 'refund' appears zero times on the homepage, about page, Privacy, Terms or the app's own disclosure, and the Terms cover only cancelling future charges - no refund window and no mention of statutory withdrawal rights",
+      "Training use is neither granted nor withheld: 'train' appears zero times across the site, both policies and the app disclosure. Because AgentMsgr hosts no model the exposure is small, but a reader cannot point to a sentence that settles it",
+      "Cloudflare's Web Analytics beacon (static.cloudflareinsights.com/beacon.min.js) loads on every marketing page while the Privacy Policy describes Cloudflare only as host and 'for security' logging, and describes a self-hosted cookieless counter of its own - the third-party beacon is not identified",
+      "X's advertising pixel (static.ads-twitter.com/uwt.js, config id rircf) loads on every page without a consent gate, and at sign-up the app sends X a SHA-256 hash of your email address, an account id, a timestamp and any ad click id, which X can match to an X account. All of it is disclosed in detail, which is to the vendor's credit, but the page-level tracking is unavoidable",
+      "Pro is on sale at $10.49 a month while three of its six listed benefits are marked 'coming soon': search across all messages, phone notifications and room templates",
+      "Checkout could not be exercised: 'Get Pro' anchors to the sign-up form and the Stripe upgrade link is only returned to a signed-in account, so the price, billing portal and cancellation path were read from the site and the app's own disclosure rather than from a live checkout",
+      "Launch pricing with no stated end date: $10.49 against a $29.99 list price, which is the figure to budget for once the launch offer is withdrawn",
+      "The published mailbox is on a catch-all domain: MX is Cloudflare Email Routing and a random local part returns 250 exactly like hello@agentmsgr.com, so the address accepts mail but nothing shows a human reads it"
+    ],
+    "key_features": [
+      "One text thread for agents from different companies, one-to-one or group, with @mentions to address one agent and an FYI rule so unmentioned agents reply only when they add something new",
+      "Two MCP endpoints: app.agentmsgr.com/mcp for agents (their own key, issued from one pasted pairing message) and app.agentmsgr.com/mcp/user for your own Claude, ChatGPT, Grok or Perplexity, with an Allow or read-only choice",
+      "Email as the backup route rather than a fallback of last resort: every chat has its own address, agents that cannot use MCP join by email, and email-only bots work unchanged",
+      "Approvals inside the chat: an agent asks before it spends, buys, posts or sends, and you tap Approve or Decline",
+      "Files both ways - screenshots, photos, documents and short videos up to 10 MB a file and 5 files a message, delivered to agents as email attachments or as 24-hour links, with 250 MB on Free and 5 GB on Pro",
+      "A 'Wiring' view that shows each message bubble as the email it becomes when an agent joins by email",
+      "A demo room with four simulated agents that answer from prepared replies in your browser, with nothing you type there sent to the service"
+    ],
+    "faq": [
+      [
+        "What is AgentMsgr?",
+        "A messaging app for AI agents you already use on other platforms. You paste one pairing message into an agent's own app, it connects over MCP with its own key or joins by email, and you then text it one-to-one or in a group chat where agents from different companies see the same thread and can build on each other's answers. AgentMsgr runs no AI: each agent answers from its own account, tools, memory and subscription."
+      ],
+      [
+        "How much does AgentMsgr cost?",
+        "Free covers up to 3 agents, 1 group chat, 100 messages a day, 250 MB of files and full message history. Pro is $10.49 a month at launch against a $29.99 list price, with unlimited agents and group chats, 150 messages an hour and 3,000 a week, and 5 GB of files, cancelled from Manage billing. Only messages you type count against the limits; agents' replies do not. A Teams tier is listed as 'Later' and is not sold yet."
+      ],
+      [
+        "How is this different from a multi-AI chat app?",
+        "A multi-AI app rents you several models side by side and charges for the tokens. AgentMsgr connects the agents you already pay for on their own platforms and charges only for the messaging layer, so quality, tools and memory are whatever your agents already have, and nothing is added to their usage except the messages you send them."
+      ],
+      [
+        "Does connecting an agent use up its usage limits?",
+        "Each reply your agent sends counts on its own platform, exactly as if you had messaged it there. What AgentMsgr adds is the message you type. The vendor notes that a watcher that polls for new messages uses more of the agent's usage than a wake link or an inbox that wakes it on new mail, which is why the pairing message asks the agent to set up instant notification first."
+      ],
+      [
+        "Who runs AgentMsgr, and where is it based?",
+        "Not stated. No company, trading name, postal address, named controller or governing law appears on any page, the about page calls it 'an independent company' without naming one, and the only contact route is hello@agentmsgr.com. The domain was registered 2026-11-07 through Cloudflare and the MCP server is published under an 'agentmsgr' GitHub organisation."
+      ]
+    ],
+    "trial_checklist": [
+      "Start on the free plan and connect the agent you actually use first - the pairing message is the entire setup, so five minutes tells you whether your platform supports a direct MCP connection or will be joining by email",
+      "Test one MCP-connected agent and one email-only agent side by side: attachments arrive as 24-hour links on the direct route and as email attachments on the email route, and reply latency differs enough that one bad test can be the wrong route rather than the wrong product",
+      "Complete the instant-wake setup the pairing message asks for before judging reply times - the polling fallback is slower by design and spends more of the agent's usage",
+      "Run one group chat with two agents from different companies and watch the @mention and FYI behaviour before adding a third, since that is the part no single platform offers and the part most likely to loop",
+      "Do not buy Pro on the launch price until you have hit the free ceiling: 3 agents and 1 group chat is the whole free plan, and three of Pro's listed benefits are marked coming soon",
+      "Ask for the refund and jurisdiction terms in writing before paying by card - neither is published, and the only cancellation term is that future charges stop"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "high",
+    "rating_rationale": "Job fit 4.3/5: the product does the one job nothing else in this catalogue does - agents from rival platforms sharing a thread, each still running on its own account - and the mechanism is honest (MCP first, email as the backup, no model rented, no per-token markup). The anti-abuse and file handling are documented rather than asserted, the MCP server is MIT-licensed and public, and the free tier is real. Transparency 3.5/5, and that is what holds the score at 3.9: the privacy work is better than most of this catalogue (named processors, real retention periods, admin-access and hashed-email-ad-attribution disclosures), but no company is named, there is no governing-law clause and no refund policy at all, training use is unstated, a Cloudflare analytics beacon loads undisclosed, and Pro sells three 'coming soon' features. The remaining gap to 4.2 is verification rather than fit: the domain is six days old, checkout could not be exercised without an account, and no independent report exists on which to base a hands-on claim."
   }
 ]

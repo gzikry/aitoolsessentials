@@ -1,6 +1,6 @@
 {
   "generated_from": "data/tools.json plus the public calculator workloads recorded in scripts/generate_outreach_kit.py",
-  "catalog_count": 109,
+  "catalog_count": 110,
   "vendor_notifications": [
     {
       "tool_slug": "descript",

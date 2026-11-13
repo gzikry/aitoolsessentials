@@ -986,6 +986,15 @@
       "public_href": "/go/aiimagetoprompt/",
       "partner": false
     },
+    "agentmsgr": {
+      "name": "AgentMsgr",
+      "slug": "agentmsgr",
+      "official": "https://agentmsgr.com/",
+      "destination": "https://agentmsgr.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/agentmsgr/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

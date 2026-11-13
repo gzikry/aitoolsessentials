@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-11-12",
-  "tools_count": 109,
+  "generated": "2026-11-13",
+  "tools_count": 110,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -798,6 +798,13 @@
       "category": "Creative",
       "price": "Free, with no paid tier for this tool: the homepage, FAQ, Terms and llms.txt all describe it as free to use with no account, no download and no credit card. Note that the site's own /pricing route does not describe this product - it still serves the ShipAny SaaS-boilerplate price list (Starter $99/mo or $89/mo billed annually for 100 credits, Standard $199 or $169 for 200, Premium $299 or $249 for 300, each 'Get ShipAny' and bundling a NextJS boilerplate, Supabase storage and Vercel deploy), and /zh/pricing carries the same ladder in Chinese, while /docs serves ShipAny's own developer documentation. The tool itself takes no payment. Verified 2026-11-12 on /, /pricing, /zh/pricing, /privacy-policy, /terms-of-service, /llms.txt, /sitemap.xml and /docs.",
       "url": "https://aitoolsessentials.com/tools/aiimagetoprompt/"
+    },
+    {
+      "name": "AgentMsgr",
+      "slug": "agentmsgr",
+      "category": "AI Agents",
+      "price": "Free $0: up to 3 agents, 1 group chat, 100 messages a day, 250 MB for files, full message history, installable on an iPhone home screen. Pro: $10.49 a month at launch against a $29.99 list price (the '65% off' badge checks out - 29.99 x 0.35 = 10.49), unlimited agents and group chats, 150 messages an hour and 3,000 a week, 5 GB for files. Only messages you type count; agents' replies do not. Paid through Stripe checkout in the app or arranged directly, cancelled from Manage billing, with Pro running to the end of the paid period. A Teams tier is shown as 'Later' and is not sold. USD; no card for the free plan. Verified 2026-11-13.",
+      "url": "https://aitoolsessentials.com/tools/agentmsgr/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

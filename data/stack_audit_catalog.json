@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12",
+  "generated_at": "2026-11-13",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2670,6 +2670,32 @@
         "video",
         "marketing",
         "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "agentmsgr",
+      "name": "AgentMsgr",
+      "category": "AI Agents",
+      "official_url": "https://agentmsgr.com/",
+      "review_url": "/tools/agentmsgr/",
+      "price_label": "Free $0: up to 3 agents, 1 group chat, 100 messages a day, 250 MB for files, full message history, installable on an iPhone home screen. Pro: $10.49 a month at launch against a $29.99 list price (the '65% off' badge checks out - 29.99 x 0.35 = 10.49), unlimited agents and group chats, 150 messages an hour and 3,000 a week, 5 GB for files. Only messages you type count; agents' replies do not. Paid through Stripe checkout in the app or arranged directly, cancelled from Manage billing, with Pro running to the end of the paid period. A Teams tier is shown as 'Later' and is not sold. USD; no card for the free plan. Verified 2026-11-13.",
+      "pricing_summary": "Free $0: up to 3 agents, 1 group chat, 100 messages a day, 250 MB for files, full message history. Pro $10.49/month at launch against a $29.99/month list price, badged '65% off' (29.99 x 0.35 = 10.49, so the arithmetic agrees); unlimited agents and group chats, 150 messages an hour and 3,000 a week, 5 GB for files. Only messages the person types count. Paid through Stripe checkout in the app or arranged directly, cancelled from Manage billing with Pro running to the end of the paid period. A Teams tier is displayed with the price 'Later' and is not sold. Verified 2026-11-13 on https://agentmsgr.com/#pricing (the homepage anchor - https://agentmsgr.com/pricing returns 404) and restated identically in https://agentmsgr.com/terms, https://agentmsgr.com/about, https://agentmsgr.com/llms.txt and the app disclosure at https://app.agentmsgr.com/legal.",
+      "pricing_url": "https://agentmsgr.com/#pricing",
+      "pricing_checked_date": "2026-11-13",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "research",
+        "coding",
+        "video",
+        "automation",
+        "email"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

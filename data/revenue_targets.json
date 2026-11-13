@@ -1969,5 +1969,26 @@
     "status": "not_started",
     "next_action": "The product is free and no partner surface exists - /affiliates, /affiliate and /api/affiliate all 404 on 2026-11-12 - so there is no commission to earn on a generation and no link to wire. The only commercial question worth asking is whether the vendor plans a paid tier or a partner programme once the ShipAny boilerplate pricing page is replaced; ask that in the publication reply rather than inventing an affiliate URL.",
     "notes": "Zero revenue surface today: free tool, no checkout, no affiliate page. Do not treat the /pricing route's $99-$299 figures as this vendor's price list - they are the ShipAny boilerplate's own plans for a different product. Revisit only if a paid tier appears."
+  },
+  {
+    "tool_slug": "agentmsgr",
+    "tool_name": "AgentMsgr",
+    "priority": "low",
+    "category": "AI Agents",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/agentmsgr/"
+    ],
+    "best_audiences": [
+      "people paying for agents on two or more platforms who want them in one thread",
+      "agencies running a room per client across the agents each client already has",
+      "builders of email-only bots who need a texting interface rather than a chat UI to code"
+    ],
+    "status": "not_started",
+    "next_action": "No partner surface exists yet: /affiliates, /partners and /affiliate all 404 on 2026-11-13 and no commission, tracking link or programme page appears anywhere on the site, so nothing is wired and no tracking URL was invented. The vendor mail asks for affiliate or partner terms separately, since a $10.49-$29.99/month subscription is the kind of low-ticket recurring product where a 20-30% referral is the only workable shape. Re-check /affiliates when they reply.",
+    "notes": "New lead, published 2026-11-13 at 3.9/5. Low priority because the plan ceiling is $29.99/month and the product is six days old, so conversion volume this year will be negligible; it is a relationship to open rather than revenue to book. The audience overlaps our own AI Agents category (Hermes Agent, OpenClaw, TypingMind), which is worth a cross-link once the review has traffic."
   }
 ]
