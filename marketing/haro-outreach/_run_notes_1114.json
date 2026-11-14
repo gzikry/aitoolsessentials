@@ -1,0 +1,62 @@
+{
+ "new_this_run": [
+  "5 rows added from an 80-slug sitemap window (2026-11-13T03:15Z -> 2026-11-14T03:48Z): 5 AI-token slugs, 0 AI+spend at slug level, 4 spend-only slugs (none about software spend: paid livestream rates, Nollywood makeup costs, a paid-250 GBP couples story, unpaid Lagos salaries). All 80 window bodies were fetched and read at body level; 4 carry an AI token in the body, and one of those four ('microsoft 365') is a product-name false positive on an outage call.",
+  "The window produced nothing sendable and nothing on-beat. Three of the five are first-person testimony asks (an Israeli developer whose job AI changed; people wrongly accused of using AI; Microsoft 365 users hit by the outage), one is a vendor podcast guest call (ServiceNow), and one wants someone running 10%+ of production inference on local models inside a 7-figure business. A dated price census can answer none of them, and none publishes an address, handle or link.",
+  "The window's dominant event is the Microsoft 365 / Outlook outage of 2026-11-13: three of the 80 slugs are the same outage from BBC News, a Midlands/London business angle and a general users angle. None is an AI-tool-cost question and none publishes a route.",
+  "Carried rows were re-fetched by URL, not by recency: every URL in the digest history, the queue and the ledger answered for itself today, and the deadline field on every carried row was rebuilt from that page's own badge and datePublished."
+ ],
+ "new_rows": {
+  "microsoft-365-users-email-outage-impact-on-workflows": {
+   "who": "Ricky Boleto, BBC News (page author field; domain bbc.co.uk).",
+   "category": "Tech / Outage Testimony",
+   "contact": "The page publishes no address and no handle. One shortlink is embedded in the body: https://t.co/Wm8BPSYAzN, which is a BBC News link, not a reply route.",
+   "relevance": "low",
+   "notes": "BBC News special programme asking Microsoft 365 users how the 2026-11-13 outage hit their work. The AI matcher fires on the product name 'Microsoft 365', not on an AI ask: nothing here is about AI tools or what they cost. First-person outage testimony from users, which we are not, and no route on the page. NOT DRAFTED.",
+   "template": "None. Not an AI request and no route. NOT DRAFTED."
+  },
+  "individuals-accused-of-using-ai-misattribution-experiences": {
+   "who": "Suzanne Bearne, freelance journalist writing for national titles (no publication named on the page).",
+   "category": "AI / Consumer Testimony",
+   "contact": "The body lists three separate asks and says 'PRs and agents, email me' for the celebrity slots only; no address, handle or link is published anywhere on the page.",
+   "relevance": "low",
+   "notes": "Wants individuals, small businesses, contractors and employees who were accused of using AI when they had not (a report, an article, an Instagram post). Pure first-person grievance testimony: we hold dated list prices, not a misattribution story, and answering would mean inventing one. No route published for the AI item. This is the second call from this reporter in two runs - the 2026-11-13 window carried individuals-and-small-businesses-accused-of-using-ai-false-allegations, same beat, same no-route problem. NOT DRAFTED.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "servicenow-customers-and-partners-podcast-guests-ai-and-career-stories": {
+   "who": "Brogan Howie, ServiceNow (domain servicenow.com).",
+   "category": "AI / Podcast Guest Call",
+   "contact": "No address or handle published. One shortlink in the body: https://lnkd.in/eDkSrN6T, which points at the ServiceNow podcast series, not at a reply route.",
+   "relevance": "low",
+   "notes": "Vendor podcast guest call: ServiceNow customers and partners talking about platform work, AI adoption and career journeys. Guest booking for people inside the ServiceNow ecosystem; no data question, no route, and we are not a customer or partner. NOT DRAFTED.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "israeli-software-developers-ai-impact-on-jobs": {
+   "who": "Daniela Fubini (page author field); the request itself is from Gianluca Pacchiani. No publication named on the page.",
+   "category": "AI / Workplace Testimony",
+   "contact": "The page publishes no address, handle or link; the body says 'Tag your friends' on LinkedIn and gives nothing to send to.",
+   "relevance": "low",
+   "notes": "Wants an Israeli software developer living in Israel whose job has been profoundly changed by AI, positive or negative, for a multi-country story on developers. First-person testimony with a geographic and occupational screen that excludes us twice over, and no route on the page. NOT DRAFTED.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  },
+  "local-model-operators-10-prod-inference-and-7-figure-biz": {
+   "who": "Brad, no surname and no publication named on the page.",
+   "category": "AI / Local Inference",
+   "contact": "The page publishes no address, handle or link of its own.",
+   "relevance": "low",
+   "notes": "The closest row in the window to our beat - it is about inference economics - but the ask is narrow and first-hand: someone running more than 10% of production inference on local models while scaling a seven-figure business. We price vendor list tiers; we have never operated a local inference deployment and hold no production-spend data, so the only honest answer is that we are the wrong source. No route published either. NOT DRAFTED.",
+   "template": "None. No route and no standing. NOT DRAFTED."
+  }
+ },
+ "narrative": [
+  "Fourth consecutive window with nothing on-beat. The pattern is now stable enough to state as a finding rather than a run-level excuse: the AI topic feed is dominated by news-reaction calls (this week the Microsoft 365 outage) and first-person testimony asks, and a dated price census is a source for neither.",
+  "The carried queue is where the sends are, and it has not moved because nothing has been sent. The InformationWeek row is 4 days old today, still live, and still the only row inside the 10-day line with both an on-beat angle and a resolved direct address."
+ ],
+ "defects": [
+  "build_digest.py refresh()/_dl() wrote \"HTTP 200, live=True ... no expiry notice on the page\" as TYPED text on every row, whatever the probe returned. The Business Insider / mistral row has carried _page_live False since 2026-11-12 while its own deadline line told a reader the page was still serving the request. Both functions now write the probe's own HTTP code and verdict, and a dead row reads 'DEAD ON THE PLATFORM ... Expired, not aged: no send is possible.' No count changes: dead rows were already excluded from live; this fixes what the file tells a sender about them.",
+  "build_pitch_queue.py's _automatable() printed 'no route published on the page or the publication's site' directly beneath the verified address on the queue's ONLY sendable row. The negation filter drops the sentence that names the address ('... not guessed: kelsey.ziser@informationweek.com ...'), and the following sentence ('The request page itself publishes no address and no link') then matched the no-route branch. A real address in the row's own route prose is now read from the raw text, the way the redacted-body branch already did, with a bounce guard so a dead mailbox cannot print as a live route. Exactly one row changed: the sendable one.",
+  "`_new_or_recovered_<date>` markers accumulated on carried rows: 201 of them across 29 past dates in today's file, so any later 'which rows are new' query would have been answered '201'. The 2026-10-08 run fixed the same accumulation under the old `_new_this_run` name; the date-keyed form reintroduced it. Carried rows now drop the marker and only today's new rows carry it (5 today)."
+ ],
+ "contact_replace": {
+  "cios-2027-goals-ram-shortage-saaspocalypse-temp-ai-physical-ai": "Route resolved OFF the request page, not guessed: kelsey.ziser@informationweek.com, published as a mailto link on her InformationWeek author page https://www.informationweek.com/author/kelsey-ziser (route-checks-2026-11-14.json: HTTP 200, 582,084 bytes, title 'Kelsey Ziser | Senior Editor, InformationWeek', address present once as 'Kelsey.ziser@' and once as 'kelsey.ziser@' in the markup). The request page itself publishes no address and no link. The send is George's: no plain mailbox on a request page has ever been ours to write to unattended. Deliverability is not SMTP-verified - only a bounce proves anything."
+ }
+}

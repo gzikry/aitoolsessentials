@@ -368,6 +368,20 @@ def _automatable(contact: str, rec: dict | None = None) -> str:
         link = rec["published_links"][0]
         if "calendly" in link or "lnkd.in" in link:
             return f"no — published booking link {link} (George)"
+    # A real address in the row's own route prose is a fact regardless of what else the prose says
+    # about it. `_positive_contact_text` drops every sentence carrying a negation word, and this
+    # monitor writes its route prose as "... not guessed: kelsey.ziser@informationweek.com,
+    # published as a mailto link ... The request page itself publishes no address and no link." Both
+    # sentences carry a negation, so the address was stripped before matching and the queue printed
+    # "no route published on the page or the publication's site" directly beneath a verified address
+    # on the ONLY sendable row in the queue (2026-11-14). Same defect class as the redacted-body
+    # branch above, reached with email_redacted False. Prose that records a bounce is excluded, so a
+    # dead mailbox cannot be printed as a live route.
+    if not re.search(r"\b(?:bounced|bounces|550|NoSuchUser|dead address)\b", raw, re.I):
+        found = [a for a in _ADDR.findall(raw) if "redacted" not in a.lower()]
+        if found:
+            return (f"no — email resolved off the publication's own site: {found[0]} "
+                    f"(George sends)")
     # A plain published address carried in `contact_method` — the class of route this queue calls
     # its strongest (resolved off the publication's own site, not off the request page). Until
     # 2026-10-10 this fell through every branch below to "unknown — verify the route before

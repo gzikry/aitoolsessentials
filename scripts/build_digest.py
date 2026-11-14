@@ -91,13 +91,27 @@ def refresh(o: dict, verified: dict, feed: set[str], today: str) -> dict:
     prefix = re.sub(r"Page fetched today:.*?= \d+ days?\.", "", prefix)
     prefix = re.sub(r"PAGE-VERIFIED 20\d{2}-\d{2}-\d{2}:.*$", "", prefix)
     prefix = " ".join(prefix.split()).strip() or "No cutoff stated."
-    o["deadline"] = (
-        f"{prefix} RE-VERIFIED {today}: HTTP 200, live=True, badge '{badge}', "
-        f"datePublished {rec.get('datePublished')} = {days} days, no expiry notice on the page. "
-        f"{'IS' if o['_in_ai_topic_feed'] else 'NOT'} in the newest AI-topic feed. The feed is a "
-        f"rolling 50-slot window over the newest requests, so absence from it is not an expiry "
-        f"signal and carries no freshness credit either way; this row's age comes from its page."
-    )
+    # A dead row's deadline field used to assert "HTTP 200, live=True" as typed text, whatever the
+    # probe returned: on 2026-11-14 the mistral row had been `_page_live: False` in three consecutive
+    # digests while its own deadline line read "RE-VERIFIED ...: HTTP 200, live=True ... no expiry
+    # notice on the page". That is the defect class this monitor keeps logging — a typed string where
+    # a measurement belongs — and here it tells a sender that a deleted page is still there. The
+    # probe's own code and verdict are written instead, and a dead row says so plainly.
+    _http = rec.get("http") or "000"
+    if o["_page_live"]:
+        o["deadline"] = (
+            f"{prefix} RE-VERIFIED {today}: HTTP {_http}, live=True, badge '{badge}', "
+            f"datePublished {rec.get('datePublished')} = {days} days, no expiry notice on the page. "
+            f"{'IS' if o['_in_ai_topic_feed'] else 'NOT'} in the newest AI-topic feed. The feed is a "
+            f"rolling 50-slot window over the newest requests, so absence from it is not an expiry "
+            f"signal and carries no freshness credit either way; this row's age comes from its page."
+        )
+    else:
+        o["deadline"] = (
+            f"{prefix} DEAD ON THE PLATFORM — RE-VERIFIED {today}: HTTP {_http}, live=False, the page "
+            f"no longer serves this request and the slug is absent from the sitemap. Expired, not aged: "
+            f"no send is possible. First measured dead in an earlier run; re-fetched today."
+        )
     return o
 
 
@@ -148,6 +162,13 @@ def main() -> None:
     opps = [refresh(o, verified, FEED, today) for o in prev["opportunities"]]
     for o in opps:
         o.setdefault("slug", slug_of(o["url"]))
+        # `_new_or_recovered_<date>` is written once, on the run that added the row, and nothing ever
+        # removed it — so by 2026-11-14 the file carried 201 of them across 29 past dates, i.e. any
+        # later query for "which rows are new" would have been answered "201". The 2026-10-08 run
+        # fixed the same accumulation under the old `_new_this_run` name; the date-keyed form
+        # reintroduced it. Carried rows drop the marker and today's NEW rows re-add it below.
+        for _k in [k for k in o if k.startswith("_new_or_recovered_") or k == "_new_this_run"]:
+            o.pop(_k)
     n_carried = len(opps)
 
     # Carried prose can cite the artefacts of the day it was written. `refresh()` rewrites `deadline`
@@ -282,8 +303,13 @@ def main() -> None:
     def _dl(slug: str) -> str:
         r = verified.get(slug) or {}
         # Same shape as refresh() writes for carried rows, so tomorrow's run can strip this
-        # measurement out of the prefix instead of stacking a second, stale age next to it.
-        return (f"No cutoff stated. RE-VERIFIED {today}: HTTP 200, live=True, badge "
+        # measurement out of the prefix instead of stacking a second, stale age next to it. The
+        # verdict is the probe's, not a typed "HTTP 200, live=True": a window slug that died between
+        # the sitemap pull and this fetch must not be described as serving its body.
+        if r.get("live") is False:
+            return (f"No cutoff stated. DEAD ON THE PLATFORM — RE-VERIFIED {today}: HTTP "
+                    f"{r.get('http') or '000'}, live=False, the page no longer serves this request.")
+        return (f"No cutoff stated. RE-VERIFIED {today}: HTTP {r.get('http') or '000'}, live=True, badge "
                 f"'{r.get('badge')}', datePublished {r.get('datePublished')} = {r.get('days_old')} days.")
 
     def contact_evidence(slug: str) -> str:
