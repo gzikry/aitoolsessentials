@@ -995,6 +995,15 @@
       "public_href": "/go/agentmsgr/",
       "partner": false
     },
+    "01router": {
+      "name": "01Router",
+      "slug": "01router",
+      "official": "https://01router.com/",
+      "destination": "https://01router.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/01router/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

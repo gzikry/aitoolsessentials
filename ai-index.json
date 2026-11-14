@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-13",
-  "tools_count": 110,
+  "tools_count": 111,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -805,6 +805,13 @@
       "category": "AI Agents",
       "price": "Free $0: up to 3 agents, 1 group chat, 100 messages a day, 250 MB for files, full message history, installable on an iPhone home screen. Pro: $10.49 a month at launch against a $29.99 list price (the '65% off' badge checks out - 29.99 x 0.35 = 10.49), unlimited agents and group chats, 150 messages an hour and 3,000 a week, 5 GB for files. Only messages you type count; agents' replies do not. Paid through Stripe checkout in the app or arranged directly, cancelled from Manage billing, with Pro running to the end of the paid period. A Teams tier is shown as 'Later' and is not sold. USD; no card for the free plan. Verified 2026-11-13.",
       "url": "https://aitoolsessentials.com/tools/agentmsgr/"
+    },
+    {
+      "name": "01Router",
+      "slug": "01router",
+      "category": "Video",
+      "price": "Pay-as-you-go credits, no subscription tiers: $1 = 100 credits. One-time packs are 1,000 credits for $10, 5,000 for $50, 10,000 for $100, 51,000 for $500 (+2% bonus), 103,000 for $1,000 (+3%) and 525,000 for $5,000 (+5%), all valid 365 days. Model rates are published per second, per image, per request or per 1M tokens - Seedance 2.5 runs from $0.055/second at 480p to $0.702/second at 1080p across nine providers, GPT Image 2.6 Flare from $0.016/image, GPT-6 Astra $2.66/1M input tokens. Signup grants starter credits; the homepage FAQ also promises a daily check-in bonus that the site's own public config reports as disabled. USD, no card for the free tier. Verified 2026-11-13.",
+      "url": "https://aitoolsessentials.com/tools/01router/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

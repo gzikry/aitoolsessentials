@@ -476,6 +476,10 @@
     "agentmsgr": {
       "date": "2026-11-13",
       "digest": "Free $0: 3 agents, 1 group chat, 100 messages/day, 250 MB files, full history. Pro $10.49/mo at launch (list $29.99/mo, '65% off' - 29.99 x 0.35 = 10.49), unlimited agents and group chats, 150 messages/hour and 3,000/week, 5 GB files; Stripe checkout in the app, cancel from Manage billing. Only messages typed count. Teams tier shown as 'Later', not sold. Prices identical on the homepage anchor, Terms, about page, llms.txt and app disclosure. Checked 2026-11-13."
+    },
+    "01router": {
+      "date": "2026-11-13",
+      "digest": "Pay-as-you-go credits, no subscription tiers. $1 = 100 credits; one-time packs 1,000 credits $10, 5,000 $50, 10,000 $100, 51,000 $500 (+2%), 103,000 $1,000 (+3%), 525,000 $5,000 (+5%), valid 365 days. Per-model rates by provider, e.g. Seedance 2.5 $0.055-$0.126/second at 480p across nine providers and $0.508-$0.702/second at 1080p; GPT Image 2.6 Flare $0.016/image; GPT-6 Astra $2.66/1M input tokens. Stripe enabled; starter credits on signup; homepage FAQ's daily check-in is disabled in the public config. Credits round up to whole units, so several tiers bill above the printed per-second rate. Checked 2026-11-13."
     }
   },
   "changes": [

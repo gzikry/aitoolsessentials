@@ -1,1994 +1,2015 @@
 [
-  {
-    "tool_slug": "adobe-enhance-speech",
-    "tool_name": "Adobe Podcast",
-    "priority": "medium",
-    "category": "Audio Production",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "adobe-firefly",
-    "tool_name": "Adobe Firefly",
-    "priority": "medium",
-    "category": "Creative",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "aibase",
-    "tool_name": "AIBase",
-    "priority": "medium",
-    "category": "Creative",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "aidetector-cx",
-    "tool_name": "AIDetector.cx",
-    "priority": "low",
-    "category": "Productivity",
-    "recommended_networks_to_check": [
-      "Direct vendor program (partnerships@aidetector.cx)"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/aidetector-cx/"
-    ],
-    "best_audiences": [
-      "bloggers and publishers screening content before publication",
-      "SEO professionals and agencies",
-      "editorial and content-quality teams"
-    ],
-    "status": "approved",
-    "next_action": "Direct affiliate approved 2026-10-08 (30% recurring). Tracking link wired to the review CTA; monitor dashboard clicks/conversions.",
-    "notes": "Direct program, no network intermediary. 30% recurring on eligible subscription payments, lifetime of the customer; monthly and annual plans eligible; 30-day attribution window; 30-day hold; $50 minimum payout (USD, bank transfer via dashboard)."
-  },
-  {
-    "tool_slug": "ailearnhub",
-    "tool_name": "AILearnHub",
-    "priority": "low",
-    "category": "Education",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/ailearnhub/"
-    ],
-    "best_audiences": [
-      "teachers and trainers producing lesson material",
-      "course creators converting articles into lessons"
-    ],
-    "status": "not_started",
-    "next_action": "Ask wangneo276@gmail.com whether any partner or referral programme exists; no /affiliates, /partners or /referral page returned a live page on 2026-10-21.",
-    "notes": "Contact route is a Gmail only - every @ailearnhub.net address returns 550 - and the operator asked us not to publish it, so outreach is the only use for it. Do not invent a tracking URL."
-  },
-  {
-    "tool_slug": "aiproductads",
-    "tool_name": "AIProductAds",
-    "priority": "low",
-    "category": "Video",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/aiproductads/"
-    ],
-    "best_audiences": [
-      "ecommerce sellers making product ad clips",
-      "small agencies producing ad variants"
-    ],
-    "status": "not_started",
-    "next_action": "Ask support@aiproductads.app whether a referral programme exists alongside the subscription and pack tiers; probe /affiliates and /partners before assuming none.",
-    "notes": "Recurring subscriptions plus non-expiring packs would support a percentage arrangement. One operator holds four products, so a single conversation can cover all of them."
-  },
-  {
-    "tool_slug": "airtable-ai",
-    "tool_name": "Airtable AI",
-    "priority": "medium",
-    "category": "Productivity",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "allvideoai",
-    "tool_name": "AllVideoAI",
-    "priority": "medium",
-    "category": "Video",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "beadpattern",
-    "tool_name": "BeadPattern",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/beadpattern/"
-    ],
-    "best_audiences": [
-      "crafters converting photos into bead patterns",
-      "craft content creators"
-    ],
-    "status": "not_started",
-    "next_action": "Ask support@beadpattern.net for partner terms; the annual-only plans are the commission base.",
-    "notes": "Annual plans from $59.99 give a workable commission base, but the operator has not named a processor, so confirm the sale actually completes before agreeing terms."
-  },
-  {
-    "tool_slug": "bolt-new",
-    "tool_name": "Bolt.new",
-    "priority": "medium",
-    "category": "Development",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "botloadout",
-    "tool_name": "BotLoadout",
-    "priority": "low",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [
-      "Direct vendor sponsorship (botloadout.com/sponsor)"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/botloadout/"
-    ],
-    "best_audiences": [
-      "readers setting up a first Claude, ChatGPT or Grok agent",
-      "small teams standardising agent prompts across platforms"
-    ],
-    "status": "not_started",
-    "next_action": "Email sponsors@botloadout.com in January 2027, when sponsor bookings open, to ask whether the placements carry a referral or affiliate arrangement; no affiliate programme exists today (/affiliates, /partners, /referral and /program all 404).",
-    "notes": "Free product with no paid tier, so there is no commission base yet; the only commerce on the site is newsletter sponsorship and it is not selling until January 2027. Do not invent a tracking URL."
-  },
-  {
-    "tool_slug": "browse-ai",
-    "tool_name": "Browse AI",
-    "priority": "medium",
-    "category": "Browser Automation",
-    "recommended_networks_to_check": [
-      "Direct Browse AI partner program search"
-    ],
-    "search_queries": [
-      "Browse AI affiliate program",
-      "Browse AI partner program",
-      "Browse AI referral program"
-    ],
-    "target_pages": [
-      "tools/browse-ai.html",
-      "comparisons/best-ai-tools.html",
-      "articles/index.html"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Listing verified open 2026-09-14 (application=true, approved=true, 20% recurring lifetime) but the join was gated the same day by the PartnerStack network limit. Attempt the marketplace apply only if George is already signed in and the listing still offers it; otherwise wait for the Network Profile to be re-approved. Do not use affiliates.browse.ai/signup - it is dead (HTTP 525) and was never the application route.",
-    "notes": "Do not invent affiliate URLs. Use the official URL until approved. Blocked on the network profile, not on the vendor."
-  },
-  {
-    "tool_slug": "canva-ai",
-    "tool_name": "Canva AI",
-    "priority": "medium",
-    "category": "Creative & Marketing",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "catch-ai",
-    "tool_name": "Catch",
-    "priority": "medium",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "chatgpt",
-    "tool_name": "ChatGPT",
-    "priority": "medium",
-    "category": "General AI Assistant",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "claude",
-    "tool_name": "Claude",
-    "priority": "medium",
-    "category": "General AI Assistant",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "cocounsel",
-    "tool_name": "CoCounsel Legal",
-    "priority": "medium",
-    "category": "Legal",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "copy-ai",
-    "tool_name": "Copy.ai",
-    "priority": "medium",
-    "category": "Marketing",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Closed 2026-09-14. The marketplace listing returns a null company block (no offers, no program state) and the in-app Marketplace fallback ended with the PartnerStack network limit. No verified working application route remains; revisit only if the vendor starts its own program.",
-    "notes": "Do not invent affiliate URLs. Recorded as closed rather than pending, so it stops consuming outreach time."
-  },
-  {
-    "tool_slug": "cursor",
-    "tool_name": "Cursor",
-    "priority": "medium",
-    "category": "Development",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "deepseek",
-    "tool_name": "DeepSeek",
-    "priority": "medium",
-    "category": "General AI Assistant",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "descript",
-    "tool_name": "Descript",
-    "priority": "medium",
-    "category": "Audio & Video",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "approved",
-    "next_action": "Approved 2026-10-16. Tracking link https://get.descript.com/wvafmtthtkp5 is wired on the /tools/descript/ Visit CTA (rel=\"sponsored noopener nofollow\" + disclosure fineprint) and Descript is named on /legal/affiliate-disclosure.html. Re-verify the link resolves on each sweep; re-check the recorded $25 + 15%/12-month terms against the PartnerStack dashboard when George is signed in (the approval email supplied the link only, no rate).",
-    "notes": "Approved 2026-10-16 via PartnerStack (application submitted 2026-09-12). Do not invent affiliate URLs - the wired URL is the vendor-issued one. The 2026-09-14 PartnerStack marketplace limit bars NEW marketplace joins only; it did not cancel this pre-existing application. Editorial score and pros/cons unchanged by the approval."
-  },
-  {
-    "tool_slug": "dragon-copilot",
-    "tool_name": "Microsoft Dragon Copilot",
-    "priority": "medium",
-    "category": "Healthcare",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "elevenlabs",
-    "tool_name": "ElevenLabs",
-    "priority": "medium",
-    "category": "Audio",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "fathom",
-    "tool_name": "Fathom",
-    "priority": "medium",
-    "category": "Meetings",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "fireflies",
-    "tool_name": "Fireflies.ai",
-    "priority": "medium",
-    "category": "Meetings",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "gamma",
-    "tool_name": "Gamma",
-    "priority": "medium",
-    "category": "Presentations",
-    "recommended_networks_to_check": [
-      "PartnerStack"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/gamma/"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "approved",
-    "next_action": "Links live 2026-09-13. Keep the disclosed PartnerStack href on the review Visit CTA.",
-    "notes": "Approved 2026-09-13. Tracking URL https://try.gamma.app/ty4k3o3rpeyd. 25% for the first year on referred customers. 2026-10-14: a Gamma partner email claims 30% for 1 year, contradicting its own approval email and the live listing's single 25% offer; 25% stays the recorded term pending written confirmation (asked 2026-10-14)."
-  },
-  {
-    "tool_slug": "gatsbyai",
-    "tool_name": "GatsbyAI",
-    "priority": "low",
-    "category": "Video",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/gatsbyai/"
-    ],
-    "best_audiences": [
-      "creators comparing model output before paying for a video subscription",
-      "small advertisers making short product clips on a daily free allowance",
-      "people animating a still image into a clip without editing software"
-    ],
-    "status": "not_started",
-    "next_action": "Ask support@gatsbyai.app whether a partner, referral or creator programme exists; /affiliates, /partners and /contact all return 404, so a direct ask is the only route.",
-    "notes": "Subscriptions from $19.98 a month and packs from $29.90 give a small but workable commission base. No programme terms are published and no tracking URL should be assumed or invented."
-  },
-  {
-    "tool_slug": "geardex",
-    "tool_name": "GearDex",
-    "priority": "low",
-    "category": "Productivity",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership",
-      "Photography creator partnerships"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/geardex/"
-    ],
-    "best_audiences": [
-      "photographers and videographers moving off a gear spreadsheet",
-      "small studios tracking loans, maintenance and gear value",
-      "rental houses needing check-out, custody and insurance records"
-    ],
-    "status": "not_started",
-    "next_action": "Email geardex.help@gmail.com about partner or referral terms; /affiliates and /partners both return 404 and no programme terms are published, so a direct ask is the only route.",
-    "notes": "Subscriptions are $4 to $19 a month ($39 to $179 a year), so commissions are small in absolute terms even at a good rate; the stronger play is audience fit with photography and studio-operations content. No tracking URL exists and none should be invented."
-  },
-  {
-    "tool_slug": "gemini",
-    "tool_name": "Gemini",
-    "priority": "medium",
-    "category": "General AI Assistant",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "github-copilot",
-    "tool_name": "GitHub Copilot",
-    "priority": "medium",
-    "category": "Development",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "grammarly",
-    "tool_name": "Grammarly",
-    "priority": "medium",
-    "category": "Writing & Productivity",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Blocked. Grammarly routes through Impact and the Impact publisher account was rejected (2026-08-25); a private Grammarly Business listing on PartnerStack (co_s4UUPYp9Nuvh1L, approved=false) is gated by the 2026-09-14 PartnerStack network limit. No action until Impact is reapplied to at the traffic threshold.",
-    "notes": "Do not invent affiliate URLs. Use the official URL until approved. Two network-level gates, neither vendor-controlled."
-  },
-  {
-    "tool_slug": "grantable",
-    "tool_name": "Grantable",
-    "priority": "medium",
-    "category": "Nonprofit",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "grok",
-    "tool_name": "Grok",
-    "priority": "medium",
-    "category": "General AI Assistant",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "harvey",
-    "tool_name": "Harvey",
-    "priority": "medium",
-    "category": "Legal",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "heidi-health",
-    "tool_name": "Heidi Health",
-    "priority": "medium",
-    "category": "Healthcare",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "hermes-agent",
-    "tool_name": "Hermes Agent",
-    "priority": "medium",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "approved",
-    "next_action": "Keep public CTAs on /go/nous/; tracking URL stays in affiliate_programs.json.",
-    "notes": "Approved Nous Research referral. $15 off first month on the Nous API and Hermes Agent. Public pages use the /go/nous/ hop."
-  },
-  {
-    "tool_slug": "heygen",
-    "tool_name": "HeyGen",
-    "priority": "medium",
-    "category": "Video",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "hol-registry",
-    "tool_name": "HOL Registry",
-    "priority": "low",
-    "category": "Development",
-    "recommended_networks_to_check": [
-      "Direct vendor programme (michael@hol.org; the site also publishes /guard/affiliates and /sponsor surfaces)"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/hol-registry/"
-    ],
-    "best_audiences": [
-      "developers configuring coding agents",
-      "teams standardising plugin installs across Claude Code, Codex and Cursor",
-      "security-minded agent users"
-    ],
-    "status": "not_started",
-    "next_action": "Email michael@hol.org about affiliate or partner terms (the site publishes a HOL Guard affiliate programme and a sponsor surface but no self-serve catalogue link).",
-    "notes": "Free product: the catalogue costs nothing to browse or submit into, so there is no end-user conversion to monetise. Commercial surfaces found are the HOL Guard affiliate programme (/guard/affiliates) and sponsored placements (/sponsor), which the site says do not change organic rank. No affiliate URL invented."
-  },
-  {
-    "tool_slug": "htmlslides",
-    "tool_name": "HtmlSlides",
-    "priority": "medium",
-    "category": "Presentations",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "humanpen",
-    "tool_name": "HumanPen",
-    "priority": "low",
-    "category": "Productivity",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/humanpen/"
-    ],
-    "best_audiences": [
-      "graduate students and researchers preparing a thesis or manuscript for submission",
-      "non-native English academic writers who need citation-style conversion rather than rewriting",
-      "teams translating or condensing long documents while keeping layout",
-      "developers who would rather call the API than upload through the web app"
-    ],
-    "status": "not_started",
-    "next_action": "Email support@humanpen.net about affiliate, referral or partner terms - there is no public affiliate page (/affiliates and /partners both render the sign-in screen), so a direct ask is the only route. Do not invent a tracking URL. The same message carries the two editorial asks: name Google Ads and Microsoft Ads in the privacy policy (or remove the tags) and add a consent control, and name a jurisdiction in the governing-law clause.",
-    "notes": "Economics are plausible but unproven: one-time credit packs from $19 to $249 with a first-purchase discount and no subscription, so a referral is worth a percentage of a single purchase rather than recurring revenue. Site traffic is the constraint, not the offer. The submitted contact is a free-provider Gmail; the domain's own support@humanpen.net was probed and is live, so that is the address to use for the commercial ask. The audience overlaps the academic-integrity debate, so keep any promotion factual and let the listing's stated limits do the work."
-  },
-  {
-    "tool_slug": "ideogram",
-    "tool_name": "Ideogram",
-    "priority": "medium",
-    "category": "Image Generation",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "imagesv2",
-    "tool_name": "ImagesV2",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/imagesv2/"
-    ],
-    "best_audiences": [
-      "designers and marketers who need poster text and transparent PNGs without a second tool",
-      "e-commerce sellers producing product and lifestyle imagery",
-      "occasional users who would rather buy non-expiring credits than another subscription"
-    ],
-    "status": "not_started",
-    "next_action": "Email support@imagesv2.ai (a verified working mailbox) about affiliate or referral terms; /affiliates, /affiliate, /referral, /partners and /api/referrals all return 404, so a direct ask is the only route.",
-    "notes": "Plans run $8.40 to $84.90 a month and packs $9.90 to $199.90 one-time, so commissions are small per sale; the stronger play is audience fit with design and e-commerce content. Credits are the billing unit, so a referral's lifetime value depends on repeat pack purchases. No tracking URL exists and none should be invented."
-  },
-  {
-    "tool_slug": "instrumentl",
-    "tool_name": "Instrumentl",
-    "priority": "medium",
-    "category": "Nonprofit",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "jasper",
-    "tool_name": "Jasper",
-    "priority": "medium",
-    "category": "Marketing",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "khanmigo",
-    "tool_name": "Khanmigo",
-    "priority": "medium",
-    "category": "Education",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "landlord-studio",
-    "tool_name": "Landlord Studio",
-    "priority": "medium",
-    "category": "Property Management",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "leonardo-ai",
-    "tool_name": "Leonardo AI",
-    "priority": "medium",
-    "category": "Creative",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "lm-studio",
-    "tool_name": "LM Studio",
-    "priority": "medium",
-    "category": "Local AI",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "lovable",
-    "tool_name": "Lovable",
-    "priority": "medium",
-    "category": "Development",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "luma-ai",
-    "tool_name": "Luma AI",
-    "priority": "medium",
-    "category": "Video & 3D",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "magicschool",
-    "tool_name": "MagicSchool",
-    "priority": "medium",
-    "category": "Education",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "make",
-    "tool_name": "Make",
-    "priority": "medium",
-    "category": "Automation",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "marigold-pet",
-    "tool_name": "Marigold Pet",
-    "priority": "low",
-    "category": "Video",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/marigold-pet/"
-    ],
-    "best_audiences": [
-      "pet owners making a one-off seasonal clip for social",
-      "small pet brands and groomers who want a costume video of a customer's animal",
-      "Spanish-speaking pet accounts, given the fully bilingual funnel"
-    ],
-    "status": "not_started",
-    "next_action": "Email w1952724273@gmail.com about affiliate, referral or partner terms - no /affiliates, /affiliate, /partners, /referral or /api/referrals page exists, so a direct ask is the only route, and the same message should carry the editorial questions about operator identity, the missing governing-law clause and the policy date that predates the domain registration. Do not invent a tracking URL.",
-    "notes": "Economics are thin by construction: a single $6.99 one-time product with no subscription and no upsell ladder means one conversion is worth cents at any plausible commission rate, and the product is seasonal, so treat this as a coverage listing rather than a revenue target. Contact is a free-provider Gmail address; the domain publishes no MX, so a @marigoldpet.com address would not receive mail today and asking for one would be a fabricated blocker."
-  },
-  {
-    "tool_slug": "meta-ai",
-    "tool_name": "Meta AI",
-    "priority": "medium",
-    "category": "General AI Assistant",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "microsoft-copilot",
-    "tool_name": "Microsoft Copilot",
-    "priority": "medium",
-    "category": "Productivity",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "midjourney",
-    "tool_name": "Midjourney",
-    "priority": "medium",
-    "category": "Creative",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "mistral-le-chat",
-    "tool_name": "Mistral Le Chat",
-    "priority": "medium",
-    "category": "General AI Assistant",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "money-tracker",
-    "tool_name": "Money Tracker (Expense & Budget)",
-    "priority": "low",
-    "category": "Productivity",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/money-tracker/"
-    ],
-    "best_audiences": [
-      "people who refuse to hand a bank login to an expense app",
-      "households and flatmates splitting shared rent and bills",
-      "freelancers and small businesses keeping business and personal books separate"
-    ],
-    "status": "not_started",
-    "next_action": "Email kui.zheng@gmail.com (the address given in the submission; the vendor's published support route is freemanzk@163.com and the domain has no MX, so no @quhou123.com address exists) about affiliate or referral terms. No affiliate, partner or referral page exists on the site, so a direct ask is the only route, and the same email should carry the documentation asks: a linked privacy notice that covers financial data, receipts, voice and notification content, a published Terms of Service, and the store prices printed on the site.",
-    "notes": "Subscription revenue is $2.99/month or $29.99/year through the stores, so a percentage commission would be small per conversion and the store takes its cut first. Stronger fit is audience relevance with budgeting and no-bank-linking content than raw commission volume. No tracking URL exists and none should be invented."
-  },
-  {
-    "tool_slug": "n8n",
-    "tool_name": "n8n",
-    "priority": "medium",
-    "category": "Automation",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "notebooklm",
-    "tool_name": "NotebookLM",
-    "priority": "medium",
-    "category": "Research",
-    "recommended_networks_to_check": [
-      "Direct NotebookLM partner program search"
-    ],
-    "search_queries": [
-      "NotebookLM affiliate program",
-      "NotebookLM partner program",
-      "NotebookLM referral program"
-    ],
-    "target_pages": [
-      "tools/notebooklm.html",
-      "comparisons/best-ai-tools.html",
-      "articles/index.html"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "notion-ai",
-    "tool_name": "Notion AI",
-    "priority": "medium",
-    "category": "Productivity",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "ollama",
-    "tool_name": "Ollama",
-    "priority": "medium",
-    "category": "Local AI",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "open-webui",
-    "tool_name": "Open WebUI",
-    "priority": "medium",
-    "category": "Local AI",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "openclaw",
-    "tool_name": "OpenClaw",
-    "priority": "medium",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "openevidence",
-    "tool_name": "OpenEvidence",
-    "priority": "medium",
-    "category": "Healthcare",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "otter-ai",
-    "tool_name": "Otter.ai",
-    "priority": "medium",
-    "category": "Meetings",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "perplexity",
-    "tool_name": "Perplexity",
-    "priority": "medium",
-    "category": "Research",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "pika",
-    "tool_name": "Pika",
-    "priority": "medium",
-    "category": "Video Generation",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "poe",
-    "tool_name": "Poe",
-    "priority": "medium",
-    "category": "Model Hub",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "replit-ai",
-    "tool_name": "Replit AI",
-    "priority": "medium",
-    "category": "Development",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "retouchia",
-    "tool_name": "Retouchia",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/retouchia/"
-    ],
-    "best_audiences": [
-      "ecommerce sellers doing their own product photography cleanup",
-      "creators who need occasional one-off edits rather than a monthly editor seat",
-      "people restoring or colourising old family photos"
-    ],
-    "status": "not_started",
-    "next_action": "Email contact@retouchia.com (verified working mailbox: 250 against the domain MX, control 550) about affiliate or referral terms. No /affiliates, /affiliate, /partners or /referral page exists, so a direct ask is the only route, and the same email should carry the editorial questions about the GPT Image 2.5 model attribution.",
-    "notes": "Price points are low ($9.99 and $29.99 one-time), so commission per conversion is small; the stronger play is audience fit with e-commerce and photo-restoration content. Credits expire after 365 days, so repeat purchase depends on a user's volume rather than on recurring billing. No tracking URL exists and none should be invented."
-  },
-  {
-    "tool_slug": "riverside-fm",
-    "tool_name": "Riverside",
-    "priority": "medium",
-    "category": "Audio Production",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "robylon",
-    "tool_name": "Robylon",
-    "priority": "low",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [
-      "Direct vendor partner programme (the site publishes /partnership covering resell, implement, build-on and refer; contact listings@robylon.ai)"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/robylon/"
-    ],
-    "best_audiences": [
-      "ecommerce and D2C support teams handling order, refund and status tickets",
-      "fintech and SaaS teams automating first-line support",
-      "teams already on Zendesk, Freshdesk or Zoho Desk that want an AI layer rather than a new inbox"
-    ],
-    "status": "not_started",
-    "next_action": "Email listings@robylon.ai about affiliate or referral terms, naming the /partnership page (resell, implement, build-on and refer) and asking which track fits a content review site. Do not invent an affiliate URL.",
-    "notes": "Self-serve B2B SaaS with a free tier and public pricing, so end-user conversion exists in principle, but the buyer is a support organisation rather than an individual, and the review page is a long way from the purchase decision. Priority low until traffic grows. No affiliate URL found or fabricated; the site publishes a partner programme but no tracked consumer affiliate link."
-  },
-  {
-    "tool_slug": "rows",
-    "tool_name": "Rows",
-    "priority": "medium",
-    "category": "Productivity",
-    "recommended_networks_to_check": [
-      "Direct Rows partner program search"
-    ],
-    "search_queries": [
-      "Rows affiliate program",
-      "Rows partner program",
-      "Rows referral program"
-    ],
-    "target_pages": [
-      "tools/rows.html",
-      "comparisons/best-ai-tools.html",
-      "articles/index.html"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "runway",
-    "tool_name": "Runway",
-    "priority": "medium",
-    "category": "Video",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "shortwave",
-    "tool_name": "Shortwave",
-    "priority": "medium",
-    "category": "Email AI",
-    "recommended_networks_to_check": [
-      "Direct Shortwave partner program search"
-    ],
-    "search_queries": [
-      "Shortwave affiliate program",
-      "Shortwave partner program",
-      "Shortwave referral program"
-    ],
-    "target_pages": [
-      "tools/shortwave.html",
-      "comparisons/best-ai-tools.html",
-      "articles/index.html"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "slack-ai",
-    "tool_name": "Slack AI",
-    "priority": "medium",
-    "category": "Productivity",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "sonaopus",
-    "tool_name": "Sonaopus",
-    "priority": "low",
-    "category": "Productivity",
-    "recommended_networks_to_check": [
-      "Direct vendor program (Gumroad affiliate)"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/sonaopus/"
-    ],
-    "best_audiences": [
-      "HR and people-operations buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "approved",
-    "next_action": "Links live 2026-09-13. Keep disclosed affiliate hrefs on the review CTAs.",
-    "notes": "Approved 2026-09-13. Site ref https://sonaopus.com/?ref=58448483. Gumroad product links: AI Recruiting hapwxp, AI Project Management iwiiw, AI HR Management eiddl, AI Executive Assistant pqpox, AI Real Estate Agent wtyioq. 40% one-time, 30-day cookie."
-  },
-  {
-    "tool_slug": "speechify",
-    "tool_name": "Speechify",
-    "priority": "medium",
-    "category": "Audio Production",
-    "recommended_networks_to_check": [
-      "Direct Speechify partner program search"
-    ],
-    "search_queries": [
-      "Speechify affiliate program",
-      "Speechify partner program",
-      "Speechify referral program"
-    ],
-    "target_pages": [
-      "tools/speechify.html",
-      "comparisons/best-ai-tools.html",
-      "articles/index.html"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "spellbook",
-    "tool_name": "Spellbook",
-    "priority": "medium",
-    "category": "Legal",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "suno",
-    "tool_name": "Suno",
-    "priority": "medium",
-    "category": "Music & Audio",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "synthesia",
-    "tool_name": "Synthesia",
-    "priority": "medium",
-    "category": "Video",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/synthesia/",
-      "/go/synthesia/",
-      "/compare/ai-video-avatar-cost/"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "approved",
-    "next_action": "Approved 2026-10-27. Public CTAs use /go/synthesia/, which holds https://www.synthesia.io/?via=george-zikry. No commission rate was supplied, so none is recorded. Re-verify the hop on each sweep.",
-    "notes": "Approved 2026-10-27. Do not invent a commission rate. The wired URL is the vendor-issued via link. Editorial score unchanged."
-  },
-  {
-    "tool_slug": "tarotai-chat",
-    "tool_name": "TAROTAI.CHAT",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/tarotai-chat/"
-    ],
-    "best_audiences": [
-      "readers using tarot as a reflection tool",
-      "creators making tarot content"
-    ],
-    "status": "not_started",
-    "next_action": "Ask support@tarotai.chat whether a partner programme exists; no affiliate page was found on 2026-10-21.",
-    "notes": "Low-ticket packs ($2.99-$10.99) mean a percentage commission would be small per conversion; a flat referral or bundle arrangement is the more plausible structure."
-  },
-  {
-    "tool_slug": "tenantcloud",
-    "tool_name": "TenantCloud",
-    "priority": "medium",
-    "category": "Property Management",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "thefacerating",
-    "tool_name": "TheFaceRating",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/thefacerating/"
-    ],
-    "best_audiences": [
-      "readers choosing a haircut, frames or a colour palette and willing to pay a few dollars for a rendered preview",
-      "personal-styling and beauty creators looking for a quick geometry read before filming",
-      "anyone comparing face-rating tools who wants one that states its formula instead of returning a black-box number"
-    ],
-    "status": "not_started",
-    "next_action": "Email vban@mail.grokbot.com about affiliate, referral or partner terms - no /affiliates, /partners or /referral page exists on the site, so a direct ask is the only route. The same message should ask them to publish a working support address (the domain has no MX, so privacy@ bounces), to gate or disclose GA4 and the Cloudflare beacon, to restore a refund path that does not depend on a dead mailbox, and to name a verifiable company registration. Do not invent a tracking URL.",
-    "notes": "Economics are modest: one-time reports at USD 7.99-24.99 and no subscription, so a single conversion is worth cents unless a partner rate is unusually high; treat this as a coverage listing first. The only working contact is the submission address on a separate domain, because thefacerating.com publishes no mail exchanger - asking them to create one purely for our listing would be a fabricated blocker, but pointing out that their own published privacy address bounces is not."
-  },
-  {
-    "tool_slug": "tunii",
-    "tool_name": "Tunii",
-    "priority": "medium",
-    "category": "Audio",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks"
-  },
-  {
-    "tool_slug": "typingmind",
-    "tool_name": "TypingMind",
-    "priority": "medium",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [
-      "Direct TypingMind partner program search"
-    ],
-    "search_queries": [
-      "TypingMind affiliate program",
-      "TypingMind partner program",
-      "TypingMind referral program"
-    ],
-    "target_pages": [
-      "tools/typingmind.html",
-      "comparisons/best-ai-tools.html",
-      "articles/index.html"
-    ],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "udio",
-    "tool_name": "Udio",
-    "priority": "medium",
-    "category": "Music & Audio",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "v0",
-    "tool_name": "v0",
-    "priority": "medium",
-    "category": "Development",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "whop-cli",
-    "tool_name": "Whop CLI",
-    "priority": "medium",
-    "category": "Automation",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "words-into-music",
-    "tool_name": "Words into Music",
-    "priority": "low",
-    "category": "Audio & Video",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/words-into-music/"
-    ],
-    "best_audiences": [
-      "people buying a personalised song as a gift",
-      "songwriters wanting a sung demo of finished lyrics",
-      "developers looking for a song-generation API"
-    ],
-    "status": "not_started",
-    "next_action": "Ask contact@wordsintomusic.com whether a partner or referral programme exists; /affiliates and /partners both 404, so a direct ask is the only route.",
-    "notes": "Annual tiers from $59.99 give a workable commission base, but no programme terms are published, so no tracking URL should be assumed or invented."
-  },
-  {
-    "tool_slug": "you-com",
-    "tool_name": "You.com",
-    "priority": "medium",
-    "category": "Research",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "zapier-ai",
-    "tool_name": "Zapier AI",
-    "priority": "medium",
-    "category": "Automation",
-    "recommended_networks_to_check": [],
-    "search_queries": [],
-    "target_pages": [],
-    "best_audiences": [
-      "AI tool buyers",
-      "workflow-specific buyers"
-    ],
-    "status": "not_started",
-    "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
-    "notes": "Do not invent affiliate URLs. Use official URL until approved."
-  },
-  {
-    "tool_slug": "claude-command-center",
-    "tool_name": "CCC (Claude Command Center)",
-    "priority": "low",
-    "category": "Development",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/claude-command-center/"
-    ],
-    "best_audiences": [
-      "developers running several coding agents in parallel on one machine",
-      "solo builders and small engineering teams who want a local, auditable control surface",
-      "readers already using Claude Code or Codex who keep losing sessions in terminal tabs"
-    ],
-    "status": "not_started",
-    "next_action": "Do not plan on commission economics: the product is free with no paid tier, so there is no sale to take a share of and no affiliate programme exists (no /affiliates, /partners or /referral page on the site). The only commercial conversation worth having is a sponsored placement or a referral arrangement if CCC ever ships a paid tier, so ask once whether one is planned, and treat this listing as coverage and citation value rather than a revenue target. Never invent a tracking URL.",
-    "notes": "Free, source-available, single-maintainer project, so the realistic upside is audience and citation rather than revenue. The vendor is unusually reachable for a technical correction - the repository is pushed daily and issues are open - which makes a follow-up about the missing privacy policy and terms page more likely to land than the same ask to a commercial vendor. Contact routes: amir.fish@gmail.com in the submission and amir@amirfish.com published on amirfish.ai, whose domain publishes MX."
-  },
-  {
-    "tool_slug": "trybestspecs",
-    "tool_name": "TryBestSpecs",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/trybestspecs/"
-    ],
-    "best_audiences": [
-      "people buying glasses online who want to preview frames on their own face first",
-      "eyewear retailers and opticians who could embed or link a try-on step",
-      "readers comparing frame shapes for their face shape"
-    ],
-    "status": "not_started",
-    "next_action": "Email the vendor about affiliate or partner terms; no programme is published today (/affiliates, /affiliate, /partners and /referral all 404), so ask in the next reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
-    "notes": "Commission economics are unproven: packs are USD 2.99-14.99 one-time with a one-credit free tier, so any sane commission is pennies per conversion. Priority stays low until traffic grows. The realistic commercial conversation is a sponsored placement or a partnership with an eyewear retailer, not a revenue share on credits."
-  },
-  {
-    "tool_slug": "genjutsu-ai",
-    "tool_name": "Genjutsu AI",
-    "priority": "low",
-    "category": "Video",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/genjutsu-ai/"
-    ],
-    "best_audiences": [
-      "creators making trend-shaped short video who need a clip recreated with their own cast",
-      "small agencies producing social content for consumer brands",
-      "product and e-commerce marketers who want a vehicle or product swapped into an existing scene"
-    ],
-    "status": "not_started",
-    "next_action": "Email the vendor about affiliate or partner terms; no program is published today (/affiliates, /affiliate, /partners, /referral and /ambassador all 404), so ask in the publication reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
-    "notes": "Commission economics are unproven at this price ladder: entry is $29.9/month or $99 one-time, so a 20-30% share is single-digit dollars per conversion and the free tier converts on 18 credits. Priority stays low until traffic grows; the realistic commercial conversation is a sponsored placement or a partner deal, not a revenue share on credits."
-  },
-  {
-    "tool_slug": "rapvideo-ai",
-    "tool_name": "RapVideo AI",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/rapvideo-ai/"
-    ],
-    "best_audiences": [
-      "creators chasing the Hotel Lobby / rap-duo trend for TikTok, Reels and Shorts",
-      "people buying novelty birthday, anniversary and roast videos",
-      "small businesses making a short promo rap"
-    ],
-    "status": "not_started",
-    "next_action": "Email alex@imagesv2.ai (the submission contact and a verified working mailbox on the operator's other domain) about affiliate or partner terms; /affiliates and /api/affiliate both return 404 on rapvideoai.com, so a direct ask is the only route.",
-    "notes": "Per-video revenue is small - $3 to $10 a render, or $29.90 to $99.90 a month - so commission per sale is low and the value is trend traffic rather than lifetime spend. Credits are the billing unit and packs never expire, so repeat purchase is not guaranteed. No tracking URL exists and none should be invented."
-  },
-  {
-    "tool_slug": "customgpt",
-    "tool_name": "CustomGPT.ai",
-    "priority": "medium",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [
-      "FirstPromoter"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/customgpt/",
-      "/go/customgpt/"
-    ],
-    "best_audiences": [
-      "teams putting a chatbot on their own documents",
-      "support and knowledge-base buyers comparing query caps"
-    ],
-    "status": "approved",
-    "next_action": "Approved 2026-10-27. Public CTAs use /go/customgpt/, which holds https://customgpt.ai/?fpr=george-881fd5. The public program page lists 15%, 18%, and 20% tiers; this account's tier was not stated on approval, so do not report a single rate.",
-    "notes": "Approved 2026-10-27 via FirstPromoter. Program page: https://customgpt.ai/partners/. Do not invent a tier. The editorial score is from the 2026-10-27 pricing page and is not part of the approval."
-  },
-  {
-    "tool_slug": "umevo",
-    "tool_name": "UMEVO",
-    "priority": "low",
-    "category": "Meetings",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/umevo/"
-    ],
-    "best_audiences": [
-      "people who record in-person meetings, lectures and site visits and want hardware rather than a meeting bot",
-      "professionals who need call recording that a video-call bot cannot do",
-      "buyers comparing a one-time device purchase against a per-seat meeting-notes subscription"
-    ],
-    "status": "not_started",
-    "next_action": "Email support@umevo.ai (and umetech2025@gmail.com, the submission contact) about the published Affiliate/Creators partnership: /pages/affiliate-creators exists but publishes no rate, stating that 'commission, attribution, codes, and settlement are confirmed by email' and that it is a human-led email process rather than a portal. Ask for commission, cookie window and payout terms; do not invent a tracking URL.",
-    "notes": "Hardware margin business: a $79-$159 one-time device with a small recurring AI tail, so commission per sale can be materially higher than the $2-$10 per-render tools in this catalog if the vendor offers a percentage. Year-one AI is included on Note Plus, which means repeat purchases are unlikely and the recurring commission is thin. Editorial verdict stays independent of any commercial terms."
-  },
-  {
-    "tool_slug": "faceloria",
-    "tool_name": "Faceloria",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/faceloria/"
-    ],
-    "best_audiences": [
-      "readers comparing face-analysis and styling-report tools",
-      "creators making glow-up/style content"
-    ],
-    "status": "not_started",
-    "next_action": "Email the vendor about affiliate or partner terms; no program is published (/affiliates etc. not present), so ask in the publication reply. Never invent affiliate URLs; keep the official URL until an approved program exists.",
-    "notes": "One-time $16.99 report economics - a percentage bounty on a $16.99 one-time product is small; priority low until traffic grows."
-  },
-  {
-    "tool_slug": "layergrab",
-    "tool_name": "LayerGrab",
-    "priority": "medium",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/layergrab/"
-    ],
-    "best_audiences": [
-      "ecommerce sellers doing product-photo cutouts",
-      "designers and social editors extracting elements from flat images"
-    ],
-    "status": "not_started",
-    "next_action": "Ask for affiliate terms in the publication reply: the /pricing page already advertises a referral arrangement ('earn 20% of every payment from people who sign up through it, for life, paid in credits or in cash by PayPal'), so a program exists in some form - confirm enrollment route and terms rather than inventing a tracking URL.",
-    "notes": "Vendor's own pricing page advertises a 20%-for-life referral payout (credits or cash via PayPal). Recurring subscription base ($12/$36 monthly) makes this the best affiliate prospect of the 2026-11-02 batch."
-  },
-  {
-    "tool_slug": "crowdwisdomtrading",
-    "tool_name": "CrowdWisdomTrading",
-    "priority": "low",
-    "category": "Research",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership",
-      "Whop marketplace"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/crowdwisdomtrading/"
-    ],
-    "best_audiences": [
-      "self-directed retail traders",
-      "readers comparing trade research/subscription communities"
-    ],
-    "status": "not_started",
-    "next_action": "Email the founder (gilad@) about partner terms in the publication reply; checkout runs through Whop, so a Whop-side affiliate route may exist. Never invent affiliate URLs.",
-    "notes": "Recurring $29.99/mo product with real legal footing; finance-adjacent, so keep the editorial verdict visibly independent of any commercial terms."
-  },
-  {
-    "tool_slug": "dreamlock",
-    "tool_name": "Dreamlock",
-    "priority": "low",
-    "category": "Productivity",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/dreamlock/"
-    ],
-    "best_audiences": [
-      "iPhone users journaling or tracking sleep/dreams",
-      "readers comparing private AI journal apps"
-    ],
-    "status": "not_started",
-    "next_action": "Email costelgn@gmail.com in the publication reply whether any partner/referral arrangement exists; Apple IAP billing leaves little margin for web affiliate payouts. Never invent affiliate URLs.",
-    "notes": "IAP economics - Apple takes its cut, so a meaningful web affiliate program is unlikely; priority low."
-  },
-  {
-    "tool_slug": "reeltada",
-    "tool_name": "ReelTada",
-    "priority": "low",
-    "category": "Video",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/reeltada/"
-    ],
-    "best_audiences": [
-      "social video creators batching trend-format shorts",
-      "small agencies doing reactive/trend content"
-    ],
-    "status": "not_started",
-    "next_action": "Email support@reeltada.com about partner terms in the publication reply; no program published. Never invent affiliate URLs.",
-    "notes": "One-time-pack economics ($9.90-$59.90) cap affiliate value; the operator's unidentified status and templated legal set mean any commercial relationship needs the vendor identified first."
-  },
-  {
-    "tool_slug": "pawheadshots",
-    "tool_name": "PawHeadshots",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/pawheadshots/"
-    ],
-    "best_audiences": [
-      "pet owners buying one-off novelty gifts",
-      "pet-brand and rescue social accounts"
-    ],
-    "status": "not_started",
-    "next_action": "Ask Vban LLC in the publication reply whether they run an affiliate or partner program; no program is published on the site. Never invent affiliate URLs.",
-    "notes": "One-time $19.90/$29.90 packs cap affiliate value at a few dollars a sale, and the operator publishes no partner page. Any commercial relationship also needs the company's jurisdiction and address, which the site does not carry."
-  },
-  {
-    "tool_slug": "dreammmer",
-    "tool_name": "DREAMMMER",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/dreammmer/"
-    ],
-    "best_audiences": [
-      "marketers and small creative teams paying monthly for AI image and video",
-      "designers comparing image models before committing"
-    ],
-    "status": "not_started",
-    "next_action": "Ask in the publication reply whether DREAMMMER runs an affiliate or partner program; /affiliates, /affiliate, /partners and /referral all 404 and no program is published. Never invent affiliate URLs.",
-    "notes": "Subscription pricing ($29-$299/mo) makes this the best affiliate shape of the recent Creative batch if a program exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive."
-  },
-  {
-    "tool_slug": "accuratescribe",
-    "tool_name": "AccurateScribe.ai",
-    "priority": "low",
-    "category": "Audio & Video",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/accuratescribe/"
-    ],
-    "best_audiences": [
-      "podcasters and journalists transcribing interviews weekly",
-      "students and academics working through lecture recordings",
-      "small teams that want one flat transcription plan instead of a minutes meter"
-    ],
-    "status": "not_started",
-    "next_action": "A programme is already published at /affiliate - 40% on subscriptions, weekly Friday payouts by PayPal or bank - so the ask is for the signup route and tracking link rather than whether terms exist. Signup needs an account, which is the operator's lane; never invent an affiliate URL.",
-    "notes": "Strongest affiliate shape in this batch: a $119.99/year and $19.99/month single plan at 40% recurring beats most Creative listings for payout, and the programme page is already live. Held pending signup terms only; nothing wired into affiliate_programs.json."
-  },
-  {
-    "tool_slug": "makifyai",
-    "tool_name": "Makify AI",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/makifyai/"
-    ],
-    "best_audiences": [
-      "e-commerce sellers producing listing and ad images in volume",
-      "small marketing teams replacing stock photography with generated product scenes",
-      "creators already paying for several image-model subscriptions at once"
-    ],
-    "status": "not_started",
-    "next_action": "No affiliate or partner page exists - /affiliate, /affiliates, /partners, /referral and /program all 404 on 2026-11-10 - so the ask is whether a partner or reseller programme exists and, if it does, for terms and a tracking link. Never invent an affiliate URL.",
-    "notes": "Subscription-led revenue shape: $118.80-$958.80 annual plans sit above $9.90-$199 one-time packs, so a recurring commission would be worth more than a pack sale if the vendor offers one. Listing carries known disclosure gaps (no controller, retention or training statement; tags before consent), which belong in the cons rather than the commercial ask."
-  },
-  {
-    "tool_slug": "aiimagetoprompt",
-    "tool_name": "AI Image to Prompt",
-    "priority": "low",
-    "category": "Creative",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/aiimagetoprompt/"
-    ],
-    "best_audiences": [
-      "creators who already have reference images and need written prompts for Midjourney, Flux or Stable Diffusion",
-      "design and marketing teams standardising a visual direction from moodboards",
-      "hobbyists learning prompt structure from their own photographs"
-    ],
-    "status": "not_started",
-    "next_action": "The product is free and no partner surface exists - /affiliates, /affiliate and /api/affiliate all 404 on 2026-11-12 - so there is no commission to earn on a generation and no link to wire. The only commercial question worth asking is whether the vendor plans a paid tier or a partner programme once the ShipAny boilerplate pricing page is replaced; ask that in the publication reply rather than inventing an affiliate URL.",
-    "notes": "Zero revenue surface today: free tool, no checkout, no affiliate page. Do not treat the /pricing route's $99-$299 figures as this vendor's price list - they are the ShipAny boilerplate's own plans for a different product. Revisit only if a paid tier appears."
-  },
-  {
-    "tool_slug": "agentmsgr",
-    "tool_name": "AgentMsgr",
-    "priority": "low",
-    "category": "AI Agents",
-    "recommended_networks_to_check": [
-      "Direct vendor partnership"
-    ],
-    "search_queries": [],
-    "target_pages": [
-      "/tools/agentmsgr/"
-    ],
-    "best_audiences": [
-      "people paying for agents on two or more platforms who want them in one thread",
-      "agencies running a room per client across the agents each client already has",
-      "builders of email-only bots who need a texting interface rather than a chat UI to code"
-    ],
-    "status": "not_started",
-    "next_action": "No partner surface exists yet: /affiliates, /partners and /affiliate all 404 on 2026-11-13 and no commission, tracking link or programme page appears anywhere on the site, so nothing is wired and no tracking URL was invented. The vendor mail asks for affiliate or partner terms separately, since a $10.49-$29.99/month subscription is the kind of low-ticket recurring product where a 20-30% referral is the only workable shape. Re-check /affiliates when they reply.",
-    "notes": "New lead, published 2026-11-13 at 3.9/5. Low priority because the plan ceiling is $29.99/month and the product is six days old, so conversion volume this year will be negligible; it is a relationship to open rather than revenue to book. The audience overlaps our own AI Agents category (Hermes Agent, OpenClaw, TypingMind), which is worth a cross-link once the review has traffic."
-  }
+ {
+  "tool_slug": "adobe-enhance-speech",
+  "tool_name": "Adobe Podcast",
+  "priority": "medium",
+  "category": "Audio Production",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "adobe-firefly",
+  "tool_name": "Adobe Firefly",
+  "priority": "medium",
+  "category": "Creative",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "aibase",
+  "tool_name": "AIBase",
+  "priority": "medium",
+  "category": "Creative",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "aidetector-cx",
+  "tool_name": "AIDetector.cx",
+  "priority": "low",
+  "category": "Productivity",
+  "recommended_networks_to_check": [
+   "Direct vendor program (partnerships@aidetector.cx)"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/aidetector-cx/"
+  ],
+  "best_audiences": [
+   "bloggers and publishers screening content before publication",
+   "SEO professionals and agencies",
+   "editorial and content-quality teams"
+  ],
+  "status": "approved",
+  "next_action": "Direct affiliate approved 2026-10-08 (30% recurring). Tracking link wired to the review CTA; monitor dashboard clicks/conversions.",
+  "notes": "Direct program, no network intermediary. 30% recurring on eligible subscription payments, lifetime of the customer; monthly and annual plans eligible; 30-day attribution window; 30-day hold; $50 minimum payout (USD, bank transfer via dashboard)."
+ },
+ {
+  "tool_slug": "ailearnhub",
+  "tool_name": "AILearnHub",
+  "priority": "low",
+  "category": "Education",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/ailearnhub/"
+  ],
+  "best_audiences": [
+   "teachers and trainers producing lesson material",
+   "course creators converting articles into lessons"
+  ],
+  "status": "not_started",
+  "next_action": "Ask wangneo276@gmail.com whether any partner or referral programme exists; no /affiliates, /partners or /referral page returned a live page on 2026-10-21.",
+  "notes": "Contact route is a Gmail only - every @ailearnhub.net address returns 550 - and the operator asked us not to publish it, so outreach is the only use for it. Do not invent a tracking URL."
+ },
+ {
+  "tool_slug": "aiproductads",
+  "tool_name": "AIProductAds",
+  "priority": "low",
+  "category": "Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/aiproductads/"
+  ],
+  "best_audiences": [
+   "ecommerce sellers making product ad clips",
+   "small agencies producing ad variants"
+  ],
+  "status": "not_started",
+  "next_action": "Ask support@aiproductads.app whether a referral programme exists alongside the subscription and pack tiers; probe /affiliates and /partners before assuming none.",
+  "notes": "Recurring subscriptions plus non-expiring packs would support a percentage arrangement. One operator holds four products, so a single conversation can cover all of them."
+ },
+ {
+  "tool_slug": "airtable-ai",
+  "tool_name": "Airtable AI",
+  "priority": "medium",
+  "category": "Productivity",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "allvideoai",
+  "tool_name": "AllVideoAI",
+  "priority": "medium",
+  "category": "Video",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "beadpattern",
+  "tool_name": "BeadPattern",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/beadpattern/"
+  ],
+  "best_audiences": [
+   "crafters converting photos into bead patterns",
+   "craft content creators"
+  ],
+  "status": "not_started",
+  "next_action": "Ask support@beadpattern.net for partner terms; the annual-only plans are the commission base.",
+  "notes": "Annual plans from $59.99 give a workable commission base, but the operator has not named a processor, so confirm the sale actually completes before agreeing terms."
+ },
+ {
+  "tool_slug": "bolt-new",
+  "tool_name": "Bolt.new",
+  "priority": "medium",
+  "category": "Development",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "botloadout",
+  "tool_name": "BotLoadout",
+  "priority": "low",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [
+   "Direct vendor sponsorship (botloadout.com/sponsor)"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/botloadout/"
+  ],
+  "best_audiences": [
+   "readers setting up a first Claude, ChatGPT or Grok agent",
+   "small teams standardising agent prompts across platforms"
+  ],
+  "status": "not_started",
+  "next_action": "Email sponsors@botloadout.com in January 2027, when sponsor bookings open, to ask whether the placements carry a referral or affiliate arrangement; no affiliate programme exists today (/affiliates, /partners, /referral and /program all 404).",
+  "notes": "Free product with no paid tier, so there is no commission base yet; the only commerce on the site is newsletter sponsorship and it is not selling until January 2027. Do not invent a tracking URL."
+ },
+ {
+  "tool_slug": "browse-ai",
+  "tool_name": "Browse AI",
+  "priority": "medium",
+  "category": "Browser Automation",
+  "recommended_networks_to_check": [
+   "Direct Browse AI partner program search"
+  ],
+  "search_queries": [
+   "Browse AI affiliate program",
+   "Browse AI partner program",
+   "Browse AI referral program"
+  ],
+  "target_pages": [
+   "tools/browse-ai.html",
+   "comparisons/best-ai-tools.html",
+   "articles/index.html"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Listing verified open 2026-09-14 (application=true, approved=true, 20% recurring lifetime) but the join was gated the same day by the PartnerStack network limit. Attempt the marketplace apply only if George is already signed in and the listing still offers it; otherwise wait for the Network Profile to be re-approved. Do not use affiliates.browse.ai/signup - it is dead (HTTP 525) and was never the application route.",
+  "notes": "Do not invent affiliate URLs. Use the official URL until approved. Blocked on the network profile, not on the vendor."
+ },
+ {
+  "tool_slug": "canva-ai",
+  "tool_name": "Canva AI",
+  "priority": "medium",
+  "category": "Creative & Marketing",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "catch-ai",
+  "tool_name": "Catch",
+  "priority": "medium",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "chatgpt",
+  "tool_name": "ChatGPT",
+  "priority": "medium",
+  "category": "General AI Assistant",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "claude",
+  "tool_name": "Claude",
+  "priority": "medium",
+  "category": "General AI Assistant",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "cocounsel",
+  "tool_name": "CoCounsel Legal",
+  "priority": "medium",
+  "category": "Legal",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "copy-ai",
+  "tool_name": "Copy.ai",
+  "priority": "medium",
+  "category": "Marketing",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Closed 2026-09-14. The marketplace listing returns a null company block (no offers, no program state) and the in-app Marketplace fallback ended with the PartnerStack network limit. No verified working application route remains; revisit only if the vendor starts its own program.",
+  "notes": "Do not invent affiliate URLs. Recorded as closed rather than pending, so it stops consuming outreach time."
+ },
+ {
+  "tool_slug": "cursor",
+  "tool_name": "Cursor",
+  "priority": "medium",
+  "category": "Development",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "deepseek",
+  "tool_name": "DeepSeek",
+  "priority": "medium",
+  "category": "General AI Assistant",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "descript",
+  "tool_name": "Descript",
+  "priority": "medium",
+  "category": "Audio & Video",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "approved",
+  "next_action": "Approved 2026-10-16. Tracking link https://get.descript.com/wvafmtthtkp5 is wired on the /tools/descript/ Visit CTA (rel=\"sponsored noopener nofollow\" + disclosure fineprint) and Descript is named on /legal/affiliate-disclosure.html. Re-verify the link resolves on each sweep; re-check the recorded $25 + 15%/12-month terms against the PartnerStack dashboard when George is signed in (the approval email supplied the link only, no rate).",
+  "notes": "Approved 2026-10-16 via PartnerStack (application submitted 2026-09-12). Do not invent affiliate URLs - the wired URL is the vendor-issued one. The 2026-09-14 PartnerStack marketplace limit bars NEW marketplace joins only; it did not cancel this pre-existing application. Editorial score and pros/cons unchanged by the approval."
+ },
+ {
+  "tool_slug": "dragon-copilot",
+  "tool_name": "Microsoft Dragon Copilot",
+  "priority": "medium",
+  "category": "Healthcare",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "elevenlabs",
+  "tool_name": "ElevenLabs",
+  "priority": "medium",
+  "category": "Audio",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "fathom",
+  "tool_name": "Fathom",
+  "priority": "medium",
+  "category": "Meetings",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "fireflies",
+  "tool_name": "Fireflies.ai",
+  "priority": "medium",
+  "category": "Meetings",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "gamma",
+  "tool_name": "Gamma",
+  "priority": "medium",
+  "category": "Presentations",
+  "recommended_networks_to_check": [
+   "PartnerStack"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/gamma/"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "approved",
+  "next_action": "Links live 2026-09-13. Keep the disclosed PartnerStack href on the review Visit CTA.",
+  "notes": "Approved 2026-09-13. Tracking URL https://try.gamma.app/ty4k3o3rpeyd. 25% for the first year on referred customers. 2026-10-14: a Gamma partner email claims 30% for 1 year, contradicting its own approval email and the live listing's single 25% offer; 25% stays the recorded term pending written confirmation (asked 2026-10-14)."
+ },
+ {
+  "tool_slug": "gatsbyai",
+  "tool_name": "GatsbyAI",
+  "priority": "low",
+  "category": "Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/gatsbyai/"
+  ],
+  "best_audiences": [
+   "creators comparing model output before paying for a video subscription",
+   "small advertisers making short product clips on a daily free allowance",
+   "people animating a still image into a clip without editing software"
+  ],
+  "status": "not_started",
+  "next_action": "Ask support@gatsbyai.app whether a partner, referral or creator programme exists; /affiliates, /partners and /contact all return 404, so a direct ask is the only route.",
+  "notes": "Subscriptions from $19.98 a month and packs from $29.90 give a small but workable commission base. No programme terms are published and no tracking URL should be assumed or invented."
+ },
+ {
+  "tool_slug": "geardex",
+  "tool_name": "GearDex",
+  "priority": "low",
+  "category": "Productivity",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership",
+   "Photography creator partnerships"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/geardex/"
+  ],
+  "best_audiences": [
+   "photographers and videographers moving off a gear spreadsheet",
+   "small studios tracking loans, maintenance and gear value",
+   "rental houses needing check-out, custody and insurance records"
+  ],
+  "status": "not_started",
+  "next_action": "Email geardex.help@gmail.com about partner or referral terms; /affiliates and /partners both return 404 and no programme terms are published, so a direct ask is the only route.",
+  "notes": "Subscriptions are $4 to $19 a month ($39 to $179 a year), so commissions are small in absolute terms even at a good rate; the stronger play is audience fit with photography and studio-operations content. No tracking URL exists and none should be invented."
+ },
+ {
+  "tool_slug": "gemini",
+  "tool_name": "Gemini",
+  "priority": "medium",
+  "category": "General AI Assistant",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "github-copilot",
+  "tool_name": "GitHub Copilot",
+  "priority": "medium",
+  "category": "Development",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "grammarly",
+  "tool_name": "Grammarly",
+  "priority": "medium",
+  "category": "Writing & Productivity",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Blocked. Grammarly routes through Impact and the Impact publisher account was rejected (2026-08-25); a private Grammarly Business listing on PartnerStack (co_s4UUPYp9Nuvh1L, approved=false) is gated by the 2026-09-14 PartnerStack network limit. No action until Impact is reapplied to at the traffic threshold.",
+  "notes": "Do not invent affiliate URLs. Use the official URL until approved. Two network-level gates, neither vendor-controlled."
+ },
+ {
+  "tool_slug": "grantable",
+  "tool_name": "Grantable",
+  "priority": "medium",
+  "category": "Nonprofit",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "grok",
+  "tool_name": "Grok",
+  "priority": "medium",
+  "category": "General AI Assistant",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "harvey",
+  "tool_name": "Harvey",
+  "priority": "medium",
+  "category": "Legal",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "heidi-health",
+  "tool_name": "Heidi Health",
+  "priority": "medium",
+  "category": "Healthcare",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "hermes-agent",
+  "tool_name": "Hermes Agent",
+  "priority": "medium",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "approved",
+  "next_action": "Keep public CTAs on /go/nous/; tracking URL stays in affiliate_programs.json.",
+  "notes": "Approved Nous Research referral. $15 off first month on the Nous API and Hermes Agent. Public pages use the /go/nous/ hop."
+ },
+ {
+  "tool_slug": "heygen",
+  "tool_name": "HeyGen",
+  "priority": "medium",
+  "category": "Video",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "hol-registry",
+  "tool_name": "HOL Registry",
+  "priority": "low",
+  "category": "Development",
+  "recommended_networks_to_check": [
+   "Direct vendor programme (michael@hol.org; the site also publishes /guard/affiliates and /sponsor surfaces)"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/hol-registry/"
+  ],
+  "best_audiences": [
+   "developers configuring coding agents",
+   "teams standardising plugin installs across Claude Code, Codex and Cursor",
+   "security-minded agent users"
+  ],
+  "status": "not_started",
+  "next_action": "Email michael@hol.org about affiliate or partner terms (the site publishes a HOL Guard affiliate programme and a sponsor surface but no self-serve catalogue link).",
+  "notes": "Free product: the catalogue costs nothing to browse or submit into, so there is no end-user conversion to monetise. Commercial surfaces found are the HOL Guard affiliate programme (/guard/affiliates) and sponsored placements (/sponsor), which the site says do not change organic rank. No affiliate URL invented."
+ },
+ {
+  "tool_slug": "htmlslides",
+  "tool_name": "HtmlSlides",
+  "priority": "medium",
+  "category": "Presentations",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "humanpen",
+  "tool_name": "HumanPen",
+  "priority": "low",
+  "category": "Productivity",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/humanpen/"
+  ],
+  "best_audiences": [
+   "graduate students and researchers preparing a thesis or manuscript for submission",
+   "non-native English academic writers who need citation-style conversion rather than rewriting",
+   "teams translating or condensing long documents while keeping layout",
+   "developers who would rather call the API than upload through the web app"
+  ],
+  "status": "not_started",
+  "next_action": "Email support@humanpen.net about affiliate, referral or partner terms - there is no public affiliate page (/affiliates and /partners both render the sign-in screen), so a direct ask is the only route. Do not invent a tracking URL. The same message carries the two editorial asks: name Google Ads and Microsoft Ads in the privacy policy (or remove the tags) and add a consent control, and name a jurisdiction in the governing-law clause.",
+  "notes": "Economics are plausible but unproven: one-time credit packs from $19 to $249 with a first-purchase discount and no subscription, so a referral is worth a percentage of a single purchase rather than recurring revenue. Site traffic is the constraint, not the offer. The submitted contact is a free-provider Gmail; the domain's own support@humanpen.net was probed and is live, so that is the address to use for the commercial ask. The audience overlaps the academic-integrity debate, so keep any promotion factual and let the listing's stated limits do the work."
+ },
+ {
+  "tool_slug": "ideogram",
+  "tool_name": "Ideogram",
+  "priority": "medium",
+  "category": "Image Generation",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "imagesv2",
+  "tool_name": "ImagesV2",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/imagesv2/"
+  ],
+  "best_audiences": [
+   "designers and marketers who need poster text and transparent PNGs without a second tool",
+   "e-commerce sellers producing product and lifestyle imagery",
+   "occasional users who would rather buy non-expiring credits than another subscription"
+  ],
+  "status": "not_started",
+  "next_action": "Email support@imagesv2.ai (a verified working mailbox) about affiliate or referral terms; /affiliates, /affiliate, /referral, /partners and /api/referrals all return 404, so a direct ask is the only route.",
+  "notes": "Plans run $8.40 to $84.90 a month and packs $9.90 to $199.90 one-time, so commissions are small per sale; the stronger play is audience fit with design and e-commerce content. Credits are the billing unit, so a referral's lifetime value depends on repeat pack purchases. No tracking URL exists and none should be invented."
+ },
+ {
+  "tool_slug": "instrumentl",
+  "tool_name": "Instrumentl",
+  "priority": "medium",
+  "category": "Nonprofit",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "jasper",
+  "tool_name": "Jasper",
+  "priority": "medium",
+  "category": "Marketing",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "khanmigo",
+  "tool_name": "Khanmigo",
+  "priority": "medium",
+  "category": "Education",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "landlord-studio",
+  "tool_name": "Landlord Studio",
+  "priority": "medium",
+  "category": "Property Management",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "leonardo-ai",
+  "tool_name": "Leonardo AI",
+  "priority": "medium",
+  "category": "Creative",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "lm-studio",
+  "tool_name": "LM Studio",
+  "priority": "medium",
+  "category": "Local AI",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "lovable",
+  "tool_name": "Lovable",
+  "priority": "medium",
+  "category": "Development",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "luma-ai",
+  "tool_name": "Luma AI",
+  "priority": "medium",
+  "category": "Video & 3D",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "magicschool",
+  "tool_name": "MagicSchool",
+  "priority": "medium",
+  "category": "Education",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "make",
+  "tool_name": "Make",
+  "priority": "medium",
+  "category": "Automation",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "marigold-pet",
+  "tool_name": "Marigold Pet",
+  "priority": "low",
+  "category": "Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/marigold-pet/"
+  ],
+  "best_audiences": [
+   "pet owners making a one-off seasonal clip for social",
+   "small pet brands and groomers who want a costume video of a customer's animal",
+   "Spanish-speaking pet accounts, given the fully bilingual funnel"
+  ],
+  "status": "not_started",
+  "next_action": "Email w1952724273@gmail.com about affiliate, referral or partner terms - no /affiliates, /affiliate, /partners, /referral or /api/referrals page exists, so a direct ask is the only route, and the same message should carry the editorial questions about operator identity, the missing governing-law clause and the policy date that predates the domain registration. Do not invent a tracking URL.",
+  "notes": "Economics are thin by construction: a single $6.99 one-time product with no subscription and no upsell ladder means one conversion is worth cents at any plausible commission rate, and the product is seasonal, so treat this as a coverage listing rather than a revenue target. Contact is a free-provider Gmail address; the domain publishes no MX, so a @marigoldpet.com address would not receive mail today and asking for one would be a fabricated blocker."
+ },
+ {
+  "tool_slug": "meta-ai",
+  "tool_name": "Meta AI",
+  "priority": "medium",
+  "category": "General AI Assistant",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "microsoft-copilot",
+  "tool_name": "Microsoft Copilot",
+  "priority": "medium",
+  "category": "Productivity",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "midjourney",
+  "tool_name": "Midjourney",
+  "priority": "medium",
+  "category": "Creative",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "mistral-le-chat",
+  "tool_name": "Mistral Le Chat",
+  "priority": "medium",
+  "category": "General AI Assistant",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "money-tracker",
+  "tool_name": "Money Tracker (Expense & Budget)",
+  "priority": "low",
+  "category": "Productivity",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/money-tracker/"
+  ],
+  "best_audiences": [
+   "people who refuse to hand a bank login to an expense app",
+   "households and flatmates splitting shared rent and bills",
+   "freelancers and small businesses keeping business and personal books separate"
+  ],
+  "status": "not_started",
+  "next_action": "Email kui.zheng@gmail.com (the address given in the submission; the vendor's published support route is freemanzk@163.com and the domain has no MX, so no @quhou123.com address exists) about affiliate or referral terms. No affiliate, partner or referral page exists on the site, so a direct ask is the only route, and the same email should carry the documentation asks: a linked privacy notice that covers financial data, receipts, voice and notification content, a published Terms of Service, and the store prices printed on the site.",
+  "notes": "Subscription revenue is $2.99/month or $29.99/year through the stores, so a percentage commission would be small per conversion and the store takes its cut first. Stronger fit is audience relevance with budgeting and no-bank-linking content than raw commission volume. No tracking URL exists and none should be invented."
+ },
+ {
+  "tool_slug": "n8n",
+  "tool_name": "n8n",
+  "priority": "medium",
+  "category": "Automation",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "notebooklm",
+  "tool_name": "NotebookLM",
+  "priority": "medium",
+  "category": "Research",
+  "recommended_networks_to_check": [
+   "Direct NotebookLM partner program search"
+  ],
+  "search_queries": [
+   "NotebookLM affiliate program",
+   "NotebookLM partner program",
+   "NotebookLM referral program"
+  ],
+  "target_pages": [
+   "tools/notebooklm.html",
+   "comparisons/best-ai-tools.html",
+   "articles/index.html"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "notion-ai",
+  "tool_name": "Notion AI",
+  "priority": "medium",
+  "category": "Productivity",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "ollama",
+  "tool_name": "Ollama",
+  "priority": "medium",
+  "category": "Local AI",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "open-webui",
+  "tool_name": "Open WebUI",
+  "priority": "medium",
+  "category": "Local AI",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "openclaw",
+  "tool_name": "OpenClaw",
+  "priority": "medium",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "openevidence",
+  "tool_name": "OpenEvidence",
+  "priority": "medium",
+  "category": "Healthcare",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "otter-ai",
+  "tool_name": "Otter.ai",
+  "priority": "medium",
+  "category": "Meetings",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "perplexity",
+  "tool_name": "Perplexity",
+  "priority": "medium",
+  "category": "Research",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "pika",
+  "tool_name": "Pika",
+  "priority": "medium",
+  "category": "Video Generation",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "poe",
+  "tool_name": "Poe",
+  "priority": "medium",
+  "category": "Model Hub",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "replit-ai",
+  "tool_name": "Replit AI",
+  "priority": "medium",
+  "category": "Development",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "retouchia",
+  "tool_name": "Retouchia",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/retouchia/"
+  ],
+  "best_audiences": [
+   "ecommerce sellers doing their own product photography cleanup",
+   "creators who need occasional one-off edits rather than a monthly editor seat",
+   "people restoring or colourising old family photos"
+  ],
+  "status": "not_started",
+  "next_action": "Email contact@retouchia.com (verified working mailbox: 250 against the domain MX, control 550) about affiliate or referral terms. No /affiliates, /affiliate, /partners or /referral page exists, so a direct ask is the only route, and the same email should carry the editorial questions about the GPT Image 2.5 model attribution.",
+  "notes": "Price points are low ($9.99 and $29.99 one-time), so commission per conversion is small; the stronger play is audience fit with e-commerce and photo-restoration content. Credits expire after 365 days, so repeat purchase depends on a user's volume rather than on recurring billing. No tracking URL exists and none should be invented."
+ },
+ {
+  "tool_slug": "riverside-fm",
+  "tool_name": "Riverside",
+  "priority": "medium",
+  "category": "Audio Production",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "robylon",
+  "tool_name": "Robylon",
+  "priority": "low",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [
+   "Direct vendor partner programme (the site publishes /partnership covering resell, implement, build-on and refer; contact listings@robylon.ai)"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/robylon/"
+  ],
+  "best_audiences": [
+   "ecommerce and D2C support teams handling order, refund and status tickets",
+   "fintech and SaaS teams automating first-line support",
+   "teams already on Zendesk, Freshdesk or Zoho Desk that want an AI layer rather than a new inbox"
+  ],
+  "status": "not_started",
+  "next_action": "Email listings@robylon.ai about affiliate or referral terms, naming the /partnership page (resell, implement, build-on and refer) and asking which track fits a content review site. Do not invent an affiliate URL.",
+  "notes": "Self-serve B2B SaaS with a free tier and public pricing, so end-user conversion exists in principle, but the buyer is a support organisation rather than an individual, and the review page is a long way from the purchase decision. Priority low until traffic grows. No affiliate URL found or fabricated; the site publishes a partner programme but no tracked consumer affiliate link."
+ },
+ {
+  "tool_slug": "rows",
+  "tool_name": "Rows",
+  "priority": "medium",
+  "category": "Productivity",
+  "recommended_networks_to_check": [
+   "Direct Rows partner program search"
+  ],
+  "search_queries": [
+   "Rows affiliate program",
+   "Rows partner program",
+   "Rows referral program"
+  ],
+  "target_pages": [
+   "tools/rows.html",
+   "comparisons/best-ai-tools.html",
+   "articles/index.html"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "runway",
+  "tool_name": "Runway",
+  "priority": "medium",
+  "category": "Video",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "shortwave",
+  "tool_name": "Shortwave",
+  "priority": "medium",
+  "category": "Email AI",
+  "recommended_networks_to_check": [
+   "Direct Shortwave partner program search"
+  ],
+  "search_queries": [
+   "Shortwave affiliate program",
+   "Shortwave partner program",
+   "Shortwave referral program"
+  ],
+  "target_pages": [
+   "tools/shortwave.html",
+   "comparisons/best-ai-tools.html",
+   "articles/index.html"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "slack-ai",
+  "tool_name": "Slack AI",
+  "priority": "medium",
+  "category": "Productivity",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "sonaopus",
+  "tool_name": "Sonaopus",
+  "priority": "low",
+  "category": "Productivity",
+  "recommended_networks_to_check": [
+   "Direct vendor program (Gumroad affiliate)"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/sonaopus/"
+  ],
+  "best_audiences": [
+   "HR and people-operations buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "approved",
+  "next_action": "Links live 2026-09-13. Keep disclosed affiliate hrefs on the review CTAs.",
+  "notes": "Approved 2026-09-13. Site ref https://sonaopus.com/?ref=58448483. Gumroad product links: AI Recruiting hapwxp, AI Project Management iwiiw, AI HR Management eiddl, AI Executive Assistant pqpox, AI Real Estate Agent wtyioq. 40% one-time, 30-day cookie."
+ },
+ {
+  "tool_slug": "speechify",
+  "tool_name": "Speechify",
+  "priority": "medium",
+  "category": "Audio Production",
+  "recommended_networks_to_check": [
+   "Direct Speechify partner program search"
+  ],
+  "search_queries": [
+   "Speechify affiliate program",
+   "Speechify partner program",
+   "Speechify referral program"
+  ],
+  "target_pages": [
+   "tools/speechify.html",
+   "comparisons/best-ai-tools.html",
+   "articles/index.html"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "spellbook",
+  "tool_name": "Spellbook",
+  "priority": "medium",
+  "category": "Legal",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "suno",
+  "tool_name": "Suno",
+  "priority": "medium",
+  "category": "Music & Audio",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "synthesia",
+  "tool_name": "Synthesia",
+  "priority": "medium",
+  "category": "Video",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/synthesia/",
+   "/go/synthesia/",
+   "/compare/ai-video-avatar-cost/"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "approved",
+  "next_action": "Approved 2026-10-27. Public CTAs use /go/synthesia/, which holds https://www.synthesia.io/?via=george-zikry. No commission rate was supplied, so none is recorded. Re-verify the hop on each sweep.",
+  "notes": "Approved 2026-10-27. Do not invent a commission rate. The wired URL is the vendor-issued via link. Editorial score unchanged."
+ },
+ {
+  "tool_slug": "tarotai-chat",
+  "tool_name": "TAROTAI.CHAT",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/tarotai-chat/"
+  ],
+  "best_audiences": [
+   "readers using tarot as a reflection tool",
+   "creators making tarot content"
+  ],
+  "status": "not_started",
+  "next_action": "Ask support@tarotai.chat whether a partner programme exists; no affiliate page was found on 2026-10-21.",
+  "notes": "Low-ticket packs ($2.99-$10.99) mean a percentage commission would be small per conversion; a flat referral or bundle arrangement is the more plausible structure."
+ },
+ {
+  "tool_slug": "tenantcloud",
+  "tool_name": "TenantCloud",
+  "priority": "medium",
+  "category": "Property Management",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "thefacerating",
+  "tool_name": "TheFaceRating",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/thefacerating/"
+  ],
+  "best_audiences": [
+   "readers choosing a haircut, frames or a colour palette and willing to pay a few dollars for a rendered preview",
+   "personal-styling and beauty creators looking for a quick geometry read before filming",
+   "anyone comparing face-rating tools who wants one that states its formula instead of returning a black-box number"
+  ],
+  "status": "not_started",
+  "next_action": "Email vban@mail.grokbot.com about affiliate, referral or partner terms - no /affiliates, /partners or /referral page exists on the site, so a direct ask is the only route. The same message should ask them to publish a working support address (the domain has no MX, so privacy@ bounces), to gate or disclose GA4 and the Cloudflare beacon, to restore a refund path that does not depend on a dead mailbox, and to name a verifiable company registration. Do not invent a tracking URL.",
+  "notes": "Economics are modest: one-time reports at USD 7.99-24.99 and no subscription, so a single conversion is worth cents unless a partner rate is unusually high; treat this as a coverage listing first. The only working contact is the submission address on a separate domain, because thefacerating.com publishes no mail exchanger - asking them to create one purely for our listing would be a fabricated blocker, but pointing out that their own published privacy address bounces is not."
+ },
+ {
+  "tool_slug": "tunii",
+  "tool_name": "Tunii",
+  "priority": "medium",
+  "category": "Audio",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks"
+ },
+ {
+  "tool_slug": "typingmind",
+  "tool_name": "TypingMind",
+  "priority": "medium",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [
+   "Direct TypingMind partner program search"
+  ],
+  "search_queries": [
+   "TypingMind affiliate program",
+   "TypingMind partner program",
+   "TypingMind referral program"
+  ],
+  "target_pages": [
+   "tools/typingmind.html",
+   "comparisons/best-ai-tools.html",
+   "articles/index.html"
+  ],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "udio",
+  "tool_name": "Udio",
+  "priority": "medium",
+  "category": "Music & Audio",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "v0",
+  "tool_name": "v0",
+  "priority": "medium",
+  "category": "Development",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "whop-cli",
+  "tool_name": "Whop CLI",
+  "priority": "medium",
+  "category": "Automation",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "words-into-music",
+  "tool_name": "Words into Music",
+  "priority": "low",
+  "category": "Audio & Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/words-into-music/"
+  ],
+  "best_audiences": [
+   "people buying a personalised song as a gift",
+   "songwriters wanting a sung demo of finished lyrics",
+   "developers looking for a song-generation API"
+  ],
+  "status": "not_started",
+  "next_action": "Ask contact@wordsintomusic.com whether a partner or referral programme exists; /affiliates and /partners both 404, so a direct ask is the only route.",
+  "notes": "Annual tiers from $59.99 give a workable commission base, but no programme terms are published, so no tracking URL should be assumed or invented."
+ },
+ {
+  "tool_slug": "you-com",
+  "tool_name": "You.com",
+  "priority": "medium",
+  "category": "Research",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "zapier-ai",
+  "tool_name": "Zapier AI",
+  "priority": "medium",
+  "category": "Automation",
+  "recommended_networks_to_check": [],
+  "search_queries": [],
+  "target_pages": [],
+  "best_audiences": [
+   "AI tool buyers",
+   "workflow-specific buyers"
+  ],
+  "status": "not_started",
+  "next_action": "Check direct affiliate/partner page and major networks; update data/affiliate_programs.json only after approval.",
+  "notes": "Do not invent affiliate URLs. Use official URL until approved."
+ },
+ {
+  "tool_slug": "claude-command-center",
+  "tool_name": "CCC (Claude Command Center)",
+  "priority": "low",
+  "category": "Development",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/claude-command-center/"
+  ],
+  "best_audiences": [
+   "developers running several coding agents in parallel on one machine",
+   "solo builders and small engineering teams who want a local, auditable control surface",
+   "readers already using Claude Code or Codex who keep losing sessions in terminal tabs"
+  ],
+  "status": "not_started",
+  "next_action": "Do not plan on commission economics: the product is free with no paid tier, so there is no sale to take a share of and no affiliate programme exists (no /affiliates, /partners or /referral page on the site). The only commercial conversation worth having is a sponsored placement or a referral arrangement if CCC ever ships a paid tier, so ask once whether one is planned, and treat this listing as coverage and citation value rather than a revenue target. Never invent a tracking URL.",
+  "notes": "Free, source-available, single-maintainer project, so the realistic upside is audience and citation rather than revenue. The vendor is unusually reachable for a technical correction - the repository is pushed daily and issues are open - which makes a follow-up about the missing privacy policy and terms page more likely to land than the same ask to a commercial vendor. Contact routes: amir.fish@gmail.com in the submission and amir@amirfish.com published on amirfish.ai, whose domain publishes MX."
+ },
+ {
+  "tool_slug": "trybestspecs",
+  "tool_name": "TryBestSpecs",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/trybestspecs/"
+  ],
+  "best_audiences": [
+   "people buying glasses online who want to preview frames on their own face first",
+   "eyewear retailers and opticians who could embed or link a try-on step",
+   "readers comparing frame shapes for their face shape"
+  ],
+  "status": "not_started",
+  "next_action": "Email the vendor about affiliate or partner terms; no programme is published today (/affiliates, /affiliate, /partners and /referral all 404), so ask in the next reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
+  "notes": "Commission economics are unproven: packs are USD 2.99-14.99 one-time with a one-credit free tier, so any sane commission is pennies per conversion. Priority stays low until traffic grows. The realistic commercial conversation is a sponsored placement or a partnership with an eyewear retailer, not a revenue share on credits."
+ },
+ {
+  "tool_slug": "genjutsu-ai",
+  "tool_name": "Genjutsu AI",
+  "priority": "low",
+  "category": "Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/genjutsu-ai/"
+  ],
+  "best_audiences": [
+   "creators making trend-shaped short video who need a clip recreated with their own cast",
+   "small agencies producing social content for consumer brands",
+   "product and e-commerce marketers who want a vehicle or product swapped into an existing scene"
+  ],
+  "status": "not_started",
+  "next_action": "Email the vendor about affiliate or partner terms; no program is published today (/affiliates, /affiliate, /partners, /referral and /ambassador all 404), so ask in the publication reply rather than inventing a tracking URL. Never invent affiliate URLs; keep the official URL until an approved program exists.",
+  "notes": "Commission economics are unproven at this price ladder: entry is $29.9/month or $99 one-time, so a 20-30% share is single-digit dollars per conversion and the free tier converts on 18 credits. Priority stays low until traffic grows; the realistic commercial conversation is a sponsored placement or a partner deal, not a revenue share on credits."
+ },
+ {
+  "tool_slug": "rapvideo-ai",
+  "tool_name": "RapVideo AI",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/rapvideo-ai/"
+  ],
+  "best_audiences": [
+   "creators chasing the Hotel Lobby / rap-duo trend for TikTok, Reels and Shorts",
+   "people buying novelty birthday, anniversary and roast videos",
+   "small businesses making a short promo rap"
+  ],
+  "status": "not_started",
+  "next_action": "Email alex@imagesv2.ai (the submission contact and a verified working mailbox on the operator's other domain) about affiliate or partner terms; /affiliates and /api/affiliate both return 404 on rapvideoai.com, so a direct ask is the only route.",
+  "notes": "Per-video revenue is small - $3 to $10 a render, or $29.90 to $99.90 a month - so commission per sale is low and the value is trend traffic rather than lifetime spend. Credits are the billing unit and packs never expire, so repeat purchase is not guaranteed. No tracking URL exists and none should be invented."
+ },
+ {
+  "tool_slug": "customgpt",
+  "tool_name": "CustomGPT.ai",
+  "priority": "medium",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [
+   "FirstPromoter"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/customgpt/",
+   "/go/customgpt/"
+  ],
+  "best_audiences": [
+   "teams putting a chatbot on their own documents",
+   "support and knowledge-base buyers comparing query caps"
+  ],
+  "status": "approved",
+  "next_action": "Approved 2026-10-27. Public CTAs use /go/customgpt/, which holds https://customgpt.ai/?fpr=george-881fd5. The public program page lists 15%, 18%, and 20% tiers; this account's tier was not stated on approval, so do not report a single rate.",
+  "notes": "Approved 2026-10-27 via FirstPromoter. Program page: https://customgpt.ai/partners/. Do not invent a tier. The editorial score is from the 2026-10-27 pricing page and is not part of the approval."
+ },
+ {
+  "tool_slug": "umevo",
+  "tool_name": "UMEVO",
+  "priority": "low",
+  "category": "Meetings",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/umevo/"
+  ],
+  "best_audiences": [
+   "people who record in-person meetings, lectures and site visits and want hardware rather than a meeting bot",
+   "professionals who need call recording that a video-call bot cannot do",
+   "buyers comparing a one-time device purchase against a per-seat meeting-notes subscription"
+  ],
+  "status": "not_started",
+  "next_action": "Email support@umevo.ai (and umetech2025@gmail.com, the submission contact) about the published Affiliate/Creators partnership: /pages/affiliate-creators exists but publishes no rate, stating that 'commission, attribution, codes, and settlement are confirmed by email' and that it is a human-led email process rather than a portal. Ask for commission, cookie window and payout terms; do not invent a tracking URL.",
+  "notes": "Hardware margin business: a $79-$159 one-time device with a small recurring AI tail, so commission per sale can be materially higher than the $2-$10 per-render tools in this catalog if the vendor offers a percentage. Year-one AI is included on Note Plus, which means repeat purchases are unlikely and the recurring commission is thin. Editorial verdict stays independent of any commercial terms."
+ },
+ {
+  "tool_slug": "faceloria",
+  "tool_name": "Faceloria",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/faceloria/"
+  ],
+  "best_audiences": [
+   "readers comparing face-analysis and styling-report tools",
+   "creators making glow-up/style content"
+  ],
+  "status": "not_started",
+  "next_action": "Email the vendor about affiliate or partner terms; no program is published (/affiliates etc. not present), so ask in the publication reply. Never invent affiliate URLs; keep the official URL until an approved program exists.",
+  "notes": "One-time $16.99 report economics - a percentage bounty on a $16.99 one-time product is small; priority low until traffic grows."
+ },
+ {
+  "tool_slug": "layergrab",
+  "tool_name": "LayerGrab",
+  "priority": "medium",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/layergrab/"
+  ],
+  "best_audiences": [
+   "ecommerce sellers doing product-photo cutouts",
+   "designers and social editors extracting elements from flat images"
+  ],
+  "status": "not_started",
+  "next_action": "Ask for affiliate terms in the publication reply: the /pricing page already advertises a referral arrangement ('earn 20% of every payment from people who sign up through it, for life, paid in credits or in cash by PayPal'), so a program exists in some form - confirm enrollment route and terms rather than inventing a tracking URL.",
+  "notes": "Vendor's own pricing page advertises a 20%-for-life referral payout (credits or cash via PayPal). Recurring subscription base ($12/$36 monthly) makes this the best affiliate prospect of the 2026-11-02 batch."
+ },
+ {
+  "tool_slug": "crowdwisdomtrading",
+  "tool_name": "CrowdWisdomTrading",
+  "priority": "low",
+  "category": "Research",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership",
+   "Whop marketplace"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/crowdwisdomtrading/"
+  ],
+  "best_audiences": [
+   "self-directed retail traders",
+   "readers comparing trade research/subscription communities"
+  ],
+  "status": "not_started",
+  "next_action": "Email the founder (gilad@) about partner terms in the publication reply; checkout runs through Whop, so a Whop-side affiliate route may exist. Never invent affiliate URLs.",
+  "notes": "Recurring $29.99/mo product with real legal footing; finance-adjacent, so keep the editorial verdict visibly independent of any commercial terms."
+ },
+ {
+  "tool_slug": "dreamlock",
+  "tool_name": "Dreamlock",
+  "priority": "low",
+  "category": "Productivity",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/dreamlock/"
+  ],
+  "best_audiences": [
+   "iPhone users journaling or tracking sleep/dreams",
+   "readers comparing private AI journal apps"
+  ],
+  "status": "not_started",
+  "next_action": "Email costelgn@gmail.com in the publication reply whether any partner/referral arrangement exists; Apple IAP billing leaves little margin for web affiliate payouts. Never invent affiliate URLs.",
+  "notes": "IAP economics - Apple takes its cut, so a meaningful web affiliate program is unlikely; priority low."
+ },
+ {
+  "tool_slug": "reeltada",
+  "tool_name": "ReelTada",
+  "priority": "low",
+  "category": "Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/reeltada/"
+  ],
+  "best_audiences": [
+   "social video creators batching trend-format shorts",
+   "small agencies doing reactive/trend content"
+  ],
+  "status": "not_started",
+  "next_action": "Email support@reeltada.com about partner terms in the publication reply; no program published. Never invent affiliate URLs.",
+  "notes": "One-time-pack economics ($9.90-$59.90) cap affiliate value; the operator's unidentified status and templated legal set mean any commercial relationship needs the vendor identified first."
+ },
+ {
+  "tool_slug": "pawheadshots",
+  "tool_name": "PawHeadshots",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/pawheadshots/"
+  ],
+  "best_audiences": [
+   "pet owners buying one-off novelty gifts",
+   "pet-brand and rescue social accounts"
+  ],
+  "status": "not_started",
+  "next_action": "Ask Vban LLC in the publication reply whether they run an affiliate or partner program; no program is published on the site. Never invent affiliate URLs.",
+  "notes": "One-time $19.90/$29.90 packs cap affiliate value at a few dollars a sale, and the operator publishes no partner page. Any commercial relationship also needs the company's jurisdiction and address, which the site does not carry."
+ },
+ {
+  "tool_slug": "dreammmer",
+  "tool_name": "DREAMMMER",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/dreammmer/"
+  ],
+  "best_audiences": [
+   "marketers and small creative teams paying monthly for AI image and video",
+   "designers comparing image models before committing"
+  ],
+  "status": "not_started",
+  "next_action": "Ask in the publication reply whether DREAMMMER runs an affiliate or partner program; /affiliates, /affiliate, /partners and /referral all 404 and no program is published. Never invent affiliate URLs.",
+  "notes": "Subscription pricing ($29-$299/mo) makes this the best affiliate shape of the recent Creative batch if a program exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive."
+ },
+ {
+  "tool_slug": "accuratescribe",
+  "tool_name": "AccurateScribe.ai",
+  "priority": "low",
+  "category": "Audio & Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/accuratescribe/"
+  ],
+  "best_audiences": [
+   "podcasters and journalists transcribing interviews weekly",
+   "students and academics working through lecture recordings",
+   "small teams that want one flat transcription plan instead of a minutes meter"
+  ],
+  "status": "not_started",
+  "next_action": "A programme is already published at /affiliate - 40% on subscriptions, weekly Friday payouts by PayPal or bank - so the ask is for the signup route and tracking link rather than whether terms exist. Signup needs an account, which is the operator's lane; never invent an affiliate URL.",
+  "notes": "Strongest affiliate shape in this batch: a $119.99/year and $19.99/month single plan at 40% recurring beats most Creative listings for payout, and the programme page is already live. Held pending signup terms only; nothing wired into affiliate_programs.json."
+ },
+ {
+  "tool_slug": "makifyai",
+  "tool_name": "Makify AI",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/makifyai/"
+  ],
+  "best_audiences": [
+   "e-commerce sellers producing listing and ad images in volume",
+   "small marketing teams replacing stock photography with generated product scenes",
+   "creators already paying for several image-model subscriptions at once"
+  ],
+  "status": "not_started",
+  "next_action": "No affiliate or partner page exists - /affiliate, /affiliates, /partners, /referral and /program all 404 on 2026-11-10 - so the ask is whether a partner or reseller programme exists and, if it does, for terms and a tracking link. Never invent an affiliate URL.",
+  "notes": "Subscription-led revenue shape: $118.80-$958.80 annual plans sit above $9.90-$199 one-time packs, so a recurring commission would be worth more than a pack sale if the vendor offers one. Listing carries known disclosure gaps (no controller, retention or training statement; tags before consent), which belong in the cons rather than the commercial ask."
+ },
+ {
+  "tool_slug": "aiimagetoprompt",
+  "tool_name": "AI Image to Prompt",
+  "priority": "low",
+  "category": "Creative",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/aiimagetoprompt/"
+  ],
+  "best_audiences": [
+   "creators who already have reference images and need written prompts for Midjourney, Flux or Stable Diffusion",
+   "design and marketing teams standardising a visual direction from moodboards",
+   "hobbyists learning prompt structure from their own photographs"
+  ],
+  "status": "not_started",
+  "next_action": "The product is free and no partner surface exists - /affiliates, /affiliate and /api/affiliate all 404 on 2026-11-12 - so there is no commission to earn on a generation and no link to wire. The only commercial question worth asking is whether the vendor plans a paid tier or a partner programme once the ShipAny boilerplate pricing page is replaced; ask that in the publication reply rather than inventing an affiliate URL.",
+  "notes": "Zero revenue surface today: free tool, no checkout, no affiliate page. Do not treat the /pricing route's $99-$299 figures as this vendor's price list - they are the ShipAny boilerplate's own plans for a different product. Revisit only if a paid tier appears."
+ },
+ {
+  "tool_slug": "agentmsgr",
+  "tool_name": "AgentMsgr",
+  "priority": "low",
+  "category": "AI Agents",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/agentmsgr/"
+  ],
+  "best_audiences": [
+   "people paying for agents on two or more platforms who want them in one thread",
+   "agencies running a room per client across the agents each client already has",
+   "builders of email-only bots who need a texting interface rather than a chat UI to code"
+  ],
+  "status": "not_started",
+  "next_action": "No partner surface exists yet: /affiliates, /partners and /affiliate all 404 on 2026-11-13 and no commission, tracking link or programme page appears anywhere on the site, so nothing is wired and no tracking URL was invented. The vendor mail asks for affiliate or partner terms separately, since a $10.49-$29.99/month subscription is the kind of low-ticket recurring product where a 20-30% referral is the only workable shape. Re-check /affiliates when they reply.",
+  "notes": "New lead, published 2026-11-13 at 3.9/5. Low priority because the plan ceiling is $29.99/month and the product is six days old, so conversion volume this year will be negligible; it is a relationship to open rather than revenue to book. The audience overlaps our own AI Agents category (Hermes Agent, OpenClaw, TypingMind), which is worth a cross-link once the review has traffic."
+ },
+ {
+  "tool_slug": "01router",
+  "tool_name": "01Router",
+  "priority": "low",
+  "category": "Video",
+  "recommended_networks_to_check": [
+   "Direct vendor partnership"
+  ],
+  "search_queries": [],
+  "target_pages": [
+   "/tools/01router/"
+  ],
+  "best_audiences": [
+   "developers adding video or image generation to an app who would otherwise integrate several vendors",
+   "agencies and small SaaS teams reselling model access to their own users with a markup",
+   "creators comparing per-second video generation prices across providers"
+  ],
+  "status": "not_started",
+  "next_action": "No partner surface exists: /affiliates, /affiliate, /partner, /partners and /referral all 404 on 2026-11-13, and no commission, tracking link or programme page appears anywhere on the site, so nothing is wired and no tracking URL was invented. The vendor mail asks for affiliate or partner terms separately. The natural shape here is a percentage of credit-pack spend or a referral credit rather than a per-subscription commission, since there is no subscription. Re-check /affiliates when they reply.",
+  "notes": "New lead, published 2026-11-13 at 3.7/5. Low priority: the product is three weeks old, sells one-time credit packs rather than recurring plans, and a paying customer spends what their own generation volume dictates, so conversion value this year is small and unproven. The strategic reason to keep it on the list is the projects/markup feature - resellers are the audience most likely to spend heavily - and the per-provider price tables, which are a linkable asset."
+ }
 ]
