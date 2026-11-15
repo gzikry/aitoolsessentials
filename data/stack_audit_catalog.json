@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14",
+  "generated_at": "2026-11-15",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2748,6 +2748,32 @@
         "meetings",
         "presentations",
         "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "edit-pic-text",
+      "name": "Edit Pic Text",
+      "category": "Creative",
+      "official_url": "https://editpictext.com/",
+      "review_url": "/tools/edit-pic-text/",
+      "price_label": "Subscriptions, monthly: Basic $11.90/mo for 100 credits, Standard $29.90/mo for 300, Pro $79.90/mo for 1,050. Yearly, billed as $118.80 / $238.80 / $358.80 and shown as $9.90 / $19.90 / $29.90 a month (the plan config carries 1,800 / 4,800 / 10,800 credits for the year, which is a different allowance from the monthly cards - ask before choosing yearly). One-time credit packs, valid 183 days: Lite $9.90 for 80 credits, Core $19.90 for 150, Plus $29.90 for 250, Max $39.90 for 400, up to $199 for 2,500. A $4.99 Starter Pass carries 40 credits for 7 days. One edit, translation or enhance costs 5 credits (1K); text extraction costs 1. Free: 3 credits at sign-up plus a daily check-in ladder (3/3/6/3/3/3/9) totalling 30, which is what the 'Get 30 credits for free' badge counts. USD; the Chinese mirror prices the same three plans at CNY 87 / 219 / 583 a month. Verified 2026-11-15 on /pricing, /zh/pricing and the served plan config.",
+      "pricing_summary": "Monthly plans, server-rendered on /pricing: Basic $11.90/mo for 100 credits, Standard $29.90/mo for 300, Pro $79.90/mo for 1,050. Yearly: $118.80, $238.80 and $358.80 billed a year and shown as $9.90, $19.90 and $29.90 a month, badged 17%/33%/50% off; the plan config behind the page carries 1,800 / 4,800 / 10,800 credits for the year, which does not match the monthly cards' per-month allowances. One-time credit packs from the same config, valid 183 days: Lite $9.90/80 credits, Core $19.90/150, Plus $29.90/250, Max $39.90/400, $59.90/650, $79.90/900, $99.90/1,200, $199/2,500; a Starter Pass is $4.99 for 40 credits over 7 days, and member top-ups run $29.90/300 up to $899/12,500. Unit costs: 5 credits per edit, translation or enhance at 1K and 1 credit per text extraction, printed by the editor as 'Credits required: 5 Credits'. Free tier: 3 credits at sign-up plus a 7-day check-in ladder (3/3/6/3/3/3/9) totalling 30. The Chinese mirror /zh/pricing prices the same three plans at CNY 87 / 219 / 583 a month. The pricing page's 'Compare Plans' table is a different catalogue and is recorded in cons rather than as the price of this product. Verified 2026-11-15.",
+      "pricing_url": "https://editpictext.com/pricing",
+      "pricing_checked_date": "2026-11-15",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "research",
+        "coding",
+        "design",
+        "video"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

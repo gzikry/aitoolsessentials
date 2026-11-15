@@ -467,6 +467,11 @@
     "random-topic-generator": {
       "date": "2026-11-14",
       "digest": "Free $0: unlimited topic draws (1/3/5 from a 250-topic library in 8 languages), 1/2/3/5-minute timer, local recording, no account, no AI report. Standard $19.9/mo for 2,000 credits/mo; Pro $59.9/mo for 6,000. One-time packs: $5/500, $10/1,000, $20/2,000, 'no auto-renewal'. AI analysis 100 credits a run (~$1 on every path; the $10 card states 'Up to 10 AI analyses (100 credits each)'). Stripe; 'cancel anytime' on both plans. Identical 19.9/59.9 on the /zh mirror and in the shipped PLANS config. Checked 2026-11-14."
+    },
+    "edit-pic-text": {
+      "date": "2026-11-15",
+      "digest": "Monthly: Basic $11.90/100 credits, Standard $29.90/300, Pro $79.90/1,050. Yearly: $118.80, $238.80, $358.80 a year shown as $9.90, $19.90, $29.90 a month (17%/33%/50% off), with 1,800/4,800/10,800 credits for the year in the plan config - a different allowance from the monthly cards. One-time packs valid 183 days: Lite $9.90/80 credits, Core $19.90/150, Plus $29.90/250, Max $39.90/400 up to $199/2,500; Starter Pass $4.99/40 credits/7 days; member top-ups $29.90/300 to $899/12,500. Unit cost 5 credits per edit, translate or enhance at 1K and 1 credit per extraction. Free: 3 credits at sign-up plus a 7-day check-in ladder (3/3/6/3/3/3/9) totalling 30. CNY mirror: 87 / 219 / 583 a month. Verified 2026-11-15 on /pricing, /zh/pricing and the served plan config.",
+      "verified_against": "https://editpictext.com/pricing"
     }
   },
   "changes": [
@@ -800,5 +805,5 @@
       "note": "Runway: recorded pricing updated since the 2026-09-18 check, re-verified 2026-11-14."
     }
   ],
-  "updated": "2026-11-14"
+  "updated": "2026-11-15"
 }

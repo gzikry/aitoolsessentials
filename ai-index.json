@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-11-14",
-  "tools_count": 112,
+  "generated": "2026-11-15",
+  "tools_count": 113,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -819,6 +819,13 @@
       "category": "Education",
       "price": "Free $0: unlimited topic draws (1, 3 or 5 at a time from a 250-topic library in English, Chinese, French, Indonesian, Arabic, Turkish, Thai and Hindi), the 1/2/3/5-minute timer and local recording, with no account and no credits; free accounts cannot request the AI report. Standard $19.9 a month for 2,000 credits a month; Pro $59.9 a month for 6,000 credits a month (the page calls it 3x the monthly credits), both 'valid for the current month; cancel anytime'. One-time packs, 'one-time payment, no auto-renewal': $5.00 for 500 credits, $10.00 for 1,000, $20.00 for 2,000. AI analysis is 100 credits a run, so a $5 pack is about 5 analyses, $10 about 10 (the card itself says 'Up to 10 AI analyses (100 credits each)'), Standard about 20 a month and Pro about 60 - roughly $1 an analysis on every path. Paid by card through Stripe; the plan prices, credit allowances and Stripe price keys also appear in the shipped app bundle. USD. Verified 2026-11-14.",
       "url": "https://aitoolsessentials.com/tools/random-topic-generator/"
+    },
+    {
+      "name": "Edit Pic Text",
+      "slug": "edit-pic-text",
+      "category": "Creative",
+      "price": "Subscriptions, monthly: Basic $11.90/mo for 100 credits, Standard $29.90/mo for 300, Pro $79.90/mo for 1,050. Yearly, billed as $118.80 / $238.80 / $358.80 and shown as $9.90 / $19.90 / $29.90 a month (the plan config carries 1,800 / 4,800 / 10,800 credits for the year, which is a different allowance from the monthly cards - ask before choosing yearly). One-time credit packs, valid 183 days: Lite $9.90 for 80 credits, Core $19.90 for 150, Plus $29.90 for 250, Max $39.90 for 400, up to $199 for 2,500. A $4.99 Starter Pass carries 40 credits for 7 days. One edit, translation or enhance costs 5 credits (1K); text extraction costs 1. Free: 3 credits at sign-up plus a daily check-in ladder (3/3/6/3/3/3/9) totalling 30, which is what the 'Get 30 credits for free' badge counts. USD; the Chinese mirror prices the same three plans at CNY 87 / 219 / 583 a month. Verified 2026-11-15 on /pricing, /zh/pricing and the served plan config.",
+      "url": "https://aitoolsessentials.com/tools/edit-pic-text/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

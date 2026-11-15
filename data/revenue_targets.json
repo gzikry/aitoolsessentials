@@ -2032,5 +2032,25 @@
     "status": "not_started",
     "next_action": "No partner surface exists yet: /affiliates, /partners, /affiliate and /referral all 404 on 2026-11-14 and no commission, tracking link or programme page appears anywhere on the site, so nothing was wired and no tracking URL was invented. The publication reply asks for affiliate or partner terms separately, because the shape is workable for a referral - a $19.9/month Standard and $59.9/month Pro subscription against about $1 per one-time analysis means a 20-30% referral is the only sensible structure. Re-check for a programme page when they reply.",
     "notes": "New lead, published 2026-11-14 at 3.6/5. Low priority: the plan ceiling is $59.9/month and the audience is speaking practice, which is a thin slice of an AI-tool readership. Second product from the operator whose protocolexplorer.org submission is held on a scope question, so one reply may settle both threads. Worth a later cross-link from the Education category hub rather than from the AI-agent and productivity pages it does not overlap."
+  },
+  {
+    "tool_slug": "edit-pic-text",
+    "tool_name": "Edit Pic Text",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/edit-pic-text/"
+    ],
+    "best_audiences": [
+      "ecommerce and small marketing teams editing prices and offer copy on exported artwork",
+      "designers and social media managers fixing typos without the source file"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether Edit Pic Text runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and no programme is published. Never invent affiliate URLs.",
+    "notes": "Subscription pricing from $11.90/mo plus one-time packs gives a workable affiliate shape if a programme exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive."
   }
 ]

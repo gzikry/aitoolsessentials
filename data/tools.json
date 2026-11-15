@@ -6806,5 +6806,94 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
     "rating_rationale": "Job fit 4.0/5: the free loop is genuinely useful and genuinely free - a 250-topic library in eight languages, categories, a timer and local recording, all client-side - and the paid half answers a real question ('was I clear, and what were my filler words?') with a specified six-dimension rubric rather than a vague score. Pricing reconciles across the page, the locale mirror and the shipped config at about $1 an analysis. Transparency 3.2/5, which is what holds the score at 3.6: the Privacy Policy and Terms both state the service requires sign-in and offers no anonymous access, the exact opposite of the free tier the site ships; a recurring subscription and one-time packs are sold with no refund policy published anywhere while the Terms point to one that 404s; no company, country, address, controller or governing law appears and neither legal page carries a date; and GA4 plus AdSense load on every page, including the policy that names neither. The named processors (OpenRouter, Stripe, Google), the written limit on use of recordings and the in-product deletion paths are why it sits above the catalogue's transparency floor rather than below it - the deficits are copy and paperwork, not a hidden data practice. The remaining gap to 3.8 is evidence: no independent review or user report exists, and the analysis quality could not be checked without an account."
+  },
+  {
+    "slug": "edit-pic-text",
+    "name": "Edit Pic Text",
+    "category": "Creative",
+    "best_for": "Creators, ecommerce and small marketing teams who need to change words that are already baked into an image - fixing a typo on an exported flyer, updating a price on a product shot, relabelling UI copy in a screenshot - without the original design file, at 5 credits per edit with the cost shown before you send. Also worth a look if you need text extraction (1 credit) or image translation in the same place. Not a fit if you need the vendor to name the company you are paying, if you are editing identity documents or payment screenshots (banned in its own terms), or if you want a vendor whose pricing page describes only the product it sells.",
+    "price": "Subscriptions, monthly: Basic $11.90/mo for 100 credits, Standard $29.90/mo for 300, Pro $79.90/mo for 1,050. Yearly, billed as $118.80 / $238.80 / $358.80 and shown as $9.90 / $19.90 / $29.90 a month (the plan config carries 1,800 / 4,800 / 10,800 credits for the year, which is a different allowance from the monthly cards - ask before choosing yearly). One-time credit packs, valid 183 days: Lite $9.90 for 80 credits, Core $19.90 for 150, Plus $29.90 for 250, Max $39.90 for 400, up to $199 for 2,500. A $4.99 Starter Pass carries 40 credits for 7 days. One edit, translation or enhance costs 5 credits (1K); text extraction costs 1. Free: 3 credits at sign-up plus a daily check-in ladder (3/3/6/3/3/3/9) totalling 30, which is what the 'Get 30 credits for free' badge counts. USD; the Chinese mirror prices the same three plans at CNY 87 / 219 / 583 a month. Verified 2026-11-15 on /pricing, /zh/pricing and the served plan config.",
+    "rating": 3.1,
+    "official": "https://editpictext.com/",
+    "summary": "Edit Pic Text rewrites the words already inside a picture instead of laying new text on top: you upload a JPG, PNG or WebP up to 30MB, the editor outlines the text it detects, you type the replacement - or leave it blank to remove the words - and the result comes back with the surrounding typeface, weight and background redrawn so the edit does not look pasted on. Instructions in plain English ('keep the logo', 'match the bold style') steer harder edits, and exports go to 1K, 2K or 4K. Four sibling pages cover the jobs people actually search for - screenshot text editing, OCR-style extraction that keeps headings and tables, translation into 110 languages with the original layout, and sharpening blurry text - each with a Chinese mirror. The workflow is honest about cost (5 credits per edit, shown before you send) and about limits (IDs, passports, receipts and payment screenshots are refused). What keeps it below the rest of the catalog is the paperwork around the product: the pricing page's comparison table prices video models this site does not sell, the same table charges 3 credits for an edit the editor bills at 5, the FAQ says refunds stop at 50 used credits while the refund policy says 10, and no company, address or jurisdiction is named anywhere.",
+    "use_cases": [
+      "Correcting a typo, a wrong date or a name on an exported poster, flyer or invitation when the design file is gone",
+      "Updating a price or an offer on a product photo, sale banner or label without reopening the layout",
+      "Changing a button label or heading inside an app or webpage screenshot while keeping the UI intact",
+      "Localising campaign artwork: swap the words into another language and keep the original font and composition",
+      "Pulling text out of a photo, scan or screenshot as editable headings, lists and tables, or as a .txt file",
+      "Making blurry text in a scan or screenshot legible by boxing the words and upscaling to 2K or 4K"
+    ],
+    "pros": [
+      "The single job is done properly: text is detected automatically, several areas can be selected and replaced in one run, and the background behind the old letters is rebuilt, which is the part most editors get wrong",
+      "Cost is visible before you commit - the editor prints 'Credits required: 5 Credits', extraction costs 1 credit, and the plan cards convert an allowance into real output (100 credits = 20 edits at 1K)",
+      "A real, dated legal set exists: Privacy Policy, Terms of Service and Refund Policy all return 200 and are specific about uploads, edit history, deletion requests and renewal refunds",
+      "Terms section 8 states plainly that the site is independent and names every model vendor it uses (OpenAI, Google, xAI, ByteDance, Black Forest Labs, Alibaba, MiniMax, Ideogram, Kuaishou, Luma AI, PixVerse, Recraft, Midjourney, Stability AI) rather than leaving the affiliation question open",
+      "The privacy policy says uploads and results are not used to train the site's own models, lists the categories of processor that touch them (storage, payment, analytics including session-replay, AI model providers) and gives a deletion route with an email address",
+      "llms.txt publishes the limits buyers usually learn after paying: very small text, curved text and heavily stylised lettering may need several attempts, and IDs, passports, certificates, receipts and payment screenshots are not supported",
+      "Paid plans carry a commercial licence and no watermark, and that is stated on the plan cards rather than buried",
+      "Stripe checkout is enabled in the served public config, with Cloudflare Turnstile in front of it, so the purchase path is live rather than announced"
+    ],
+    "cons": [
+      "The pricing page sells a catalogue this product does not have: under 'Compare Plans' it lists a Video table - MiniMax H3 480p at 25 credits/5s (4, 12 or 42 videos), Seedance 2.5 480p at 125, Seedance 2.0 at 100, Seedance 2.0 Fast at 50, Seedance 2.0 Lite at 85 and Wan 2.7 720p at 20 - while every product page is image text editing and /video and /video-generator both return 404. The same table renders on /zh/pricing under the heading 视频, and the paid plans' 'Access to all models & features' hint lists Seedance 2.5/2.0/Fast/Lite, Wan 3.0, Wan 2.7, MiniMax H3 and FLUX 3 Video, so a buyer is told they are buying video generation that this site does not offer",
+      "The same pricing page contradicts the editor on the core unit of sale: the comparison table prices 'GPT Image 2 - 3 credits/image', while the editor prints 'Credits required: 5 Credits' for a GPT Image 2 edit and every plan card converts 100 credits into 20 edits. Both numbers are on the same site today, so a buyer cannot tell whether an edit costs 3 or 5 credits",
+      "Refunds disagree with themselves on the money-back threshold: the pricing FAQ says a refund is available within 3 days 'provided you've used no more than 50 paid credits from that purchase', while /refund-policy says 'You have used 10 credits or less of the paid credits from that purchase' - and repeats 10 in sections 3 and 5. The policy also deducts a 10% processing fee, which the FAQ does not mention",
+      "No registered company, trading name, postal address or named controller appears on any page, and the Terms do not name a jurisdiction: section 13 reads 'governed by and construed in accordance with the laws of the jurisdiction in which editpictext.com operates', which is circular. A buyer cannot tell who they are contracting with or where a dispute would be heard",
+      "For a product whose whole function is uploading images, the processors are named only by category - 'AI model providers that read your image and perform the text edits you request' - and the policy adds that 'the specific providers we work with may change over time', so a reader cannot find out where their image is sent",
+      "The legal pages carry a calendar date of Feb 7, 2026 next to 'Last updated: Oct 14, 2026', while the domain was registered 2026-10-10 - the earlier date predates the domain by eight months and cannot be when these documents were written",
+      "Six of the ten tiles in the homepage's 'More Than a Pic Text Editor' grid have no link at all (Remove Text from Image, Blur Text in Image, Add Text to Photo, Remove Background from Text, Font Finder, AI Photo Editor): they render as images with no destination, so a reader who clicks gets nothing. Only the four tile pages the sitemap lists are live",
+      "The shipped build still carries another product's metadata strings - the message bundle defines the site title as 'Create AI Videos & Images Online' and the description as 'Create stunning AI images with GPT Image 2.0. Turn text to image, animate photos, generate stunning visuals' - alongside sign-in modal copy for 'Free AI Video Generation'. The visible page title is correct, so this is a build leftover rather than what a reader sees, but it is the same boilerplate the pricing table came from",
+      "The domain is 35 days old (registered 2026-10-10), there is no independent review or user report anywhere that we could find, and nothing here has been tested hands-on - the judgement rests entirely on the served pages and the public config",
+      "support@editpictext.com is the only published route, and the domain runs Cloudflare Email Routing with a catch-all MX, so the address accepts mail but a probe cannot confirm a human reads it; /contact and /about both return 404"
+    ],
+    "key_features": [
+      "Automatic text detection that outlines every text block in the upload, with click-to-select replacement and blank-to-remove",
+      "Font, size, colour and background reconstruction so the new words match the original artwork instead of sitting on top of it",
+      "Plain-English extra instructions ('keep the logo', 'match the bold style') applied to the selected area only",
+      "Input JPG, PNG or WebP up to 30MB; export at 1K, 2K or 4K depending on aspect ratio",
+      "Screenshot text editor page for app, chat and webpage captures, with the interface and spacing preserved",
+      "Text extraction that keeps headings, paragraphs, lists and tables intact, copyable or downloadable as .txt",
+      "Image translation into 110 languages with the picture returned in the original font and layout, then editable line by line",
+      "Blurry-text enhancer that boxes the words you need and upscales to 2K or 4K before extraction",
+      "Credit meter printed before each run: 5 credits for an edit, translation or enhance at 1K, 1 credit for extraction",
+      "Google sign-in with Cloudflare Turnstile, edit history you can revisit, and Stripe checkout on paid plans"
+    ],
+    "faq": [
+      [
+        "What is Edit Pic Text?",
+        "A browser AI image text editor that changes the words already inside a photo, screenshot or design instead of adding a new text layer. You upload a JPG, PNG or WebP up to 30MB, the editor outlines the text it detects, you type the replacement (or leave it blank to delete the words), and it redraws them in the original font, size and colour with the background repaired. Paid plans add a commercial licence and watermark-free output; exports go to 1K, 2K or 4K."
+      ],
+      [
+        "How much does Edit Pic Text cost?",
+        "Monthly plans are Basic $11.90 for 100 credits, Standard $29.90 for 300 and Pro $79.90 for 1,050, with yearly billing at $118.80, $238.80 and $358.80 a year (shown as $9.90, $19.90 and $29.90 a month). One-time credit packs run from $9.90 for 80 credits to $199 for 2,500 and stay valid 183 days, and a $4.99 Starter Pass gives 40 credits for 7 days. An edit, translation or enhance costs 5 credits at 1K and text extraction costs 1, so a $11.90 month is about 20 edits."
+      ],
+      [
+        "Is there a free tier?",
+        "Yes, and it is small but recurring. Signing in with Google grants 3 credits, and a daily check-in ladder adds 3, 3, 6, 3, 3, 3 and 9 over the first week for 30 in total - which is the number behind the 'Get 30 credits for free' badge. No card is required to start. Extraction at 1 credit is the cheapest way to test whether the OCR holds up on your own files."
+      ],
+      [
+        "Can I edit text in a screenshot, poster or product photo?",
+        "That is the core use case. The screenshot page keeps the interface, icons and spacing intact while you swap a label or heading; the poster and product-label path is for prices, dates and offers on images whose design file you no longer have. What the site refuses is documents: IDs, passports, certificates, receipts and payment screenshots are excluded in its own documentation, and edits meant to mislead are not allowed."
+      ],
+      [
+        "Does it work in languages other than English?",
+        "The site says English and other Latin-alphabet languages work best and that Chinese, Japanese and Hindi are supported, and it sells a dedicated translation page that returns the image in the original font and layout across 110 languages. Because the tool redraws type rather than overlaying it, quality depends on the script and the original lettering - very small text, curved text and heavily stylised lettering are the cases it warns may need several attempts."
+      ],
+      [
+        "What should I check before paying?",
+        "Two things on the site itself. Ask which refund threshold applies, because the pricing FAQ says a refund survives up to 50 used credits while the refund policy says 10. And read the plan you are buying carefully: the comparison table on the pricing page prices video models this product does not sell and puts an edit at 3 credits where the editor charges 5, so the editor's own meter is the number to trust."
+      ]
+    ],
+    "trial_checklist": [
+      "Spend the 3 sign-up credits plus the first check-in credits on one real file of your own - a typo you actually need fixed - and watch the 'Credits required' line before you press Create so you learn the meter rather than the marketing",
+      "Test the font you care about: edit a headline in a face that is not a default sans, then zoom to 100% and compare letter shapes, spacing and the repaired background before deciding the tool is good enough for client work",
+      "Export the same result at 1K and 4K and check that the redrawn text survives upscaling, since the plan cards price everything at 1K and higher resolutions are where redraw artefacts show",
+      "Run one OCR extraction (1 credit) on a scan or screenshot with a table in it - extraction is the cheapest test of the underlying model and tells you whether the paid packs are worth buying",
+      "Read the refund clause on /refund-policy rather than the pricing FAQ before any purchase, note that both conditions (3 days, credit cap) must hold and that a 10% processing fee is deducted, and keep under the lower figure if you might want your money back",
+      "Do not upload identity documents, receipts or payment screenshots - the site's own documentation excludes them and its terms forbid misleading edits"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.0/5 - this is a narrow job done with unusual care: the words inside the picture are rewritten rather than overlaid, the background is repaired, several text blocks can be changed in one run, output goes to 4K, and four sibling pages cover the adjacent jobs (screenshots, extraction, translation, blurry text) in two languages. The unit price is transparent (5 credits per edit, printed before you send) and cheap, the legal set is real and specific about uploads and deletion, and the non-affiliation clause names every model vendor instead of leaving it hanging. It is not higher because nothing was tested hands-on, the free tier is 30 credits spread over a week, and the four pages are the whole product surface. Transparency 2.6/5, and that is what pulls the score to 3.1, below the rest of the catalog: the sale page's comparison table prices video models this site does not sell and contradicts the editor on what an edit costs (3 credits vs 5), the FAQ and the refund policy set different money-back thresholds (50 used credits vs 10), no company, address or jurisdiction is named and the governing-law clause is circular, the AI processors are named only by category for a product built on uploading images, the legal pages are dated before the domain existed, and six homepage tiles lead nowhere - the same boilerplate fingerprints as aiimagetoprompt, which is the only entry this sits beside."
   }
 ]
