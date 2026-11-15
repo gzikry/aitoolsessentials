@@ -2,7 +2,7 @@
 
 **Three drafts, three sends, all George's lane. Nothing below has been sent.**
 
-309 tracked requests, **52 live unpitched, 1 sendable** (`pitch-queue.md`, built today), 44 dead on
+309 tracked requests, **63 live unpitched, 1 sendable** (`pitch-queue.md`, built today), 44 dead on
 the platform, **0 newly expired**. The one sendable row is **InformationWeek / Kelsey Ziser, 5 days
 old** — the only request inside the 10-day line with both an on-beat angle and a resolved direct
 address. The other two are live and late (19 and 18 days) against this monitor's own cold line, not

@@ -245,13 +245,20 @@ def collect() -> list[dict]:
                 _dt = datetime.fromisoformat(str(_pub).replace("Z", "+00:00"))
                 if _dt.tzinfo is None:
                     _dt = _dt.replace(tzinfo=timezone.utc)
-                rec["days_old"] = (datetime.now(timezone.utc) - _dt).total_seconds() / 86400
+                # WHOLE DAYS, not a fraction. verify_journo_requests.py and build_digest.py both
+                # report `days_old` as an int (datetime subtraction .days), and this recompute used
+                # a fractional quotient. On 2026-11-15 the two artefacts therefore disagreed on the
+                # same rows: the digest put 11 requests at exactly 10 days ("cross tomorrow") while
+                # the queue's 10.4-day value already counted them cold, so the queue headline read
+                # "52 live" against the digest's "63 live unpitched" — the same defect class as a
+                # typed count, reached by a unit mismatch rather than by hand-editing.
+                rec["days_old"] = (datetime.now(timezone.utc) - _dt).days
                 rec["age_source"] = f"page datePublished (page probed {v.get('checked', '?')})"
             except ValueError:
-                rec["days_old"] = float(v["days_old"]) if v.get("days_old") is not None else None
+                rec["days_old"] = int(v["days_old"]) if v.get("days_old") is not None else None
                 rec["age_source"] = "page datePublished unparseable (cached age)"
         elif v.get("days_old") is not None:
-            rec["days_old"] = float(v["days_old"])
+            rec["days_old"] = int(v["days_old"])
             rec["age_source"] = f"page datePublished (cached, probed {v.get('checked', '?')})"
         else:
             rec["days_old"] = _days_old(rec["deadline"], rec["first_seen"])
