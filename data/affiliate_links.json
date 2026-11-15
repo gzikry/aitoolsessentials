@@ -1004,6 +1004,15 @@
       "public_href": "/go/01router/",
       "partner": false
     },
+    "random-topic-generator": {
+      "name": "Random Topic Generator",
+      "slug": "random-topic-generator",
+      "official": "https://randomtopicgenerator.net/",
+      "destination": "https://randomtopicgenerator.net/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/random-topic-generator/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-14",
-  "tools_count": 111,
+  "tools_count": 112,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -812,6 +812,13 @@
       "category": "Video",
       "price": "Pay-as-you-go credits, no subscription tiers: $1 = 100 credits. One-time packs are 1,000 credits for $10, 5,000 for $50, 10,000 for $100, 51,000 for $500 (+2% bonus), 103,000 for $1,000 (+3%) and 525,000 for $5,000 (+5%), all valid 365 days. Model rates are published per second, per image, per request or per 1M tokens - Seedance 2.5 runs from $0.055/second at 480p to $0.702/second at 1080p across nine providers, GPT Image 2.6 Flare from $0.016/image, GPT-6 Astra $2.66/1M input tokens. Signup grants starter credits; the homepage FAQ also promises a daily check-in bonus that the site's own public config reports as disabled. USD, no card for the free tier. Verified 2026-11-13.",
       "url": "https://aitoolsessentials.com/tools/01router/"
+    },
+    {
+      "name": "Random Topic Generator",
+      "slug": "random-topic-generator",
+      "category": "Education",
+      "price": "Free $0: unlimited topic draws (1, 3 or 5 at a time from a 250-topic library in English, Chinese, French, Indonesian, Arabic, Turkish, Thai and Hindi), the 1/2/3/5-minute timer and local recording, with no account and no credits; free accounts cannot request the AI report. Standard $19.9 a month for 2,000 credits a month; Pro $59.9 a month for 6,000 credits a month (the page calls it 3x the monthly credits), both 'valid for the current month; cancel anytime'. One-time packs, 'one-time payment, no auto-renewal': $5.00 for 500 credits, $10.00 for 1,000, $20.00 for 2,000. AI analysis is 100 credits a run, so a $5 pack is about 5 analyses, $10 about 10 (the card itself says 'Up to 10 AI analyses (100 credits each)'), Standard about 20 a month and Pro about 60 - roughly $1 an analysis on every path. Paid by card through Stripe; the plan prices, credit allowances and Stripe price keys also appear in the shipped app bundle. USD. Verified 2026-11-14.",
+      "url": "https://aitoolsessentials.com/tools/random-topic-generator/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
