@@ -74,11 +74,18 @@ def sections(md: str) -> list[dict]:
 
 
 def stale_figure(d: dict, f: dict) -> str | None:
-    """A draft that quotes today's tool count or median must quote today's numbers."""
-    m = re.search(r"of the (\d{2,3}) AI tools", d["body"])
+    """A draft that quotes today's tool count or median must quote today's numbers.
+
+    Both patterns are case-insensitive on purpose. The tool-count pattern was `of the (\\d{2,3})
+    AI tools`, and the drafts open the sentence differently from file to file ("Of the 113 AI
+    tools we track", "Across the 113 AI tools"), so a capitalised opener silently skipped the
+    check: the guard was present, ran, and verified nothing — the same defect class as a typed
+    count. The median pattern already matched case-insensitively by accident of wording.
+    """
+    m = re.search(r"of the (\d{2,3}) AI tools", d["body"], re.I)
     if m and int(m.group(1)) != f["n_tools"]:
         return f"quotes {m.group(1)} tools, dataset holds {f['n_tools']}"
-    m = re.search(r"median[^$]{0,40}\$(\d+(?:\.\d+)?)", d["body"])
+    m = re.search(r"median[^$]{0,40}\$(\d+(?:\.\d+)?)", d["body"], re.I)
     if m and f["median"] is not None and abs(float(m.group(1)) - f["median"]) > 0.005:
         return f"quotes median ${m.group(1)}, dataset yields ${f['median']:.2f}"
     return None

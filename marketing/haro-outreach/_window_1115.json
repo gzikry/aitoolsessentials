@@ -1,0 +1,246 @@
+{
+ "today": "2026-11-15",
+ "prev": "2026-11-14",
+ "sitemap_http": "200",
+ "bytes": 8767070,
+ "count": 36529,
+ "newest": "2026-11-15T02:32:27.468Z",
+ "mark": "2026-11-14T03:48:28.000Z",
+ "window": [
+  [
+   "gophers-fans-traveling-to-indiana-first-big-ten-vb-tournament",
+   "2026-11-15T02:32:27.468Z"
+  ],
+  [
+   "lexington-fans-final-buzzer-reactions-call-and-text-8592535959",
+   "2026-11-15T01:56:44.000Z"
+  ],
+  [
+   "buckeye-fans-with-inherited-michigan-memorabilia-beat-michigan-week",
+   "2026-11-15T00:00:10.000Z"
+  ],
+  [
+   "women-writers-in-global-south-climate-care-and-environmental-justice",
+   "2026-11-14T23:49:40.236Z"
+  ],
+  [
+   "irish-entertainment-scene-survivors-sexual-abuse-and-grooming",
+   "2026-11-14T21:35:02.854Z"
+  ],
+  [
+   "ethics-and-integrity-committee-members-head-standing-down",
+   "2026-11-14T19:19:22.000Z"
+  ],
+  [
+   "everton-and-liverpool-fan-first-game-first-hero-first-heartbreak",
+   "2026-11-14T18:27:29.000Z"
+  ],
+  [
+   "alcoholfree-drink-brands-christmas-celebration-samples",
+   "2026-11-14T18:12:51.000Z"
+  ],
+  [
+   "consciousness-practitioners-podcast-and-video-series-feature",
+   "2026-11-14T16:57:26.008Z"
+  ],
+  [
+   "canadian-farmers-and-ranchers-farm-hobbies-supporting-wellbeing",
+   "2026-11-14T16:00:57.000Z"
+  ],
+  [
+   "geisinger-selinsgrove-patients-billing-fraud-allegations",
+   "2026-11-14T15:25:11.000Z"
+  ],
+  [
+   "edmonton-weekend-air-travelers-flight-disruptions",
+   "2026-11-14T15:17:36.000Z"
+  ],
+  [
+   "founders-55-latelife-entrepreneurship-series-3",
+   "2026-11-14T15:00:25.256Z"
+  ],
+  [
+   "young-adults-in-delhi-financial-and-psychological-toll-of-living-alone",
+   "2026-11-14T12:52:22.476Z"
+  ],
+  [
+   "indians-traveling-to-or-returning-from-us-flight-grounding-impact",
+   "2026-11-14T12:25:54.000Z"
+  ],
+  [
+   "women-entrepreneurs-and-leaders-designing-yearahead-vision",
+   "2026-11-14T12:00:31.051Z"
+  ],
+  [
+   "heathrow-passengers-affected-by-us-travel-disruption",
+   "2026-11-14T11:15:52.000Z"
+  ],
+  [
+   "essex-food-bloggers-christmas-food-and-drink-features",
+   "2026-11-14T10:57:31.000Z"
+  ],
+  [
+   "airline-and-travel-insurance-experts-flight-delay-compensation",
+   "2026-11-14T10:38:12.000Z"
+  ],
+  [
+   "northern-ireland-patients-on-nhs-waiting-list-operation-experiences",
+   "2026-11-14T10:30:34.114Z"
+  ],
+  [
+   "frontline-housing-staff-and-tenants-housing-off-script-guests",
+   "2026-11-14T09:03:13.195Z"
+  ],
+  [
+   "leadership-and-speaking-experts-why-brilliant-people-get-underestimated",
+   "2026-11-14T07:39:00.106Z"
+  ],
+  [
+   "bangalore-founders-podcasters-and-vcs-india-growth-story",
+   "2026-11-14T06:21:20.000Z"
+  ],
+  [
+   "creators-and-brands-at-twitchcon-livestreaming-gear-reviews",
+   "2026-11-14T05:48:39.644Z"
+  ]
+ ],
+ "ai": [],
+ "ai_strict": [],
+ "spend_any": [
+  [
+   "geisinger-selinsgrove-patients-billing-fraud-allegations",
+   "2026-11-14T15:25:11.000Z"
+  ]
+ ],
+ "ai_strict_false_positives": [],
+ "feed_count": 50,
+ "feed_http": "200",
+ "feed_bytes": 175427,
+ "feed_overlap_with_window": 15,
+ "feed_slugs": [
+  "gophers-fans-traveling-to-indiana-first-big-ten-vb-tournament",
+  "women-writers-in-global-south-climate-care-and-environmental-justice",
+  "irish-entertainment-scene-survivors-sexual-abuse-and-grooming",
+  "ethics-and-integrity-committee-members-head-standing-down",
+  "alcoholfree-drink-brands-christmas-celebration-samples",
+  "canadian-farmers-and-ranchers-farm-hobbies-supporting-wellbeing",
+  "geisinger-selinsgrove-patients-billing-fraud-allegations",
+  "edmonton-weekend-air-travelers-flight-disruptions",
+  "young-adults-in-delhi-financial-and-psychological-toll-of-living-alone",
+  "indians-traveling-to-or-returning-from-us-flight-grounding-impact",
+  "women-entrepreneurs-and-leaders-designing-yearahead-vision",
+  "essex-food-bloggers-christmas-food-and-drink-features",
+  "airline-and-travel-insurance-experts-flight-delay-compensation",
+  "northern-ireland-patients-on-nhs-waiting-list-operation-experiences",
+  "frontline-housing-staff-and-tenants-housing-off-script-guests",
+  "families-affected-by-medicaid-estate-recovery-loved-ones-death",
+  "christian-adults-reconnecting-with-past-relationships",
+  "corpsmen-and-staff-who-saw-congressional-letters-capitol-pharmacy",
+  "showrunners-and-producers-video-gametotv-adaptations",
+  "us-air-travelers-impacted-by-faa-grounding-of-departing-flights",
+  "air-freight-companies-faa-ground-stop-impact-on-operations",
+  "transportation-secretary-pete-buttigieg-faa-live-updates",
+  "interior-designers-property-styling-colors-and-textures",
+  "passengers-delayed-by-faa-ground-stop-travel-disruption-impact",
+  "air-travelers-stuck-on-tarmac-and-inflight-faa-outage",
+  "passengers-affected-by-faa-ground-stop-stuck-aboard-planes",
+  "otc-and-pharma-packaging-experts-qr-and-2d-codes-replacing-leaflets",
+  "waste-treatment-workers-avonmouth-disaster-aftermath",
+  "independent-artists-and-bands-original-music-submission-yeti-radio",
+  "people-dreading-family-holidays-therapist-qanda",
+  "male-sexual-assault-survivors-in-india-oncamera-anonymity-offered",
+  "tesla-model-y-fsd-users-fsd-steering-into-closed-lanes",
+  "specialty-coffee-traceability-experts-supply-chain-transparency",
+  "nursing-home-owners-administrators-and-dons-drug-testing-policies",
+  "irvington-parents-oncamera-school-closures-and-ics-financial-issues",
+  "video-game-streamers-selling-paid-streams-and-activations-rates",
+  "pickleball-club-operators-new-year-membership-surge-prep",
+  "pop-culture-expert-entertainment-trends-analysis",
+  "ufo-and-uap-witnesses-firsthand-accounts-podcast",
+  "formal-wear-brands-feature-opportunity",
+  "young-people-across-commonwealth-cervical-cancer-elimination",
+  "people-who-changed-your-mind-what-they-said",
+  "people-noticing-loved-ones-changed-after-cosmetic-work-and-glp1s",
+  "employees-leadership-toxicity-effects-on-culture-and-performance",
+  "university-professors-and-students-devicefree-classroom-experiences",
+  "microsoft-365-users-email-outage-impact-on-workflows",
+  "women-who-started-snoring-during-or-after-menopause-media-interview",
+  "uk-couples-with-opposing-views-on-twiglets-paid-250",
+  "foreign-volunteers-in-ukraine-suspected-murders-chadwick-and-burke",
+  "homebuyers-microsoft-outage-blocking-property-completions-today"
+ ],
+ "platforms": [
+  {
+   "platform": "Sourcee (sourcee.app)",
+   "url": "https://www.sourcee.app/",
+   "http": "200",
+   "bytes": 100776,
+   "title": "Sourcee - We find the Journo Requests, You get Featured",
+   "checkpoint": false
+  },
+  {
+   "platform": "Sourcee AI topic feed",
+   "url": "https://www.sourcee.app/topics/ai/journo-requests",
+   "http": "200",
+   "bytes": 175427,
+   "title": "Ai | Journo Requests",
+   "checkpoint": false
+  },
+  {
+   "platform": "HARO (helpareporter.com)",
+   "url": "https://www.helpareporter.com/",
+   "http": "200",
+   "bytes": 101835,
+   "title": "Help a Reporter Out (HARO) \u2013 Connecting Journalists &amp; Sources",
+   "checkpoint": false
+  },
+  {
+   "platform": "Connectively (connectively.us)",
+   "url": "https://www.connectively.us/",
+   "http": "200",
+   "bytes": 190288,
+   "title": "Connectively: Connecting Publishers with Subject Matter Experts",
+   "checkpoint": false
+  },
+  {
+   "platform": "Source of Sources (sourceofsources.com)",
+   "url": "https://sourceofsources.com/requests",
+   "http": "404",
+   "bytes": 140415,
+   "title": "Page Not Found - Source of Sources",
+   "checkpoint": false
+  },
+  {
+   "platform": "Qwoted (qwoted.com)",
+   "url": "https://app.qwoted.com/requests",
+   "http": "404",
+   "bytes": 3266,
+   "title": "Error: The page you were looking for doesn't exist (404) | Qwoted",
+   "checkpoint": false
+  },
+  {
+   "platform": "MentionMatch (mentionmatch.com)",
+   "url": "https://mentionmatch.com/",
+   "http": "200",
+   "bytes": 12029,
+   "title": "MentionMatch - Connect B2B Writers with Expert Sources",
+   "checkpoint": false
+  },
+  {
+   "platform": "Medialyst MCP (medialyst.ai/api/mcp)",
+   "url": "https://medialyst.ai/api/mcp",
+   "http": "401",
+   "bytes": 74,
+   "title": "",
+   "checkpoint": false
+  },
+  {
+   "platform": "ResponseSource (responsesource.com)",
+   "url": "https://www.responsesource.com/",
+   "http": "200",
+   "bytes": 147877,
+   "title": "ResponseSource - Connecting the media",
+   "checkpoint": false
+  }
+ ]
+}

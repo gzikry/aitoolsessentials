@@ -1,0 +1,24 @@
+{
+ "new_rows": {
+  "women-writers-in-global-south-climate-care-and-environmental-justice": {
+   "who": "Poetry Wales / MODRON magazine \u2014 editorial call from the publication itself (no journalist named; page author field is blank)",
+   "category": "Literature / Climate & Environmental Justice / Submissions Call",
+   "contact": "Pitch by following the two lnkd.in short links published in the body (one to MODRON's pitch call, one to the UN Women fact sheet). No address and no handle of the author's own is published; Sourcee's redaction is not the reason.",
+   "relevance": "low",
+   "notes": "Recorded because it is the only window body that mentions AI at all, and the mention is not our beat: 'expansion of AI is driving up electricity demand from data centres' appears once, as a climate-justice aside, inside a call for women writers from the Global South to submit poetry and articles to Poetry Wales / MODRON. There is no pricing, seat, subscription or procurement question anywhere in the body, no journalist to answer, and the outlet states it cannot pay contributors. We hold no standing as a poet or a Global South writer, so there is nothing honest to send. Tracked so a future body scan does not re-surface it as a new find; not drafted.",
+   "template": "None \u2014 excluded. Off-beat: a literary submissions call whose only AI mention is a data-centre electricity aside; no spend angle, no route of the author's own, and no standing for us."
+  }
+ },
+ "why_not_drafted": [
+  "women-writers-in-global-south-climate-care-and-environmental-justice \u2014 literary submissions call; the single AI mention is about data-centre electricity demand, not tool pricing, and the outlet publishes no address"
+ ],
+ "new_this_run": [],
+ "defects": [
+  "The 2026-11-15 window is the smallest this monitor has recorded (24 slugs, 0 carrying an AI token in the slug, 1 carrying a spend token, 0 carrying both) and the body scan found exactly one AI mention across all 24 bodies. A zero here is a measurement, not a filter artefact: all 24 bodies were fetched and read. The AI topic page carried 50 slugs with 15 inside the window, so supply is not drying up \u2014 the newest day of requests simply contained no AI-spend call.",
+  "No code change was needed this run. The 2026-11-14 fix that lets a resolved address inside route prose count as a route (the defect that printed 'no route published' beneath kelsey.ziser@informationweek.com) held in today's build: the InformationWeek row still renders its route and stays the queue's only sendable row."
+ ],
+ "extra_actions": [
+  "TWO FINISHED PITCHES ARE SITTING IN THE GMAIL DRAFTS FOLDER, NOT IN THIS QUEUE'S TO-DO COUNT: draft uid 66 'The seat-price numbers behind the SaaSpocalypse question' (InformationWeek \u2014 Kelsey Ziser, the queue's only sendable row) and uid 67 'What the AI stack costs when it stands in for a first hire' (Forbes \u2014 Alison Coleman, 18d). Both were staged 2026-11-14 09:13 PT and neither has been sent. Opening Drafts and pressing send is the whole remaining step; nothing else in this monitor is blocking those two.",
+  "THE ONE BLOCKER THAT IS NOT GEORGE'S TO CLEAR: Medialyst's MCP endpoint (medialyst.ai/api/mcp) answers HTTP 401 and needs an OAuth handshake, and MentionMatch's request list is fetched client-side behind an account. Both are account/OAuth lanes only George can open, and they are the only remaining sources that would widen supply beyond Sourcee."
+ ]
+}
