@@ -6895,5 +6895,90 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.0/5 - this is a narrow job done with unusual care: the words inside the picture are rewritten rather than overlaid, the background is repaired, several text blocks can be changed in one run, output goes to 4K, and four sibling pages cover the adjacent jobs (screenshots, extraction, translation, blurry text) in two languages. The unit price is transparent (5 credits per edit, printed before you send) and cheap, the legal set is real and specific about uploads and deletion, and the non-affiliation clause names every model vendor instead of leaving it hanging. It is not higher because nothing was tested hands-on, the free tier is 30 credits spread over a week, and the four pages are the whole product surface. Transparency 2.6/5, and that is what pulls the score to 3.1, below the rest of the catalog: the sale page's comparison table prices video models this site does not sell and contradicts the editor on what an edit costs (3 credits vs 5), the FAQ and the refund policy set different money-back thresholds (50 used credits vs 10), no company, address or jurisdiction is named and the governing-law clause is circular, the AI processors are named only by category for a product built on uploading images, the legal pages are dated before the domain existed, and six homepage tiles lead nowhere - the same boilerplate fingerprints as aiimagetoprompt, which is the only entry this sits beside."
+  },
+  {
+    "slug": "rapvideogo",
+    "name": "RapVideoGo",
+    "category": "Creative",
+    "best_for": "People who want a short rap video made from one or two phone photos of themselves, a friend or a colleague - the Hotel Lobby-style duet, a birthday or anniversary clip, a farewell for a coworker, or a friendly roast - and would rather buy a one-time credit pack than take on another monthly AI subscription",
+    "price": "One-time credit packs only, no subscription and no auto-renewal, credits never expire (the pricing bundle carries creditsValidDays: 0): Single $6.99 (10 credits), Duo Pack $29 (50), Crew Pack $99 (200), Studio Pack $199 (450), Label Pack $599 (1,500). The same five figures and the same 17% / 29% / 37% / 43% savings badges appear on /zh/pricing, and the pack SKUs in the shipped pricing chunk (rap_single 699c/10cr, rap_duo 2900c/50, rap_crew 9900c/200, rap_studio 19900c/450, rap_label 59900c/1500) agree with the cards. The studio shows the cost of the exact render before you commit: the default 9:16, 12-second, 480p render is priced at 24 credits, while every pack card estimates 10 credits per video. USD, charged through the site's own checkout after sign-in; /api/config/public returns waffo_enabled:true plus Google sign-in, email verification and password reset all enabled.",
+    "rating": 3.8,
+    "official": "https://rapvideogo.com/",
+    "summary": "RapVideoGo turns one or two uploaded photos into a short vertical rap video: you pick a template or write the lyrics, the site arranges the scenes and renders the people from your photos rapping to a generated beat and vocal. The default stage is a recording-studio duet, with a Hotel Lobby (golden lobby) effect, a rap-battle generator, birthday pages for a mother, friend, daughter, son, sibling or partner, plus anniversary, farewell and team-celebration templates. Output is 9:16 for TikTok, Reels and Shorts - the studio's default render is 12 seconds at 480p for 24 credits, and the sample clips on the page are 720p. Everything is bought as one-time credit packs that never expire rather than a subscription, and the site is explicit that only photos of consenting adults may be uploaded. It is a single-purpose studio with 70 indexed URLs (English plus a Chinese mirror) and eight how-to guides around it.",
+    "use_cases": [
+      "Making the Hotel Lobby / rap-duo trend clip with your own or a friend's face for TikTok, Reels or Shorts",
+      "A birthday, anniversary or farewell message delivered as a rap instead of a card",
+      "A friendly roast or rap battle between two coworkers, roommates or teammates",
+      "A short celebration clip for a team, small business or family group from photos only",
+      "Checking whether pay-per-video credits are cheaper than a monthly AI video subscription for occasional clips"
+    ],
+    "pros": [
+      "The product demonstrably renders: finished sample MP4s are served from the operator's own storage (assets.rapvideogo.com, e.g. a 3.85 MB 12-second duet clip, content-type video/mp4), and the studio displays the credit cost of the exact render before you commit",
+      "The sale model is one thing everywhere it is stated: every pack card says 'Pay once. No auto-renewal. Credits never expire', the FAQ answers 'Will I be charged every month?' with 'No ... no monthly or annual plans and no automatic renewals', and the pricing bundle carries creditsValidDays: 0",
+      "The pack savings reconcile with the per-credit price rather than being decorative: 10 credits for $6.99 is $0.699 a credit, and the 50 / 200 / 450 / 1,500 packs come out 17% / 29% / 37% / 43% cheaper per credit, exactly the badges on the cards",
+      "Prices are identical in the Chinese mirror: /zh/pricing carries the same $6.99 / $29 / $99 / $199 / $599 and the same 省 17% / 29% / 37% / 43% badges",
+      "The privacy policy names what actually touches a photo, by company and model: reference photos, lyrics and template constraints are sent to Gemini through Kie AI, the resulting prompt goes to SeeAPI for Seedance 2.0 Fast, and Hotel Lobby effects run Seedance 2.0 Fast through Kie AI",
+      "Abuse rules are written for this exact product rather than copied in: the studio itself says 'Only upload photos of adults (18+) who have consented to their use', and the ToS bars CSAM, sexualization of minors, non-consensual likeness or voice use and deceptive deepfakes",
+      "Non-affiliation is stated in both languages ('RapVideoGo is not affiliated with or endorsed by any artists or brands'), which matters for a product built on a trend recording",
+      "Account hygiene is switched on: /api/config/public returns email_verification_enabled:true and password_reset_enabled:true, so a mistyped address is recoverable",
+      "Failed renders are not charged, per the site's own FAQ answer on how credits are charged and refunded",
+      "The legal pages are recent and post-date the domain registration (privacy updated 29 Oct 2026, ToS 9 Nov 2026, on a domain registered 24 Oct 2026), so they are not a pre-launch leftover"
+    ],
+    "cons": [
+      "No registered company, trading name, postal address, named data controller, jurisdiction or governing-law clause appears on any page; the ToS runs acceptance, service description, acceptable use, reports, billing, IP, termination, liability, changes and contact with no law or venue named anywhere",
+      "The ToS refers to a refund policy that does not exist on the site: 'Refunds are handled on a case-by-case basis in line with our refund policy' while /refund-policy returns 404 and no footer or nav link points to one",
+      "The ToS uses subscription language on a product that sells only one-time packs: 'Paid features are billed in advance for the selected billing period' - there is no billing period to select",
+      "The per-video credit estimates do not reconcile with the studio: every pack card estimates 10 credits per video (50 credits '≈ 5 videos', 200 '≈ 20 videos'), while the homepage's own default 9:16, 12-second, 480p render is priced at 24 credits, and every sample example is 720p which the FAQ says costs more",
+      "Google Analytics 4 (G-VWWKKNM1HH) and Cloudflare Insights load on every page we fetched, including /privacy-policy and /terms-of-service themselves, while that privacy policy contains zero occurrences of 'analytics' or 'Google' and no consent gate",
+      "Retention is never stated as a period: the privacy policy has no retention section at all, and photos, lyrics and generated results are described only as data collected and shared",
+      "Training use is unstated: no page says whether uploads or outputs are used to train models (the only 'train' match on the site is the word 'constraints'), which matters because every render is handed to Gemini and Seedance",
+      "Output ownership is unaddressed: the ToS Intellectual Property section covers only the service's own content and says nothing about who owns a generated video or whether it may be used commercially",
+      "The rendered <title> on /pricing carries a stray horse emoji ('🐴 Credit packs — pay as you go | RapVideoGo'), a template artifact visible in the browser tab and in a search result",
+      "The name family is crowded with separate operators - rapvideoai.com (already listed here), rapvideo.ai, and rapvideoai.site trading as AIRapVideo - and this site's own blog names AIRAP and AIRapGen as alternatives, so a reader searching the category meets several lookalikes",
+      "The vendor submitted the category as 'Video'; the product is a single-purpose rap-video studio, filed here under Creative to match the rest of the music-video listings"
+    ],
+    "key_features": [
+      "One or two reference photos in, a 12-second vertical rap video out (9:16, 480p by default, 720p examples)",
+      "Editable lyrics with template starts, including named birthday, anniversary, farewell and roast lyrics",
+      "AI scene and shot arrangement from the lyric and template",
+      "Hotel Lobby effect using a selected reference clip and two photos",
+      "Rap battle generator with labelled A/B roles plus roommates, couple, gaming-teammate and friends templates",
+      "Cost of the exact render shown before generation (24 credits for the default 9:16 / 12s / 480p render)",
+      "One-time credit packs, credits never expire, no auto-renewal",
+      "Chinese language mirror of the studio, pricing and policies (/zh)",
+      "Eight how-to guides covering photo preparation, birthday lyrics, rap-battle scripts and TikTok publishing"
+    ],
+    "faq": [
+      [
+        "How much does RapVideoGo cost?",
+        "One-time credit packs, no subscription: Single $6.99 (10 credits), Duo Pack $29 (50), Crew Pack $99 (200), Studio Pack $199 (450) and Label Pack $599 (1,500). Credits never expire and nothing auto-renews, which the FAQ states directly ('no monthly or annual plans and no automatic renewals'). A render's cost is shown before you generate; the homepage's default 9:16, 12-second, 480p render is 24 credits, so treat the '10 credits ≈ 1 video' line on the pack cards as the vendor's floor estimate rather than the default."
+      ],
+      [
+        "Do I need a subscription?",
+        "No. Every pack is a one-time purchase and the site says so on all five cards and in the pricing FAQ. You can buy a pack again later and the credits add up; there is no plan to cancel."
+      ],
+      [
+        "What kind of photos does it accept, and are other people's photos allowed?",
+        "One or two photos of the people who should appear. The studio says plainly to upload only photos of adults (18+) who have consented to their use, and the ToS bars celebrity or third-party likeness used without permission, CSAM, sexualized depictions of minors and deceptive deepfakes."
+      ],
+      [
+        "What do I actually get at the end?",
+        "A short vertical video (9:16) with a generated beat and vocal. The default render is 12 seconds at 480p; the example clips on the site are 720p, and the FAQ notes credit cost depends on length and quality. Check the export for a watermark and for face and lip-sync accuracy before publishing, since the site does not publish a separate export-quality page."
+      ],
+      [
+        "Is RapVideoGo the same company as RapVideo AI or rapvideo.ai?",
+        "They are separate sites on separate infrastructure and separate price lists - RapVideoGo sells $6.99-$599 one-time packs, while RapVideo AI (already listed here) also sells monthly plans and rapvideo.ai runs its own storefront. Nothing on any of the three names the others as a parent or partner; we have asked RapVideoGo directly and will update this line when they answer."
+      ]
+    ],
+    "trial_checklist": [
+      "Render one clip from your own two photos at the default 9:16 / 12s / 480p setting first and note the credits actually deducted, because the site's own numbers disagree (24 on the studio, 10 per video on the pack cards)",
+      "Watch the lip-sync and face likeness on a phone screen rather than a desktop monitor - a drifting face or a mouth running ahead of the vocal is the failure mode for this product class",
+      "Confirm the credit balance before and after a render, and test what happens to credits on a failed or blocked generation before buying a large pack",
+      "Check the exported file for a watermark and for the resolution you expected, since the samples are 720p and the default render is 480p",
+      "Keep to photos of consenting adults you have permission to use, and do not test with a public figure - the ToS bars that and the platform rules for AI video are enforced at the app store level, not by the site"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "medium",
+    "rating_rationale": "Job fit 4.3/5 - this is a real, working single-purpose studio, not a wrapper: it serves finished sample MP4s from its own storage, quotes the credit cost of the exact render before you commit, says plainly that only consenting adults' photos may be uploaded, and names the processors and model versions that handle a photo (Gemini via Kie AI, SeeAPI for Seedance 2.0 Fast). The sale model is also unusually clean for this category - one-time packs only, credits never expire, and savings badges that reconcile with the per-credit price. Transparency 3.1/5 is what holds it at 3.8: no company, controller, address or governing law is named anywhere; the ToS points at a refund policy the domain 404s and bills 'the selected billing period' on a product with no billing period; the pack cards estimate 10 credits a video while the studio prices the default render at 24; GA4 and Cloudflare Insights load on the privacy policy itself with no analytics disclosure or consent; and retention, training use and output ownership are all unstated. Everything in that second list is published as a limitation rather than a reason to withhold the listing, because the product is verifiable and purchasable and a reader can see the defects on the same pages we quote."
   }
 ]

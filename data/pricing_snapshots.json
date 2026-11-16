@@ -472,6 +472,10 @@
       "date": "2026-11-15",
       "digest": "Monthly: Basic $11.90/100 credits, Standard $29.90/300, Pro $79.90/1,050. Yearly: $118.80, $238.80, $358.80 a year shown as $9.90, $19.90, $29.90 a month (17%/33%/50% off), with 1,800/4,800/10,800 credits for the year in the plan config - a different allowance from the monthly cards. One-time packs valid 183 days: Lite $9.90/80 credits, Core $19.90/150, Plus $29.90/250, Max $39.90/400 up to $199/2,500; Starter Pass $4.99/40 credits/7 days; member top-ups $29.90/300 to $899/12,500. Unit cost 5 credits per edit, translate or enhance at 1K and 1 credit per extraction. Free: 3 credits at sign-up plus a 7-day check-in ladder (3/3/6/3/3/3/9) totalling 30. CNY mirror: 87 / 219 / 583 a month. Verified 2026-11-15 on /pricing, /zh/pricing and the served plan config.",
       "verified_against": "https://editpictext.com/pricing"
+    },
+    "rapvideogo": {
+      "date": "2026-11-15",
+      "digest": "One-time credit packs only, no subscription, credits never expire. Single $6.99/10 credits, Duo $29/50, Crew $99/200, Studio $199/450, Label $599/1,500 (SKUs rap_single/rap_duo/rap_crew/rap_studio/rap_label at 699/2900/9900/19900/59900 cents). Save 17/29/37/43% badges reconcile with $0.699 per credit on the Single pack; /zh/pricing identical. Default render 9:16 12s 480p = 24 credits; pack cards estimate 10 credits/video. USD, checkout via Waffo after sign-in."
     }
   },
   "changes": [

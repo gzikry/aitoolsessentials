@@ -1540,6 +1540,16 @@
         "Which AI model provider receives an uploaded image: the privacy policy names processors only by category and says the specific providers 'may change over time'.",
         "Why the legal pages show a Feb 7, 2026 date when the domain was registered 2026-10-10 and the pages say 'Last updated: Oct 14, 2026'."
       ]
+    },
+    {
+      "slug": "rapvideogo",
+      "pricing_checked_date": "2026-11-15",
+      "pricing_summary": "One-time credit packs only, no subscription and no auto-renewal. Single $6.99 for 10 credits, Duo Pack $29 for 50, Crew Pack $99 for 200, Studio Pack $199 for 450, Label Pack $599 for 1,500; credits never expire (creditsValidDays: 0 in the shipped pricing chunk). Savings badges Save 17% / 29% / 37% / 43% reconcile with the per-credit price ($0.699 a credit on the Single pack). The same five prices and the same badges appear on /zh/pricing. Pack SKUs in the served chunk: rap_single 699 cents / 10 credits, rap_duo 2900 / 50, rap_crew 9900 / 200, rap_studio 19900 / 450, rap_label 59900 / 1,500. Render cost is displayed before generation: the homepage's default 9:16, 12-second, 480p render is 24 credits while the pack cards estimate 10 credits per video. /api/config/public returns waffo_enabled:true, email_verification_enabled:true and password_reset_enabled:true; checkout routes to /sign-in first for a signed-out visitor.",
+      "pricing_url": "https://rapvideogo.com/pricing",
+      "docs_url": "https://rapvideogo.com/llms.txt",
+      "privacy_url": "https://rapvideogo.com/privacy-policy",
+      "rights_url": "https://rapvideogo.com/terms-of-service",
+      "verification_notes": "Submitted via form by the vendor 2026-11-15 23:38 UTC; editorial entry written independently. Vendor category was 'Video'; reclassified to Creative after verifying the product is a single-purpose rap-video studio. Verified from the live pages the same day: /pricing and /zh/pricing (identical figures), the shipped pricing chunk for the pack SKUs and credit grants, /api/config/public for payment and account flags, the sample MP4s on assets.rapvideogo.com (200, video/mp4, 3.85 MB) for liveness, /privacy-policy and /terms-of-service for the legal set, /llms.txt and /sitemap.xml (70 URLs) for structure. /refund-policy, /about, /contact and /faq all return 404. Domain registered 2026-10-24 (Cloudflare Registrar); MX is Cloudflare Email Routing, so an RCPT probe against support@rapvideogo.com answers 250 for any local part and cannot confirm a mailbox - the address is published in the footer and the policies. Name family checked: rapvideoai.com (published here), rapvideo.ai (separate operator, Zoho MX) and rapvideoai.site (AIRapVideo) all trade in the same category; RapVideoGo's privacy policy shares a house template with lemgen.org (whole-body difflib 0.399) but its ToS is separately drafted (0.040) and nothing links the two sites, so no operator relationship is asserted. Not published as an affiliate program: /affiliates, /api/affiliate and /partners all 404."
     }
   ]
 }

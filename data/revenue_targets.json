@@ -2052,5 +2052,26 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether Edit Pic Text runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and no programme is published. Never invent affiliate URLs.",
     "notes": "Subscription pricing from $11.90/mo plus one-time packs gives a workable affiliate shape if a programme exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive."
+  },
+  {
+    "tool_slug": "rapvideogo",
+    "tool_name": "RapVideoGo",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/rapvideogo/"
+    ],
+    "best_audiences": [
+      "creators making the rap-duo / Hotel Lobby trend clip for TikTok, Reels and Shorts",
+      "people buying novelty birthday, anniversary, farewell and roast videos",
+      "small teams and businesses making a short celebration or promo rap from photos"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@rapvideogo.com about affiliate or partner terms. The site publishes no affiliate programme (/affiliates, /api/affiliate and /partners all 404), so a direct ask is the only route; note the domain uses Cloudflare Email Routing, so confirm a human reads the address rather than assuming delivery.",
+    "notes": "Per-render value is small - $6.99 for the entry pack up to $599 for the largest, and the studio's default render is 24 credits - so commission per sale is low and the value here is category coverage and trend traffic rather than near-term revenue. Priority low until the review shows organic impressions."
   }
 ]

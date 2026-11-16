@@ -2780,6 +2780,29 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "rapvideogo",
+      "name": "RapVideoGo",
+      "category": "Creative",
+      "official_url": "https://rapvideogo.com/",
+      "review_url": "/tools/rapvideogo/",
+      "price_label": "One-time credit packs only, no subscription and no auto-renewal, credits never expire (the pricing bundle carries creditsValidDays: 0): Single $6.99 (10 credits), Duo Pack $29 (50), Crew Pack $99 (200), Studio Pack $199 (450), Label Pack $599 (1,500). The same five figures and the same 17% / 29% / 37% / 43% savings badges appear on /zh/pricing, and the pack SKUs in the shipped pricing chunk (rap_single 699c/10cr, rap_duo 2900c/50, rap_crew 9900c/200, rap_studio 19900c/450, rap_label 59900c/1500) agree with the cards. The studio shows the cost of the exact render before you commit: the default 9:16, 12-second, 480p render is priced at 24 credits, while every pack card estimates 10 credits per video. USD, charged through the site's own checkout after sign-in; /api/config/public returns waffo_enabled:true plus Google sign-in, email verification and password reset all enabled.",
+      "pricing_summary": "One-time credit packs only, no subscription and no auto-renewal. Single $6.99 for 10 credits, Duo Pack $29 for 50, Crew Pack $99 for 200, Studio Pack $199 for 450, Label Pack $599 for 1,500; credits never expire (creditsValidDays: 0 in the shipped pricing chunk). Savings badges Save 17% / 29% / 37% / 43% reconcile with the per-credit price ($0.699 a credit on the Single pack). The same five prices and the same badges appear on /zh/pricing. Pack SKUs in the served chunk: rap_single 699 cents / 10 credits, rap_duo 2900 / 50, rap_crew 9900 / 200, rap_studio 19900 / 450, rap_label 59900 / 1,500. Render cost is displayed before generation: the homepage's default 9:16, 12-second, 480p render is 24 credits while the pack cards estimate 10 credits per video. /api/config/public returns waffo_enabled:true, email_verification_enabled:true and password_reset_enabled:true; checkout routes to /sign-in first for a signed-out visitor.",
+      "pricing_url": "https://rapvideogo.com/pricing",
+      "pricing_checked_date": "2026-11-15",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "video"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

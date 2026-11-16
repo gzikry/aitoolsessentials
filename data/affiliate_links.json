@@ -1022,6 +1022,15 @@
       "public_href": "/go/edit-pic-text/",
       "partner": false
     },
+    "rapvideogo": {
+      "name": "RapVideoGo",
+      "slug": "rapvideogo",
+      "official": "https://rapvideogo.com/",
+      "destination": "https://rapvideogo.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/rapvideogo/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

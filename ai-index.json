@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-15",
-  "tools_count": 113,
+  "tools_count": 114,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -826,6 +826,13 @@
       "category": "Creative",
       "price": "Subscriptions, monthly: Basic $11.90/mo for 100 credits, Standard $29.90/mo for 300, Pro $79.90/mo for 1,050. Yearly, billed as $118.80 / $238.80 / $358.80 and shown as $9.90 / $19.90 / $29.90 a month (the plan config carries 1,800 / 4,800 / 10,800 credits for the year, which is a different allowance from the monthly cards - ask before choosing yearly). One-time credit packs, valid 183 days: Lite $9.90 for 80 credits, Core $19.90 for 150, Plus $29.90 for 250, Max $39.90 for 400, up to $199 for 2,500. A $4.99 Starter Pass carries 40 credits for 7 days. One edit, translation or enhance costs 5 credits (1K); text extraction costs 1. Free: 3 credits at sign-up plus a daily check-in ladder (3/3/6/3/3/3/9) totalling 30, which is what the 'Get 30 credits for free' badge counts. USD; the Chinese mirror prices the same three plans at CNY 87 / 219 / 583 a month. Verified 2026-11-15 on /pricing, /zh/pricing and the served plan config.",
       "url": "https://aitoolsessentials.com/tools/edit-pic-text/"
+    },
+    {
+      "name": "RapVideoGo",
+      "slug": "rapvideogo",
+      "category": "Creative",
+      "price": "One-time credit packs only, no subscription and no auto-renewal, credits never expire (the pricing bundle carries creditsValidDays: 0): Single $6.99 (10 credits), Duo Pack $29 (50), Crew Pack $99 (200), Studio Pack $199 (450), Label Pack $599 (1,500). The same five figures and the same 17% / 29% / 37% / 43% savings badges appear on /zh/pricing, and the pack SKUs in the shipped pricing chunk (rap_single 699c/10cr, rap_duo 2900c/50, rap_crew 9900c/200, rap_studio 19900c/450, rap_label 59900c/1500) agree with the cards. The studio shows the cost of the exact render before you commit: the default 9:16, 12-second, 480p render is priced at 24 credits, while every pack card estimates 10 credits per video. USD, charged through the site's own checkout after sign-in; /api/config/public returns waffo_enabled:true plus Google sign-in, email verification and password reset all enabled.",
+      "url": "https://aitoolsessentials.com/tools/rapvideogo/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
