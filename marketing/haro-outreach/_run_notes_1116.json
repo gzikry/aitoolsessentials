@@ -1,0 +1,69 @@
+{
+ "_note": "Editorial judgement for the 2026-11-16 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json and _window_1116.json. Only the judgements below are typed.",
+ "new_rows": {
+  "comic-book-writer-greg-pak-ai-consent-and-digital-comics": {
+   "who": "Weird City Media - poster's name not given on the page (author field reads 'Weird City Media'); the request is addressed to the comic writer Greg Pak (@gregpak.net)",
+   "category": "Comics / AI Consent / Creator Rights",
+   "contact": "The request body is a single line asking @gregpak.net for 'the best way to get in touch with you for a story on AI consent and digital comics'. The page publishes no address, handle or link of its own, so there is no route to the poster at all.",
+   "relevance": "low",
+   "notes": "Not a sourcing call we can answer: the poster is trying to reach one named comic-book writer about AI consent and digital comics, and asks the platform for his contact route. There is no question about tool pricing, seats, subscriptions or procurement anywhere in the body, and no address for the poster. Recorded so a future body scan does not re-surface the 'AI' token as a find; not drafted.",
+   "template": "None - excluded. Off-beat: a contact-route request aimed at one named comic writer, with no pricing question and no route to the poster."
+  },
+  "basementborn-entrepreneurs-built-businesses-despite-doubters": {
+   "who": "Jen Josey - Comfort to Courage Podcast (guest booking)",
+   "category": "Podcast Guest Booking / Entrepreneurship",
+   "contact": "No address and no link published on the page; the call says to pitch a personal founding story. Sourcee's redaction is not the reason there is no route - the body simply publishes none.",
+   "relevance": "low",
+   "notes": "A podcast guest call for founders with a basement-to-national personal story, and it explicitly excludes 'coaches of any kind, business advisors and consultants'. The single AI mention is one example guest ('the hustler who designs AI bots to help the elderly stay connected'); there is no pricing, seat or spend question in the body. We are a price census, not a founder with that story, so there is nothing honest to send and nobody to send it to.",
+   "template": "None - excluded. Off-beat: personal founding-story booking that names consultants and advisors as excluded, with one incidental AI mention."
+  },
+  "bay-area-tech-workers-laid-off-last-6-months-roles-changed-by-ai": {
+   "who": "Basem Istanbouli - (un)PTO, a Bay Area layoff community of ~2,000 people",
+   "category": "Tech Layoffs / Future of Work",
+   "contact": "Body says 'DM me a short blurb about your story'. No address, no handle and no link is published on the page.",
+   "relevance": "low",
+   "notes": "Asks laid-off Bay Area tech workers whose role was 'cut or changed because of AI' to come forward for interview or filming. This is first-hand testimony from a job we do not hold; we cannot supply it without inventing it. No spend or pricing question in the body - 'pay' matched only as 'paying attention'. No route published either, so even a misjudged pitch had nowhere to go.",
+   "template": "None - excluded. Off-beat: first-hand layoff testimony from named workers; no pricing question and no route."
+  },
+  "employees-at-anduril-and-9-ai100-firms-build-hire-and-sell": {
+   "who": "Michael Finocchiaro - ThreadMoat / 'AI Across the Product Lifecycle' podcast",
+   "category": "Physical AI / Podcast Interviews",
+   "contact": "Publishes one lnkd.in short link to the podcast; no address and no handle of the poster's own. The call is for employees of ten named companies or people who can introduce them.",
+   "relevance": "low",
+   "notes": "Wants to interview people who work at Anduril, Applied Intuition, Physical Intelligence, Skild AI, Prometheus, Skydio, Generalist, Periodic Labs, Mind Robotics or Bedrock Robotics - 'If you work at one of the ten, or you know someone who does'. We work at none of them and hold no introductions, so the only honest reply is no. The body's numbers ($14.4B raised, $7B of it Anduril) are the poster's own records, not ours, and there is no pricing or procurement question.",
+   "template": "None - excluded. Off-beat: named-employer podcast sourcing; standing we do not have and no route of the poster's own."
+  },
+  "ai-economist-tokenomics-and-market-winners-selfhosting-viability": {
+   "who": "Theophile Cantelobre - Revue des Mines (revue-mines.org), a community-run magazine for the Mines engineering alumni and academic network",
+   "category": "AI Economics / Tokenomics / Byline Contribution",
+   "contact": "Body says 'DM me or write to [email redacted]'; the page publishes no address, handle or link of its own and Sourcee has redacted the one address the poster offered.",
+   "relevance": "low",
+   "notes": "The nearest thing to our beat in the window and still not answerable from our data: it asks for 'an expert in the economic model (or models) of AI' to write a piece on whether there is a bubble, whether token prices rise or fall, who wins, and whether companies will self-host. Our census measures published subscription seat prices, not token or API prices, and holds nothing on self-hosting economics - so the three questions it poses are precisely the ones we cannot evidence. The ask is also authorship of a French-language print article for an alumni magazine, not a quote, and there is no route: the address is redacted and no handle is published. Recorded as a real on-beat-adjacent find rather than dropped silently; NOT drafted, because a pitch would have to claim tokenomics standing we do not have.",
+   "template": "None - excluded despite being on-beat-adjacent. Asks for tokenomics expertise and an authored French print article; we hold seat/subscription prices only, the address is platform-redacted and no DM handle is published."
+  },
+  "ai-safety-leaders-physical-ai-safety-and-zerotrust-infrastructure": {
+   "who": "Luiza Jarovsky, PhD - AI governance newsletter (103,000+ subscribers), recapping her GTC Berlin interviews",
+   "category": "AI Safety / Governance / Interview Sourcing",
+   "contact": "Body says 'write to me' but publishes no address, handle or link; the only link offered is to her newsletter and the 15-minute interview.",
+   "relevance": "low",
+   "notes": "This is a newsletter post that happens to contain a sourcing line: she is looking for 'highly innovative leaders... building the future of AI safety, ethics, and governance' to interview. It is a recommendation call for named AI-safety leaders and their work, not a request for pricing or procurement data, and we hold no standing in AI safety or robotics. Contact is by a 'write to me' with the address absent from the page, so there is no route either.",
+   "template": "None - excluded. Off-beat: AI-safety interview sourcing in a newsletter recap; no pricing question, no standing, no published route."
+  }
+ },
+ "why_not_drafted": [
+  "ai-economist-tokenomics-and-market-winners-selfhosting-viability - the window's only body-level AI+spend hit and the closest to our beat, but it asks for tokenomics and self-hosting economics (we measure subscription seat prices) and for an authored French print article; address redacted, no handle published",
+  "the other five window rows ask for personal testimony, named-employer access, podcast guests or a contact route for one specific comic writer; none asks what an AI tool costs and four publish no route at all"
+ ],
+ "defects": [
+  "The 30-slug window (2026-11-15T02:32Z -> 2026-11-16T01:46Z) carried 4 AI-token slugs and 0 AI+spend slugs; the body scan found 6 body-level AI hits and exactly 1 body-level AI+real-spend hit (the Revue des Mines tokenomics call, which uses 'prices' about token prices rather than tool subscriptions). All 30 bodies were fetched and read, so the zero at slug level is a measurement rather than a filter artefact.",
+  "No code change was needed this run: the 2026-11-14 route-prose fix and the 2026-11-15 whole-day age fix both held. The figure set moved again (113 -> 114 tools) while the price statistics did not, which is exactly the case scripts/stage_pitch_drafts.py exists to catch - both standing Gmail drafts were re-staged from today's file rather than left carrying yesterday's tool count."
+ ],
+ "extra_actions": [
+  "Drafts 68 (InformationWeek / Kelsey Ziser) and 69 (Forbes / Alison Coleman) were sitting unsent in [Gmail]/Drafts from 2026-11-15 and carried the 113-tool figure. Both were re-staged today at 114 tools by scripts/stage_pitch_drafts.py and the superseded copies deleted, so the send that is one click away is also correct.",
+  "Nothing was sent. Sends remain George's lane; every route in this queue is an email, a DM or a platform reply.",
+  "The one blocker that is not George's to clear: Medialyst's MCP endpoint (medialyst.ai/api/mcp) answers HTTP 401 and needs an OAuth handshake, and MentionMatch's request list is fetched client-side behind an account - both are account/OAuth lanes only George can open, and they are the only sources that would widen supply beyond Sourcee."
+ ],
+ "contact_replace": {
+  "cios-2027-goals-ram-shortage-saaspocalypse-temp-ai-physical-ai": "Route resolved OFF the request page, not guessed: kelsey.ziser@informationweek.com, published as a mailto link on her InformationWeek author page https://www.informationweek.com/author/kelsey-ziser (route-checks-2026-11-16.json: HTTP 200, 582,686 bytes, title 'Kelsey Ziser | Senior Editor, InformationWeek', address present once as 'Kelsey.ziser@' and once as 'kelsey.ziser@' in the markup - re-fetched and re-confirmed today). The request page itself publishes no address and no link. The send is George's: no plain mailbox on a request page has ever been ours to write to unattended. Deliverability is not SMTP-verified - only a bounce proves anything."
+ }
+}
