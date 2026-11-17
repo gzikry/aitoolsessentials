@@ -1031,6 +1031,15 @@
       "public_href": "/go/rapvideogo/",
       "partner": false
     },
+    "pawgroove": {
+      "name": "PawGroove",
+      "slug": "pawgroove",
+      "official": "https://pawgroove.org/",
+      "destination": "https://pawgroove.org/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/pawgroove/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

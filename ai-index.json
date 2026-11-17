@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-16",
-  "tools_count": 114,
+  "tools_count": 115,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -833,6 +833,13 @@
       "category": "Creative",
       "price": "One-time credit packs only, no subscription and no auto-renewal, credits never expire (the pricing bundle carries creditsValidDays: 0): Single $6.99 (10 credits), Duo Pack $29 (50), Crew Pack $99 (200), Studio Pack $199 (450), Label Pack $599 (1,500). The same five figures and the same 17% / 29% / 37% / 43% savings badges appear on /zh/pricing, and the pack SKUs in the shipped pricing chunk (rap_single 699c/10cr, rap_duo 2900c/50, rap_crew 9900c/200, rap_studio 19900c/450, rap_label 59900c/1500) agree with the cards. The studio shows the cost of the exact render before you commit: the default 9:16, 12-second, 480p render is priced at 24 credits, while every pack card estimates 10 credits per video. USD, charged through the site's own checkout after sign-in; /api/config/public returns waffo_enabled:true plus Google sign-in, email verification and password reset all enabled.",
       "url": "https://aitoolsessentials.com/tools/rapvideogo/"
+    },
+    {
+      "name": "PawGroove",
+      "slug": "pawgroove",
+      "category": "Creative",
+      "price": "One-time credit packs only, no subscription and no auto-renewal, priced in USD: Starter $4.99 for 50 credits and Creator $9.99 for 120 credits, printed as $1.00 and $0.83 per 10 credits respectively. A dog video costs 10 credits, a full themed photo pack of 6-8 images costs 20, a 2-image preview costs 10, and extra image redos cost 3 credits each after two free redos per full pack. Eligible new accounts can receive 10 welcome credits for one video or a 2-image preview, not both, subject to network limits and a daily grant cap; trial videos are 480p and accounts with an eligible paid order get 720p for new videos. The same two pack prices, the same credit costs and the same per-10-credit figures appear on /pricing, on /zh/pricing and in the Terms, and the 50-credit and 120-credit pack arithmetic reconciles in the Terms' own examples ('50 credits can make two full photo packs and one video', '120 credits can make six full photo packs'). The live pricing page renders 'Buy Starter' and 'Buy Creator' buttons after its 'Checking payment availability...' placeholder resolves, and /api/config/public returns default_payment_provider:stripe, stripe_enabled:true and stripe_environment:live. No purchase was attempted.",
+      "url": "https://aitoolsessentials.com/tools/pawgroove/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -476,6 +476,10 @@
     "rapvideogo": {
       "date": "2026-11-15",
       "digest": "One-time credit packs only, no subscription, credits never expire. Single $6.99/10 credits, Duo $29/50, Crew $99/200, Studio $199/450, Label $599/1,500 (SKUs rap_single/rap_duo/rap_crew/rap_studio/rap_label at 699/2900/9900/19900/59900 cents). Save 17/29/37/43% badges reconcile with $0.699 per credit on the Single pack; /zh/pricing identical. Default render 9:16 12s 480p = 24 credits; pack cards estimate 10 credits/video. USD, checkout via Waffo after sign-in."
+    },
+    "pawgroove": {
+      "date": "2026-11-16",
+      "digest": "One-time credit packs, no subscription, no auto-renewal. Starter $4.99/50 credits ($1.00 per 10), Creator $9.99/120 credits ($0.83 per 10). Dog video 10 credits, full themed photo pack (6-8 images) 20, 2-image preview 10, extra redo 3 after two free per full pack. Welcome trial 10 credits for one video or one 2-image preview, 480p trial vs 720p after a paid order. Same figures on /pricing, /zh/pricing and the Terms. USD via Stripe (config reports stripe live); buy buttons render on the live pricing page."
     }
   },
   "changes": [
