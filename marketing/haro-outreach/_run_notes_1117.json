@@ -1,0 +1,113 @@
+{
+ "_note": "Editorial judgement for the 2026-11-17 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json and _window_1117.json. Only the judgements below are typed.",
+ "new_rows": {
+  "former-software-engineers-left-tech-after-ai-coding-tools": {
+   "who": "Thibault Spirlet - Business Insider (author field in the page's JSON-LD reads 'Thibault Spirlet')",
+   "category": "AI Coding Tools / Vendor Switching / Software Careers",
+   "contact": "Body says 'please DM me or email me at [email redacted]' - Sourcee redacts the address and the page publishes no handle of the poster's own. His byline page businessinsider.com/author/thibault-spirlet publishes tspirlet@businessinsider.com in a mailto link (re-probed today, HTTP 200, 322,839 bytes, address 5 times in the markup), which is the route used in the draft.",
+   "relevance": "medium",
+   "notes": "A four-part Business Insider call, posted 2026-11-16T12:19Z. Three parts are first-hand testimony we cannot supply (former engineers who left over AI coding tools; workers rethinking which skills to protect; owners of vibe-coded businesses on their finances). The second part IS our beat: 'Employees, customers, and investors who have switched from US AI firms to Mistral, or are seriously considering doing so.' We hold dated per-seat prices for both sides of exactly that comparison - Mistral Vibe (Le Chat) Pro $14.99/month and Team $24.99/user/month, ChatGPT Plus $20/month, Claude Pro $20 month-to-month or $17 on $200 annual prepay, all checked 2026-11-14 - so the pitch offers the switching arithmetic without claiming to be a switcher. This is the same reporter whose two October calls we drafted and never sent; the earlier Mistral request is now 404, so this is a fresh page and a first contact, not a re-send.",
+   "template": "Offer the seat-price comparison behind a US-to-Mistral switch, dated: Mistral Vibe Pro $14.99/month and Team $24.99/user/month against ChatGPT Plus $20 and Claude Pro $20 month-to-month, all read 2026-11-14, plus the 1.11x-2.53x (median 1.25x) monthly-vs-annual premium over 19 same-tier pairs. State plainly that we are a price census, not a switcher. Draft at pitch-drafts-2026-11-17.md section 1."
+  },
+  "cios-ctos-and-senior-tech-leaders-working-with-ai-cio-summit-nyc-feb": {
+   "who": "GDS Group CIO Summit portfolio - poster's name not given on the page; the call is addressed to CIOs, CTOs and senior technology leaders attending the New York edition in February",
+   "category": "Enterprise AI / Funding, Ownership and ROI / Conference Sourcing",
+   "contact": "Body says 'please do comment below or drop me a message if you have thoughts'; the page publishes no address, no handle and no link of its own, so there is no route to the poster at all.",
+   "relevance": "low",
+   "notes": "The most on-beat question in the window and still not ours to answer: how large organisations fund AI, who owns it, how they measure ROI, and how long they run an agent before killing it. Those are answers from inside a CIO function, and we hold a price census rather than enterprise deployment experience - answering would mean inventing a CIO's account. The body-level spend hit is the token 'ROI', which is a value measure rather than tool spend, so the AI+spend count for the window stays at zero. Recorded so a future body scan does not re-surface it as a find; not drafted.",
+   "template": "None - excluded. Asks CIOs/CTOs for funding, ownership and ROI experience we do not hold; the page publishes no route."
+  },
+  "software-developers-ai-impact-on-development-practices": {
+   "who": "Not named on the page - the call is addressed to software developers",
+   "category": "Software Engineering / AI Coding Tools",
+   "contact": "Body says 'DM or comment below'; the page publishes no address, handle or link.",
+   "relevance": "low",
+   "notes": "Developer testimony about what is changing, working and breaking in engineering practice. We are not a working developer and hold no first-hand account, so the honest answer is no. There is no pricing or procurement question in the body and no route published, so there is nothing to send and nowhere to send it.",
+   "template": "None - excluded. Off-beat: practitioner testimony from working developers; no pricing question and no route."
+  },
+  "uk-developers-ai-impact-on-job-satisfaction-and-careers": {
+   "who": "Not named on the page - the call is addressed to UK-based software engineers and developers",
+   "category": "UK Tech Labour / AI Coding Tools",
+   "contact": "Body says 'DM / email: [email redacted]'; Sourcee redacts the address and no handle is published.",
+   "relevance": "low",
+   "notes": "Asks UK developers how AI-generated work is changing job satisfaction, professional identity and the junior-to-manager pipeline. First-hand testimony from a job we do not hold, and the address is redacted with no handle to fall back on. No spend question in the body.",
+   "template": "None - excluded. Off-beat: UK developer testimony on job satisfaction; address redacted, no route."
+  },
+  "ai-experts-bot-syntax-and-prompt-structure": {
+   "who": "Not named on the page",
+   "category": "Prompt Engineering / Bot Syntax",
+   "contact": "Body says 'ping me by chat'; the page publishes no address, handle or link.",
+   "relevance": "low",
+   "notes": "A one-line call for people who know bot syntax and prompt structure. Not a pricing, seat or procurement question, and there is no route published to answer it even if it were.",
+   "template": "None - excluded. Off-beat: prompt-syntax expertise with no pricing question and no route."
+  },
+  "parents-using-ai-tools-invisible-labor-in-relationships": {
+   "who": "Not named on the page - The Washington Post",
+   "category": "Consumer AI / Family Labour",
+   "contact": "Body says 'Let me know your experience by emailing me: [email redacted]'; the address is platform-redacted and no handle is published.",
+   "relevance": "low",
+   "notes": "Washington Post call for parents using AI for calendars, appointments and travel, on the invisible labour in a household. Personal testimony from a family unit we cannot supply, and the address is redacted. The nearest honest thing we hold is a per-seat price for consumer tiers, which is not what the piece is about.",
+   "template": "None - excluded. Off-beat: household testimony about AI and invisible labour; address redacted, no route."
+  },
+  "divorcing-adults-who-used-ai-personal-stories-about-impact": {
+   "who": "Not named on the page - Insider",
+   "category": "Consumer AI / Divorce and Co-parenting",
+   "contact": "Body says 'Email me at [email redacted]'; the address is platform-redacted and no handle is published.",
+   "relevance": "low",
+   "notes": "First-person stories from people who used AI through a divorce or co-parenting. Testimony we do not have, on a beat where we have no standing, with a redacted address and no route.",
+   "template": "None - excluded. Off-beat: personal divorce testimony; address redacted, no route."
+  },
+  "chatgpt-users-use-ai-to-run-their-lives-and-been-called-meat-proxy": {
+   "who": "Not named on the page",
+   "category": "Consumer AI / Daily Life",
+   "contact": "Body says 'my DMs are open' but publishes no handle, address or link.",
+   "relevance": "low",
+   "notes": "Asks ChatGPT users whether they use it to run their lives and have been called a 'meat proxy'. First-hand consumer testimony, no pricing question, and 'DMs are open' with no handle to open them at.",
+   "template": "None - excluded. Off-beat: consumer ChatGPT testimony with no route."
+  },
+  "lab-researchers-and-ai-preppers-ai-doom-prep-land-metals-weapons": {
+   "who": "Not named on the page",
+   "category": "AI Risk / Preparedness",
+   "contact": "Body says 'shoot me a DM'; no address, handle or link is published.",
+   "relevance": "low",
+   "notes": "A reporter looking for lab researchers and AI preppers who have bought land, metals or weapons against an 'AI doom' scenario. Off our beat entirely, asks for people we are not, and publishes no route.",
+   "template": "None - excluded. Off-beat: AI-doom preparedness testimony; no pricing question and no route."
+  },
+  "uk-tech-leaders-nvidia-role-in-infrastructure-finance-and-geopolitics": {
+   "who": "Not named on the page",
+   "category": "UK Tech / Nvidia / Infrastructure and Geopolitics",
+   "contact": "Body says 'please DM me in confidence'; no handle, address or link is published.",
+   "relevance": "low",
+   "notes": "Asks UK tech leaders for views on Nvidia's role in infrastructure, financing and geopolitics. Institutional commentary from a company we are not, with no route published. Nothing in the body asks what a tool costs.",
+   "template": "None - excluded. Off-beat: UK tech-leader commentary on Nvidia; standing we do not have and no route."
+  },
+  "cpas-choosing-best-accounting-software-forbes-advisor": {
+   "who": "Forbes Advisor source request - poster's name not given on the page",
+   "category": "Accounting Software / Expert Quote",
+   "contact": "Body says 'comment for more info or send me a message'; no address, handle or link is published.",
+   "relevance": "low",
+   "notes": "Wants a CPA to give a one-to-four-sentence original quote on choosing accounting software for Forbes Advisor. The body-level AI hit is the poster's own instruction that the quote be 'no AI', i.e. the token appears as a prohibition rather than a subject. We are a price census, not a CPA, and no route is published. A false positive on the body scan, kept here so it is not re-surfaced.",
+   "template": "None - excluded. Off-beat (CPA quote for Forbes Advisor); 'AI' appears only in the instruction that the quote be original, and no route is published."
+  },
+  "cfpa-members-and-fluid-power-experts-spring-2027-articles": {
+   "who": "Richard Cowan - 'Your World in Motion', published for the Canadian Fluid Power Association (CFPA)",
+   "category": "Trade Magazine / Fluid Power / Byline Contribution",
+   "contact": "Body says to send an abstract to Richard Cowan at [email redacted]; the address is platform-redacted and no handle is published.",
+   "relevance": "low",
+   "notes": "A byline call for the Spring 2027 issue of a fluid-power trade magazine, abstracts due 2027-01-04, with CFPA members given preference and product or company promotion excluded. The body-level AI hit is a contributor name in the thank-you list ('Dominic Gagnon, General Manager of BDC Mission AI'), not a subject, so this is a second body-scan false positive. Off-beat and route-redacted in any case.",
+   "template": "None - excluded. Off-beat (fluid-power trade bylines, abstracts due 2027-01-04); 'AI' is a contributor's job title, and the address is platform-redacted."
+  }
+ },
+ "why_not_drafted": [
+  "former-software-engineers-left-tech-after-ai-coding-tools IS drafted (pitch-drafts-2026-11-17.md section 1): it is the one window row whose ask touches our data - the Mistral-vs-US switching arithmetic - and its author is named on the page with a live byline route",
+  "the other eleven window rows ask for personal testimony, named-employer access, a CPA quote or conference/institutional commentary; none asks what an AI tool costs, and eight publish no route at all (four of those have a platform-redacted address)"
+ ],
+ "defects": [
+  "The 97-slug window (2026-11-16T01:46Z -> today) carried 10 AI-token slugs and 0 AI+spend slugs; the body scan found 12 body-level AI hits and 1 body-level AI+spend match (the GDS Group CIO Summit call, where the spend token is 'ROI' - a value measure rather than tool spend). All 97 bodies were fetched and read, so the zero at slug level is a measurement, not a filter artefact.",
+  "Two of the twelve body-level hits are false positives on the word 'AI' rather than on the subject: a Forbes Advisor request whose body says the quote must be 'no AI', and a fluid-power trade call where 'AI' appears inside a contributor's job title. Both are recorded with that reason so a later body scan does not resurface them as finds.",
+  "The tool count moved again (114 -> 115) while the price statistics held (50 of 115 monthly-priced, 41 at or under $25, median $15.50, snapshot 2026-11-17), so both standing Gmail drafts from 2026-11-16 were replaced from today's file rather than left carrying yesterday's count behind a send button."
+ ],
+ "extra_actions": [
+  "THE SEND QUEUE IS THREE DRAFTS AND ZERO SENDS: Business Insider / Thibault Spirlet (1d, tspirlet@businessinsider.com) is the freshest on-beat row this monitor has produced since 2026-10-24; InformationWeek / Kelsey Ziser (7d, kelsey.ziser@informationweek.com) is the only row inside the 10-day line that was already drafted; Forbes / Alison Coleman (21d, alison@alisoncoleman.co.uk) is a late send that closes two rows with one email. Drafts at pitch-drafts-2026-11-17.md; the two email bodies are staged in [Gmail]/Drafts so each send is a click."
+ ]
+}
