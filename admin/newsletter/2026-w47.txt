@@ -1,0 +1,50 @@
+KEEP, TEST, CUT · Issue 10 · Tue 17 Nov 2026
+
+Gemini now has a $4.99 plan
+Google, OpenAI and xAI all sell a chat plan under $10 now, and the $100 tiers bundle API credits. A second $20 assistant is the easy cut.
+
+THIS WEEK’S CALL: AI CHAT ASSISTANTS
+KEEP: One $20 assistant you open daily. Claude (https://aitoolsessentials.com/tools/claude/) Pro is $20 month-to-month or $17 with a $200 annual prepay, checked 14 Nov.
+TEST FIRST: Google AI Plus (https://aitoolsessentials.com/tools/gemini/) at $4.99 a month as your second opinion, checked 14 Nov.
+CUT: A second $20 chatbot doing the same job.
+
+Count the chat assistants on your card. On our 14 Nov 2026 checks of the official pages, ChatGPT (https://aitoolsessentials.com/tools/chatgpt/) Plus is $20 a month, Google AI Pro is $19.99, Claude Pro is $20 month-to-month, and Grok (https://aitoolsessentials.com/tools/grok/) Premium is $30. They all answer, draft, summarize and read your files. If two of them bill you every month, one is there out of habit.
+
+THE SUB-$10 RUNG IS THE CHEAPEST SECOND OPINION
+
+Three of the big four now sell a plan under $10. Google added Google AI Plus at $4.99 a month, between Free and AI Pro. It wasn’t in our 18 Sep record. Google says Plus gets double the Free usage limits and AI Pro gets four times. ChatGPT Go is $8. Grok’s new Plus is $8 too, and it bundles Cursor.
+
+That changes the math on a second subscription. Say you keep the other assistant for one job, like checking a draft or a second read on a contract. A backup rarely needs a high usage cap. At $4.99 that’s $59.88 a year. At $8 it’s $96. A second $20 seat is $240. Move the backup down a rung for one month and see if you notice.
+
+AT $100 YOU’RE BUYING API CREDITS, NOT JUST CHAT
+
+The top of the ladder moved on 14 Nov. Anthropic now sells its $200 tier as a separate plan called Ultra, with 10x Pro weekly usage and $200 a month in API credits. Max stays $100 and now includes $100 a month in API credits. ChatGPT Pro is also $100. On Grok’s page, the old $30 SuperGrok is now Premium and the $100 SuperGrok Plus is now Super.
+
+Those credits only count if you’d spend them. If you already pay a separate API bill for scripts or a coding tool, Max can absorb it. If you don’t, you’re paying $100 for headroom. Look at the last 30 days. Did you hit a usage limit even once? No limit, no upgrade.
+
+If you’re still on SuperGrok, nothing forces a switch. On our 13 Oct check, xAI’s documentation said existing SuperGrok plans continue and switching is optional. If $30 for Premium is what you’d pay anyway, there’s nothing to do today.
+
+PRICING WATCH (These five moved on our 14 Nov re-checks. ChatGPT, Canva, Runway, ElevenLabs and GitHub Copilot were re-checked that day with no price change.)
+- Claude · 14 Nov 2026 · New tier: Ultra $200/mo with $200/mo API credits · Max $100/mo now includes $100/mo API credits · Pro $20/mo or $17/mo on a $200 annual prepay
+- Gemini · 14 Nov 2026 · New tier: Google AI Plus $4.99/mo · AI Pro $19.99/mo · AI Ultra $99.99/mo or $199.99/mo
+- Grok · 14 Nov 2026 · Renamed: SuperGrok $30 is now Premium $30/mo · SuperGrok Plus $100 is now Super $100/mo · Plus $8/mo · Ultra $200/mo · Teams $30+/user
+- Gamma · 14 Nov 2026 · More credits: Plus is still $108/yr, now with 1,500 monthly credits, up from 1,000 on 1 Oct
+- Adobe Firefly · 14 Nov 2026 · Promo: Pro $19.99/mo, $9.99/mo for the first 6 months on a promo ending 6 Dec · Standard $9.99/mo unchanged
+Every price in this issue was checked 14 Nov 2026 except where another date is given.
+Full tracker: https://aitoolsessentials.com/pricing-watch/
+
+WORTH A LOOK
+Poe puts many models behind one $49.99 plan
+Poe (https://aitoolsessentials.com/tools/poe/) runs chat, image and video models from several vendors in one app, with side-by-side answers and custom bots. Its official page, checked 14 Nov 2026, lists annual plans only: $49.99 a year for 10,000 points a day, which Poe shows as $4.17 a month. Bigger plans run from $199.99 to $2,499.99 a year, and there’s a free daily points allowance.
+
+The catch: we found no monthly prices, so you’re prepaying a year, and training rules vary by bot. Fully shaded bots don’t feed provider training. Half-shaded ones may. Use it as the backup, not the main seat.
+
+ONE THING TO DO THIS WEEK
+Open the billing page of every assistant you pay for. Write down the plan, the renewal date, and whether you hit a usage limit in the last 30 days. If two $20 assistants show up, keep the one you opened most this week. Move the other to its sub-$10 rung or to free before it renews. Then run the free Stack Audit (https://aitoolsessentials.com/stack-audit.html). It stays in your browser, needs no login, and maps overlap by job.
+
+Got a question about a tool on your card? Write to aitoolsessentials@gmail.com.
+— AIToolsEssentials
+
+You’re getting this because you subscribed to Keep, Test, Cut at aitoolsessentials.com. Past issues: https://aitoolsessentials.com/newsletter/  Get it free: https://aitoolsessentials.com/subscribe/
+Premium is a separate $12/month research membership: https://aitoolsessentials.com/premium/
+AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}
