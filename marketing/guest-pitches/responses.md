@@ -1,12 +1,13 @@
-# Guest pitch responses — 2026-09-03 batch (+ 2026-09-22, 2026-10-13, 2026-10-20 and 2026-11-03 additions)
+# Guest pitch responses — 2026-09-03 batch (+ 2026-09-22, 2026-10-13, 2026-10-20, 2026-11-03, 2026-11-10 and 2026-11-17 additions)
 
-Tracking file for the pitches in `pitches-2026-11-10.json` (12 drafts, supersedes the 12 in
-`pitches-2026-11-03.json`, the 12 in `pitches-2026-10-20.json`, the 12 in `pitches-2026-10-13.json`,
-the 12 in `pitches-2026-09-22.json` and the 10 in `pitches-2026-09-03.json` — never send from a
-superseded file).
-**Created:** 2026-09-15 · **Re-verified:** 2026-11-10 (cron reminder run). Still **0 sends** from the
-Sep-22, Oct-13, Oct-20, Nov-03 and Nov-10 batches; Sent folder confirms the last pitch mail of any kind
-is the 2026-10-08 ToolChase reply (newest outbound IDs 396–402 are vendor submission mail, 11-08/11-10).
+Tracking file for the pitches in `pitches-2026-11-17.json` (12 drafts, supersedes the 12 in
+`pitches-2026-11-10.json`, the 12 in `pitches-2026-11-03.json`, the 12 in `pitches-2026-10-20.json`,
+the 12 in `pitches-2026-10-13.json`, the 12 in `pitches-2026-09-22.json` and the 10 in
+`pitches-2026-09-03.json` — never send from a superseded file).
+**Created:** 2026-09-15 · **Re-verified:** 2026-11-17 (cron reminder run). Still **0 sends** from the
+Sep-22, Oct-13, Oct-20, Nov-03, Nov-10 and Nov-17 batches; Sent folder confirms the newest outbound
+IDs are 432 (PawGroove, 11-17) and 430 (Seedance, 11-16) — all vendor submission mail. The last pitch
+mail of any kind is still the 2026-10-08 ToolChase reply.
 
 Status legend: `NOT SENT` · `SENT` · `AWAITING` · `REPLIED` · `NO RESPONSE` · `CLOSED`
 
@@ -66,7 +67,56 @@ Blocker status: **none.** Freshness after the fix (2026-10-13): **41 FRESH · 22
 10 NO_CLAIM · 2 DRIFTED · 2 UNVERIFIED** — `cursor` and `claude` both **FRESH 4/4**. The two
 remaining DRIFTED rows (`aidetector-cx`, `instrumentl`) appear in no draft.
 
-## Send plan for the week of 2026-11-10 (2-3 sends)
+## Send plan for the week of 2026-11-17 (2-3 sends)
+
+**75 days since the last cold pitch (2026-09-03), 82 days since the last pitch mail of any kind
+(2026-10-08 ToolChase reply), 7 days since the Nov-10 plan — still 0 sends from every batch since
+Sep 22.** Sent folder re-checked today: IDs 404–432 are all vendor submission mail (11-10 to 11-17).
+Inbox since 11-10 holds tool submissions and vendor threads only; no outlet replies.
+
+**Why the Nov-10 batch could not be sent as-is:** `data/tools.json` is now at **115 tools**, not the
+108 baked into `pitches-2026-11-10.json` — the one sentence an editor can check in ten seconds.
+`cursor` and `claude` were also both re-verified 2026-11-14, so the blog draft's checked dates had
+drifted too. Regenerated as **`pitches-2026-11-17.json` (12 drafts, 115 tools, dates 2026-11-14)**.
+Everything older is superseded — do not send from it.
+
+**On the standing "start with newsletters" advice:** true of newsletters in general, still false of
+this list. The Sep-3 newsletter sends went **0/5**; of the four newsletter rows, `dan@tldr.tech` is a
+guess (TLDR publishes no editorial address), `support@therundown.ai` is a general support inbox, and
+two were already pitched. Exactly one viable newsletter send exists — Ben's Bites, and only with a
+changed opening.
+
+1. **The Decoder** — `hello@the-decoder.com`, blog, **first touch.** Best odds on the list: editorial
+   address published on their own `/about`, MX live (`mail.the-decoder.com`, re-checked today), never
+   contacted. *Keep the drafted first line:* "I've been following The Decoder — how clearly you mark
+   sponsored posts and keep them separate from editorial." Draft's concrete claim is the X Subscription
+   ladder at the 2026-11-14 check, plus Claude Max $100 (2026-11-14).
+2. **Latent Space** — `tips@latent.space`, podcast, **first touch.** `tips@` is the show's published
+   pitch address (`business@` is sponsorship); MX live (`smtp.google.com`). *Add:* "Your AI-engineer
+   audience is the one group that actually has to choose between overlapping coding subscriptions, so
+   this may land better here than with a general AI newsletter." Ask is an interview walkthrough, not
+   a placement.
+3. **Ben's Bites** — `team@bensbites.com`, newsletter, **second touch, new opening required.** The
+   Nov-17 draft is still the Sep-3 resource pitch verbatim; do not send it as written. Replace the
+   first two paragraphs with the repricing lead:
+   > Hi Ben's Bites team,
+   >
+   > Not a re-pitch — Cursor stopped selling standalone seats on 12 Oct and now sits on an X
+   > Subscription ladder that also carries Grok and X Premium (cursor.com/pricing, re-checked
+   > 2026-11-14). We track 115 AI tools with dated pricing evidence, and the overlap math is what
+   > changed: a coding seat plus a frontier chat seat is now the most expensive stack to double up on.
+   >
+   > If a short "what the repricing actually costs you" item fits a future issue, the dated table is
+   > here: https://aitoolsessentials.com/pricing-watch/ — every row carries its own checked date.
+
+**Skip this week:** TLDR AI (guessed address), The Rundown AI (support inbox), The Neuron (already
+pitched; live newsletter on theneuron.ai), ToolRadar and AIToolsRecap (monetized placement desks),
+Changelog and Last Week in AI (lower fit than the three above), infoDOCKET (`gprice@gmail.com` is a
+personal Gmail — low-yield unless Gary is actively soliciting).
+
+**Fallback:** send #1 and #3 only. Two sends beats a sixth consecutive week of zero.
+
+## Send plan for the week of 2026-11-10 (2-3 sends) — historical
 
 **68 days since the last pitch mail of any kind (2026-09-03 batch), 7 days since the Nov-03 plan,
 still 0 sends from every batch since Sep 22.** Sent folder re-checked today: newest outbound is vendor
@@ -335,3 +385,4 @@ the angle or skip those addresses.
 | 2026-10-20 | Cron reminder run — 28 days, 0 sends; batch regenerated | Sent folder confirms no pitch mail since 2026-10-13 (only vendor submission replies), so the Oct-13 plan was never executed. Regenerated as `pitches-2026-10-20.json`: tool count re-derived 77 → 80; blog greeting grammar fixed (3 drafts) plus an `infoDOCKET` key typo that had been falling back to a fragment. MX re-confirmed live on the 6 candidate routes (the-decoder.com, latent.space, bensbites.com, toolchase.com, changelog.com, lastweekinai.com). Claims re-checked at source: `cursor` snapshot 2026-10-13 (X Subscription ladder), `claude` 2026-09-18 (Max $100). Send plan rewritten around two uncontacted editorial routes + the ToolChase warm follow-up, because the newsletter-first ordering this reminder suggested is contradicted by the batch's own 0/5 newsletter record. No send. |
 | 2026-11-10 | Cron reminder run — 68 days, 0 sends; batch regenerated at 108 tools | Sent folder: newest outbound IDs 396–402 are vendor submission mail (11-08/11-10); last pitch mail remains the 2026-10-08 ToolChase reply. Inbox since 11-04 holds only tool submissions and vendor threads — no outlet replies. `data/tools.json` reached **108**, so `pitches-2026-11-03.json` (105) would have shipped a checkable-wrong count; regenerated as `pitches-2026-11-10.json` (12 drafts, 108 tools, dates cursor 2026-11-03 / claude 2026-09-18). Week plan unchanged: The Decoder + Latent Space first touch, Ben's Bites second touch with the repricing opening (not the Sep-3 resource text). No send. |
 | 2026-11-03 | Cron reminder run — 40 days, 0 sends; checked dates now derived, batch regenerated | Sent folder: newest outbound is vendor/submission mail (IDs 378–392, 11-02/03); last pitch mail remains the 2026-10-08 ToolChase reply, so the Oct-20 plan also went unexecuted. `data/tools.json` reached **105**, i.e. `pitches-2026-10-20.json` was 25 tools behind, and `cursor` re-verified today made its "2026-10-13 check" string stale. `verified_overlap_line()` now calls new `pricing_checked_date()` and reads `cursor`/`claude` checked dates from `data/tool_sources.json` instead of hardcoding them — same drift class as the tool count. Regenerated `pitches-2026-11-03.json` (12 drafts, 105 tools, dates 2026-11-03 / 2026-09-18). MX live re-checked 11-03: the-decoder.com (mail.the-decoder.com), latent.space (smtp.google.com), bensbites.com (google). Week plan: The Decoder + Latent Space first touch, Ben's Bites second touch with the repricing opening. No send. |
+| 2026-11-17 | Cron reminder run — 75 days since last cold pitch, 0 sends; batch regenerated at 115 tools | Sent folder: IDs 404–432 are all vendor submission mail (11-10 → 11-17, newest PawGroove 11-17 02:47 UTC); last pitch mail remains the 2026-10-08 ToolChase reply, so the Nov-10 plan also went unexecuted. `data/tools.json` reached **115**, and `cursor` + `claude` were both re-verified 2026-11-14 — `pitches-2026-11-10.json` (108, dates 11-03/09-18) would have shipped a checkable-wrong count and stale dates. Regenerated as `pitches-2026-11-17.json` (12 drafts, 115 tools, dates both 2026-11-14). MX live today: the-decoder.com (mail.the-decoder.com), latent.space (smtp.google.com), bensbites.com (aspmx/smtp.google.com). Week plan: The Decoder + Latent Space first touch, Ben's Bites second touch with the repricing opening. No send. |
