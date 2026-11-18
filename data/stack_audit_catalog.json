@@ -2855,6 +2855,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "savingy",
+      "name": "Savingy",
+      "category": "Productivity",
+      "official_url": "https://www.savingy.com/",
+      "review_url": "/tools/savingy/",
+      "price_label": "Free core with no card and no time limit: unlimited manual income and expense records, one-line entry, receipts, statement import, the tracker and money screens, monthly budgets and plans, goals and contributions, bill reminders, the Weekly Reset review, Ask Savingy, recurring purchases, calculators, and data backup/restore/export. Pro is sold as fixed access periods in INR, one payment each: Rs 149 for 30 days, or Rs 1,188 for 365 days - printed as about Rs 99 a month paid once, saving Rs 600 against twelve 30-day periods (12 x 149 = 1,788). No automatic renewal: the pricing FAQ answers 'Does Pro renew automatically? No. You pay once for 30 or 365 days. When the period ends, Pro stops and everything you logged stays on Free.' A one-time 45-day Pro trial opens after 30 real expense or income entries, at the user's choosing, with no card and no charge when it ends. Razorpay takes the payment; the shipped checkout bundle hardcodes the same amounts (monthly 149, yearly 1188) and loads checkout.razorpay.com/v1/checkout.js. The Google Play listing prints the identical offer: 'Rs 149 for 30 days or Rs 1,188 for a year. Fixed access periods: no subscription and no automatic renewal.' All prices include GST per the store listing. No purchase was attempted.",
+      "pricing_summary": "Free core with no card and no time limit: unlimited manual income and expense records, one-line entry, receipts, statement import, the tracker and money screens, monthly budgets and plans, goals and contributions, bill reminders, the Weekly Reset review, Ask Savingy, recurring purchases, calculators, and data backup/restore/export. Pro is sold as fixed access periods in INR, one payment each: Rs 149 for 30 days, or Rs 1,188 for 365 days - printed as about Rs 99 a month paid once, saving Rs 600 against twelve 30-day periods (12 x 149 = 1,788). No automatic renewal: the pricing FAQ answers 'Does Pro renew automatically? No. You pay once for 30 or 365 days. When the period ends, Pro stops and everything you logged stays on Free.' A one-time 45-day Pro trial opens after 30 real expense or income entries, at the user's choosing, with no card and no charge when it ends. Razorpay takes the payment; the shipped checkout bundle hardcodes the same amounts (monthly 149, yearly 1188) and loads checkout.razorpay.com/v1/checkout.js. The Google Play listing prints the identical offer: 'Rs 149 for 30 days or Rs 1,188 for a year. Fixed access periods: no subscription and no automatic renewal.' All prices include GST per the store listing. No purchase was attempted.",
+      "pricing_url": "https://www.savingy.com/pricing",
+      "pricing_checked_date": "2026-11-18",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "design",
+        "video",
+        "audio",
+        "automation",
+        "email"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

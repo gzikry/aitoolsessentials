@@ -484,6 +484,10 @@
     "pawmambo": {
       "date": "2026-11-18",
       "digest": "One-time credit packs only, no subscription, no auto-renewal, USD: Try $6.99 / 60 credits (printed as 30 seconds of video), Make more $14.90 / 160 credits (80 seconds), Keep creating $29.90 / 340 cred"
+    },
+    "savingy": {
+      "date": "2026-11-18",
+      "digest": "Free core with no card and no time limit: unlimited manual income and expense records, one-line entry, receipts, statement import, the tracker and money screens, monthly budgets and plans, goals and contributions, bill reminders, the Weekly Reset review, Ask Savingy, recurring purchases, calculators, and data backup/restore/export. Pro is sold as fixed access periods in INR, one payment each: Rs 149 for 30 days, or Rs 1,188 for 365 days - printed as about Rs 99 a month paid once, saving Rs 600 against twelve 30-day"
     }
   },
   "changes": [
@@ -822,6 +826,13 @@
       "previous_check": "2026-11-17",
       "new_check": "2026-11-18",
       "note": "PawMambo: recorded pricing updated since the 2026-11-17 check, re-verified 2026-11-18."
+    },
+    {
+      "slug": "savingy",
+      "detected": "2026-11-18",
+      "previous_check": null,
+      "new_check": "2026-11-18",
+      "note": "Savingy: first recorded pricing snapshot - free core plus one-time Pro passes at Rs 149 / 30 days and Rs 1,188 / 365 days, verified on the pricing page, the Google Play listing and the shipped checkout bundle."
     }
   ],
   "updated": "2026-11-18"

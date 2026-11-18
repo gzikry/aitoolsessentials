@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-18",
-  "tools_count": 116,
+  "tools_count": 117,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -847,6 +847,13 @@
       "category": "Creative",
       "price": "One-time credit packs only, no subscription and no auto-renewal, priced in USD: Try $6.99 for 60 credits (30 seconds of video), Make more $14.90 for 160 credits (80 seconds) and Keep creating $29.90 for 340 credits (170 seconds). The stated rate is 2 credits per second of finished video with a 10-credit minimum per request, so a 10-second clip is 20 credits, the built-in 16-second Denim Shuffle is 32 and a 30-second custom reference is 60; at those rates a 10-second video works out at $2.33 on the smallest pack and $1.76 on the largest. New accounts get 20 welcome credits once - enough for one 10-second video - and the page warns that a 16-second Denim Shuffle costs 32 credits, so the welcome grant does not cover it. Purchased credits do not expire. The pack arithmetic reconciles with the stated rate on every row (60 credits / 2 per second = 30 seconds, 160 = 80, 340 = 170), and the pricing page states the same figures in its FAQ answers. Stripe handles payment; no purchase was attempted.",
       "url": "https://aitoolsessentials.com/tools/pawmambo/"
+    },
+    {
+      "name": "Savingy",
+      "slug": "savingy",
+      "category": "Productivity",
+      "price": "Free core with no card and no time limit: unlimited manual income and expense records, one-line entry, receipts, statement import, the tracker and money screens, monthly budgets and plans, goals and contributions, bill reminders, the Weekly Reset review, Ask Savingy, recurring purchases, calculators, and data backup/restore/export. Pro is sold as fixed access periods in INR, one payment each: Rs 149 for 30 days, or Rs 1,188 for 365 days - printed as about Rs 99 a month paid once, saving Rs 600 against twelve 30-day periods (12 x 149 = 1,788). No automatic renewal: the pricing FAQ answers 'Does Pro renew automatically? No. You pay once for 30 or 365 days. When the period ends, Pro stops and everything you logged stays on Free.' A one-time 45-day Pro trial opens after 30 real expense or income entries, at the user's choosing, with no card and no charge when it ends. Razorpay takes the payment; the shipped checkout bundle hardcodes the same amounts (monthly 149, yearly 1188) and loads checkout.razorpay.com/v1/checkout.js. The Google Play listing prints the identical offer: 'Rs 149 for 30 days or Rs 1,188 for a year. Fixed access periods: no subscription and no automatic renewal.' All prices include GST per the store listing. No purchase was attempted.",
+      "url": "https://aitoolsessentials.com/tools/savingy/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -1049,6 +1049,15 @@
       "public_href": "/go/pawmambo/",
       "partner": false
     },
+    "savingy": {
+      "name": "Savingy",
+      "slug": "savingy",
+      "official": "https://www.savingy.com/",
+      "destination": "https://www.savingy.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/savingy/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",
