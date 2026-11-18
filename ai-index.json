@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-17",
-  "tools_count": 115,
+  "tools_count": 116,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -840,6 +840,13 @@
       "category": "Creative",
       "price": "One-time credit packs only, no subscription and no auto-renewal, priced in USD: Starter $4.99 for 50 credits and Creator $9.99 for 120 credits, printed as $1.00 and $0.83 per 10 credits respectively. A dog video costs 10 credits, a full themed photo pack of 6-8 images costs 20, a 2-image preview costs 10, and extra image redos cost 3 credits each after two free redos per full pack. Eligible new accounts can receive 10 welcome credits for one video or a 2-image preview, not both, subject to network limits and a daily grant cap; trial videos are 480p and accounts with an eligible paid order get 720p for new videos. The same two pack prices, the same credit costs and the same per-10-credit figures appear on /pricing, on /zh/pricing and in the Terms, and the 50-credit and 120-credit pack arithmetic reconciles in the Terms' own examples ('50 credits can make two full photo packs and one video', '120 credits can make six full photo packs'). The live pricing page renders 'Buy Starter' and 'Buy Creator' buttons after its 'Checking payment availability...' placeholder resolves, and /api/config/public returns default_payment_provider:stripe, stripe_enabled:true and stripe_environment:live. No purchase was attempted.",
       "url": "https://aitoolsessentials.com/tools/pawgroove/"
+    },
+    {
+      "name": "PawMambo",
+      "slug": "pawmambo",
+      "category": "Creative",
+      "price": "One-time credit packs only, no subscription and no auto-renewal, priced in USD: Try $6.99 for 60 credits (30 seconds of video), Make more $14.90 for 160 credits (80 seconds) and Keep creating $29.90 for 340 credits (170 seconds). The stated rate is 2 credits per second of finished video with a 10-credit minimum per request, so a 10-second clip is 20 credits, the built-in 16-second Denim Shuffle is 32 and a 30-second custom reference is 60; at those rates a 10-second video works out at $2.33 on the smallest pack and $1.76 on the largest. New accounts get 20 welcome credits once - enough for one 10-second video - and the page warns that a 16-second Denim Shuffle costs 32 credits, so the welcome grant does not cover it. Purchased credits do not expire. The pack arithmetic reconciles with the stated rate on every row (60 credits / 2 per second = 30 seconds, 160 = 80, 340 = 170), and the pricing page states the same figures in its FAQ answers. Stripe handles payment; no purchase was attempted.",
+      "url": "https://aitoolsessentials.com/tools/pawmambo/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -7055,5 +7055,87 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
     "rating_rationale": "Job fit 4.4/5. This is a real, working consumer studio rather than a wrapper: eleven templates each carry their own generated example served as an MP4, each template page prints its own input requirements and limits, the two credit packs are priced identically in three places and the per-credit arithmetic reconciles, and the sale model is a one-time pack with no subscription and no auto-renewal. Transparency 3.6/5 is what holds it at 4.0, and the score splits cleanly on the two questions a buyer actually asks. On honesty this site is above the catalog median: it names its processors by company and model family, states that analytics runs before any consent choice, states that there is no automatic expiry schedule, states that completion time is not guaranteed, and publishes a specific acceptable-use policy with a non-affiliation line. On the documents a buyer is asked to rely on it is still thin: nobody is identified as the contracting party, no law or venue is named, training use is unstated, there is no refund page behind the one refund sentence in the Terms, and the free trial's relationship to a real generation is left ambiguous by the site's own 'preview mode' wording. None of those is a reason to withhold a listing when the product is verifiable and purchasable and every defect is quoted from a page a reader can open - but together they keep it below the 4.5 tier that proven, answerable operators occupy."
+  },
+  {
+    "slug": "pawmambo",
+    "name": "PawMambo",
+    "category": "Creative",
+    "best_for": "Dog owners and pet creators who already have a clip of someone dancing and want their own dog's photo to follow that exact movement - a 10 to 30 second vertical clip for a Reel, Short or TikTok - and who would rather buy a small one-time credit pack per clip than start another monthly AI video subscription",
+    "price": "One-time credit packs only, no subscription and no auto-renewal, priced in USD: Try $6.99 for 60 credits (30 seconds of video), Make more $14.90 for 160 credits (80 seconds) and Keep creating $29.90 for 340 credits (170 seconds). The stated rate is 2 credits per second of finished video with a 10-credit minimum per request, so a 10-second clip is 20 credits, the built-in 16-second Denim Shuffle is 32 and a 30-second custom reference is 60; at those rates a 10-second video works out at $2.33 on the smallest pack and $1.76 on the largest. New accounts get 20 welcome credits once - enough for one 10-second video - and the page warns that a 16-second Denim Shuffle costs 32 credits, so the welcome grant does not cover it. Purchased credits do not expire. The pack arithmetic reconciles with the stated rate on every row (60 credits / 2 per second = 30 seconds, 160 = 80, 340 = 170), and the pricing page states the same figures in its FAQ answers. Stripe handles payment; no purchase was attempted.",
+    "rating": 4.0,
+    "official": "https://pawmambo.com/",
+    "summary": "PawMambo is a single-purpose browser studio that turns one dog photo plus a dance video into a short vertical clip, using Kling 2.6 motion control through Kie AI rather than a text prompt. You pick one of two built-in dance references - Denim Shuffle at 16 seconds, Varsity Strut at 10 - or upload your own 3 to 30 second MP4 or MOV under 10 MB, add a JPG or PNG of one dog up to 8 MB, sign in with Google and generate. Output is 720 by 1264 portrait, and the two example videos served from the site are real files of exactly those durations. It sells one-time credit packs at 2 credits per second of video with a 10-credit minimum, gives new accounts 20 credits once, returns reserved credits when a generation fails, and lets you download the MP4 or create a public share page. What sets it apart from the rest of the pet-video wave is how much of its own uncertainty it prints: the features section says sample results are still being tested, the motion section says the operator still needs to test how closely the output follows the reference, and the FAQ says cat photos can be selected but have not been tested.",
+    "use_cases": [
+      "Making a dog dance to a specific clip you already like - your own 3 to 30 second reference video rather than a fixed template list",
+      "A 10 or 16 second vertical clip for a Reel, Short or TikTok, made from a photo you already have instead of filming",
+      "Testing whether pay-per-clip credits at 2 per second beat a monthly AI video subscription for occasional use",
+      "Comparing a reference-driven motion-transfer workflow against prompt-driven pet video tools that guess the motion from text",
+      "A short novelty clip for a birthday post, a group chat or a reply to a comment, without an editing timeline"
+    ],
+    "pros": [
+      "The product demonstrably renders: the two built-in dance references are served from the site's own /presets/ path as real MP4s (HTTP 200, H.264 + AAC, 720x1264) at 16.1 and 10.03 seconds, which is exactly the 16-second and 10-second lengths the copy claims, and the API routes answer with their own auth errors rather than filler - /api/account/credits, /api/generate/history and /api/payments/order all return 401 'Sign in to see your credits.' / 'your videos' / 'your payment', while /api/payments/checkout is a real route handler (405 to a GET)",
+      "The pricing arithmetic reconciles on every row and in both directions: 60 credits / 2 per second = 30 seconds, 160 = 80, 340 = 170, exactly as the three pack cards print, and the FAQ's statement that a 16-second Denim Shuffle costs 32 credits matches the same rate. This is checked, not assumed - the numbers are consistent to the credit",
+      "The privacy notice is specific enough to act on rather than boilerplate: it names Kie AI and 'its video model provider' for generation, Cloudflare D1 for job records and sign-in data, Cloudflare R2 for a private copy of finished videos, Stripe for payment records, Google for sign-in identity and Porkbun for support-mail forwarding, and it states that the original photo and reference video are not stored in D1 and that the R2 bucket is not public",
+      "Analytics consent is real in the shipped code, not just in the copy: the GA script (G-H0NL4SB9P3) and Clarity tag (z704mjwyqj) are injected only from a function that runs after an accepted choice, gtag starts at analytics_storage 'denied', the choice is persisted under pawmambo:analytics-consent:v1, and the tracker's own route list excludes profile, account, sign-in and admin paths - which is what the notice says it does",
+      "It publishes its own limits instead of a quality claim: 'Sample results are still being tested', 'We still need to test how closely the generated dance follows its movement and timing', 'Results may vary', 'Finished video length may vary', and a FAQ that says cat photos can be selected in the interface but cat results have not been tested",
+      "A working contact route on the product's own domain: contact@pawmambo.com is accepted at the domain's own MX (Porkbun forwarding via fwd1/fwd2.porkbun.com) while a random local part at the same domain is rejected 554, so the domain is not a catch-all and the published address is a real route - and the same address is printed in the footer, on /contact and in both policies",
+      "A substantive guide page rather than a stub: /guides/how-to-make-a-dog-dancing-video is dated 4 November 2026, carries a byline, an on-page contents list, per-step file limits (JPG or PNG up to 8 MB, MP4 or MOV 3 to 30 seconds under 10 MB), a troubleshooting section and the same 0-credit failure rule"
+    ],
+    "cons": [
+      "No registered company, trading name, postal address or named data controller appears anywhere on the site, and the Terms carry no governing-law, jurisdiction, venue or arbitration clause - 'company', 'entity', 'jurisdiction', 'governing' and 'laws of' occur zero times across /privacy and /terms",
+      "The Terms of use are four short sections with no refund, cancellation or chargeback language at all, and /refund, /refund-policy and /legal all 404 - so a buyer of a one-time credit pack has nothing in writing about what happens to unused credits after a failed or unwanted purchase, despite the FAQ promising that purchased credits never expire",
+      "Output ownership is unstated: the Terms say 'You keep your rights to what you provide' about the photo and reference video, and grant PawMambo and its video provider permission to process them, but nothing says what licence a buyer gets to the generated video or whether commercial use is allowed",
+      "No training statement - 'train' and 'training' occur zero times in the Privacy notice and the Terms, while the notice states that photos, reference videos and generation instructions are sent to Kie AI and its video model provider",
+      "Google is the only sign-in: /sign-in says 'Use your Google account to keep your future dance videos together. Your account is created the first time you sign in', and both generating and buying credits require that account - so a buyer who does not use Google cannot use the product at all, and there is no email-and-password or guest path",
+      "Output is portrait only, 720 by 1264, verified from the two example files - there is no landscape or square option and no resolution tier above 720p",
+      "A cat photo can be selected in the studio while the FAQ says cat results have not been tested, so the interface offers a path the vendor does not stand behind",
+      "Nineteen days old at the time of this listing (RDAP registration 2026-10-29T11:34:31Z, Porkbun, NS amir/nucum Cloudflare pair) with no independent review anywhere; Stripe readiness cannot be confirmed from outside because the site publishes no public config route and the checkout handler is POST-only behind a signed-in account - the Buy credits buttons do render server-side, but payment itself was not tested",
+      "The same job as PawGroove, which is listed here a day earlier: separate operator, not a duplicate - different registrar and nameserver pair, a custom vinext build rather than the ShipAny starter, a different credit ladder and separately drafted privacy text (whole-body similarity 0.018) - but a reader choosing between the two gets no head-to-head evidence from either site"
+    ],
+    "key_features": [
+      "Reference-guided motion transfer: a built-in dance clip or your own 3 to 30 second MP4/MOV under 10 MB drives the movement, instead of a text prompt",
+      "Two built-in references - Denim Shuffle (16 seconds, side steps and paw swings) and Varsity Strut (10 seconds, bouncy steps and raised paws) - which are themselves finished dog dances",
+      "One dog photo in, 720x1264 portrait video out, up to 30 seconds per request",
+      "Credit pricing at 2 credits per second with a 10-credit minimum, quoted before you generate",
+      "Failed generations cost 0 credits; reserved credits return when a task is marked failed",
+      "Download the MP4 or create a public share page, with a private copy kept in account history; submitted jobs and share pages are listed in the profile",
+      "Google sign-in, Stripe checkout on one-time packs, and analytics held behind an explicit consent choice"
+    ],
+    "faq": [
+      [
+        "What does PawMambo cost?",
+        "Three one-time credit packs and no subscription: $6.99 for 60 credits, $14.90 for 160 and $29.90 for 340, sold at 2 credits per second of finished video with a 10-credit minimum per request. That makes a 10-second clip 20 credits, the built-in 16-second Denim Shuffle 32 and a 30-second custom reference 60, so the smallest pack buys 30 seconds of video and a 10-second clip costs $2.33 on that pack against $1.76 on the largest. Purchased credits do not expire and nothing renews automatically."
+      ],
+      [
+        "Is there a free trial?",
+        "New accounts receive 20 credits once, which the site describes as enough for one 10-second video. That does not cover the 16-second Denim Shuffle at 32 credits. Existing accounts get no retroactive grant, and the welcome grant is tied to a Google sign-in because there is no other way to create an account."
+      ],
+      [
+        "Do I need my own dance video?",
+        "No. Two built-in dances ship with the studio - a 16-second Denim Shuffle and a 10-second Varsity Strut. If you want a specific move, switch to My video and upload an MP4 or MOV of 3 to 30 seconds under 10 MB; longer or larger files are rejected, so trim before uploading. A 30-second custom reference is a single 60-credit request."
+      ],
+      [
+        "What do I get back, and in what resolution?",
+        "A portrait video at 720 by 1264, up to 30 seconds depending on the reference you chose. You can download the MP4 or use Copy video link to create a public share page that anyone with the link can watch. Sound from the reference may carry through, but the FAQ does not guarantee it."
+      ],
+      [
+        "What happens when a generation fails?",
+        "Failed generations cost 0 PawMambo credits and reserved credits return automatically when a task is marked failed, per both the pricing FAQ and the Terms. The Terms otherwise say nothing about refunds for purchased packs, and the site has no refund policy page."
+      ],
+      [
+        "Can I use a photo of my cat?",
+        "The interface lets you select one, but PawMambo's own FAQ says cat results have not been tested and that the product is focused on dogs. Treat a cat result as an experiment rather than a supported use."
+      ]
+    ],
+    "trial_checklist": [
+      "Confirm the 20 welcome credits actually land on the account before uploading a photo you care about, then check the quoted cost against the dance you picked - 10 seconds is 20 credits and the 16-second Denim Shuffle is 32, so the grant only covers the shorter one",
+      "Run the free 10-second test on a clear, full-body photo and judge the two things the vendor says it has not finished testing: how closely the motion follows the reference, and whether the dog's markings survive the move",
+      "Send your own 3 to 30 second reference once, because reference-driven motion is the whole product and the built-in dances are the vendor's own finished clips",
+      "Download the MP4 the day you make it and check whether the reference's sound carried through, since the FAQ says that is not guaranteed and the file is the only copy you control",
+      "Before buying the $6.99 pack, decide how many clips you actually want: at 2 credits per second it buys 30 seconds total, so it is one 30-second dance or three 10-second takes, and unused credits never expire"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "medium",
+    "rating_rationale": "Job fit 4.1/5. This is a narrow product that does one job and does it visibly: the two example videos are real MP4s at exactly the 16- and 10-second lengths the copy claims, output is a stated 720x1264, the reference-driven workflow is described in enough detail to follow without an account, and the three credit packs reconcile with the stated 2-credits-per-second rate on every row, including the FAQ's 32-credit figure for the 16-second dance. The engineering evidence is unusually clean for a nineteen-day-old site: three API routes return their own 401 auth errors rather than filler, the checkout handler is a real POST route, and analytics consent is enforced in shipped code rather than promised in copy. Transparency 3.9/5 is what holds the score at 4.0. On candour it is well above the catalog median - it prints that sample results are still being tested, that it still needs to test reference fidelity, that cat photos are selectable but untested, and it gives specific, checkable processing facts about which provider holds what. On the documents a buyer is asked to rely on it is thinner than the product: no company, controller, jurisdiction or governing law, four short Terms sections with no refund or cancellation terms and no refund page, output licensing unstated, and no training statement, all against a credit-pack product where the refund question is the one a buyer actually asks. The score is not lower because none of those items mislead a reader about what the product is or what it costs - they are absences, published as cons - and it is not higher because a store selling prepaid credits with no written refund terms has not finished the paperwork a buyer needs."
   }
 ]

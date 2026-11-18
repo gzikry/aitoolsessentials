@@ -1040,6 +1040,15 @@
       "public_href": "/go/pawgroove/",
       "partner": false
     },
+    "pawmambo": {
+      "name": "PawMambo",
+      "slug": "pawmambo",
+      "official": "https://pawmambo.com/",
+      "destination": "https://pawmambo.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/pawmambo/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

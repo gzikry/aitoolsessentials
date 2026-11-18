@@ -2094,5 +2094,26 @@
     "status": "not_started",
     "next_action": "Email u5196173364@gmail.com about affiliate or partner terms. No affiliate or partner page exists (/affiliates, /partners, /referral, /affiliate all 404), and pawgroove.org publishes no MX records, so the Gmail address in the policies and footer is the only route.",
     "notes": "Per-sale value is small - $4.99 and $9.99 one-time packs - and the buyer usually makes one or two clips, so commission per conversion is a few tens of cents. Priority low until the review earns organic impressions; the value now is category coverage and pet/trend traffic rather than near-term revenue."
+  },
+  {
+    "tool_slug": "pawmambo",
+    "tool_name": "PawMambo",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/pawmambo/"
+    ],
+    "best_audiences": [
+      "dog owners and pet creators making a dance Reel, Short or TikTok from a photo",
+      "creators who want reference-driven motion rather than a fixed template list",
+      "occasional users weighing a one-time credit pack against a monthly AI video subscription"
+    ],
+    "status": "not_started",
+    "next_action": "Email contact@pawmambo.com about affiliate or partner terms. No affiliate or partner page exists (/affiliates 404), and the domain publishes a working contact mailbox via Porkbun forwarding (RCPT-verified 250 with a 554 control), so that is the route.",
+    "notes": "Per-sale value is small - $6.99, $14.90 and $29.90 one-time packs - and most buyers will make one or two clips, so commission per conversion is a few tens of cents. Priority low until the review earns organic impressions; the near-term value is category depth in pet/trend video beside pawgroove, not revenue."
   }
 ]
