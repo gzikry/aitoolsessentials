@@ -1,0 +1,83 @@
+{
+ "_note": "Editorial judgement for the 2026-11-18 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json and _window_1118.json. Only the judgements below are typed.",
+ "new_rows": {
+  "investment-bankers-and-vcs-and-valuation-experts-ai-ipo-race-drivers": {
+   "who": "Not named on the page - Times Group (timesgroup.com) request",
+   "category": "AI Markets / IPO and Valuation",
+   "contact": "Body says 'please feel free to DM me' and 'reach out to me here: [email redacted]'; Sourcee redacts the address and the page publishes no handle, link or byline of the poster's own.",
+   "relevance": "low",
+   "notes": "A story on the AI IPO race - OpenAI, Anthropic and Perplexity exploring public listings - and what drives the shift from private funding to public markets. It wants investment bankers, VCs, fund managers, AI industry analysts and valuation experts. We hold a tool price census, not capital-markets or valuation expertise, so answering would mean inventing a banker's view. The 'cost' token in the body refers to AI compute financing, not a tool price. No route published.",
+   "template": "None - excluded. Off-beat: capital-markets and valuation commentary on the AI IPO race; no pricing question we can answer and no route published."
+  },
+  "b2b-creators-and-agencies-impact-on-ai-visibility-and-aeo": {
+   "who": "Not named on the page - an unnamed report author",
+   "category": "B2B Marketing / AI Visibility and AEO",
+   "contact": "Body names three wanted profiles and asks for no channel at all; the page publishes no address, handle or link of its own.",
+   "relevance": "low",
+   "notes": "Wants people doing paid B2B creator content, agencies or software studying creators' impact on AI visibility, and analysts covering creators plus AI. The spend token is 'paid' in 'paid B2B creator content', which is a media-buying question, not software spend. We are a publisher of a price census, not a creator agency or an AEO measurement vendor, and there is no route.", 
+   "template": "None - excluded. Off-beat: B2B creator/AEO practitioner research with no pricing question and no route published."
+  },
+  "ai-agent-builders-and-researchers-agentcentric-web-policy-input": {
+   "who": "Not named on the page - input sought for the UNESCO IFAP Information Literacy Working Group (ILWG)",
+   "category": "AI Policy / Agent-Centric Web",
+   "contact": "Body says 'If you build, deploy or research...' and the page publishes one shortened link (https://lnkd.in/gPvrfnae) plus a 'Signal' hint; no address or handle is published.",
+   "relevance": "low",
+   "notes": "Policy input for a UNESCO working group examining the shift to an agent-centric web. The 'afford' token is the poster's own framing that the new divide is 'which agent you can afford' - a policy observation, not a software-spend question. It asks builders, deployers and researchers of agents; we are a price census, not an agent builder, and submitting non-practitioner input to a policy consultation would misrepresent us.",
+   "template": "None - excluded. Off-beat: UNESCO policy consultation for AI agent builders and researchers; standing we do not have."
+  },
+  "flemish-visual-artists-against-ai-college-magazine-article": {
+   "who": "Not named on the page - college magazine",
+   "category": "Visual Arts / AI and Culture",
+   "contact": "Body says 'Contact me!' but the page publishes no address, handle or link.",
+   "relevance": "low",
+   "notes": "Wants Flemish visual artists who oppose AI in the visual arts for a phone interview. Neither nationality nor practice applies to us, there is no pricing question, and no route is published.",
+   "template": "None - excluded. Off-beat: Flemish artist testimony; no pricing question and no route."
+  },
+  "ai-faculty-fellows-and-supervisors-role-between-policy-tech-curriculum": {
+   "who": "Not named on the page - the poster says she started in an AI faculty fellow role this fall",
+   "category": "Higher Education / AI Faculty Roles",
+   "contact": "Body shares a survey link (https://lnkd.in/gch_xGQk) and asks people to comment or tag colleagues; no address or handle of the poster's own is published.",
+   "relevance": "low",
+   "notes": "A three-minute survey for people who hold or supervise an AI faculty fellow role, for an article on how institutions define that role. We hold no faculty appointment, so the survey is not ours to answer, and there is no pricing question in the body.",
+   "template": "None - excluded. Off-beat: survey of AI faculty fellows; standing we do not have."
+  },
+  "publishers-creators-and-media-brands-state-of-newsletter-report-2027": {
+   "who": "Not named on the page - beehiiv's annual State of Newsletter report",
+   "category": "Newsletter Industry / Media Business",
+   "contact": "Body points at a Tally survey (https://tally.so/r/rDDdP2) and asks for comments; no address or handle is published.",
+   "relevance": "low",
+   "notes": "beehiiv's 2027 State of Newsletter report, seeking publishers, creators and media brands building beyond the inbox. Our newsletter is a distribution channel for the price census, not a media business with audience-monetisation experiments to report, so we would be overstating our standing by taking the survey as a publisher. The body's AI token appears only in a passing AI-related question. No route to a person.",
+   "template": "None - excluded. Off-beat: newsletter-industry survey where we would be overstating our standing; no route."
+  },
+  "home-hunters-and-renters-misleading-aigenerated-listing-photos": {
+   "who": "Not named on the page - The Sun",
+   "category": "Consumer AI / Property",
+   "contact": "Body says 'Email me: [email redacted]'; the address is platform-redacted and no handle is published.",
+   "relevance": "low",
+   "notes": "The Sun wants house-hunters and renters who saw estate-agent photos that did not match the property and were likely AI-generated. First-hand consumer testimony we cannot give, on a beat where we hold no standing, with a redacted address and no route.",
+   "template": "None - excluded. Off-beat: consumer testimony about AI listing photos; address redacted, no route."
+  }
+ },
+ "why_not_drafted": [
+  "The 2026-11-18 window carried 5 AI-token slugs and 0 AI+spend slugs, and all 92 window bodies were fetched and read; the two body-only AI hits (beehiiv's newsletter survey, The Sun's listing-photo call) are off-beat as well. None asks what an AI tool costs, and not one publishes a route to a named person.",
+  "No new draft is written from this window. The sendable set is carried, not new, and re-drafting a carried row with a fresher tool count is the only way to keep its staged copy honest."
+ ],
+ "contact_replace": {
+  "us-solopreneurs-ai-eliminated-or-delayed-first-hire-forbes": "The body's address is platform-redacted ('email: [email redacted]'), and the page publishes no link or handle. ROUTE RESOLVED OFF HER OWN SITE, not guessed: https://www.alisoncoleman.co.uk/contact-me/ returns HTTP 200, 28,113 bytes, title 'Contact me : Alison Coleman', in today's route probe (route-checks-2026-11-18.json) and prints in visible body text 'Email: alison@alisoncoleman.co.uk', 'Twitter: @alisonbcoleman', 'Skype: alisonbcoleman'. forbes.com/sites/alisoncoleman/ answers 403 and is a dead end, not a route. One send closes this row and the bootstrapped-founders row posted seven minutes earlier. George's lane to send."
+ },
+ "angle_replace": {
+  "former-software-engineers-left-tech-after-ai-coding-tools": "Email to tspirlet@businessinsider.com (route resolved off his Business Insider byline page, re-probed 2026-11-18: HTTP 200). Subject: 'The per-seat arithmetic in your Mistral switchers call'. Open with the dated switching comparison: Mistral Vibe (Le Chat) Pro $14.99/month and Team $24.99 per user/month against ChatGPT Plus $20/month and Claude Pro $20 month-to-month or $17 on a $200 annual prepay, all read 2026-11-14; the individual tier is roughly a 25% cut. Then the billing-term half: monthly costs 1.11x to 2.53x the annual rate, median 1.25x over 19 same-tier pairs (re-asserted 2026-10-16). Say plainly we are a dated price census of 117 AI tools, not a switcher, and that every figure carries its vendor URL and check date. Draft at pitch-drafts-2026-11-18.md section 1.",
+  "cios-2027-goals-ram-shortage-saaspocalypse-temp-ai-physical-ai": "Email to kelsey.ziser@informationweek.com (mailto on her InformationWeek author page, re-probed 2026-11-18: HTTP 200). Subject: 'The seat-price numbers behind the SaaSpocalypse question'. Open with one measured number from the 2026-11-18 snapshot: 50 of 117 tracked AI tools publish a monthly per-seat price, 41 of those at or under $25, median cheapest paid seat $15.50, with the cheapest paid seat at $4 and the dearest at $299. Then the temporary-deployment angle: monthly billing costs 1.11x to 2.53x the annual rate, median 1.25x over 19 same-tier pairs (2026-10-16). State that we are a price census and not a CIO voice. The row is 8 days old and crosses the 10-day line on 2026-11-20. Draft at pitch-drafts-2026-11-18.md section 2.",
+  "us-founders-bootstrapped-despite-vc-revenue-growth-and-ai-impact": "Same reporter and same route as the solopreneur row: alison@alisoncoleman.co.uk, published in visible text on her own contact page (re-probed 2026-11-18, HTTP 200, 28,113 bytes). One email answers both Forbes rows. Open with the seat arithmetic: 50 of 117 tracked AI tools publish a monthly per-seat price, 41 at or under $25, median cheapest paid seat $15.50 (snapshot 2026-11-18), so five seats is $930 a year against a first hire; monthly billing costs 1.11x to 2.53x the annual rate, median 1.25x over 19 pairs. Draft at pitch-drafts-2026-11-18.md section 3."
+ },
+ "defects": [
+  "The carried Forbes bootstrapped-founders template quoted '$990 a year for five seats' while its sibling row quoted '$930' on the same $15.50 median: 5 x 15.50 x 12 = $930, and $990 is the superseded $16.50 median multiplied out. build_digest.py's seat-year repair only matches the figure AFTER the words 'N seats', so a template phrased '$990 a year for five seats' passed through unrewritten. Superseded by angle_replace this run; the regex gap is left recorded here rather than silently half-fixed.",
+  "The three Gmail drafts staged on 2026-11-17 (uids 72-74) quote '115 AI tools'. data/tools.json now holds 117, so each staged body carries a stale count one click from a send. They are re-staged from today's file and the 11-17 copies deleted.",
+  "Window measurement: 92 slugs since the 2026-11-17T03:59Z mark, 5 AI-token, 0 AI+spend, 7 body-level AI hits (2 of them with no AI token in the slug: the beehiiv newsletter survey and The Sun listing-photo call). Two body hits carry a real-spend token and both are false positives for tool spend: 'cost' in the AI-IPO call means compute financing, and 'afford' in the UNESCO call is the poster's policy framing. All 92 bodies were fetched, so the zero at the AI+spend level is a measurement and not a filter artefact."
+ ],
+ "extra_actions": [
+  "SEND QUEUE UNCHANGED AND STILL UNSENT: Business Insider / Thibault Spirlet (2d, tspirlet@businessinsider.com) is the freshest on-beat row; InformationWeek / Kelsey Ziser (8d, kelsey.ziser@informationweek.com) crosses the 10-day line on 2026-11-20; Forbes / Alison Coleman (22d, alison@alisoncoleman.co.uk) is a late send that closes two rows with one email. Drafts at pitch-drafts-2026-11-18.md, staged as Gmail drafts from today's figures.",
+  "No reply to any sent pitch: scripts/check_pitch_replies.py ran with its positive control returning two Jan Suski messages, so the zero across the ten recipient domains is a real zero.",
+  "Route probe re-ran all 15 known routes: all still answer, except the known dead ends (raconteur.net/author/simon-chandler 404, muckrack.com/christopher-mims 403, wsj.com/news/author/christopher-mims 401)."
+ ]
+}
