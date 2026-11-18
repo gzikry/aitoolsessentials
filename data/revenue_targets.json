@@ -2136,5 +2136,26 @@
     "status": "not_started",
     "next_action": "Email support@savingy.com (cc rohan@savingy.com, the founder address published in the footer and on the Play developer block) about affiliate or partner terms. No affiliate page exists on the site and none was found in search; the domain publishes Zoho India MX, so the mailboxes are live even though an SMTP RCPT probe from this machine is rejected by Zoho's anti-dynamic-IP policy.",
     "notes": "Per-sale value is low - Rs 149 per 30-day pass and Rs 1,188 per 365-day pass in INR, with a genuinely free core that many readers will never pay past - so commission per conversion is small and the audience is India-only for now. Priority low until the review earns organic impressions; the near-term value is category depth in personal finance and a creditable example of a vendor that names its subprocessors, not revenue."
+  },
+  {
+    "tool_slug": "replyargus",
+    "tool_name": "Reply Argus",
+    "priority": "low",
+    "category": "Development",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/replyargus/"
+    ],
+    "best_audiences": [
+      "indie iOS and Android developers who ship enough apps to have a review queue",
+      "app studios and agencies answering reviews for a client portfolio in several languages",
+      "developers who want their review inbox reachable from Claude, Cursor or Codex over MCP"
+    ],
+    "status": "not_started",
+    "next_action": "Ask support@replyargus.com for affiliate or partner terms once the listing is live - no affiliate page exists on the site (/affiliates was not published; /alternatives is a competitor comparison page) and none was found in search. The submitted contact (replyargus-dfiy@streakrover.in) is a masked forwarding address on a domain with no A record but working MX, so support@ on the product domain is the address to use.",
+    "notes": "Low priority on economics rather than fit: $9.99-$99 a month with a 14-day trial means a single-digit-dollar commission at any normal rate, and the buyers are developers who mostly arrive through the app-store and MCP ecosystems rather than an AI-tool directory. Worth wiring if the vendor offers a program, not worth outbound chasing."
   }
 ]

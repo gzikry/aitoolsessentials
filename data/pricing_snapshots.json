@@ -488,6 +488,10 @@
     "savingy": {
       "date": "2026-11-18",
       "digest": "Free core with no card and no time limit: unlimited manual income and expense records, one-line entry, receipts, statement import, the tracker and money screens, monthly budgets and plans, goals and contributions, bill reminders, the Weekly Reset review, Ask Savingy, recurring purchases, calculators, and data backup/restore/export. Pro is sold as fixed access periods in INR, one payment each: Rs 149 for 30 days, or Rs 1,188 for 365 days - printed as about Rs 99 a month paid once, saving Rs 600 against twelve 30-day"
+    },
+    "replyargus": {
+      "date": "2026-11-18",
+      "digest": "Indie $9.99/mo or $99.90/yr (4 apps, 300 replies); Pro $19.99/mo or $199.90/yr (10 apps, 2,000 replies, REST API + webhooks); Studio $99/mo or $990/yr (30 apps, 8,000 replies, white-label); Enterprise custom. 14-day trial with a card at signup, billed from day 14; seats included (5/10/25/unlimited), viewers free, no overage billing. Verified on four agreeing surfaces (/pricing cards, /llms.txt, /llms-full.txt, JSON-LD Offers). /signup and /login contradict this by advertising 'Free for 1 app and 100 replies a month. You don't need a card' while the pricing FAQ answers 'Is there a free plan? No'."
     }
   },
   "changes": [
@@ -833,6 +837,13 @@
       "previous_check": null,
       "new_check": "2026-11-18",
       "note": "Savingy: first recorded pricing snapshot - free core plus one-time Pro passes at Rs 149 / 30 days and Rs 1,188 / 365 days, verified on the pricing page, the Google Play listing and the shipped checkout bundle."
+    },
+    {
+      "slug": "replyargus",
+      "detected": "2026-11-18",
+      "previous_check": null,
+      "new_check": "2026-11-18",
+      "note": "Reply Argus: first recorded pricing snapshot - Indie $9.99/$99.90, Pro $19.99/$199.90, Studio $99/$990 with 14-day trial and card at signup, verified on /pricing, /llms.txt, /llms-full.txt and the page's JSON-LD Offers; signup and login pages still advertise a card-free 100-reply free plan the pricing page denies."
     }
   ],
   "updated": "2026-11-18"

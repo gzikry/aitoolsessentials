@@ -1058,6 +1058,15 @@
       "public_href": "/go/savingy/",
       "partner": false
     },
+    "replyargus": {
+      "name": "Reply Argus",
+      "slug": "replyargus",
+      "official": "https://www.replyargus.com/",
+      "destination": "https://www.replyargus.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/replyargus/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",
