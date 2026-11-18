@@ -482,8 +482,8 @@
       "digest": "One-time credit packs, no subscription, no auto-renewal. Starter $4.99/50 credits ($1.00 per 10), Creator $9.99/120 credits ($0.83 per 10). Dog video 10 credits, full themed photo pack (6-8 images) 20, 2-image preview 10, extra redo 3 after two free per full pack. Welcome trial 10 credits for one video or one 2-image preview, 480p trial vs 720p after a paid order. Same figures on /pricing, /zh/pricing and the Terms. USD via Stripe (config reports stripe live); buy buttons render on the live pricing page."
     },
     "pawmambo": {
-      "date": "2026-11-17",
-      "digest": "One-time credit packs, no subscription, no auto-renewal. Try $6.99/60 credits (30 s of video), Make more $14.90/160 (80 s), Keep creating $29.90/340 (170 s). Rate 2 credits per second, 10-credit minimum: 10 s = 20 credits, 16-second Denim Shuffle = 32, 30 s = 60. 20 welcome credits once for a 10-second video. Purchased credits never expire; failed generations cost 0. Same figures and arithmetic on /pricing and in its FAQ. USD via Stripe; buy buttons render server-side, checkout route is POST-only behind sign-in."
+      "date": "2026-11-18",
+      "digest": "One-time credit packs only, no subscription, no auto-renewal, USD: Try $6.99 / 60 credits (printed as 30 seconds of video), Make more $14.90 / 160 credits (80 seconds), Keep creating $29.90 / 340 cred"
     }
   },
   "changes": [
@@ -815,7 +815,14 @@
       "previous_check": "2026-09-18",
       "new_check": "2026-11-14",
       "note": "Runway: recorded pricing updated since the 2026-09-18 check, re-verified 2026-11-14."
+    },
+    {
+      "slug": "pawmambo",
+      "detected": "2026-11-18",
+      "previous_check": "2026-11-17",
+      "new_check": "2026-11-18",
+      "note": "PawMambo: recorded pricing updated since the 2026-11-17 check, re-verified 2026-11-18."
     }
   ],
-  "updated": "2026-11-17"
+  "updated": "2026-11-18"
 }

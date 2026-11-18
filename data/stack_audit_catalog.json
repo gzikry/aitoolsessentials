@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17",
+  "generated_at": "2026-11-18",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2839,7 +2839,7 @@
       "price_label": "One-time credit packs only, no subscription and no auto-renewal, priced in USD: Try $6.99 for 60 credits (30 seconds of video), Make more $14.90 for 160 credits (80 seconds) and Keep creating $29.90 for 340 credits (170 seconds). The stated rate is 2 credits per second of finished video with a 10-credit minimum per request, so a 10-second clip is 20 credits, the built-in 16-second Denim Shuffle is 32 and a 30-second custom reference is 60; at those rates a 10-second video works out at $2.33 on the smallest pack and $1.76 on the largest. New accounts get 20 welcome credits once - enough for one 10-second video - and the page warns that a 16-second Denim Shuffle costs 32 credits, so the welcome grant does not cover it. Purchased credits do not expire. The pack arithmetic reconciles with the stated rate on every row (60 credits / 2 per second = 30 seconds, 160 = 80, 340 = 170), and the pricing page states the same figures in its FAQ answers. Stripe handles payment; no purchase was attempted.",
       "pricing_summary": "One-time credit packs only, no subscription, no auto-renewal, USD: Try $6.99 / 60 credits (printed as 30 seconds of video), Make more $14.90 / 160 credits (80 seconds), Keep creating $29.90 / 340 credits (170 seconds). Stated rate 2 credits per second with a 10-credit minimum per request, so 10 seconds = 20 credits, the built-in 16-second Denim Shuffle = 32 credits, a 30-second custom reference = 60 credits; at those rates a 10-second video is $2.33 on the $6.99 pack and $1.76 on the $29.90 pack. New accounts receive 20 welcome credits once (one 10-second video, not the 16-second dance); purchased credits never expire; failed generations cost 0 credits and reserved credits return when a task is marked failed. Every row reconciles: 60/2 = 30 s, 160/2 = 80 s, 340/2 = 170 s. Payment by Stripe (stated on the pricing page and in the Privacy notice); 'Buy credits' renders server-side on all three cards; /api/payments/checkout is a real POST-only route handler (405 on GET) and /api/payments/order returns 401 'Sign in to check your payment.' to an unauthenticated GET. No purchase was attempted.",
       "pricing_url": "https://pawmambo.com/pricing",
-      "pricing_checked_date": "2026-11-17",
+      "pricing_checked_date": "2026-11-18",
       "price_confidence": "official_summary",
       "numeric_list_price_usd": null,
       "promotion_mentioned": false,
