@@ -2959,6 +2959,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "meloletter",
+      "name": "MeloLetter",
+      "category": "Audio & Video",
+      "official_url": "https://meloletter.com/",
+      "review_url": "/tools/meloletter/",
+      "price_label": "One-time or monthly subscription, USD. $19.90 per song pack (one-time, no subscription) or $9.90/month for three song packs a month, renewing monthly. One song pack = two generated song versions plus one included regenerate, MP3 downloads and a shareable gift page. A lyric draft and a 30-second audio preview of both versions are free before payment, subject to rolling 24-hour limits and daily capacity. The same $19.90 and $9.90 figures appear on /pricing and on the /zh pricing page. Refunds are a single Terms clause rather than a policy page ('payments are not automatically refundable after generation work has started or a paid credit has been used'). No purchase was attempted.",
+      "pricing_summary": "One-time or monthly subscription, USD. $19.90 per song pack (one-time, no subscription) or $9.90/month for three song packs a month, renewing monthly. One song pack = two generated song versions plus one included regenerate, MP3 downloads and a shareable gift page. A lyric draft and a 30-second audio preview of both versions are free before payment, subject to rolling 24-hour limits and daily capacity. The same $19.90 and $9.90 figures appear on /pricing and on the /zh pricing page. Refunds are a single Terms clause rather than a policy page ('payments are not automatically refundable after generation work has started or a paid credit has been used'). No purchase was attempted.",
+      "pricing_url": "https://meloletter.com/pricing",
+      "pricing_checked_date": "2026-11-18",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "audio"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

@@ -1085,6 +1085,15 @@
       "public_href": "/go/rapai/",
       "partner": false
     },
+    "meloletter": {
+      "name": "MeloLetter",
+      "slug": "meloletter",
+      "official": "https://meloletter.com/",
+      "destination": "https://meloletter.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/meloletter/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

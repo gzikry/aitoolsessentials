@@ -501,6 +501,10 @@
     "rapai": {
       "date": "2026-11-18",
       "digest": "One-time credit packs only, no subscription, no auto-renewal, USD: Lite $6.90 / 390 credits, Pro $14.90 / 1,000, Ultra $29.90 / 2,200; credits valid 365 days. Generation cost is duration- and resolution-based: 15 seconds = 390 credits at 480p, 825 at 720p, 2,055 at 1080p; 5 seconds at 480p = 130 credits (exactly one third). Pack cards reconcile (390 = 1 x 15s 480p, 1,000 = 2.56, 2,200 = 5.64). Payment via Waffo (/api/config/public waffo_enabled:true), unnamed in the policies. No free plan."
+    },
+    "meloletter": {
+      "date": "2026-11-18",
+      "digest": "One-time $19.90 per song pack, or $9.90/month for three song packs a month renewing monthly; a pack = two generated versions, one included regenerate, MP3 downloads and a shareable gift page. Free lyric draft and 30-second previews of both versions before payment, rationed by unpublished rolling 24-hour limits and daily capacity. Songs by Suno v5.5 (chirp-v5.5) via YourMusic, lyrics by GPT-5.5 via Brioi. No free trial, no refund policy page (one Terms clause), same figures on /pricing and the Chinese pricing page."
     }
   },
   "changes": [
