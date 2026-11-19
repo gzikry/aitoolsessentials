@@ -2177,5 +2177,26 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether Change Text in Image runs an affiliate or partner programme; /affiliates, /partners and /referral all 404 and no programme is published. Never invent affiliate URLs.",
     "notes": "One-time packs from $14.90 give a low-value but clean affiliate shape if a programme exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive. The same message should ask for a company/jurisdiction, a committed retention period for uploaded images, an analytics disclosure matching the three trackers that actually load, and whether password reset can be enabled."
+  },
+  {
+    "tool_slug": "rapai",
+    "tool_name": "RapAI",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/rapai/"
+    ],
+    "best_audiences": [
+      "creators making a short rap clip from a photo for TikTok, Reels or Shorts",
+      "friends or couples wanting a novelty two-person performance without filming",
+      "occasional users weighing a one-time credit pack against a monthly AI video subscription"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@airapvideo.design about affiliate, referral or partner terms. No affiliate, partner or referral page exists (/affiliates 404), so a direct ask is the only route; the mailbox is RCPT-verified (250 with a 550 random-local-part control), so the address is live.",
+    "notes": "Per-sale value is small - $6.90, $14.90 and $29.90 one-time packs, with a real clip costing roughly $5.30 to $6.90 at 480p - so commission per conversion is a few tens of cents at best. Priority low until the review earns organic impressions; the near-term value is category depth in the rap-video cluster beside rapvideo-ai and rapvideogo, where the three listings now let a reader compare three different credit models, not revenue."
   }
 ]

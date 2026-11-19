@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-18",
-  "tools_count": 119,
+  "tools_count": 120,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -868,6 +868,13 @@
       "category": "Creative",
       "price": "One-time credit packs, USD, no subscription: Starter $14.90 for 400 credits (40 text edits, $0.37 per edit), Pro $26.90 for 1,000 credits (100 edits, $0.27), Studio $39.90 for 1,800 credits (180 edits, $0.22). Each generation costs 10 credits and new accounts get 10 free credits, which is one free edit. Credits do not expire while the account remains available, failed generations return the credits spent, and checkout runs through Waffo Pancake as merchant of record. The same figures and the same per-edit arithmetic render on the /zh mirror. Verified 2026-11-18 on /#pricing, /zh and /api/config/public.",
       "url": "https://aitoolsessentials.com/tools/change-text-in-image/"
+    },
+    {
+      "name": "RapAI",
+      "slug": "rapai",
+      "category": "Creative",
+      "price": "One-time credit packs only, no subscription, no auto-renewal, USD: Lite $6.90 / 390 credits, Pro $14.90 / 1,000 credits, Ultra $29.90 / 2,200 credits; credits valid 365 days from purchase. The stated generation cost is duration- and resolution-based: a 15-second clip costs 390 credits at 480p, 825 at 720p and 2,055 at 1080p, and the studio quotes a 5-second 480p render at 130 credits - exactly one third of the 390 figure, so the ladder is linear in duration. Every pack card reconciles against those numbers (Lite 390 = 1 x 15s 480p, Pro 1,000 = 2.56, Ultra 2,200 = 5.64, printed on the cards as 'about 1', 'about 2' and 'about 5' - conservative in the buyer's favour). Effective cost of a 15-second 480p video: $6.90 on Lite, $5.82 on Pro, $5.30 on Ultra; a 5-second 480p clip is $2.30 on Lite. The same three prices and the same three credit figures appear on /pricing and /zh/pricing. Failed generations return the task credits. Payment runs through Waffo - /api/config/public returns waffo_enabled:'true' - but the processor is named nowhere in the Privacy or Refund policy, which say only 'trusted third-party payment processors'. No purchase was attempted.",
+      "url": "https://aitoolsessentials.com/tools/rapai/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

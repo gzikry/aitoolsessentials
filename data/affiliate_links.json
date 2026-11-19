@@ -1076,6 +1076,15 @@
       "public_href": "/go/change-text-in-image/",
       "partner": false
     },
+    "rapai": {
+      "name": "RapAI",
+      "slug": "rapai",
+      "official": "https://airapvideo.design/",
+      "destination": "https://airapvideo.design/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/rapai/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

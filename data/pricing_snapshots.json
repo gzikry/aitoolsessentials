@@ -497,6 +497,10 @@
       "date": "2026-11-18",
       "digest": "One-time packs, USD, no subscription: Starter $14.90 / 400 credits (40 text edits, $0.37 per edit), Pro $26.90 / 1,000 (100 edits, $0.27), Studio $39.90 / 1,800 (180 edits, $0.22). 10 credits per generation; new accounts get 10 free credits (one edit); credits do not expire while the account remains available; failed generations return their credits. Checkout via Waffo Pancake (waffo_enabled true in /api/config/public). Refunds inside the Terms: full refund within 7 days only if none of that purchase's credits were used. /zh mirrors the same three packs at the same USD prices. Verified 2026-11-18 on /#pricing, /zh and /api/config/public.",
       "verified_against": "https://changetextinimage.org/#pricing"
+    },
+    "rapai": {
+      "date": "2026-11-18",
+      "digest": "One-time credit packs only, no subscription, no auto-renewal, USD: Lite $6.90 / 390 credits, Pro $14.90 / 1,000, Ultra $29.90 / 2,200; credits valid 365 days. Generation cost is duration- and resolution-based: 15 seconds = 390 credits at 480p, 825 at 720p, 2,055 at 1080p; 5 seconds at 480p = 130 credits (exactly one third). Pack cards reconcile (390 = 1 x 15s 480p, 1,000 = 2.56, 2,200 = 5.64). Payment via Waffo (/api/config/public waffo_enabled:true), unnamed in the policies. No free plan."
     }
   },
   "changes": [
@@ -856,6 +860,13 @@
       "previous_check": null,
       "new_check": "2026-11-18",
       "note": "Change Text in Image: first recorded pricing snapshot - one-time packs only at $14.90/400, $26.90/1,000 and $39.90/1,800 credits with 10 credits per edit and 10 free credits at sign-up; per-edit prices of $0.37/$0.27/$0.22 reconcile with each card's generation count; no subscription, no yearly plan; verified on /#pricing, the /zh mirror and /api/config/public."
+    },
+    {
+      "slug": "rapai",
+      "detected": "2026-11-18",
+      "previous_check": null,
+      "new_check": "2026-11-18",
+      "note": "RapAI: first recorded pricing snapshot - one-time packs only at $6.90/390, $14.90/1,000 and $29.90/2,200 credits, 365-day validity, no subscription; a 15-second render costs 390 credits at 480p, 825 at 720p and 2,055 at 1080p, and the studio's 5-second 480p quote of 130 credits is exactly one third, so the ladder is linear and every pack card reconciles. Identical on /pricing and /zh/pricing; no free plan; payment provider Waffo enabled in /api/config/public."
     }
   ],
   "updated": "2026-11-18"
