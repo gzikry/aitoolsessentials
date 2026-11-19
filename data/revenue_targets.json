@@ -2261,5 +2261,26 @@
     "status": "not_started",
     "next_action": "Email support@stylmorph.com about affiliate or partner terms. /affiliates, /partners and /referral all 404 and the only published address is support@stylmorph.com in both policies.",
     "notes": "One-time packs of $6.99, $12.99 and $24.99 put commission per conversion in cents; priority low until organic impressions justify the work. The free browser-tool set is the more linkable surface for outreach than the paid transformation."
+  },
+  {
+    "tool_slug": "ficweave",
+    "tool_name": "FicWeave",
+    "priority": "low",
+    "category": "Productivity",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/ficweave/"
+    ],
+    "best_audiences": [
+      "fanfiction writers working on multi-chapter stories who lose continuity in a chat window",
+      "writers weighing a $7.99-$24.99/month writing subscription against a general chatbot",
+      "readers exploring what-if branches of a fandom who want the result saved, not lost"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@ficweave.com about affiliate or partner terms. No affiliate surface exists - /affiliates, /affiliate, /partners, /referral, /program and /api/affiliate all 404 - and support@ is the only address published (on /contact, in the footer and in the Terms), so that is the route.",
+    "notes": "$7.99 entry price with 100 credits a month means commission per conversion is small; priority low until the review earns organic impressions. Near-term value is category depth in long-form AI writing beside grammarly, humanpen, sudowrite-style tools and the writing half of Productivity."
   }
 ]

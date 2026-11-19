@@ -513,6 +513,10 @@
     "stylmorph": {
       "date": "2026-11-19",
       "digest": "One free Seedream 4.5 image per guest identity, then one-time packs only: $6.99/40, $12.99/90, $24.99/200 credits ($0.175/$0.144/$0.125 per credit), no subscription and no auto-renewal, purchased credits never expire; model costs 1 credit (Seedream 4.5), 4 purchased credits (Nano Banana Pro) and 2 purchased credits for the two-model comparison; results and originals expire after 24 hours on every plan; Stripe checkout after Google sign-in; no refund page."
+    },
+    "ficweave": {
+      "date": "2026-11-19",
+      "digest": "Pro $7.99/mo (100 credits per subscription month, 20 editable stories), Pro+ $14.99/mo (200, 50), Max $24.99/mo (400, 100); annual $79.90/$149.90/$249.90 charged once with credits granted monthly (= 10 monthly payments, 'Save 16.7%'); free = anonymous chapter 1 plus 3 non-expiring starter credits, 1 editable story, read-only memory, 1 recent chapter of context; 1 credit per saved continuation; failed or cancelled generations return the reservation; credits expire each monthly window with no rollover, annual included; one-time credit packs discontinued; all six SKUs ready:true at /api/payment/checkout-readiness; Waffo Pancake merchant of record."
     }
   },
   "changes": [
@@ -893,6 +897,13 @@
       "previous_check": null,
       "new_check": "2026-11-19",
       "note": "StylMorph: first recorded pricing snapshot - one-time packs only at $6.99/40, $12.99/90 and $24.99/200 credits with per-credit prices of $0.175/$0.144/$0.125 that reconcile with each card, no subscription and no auto-renewal, purchased credits never expire; 1 credit per Seedream 4.5 image, 4 purchased credits per Nano Banana Pro image, 2 credits for the fixed comparison; results expire after 24 hours."
+    },
+    {
+      "slug": "ficweave",
+      "detected": "2026-11-19",
+      "previous_check": null,
+      "new_check": "2026-11-19",
+      "note": "FicWeave: first recorded pricing snapshot - three subscription tiers at $7.99/$14.99/$24.99 monthly for 100/200/400 credits per subscription month and 20/50/100 editable stories, annual $79.90/$149.90/$249.90 as exactly ten monthly payments; a one-time free allowance of 3 non-expiring starter credits and 1 editable story rather than a trial; credit packs discontinued; monthly credit expiry with no rollover. /zh/pricing, /terms and /refund-policy agree to the cent."
     }
   ],
   "updated": "2026-11-19"

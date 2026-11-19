@@ -1112,6 +1112,15 @@
       "public_href": "/go/stylmorph/",
       "partner": false
     },
+    "ficweave": {
+      "name": "FicWeave",
+      "slug": "ficweave",
+      "official": "https://ficweave.com/",
+      "destination": "https://ficweave.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/ficweave/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",
