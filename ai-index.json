@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-11-18",
-  "tools_count": 121,
+  "generated": "2026-11-19",
+  "tools_count": 123,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -882,6 +882,20 @@
       "category": "Audio & Video",
       "price": "One-time or monthly subscription, USD. $19.90 per song pack (one-time, no subscription) or $9.90/month for three song packs a month, renewing monthly. One song pack = two generated song versions plus one included regenerate, MP3 downloads and a shareable gift page. A lyric draft and a 30-second audio preview of both versions are free before payment, subject to rolling 24-hour limits and daily capacity. The same $19.90 and $9.90 figures appear on /pricing and on the /zh pricing page. Refunds are a single Terms clause rather than a policy page ('payments are not automatically refundable after generation work has started or a paid credit has been used'). No purchase was attempted.",
       "url": "https://aitoolsessentials.com/tools/meloletter/"
+    },
+    {
+      "name": "ReelBoop",
+      "slug": "reelboop",
+      "category": "Creative",
+      "price": "Two ways to buy, both in USD and both metered per generation. Subscriptions: Creator $9.90/month for 200 credits, or $99/year for 2,400 credits shown as $8.25/month; Pro $29.90/month or $299/year for 9,600; Studio $59.90/month or $599/year for 24,000. Yearly allowances are released upfront and plan credits expire at the end of the billing period. One-time credit packs: $15 for 200 credits, $45 for 800 and $90 for 2,000, valid 365 days with no auto-renewal. Credit costs are printed per tool before you start: GPT Image 2.6 and Nano Banana 2.1 at 5 credits an image, Kling 3.0 Pro at 60 credits per 5-second clip, Seedance 2.5 at 100 credits per 5-second clip, and the product-film preset at 10 credits a generation. There is no free trial - the pricing FAQ says video generation requires credits. The annual discount is a flat ~17% on all three tiers ($99 against 12 x $9.90 = $118.80, $299 against $358.80, $599 against $718.80), the /zh/pricing mirror prints the same figures to the cent, and the refund policy restates the Creator monthly figure at $9.90 for 200 credits. Stripe handles payment; no purchase was attempted.",
+      "url": "https://aitoolsessentials.com/tools/reelboop/"
+    },
+    {
+      "name": "StylMorph",
+      "slug": "stylmorph",
+      "category": "Creative",
+      "price": "Free to try once: one successful Seedream 4.5 image per guest identity, no account, shared across the site's image tools. Then one-time credit packs with no subscription and no auto-renewal - Starter $6.99 for 40 credits ($0.175 per credit), Creator $12.99 for 90 ($0.144) and Studio $24.99 for 200 ($0.125) - and purchased credits never expire. Cost per image depends on the model: Seedream 4.5 is 1 credit, Nano Banana Pro is 4 purchased credits, and the fixed two-model comparison is 2 purchased credits, so a Seedream image is about $0.06 on the largest pack and a Nano Banana Pro image about $0.50. Nano Banana Pro and comparisons cannot be paid for with free or gifted credits. Checkout is by Stripe after Google sign-in, the cost is quoted before each generation, and results are downloadable for 24 hours. No purchase was attempted.",
+      "url": "https://aitoolsessentials.com/tools/stylmorph/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

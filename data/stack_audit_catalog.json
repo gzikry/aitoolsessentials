@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18",
+  "generated_at": "2026-11-19",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -2979,6 +2979,58 @@
         "design",
         "video",
         "audio"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "reelboop",
+      "name": "ReelBoop",
+      "category": "Creative",
+      "official_url": "https://reelboop.com/",
+      "review_url": "/tools/reelboop/",
+      "price_label": "Two ways to buy, both in USD and both metered per generation. Subscriptions: Creator $9.90/month for 200 credits, or $99/year for 2,400 credits shown as $8.25/month; Pro $29.90/month or $299/year for 9,600; Studio $59.90/month or $599/year for 24,000. Yearly allowances are released upfront and plan credits expire at the end of the billing period. One-time credit packs: $15 for 200 credits, $45 for 800 and $90 for 2,000, valid 365 days with no auto-renewal. Credit costs are printed per tool before you start: GPT Image 2.6 and Nano Banana 2.1 at 5 credits an image, Kling 3.0 Pro at 60 credits per 5-second clip, Seedance 2.5 at 100 credits per 5-second clip, and the product-film preset at 10 credits a generation. There is no free trial - the pricing FAQ says video generation requires credits. The annual discount is a flat ~17% on all three tiers ($99 against 12 x $9.90 = $118.80, $299 against $358.80, $599 against $718.80), the /zh/pricing mirror prints the same figures to the cent, and the refund policy restates the Creator monthly figure at $9.90 for 200 credits. Stripe handles payment; no purchase was attempted.",
+      "pricing_summary": "Two ways to buy, USD, metered per generation. Subscriptions: Creator $9.90/mo (200 credits) or $99/yr (2,400, shown as $8.25/mo); Pro $29.90/mo or $299/yr (9,600); Studio $59.90/mo or $599/yr (24,000); yearly allowances released upfront and plan credits expire at period end. One-time packs: $15/200, $45/800, $90/2,000 credits, valid 365 days, no auto-renewal. Per-generation costs printed on the pricing page and each tool: GPT Image 2.6 5 credits/image, Nano Banana 2.1 5 credits/image, Kling 3.0 Pro 60 credits per 5s clip, Seedance 2.5 100 credits per 5s clip, product-film preset 10 credits. No free trial - the FAQ states video generation requires credits. Annual saving ~17% on all three tiers, arithmetic reconciles ($99 vs $118.80, $299 vs $358.80, $599 vs $718.80); /zh/pricing prints identical figures; refund policy restates Creator Monthly at $9.90 for 200 credits. Refund page: full refund within 7 days on an untouched pack, 365-day pack validity, credits returned on confirmed failure. Stripe handles payment, stripe_enabled:'true' in /api/config/public; 'Choose <plan>' renders server-side and the credit-pack tab renders $15/$45/$90 after the tab click. No purchase attempted.",
+      "pricing_url": "https://reelboop.com/pricing",
+      "pricing_checked_date": "2026-11-19",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "design",
+        "video",
+        "marketing",
+        "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "stylmorph",
+      "name": "StylMorph",
+      "category": "Creative",
+      "official_url": "https://stylmorph.com/",
+      "review_url": "/tools/stylmorph/",
+      "price_label": "Free to try once: one successful Seedream 4.5 image per guest identity, no account, shared across the site's image tools. Then one-time credit packs with no subscription and no auto-renewal - Starter $6.99 for 40 credits ($0.175 per credit), Creator $12.99 for 90 ($0.144) and Studio $24.99 for 200 ($0.125) - and purchased credits never expire. Cost per image depends on the model: Seedream 4.5 is 1 credit, Nano Banana Pro is 4 purchased credits, and the fixed two-model comparison is 2 purchased credits, so a Seedream image is about $0.06 on the largest pack and a Nano Banana Pro image about $0.50. Nano Banana Pro and comparisons cannot be paid for with free or gifted credits. Checkout is by Stripe after Google sign-in, the cost is quoted before each generation, and results are downloadable for 24 hours. No purchase was attempted.",
+      "pricing_summary": "One free successful Seedream 4.5 image per guest identity, no account, shared across the image tools. Then one-time credit packs only, no subscription and no auto-renewal: Starter $6.99/40 credits ($0.175 per credit), Creator $12.99/90 ($0.144), Studio $24.99/200 ($0.125); purchased credits never expire. Model costs: Seedream 4.5 1 credit per image, Nano Banana Pro 4 purchased credits per image, fixed two-model comparison 2 purchased credits; free/gifted credits cannot be used on Nano Banana Pro or comparisons. Per-credit arithmetic reconciles on every card and each card prints its own discount against Starter (17% and 29%). Results and originals expire after 24 hours on every plan including paid packs. Stripe checkout after Google sign-in; no refund page exists - a 14-day clause in the Terms and pricing FAQ covers duplicate charges, unauthorized payments and undelivered credits only. No purchase attempted.",
+      "pricing_url": "https://stylmorph.com/pricing",
+      "pricing_checked_date": "2026-11-19",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "automation",
+        "presentations"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

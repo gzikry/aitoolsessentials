@@ -1094,6 +1094,24 @@
       "public_href": "/go/meloletter/",
       "partner": false
     },
+    "reelboop": {
+      "name": "ReelBoop",
+      "slug": "reelboop",
+      "official": "https://reelboop.com/",
+      "destination": "https://reelboop.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/reelboop/",
+      "partner": false
+    },
+    "stylmorph": {
+      "name": "StylMorph",
+      "slug": "stylmorph",
+      "official": "https://stylmorph.com/",
+      "destination": "https://stylmorph.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/stylmorph/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

@@ -505,6 +505,14 @@
     "meloletter": {
       "date": "2026-11-18",
       "digest": "One-time $19.90 per song pack, or $9.90/month for three song packs a month renewing monthly; a pack = two generated versions, one included regenerate, MP3 downloads and a shareable gift page. Free lyric draft and 30-second previews of both versions before payment, rationed by unpublished rolling 24-hour limits and daily capacity. Songs by Suno v5.5 (chirp-v5.5) via YourMusic, lyrics by GPT-5.5 via Brioi. No free trial, no refund policy page (one Terms clause), same figures on /pricing and the Chinese pricing page."
+    },
+    "reelboop": {
+      "date": "2026-11-19",
+      "digest": "Subscriptions $9.90/$29.90/$59.90 per month for 200/800/2,000 credits a month (2,400/9,600/24,000 a year); yearly $99/$299/$599 (~17% off); one-time packs $15/200, $45/800, $90/2,000 credits valid 365 days; per-generation 5 credits an image (GPT Image 2.6, Nano Banana 2.1), 60 credits per 5s Kling 3.0 Pro clip, 100 per 5s Seedance 2.5 clip, 10 for the product-film preset; no free trial; plan credits expire at period end; 7-day refund on an untouched pack."
+    },
+    "stylmorph": {
+      "date": "2026-11-19",
+      "digest": "One free Seedream 4.5 image per guest identity, then one-time packs only: $6.99/40, $12.99/90, $24.99/200 credits ($0.175/$0.144/$0.125 per credit), no subscription and no auto-renewal, purchased credits never expire; model costs 1 credit (Seedream 4.5), 4 purchased credits (Nano Banana Pro) and 2 purchased credits for the two-model comparison; results and originals expire after 24 hours on every plan; Stripe checkout after Google sign-in; no refund page."
     }
   },
   "changes": [
@@ -871,7 +879,21 @@
       "previous_check": null,
       "new_check": "2026-11-18",
       "note": "RapAI: first recorded pricing snapshot - one-time packs only at $6.90/390, $14.90/1,000 and $29.90/2,200 credits, 365-day validity, no subscription; a 15-second render costs 390 credits at 480p, 825 at 720p and 2,055 at 1080p, and the studio's 5-second 480p quote of 130 credits is exactly one third, so the ladder is linear and every pack card reconciles. Identical on /pricing and /zh/pricing; no free plan; payment provider Waffo enabled in /api/config/public."
+    },
+    {
+      "slug": "reelboop",
+      "detected": "2026-11-19",
+      "previous_check": null,
+      "new_check": "2026-11-19",
+      "note": "ReelBoop: first recorded pricing snapshot - three metered subscription tiers ($9.90/$29.90/$59.90 monthly, $99/$299/$599 yearly at a flat ~17% off) and three one-time packs ($15/200, $45/800, $90/2,000 credits, 365-day validity). Per-generation costs printed by model (5 credits an image, 60 per 5-second Kling 3.0 Pro clip, 100 for Seedance 2.5, 10 for the product-film preset); no free trial; /zh/pricing agrees to the cent."
+    },
+    {
+      "slug": "stylmorph",
+      "detected": "2026-11-19",
+      "previous_check": null,
+      "new_check": "2026-11-19",
+      "note": "StylMorph: first recorded pricing snapshot - one-time packs only at $6.99/40, $12.99/90 and $24.99/200 credits with per-credit prices of $0.175/$0.144/$0.125 that reconcile with each card, no subscription and no auto-renewal, purchased credits never expire; 1 credit per Seedream 4.5 image, 4 purchased credits per Nano Banana Pro image, 2 credits for the fixed comparison; results expire after 24 hours."
     }
   ],
-  "updated": "2026-11-18"
+  "updated": "2026-11-19"
 }
