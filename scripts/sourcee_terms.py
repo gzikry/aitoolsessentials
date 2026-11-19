@@ -19,7 +19,13 @@ import re
 # Product classes AND vendor/product names. A slug can name a vendor without naming an AI class.
 AI_TOKENS = (
     # product classes
-    "ai", "a-i", "llm", "gpt", "chatgpt", "claude", "gemini", "copilot", "agents?",
+    # `agents?` alone was removed 2026-11-19: a slug token must describe AI on its own, and bare
+    # "agents" matched `uk-older-homeowners-and-agents-selling-2m-homes-mansion-tax-impact` -
+    # estate agents, no AI content in the body at all - putting a property-tax case-study call in
+    # the AI-token window and in the new-rows list. The AI-agent forms that do describe AI always
+    # write the token as "ai-agents"/"ai-agent"/"agentic", and the body scan is the backstop for
+    # anything the slug misses.
+    "ai", "a-i", "llm", "gpt", "chatgpt", "claude", "gemini", "copilot", "ai-agents?",
     "machine-learning", "automation", "ml", "genai", "gen-ai", "chatbot", "rag",
     "inference", "prompt", "token-burn", "tokenmaxxing", "agentic", "foundation-model",
     # vendors and products (added 2026-10-11 after the Anthropic miss)

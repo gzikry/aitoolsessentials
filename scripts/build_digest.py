@@ -72,6 +72,83 @@ def derive_figures() -> dict:
     }
 
 
+def _norm_url(u: str) -> str:
+    u = re.sub(r"^https?://", "", (u or "").strip()).rstrip("/.,;)")
+    return re.sub(r"^www\.", "", u)
+
+
+def refresh_route_evidence(text: str, today: str) -> str:
+    """Re-stamp today's route probe inside prose that quotes one.
+
+    `contact_method` is carried from the row's first digest, and it carries the probe figures from
+    the day the route was resolved — "(route-checks-2026-11-18.json: HTTP 200, 582,686 bytes". Those
+    bytes are a measurement of a page, and pages change: on 2026-11-19 the InformationWeek row still
+    printed the 2026-11-18 figure under the sentence "re-probed today", which is exactly the
+    typed-value-where-a-measurement-belongs defect this monitor exists to remove. The URL named just
+    before the parenthetical is matched against today's route-checks file; when it resolves, today's
+    HTTP code and byte count replace the old ones. When it does not resolve, the text is left alone
+    rather than guessed at.
+    """
+    path = D / f"route-checks-{today}.json"
+    if not path.exists():
+        return text
+    routes = (load(path, {}) or {}).get("routes") or {}
+    by_url = {_norm_url(r["url"]): r for r in routes.values() if isinstance(r, dict) and r.get("url")}
+    if not by_url:
+        return text
+    pat = re.compile(r"\(route-checks-20\d{2}-\d{2}-\d{2}\.json: HTTP \d+, [\d,]+ bytes")
+    out, last = [], 0
+    for m in pat.finditer(text):
+        before = text[max(0, m.start() - 320):m.start()]
+        cands = re.findall(r"(?:https?://)?[a-z0-9][a-z0-9.-]*\.[a-z]{2,}/[^\s,)\"']*", before)
+        chosen = None
+        for c in reversed(cands):
+            cn = _norm_url(c)
+            for k, rec in by_url.items():
+                if k == cn or cn.startswith(k) or k.startswith(cn):
+                    chosen = rec
+                    break
+            if chosen:
+                break
+        out.append(text[last:m.start()])
+        if chosen:
+            out.append(f"(route-checks-{today}.json: HTTP {chosen.get('http')}, {int(chosen.get('bytes') or 0):,} bytes")
+        else:
+            out.append(m.group(0))
+        last = m.end()
+    if out:
+        text = "".join(out)
+    out, last = [], 0
+    # Same defect in the other wording this monitor uses for a route probe: "(re-probed today, HTTP
+    # 200, 322,839 bytes". Only re-stamped when the sentence itself says "today", so a figure that a
+    # run dated to an earlier day keeps its own date and value.
+    pat2 = re.compile(r"HTTP (\d{3}), ([\d,]+) bytes")
+    for m in pat2.finditer(text):
+        window = text[max(0, m.start() - 200):m.start()]
+        if "today" not in window.lower():
+            out.append(text[last:m.end()])
+            last = m.end()
+            continue
+        cands = re.findall(r"(?:https?://)?[a-z0-9][a-z0-9.-]*\.[a-z]{2,}/[^\s,)\"']*", window)
+        chosen = None
+        for c in reversed(cands):
+            cn = _norm_url(c)
+            for k, rec in by_url.items():
+                if k == cn or cn.startswith(k) or k.startswith(cn):
+                    chosen = rec
+                    break
+            if chosen:
+                break
+        out.append(text[last:m.start()])
+        if chosen:
+            out.append(f"HTTP {chosen.get('http')}, {int(chosen.get('bytes') or 0):,} bytes")
+        else:
+            out.append(m.group(0))
+        last = m.end()
+    out.append(text[last:])
+    return "".join(out)
+
+
 def refresh(o: dict, verified: dict, feed: set[str], today: str) -> dict:
     """Replace every page-derived field on a carried row with today's page truth."""
     rec = verified.get(slug_of(o["url"])) or {}
@@ -112,6 +189,7 @@ def refresh(o: dict, verified: dict, feed: set[str], today: str) -> dict:
             f"no longer serves this request and the slug is absent from the sitemap. Expired, not aged: "
             f"no send is possible. First measured dead in an earlier run; re-fetched today."
         )
+    o["contact_method"] = refresh_route_evidence(o.get("contact_method") or "", today)
     return o
 
 

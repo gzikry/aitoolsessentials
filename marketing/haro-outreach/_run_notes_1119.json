@@ -1,0 +1,126 @@
+{
+ "_note": "Editorial judgement for the 2026-11-19 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json and _window_1119.json. Only the judgements below are typed.",
+ "new_rows": {
+  "data-centre-operators-and-enterprise-cios-in-india-ai-capacity-and-costs": {
+   "who": "Shrikanth Govindarajan - Dataquest (dataquest.in), print cover story",
+   "category": "AI Infrastructure / Data Centres and Compute Cost",
+   "contact": "Body asks for perspective and the page's address is platform-redacted; no handle, link or byline route is published.",
+   "relevance": "low",
+   "notes": "A Dataquest print cover on India's AI factory buildout, quoting 7.5 GW of installed data-centre capacity by March 2030 and asking what it will cost enterprises to use it. The spend token is capex and power, not software subscription spend: our census prices SaaS seats, not GPU hours or facility design. It wants operators and CIOs who have built or bought AI infrastructure in India; we hold neither the standing nor the market. Address redacted, no route.",
+   "template": "None - excluded. Off-beat: Indian data-centre capex and power costs; no pricing question we hold evidence on and no route."
+  },
+  "startup-founders-time-off-for-gta-release-and-anthropic-ipo-coincidence": {
+   "who": "Amanda Silberling - TechCrunch (techcrunch.com)",
+   "category": "Startups / Culture",
+   "contact": "Body says 'emailed quotes OK [email redacted]'; the address is platform-redacted and no handle is published.",
+   "relevance": "low",
+   "notes": "A deliberately light request: founders taking time off for the GTA release, plus a joke angle on the Anthropic IPO landing the same week. No pricing or spend question at all, and the address is redacted.",
+   "template": "None - excluded. Off-beat joke call about GTA and the Anthropic IPO; no pricing question and no route."
+  },
+  "call-center-and-customer-service-reps-ai-agent-phone-calls-impact": {
+   "who": "Issie Lapowsky - columnist (page names no publication; body says 'an upcoming column on AI and work')",
+   "category": "AI and Work / Agentic Customer Service",
+   "contact": "Body says 'Reach out at [email redacted] or issielapowsky.08 on Signal'. The Signal handle is the only published route and is a reporter's own handle, not an address on the request page.",
+   "relevance": "low",
+   "notes": "Wants ONLY first-hand experience from people who receive AI agent phone calls or run businesses that do. It explicitly narrows to call-centre, claims and benefits staff. We are a price census, not a call-centre operator, and answering would mean inventing a first-hand account. The Signal handle is a real route but there is nothing truthful to send through it.",
+   "template": "None - excluded. First-hand call-centre testimony only; we hold no such experience."
+  },
+  "freelancers-using-ai-tools-rising-income-and-more-work": {
+   "who": "Ellen Sheng - CNBC (cnbc.com)",
+   "category": "Freelance Work / AI Productivity",
+   "contact": "Body says 'email me at [email redacted]'; the address is platform-redacted and the page publishes no handle or link.",
+   "relevance": "low",
+   "notes": "CNBC story on freelancers whose income grew in the AI era, quoting Upwork survey figures (+45% earnings for complex AI-augmented work, -13% per-contract for routine AI-assisted work). It needs named freelancers with income stories and receipts. We have neither a freelance income story nor a route.",
+   "template": "None - excluded. Freelancer income testimony; no pricing question we can answer as a publisher and no route."
+  },
+  "board-directors-and-governance-advisers-nvidia-ceo-crisis-prevention": {
+   "who": "Matt Kelly - no publication named on the page",
+   "category": "Corporate Governance",
+   "contact": "Body says 'Reach out if interested'; no address, handle or link is published.",
+   "relevance": "low",
+   "notes": "Board directors and governance advisers on how boards should prevent an Nvidia-style CEO crisis. No AI pricing question, no route, and we are not a governance practitioner.",
+   "template": "None - excluded. Board governance commentary with no pricing question and no route."
+  },
+  "truck-drivers-nomap-mishaps-and-gis-ai-future": {
+   "who": "The Open Road w/ KC Phillips - podcast (no publication domain)",
+   "category": "Logistics / GIS",
+   "contact": "Page publishes one shortened link (https://t.co/yrokZsDvOF); no address or handle of the poster's own.",
+   "relevance": "low",
+   "notes": "A GIS Day podcast call for truck drivers' no-map stories, with a side topic on GIS in the AI era. The AI token is incidental to a trucking-segment booking; no pricing question and no route.",
+   "template": "None - excluded. Trucking podcast booking; no pricing question and no route."
+  },
+  "anthropic-investors-bull-and-bear-case-ahead-of-ipo": {
+   "who": "Jennifer Sor - Business Insider (businessinsider.com)",
+   "category": "AI Markets / IPO",
+   "contact": "Body says 'email [email redacted]'; the address is platform-redacted and the page publishes no handle.",
+   "relevance": "low",
+   "notes": "Investors in the Anthropic IPO, on the record with receipts, on the bull and bear case. It asks for a position we do not hold and requires proof of investment; no pricing question about tools, address redacted, no route.",
+   "template": "None - excluded. Investor testimony requiring receipts; we are not an Anthropic investor and no route is published."
+  },
+  "apac-banking-risk-officers-ai-agents-accelerating-bank-runs": {
+   "who": "Vince Dioquino - page names no publication",
+   "category": "Banking Risk / AI Governance",
+   "contact": "Body says 'Please message me or leave a comment so I can reach out'; no address or handle is published.",
+   "relevance": "low",
+   "notes": "APAC banking, compliance and risk staff overseeing agents across jurisdictions, for a story on AI-accelerated bank runs. Regulatory and operational standing we do not have; the only route is a comment on the platform, and no pricing question is asked.",
+   "template": "None - excluded. APAC banking-risk commentary; no pricing question and only a platform comment as a route."
+  },
+  "estate-agents-and-buyers-affected-by-housefishing-ai-listing-photos": {
+   "who": "Emily Braeger - The i Paper (theipaper.com)",
+   "category": "Consumer AI / Property",
+   "contact": "Body says 'Pls email me at [email redacted]'; the address is platform-redacted and no handle is published.",
+   "relevance": "low",
+   "notes": "Estate agents, buyers or sellers 'housefished' by AI-generated listing photos. This is the same consumer-testimony beat as yesterday's Sun call: no pricing question, address redacted, no route.",
+   "template": "None - excluded. First-hand housefishing testimony; address redacted and no route."
+  },
+  "uk-retail-investors-who-bought-anthropic-preipo-anthropic-ipo": {
+   "who": "Maisie Grice - City A.M. (cityam.com)",
+   "category": "AI Markets / IPO",
+   "contact": "Body says 'Please email [email redacted]'; redacted, no handle published.",
+   "relevance": "low",
+   "notes": "UK retail investors who bought Anthropic pre-IPO shares, for a same-day City A.M. piece. The 'today' framing means the window is already closing; no pricing question and no route.",
+   "template": "None - excluded. UK retail investor testimony, same-day deadline implied; no route and no pricing question."
+  },
+  "british-private-investors-anthropic-ipo-plans": {
+   "who": "Callum Martin - The Times (thetimes.co.uk)",
+   "category": "AI Markets / IPO",
+   "contact": "Body says 'please reach out at [email redacted]'; redacted, no handle published.",
+   "relevance": "low",
+   "notes": "British private investors planning to buy the Anthropic IPO. The fourth Anthropic-investor call in this window; it asks for a retail investment position we do not hold, publishes no route, and carries no tool-pricing question.",
+   "template": "None - excluded. Private-investor testimony; no route and no pricing question."
+  },
+  "nigerian-ai-founders-realworld-ai-solving-local-problems": {
+   "who": "Dr Chioma Ezenwafor - page names no publication",
+   "category": "AI in Emerging Markets",
+   "contact": "Body says 'DM me with a one-line description'; no address, handle or link is published.",
+   "relevance": "low",
+   "notes": "Nigerian founders building AI products in healthcare, agriculture, education, transport or finance, for filming within two weeks. We are not a Nigerian AI product builder and the page publishes no route.",
+   "template": "None - excluded. Nigerian founder profile call; standing we do not have and no route."
+  },
+  "ai-experts-and-industry-leaders-use-cases-jobs-ethics": {
+   "who": "Chetan K. - Kicckutalks podcast (no publication domain)",
+   "category": "AI / Podcast Booking",
+   "contact": "Body says 'Send me a DM or comment AI EXPERT below'; no address or handle of the poster's own.",
+   "relevance": "low",
+   "notes": "A podcast booking call for AI practitioners across HR, IT, healthcare, education and finance. It asks for an implementation story; we run a price census, not a deployment. Generic topics, 30-40 minute recording, no route beyond a platform comment.",
+   "template": "None - excluded. Podcast guest booking; no pricing question and no route."
+  },
+  "consumers-panic-buying-and-hoarding-cash-outages-and-market-fears": {
+   "who": "Genna - MarketWatch (marketwatch.com)",
+   "category": "Consumer Finance",
+   "contact": "Body says 'Email me if interested [email redacted]'; redacted, no handle published.",
+   "relevance": "low",
+   "notes": "Body-level AI hit only (the slug carries no token): consumers hoarding cash over outages, an FAA ground stop, 'AI fears' and market fears. It is a personal-finance testimony call where AI is one item in a list; no pricing question and no route.",
+   "template": "None - excluded. Consumer panic-buying testimony; AI is incidental, address redacted, no route."
+  }
+ },
+ "why_not_drafted": [
+  "The 2026-11-19 window carried 13 AI-token slugs and 1 AI+spend slug at slug level, and all 101 window bodies were fetched and read. Every one of the 14 candidates asks for testimony, standing or a named investor, or books a podcast guest. None asks what an AI tool costs, and 11 of the 14 publish no route at all.",
+  "The window's single AI+spend hit, the Dataquest India data-centre cover, is capex and power pricing - GPU capacity and facility design - not subscription seat spend. Our dated census cannot answer it without pretending to be an operator.",
+  "No new draft is written from this window. The sendable set is carried, not new, and the only honest work left is to keep the carried drafts' figures current and put them in front of George as sends rather than as findings."
+ ],
+ "defects": [
+  "SOURCEE_TERMS: bare `agents?` in the slug-level AI set matched `uk-older-homeowners-...-mansion-tax-impact` (estate agents). That property-tax case-study call, with no AI content in its body at all, entered the AI-token window and would have been added to tracking as an AI row. Replaced with `ai-agents?`; the body scan remains the backstop for AI-agent requests whose slugs name no token (verified: `apac-banking-risk-officers-ai-agents-...` and `individual-contributors-managing-ai-agents-...` still match)."
+ ],
+ "extra_actions": []
+}
