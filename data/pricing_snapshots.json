@@ -517,6 +517,10 @@
     "ficweave": {
       "date": "2026-11-19",
       "digest": "Pro $7.99/mo (100 credits per subscription month, 20 editable stories), Pro+ $14.99/mo (200, 50), Max $24.99/mo (400, 100); annual $79.90/$149.90/$249.90 charged once with credits granted monthly (= 10 monthly payments, 'Save 16.7%'); free = anonymous chapter 1 plus 3 non-expiring starter credits, 1 editable story, read-only memory, 1 recent chapter of context; 1 credit per saved continuation; failed or cancelled generations return the reservation; credits expire each monthly window with no rollover, annual included; one-time credit packs discontinued; all six SKUs ready:true at /api/payment/checkout-readiness; Waffo Pancake merchant of record."
+    },
+    "markin": {
+      "date": "2026-11-19",
+      "digest": "EUR + VAT, request-based. Free EUR 0: 200 one-off welcome credits, expire 30 days, no card. Pro EUR 49/mo (750 credits), EUR 149/mo (2,500), EUR 490/mo (8,500), EUR 990/mo (17,500); team-shared, no per-seat fee. Annual = 20% off twelve monthly payments, paid once, credits still granted monthly; no annual total published. Rollover one extra month (oldest first); monthly cancel to month end; annual cancel stops renewal, keeps access and grants to year end. Enterprise custom. FAQ: 'there is no online checkout yet'; access confirmed by the team before any charge."
     }
   },
   "changes": [

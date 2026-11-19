@@ -1121,6 +1121,15 @@
       "public_href": "/go/ficweave/",
       "partner": false
     },
+    "markin": {
+      "name": "Markin",
+      "slug": "markin",
+      "official": "https://markin.ai/",
+      "destination": "https://markin.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/markin/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

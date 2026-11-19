@@ -3063,6 +3063,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "markin",
+      "name": "Markin",
+      "category": "AI Agents",
+      "official_url": "https://markin.ai/",
+      "review_url": "/tools/markin/",
+      "price_label": "Monthly subscriptions in EUR plus VAT, sold through a request form rather than a checkout, with a free tier. Free: EUR 0 for 200 one-off welcome credits that expire 30 calendar days after they are granted, no card and no automatic charge, but access is requested rather than signed up. Pro at four capacity tiers: EUR 49/month for 750 credits, EUR 149/month for 2,500, EUR 490/month for 8,500 and EUR 990/month for 17,500, credits shared by the whole team with no per-seat fee. Annual billing is a 20% discount over twelve monthly payments, paid once for the year, with the credits still granted monthly rather than all at once; no annual figure is published anywhere on the page, so the discounted total has to be computed from the monthly price. Unused credits roll over into one additional monthly period and expire at the end of it, oldest credits consumed first; cancelling a monthly plan runs to the end of the paid month, and cancelling an annual plan stops renewal while access and the monthly credit grants continue to the end of the paid year. Enterprise is custom - agreed capacity, tailored integrations, a forward deployed engineer, DPA and security review, adapted invoicing. The pricing FAQ states 'there is no online checkout yet' and that the team confirms access, configuration and billing before anything is charged. No purchase was attempted.",
+      "pricing_summary": "EUR, plus VAT, sold by request form. Free EUR 0 with 200 one-off welcome credits expiring 30 calendar days after grant (no card, no automatic charge). Pro: EUR 49/month for 750 credits, EUR 149/month for 2,500, EUR 490/month for 8,500, EUR 990/month for 17,500 - credits shared by the team, no per-seat fee. Annual is a 20% discount over twelve monthly payments paid once, credits still granted monthly; no annual total is published. Rollover runs one extra monthly period then expires, oldest first; monthly cancellation runs to month end, annual cancellation stops renewal but keeps access and monthly grants to year end. Enterprise custom. Pricing FAQ: 'there is no online checkout yet' and the team confirms access, configuration and billing before anything is charged. No purchase attempted.",
+      "pricing_url": "https://markin.ai/pricing",
+      "pricing_checked_date": "2026-11-19",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "automation",
+        "email"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

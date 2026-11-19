@@ -2282,5 +2282,26 @@
     "status": "not_started",
     "next_action": "Email support@ficweave.com about affiliate or partner terms. No affiliate surface exists - /affiliates, /affiliate, /partners, /referral, /program and /api/affiliate all 404 - and support@ is the only address published (on /contact, in the footer and in the Terms), so that is the route.",
     "notes": "$7.99 entry price with 100 credits a month means commission per conversion is small; priority low until the review earns organic impressions. Near-term value is category depth in long-form AI writing beside grammarly, humanpen, sudowrite-style tools and the writing half of Productivity."
+  },
+  {
+    "tool_slug": "markin",
+    "tool_name": "Markin",
+    "priority": "low",
+    "category": "AI Agents",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/markin/"
+    ],
+    "best_audiences": [
+      "growth and lifecycle leads at D2C brands with a large customer base and an existing CRM/CDP",
+      "procurement and security reviewers comparing agentic vendors with a DPA and subprocessor list",
+      "data-science teams asked whether an LLM plus MCP is enough instead of buying a platform"
+    ],
+    "status": "not_started",
+    "next_action": "Email roma@markin.ai (the submitted contact, a verified single mailbox on Google Workspace) about affiliate or partner terms. No programme exists - /affiliates and /partners both 404 - so there is nothing to join yet; the practical next step is asking whether they run a referral or reseller arrangement for enterprise deals.",
+    "notes": "Enterprise, sales-led pricing from EUR 49/month to EUR 990/month plus custom contracts, so a referral commission would be material if they ever offer one; priority stays low because a reader cannot transact from the listing and the review's near-term value is category depth in AI Agents beside the consumer tools."
   }
 ]

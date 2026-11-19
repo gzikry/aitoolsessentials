@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-19",
-  "tools_count": 124,
+  "tools_count": 125,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -903,6 +903,13 @@
       "category": "Productivity",
       "price": "Subscriptions only, in USD, plus a one-time free allowance rather than a trial. Free after sign-in: 3 starter credits that do not expire, 1 editable story, read-only Story Memory and up to one recent chapter of context. Pro $7.99/month for 100 credits per subscription month and up to 20 editable stories; Pro+ $14.99/month for 200 credits and 50 stories; Max $24.99/month for 400 credits and 100 stories. Annual billing charges once and grants credits monthly: $79.90, $149.90 and $249.90, which is exactly ten monthly payments and matches the 'Save 16.7%' badge on every card; the /zh/pricing mirror prints the same figures to the cent and the Terms restate both columns. A saved standard continuation costs 1 credit; a failed or cancelled attempt returns its reservation to its original source and expiry; Story Memory updates cost nothing. Subscription credits expire at each monthly window with no rollover, on annual plans too. One-time Credit Packs are no longer sold - /pricing, /terms, /refund-policy and /contact each say so - and only prior purchases keep their historical terms. All six SKUs (three plans x monthly/annual) report ready:true at /api/payment/checkout-readiness; the Choose buttons ship disabled in the served HTML and enable after the client-side account check. Waffo Pancake is the merchant of record for checkout, tax and the customer portal. No purchase was attempted.",
       "url": "https://aitoolsessentials.com/tools/ficweave/"
+    },
+    {
+      "name": "Markin",
+      "slug": "markin",
+      "category": "AI Agents",
+      "price": "Monthly subscriptions in EUR plus VAT, sold through a request form rather than a checkout, with a free tier. Free: EUR 0 for 200 one-off welcome credits that expire 30 calendar days after they are granted, no card and no automatic charge, but access is requested rather than signed up. Pro at four capacity tiers: EUR 49/month for 750 credits, EUR 149/month for 2,500, EUR 490/month for 8,500 and EUR 990/month for 17,500, credits shared by the whole team with no per-seat fee. Annual billing is a 20% discount over twelve monthly payments, paid once for the year, with the credits still granted monthly rather than all at once; no annual figure is published anywhere on the page, so the discounted total has to be computed from the monthly price. Unused credits roll over into one additional monthly period and expire at the end of it, oldest credits consumed first; cancelling a monthly plan runs to the end of the paid month, and cancelling an annual plan stops renewal while access and the monthly credit grants continue to the end of the paid year. Enterprise is custom - agreed capacity, tailored integrations, a forward deployed engineer, DPA and security review, adapted invoicing. The pricing FAQ states 'there is no online checkout yet' and that the team confirms access, configuration and billing before anything is charged. No purchase was attempted.",
+      "url": "https://aitoolsessentials.com/tools/markin/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
