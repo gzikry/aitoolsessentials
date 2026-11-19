@@ -492,6 +492,11 @@
     "replyargus": {
       "date": "2026-11-18",
       "digest": "Indie $9.99/mo or $99.90/yr (4 apps, 300 replies); Pro $19.99/mo or $199.90/yr (10 apps, 2,000 replies, REST API + webhooks); Studio $99/mo or $990/yr (30 apps, 8,000 replies, white-label); Enterprise custom. 14-day trial with a card at signup, billed from day 14; seats included (5/10/25/unlimited), viewers free, no overage billing. Verified on four agreeing surfaces (/pricing cards, /llms.txt, /llms-full.txt, JSON-LD Offers). /signup and /login contradict this by advertising 'Free for 1 app and 100 replies a month. You don't need a card' while the pricing FAQ answers 'Is there a free plan? No'."
+    },
+    "change-text-in-image": {
+      "date": "2026-11-18",
+      "digest": "One-time packs, USD, no subscription: Starter $14.90 / 400 credits (40 text edits, $0.37 per edit), Pro $26.90 / 1,000 (100 edits, $0.27), Studio $39.90 / 1,800 (180 edits, $0.22). 10 credits per generation; new accounts get 10 free credits (one edit); credits do not expire while the account remains available; failed generations return their credits. Checkout via Waffo Pancake (waffo_enabled true in /api/config/public). Refunds inside the Terms: full refund within 7 days only if none of that purchase's credits were used. /zh mirrors the same three packs at the same USD prices. Verified 2026-11-18 on /#pricing, /zh and /api/config/public.",
+      "verified_against": "https://changetextinimage.org/#pricing"
     }
   },
   "changes": [
@@ -844,6 +849,13 @@
       "previous_check": null,
       "new_check": "2026-11-18",
       "note": "Reply Argus: first recorded pricing snapshot - Indie $9.99/$99.90, Pro $19.99/$199.90, Studio $99/$990 with 14-day trial and card at signup, verified on /pricing, /llms.txt, /llms-full.txt and the page's JSON-LD Offers; signup and login pages still advertise a card-free 100-reply free plan the pricing page denies."
+    },
+    {
+      "slug": "change-text-in-image",
+      "detected": "2026-11-18",
+      "previous_check": null,
+      "new_check": "2026-11-18",
+      "note": "Change Text in Image: first recorded pricing snapshot - one-time packs only at $14.90/400, $26.90/1,000 and $39.90/1,800 credits with 10 credits per edit and 10 free credits at sign-up; per-edit prices of $0.37/$0.27/$0.22 reconcile with each card's generation count; no subscription, no yearly plan; verified on /#pricing, the /zh mirror and /api/config/public."
     }
   ],
   "updated": "2026-11-18"

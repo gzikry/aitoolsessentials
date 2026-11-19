@@ -2907,6 +2907,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "change-text-in-image",
+      "name": "Change Text in Image",
+      "category": "Creative",
+      "official_url": "https://changetextinimage.org/",
+      "review_url": "/tools/change-text-in-image/",
+      "price_label": "One-time credit packs, USD, no subscription: Starter $14.90 for 400 credits (40 text edits, $0.37 per edit), Pro $26.90 for 1,000 credits (100 edits, $0.27), Studio $39.90 for 1,800 credits (180 edits, $0.22). Each generation costs 10 credits and new accounts get 10 free credits, which is one free edit. Credits do not expire while the account remains available, failed generations return the credits spent, and checkout runs through Waffo Pancake as merchant of record. The same figures and the same per-edit arithmetic render on the /zh mirror. Verified 2026-11-18 on /#pricing, /zh and /api/config/public.",
+      "pricing_summary": "One-time credit packs only, USD, server-rendered under /#pricing: Starter $14.90 for 400 credits, Pro $26.90 for 1,000 and Studio $39.90 for 1,800, each card converting its allowance into text-edit generations and a per-edit price - '400 credits - $0.37 USD / edit - 40 text-edit generations', '1,000 - $0.27 - 100', '1,800 - $0.22 - 180'. The footnote reads 'Each generation uses 10 credits. New accounts receive 10 free credits. One-time purchase, no recurring charges', and the Terms add that credits do not expire while the account remains available and failed generations return the credits spent. The arithmetic reconciles on every card (400/10 = 40 at 14.90/40 = $0.3725, 1,000/10 = 100 at $0.269, 1,800/10 = 180 at $0.2217). The Chinese mirror /zh carries the identical price tokens and the same three packs. No subscription, no yearly plan, no add-ons; checkout labels every card 'Pay with Waffo' and /api/config/public returns waffo_enabled:'true'. Refunds are a Terms clause, not a separate page: full refund within 7 days only if none of that purchase's credits have been used. Verified 2026-11-18 on /#pricing, /zh and /api/config/public.",
+      "pricing_url": "https://changetextinimage.org/#pricing",
+      "pricing_checked_date": "2026-11-18",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "marketing",
+        "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

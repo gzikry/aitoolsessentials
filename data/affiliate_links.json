@@ -1067,6 +1067,15 @@
       "public_href": "/go/replyargus/",
       "partner": false
     },
+    "change-text-in-image": {
+      "name": "Change Text in Image",
+      "slug": "change-text-in-image",
+      "official": "https://changetextinimage.org/",
+      "destination": "https://changetextinimage.org/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/change-text-in-image/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

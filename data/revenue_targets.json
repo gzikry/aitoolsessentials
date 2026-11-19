@@ -2157,5 +2157,25 @@
     "status": "not_started",
     "next_action": "Ask support@replyargus.com for affiliate or partner terms once the listing is live - no affiliate page exists on the site (/affiliates was not published; /alternatives is a competitor comparison page) and none was found in search. The submitted contact (replyargus-dfiy@streakrover.in) is a masked forwarding address on a domain with no A record but working MX, so support@ on the product domain is the address to use.",
     "notes": "Low priority on economics rather than fit: $9.99-$99 a month with a 14-day trial means a single-digit-dollar commission at any normal rate, and the buyers are developers who mostly arrive through the app-store and MCP ecosystems rather than an AI-tool directory. Worth wiring if the vendor offers a program, not worth outbound chasing."
+  },
+  {
+    "tool_slug": "change-text-in-image",
+    "tool_name": "Change Text in Image",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/change-text-in-image/"
+    ],
+    "best_audiences": [
+      "e-commerce and small marketing teams updating prices and offer copy on exported artwork",
+      "social media managers and solo creators fixing typos without the source design file"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether Change Text in Image runs an affiliate or partner programme; /affiliates, /partners and /referral all 404 and no programme is published. Never invent affiliate URLs.",
+    "notes": "One-time packs from $14.90 give a low-value but clean affiliate shape if a programme exists; nothing is published, so the ask goes out with the publication notice and nothing is wired until terms arrive. The same message should ask for a company/jurisdiction, a committed retention period for uploaded images, an analytics disclosure matching the three trackers that actually load, and whether password reset can be enabled."
   }
 ]
