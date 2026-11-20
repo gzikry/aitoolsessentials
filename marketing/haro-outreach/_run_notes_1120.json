@@ -1,0 +1,117 @@
+{
+ "_note": "Editorial judgement for the 2026-11-20 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json and _window_1120.json. Only the judgements below are typed.",
+ "new_rows": {
+  "consumers-using-agentic-shopping-christmas-purchase-insights": {
+   "who": "Jeremy Lott - page names no publication (byline reads 'Jeremy Lott has a children's book for you')",
+   "category": "Consumer AI / Retail",
+   "contact": "Body says 'Drop me a line'; the page publishes no address, handle or link of its own.",
+   "relevance": "low",
+   "notes": "Consumers using 'agentic shopping' for Christmas purchases, for an outlet the page does not name. It wants first-hand consumer experience with AI shopping agents; we run a dated tool-price census, not a consumer-shopping practice, and the page publishes no route.",
+   "template": "None - excluded. Consumer agentic-shopping testimony; no pricing question we hold evidence on and no route."
+  },
+  "parents-of-current-students-ai-impact-on-kids-and-how-they-help": {
+   "who": "Unlocked: Living With AI - podcast (page names no publication domain; body tags #Unlocked_LivingWithAI)",
+   "category": "AI and Education",
+   "contact": "Page publishes no address, handle or link of its own; the body routes via hashtags to 'Beyond the Screen: Whose Voices'.",
+   "relevance": "low",
+   "notes": "A podcast call for parents of current students on how AI affects their kids and how they help. It wants parental testimony from a household with school-age children; we hold no such standing and the page publishes no route.",
+   "template": "None - excluded. Parental AI-in-schools testimony; no pricing question and no route."
+  },
+  "young-nigerian-creatives-ai-impact-on-work-and-income": {
+   "who": "Ihuoma Ukeje - ClickNaija (page names no publication domain; body tags #ClickNaija)",
+   "category": "AI and Work / Creative Industries",
+   "contact": "Body routes to a survey: https://lnkd.in/ecTwGXJr. No email or handle of the poster's own is published.",
+   "relevance": "low",
+   "notes": "Young Nigerian creatives on how AI is changing their work and income, collected through a survey link. It is geo- and demographic-gated to Nigerian creatives; we are a price census and the only route is the survey form, not a channel that reaches us.",
+   "template": "None - excluded. Nigerian-creative income survey; first-hand experience we do not hold and the only route is a form."
+  },
+  "ai-benchmark-experts-commentary-on-arena-and-datacurve": {
+   "who": "Scott Tolinski - page names no publication (the tagged @arena and @datacurve are product accounts, not outlets)",
+   "category": "AI / Benchmarks and Evaluation",
+   "contact": "Body asks 'who should i talk to?' - a referral ask, not an open call; the page publishes no address or handle.",
+   "relevance": "low",
+   "notes": "A referral request: the poster wants introductions to AI benchmark experts to interview, tagging @arena and @datacurve. Our census prices tool seats; it does not score models on benchmarks, so we are not the source, and there is no route on the page.",
+   "template": "None - excluded. Benchmark-expert referral; off our pricing beat and no route."
+  },
+  "uk-and-europe-sports-retail-supply-chain-pros-retail-ai-at-scale": {
+   "who": "Katie Howard - SupplyChainTalk (podcast/webinar series; page names no publication domain)",
+   "category": "Supply Chain / Retail AI",
+   "contact": "Body books speakers for two 2027 episodes (13 January 2027 and a second slot); the page publishes no address or handle.",
+   "relevance": "low",
+   "notes": "A speaker-booking call for SupplyChainTalk's 2027 season on supply-chain resilience and AI at scale. The spend token is procurement, not software subscription spend; it wants retail supply-chain operators as guests, standing we do not have, and publishes no route.",
+   "template": "None - excluded. Supply-chain podcast booking; no pricing question and no route."
+  },
+  "hr-leaders-and-talent-execs-skills-gap-ai-and-graduate-employability": {
+   "who": "George Chilton - HBR (Deusto edition) article (page names no publication domain)",
+   "category": "AI and Work / Talent",
+   "contact": "Body says 'If you answer below, I may include your quote or reach out for an interview'; the page publishes no address or handle.",
+   "relevance": "low",
+   "notes": "An HBR (Deusto) article asking HR leaders whether they are plugging talent gaps with AI. It wants the employer's own hiring experience; we are a tool-price publisher, not an HR leader, and the only route is to 'answer below' on the platform, with no address or handle published.",
+   "template": "None - excluded. HR talent-strategy quotes; standing we do not have and no route."
+  },
+  "security-researchers-antiforensics-iot-ai-security": {
+   "who": "Enleak - DE&TH DIARIES podcast (page names no publication domain)",
+   "category": "AI Security / Podcast Booking",
+   "contact": "Page publishes one shortened link (https://t.co/TOTtQF2Xl8); no address or handle of the poster's own.",
+   "relevance": "low",
+   "notes": "A podcast call for security researchers across anti-forensics, IoT and adversarial ML. It books research guests; no pricing question, and no route beyond the podcast link.",
+   "template": "None - excluded. Security-research podcast booking; off the pricing beat and no route."
+  },
+  "customer-experience-experts-b2c-experience-trends-and-challenges": {
+   "who": "Claire Cunningham - The Customer Connexion (webinar series; page names no publication domain)",
+   "category": "Customer Experience / Webinar Booking",
+   "contact": "Body books an 'industry expert guest' for the Experience Gap webinar series; no address or handle of the poster's own is published.",
+   "relevance": "low",
+   "notes": "A webinar-guest booking for a CX series that has covered AI agents in customer service. It wants a CX practitioner to interview; we run a price census, not a CX practice, and the page publishes no route.",
+   "template": "None - excluded. CX webinar guest booking; no pricing question and no route."
+  },
+  "residents-near-data-centers-jobs-and-investment-promises": {
+   "who": "Adam Mahoney - Capital B (capitalbnews.org), Pulitzer Center AI Accountability Network series",
+   "category": "AI Infrastructure / Community Impact",
+   "contact": "Body routes to a story-sharing form (https://lnkd.in/gvxbu9vx); the page publishes no address or handle of the reporter's own.",
+   "relevance": "low",
+   "notes": "A Capital B investigation into how data centres reshape Black communities, seeking residents' first-hand accounts of promised jobs and investment. It wants resident testimony; the only route is the share-your-story form, and there is no tool-pricing question.",
+   "template": "None - excluded. Resident data-centre testimony; first-hand experience we do not hold and only a form as a route."
+  },
+  "payroll-and-hris-analysts-combined-role-challenges-and-pay-gaps": {
+   "who": "Katrina Flowers, MSOP - page names no publication (a first-person data post)",
+   "category": "AI and Work / HR Technology Pay",
+   "contact": "Page publishes no address, handle or link of its own.",
+   "relevance": "low",
+   "notes": "A first-person analysis of payroll-and-HRIS combined roles and pay gaps, built from 36 HRIS job postings. The spend tokens (budget, pay) are salary, not software subscription spend; it wants HR/payroll practitioners' own experience and publishes no route.",
+   "template": "None - excluded. HRIS role/pay commentary; salary spend, not tool pricing, and no route."
+  },
+  "fashion-analysts-industry-trends-and-commentary": {
+   "who": "Trishla Ostwal - ADWEEK (page names no publication domain)",
+   "category": "Fashion / Media Commentary",
+   "contact": "Body says 'my DMs and emails are open'; the page publishes no address or handle of its own.",
+   "relevance": "low",
+   "notes": "ADWEEK's AI reporter asking for fashion analysts - explicitly not an AI story this week. No pricing question, and no route on the page.",
+   "template": "None - excluded. Fashion-analyst commentary; the poster says it is not an AI story this week and no route is published."
+  }
+ },
+ "new_this_run": [
+  "consumers-using-agentic-shopping-christmas-purchase-insights",
+  "parents-of-current-students-ai-impact-on-kids-and-how-they-help",
+  "young-nigerian-creatives-ai-impact-on-work-and-income",
+  "ai-benchmark-experts-commentary-on-arena-and-datacurve",
+  "uk-and-europe-sports-retail-supply-chain-pros-retail-ai-at-scale",
+  "hr-leaders-and-talent-execs-skills-gap-ai-and-graduate-employability",
+  "security-researchers-antiforensics-iot-ai-security",
+  "customer-experience-experts-b2c-experience-trends-and-challenges",
+  "residents-near-data-centers-jobs-and-investment-promises",
+  "payroll-and-hris-analysts-combined-role-challenges-and-pay-gaps",
+  "fashion-analysts-industry-trends-and-commentary"
+ ],
+ "why_not_drafted": [
+  "The 2026-11-20 window carried 7 AI-token slugs and 0 AI+spend slugs at slug level, and all 92 window bodies were fetched and read. The body scan lifted the candidate set to 11 (the 4 extras are body-level AI hits whose slugs carry no token). Every one of the 11 asks for first-hand testimony, standing or a named guest, or is a referral; none asks what an AI tool costs, and every one publishes no route of its own.",
+  "The window's spend-token hits are salary (payroll/HRIS pay gaps) and procurement (sports-retail supply chain), not software subscription spend. Our dated seat-price census cannot answer either without pretending to be the practitioner the poster asked for.",
+  "No new draft is written from this window. The sendable set is carried, not new, and the only honest work left is to keep the carried draft's figures current and put it in front of George as a send rather than as a finding."
+ ],
+ "defects": [
+  "DEAD SCRIPT: scripts/haro_monitor.py (Sep 17) is a superseded stub - it fetches the helpareporter.com and connectively.us homepages and regexes <h2>/<h3> headings for query text. Both sit behind the email wall, so run as written it would return zero or headings, and its OUTPUT_DIR write would overwrite a real digest file with that garbage. Nothing calls it; the live pipeline is haro_window.py -> haro_bodies.py -> verify_journo_requests.py -> build_digest.py. Flagged so a future run does not invoke it by name."
+ ],
+ "extra_actions": [
+  "SEND BLOCKER (2026-11-20): the monitor's output is complete and every route below is a human send (a journalist's inbox, a LinkedIn DM, a Signal handle). Nothing on the monitor side is blocking a send; the one step that is not automatic is the click, which is George's lane. The queue's sendable row and its paste-ready draft are named in pitch-drafts-2026-11-20.md."
+ ]
+}
