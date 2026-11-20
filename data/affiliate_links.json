@@ -1130,6 +1130,15 @@
       "public_href": "/go/markin/",
       "partner": false
     },
+    "tiny-deskai": {
+      "name": "TINY DESK AI (tiny-deskai.net)",
+      "slug": "tiny-deskai",
+      "official": "https://tiny-deskai.net/",
+      "destination": "https://tiny-deskai.net/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/tiny-deskai/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

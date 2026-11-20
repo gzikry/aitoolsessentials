@@ -2303,5 +2303,26 @@
     "status": "not_started",
     "next_action": "Email roma@markin.ai (the submitted contact, a verified single mailbox on Google Workspace) about affiliate or partner terms. No programme exists - /affiliates and /partners both 404 - so there is nothing to join yet; the practical next step is asking whether they run a referral or reseller arrangement for enterprise deals.",
     "notes": "Enterprise, sales-led pricing from EUR 49/month to EUR 990/month plus custom contracts, so a referral commission would be material if they ever offer one; priority stays low because a reader cannot transact from the listing and the review's near-term value is category depth in AI Agents beside the consumer tools."
+  },
+  {
+    "tool_slug": "tiny-deskai",
+    "tool_name": "TINY DESK AI (tiny-deskai.net)",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/tiny-deskai/"
+    ],
+    "best_audiences": [
+      "people making the 'Outstanding' Tiny Desk meme clip from their own photos for a TikTok, Reel or Short",
+      "friend groups, sports fans and coworkers casting themselves as the band",
+      "occasional users weighing a one-time $5.90 video pack against a monthly AI video subscription"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@tiny-deskai.net (RCPT-verified working domain mailbox) about affiliate or partner terms; the submission came via anyandy@mail.grokbot.com. No affiliate page exists on the site, so no tracking URL was invented.",
+    "notes": "Per-sale value is small - $5.90, $15.90 and $49.90 one-time packs - and most buyers make one or two meme clips, so commission per conversion is a few tens of cents. Priority low until the review earns organic impressions; near-term value is category depth in the trend-video cluster beside pawgroove, pawmambo and rapvideogo, not revenue."
   }
 ]
