@@ -2,17 +2,18 @@
 
 **Three paste-ready pitches. Zero sent. Each one needs George's click or paste.**
 
-348 tracked requests, **82 live unpitched, 2 sendable** (`pitch-queue.md`, built today), 42 dead on the
-platform, **0 newly expired**. §1 is Business Insider / Thibault Spirlet at **3 days** — the freshest
-on-beat row in the queue. §2 is InformationWeek / Kelsey Ziser at **9 days**, which crosses the 10-day
-line tomorrow (**2026-11-20**). §3 is the Forbes late send that closes two rows with one email.
+348 tracked requests, **82 live unpitched, 2 sendable** (`pitch-queue.md`, rebuilt this evening), 42 dead
+on the platform, **0 newly expired**. §1 is Business Insider / Thibault Spirlet at **3 days** — the freshest
+on-beat row in the queue. §2 is InformationWeek / Kelsey Ziser, whose page badge now reads **"Posted 10
+days ago"** — it is ON the 10-day line today and crosses cold at 11 days, so today is its last sendable
+day. §3 is the Forbes late send that closes two rows with one email.
 
-**Figures today:** `data/tools.json` holds **124 tools**; `data/pricing_snapshots.json`
+**Figures today:** `data/tools.json` holds **125 tools**; `data/pricing_snapshots.json`
 (`updated: 2026-11-19`) yields **51 with a published monthly per-seat price, 42 at or under $25/month,
 median $15.00**. Monthly vs annual is unchanged: **1.11x to 2.53x, median 1.25x over 19 tiers**
-(`data/monthly_annual_pairs.json`, re-asserted 2026-10-16). The dataset moved 117 → 124 tools since
-yesterday, so the three Gmail drafts staged 2026-11-18 (uids 75-77) are replaced by this file's text
-rather than left carrying a stale count behind a send button.
+(`data/monthly_annual_pairs.json`, re-asserted 2026-10-16). The dataset moved 124 → 125 tools with the
+Markin listing added this evening, so the three Gmail drafts staged this morning (uids 78-80) are
+re-staged at the 125-tool count rather than left carrying a stale number behind a send button.
 
 ---
 
@@ -27,8 +28,8 @@ Mistral, or are seriously considering doing so."* (Three of his four asks are fi
 cannot give; this one is a pricing question we can.)
 
 **Reply route:** **tspirlet@businessinsider.com** — **automatable? No.** Published as a `mailto:` link
-on his byline page `businessinsider.com/author/thibault-spirlet` (probed today:
-`route-checks-2026-11-19.json`, HTTP 200, 319,992 bytes, address 5 times in the markup). The request
+on his byline page `businessinsider.com/author/thibault-spirlet` (re-probed this evening:
+`route-checks-2026-11-19.json`, HTTP 200, 323,377 bytes, address 5 times in the markup). The request
 page redacts the address. The send is George's.
 
 **Subject:** `The per-seat arithmetic in your Mistral switchers call`
@@ -41,7 +42,7 @@ page redacts the address. The send is George's.
 >
 > The other half is billing term: across 19 same-tier pairs in our census, monthly billing costs 1.11x to 2.53x the annual rate, median 1.25x (pairs re-asserted 2026-10-16). That premium is usually what a switcher is reacting to, not the sticker.
 >
-> I keep a dated census of the 124 AI tools we track, each tier read off the vendor's own pricing page with its check date, so every number above is citable. Free to use, with or without attribution.
+> I keep a dated census of the 125 AI tools we track, each tier read off the vendor's own pricing page with its check date, so every number above is citable. Free to use, with or without attribution.
 >
 > AIToolsEssentials
 
@@ -49,20 +50,21 @@ page redacts the address. The send is George's.
 
 ---
 
-## 2. InformationWeek — CIOs on the SaaSpocalypse and temporary AI ◀ 9d, EMAIL, CROSSES COLD 2026-11-20
+## 2. InformationWeek — CIOs on the SaaSpocalypse and temporary AI ◀ 10d, EMAIL, LAST SENDABLE DAY
 
 **Source:** https://www.sourcee.app/journo-request/cios-2027-goals-ram-shortage-saaspocalypse-temp-ai-physical-ai
-**Posted:** 2026-11-09 20:11 UTC — **9 days.** Page read today: HTTP 200, body served,
-`datePublished 2026-11-09T20:11:11.759Z`, badge *"Posted 9 days ago"*, no expiry notice.
+**Posted:** 2026-11-09 20:11 UTC — **10 days.** Page re-read this evening: HTTP 200, body served,
+`datePublished 2026-11-09T20:11:11.759Z`, badge *"Posted 10 days ago"* (it read 9 days this morning),
+no expiry notice. At 11 days it leaves the sendable count.
 **Who:** **Kelsey Ziser**, Senior Editor, InformationWeek (named in the page's author field).
 **Ask, her words:** *"thoughts on the SaaSpocalypse? - are there any use cases where you deploy a
 temporary AI tool?"*
 
 **Reply route:** **kelsey.ziser@informationweek.com** — **automatable? No.** Published in a `mailto:`
-link on her author page `informationweek.com/author/kelsey-ziser` (re-probed today:
-`route-checks-2026-11-19.json`, HTTP 200, 584,322 bytes, address present twice in the markup). The
+link on her author page `informationweek.com/author/kelsey-ziser` (re-probed this evening:
+`route-checks-2026-11-19.json`, HTTP 200, 583,970 bytes, address present once, in the `mailto:` link). The
 request page publishes no address. The send is George's. **This is the row that expires first** — not
-by a stated deadline, but by the queue's own 10-day line, tomorrow.
+by a stated deadline, but by the queue's own 10-day line: it sits on the line today and crosses at 11 days.
 
 **Subject:** `The seat-price numbers behind the SaaSpocalypse question`
 
@@ -70,7 +72,7 @@ by a stated deadline, but by the queue's own 10-day line, tomorrow.
 >
 > You asked CIOs about the SaaSpocalypse and temporary AI deployments. I'm not a CIO, so I won't answer as one. What I can give you is the seat-price floor beneath that question.
 >
-> Of the 124 AI tools we track, 51 publish a monthly per-seat price; 42 of those sit at or under $25, and the median cheapest paid seat is $15.00 (snapshot 2026-11-19, every tier read off the vendor's own pricing page with its check date). The cheapest paid seat we record is $4 (Khanmigo's learner plan, checked 2026-09-18) and the dearest $299 (Instrumentl, checked 2026-09-18), so "AI" is not one price point to a CFO.
+> Of the 125 AI tools we track, 51 publish a monthly per-seat price; 42 of those sit at or under $25, and the median cheapest paid seat is $15.00 (snapshot 2026-11-19, every tier read off the vendor's own pricing page with its check date). The cheapest paid seat we record is $4 (Khanmigo's learner plan, checked 2026-09-18) and the dearest $299 (Instrumentl, checked 2026-09-18), so "AI" is not one price point to a CFO.
 >
 > The billing split is the part that speaks to a temporary deployment: across 19 same-tier pairs, monthly billing costs 1.11x to 2.53x the annual rate, median 1.25x (pair set re-asserted 2026-10-16). That premium is exactly what a buyer pays for the right to switch a tool off.
 >
@@ -93,8 +95,8 @@ knowing it is late, or record it skipped and stop carrying it.
 **Who:** **Alison Coleman**, Forbes senior contributor.
 
 **Reply route:** **alison@alisoncoleman.co.uk** — **automatable? No.** Published in visible body text
-on `alisoncoleman.co.uk/contact-me/` (re-probed today: `route-checks-2026-11-19.json`, HTTP 200,
-28,113 bytes). `forbes.com/sites/alisoncoleman/` answers 403 to this monitor and is a dead end, not a
+on `alisoncoleman.co.uk/contact-me/` (re-probed this evening: `route-checks-2026-11-19.json`, HTTP 200,
+28,082 bytes). `forbes.com/sites/alisoncoleman/` answers 403 to this monitor and is a dead end, not a
 route. The send is George's.
 
 **Subject:** `One price dataset behind both of your founder calls`
@@ -103,7 +105,7 @@ route. The send is George's.
 >
 > You posted two founder calls on 27 October — solopreneurs whose first hire was delayed or eliminated by AI, and founders who bootstrapped rather than raise. I can't give you a first-hand founder story. I can give you the numbers those decisions sit on.
 >
-> Of the 124 AI tools we track, 51 publish a monthly per-seat price; 42 of those are at or under $25, and the median cheapest paid seat is $15.00 — $180 a year (snapshot 2026-11-19, each tier read off the vendor's own pricing page with its check date). The cheapest paid seat we record is $4, for Khanmigo's learner plan, checked 2026-09-18.
+> Of the 125 AI tools we track, 51 publish a monthly per-seat price; 42 of those are at or under $25, and the median cheapest paid seat is $15.00 — $180 a year (snapshot 2026-11-19, each tier read off the vendor's own pricing page with its check date). The cheapest paid seat we record is $4, for Khanmigo's learner plan, checked 2026-09-18.
 >
 > A stack of four paid tools at that median is $720 a year. That is the arithmetic behind "we didn't make the hire yet": the routine work a first hire used to absorb now has a published price, and it is small.
 >

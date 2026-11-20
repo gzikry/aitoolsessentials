@@ -5,14 +5,14 @@
    "label": "added 2026-10-28",
    "url": "https://www.alisoncoleman.co.uk/",
    "http": "200",
-   "bytes": 21366,
+   "bytes": 21396,
    "title": "Alison Coleman"
   },
   "alisoncoleman.co.uk/contact-me/": {
    "label": "added 2026-10-28",
    "url": "https://www.alisoncoleman.co.uk/contact-me/",
    "http": "200",
-   "bytes": 28113,
+   "bytes": 28082,
    "title": "Contact me : Alison Coleman",
    "emails_on_page": {
     "alison@alisoncoleman.co.uk": 1
@@ -22,7 +22,7 @@
    "label": "Thibault Spirlet (Business Insider) byline page \u2014 mailto tspirlet@businessinsider.com",
    "url": "https://www.businessinsider.com/author/thibault-spirlet",
    "http": "200",
-   "bytes": 319992,
+   "bytes": 323377,
    "title": "Thibault Spirlet - Business Insider",
    "emails_on_page": {
     "group-subscriptions@businessinsider.com": 1,
@@ -34,7 +34,7 @@
    "label": "added 2026-11-03",
    "url": "https://www.informationweek.com/author/kelsey-ziser",
    "http": "200",
-   "bytes": 584322,
+   "bytes": 583970,
    "title": "Kelsey Ziser | Senior Editor, InformationWeek",
    "emails_on_page": {
     "Kelsey.ziser@informationweek.com": 1,
@@ -46,21 +46,21 @@
    "label": "Mims LinkedIn byline page",
    "url": "https://www.linkedin.com/in/christopher-mims-club/",
    "http": "200",
-   "bytes": 571926,
+   "bytes": 656704,
    "title": "Christopher Mims - The Wall Street Journal | LinkedIn"
   },
   "muckrack.com/christopher-mims/": {
    "label": "Mims Muck Rack profile (recorded dead end)",
    "url": "https://www.muckrack.com/christopher-mims",
    "http": "403",
-   "bytes": 5680,
+   "bytes": 5701,
    "title": "Just a moment..."
   },
   "ope-plus.com/2024/02/13/announcing-ope/19236/": {
    "label": "OPE+ 'Announcing OPE+' - carries the editor's address",
    "url": "https://ope-plus.com/2024/02/13/announcing-ope/19236",
    "http": "200",
-   "bytes": 150831,
+   "bytes": 146211,
    "title": "Announcing OPE+ | OPE+Landscape",
    "emails_on_page": {
     "ghansen@epgacceleration.com": 2
@@ -70,7 +70,7 @@
    "label": "OPE+ contact page - editorial domain",
    "url": "https://ope-plus.com/contact-us",
    "http": "200",
-   "bytes": 115049,
+   "bytes": 110426,
    "title": "Contact Us | OPE+Landscape",
    "emails_on_page": {
     "-prainito@epgacceleration.com": 4,

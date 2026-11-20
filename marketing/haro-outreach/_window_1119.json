@@ -508,7 +508,7 @@
  "ai_strict_false_positives": [],
  "feed_count": 50,
  "feed_http": "200",
- "feed_bytes": 178754,
+ "feed_bytes": 178711,
  "feed_overlap_with_window": 50,
  "feed_slugs": [
   "podcast-guests-hawaii-stories",
@@ -575,7 +575,7 @@
    "platform": "Sourcee AI topic feed",
    "url": "https://www.sourcee.app/topics/ai/journo-requests",
    "http": "200",
-   "bytes": 178754,
+   "bytes": 178711,
    "title": "Ai | Journo Requests",
    "checkpoint": false
   },
@@ -630,9 +630,9 @@
   {
    "platform": "ResponseSource (responsesource.com)",
    "url": "https://www.responsesource.com/",
-   "http": "000",
-   "bytes": 1,
-   "title": "",
+   "http": "200",
+   "bytes": 147963,
+   "title": "ResponseSource - Connecting the media",
    "checkpoint": false
   }
  ]
