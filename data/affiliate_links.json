@@ -1139,6 +1139,15 @@
       "public_href": "/go/tiny-deskai/",
       "partner": false
     },
+    "ai-genjutsu-io": {
+      "name": "AI Genjutsu (aigenjutsu.io)",
+      "slug": "ai-genjutsu-io",
+      "official": "https://aigenjutsu.io/",
+      "destination": "https://aigenjutsu.io/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/ai-genjutsu-io/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19",
+  "generated_at": "2026-11-20",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -3109,6 +3109,32 @@
         "audio",
         "marketing",
         "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "ai-genjutsu-io",
+      "name": "AI Genjutsu (aigenjutsu.io)",
+      "category": "Video",
+      "official_url": "https://aigenjutsu.io/",
+      "review_url": "/tools/ai-genjutsu-io/",
+      "price_label": "No free tier - the smallest purchase is a 10-credit pack at $1.99 (two 5-credit videos). Monthly plans: Basic $5.99 for 60 credits/month, Plus $9.99 for 120, Pro $24.99 for 320. Yearly (20% off, billed once, credits still arrive monthly): Basic $57.50/yr ($4.79/mo), Plus $95.90/yr ($7.99/mo), Pro $239.90/yr ($19.99/mo). One-time credit packs, never expire: 10/$1.99, 40/$5.99, 120/$14.99, 360/$34.99. Classic templates cost 5 or 8 credits per video; the three lion stories cost 45 and the human-lion duet 60; the AI Video Recreator charges a 20-credit analysis plus a model/seconds-based generation quote. Unused plan credits roll over one month, capped at two months' allowance; plan credits are spent before pack credits. Failed or safety-blocked generations return their credits automatically. USD, tax excluded. Read 2026-11-20 from the rendered /pricing monthly and yearly tabs (the monthly figures load at runtime) and the pack cards; the per-video arithmetic reconciles on every row.",
+      "pricing_summary": "No free tier (FAQ: 'AI Genjutsu has no free videos or trial credits'; smallest purchase 10 credits/$1.99). Monthly plans rendered in a browser (figures load at runtime, not literals in served HTML): Basic $5.99/60 credits, Plus $9.99/120, Pro $24.99/320. Yearly, 20% off, billed once with credits arriving monthly: Basic $57.50/yr ($4.79/mo), Plus $95.90/yr ($7.99/mo), Pro $239.90/yr ($19.99/mo). One-time never-expiring packs: 10/$1.99, 40/$5.99, 120/$14.99, 360/$34.99. Per-video arithmetic reconciles: monthly $0.50/$0.42/$0.39, yearly $0.40/$0.33/$0.31 for a 5-credit video; pack per-video $1.00/$0.75/$0.62/$0.49 with 'save 25/37/51%' badges matching. Template costs: classic 5 or 8 credits, three lion stories 45, human-lion duet 60; Recreator 20-credit analysis + model/seconds quote. Unused plan credits roll over one month, capped at two months' allowance; plan credits spent before pack credits; failed/blocked jobs return credits. USD, tax excluded. All Choose/Buy buttons enabled in a browser (not the served-HTML pre-hydration disabled state). Stripe Managed Payments / Waffo. Read 2026-11-20 from rendered /pricing (both tabs), pack cards, homepage FAQ and llms.txt, which agree.",
+      "pricing_url": "https://aigenjutsu.io/pricing",
+      "pricing_checked_date": "2026-11-20",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "automation"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

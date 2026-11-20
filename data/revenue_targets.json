@@ -2324,5 +2324,26 @@
     "status": "not_started",
     "next_action": "Email support@tiny-deskai.net (RCPT-verified working domain mailbox) about affiliate or partner terms; the submission came via anyandy@mail.grokbot.com. No affiliate page exists on the site, so no tracking URL was invented.",
     "notes": "Per-sale value is small - $5.90, $15.90 and $49.90 one-time packs - and most buyers make one or two meme clips, so commission per conversion is a few tens of cents. Priority low until the review earns organic impressions; near-term value is category depth in the trend-video cluster beside pawgroove, pawmambo and rapvideogo, not revenue."
+  },
+  {
+    "tool_slug": "ai-genjutsu-io",
+    "tool_name": "AI Genjutsu (aigenjutsu.io)",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/ai-genjutsu-io/"
+    ],
+    "best_audiences": [
+      "TikTok/Reels/Shorts creators who want a specific trend effect from one photo without prompt engineering",
+      "pet owners making dance/transformation clips, and meme makers casting themselves into fixed scenes",
+      "occasional users weighing a $1.99 one-time pack against a monthly AI video subscription"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@aigenjutsu.io (RCPT-verified working domain mailbox) about affiliate or partner terms. No affiliate page exists (/affiliates 404), so no tracking URL was invented.",
+    "notes": "Per-sale value is small - $1.99-$34.99 one-time packs and $5.99-$24.99/mo plans - and most buyers make a few trend clips, so commission per conversion is modest. Priority low until the review earns organic impressions; near-term value is category depth in the trend-video cluster beside the separately-operated Genjutsu AI (aigenjutsu.app), not revenue. A named Delaware LLC (Springtide Labs) makes a direct partnership conversation more feasible than the unnamed platform brands."
   }
 ]

@@ -525,6 +525,10 @@
     "tiny-deskai": {
       "date": "2026-11-19",
       "digest": "One-time video packs only, no subscription, no auto-renewal, USD: 1 video $5.90 ($5.90/video), 3 videos $15.90 ($5.30/video), 10 videos $49.90 ($4.99/video). Ea"
+    },
+    "ai-genjutsu-io": {
+      "date": "2026-11-20",
+      "digest": "No free tier; smallest purchase 10 credits/$1.99. Monthly: Basic $5.99/60 credits, Plus $9.99/120, Pro $24.99/320. Yearly 20% off, billed once, credits monthly: Basic $57.50/yr ($4.79/mo), Plus $95.90/yr ($7.99/mo), Pro $239.90/yr ($19.99/mo). One-time never-expiring packs: 10/$1.99, 40/$5.99, 120/$14.99, 360/$34.99. Classic templates 5 or 8 credits/video, lion stories 45, human-lion duet 60; Recreator 20-credit analysis + model/seconds quote. Per-video math reconciles (monthly $0.50/$0.42/$0.39, yearly $0.40/$0.33/$0.31). One-month rollover capped at two months; failed/blocked jobs refund credits. USD ex-tax; Stripe Managed Payments/Waffo. Rendered /pricing both tabs + packs + FAQ + llms.txt agree, 2026-11-20."
     }
   },
   "changes": [
@@ -912,7 +916,14 @@
       "previous_check": null,
       "new_check": "2026-11-19",
       "note": "FicWeave: first recorded pricing snapshot - three subscription tiers at $7.99/$14.99/$24.99 monthly for 100/200/400 credits per subscription month and 20/50/100 editable stories, annual $79.90/$149.90/$249.90 as exactly ten monthly payments; a one-time free allowance of 3 non-expiring starter credits and 1 editable story rather than a trial; credit packs discontinued; monthly credit expiry with no rollover. /zh/pricing, /terms and /refund-policy agree to the cent."
+    },
+    {
+      "slug": "ai-genjutsu-io",
+      "detected": "2026-11-20",
+      "previous_check": null,
+      "new_check": "2026-11-20",
+      "note": "AI Genjutsu (aigenjutsu.io): first recorded pricing snapshot - no free tier; monthly Basic $5.99/60, Plus $9.99/120, Pro $24.99/320 credits; yearly exactly 20% off ($57.50/$95.90/$239.90 billed once, credits still monthly); one-time never-expiring packs 10/$1.99, 40/$5.99, 120/$14.99, 360/$34.99; classic templates 5 or 8 credits, lion stories 45, human-lion duet 60, Recreator 20-credit analysis plus a model/seconds quote. Per-video arithmetic reconciles on every row; monthly figures read from the rendered tab (runtime-loaded), packs/yearly are served literals. Separate operator (Springtide Labs, LLC, Delaware) from the published Genjutsu AI at aigenjutsu.app."
     }
   ],
-  "updated": "2026-11-19"
+  "updated": "2026-11-20"
 }
