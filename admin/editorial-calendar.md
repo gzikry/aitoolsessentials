@@ -116,4 +116,11 @@ Priority order unchanged: how-to/workflow → audience guides → question-inten
 Next up: one audience guide, then another workflow piece. Guides hub count is 190.
 Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
 
+## Backlog: batch 7 (from 2026-11-20)
+Priority order unchanged: how-to/workflow → audience guides → question-intent.
+19. Best AI tools for social media managers ✅ shipped 2026-11-20 (audience guide, articles/best-ai-tools-for-social-media-managers.html; /best-for/ role `social-media-managers` + stack-builder role added)
+20. Repurposing one long asset into a week of content ✅ shipped 2026-11-20 (workflow, articles/content-repurposing-workflow.html; added to Learn hub)
+Next up: another workflow piece, then a question-intent interleave.
+Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
+
 

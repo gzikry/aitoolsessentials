@@ -150,6 +150,13 @@ ROLES = [
       ("canva-ai", "Client guides, price sheets, and social crops"),
       ("chatgpt", "Client communication, shot lists, and package descriptions")],
      "articles/best-ai-tools-for-photographers.html"),
+    ("social-media-managers", "Social media managers", "Platform copy, branded visuals, long-form repurposing, and cited research — with disclosure and brand voice treated as part of the job.",
+     [("canva-ai", "Branded tiles, story crops, and campaign templates at volume"),
+      ("ideogram", "Legible text inside images for quote cards and promo graphics"),
+      ("descript", "Long-form video and podcast clips edited by transcript"),
+      ("copy-ai", "Repeatable marketing workflows without one-off prompts"),
+      ("chatgpt", "Captions, calendars, and reply drafts from your own past posts")],
+     "articles/best-ai-tools-for-social-media-managers.html"),
 ]
 
 
