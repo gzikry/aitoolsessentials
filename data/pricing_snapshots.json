@@ -545,6 +545,10 @@
     "gta6-ai-video": {
       "date": "2026-11-21",
       "digest": "Free: 20 signup credits (365-day expiry) plus a weekly check-in cycle worth 60 credits (6/6/12/6/6/6/18) - the sitewide '60 credits for free' line; watermarked output, up to 3 images or 1 video. Monthly Starter $22.90/840 credits, Creator $48.90/1,800, Studio $98.90/3,650; yearly $218.90/10,080, $410.90/21,600, $593.40/43,800 (each exactly 12x monthly; badged 20%/30%/50% off). Subscription credits expire each period; one-time packs never expire: $8.99/300, $23.90/800, $58.90/2,000, $238.90/10,000, $918.90/44,000. 6 credits per image, 18 per video on the cheapest models. Refunds within 72 hours, proportional to unused purchased credits, less up to 6% processing costs. Stripe checkout, all 11 products enabled, Google sign-in required. Verified 2026-11-21 against the monthly/yearly/pay-once pricing tabs and the plan config in the served bundle."
+    },
+    "tinycommand": {
+      "date": "2026-11-21",
+      "digest": "Free forever $0: 1,000 credits/mo, 1 seat, unlimited forms and responses, all 458 integrations, form payments; TinySEO and TinyAnswers as one 7-day trial per workspace. Monthly Basic $19 (10,000 credits, 3 seats), Professional $49 (50,000, 10 seats, custom agents), Agency $149 (250,000, 50 seats). Billed annually $199/$499/$1,499 a year, headlined on the cards as $17/$42/$125 a month ('save up to 16%') - each exactly the annual total divided by 12; staying monthly costs $228/$588/$1,788 a year. Separate one-payment lifetime tiers on /lifetime, never listed on /pricing: Solo $199 (10,000 credits/mo forever, 1 seat), Growth $499 (50,000, 5 seats), Agency $999 (200,000, 25 seats), Founder $1,499 (500,000, unlimited seats), each with a 30-day money-back guarantee that Terms section 8 contradicts ('Fees are non-refundable except where a refund is required by applicable law'). Black Friday BFCM2026: month one only at $19/$49/$149 on the yearly plan, months two to twelve free, renewal at the yearly price from month 13; bar renders 2026-11-14 05:00 UTC - 2026-12-08 04:59:59 UTC while its label reads 'Deal starts in'. Credits: 1 per workflow step, ~10 per agent step, 20 per company and 10 per person found via Discovery (no charge on a miss); data collection never consumes credits. Fees exclusive of tax; USD. Verified 2026-11-21 against the plan cards, the compare table, the page's JSON-LD AggregateOffer, /black-friday and /lifetime."
     }
   },
   "changes": [
@@ -946,6 +950,13 @@
       "previous_check": null,
       "new_check": "2026-11-20",
       "note": "Ozil Goal AI (ozilgoalai.io): first recorded pricing snapshot - one-time packs 10/$4.90, 30/$12.90, 50/$19.90, 350/$99, 900/$199, 3,000/$499 plus a single 720p render at $5.99; monthly subscriptions Basic $29.90 (100 credits), Pro $49.90 (300), Studio $99.90 (800); yearly $100 (400), $500 (4,000), $600 (6,000) granted once a year; 10 credits at 480p and 20 at 720p; one free personalised reference image per verified account."
+    },
+    {
+      "slug": "tinycommand",
+      "detected": "2026-11-21",
+      "previous_check": null,
+      "new_check": "2026-11-21",
+      "note": "TinyCommand: first recorded pricing snapshot. Free forever tier; monthly $19/$49/$149; billed annually $199/$499/$1,499 (cards show the annual total divided by twelve); three price bases in play at once, all reconciling. Not on /pricing: one-payment lifetime tiers $199/$499/$999/$1,499 on /lifetime and the BFCM2026 offer on /black-friday (month one only, months two to twelve free, renews yearly from month 13). Four policy clauses point to an unpublished sub-processor list. A separate operator from every cluster in the ledger."
     }
   ],
   "updated": "2026-11-21"

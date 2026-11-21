@@ -2426,5 +2426,27 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether GTA6 AI Video runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and no programme is published. Never invent affiliate URLs.",
     "notes": "Subscriptions from $22.90/mo plus never-expiring credit packs from $8.99 give a workable affiliate shape if a programme exists. Checkout runs on Stripe, so any programme would run through Stripe or the vendor directly. Priority stays low: the product is two days old at listing and its demand is tied to a launch-week trend."
+  },
+  {
+    "tool_slug": "tinycommand",
+    "tool_name": "TinyCommand",
+    "priority": "high",
+    "category": "Automation",
+    "recommended_networks_to_check": [
+      "Direct vendor programme (public /affiliates page)",
+      "TinyCommand partner programme (/become-a-partner)"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/tinycommand/"
+    ],
+    "best_audiences": [
+      "operations and RevOps leads replacing a Typeform/Airtable/Zapier/Mailchimp stack",
+      "founders and solo operators who want one bill instead of five subscriptions",
+      "agencies running automation for clients who need many workspaces and seats"
+    ],
+    "status": "not_started",
+    "next_action": "TinyCommand publishes its own affiliate programme at /affiliates - recurring cash share of every invoice a referral pays, for as long as they stay, paid in cash after a refund hold - plus a separate partner track at /become-a-partner for agencies. Both are behind an application form ('Apply to the affiliate program', 'Join the Partner Program'), which is George's lane. Ask the vendor for the commission percentage, attribution/cookie window, hold period and payout threshold before applying; never invent an affiliate URL, and wire affiliate_programs.json only once an approved tracking link exists.",
+    "notes": "Subscriptions from $19/mo (Basic) to $149/mo (Agency) with a free forever tier, plus one-payment lifetime tiers from $199, give a workable recurring affiliate shape - and the programme pays on recurring revenue rather than a one-off bounty, which matches this site's audience of buyers already paying for a stack. Priority high: the vendor replied to the publication notice at support@tinycommand.com, so terms can be asked for in one thread. Checkout runs through the vendor's own signup; AppSumo's lifetime deal is sold out and carries no affiliate surface."
   }
 ]
