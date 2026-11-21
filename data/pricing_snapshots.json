@@ -529,6 +529,10 @@
     "ai-genjutsu-io": {
       "date": "2026-11-20",
       "digest": "No free tier; smallest purchase 10 credits/$1.99. Monthly: Basic $5.99/60 credits, Plus $9.99/120, Pro $24.99/320. Yearly 20% off, billed once, credits monthly: Basic $57.50/yr ($4.79/mo), Plus $95.90/yr ($7.99/mo), Pro $239.90/yr ($19.99/mo). One-time never-expiring packs: 10/$1.99, 40/$5.99, 120/$14.99, 360/$34.99. Classic templates 5 or 8 credits/video, lion stories 45, human-lion duet 60; Recreator 20-credit analysis + model/seconds quote. Per-video math reconciles (monthly $0.50/$0.42/$0.39, yearly $0.40/$0.33/$0.31). One-month rollover capped at two months; failed/blocked jobs refund credits. USD ex-tax; Stripe Managed Payments/Waffo. Rendered /pricing both tabs + packs + FAQ + llms.txt agree, 2026-11-20."
+    },
+    "ozil-goal-ai": {
+      "date": "2026-11-20",
+      "digest": "One-time credit packs (no expiry): 10/$4.90, 30/$12.90, 50/$19.90, Crew 350/$99, Studio 900/$199, Bulk 3,000/$499; single 720p render $5.99 (JSON-LD offers 'Single' $4.90 / 'HD Single' $5.99). Monthly: Basic $29.90 / 100 credits, Pro $49.90 / 300, Studio $99.90 / 800, unused subscription credits expire at the end of the paid period. Yearly, credits granted once a year: $100 / 400, $500 / 4,000, $600 / 6,000. Render cost 10 credits at 480p, 20 at 720p; scenes 15s/13s/9s. One free personalised reference image per verified account; video always paid; failed or rejected generations return credits with their original expiry. Per-credit cost falls at every step. USD, tax excluded. Pack cards and plan packs read from the served HTML and the subscription tabs from the rendered /plans in a browser, 2026-11-20."
     }
   },
   "changes": [
@@ -923,6 +927,13 @@
       "previous_check": null,
       "new_check": "2026-11-20",
       "note": "AI Genjutsu (aigenjutsu.io): first recorded pricing snapshot - no free tier; monthly Basic $5.99/60, Plus $9.99/120, Pro $24.99/320 credits; yearly exactly 20% off ($57.50/$95.90/$239.90 billed once, credits still monthly); one-time never-expiring packs 10/$1.99, 40/$5.99, 120/$14.99, 360/$34.99; classic templates 5 or 8 credits, lion stories 45, human-lion duet 60, Recreator 20-credit analysis plus a model/seconds quote. Per-video arithmetic reconciles on every row; monthly figures read from the rendered tab (runtime-loaded), packs/yearly are served literals. Separate operator (Springtide Labs, LLC, Delaware) from the published Genjutsu AI at aigenjutsu.app."
+    },
+    {
+      "slug": "ozil-goal-ai",
+      "detected": "2026-11-20",
+      "previous_check": null,
+      "new_check": "2026-11-20",
+      "note": "Ozil Goal AI (ozilgoalai.io): first recorded pricing snapshot - one-time packs 10/$4.90, 30/$12.90, 50/$19.90, 350/$99, 900/$199, 3,000/$499 plus a single 720p render at $5.99; monthly subscriptions Basic $29.90 (100 credits), Pro $49.90 (300), Studio $99.90 (800); yearly $100 (400), $500 (4,000), $600 (6,000) granted once a year; 10 credits at 480p and 20 at 720p; one free personalised reference image per verified account."
     }
   ],
   "updated": "2026-11-20"

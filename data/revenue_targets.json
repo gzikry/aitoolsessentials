@@ -2345,5 +2345,26 @@
     "status": "not_started",
     "next_action": "Email support@aigenjutsu.io (RCPT-verified working domain mailbox) about affiliate or partner terms. No affiliate page exists (/affiliates 404), so no tracking URL was invented.",
     "notes": "Per-sale value is small - $1.99-$34.99 one-time packs and $5.99-$24.99/mo plans - and most buyers make a few trend clips, so commission per conversion is modest. Priority low until the review earns organic impressions; near-term value is category depth in the trend-video cluster beside the separately-operated Genjutsu AI (aigenjutsu.app), not revenue. A named Delaware LLC (Springtide Labs) makes a direct partnership conversation more feasible than the unnamed platform brands."
+  },
+  {
+    "tool_slug": "ozil-goal-ai",
+    "tool_name": "Ozil Goal AI (ozilgoalai.io)",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/ozil-goal-ai/"
+    ],
+    "best_audiences": [
+      "Football and meme creators who want one short clip from a photo without editing software",
+      "Occasional buyers comparing a $4.90 one-time pack against a monthly AI video subscription",
+      "Creators who already run the Ozil-goal trend and want a second scene or a two-photo variant"
+    ],
+    "status": "not_started",
+    "next_action": "Email support@ozilgoalai.io (RCPT-verified working domain mailbox) about affiliate or partner terms. No affiliate page exists (/affiliates, /affiliate, /partners, /referral and /program all 404), so no tracking URL was invented.",
+    "notes": "Small per-sale value - $4.90-$499 one-time packs and $29.90-$99.90 a month - and most buyers make a handful of trend clips, so commission per conversion is modest. Priority low until the review earns organic impressions; near-term value is category depth in the football/trend-video cluster beside the other photo-to-video listings. A named operator (Jimmy Allen, Portland, Oregon) makes a direct partnership conversation more feasible than the unnamed platform brands in this space."
   }
 ]

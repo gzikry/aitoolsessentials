@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-20",
-  "tools_count": 127,
+  "tools_count": 128,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -924,6 +924,13 @@
       "category": "Video",
       "price": "No free tier - the smallest purchase is a 10-credit pack at $1.99 (two 5-credit videos). Monthly plans: Basic $5.99 for 60 credits/month, Plus $9.99 for 120, Pro $24.99 for 320. Yearly (20% off, billed once, credits still arrive monthly): Basic $57.50/yr ($4.79/mo), Plus $95.90/yr ($7.99/mo), Pro $239.90/yr ($19.99/mo). One-time credit packs, never expire: 10/$1.99, 40/$5.99, 120/$14.99, 360/$34.99. Classic templates cost 5 or 8 credits per video; the three lion stories cost 45 and the human-lion duet 60; the AI Video Recreator charges a 20-credit analysis plus a model/seconds-based generation quote. Unused plan credits roll over one month, capped at two months' allowance; plan credits are spent before pack credits. Failed or safety-blocked generations return their credits automatically. USD, tax excluded. Read 2026-11-20 from the rendered /pricing monthly and yearly tabs (the monthly figures load at runtime) and the pack cards; the per-video arithmetic reconciles on every row.",
       "url": "https://aitoolsessentials.com/tools/ai-genjutsu-io/"
+    },
+    {
+      "name": "Ozil Goal AI (ozilgoalai.io)",
+      "slug": "ozil-goal-ai",
+      "category": "Creative",
+      "price": "USD, tax excluded at checkout. One-time credit packs (credits do not expire): 10 credits $4.90 (one 480p video), 30 credits $12.90 ($4.30 a video), 50 credits $19.90 ($3.98 a video), Crew 350 credits $99, Studio 900 credits $199 and Bulk 3,000 credits $499; a single 720p render is offered at $5.99. Monthly subscriptions (credits granted each paid month, unused credits expire at the end of that period): Basic $29.90 for 100 credits, Pro $49.90 for 300, Studio $99.90 for 800. Yearly plans grant credits once per paid year, not monthly: Basic $100 for 400 credits, Pro $500 for 4,000, Studio $600 for 6,000. A video costs 10 credits at 480p and 20 at 720p; the Daylight and Halloween goal scenes run 15 seconds, the missed-goal celebration 15, the header jump 13 and the Yamal rabona 9. One personalised reference image is free per verified account; video generation is always paid. Failed or rejected generations return their credits to the original purchase with its original expiry. Accurate as of 2026-11-20: the pack cards and the subscriptions' prices were read from the rendered /packs and /plans tabs in a browser (subscription figures load at runtime and are not literals in the served HTML); the pack prices, $99/$199/$499 plan packs and the JSON-LD offers $4.90 and $5.99 are present in the served HTML. Per-credit cost falls at every step of the ladder.",
+      "url": "https://aitoolsessentials.com/tools/ozil-goal-ai/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."
