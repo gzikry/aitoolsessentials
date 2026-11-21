@@ -3167,6 +3167,58 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "unblurfy",
+      "name": "Unblurfy",
+      "category": "Creative",
+      "official_url": "https://unblurfy.com/",
+      "review_url": "/tools/unblurfy/",
+      "price_label": "Free: 1 AI enhance per day signed out, 2 per day signed in, at 1K, no watermark (usage before signing in counts toward the signed-in daily total, and the daily free budget is capped at $10, after which free jobs pause until the next UTC day). Subscriptions, monthly: Basic $5.99/mo for 80 credits, Pro $9.99/mo for 200, Max $24.99/mo for 600; yearly $47.88 / $79.99 / $199 (badged Save 33%). Monthly credits reset each subscription month with no rollover; yearly plans also issue credits monthly. One-time credits, never expire: Starter $4.99/20, Plus $14.99/80, Large $29.99/200. A 1K enhance costs 1 credit and 2K costs 2, across every AI tool, including face, old-photo and text restoration; credits are charged only when a fix succeeds and returned if it fails, times out or is rejected. Checkout is Stripe Managed Payments (merchant of record Link, a Stripe company) and requires signing in with Google so credits attach to an account. USD, taxes added at checkout. Verified 2026-11-20 across the monthly, yearly and pay-once tabs of /pricing, the page's JSON-LD Offer array, the Terms 'Prices and credits' section and the standalone Refund Policy.",
+      "pricing_summary": "Free: 1 AI enhance per day signed out, 2 per day signed in, at 1K, no watermark (usage before signing in counts toward the signed-in daily total, and the daily free budget is capped at $10, after which free jobs pause until the next UTC day). Subscriptions, monthly: Basic $5.99/mo for 80 credits, Pro $9.99/mo for 200, Max $24.99/mo for 600; yearly $47.88 / $79.99 / $199 (badged Save 33%). Monthly credits reset each subscription month with no rollover; yearly plans also issue credits monthly. One-time credits, never expire: Starter $4.99/20, Plus $14.99/80, Large $29.99/200. A 1K enhance costs 1 credit and 2K costs 2, across every AI tool, including face, old-photo and text restoration; credits are charged only when a fix succeeds and returned if it fails, times out or is rejected. Checkout is Stripe Managed Payments (merchant of record Link, a Stripe company) and requires signing in with Google so credits attach to an account. USD, taxes added at checkout. Verified 2026-11-20 across the monthly, yearly and pay-once tabs of /pricing, the page's JSON-LD Offer array, the Terms 'Prices and credits' section and the standalone Refund Policy.",
+      "pricing_url": "https://unblurfy.com/pricing",
+      "pricing_checked_date": "2026-11-20",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "research",
+        "design",
+        "video",
+        "presentations"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "image-text-editor",
+      "name": "Image Text Editor",
+      "category": "Creative",
+      "official_url": "https://imagetexteditor.dev/",
+      "review_url": "/tools/image-text-editor/",
+      "price_label": "Free: eligible new accounts receive 1 free credit (one Standard 1K result) plus capacity to scan 3 images; the sample demo runs locally with no sign-in and no AI call. Subscriptions, monthly: Basic $9.99/mo for 40 credits, Pro $19.99/mo for 90, Studio $39.99/mo for 200; yearly $99.90 / $199.90 / $399.90, exactly ten monthly payments, badged Save 16.7%, with credits issued monthly through the paid year. Monthly credits expire at the next refresh and do not roll over; one-time credits do not expire. One-time packs, no auto-renewal: 12 credits $4.99, 30 credits $9.99, 70 credits $19.99. A saved Standard 1K result costs 1 credit and HD 2K costs 2; the credits are reserved when generation starts and deducted only after a result is saved, and a failed generation releases them. Checkout and merchant-of-record duties run through Creem. USD. Verified 2026-11-20 in a browser on all three tabs of /pricing (monthly, yearly, one-time) plus /privacy and /terms.",
+      "pricing_summary": "Free: eligible new accounts receive 1 free credit (one Standard 1K result) plus capacity to scan 3 images; the sample demo runs locally with no sign-in and no AI call. Subscriptions, monthly: Basic $9.99/mo for 40 credits, Pro $19.99/mo for 90, Studio $39.99/mo for 200; yearly $99.90 / $199.90 / $399.90, exactly ten monthly payments, badged Save 16.7%, with credits issued monthly through the paid year. Monthly credits expire at the next refresh and do not roll over; one-time credits do not expire. One-time packs, no auto-renewal: 12 credits $4.99, 30 credits $9.99, 70 credits $19.99. A saved Standard 1K result costs 1 credit and HD 2K costs 2; the credits are reserved when generation starts and deducted only after a result is saved, and a failed generation releases them. Checkout and merchant-of-record duties run through Creem. USD. Verified 2026-11-20 in a browser on all three tabs of /pricing (monthly, yearly, one-time) plus /privacy and /terms.",
+      "pricing_url": "https://imagetexteditor.dev/pricing",
+      "pricing_checked_date": "2026-11-20",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "marketing",
+        "data"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

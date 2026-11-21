@@ -8164,5 +8164,179 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.0/5 - the product does exactly one thing and describes it accurately: a fixed set of football scenes, one or two photos per render, a credit price shown before you commit, 480p and 720p output at 9-15 seconds, a free still preview per verified account, and a pricing ladder whose per-credit cost falls at every step and whose per-video labels match the arithmetic. It is held below 4.5 by the soundtrack being sold alongside a Terms clause that grants no music rights, by a yearly tier that is a smaller allowance rather than the same allowance discounted, by one out-of-order rung in the pack ladder, and by output no outsider can judge without paying. Transparency 4.3/5, which is what puts this in the upper half of the band: a named operator with a city and state on every page, a complete product-specific legal set dated after the domain existed, a working support mailbox, a privacy notice that describes its own first-party analytics and retention windows instead of hiding behind categories, media-handling rules written as durations, refund mechanics that distinguish credit returns from cash refunds, a consent policy that admits what the checkbox does and does not prove, and sitewide non-affiliation wording. It stops short of 4.5+ because the contract names no governing law, the template soundtrack has no published licence, and the templates and brand use real footballers' names without stating a rights basis. Blended 4.1."
+  },
+  {
+    "slug": "unblurfy",
+    "name": "Unblurfy",
+    "category": "Creative",
+    "best_for": "Anyone rescuing an ordinary photo - a shaky family snapshot, a soft product shot, a blurred screenshot of text, a scan from a shoebox - who wants a fix without signing up or installing anything: one free 1K enhance a day with no watermark, then either one-time credits that never expire or a small monthly plan for 2K output and 20-image batches. Also covers old-photo restoration, colourising and video-frame extraction from the same credit pool. Not a fit if you need 4K output or an API, if the company you are paying has to be named before you buy, or if the job is revealing censored, mosaicked or paywalled content - refused in the site's own terms.",
+    "price": "Free: 1 AI enhance per day signed out, 2 per day signed in, at 1K, no watermark (usage before signing in counts toward the signed-in daily total, and the daily free budget is capped at $10, after which free jobs pause until the next UTC day). Subscriptions, monthly: Basic $5.99/mo for 80 credits, Pro $9.99/mo for 200, Max $24.99/mo for 600; yearly $47.88 / $79.99 / $199 (badged Save 33%). Monthly credits reset each subscription month with no rollover; yearly plans also issue credits monthly. One-time credits, never expire: Starter $4.99/20, Plus $14.99/80, Large $29.99/200. A 1K enhance costs 1 credit and 2K costs 2, across every AI tool, including face, old-photo and text restoration; credits are charged only when a fix succeeds and returned if it fails, times out or is rejected. Checkout is Stripe Managed Payments (merchant of record Link, a Stripe company) and requires signing in with Google so credits attach to an account. USD, taxes added at checkout. Verified 2026-11-20 across the monthly, yearly and pay-once tabs of /pricing, the page's JSON-LD Offer array, the Terms 'Prices and credits' section and the standalone Refund Policy.",
+    "rating": 3.9,
+    "official": "https://unblurfy.com/",
+    "summary": "Unblurfy rebuilds detail in photos that are blurry, pixelated, grainy or simply too small, rather than just enlarging them. You pick a file (JPG, PNG, WebP or HEIC up to 20MB), choose 1K or 2K, press Enhance photo, then compare the result with the original on a slider before downloading as PNG, JPG or WebP - no watermark on any plan. Each page covers one job people actually search for: unblur a photo, unblur text in a screenshot, unpixelate, sharpen a face, restore a scanned print, colourise a black-and-white photo, prepare a file for 300 DPI printing or pull a still from a video, all drawing on the same credit pool. The site is unusually direct about the trade-off - AI redraws missing detail, so small text, faces and logos can come out slightly different, results are 'not verified reproductions' and not for evidence - and it refuses the jobs it cannot honestly do: removing mosaics or censorship someone else applied, unlocking paywalls or blurred previews. Free use is one 1K enhance a day without an account (two when signed in); paid credits buy 2K output and batches of up to 20, and uploads are deleted about 24 hours after they arrive.",
+    "use_cases": [
+      "Unblurring a photo with camera shake, missed focus or low light so it holds up at full screen instead of only as a thumbnail",
+      "Making small text in a screenshot, menu or photographed document readable again",
+      "Unpixelating or smoothing a blocky image damaged by heavy compression or repeated re-saving",
+      "Restoring a scanned, creased or faded old print, including colourising a black-and-white original",
+      "Sharpening a blurry face in a group photo taken at a distance",
+      "Preparing a low-resolution image for print at 300 DPI, or pulling the sharpest still out of a video clip",
+      "Batch-processing up to 20 photos at once and downloading them as a ZIP (members)"
+    ],
+    "pros": [
+      "The free tier is real and repeatable rather than a one-off: 1 enhance a day at 1K with no sign-up, 2 when signed in, no watermark on any plan, and the site says plainly that usage before signing in counts toward the signed-in daily total",
+      "Pricing is internally consistent four ways - the monthly, yearly and pay-once tabs, the page's JSON-LD Offer array, the 'Prices and credits' section of the Terms and the standalone Refund Policy all carry the same six figures and the same 1-credit/2-credit unit cost, and the per-credit notes ($0.075 / $0.050 / $0.042) reconcile with the card prices",
+      "Retention and training are stated in plain numbers rather than hedged: uploaded images and results are deleted about 24 hours after upload (48 in rare cases), account data lives until you ask for deletion, the policy says 'we never use them to train models', and IP addresses are kept only as a one-way hash",
+      "Processors and the payment chain are named by company and job - Cloudflare for hosting and storage, Google for sign-in, Stripe for payments with Link (a Stripe company) as merchant of record, and OpenAI's moderation service screening images before processing - which is more than most sites in this class disclose",
+      "It is honest about what AI enhancement cannot do: 'AI may change details such as text, numbers and faces', results are 'not verified reproductions of the original and are not for evidence or identity verification', and the Terms refuse removing mosaics, censorship, paywalls and other people's private photos",
+      "Refunds are written as a rule in two places rather than left to discretion: unused credit packs are refundable in full within 7 days, first subscriptions within 7 days if untouched, credits return automatically when a fix fails or times out, and refunds go back to the original payment method with a stated 3-business-day reply",
+      "Practical detail where it matters: HEIC conversion and resizing happen in the browser before anything is uploaded, a file must be explicitly submitted (selecting one starts nothing), batches show progress and keep running after the tab closes, and the 20MB per-file limit is stated up front"
+    ],
+    "cons": [
+      "No company, trading name, postal address or named controller appears on any page, and the Terms carry no governing-law or jurisdiction clause at all - the operator is only 'Unblurfy (unblurfy.com)' with a support@ address",
+      "Google Analytics 4 and Plausible load on every page, including /privacy itself, before any consent is given: a live session recorded no stored consent state and no banner, and the only opt-out offered is the footer's 'Do Not Sell or Share My Personal Information' link, which points at a policy anchor (#analytics-opt-out) rather than a working control",
+      "The custom event set the policy discloses is broad - tool, resolution, signed-in state, processing outcome, download, quota and checkout activity, plus the plan, USD value and Checkout session transaction identifier on a verified return - so signed-in usage is tied to analytics identifiers",
+      "Microsoft Clarity is named in the policy as masked session replay and the served markup marks regions with data-clarity-mask, but no Clarity loader is present in the HTML and no Clarity request appeared in a live session - recorded as configured, and the policy may describe more than the site runs",
+      "Which company actually receives the photo is not knowable: the policy names 'Image AI service providers' as a category (only OpenAI's moderation step is named) and warns those providers 'may keep a temporary copy for a limited time' under their own terms",
+      "The 'runs in the browser' wording used in the vendor's submission and in llms.txt describes the interface, not the processing: HEIC conversion and resizing are local, but the photo is uploaded to Unblurfy's storage and sent to a third-party AI service, which the privacy policy itself states plainly",
+      "A stale string survives in the shipped bundle - 'Paid plans are coming soon. For now, enjoy the free fixes every day.' - and appears on no rendered page, so it is a build leftover rather than a claim",
+      "2K is the ceiling: no 4K output and no API on any plan, and buying requires signing in with Google so credits attach to an account",
+      "A near-name neighbour sells the same job: Unblurry at unblurry.tools (registered 2026-07-12, Dynadot, its own nameserver pair) is a separate operator, so the domain is printed in the listing name to keep the two apart"
+    ],
+    "key_features": [
+      "1K (about 1MP) and 2K (about 4MP) output with a before-and-after slider and 4x zoom for comparing detail",
+      "Single-job pages covering the common searches: unblur text, unpixelate image, fix pixelated image, unblur face, restore old photos, colourise photo, image upscaler, photo enhancer, fix grainy photos, video stills, DPI and print-size helpers",
+      "Batch mode for members: up to 20 photos at once, progress tracking, ZIP download, and jobs that continue if the tab closes",
+      "One credit per 1K enhance and two per 2K across every tool; credits are charged only on success and returned if a fix fails, times out or is rejected",
+      "Free daily allowance of 1 fix signed out / 2 signed in at 1K, with no watermark and no card",
+      "Card payments through Stripe Managed Payments (merchant of record Link, a Stripe company); Google sign-in ties purchases to an account",
+      "Uploads and results deleted about 24 hours after they arrive (48 hours in rare cases), with a job record kept that contains no image",
+      "JPG, PNG, WebP and HEIC input up to 20MB, with HEIC conversion and downscaling done in the browser before upload"
+    ],
+    "faq": [
+      [
+        "What is Unblurfy?",
+        "A browser photo-enhancement service that rebuilds detail lost to blur, pixelation, grain or low resolution. You upload an image (JPG, PNG, WebP or HEIC up to 20MB), pick 1K or 2K, and it returns a sharper version to compare against the original before you download. Neighbouring pages apply the same engine to specific jobs - blurry text, pixelated images, faces, old prints, colourising, print preparation and pulling a still from a video - and it will not attempt to strip censorship, mosaics or paywall blur."
+      ],
+      [
+        "How much does Unblurfy cost?",
+        "Free use is one 1K enhance a day without an account, or two a day when signed in, with no watermark. Paid options are monthly subscriptions - Basic $5.99/mo for 80 credits, Pro $9.99/mo for 200, Max $24.99/mo for 600 - annual versions at $47.88, $79.99 and $199, or one-time packs that never expire: $4.99 for 20 credits, $14.99 for 80 and $29.99 for 200. A 1K enhance costs 1 credit and 2K costs 2, and credits come back if a fix fails."
+      ],
+      [
+        "Is there a free tier, and do I need an account?",
+        "There is a real daily free tier and you do not need an account for it: 1 enhance a day at 1K, 2 if you sign in, with no watermark. Purchase does require signing in with Google, so credits attach to an account, and usage before signing in counts toward the same daily total."
+      ],
+      [
+        "What happens to my photos?",
+        "Uploads and results are deleted automatically about 24 hours after upload, 48 hours in rare cases, and a job record without the image is kept for accounting. The policy states the images are never made public, are not sold, and are never used to train models, and that IP addresses are stored only as a one-way hash. Before processing, images are screened by OpenAI's moderation service, and the image AI provider may keep a temporary copy under its own terms."
+      ],
+      [
+        "What can't it do?",
+        "It will not remove blur that was applied on purpose - censorship, mosaics, paywalled text or blurred previews - and it stops at 2K, with no 4K output and no API. Because enhancement redraws detail, small text, faces and logos can differ from the original, and the Terms state results are not verified reproductions and must not be used as evidence or for fake documents."
+      ],
+      [
+        "What should I check before paying?",
+        "Two things. First, whether you need 2K at all, since 1K covers screen use and 2K doubles the credit cost. Second, the refund rule: packs are refundable only while completely unused, within 7 days, and the first-subscription exception is 7 days and untouched credits only. Also note that no company, address or jurisdiction is published and there is no governing-law clause."
+      ]
+    ],
+    "trial_checklist": [
+      "Spend the free daily fix on a photo you actually need, at 2K if you sign in, then zoom to 100% and check small text, faces and logos against the original before deciding anything - the site says outright that rebuilt detail is a best guess",
+      "Compare the two purchase shapes against your real volume: a one-time pack never expires and needs no renewal management, while subscription credits reset each month with no rollover, so a light user pays for credits they will not use",
+      "Sign in with the Google account you want the credits attached to before buying, since purchase requires sign-in and the credits live on that account",
+      "Check whether you need 2K at all: 1K free fixes cover screen use, and only printing or heavy cropping justifies the doubled credit cost at 2K",
+      "Read the refund rule before spending: packs are refundable only while completely unused and within 7 days, and the first-subscription exception is 7 days and untouched credits only",
+      "Do not upload anything you would not send to a third-party AI provider, and do not treat a sharper result as evidence - the Terms say results are not verified reproductions and ban using them for fake documents"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.3/5 - a genuinely useful everyday tool with an unusually honest voice: broad file support including HEIC, 1K/2K output with a comparison slider, a dozen single-job pages, batch processing, a real daily free tier with no watermark, and copy that repeatedly says the AI redraws detail that may differ from the original. The commercial side is clean - prices agree across the plan tabs, the JSON-LD, the Terms and the refund page, one-time credits never expire, credits return on failed fixes, and refunds are a stated rule rather than a discretion. Transparency 3.6/5, which brings the score to 3.9: retention (about 24 hours) and training ('we never use them to train models') are stated plainly and the payment chain and moderation step are named, but no company, address or jurisdiction is published and the Terms have no governing-law clause, Google Analytics and Plausible load before any consent with only a policy-anchor link standing in for an opt-out control, the specific image-AI provider is unnamed, and the policy names Microsoft Clarity while no Clarity loader could be found in the served HTML or a live session. Nothing here misdescribes the product, which is why it sits above the boilerplate-catalogue tools in this category and below a vendor that would name its operator and gate its analytics."
+  },
+  {
+    "slug": "image-text-editor",
+    "name": "Image Text Editor",
+    "category": "Creative",
+    "best_for": "Ecommerce sellers, marketers and small teams who need one word, price, date or label corrected on a finished poster, screenshot, banner or product photo when you no longer have the design file - priced per saved result (1 credit at 1K, 2 at 2K) with one-time packs that never expire or a monthly plan for longer result retention. Also a fit if you want a no-sign-in local demo and a policy set that states its retention windows in days. Not a fit if the edit has to be re-editable afterwards (the download is flattened, with no text layer or removal mask), if you need a named company and jurisdiction before paying, if you need to be sure the AI provider does not train on your uploads, or if the image is a document - IDs, passports, certificates, receipts and bank statements are named as prohibited in its own policies.",
+    "price": "Free: eligible new accounts receive 1 free credit (one Standard 1K result) plus capacity to scan 3 images; the sample demo runs locally with no sign-in and no AI call. Subscriptions, monthly: Basic $9.99/mo for 40 credits, Pro $19.99/mo for 90, Studio $39.99/mo for 200; yearly $99.90 / $199.90 / $399.90, exactly ten monthly payments, badged Save 16.7%, with credits issued monthly through the paid year. Monthly credits expire at the next refresh and do not roll over; one-time credits do not expire. One-time packs, no auto-renewal: 12 credits $4.99, 30 credits $9.99, 70 credits $19.99. A saved Standard 1K result costs 1 credit and HD 2K costs 2; the credits are reserved when generation starts and deducted only after a result is saved, and a failed generation releases them. Checkout and merchant-of-record duties run through Creem. USD. Verified 2026-11-20 in a browser on all three tabs of /pricing (monthly, yearly, one-time) plus /privacy and /terms.",
+    "rating": 3.8,
+    "official": "https://imagetexteditor.dev/",
+    "summary": "Image Text Editor changes the words that are already part of a finished picture instead of adding a text layer on top. You upload a JPG, PNG or WebP, the editor detects readable text blocks, you select one and type the new wording - or choose the removal mode and let it reconstruct the area - and it returns one flattened result to compare against the original before you download. Nothing has to be re-designed: the pitch is a single headline, price, date or label corrected on a poster, screenshot, banner or product photo whose source file is gone, with the surrounding typeface, colour and background regenerated around the change. The output is deliberately not editable as text, the sample demo runs in the browser with no sign-in and no AI call, editing your own image needs a Google account, and results are saved for a fixed window - 7 days without a subscription, 30/60/90 days on Basic/Pro/Studio - with the expiry date shown in the dashboard.",
+    "use_cases": [
+      "Correcting a headline, price, date or offer on an exported poster, banner or ad whose source file is gone",
+      "Updating a label, SKU or product detail in a product photo for a listing without re-shooting it",
+      "Changing wording in an app or website screenshot while the surrounding interface stays pixel-identical",
+      "Removing text entirely - a stale badge, an outdated offer, a name - and letting the background be rebuilt",
+      "Fixing misspelled or garbled text in an AI-generated image",
+      "Updating social posts, thumbnails and static banners at 1K or 2K from the same credit pool, with pack credits that never expire"
+    ],
+    "pros": [
+      "Retention is stated in days per plan rather than hedged - uploads up to 24 hours, saved results 7 days without a subscription and 30/60/90 days on Basic/Pro/Studio, diagnostic copies up to 7 days - and the policy notes that later cancellation does not shorten an already-saved result's expiry, which is the fairest version of that rule in this category",
+      "Billing is unambiguous and the arithmetic reconciles exactly: 1 credit per saved 1K result and 2 per 2K, credits reserved at generation and charged only when a result is saved, failed generations released back to the balance, one-time credits that never expire against monthly credits that reset, and every yearly price exactly ten times its monthly price (the 'Save 16.7%' badge is accurate)",
+      "A real consent control exists: a persistent 'Privacy choices' banner with Reject and Accept plus a Cookie settings link in the footer, and the policy tells readers that footer link is how to change the analytics choice",
+      "A rights section that maps to how the product actually works - access, correction, deletion, portability, withdrawal of consent, equal service - and saved images plus their diagnostic copies can be deleted from Generation history at any time, with other requests handled by email",
+      "The policies are written for this product and dated after the domain existed (Terms 2026-10-31, Privacy 2026-11-16 against a 2026-07-17 registration), the Acceptable Use Policy referenced by the Terms actually exists at /acceptable-use, and prohibited uses are named specifically rather than gestured at",
+      "It states its failure modes in the same breath as its promise - missed text, imprecise selection, traces of original lettering, imperfect background reconstruction, changed nearby detail, misspelled replacement copy - and refuses to promise that output is copyrightable or free of third-party claims",
+      "Processors are named by job where the site can: Creem as merchant of record (noting Creem may receive prompt and instruction text for a pre-generation safety check), Cloudflare D1 for account and usage records, Cloudflare R2 for saved results, Google for sign-in",
+      "The demo runs locally with no sign-in and no AI generation, so the workflow can be judged before an account exists, and sign-in is required only to edit your own image"
+    ],
+    "cons": [
+      "Google Analytics 4, Microsoft Clarity (session replay) and Plausible all load on every page - including /privacy and /terms themselves - before any consent is given, with no stored consent state; the site admits the default ('on by default on public pages') and offers a Reject button, but the default is on rather than prior-consent",
+      "Training use is unstated: a whole-word scan of both the Privacy Policy and the Terms returns no occurrence of 'train', so whether the image model provider trains on uploads is not answered anywhere - the weakest disclosure in an otherwise detailed policy",
+      "No company, trading name, postal address or named controller anywhere, and no governing-law or jurisdiction clause in the Terms, which cap liability at 'US$25 if you paid nothing' without saying whose law applies",
+      "Refunds are discretionary rather than a rule: 'Administrator-approved refunds ... based on unused credits from the related purchase', with no refund policy page (/refund-policy 404) and no stated window - a buyer has less to rely on than the sibling tools in this category",
+      "The AI provider that performs the edit is unnamed - material is 'sent to the processing providers needed to perform the edit' and 'the image model' is referenced - so anyone who needs to know which company sees an unpublished product shot cannot find out",
+      "Both policies describe screening 'prompt-based image generation' requests for moderation, a mode the vendor's submission and the visible product pages do not describe; worth asking whether a prompt-based generator ships or the language was carried over",
+      "The download is a flattened image with no text layer or removal mask by design, so a mis-typed edit means paying for another generation, and the free allowance is a single credit",
+      "Crowded category with near-identical neighbours (editpictext.com, changetextinimage.org, rewords.ai), and the .com of its own name - imagetexteditor.com - is parked for sale at a domain marketplace, so a reader searching the name may land on a listing page rather than a product"
+    ],
+    "key_features": [
+      "Text-block detection with single-region selection, then replacement in place or full removal with the surrounding area reconstructed",
+      "One flattened result per generation, returned to a dashboard with before-and-after review and 7/30/60/90-day retention by plan",
+      "1 credit per saved Standard 1K result and 2 per HD 2K; reserved at generation, charged only on success, released on failure",
+      "One-time credit packs (12 / 30 / 70 credits at $4.99 / $9.99 / $19.99) that never expire, alongside monthly and yearly subscriptions",
+      "Concurrency by plan - one generation at a time free or on packs, up to 2 / 3 / 5 for Basic / Pro / Studio - with jobs continuing after the tab closes",
+      "ZIP export of up to 20 saved results at 100MB per export on Pro and Studio",
+      "Per-result expiry date shown in the dashboard, so the retention window is visible per file rather than only in the policy",
+      "Local no-sign-in demo; Google sign-in to edit your own image and use account storage",
+      "Upload limits stated up front (JPG, PNG and WebP) with one selected text region per edit",
+      "Privacy choices banner with Reject / Accept and a footer Cookie settings link that changes the choice later"
+    ],
+    "faq": [
+      [
+        "What is Image Text Editor?",
+        "A browser editor for the words inside a finished picture rather than a text layer on top of it. You upload a JPG, PNG or WebP, the editor detects readable text blocks, you select one and type the replacement - or use the removal mode to erase it and rebuild the area - and it returns one flattened image to compare against the original. It is built for correcting a headline, price, date or label on a poster, screenshot, banner or product photo whose source file is gone; it is not a design application and the result is not editable as text afterwards."
+      ],
+      [
+        "How much does Image Text Editor cost?",
+        "One-time packs cost $4.99 for 12 credits, $9.99 for 30 and $19.99 for 70, and never expire. Subscriptions are $9.99 / $19.99 / $39.99 a month for 40 / 90 / 200 monthly credits, or $99.90 / $199.90 / $399.90 a year - exactly ten monthly payments. A saved 1K result costs 1 credit and 2K costs 2; credits are reserved at generation and charged only when a result is saved, and a failed generation releases them."
+      ],
+      [
+        "Is there a free tier?",
+        "Eligible new accounts get one free credit - one Standard 1K result - plus capacity to scan three images, and the sample demo runs locally without signing in and without any AI call. Editing your own image requires a Google account, which the site says protects AI processing capacity."
+      ],
+      [
+        "How long are my files kept?",
+        "Original uploads are stored privately for up to 24 hours. Saved results last 7 days without a subscription, or 30 / 60 / 90 days on Basic / Pro / Studio, with the expiry shown in the dashboard; cancelling later does not shorten a result already saved. Private diagnostic copies used for troubleshooting are kept up to 7 days, and you can delete saved images and their diagnostics from Generation history yourself."
+      ],
+      [
+        "What shouldn't I use it for?",
+        "Anything unlawful or deceptive: the Terms ban impersonation, forged records, misleading product claims, removing required legal disclosures, and the whole document class - IDs, passports, certificates, receipts, bank statements. The Acceptable Use Policy also covers adult and non-consensual content. Separately, the download is flattened with no text layer, so it is not a substitute for keeping your editable source."
+      ],
+      [
+        "What should I check before paying?",
+        "Three things. Whether you need the longer retention (30/60/90 days) that only subscriptions give, since packs stop at 7 days of saved results. Whether you accept that no company, jurisdiction or named AI provider is published and that refunds are approved case by case. And whether you are comfortable with analytics - Google Analytics, Microsoft Clarity session replay and Plausible - running by default until you use the Reject control."
+      ]
+    ],
+    "trial_checklist": [
+      "Use the free credit on a real file whose font is not a default sans, then zoom to 100% and check letter shapes, spacing and the rebuilt background against the original before buying",
+      "Choose your purchase shape by the retention you need, not the price alone: 7 days of saved results on a pack versus 30/60/90 days on Basic/Pro/Studio is the real difference between the tiers",
+      "Buy a pack only against real volume - 12 credits is 12 edits at $4.99 and the per-credit rate improves slowly ($0.42 then $0.33 then $0.29), so a partly used pack is money left on the table",
+      "Do not upload IDs, passports, certificates, receipts or bank statements: the Terms and Acceptable Use Policy name those as prohibited",
+      "Set your analytics choice deliberately from the banner or the footer Cookie settings link if you do not want Google Analytics, Clarity session replay and Plausible running by default",
+      "Assume the download is final: the result is flattened with no text layer or removal mask, so keep the original and budget a second generation for a mis-typed correction",
+      "Before paying, accept that no operator, jurisdiction or named AI provider is published and that refunds are approved case by case rather than by a stated rule"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - a focused, well-described tool: text detection with region selection, replacement and removal modes, job pages plus a no-sign-in local demo, a dashboard with per-result expiry, plan-based concurrency, ZIP export on the top tier, and a policy set that states retention windows in days and lists its own failure modes. Billing is unusually clean: credits are reserved at generation and charged only on a saved result, failed generations are refunded, yearly prices are exactly ten times monthly, and one-time packs never expire. Transparency 3.5/5, which brings the score to 3.8: the retention and rights sections are stronger than most of this category and a real Reject control exists, but Google Analytics, Microsoft Clarity session replay and Plausible all run before any consent, training use is nowhere stated across either policy, no company or jurisdiction is published and the Terms have no governing-law clause, the AI provider that performs the edit is unnamed, and refunds are left to administrator approval with no stated window or policy page. The product is described honestly and priced coherently, so it publishes clear of the boilerplate-catalogue tools in the category and below a vendor that would answer the identity, training and consent questions."
   }
 ]

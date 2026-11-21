@@ -533,6 +533,14 @@
     "ozil-goal-ai": {
       "date": "2026-11-20",
       "digest": "One-time credit packs (no expiry): 10/$4.90, 30/$12.90, 50/$19.90, Crew 350/$99, Studio 900/$199, Bulk 3,000/$499; single 720p render $5.99 (JSON-LD offers 'Single' $4.90 / 'HD Single' $5.99). Monthly: Basic $29.90 / 100 credits, Pro $49.90 / 300, Studio $99.90 / 800, unused subscription credits expire at the end of the paid period. Yearly, credits granted once a year: $100 / 400, $500 / 4,000, $600 / 6,000. Render cost 10 credits at 480p, 20 at 720p; scenes 15s/13s/9s. One free personalised reference image per verified account; video always paid; failed or rejected generations return credits with their original expiry. Per-credit cost falls at every step. USD, tax excluded. Pack cards and plan packs read from the served HTML and the subscription tabs from the rendered /plans in a browser, 2026-11-20."
+    },
+    "unblurfy": {
+      "date": "2026-11-20",
+      "digest": "Free daily: 1 fix/day signed out, 2/day signed in at 1K, no watermark (daily free budget capped at $10). Subscriptions monthly Basic $5.99/80 credits, Pro $9.99/200, Max $24.99/600; yearly $47.88 / $79.99 / $199 (Save 33%); monthly credits reset with no rollover. One-time credits never expire: Starter $4.99/20, Plus $14.99/80, Large $29.99/200. 1 credit per 1K enhance, 2 per 2K, charged only on success and returned on failure. Checkout via Stripe Managed Payments (merchant of record Link); Google sign-in required to buy. USD plus tax; uploads and results deleted about 24 hours after upload. Verified 2026-11-20 on the /pricing tabs, the JSON-LD Offer array, the Terms and /refund."
+    },
+    "image-text-editor": {
+      "date": "2026-11-20",
+      "digest": "Free: 1 credit (one Standard 1K result) plus 3 image scans for eligible new accounts; local demo needs no sign-in. Subscriptions monthly Basic $9.99/40 credits, Pro $19.99/90, Studio $39.99/200; yearly $99.90 / $199.90 / $399.90 (exactly ten monthly payments, badged Save 16.7%), credits issued monthly and expiring at each refresh. One-time packs, no auto-renewal: 12 credits $4.99, 30 $9.99, 70 $19.99, credits never expire. 1 credit per saved 1K result, 2 per 2K; reserved at generation and charged only on a saved result, released on failure. Merchant of record Creem. Saved results 7 days on packs, 30/60/90 days on Basic/Pro/Studio; uploads up to 24 hours. Verified 2026-11-20 in a browser across all three /pricing tabs plus /privacy and /terms."
     }
   },
   "changes": [

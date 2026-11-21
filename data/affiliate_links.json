@@ -1157,6 +1157,24 @@
       "public_href": "/go/ozil-goal-ai/",
       "partner": false
     },
+    "unblurfy": {
+      "name": "Unblurfy",
+      "slug": "unblurfy",
+      "official": "https://unblurfy.com/",
+      "destination": "https://unblurfy.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/unblurfy/",
+      "partner": false
+    },
+    "image-text-editor": {
+      "name": "Image Text Editor",
+      "slug": "image-text-editor",
+      "official": "https://imagetexteditor.dev/",
+      "destination": "https://imagetexteditor.dev/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/image-text-editor/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

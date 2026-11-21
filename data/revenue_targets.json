@@ -2366,5 +2366,45 @@
     "status": "not_started",
     "next_action": "Email support@ozilgoalai.io (RCPT-verified working domain mailbox) about affiliate or partner terms. No affiliate page exists (/affiliates, /affiliate, /partners, /referral and /program all 404), so no tracking URL was invented.",
     "notes": "Small per-sale value - $4.90-$499 one-time packs and $29.90-$99.90 a month - and most buyers make a handful of trend clips, so commission per conversion is modest. Priority low until the review earns organic impressions; near-term value is category depth in the football/trend-video cluster beside the other photo-to-video listings. A named operator (Jimmy Allen, Portland, Oregon) makes a direct partnership conversation more feasible than the unnamed platform brands in this space."
+  },
+  {
+    "tool_slug": "unblurfy",
+    "tool_name": "Unblurfy",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/unblurfy/"
+    ],
+    "best_audiences": [
+      "everyday users and small sellers rescuing blurry phone photos, product shots and screenshots",
+      "photographers and print shops preparing low-resolution images for output"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether Unblurfy runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and no programme is published. Never invent affiliate URLs.",
+    "notes": "A subscription from $5.99/mo plus one-time packs gives a workable affiliate shape if a programme exists, but nothing is published and the footer carries no partner link, so the ask goes out with the publication notice and nothing is wired until terms arrive."
+  },
+  {
+    "tool_slug": "image-text-editor",
+    "tool_name": "Image Text Editor",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/image-text-editor/"
+    ],
+    "best_audiences": [
+      "ecommerce sellers and marketers correcting prices, dates and labels on exported artwork",
+      "social media and content teams updating finished images without the source file"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether Image Text Editor runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and the contact page only offers a message form. Never invent affiliate URLs.",
+    "notes": "Subscriptions from $9.99/mo plus never-expiring credit packs give a workable affiliate shape if a programme exists; Creem is the merchant of record, so any programme would need to run through Creem or the vendor directly. Nothing published yet."
   }
 ]
