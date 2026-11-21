@@ -2406,5 +2406,25 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether Image Text Editor runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and the contact page only offers a message form. Never invent affiliate URLs.",
     "notes": "Subscriptions from $9.99/mo plus never-expiring credit packs give a workable affiliate shape if a programme exists; Creem is the merchant of record, so any programme would need to run through Creem or the vendor directly. Nothing published yet."
+  },
+  {
+    "tool_slug": "gta6-ai-video",
+    "tool_name": "GTA6 AI Video (gta6ai.video)",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/gta6-ai-video/"
+    ],
+    "best_audiences": [
+      "creators riding the GTA 6 launch trend with short-form video",
+      "social teams and meme accounts producing game-style vertical clips from one photo"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether GTA6 AI Video runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and no programme is published. Never invent affiliate URLs.",
+    "notes": "Subscriptions from $22.90/mo plus never-expiring credit packs from $8.99 give a workable affiliate shape if a programme exists. Checkout runs on Stripe, so any programme would run through Stripe or the vendor directly. Priority stays low: the product is two days old at listing and its demand is tied to a launch-week trend."
   }
 ]

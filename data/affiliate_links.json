@@ -1175,6 +1175,15 @@
       "public_href": "/go/image-text-editor/",
       "partner": false
     },
+    "gta6-ai-video": {
+      "name": "GTA6 AI Video (gta6ai.video)",
+      "slug": "gta6-ai-video",
+      "official": "https://gta6ai.video/",
+      "destination": "https://gta6ai.video/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/gta6-ai-video/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

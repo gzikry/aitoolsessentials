@@ -541,6 +541,10 @@
     "image-text-editor": {
       "date": "2026-11-20",
       "digest": "Free: 1 credit (one Standard 1K result) plus 3 image scans for eligible new accounts; local demo needs no sign-in. Subscriptions monthly Basic $9.99/40 credits, Pro $19.99/90, Studio $39.99/200; yearly $99.90 / $199.90 / $399.90 (exactly ten monthly payments, badged Save 16.7%), credits issued monthly and expiring at each refresh. One-time packs, no auto-renewal: 12 credits $4.99, 30 $9.99, 70 $19.99, credits never expire. 1 credit per saved 1K result, 2 per 2K; reserved at generation and charged only on a saved result, released on failure. Merchant of record Creem. Saved results 7 days on packs, 30/60/90 days on Basic/Pro/Studio; uploads up to 24 hours. Verified 2026-11-20 in a browser across all three /pricing tabs plus /privacy and /terms."
+    },
+    "gta6-ai-video": {
+      "date": "2026-11-21",
+      "digest": "Free: 20 signup credits (365-day expiry) plus a weekly check-in cycle worth 60 credits (6/6/12/6/6/6/18) - the sitewide '60 credits for free' line; watermarked output, up to 3 images or 1 video. Monthly Starter $22.90/840 credits, Creator $48.90/1,800, Studio $98.90/3,650; yearly $218.90/10,080, $410.90/21,600, $593.40/43,800 (each exactly 12x monthly; badged 20%/30%/50% off). Subscription credits expire each period; one-time packs never expire: $8.99/300, $23.90/800, $58.90/2,000, $238.90/10,000, $918.90/44,000. 6 credits per image, 18 per video on the cheapest models. Refunds within 72 hours, proportional to unused purchased credits, less up to 6% processing costs. Stripe checkout, all 11 products enabled, Google sign-in required. Verified 2026-11-21 against the monthly/yearly/pay-once pricing tabs and the plan config in the served bundle."
     }
   },
   "changes": [
