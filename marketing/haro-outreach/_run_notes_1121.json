@@ -1,0 +1,70 @@
+{
+ "_note": "Editorial judgement for the 2026-11-21 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json and _window_1121.json. Only the judgements below are typed.",
+ "new_rows": {
+  "generative-and-agentic-ai-builders-and-users-agentic-vs-generative-ai": {
+   "who": "Mark Schwartz - Lawyers Weekly (lawyersweekly.com.au); the domain field on the page names the outlet.",
+   "category": "Legal Tech / AI Explanation",
+   "contact": "Body says 'Comment below or send me a message, and introductions are welcome too'; the page publishes no address or handle of its own.",
+   "relevance": "low",
+   "notes": "A Lawyers Weekly Legal Tech article wanting one more voice on the difference between generative and agentic AI and how it changes attorneys' work. It wants an AI builder/seller/advisor/student; we run a dated tool-price census, not a builder, and the turn is 'by tonight'. No route resolvable off the page (a platform comment is not a channel we hold). Recorded so the window's AI-token count is accounted for, not drafted.",
+   "template": "None - excluded. Off our standing (wants an AI builder/practitioner) and no route published."
+  },
+  "higher-ed-advancement-leaders-and-board-members-ai-partnerships": {
+   "who": "Kristin Hanson - page names no publication domain; body is tagged 'SOURCE REQUEST!'.",
+   "category": "Higher Ed / Corporate AI Partnerships",
+   "contact": "Body says 'Please DM or email me to chat ASAP'; the page publishes no address or handle of the poster's own.",
+   "relevance": "low",
+   "notes": "Wants higher-ed advancement leaders (including board members) navigating AI-focused corporate partnerships (e.g. PwC funding universities for a critical-thinking certification). It wants an institution's own partnership experience; we are a pricing publisher with no such standing and the page publishes no route.",
+   "template": "None - excluded. Institutional-partnership testimony we do not hold and no route."
+  },
+  "hiring-managers-and-hr-leaders-ai-impact-on-graduate-hiring": {
+   "who": "Pitch & Shout - a PR/press-feature platform (the page's author field), relaying a journalist co-writing for an unnamed 'leading business magazine'.",
+   "category": "AI and Work / Graduate Hiring",
+   "contact": "Body says 'Join Pitch & Shout using the link in bio and apply directly'; no address or handle of the journalist's own is published.",
+   "relevance": "low",
+   "notes": "A press-feature solicitation routed through the Pitch & Shout platform: a journalist wants hiring-manager/HR-leader expert views on AI and graduate hiring. It is a platform-mediated listing, not a direct call, it wants an employer's own hiring experience we do not hold, and there is no route to us off the page.",
+   "template": "None - excluded. Employer hiring-experience solicitation via a PR platform; no standing and no route."
+  },
+  "psychologist-and-behavioural-scientist-value-of-business-travel": {
+   "who": "Becky Tanner-Rolf - page names no publication domain; the piece is an 'editorial report' for an unnamed client.",
+   "category": "Business Travel / Behavioural Science",
+   "contact": "Body says 'drop a note in the comments or send me a message'; the page publishes no address or handle of its own.",
+   "relevance": "low",
+   "notes": "Wants a psychologist/behavioural scientist on the value of in-person business travel in a world of AI and hybrid work. Off our beat (no pricing, seat or spend question) and it wants a behavioural-science expert, which we are not; no route published. A body-level AI hit whose slug carries no AI token, which is why the body scan runs.",
+   "template": "None - excluded. Off-beat expert call, no pricing question and no route."
+  },
+  "hospital-cios-and-cisos-preparing-for-2027-it-regulations": {
+   "who": "Brian Eastwood - HealthTech Magazine (healthtechmagazine.net); the domain field names the outlet.",
+   "category": "Healthcare IT / 2027 Regulation",
+   "contact": "Body says 'Hit me up with suggestions'; the page publishes no address or handle of the reporter's own.",
+   "relevance": "low",
+   "notes": "The nearest window hit to our beat and still not ours: a HealthTech Magazine piece on 2027 IT regulations that touches 'vendor contracts' and 'tightening AI governance', but it wants someone AT a hospital or health system to describe how they are responding. It explicitly does not need explanation, only a practitioner's response plan; we are a pricing census with no hospital standing, and the route is a referral ask with no address published.",
+   "template": "None - excluded. Wants a hospital/health-system IT leader's own response; no standing and no route."
+  },
+  "crypto-hack-victims-hacked-podcast-personal-stories": {
+   "who": "James McFadden ('Six8Jay') - 'HACKED: The Podcast'; page names no publication domain.",
+   "category": "Crypto / Podcast Booking",
+   "contact": "Body invites victims to tell their story; the page publishes only a t.co book link, no address or handle as a reply channel.",
+   "relevance": "low",
+   "notes": "A podcast launch seeking crypto-hack victims to tell first-person stories. Off our beat entirely (no tool-pricing question); the only published link is the host's own book. Recorded so the window's body-level hits are accounted for, not drafted.",
+   "template": "None - excluded. Podcast victim-story booking; off the pricing beat and no route."
+  }
+ },
+ "new_this_run": [
+  "generative-and-agentic-ai-builders-and-users-agentic-vs-generative-ai",
+  "higher-ed-advancement-leaders-and-board-members-ai-partnerships",
+  "hiring-managers-and-hr-leaders-ai-impact-on-graduate-hiring",
+  "psychologist-and-behavioural-scientist-value-of-business-travel",
+  "hospital-cios-and-cisos-preparing-for-2027-it-regulations",
+  "crypto-hack-victims-hacked-podcast-personal-stories"
+ ],
+ "why_not_drafted": [
+  "The 2026-11-21 window carried 65 slugs, 3 AI-token and 0 AI+spend at slug level, and all 65 window bodies were fetched and read. The body scan lifted the AI-hit candidate set to 6 (3 of them body-level hits whose slugs carry no AI token). Every one asks for first-hand testimony, institutional standing or a named guest, and every one publishes no route of its own.",
+  "The window's 3 spend-token hits are consumer money, not software spend: flight/hotel price-alert coverage (Newsweek), women who paid off debt, and content creators offered paid narratives - none is an AI tool-price question our dated seat census answers.",
+  "No new draft is written from this window. The sendable set is carried from 2026-11-20, not new; the only honest work left is to keep the carried drafts' figures current against today's snapshot and put them in front of George as sends rather than as findings."
+ ],
+ "defects": [],
+ "extra_actions": [
+  "SEND BLOCKER (2026-11-21): the monitor's output is complete and every route below is a human send (a journalist's inbox, a LinkedIn DM, a Signal handle). Nothing on the monitor side is blocking a send; the one step that is not automatic is the click, which is George's lane. The queue's sendable row and its paste-ready draft are named in pitch-drafts-2026-11-21.md."
+ ]
+}
