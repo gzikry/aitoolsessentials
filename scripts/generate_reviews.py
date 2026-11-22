@@ -12,6 +12,7 @@ EMAIL = 'contact@aitoolsessentials.com'
 from affiliate_util import approved_programs, public_affiliate_href, product_links_module, NOUS_OFFER
 from badge_ledger import CITE_STYLE, cite_drawer_html
 from enhance_structured_data import software_schema_for_tool, valid_rating_value
+from redact import mask_personal
 
 
 def _source_record(root: Path, slug: str):
@@ -36,7 +37,7 @@ def _official_source_html(record, _prog=None) -> str:
     links = ''.join(link_bits)
     unresolved = ''.join(f'<li>{x}</li>' for x in record.get('unresolved_claims', []))
     unresolved_html = f'<details><summary>Open verification questions</summary><ul>{unresolved}</ul></details>' if unresolved else ''
-    notes = record.get('verification_notes') or ''
+    notes = mask_personal(record.get('verification_notes') or '')
     return f'''<div class="official-source-card"><span>Official sources checked {record.get('pricing_checked_date', '')}</span><p><strong>Current official summary:</strong> {record.get('pricing_summary') or 'No stable public pricing was verified.'}</p><div class="official-source-links">{links}</div>{unresolved_html}<p class="source-notes">{notes}</p></div>'''
 
 

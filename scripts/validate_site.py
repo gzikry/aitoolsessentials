@@ -262,6 +262,45 @@ def main():
     pricing_slugs = set(pricing_data.get('snapshots', {}))
     if pricing_slugs != tool_slugs:
         errors.append('Pricing snapshots do not match tools.json slugs')
+
+    # Third parties' personal mailboxes must not be published. The registries below are served
+    # directly by GitHub Pages (/data/tool_sources.json), the repo is public, and the review and
+    # comparison pages render the verification notes verbatim — so a vendor's private address typed
+    # into the submission form was being republished three ways. Redacted at render time and in the
+    # stored records; this guard is what stops it returning with the next submission.
+    try:
+        from redact import personal_addresses
+    except ImportError:
+        personal_addresses = None
+    if personal_addresses:
+        # Served data registries.
+        for name in ('tools.json', 'tool_sources.json', 'revenue_targets.json',
+                     'affiliate_programs.json', 'pricing_snapshots.json'):
+            f = ROOT / 'data' / name
+            if not f.exists():
+                continue
+            leaked = personal_addresses(f.read_text(errors='ignore'))
+            if leaked:
+                errors.append(
+                    f'data/{f.name} publishes personal email address(es): {leaked[:5]}'
+                )
+        # Rendered pages that carry verification notes.
+        leaked_pages = []
+        for rel in ('tools', 'comparisons', 'evidence'):
+            base = ROOT / rel
+            if not base.exists():
+                continue
+            for page in base.rglob('*.html'):
+                html = page.read_text(errors='ignore')
+                if '<p class="source-notes">' not in html and 'source-notes' not in html:
+                    continue
+                found = personal_addresses(html)
+                if found:
+                    leaked_pages.append(f'{page.relative_to(ROOT)}: {found[0]}')
+        if leaked_pages:
+            errors.extend(
+                f'Published page leaks a personal address — {item}' for item in leaked_pages[:10]
+            )
     sponsor_inv = json.loads((ROOT/'data/sponsor_inventory.json').read_text())
     if not isinstance(sponsor_inv, dict) or 'placements' not in sponsor_inv or len(sponsor_inv.get('placements', [])) == 0:
         errors.append('Sponsor inventory is empty')

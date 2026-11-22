@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 from page_ctas import free_stack_audit_cta, run_free_audit_link
+from redact import mask_personal
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = 'https://aitoolsessentials.com'
@@ -44,7 +45,7 @@ def _source_card(slug, name):
         f'<span>Official sources checked {_e(src.get("pricing_checked_date", ""))}</span>'
         f'<div class="official-source-links">{links}</div>'
         f'{unresolved_html}'
-        f'<p class="source-notes">{_e(src.get("verification_notes", ""))}</p>'
+        f'<p class="source-notes">{_e(mask_personal(src.get("verification_notes", "")))}</p>'
         f'</div>'
     )
 

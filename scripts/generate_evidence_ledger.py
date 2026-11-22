@@ -5,6 +5,7 @@ import html
 import json
 from datetime import datetime
 from pathlib import Path
+from redact import mask_personal
 
 DOMAIN = "https://aitoolsessentials.com"
 
@@ -25,7 +26,7 @@ def generate(root: Path, today: str | None = None) -> Path:
         rec = records.get(slug, {})
         unresolved = rec.get("unresolved_claims") or []
         unresolved_text = "; ".join(str(x) for x in unresolved) if unresolved else "None recorded"
-        notes = rec.get("verification_notes") or "Official source links recorded in the site data ledger."
+        notes = mask_personal(rec.get("verification_notes") or "Official source links recorded in the site data ledger.")
         rows.append(
             f'<tr id="evidence-{esc(slug)}"><td><strong><a href="/tools/{esc(slug)}/">{esc(tool.get("name", slug))}</a></strong><br><span class="muted">{esc(tool.get("category", ""))}</span></td>'
             f'<td><strong>{esc(rec.get("pricing_checked_date", "—"))}</strong><br>{source_link(rec.get("pricing_url", ""), "Pricing")}</td>'
