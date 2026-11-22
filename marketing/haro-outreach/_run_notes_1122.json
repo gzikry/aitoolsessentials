@@ -1,0 +1,12 @@
+{
+  "_note": "Editorial judgement for the 2026-11-22 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json (365/365 carried rows re-probed today) and _window_1122.json. Only the judgements below are typed. The sitemap window produced 21 new slugs with ZERO AI-token slugs and the AI topic feed listed 50 slugs, all already tracked; so no new rows are added this run and nothing new needed an exclusion note.",
+  "new_rows": {},
+  "new_this_run": [],
+  "why_not_drafted": [
+    "no new AI-relevant request was indexed in this run's window (21 new sitemap slugs, 0 carrying an AI token; the AI topic feed's 50 slugs were all already tracked), so there is nothing new to draft"
+  ],
+  "defects": [
+    "scripts/verify_journo_requests.py swept its 365 carried URLs strictly serially (curl, then sleep(1)). Measured today at ~13 s/URL, because a 404 sits out the curl timeout, a full refresh needed ~80 minutes — longer than the cron window and the reason a run could finish with page truth only partly re-measured. Probes are independent GETs, so the sweep now runs on a bounded pool (--jobs=N, default 6). Today's full 365-row refresh completed in ~2 minutes at --jobs=10, and every carried row is checked=2026-11-22."
+  ],
+  "extra_actions": []
+}

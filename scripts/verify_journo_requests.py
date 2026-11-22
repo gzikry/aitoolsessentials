@@ -176,7 +176,8 @@ def main() -> None:
     if any(a in ("-h", "--help") for a in sys.argv[1:]):
         print(__doc__)
         return
-    unknown = [a for a in sys.argv[1:] if a.startswith("-") and a != "--refresh-feed"]
+    unknown = [a for a in sys.argv[1:] if a.startswith("-") and a != "--refresh-feed"
+               and not re.fullmatch(r"--jobs(?:=|)\d+", a) and a != "--jobs"]
     if unknown:
         raise SystemExit(f"unknown option(s) {unknown}; usage: {sys.argv[0]} [slug|url ...] [--refresh-feed]")
 
@@ -196,13 +197,31 @@ def main() -> None:
     feed = fetch_ai_feed(refresh="--refresh-feed" in sys.argv)
     print(f"AI topic feed: {len(feed)} slugs")
 
-    for url in urls:
-        rec = probe(url, feed)
-        cache[rec["slug"] or url] = rec
+    # The sweep used to be strictly serial: one curl, then sleep(1), times 365 carried rows, which
+    # measured ~13 s/URL on 2026-11-22 (dead pages sit out the full curl timeout) and made a full
+    # refresh an 80-minute run — long enough that a cron window cannot finish it. Each probe is an
+    # independent GET against a different URL, so bounded concurrency is safe; the per-worker sleep
+    # keeps the request rate on Sourcee roughly what the serial loop produced (jobs req/s).
+    m = re.search(r"--jobs=(\d+)", " ".join(sys.argv[1:]))
+    jobs = max(1, int(m.group(1))) if m else 6
+
+    def one(u: str) -> dict:
+        r = probe(u, feed)
+        time.sleep(1)
+        return r
+
+    if jobs == 1:
+        results = (one(u) for u in urls)
+    else:
+        from concurrent.futures import ThreadPoolExecutor
+        pool = ThreadPoolExecutor(max_workers=jobs)
+        results = pool.map(one, urls)
+
+    for rec in results:
+        cache[rec["slug"] or rec["url"]] = rec
         print(f"{'LIVE' if rec['live'] else 'GONE':<4} {rec['http']} "
               f"{str(rec['days_old']):>5}d feed={'Y' if rec['in_ai_topic_feed'] else 'n'} "
               f"{str(rec['badge']):<22} {str(rec['headline'])[:52]}", flush=True)
-        time.sleep(1)
 
     # A request probed without `www.` caches under its slug, which is correct — but a record
     # keyed on a bare http URL from an older run would never be found by slug lookup again.
