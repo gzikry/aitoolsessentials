@@ -1193,6 +1193,15 @@
       "public_href": "/go/tinycommand/",
       "partner": false
     },
+    "sarah-ai": {
+      "name": "Sarah AI by NextGen Fusion AI",
+      "slug": "sarah-ai",
+      "official": "https://www.nextgenfusionai.com/sarah-ai",
+      "destination": "https://www.nextgenfusionai.com/sarah-ai?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/sarah-ai/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

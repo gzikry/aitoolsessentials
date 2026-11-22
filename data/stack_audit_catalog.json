@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21",
+  "generated_at": "2026-11-22",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -3265,6 +3265,31 @@
         "coding",
         "design",
         "audio"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "sarah-ai",
+      "name": "Sarah AI by NextGen Fusion AI",
+      "category": "AI Agents",
+      "official_url": "https://www.nextgenfusionai.com/sarah-ai",
+      "review_url": "/tools/sarah-ai/",
+      "price_label": "Free two-week supervised pilot, then free setup and $1 for the first month, then the plan price. Published USD prices, identical on /pricing, the pricing page's JSON-LD Offer array, /sarah-ai, /about, llms.txt and llms-full.txt: one agent $79/month (500 messages, 1 number); small brokerage $159/month for 3 agents and 2,000 texts, plus $31 per extra agent; property managers with 11 or more units $1.40 per unit per month with a $119 monthly minimum; landlords with 1 to 10 units $39/month; extra texts $12 per 500. The page states 'No other discounts. No commissions.' The pricing calculator renders 'Month 1 $1' and 'Month 2 on $79 / month'. Billing is not self-serve: the published path is the free pilot booked through Calendly or the contact form, with setup and the number arranged afterwards, so no card checkout could be seen from outside. The Terms (not the pricing page) add that subscriptions auto-renew and can be cancelled only with 30 days' written notice, with no refund for the remaining time; the Terms also give a refund for an unused purchase inside 30 days, for service failures over 7 consecutive days, and for duplicate or erroneous charges. No purchase was attempted.",
+      "pricing_summary": "Free two-week supervised pilot, then free setup and $1 for the first month, then the plan price. Published USD prices, identical on /pricing, the pricing page's JSON-LD Offer array, /sarah-ai, /about, llms.txt and llms-full.txt: one agent $79/month (500 messages, 1 number); small brokerage $159/month for 3 agents and 2,000 texts, plus $31 per extra agent; property managers with 11 or more units $1.40 per unit per month with a $119 monthly minimum; landlords with 1 to 10 units $39/month; extra texts $12 per 500. The page states 'No other discounts. No commissions.' The pricing calculator renders 'Month 1 $1' and 'Month 2 on $79 / month'. Billing is not self-serve: the published path is the free pilot booked through Calendly or the contact form, with setup and the number arranged afterwards, so no card checkout could be seen from outside. The Terms (not the pricing page) add that subscriptions auto-renew and can be cancelled only with 30 days' written notice, with no refund for the remaining time; the Terms also give a refund for an unused purchase inside 30 days, for service failures over 7 consecutive days, and for duplicate or erroneous charges. No purchase was attempted.",
+      "pricing_url": "https://www.nextgenfusionai.com/pricing",
+      "pricing_checked_date": "2026-11-22",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "audio",
+        "automation",
+        "data"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

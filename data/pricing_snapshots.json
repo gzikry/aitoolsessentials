@@ -549,6 +549,10 @@
     "tinycommand": {
       "date": "2026-11-21",
       "digest": "Free forever $0: 1,000 credits/mo, 1 seat, unlimited forms and responses, all 458 integrations, form payments; TinySEO and TinyAnswers as one 7-day trial per workspace. Monthly Basic $19 (10,000 credits, 3 seats), Professional $49 (50,000, 10 seats, custom agents), Agency $149 (250,000, 50 seats). Billed annually $199/$499/$1,499 a year, headlined on the cards as $17/$42/$125 a month ('save up to 16%') - each exactly the annual total divided by 12; staying monthly costs $228/$588/$1,788 a year. Separate one-payment lifetime tiers on /lifetime, never listed on /pricing: Solo $199 (10,000 credits/mo forever, 1 seat), Growth $499 (50,000, 5 seats), Agency $999 (200,000, 25 seats), Founder $1,499 (500,000, unlimited seats), each with a 30-day money-back guarantee that Terms section 8 contradicts ('Fees are non-refundable except where a refund is required by applicable law'). Black Friday BFCM2026: month one only at $19/$49/$149 on the yearly plan, months two to twelve free, renewal at the yearly price from month 13; bar renders 2026-11-14 05:00 UTC - 2026-12-08 04:59:59 UTC while its label reads 'Deal starts in'. Credits: 1 per workflow step, ~10 per agent step, 20 per company and 10 per person found via Discovery (no charge on a miss); data collection never consumes credits. Fees exclusive of tax; USD. Verified 2026-11-21 against the plan cards, the compare table, the page's JSON-LD AggregateOffer, /black-friday and /lifetime."
+    },
+    "sarah-ai": {
+      "date": "2026-11-22",
+      "digest": "Free two-week supervised pilot, then free setup and $1 for the first month, then the plan price. Published USD prices, identical on /pricing, the pricing page's JSON-LD Offer array, /sarah-ai, /about, llms.txt and llms-full.txt: one agent $79/month (500 messages, 1 number); small brokerage $159/month for 3 agents and 2,000 texts, plus $31 per extra agent; property managers with 11 or more units $1.40 per unit per month with a $119 monthly minimum; landlords with 1 to 10 units $39/month; extra texts $12 per 500. The page states 'No other discounts. No commissions.' The pricing calculator renders 'Month 1 $1' and 'Month 2 on $79 / month'. Billing is not self-serve: the published path is the free pilot booked through Calendly or the contact form, with setup and the number arranged afterwards, so no card checkout could be seen from outside. The Terms (not the pricing page) add that subscriptions auto-renew and can be cancelled only with 30 days' written notice, with no refund for the remaining time; the Terms also give a refund for an unused purchase inside 30 days, for service failures over 7 consecutive days, and for duplicate or erroneous charges. No purchase was attempted."
     }
   },
   "changes": [
@@ -959,5 +963,5 @@
       "note": "TinyCommand: first recorded pricing snapshot. Free forever tier; monthly $19/$49/$149; billed annually $199/$499/$1,499 (cards show the annual total divided by twelve); three price bases in play at once, all reconciling. Not on /pricing: one-payment lifetime tiers $199/$499/$999/$1,499 on /lifetime and the BFCM2026 offer on /black-friday (month one only, months two to twelve free, renews yearly from month 13). Four policy clauses point to an unpublished sub-processor list. A separate operator from every cluster in the ledger."
     }
   ],
-  "updated": "2026-11-21"
+  "updated": "2026-11-22"
 }

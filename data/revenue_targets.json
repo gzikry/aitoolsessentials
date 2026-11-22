@@ -2448,5 +2448,26 @@
     "status": "not_started",
     "next_action": "TinyCommand publishes its own affiliate programme at /affiliates - recurring cash share of every invoice a referral pays, for as long as they stay, paid in cash after a refund hold - plus a separate partner track at /become-a-partner for agencies. Both are behind an application form ('Apply to the affiliate program', 'Join the Partner Program'), which is George's lane. Ask the vendor for the commission percentage, attribution/cookie window, hold period and payout threshold before applying; never invent an affiliate URL, and wire affiliate_programs.json only once an approved tracking link exists.",
     "notes": "Subscriptions from $19/mo (Basic) to $149/mo (Agency) with a free forever tier, plus one-payment lifetime tiers from $199, give a workable recurring affiliate shape - and the programme pays on recurring revenue rather than a one-off bounty, which matches this site's audience of buyers already paying for a stack. Priority high: the vendor replied to the publication notice at support@tinycommand.com, so terms can be asked for in one thread. Checkout runs through the vendor's own signup; AppSumo's lifetime deal is sold out and carries no affiliate surface."
+  },
+  {
+    "tool_slug": "sarah-ai",
+    "tool_name": "Sarah AI by NextGen Fusion AI",
+    "priority": "low",
+    "category": "AI Agents",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/sarah-ai/"
+    ],
+    "best_audiences": [
+      "real estate agents and small brokerages in Chicago and other US metros who get property-inquiry texts",
+      "property managers with 11 or more units and independent landlords with 1 to 10 units",
+      "readers comparing leasing assistants (LeaseBot, Structurely, EliseAI, AppFolio Lisa, Ylopo) before choosing one"
+    ],
+    "status": "not_started",
+    "next_action": "Email shubham@nextgenfusionai.com about affiliate, partner or referral terms. No affiliate or partner page exists (/affiliates, /affiliate, /partners, /referral all 404) and the domain publishes a working mailbox (MX = Microsoft 365), so that is the route; the same address is Cc'd on the publication reply.",
+    "notes": "Unlike the one-off credit-pack tools in this catalogue, Sarah AI is a monthly subscription ($39 to $159 a month, plus $1.40 per unit per month for larger property managers), so a percentage of monthly revenue would be worth more per conversion than a single render - if a programme exists. None does today, and the audience is a narrow vertical, so priority stays low until the review earns organic impressions."
   }
 ]
