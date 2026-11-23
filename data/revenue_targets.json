@@ -2469,5 +2469,25 @@
     "status": "not_started",
     "next_action": "Email [personal address withheld] about affiliate, partner or referral terms. No affiliate or partner page exists (/affiliates, /affiliate, /partners, /referral all 404) and the domain publishes a working mailbox (MX = Microsoft 365), so that is the route; the same address is Cc'd on the publication reply.",
     "notes": "Unlike the one-off credit-pack tools in this catalogue, Sarah AI is a monthly subscription ($39 to $159 a month, plus $1.40 per unit per month for larger property managers), so a percentage of monthly revenue would be worth more per conversion than a single render - if a programme exists. None does today, and the audience is a narrow vertical, so priority stays low until the review earns organic impressions."
+  },
+  {
+    "tool_slug": "minimax-h3-image",
+    "tool_name": "MiniMax H3 Image",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/minimax-h3-image/"
+    ],
+    "best_audiences": [
+      "creators, marketers and small teams generating images and short video from prompts across several models",
+      "developers comparing image model cost per output before wiring an API"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether minimaxh3image.com runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and nothing is published. Never invent affiliate URLs.",
+    "notes": "A $9.99-$79.99/mo subscription ladder plus 365-day credit packs is a workable affiliate shape if a programme exists, but nothing is published and the same platform (01Router) already has a listing here, so the operator question is worth settling in the same thread before wiring anything."
   }
 ]

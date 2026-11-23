@@ -8601,5 +8601,96 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "medium",
     "rating_rationale": "Job fit 4.2/5. This is a narrow product that does one job and describes it consistently: every sale surface - homepage, /sarah-ai, /pricing, /about, /pilot, the four vertical pages, llms.txt and llms-full.txt - describes the same SMS assistant with the same five pre-qualification questions and the same Google Sheets and Google Calendar integrations, and the published prices reconcile to the cent with the page's own JSON-LD Offer array. The submission itself volunteered the limits ('SMS only, no voice, Google Sheets and Calendar only, new with no published customer results'), and the company tells automated readers not to cite customer counts or accuracy rates because they are not backed up, which is the opposite of the fabricated-social-proof pattern this catalogue keeps finding. The commercials are also more transparent than most: a published refund clause, SMS opt-in consent records, a 120-day retention period and a Fair Housing notice on the second pilot. Transparency 3.1/5 pulls the score down, and deliberately. The document a buyer is asked to agree to describes a different product - Terms section 4.1 defines 'Sarah AI Functionality' as Microsoft Teams project management, Jira tickets and daily stand-up summaries, and the Privacy Policy lists Teams and Jira credentials as core collected data - the terms were last updated in January 2025 against an October 2026 privacy notice, the entity is called a Texas corporation in the Terms and Chicago-based everywhere else with no postal address, the auto-renewal and 30-day cancellation terms never reach the pricing page, and analytics capture starts before the consent choice. A buyer can tell what they are being sold from the product pages; they cannot tell what they are agreeing to from the contract. Blended 3.7/5."
+  },
+  {
+    "slug": "minimax-h3-image",
+    "name": "MiniMax H3 Image (minimaxh3image.com)",
+    "category": "Creative",
+    "best_for": "Creators, marketers and small teams who want several current image and video models behind one account and one credit balance instead of an account per model - product photos, portraits, social visuals and short clips assembled in the browser, with a credit estimate shown before every generation. It fits light use on the Lite tier, regular creation on Pro and heavier production on Ultra, and a one-time pack suits buyers who do not want a subscription. Not a fit if you need a named company to contract with or a governing-law clause to review, a published retention period or training statement, a dedicated refund page, or the single best model for one job - the pitch here is breadth across a shared model catalogue, and the same platform is already listed here as 01Router.",
+    "price": "Monthly billing: Lite $12.99/mo (3,000 credits), Pro $34.99/mo (10,000), Ultra $129.99/mo (30,000). Billed yearly: Lite $9.99/mo, $119.88/year (36,000 credits released monthly), Pro $24.99/mo, $299.88/year (120,000), Ultra $79.99/mo, $959.88/year (360,000); the cards badge 'Save up to 38%' and the arithmetic matches the month-to-month rate exactly (119.88/12 = 9.99, 299.88/12 = 24.99, 959.88/12 = 79.99). Unused monthly subscription credits expire at the next refresh with no rollover. One-time credit packs, valid 365 days: 5,000 credits $29.99, 15,000 $79.99, 40,000 $189.99, 100,000 $399.99, 250,000 $899.99. Every tool draws on one balance; the rendered plan cards estimate up to 500 / 1,666 / 5,000 images and up to 37 / 125 / 375 videos a month at default settings. Payment is Stripe. USD, tax added at checkout; the same figures appear on /zh/pricing. Verified 2026-11-23 on the rendered /pricing in both billing toggle states (monthly $12.99 / $34.99 / $129.99; yearly $9.99 / $24.99 / $79.99) and on /zh/pricing.",
+    "rating": 3.9,
+    "official": "https://minimaxh3image.com/",
+    "summary": "MiniMax H3 Image is a browser studio that puts a whole model catalogue behind one credit balance. The image tool leads with MiniMax H3 Image and MiniMax H3 Image Highspeed and continues through GPT Image, Nano Banana, Seedream, Qwen Image, FLUX, Ideogram, Recraft and Z-Image for stills, while the video side carries Seedance, Kling, Veo, Wan, Grok Imagine, Gemini Omni and MiniMax H3 / H3 Max / H3 Max Turbo, plus music and audio models, an agent chat and an infinite canvas. You write a prompt or upload a reference, choose a model, resolution and ratio, read the credit estimate, and generate in the browser with nothing to install. Access is a monthly or yearly subscription on three tiers or a one-time credit pack valid 365 days, with API access and an MCP route sold alongside. Credits are metered per generation, shown before you submit, and returned automatically when a task fails.",
+    "use_cases": [
+      "Generating product photos, portraits, posters and social visuals from a text prompt on whichever image model fits the brief",
+      "Editing or restyling an uploaded photo with a reference image on a model that supports 16 references",
+      "Producing a short clip from text, from a first/last frame, or from reference images using one of the video models",
+      "Comparing what the same prompt costs across models, because each model prints its credit cost before you generate",
+      "Generating an original music bed or soundtrack for a clip on the same credit balance",
+      "Driving image and video work from a conversation with the agent, or wiring the image API into an app",
+      "Trying a model before paying, using whatever starter credits the account grants"
+    ],
+    "pros": [
+      "The namesake is a real, current model: MiniMax released H3-Image on 2026-11-10 as an open-weight 4K image generator and editor, and this site both lists it first in the image model selector and prices it in its own public catalogue (minimax-h3-image, minimax-h3-image-highspeed)",
+      "The pricing ladder reconciles to the cent and the annual discount is real rather than decorative: 12.99 to 9.99, 34.99 to 24.99 and 129.99 to 79.99 is 23%, 29% and 38% off the month-to-month rate, and each yearly total is exactly twelve monthly payments",
+      "A per-model price table is readable from a public endpoint without an account (per resolution, in USD micros), and the same figures appear on the Chinese mirror - so a buyer can price a job before signing up",
+      "The acceptable-use terms are substantive rather than a stub: six named prohibited categories, a zero-tolerance CSAM clause naming NCMEC referral, deepfake and non-consensual-imagery bans, pre-generation and post-generation moderation plus human review, and a reporting channel with a stated 24-48 hour response target and an appeal route",
+      "Output rights are stated plainly: the user keeps ownership of what they upload, gets full commercial and non-commercial rights to the outputs subject to law, and the plans list commercial-use rights as included",
+      "Credit behaviour is stated on both the Terms and the pricing FAQ: failed generations, including safety or copyright rejections, are returned to the balance automatically",
+      "The legal set is dated 2026-11-10, the day after the domain registered, and is written for this product rather than pasted in"
+    ],
+    "cons": [
+      "No company, trading name, named controller, postal address or governing-law clause appears on any page, and the Terms close with a circular instruction to contact 'the support team via the channels published on our website' rather than naming an operator - the only identity given is the brand and support@minimaxh3image.com",
+      "The site's own copy is stale against its product: the homepage and llms.txt both say MiniMax H3 is a video model here and that still images are generated by another model you select, while the image tool lists MiniMax H3 Image first and prices it - the opposite of a namesake that cannot be bought",
+      "Training use is unstated: a whole-word sweep of both policies for train, trained or fine-tune returns nothing, while prompts, reference photos and videos are sent to third-party processing",
+      "Retention is a formula rather than a period ('as long as your account remains active or as needed'), so no deletion window is published for uploaded references or generated media",
+      "The AI and cloud processors are named only as categories ('specialized AI infrastructure and cloud compute providers', 'authorized processing nodes') on a product whose whole function is uploading images of people and products; only Stripe and Creem are named for payments",
+      "Google Analytics (G-K5GKTVSY6C) and a self-hosted analytics script on ga.smnzb.com load on /privacy-policy and /terms-of-service themselves, while the policies describe telemetry and cookies in general terms and name no analytics vendor",
+      "/refund-policy returns 404, so the only refund rule a buyer can read is Terms section 4 - non-refundable once generation has started except where consumer law requires otherwise",
+      "The free offer is hedged everywhere as 'free trial opportunities' dependent on account eligibility, with no starter-credit amount published even though the public config reports starter credits are enabled",
+      "The footer's own model dropdown lists Seedance 2.5, Veo 3.1, Kling 3.0 Turbo, Nano Banana Pro and Wan 2.7 - no MiniMax model at all on a site named after one",
+      "No non-affiliation statement anywhere: the site is named after a MiniMax model and never says it is not operated by MiniMax, while a same-name site in the family (minimax-h3.com) publishes exactly that disclaimer",
+      "The name is crowded rather than unique - minimaxh3.com (registered 2026-07-15), minimax-h3.com (2026-07-30), minimax-h3-image.com and minimaxh3image.org (both 2026-11-10, hours after this domain) sit on five different nameserver pairs, so a reader searching the name sees several unrelated sites",
+      "Account recovery is thin by configuration: the public config reports password reset and email verification both disabled, so a mistyped signup address has no recovery path - and the same config carries no leak, but someone reading it can also see Google sign-in shares a client ID with 01Router, the model API gateway already listed here, whose domain also serves this site's model icons",
+      "Purchases are subscription-first: the Lite/Pro/Ultra cards are pre-selected to the yearly view, and monthly-billed access costs 30% more per month than the headlined annual figure"
+    ],
+    "key_features": [
+      "One credit balance across roughly 55 models in the platform catalogue - around 19 image, 20 video, 12 chat and 4 audio entries served from a public model endpoint",
+      "Image side: MiniMax H3 Image and H3 Image Highspeed, GPT Image 2.5/2.6 Flare and Sunburst, Nano Banana 2 / 2.1 / Pro, Seedream 5.0 Pro and Flash and 5.5, Qwen Image 3.0, Grok Imagine Image 2.0, FLUX.2 Pro, Ideogram 4.5, Recraft V4 and V4 Pro, Z-Image Turbo",
+      "Video side: MiniMax H3, H3 Max and H3 Max Turbo, Seedance 2.5 / 2.5 Flash / 2.0 / 2.0 Fast / 2.0 Mini, Veo 3.1, Kling 3.0 Turbo, Wan 3.0 and 2.7, Grok Imagine Video 1.5 and Lite, Gemini Omni Flash 1.1 and 1.2, HappyHorse 1.1, FLUX 3 Video, LTX-2.5 Fast and Pro",
+      "Text-to-image, image-to-image with up to 16 references, image editing, text-to-video, image-to-video, reference-to-video, music generation and audio tools",
+      "Credit cost shown for the chosen model, resolution and output count before submitting, with failed tasks refunded",
+      "An agent chat and an infinite canvas for chaining image, video and audio steps in one session",
+      "Image generation API with keys managed in account settings, plus an MCP route for tool-driven workflows",
+      "A public community showcase whose prompts can be reused, and 41+ single-effect pages (product, UGC, cinematic, character, trend categories)",
+      "Monthly subscriptions on three tiers or one-time credit packs valid 365 days, paid by card through Stripe"
+    ],
+    "faq": [
+      [
+        "What is MiniMax H3 Image?",
+        "A browser studio that generates images and video from prompts or reference files using a catalogue of current third-party models on one credit balance. It is named after MiniMax's H3-Image model, which its image tool offers first, but it is a multi-model workspace rather than a single-model generator: stills can also run on GPT Image, Nano Banana, Seedream, Qwen Image, FLUX, Ideogram, Recraft or Z-Image, and video on Seedance, Kling, Veo, Wan, Grok Imagine, Gemini Omni or MiniMax H3 and its Max variants. Nothing is installed locally."
+      ],
+      [
+        "How much does it cost?",
+        "Monthly billing is Lite $12.99 for 3,000 credits, Pro $34.99 for 10,000 and Ultra $129.99 for 30,000 a month. Billed yearly the same tiers are $9.99, $24.99 and $79.99 a month, charged as $119.88, $299.88 and $959.88 a year, with the credits released monthly. One-time packs that stay valid 365 days cost $29.99 for 5,000 credits up to $899.99 for 250,000. Every model draws on the same balance and the cost of a generation is shown before you submit it."
+      ],
+      [
+        "Does MiniMax H3 generate the images?",
+        "On this site the image tool offers MiniMax H3 Image as its first listed model, costing 11 credits for a 1:1 image at 2K in the tool's default state, alongside an H3 Image Highspeed variant. Note that the site's own homepage and llms.txt still say H3 is used only as a video model here and that stills come from another model - that copy is out of date against the tool itself. The video models named MiniMax H3 are separate entries from the H3 Image ones."
+      ],
+      [
+        "What happens if a generation fails?",
+        "Credits are deducted when a task is submitted and returned automatically if it fails, including failures caused by content safety review or copyright restrictions. The Terms and the pricing FAQ say the same thing, and the credit history in the account shows the status of each task."
+      ],
+      [
+        "Do credits expire?",
+        "Subscription credits expire at the next monthly refresh and do not roll over; one-time pack credits stay valid for 365 days. When credits with different expiry dates are on the account the soonest to expire are used first, and a later purchase does not extend earlier credits."
+      ],
+      [
+        "Who operates the site?",
+        "No company, trading name, postal address or governing-law clause is published on any page; the only identity given is the brand name and a support@ address. The Terms are governed by no named jurisdiction. That is worth knowing before you pay, because it is the operator a buyer would have to pursue rather than a registered entity."
+      ]
+    ],
+    "trial_checklist": [
+      "Before spending anything, open the image tool and read the credit cost on the model you actually want at the resolution you need - the default is 1:1 at 2K, and 4K costs several times more per image in the published catalogue",
+      "Compare the month-to-month rate ($12.99 / $34.99 / $129.99) with the headlined annual figure on the same card, because the cards open on the yearly view and the annual total is exactly twelve monthly payments",
+      "Decide purchase shape against real volume: subscription credits vanish at each monthly refresh while pack credits last 365 days, so a light user should price the $29.99 pack before a subscription",
+      "Run the same prompt through two or three image models and compare the outputs against your brief rather than taking the site's category labels as quality claims",
+      "Check the retention rule before uploading anything sensitive - no deletion period is published, and a private generation is private on the site but still passes through third-party processing",
+      "If you need an invoice, a data-processing agreement or a named counterparty, ask before paying: there is no entity, address or governing law on the site to put on a contract"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.1/5 - the offer is broad and genuinely usable: current models on both sides (a real 2026-11-10 model as the namesake, plus GPT Image 2.6, Seedream 5.5, Nano Banana Pro, Seedance 2.5 and MiniMax H3 Max variants), one credit balance across roughly 55 catalogue entries, a pre-run cost estimate on every generation, automatic refund of failed tasks, an API and an MCP route, and both a subscription and a 365-day pack for different buying shapes. What holds it under the leaders is that breadth is the whole pitch - it is one of many multi-model workspaces with the same catalogue behind a different front end, and the footer's own model list does not even include the model the site is named after. Transparency 3.4/5, bringing it to 3.9: credit and refund behaviour is stated on both the Terms and the pricing FAQ, the acceptable-use terms are substantive (six categories, CSAM with NCMEC referral, deepfake and NCII bans, a reporting channel with a response target and appeals), output and commercial rights are spelled out, the prices reconcile to the cent on four surfaces including the Chinese mirror, and the legal pages are dated for this product rather than pasted in. Against that: no company, controller, address or governing-law clause anywhere, a circular contact clause, no training statement, retention as a formula, AI processors named only as categories, analytics running on the policy pages themselves without being named, no refund page, and homepage copy that contradicts the tool about what its namesake does. The same platform and app build is separately listed here as 01Router, which is disclosed rather than asserted - if the vendor confirms one operator, one answer reconciles both listings. The rating is an editorial score, not a benchmark."
   }
 ]

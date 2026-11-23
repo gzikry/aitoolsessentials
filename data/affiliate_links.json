@@ -1202,6 +1202,15 @@
       "public_href": "/go/sarah-ai/",
       "partner": false
     },
+    "minimax-h3-image": {
+      "name": "MiniMax H3 Image (minimaxh3image.com)",
+      "slug": "minimax-h3-image",
+      "official": "https://minimaxh3image.com/",
+      "destination": "https://minimaxh3image.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/minimax-h3-image/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

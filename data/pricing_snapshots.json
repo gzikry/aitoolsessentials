@@ -553,6 +553,10 @@
     "sarah-ai": {
       "date": "2026-11-22",
       "digest": "Free two-week supervised pilot, then free setup and $1 for the first month, then the plan price. Published USD prices, identical on /pricing, the pricing page's JSON-LD Offer array, /sarah-ai, /about, llms.txt and llms-full.txt: one agent $79/month (500 messages, 1 number); small brokerage $159/month for 3 agents and 2,000 texts, plus $31 per extra agent; property managers with 11 or more units $1.40 per unit per month with a $119 monthly minimum; landlords with 1 to 10 units $39/month; extra texts $12 per 500. The page states 'No other discounts. No commissions.' The pricing calculator renders 'Month 1 $1' and 'Month 2 on $79 / month'. Billing is not self-serve: the published path is the free pilot booked through Calendly or the contact form, with setup and the number arranged afterwards, so no card checkout could be seen from outside. The Terms (not the pricing page) add that subscriptions auto-renew and can be cancelled only with 30 days' written notice, with no refund for the remaining time; the Terms also give a refund for an unused purchase inside 30 days, for service failures over 7 consecutive days, and for duplicate or erroneous charges. No purchase was attempted."
+    },
+    "minimax-h3-image": {
+      "date": "2026-11-23",
+      "digest": "Monthly Lite $12.99/3,000 credits, Pro $34.99/10,000, Ultra $129.99/30,000; billed yearly $9.99 / $24.99 / $79.99 a month as $119.88 / $299.88 / $959.88 a year with credits released monthly and no rollover, badges 'Save up to 38%' and annual totals exactly twelve monthly payments. One-time packs valid 365 days: $29.99/5,000, $79.99/15,000, $189.99/40,000, $399.99/100,000, $899.99/250,000. One balance across the catalogue; failed generations refunded; Stripe checkout; USD plus tax. No company, controller, address or governing-law clause published; training unstated; retention a formula; /refund-policy 404. Verified 2026-11-23 on the rendered /pricing in both toggle states and /zh/pricing."
     }
   },
   "changes": [

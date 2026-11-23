@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-23",
-  "tools_count": 133,
+  "tools_count": 134,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -966,6 +966,13 @@
       "category": "AI Agents",
       "price": "Free two-week supervised pilot, then free setup and $1 for the first month, then the plan price. Published USD prices, identical on /pricing, the pricing page's JSON-LD Offer array, /sarah-ai, /about, llms.txt and llms-full.txt: one agent $79/month (500 messages, 1 number); small brokerage $159/month for 3 agents and 2,000 texts, plus $31 per extra agent; property managers with 11 or more units $1.40 per unit per month with a $119 monthly minimum; landlords with 1 to 10 units $39/month; extra texts $12 per 500. The page states 'No other discounts. No commissions.' The pricing calculator renders 'Month 1 $1' and 'Month 2 on $79 / month'. Billing is not self-serve: the published path is the free pilot booked through Calendly or the contact form, with setup and the number arranged afterwards, so no card checkout could be seen from outside. The Terms (not the pricing page) add that subscriptions auto-renew and can be cancelled only with 30 days' written notice, with no refund for the remaining time; the Terms also give a refund for an unused purchase inside 30 days, for service failures over 7 consecutive days, and for duplicate or erroneous charges. No purchase was attempted.",
       "url": "https://aitoolsessentials.com/tools/sarah-ai/"
+    },
+    {
+      "name": "MiniMax H3 Image (minimaxh3image.com)",
+      "slug": "minimax-h3-image",
+      "category": "Creative",
+      "price": "Monthly billing: Lite $12.99/mo (3,000 credits), Pro $34.99/mo (10,000), Ultra $129.99/mo (30,000). Billed yearly: Lite $9.99/mo, $119.88/year (36,000 credits released monthly), Pro $24.99/mo, $299.88/year (120,000), Ultra $79.99/mo, $959.88/year (360,000); the cards badge 'Save up to 38%' and the arithmetic matches the month-to-month rate exactly (119.88/12 = 9.99, 299.88/12 = 24.99, 959.88/12 = 79.99). Unused monthly subscription credits expire at the next refresh with no rollover. One-time credit packs, valid 365 days: 5,000 credits $29.99, 15,000 $79.99, 40,000 $189.99, 100,000 $399.99, 250,000 $899.99. Every tool draws on one balance; the rendered plan cards estimate up to 500 / 1,666 / 5,000 images and up to 37 / 125 / 375 videos a month at default settings. Payment is Stripe. USD, tax added at checkout; the same figures appear on /zh/pricing. Verified 2026-11-23 on the rendered /pricing in both billing toggle states (monthly $12.99 / $34.99 / $129.99; yearly $9.99 / $24.99 / $79.99) and on /zh/pricing.",
+      "url": "https://aitoolsessentials.com/tools/minimax-h3-image/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

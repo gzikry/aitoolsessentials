@@ -3296,6 +3296,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "minimax-h3-image",
+      "name": "MiniMax H3 Image (minimaxh3image.com)",
+      "category": "Creative",
+      "official_url": "https://minimaxh3image.com/",
+      "review_url": "/tools/minimax-h3-image/",
+      "price_label": "Monthly billing: Lite $12.99/mo (3,000 credits), Pro $34.99/mo (10,000), Ultra $129.99/mo (30,000). Billed yearly: Lite $9.99/mo, $119.88/year (36,000 credits released monthly), Pro $24.99/mo, $299.88/year (120,000), Ultra $79.99/mo, $959.88/year (360,000); the cards badge 'Save up to 38%' and the arithmetic matches the month-to-month rate exactly (119.88/12 = 9.99, 299.88/12 = 24.99, 959.88/12 = 79.99). Unused monthly subscription credits expire at the next refresh with no rollover. One-time credit packs, valid 365 days: 5,000 credits $29.99, 15,000 $79.99, 40,000 $189.99, 100,000 $399.99, 250,000 $899.99. Every tool draws on one balance; the rendered plan cards estimate up to 500 / 1,666 / 5,000 images and up to 37 / 125 / 375 videos a month at default settings. Payment is Stripe. USD, tax added at checkout; the same figures appear on /zh/pricing. Verified 2026-11-23 on the rendered /pricing in both billing toggle states (monthly $12.99 / $34.99 / $129.99; yearly $9.99 / $24.99 / $79.99) and on /zh/pricing.",
+      "pricing_summary": "Monthly billing: Lite $12.99/mo for 3,000 credits, Pro $34.99/mo for 10,000, Ultra $129.99/mo for 30,000. Billed yearly: Lite $9.99/mo, $119.88/year for 36,000 credits released monthly; Pro $24.99/mo, $299.88/year for 120,000; Ultra $79.99/mo, $959.88/year for 360,000; cards badge 'Save up to 38%' and the annual totals are exactly twelve monthly payments (119.88/12 = 9.99, 299.88/12 = 24.99, 959.88/12 = 79.99). Unused monthly subscription credits expire at the next refresh with no rollover. One-time credit packs valid 365 days: 5,000 credits $29.99, 15,000 $79.99, 40,000 $189.99, 100,000 $399.99, 250,000 $899.99. One balance covers every model; rendered plan cards estimate up to 500 / 1,666 / 5,000 images and up to 37 / 125 / 375 videos a month at default settings. Public model catalogue (/api/ai/router01/models) prices per model and resolution in USD, e.g. MiniMax H3 Image 1K/2K $0.0247 per image and 4K $0.0703, MiniMax H3 768p $0.038/second; the image tool shows MiniMax H3 Image at 11 credits for 1:1 at 2K by default. Stripe checkout; USD plus tax. Totals verified 2026-11-23 on the rendered /pricing in both billing toggle states and on /zh/pricing, which carries identical figures.",
+      "pricing_url": "https://minimaxh3image.com/pricing",
+      "pricing_checked_date": "2026-11-23",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "audio"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }
