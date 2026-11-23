@@ -1,7 +1,7 @@
 {
  "date": "2026-11-23",
  "monitor": "HARO / Sourcee journalist-request monitor for AIToolsEssentials",
- "run_at": "2026-11-23T17:04:19.840418+00:00",
+ "run_at": "2026-11-23T17:06:34.595011+00:00",
  "search_scope": "AI tools, AI pricing, shadow/unbudgeted AI spend, overlapping AI subscriptions, software spend, SaaS cost/credits, agentic AI cost overruns, AI vendor support value, tool consolidation, procurement budget, enterprise AI seat/token costs",
  "age_policy": "Ages are read off each request page (JSON-LD datePublished plus the rendered 'Posted ... ago' badge), never off the digest text, and every carried row's deadline field was rewritten this run from the page itself. All 365 carried URLs plus the 2 rows added today were re-fetched today: 321 of the carried rows serve HTTP 200 with the body still present, and 44 now answer HTTP 404 with the slug removed from the sitemap \u2014 the first expiries this monitor has ever observed on this source (before today the standing finding was that no page carried an expiry). 'deadline' still means the poster's own stated cutoff or a measured age. FEED MEMBERSHIP IS NOT A FRESHNESS SIGNAL: the AI topic page carries 50 slugs and 15 of them are inside today's 25-slug sitemap window; 7 tracked row(s) appear in it.",
  "platforms_checked": [
@@ -6278,7 +6278,7 @@
  "recommended_actions": [
   "SEND former-software-engineers-left-tech-after-ai-coding-tools \u2014 sendable, 7 days old, relevance medium. Route: Body says 'please DM me or email me at [email redacted]' - Sourcee redacts the address and the page publishes no handle of the poster's own. His byline page businessinsider.com/author/thibault-spirlet publishes tspirlet@businessinsider.com in a mailto link (re-probed today, HTTP 200, 321,331 bytes, . Draft at pitch-drafts-2026-11-23.md.",
   "NEW ROWS ADDED THIS RUN (2): High Point Editorial Services: cybersecurity peer review of the poster's own AI-weaponization write-ups (no route, no standing); LiveMint: testimony on everyday AI use in complex Indian languages (no route, no on-beat data). Drafted from this run's new rows: 0.",
-  "REPLIES ON RECORD: 1 of 6 sent pitches have drawn a reply \u2014 amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot (REPLIED 2026-09-18 20:39Z from jan@jansuski). Ledger reply status last checked 2026-11-21; re-check the mailbox before treating any thread as open or closed."
+  "REPLIES ON RECORD: 1 of 6 sent pitches have drawn a reply \u2014 amplemarket-growth-and-elite-customers-pricing-credits-and-duo-copilot (REPLIED 2026-09-18 20:39Z from jan@jansuski). Ledger reply status last checked 2026-11-23; re-check the mailbox before treating any thread as open or closed."
  ],
  "monitor_health": {
   "platforms_accessible": 2,
@@ -6308,10 +6308,10 @@
   "sendable_rows_crossing_tomorrow": 0,
   "rows_crossed_cold_since_last_digest": 15,
   "rows_at_ten_days_crossing_next_run": 10,
-  "pitch_draft_files_on_disk": 61,
+  "pitch_draft_files_on_disk": 62,
   "rows_named_in_a_draft_file": 9,
   "replies_to_date": 1,
-  "reply_status_checked": "2026-11-21",
+  "reply_status_checked": "2026-11-23",
   "reply_outstanding_amplemarket_thread": false,
   "shadow_ai_tools_tracked": 133,
   "shadow_ai_monthly_priced_tools": 52,
