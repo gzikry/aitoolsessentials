@@ -1,0 +1,31 @@
+{
+  "_note": "Editorial judgement for the 2026-11-23 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json (365 carried rows + 2 new window rows, all checked=2026-11-23) and _window_1123.json. Only the judgements below are typed. The sitemap window produced 25 new slugs, 2 carrying an AI token and 0 AI+spend; both AI rows were read in full and neither is on-beat or routable, so no row is drafted from the window.",
+  "new_rows": {
+    "cybersecurity-experts-review-ai-weaponization-investigation-desk": {
+      "who": "High Point Editorial Services - the banner/byline on the page; a Substack publisher, no news outlet named.",
+      "category": "AI / Security Review",
+      "contact": "No address, handle or reply link published on the request page; the only outbound link is the poster's own Substack (lnkd.in/gXPpRwvh).",
+      "relevance": "low",
+      "notes": "Asks cybersecurity experts to review AI-weaponization case write-ups from the poster's own 'Investigation Desk'. It is a peer-review request from one publisher to recognised security experts, not a request for pricing data: we are neither a cybersecurity expert nor a reviewer of weaponization reporting, and the page publishes no reply route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "nontech-users-and-ai-teams-in-india-ai-use-in-complex-indian-languages": {
+      "who": "LiveMint (livemint.com) - domain on the page; no named byline.",
+      "category": "AI / Language Use Testimony",
+      "contact": "The body says 'DMs open' but publishes no handle or address of its own; the request page carries no reply route.",
+      "relevance": "low",
+      "notes": "A LiveMint reporter seeking non-tech users, creators and AI teams building language and voice AI in India for a story on everyday AI use in complex Indian languages. It asks for first-hand testimony from inside Indian language-AI work; we hold a dated price census, not usage experience, and the page publishes no route of its own.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    }
+  },
+  "new_this_run": [
+    "25 new slugs in the sitemap window (2026-11-21T23:40:54Z -> 2026-11-23T00:42:15Z): 2 AI-token, 0 AI+spend, 0 spend-only. All 25 window bodies were fetched (25/25 HTTP 200) and read; the body scan agrees with the slug scan (2 AI hits, both already in the AI-token set) and finds 0 rows carrying a real spend token.",
+    "Neither AI row is on-beat: the cybersecurity row wants volunteer expert reviewers for one publisher's own weaponization desk, and the LiveMint row wants first-hand testimony on Indian-language AI use. Neither asks what an AI tool costs and neither publishes a route, so both are recorded and assessed rather than drafted."
+  ],
+  "why_not_drafted": [
+    "High Point Editorial Services: cybersecurity peer review of the poster's own AI-weaponization write-ups (no route, no standing)",
+    "LiveMint: testimony on everyday AI use in complex Indian languages (no route, no on-beat data)"
+  ],
+  "defects": [],
+  "extra_actions": []
+}
