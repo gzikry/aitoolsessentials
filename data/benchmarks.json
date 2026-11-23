@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-11-11",
-  "reviewed_date": "2026-11-16",
+  "snapshot_date": "2026-11-22",
+  "reviewed_date": "2026-11-23",
   "policy": {
     "title": "Benchmark evidence policy",
     "summary": "Benchmarks are supporting evidence, not our final ranking. We identify the exact model/version, source, snapshot date and harness. Product scores are not treated as model scores, and results from different harness versions are not compared directly.",
@@ -13,7 +13,7 @@
       "url": "https://arena.ai/leaderboard/text",
       "measures": "Human preference in anonymous model-vs-model battles across open-ended text tasks.",
       "use_for": "General assistants and model-family context",
-      "caveat": "A product such as ChatGPT or Claude can change its default model; Arena ranks specific model versions, not the whole product. Checked 2026-09-14 and re-checked 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: /leaderboard/text 308-redirects to /leaderboard/chat/text, which answers a Cloudflare managed challenge to plain HTTP clients (HTTP 403) and to a headless Chrome DOM dump, so this check again read the board through a persistent Chrome profile (Playwright driving the installed Chrome channel with an automation-hiding init script) and cross-read the rendered rows against the page's own embedded per-model JSON (rank, rating, confidence bounds, vote count and modelKey for all 421 listings). The board served a new snapshot dated 2026-11-11 (9,122,174 votes, 421 models), replacing the 2026-11-08 snapshot (9,091,367 votes, 420 models). Every tracked row was re-read from it and all six keep the same exact model key as before; no rating moved at integer rounding, and vote counts fell between 3 and 62 on a board whose total rose by 30,807. Newer same-board listings were again seen and deliberately NOT added as rows: grok-4.5-text (#55, 1466 +/-4, 39,122 votes), grok-4.1-thinking (#56, 1465 +/-3, 66,050 votes) and deepseek-v4-pro-high-20260813-text (#60, 1464 +/-7, 9,573 votes). This registry carries one representative exact listing per product family, and the site's generators key rows by tool_slug, so a second row for the same family would silently overwrite the first in every generated comparison rather than adding evidence."
+      "caveat": "A product such as ChatGPT or Claude can change its default model; Arena ranks specific model versions, not the whole product. Checked 2026-09-14 and re-checked 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: /leaderboard/text 308-redirects to /leaderboard/chat/text, which answers a Cloudflare managed challenge to plain HTTP clients (HTTP 403) and to a headless Chrome DOM dump, so this check again read the board through a persistent Chrome profile (Playwright driving the installed Chrome channel with an automation-hiding init script) and cross-read the rendered rows against the page's own embedded per-model JSON (rank, rating, confidence bounds, vote count and modelKey). The board served a new snapshot dated 2026-11-22 (9,241,799 votes, 427 models), replacing the 2026-11-11 snapshot (9,122,174 votes, 421 models). The snapshot re-keyed every listing - model keys now carry a four-character suffix (for example grok-4.1-xv3g) and hyphenated version numbers became dotted (claude-sonnet-4.5-...) - so the six tracked rows were re-identified by display name and organisation instead of by their old key. No rating moved at integer rounding, but every tracked rank fell and votes fell on all six, on a board whose total rose by 119,625. Newer same-board listings were again seen and deliberately NOT added as rows: grok-4.5 (#59, 1465.61, 38,965 votes), grok-4.1-thinking (#60, 1465.36, 65,914 votes) and deepseek-v4-pro-high-20260813 (#65, 1463.60, 9,529 votes). This registry carries one representative exact listing per product family, and the site's generators key rows by tool_slug, so a second row for the same family would silently overwrite the first in every generated comparison rather than adding evidence."
     },
     {
       "id": 2,
@@ -29,7 +29,7 @@
       "url": "https://www.swebench.com/verified.html",
       "measures": "Percentage of 500 human-validated real GitHub issues resolved by a coding model or agent.",
       "use_for": "Coding models and coding-agent context",
-      "caveat": "Scores depend heavily on the agent harness. mini-SWE-agent v1.x and v2.x results are not directly comparable. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: the site still publishes a machine-readable results payload on the home page (an embedded leaderboard-data JSON block covering Multilingual, Test, Verified, Lite and Multimodal). The Verified group is unchanged at 180 rows dated 2023-10-10 to 2026-02-26; the newest is still a mini-SWE-agent 2.0.0 run on Gemini 3 Pro at 69.6% resolved, and the highest score in the group is Sonar Foundation Agent + Claude 4.5 Opus at 79.2% (2025-12-05), tied by live-SWE-agent + Claude 4.5 Opus medium at 79.2% (2025-12-15). No Cursor, GitHub Copilot, Replit, Windsurf or Devin product appears in that Verified set - the only Devin-substring occurrence is an OpenHands folder named 20240725_opendevin_codeact_v1.8_claude35sonnet in the Lite group - so no product-level coding row is added from it. The page text still confirms the 500-instance human-validated subset."
+      "caveat": "Scores depend heavily on the agent harness. mini-SWE-agent v1.x and v2.x results are not directly comparable. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: the site still publishes a machine-readable results payload on the home page (an embedded leaderboard-data JSON block covering Multilingual, Test, Verified, Lite and Multimodal). The Verified group is unchanged at 180 rows dated 2023-10-10 to 2026-02-26; the newest is still a mini-SWE-agent 2.0.0 run on Gemini 3 Pro at 69.6% resolved, and the highest score in the group is Sonar Foundation Agent + Claude 4.5 Opus at 79.2% (2025-12-05), tied by live-SWE-agent + Claude 4.5 Opus medium at 79.2% (2025-12-15). No Cursor, GitHub Copilot, Replit, Windsurf or Devin product appears in that Verified set - the only Devin-substring occurrence is an OpenHands folder named 20240725_opendevin_codeact_v1.8_claude35sonnet in the Lite group - so no product-level coding row is added from it. The page text still confirms the 500-instance human-validated subset."
     },
     {
       "id": 4,
@@ -37,7 +37,7 @@
       "url": "https://github.com/LiveBench/LiveBench",
       "measures": "Objective, frequently refreshed tasks across reasoning, math, coding, language, instruction following and data analysis.",
       "use_for": "Contamination-limited general-model context",
-      "caveat": "Always state the release; questions and model configurations change between snapshots. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: the repository is live (latest commit still 2026-10-18, adding a deepseek-v4.1-flash-1017-max configuration), but its own changelog.md still ends at 2026-01-08 and the README still shows \"Top models as of 30th September 2024\". The material content sits on the website, which is branded \"LiveBench 2.0 - a challenging, contamination-free long-horizon AI benchmark\" and whose bundled release list now ends at a new 2026-11-06 release (/data/20261106/table.csv, HTTP 200, 35 model rows), followed by 2026-10-25 (/data/20261025/table.csv, 32 model rows) and 2026-10-14 (/data/20261014/table.csv, 55 model rows), all across the same seven categories (long_agentic, reasoning, coding, browser, data_analysis, research, design). No release dated after 2026-11-06 exists (probed the 2026-11-01, 2026-11-08, 2026-11-09, 2026-11-12, 2026-11-14, 2026-11-15 and 2026-11-16 table paths, all 404). Generation v1 releases run 2024-06-24 through 2026-06-25. The two generations use different task sets and must never be pooled or compared, and neither is a product-level ranking: no registry row is scored from LiveBench, which is used as contamination-limited model context only."
+      "caveat": "Always state the release; questions and model configurations change between snapshots. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: the repository is live (latest commit still 2026-10-18, adding a deepseek-v4.1-flash-1017-max configuration), but its own changelog.md still ends at 2026-01-08 and the README still shows \"Top models as of 30th September 2024\". The material content sits on the website, which is branded \"LiveBench 2.0 - a challenging, contamination-free long-horizon AI benchmark\" and whose bundled release list now ends at a new 2026-11-06 release (/data/20261106/table.csv, HTTP 200, 35 model rows), followed by 2026-10-25 (/data/20261025/table.csv, 32 model rows) and 2026-10-14 (/data/20261014/table.csv, 55 model rows), all across the same seven categories (long_agentic, reasoning, coding, browser, data_analysis, research, design). No release dated after 2026-11-06 exists (probed the 2026-11-01, 2026-11-08, 2026-11-09, 2026-11-12, 2026-11-14, 2026-11-15 and 2026-11-16 table paths, all 404). Generation v1 releases run 2024-06-24 through 2026-06-25. The two generations use different task sets and must never be pooled or compared, and neither is a product-level ranking: no registry row is scored from LiveBench, which is used as contamination-limited model context only."
     },
     {
       "id": 5,
@@ -45,7 +45,7 @@
       "url": "https://artificialanalysis.ai/methodology",
       "measures": "Independent intelligence, latency, speed, price, speech, image and video model evaluations.",
       "use_for": "Cost/speed context and non-text modality methodology",
-      "caveat": "API model measurements do not equal the complete end-user product experience. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: the methodology page is live (HTTP 200, 315,548 bytes, title \"Artificial Analysis Benchmarking Methodology\") and still serves no dated per-model score table (zero <table> elements), so no Artificial Analysis row exists in this registry."
+      "caveat": "API model measurements do not equal the complete end-user product experience. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: the methodology page is live (HTTP 200, 330,528 bytes, title \"Artificial Analysis Benchmarking Methodology\") and still serves no dated per-model score table (zero <table> elements), so no Artificial Analysis row exists in this registry."
     },
     {
       "id": 6,
@@ -53,7 +53,7 @@
       "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1",
       "measures": "Accuracy of an agent + model + reasoning-effort configuration on 89 complex containerized terminal tasks.",
       "use_for": "Coding agents and terminal-capable development tools",
-      "caveat": "Checked 2026-09-14, re-checked 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: https://www.tbench.ai/leaderboard/terminal-bench/2.1 still returns a 308 redirect to https://www.tbench.ai/?version=2.1, and that route no longer serves the 4.0 board - the host now serves Terminal-Bench 4.1 (leaderboard slug \"4-1-0\", title \"Terminal-Bench 4.1\", created 2026-11-03, updated_at 2026-11-14T06:10:26Z, 59 rows at 330 trials each, and no other board in the page payload). The 4.1 board still carries zero Cursor, Copilot, Windsurf or Replit entries: its rows cover only Claude Code, Codex, Antigravity CLI, Grok Build, Muse Code and mini-SWE-agent configurations, topped by Claude Code + Opus 5.5 at max effort (65.76% +/-3.11, 330 trials, 2026-09-22) tied by Claude Code + Fable 5.2 at max effort (65.76% +/-2.85, 330 trials, 2026-11-09). No 2.1 rows can be read from this URL on any date and no archived 2.1 board is reachable, so nothing here can move the registry's coding row; 2.1, 4.0 and 4.1 are different harness versions and are not comparable with each other. Never present this as a model-only score; keep agent, exact model, effort, trial count and integrity metadata visible."
+      "caveat": "Checked 2026-09-14, re-checked 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: https://www.tbench.ai/leaderboard/terminal-bench/2.1 still returns a 308 redirect to https://www.tbench.ai/?version=2.1, and that route does not serve the 2.1 or 4.0 board - the host now serves Terminal-Bench 4.1 (leaderboard slug \"4-1-0\", title \"Terminal-Bench 4.1\", created 2026-11-03, updated_at 2026-11-20T16:07:10Z, 67 rows at 330 trials each, and no other board in the page payload). The 4.1 board now carries its first GitHub Copilot entry - GitHub Copilot CLI + \"Copilot Fusion\" at max effort, 71.2% +/-2.9 over 330 trials, dated 2026-11-17, which is the current #1 - so the earlier statement that the board had zero Copilot, Cursor, Windsurf or Replit entries no longer holds; there is still no Cursor, Windsurf or Replit entry. The rest of the board is Claude Code, Codex, Antigravity CLI, Grok Build, Muse Code and mini-SWE-agent configurations, with Claude Code + Opus 5.5 max effort (65.8% +/-3.1, 2026-09-22) and Claude Code + Fable 5.2 max effort (65.8% +/-2.8, 2026-11-09) next. No 2.1 rows can be read from this URL on any date and no archived 2.1 board is reachable, so nothing here can move the registry's 2.1 Cursor coding row; the new GitHub Copilot result is NOT added as a row because the site's cursor-vs-github-copilot page keys rows by tool_slug and would then place a 4.1 result beside a 2.1 result. 2.1, 4.0 and 4.1 are different harness versions and are not comparable with each other. Never present this as a model-only score; keep agent, exact model, effort, trial count and integrity metadata visible."
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "url": "https://artificialanalysis.ai/image/methodology",
       "measures": "Blind pairwise image preference with exact model/version and matched prompt conditions.",
       "use_for": "Text-to-image and image-editing model context",
-      "caveat": "Keep text-to-image and editing pools separate; old model versions are historical evidence only. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: the page resolves at https://artificialanalysis.ai/methodology/image (HTTP 200, 380,677 bytes, title \"Image Generation Benchmarking Methodology\"), keeps separate text-to-image and editing sections, and serves no dated score table (zero <table> elements)."
+      "caveat": "Keep text-to-image and editing pools separate; old model versions are historical evidence only. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: the page resolves at https://artificialanalysis.ai/methodology/image (HTTP 200, 395,133 bytes, title \"Image Generation Benchmarking Methodology\"), keeps separate text-to-image and editing sections, and serves no dated score table (zero <table> elements)."
     },
     {
       "id": 8,
@@ -69,7 +69,7 @@
       "url": "https://artificialanalysis.ai/video/methodology",
       "measures": "Modality-separated video quality, latency and price comparisons.",
       "use_for": "Text-to-video and image-to-video model context",
-      "caveat": "Do not compare Elo across different video modalities or output settings. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: the page resolves at https://artificialanalysis.ai/methodology/video (HTTP 200, 430,316 bytes) and still states that each modality has its own Elo pool in the Video Arena, so silent and audio-enabled outputs are not compared directly and editing is not compared with generation. Its only <table> is the settings/parameters table (1080p, 24 FPS, 10 s, 16:9, seed 42); no dated score table is served."
+      "caveat": "Do not compare Elo across different video modalities or output settings. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: the page resolves at https://artificialanalysis.ai/methodology/video (HTTP 200, 444,822 bytes) and still states that each modality has its own Elo pool in the Video Arena, so silent and audio-enabled outputs are not compared directly and editing is not compared with generation. Its only <table> is the settings/parameters table (1080p, 24 FPS, 10 s, 16:9, seed 42); no dated score table is served."
     },
     {
       "id": 9,
@@ -77,7 +77,7 @@
       "url": "https://artificialanalysis.ai/text-to-speech/methodology",
       "measures": "Provider-voice and controlled-voice human-preference comparisons for text-to-speech.",
       "use_for": "Voice-generation model context",
-      "caveat": "Controlled-voice and provider-voice arenas answer different questions and must remain separate. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: the page resolves at https://artificialanalysis.ai/methodology/text-to-speech (HTTP 200, 457,139 bytes, title \"Text to Speech Benchmarking Methodology\"), separates the provider-voice and controlled-voice sections, and serves no dated score table (zero <table> elements)."
+      "caveat": "Controlled-voice and provider-voice arenas answer different questions and must remain separate. Checked 2026-09-21 and re-checked 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: the page resolves at https://artificialanalysis.ai/methodology/text-to-speech (HTTP 200, 473,459 bytes, title \"Text to Speech Benchmarking Methodology\"), separates the provider-voice and controlled-voice sections, and serves no dated score table (zero <table> elements)."
     },
     {
       "id": 10,
@@ -85,7 +85,7 @@
       "url": "https://raw.githubusercontent.com/harbor-framework/terminal-bench-2-1/main/leaderboard/submissions/2026-07-09-cursor-grok-4-5-none-cursor-cli.json",
       "measures": "Maintainer-verified Terminal-Bench 2.1 submission record for one exact Cursor CLI configuration.",
       "use_for": "A configuration-specific Cursor benchmark snapshot",
-      "caveat": "Checked 2026-09-14, re-checked 2026-09-21, re-hashed 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16 against the raw submission file (sha256 a73454861c91299b501637e6df6082f2f16cf9c9f6c98f07bce315189f82eb23, 29,033 bytes, byte-identical on every check): Cursor CLI 2026.07.08-0c04a8a + cursor/grok-4.5 at high effort, 79.33% +/- 1.46, 445 trials, 8.99% reward-hack disqualifications, dated 2026-07-09. Two limits sit on it: the Terminal-Bench 2.1 README states \"Community submissions are currently closed for Terminal-Bench 2.1\", so the 2.1 board is frozen, and neither the later 4.0 board nor the current 4.1 board (updated 2026-11-14) carries a Cursor entry, so there is no newer Cursor reading to compare it to. Scores from 2.1, 4.0 and 4.1 are different harness versions and must never be compared with each other."
+      "caveat": "Checked 2026-09-14, re-checked 2026-09-21, re-hashed 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23 against the raw submission file (sha256 a73454861c91299b501637e6df6082f2f16cf9c9f6c98f07bce315189f82eb23, 29,033 bytes, byte-identical on every check): Cursor CLI 2026.07.08-0c04a8a + cursor/grok-4.5 at high effort, 79.33% +/- 1.46, 445 trials, 8.99% reward-hack disqualifications, dated 2026-07-09. Two limits sit on it: the Terminal-Bench 2.1 README states \"Community submissions are currently closed for Terminal-Bench 2.1\", so the 2.1 board is frozen, and neither the later 4.0 board nor the current 4.1 board (updated 2026-11-20) carries a Cursor entry, so there is no newer Cursor reading to compare it to. Scores from 2.1, 4.0 and 4.1 are different harness versions and must never be compared with each other."
     },
     {
       "id": 11,
@@ -93,63 +93,63 @@
       "url": "https://hub.harborframework.com/datasets/terminal-bench/terminal-bench-2-1/latest",
       "measures": "The live dataset record for Terminal-Bench 2.1: which tasks the frozen board ran and which version is published.",
       "use_for": "Confirming the task set behind a Terminal-Bench 2.1 configuration score",
-      "caveat": "Checked 2026-09-14, re-checked 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16: the dataset page still describes \"Version 2.1 of Terminal-Bench\" and still serves revision 6 (package version 2.0.2, tagged latest) as its latest published revision, out of six revisions (1.0.0 through 2.0.2). The Terminal-Bench 2.1 repository independently holds 91 task entries at main (89 task directories after README.md and dataset.toml), matching the 89 tasks this dataset reports. The upstream Terminal-Bench repository now publishes three release tags - v4.1.0, v4.0.0 and v3.0.0 - and both v4.1.0 and v4.0.0 hold 68 task entries (66 task directories), so 4.x is not a \"larger\" task set than 2.1 either: 2.1, 4.0 and 4.1 are different task sets, not a small/large pair. A separate 4.1 dataset page now also resolves on this host (terminal-bench-4-1, HTTP 200). This page publishes the task list, not leaderboard scores; it cannot upgrade a 2.1 score into a 4.0 or 4.1 score."
+      "caveat": "Checked 2026-09-14, re-checked 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23: the dataset page still describes \"Version 2.1 of Terminal-Bench\" and still serves revision 6 (package version 2.0.2, tagged latest) as its latest published revision, out of six revisions (1.0.0 through 2.0.2). The Terminal-Bench 2.1 repository independently holds 91 task entries at main (89 task directories after README.md and dataset.toml), matching the 89 tasks this dataset reports. The upstream Terminal-Bench repository now publishes three release tags - v4.1.0, v4.0.0 and v3.0.0 - and both v4.1.0 and v4.0.0 hold 68 task entries (66 task directories), so 4.x is not a \"larger\" task set than 2.1 either: 2.1, 4.0 and 4.1 are different task sets, not a small/large pair. A separate 4.1 dataset page now also resolves on this host (terminal-bench-4-1, HTTP 200). This page publishes the task list, not leaderboard scores; it cannot upgrade a 2.1 score into a 4.0 or 4.1 score."
     }
   ],
   "arena_text_snapshot": [
     {
       "tool_slug": "grok",
       "model": "grok-4.1",
-      "rank": 64,
+      "rank": 69,
       "score": "1459±3",
-      "votes": 68162,
+      "votes": 68087,
       "source_id": 1,
-      "note": "Board listing key grok-4.1 (modelOrganization label \"SpaceXAI\" in this snapshot; xAI model page). Representative public xAI model listing; not necessarily the product's current default."
+      "note": "Board listing key grok-4.1-xv3g (modelOrganization label \"SpaceXAI\" in this snapshot; xAI model page). Representative public xAI model listing; not necessarily the product's current default."
     },
     {
       "tool_slug": "deepseek",
       "model": "deepseek-v4-pro",
-      "rank": 66,
+      "rank": 71,
       "score": "1458±4",
-      "votes": 56857,
+      "votes": 56644,
       "source_id": 1,
-      "note": "Board listing key deepseek-v4-pro-ch1-text, displayed as deepseek-v4-pro. Representative public DeepSeek model listing."
+      "note": "Board listing key deepseek-v4-pro-37lx, displayed as DeepSeek-V4-Pro. Representative public DeepSeek model listing."
     },
     {
       "tool_slug": "claude",
       "model": "claude-sonnet-4-5-20250929",
-      "rank": 74,
+      "rank": 81,
       "score": "1455±3",
-      "votes": 82053,
+      "votes": 81948,
       "source_id": 1,
-      "note": "Board listing key claude-sonnet-4-5-20250929 (Anthropic), displayed as Claude Sonnet 4.5 (20250929). Older public Claude listing retained for reproducible snapshot context; newer variants may rank differently."
+      "note": "Board listing key claude-sonnet-4.5-20250929-ybgq (Anthropic), displayed as Claude Sonnet 4.5 (20250929). Older public Claude listing retained for reproducible snapshot context; newer variants may rank differently."
     },
     {
       "tool_slug": "gemini",
       "model": "gemini-2.5-pro",
-      "rank": 90,
+      "rank": 95,
       "score": "1445±2",
-      "votes": 124742,
+      "votes": 124637,
       "source_id": 1,
-      "note": "Board listing key gemini-2.5-pro (Google). Specific Gemini model version, not the whole Gemini product."
+      "note": "Board listing key gemini-2.5-pro-hufk (Google). Specific Gemini model version, not the whole Gemini product."
     },
     {
       "tool_slug": "chatgpt",
       "model": "chatgpt-4o-latest-20250326",
-      "rank": 94,
+      "rank": 101,
       "score": "1443±3",
-      "votes": 81638,
+      "votes": 81621,
       "source_id": 1,
-      "note": "Board listing key chatgpt-4o-latest-20250326 (OpenAI). Historical public ChatGPT model listing; do not interpret as the current default model's rank."
+      "note": "Board listing key chatgpt-4o-latest-20250326-0t0p (OpenAI). Historical public ChatGPT model listing; do not interpret as the current default model's rank."
     },
     {
       "tool_slug": "mistral-le-chat",
       "model": "mistral-medium-3.5",
-      "rank": 121,
+      "rank": 127,
       "score": "1426±6",
-      "votes": 11647,
+      "votes": 11621,
       "source_id": 1,
-      "note": "Board listing key mistral-medium-3.5-text, displayed as mistral-medium-3.5. Representative Mistral model listing with a wider confidence interval."
+      "note": "Board listing key mistral-medium-3.5-co2e, displayed as Mistral Medium 3.5. Representative Mistral model listing with a wider confidence interval."
     }
   ],
   "coverage": {
@@ -221,7 +221,7 @@
       "run_date": "2026-07-09",
       "reward_hack_disqualification": "9.0%",
       "source_id": 10,
-      "note": "Maintainer-verified configuration snapshot, re-hashed byte-identical on 2026-09-14, 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09 and 2026-11-16. Agent, model, effort and integrity metadata are inseparable from the score. The Terminal-Bench 2.1 board is closed to new submissions and carries no later Cursor entry; the tbench.ai host now serves Terminal-Bench 4.1 (updated 2026-11-14) and neither the 4.0 nor the 4.1 board lists a Cursor configuration at all, so this remains the most recent published Cursor reading and is only valid for the 2.1 task set.",
+      "note": "Maintainer-verified configuration snapshot, re-hashed byte-identical on 2026-09-14, 2026-09-21, 2026-09-28, 2026-10-05, 2026-10-12, 2026-10-19, 2026-10-26, 2026-11-09, 2026-11-16 and 2026-11-23. Agent, model, effort and integrity metadata are inseparable from the score. The Terminal-Bench 2.1 board is closed to new submissions and carries no later Cursor entry; the tbench.ai host now serves Terminal-Bench 4.1 (updated 2026-11-20), whose current #1 row is GitHub Copilot CLI + Copilot Fusion, and neither the 4.0 nor the 4.1 board lists a Cursor configuration at all, so this remains the most recent published Cursor reading and is only valid for the 2.1 task set.",
       "dataset_source_id": 11
     }
   ],
@@ -273,16 +273,16 @@
       ]
     }
   ],
-  "previous_snapshot_date": "2026-11-08",
-  "snapshot_summary": "Arena Text published a new snapshot dated 11 Nov 2026 (9,122,174 votes across 421 models), replacing the 8 Nov 2026 snapshot this file previously pinned (9,091,367 votes across 420 models). All six tracked listings were re-read from it and all six keep the same exact model key as before. No rating moved at the board's integer rounding. Five tracked ranks slipped: Grok 4.1 to #64, DeepSeek V4 Pro to #66, Claude Sonnet 4.5 to #74, Gemini 2.5 Pro to #90 and ChatGPT-4o-latest to #94, while Mistral Medium 3.5 rose one place to #121, all on a board that added one listing and 30,807 votes. Votes fell on all six rows by between 3 and 62, a re-filtering effect rather than a signal about the tracked models.",
+  "previous_snapshot_date": "2026-11-11",
+  "snapshot_summary": "Arena Text published a new snapshot dated 22 Nov 2026 (9,241,799 votes across 427 models), replacing the 11 Nov 2026 snapshot this file previously pinned (9,122,174 votes across 421 models). The snapshot re-keyed every listing, so the six tracked rows were re-identified by display name and organisation rather than by their old model key. No rating moved at the board's integer rounding, but all six tracked ranks fell: Grok 4.1 to #69, DeepSeek-V4-Pro to #71, Claude Sonnet 4.5 to #81, Gemini 2.5 Pro to #95, ChatGPT-4o Latest to #101 and Mistral Medium 3.5 to #127, on a board that added six listings and 119,625 votes. Votes fell on all six rows by between 17 and 213, a re-filtering effect rather than a signal about the tracked models.",
   "arena_text_changes": [
     {
       "tool_slug": "grok",
       "model": "grok-4.1",
-      "old_rank": 62,
-      "new_rank": 64,
-      "old_votes": 68204,
-      "new_votes": 68162,
+      "old_rank": 64,
+      "new_rank": 69,
+      "old_votes": 68162,
+      "new_votes": 68087,
       "score_changed": false,
       "old_score": "1459±3",
       "new_score": "1459±3"
@@ -290,10 +290,10 @@
     {
       "tool_slug": "deepseek",
       "model": "deepseek-v4-pro",
-      "old_rank": 64,
-      "new_rank": 66,
-      "old_votes": 56904,
-      "new_votes": 56857,
+      "old_rank": 66,
+      "new_rank": 71,
+      "old_votes": 56857,
+      "new_votes": 56644,
       "score_changed": false,
       "old_score": "1458±4",
       "new_score": "1458±4"
@@ -301,10 +301,10 @@
     {
       "tool_slug": "claude",
       "model": "claude-sonnet-4-5-20250929",
-      "old_rank": 73,
-      "new_rank": 74,
-      "old_votes": 82115,
-      "new_votes": 82053,
+      "old_rank": 74,
+      "new_rank": 81,
+      "old_votes": 82053,
+      "new_votes": 81948,
       "score_changed": false,
       "old_score": "1455±3",
       "new_score": "1455±3"
@@ -312,10 +312,10 @@
     {
       "tool_slug": "gemini",
       "model": "gemini-2.5-pro",
-      "old_rank": 88,
-      "new_rank": 90,
-      "old_votes": 124804,
-      "new_votes": 124742,
+      "old_rank": 90,
+      "new_rank": 95,
+      "old_votes": 124742,
+      "new_votes": 124637,
       "score_changed": false,
       "old_score": "1445±2",
       "new_score": "1445±2"
@@ -323,10 +323,10 @@
     {
       "tool_slug": "chatgpt",
       "model": "chatgpt-4o-latest-20250326",
-      "old_rank": 92,
-      "new_rank": 94,
-      "old_votes": 81673,
-      "new_votes": 81638,
+      "old_rank": 94,
+      "new_rank": 101,
+      "old_votes": 81638,
+      "new_votes": 81621,
       "score_changed": false,
       "old_score": "1443±3",
       "new_score": "1443±3"
@@ -334,62 +334,62 @@
     {
       "tool_slug": "mistral-le-chat",
       "model": "mistral-medium-3.5",
-      "old_rank": 122,
-      "new_rank": 121,
-      "old_votes": 11650,
-      "new_votes": 11647,
+      "old_rank": 121,
+      "new_rank": 127,
+      "old_votes": 11647,
+      "new_votes": 11621,
       "score_changed": false,
       "old_score": "1426±6",
       "new_score": "1426±6"
     }
   ],
   "source_checks": {
-    "checked_on": "2026-11-16",
+    "checked_on": "2026-11-23",
     "results": [
       {
         "source_id": 1,
         "status": "live-snapshot-changed",
-        "detail": "New snapshot: dated 2026-11-11 (page <time datetime=\"2026-11-11T14:00:00.000Z\">), 9,122,174 votes, 421 models (was 2026-11-08 / 9,091,367 / 420). /leaderboard/text still 308-redirects to /leaderboard/chat/text; curl returns HTTP 403 behind Cloudflare and both headless and freshly-profiled headed Chrome stalled on the 'Just a moment' challenge, so the board was read through a persistent Chrome profile (Playwright, installed Chrome channel, automation-hiding init script) and the rendered rows were cross-read against the page's own embedded per-model JSON - 421 distinct modelKey records, matching the 421 models and 9,122,174 votes the page header reports. All six tracked rows updated: grok-4.1 #64 1459+/-3 68,162; deepseek-v4-pro #66 1458+/-4 56,857; claude-sonnet-4-5-20250929 #74 1455+/-3 82,053; gemini-2.5-pro #90 1445+/-2 124,742; chatgpt-4o-latest-20250326 #94 1443+/-3 81,638; mistral-medium-3.5 #121 1426+/-6 11,647. No rating moved at integer rounding; five ranks slipped (four by two places, one by one) and one rose one place; vote deltas ran from -3 to -62 while the board total rose 30,807. Newer same-board listings grok-4.5-text (#55, 1466+/-4, 39,122), grok-4.1-thinking (#56, 1465+/-3, 66,050) and deepseek-v4-pro-high-20260813-text (#60, 1464+/-7, 9,573) were again left out, because generators key rows by tool_slug and a duplicate family row would overwrite the existing one."
+        "detail": "New snapshot: dated 2026-11-22 (page <time datetime=\"2026-11-22T17:00:00.000Z\">), 9,241,799 votes, 427 models (was 2026-11-11 / 9,122,174 / 421). /leaderboard/text still 308-redirects to /leaderboard/chat/text; this check again read the board through a persistent Chrome profile (Playwright, installed Chrome channel, automation-hiding init script), the 'Just a moment' Cloudflare challenge clearing on the first poll, and the rendered rows were cross-read against the page's own embedded per-model JSON - 427 distinct modelKey records, matching the 427 models and 9,241,799 votes the page header reports. The snapshot re-keyed every listing: model keys now carry a four-character suffix and hyphenated version numbers became dotted, so the six tracked rows were re-identified by display name, organisation and rating. All six updated: grok-4.1 (key grok-4.1-xv3g) #69 1459+/-3 68,087; deepseek-v4-pro (deepseek-v4-pro-37lx) #71 1458+/-4 56,644; claude-sonnet-4.5-20250929 (claude-sonnet-4.5-20250929-ybgq) #81 1455+/-3 81,948; gemini-2.5-pro (gemini-2.5-pro-hufk) #95 1445+/-2 124,637; chatgpt-4o-latest-20250326 (chatgpt-4o-latest-20250326-0t0p) #101 1443+/-3 81,621; mistral-medium-3.5 (mistral-medium-3.5-co2e) #127 1426+/-6 11,621. No rating moved at integer rounding; all six ranks fell and votes fell on all six (deltas -17 to -213) while the board total rose 119,625. Newer same-board listings grok-4.5 (#59, 1465.61, 38,965), grok-4.1-thinking (#60, 1465.36, 65,914) and deepseek-v4-pro-high-20260813 (#65, 1463.60, 9,529) were again left out, because generators key rows by tool_slug and a duplicate family row would overwrite the existing one."
       },
       {
         "source_id": 2,
         "status": "live",
-        "detail": "Arena-Rank methodology article live at /blog/arena-rank (HTTP 200, 306,710 bytes); still describes Bradley-Terry ratings fitted on pairwise preference data with 95% confidence intervals and reweighting for models with fewer battles. No scoring change."
+        "detail": "Arena-Rank methodology article live at /blog/arena-rank (HTTP 200, 318,445 bytes); still describes Bradley-Terry ratings fitted on pairwise preference data with 95% confidence intervals and reweighting for models with fewer battles. No scoring change."
       },
       {
         "source_id": 3,
         "status": "live-leaderboard-readable",
-        "detail": "Machine-readable leaderboard-data JSON block still served on the home page: groups Multilingual (13 rows), Test (24), Verified (180), Lite (84), Multimodal (22). Verified re-counted at 180 rows, 2023-10-10 to 2026-02-26; top score Sonar Foundation Agent + Claude 4.5 Opus 79.2% (2025-12-05) tied by live-SWE-agent + Claude 4.5 Opus medium 79.2% (2025-12-15); newest row mini-SWE-agent 2.0.0 on Gemini 3 Pro 69.6% (2026-02-26). Zero Cursor/Copilot/Windsurf/Replit occurrences; the single Devin substring is an OpenHands folder name in the Lite group, so no tracked end-user product row changed."
+        "detail": "Machine-readable leaderboard-data JSON block still served on the home page: groups Multilingual (13 rows), Test (24), Verified (180), Lite (84), Multimodal (22). Verified re-counted at 180 rows, 2023-10-10 to 2026-02-26; top score Sonar Foundation Agent + Claude 4.5 Opus 79.2% (2025-12-05) tied by live-SWE-agent + Claude 4.5 Opus medium 79.2% (2025-12-15); newest row mini-SWE-agent 2.0.0 on Gemini 3 Pro 69.6% (2026-02-26). Zero Cursor/Copilot/Windsurf/Replit occurrences; the two Devin substrings are OpenHands folder names in the Lite group, so no tracked end-user product row changed."
       },
       {
         "source_id": 4,
-        "status": "release-pinned-changed",
-        "detail": "Repository active, latest commit unchanged at 2026-10-18; changelog.md still ends 2026-01-08; README still shows 30 Sep 2024 models. The bundled release list now ends at a NEW LiveBench 2.0 release dated 2026-11-06 (/data/20261106/table.csv, HTTP 200, 35 model rows), ahead of 2026-10-25 (32 rows) and 2026-10-14 (55 rows), all with the same 7 categories. No release after 2026-11-06: the 2026-11-01, 2026-11-08, 2026-11-09, 2026-11-12, 2026-11-14, 2026-11-15 and 2026-11-16 table paths all return 404. Two different task sets across generations: never pooled or compared, and neither is a product-level ranking - no registry row is scored from LiveBench."
+        "status": "release-pinned",
+        "detail": "Repository active, latest commit unchanged at 2026-10-18 (GitHub commits feed); changelog.md still ends 2026-01-08; README still shows 30 Sep 2024 models. The bundled release list still ends at 2026-11-06 (/data/20261106/table.csv, HTTP 200, 35 model rows), ahead of 2026-10-25 (32 rows) and 2026-10-14 (55 rows), all with the same 7 categories. No newer release: probed the 2026-11-01 through 2026-11-05, 2026-11-07 through 2026-11-12, 2026-11-13 through 2026-11-18, 2026-11-19, 2026-11-20, 2026-11-21, 2026-11-22 and 2026-11-23 table paths, all 404. Two different task sets across generations: never pooled or compared, and neither is a product-level ranking - no registry row is scored from LiveBench."
       },
       {
         "source_id": 5,
         "status": "live-methodology-only",
-        "detail": "Methodology page live (HTTP 200, 315,548 bytes, title 'Artificial Analysis Benchmarking Methodology'); zero <table> elements, so still no dated per-model score table and no Artificial Analysis row was changed."
+        "detail": "Methodology page live (HTTP 200, 330,528 bytes, title 'Artificial Analysis Benchmarking Methodology'); zero <table> elements, so still no dated per-model score table and no Artificial Analysis row was changed."
       },
       {
         "source_id": 6,
-        "status": "blocked-superseded",
-        "detail": "308 redirect to ?version=2.1 confirmed again, but the host no longer serves the 4.0 board: the page payload now contains a single leaderboard, slug '4-1-0', title 'Terminal-Bench 4.1', created 2026-11-03, updated_at 2026-11-14T06:10:26Z. It parses to 59 rows at 330 trials each, with zero occurrences of 'Cursor', 'Copilot', 'Windsurf' or 'Replit'. Top rows: Claude Code + Opus 5.5 max effort 65.76% +/-3.11 (2026-09-22) and Claude Code + Fable 5.2 max effort 65.76% +/-2.85 (2026-11-09). No 2.1 rows readable on any date; no Cursor entry on 4.0 or 4.1."
+        "status": "live-leaderboard-changed",
+        "detail": "308 redirect to ?version=2.1 confirmed again; the host still serves Terminal-Bench 4.1 (slug '4-1-0', title 'Terminal-Bench 4.1', created 2026-11-03, updated_at 2026-11-20T16:07:10Z), now 67 rows at 330 trials each (was 59). The board's first GitHub Copilot entry now exists and is #1: GitHub Copilot CLI + 'Copilot Fusion' max effort, 71.2% +/-2.9, 330 trials, dated 2026-11-17 - so the earlier 'zero Copilot entries' note is corrected. Still zero occurrences of 'Cursor', 'Windsurf' or 'Replit'. Next rows: Claude Code + Opus 5.5 max effort 65.8% +/-3.1 (2026-09-22) and Claude Code + Fable 5.2 max effort 65.8% +/-2.8 (2026-11-09). No 2.1 rows readable on any date and no Cursor entry on 4.0 or 4.1, so the registry's 2.1 Cursor coding row is unchanged; the new Copilot 4.1 result was NOT added as a row because a 4.1 row would sit beside the 2.1 Cursor row on cursor-vs-github-copilot."
       },
       {
         "source_id": 7,
         "status": "live-methodology-only",
-        "detail": "Image methodology page live at /methodology/image (HTTP 200, 380,677 bytes, title 'Image Generation Benchmarking Methodology'); separate text-to-image and editing pools; zero <table> elements, no dated score table served."
+        "detail": "Image methodology page live at /methodology/image (HTTP 200, 395,133 bytes, title 'Image Generation Benchmarking Methodology'); separate text-to-image and editing pools; zero <table> elements, no dated score table served."
       },
       {
         "source_id": 8,
         "status": "live-methodology-only",
-        "detail": "Video methodology page live at /methodology/video (HTTP 200, 430,316 bytes); states each modality has its own Elo pool in the Video Arena. Its single <table> is still the settings/parameters table (1080p, 24 FPS, 10 s, 16:9, seed 42), not scores."
+        "detail": "Video methodology page live at /methodology/video (HTTP 200, 444,822 bytes); states each modality has its own Elo pool in the Video Arena. Its single <table> is still the settings/parameters table (1080p, 24 FPS, 10 s, 16:9, seed 42), not scores."
       },
       {
         "source_id": 9,
         "status": "live-methodology-only",
-        "detail": "Text-to-speech methodology page live at /methodology/text-to-speech (HTTP 200, 457,139 bytes, title 'Text to Speech Benchmarking Methodology'), separating provider-voice and controlled-voice arenas; zero <table> elements, no score table served."
+        "detail": "Text-to-speech methodology page live at /methodology/text-to-speech (HTTP 200, 473,459 bytes, title 'Text to Speech Benchmarking Methodology'), separating provider-voice and controlled-voice arenas; zero <table> elements, no score table served."
       },
       {
         "source_id": 10,
@@ -399,7 +399,7 @@
       {
         "source_id": 11,
         "status": "live-unchanged",
-        "detail": "Version 2.1 and rev. 6 (package version 2.0.2, tagged latest) confirmed on the rendered dataset page, out of six revisions. The terminal-bench-2-1 repository still holds 91 task entries at main (89 task directories). The upstream terminal-bench repository now publishes tags v4.1.0, v4.0.0 and v3.0.0; both v4.1.0 and v4.0.0 hold 68 task entries (66 task directories). A separate terminal-bench-4-1 dataset page also resolves on this host (HTTP 200)."
+        "detail": "Version 2.1 and rev. 6 (package version 2.0.2, tagged latest) confirmed on the rendered dataset page (currentRevision 6, six revisions 1.0.0 through 2.0.2). The terminal-bench-2-1 repository still holds 91 task entries at main (89 task directories). The upstream terminal-bench repository now publishes tags v4.1.0, v4.0.0 and v3.0.0; both v4.1.0 and v4.0.0 hold 68 task entries (66 task directories). A separate terminal-bench-4-1 dataset page also resolves on this host (HTTP 200)."
       }
     ]
   }
