@@ -1,6 +1,6 @@
-# Submission lanes (draft policy, needs George's go)
+# Submission lanes (adopted policy)
 
-Drafted 2026-11-24. Nothing here is in force until George approves it. Until then the intake run keeps its current behavior.
+Drafted and adopted 2026-11-24: George approved this policy as written. From 2026-11-24 the intake run follows the two lanes below. Free submissions received on or after 2026-11-24 go into the queue in `admin/held-submissions.md` and are published no earlier than 14 days after receipt. Sending the acknowledgement email below still needs George's separate go.
 
 ## Why
 
