@@ -247,8 +247,11 @@ def main() -> None:
     article = (REPO / "articles" / "claude-code-vs-cursor-vs-copilot.html").read_text(encoding="utf-8")
     if 'href="/compare/ai-coding-assistants/"' not in article:
         errors.append("claude-code comparison does not link the calculator")
-    if "Independent math" not in page or "buy.stripe.com/cNi00ideNbpb8O32az0x204" not in page:
-        errors.append("coding hub missing the audit receipt footer")
+    # The $497 audit is parked off the front door (2026-11-24); the receipt points at price alerts.
+    if "Independent math" not in page or 'href="/price-changes/#price-alert"' not in page:
+        errors.append("coding hub missing the receipt footer")
+    if "buy.stripe.com/cNi00ideNbpb8O32az0x204" in page:
+        errors.append("coding hub still pitches the parked $497 audit")
     if 'href="/sponsor/"' not in page or 'href="/go/cursor/"' not in page:
         errors.append("coding hub missing sponsor or switch hop")
     home_bill = (REPO / "index.html").read_text(encoding="utf-8")

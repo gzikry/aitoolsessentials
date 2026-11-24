@@ -28,12 +28,13 @@ def main() -> None:
         errors.append("Do not invent a new Whop plan id")
 
     home = (ROOT / "index.html").read_text()
-    if PREMIUM_URL not in home:
-        errors.append("Homepage missing the live Stripe Premium checkout")
+    # Premium and the $497 audit are parked off the front door (2026-11-24).
+    if PREMIUM_URL in home:
+        errors.append("Homepage still carries the Premium checkout while it is parked")
     if "promo=LAUNCH50" in home:
         errors.append("Homepage still prefills LAUNCH50")
-    if "$12" not in home:
-        errors.append("Homepage must keep $12/mo visible near Premium upgrade copy")
+    if "$497" in home:
+        errors.append("Homepage still pitches the parked $497 audit")
     if home.count(JOIN_LABEL) > 2:
         errors.append("Homepage repeats Join more than mid-page upgrade + footer")
     subscribe = home[home.find('id="subscribe"'): home.find('id="subscribe"') + 1200]
@@ -55,8 +56,8 @@ def main() -> None:
         errors.append("Homepage still sells Premium as pay $12 to stop paying for AI")
     if "Three paths" in home or "Essential categories" in home or "AIT LEAD MAGNET" in home:
         errors.append("Homepage is still the fat pre-slim page")
-    if home.count("AIT HOMEPAGE PREMIUM BAND START") != 1:
-        errors.append("Homepage must keep exactly one Premium band")
+    if home.count("AIT HOMEPAGE ALERT BAND START") != 1 or "AIT HOMEPAGE PREMIUM BAND START" in home:
+        errors.append("Homepage must have exactly one price-alert band and no Premium band")
     if home.count('id="subscribe"') != 1:
         errors.append("Homepage must keep exactly one #subscribe panel")
     if "Beehiiv form" in home or 'beehiiv.com/subscribe"' in home:
