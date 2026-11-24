@@ -27,10 +27,15 @@ def main() -> None:
     if 'href="/newsletter/2026-w47.html"' not in committed_w45 or "Next · Issue 10 ·" not in committed_w45:
         errors.append("committed w45 pager missing the next issue")
     committed_w47 = _pager((REPO / "newsletter" / "2026-w47.html").read_text(encoding="utf-8"))
-    if "newsletter-pager-next" in committed_w47:
-        errors.append("committed w47 pager invented a newer issue")
+    if 'href="/newsletter/2026-w48.html"' not in committed_w47 or "Next · Issue 11 ·" not in committed_w47:
+        errors.append("committed w47 pager missing the next issue")
     if "Previous · Issue 8 · Synthesia’s $9 Starter lasts one month" not in committed_w47:
         errors.append("committed w47 pager missing the previous issue")
+    committed_w48 = _pager((REPO / "newsletter" / "2026-w48.html").read_text(encoding="utf-8"))
+    if "newsletter-pager-next" in committed_w48:
+        errors.append("committed w48 pager invented a newer issue")
+    if "Previous · Issue 10 · Gemini now has a $4.99 plan" not in committed_w48:
+        errors.append("committed w48 pager missing the previous issue")
     root = Path(tempfile.mkdtemp())
     shutil.copytree(REPO / "admin" / "newsletter", root / "admin" / "newsletter")
     shutil.copytree(REPO / "newsletter", root / "newsletter")
@@ -77,8 +82,8 @@ def main() -> None:
     if "{{{RESEND_UNSUBSCRIBE_URL}}}" in w45_page:
         errors.append("w45 published the send placeholder")
     w47_page = (root / "newsletter" / "2026-w47.html").read_text(encoding="utf-8")
-    if "newsletter-pager-next" in w47_page:
-        errors.append("w47 invented a newer issue")
+    if 'href="/newsletter/2026-w48.html"' not in w47_page or "Next · Issue 11 ·" not in w47_page:
+        errors.append("w47 missing the next issue")
     if "Previous · Issue 8 · Synthesia’s $9 Starter lasts one month" not in w47_page:
         errors.append("w47 missing the previous issue")
     if "Issue 10 · 17 Nov 2026" not in w47_page or "Gemini now has a $4.99 plan" not in w47_page:
@@ -91,6 +96,21 @@ def main() -> None:
         errors.append("w47 missing keep/test/cut paragraphs")
     if "<table" in w47_page:
         errors.append("w47 public page kept an email table")
+    w48_page = (root / "newsletter" / "2026-w48.html").read_text(encoding="utf-8")
+    if "newsletter-pager-next" in w48_page:
+        errors.append("w48 invented a newer issue")
+    if "Previous · Issue 10 · Gemini now has a $4.99 plan" not in w48_page:
+        errors.append("w48 missing the previous issue")
+    if "Issue 11 · 24 Nov 2026" not in w48_page or "Firefly Pro is $9.99 until 6 Dec" not in w48_page:
+        errors.append("w48 missing the issue line or headline")
+    if "Tue 24 Nov 2026" in w48_page:
+        errors.append("w48 public page kept the weekday")
+    if "{{{RESEND_UNSUBSCRIBE_URL}}}" in w48_page:
+        errors.append("w48 published the send placeholder")
+    if "<strong>KEEP.</strong>" not in w48_page or "<strong>TEST FIRST.</strong>" not in w48_page or "<strong>CUT.</strong>" not in w48_page:
+        errors.append("w48 missing keep/test/cut paragraphs")
+    if "<table" in w48_page:
+        errors.append("w48 public page kept an email table")
     if "Issue 7 · 27 Oct 2026" not in w44_page or "v0’s $20 tier is closed to new signups" not in w44_page:
         errors.append("w44 missing the issue line or headline")
     if 'href="/compare/ai-app-builders/"' not in w44_page:
@@ -109,7 +129,7 @@ def main() -> None:
     if 'href="/subscribe/">Get the free email' not in w38_page:
         errors.append("w38 missing the subscribe CTA")
     sitemap = (REPO / "sitemap.xml").read_text(encoding="utf-8")
-    for slug in ("2026-w47.html", "2026-w45.html", "2026-w44.html", "2026-w43.html", "2026-w42.html", "2026-w38.html", "2026-w35.html"):
+    for slug in ("2026-w48.html", "2026-w47.html", "2026-w45.html", "2026-w44.html", "2026-w43.html", "2026-w42.html", "2026-w38.html", "2026-w35.html"):
         if f"https://aitoolsessentials.com/newsletter/{slug}" not in sitemap:
             errors.append(f"sitemap missing {slug}")
     issue1 = (root / "newsletter" / "2026-w35.html").read_text(encoding="utf-8")
@@ -134,11 +154,14 @@ def main() -> None:
         errors.append("w45 missing the archive back-link")
     if 'href="/newsletter/">← All past issues' not in w47_page:
         errors.append("w47 missing the archive back-link")
+    if 'href="/newsletter/">← All past issues' not in w48_page:
+        errors.append("w48 missing the archive back-link")
     if "george" in w45_page.casefold():
         errors.append("w45 uses a personal name")
     if "1090 West Foothill, Claremont, CA 91711" not in w45_page:
         errors.append("w45 missing the postal address")
     hub = (root / "newsletter" / "index.html").read_text(encoding="utf-8")
+    w48 = hub.find("/newsletter/2026-w48.html")
     w47 = hub.find("/newsletter/2026-w47.html")
     w45 = hub.find("/newsletter/2026-w45.html")
     w44 = hub.find("/newsletter/2026-w44.html")
@@ -146,8 +169,10 @@ def main() -> None:
     w42 = hub.find("/newsletter/2026-w42.html")
     w38 = hub.find("/newsletter/2026-w38.html")
     w35 = hub.find("/newsletter/2026-w35.html")
-    if not (0 <= w47 < w45 < w44 < w43 < w42 < w38 < w35):
-        errors.append(f"archive order is {w47}, {w45}, {w44}, {w43}, {w42}, {w38}, {w35}")
+    if not (0 <= w48 < w47 < w45 < w44 < w43 < w42 < w38 < w35):
+        errors.append(f"archive order is {w48}, {w47}, {w45}, {w44}, {w43}, {w42}, {w38}, {w35}")
+    if "Adobe, ElevenLabs, Slack and TinyCommand all cut the first payment this month. The renewal stays at list, so price the year, not the month." not in hub:
+        errors.append("archive index dropped the issue 11 dek")
     if "Google, OpenAI and xAI all sell a chat plan under $10 now, and the $100 tiers bundle API credits. A second $20 assistant is the easy cut." not in hub:
         errors.append("archive index dropped the issue 10 dek")
     if "Synthesia cut its Starter renewal from $29 to $19 and put $9 on the first month. You still need only one AI avatar seat." not in hub:
@@ -174,6 +199,11 @@ def main() -> None:
         errors.append(f"w47 draft parsed as issue {parsed47.issue} {parsed47.when!r}")
     if parsed47.title != "Gemini now has a $4.99 plan":
         errors.append(f"w47 title parsed as {parsed47.title!r}")
+    parsed48 = parse_draft((REPO / "admin" / "newsletter" / "2026-w48-draft.html").read_text(encoding="utf-8"), "2026-w48")
+    if parsed48.when != "Tue 24 Nov 2026" or parsed48.issue != 11:
+        errors.append(f"w48 draft parsed as issue {parsed48.issue} {parsed48.when!r}")
+    if parsed48.title != "Firefly Pro is $9.99 until 6 Dec":
+        errors.append(f"w48 title parsed as {parsed48.title!r}")
     if "Sonaopus is $99 once" not in hub or "The AI bill you forgot to cancel" not in hub:
         errors.append("archive index dropped an issue")
     if "Issues 2 and 3 were not published." not in hub:

@@ -129,6 +129,25 @@ def main() -> None:
             errors.append(f"w47 subject was {subject!r}")
     if (REPO / "admin" / "newsletter" / "2026-w47.approved").exists():
         errors.append("w47 approval file must not be committed")
+    draft48 = (REPO / "admin" / "newsletter" / "2026-w48-draft.html").read_text(encoding="utf-8")
+    try:
+        html = email_html(draft48)
+    except ValueError as exc:
+        errors.append(f"w48 draft refused: {exc}")
+    else:
+        if "{{{RESEND_UNSUBSCRIBE_URL}}}" not in html:
+            errors.append("w48 broadcast missing the Resend unsubscribe URL")
+        if POSTAL_ADDRESS not in html or "\u2014 AIToolsEssentials" not in html:
+            errors.append("w48 broadcast missing the footer or the brand sign-off")
+        if "george" in html.casefold():
+            errors.append("w48 broadcast uses a personal name")
+        if "mailto:aitoolsessentials@gmail.com?subject=Unsubscribe%20Keep%2C%20Test%2C%20Cut" in html:
+            errors.append("w48 broadcast still uses the mailto unsubscribe")
+        subject = (REPO / "admin" / "newsletter" / "2026-w48-subject.txt").read_text(encoding="utf-8").strip()
+        if subject != "Firefly Pro is $9.99 until 6 Dec":
+            errors.append(f"w48 subject was {subject!r}")
+    if (REPO / "admin" / "newsletter" / "2026-w48.approved").exists():
+        errors.append("w48 approval file must not be committed")
     if errors:
         raise SystemExit("\n".join(errors))
 

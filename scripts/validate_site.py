@@ -1005,6 +1005,7 @@ def main():
     if newsletter_hub.exists():
         hub_html = newsletter_hub.read_text()
         for slug, title in (
+            ('2026-w48.html', 'Firefly Pro is $9.99 until 6 Dec'),
             ('2026-w47.html', 'Gemini now has a $4.99 plan'),
             ('2026-w45.html', 'Synthesia’s $9 Starter lasts one month'),
             ('2026-w44.html', 'v0’s $20 tier is closed to new signups'),

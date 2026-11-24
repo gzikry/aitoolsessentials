@@ -1,0 +1,47 @@
+KEEP, TEST, CUT · Issue 11 · Tue 24 Nov 2026
+
+Firefly Pro is $9.99 until 6 Dec
+Adobe, ElevenLabs, Slack and TinyCommand all cut the first payment this month. The renewal stays at list, so price the year, not the month.
+
+THIS WEEK’S CALL: BLACK FRIDAY AI DEALS
+KEEP: Any plan you’d pay list for. Firefly (https://aitoolsessentials.com/tools/adobe-firefly/) Standard is $9.99 a month with 2,000 credits, checked 14 Nov.
+TEST FIRST: Firefly Pro at $9.99 a month for six months, then $19.99. The offer ends 6 Dec.
+CUT: A deal you’d only buy because it ends this week.
+
+This is the week every subscription on your card gets a cheaper-looking twin. Most of what we logged isn’t a lower price. It’s a lower first payment. On our 14 Nov checks, Adobe listed Firefly Pro at $19.99 a month, or $9.99 for the first six months if you sign up before 6 Dec. ElevenLabs (https://aitoolsessentials.com/tools/elevenlabs/) showed its $22 Creator plan at $11 for the first month. Slack (https://aitoolsessentials.com/tools/slack-ai/) was running 50% off for three months on eligible Pro and Business+ purchases.
+
+PRICE THE PROMO AT MONTH SEVEN
+
+Do the year, not the month. Firefly Pro on the promo is $59.94 for six months, then $119.94 for the next six at $19.99. That’s $179.88 in year one against $239.88 at list. A real saving, if Pro is the plan you’d want anyway. If Standard at $9.99 already covers you, the promo isn’t a discount. It’s an upgrade with a delayed bill. Slack’s deal works the same way, just multiplied by seats: half off for three months, then full price on every user.
+
+ElevenLabs is the same shape over a shorter window: $11 once, then $22. Its annual billing equals ten monthly payments, which works out to $18.33 a month for Creator. If you’d keep it a year, that’s the lower number, and it isn’t a one-month price. Unused paid credits roll over for up to two months, so one slow month isn’t wasted.
+
+ELEVEN FREE MONTHS STILL RENEW
+
+TinyCommand (https://aitoolsessentials.com/tools/tinycommand/)’s Black Friday offer, checked 21 Nov, is the boldest one we’ve logged. On the yearly plan you pay for month one only: $19 for Basic, $49 for Professional. Months two to twelve are free. From month 13 it renews at the normal yearly price, $199 or $499. The window closes 7 Dec at 11:59 PM ET. For scale, Basic billed monthly is $19 a month, or $228 a year.
+
+That’s a good deal on a tool you’ll use, and a $199 surprise next November on one you won’t. The risk isn’t the first charge. It’s a renewal you set up a year before you’ll think about it. Before you pay for any of these, put the list-price renewal date in your calendar. If you wouldn’t pay list on that date, skip the deal.
+
+PRICING WATCH (Four Black Friday prices on tools we track, each next to the price it turns into.)
+- Adobe Firefly · 14 Nov 2026 · Promo: Pro $19.99/mo, $9.99/mo for the first 6 months · Pro Plus $49.99/mo, $19.99/mo for 6 months · both offers end 6 Dec · Standard $9.99/mo unchanged
+- ElevenLabs · 14 Nov 2026 · Promo: Creator $22/mo, $11 for the first month · annual billing = 10 monthly payments ($18.33/mo for Creator) · Starter $6/mo
+- Slack · 14 Nov 2026 · Promo: Pro $8.75/user/mo monthly or $7.25 annually · Business+ $18 or $15 · 50% off for 3 months on eligible Pro and Business+ purchases
+- TinyCommand · 21 Nov 2026 · New tier: Black Friday yearly plan: pay month one only ($19 Basic / $49 Professional / $149 Agency), renews at $199 / $499 / $1,499 from month 13 · closes 7 Dec
+Prices checked 14 Nov 2026 except TinyCommand, checked 21 Nov 2026.
+Full tracker: https://aitoolsessentials.com/pricing-watch/
+
+WORTH A LOOK
+Unblurfy sells credits that don’t expire
+Unblurfy (https://aitoolsessentials.com/tools/unblurfy/) rebuilds detail in blurry, pixelated or too-small photos, then shows the result next to the original on a slider. On our 20 Nov check, signed-in users get 2 free enhances a day at 1K with no watermark. Monthly plans run $5.99, $9.99 and $24.99, and those credits reset with no rollover. The one-time packs never expire: $4.99 for 20 credits, $14.99 for 80.
+
+The catch: the site says plainly that AI redraws detail rather than recovering it, so don’t use it where the fix has to be exact. Checkout needs a Google sign-in. A few photos a month? The free tier or a pack beats a subscription.
+
+ONE THING TO DO THIS WEEK
+Before Friday, open the billing page of every AI tool you pay for and write down two things: the renewal date and the price it renews at. Any plan on an intro rate gets a calendar reminder a week before the rate ends. If a deal shows up for something you already pay for, check it’s your plan and not an upgrade. Then run the free Stack Audit (https://aitoolsessentials.com/stack-audit.html). It stays in your browser, needs no login, and maps overlap by job.
+
+Got a question about a tool on your card? Write to aitoolsessentials@gmail.com.
+— AIToolsEssentials
+
+You’re getting this because you subscribed to Keep, Test, Cut at aitoolsessentials.com. Past issues: https://aitoolsessentials.com/newsletter/  Get it free: https://aitoolsessentials.com/subscribe/
+Premium is a separate $12/month research membership: https://aitoolsessentials.com/premium/
+AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711 · Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}
