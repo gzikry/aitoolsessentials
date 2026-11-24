@@ -74,7 +74,7 @@ def _button(product: dict, contact: str) -> str:
         )
     subject = quote(f"{product['name']} ({product['price']})")
     return (
-        f'<a class="button" href="mailto:{_esc(contact)}?subject={subject}">'
+        f'<a class="button button-blue" href="mailto:{_esc(contact)}?subject={subject}">'
         f"Email to book the {_esc(product['name'].lower())}</a>"
         " <span class=\"ledger-note\">Checkout opens soon. We reply with a payment link.</span>"
     )
@@ -141,7 +141,7 @@ def page_html(data: dict, today: _dt.date) -> str:
         '<link rel="stylesheet" href="/css/styles.css">\n'
         "</head>\n<body>\n"
         + canonical_header(contained=True)
-        + '\n<main class="founder-desk">\n<section class="scene scene-light content-hub">'
+        + '\n<main class="sponsor-offer founder-desk">\n<section class="scene scene-light content-hub">'
         '<div class="article-shell wide">\n'
         + body
         + "\n</div></section>\n</main>\n"
