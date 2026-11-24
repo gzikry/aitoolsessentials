@@ -82,10 +82,12 @@ def main() -> None:
         errors.append("Welcome page must say this page cannot verify a charge")
 
     stack = (ROOT / "stack-audit.html").read_text()
-    if "paid Premium" not in stack.lower() and "Paid Premium" not in stack and "keep/cut pack" not in stack.lower() and "See Premium keep/cut pack" not in stack:
-        errors.append("Free Stack Audit page must label paid Premium separately")
-    if PREMIUM_URL not in stack:
-        errors.append("Stack Audit post-result upgrade must use the live Stripe checkout")
+    if "paid Premium" not in stack.lower() and "Paid Premium" not in stack and "See Premium keep/cut pack" not in stack:
+        errors.append("Free Stack Audit page must still link paid Premium directly")
+    if PREMIUM_URL in stack or "sa-premium-upsell" in stack:
+        errors.append("Stack Audit still renders the parked Premium upsell")
+    if "AIT PRICE ALERT START" not in stack or "price-alert-form" not in stack:
+        errors.append("Stack Audit missing the price-alert signup")
     if "You could save" in stack:
         errors.append("Stack Audit must not invent savings in the Premium upgrade CTA")
     if "200 audit" in stack.lower():

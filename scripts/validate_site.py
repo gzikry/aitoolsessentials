@@ -515,14 +515,29 @@ def main():
             if '20' == str(item.get('numeric_list_price_usd')) or item.get('numeric_list_price_usd') == 35:
                 errors.append(f'Stack Audit catalog reused viral heuristic for {item.get("slug")}')
         page = (ROOT / 'stack-audit.html').read_text() if (ROOT / 'stack-audit.html').exists() else ''
-        if 'sa-premium-upsell' not in page:
-            errors.append('Stack Audit page missing Premium upsell section')
-        if 'keep/cut pack' not in page.lower() and 'written reply' not in page.lower():
-            errors.append('Stack Audit page missing Path A keep/cut pack upgrade')
-        if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in page:
-            errors.append('Stack Audit upgrade CTA must use the live Stripe Premium checkout')
-        if 'use code LAUNCH50 at checkout' not in page:
-            errors.append('Stack Audit upgrade CTA must say use code LAUNCH50 at checkout')
+        if 'sa-premium-upsell' in page:
+            errors.append('Stack Audit page still renders the parked Premium upsell')
+        if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' in page:
+            errors.append('Stack Audit page still links the parked Premium checkout')
+        if 'use code LAUNCH50 at checkout' in page:
+            errors.append('Stack Audit page still tells readers to use LAUNCH50')
+        if 'AIT PRICE ALERT START' not in page or 'price-alert-form' not in page:
+            errors.append('Stack Audit page missing the price-alert signup')
+        alert_match = re.search(
+            r'<!-- AIT PRICE ALERT START -->.*?<!-- AIT PRICE ALERT END -->',
+            page,
+            flags=re.S,
+        )
+        alert_html = alert_match.group(0) if alert_match else ''
+        if 'name="tool"' in alert_html:
+            errors.append('Stack Audit price alert must not prefill a tool slug')
+        if '/services/paid-audit.html' not in page:
+            errors.append('Stack Audit must still link the written audit')
+        if 'href="/premium/"' not in page:
+            errors.append('Stack Audit must still link /premium/ directly')
+        audit_js = (ROOT / 'js/stack-audit.js').read_text() if (ROOT / 'js/stack-audit.js').exists() else ''
+        if 'sa-premium-upsell' in audit_js or 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' in audit_js:
+            errors.append('stack-audit.js still injects the parked Premium upsell')
         if '?promo=LAUNCH50' in page:
             errors.append('Stack Audit must not prefill LAUNCH50')
         if 'You could save' in page:
@@ -843,11 +858,41 @@ def main():
             errors.append('Premium library hub must be labeled Public Premium preview')
         if 'use code LAUNCH50 at checkout' not in library_html:
             errors.append('Premium library hub must say use code LAUNCH50 at checkout')
-    conversion_hits = list((ROOT).glob('tools/*/index.html'))[:3]
-    for sample in conversion_hits:
-        text = sample.read_text()
-        if 'premium-conversion-panel' in text and 'Subscribe on Whop' in text:
-            errors.append(f'{sample.relative_to(ROOT)} Premium CTA still says Subscribe on Whop')
+    parked_hits = []
+    missing_watch = []
+    for path in sorted((ROOT / 'tools').glob('*/index.html')):
+        rel = path.relative_to(ROOT).as_posix()
+        text = path.read_text(errors='ignore')
+        if 'premium-conversion-panel' in text or 'AIT PREMIUM MODULE' in text:
+            parked_hits.append(rel)
+        if 'http-equiv="refresh"' in text or '<main' not in text:
+            continue
+        slug = path.parent.name
+        if f'name="tool" value="{slug}"' not in text or 'price-alert-form' not in text:
+            missing_watch.append(rel)
+    for path in sorted((ROOT / 'comparisons').glob('*.html')):
+        rel = path.relative_to(ROOT).as_posix()
+        text = path.read_text(errors='ignore')
+        if 'premium-conversion-panel' in text or 'AIT PREMIUM MODULE' in text:
+            parked_hits.append(rel)
+        if 'http-equiv="refresh"' in text or '<main' not in text:
+            continue
+        if 'AIT PRICE ALERT START' not in text or 'price-alert-form' not in text:
+            missing_watch.append(rel)
+    if parked_hits:
+        shown = ', '.join(parked_hits[:8])
+        errors.append(f'Premium upsell still on {len(parked_hits)} parked pages ({shown})')
+    if missing_watch:
+        shown = ', '.join(missing_watch[:8])
+        errors.append(f'Price-alert signup missing on {len(missing_watch)} tool or comparison pages ({shown})')
+    for rel in ('premium/index.html', 'services/paid-audit.html'):
+        parked_page = ROOT / rel
+        if not parked_page.exists():
+            errors.append(f'{rel} must stay reachable')
+            continue
+        parked_text = parked_page.read_text(errors='ignore')
+        if 'noindex' in parked_text:
+            errors.append(f'{rel} must not be noindex')
     header = home_html.split('</header>', 1)[0]
     for required in (
         'data-nav="slim"',

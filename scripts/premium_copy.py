@@ -109,29 +109,19 @@ def path_a_pitch(price: int = 12) -> tuple[str, str, str]:
 
 
 def post_audit_upgrade_html(whop: dict[str, Any] | None = None) -> str:
-    """Two paid lanes after the free audit, stated as a real choice. No invented savings figures."""
-    price = int((whop or {}).get("price_usd_month") or 12)
-    trial = int((whop or {}).get("trial_period_days") or 7)
-    promo = str((whop or {}).get("promo_code") or "LAUNCH50")
-    href = esc(primary_checkout_url(whop or {"checkout_promo_url": DEFAULT_CHECKOUT_PROMO}))
+    """Price alert after the free scorecard, then the written audit.
+
+    The $12/mo Premium box is parked off this page. /premium/ stays a direct URL.
+    The written audit stays: the reader has just inventoried the stack.
+    """
+    _ = whop
+    from inject_price_alerts import signup_block
+
+    root = Path(__file__).resolve().parents[1]
+    alert = signup_block(root, source="stack-audit.html", hub=True)
     return (
-        '<section class="score-card sa-premium-upsell">'
-        "<span>Optional next step</span>"
-        "<h3>Want a keep/cut pack and a written reply before you renew?</h3>"
-        "<p>The scorecard above stays free. Premium is optional: dated keep/cut notes and a "
-        "48-hour written reply by email when you want someone to decide with you. "
-        f"${price}/month — cheaper than one overlapping seat, not another AI subscription.</p>"
-        f'<p><a class="button button-blue" data-sa-cta href="{href}" rel="external noopener">'
-        f"{esc(join_label(price, trial_days=trial, promo=promo))}</a></p>"
-        f'<p class="sa-note">{trial}-day free trial, then ${price}/month. Code <strong>{esc(promo)}</strong> '
-        "for 50% off the first paid month. We do not invent how much you will save. "
-        "Use your own numbers from this audit.</p>"
-        "</section>"
-        # The written audit belongs here and nowhere more naturally: the reader has just
-        # inventoried the stack and seen the overlap, which is exactly the input a $497 audit
-        # needs. Offering only the $12 lane at this moment hid the higher-value service from
-        # the warmest leads on the site.
-        '<section class="score-card sa-paid-audit">'
+        alert
+        + '<section class="score-card sa-paid-audit">'
         "<span>If a scorecard is not enough</span>"
         "<h3>Written AI Stack Audit — $497, one-time.</h3>"
         "<p>This scorecard tells you where the overlap is. It cannot tell you what the "

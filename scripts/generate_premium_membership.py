@@ -1169,7 +1169,8 @@ def premium_upsell_module() -> str:
     return upsell_module_html(_whop_dict())
 
 
-def inject_before_main_end(html: str, module: str) -> str:
+def strip_premium_module(html: str) -> str:
+    """Remove the $12/mo conversion box. Leave every other section alone."""
     import re
     html = re.sub(r'\n?<!-- AIT PREMIUM MODULE START -->.*?<!-- AIT PREMIUM MODULE END -->\n?', '\n', html, flags=re.S)
     html = re.sub(
@@ -1178,7 +1179,12 @@ def inject_before_main_end(html: str, module: str) -> str:
         html,
         flags=re.S,
     )
-    if '</main>' not in html:
+    return html
+
+
+def inject_before_main_end(html: str, module: str) -> str:
+    html = strip_premium_module(html)
+    if not module or '</main>' not in html:
         return html
     return html.replace('</main>', module + '\n</main>', 1)
 
@@ -1199,7 +1205,9 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
     dynamic_targets = []
     dynamic_targets.extend(str(p.relative_to(root)) for p in sorted((root / 'tools').glob('*/index.html')))
     dynamic_targets.extend(str(p.relative_to(root)) for p in sorted((root / 'comparisons').glob('*.html')))
-    # Keep admin/noindex/checkout/legal pages out of the conversion injection path.
+    # Tool and comparison pages park the $12 box. The price-alert signup
+    # already on those pages is the replacement. Other targets keep the box.
+    # Admin, noindex, checkout, and legal pages stay out of the injection path.
     targets = list(dict.fromkeys(base_targets + dynamic_targets))
     module = premium_upsell_module()
     changed = 0
@@ -1208,9 +1216,13 @@ def postprocess(root: Path, tools: list[dict[str, Any]] | None = None, today: st
         if not p.exists():
             continue
         old = p.read_text()
-        if 'name="robots" content="noindex' in old:
-            continue
-        new = inject_before_main_end(old, module)
+        parked = rel.startswith('tools/') or rel.startswith('comparisons/')
+        if parked:
+            new = strip_premium_module(old)
+        else:
+            if 'name="robots" content="noindex' in old:
+                continue
+            new = inject_before_main_end(old, module)
         if new != old:
             p.write_text(new)
             changed += 1
