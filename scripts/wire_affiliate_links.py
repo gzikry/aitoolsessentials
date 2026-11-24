@@ -40,6 +40,7 @@ _NAME_PATTERNS = {
     "hermes-agent": re.compile(r"Hermes Agent|hermes-agent", re.I),
     "synthesia": re.compile(r"\bSynthesia\b"),
     "customgpt": re.compile(r"CustomGPT", re.I),
+    "fireflies": re.compile(r"\bFireflies(?:\.ai)?\b"),
 }
 # Price and decision hubs rank better than generic reviews, so they carry the
 # same disclosed hop block as comparisons when they name a partner tool page.
@@ -293,7 +294,8 @@ _COST_VERDICT_JS = r"""
     sonaopus: "/go/sonaopus/",
     "hermes-agent": "/go/nous/",
     synthesia: "/go/synthesia/",
-    customgpt: "/go/customgpt/"
+    customgpt: "/go/customgpt/",
+    fireflies: "/go/fireflies/"
   };
   var disclosure = '<span class="ledger-disclosure">Some outbound links may earn a partner commission at no cost to you. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</span>';
   function esc(value) {
@@ -362,6 +364,7 @@ def _partner_open_links() -> str:
         ("hermes-agent", "/go/nous/", "Hermes Agent"),
         ("synthesia", "/go/synthesia/", "Synthesia"),
         ("customgpt", "/go/customgpt/", "CustomGPT.ai"),
+        ("fireflies", "/go/fireflies/", "Fireflies.ai"),
     )
     for _slug, href, name in catalog:
         rows.append(
