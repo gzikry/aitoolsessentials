@@ -573,6 +573,9 @@ print('Re-applied homepage voice meta after final metadata pass')
 from sponsor_chrome import write_page
 write_page(root)
 
+from generate_founder_launch import generate as _founder_launch
+print('Founder launch desk:', _founder_launch(root))
+
 # enhance_homepage rebuilds index.html from its own header template, which discards the
 # sitewide injections added earlier in the run — the nav Search link and the predictive
 # header search both live in the header. Re-apply after it, or the homepage is the one page
