@@ -430,7 +430,7 @@
       "workflow-specific buyers"
     ],
     "status": "approved",
-    "next_action": "Approved 2026-11-24 via FirstPromoter (10% recurring; the approval email stated the rate for this account). Tracking link https://fireflies.ai/?fpr=aitoolsessentials-a24057 is wired through the /go/fireflies/ noindex hop and the review CTA carries rel=\"sponsored noopener nofollow\". Fireflies.ai is named on /legal/affiliate-disclosure.html. Re-verify the hop resolves on each sweep. Open chore (operator-only): George must set a payout method in the FirstPromoter dashboard before any commission can be paid.",
+    "next_action": "Approved 2026-11-24 via FirstPromoter. The welcome email stated no rate, so no account rate is recorded; the vendor's public page advertises up to 30% for 12 months, and the account's actual tier is unverified. Tracking link https://fireflies.ai/?fpr=aitoolsessentials-a24057 is wired through the /go/fireflies/ noindex hop and the review CTA carries rel=\"sponsored noopener nofollow\". Fireflies.ai is named on /legal/affiliate-disclosure.html. Re-verify the hop resolves on each sweep. Operator-only: set the rate expectation and payout method in the FirstPromoter dashboard.",
     "notes": "Approved 2026-11-24. Public CTAs use /go/fireflies/, which holds the fpr tracking URL - do not print the tracking URL in public hrefs. Do not invent affiliate URLs. Editorial score and pros/cons unchanged by the approval."
   },
   {

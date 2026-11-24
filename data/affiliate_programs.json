@@ -312,7 +312,7 @@
       "network": "FirstPromoter",
       "official_program_url": "https://fireflies.ai/affiliate",
       "application_status": "approved",
-      "commission_note": "10% recurring, as stated for this account at approval on 2026-11-24 (FirstPromoter). Payout method not yet set; George to add it in the FirstPromoter dashboard.",
+      "commission_note": "No rate is confirmed for this account. The 2026-11-24 FirstPromoter welcome email supplied the unique tracking link only and stated no rate, and the FirstPromoter program page at fireflies.firstpromoter.com publishes no rate either. The only rate in the public record is the vendor's own page, checked live 2026-11-24 at https://fireflies.ai/affiliate: 'Earn up to 30% in recurring commissions' / 'up to 30% recurring commissions per sale for 12 months', with a 90-day referral cookie ('users from your link can purchase within 90 days'). An earlier record here of '10% recurring for this account (FirstPromoter)' has no source in the mailbox or on any page we can fetch, so no account-specific rate is carried - the account's actual tier is unverified and should be reconciled in the FirstPromoter dashboard (operator-only). Payment method must also be set there (operator-only) before any commission can be paid.",
       "notes": "Approved 2026-11-24 through FirstPromoter under the brand account. Tracking URL https://fireflies.ai/?fpr=aitoolsessentials-a24057 uses the FirstPromoter fpr parameter. A GET the same day returned HTTP 200. Public CTAs use /go/fireflies/. The hop holds the fpr URL. Pricing, docs, privacy, and terms stay editorial source links. The affiliate approval does not assign the editorial score.",
       "status": "approved",
       "approved_date": "2026-11-24",
