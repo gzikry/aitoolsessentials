@@ -123,6 +123,34 @@ def test_app_builder_hops_get_rel_and_disclosure() -> None:
         raise SystemExit("app-builder wiring was not idempotent")
 
 
+def test_price_and_decision_hubs_are_in_scope() -> None:
+    root = Path(__file__).resolve().parents[1]
+    for rel in (
+        "pricing-watch/index.html",
+        "change-radar/index.html",
+        "price-changes/index.html",
+        "pricing-index/index.html",
+        "alternatives/zapier-ai-alternatives.html",
+        "categories/index.html",
+    ):
+        if not wire._scope(root, root / rel):
+            raise SystemExit(f"{rel} should carry partner hops")
+    for rel in ("admin/index.html", "go/make/index.html", "newsletter/index.html"):
+        if wire._scope(root, root / rel):
+            raise SystemExit(f"{rel} must not carry partner hops")
+
+
+def test_synthesia_and_customgpt_names_are_matched() -> None:
+    synth = {"slug": "synthesia", "public": "/go/synthesia/"}
+    custom = {"slug": "customgpt", "public": "/go/customgpt/"}
+    if not wire._name_mentioned("<p>Synthesia avatars</p>", synth):
+        raise SystemExit("Synthesia name not matched")
+    if not wire._name_mentioned("<p>CustomGPT.ai bots</p>", custom):
+        raise SystemExit("CustomGPT name not matched")
+    if wire._name_mentioned("<p>speech synthesis</p>", synth):
+        raise SystemExit("synthesis must not match Synthesia")
+
+
 def main() -> None:
     test_external_nofollow_becomes_sponsored_hop()
     test_external_nofollow_on_existing_hop_gains_sponsored()
@@ -133,6 +161,8 @@ def main() -> None:
     test_directory_visit_rel_order_is_rewritten()
     test_hub_mention_without_tool_link()
     test_app_builder_hops_get_rel_and_disclosure()
+    test_price_and_decision_hubs_are_in_scope()
+    test_synthesia_and_customgpt_names_are_matched()
     print("affiliate wiring checks passed")
 
 
