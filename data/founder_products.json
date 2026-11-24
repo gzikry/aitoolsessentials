@@ -22,7 +22,7 @@
       "name": "Launch-day feature",
       "price": "$49",
       "price_note": "one-time",
-      "payment_url": "",
+      "payment_url": "https://buy.stripe.com/6oU28q1w59h3e8nbL90x207",
       "summary": "A labeled launch card for the week you ship, plus launch copy you can post.",
       "includes": [
         "A card on this page's Launching this week list for 7 days, labeled Sponsored",
@@ -36,7 +36,7 @@
       "name": "New tools roundup line",
       "price": "$29",
       "price_note": "one issue",
-      "payment_url": "",
+      "payment_url": "https://buy.stripe.com/8x25kCeiR50N7JZ6qP0x208",
       "summary": "One labeled line in the New tools section of Keep, Test, Cut.",
       "includes": [
         "One line, up to 40 characters plus your link, labeled Sponsored",
@@ -49,7 +49,7 @@
       "name": "Launch pack",
       "price": "$99",
       "price_note": "one-time",
-      "payment_url": "",
+      "payment_url": "https://buy.stripe.com/6oU6oGeiRbpb4xNbL90x209",
       "summary": "Verified fast lane, Launch-day feature, and a roundup line together. $157 if bought separately.",
       "includes": [
         "Everything in the Verified fast lane",

@@ -13,7 +13,7 @@ The public submit page promises a "3–4 week review backlog" for the free form.
 | Free queue | $0 | Reviewed in arrival order. The queue currently runs 3 to 4 weeks. No written feedback if declined. | Acknowledge, add to `admin/held-submissions.md` queue with the received date, review oldest first. Publish no earlier than 14 days after receipt. |
 | Verified fast lane | $79 (live link `https://buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205`) | Written decision within one working day. Full refund if declined. Same score as the free queue. | Match the Stripe payment email to the form, review the same working day, send the written decision, publish if accepted. Refund in Stripe if declined (George's click). |
 
-Founder products on `/founders/` (Launch-day feature $49, roundup line $29, Launch pack $99) render as email requests until George approves the Stripe products and the payment links are added to `data/founder_products.json`.
+Founder products on `/founders/` have live Stripe checkouts since 2026-11-24: Launch-day feature $49 (`https://buy.stripe.com/6oU28q1w59h3e8nbL90x207`), New tools roundup line $29 (`https://buy.stripe.com/8x25kCeiR50N7JZ6qP0x208`), Launch pack $99 (`https://buy.stripe.com/6oU6oGeiRbpb4xNbL90x209`). Every founder checkout, including the $79 lane, asks for the tool website.
 
 ## Free-queue acknowledgement (draft — sending it needs George's go)
 
