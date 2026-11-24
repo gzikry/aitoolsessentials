@@ -750,10 +750,9 @@ def main():
             errors.append('Homepage #subscribe must be labeled as the free Keep, Test, Cut email')
         if 'join premium on whop' in subscribe_block.lower() or 'start 7-day' in subscribe_block.lower():
             errors.append('Homepage #subscribe must not look like the paid Premium CTA')
-    if 'Join Premium — 7-day trial · use code LAUNCH50 at checkout' not in home_html:
-        errors.append('Homepage must keep a labeled LAUNCH50 upgrade CTA (not as the hero primary)')
-    if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in home_html:
-        errors.append('Homepage upgrade checkout must use the live Stripe Premium URL')
+    # Premium is parked off the front door (2026-11-24): no checkout on the homepage.
+    if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' in home_html or 'https://buy.stripe.com/cNi00ideNbpb8O32az0x204' in home_html:
+        errors.append('Homepage must not carry the Premium or $497 audit checkout while they are parked')
     hero_match = re.search(r'<section class="hero[^"]*".*?</section>', home_html, flags=re.S)
     hero_html = hero_match.group(0) if hero_match else ''
     if 'hero-device' in home_html or 'device-window' in home_html:
@@ -853,12 +852,12 @@ def main():
     for required in (
         'data-nav="slim"',
         'href="/stack-audit.html">Stack Audit</a>',
-        'href="/premium/">Premium</a>',
+        'href="/price-changes/">Price alerts</a>',
         'href="/subscribe/">Subscribe</a>',
         'href="/stack-audit.html">Free Stack Audit</a>',
     ):
         if required not in header:
-            errors.append(f'Homepage nav must keep Stack Audit, Premium, and Subscribe ({required})')
+            errors.append(f'Homepage nav must keep Stack Audit, Price alerts, and Subscribe ({required})')
     for junk in ('Cost calc', 'Shortlist', 'Coding quiz'):
         if junk in header:
             errors.append(f'Homepage nav still has fat-nav junk: {junk}')
@@ -907,20 +906,24 @@ def main():
     ):
         if href not in learn_html:
             errors.append(f'Homepage Learn strip missing real path {href}')
-    if home_html.count('AIT HOMEPAGE PREMIUM BAND START') != 1:
-        errors.append('Homepage must have exactly one Premium band')
+    # Premium and the $497 audit are parked off the front door (2026-11-24).
+    # The mid-page band is free price-change alerts; the paid pages stay reachable.
+    if home_html.count('AIT HOMEPAGE ALERT BAND START') != 1:
+        errors.append('Homepage must have exactly one price-alert band')
+    if 'AIT HOMEPAGE PREMIUM BAND START' in home_html:
+        errors.append('Homepage must not promote Premium while it is parked')
     band_match = re.search(
-        r'<!-- AIT HOMEPAGE PREMIUM BAND START -->.*?<!-- AIT HOMEPAGE PREMIUM BAND END -->',
+        r'<!-- AIT HOMEPAGE ALERT BAND START -->.*?<!-- AIT HOMEPAGE ALERT BAND END -->',
         home_html,
         flags=re.S,
     )
     band_html = band_match.group(0) if band_match else ''
-    if 'home-cta-primary' not in band_html or 'href="/premium/"' not in band_html:
-        errors.append('Homepage Premium band must keep a liquid-glass CTA to /premium/')
+    if 'home-cta-primary' not in band_html or 'href="/price-changes/#price-alert"' not in band_html:
+        errors.append('Homepage alert band must keep a primary CTA to /price-changes/#price-alert')
     if 'scene-light' in band_html:
-        errors.append('Homepage Premium band must stay in the dark mid-page composition')
-    if 'second opinion' not in band_html.lower() and 'help deciding' not in band_html.lower():
-        errors.append('Homepage Premium band must frame keep/cut as help deciding, not cancel-only')
+        errors.append('Homepage alert band must stay in the dark mid-page composition')
+    if '/premium/' in band_html or '$497' in band_html:
+        errors.append('Homepage alert band must not pitch Premium or the $497 audit')
     stack_audit_buttons = home_html.count('href="/stack-audit.html">Free Stack Audit')
     if stack_audit_buttons > 2:
         errors.append(f'Homepage repeats Free Stack Audit too many times ({stack_audit_buttons})')

@@ -650,8 +650,8 @@ def test_homepage_sponsor_link_survives_stamp() -> None:
         raise AssertionError("homepage header does not have one Sponsor us link")
     if 'href="/stack-audit.html">Stack Audit</a>' not in header:
         raise AssertionError("homepage header lost Stack Audit")
-    if 'href="/premium/">Premium</a>' not in header or 'href="/subscribe/">Subscribe</a>' not in header:
-        raise AssertionError("homepage header lost Premium or Subscribe")
+    if 'href="/price-changes/">Price alerts</a>' not in header or 'href="/subscribe/">Subscribe</a>' not in header:
+        raise AssertionError("homepage header lost Price alerts or Subscribe")
     if 'class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">Free Stack Audit</a>' not in header:
         raise AssertionError("homepage header lost the Free Stack Audit CTA")
     page = "<!doctype html><html><body>" + header + "<main><p>Body</p></main></body></html>"

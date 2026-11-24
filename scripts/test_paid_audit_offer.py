@@ -30,10 +30,8 @@ REACHABLE_FROM = [
     "premium/index.html",
     "stack-audit.html",
     "services/ai-stack-audit.html",
-    # The homepage is where essentially every visitor lands, and it previously sold only the
-    # $12 membership. A visitor who never leaves the homepage is the single largest group on
-    # the site, so omitting the offer here was the largest remaining hole in its reach.
-    "index.html",
+    # The homepage no longer pitches the audit: it is parked off the front door (2026-11-24)
+    # until the list has real readers. The audit page stays live and linked from these pages.
 ]
 ACTIVATED_ENDPOINT = "formsubmit.co/eb3d1bf5a35125c06383cafa247af931"
 

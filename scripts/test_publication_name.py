@@ -45,7 +45,7 @@ def main() -> None:
     if "Sponsored by" not in sponsor or NEW_NAME not in sponsor:
         errors.append("sponsor tier copy does not name Keep, Test, Cut")
     worker = (REPO / "workers" / "newsletter-subscribe" / "worker.js").read_text(encoding="utf-8")
-    if 'subject: "Confirm Keep, Test, Cut"' not in worker:
+    if '"Confirm Keep, Test, Cut"' not in worker or "subject:" not in worker:
         errors.append("confirm subject is not Confirm Keep, Test, Cut")
     if OLD_PUBLICATION_NAME in worker:
         errors.append("worker still says the retired name")

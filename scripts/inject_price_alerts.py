@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add a price-and-credit alert signup beside pricing on tool and comparison pages.
+"""Add a price-and-credit alert signup on tool, comparison, and price-hub pages.
 
 The form posts to the existing workers.dev subscribe endpoint. Extra hidden
 fields are ignored by that worker. Newsletter issues stay send_enabled false.
@@ -67,12 +67,31 @@ def _insert_at(text: str) -> int | None:
     return main_end
 
 
-def _block(name: str, tool_id: str, source: str, endpoint: str) -> str:
+# Price and decision hubs: one alert box for every tool on the page.
+_HUBS = {
+    "pricing-watch/index.html": "pricing-watch",
+    "pricing-watch/credit-traps/index.html": "credit-traps",
+    "change-radar/index.html": "change-radar",
+    "price-changes/index.html": "price-changes",
+    "pricing-index/index.html": "pricing-index",
+}
+
+
+def _sentence(name: str, hub: bool) -> str:
+    if hub:
+        return (
+            "Get an email when a tool you pay for changes its price, credits, or free plan. "
+            "Each change is tied to the vendor's own pricing page with the date we checked it."
+        )
     safe = html.escape(name, quote=True)
-    sentence = (
+    return (
         f"Track {safe} price &amp; credit-rule changes — get an email when {safe} "
         "changes tier pricing, credit rollover, or free-plan limits."
     )
+
+
+def _block(name: str, tool_id: str, source: str, endpoint: str, hub: bool = False) -> str:
+    sentence = _sentence(name, hub)
     hidden = (
         f'<input type="hidden" name="tool" value="{html.escape(tool_id, quote=True)}">'
         f'<input type="hidden" name="source_page" value="{html.escape(source, quote=True)}">'
@@ -94,7 +113,8 @@ def _block(name: str, tool_id: str, source: str, endpoint: str) -> str:
         )
     else:
         form = '<p><a href="/subscribe/">Get the free email</a></p>' + f"<p>{compliance_footer()}</p>"
-    aside = f'<aside class="price-alert ledger-sheet"><p>{sentence}</p>{form}</aside>'
+    anchor = ' id="price-alert"' if hub else ""
+    aside = f'<aside class="price-alert ledger-sheet"{anchor}><p>{sentence}</p>{form}</aside>'
     return START + aside + END
 
 
@@ -107,7 +127,8 @@ def _tool_id(path: Path) -> str:
 def _targets(root: Path) -> list[Path]:
     pages = list((root / "tools").glob("*/index.html"))
     pages.extend((root / "comparisons").glob("*.html"))
-    return sorted(pages)
+    pages.extend(root / rel for rel in _HUBS if (root / rel).is_file())
+    return sorted(set(pages))
 
 
 def inject(root: Path) -> int:
@@ -118,7 +139,9 @@ def inject(root: Path) -> int:
         if 'http-equiv="refresh"' in text or "<main" not in text:
             continue
         rel = path.relative_to(root).as_posix()
-        block = _block(_name(text, path.stem, path), _tool_id(path), rel, endpoint)
+        hub = rel in _HUBS
+        tool_id = _HUBS.get(rel) or _tool_id(path)
+        block = _block(_name(text, path.stem, path), tool_id, rel, endpoint, hub=hub)
         if START in text:
             updated = BLOCK_RE.sub(block, text, count=1)
         else:

@@ -41,9 +41,12 @@ def main() -> None:
     header = home.split("</header>", 1)[0]
     if 'data-nav="slim"' not in header:
         errors.append("homepage nav is not the short nav")
-    for label in ("Stack Audit", "Premium", "Subscribe"):
+    for label in ("Stack Audit", "Price alerts", "Subscribe"):
         if f">{label}</a>" not in header:
             errors.append(f"homepage nav lost {label}")
+    # Premium is parked off the front door (2026-11-24). /premium/ stays reachable.
+    if 'href="/premium/">Premium</a>' in header:
+        errors.append("homepage nav still promotes Premium while it is parked")
     if 'class="button home-cta-primary" href="/stack-audit.html"' not in home:
         errors.append("homepage hero lost Free Stack Audit")
     claude = (ROOT / "articles/claude-vs-chatgpt.html").read_text(encoding="utf-8")
