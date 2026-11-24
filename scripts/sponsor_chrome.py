@@ -534,6 +534,8 @@ def _verified_block() -> str:
         + '" target="_blank" rel="'
         + _EXTERNAL_REL
         + '">Request a verified listing</a></p>\n'
+        '<p>Launching a tool? The <a href="/founders/">founder launch desk</a> '
+        "has the launch card and launch pack.</p>\n"
         "</div>"
     )
 

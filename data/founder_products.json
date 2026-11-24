@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-11-24",
+  "policy": "Founder products buy a review slot, a labeled placement, or copy. They never buy a score, a rank, or a verdict. A product with an empty payment_url renders as an email request, never as a checkout. Only live https://buy.stripe.com/ links go here, after George approves the Stripe product.",
+  "contact": "contact@aitoolsessentials.com",
+  "products": [
+    {
+      "key": "verified",
+      "name": "Verified fast lane",
+      "price": "$79",
+      "price_note": "one-time",
+      "payment_url": "https://buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205",
+      "summary": "Skip the free queue. A written decision within one working day.",
+      "includes": [
+        "A written decision within one working day, with the reasons",
+        "If accepted: a full review page and an embeddable badge for your site",
+        "If declined: the $79 is refunded in full",
+        "The score is the same score the free queue would give"
+      ]
+    },
+    {
+      "key": "launch_feature",
+      "name": "Launch-day feature",
+      "price": "$49",
+      "price_note": "one-time",
+      "payment_url": "",
+      "summary": "A labeled launch card for the week you ship, plus launch copy you can post.",
+      "includes": [
+        "A card on this page's Launching this week list for 7 days, labeled Sponsored",
+        "A one-line Sponsored launch mention on the homepage for the same 7 days",
+        "Launch copy written from your product page: an X post, a LinkedIn post, and a Product Hunt maker comment",
+        "Your tool must pass the same identity and legal-page checks as any listing"
+      ]
+    },
+    {
+      "key": "roundup_line",
+      "name": "New tools roundup line",
+      "price": "$29",
+      "price_note": "one issue",
+      "payment_url": "",
+      "summary": "One labeled line in the New tools section of Keep, Test, Cut.",
+      "includes": [
+        "One line, up to 40 characters plus your link, labeled Sponsored",
+        "It runs in one weekly issue and stays on that issue's public archive page",
+        "Keep, Test, Cut is a small, early list. We do not publish a list size."
+      ]
+    },
+    {
+      "key": "launch_pack",
+      "name": "Launch pack",
+      "price": "$99",
+      "price_note": "one-time",
+      "payment_url": "",
+      "summary": "Verified fast lane, Launch-day feature, and a roundup line together. $157 if bought separately.",
+      "includes": [
+        "Everything in the Verified fast lane",
+        "Everything in the Launch-day feature",
+        "One New tools roundup line",
+        "If the listing is declined, the whole $99 is refunded"
+      ]
+    }
+  ],
+  "launches": []
+}
