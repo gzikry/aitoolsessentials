@@ -14,9 +14,9 @@ JOIN_LABEL = "Join Premium — 7-day trial · use code LAUNCH50 at checkout"
 ACCESS_EMAIL = "aitoolsessentials@gmail.com"
 CANCEL = "Cancel anytime from the link in your Stripe receipt email"
 
+# index.html left both lists on 2026-11-24: Premium and the audit are parked off the front door.
 CHECKOUT_PAGES = (
     "premium/index.html",
-    "index.html",
     "services/ai-stack-audit.html",
     "stack-audit.html",
     "js/stack-audit.js",
@@ -38,7 +38,6 @@ AUDIT_PAGES = (
     "services/intake-questionnaire.html",
     "stack-audit.html",
     "pricing/index.html",
-    "index.html",
 )
 
 
