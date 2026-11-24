@@ -38,7 +38,19 @@ _NAME_PATTERNS = {
     "aidetector-cx": re.compile(r"AIDetector|aidetector", re.I),
     "sonaopus": re.compile(r"Sonaopus|sonaopus", re.I),
     "hermes-agent": re.compile(r"Hermes Agent|hermes-agent", re.I),
+    "synthesia": re.compile(r"\bSynthesia\b"),
+    "customgpt": re.compile(r"CustomGPT", re.I),
 }
+# Price and decision hubs rank better than generic reviews, so they carry the
+# same disclosed hop block as comparisons when they name a partner tool page.
+_HUB_PREFIXES = (
+    "pricing-watch/",
+    "change-radar/",
+    "price-changes/",
+    "pricing-index/",
+    "alternatives/",
+    "categories/",
+)
 _APP_BUILDER_LINKS = (
     ('/go/v0/', "Try v0"),
     ("/go/bolt-new/", "Try Bolt.new"),
@@ -84,6 +96,8 @@ def _scope(root: Path, path: Path) -> bool:
     if rel.startswith(("admin/", "marketing/", "go/", "newsletter/", "legal/", "scripts/")):
         return False
     if rel.startswith(("tools/", "comparisons/", "guides/switch-guides/", "articles/", "compare/")):
+        return True
+    if rel.startswith(_HUB_PREFIXES):
         return True
     return rel in {"index.html", "stack-audit.html", "cost-calculator.html"}
 
@@ -277,7 +291,9 @@ _COST_VERDICT_JS = r"""
     descript: "/go/descript/",
     "aidetector-cx": "/go/aidetector-cx/",
     sonaopus: "/go/sonaopus/",
-    "hermes-agent": "/go/nous/"
+    "hermes-agent": "/go/nous/",
+    synthesia: "/go/synthesia/",
+    customgpt: "/go/customgpt/"
   };
   var disclosure = '<span class="ledger-disclosure">Some outbound links may earn a partner commission at no cost to you. <a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>.</span>';
   function esc(value) {
@@ -344,6 +360,8 @@ def _partner_open_links() -> str:
         ("aidetector-cx", "/go/aidetector-cx/", "AIDetector.cx"),
         ("sonaopus", "/go/sonaopus/", "Sonaopus"),
         ("hermes-agent", "/go/nous/", "Hermes Agent"),
+        ("synthesia", "/go/synthesia/", "Synthesia"),
+        ("customgpt", "/go/customgpt/", "CustomGPT.ai"),
     )
     for _slug, href, name in catalog:
         rows.append(
