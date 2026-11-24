@@ -221,7 +221,6 @@ def generate_page(root: Path, catalog: dict[str, Any]) -> Path:
         </div>
       </section>
       {post_audit_upgrade_html()}
-      <div id="sa-premium-panel"></div>
       <div class="sa-actions">
         <button class="button button-dark" type="button" id="sa-back-2">Edit answers</button>
         <button class="button button-blue" type="button" id="sa-restart">Start over</button>

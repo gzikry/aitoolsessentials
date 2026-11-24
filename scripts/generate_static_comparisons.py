@@ -110,24 +110,6 @@ def _decision_brief_link(slugs):
     return f'<p style="text-align:center;margin-top:14px"><a class="button button-ghost-dark" href="/decision-brief.html?vs={",".join(slugs)}">Get a shareable decision brief for this matchup →</a></p>'
 
 
-def _premium_module():
-    try:
-        from generate_premium_membership import premium_upsell_module
-        return premium_upsell_module().replace("<!-- AIT PREMIUM MODULE START -->", "").replace("<!-- AIT PREMIUM MODULE END -->", "").strip()
-    except Exception:
-        return (
-            '<section class="newsletter-panel premium-conversion-panel"><div><span>Paid Premium · $12/mo via Whop</span>'
-            '<h2>Paying for two tools that do the same job?</h2>'
-            '<p>Premium is $12/month on Whop. Dated keep/cut research, monthly CSV, weekly checklist, alerts, and a written reply — delivered in Whop. Keep, Test, Cut and the instant Stack Audit stay free.</p>'
-            '<p class="affiliate-inline">7-day free trial · then $12/month · code LAUNCH50 for 50% off first paid month · delivered in Whop · research and strategy only.</p>'
-            '</div><div class="newsletter-actions">'
-            '<a class="button button-blue" href="https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203" rel="external noopener">Join Premium — 7-day trial · use code LAUNCH50 at checkout</a>'
-            '<a class="button button-dark" href="/premium/">See Premium keep/cut pack</a>'
-            '<a class="button button-dark" href="/premium/faq.html">FAQ</a>'
-            '</div></section>'
-        )
-
-
 def generate_best_ai_tools(root: Path):
     tools = sorted(TOOLS.values(), key=lambda x: (-x.get('rating', 0), _e(x.get('name', ''))))
     by_cat = {}
@@ -245,7 +227,6 @@ def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
         '<a class="button button-blue" href="/compare-shortlist.html" style="margin-left:8px">Compare shortlist</a></p></section>'
         '<section class="score-card related-next-steps"><span>Related</span><h3>Next reads</h3>'
         '<p><a href="/pricing-watch/">Pricing Watch</a> · <a href="/evidence/">Evidence ledger</a> · <a href="/methodology/">Methodology</a> · <a href="/press/">Press / cite us</a> · <a href="/newsletter/">Keep, Test, Cut</a></p></section>'
-        f'{_premium_module()}'
         f'{free_stack_audit_cta()}'
     )
     page = _wrap(f'{title} | AIToolsEssentials', subhead, kicker, body, fname)

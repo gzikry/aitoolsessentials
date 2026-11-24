@@ -15,15 +15,18 @@ ACCESS_EMAIL = "aitoolsessentials@gmail.com"
 CANCEL = "Cancel anytime from the link in your Stripe receipt email"
 
 # index.html left both lists on 2026-11-24: Premium and the audit are parked off the front door.
+# Tool pages, comparison pages, and the stack audit parked the $12 box the same day.
 CHECKOUT_PAGES = (
     "premium/index.html",
     "services/ai-stack-audit.html",
-    "stack-audit.html",
-    "js/stack-audit.js",
     "pricing/index.html",
     "start-here/index.html",
     "resources/index.html",
     "weekly/index.html",
+)
+PARKED_UPSELL_PAGES = (
+    "stack-audit.html",
+    "js/stack-audit.js",
     "tools/whop-cli/index.html",
     "comparisons/whop-cli-vs-zapier-ai.html",
     "comparisons/n8n-vs-whop-cli.html",
@@ -79,8 +82,12 @@ def main() -> None:
             errors.append(rel + " still links to whop.com/checkout")
         if "promo=LAUNCH50" in text:
             errors.append(rel + " still prefills LAUNCH50")
-        if rel.startswith(("tools/whop-cli/", "comparisons/")) and JOIN_LABEL not in text:
-            errors.append(rel + " missing the Stripe join label")
+    for rel in PARKED_UPSELL_PAGES:
+        text = (ROOT / rel).read_text()
+        if PREMIUM_URL in text or "premium-conversion-panel" in text or "sa-premium-upsell" in text:
+            errors.append(rel + " still renders the parked Premium upsell")
+        if "whop.com/checkout" in text:
+            errors.append(rel + " still links to whop.com/checkout")
 
     tool_review = (ROOT / "tools/whop-cli/index.html").read_text()
     if "Is the Whop CLI free?" not in tool_review:

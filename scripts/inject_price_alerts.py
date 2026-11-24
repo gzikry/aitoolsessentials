@@ -90,11 +90,22 @@ def _sentence(name: str, hub: bool) -> str:
     )
 
 
-def _block(name: str, tool_id: str, source: str, endpoint: str, hub: bool = False) -> str:
+def _block(
+    name: str,
+    tool_id: str,
+    source: str,
+    endpoint: str,
+    hub: bool = False,
+    *,
+    watch_tool: bool = True,
+) -> str:
     sentence = _sentence(name, hub)
+    tool_input = ""
+    if watch_tool:
+        tool_input = f'<input type="hidden" name="tool" value="{html.escape(tool_id, quote=True)}">'
     hidden = (
-        f'<input type="hidden" name="tool" value="{html.escape(tool_id, quote=True)}">'
-        f'<input type="hidden" name="source_page" value="{html.escape(source, quote=True)}">'
+        tool_input
+        + f'<input type="hidden" name="source_page" value="{html.escape(source, quote=True)}">'
     )
     fields = (
         hidden
@@ -116,6 +127,15 @@ def _block(name: str, tool_id: str, source: str, endpoint: str, hub: bool = Fals
     anchor = ' id="price-alert"' if hub else ""
     aside = f'<aside class="price-alert ledger-sheet"{anchor}><p>{sentence}</p>{form}</aside>'
     return START + aside + END
+
+
+def signup_block(root: Path, *, source: str, hub: bool = False, tool_id: str = "", name: str = "") -> str:
+    """The same signup box tool and comparison pages already use.
+
+    A tool page passes its slug so the subscribe worker can store it on
+    price_watch. A page that is not one tool omits that field.
+    """
+    return _block(name, tool_id, source, _endpoint(root), hub=hub, watch_tool=bool(tool_id))
 
 
 def _tool_id(path: Path) -> str:
