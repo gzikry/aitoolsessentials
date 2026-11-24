@@ -493,19 +493,18 @@ def homepage_learn_html() -> str:
 
 
 def homepage_band_html(whop: dict[str, Any]) -> str:
-    """One short Premium line — second opinion, not a cancel-only pitch."""
-    price = int(whop["price_usd_month"])
-    trial = int(whop["trial_period_days"])
-    return f"""<!-- AIT HOMEPAGE PREMIUM BAND START -->
-<section class="scene scene-dark home-premium-band">
+    """Free price-change alerts on the front door. Premium and the written audit stay
+    reachable at /premium/ and /services/paid-audit.html but are not promoted here
+    until the list has real readers (parked 2026-11-24)."""
+    del whop
+    return """<!-- AIT HOMEPAGE ALERT BAND START -->
+<section class="scene scene-dark home-premium-band home-alert-band" id="price-alerts">
 <div>
-<p class="kicker light">Want a second opinion before you renew?</p>
-<p>Two ways to get one. Premium is the ${price}/month keep/cut pack. You get dated notes and a written reply in 48 hours, usually cheaper than one forgotten seat. If your stack is bigger than a pack can cover, the <a href="/services/paid-audit.html">written AI Stack Audit</a> is $497 one-time.</p>
-<p class="home-premium-actions"><a class="button home-cta-primary" href="/premium/">{BUY_PAGE_LABEL}</a>
-<a href="/services/paid-audit.html">Or see the $497 written audit</a>
-{audit_buy_html()}
-<a class="checkout-plain-link" href="{esc(primary_checkout_url(whop))}" rel="external noopener">{esc(join_label(price, trial_days=trial, promo=whop["promo_code"]))}</a></p>
+<p class="kicker light">Know before you renew</p>
+<p>Get an email when a tool you pay for changes its price, credits, or free plan. Every change we log is tied to the vendor's own pricing page with the date we checked it. Free, with an unsubscribe link in every email.</p>
+<p class="home-premium-actions"><a class="button home-cta-primary" href="/price-changes/#price-alert">Watch a tool's price</a>
+<a href="/pricing-watch/">See the pricing watch</a></p>
 </div>
 </section>
-<!-- AIT HOMEPAGE PREMIUM BAND END -->
+<!-- AIT HOMEPAGE ALERT BAND END -->
 """

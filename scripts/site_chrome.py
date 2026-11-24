@@ -46,7 +46,7 @@ CANONICAL_HEADER = (
     "</header>"
 )
 
-# Homepage keeps the short nav from main: Stack Audit, Premium, Subscribe.
+# Homepage keeps the short nav: Stack Audit, Price alerts, Subscribe. Premium is parked off the front door.
 HOMEPAGE_HEADER = (
     '<header class="global-nav" aria-label="Primary navigation" data-nav="slim">'
     '<a class="brand home-appear" data-appear="0" href="/" aria-label="AIToolsEssentials home">'
@@ -55,7 +55,7 @@ HOMEPAGE_HEADER = (
     '<a href="/tools/">Tools</a>'
     '<a href="/search/">Search</a>'
     '<a href="/stack-audit.html">Stack Audit</a>'
-    '<a href="/premium/">Premium</a>'
+    '<a href="/price-changes/">Price alerts</a>'
     '<a href="/subscribe/">Subscribe</a>'
     '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END -->'
     "</nav>"
@@ -120,7 +120,7 @@ _HOME_LABELS = (
     'href="/tools/">Tools</a>',
     'href="/search/">Search</a>',
     'href="/stack-audit.html">Stack Audit</a>',
-    'href="/premium/">Premium</a>',
+    'href="/price-changes/">Price alerts</a>',
     'href="/subscribe/">Subscribe</a>',
     'href="/sponsor/" rel="nofollow">Sponsor us</a>',
     'href="/stack-audit.html">Free Stack Audit</a>',
