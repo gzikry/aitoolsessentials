@@ -567,10 +567,10 @@
       "name": "Fireflies.ai",
       "slug": "fireflies",
       "official": "https://fireflies.ai/",
-      "destination": "https://fireflies.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
-      "affiliate_url": "",
+      "destination": "https://fireflies.ai/?fpr=aitoolsessentials-a24057",
+      "affiliate_url": "https://fireflies.ai/?fpr=aitoolsessentials-a24057",
       "public_href": "/go/fireflies/",
-      "partner": false
+      "partner": true
     },
     "otter-ai": {
       "name": "Otter.ai",

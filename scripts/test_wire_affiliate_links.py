@@ -140,6 +140,14 @@ def test_price_and_decision_hubs_are_in_scope() -> None:
             raise SystemExit(f"{rel} must not carry partner hops")
 
 
+def test_fireflies_name_is_matched() -> None:
+    ff = {"slug": "fireflies", "public": "/go/fireflies/"}
+    if not wire._name_mentioned("<p>Fireflies.ai notes</p>", ff):
+        raise SystemExit("Fireflies name not matched")
+    if wire._name_mentioned("<p>fireflies at dusk</p>", ff):
+        raise SystemExit("lowercase fireflies must not match the product")
+
+
 def test_synthesia_and_customgpt_names_are_matched() -> None:
     synth = {"slug": "synthesia", "public": "/go/synthesia/"}
     custom = {"slug": "customgpt", "public": "/go/customgpt/"}
@@ -163,6 +171,7 @@ def main() -> None:
     test_app_builder_hops_get_rel_and_disclosure()
     test_price_and_decision_hubs_are_in_scope()
     test_synthesia_and_customgpt_names_are_matched()
+    test_fireflies_name_is_matched()
     print("affiliate wiring checks passed")
 
 

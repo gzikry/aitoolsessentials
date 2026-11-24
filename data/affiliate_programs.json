@@ -304,6 +304,22 @@
       "affiliate_url": "https://customgpt.ai/?fpr=george-881fd5",
       "url": "https://customgpt.ai/?fpr=george-881fd5",
       "partner": true
+    },
+    {
+      "tool_slug": "fireflies",
+      "availability": "approved_publisher_affiliate",
+      "program_type": "affiliate",
+      "network": "FirstPromoter",
+      "official_program_url": "https://fireflies.ai/affiliate",
+      "application_status": "approved",
+      "commission_note": "10% recurring, as stated for this account at approval on 2026-11-24 (FirstPromoter). Payout method not yet set; George to add it in the FirstPromoter dashboard.",
+      "notes": "Approved 2026-11-24 through FirstPromoter under the brand account. Tracking URL https://fireflies.ai/?fpr=aitoolsessentials-a24057 uses the FirstPromoter fpr parameter. A GET the same day returned HTTP 200. Public CTAs use /go/fireflies/. The hop holds the fpr URL. Pricing, docs, privacy, and terms stay editorial source links. The affiliate approval does not assign the editorial score.",
+      "status": "approved",
+      "approved_date": "2026-11-24",
+      "approved_tracking_url": "https://fireflies.ai/?fpr=aitoolsessentials-a24057",
+      "affiliate_url": "https://fireflies.ai/?fpr=aitoolsessentials-a24057",
+      "url": "https://fireflies.ai/?fpr=aitoolsessentials-a24057",
+      "partner": true
     }
   ],
   "priority_application_queue": [
