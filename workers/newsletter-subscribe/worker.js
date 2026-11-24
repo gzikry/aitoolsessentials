@@ -1,4 +1,22 @@
 const CONFIRM_MS = 48 * 60 * 60 * 1000;
+const WATCH_PROPERTY = "price_watch";
+const WATCH_LIMIT = 20;
+
+// Price-alert forms post a tool slug. Anything that is not a plain slug is dropped.
+export function watchSlug(value) {
+  const slug = String(value || "").trim().toLowerCase();
+  return /^[a-z0-9][a-z0-9-]{0,63}$/.test(slug) ? slug : "";
+}
+
+// Comma list of watched slugs, newest last, capped so the property stays small.
+export function mergeWatch(existing, slug) {
+  const list = String(existing || "")
+    .split(",")
+    .map((item) => watchSlug(item))
+    .filter(Boolean);
+  if (slug && !list.includes(slug)) list.push(slug);
+  return list.slice(-WATCH_LIMIT).join(",");
+}
 
 export function classify(fields) {
   const trap = String(fields.company_website || "").trim();
@@ -78,6 +96,7 @@ async function startSignup(request, env) {
     email: form.get("email"),
     company_website: form.get("company_website"),
   };
+  const watch = watchSlug(form.get("tool"));
   const kind = classify(fields);
   if (kind === "honeypot") return page("Check your email", "If that address can join, a confirm link is on its way.");
   if (kind === "bad_email") return page("Check the address", "Enter a full email address.");
@@ -86,7 +105,12 @@ async function startSignup(request, env) {
   const email = String(fields.email).trim().toLowerCase();
   const encoded = encodeURIComponent(email);
   const existing = await resend(env, `/contacts/${encoded}`, "GET");
-  if (existing.ok && existing.data.unsubscribed === false) {
+  const known = existing.ok ? existing.data : {};
+  if (existing.ok && known.unsubscribed === false) {
+    if (watch) {
+      await recordWatch(env, encoded, known, watch);
+      return page("Price alert added", "That address is already confirmed. We added this tool to its price alerts.");
+    }
     return page("Already confirmed", "That address is already on Keep, Test, Cut.");
   }
   if (!existing.ok) {
@@ -97,6 +121,7 @@ async function startSignup(request, env) {
   }
   const segment = encodeURIComponent(env.RESEND_SEGMENT_ID);
   await resend(env, `/contacts/${encoded}/segments/${segment}`, "POST");
+  if (watch) await recordWatch(env, encoded, known, watch);
 
   const exp = Date.now() + CONFIRM_MS;
   const token = await sign(env.CONFIRM_SECRET, email, exp);
@@ -104,11 +129,22 @@ async function startSignup(request, env) {
   const mailed = await resend(env, "/emails", "POST", {
     from: env.FROM_ADDRESS,
     to: [email],
-    subject: "Confirm Keep, Test, Cut",
-    html: `<p>Confirm Keep, Test, Cut. Nothing is added until you open this link.</p><p><a href="${link}">Confirm this address</a></p><p>AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711.</p>`,
+    subject: watch ? "Confirm your price alert" : "Confirm Keep, Test, Cut",
+    html: `<p>${watch ? "Confirm your price alert. We email you when that tool changes its price, credits, or free plan, and you get Keep, Test, Cut, the weekly letter." : "Confirm Keep, Test, Cut."} Nothing is added until you open this link.</p><p><a href="${link}">Confirm this address</a></p><p>Every email has an unsubscribe link.</p><p>AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711.</p>`,
   });
   if (!mailed.ok) return page("Try again", "The confirm message did not send.");
   return page("Check your email", "Open the confirm link. The list stays empty until you do.");
+}
+
+// Best effort: a missing price_watch property in Resend must not break signup.
+async function recordWatch(env, encoded, known, slug) {
+  const current = known && known.properties ? known.properties[WATCH_PROPERTY] : "";
+  const merged = mergeWatch(current, slug);
+  try {
+    await resend(env, `/contacts/${encoded}`, "PATCH", { properties: { [WATCH_PROPERTY]: merged } });
+  } catch {
+    // Signup continues without the watch.
+  }
 }
 
 async function confirm(url, env) {

@@ -26,7 +26,14 @@ def main() -> None:
     if "limit = 1" not in toml or "period = 60" not in toml:
         errors.append("wrangler.toml rate limit is not 1 per 60 seconds")
     code = """
-import { classify, sign, sameHex, limited } from "./workers/newsletter-subscribe/worker.js";
+import { classify, sign, sameHex, limited, watchSlug, mergeWatch } from "./workers/newsletter-subscribe/worker.js";
+if (watchSlug("ElevenLabs") !== "elevenlabs") process.exit(20);
+if (watchSlug("../etc") !== "" || watchSlug("a b") !== "" || watchSlug("") !== "") process.exit(21);
+if (mergeWatch("", "gamma") !== "gamma") process.exit(22);
+if (mergeWatch("gamma,make", "gamma") !== "gamma,make") process.exit(23);
+if (mergeWatch("gamma,<x>", "make") !== "gamma,make") process.exit(24);
+const many = Array.from({ length: 25 }, (_, i) => "t" + i).join(",");
+if (mergeWatch(many, "last").split(",").length !== 20 || !mergeWatch(many, "last").endsWith("last")) process.exit(25);
 if (classify({ email: "reader@example.com", company_website: "" }) !== "accept") process.exit(2);
 if (classify({ email: "reader@example.com", company_website: "http://spam.example" }) !== "honeypot") process.exit(3);
 if (classify({ email: "nope", company_website: "" }) !== "bad_email") process.exit(4);
