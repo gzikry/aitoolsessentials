@@ -37,8 +37,26 @@ def test_committed_data_loads() -> None:
         _fail(f"unexpected prices {prices}")
 
 
-def test_empty_link_is_an_email_request() -> None:
+def test_live_links_render_as_checkouts() -> None:
     html = founder.page_html(_data(), DAY)
+    for url in (
+        "buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205",
+        "buy.stripe.com/6oU28q1w59h3e8nbL90x207",
+        "buy.stripe.com/8x25kCeiR50N7JZ6qP0x208",
+        "buy.stripe.com/6oU6oGeiRbpb4xNbL90x209",
+    ):
+        if url not in html:
+            _fail(f"committed product link {url} should render as a checkout")
+    if "mailto:contact@aitoolsessentials.com?subject=Launch-day%20feature" in html:
+        _fail("launch feature has a live link and should not be an email request")
+
+
+def test_empty_link_is_an_email_request() -> None:
+    data = copy.deepcopy(_data())
+    for product in data["products"]:
+        if product["key"] == "launch_feature":
+            product["payment_url"] = ""
+    html = founder.page_html(data, DAY)
     if "mailto:contact@aitoolsessentials.com?subject=Launch-day%20feature" not in html:
         _fail("launch feature should be an email request until a Stripe link exists")
     if "buy.stripe.com/7sY6oG3Ed2SF7JZ3eD0x205" not in html:
@@ -96,6 +114,7 @@ def test_home_line_defaults_to_founders_link() -> None:
 
 def main() -> None:
     test_committed_data_loads()
+    test_live_links_render_as_checkouts()
     test_empty_link_is_an_email_request()
     test_test_mode_link_is_refused()
     test_launch_cards_are_labeled_and_expire()
