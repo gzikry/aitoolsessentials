@@ -6,7 +6,7 @@
       "network_status": "limited_marketplace_access",
       "decided": "2026-09-14",
       "evidence": "[personal address withheld], \"The status of your PartnerStack Network Application\", 2026-09-14 16:17 UTC (2026-09-14 09:17 PT). Reason given: \"We are working on expanding our Network. Your profile is not a great fit, but may be in the future.\"",
-      "effect": "Cannot join any NEW programs through the PartnerStack Marketplace. Existing partnerships are unaffected, so the approved Gamma tracking link stays live - and the Descript application, already submitted before the limit, was approved on 2026-10-16 with its tracking link live. Reapplying is dashboard-only and George-only.",
+      "effect": "Cannot join any NEW programs through the PartnerStack Marketplace. Existing partnerships are unaffected, so the approved Gamma tracking link stays live - and the Descript application, already submitted before the limit, was approved on 2026-10-16 with its tracking link live. Reapplying is dashboard-only and George-only. UPDATED 2026-11-24: PartnerStack acknowledged a NEW application to n8n GmbH submitted under this account (PartnerStack program-notification mail, \"Your Application to join n8n GmbH\", 2026-11-24 21:53 UTC) - a new join attempt, not a pre-existing one, so it is recorded as an open question rather than as the limit having been lifted. No network re-approval or status-change email has arrived, so whether the 2026-09-14 limit still bars new joins needs the dashboard re-checked (operator-only; see the n8n entry).",
       "not_affected": "Gamma (approved 2026-09-13, unique link live), Descript (applied 2026-09-12, approved 2026-10-16, tracking link live), ElevenLabs, Make, Nous / Hermes, Sonaopus, Synthesia (approved 2026-10-27, direct via link), and CustomGPT.ai (approved 2026-10-27, FirstPromoter) — all direct, already-approved, or on a network other than PartnerStack.",
       "blocked": "Every NEW program join through the PartnerStack marketplace, including Browse AI (its listing is open and was marked ready_to_apply on 2026-09-14, but the join is now gated by this limit) and the private Grammarly Business group lead. Copy.ai's closed listing is unaffected either way. Notion, Grammarly-via-PartnerStack and other network-hosted vendors are unreachable until the profile is re-approved.",
       "george_action": "Dashboard-only and George-only: sign in at app.partnerstack.com and reapply the Network Profile with corrected/new information. Do not attempt marketplace joins before that."
@@ -320,6 +320,16 @@
       "affiliate_url": "https://fireflies.ai/?fpr=aitoolsessentials-a24057",
       "url": "https://fireflies.ai/?fpr=aitoolsessentials-a24057",
       "partner": true
+    },
+    {
+      "tool_slug": "n8n",
+      "availability": "available",
+      "program_type": "affiliate",
+      "network": "PartnerStack",
+      "official_program_url": "https://n8n.io/affiliates/",
+      "application_status": "applied_pending_review",
+      "commission_note": "Public program page checked live 2026-11-24 at https://n8n.io/affiliates/: \"Get paid a 30% commission on all your n8n cloud referrals for the first year\", based on n8n's net earnings per subscription (tax-inclusive billing, so net varies by region); payouts monthly and only on balances of EUR 100 or more; paid ad campaigns on the affiliate links are prohibited. The PartnerStack acknowledgment supplied no rate, so the recorded 30% comes from the vendor's own page, not from the approval.",
+      "notes": "APPLIED 2026-11-24. PartnerStack acknowledged the application the same day (PartnerStack program-notification mail on its own sending domain, \"Your Application to join n8n GmbH\", 2026-11-24 21:53 UTC; SPF pass, DKIM signed by partnerstackmail.com and sendgrid.info) - \"submitted for review\", outcome pending. This is the first n8n application on record: no prior \"n8n GmbH\" hit exists in the repo, this ledger or any mail folder, and n8n is not in priority_application_queue. Open question, recorded not resolved: the 2026-09-14 PartnerStack limit bars NEW marketplace joins, yet this application was accepted. Whether the limit was lifted or the vendor's direct program URL (n8n.io/affiliates/ links to dash.partnerstack.com/application?company=n8n&group=affiliates2025) routes around the marketplace is unverified and needs the dashboard - do not record the limit as lifted on this evidence alone. No tracking URL has been issued, so no CTA or hop is wired and no rate is published as ours. Affiliate questions go to the contact address published on n8n.io/affiliates/."
     }
   ],
   "priority_application_queue": [
