@@ -1,0 +1,21 @@
+{
+ "checked": "2026-11-24",
+ "routes": {
+  "personneltoday.com/contact-us/": {
+   "label": "Personnel Today editorial contact page - publishes 'Jo Faragher, contributing editor jo.faragher@personneltoday.com'",
+   "url": "https://www.personneltoday.com/contact-us/",
+   "http": "200",
+   "bytes": 243494,
+   "title": "Contact us - Personnel Today",
+   "emails_on_page": {"adam.mcculloch@personneltoday.com": 1, "jo.faragher@personneltoday.com": 1, "maddie.frost@personneltoday.com": 1, "rob.moss@personneltoday.com": 1}
+  },
+  "businessinsider.com/author/thibault-spirlet/": {
+   "label": "Thibault Spirlet (Business Insider) byline page - mailto tspirlet@businessinsider.com",
+   "url": "https://www.businessinsider.com/author/thibault-spirlet",
+   "http": "200",
+   "bytes": 328089,
+   "title": "Thibault Spirlet - Business Insider",
+   "emails_on_page": {"tspirlet@businessinsider.com": 5}
+  }
+ }
+}

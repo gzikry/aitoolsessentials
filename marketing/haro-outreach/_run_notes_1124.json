@@ -1,0 +1,141 @@
+{
+  "_note": "Editorial judgement for the 2026-11-24 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json (367 carried rows + 15 new window rows, all checked=2026-11-24) and _window_1124.json. Only the judgements below are typed. The sitemap window produced 87 new slugs, 12 carrying an AI slug token and 0 AI+spend by slug; every one of the 87 window bodies was fetched and read, and the body scan found 14 AI-token bodies of which 2 also carry a real spend token. One of those two is on-beat and routable and is drafted (Personnel Today, Jo Faragher); the other thirteen AI rows are off-beat with no reply route and are recorded and assessed rather than drafted.",
+  "new_rows": {
+    "current-and-former-nvidia-employees-jensen-huang-reinstated-as-ceo": {
+      "who": "Daniel Howley - the page's own author field; no outlet named on the page.",
+      "category": "AI / Corporate Governance Reaction",
+      "contact": "The body says 'My DMs are open' but publishes no handle or address of its own; the request page carries no reply route.",
+      "relevance": "low",
+      "notes": "Asks current and former Nvidia employees for reaction to the board reinstating Jensen Huang as CEO. First-hand employee testimony only, and the page publishes no reply route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "ai-industry-analysts-jensen-huang-return-to-nvda-implications": {
+      "who": "Jon Swartz, TechStrong Group (techstronggroup.com) - domain on the page.",
+      "category": "AI / Breaking-News Market Comment",
+      "contact": "The body's address is redacted by Sourcee ('DM or [email redacted]'); the request page publishes no address, handle or link of its own.",
+      "relevance": "low",
+      "notes": "Breaking-news request for industry comment on Jensen Huang's return to Nvidia and what it portends. It wants market/analyst opinion, not pricing data, and the page redacts the route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "it-analysts-and-security-experts-nvidia-ceo-reinstatement-impact": {
+      "who": "Sarah A. - the page's own author field; no outlet named.",
+      "category": "AI / Opinion Pieces",
+      "contact": "The body asks to 'drop me a line' but publishes no address or handle; the request page carries no reply route.",
+      "relevance": "low",
+      "notes": "Wants opinion pieces from IT analysts and security experts on the Nvidia CEO reinstatement and its IT/cybersecurity implications. We are neither a security analyst nor a vendor of that opinion, and the page publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "brokers-and-claims-pros-m365-and-us-atc-ground-stop-insurer-response": {
+      "who": "Bryony Garlick, Insurance Business UK (insurancebusinessmag.com) - domain on the page.",
+      "category": "AI / Insurance Response to Outages",
+      "contact": "The body's address is redacted by Sourcee ('Comment below, DM me or email [email redacted]'); the request page publishes no address, handle or link of its own.",
+      "relevance": "low",
+      "notes": "Insurance-trade request to brokers, underwriters and claims staff about cover for supplier outages, citing the 12 November Microsoft 365 failure. It wants insurance-sector testimony, not AI-tool prices, and the page redacts the route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "nvidia-employees-and-openai-staff-at-altman-exit-and-return-reactions": {
+      "who": "Manseen Logan, MFA, Business Insider (businessinsider.com) - domain on the page.",
+      "category": "AI / Employee Reaction",
+      "contact": "The body's address is redacted by Sourcee ('reach out on LinkedIn or to my inbox: [email redacted]'); the page publishes no address or handle of its own.",
+      "relevance": "low",
+      "notes": "Wants first-hand reactions from Nvidia staff and from people at OpenAI through the Altman exit and return. Insider testimony only, and the page redacts the route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "uk-healthcare-expert-ai-impact-on-nhs-staffing-and-care": {
+      "who": "Pitch & Shout - an agency's own request-listing post; no journalist or outlet named.",
+      "category": "AI / PR Agency Listing",
+      "contact": "The post carries one outbound link, an application form at https://t.co/U6uparUPmF ('Join here to apply for this'); there is no address or handle.",
+      "relevance": "low",
+      "notes": "A PR agency listing an opportunity for a UK healthcare expert to comment on AI helping the NHS. It is a CV/expertise application through the agency's own form, not a routable journalist request, and we hold no NHS/healthcare standing.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "hr-professional-leadership-and-ai-available-next-48-hours": {
+      "who": "Dr. Cheryl Robinson - the page's own author field; no outlet named.",
+      "category": "AI / Leadership Interview",
+      "contact": "Asks to be recommended someone available for a brief interview; publishes no address, handle or link of its own.",
+      "relevance": "low",
+      "notes": "A tight-deadline ask for an HR professional to interview on leadership and AI. It wants an HR practitioner, not a pricing/data source, and the page publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "uk-healthcare-experts-ai-scheduling-and-staffing-admin-impact": {
+      "who": "Lindsay Dodgson - the page's own author field; no outlet named.",
+      "category": "AI / Healthcare Operations",
+      "contact": "The body's address is redacted by Sourcee; the request page publishes no address, handle or link of its own.",
+      "relevance": "low",
+      "notes": "Wants UK healthcare experts on AI-powered scheduling and staffing in the NHS. It asks for clinical/operational healthcare standing we do not hold, and the page redacts the route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "estate-agents-using-ai-photos-reluctant-due-to-competition": {
+      "who": "Emily Braeger, The i Paper (theipaper.com) - domain on the page.",
+      "category": "AI / Real-Estate Listing Images",
+      "contact": "The body's address is redacted by Sourcee ('Pls email me at [email redacted]'); the request page publishes no address or handle of its own.",
+      "relevance": "low",
+      "notes": "Wants estate agents who have reluctantly used AI property photos because competitors do. Sector testimony only, no pricing angle, and the page redacts the route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "hr-professionals-ai-hiring-economics-and-workforce-planning": {
+      "who": "Jo Faragher (contributing editor), Personnel Today (personneltoday.com) - byline on the page and named on the publication's own contact page.",
+      "category": "AI / Token & Seat Cost vs Employment Economics",
+      "contact": "ROUTE RESOLVED OFF THE PUBLICATION'S OWN SITE, not the request page: personneltoday.com/contact-us/ publishes 'Jo Faragher, contributing editor jo.faragher@personneltoday.com' in its own contact listing (HTTP 200, read 2026-11-24); personneltoday.com MX = Google Workspace (aspmx.l.google.com). Deliverability not SMTP-verified. The request page itself publishes no address, handle or link.",
+      "relevance": "high",
+      "notes": "ON-BEAT: a Personnel Today contributing editor asking, in her own words, 'how do companies calculate the cost of AI against the cost of employing people' as 'some companies are capping the use of tokens'. This is the core AI+spend beat this monitor exists to answer, and our dated seat/token price set speaks to it directly. Route resolved off the publication's own contact page, so the row is sendable.",
+      "template": "Lead with the measured seat/token series and the per-seat arithmetic, offer the dated price census as the number, and answer the 'cost of AI vs cost of people' framing with our cheapest-paid-tier median and the seat annualisation. Full paste-ready draft in pitch-drafts-2026-11-24.md §1."
+    },
+    "accountancy-automation-consultant-professional-body-publication": {
+      "who": "Caroline Roberts - the page's own author field; no outlet named ('professional body publication').",
+      "category": "AI / Accountancy Automation",
+      "contact": "The page publishes no address, handle or link of its own; the body carries only a deadline ('Deadline Thurs 26th').",
+      "relevance": "low",
+      "notes": "Seeks a consultant/expert in automation of accountancy processes for a professional-body publication. It asks for accountancy-automation consulting standing we do not hold, and the page publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "icaew-sme-accountancy-firms-ai-and-robotics-process-automation": {
+      "who": "Caroline Roberts - same author as the row above; no outlet named.",
+      "category": "AI / Accountancy Firms RPA",
+      "contact": "The page publishes no address, handle or link of its own; deadline 'Thurs 26th'.",
+      "relevance": "low",
+      "notes": "Wants small-to-medium accountancy firms that are ICAEW members to discuss automating processes with AI and robotics. We are not an ICAEW member firm, so no standing, and the page publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "classic-car-owners-restoration-and-firstcar-stories": {
+      "who": "Doug K., carsloved.com - the poster's own podcast site, linked from the page.",
+      "category": "AI / Podcast Booking",
+      "contact": "The body links the poster's own site (https://carsloved.com) as a listen/join call; no address or handle published for a reply.",
+      "relevance": "low",
+      "notes": "A podcast soliciting classic-car restoration stories, wrapped around a note that Claude AI recommended the show. It is a guest-booking promo, not a request for AI pricing data, and the only link is the poster's own site.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "executives-and-founders-career-reinvention-case-studies": {
+      "who": "Mo GAD - the page's own author field; the post is a LinkedIn newsletter promo.",
+      "category": "AI / Newsletter Case Studies",
+      "contact": "The body's address is redacted by Sourcee; the page publishes no address or handle of its own.",
+      "relevance": "low",
+      "notes": "A careers-newsletter promo inviting case studies on leadership, AI and reinvention. It is a newsletter-building call, not a routable journalist request, and the page redacts the route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "freelance-illustrators-false-aiuse-accusations-economic-impact": {
+      "who": "Suzanne Bearne - the page's own author field; no outlet named.",
+      "category": "AI / False AI-Use Accusations",
+      "contact": "The body says 'Please share' but publishes no address, handle or link of its own; the request page carries no reply route.",
+      "relevance": "low-medium",
+      "notes": "Wants surveys/studies on people falsely accused of using AI, plus case studies, including the financial cost to an accused freelancer. It asks for accusation-prevalence research we do not hold (we price AI tools, not AI-accusation rates), and the page publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    }
+  },
+  "new_this_run": [
+    "87 new slugs in the sitemap window (2026-11-23T00:42:15Z -> 2026-11-24T02:54:45Z): 12 AI-token by slug, 0 AI+spend by slug, 2 spend-only by slug. All 87 window bodies were fetched (87/87) and read; the body scan found 14 AI-token bodies, of which 2 also carry a real spend token (Personnel Today 'cost of AI vs cost of employing people'; a freelance-illustrators 'financial cost' row that is accusation research, not tool pricing).",
+    "One on-beat, routable row this run: hr-professionals-ai-hiring-economics-and-workforce-planning (Jo Faragher, Personnel Today) - a direct AI-token-cost-vs-employment-cost question, route resolved to jo.faragher@personneltoday.com off the publication's own contact page. Drafted.",
+    "The other thirteen AI rows are off-beat (Nvidia/CEO and Altman reaction, insurance, NHS healthcare, estate-agent photos, accountancy-automation consultants, a podcast and a newsletter promo). None asks what an AI tool costs and none publishes a route, so they are recorded and assessed rather than drafted."
+  ],
+  "why_not_drafted": [
+    "Daniel Howley / Sarah A. / Manseen Logan (Business Insider): employee or opinion reaction to Nvidia/OpenAI leadership news - no route, no standing",
+    "Jon Swartz (TechStrong Group) / Bryony Garlick (Insurance Business UK): breaking-news market comment and insurance-outage testimony - route redacted, off-beat",
+    "Pitch & Shout (NHS healthcare expert): agency application form, not a routable request",
+    "Dr. Cheryl Robinson / Lindsay Dodgson / Emily Braeger (The i Paper): HR, NHS and estate-agent testimony - no route, no standing",
+    "Caroline Roberts (accountancy automation, ICAEW firms): accountancy-consulting standing we do not hold, no route",
+    "Doug K. (carsloved podcast) / Mo GAD (careers newsletter): booking and newsletter promos, not requests",
+    "Suzanne Bearne (false AI-use accusations): accusation-prevalence research, not tool pricing; no route"
+  ],
+  "defects": [],
+  "extra_actions": []
+}
