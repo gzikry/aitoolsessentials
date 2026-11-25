@@ -2962,20 +2962,3 @@ main.home-simple { max-width: 880px; margin: 0 auto; padding: 0 24px 48px; }
 @media (max-width: 640px) { .home-cards { grid-template-columns: 1fr; } .home-simple .home-section { padding: 32px 0; } .home-intro { padding-top: 40px; } }
 body[data-page="home"] main.home-simple { display: block; max-width: 880px; margin: 0 auto; padding: 0 24px 48px; }
 .footer[data-footer="site"], .footer[data-footer="site"] a, .footer[data-footer="site"] p { font-family: var(--sans); letter-spacing: 0; text-transform: none; }
-
-/* Plain pass (site cleanup P2, Nov 2026): flat fills, one light shadow, no glow or hover lift. */
-.orb-blue { background: #7170ff; box-shadow: none; }
-.orb-silver { background: #b8b8bf; }
-.orb { filter: none; box-shadow: none; }
-.score-meter i, .confidence-meter span { background: #0071e3; }
-#shortlist-widget { background: #4c56b8; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
-.viral-result-card, .stack-score, .conversion-verdict-bar, .exit-plan-module, .planner-result { background: #fff; box-shadow: none; }
-.vendor-badge-preview, .stack-share-card { background: #151626; box-shadow: none; }
-.premium-conversion-panel, .pricing-card.featured, .newsletter-cta, .hardware-card, .planner-form { box-shadow: none; }
-.content-hub-card, .score-card, .pricing-card, .guide-card, .directory-card, .table-wrap { box-shadow: 0 1px 2px rgba(10,15,35,.06); }
-.content-hub-card:hover, .score-card:hover, .directory-card:hover { transform: none; box-shadow: 0 1px 2px rgba(10,15,35,.06); }
-.button-blue { box-shadow: none; }
-.button-blue:hover, .cta-button:hover, .shortlist-btn:hover { transform: none; box-shadow: none; }
-button.shortlist-btn, .card-actions button.shortlist-btn { box-shadow: none !important; }
-thead th, tr:first-child th, tr:first-child td { backdrop-filter: none; }
-body[data-page="home"] .home-appear { opacity: 1; transform: none; filter: none; animation: none; }
