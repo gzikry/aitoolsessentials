@@ -360,17 +360,21 @@ _r=_sp.run(['python3','scripts/wire_affiliate_links.py'],capture_output=True,tex
 print(_r.stdout.strip() or _r.stderr.strip())
 
 # Final viral review modules must run after cleanup/affiliate post-passes so they persist.
-from generate_viral_growth import inject_review_stack_modules as _inject_review_stack_modules
-_inject_review_stack_modules(root, tools)
-print('Injected review-page stack modules')
+# Retired Nov 2026 (site cleanup P2): this band injector no longer runs.
+# simplify_pages.py removes the band from older pages.
+# from generate_viral_growth import inject_review_stack_modules as _inject_review_stack_modules
+# _inject_review_stack_modules(root, tools)
+# print('Injected review-page stack modules')
 
 from generate_conversion_growth import postprocess as _conversion_postprocess
 _conversion_postprocess(root, tools)
 print('Injected conversion growth post-process modules')
 
 # Re-link the quiz after module injectors run, so later passes cannot strip it.
-from generate_quiz import link_quiz as _link_quiz
-print('Quiz links refreshed:', _link_quiz(root))
+# Retired Nov 2026 (site cleanup P2): this band injector no longer runs.
+# simplify_pages.py removes the band from older pages.
+# from generate_quiz import link_quiz as _link_quiz
+# print('Quiz links refreshed:', _link_quiz(root))
 
 from generate_site_discovery import postprocess as _site_discovery_postprocess
 _site_discovery_postprocess(root, tools, today)
@@ -388,13 +392,17 @@ from generate_stack_audit import postprocess as _stack_audit_postprocess
 print('Injected stack audit entry links:', _stack_audit_postprocess(root))
 
 
-from generate_premium_membership import postprocess as _premium_postprocess
-_premium_postprocess(root, tools, today)
-print('Injected premium conversion modules')
+# Retired Nov 2026 (site cleanup P2): this band injector no longer runs.
+# simplify_pages.py removes the band from older pages.
+# from generate_premium_membership import postprocess as _premium_postprocess
+# _premium_postprocess(root, tools, today)
+# print('Injected premium conversion modules')
 
-from generate_switch_guides import postprocess as _switch_postprocess
-_switch_postprocess(root, tools, today)
-print('Re-injected switch guide modules')
+# Retired Nov 2026 (site cleanup P2): this band injector no longer runs.
+# simplify_pages.py removes the band from older pages.
+# from generate_switch_guides import postprocess as _switch_postprocess
+# _switch_postprocess(root, tools, today)
+# print('Re-injected switch guide modules')
 
 from generate_pricing_watch import postprocess as _pricing_watch_postprocess
 _pricing_watch_postprocess(root, tools, today)
@@ -410,14 +418,20 @@ print('Generated model lineups hub:', generate_lineup_hub(root))
 from generate_seo_monetization_sweep import postprocess as _sweep_postprocess
 print('SEO/monetization sweep:', _sweep_postprocess(root, tools, today))
 
-from generate_evidence_ledger import postprocess_reviews as _evidence_review_postprocess
-print('Injected exact evidence links:', _evidence_review_postprocess(root))
+# Retired Nov 2026 (site cleanup P2): this band injector no longer runs.
+# simplify_pages.py removes the band from older pages.
+# from generate_evidence_ledger import postprocess_reviews as _evidence_review_postprocess
+# print('Injected exact evidence links:', _evidence_review_postprocess(root))
 
-from generate_exit_plan import postprocess as _exit_plan_postprocess
-print('Injected exit plans:', _exit_plan_postprocess(root, tools))
+# Retired Nov 2026 (site cleanup P2): this band injector no longer runs.
+# simplify_pages.py removes the band from older pages.
+# from generate_exit_plan import postprocess as _exit_plan_postprocess
+# print('Injected exit plans:', _exit_plan_postprocess(root, tools))
 
-from generate_test_protocol import postprocess as _test_protocol_postprocess
-print('Injected test protocols:', _test_protocol_postprocess(root, tools))
+# Retired Nov 2026 (site cleanup P2): this band injector no longer runs.
+# simplify_pages.py removes the band from older pages.
+# from generate_test_protocol import postprocess as _test_protocol_postprocess
+# print('Injected test protocols:', _test_protocol_postprocess(root, tools))
 
 from generate_bestfor_and_report import postprocess_refresh as _bestfor_refresh
 print('Best-for deals strip refreshed:', _bestfor_refresh(root))
@@ -657,6 +671,8 @@ print('Page CTAs:', _inject_page_ctas(root))
 
 from park_premium_links import apply as _park_premium_links
 print('Parked Premium links removed on', _park_premium_links(root), 'pages')
+from simplify_pages import apply as _simplify_pages
+print('Simplified pages:', _simplify_pages(root))
 from generate_homepage import generate as _generate_homepage
 print('Homepage body:', _generate_homepage(root))
 
