@@ -241,7 +241,7 @@ def main() -> None:
     for page, tool_id in ((tool, "chatgpt"), (comparison, "chatgpt-vs-claude")):
         if "AIT PRICE ALERT START" not in page or "price-alert-form" not in page:
             raise SystemExit("price alert missing")
-        if tool_id == "chatgpt" and "Get an email when ChatGPT changes its prices" not in page:
+        if tool_id == "chatgpt" and "Track ChatGPT price &amp; credit-rule changes" not in page:
             raise SystemExit("price alert used the review headline instead of the tool name")
         if f'name="tool" value="{tool_id}"' not in page:
             raise SystemExit(f"price alert tool context missing for {tool_id}")

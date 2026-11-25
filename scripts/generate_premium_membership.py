@@ -1078,11 +1078,11 @@ def homepage_bill_slasher_html(root: Path) -> str:
             f'<form id="bill-cut-sheet" method="post" action="{endpoint}">'
             "<p><label>Email <input type=\"email\" name=\"email\" autocomplete=\"email\" required></label></p>"
             '<p class="subscribe-honeypot"><label>Company website <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></p>'
-            '<p><button class="button button-blue" type="submit">Email me the subscription summary</button></p>'
+            '<p><button class="button button-blue" type="submit">Email me the cut sheet</button></p>'
             "</form>"
         )
     else:
-        form = '<p>Email <a href="mailto:aitoolsessentials@gmail.com">aitoolsessentials@gmail.com</a> for the subscription summary.</p>'
+        form = '<p>Email <a href="mailto:aitoolsessentials@gmail.com">aitoolsessentials@gmail.com</a> for the cut sheet.</p>'
     seats = (
         ("chatgpt", "ChatGPT Plus $20"),
         ("claude", "Claude Pro $20"),
