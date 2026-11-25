@@ -557,6 +557,10 @@
     "minimax-h3-image": {
       "date": "2026-11-23",
       "digest": "Monthly Lite $12.99/3,000 credits, Pro $34.99/10,000, Ultra $129.99/30,000; billed yearly $9.99 / $24.99 / $79.99 a month as $119.88 / $299.88 / $959.88 a year with credits released monthly and no rollover, badges 'Save up to 38%' and annual totals exactly twelve monthly payments. One-time packs valid 365 days: $29.99/5,000, $79.99/15,000, $189.99/40,000, $399.99/100,000, $899.99/250,000. One balance across the catalogue; failed generations refunded; Stripe checkout; USD plus tax. No company, controller, address or governing-law clause published; training unstated; retention a formula; /refund-policy 404. Verified 2026-11-23 on the rendered /pricing in both toggle states and /zh/pricing."
+    },
+    "poseloop": {
+      "date": "2026-11-24",
+      "digest": "One-time packs never expiring: Starter $9.99/200 credits, Plus $24.99/600, Max $59.99/1,600. Monthly: Basic $19.90/500 credits, Pro $49.90/1,500, Ultra $99.90/3,000. Yearly billed $15.90/$29.90/$59.90 a month as $190.80/$358.80/$718.80 - exactly twelve monthly payments - with the toggle badge 'Up to -40%' and cards marked -20% (Basic) / -40% (Pro, Ultra). 15 free credits on signup valid 90 days; free-credit images watermarked. Failed renders return credits automatically; pack credits never expire, plan credits expire with the period. Stripe checkout, USD plus tax; per-clip credit cost varies by trend/model/length/resolution and is quoted on the Generate button. Operator ZheLogic, LLC (Delaware, US) and Delaware governing law named on the legal pages; no postal address published; render-path processors named by category. Verified 2026-11-24 on the rendered /pricing in both tabs."
     }
   },
   "changes": [
@@ -965,6 +969,13 @@
       "previous_check": null,
       "new_check": "2026-11-21",
       "note": "TinyCommand: first recorded pricing snapshot. Free forever tier; monthly $19/$49/$149; billed annually $199/$499/$1,499 (cards show the annual total divided by twelve); three price bases in play at once, all reconciling. Not on /pricing: one-payment lifetime tiers $199/$499/$999/$1,499 on /lifetime and the BFCM2026 offer on /black-friday (month one only, months two to twelve free, renews yearly from month 13). Four policy clauses point to an unpublished sub-processor list. A separate operator from every cluster in the ledger."
+    },
+    {
+      "slug": "poseloop",
+      "detected": "2026-11-24",
+      "previous_check": null,
+      "new_check": "2026-11-24",
+      "note": "PoseLoop (poseloop.app): first recorded pricing snapshot - one-time packs Starter/Plus/Max $9.99/$24.99/$59.99 for 200/600/1,600 never-expiring credits; monthly Basic/Pro/Ultra $19.90/$49.90/$99.90 for 500/1,500/3,000 credits; yearly $190.80/$358.80/$718.80 as $15.90/$29.90/$59.90 a month, i.e. twelve monthly payments with Basic 20% off and Pro/Ultra 40% off; 15 free signup credits valid 90 days."
     }
   ],
   "updated": "2026-11-24"

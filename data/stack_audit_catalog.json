@@ -3322,6 +3322,32 @@
       "affiliate_status": null,
       "affiliate": false,
       "sponsored": false
+    },
+    {
+      "slug": "poseloop",
+      "name": "PoseLoop (poseloop.app)",
+      "category": "Creative",
+      "official_url": "https://poseloop.app/",
+      "review_url": "/tools/poseloop/",
+      "price_label": "One-time credit packs (credits never expire): Starter $9.99 / 200 credits, Plus $24.99 / 600, Max $59.99 / 1,600. Monthly plans: Basic $19.90 / 500 credits a month, Pro $49.90 / 1,500, Ultra $99.90 / 3,000. Billed yearly: Basic $15.90/mo ($190.80/year, 20% off the $238.80 monthly rate), Pro $29.90/mo ($358.80/year, 40% off $598.80), Ultra $59.90/mo ($718.80/year, 40% off $1,198.80). Every annual figure is exactly twelve monthly payments to the cent (190.80/12 = 15.90, 358.80/12 = 29.90, 718.80/12 = 59.90); the billing toggle badge reads 'Up to -40%' and the cards mark -20% (Basic) and -40% (Pro, Ultra), which matches. New accounts get 15 free credits valid 90 days; images produced on free credits carry a watermark and paid credits download clean. Credit packs never expire, while plan credits belong to the billing period and each render draws on the soonest-expiring credits first. Checkout is Stripe (USD plus tax); the Terms name the party taking payment as 'Waffo Pancake, or whichever provider checkout identifies'. Verified 2026-11-24 on the rendered /pricing in both the Credit packs and Yearly tabs and against the served plan config.",
+      "pricing_summary": "One-time credit packs (credits never expire): Starter $9.99 for 200 credits, Plus $24.99 for 600, Max $59.99 for 1,600. Monthly plans: Basic $19.90 for 500 credits a month, Pro $49.90 for 1,500, Ultra $99.90 for 3,000. Billed yearly: Basic $15.90/mo, $190.80/year (against a $238.80 monthly-basis figure, 20% off), Pro $29.90/mo, $358.80/year (against $598.80, 40% off), Ultra $59.90/mo, $718.80/year (against $1,198.80, 40% off); every annual total is exactly twelve monthly payments to the cent, and the billing toggle badge reads 'Up to -40%' against cards marked -20% (Basic) and -40% (Pro, Ultra). New accounts receive 15 free credits valid 90 days; free-credit images carry a watermark and paid credits download clean. Pack credits never expire, plan credits belong to the billing period and soonest-expiring credits are drawn first. Checkout is Stripe, USD plus tax; the Terms name the party taking the money as 'Waffo Pancake, or whichever provider checkout identifies'. The per-clip credit price varies with the trend, model, length and resolution and is quoted on the Generate button rather than on the pricing page. Verified 2026-11-24 on the rendered /pricing in both the Credit packs and Yearly tabs (Chrome, post-hydration) and against the served plan config.",
+      "pricing_url": "https://poseloop.app/pricing",
+      "pricing_checked_date": "2026-11-24",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "marketing"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
     }
   ]
 }

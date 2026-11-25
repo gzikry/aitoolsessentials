@@ -1211,6 +1211,15 @@
       "public_href": "/go/minimax-h3-image/",
       "partner": false
     },
+    "poseloop": {
+      "name": "PoseLoop (poseloop.app)",
+      "slug": "poseloop",
+      "official": "https://poseloop.app/",
+      "destination": "https://poseloop.app/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/poseloop/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

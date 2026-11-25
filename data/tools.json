@@ -8692,5 +8692,93 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.1/5 - the offer is broad and genuinely usable: current models on both sides (a real 2026-11-10 model as the namesake, plus GPT Image 2.6, Seedream 5.5, Nano Banana Pro, Seedance 2.5 and MiniMax H3 Max variants), one credit balance across roughly 55 catalogue entries, a pre-run cost estimate on every generation, automatic refund of failed tasks, an API and an MCP route, and both a subscription and a 365-day pack for different buying shapes. What holds it under the leaders is that breadth is the whole pitch - it is one of many multi-model workspaces with the same catalogue behind a different front end, and the footer's own model list does not even include the model the site is named after. Transparency 3.4/5, bringing it to 3.9: credit and refund behaviour is stated on both the Terms and the pricing FAQ, the acceptable-use terms are substantive (six categories, CSAM with NCMEC referral, deepfake and NCII bans, a reporting channel with a response target and appeals), output and commercial rights are spelled out, the prices reconcile to the cent on four surfaces including the Chinese mirror, and the legal pages are dated for this product rather than pasted in. Against that: no company, controller, address or governing-law clause anywhere, a circular contact clause, no training statement, retention as a formula, AI processors named only as categories, analytics running on the policy pages themselves without being named, no refund page, and homepage copy that contradicts the tool about what its namesake does. The same platform and app build is separately listed here as 01Router, which is disclosed rather than asserted - if the vendor confirms one operator, one answer reconciles both listings. The rating is an editorial score, not a benchmark."
+  },
+  {
+    "slug": "poseloop",
+    "name": "PoseLoop (poseloop.app)",
+    "category": "Creative",
+    "best_for": "Creators and small social teams who want to post a trend clip while the format is still climbing, starting from one or two photos rather than a prompt or a shoot - one photo for most trends, two for a duet, up to five friends, or one shot of a car. It suits people who will read the per-render credit price on the Generate button before committing and who are happy to buy a one-time credit pack (credits never expire) rather than subscribe. It is a weaker fit for a buyer who needs a registered street address or a named human counterparty to contract with, who wants every data processor named as a company before uploading faces, who wants a flat per-clip price list on the pricing page, or who wants a tool with a third-party track record - the domain is about two months old and no independent review of it exists.",
+    "price": "One-time credit packs (credits never expire): Starter $9.99 / 200 credits, Plus $24.99 / 600, Max $59.99 / 1,600. Monthly plans: Basic $19.90 / 500 credits a month, Pro $49.90 / 1,500, Ultra $99.90 / 3,000. Billed yearly: Basic $15.90/mo ($190.80/year, 20% off the $238.80 monthly rate), Pro $29.90/mo ($358.80/year, 40% off $598.80), Ultra $59.90/mo ($718.80/year, 40% off $1,198.80). Every annual figure is exactly twelve monthly payments to the cent (190.80/12 = 15.90, 358.80/12 = 29.90, 718.80/12 = 59.90); the billing toggle badge reads 'Up to -40%' and the cards mark -20% (Basic) and -40% (Pro, Ultra), which matches. New accounts get 15 free credits valid 90 days; images produced on free credits carry a watermark and paid credits download clean. Credit packs never expire, while plan credits belong to the billing period and each render draws on the soonest-expiring credits first. Checkout is Stripe (USD plus tax); the Terms name the party taking payment as 'Waffo Pancake, or whichever provider checkout identifies'. Verified 2026-11-24 on the rendered /pricing in both the Credit packs and Yearly tabs and against the served plan config.",
+    "rating": 3.8,
+    "official": "https://poseloop.app/",
+    "summary": "PoseLoop is an image-to-video studio built around short-lived viral trends rather than a general clip generator. Trends get their own page - a rap duet in a green booth, a lip-synced music video, a cashier meme, a car flipping off a ramp - and each states the photos it needs, its length, its resolution and its credit price before you start. Behind the button a trend runs as a short chain of AI steps: some place you in the scene as a still, some read your photo so the scene fits, and a video model then renders the motion; where a trend lives on its sound the original track is laid under the finished clip. Output is vertical 9:16 MP4 framed for TikTok, Reels and Shorts, with a 66-effect library, video and image prompt galleries and its own prompt-to-image generation alongside. Accounts sign in with Google or email and password, and checkout is Stripe. It is operated by ZheLogic, LLC, a Delaware company, and - after a first pass in which none of that was published - its legal set now names the operator and the governing law.",
+    "use_cases": [
+      "Turning one clear photo of yourself into a vertical clip for a trend that is currently climbing, without writing a prompt",
+      "Making a two-person duet from two portraits, or a group clip from up to five friends",
+      "Putting a pet or a car into a trend scene from a single photo of the animal or the vehicle",
+      "Generating still images from a text prompt on the same credit balance as the video",
+      "Browsing the effect library and the video and image prompt galleries for formats to run on your own pictures",
+      "Trying the product on the 15 free signup credits before buying a pack or a plan"
+    ],
+    "pros": [
+      "The operator and the jurisdiction are now named: the About, Terms, Privacy and Refund pages all state that poseloop.app is operated by ZheLogic, LLC, a limited liability company established in the State of Delaware, United States, and the Privacy Policy adds that ZheLogic is the operator and data controller",
+      "There is a real governing-law clause instead of a circular one: Terms section 14 says the Terms and any dispute are governed by the laws of the State of Delaware without regard to conflict-of-law principles, names the state and federal courts located in Delaware as the forum, and preserves mandatory consumer protections that cannot be waived",
+      "The self-contradicting date stamp is gone: the privacy, terms, refund, about and editorial-policy pages now all carry one date, November 25 2026, which post-dates the September 18 2026 domain registration; the earlier set had a stamp of Oct 24 2025 directly beside body text reading 'October 24, 2026'",
+      "The pricing reconciles to the cent across every surface and both billing tabs, and the presentation defect is fixed: the toggle badge reads 'Up to -40%' against cards marked -20% (Basic) and -40% (Pro, Ultra), and the heading now reads 'PoseLoop credit packs and subscription plans' rather than advertising only subscription plans beside a default pack view",
+      "The model stack is disclosed rather than implied: the engines it runs on are named (Seedance 2.5 / 2.0 / 2.0 Mini, GPT Image 2, Gemini Flash, Veo 3.1 and Kling) and the Terms state plainly that PoseLoop is an independent product with no affiliation to any provider whose model it connects to",
+      "No invented proof anywhere: card previews are labelled illustrative, and there are no testimonials, user counts or star ratings on the site",
+      "Retention is stated with numbers and the training position is explicit: erasure within 30 days of a verified request plus up to 90 days of backups, and 'PoseLoop does not feed your uploads or your finished clips into training for models of its own'",
+      "Failed renders return their reserved credits to the balance automatically with no ticket to file, and the refund policy's 7-day, substantially-unspent window matches the pricing FAQ word for word",
+      "The tracker profile is light and now disclosed: the only external scripts a live session loads are Stripe for checkout and a self-hosted, cookieless Plausible instance at p.poseloop.app, and the Privacy Policy now names that host; no GA4, Clarity, session-replay or ad-network script loads at all",
+      "The TikTok embed is disclosed as loading nothing until the reader presses play"
+    ],
+    "cons": [
+      "No registered postal address is published. The entity (ZheLogic, LLC) and the state (Delaware, United States) are named on four pages, but no street or registered-office address appears anywhere, so a buyer knows who to name but not where they are",
+      "The data processors are named by category rather than by company for the render path: the Privacy Policy refers to 'a third-party AI model provider, and to the infrastructure, storage, and safety vendors that sit around that request' without naming them as companies (the analytics host p.poseloop.app is the one processor now named)",
+      "The shared-codebase question is answered but not independently confirmable. poseloop.app ships a cookie-consent module that also runs on bananaproai.app, miso-one.com, bulin47ai.video and popstarai.video, and self-hosts Plausible at p.<domain> in the same way; PoseLoop links to none of them and now says it is 'operated as a standalone product by ZheLogic, LLC' and should be listed on its own merits, but the relationship itself is the vendor's assertion rather than something a reader can verify",
+      "Outside the EEA, the UK and Switzerland the cookie banner is not shown and the site stores its consent record (poseloop_cookie_consent) with analytics already granted, so non-EU visitors are measured by default rather than asked - a regional default standing in for a choice. The Privacy Policy now describes this behaviour honestly, and the only thing that runs is cookieless Plausible, so the impact is small, but it is still an opt-out-default shape rather than prior consent",
+      "The name collides with an unrelated iOS app, 'PoseLoop: Self Timer Camera'; the vendor says it is aware of it and has no affiliation, and no AI-video product shares the name",
+      "The domain was registered 2026-09-18 and is about two months old at the time of this check, with no independent third-party review or hands-on test",
+      "The cost of one clip is not published on the pricing page: credit cost varies with the trend, the model, the length and the resolution and is only quoted on the Generate button inside each trend, so a reader cannot budget from the pricing page alone",
+      "The Terms name the party taking payment ambiguously - 'Waffo Pancake, or whichever provider checkout identifies' - so the merchant of record is not stated plainly on the pricing page even though live checkout runs on Stripe"
+    ],
+    "key_features": [
+      "Trend pages that each state the photos needed, the clip length, the resolution and the credit price before a render starts - 9 trends live in November 2026 (including Tiny Desk AI, Chat GTT AI, Popstar AI, Bulin 47 AI, Burning Bridges AI and Tesla Roadster AI)",
+      "A 66-effect library plus video and image prompt galleries, so older formats and prompt-driven generation sit alongside the current trends",
+      "Multi-step render chains: some trends place you in the scene as a still or read your photo so the scene fits before a video model renders the motion, and the trend's original sound is laid under the clip where the format carries one",
+      "Credits are quoted on the Generate button before you confirm, and the credits reserved for a failed render return to the balance automatically",
+      "One-time credit packs with no expiry alongside monthly and yearly subscriptions, on one credit balance",
+      "15 free credits on signup, valid 90 days, with a watermark on images made from free credits and clean downloads on paid credits",
+      "Vertical 9:16 MP4 output framed for TikTok, Instagram Reels and YouTube Shorts; finished clips download and stay in My creations, where they can be deleted at any time",
+      "Sign-in with Google or an email and password; Stripe checkout; AI image generation from prompts as well as video",
+      "A legal set that names the operator (ZheLogic, LLC, Delaware, US) and the governing law (Delaware), with retention periods, a no-training statement on uploads and a stated 7-day refund window on packs and first subscription charges"
+    ],
+    "faq": [
+      [
+        "Who operates PoseLoop?",
+        "poseloop.app is operated by ZheLogic, LLC, a limited liability company established in the State of Delaware, United States, which the Privacy Policy also names as the operator and data controller. That is stated on the About, Terms, Privacy and Refund pages, and the Terms identify the courts of Delaware as the forum for disputes. No street or registered-office address is published, and support@poseloop.app is the only contact channel given."
+      ],
+      [
+        "What does PoseLoop cost?",
+        "One-time credit packs are $9.99 for 200 credits, $24.99 for 600 and $59.99 for 1,600 (credits never expire). Monthly plans are Basic $19.90 for 500 credits a month, Pro $49.90 for 1,500 and Ultra $99.90 for 3,000. Billed yearly the same plans cost $15.90, $29.90 and $59.90 per month at $190.80, $358.80 and $718.80 a year - exactly twelve monthly payments, with Basic 20% off and Pro and Ultra 40% off. New accounts start with 15 free credits valid 90 days."
+      ],
+      [
+        "Can I get a refund?",
+        "Within 7 days of buying a credit pack or the first charge of a subscription, if the credits are substantially unspent, write to support@poseloop.app; approved payments take 5-10 business days to return via the original route. Subscription renewals are not refunded - cancelling before the next billing date stops the next charge - and statutory consumer rights are preserved. A render that fails returns its credits automatically without a request."
+      ],
+      [
+        "Does PoseLoop train on my photos?",
+        "No, not for its own models: the Privacy Policy states that PoseLoop does not feed uploads or finished clips into training for models of its own. The third-party providers that carry out a render operate under their own published terms and privacy notices, which the policy says it does not control. Uploads are erased within 30 days of a verified request, with up to 90 days of backups."
+      ],
+      [
+        "Is PoseLoop affiliated with the AI models it uses?",
+        "No. The Terms say PoseLoop is an independent product, names the engines it runs on (Seedance, GPT Image, Gemini Flash, Veo and Kling among them), and state that no affiliation with, sponsorship by or endorsement from any model provider should be inferred unless stated in writing."
+      ],
+      [
+        "How much does one clip cost in credits?",
+        "It depends on the trend or effect, the model, the clip length and the resolution you choose, and the figure is shown on the Generate button before you confirm anything - the pricing page does not publish a per-clip credit table. Failed renders return their credits."
+      ]
+    ],
+    "trial_checklist": [
+      "Sign up and use the 15 free credits first, and check what the watermark looks like on a free-credit image before deciding whether the paid clean download matters for your use",
+      "Open two or three trend pages you would actually post and read the credit price shown on the Generate button at the length and resolution you want - the price is not on the pricing page and it varies by trend",
+      "Compare the one-time pack against the monthly plan on the same card: packs never expire and suit occasional posting, plans refresh credits monthly at a lower price per credit but plan credits lapse at the end of the period",
+      "If you switch the billing toggle to Yearly, confirm the badge ('Up to -40%') against each card's own discount - Basic is 20% off, Pro and Ultra are 40% off - and check the annual total is exactly twelve monthly payments",
+      "Read the Refund Policy's 7-day / substantially-unspent window before a large purchase, since subscription renewals are not refunded",
+      "Decide whether you are comfortable uploading faces to a product whose render-path processors are named only by category and whose operator publishes no postal address; if a named company is a requirement for a client or a compliance review, that is a reason to wait"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5 - the offer is real, live and priced: a working trend-video studio with a no-account API that answers correctly (GET /api/my-creations 401, GET /api/payment/checkout 405 on a live POST route), Stripe loaded sitewide, an internally consistent credit ladder across packs and both plan tabs, disclosed model dependencies, illustrative-only previews and no invented proof. It loses points on surround rather than substance: per-clip costs are not published on the pricing page, the merchant of record is named ambiguously in the Terms, and there is no third-party track record on a two-month-old domain. Transparency 3.7/5 - the vendor answered a specific hold by shipping real fixes: it named the operator (ZheLogic, LLC, Delaware) on four pages, replaced a circular governing-law sentence with a Delaware law-and-forum clause, brought five pages onto one truthful date that post-dates the domain, renamed the consent storage key, named the Plausible host and aligned the analytics wording with the regional banner behaviour. What holds it below the top of the band is what is still absent or unverifiable - no registered postal address, render-path processors named only by category, an opt-out-default consent record outside the EU, and a shared-codebase sibling relationship the vendor asserts is independent but a reader cannot confirm. Overall 3.8; the score is an editorial judgement, not a benchmark."
   }
 ]
