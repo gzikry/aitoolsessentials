@@ -96,8 +96,7 @@ def main() -> None:
     need(embed, 'id="trap-util"', errors, "embed")
     need(embed, "#FAF8F5", errors, "embed")
     need(embed, 'href="/pricing-watch/credit-traps/"', errors, "embed")
-    need(home, 'href="/pricing-watch/credit-traps/"', errors, "home")
-    need(home, "home-learn-card-wide", errors, "home")
+    need(home, 'href="/price-changes/"', errors, "home")
     need(watch, 'id="credit-trap-card"', errors, "watch")
     need(prices, 'id="credit-trap-card"', errors, "prices")
     for needle in (

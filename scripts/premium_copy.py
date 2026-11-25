@@ -402,21 +402,10 @@ def homepage_header_html() -> str:
 
 
 def homepage_footer_html() -> str:
-    """Short homepage utility footer. Inner pages keep their own footers."""
-    return (
-        '<footer class="footer" data-footer="slim">'
-        "<span>© 2026 AIToolsEssentials</span>"
-        '<a href="/tools/index.html">Tools</a>'
-        '<a href="/newsletter/">Newsletter</a>'
-        '<a href="/newsletter/">Keep, Test, Cut</a>'
-        '<a href="/pricing-watch/">Pricing Watch</a>'
-        '<a href="/legal/about.html">About</a>'
-        f'<a href="mailto:{EMAIL}">Contact</a>'
-        '<a href="/legal/privacy.html">Privacy</a>'
-        '<a href="/legal/terms.html">Terms</a>'
-        + public_colophon_html()
-        + "</footer>"
-    )
+    """The shared site footer (one footer everywhere since Nov 2026)."""
+    from site_chrome import CANONICAL_FOOTER
+
+    return CANONICAL_FOOTER
 
 
 def homepage_learn_html() -> str:

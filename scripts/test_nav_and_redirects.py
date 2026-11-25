@@ -30,25 +30,25 @@ def main() -> None:
         errors.append("shared nav has no menu button")
     if 'href="/tools/">Tools</a>' not in CANONICAL_HEADER:
         errors.append("shared nav dropped Tools")
-    if 'href="/legal/affiliate-disclosure.html">Disclosure</a>' not in CANONICAL_HEADER:
-        errors.append("shared nav dropped Disclosure")
-    if CANONICAL_HEADER.count(">Sponsor us</a>") != 1:
-        errors.append("shared nav must have one Sponsor us link")
+    if "nav-cta" in CANONICAL_HEADER:
+        errors.append("shared nav must not carry a button CTA")
+    for label in ("Tools", "Compare", "Price alerts", "Newsletter", "For founders", "Sponsor"):
+        if f">{label}</a>" not in CANONICAL_HEADER:
+            errors.append(f"shared nav dropped {label}")
+    if CANONICAL_HEADER.count('href="/sponsor/"') != 1:
+        errors.append("shared nav must have one Sponsor link")
     sample = redirect_stub("Suno vs Udio", "comparisons/suno-vs-udio.html")
     if 'url=/comparisons/suno-vs-udio.html' not in sample or "noindex" not in sample:
         errors.append("redirect stub is not a noindex refresh")
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     header = home.split("</header>", 1)[0]
-    if 'data-nav="slim"' not in header:
-        errors.append("homepage nav is not the short nav")
-    for label in ("Stack Audit", "Price alerts", "Subscribe"):
-        if f">{label}</a>" not in header:
-            errors.append(f"homepage nav lost {label}")
-    # Premium is parked off the front door (2026-11-24). /premium/ stays reachable.
-    if 'href="/premium/">Premium</a>' in header:
+    if header[header.find("<header"):].replace(' aria-label="Primary navigation"', "") + "</header>" != CANONICAL_HEADER:
+        errors.append("homepage header is not the shared header")
+    # Premium is parked (2026-11-24). /premium/ pages redirect.
+    if "/premium/" in header:
         errors.append("homepage nav still promotes Premium while it is parked")
-    if 'class="button home-cta-primary" href="/stack-audit.html"' not in home:
-        errors.append("homepage hero lost Free Stack Audit")
+    if 'href="/stack-audit.html"' not in home:
+        errors.append("homepage lost the Stack Audit link")
     claude = (ROOT / "articles/claude-vs-chatgpt.html").read_text(encoding="utf-8")
     footer = claude[claude.rfind("<footer") :]
     if 'href="/sponsor/" rel="nofollow">Sponsor us</a>' not in footer:

@@ -16,7 +16,6 @@ UTILITY = (
     "pricing-watch/index.html",
     "legal/about.html",
     "advertise/index.html",
-    "premium/index.html",
     "stack-audit.html",
     "newsletter/index.html",
     "price-changes/index.html",

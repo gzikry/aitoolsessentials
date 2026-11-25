@@ -75,6 +75,29 @@ LEGACY = (
     ("marketing/linkable-assets/coding-assistant-quiz.html", "quiz/coding-assistant-keep-cut.html", "Coding assistant quiz"),
 )
 
+# Premium is parked (Nov 24, 2026). Its pages send readers to the homepage so no old link 404s.
+PREMIUM = tuple(
+    (path, "", "AIToolsEssentials Premium")
+    for path in (
+        "premium/index.html",
+        "premium/faq.html",
+        "premium/archive.html",
+        "premium/roadmap.html",
+        "premium/sample-audit.html",
+        "premium/sample-report.html",
+        "premium/onboarding/index.html",
+        "premium/welcome/index.html",
+        "premium/library/index.html",
+        "premium/library/how-to-access.html",
+        "premium/library/research-brief.html",
+        "premium/library/decision-matrix.html",
+        "premium/library/tool-change-alerts.html",
+        "premium/library/weekly-checklist.html",
+        "premium/library/stack-audit-template.html",
+        "premium/library/roi-worksheet.html",
+    )
+) + (("pricing/index.html", "price-changes/", "Premium pricing"),)
+
 
 def write_legacy_redirects(root: Path) -> int:
     """Write a noindex refresh stub for every legacy path. Returns how many changed."""
@@ -82,7 +105,7 @@ def write_legacy_redirects(root: Path) -> int:
 
     written = 0
     root = Path(root)
-    for loser, winner, title in LEGACY:
+    for loser, winner, title in LEGACY + PREMIUM:
         path = root / loser
         path.parent.mkdir(parents=True, exist_ok=True)
         html = redirect_stub(title, winner)

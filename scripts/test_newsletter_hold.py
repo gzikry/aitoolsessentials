@@ -97,13 +97,13 @@ def main() -> None:
     if "subscribe.news.aitoolsessentials.com" in page:
         errors.append("subscribe page posts to the Porkbun host")
     home = (REPO / "index.html").read_text(encoding="utf-8")
-    panel = home[home.find("AIT HOMEPAGE NEWSLETTER START"): home.find("AIT HOMEPAGE NEWSLETTER END")]
+    panel = home[home.find('<div class="home-signup">'): home.find("</section>", home.find('<div class="home-signup">'))]
     if f'action="{LIVE_ENDPOINT}"' not in panel:
         errors.append("homepage subscribe panel action is not the live workers.dev URL")
     if "Signups open soon." in panel:
         errors.append("homepage subscribe panel still says signups open soon")
-    if panel.count('href="/subscribe/">Subscribe free') != 1:
-        errors.append("homepage subscribe panel must keep one Subscribe free link")
+    if panel.count("<form") != 1:
+        errors.append("homepage must keep exactly one email form")
 
     source = Path(__file__).resolve().with_name("newsletter_hold.py").read_text().lower()
     for word in ("beehiiv", "formsubmit", "requests", "urllib", "smtplib"):

@@ -24,45 +24,75 @@ _FORM = (
     "<!-- AIT HEADER SEARCH END -->"
 )
 
+# One header on every page, the homepage included: six plain links and the search box.
+NAV_LINKS = (
+    ("/tools/", "Tools", ""),
+    ("/comparisons/", "Compare", ""),
+    ("/price-changes/", "Price alerts", ""),
+    ("/newsletter/", "Newsletter", ""),
+    ("/founders/", "For founders", ""),
+    ("/sponsor/", "Sponsor", ' rel="nofollow"'),
+)
+
+
+def _nav_html() -> str:
+    links = []
+    for href, label, extra in NAV_LINKS:
+        link = f'<a href="{href}"{extra}>{label}</a>'
+        if href == "/sponsor/":
+            link = "<!-- AIT SPONSOR NAV START -->" + link + "<!-- AIT SPONSOR NAV END -->"
+        links.append(link)
+    return "".join(links)
+
+
 CANONICAL_HEADER = (
     '<header class="global-nav">'
     '<a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>'
     '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>'
     '<nav class="nav-links" id="site-nav">'
-    '<a href="/tools/">Tools</a>'
-    '<a href="/search/">Search</a>'
-    '<a href="/comparisons/best-ai-tools.html">Best AI tools</a>'
-    '<a href="/categories/">Categories</a>'
-    '<a href="/articles/">Guides</a>'
-    '<a href="/benchmarks/">Benchmarks</a>'
-    '<a href="/articles/learn.html">Learn</a>'
-    '<a href="/guides/switch-guides/">Switching</a>'
-    '<a href="/price-changes/">Price changes</a>'
-    '<a href="/newsletter/">Newsletter</a>'
-    '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END -->'
-    "</nav>"
+    + _nav_html()
+    + "</nav>"
     + _FORM
-    + '<a class="nav-cta" href="/legal/affiliate-disclosure.html">Disclosure</a>'
-    "</header>"
+    + "</header>"
 )
 
-# Homepage keeps the short nav: Stack Audit, Price alerts, Subscribe. Premium is parked off the front door.
-HOMEPAGE_HEADER = (
-    '<header class="global-nav" aria-label="Primary navigation" data-nav="slim">'
-    '<a class="brand home-appear" data-appear="0" href="/" aria-label="AIToolsEssentials home">'
-    '<span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a>'
-    '<nav class="nav-links home-appear" data-appear="1">'
-    '<a href="/tools/">Tools</a>'
-    '<a href="/search/">Search</a>'
-    '<a href="/stack-audit.html">Stack Audit</a>'
-    '<a href="/price-changes/">Price alerts</a>'
-    '<a href="/subscribe/">Subscribe</a>'
-    '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a><!-- AIT SPONSOR NAV END -->'
-    "</nav>"
-    + _FORM
-    + '<a class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">Free Stack Audit</a>'
-    "</header>"
+# The homepage uses the same header. It keeps its aria label so screen readers hear "Primary navigation".
+HOMEPAGE_HEADER = CANONICAL_HEADER.replace(
+    '<header class="global-nav">',
+    '<header class="global-nav" aria-label="Primary navigation">',
+    1,
 )
+
+# One footer on every page that uses the shared chrome.
+CANONICAL_FOOTER = (
+    '<footer class="footer" data-footer="site">'
+    '<nav class="footer-row" aria-label="Site">'
+    '<a href="/tools/">Tools</a>'
+    '<a href="/comparisons/">Compare</a>'
+    '<a href="/price-changes/">Price alerts</a>'
+    '<a href="/newsletter/">Newsletter</a>'
+    '<a href="/founders/">For founders</a>'
+    '<a href="/sponsor/" rel="nofollow">Sponsor us</a>'
+    '<a href="/submit/">Submit a tool</a>'
+    "</nav>"
+    '<nav class="footer-row footer-row-small" aria-label="About">'
+    '<a href="/legal/about.html">About</a>'
+    '<a href="/search/">Search</a>'
+    '<a href="/methodology/">How we review</a>'
+    '<a href="/legal/affiliate-disclosure.html">Affiliate disclosure</a>'
+    '<a href="/legal/corrections.html">Corrections</a>'
+    '<a href="mailto:contact@aitoolsessentials.com">Contact</a>'
+    '<a href="/legal/privacy.html">Privacy</a>'
+    '<a href="/legal/terms.html">Terms</a>'
+    '<a href="/embeds/">Embeds</a>'
+    "</nav>"
+    '<p class="footer-colophon">\u00a9 2026 AIToolsEssentials. '
+    "Keep, Test, Cut by AIToolsEssentials, 1090 West Foothill, Claremont, CA 91711. "
+    "Every email has an unsubscribe link.</p>"
+    "</footer>"
+)
+_FOOTER_RE = re.compile(r'<footer class="footer"[^>]*>.*?</footer>', re.S)
+
 
 # Former site-header pages carried Sponsor us in the footer. The shared nav
 # also has it; the footer link stays. Redirect stubs are not in this list.
@@ -101,30 +131,11 @@ _HEADER_RE = re.compile(
     r'<header class="(?:global-nav|site-header)"[^>]*>.*?</header>',
     re.S,
 )
-_LABELS = (
-    'href="/tools/">Tools</a>',
-    'href="/search/">Search</a>',
-    'href="/comparisons/best-ai-tools.html">Best AI tools</a>',
-    'href="/categories/">Categories</a>',
-    'href="/articles/">Guides</a>',
-    'href="/benchmarks/">Benchmarks</a>',
-    'href="/articles/learn.html">Learn</a>',
-    'href="/guides/switch-guides/">Switching</a>',
-    'href="/newsletter/">Newsletter</a>',
-    'href="/sponsor/" rel="nofollow">Sponsor us</a>',
-    'href="/legal/affiliate-disclosure.html">Disclosure</a>',
+_LABELS = tuple(f'href="{href}"{extra}>{label}</a>' for href, label, extra in NAV_LINKS) + (
     'class="nav-toggle"',
+    'data-footer="site"',
 )
-_HOME_LABELS = (
-    'data-nav="slim"',
-    'href="/tools/">Tools</a>',
-    'href="/search/">Search</a>',
-    'href="/stack-audit.html">Stack Audit</a>',
-    'href="/price-changes/">Price alerts</a>',
-    'href="/subscribe/">Subscribe</a>',
-    'href="/sponsor/" rel="nofollow">Sponsor us</a>',
-    'href="/stack-audit.html">Free Stack Audit</a>',
-)
+_HOME_LABELS = _LABELS
 
 
 def canonical_header(contained: bool = False) -> str:
@@ -172,6 +183,7 @@ def unify_headers(root: Path) -> int:
                 contained = 'data-nav="contained"' in match.group(0) or rel.as_posix() == "sponsor/index.html"
                 replacement = canonical_header(contained)
             updated = _HEADER_RE.sub(replacement, html, count=1)
+        updated = _FOOTER_RE.sub(lambda _m: CANONICAL_FOOTER, updated, count=1)
         if rel.as_posix() in FOOTER_SPONSOR_PAGES:
             updated = _restore_footer_sponsor(updated)
         updated = _ensure_newsletter_footer(updated)
@@ -196,8 +208,11 @@ def header_label_errors(root: Path) -> list[str]:
             continue
         if "<header" not in html:
             continue
-        labels = _HOME_LABELS if rel.as_posix() == "index.html" else _LABELS
-        missing = [label for label in labels if label not in html]
+        if '<footer class="footer"' not in html:
+            labels_needed = [label for label in _LABELS if label != 'data-footer="site"']
+        else:
+            labels_needed = list(_LABELS)
+        missing = [label for label in labels_needed if label not in html]
         if missing:
             errors.append(f"{rel.as_posix()} nav missing {missing[0]}")
         if "<footer" in html and 'href="/newsletter/">Newsletter</a>' not in html:

@@ -26,8 +26,7 @@ PAGES = [
 ]
 # Pages already receiving offer traffic. The paid audit must be reachable from each.
 REACHABLE_FROM = [
-    "pricing/index.html",
-    "premium/index.html",
+    # /pricing/ and /premium/ redirect while Premium is parked (2026-11-24).
     "stack-audit.html",
     "services/ai-stack-audit.html",
     # The homepage no longer pitches the audit: it is parked off the front door (2026-11-24)

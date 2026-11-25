@@ -10,7 +10,7 @@ from urllib.parse import quote, unquote, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from legacy_redirects import LEGACY
+from legacy_redirects import LEGACY, PREMIUM
 from site_health import run as health_run
 from site_scope import is_public_rel
 from validate_site import site_urls
@@ -30,7 +30,7 @@ def main() -> None:
         errors.append("robots.txt no longer allows the public site")
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     locs = re.findall(r"<loc>([^<]+)</loc>", sitemap)
-    for loser, winner, _title in LEGACY:
+    for loser, winner, _title in LEGACY + PREMIUM:
         page = ROOT / loser
         if not page.is_file():
             errors.append(f"missing redirect stub {loser}")

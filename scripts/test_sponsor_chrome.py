@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sponsor_chrome import production_stripe_test_errors, stamp, stamp_site, write_page
 
 HOUSE = (
-    '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor us</a>'
+    '<!-- AIT SPONSOR NAV START --><a href="/sponsor/" rel="nofollow">Sponsor</a>'
     "<!-- AIT SPONSOR NAV END -->"
 )
 MAILTO_BUTTON = (
@@ -122,7 +122,7 @@ def test_null_enrollment_offer_and_page() -> None:
         _has(offer, '<main class="sponsor-offer">')
         _has(offer, 'class="nav-links"')
         _has(offer, "</header>")
-        _has(offer, '<footer class="footer">')
+        _has(offer, '<footer class="footer"')
         _has(offer, 'href="mailto:contact@aitoolsessentials.com"')
         _has(offer, 'href="/css/styles.css"')
         _lacks(offer, "George")
@@ -131,7 +131,7 @@ def test_null_enrollment_offer_and_page() -> None:
         _has(offer, "$200")
         _lacks(offer, "data-sponsor")
         _lacks(offer, "sponsor-line")
-        _has(offer, 'href="/comparisons/best-ai-tools.html">Best AI tools</a>')
+        _has(offer, 'href="/comparisons/">Compare</a>')
         _lacks(offer, 'data-footer="slim"')
         stamped = stamp(offer, "sponsor/index.html", root=root, env={})
         _lacks(stamped, "data-sponsor")
@@ -646,14 +646,11 @@ def test_homepage_sponsor_link_survives_stamp() -> None:
     from premium_copy import homepage_header_html
 
     header = homepage_header_html()
-    if header.count('href="/sponsor/"') != 1 or header.count(">Sponsor us</a>") != 1:
-        raise AssertionError("homepage header does not have one Sponsor us link")
-    if 'href="/stack-audit.html">Stack Audit</a>' not in header:
-        raise AssertionError("homepage header lost Stack Audit")
-    if 'href="/price-changes/">Price alerts</a>' not in header or 'href="/subscribe/">Subscribe</a>' not in header:
-        raise AssertionError("homepage header lost Price alerts or Subscribe")
-    if 'class="nav-cta home-appear" data-appear="1" href="/stack-audit.html">Free Stack Audit</a>' not in header:
-        raise AssertionError("homepage header lost the Free Stack Audit CTA")
+    if header.count('href="/sponsor/"') != 1 or header.count(">Sponsor</a>") != 1:
+        raise AssertionError("homepage header does not have one Sponsor link")
+    for label in ("Tools", "Compare", "Price alerts", "Newsletter", "For founders"):
+        if f">{label}</a>" not in header:
+            raise AssertionError(f"homepage header lost {label}")
     page = "<!doctype html><html><body>" + header + "<main><p>Body</p></main></body></html>"
     with TemporaryDirectory() as raw:
         root = Path(raw)
@@ -666,19 +663,16 @@ def test_homepage_sponsor_link_survives_stamp() -> None:
             raise AssertionError("homepage stamp house link count " + str(once.count(HOUSE)))
         nav_end = once.find("</nav>")
         house_at = once.find(HOUSE)
-        cta_at = once.find('class="nav-cta')
-        if not (0 <= house_at < nav_end < cta_at):
-            raise AssertionError("Sponsor us is not inside the nav, ahead of the CTA")
+        if not (0 <= house_at < nav_end):
+            raise AssertionError("Sponsor is not inside the nav")
         if "home-cta-primary" in once:
             raise AssertionError("header stamp touched a hero CTA")
     home = (Path(__file__).resolve().parents[1] / "index.html").read_text()
     if home.count(HOUSE) != 1:
-        raise AssertionError("committed homepage does not have the Sponsor us nav link")
-    hero = home.split('<section class="hero', 1)[1].split("</section>", 1)[0]
-    if "/sponsor/" in hero or "Sponsor us" in hero:
-        raise AssertionError("Sponsor us landed in the hero")
-    if 'class="button home-cta-primary" href="/stack-audit.html"' not in home:
-        raise AssertionError("homepage hero primary CTA changed")
+        raise AssertionError("committed homepage does not have the Sponsor nav link")
+    intro = home.split('<section class="home-section home-intro">', 1)[1].split("</section>", 1)[0]
+    if "/sponsor/" in intro:
+        raise AssertionError("Sponsor landed in the homepage intro")
 
 
 def test_stamp_site_walk() -> None:

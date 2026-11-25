@@ -19,6 +19,7 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
+NAV_LABELS = ("Tools", "Compare", "Price alerts", "Newsletter", "For founders", "Sponsor")
 WIDTHS = (320, 360, 375, 390, 414, 480, 481, 520, 640, 700, 766, 767, 900, 1024, 1280)
 _CHROME = (
     "google-chrome",
@@ -56,6 +57,9 @@ _MEASURE = r"""
       bottom: rect.bottom
     });
   }
+  const toggleEl = document.querySelector("header.global-nav .nav-toggle");
+  const toggleRect = toggleEl ? toggleEl.getBoundingClientRect() : null;
+  const toggle = !!(toggleEl && getComputedStyle(toggleEl).display !== "none" && toggleRect.width > 0);
   const tops = links.map((link) => link.top);
   const bottoms = links.map((link) => link.bottom);
   const header = document.querySelector("header.global-nav");
@@ -66,6 +70,7 @@ _MEASURE = r"""
     inner: window.innerWidth,
     headerHeight: header ? header.getBoundingClientRect().height : 0,
     oneRow: tops.length ? Math.max(...tops) < Math.min(...bottoms) : false,
+    toggle,
     links
   };
 })()
@@ -387,9 +392,13 @@ def main() -> None:
                         f"{width}px {link['text']!r} sits at {link['left']:.1f}–{link['right']:.1f}"
                         f" outside 0–{viewport:.0f}"
                     )
-            if "Sponsor us" not in labels:
-                errors.append(f"{width}px hides Sponsor us")
-            if not layout["oneRow"] or float(layout["headerHeight"]) > 72:
+            if width > 900:
+                for label in NAV_LABELS:
+                    if label not in labels:
+                        errors.append(f"{width}px hides {label}")
+            elif not layout.get("toggle"):
+                errors.append(f"{width}px has no visible Menu button")
+            if width > 900 and (not layout["oneRow"] or float(layout["headerHeight"]) > 72):
                 errors.append(
                     f"{width}px homepage header wrapped onto a second row"
                     f" (height {layout['headerHeight']})"

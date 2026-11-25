@@ -655,6 +655,11 @@ print('Internal links:', _apply_internal_links(root))
 from page_ctas import inject as _inject_page_ctas
 print('Page CTAs:', _inject_page_ctas(root))
 
+from park_premium_links import apply as _park_premium_links
+print('Parked Premium links removed on', _park_premium_links(root), 'pages')
+from generate_homepage import generate as _generate_homepage
+print('Homepage body:', _generate_homepage(root))
+
 from generate_search_index import main as _build_search_index  # noqa: E402
 if _build_search_index() != 0:
     raise RuntimeError('Search index build failed (a catalog tool has no index entry)')

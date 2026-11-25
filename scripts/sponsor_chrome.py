@@ -64,7 +64,7 @@ _HOUSE = (
     + _HOUSE_HREF
     + '" rel="'
     + _HOUSE_REL
-    + '">Sponsor us</a>'
+    + '">Sponsor</a>'
     + _NAV_END
 )
 
@@ -95,15 +95,7 @@ def _offer_header() -> str:
 
 
 _HEADER = _offer_header()
-_FOOTER = (
-    '<footer class="footer"><span>\u00a9 2026 AIToolsEssentials</span>'
-    '<a href="/advertise/" rel="nofollow">Advertise</a>'
-    '<a href="/legal/affiliate-disclosure.html" rel="nofollow">Affiliate disclosure</a>'
-    '<a href="mailto:contact@aitoolsessentials.com">Contact</a>'
-    '<a href="/legal/about.html">About</a>'
-    '<a href="/legal/privacy.html">Privacy</a>'
-    '<a href="/legal/terms.html">Terms</a></footer>'
-)
+from site_chrome import CANONICAL_FOOTER as _FOOTER  # noqa: E402
 
 _FORBIDDEN_CLASSES = frozenset({
     "review-layout",
