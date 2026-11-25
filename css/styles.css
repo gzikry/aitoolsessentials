@@ -2979,3 +2979,37 @@ body[data-page="home"] main.home-simple { display: block; max-width: 880px; marg
 button.shortlist-btn, .card-actions button.shortlist-btn { box-shadow: none !important; }
 thead th, tr:first-child th, tr:first-child td { backdrop-filter: none; }
 body[data-page="home"] .home-appear { opacity: 1; transform: none; filter: none; animation: none; }
+
+/* Plain pass (site cleanup P3, Nov 2026): sentence-case labels, no ALL-CAPS. */
+.auto-toc span,
+.best-plan-card span,
+.evidence-label,
+.kicker,
+.kicker.light,
+.kicker:not(.light),
+.last-updated,
+.ledger-kicker,
+.newsletter-issue-card-meta,
+.newsletter-name,
+.newsletter-segment h2,
+.official-source-card>span,
+.premium-conversion-panel span,
+.pricing-flag,
+.priority,
+.score-card span,
+.share-copy-panel > span,
+.sponsor-line-label,
+.stack-gallery-block > div > p:first-child,
+.stack-score span,
+.stack-share-card span,
+.viral-result-card > span,
+body.ledger-page .kicker,
+body.ledger-page .kicker.light,
+body.ledger-page .ledger-kicker,
+body.ledger-page th,
+body[data-page="home"] .home-kicker,
+body[data-page="home"] .home-learn-kicker,
+body[data-page="home"] .home-newsletter.newsletter-panel span,
+section.scene.scene-dark.ledger-mast .kicker,
+section.scene.scene-dark.ledger-mast .kicker.light,
+th { text-transform: none !important; letter-spacing: normal !important; }
