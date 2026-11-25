@@ -97,11 +97,11 @@ def main() -> None:
         union.setdefault(_key(url), {"label": f"added {date.today().isoformat()}", "url": url})
     today = date.today().isoformat()
     routes: dict = {}
-    for k, prev in sorted(union.items()):
-        url = prev.get("url") or f"https://{k.rstrip('/')}"
+
+    def _probe(url: str) -> tuple[str, str, dict]:
         code, raw = curl(url)
         title = re.search(r"<title[^>]*>(.*?)</title>", raw, re.S | re.I)
-        rec = {"label": prev.get("label") or k, "url": url, "http": code, "bytes": len(raw),
+        rec = {"http": code, "bytes": len(raw),
                "title": (title.group(1).strip()[:120] if title else "")}
         # How many times each address appears on the page. A reply route published on a
         # journalist's own site is only evidence if it is still there, and "verbatim N times"
@@ -116,6 +116,19 @@ def main() -> None:
             # on the page; re-read them rather than carrying yesterday's triple forward.
             parts = re.findall(r'data-part[123]="([^"]*)"', raw)
             rec["triple"] = "+".join(parts[:3]) if len(parts) >= 3 else None
+        return code, raw, rec
+
+    for k, prev in sorted(union.items()):
+        url = prev.get("url") or f"https://{k.rstrip('/')}"
+        code, raw, rec = _probe(url)
+        # A route page that published an address yesterday must not be recorded today with no
+        # address just because one fetch returned a truncated / consent-wall variant. On 2026-11-25
+        # a single probe of personneltoday.com/contact-us/ returned 78,436 bytes and no email, while
+        # the immediate re-probe returned the full 243,137-byte page carrying the address - so the
+        # route looked dead when it was not. Retry once before believing a live route went silent.
+        if code == "200" and not rec.get("emails_on_page") and prev.get("emails_on_page"):
+            code, raw, rec = _probe(url)
+        rec = {"label": prev.get("label") or k, "url": url, **rec}
         routes[k] = rec
         print(f"  {code:>4} {len(raw):>9,}  {k}  {rec['title'][:52]}", flush=True)
 

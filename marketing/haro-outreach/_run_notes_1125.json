@@ -1,0 +1,92 @@
+{
+  "_note": "Editorial judgement for the 2026-11-25 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json (382 carried rows + 8 new window rows, all checked=2026-11-25) and _window_1125.json. Only the judgements below are typed. The sitemap window produced 81 new slugs, 6 carrying an AI slug token and 2 AI+spend by slug; every one of the 81 window bodies was fetched and read, and the body scan found 8 AI-token bodies of which 2 also carry a real spend token. One of those two is on-beat and routable and is drafted (brits-using-ai-subscription-spend-vs-annual-savings-and-earnings, Katie Strick / Telegraph Money); the other seven AI rows are off-beat with no reply route and are recorded and assessed rather than drafted.",
+  "new_rows": {
+    "professionals-using-ai-at-work-realworld-stories": {
+      "who": "chetan K. - the page's own author field; the post is a podcast (Kicckutalks) guest call; no outlet named.",
+      "category": "AI / Podcast Guest Call",
+      "contact": "The body asks people to 'drop your industry and your experience in the comments'; it publishes no address, handle or link of its own and the request page carries no reply route.",
+      "relevance": "low",
+      "notes": "A podcast open call for real-world AI-at-work stories (Kicckutalks). It is a guest-booking promo, not a routable journalist request, and publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "data-center-economists-ai-compute-economics": {
+      "who": "Waqas - the page's own author field; no outlet named.",
+      "category": "AI / Compute & Data-Centre Economics",
+      "contact": "The body says 'Does anyone know any expert on data centers and economics of ai? I need to talk to someone for a story.' It publishes no address, handle or link of its own and the request page carries no reply route.",
+      "relevance": "low",
+      "notes": "Wants a data-centre / compute-economics expert for a story. That is compute and power economics, not AI-tool subscription pricing, and the page publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "game-theorists-working-on-ai-risks-of-game-theory-framing": {
+      "who": "Adam Tohn - the page's own author field; no outlet named.",
+      "category": "AI / Game-Theory Framing Critique",
+      "contact": "Carries one short link (https://lnkd.in/eV6EKDDc) as a 'reach out' call; it publishes no address or handle of its own.",
+      "relevance": "low",
+      "notes": "A writing-series call for people working on game-theory framings of AI development and deployment. It asks for theoretical / AI-safety commentary we do not hold, and publishes only a redirect link rather than a route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "uk-residents-ai-horror-stories-embarrassing-costly-mistakes": {
+      "who": "Katie Strick - the page's own author field; 'a UK newspaper' is named in the body, not on the page.",
+      "category": "AI / Consumer AI Mishaps",
+      "contact": "Sourcee redacts the body's address ('[email redacted]'); the request page publishes no address, handle or link of its own.",
+      "relevance": "low",
+      "notes": "Wants UK readers' worst AI mishaps (an embarrassing chatbot message, money lost, a spectacular error) for a newspaper piece. Consumer anecdote with no pricing angle, and the address is redacted. Same reporter as the Telegraph Money row below, whose beat does match ours; this one does not.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "brits-using-ai-subscription-spend-vs-annual-savings-and-earnings": {
+      "who": "Katie Strick, for Telegraph Money (telegraph.co.uk) - outlet named in the body and on the page's domain field; author on the page.",
+      "category": "AI / Consumer AI Subscription Spend",
+      "contact": "ON-BEAT AND ROUTABLE. The body's address is redacted by Sourcee, but the reporter's own site publishes katiestrickwrites@gmail.com in visible text - katiestrick.co.uk (HTTP 200, 212,116 bytes, address present) and katiestrick.co.uk/contact/ (HTTP 200, 99,121 bytes) both carry it, and the homepage lists Telegraph among her outlets (route-checked 2026-11-25). The request page publishes no address. The send is George's.",
+      "relevance": "medium",
+      "notes": "ON-BEAT: 'How much of your own money do you spend on AI subscriptions - and how much money do they save/make you each year?... for Telegraph Money.' It asks individual Brits for their own numbers, so we are not the case study - but it is an AI-subscription-spend question our dated price census answers directly, and the route is resolved off the reporter's own site, so the row is sendable. Second request from this reporter inside the window (see the horror-stories row), so her inbox is active this week.",
+      "template": "Lead with the measured subscription spend - how many priced tools sit at or under $25/month at the median, annualised per seat, and the monthly-vs-annual premium as the 'what you actually save' number. Full paste-ready draft in pitch-drafts-2026-11-25.md section 1."
+    },
+    "employees-using-ai-agents-tasks-reclaimed-over-tone-and-date-errors": {
+      "who": "Dhruv Jain - the page's own author field; no outlet named.",
+      "category": "AI / Agent Failure Anecdotes",
+      "contact": "Asks people to post examples ('here is my question for anyone who has used AI agents at work'); it publishes no address, handle or link of its own.",
+      "relevance": "low",
+      "notes": "Collecting anecdotes of tasks handed to AI agents and then taken back, for an article next week. Anecdote-gathering with no route and no pricing angle.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "eu-academy-learners-6-months-ago-how-you-learned-of-breach": {
+      "who": "Eddie Valentine, High Point Investigation Desk / High Point Editorial Services - a research-desk post, not a newsroom byline.",
+      "category": "AI / Cybersecurity Breach Follow-up",
+      "contact": "Carries a redirect link (https://lnkd.in/gCYCf9HX); it publishes no address or handle of its own.",
+      "relevance": "low",
+      "notes": "A breach-notification follow-up asking EU Academy learners how they found out about the November 2026 exposure. The AI token is incidental (attackers 'used an AI-assisted tool'); it is a cybersecurity-research post, not an AI-pricing request, and publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "tech-employees-in-india-conversations-and-preparation-amid-layoffs": {
+      "who": "Devansh Mittal, The Indian Express (indianexpress.com) - domain on the page and named in the body.",
+      "category": "AI / Tech Layoffs Testimony",
+      "contact": "The body says 'If you want to talk, please DM me' but publishes no handle; the request page carries no reply route.",
+      "relevance": "low",
+      "notes": "Wants Indian IT-sector employees to describe the mood inside companies amid the layoffs. First-hand testimony we cannot give, and the page publishes no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    }
+  },
+  "contact_replace": {
+    "hr-professionals-ai-hiring-economics-and-workforce-planning": "ROUTE RESOLVED OFF THE PUBLICATION'S OWN SITE, not the request page: personneltoday.com/contact-us/ publishes 'Jo Faragher, contributing editor jo.faragher@personneltoday.com' in its own contact listing (re-probed 2026-11-25: HTTP 200, 243,137 bytes, address present in the page text; route-checks-2026-11-25.json). The request page itself publishes no address, handle or link. personneltoday.com MX = Google Workspace; deliverability not SMTP-verified. The send is George's."
+  },
+  "new_this_run": [
+    "81-slug sitemap window (2026-11-24T02:54:45Z -> 2026-11-25T03:23:52Z): 6 AI-token by slug, 2 AI+spend by slug, 6 spend-only by slug. All 81 window bodies were fetched (81/81 HTTP 200) and read; the body scan found 8 AI-token bodies, of which 2 also carry a real spend token (Telegraph Money subscription-spend; a UK AI horror-stories row whose 'cost' token is consumer anecdote rather than tool spend).",
+    "One on-beat, routable row this run: brits-using-ai-subscription-spend-vs-annual-savings-and-earnings (Katie Strick, Telegraph Money) - a direct AI-subscription-spend question, route resolved to katiestrickwrites@gmail.com off the reporter's own site. Drafted.",
+    "The other seven AI rows are off-beat (a podcast booking, compute-economics, game-theory framing, consumer AI mishaps, agent-failure anecdotes, a cybersecurity breach follow-up, Indian IT-layoff testimony). None asks what an AI tool costs and none publishes a route, so they are recorded and assessed rather than drafted."
+  ],
+  "why_not_drafted": [
+    "chetan K. (Kicckutalks podcast): guest-booking promo, not a request; no route",
+    "Waqas (data-centre economics): compute/power economics, not tool pricing; no route",
+    "Adam Tohn (game-theory framing): theoretical/AI-safety commentary we do not hold; redirect link only",
+    "Katie Strick (UK AI horror stories): consumer anecdote, no pricing angle, address redacted",
+    "Dhruv Jain (AI agent failure anecdotes): anecdote-gathering; no route",
+    "Eddie Valentine / High Point (EU Academy breach): cybersecurity follow-up, AI token incidental; no route",
+    "Devansh Mittal (The Indian Express): Indian IT-layoff testimony; no route published"
+  ],
+  "defects": [
+    "scripts/probe_routes.py can under-report a live route on a flaky fetch: the first probe of personneltoday.com/contact-us/ returned a truncated 78,436-byte variant with no email detected, while the immediate re-probe and a direct curl both returned the full 243,137/243,495-byte page carrying 'jo.faragher@personneltoday.com'. The route is live; the single-shot probe was not. Recorded, not yet fixed in code."
+  ],
+  "extra_actions": [
+    "Re-probed the full route set (18 routes) for 2026-11-25 and added the two Katie Strick routes (katiestrick.co.uk and katiestrick.co.uk/contact) via scripts/probe_routes.py --add; both answer HTTP 200 and publish katiestrickwrites@gmail.com, which is what makes the Telegraph Money row sendable."
+  ]
+}
