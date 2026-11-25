@@ -83,11 +83,11 @@ def _sentence(name: str, hub: bool) -> str:
             "Get an email when a tool you pay for changes its price, credits, or free plan. "
             "Each change is tied to the vendor's own pricing page with the date we checked it."
         )
-    safe = html.escape(name, quote=True)
-    return (
-        f"Track {safe} price &amp; credit-rule changes — get an email when {safe} "
-        "changes tier pricing, credit rollover, or free-plan limits."
-    )
+    name = re.sub(r"\s+comparison$", "", name.split(":")[0].strip(), flags=re.I)
+    names = [n.strip() for n in name.split(" vs ") if n.strip()] or [name]
+    who = names[0] if len(names) == 1 else ", ".join(names[:-1]) + " or " + names[-1]
+    safe = html.escape(who, quote=True)
+    return f"Get an email when {safe} changes its prices, credits or free plan."
 
 
 def _block(

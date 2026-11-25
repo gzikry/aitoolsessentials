@@ -663,7 +663,7 @@ def generate(root: Path) -> int:
                       f'<div class="pick-actions"><a class="button button-blue" href="../tools/{s}/">Read review</a>'
                       f'<a class="text-link" href="../legal/editorial-methodology.html">How we score</a></div></article>')
             picks.append(t['name'])
-        # "Official sources checked" must reflect the real verification dates in
+        # "Last checked" must reflect the real verification dates in
         # data/tool_sources.json, not the day the generator happened to run.
         checks = sorted(srcs[s].get('pricing_checked_date', '') for s in spec['slugs']
                         if srcs.get(s, {}).get('pricing_checked_date'))
@@ -695,7 +695,7 @@ def generate(root: Path) -> int:
   <link rel="icon" href="../assets/aitools-bot-mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/aitools-bot-logo-256.png">
   <!-- AIT FAVICON END -->
-</head><body>{HEADER}<main><section class="scene scene-light article-hero"><p class="kicker light">{_e(spec['kicker'])}</p><h1>{_e(spec['title'])}</h1><p>{_e(spec['subhead'])}</p><p class="last-updated">Official sources checked {checked_label} · Editorial scores are AIToolsEssentials ratings, not benchmarks · Independent hands-on results not yet published</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse all tools</a><a class="button button-dark" href="../downloads/premium/aitools-premium-comparison-archive-2026-09.csv">Download comparison archive</a></div></section>
+</head><body>{HEADER}<main><section class="scene scene-light article-hero"><p class="kicker light">{_e(spec['kicker'])}</p><h1>{_e(spec['title'])}</h1><p>{_e(spec['subhead'])}</p><p class="last-updated">Last checked {checked_label} · Editorial scores are AIToolsEssentials ratings, not benchmarks · Independent hands-on results not yet published</p><div class="actions"><a class="button button-blue" href="../tools/index.html">Browse all tools</a><a class="button button-dark" href="../downloads/premium/aitools-premium-comparison-archive-2026-09.csv">Download comparison archive</a></div></section>
 <section class="scene scene-light"><article class="article-shell">
 <h2>How this stack is chosen</h2><p>{_e(spec['angle'])}</p>
 <h2>The shortlist</h2>

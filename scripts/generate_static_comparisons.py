@@ -42,7 +42,7 @@ def _source_card(slug, name):
     return (
         f'<div><strong>{_e(name)}</strong>'
         f'<p>{_e(src.get("pricing_summary", ""))}</p>'
-        f'<span>Official sources checked {_e(src.get("pricing_checked_date", ""))}</span>'
+        f'<span>Last checked {_e(src.get("pricing_checked_date", ""))}</span>'
         f'<div class="official-source-links">{links}</div>'
         f'{unresolved_html}'
         f'<p class="source-notes">{_e(mask_personal(src.get("verification_notes", "")))}</p>'
@@ -146,7 +146,7 @@ def generate_best_ai_tools(root: Path):
         '</div></section>'
         '<section class="scene scene-light comparison-section"><div class="article-shell wide">'
         '<h2>Calculators</h2>'
-        '<p><a href="/compare/ai-coding-assistants/">Coding seats</a>, <a href="/compare/ai-app-builders/">app builders</a>, <a href="/compare/ai-video-avatar-cost/">voice and video minutes</a>, <a href="/compare/automation-task-calculator/">automation task burn</a>, and <a href="/compare/ai-presentation-cost/">deck cost</a>. <a href="/pricing-watch/credit-traps/">Credit traps</a> lists expiry windows and locks. <a href="/price-changes/">Price changes</a> lists the credit clocks.</p>'
+        '<p><a href="/compare/ai-coding-assistants/">Coding seats</a>, <a href="/compare/ai-app-builders/">app builders</a>, <a href="/compare/ai-video-avatar-cost/">voice and video minutes</a>, <a href="/compare/automation-task-calculator/">automation task burn</a>, and <a href="/compare/ai-presentation-cost/">deck cost</a>. <a href="/pricing-watch/credit-traps/">Credit traps</a> lists expiry windows and locks. <a href="/price-changes/">Price changes</a> lists the credit expiry ruless.</p>'
         '<h2>Best AI tools by category</h2>'
         '<p>This is a living shortlist, not a claim that the AI market is finite. AIToolsEssentials will keep expanding and pruning tools based on adoption, buyer intent, practical usefulness, and monetization fit.</p>'
         f'{"".join(cat_rows)}'
@@ -164,7 +164,8 @@ def generate_best_ai_tools(root: Path):
 def generate_versus(root: Path, fname: str, a: str, b: str, c: str = ''):
     slugs = [s for s in [a, b, c] if s]
     names = [TOOLS[s]['name'] for s in slugs]
-    title = fname.replace('.html', '').replace('-', ' ').title().replace('Vs', 'vs').replace('N8N', 'n8n')
+    # Proper product names ("ChatGPT", "GitHub Copilot"), not str.title() of the slug.
+    title = ' vs '.join(names)
     kicker = 'Versus comparison'
     if any(x in TOOLS[s].get('category', '') for s in slugs for x in ['Video', 'Creative']):
         kicker = 'Video comparison' if any('Video' in TOOLS[s].get('category', '') for s in slugs) else 'Design comparison'

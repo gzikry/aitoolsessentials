@@ -40,7 +40,19 @@ def _official_source_html(record, _prog=None) -> str:
     # Notes quote page markup such as <title> and <video>. Unescaped, an HTML parser
     # reads "<title>" as a real tag and swallows the rest of the page.
     notes = _text(mask_personal(record.get('verification_notes') or ''))
-    return f'''<div class="official-source-card"><span>Official sources checked {record.get('pricing_checked_date', '')}</span><p><strong>Current official summary:</strong> {record.get('pricing_summary') or 'No stable public pricing was verified.'}</p><div class="official-source-links">{links}</div>{unresolved_html}<p class="source-notes">{notes}</p></div>'''
+    return f'''<div class="official-source-card"><span>Last checked {record.get('pricing_checked_date', '')}</span><p><strong>Current official summary:</strong> {record.get('pricing_summary') or 'No stable public pricing was verified.'}</p><div class="official-source-links">{links}</div>{unresolved_html}<p class="source-notes">{notes}</p></div>'''
+
+
+_NAMES: dict[str, str] | None = None
+
+
+def _display_name(slug: str) -> str:
+    """The product's own spelling from tools.json, e.g. "GitHub Copilot", not "Github Copilot"."""
+    global _NAMES
+    if _NAMES is None:
+        data = json.loads((Path(__file__).resolve().parents[1] / 'data' / 'tools.json').read_text(encoding='utf-8'))
+        _NAMES = {t['slug']: t['name'] for t in data}
+    return _NAMES.get(slug) or slug.replace('-', ' ').title()
 
 
 def _text(value) -> str:
@@ -135,7 +147,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
         for c in sorted(comp_dir.glob('*.html')):
             parts = re.split('-vs-', c.stem)
             if any(p == slug or p == name_key or p in name_key for p in parts):
-                comp_links.append((c.name, c.stem.replace('-', ' ').title()))
+                comp_links.append((c.name, ' vs '.join(_display_name(x) for x in parts)))
     comp_links = comp_links[:5]
 
     # Find related articles (worth-it guides, deep comparisons, audience guides)
@@ -327,8 +339,10 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
             visit_note = 'Affiliate / referral link — labeled because this is a partner offer.'
             visit_fineprint = '<p class="pricing-fineprint">Affiliate / referral link — we may earn a commission at no cost to you. See our <a href="../../legal/affiliate-disclosure.html">disclosure</a>.</p>'
         else:
-            visit_note = 'Affiliate link — supports editorial maintenance at no cost to you.'
+            visit_note = ''
             visit_fineprint = '<p class="pricing-fineprint">Affiliate link — we may earn a commission at no cost to you. See our <a href="../../legal/affiliate-disclosure.html">disclosure</a>.</p>'
+
+    visit_note_html = f'<span>{visit_note}</span>' if visit_note else ''
 
     html = f'''<!doctype html>
 <html lang="en">
@@ -407,7 +421,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 <h2>How {name} compares</h2>
 <p>{compare_para}</p>
 <h2>How we evaluated</h2>
-{rationale_html}<p>The AIToolsEssentials rating is an editorial score—not an external benchmark. It summarizes job fit, likely output quality, ease of adoption, and operational cost using published product information, benchmark context where the exact model is identifiable, and the repeatable trial checklist above. Benchmarks never determine the final product rating by themselves. See our <a href="../../methodology/">editorial methodology</a>, <a href="../../evidence/">evidence ledger</a>, and <a href="../../benchmarks/">benchmark evidence policy</a>.</p>
+{rationale_html}<p>We don't publish an editorial score until we have tested a tool hands-on, and we have not tested {name} yet. This review uses the vendor's published pricing and documentation, benchmark data where the exact model is identifiable, and the trial checklist above. See <a href="../../methodology/">how we review</a>, the <a href="../../evidence/">evidence log</a>, and our <a href="../../benchmarks/">benchmark policy</a>.</p>
 {best_plan_html}<h2>Frequently asked questions</h2>
 <div class="faq-list">
 {faq_html}</div>
@@ -420,7 +434,7 @@ def generate_review_page(root: Path, tool: dict, tools: list, today: str) -> Non
 {score_heading}
 <span>Evidence: editorial assessment + sourced benchmarks where the exact model is identifiable.</span>
 <a class="button button-blue small" style="margin-top:8px" href="{visit_href}" rel="{visit_rel}"{visit_target}>{visit_label}</a>{visit_fineprint}
-{visit_offer}<span>{visit_note}</span>
+{visit_offer}{visit_note_html}
 </div>
 <div class="score-card">
 <span>Related tools</span>

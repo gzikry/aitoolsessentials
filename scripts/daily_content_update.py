@@ -675,6 +675,8 @@ from simplify_pages import apply as _simplify_pages
 print('Simplified pages:', _simplify_pages(root))
 from generate_homepage import generate as _generate_homepage
 print('Homepage body:', _generate_homepage(root))
+from plain_copy import apply as _plain_copy
+print('Plain copy:', _plain_copy(root))
 
 from generate_search_index import main as _build_search_index  # noqa: E402
 if _build_search_index() != 0:
