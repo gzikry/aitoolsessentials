@@ -74,9 +74,23 @@ def main() -> None:
         if 'class="ledger-page"' not in html and "ledger-page" not in html.split(">", 1)[-1][:800]:
             if "<body class=\"ledger-page\">" not in html and 'class="ledger-page"' not in html:
                 errors.append(f"{rel} missing ledger-page")
-        # The calculator callout band was retired in the Nov 2026 cleanup (P2).
-        if MARK.search(html) or PHRASE in html:
-            errors.append(f"{rel} still carries the retired calculator callout")
+        if html.count(PHRASE) != 1:
+            errors.append(f"{rel} phrase count {html.count(PHRASE)}")
+        block = _block(html)
+        if not block:
+            errors.append(f"{rel} missing callout")
+            return
+        if "sponsored" in block:
+            errors.append(f"{rel} callout is sponsored")
+        hrefs = _hrefs(block)
+        if not hrefs or hrefs[0] != first:
+            errors.append(f"{rel} primary {hrefs[:1]} != {first}")
+        for href in (CREDIT, AUDIT, *also):
+            if href not in hrefs:
+                errors.append(f"{rel} missing {href}")
+        for href in banned:
+            if href in hrefs:
+                errors.append(f"{rel} should not link {href}")
         if 'content="#FAF8F5"' not in html:
             errors.append(f"{rel} theme-color")
 
@@ -129,10 +143,12 @@ def main() -> None:
         html = path.read_text(encoding="utf-8")
         if "<body class=\"ledger-page\">" not in html and 'class="ledger-page"' not in html:
             errors.append(f"{rel} missing ledger-page")
-        if MARK.search(html):
-            errors.append(f"{rel} still carries the retired calculator callout")
+        if html.count(PHRASE) != 1 or not _block(html):
+            errors.append(f"{rel} callout")
         if html.count("AIT DISCOVERY LINKS") != 1:
             errors.append(f"{rel} discovery links {html.count('AIT DISCOVERY LINKS')}")
+        elif "sponsored" in _block(html):
+            errors.append(f"{rel} sponsored callout")
 
     comp_pages = _live((ROOT / "comparisons").glob("*.html"))
     if len(comp_pages) < 370:
@@ -140,8 +156,8 @@ def main() -> None:
     for path in comp_pages:
         rel = path.relative_to(ROOT).as_posix()
         html = path.read_text(encoding="utf-8")
-        if "ledger-page" not in html or MARK.search(html):
-            errors.append(f"{rel} ledger page without the retired callout")
+        if "ledger-page" not in html or html.count(PHRASE) != 1:
+            errors.append(f"{rel} ledger callout")
         if html.count("AIT DISCOVERY LINKS") != 1:
             errors.append(f"{rel} discovery links {html.count('AIT DISCOVERY LINKS')}")
 

@@ -267,10 +267,10 @@ def apply(root: Path) -> str:
 
     # The guides hub is generated and is not a single-tool article.
     add("articles/index.html", "/start-here/", "Start here")
+    add("articles/index.html", "/pricing-index/", "AI tool pricing index")
     add("articles/index.html", "/site-map/", "Site map")
     add("articles/index.html", "/leaderboard.html", "Community test results")
-    add("articles/index.html", "/guides/switch-guides/", "Switching guides")
-    add("articles/index.html", "/resources/", "Free resources")
+    add("articles/index.html", "/pricing-report/", "AI pricing report")
 
     written = 0
     for path, links in sorted(planned.items(), key=lambda item: item[0].as_posix()):
