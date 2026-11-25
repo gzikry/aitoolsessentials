@@ -19,12 +19,17 @@ _LINK_RE = re.compile(
     r'\s*<a\b[^>]*\bhref="(?:https://aitoolsessentials\.com)?(?:/|(?:\.\./)+)?premium/[^"]*"[^>]*>.*?</a>(?:\s*[\u00b7|]\s*(?=<))?',
     re.S,
 )
+# The Premium Stripe checkout (premium_copy.STRIPE_PREMIUM_URL). The $497 audit checkout stays.
+_CHECKOUT_RE = re.compile(
+    r'\s*<a\b[^>]*\bhref="https://buy\.stripe\.com/bJe4gya2Bctf1lB02r0x203"[^>]*>.*?</a>',
+    re.S,
+)
 # A list item or paragraph left empty once its only link is gone.
 _EMPTY_RE = re.compile(r"<(li|p)\b[^>]*>\s*(?:[\u00b7|,]\s*)*</\1>")
 
 
 def strip(text: str) -> str:
-    updated = _LINK_RE.sub("", text)
+    updated = _CHECKOUT_RE.sub("", _LINK_RE.sub("", text))
     return _EMPTY_RE.sub("", updated)
 
 
@@ -35,7 +40,7 @@ def apply(root: Path) -> int:
         if not is_public_rel(rel) or rel.parts[0] == "premium":
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
-        if 'http-equiv="refresh"' in text or "premium/" not in text:
+        if 'http-equiv="refresh"' in text or ("premium/" not in text and "bJe4gya2Bctf1lB02r0x203" not in text):
             continue
         updated = strip(text)
         if updated != text:

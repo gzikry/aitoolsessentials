@@ -37,7 +37,7 @@ def generate(root: Path) -> int:
                 f'<a href="{src[k]}" target="_blank" rel="external noopener">{label} ↗</a>'
                 for label,k in [('Pricing','pricing_url'),('Docs','docs_url'),('Privacy','privacy_url'),('Rights','rights_url')] if src.get(k)
             )
-            cards += f'''<div><strong>{tool['name']}</strong><p>{src.get('pricing_summary') or 'No stable public pricing verified.'}</p><span>Official sources checked {src.get('pricing_checked_date')}</span><div class="official-source-links">{links}</div></div>'''
+            cards += f'''<div><strong>{tool['name']}</strong><p>{src.get('pricing_summary') or 'No stable public pricing verified.'}</p><span>Last checked {src.get('pricing_checked_date')}</span><div class="official-source-links">{links}</div></div>'''
             if slug in arena:
                 b=arena[slug]; benchmark_notes.append(f"{tool['name']}: Arena Text {b['model']} — Arena rank #{b['rank']}, Arena rating {b['score']} (95% confidence interval; {b['votes']:,} preference votes; snapshot {benchmarks['snapshot_date']}).")
             if slug in coding:

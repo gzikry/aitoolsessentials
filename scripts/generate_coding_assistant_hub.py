@@ -279,7 +279,7 @@ def generate(root: Path) -> Path:
 <h2>Questions</h2>
 <div class="faq-list">{_faq_html()}</div>
 
-<p>Read the lane split in <a href="/articles/claude-code-vs-cursor-vs-copilot.html">Claude Code vs Cursor vs Copilot</a>, then run the <a href="/stack-audit.html">Stack Audit</a> if these seats are already on the card. Credit clocks are on <a href="/price-changes/">Price changes</a>.</p>
+<p>Read the lane split in <a href="/articles/claude-code-vs-cursor-vs-copilot.html">Claude Code vs Cursor vs Copilot</a>, then run the <a href="/stack-audit.html">Stack Audit</a> if these seats are already on the card. Credit expiry ruless are on <a href="/price-changes/">Price changes</a>.</p>
 <p>Switch links: <a href="/go/cursor/">Cursor</a>, <a href="/go/claude/">Claude</a>, <a href="/go/github-copilot/">GitHub Copilot</a>, <a href="/go/windsurf/">Windsurf</a>.</p>
 {__import__('ledger_offers').receipt_footer_html()}
 </div>
