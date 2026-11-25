@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-11-24",
-  "tools_count": 135,
+  "generated": "2026-11-25",
+  "tools_count": 136,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -980,6 +980,13 @@
       "category": "Creative",
       "price": "One-time credit packs (credits never expire): Starter $9.99 / 200 credits, Plus $24.99 / 600, Max $59.99 / 1,600. Monthly plans: Basic $19.90 / 500 credits a month, Pro $49.90 / 1,500, Ultra $99.90 / 3,000. Billed yearly: Basic $15.90/mo ($190.80/year, 20% off the $238.80 monthly rate), Pro $29.90/mo ($358.80/year, 40% off $598.80), Ultra $59.90/mo ($718.80/year, 40% off $1,198.80). Every annual figure is exactly twelve monthly payments to the cent (190.80/12 = 15.90, 358.80/12 = 29.90, 718.80/12 = 59.90); the billing toggle badge reads 'Up to -40%' and the cards mark -20% (Basic) and -40% (Pro, Ultra), which matches. New accounts get 15 free credits valid 90 days; images produced on free credits carry a watermark and paid credits download clean. Credit packs never expire, while plan credits belong to the billing period and each render draws on the soonest-expiring credits first. Checkout is Stripe (USD plus tax); the Terms name the party taking payment as 'Waffo Pancake, or whichever provider checkout identifies'. Verified 2026-11-24 on the rendered /pricing in both the Credit packs and Yearly tabs and against the served plan config.",
       "url": "https://aitoolsessentials.com/tools/poseloop/"
+    },
+    {
+      "name": "GTA 6 AI Video (gta6aivideo.com)",
+      "slug": "gta6-ai-video-com",
+      "category": "Video",
+      "price": "One-time credit packs, no subscription and nothing renews: 100 credits $9.99, 300 credits $29.49, 600 credits $58.49 (USD; taxes may be added at checkout). A 5-second clip costs 15 credits and a 10-second clip 30, whether it starts from a prompt or from an uploaded photo, so a 5-second render works out at about $1.50 on the 100-credit pack, $1.47 on the 300 pack and $1.46 on the 600 pack. New accounts start with 0 credits and there are no free renders - building, editing and copying prompts is free and needs no account. Failed renders are returned to the balance automatically. Buying requires a Google sign-in. Verified 2026-11-25 on the rendered /pricing and on the homepage credit tables, which agree.",
+      "url": "https://aitoolsessentials.com/tools/gta6-ai-video-com/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

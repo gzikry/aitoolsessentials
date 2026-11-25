@@ -2512,5 +2512,25 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether poseloop.app runs an affiliate, referral or partner programme; nothing is published and no affiliate, partner or referral path was found, so no tracking URL is invented.",
     "notes": "A $9.99-$59.99 one-time pack ladder plus $19.90-$99.90 monthly and $15.90-$59.90 monthly-billed yearly plans is a workable affiliate shape if a programme exists, but the vendor's pages publish none. Low priority until traffic grows."
+  },
+  {
+    "tool_slug": "gta6-ai-video-com",
+    "tool_name": "GTA 6 AI Video (gta6aivideo.com)",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/gta6-ai-video-com/"
+    ],
+    "best_audiences": [
+      "creators making short trend-driven video clips from one photo or prompt",
+      "buyers comparing one-time credit packs against subscription video tools"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether gta6aivideo.com runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and nothing is published. Never invent affiliate URLs.",
+    "notes": "A $9.99-$58.49 one-time pack ladder is a workable affiliate shape if a programme exists, but nothing is published. Low priority until traffic grows."
   }
 ]

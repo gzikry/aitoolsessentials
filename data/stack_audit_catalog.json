@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24",
+  "generated_at": "2026-11-25",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -3342,6 +3342,31 @@
         "design",
         "video",
         "marketing"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "gta6-ai-video-com",
+      "name": "GTA 6 AI Video (gta6aivideo.com)",
+      "category": "Video",
+      "official_url": "https://gta6aivideo.com/",
+      "review_url": "/tools/gta6-ai-video-com/",
+      "price_label": "One-time credit packs, no subscription and nothing renews: 100 credits $9.99, 300 credits $29.49, 600 credits $58.49 (USD; taxes may be added at checkout). A 5-second clip costs 15 credits and a 10-second clip 30, whether it starts from a prompt or from an uploaded photo, so a 5-second render works out at about $1.50 on the 100-credit pack, $1.47 on the 300 pack and $1.46 on the 600 pack. New accounts start with 0 credits and there are no free renders - building, editing and copying prompts is free and needs no account. Failed renders are returned to the balance automatically. Buying requires a Google sign-in. Verified 2026-11-25 on the rendered /pricing and on the homepage credit tables, which agree.",
+      "pricing_summary": "One-time credit packs only, no subscription: 100 credits $9.99, 300 credits $29.49, 600 credits $58.49 (USD, tax may be added at checkout). 5-second clip = 15 credits, 10-second clip = 30, from a text prompt or from an uploaded photo; work out to about $1.50 / $1.47 / $1.46 per 5-second render on the three packs. New accounts start with 0 credits and there are no free renders; prompt building and the prompt library are free and need no account. Failed renders returned to the balance automatically. Stripe checkout per SKU (credits-100/300/600) after a Google sign-in. Verified 2026-11-25 on the rendered /pricing and the homepage credit tables.",
+      "pricing_url": "https://gta6aivideo.com/pricing",
+      "pricing_checked_date": "2026-11-25",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "video",
+        "data"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

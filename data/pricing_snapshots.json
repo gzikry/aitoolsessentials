@@ -561,6 +561,10 @@
     "poseloop": {
       "date": "2026-11-24",
       "digest": "One-time packs never expiring: Starter $9.99/200 credits, Plus $24.99/600, Max $59.99/1,600. Monthly: Basic $19.90/500 credits, Pro $49.90/1,500, Ultra $99.90/3,000. Yearly billed $15.90/$29.90/$59.90 a month as $190.80/$358.80/$718.80 - exactly twelve monthly payments - with the toggle badge 'Up to -40%' and cards marked -20% (Basic) / -40% (Pro, Ultra). 15 free credits on signup valid 90 days; free-credit images watermarked. Failed renders return credits automatically; pack credits never expire, plan credits expire with the period. Stripe checkout, USD plus tax; per-clip credit cost varies by trend/model/length/resolution and is quoted on the Generate button. Operator ZheLogic, LLC (Delaware, US) and Delaware governing law named on the legal pages; no postal address published; render-path processors named by category. Verified 2026-11-24 on the rendered /pricing in both tabs."
+    },
+    "gta6-ai-video-com": {
+      "date": "2026-11-25",
+      "digest": "One-time credit packs, no subscription: $9.99/100 credits, $29.49/300, $58.49/600 (USD + tax). 5-second clip 15 credits (~$1.46-$1.50), 10-second clip 30. New accounts start with 0 credits - no free renders; prompt builder and prompt library free without an account. Failed renders refunded automatically. Pack expiry not stated. Refunds within 14 days for an unused pack, duplicate charge, credits never arrived or a broken generator; unused share refundable on request. Stripe checkout per SKU after a Google sign-in. No entity, controller, postal address or governing-law clause; video provider and payment processor unnamed; pvuv.ai statistics script not named in the notice; photo retention stated at 24 hours and training use declined in plain words. Verified 2026-11-25 on the rendered /pricing and the homepage credit tables."
     }
   },
   "changes": [
@@ -978,5 +982,5 @@
       "note": "PoseLoop (poseloop.app): first recorded pricing snapshot - one-time packs Starter/Plus/Max $9.99/$24.99/$59.99 for 200/600/1,600 never-expiring credits; monthly Basic/Pro/Ultra $19.90/$49.90/$99.90 for 500/1,500/3,000 credits; yearly $190.80/$358.80/$718.80 as $15.90/$29.90/$59.90 a month, i.e. twelve monthly payments with Basic 20% off and Pro/Ultra 40% off; 15 free signup credits valid 90 days."
     }
   ],
-  "updated": "2026-11-24"
+  "updated": "2026-11-25"
 }

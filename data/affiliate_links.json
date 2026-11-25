@@ -1220,6 +1220,15 @@
       "public_href": "/go/poseloop/",
       "partner": false
     },
+    "gta6-ai-video-com": {
+      "name": "GTA 6 AI Video (gta6aivideo.com)",
+      "slug": "gta6-ai-video-com",
+      "official": "https://gta6aivideo.com/",
+      "destination": "https://gta6aivideo.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/gta6-ai-video-com/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

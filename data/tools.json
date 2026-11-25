@@ -8381,6 +8381,8 @@
       "Promotional framing runs through the checkout: a persistent 'Get 50% off' banner button sits on the pricing page and each annual card carries an 'OFF · Save $X' badge. The discounts are real (each annual price is exactly twelve monthly payments) but 'up to 50%' applies only to the Studio tier while Starter is 20%",
       "The plan cards' 'Up to 1,680 images / Up to 560 videos' figures use the cheapest model family named on the card (6 credits an image, 18 a video), while the workspace's own default estimate on the homepage reads 40 credits for a Seedance 2.0 Mini 720p/5s clip - both numbers are the vendor's, and the 'up to' framing only holds for the cheapest models",
       "Commercial-use rights in outputs are deferred rather than answered: the Terms grant output ownership, but the pricing FAQ tells buyers to 'review the Terms of Service, applicable law, restrictions for the chosen model' without saying which models permit commercial use"
+,
+      "A near-identical name exists on a separate domain: gta6aivideo.com runs its own GTA 6-style generator under almost the same name, on a different registrar, a different platform and a different pricing model (one-time credit packs rather than subscriptions); whole-body text similarity between the two is about 0.02, so they are recorded as separate operators here, but check the domain before buying."
     ],
     "key_features": [
       "A prepared-scene gallery of 100+ GTA-inspired templates (night drive, police chase, car wash, apocalypse, Grand Theft India, GTA 5 goodbye montages, dance and pet trends) where browsing and selecting costs nothing",
@@ -8780,5 +8782,91 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - the offer is real, live and priced: a working trend-video studio with a no-account API that answers correctly (GET /api/my-creations 401, GET /api/payment/checkout 405 on a live POST route), Stripe loaded sitewide, an internally consistent credit ladder across packs and both plan tabs, disclosed model dependencies, illustrative-only previews and no invented proof. It loses points on surround rather than substance: per-clip costs are not published on the pricing page, the merchant of record is named ambiguously in the Terms, and there is no third-party track record on a two-month-old domain. Transparency 3.7/5 - the vendor answered a specific hold by shipping real fixes: it named the operator (ZheLogic, LLC, Delaware) on four pages, replaced a circular governing-law sentence with a Delaware law-and-forum clause, brought five pages onto one truthful date that post-dates the domain, renamed the consent storage key, named the Plausible host and aligned the analytics wording with the regional banner behaviour. What holds it below the top of the band is what is still absent or unverifiable - no registered postal address, render-path processors named only by category, an opt-out-default consent record outside the EU, and a shared-codebase sibling relationship the vendor asserts is independent but a reader cannot confirm. Overall 3.8; the score is an editorial judgement, not a benchmark."
+  },
+  {
+    "slug": "gta6-ai-video-com",
+    "name": "GTA 6 AI Video (gta6aivideo.com)",
+    "category": "Video",
+    "best_for": "Creators who want a finished vertical GTA 6-style clip from one photo or one prompt while the launch trend is live, without learning a general video editor: pick a prepared Vice City-style scene, set the length, camera, time of day and format, sign in with Google, and download an MP4 for a few dollars in one-time credits. It suits a single burst of clip-making rather than steady monthly output, because packs are one-time and nothing renews. Not a fit if you want to try a render before paying (new accounts start at 0 credits and sign-in is required to buy), if you need more than 480p, longer than 10 seconds, or models other than the site's eight scenes, if Google is not an acceptable sign-in, if you need a named company, postal address or governing-law clause to contract with, or if you intend to sell GTA-branded video - the site disclaims Rockstar/Take-Two affiliation and tells users not to use official logos, music or character names.",
+    "price": "One-time credit packs, no subscription and nothing renews: 100 credits $9.99, 300 credits $29.49, 600 credits $58.49 (USD; taxes may be added at checkout). A 5-second clip costs 15 credits and a 10-second clip 30, whether it starts from a prompt or from an uploaded photo, so a 5-second render works out at about $1.50 on the 100-credit pack, $1.47 on the 300 pack and $1.46 on the 600 pack. New accounts start with 0 credits and there are no free renders - building, editing and copying prompts is free and needs no account. Failed renders are returned to the balance automatically. Buying requires a Google sign-in. Verified 2026-11-25 on the rendered /pricing and on the homepage credit tables, which agree.",
+    "rating": 3.8,
+    "official": "https://gta6aivideo.com/",
+    "summary": "GTA 6 AI Video turns a text prompt or one photo into a 5- or 10-second GTA 6-style clip in the browser. You pick one of eight prepared Vice City-style scenes, adjust who is in the shot, what happens, the camera, the time of day, the format (9:16, 16:9 or 1:1) and the length, or start from your own prompt; then sign in with Google and spend credits to render. Finished clips play in the page and download as 480p MP4 with generated sound and no watermark added by the site, and the page shows the prompt and settings used for the sample it plays. Building, editing and copying prompts, plus a small prompt library with the clip each prompt produced, are free and need no account, and there are guide pages for a fan trailer, a farewell montage and a loading-screen clip. New accounts start with 0 credits, so nothing renders without buying a pack: 100 credits for $9.99, 300 for $29.49 or 600 for $58.49, one-time, with a 5-second clip costing 15 credits and a 10-second clip 30. Uploaded photos are used as the first frame, and the site says they are sent to its AI video provider and deleted from its storage within 24 hours, and that uploads are not used to train AI models; generated clips are unlisted, so anyone with the link can open one. The site states plainly that it is a fan-made tool and not affiliated with Rockstar Games or Take-Two Interactive.",
+    "use_cases": [
+      "Making a 5- or 10-second GTA 6-style vertical clip of yourself or a friend from a single photo while the launch trend is live",
+      "Testing a prompt for free in the builder before deciding whether to spend credits on a render",
+      "Producing a short trailer-style or farewell-style shot list by rendering one clip per shot from the site's own prompt library",
+      "Making a square or widescreen version of the same idea by switching the format before paying",
+      "Buying one pack for a one-off batch of clips rather than subscribing to a monthly video tool",
+      "Checking the credit cost of a clip - and whether a failed render is refunded - before spending anything"
+    ],
+    "pros": [
+      "Live, concrete and priced rather than promised: three one-time packs, the per-clip credit cost printed on both the homepage and /pricing, and the two pages agree",
+      "Checkout is configured, not just described - the pricing markup pins Stripe per SKU (credits-100, credits-300, credits-600) behind a Cloudflare Turnstile challenge, and the page handles the 'payment received' and 'still being confirmed' return states",
+      "A real, product-specific legal set dated the day the domain was registered (2026-11-19) - Privacy, Terms, a Refund Policy and a dedicated Contact & Copyright page, not a pasted template",
+      "The policies state retention with a period (uploaded photos deleted within 24 hours), give a training position in plain words ('Uploads are not used to train AI models'), and describe account deletion via a Delete my account button",
+      "The acceptable-use section is specific: no sexual content involving minors or of real people, no impersonation or content presented as real news or official game footage, no harassment or real-world violence, and no illegal use",
+      "Failed renders are returned to the balance automatically, stated in both the Terms and the pricing FAQ, with the history visible in the account's credit ledger",
+      "The refund policy is specific rather than decorative: 14 days for an unused pack, a duplicate charge, credits that never arrived, or a broken generator; the unused share is refundable on request; a 3-business-day reply target is published",
+      "Output terms are plain - you may download and share your clips, you stay responsible for how you use them, and the site tells users to label posts as AI-generated fan content",
+      "Non-affiliation is disclosed in the vendor's own words ('Fan-made tool. Not affiliated with Rockstar Games or Take-Two Interactive.') and repeated in llms.txt, alongside a copyright/takedown route on the contact page",
+      "Prompts, the prompt library and the sample clips are free and need no account, and the samples are real MP4s on the site's own media host (one is 4.4 MB)"
+    ],
+    "cons": [
+      "No company, legal entity, controller, postal address or governing-law clause appears on any page - the notices define the counterparty only as 'gta6aivideo.com' with contact@gta6aivideo.com, so there is no named party to contract with and no law or venue stated",
+      "New accounts start with 0 credits and there are no free renders, and buying requires a Google sign-in, so nothing can be evaluated end to end before paying and a buyer without a Google account cannot buy at all",
+      "Narrow output: 480p only, 5 or 10 seconds only, and eight prepared scenes - there is no resolution or duration control beyond that, and no model choice",
+      "The AI video provider is never named - the policies say only 'our AI video provider' - so a buyer cannot tell which model renders the clip, where it runs, what it retains or on what licence, on a product whose whole input is a photo of a person",
+      "The payment processor is not named in any policy either, although the pricing markup pins Stripe",
+      "A third-party statistics script (pvuv.ai) loads on every page while the privacy notice describes 'anonymous statistics' without naming the vendor, and there is no consent banner on the fetched pages",
+      "Generated clips are unlisted rather than private - anyone holding the link can open one - and the only removal path the policy describes is deleting the account or emailing the contact address",
+      "Order records are kept 'as long as tax and accounting rules require' with no concrete period, and no cross-border transfer mechanism is described",
+      "The residual trademark exposure sits with the buyer, not the site: the brand, the eight scenes and the product all rest on GTA 6 / Grand Theft Auto, whose marks belong to Rockstar Games/Take-Two, and the site tells users not to use official logos, music or character names but does not say what a user may call their own clip",
+      "The name is nearly identical to the review already published here as GTA6 AI Video (gta6ai.video) - a different operator, separately drafted and on a different platform, but the two listings share a name, so check the domain before buying",
+      "Six days old at verification (registered 2026-11-19, the day GTA 6 launched) with no independent reviews anywhere, an eight-page site and no blog",
+      "No affiliate or partner page exists (/affiliates, /affiliate, /partners and /referral all 404)"
+    ],
+    "key_features": [
+      "Text-to-video and photo-to-video: a 5- or 10-second 480p MP4 with generated sound, from a prompt or from an uploaded photo used as the first frame",
+      "Eight prepared Vice City-style scene presets (ocean-drive cruise, desert portrait, marsh airboat, sunset farewell and others) plus free-prompt mode",
+      "Controls for who is in the shot, what happens, camera (trailer cinematic, third-person gameplay, phone-shot vertical), time of day (golden hour, night neon, midday, storm), format (9:16, 16:9, 1:1) and length (5 s / 10 s)",
+      "A prompt library whose entries come with the clip each prompt produced, plus trailer, farewell, lap-dance and loading-screen guide pages",
+      "Credit pricing shown before you generate: 15 credits for 5 seconds, 30 for 10 seconds, from a prompt or a photo",
+      "One-time credit packs of 100 / 300 / 600 credits ($9.99 / $29.49 / $58.49) - no subscription and nothing renews - bought via Stripe after a Google sign-in",
+      "MP4 download with no watermark added by the site, unlisted share links, and a Delete my account control on the account page"
+    ],
+    "faq": [
+      [
+        "What is GTA 6 AI Video?",
+        "A browser-based generator that makes 5- or 10-second GTA 6-style clips from a text prompt or from one uploaded photo used as the first frame. You choose one of eight prepared Vice City-style scenes or write your own prompt, set the camera, time of day, format and length, then sign in and spend credits to render. Finished clips download as 480p MP4 with generated sound. Building and copying prompts is free and needs no account."
+      ],
+      [
+        "How much does it cost?",
+        "One-time credit packs only, with no subscription: 100 credits for $9.99, 300 for $29.49 or 600 for $58.49 in USD. A 5-second clip costs 15 credits and a 10-second clip 30, from a prompt or from a photo, so a 5-second render is roughly $1.46-$1.50 depending on pack. New accounts start with 0 credits, so there is no free render, and failed renders are refunded to your balance automatically."
+      ],
+      [
+        "Is this an official GTA 6 tool?",
+        "No. The site states that it is a fan-made tool and is not affiliated with Rockstar Games or Take-Two Interactive, and it tells users not to use official logos, music or character names and to label posts as AI-generated fan content. The domain was registered on 2026-11-19, the day GTA 6 launched. The underlying video model is not named - the policies refer only to 'our AI video provider'."
+      ],
+      [
+        "What happens to my photo and my clips?",
+        "An uploaded photo becomes the first frame of the clip, is sent to the site's AI video provider, and the site says it is deleted from its storage within 24 hours and is not used to train AI models. Generated clips are unlisted, so anyone with the link can open one, and you can request deletion of your data or delete the whole account from the account page."
+      ],
+      [
+        "Can I get a refund?",
+        "Yes, within 14 days of purchase, if none of the pack's credits have been spent, if you were charged twice or bought the same pack by mistake, if you paid but the credits never arrived, or if the generator was broken in a way that stopped you using them. If part of a pack is used, the unused share can be refunded on request. Credits already spent on clips that rendered successfully are not refundable."
+      ]
+    ],
+    "trial_checklist": [
+      "Before paying, build your prompt and copy it in the free builder - no account is needed for that, and the sample clips show what the eight scenes produce",
+      "Read the credit cost on the Generate button against the pack you are considering: 15 credits for 5 seconds and 30 for 10 seconds means the 100-credit pack is about six short renders",
+      "Confirm whether you need 480p: there is no higher resolution, no model choice and no clip longer than 10 seconds on this site",
+      "Decide about the sign-in before you start, because buying requires a Google account and there are no free renders to test with",
+      "Keep uploads to photos you have the right to use and expect a clip link that anyone holding it can open - treat the output as unlisted, not private",
+      "If a render fails, check the credit history on the account page; the refund should be automatic, and the refund policy's 14-day window covers a pack you have not used"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.0/5 - the product is live, specific and honestly priced: text- or photo-to-video at 5 or 10 seconds, eight prepared scenes plus free prompts, three one-time packs with the per-clip credit cost printed on two surfaces that agree, automatic refunds for failed renders, real sample MP4s, and a prompt library a buyer can use without spending anything. What holds it back is breadth and access: 480p only, no clip longer than 10 seconds, eight scenes, no model choice, no free render at all and a Google-only sign-in. Transparency 3.6/5, bringing it to 3.8: the legal set is genuinely written for this product and dated the day the domain was registered, with a stated 24-hour photo-retention period, a plain training position, an account-deletion control, a specific acceptable-use list and the most concrete refund rule in this class (14 days, unused pack, duplicate charge, missing credits or a broken generator, with a reply target). Against that: no entity, controller, postal address, governing law or venue anywhere, the video provider and the payment processor both unnamed, a third-party statistics script running on every page while the notice names no analytics vendor, no consent banner, no concrete record-retention period, and the name it shares with the already-published GTA6 AI Video at gta6ai.video. Overall 3.8; the score is an editorial judgement, not a benchmark."
   }
 ]
