@@ -2,6 +2,8 @@
 """Enriched tool review page generator for AIToolsEssentials.
 Called from daily_content_update.py. Expects `root`, `today`, `tools` in caller scope
 when run as a function; can also run standalone."""
+from __future__ import annotations
+
 import json
 import re
 from pathlib import Path
