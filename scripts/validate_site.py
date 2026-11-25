@@ -430,7 +430,7 @@ def main():
             for phrase in unsupported_claim_patterns:
                 if phrase in text:
                     errors.append(f"{review.relative_to(ROOT)} contains unsupported testing claim: {phrase}")
-            for required in ['Trial checklist', 'How we evaluated', 'editorial score', 'Official sources checked', 'Hands-on result not yet published']:
+            for required in ['Trial checklist', 'How we evaluated', 'editorial score', 'Last checked', 'Hands-on result not yet published']:
                 if required.lower() not in text:
                     errors.append(f"{review.relative_to(ROOT)} missing review evidence label: {required}")
             rel = review.relative_to(ROOT)

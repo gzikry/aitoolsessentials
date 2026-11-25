@@ -133,7 +133,7 @@ def source_card(src, name):
         if src.get(k))
     return (f'<div><strong>{_e(name)}</strong>'
             f'<p>{_e(src["pricing_summary"])}</p>'
-            f'<span>Official sources checked {src["pricing_checked_date"]}</span>'
+            f'<span>Last checked {src["pricing_checked_date"]}</span>'
             f'<div class="official-source-links">{links}</div></div>')
 
 
@@ -163,7 +163,7 @@ def generate(root: Path) -> int:
     for fname, spec in NEW_COMPARISONS.items():
         slugs = [spec['a'], spec['b']] + ([spec['c']] if spec.get('c') else [])
         names = [tools[s]['name'] for s in slugs]
-        title = fname.replace('.html','').replace('-', ' ').title().replace('Vs','vs').replace('N8N','n8n') + ' comparison'
+        title = ' vs '.join(names) + ' comparison'
         rows = ''
         labels = ['Best for'] + ['Category']
         header_cells = ''.join(f'<th>{_e(n)}</th>' for n in names)
