@@ -98,6 +98,18 @@ PREMIUM = tuple(
     )
 ) + (("pricing/index.html", "price-changes/", "Premium pricing"),)
 
+# Duplicate pages folded into one page each (site cleanup P2, Nov 2026).
+# /quiz/ and /services/ had no index and returned 403 on GitHub Pages.
+CONSOLIDATED = (
+    ("pricing-index/index.html", "price-changes/", "AI tool pricing index"),
+    ("pricing-report/index.html", "price-changes/", "AI pricing report"),
+    ("advertise/index.html", "sponsor/", "Advertise"),
+    ("get-reviewed/index.html", "founders/", "Get reviewed"),
+    ("launch-kit/index.html", "founders/", "Launch kit"),
+    ("quiz/index.html", "quiz/coding-assistant-keep-cut.html", "Coding assistant quiz"),
+    ("services/index.html", "stack-audit.html", "Stack audit"),
+)
+
 
 def write_legacy_redirects(root: Path) -> int:
     """Write a noindex refresh stub for every legacy path. Returns how many changed."""
@@ -105,7 +117,7 @@ def write_legacy_redirects(root: Path) -> int:
 
     written = 0
     root = Path(root)
-    for loser, winner, title in LEGACY + PREMIUM:
+    for loser, winner, title in LEGACY + PREMIUM + CONSOLIDATED:
         path = root / loser
         path.parent.mkdir(parents=True, exist_ok=True)
         html = redirect_stub(title, winner)
