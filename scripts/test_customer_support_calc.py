@@ -70,7 +70,6 @@ def main() -> None:
         ('id="support-calc"', embed, "embed"),
         ('src="/embed/customer-support-cost.html"', embeds, "showcase"),
         ('height="480"', embeds, "showcase"),
-        ('href="/compare/ai-customer-support-cost/"', home, "home"),
         ('href="/compare/ai-customer-support-cost/"', audit, "audit"),
         ('href="/compare/ai-customer-support-cost/"', traps, "traps"),
         ('href="/compare/ai-customer-support-cost/"', custom, "customgpt"),

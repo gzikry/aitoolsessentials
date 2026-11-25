@@ -66,9 +66,8 @@ def main() -> None:
     home = _read("index.html")
     if "ledger-page" in home:
         errors.append("homepage picked up ledger-page")
-    premium = re.search(r'<section class="([^"]*home-premium-band[^"]*)"', home)
-    if not premium or "scene-dark" not in premium.group(1) or "scene-light" in premium.group(1):
-        errors.append("homepage premium band must stay scene-dark")
+    if "home-premium-band" in home:
+        errors.append("homepage still carries the parked Premium band")
 
     def expect(rel: str, first: str, also: tuple[str, ...] = (), banned: tuple[str, ...] = ()) -> None:
         html = _read(rel)

@@ -234,9 +234,6 @@ def main() -> None:
     sitemap = (REPO / "sitemap.xml").read_text(encoding="utf-8")
     if "https://aitoolsessentials.com/compare/ai-coding-assistants/" not in sitemap:
         errors.append("sitemap missing the coding-assistant hub")
-    home = (REPO / "index.html").read_text(encoding="utf-8")
-    if 'href="/compare/ai-coding-assistants/"' not in home:
-        errors.append("homepage missing the calculator card")
     comparisons = (REPO / "comparisons" / "index.html").read_text(encoding="utf-8")
     if 'href="/compare/ai-coding-assistants/"' not in comparisons:
         errors.append("comparison hub missing the calculator")
@@ -254,9 +251,6 @@ def main() -> None:
         errors.append("coding hub still pitches the parked $497 audit")
     if 'href="/sponsor/"' not in page or 'href="/go/cursor/"' not in page:
         errors.append("coding hub missing sponsor or switch hop")
-    home_bill = (REPO / "index.html").read_text(encoding="utf-8")
-    if 'id="bill-slasher"' not in home_bill or "Email me the cut sheet" not in home_bill:
-        errors.append("homepage missing the bill slasher")
     if not (REPO / "price-changes" / "index.html").is_file():
         errors.append("missing price-changes page")
     elif "65 days" not in (REPO / "price-changes" / "index.html").read_text(encoding="utf-8"):

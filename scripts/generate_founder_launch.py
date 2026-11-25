@@ -110,7 +110,7 @@ def page_html(data: dict, today: _dt.date) -> str:
     body = (
         "<h1>Founder launch desk</h1>"
         "<p>Launching an AI tool? The free submission form still works. It joins a queue that "
-        "currently runs 3 to 4 weeks, and declined tools get no written feedback. If you need a "
+        "takes about 14 days, and declined tools get no written feedback. If you need a "
         "date, these are the paid options.</p>"
         "<p><strong>What money never buys:</strong> a score, a rank, a verdict, or a review "
         "date for the free queue. Paid placements are labeled Sponsored. If we would not list "

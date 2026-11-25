@@ -225,7 +225,8 @@ def main() -> None:
     ):
         if needle not in auto:
             raise SystemExit(f"automation hub missing {needle}")
-    for page, label in ((home, "home"), (best, "best"), (prices, "prices"), (sitemap, "sitemap")):
+    # The Nov 2026 homepage is four sections; the calculators are reached from the hubs.
+    for page, label in ((best, "best"), (prices, "prices"), (sitemap, "sitemap")):
         for href in ("/compare/ai-video-avatar-cost/", "/compare/automation-task-calculator/"):
             if href not in page:
                 raise SystemExit(f"{label} missing {href}")

@@ -169,10 +169,6 @@ def main() -> None:
         errors.append("subscribe page points at an old form host")
 
     home_html = home.read_text(encoding="utf-8")
-    _need(home_html, 'href="/newsletter/">Browse all past issues →', errors, "home")
-    _need(home_html, 'href="/newsletter/2026-w48.html"', errors, "home")
-    _need(home_html, 'href="/compare/ai-presentation-cost/"', errors, "home")
-    _need(home_html, 'href="/pricing-watch/credit-traps/"', errors, "home")
     _need(home_html, 'href="/newsletter/">Newsletter</a>', errors, "home")
 
     if errors:

@@ -533,8 +533,6 @@ def main():
             errors.append('Stack Audit price alert must not prefill a tool slug')
         if '/services/paid-audit.html' not in page:
             errors.append('Stack Audit must still link the written audit')
-        if 'href="/premium/"' not in page:
-            errors.append('Stack Audit must still link /premium/ directly')
         audit_js = (ROOT / 'js/stack-audit.js').read_text() if (ROOT / 'js/stack-audit.js').exists() else ''
         if 'sa-premium-upsell' in audit_js or 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' in audit_js:
             errors.append('stack-audit.js still injects the parked Premium upsell')
@@ -746,42 +744,36 @@ def main():
                         errors.append('premium/faq.html Offer missing digital-goods shippingDetails')
 
     home_html = (ROOT / 'index.html').read_text()
-    subscribe_match = re.search(r'<section[^>]*id="subscribe"[^>]*>.*?</section>', home_html, flags=re.S)
-    if not subscribe_match:
-        errors.append('Homepage missing #subscribe Keep, Test, Cut panel')
-    else:
-        subscribe_block = subscribe_match.group(0)
-        if 'whop.com/checkout' in subscribe_block.lower():
-            errors.append('Homepage #subscribe must not be the Whop Premium checkout')
-        if '/subscribe/' not in subscribe_block:
-            errors.append('Homepage #subscribe must link to /subscribe/')
-        if 'Beehiiv form' in subscribe_block or re.search(
-            r'<a[^>]+href="https?://[^"]*beehiiv\.com/subscribe"', subscribe_block, flags=re.I
-        ):
-            errors.append('Homepage #subscribe must not add a second Beehiiv form button')
-        if len(re.findall(r'<a\b[^>]*\bbutton\b', subscribe_block)) != 1:
-            errors.append('Homepage #subscribe must have exactly one button CTA')
-        if 'keep, test, cut' not in subscribe_block.lower():
-            errors.append('Homepage #subscribe must be labeled as the free Keep, Test, Cut email')
-        if 'join premium on whop' in subscribe_block.lower() or 'start 7-day' in subscribe_block.lower():
-            errors.append('Homepage #subscribe must not look like the paid Premium CTA')
+    # Homepage, Nov 24 2026 cleanup: four sections, one email ask, the shared header.
+    main_match = re.search(r'<main class="home-simple">.*?</main>', home_html, flags=re.S)
+    main_html = main_match.group(0) if main_match else ''
+    if not main_html:
+        errors.append('Homepage must use the four-section home-simple body')
+    if main_html.count('<section') != 4:
+        errors.append(f'Homepage must have exactly four sections ({main_html.count("<section")})')
+    if main_html.count('<h1') != 1:
+        errors.append('Homepage must have exactly one H1')
+    if main_html.count('<form') != 2:
+        errors.append('Homepage must have one search form and one email form')
+    if 'price-alert-form' not in main_html:
+        errors.append('Homepage must keep the price-alert email form')
+    for href in ('/tools/', '/comparisons/', '/price-changes/', '/founders/', '/submit/', '/sponsor/', '/stack-audit.html'):
+        if f'href="{href}"' not in main_html:
+            errors.append(f'Homepage body must link {href}')
+    if '$79' not in main_html:
+        errors.append('Homepage founders section must name the $79 Verified fast lane')
+    for stale in ('home-dateline', 'TOOLS AUDITED', 'HEAD-TO-HEAD LEDGERS', 'ZERO PAID RANKINGS', 'bill-slasher', 'AIT HOMEPAGE'):
+        if stale in home_html:
+            errors.append(f'Homepage still carries the old section: {stale}')
     # Premium is parked off the front door (2026-11-24): no checkout on the homepage.
     if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' in home_html or 'https://buy.stripe.com/cNi00ideNbpb8O32az0x204' in home_html:
         errors.append('Homepage must not carry the Premium or $497 audit checkout while they are parked')
-    hero_match = re.search(r'<section class="hero[^"]*".*?</section>', home_html, flags=re.S)
-    hero_html = hero_match.group(0) if hero_match else ''
+    if '/premium/' in main_html:
+        errors.append('Homepage must not link parked Premium pages')
     if 'hero-device' in home_html or 'device-window' in home_html:
         errors.append('Homepage must not include the decorative hero device card')
-    if 'Not a drip' in home_html:
-        errors.append('Homepage must not use Not a drip newsletter copy')
-    if 'on this device' in home_html.lower():
-        errors.append('Homepage must not say on this device')
-    if 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
-        errors.append('Homepage hero primary CTA must be Free Stack Audit')
-    if 'Join Premium' in hero_html:
-        errors.append('Homepage hero must not lead with Join Premium')
-    if '/stack-audit.html' not in home_html:
-        errors.append('Homepage must link the free Stack Audit')
+    if 'fonts.googleapis.com' in home_html:
+        errors.append('Homepage must not load Google fonts')
     home_head = home_html.split('</head>', 1)[0]
     if 'operationalize' in home_html.lower():
         errors.append('Homepage still says operationalize (meta/OG/Twitter/JSON-LD must use second-person voice)')
@@ -822,42 +814,14 @@ def main():
         errors.append('checkout/complete must be honest that Whop is the source of truth')
     if "You're in" in checkout_html:
         errors.append('checkout/complete must not use confirmation tone')
-    welcome_html = (ROOT / 'premium/welcome/index.html').read_text()
-    if 'aitoolsessentials@gmail.com' not in welcome_html or '24 hours' not in welcome_html:
-        errors.append('premium/welcome must say access is emailed within 24 hours')
-    if 'whop.com' in welcome_html.lower():
-        errors.append('premium/welcome still points at Whop')
-    pricing_html = (ROOT / 'pricing/index.html').read_text()
-    if '/stack-audit.html' not in pricing_html:
-        errors.append('Pricing page must link the free Stack Audit')
-    if 'Join Premium — 7-day trial · use code LAUNCH50 at checkout' not in pricing_html:
-        errors.append('Pricing page must label the Stripe CTA with trial + LAUNCH50')
-    if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in pricing_html:
-        errors.append('Pricing page primary checkout must use the live Stripe Premium URL')
-    if 'second product' not in pricing_html.lower() and 'not a second' not in pricing_html.lower():
-        errors.append('Pricing page must say the human audit is not a second paid product')
+    welcome = ROOT / 'premium/welcome/index.html'
+    if not welcome.exists() or 'http-equiv="refresh"' not in welcome.read_text():
+        errors.append('premium/welcome must be a redirect while Premium is parked')
     services_audit = ROOT / 'services/ai-stack-audit.html'
     if services_audit.exists():
         services_html = services_audit.read_text()
         if '/stack-audit.html' not in services_html:
             errors.append('services/ai-stack-audit.html must distinguish the free instant Stack Audit')
-    library_hub = ROOT / 'premium/library/index.html'
-    if not library_hub.exists():
-        errors.append('Missing premium/library/index.html preview hub')
-    else:
-        library_html = library_hub.read_text()
-        preview_ok = any(
-            phrase in library_html.lower()
-            for phrase in ('public preview', 'not gated', 'no server-side gate', 'not a login wall', 'cannot hide')
-        )
-        if not preview_ok:
-            errors.append('Premium library hub must say the pages are a public preview and not gated')
-        if 'https://buy.stripe.com/bJe4gya2Bctf1lB02r0x203' not in library_html:
-            errors.append('Premium library hub must use the live Stripe Premium checkout')
-        if 'public premium preview' not in library_html.lower():
-            errors.append('Premium library hub must be labeled Public Premium preview')
-        if 'use code LAUNCH50 at checkout' not in library_html:
-            errors.append('Premium library hub must say use code LAUNCH50 at checkout')
     parked_hits = []
     missing_watch = []
     for path in sorted((ROOT / 'tools').glob('*/index.html')):
@@ -885,113 +849,20 @@ def main():
     if missing_watch:
         shown = ', '.join(missing_watch[:8])
         errors.append(f'Price-alert signup missing on {len(missing_watch)} tool or comparison pages ({shown})')
-    for rel in ('premium/index.html', 'services/paid-audit.html'):
-        parked_page = ROOT / rel
-        if not parked_page.exists():
-            errors.append(f'{rel} must stay reachable')
-            continue
-        parked_text = parked_page.read_text(errors='ignore')
-        if 'noindex' in parked_text:
-            errors.append(f'{rel} must not be noindex')
+    paid_audit = ROOT / 'services/paid-audit.html'
+    if not paid_audit.exists():
+        errors.append('services/paid-audit.html must stay reachable')
+    for rel in ('premium/index.html', 'premium/library/index.html', 'premium/faq.html'):
+        stub = ROOT / rel
+        if not stub.exists() or 'http-equiv="refresh"' not in stub.read_text():
+            errors.append(f'{rel} must redirect while Premium is parked')
     header = home_html.split('</header>', 1)[0]
-    for required in (
-        'data-nav="slim"',
-        'href="/stack-audit.html">Stack Audit</a>',
-        'href="/price-changes/">Price alerts</a>',
-        'href="/subscribe/">Subscribe</a>',
-        'href="/stack-audit.html">Free Stack Audit</a>',
-    ):
+    for required in ('href="/tools/">Tools</a>', 'href="/comparisons/">Compare</a>', 'href="/price-changes/">Price alerts</a>',
+                     'href="/newsletter/">Newsletter</a>', 'href="/founders/">For founders</a>', 'href="/sponsor/" rel="nofollow">Sponsor</a>'):
         if required not in header:
-            errors.append(f'Homepage nav must keep Stack Audit, Price alerts, and Subscribe ({required})')
-    for junk in ('Cost calc', 'Shortlist', 'Coding quiz'):
-        if junk in header:
-            errors.append(f'Homepage nav still has fat-nav junk: {junk}')
-    main_html = home_html[home_html.find('<main>'): home_html.find('</main>')] if '<main>' in home_html and '</main>' in home_html else ''
-    if 'Three paths' in main_html:
-        errors.append('Homepage still has the Three paths section')
-    if 'Essential categories' in main_html:
-        errors.append('Homepage still has the Essential categories grid')
-    if 'Do not buy a tool because the demo looked clever' in main_html:
-        errors.append('Homepage still has the how-to-choose workflow section')
-    if 'State of AI Tool Pricing' in main_html:
-        errors.append('Homepage still has the State of AI Pricing deep section')
-    if 'AIT LEAD MAGNET' in home_html or 'Print this before you buy another subscription' in main_html:
-        errors.append('Homepage still has the PDF checklist / lead magnet')
-    if 'AIT HOMEPAGE JOB TILES' in home_html:
-        errors.append('Homepage still has the three-paths job tiles')
-    if 'AIT HOMEPAGE CITE STRIP' in home_html:
-        errors.append('Homepage still has the cite-strip mega CTA row')
-    if 'AIT WORKFLOW LIBRARY PROMO' in home_html:
-        errors.append('Homepage still has the workflow library promo')
-    if 'AIT PREMIUM MODULE' in home_html:
-        errors.append('Homepage still has a duplicate Premium closer module')
-    if 'If you sell a tool, submit evidence' in main_html:
-        errors.append('Homepage still has the vendor submit pitch')
-    if home_html.count('AIT HOMEPAGE LEARN START') != 1:
-        errors.append('Homepage must have exactly one Learn strip')
-    learn_match = re.search(
-        r'<!-- AIT HOMEPAGE LEARN START -->.*?<!-- AIT HOMEPAGE LEARN END -->',
-        home_html,
-        flags=re.S,
-    )
-    learn_html = learn_match.group(0) if learn_match else ''
-    if 'dated evidence' not in learn_html.lower():
-        errors.append('Homepage Learn strip must promise choose/learn with dated evidence')
-    if 'href="/premium/"' in learn_html or 'Join Premium' in learn_html:
-        errors.append('Homepage Learn strip must not add a Premium CTA')
-    if 'hero-device' in learn_html or 'device-window' in learn_html:
-        errors.append('Homepage Learn strip must not add a decorative device card')
-    for href in (
-        '/articles/chatgpt-vs-claude-which-is-better.html',
-        '/articles/cursor-vs-github-copilot-deep-comparison.html',
-        '/comparisons/best-ai-tools.html',
-        '/pricing-watch/',
-        '/articles/',
-        '/alternatives/',
-    ):
-        if href not in learn_html:
-            errors.append(f'Homepage Learn strip missing real path {href}')
-    # Premium and the $497 audit are parked off the front door (2026-11-24).
-    # The mid-page band is free price-change alerts; the paid pages stay reachable.
-    if home_html.count('AIT HOMEPAGE ALERT BAND START') != 1:
-        errors.append('Homepage must have exactly one price-alert band')
-    if 'AIT HOMEPAGE PREMIUM BAND START' in home_html:
-        errors.append('Homepage must not promote Premium while it is parked')
-    band_match = re.search(
-        r'<!-- AIT HOMEPAGE ALERT BAND START -->.*?<!-- AIT HOMEPAGE ALERT BAND END -->',
-        home_html,
-        flags=re.S,
-    )
-    band_html = band_match.group(0) if band_match else ''
-    if 'home-cta-primary' not in band_html or 'href="/price-changes/#price-alert"' not in band_html:
-        errors.append('Homepage alert band must keep a primary CTA to /price-changes/#price-alert')
-    if 'scene-light' in band_html:
-        errors.append('Homepage alert band must stay in the dark mid-page composition')
-    if '/premium/' in band_html or '$497' in band_html:
-        errors.append('Homepage alert band must not pitch Premium or the $497 audit')
-    stack_audit_buttons = home_html.count('href="/stack-audit.html">Free Stack Audit')
-    if stack_audit_buttons > 2:
-        errors.append(f'Homepage repeats Free Stack Audit too many times ({stack_audit_buttons})')
-    if 'you should cancel' in hero_html.lower() or 'which ones you should cancel' in hero_html.lower():
-        errors.append('Homepage H1 must not be cancel-only')
-    if 'fit the job' not in hero_html.lower() and 'not the <em>hype</em>' not in hero_html.lower():
-        errors.append('Homepage H1 must stay about choosing tools that fit')
-    if 'Dated reviews, comparisons, and a free stack check' not in hero_html:
-        errors.append('Homepage hero missing the dated-reviews kicker')
-    if 'dated evidence' not in hero_html.lower():
-        errors.append('Homepage hero must lead with dated evidence, not cancel-only')
-    if '<em>' not in hero_html or 'Iowan Old Style' not in home_head or 'fonts.googleapis.com' in home_head:
-        errors.append('Homepage must accent one H1 phrase with a system serif and must not load Google fonts')
-    if not re.search(r'href="(?:/)?css/styles\.css\?v=', home_head):
-        errors.append('Homepage stylesheet must be cache-busted so frosted Premium CSS can ship')
-    if 'ait-home-critical' not in home_head or 'home-premium-band>div' not in home_head.replace(' ', ''):
-        errors.append('Homepage critical CSS must keep the Premium band dark if styles.css is stale')
-    if 'home-cta-primary' not in hero_html or 'href="/stack-audit.html">Free Stack Audit' not in hero_html:
-        errors.append('Homepage hero primary must stay Free Stack Audit')
-    if 'href="/tools/">Browse tools' not in hero_html and 'href="/tools/index.html">Browse tools' not in hero_html:
-        errors.append('Homepage hero missing the Browse tools learning path')
-    if home_html.count('href="/subscribe/">Subscribe free') != 1:
-        errors.append('Homepage must keep exactly one Subscribe free button')
+            errors.append(f'Homepage nav missing {required}')
+    if 'nav-cta' in header:
+        errors.append('Homepage header must not carry a button CTA')
     if re.search(r'<html[^>]*style="[^"]*overflow\s*:\s*hidden', home_html, flags=re.I) or re.search(
         r'<body[^>]*style="[^"]*overflow\s*:\s*hidden', home_html, flags=re.I
     ):
@@ -1002,10 +873,10 @@ def main():
     if 'pay $12 to stop paying' in home_html.lower():
         errors.append('Homepage still says pay $12 to stop paying for AI')
     footer = home_html[home_html.find('<footer'): home_html.find('</footer>')] if '<footer' in home_html else ''
-    if '/pricing-watch/' not in footer:
-        errors.append('Homepage footer must link Pricing Watch')
     if '/tools/' not in footer:
         errors.append('Homepage footer must link the Tools directory')
+    if '/legal/affiliate-disclosure.html' not in footer:
+        errors.append('Homepage footer must link the affiliate disclosure')
     subscribe_page = ROOT / 'subscribe/index.html'
     if subscribe_page.exists():
         subscribe_html = subscribe_page.read_text()

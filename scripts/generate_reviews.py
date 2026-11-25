@@ -35,10 +35,16 @@ def _official_source_html(record, _prog=None) -> str:
         rel = 'external noopener'
         link_bits.append(f'<a href="{href}" target="_blank" rel="{rel}">{label} ↗</a>')
     links = ''.join(link_bits)
-    unresolved = ''.join(f'<li>{x}</li>' for x in record.get('unresolved_claims', []))
+    unresolved = ''.join(f'<li>{_text(x)}</li>' for x in record.get('unresolved_claims', []))
     unresolved_html = f'<details><summary>Open verification questions</summary><ul>{unresolved}</ul></details>' if unresolved else ''
-    notes = mask_personal(record.get('verification_notes') or '')
+    # Notes quote page markup such as <title> and <video>. Unescaped, an HTML parser
+    # reads "<title>" as a real tag and swallows the rest of the page.
+    notes = _text(mask_personal(record.get('verification_notes') or ''))
     return f'''<div class="official-source-card"><span>Official sources checked {record.get('pricing_checked_date', '')}</span><p><strong>Current official summary:</strong> {record.get('pricing_summary') or 'No stable public pricing was verified.'}</p><div class="official-source-links">{links}</div>{unresolved_html}<p class="source-notes">{notes}</p></div>'''
+
+
+def _text(value) -> str:
+    return str(value).replace('<', '&lt;').replace('>', '&gt;')
 
 
 def _price_rows(tool):
