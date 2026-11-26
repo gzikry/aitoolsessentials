@@ -2532,5 +2532,25 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether gta6aivideo.com runs an affiliate or partner programme; /affiliates, /affiliate, /partners and /referral all 404 and nothing is published. Never invent affiliate URLs.",
     "notes": "A $9.99-$58.49 one-time pack ladder is a workable affiliate shape if a programme exists, but nothing is published. Low priority until traffic grows."
+  },
+  {
+    "tool_slug": "sharkfoto",
+    "tool_name": "SharkFoto",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/sharkfoto/"
+    ],
+    "best_audiences": [
+      "creators and small teams replacing several single-purpose image/video/audio AI sites with one account and one credit balance",
+      "readers comparing a free ad-supported tier against $9/$27 a month paid plans for a mixed image, video and audio workflow"
+    ],
+    "status": "not_started",
+    "next_action": "Ask in the publication reply whether sharkfoto.com (SharkAI Limited) runs an affiliate, referral or partner programme; its contact page invites '[Partnership]' emails to a business address but publishes no tracking programme, so no affiliate URL is invented.",
+    "notes": "A $0 free tier plus $9/$27 a month billed-annually paid tiers (500 / 2,000 credits a month) is a workable affiliate shape if a programme exists, but the vendor publishes none and the domain lists no partner URLs. Low priority until traffic grows."
   }
 ]

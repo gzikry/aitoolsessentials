@@ -565,6 +565,10 @@
     "gta6-ai-video-com": {
       "date": "2026-11-25",
       "digest": "One-time credit packs, no subscription: $9.99/100 credits, $29.49/300, $58.49/600 (USD + tax). 5-second clip 15 credits (~$1.46-$1.50), 10-second clip 30. New accounts start with 0 credits - no free renders; prompt builder and prompt library free without an account. Failed renders refunded automatically. Pack expiry not stated. Refunds within 14 days for an unused pack, duplicate charge, credits never arrived or a broken generator; unused share refundable on request. Stripe checkout per SKU after a Google sign-in. No entity, controller, postal address or governing-law clause; video provider and payment processor unnamed; pvuv.ai statistics script not named in the notice; photo retention stated at 24 hours and training use declined in plain words. Verified 2026-11-25 on the rendered /pricing and the homepage credit tables."
+    },
+    "sharkfoto": {
+      "date": "2026-11-26",
+      "digest": "Free $0/month with 10 credits, no credit card. Personal $10.00/month or $9.00/month billed annually at $108.00 for 500 credits a month ($0.018/credit); Professional $30.00/month or $27.00/month billed annually at $324.00 for 2,000 credits a month ($0.0135/credit). Each annual total is twelve monthly payments at the discounted rate (9x12=108; 27x12=324). All paid plans list the same features incl. no watermark, commercial license, batch conversion up to 30 files and 5/10 GB storage; credits reset monthly. Stripe on web; Google Play Billing / Apple App Store in-app. Refund Policy: 7-day window for subscription credits only, >50 subscription credits used disqualifies, add-on credits non-refundable, fee up to 6%. Operator SharkAI Limited (Hong Kong) with HK governing law and exclusive jurisdiction named on the legal pages; no street address published. Verified 2026-11-26 on the rendered /pricing with the Monthly/Yearly toggle and enabled Buy Now / Sign Up Free buttons."
     }
   },
   "changes": [
@@ -980,7 +984,14 @@
       "previous_check": null,
       "new_check": "2026-11-24",
       "note": "PoseLoop (poseloop.app): first recorded pricing snapshot - one-time packs Starter/Plus/Max $9.99/$24.99/$59.99 for 200/600/1,600 never-expiring credits; monthly Basic/Pro/Ultra $19.90/$49.90/$99.90 for 500/1,500/3,000 credits; yearly $190.80/$358.80/$718.80 as $15.90/$29.90/$59.90 a month, i.e. twelve monthly payments with Basic 20% off and Pro/Ultra 40% off; 15 free signup credits valid 90 days."
+    },
+    {
+      "slug": "sharkfoto",
+      "detected": "2026-11-26",
+      "previous_check": null,
+      "new_check": "2026-11-26",
+      "note": "SharkFoto (sharkfoto.com): first recorded pricing snapshot - Free $0/10 credits (no card); Personal $10/mo or $9/mo billed annually ($108/yr) for 500 credits/mo at $0.018/credit; Professional $30/mo or $27/mo billed annually ($324/yr) for 2,000 credits/mo at $0.0135/credit. All paid plans add no watermark and a commercial licence; Stripe on web, Google Play Billing / Apple App Store in-app. Refund Policy gives a 7-day window for subscription credits only, disqualifies >50 subscription credits used, excludes add-on credits and reserves up to a 6% fee. Operated by SharkAI Limited (Hong Kong)."
     }
   ],
-  "updated": "2026-11-25"
+  "updated": "2026-11-26"
 }

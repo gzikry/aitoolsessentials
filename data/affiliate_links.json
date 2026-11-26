@@ -1229,6 +1229,15 @@
       "public_href": "/go/gta6-ai-video-com/",
       "partner": false
     },
+    "sharkfoto": {
+      "name": "SharkFoto",
+      "slug": "sharkfoto",
+      "official": "https://sharkfoto.com/",
+      "destination": "https://sharkfoto.com/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/sharkfoto/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",
