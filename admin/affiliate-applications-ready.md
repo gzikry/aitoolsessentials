@@ -156,6 +156,21 @@ to this partner; cite the send by date + subject and check Trash before ever re-
 day: `/tools/gamma/` carries `https://try.gamma.app/ty4k3o3rpeyd` with `rel="sponsored noopener nofollow"` on
 both the public URL and the origin.
 
+**Third campaign, 2026-11-26 11:10 UTC — identical template to the 2026-10-14 mail, no answer, no reply, no
+action.** A third PartnerStack campaign from the same `partners@gamma.app` reuses the exact subject and body of
+the 2026-10-14 message ("How top Gamma partners get clicks", signed Justine, Affiliate Consultant; INBOX msg 350 /
+All Mail msg 814, `Date: Thu, 26 Nov 2026 11:10:14 +0000 (UTC)`,
+`Message-ID: <8q8fHkjPQW-cut4Vn5GonA@geopod-ismtpd-158>`). It restates the same tracking link, repeats the
+**30% recurring for 1 year** claim without addressing the 2026-10-14 rate question, and again offers promotional
+help in exchange for the site link and audience info already supplied in the 2026-10-14 reply. **25%/first-year
+stays the governing term; the 30% figure remains unresolved.** **No reply sent** — a third repetition of one
+nurture template, six weeks on; re-asking a question that is already in writing adds nothing, and the
+2026-10-15 precedent (second campaign, no reply) governs. Live re-check the same day: `/tools/gamma/` carries the
+CTA `href="/go/gamma/" rel="sponsored nofollow noopener"`, and `/go/gamma/` (HTTP 200) meta-refreshes to
+`https://try.gamma.app/ty4k3o3rpeyd` — the approved tracking link is unchanged. **Note:** the 2026-10-14 reply is
+no longer retrievable in `[Gmail]/Trash` (Gmail's 30-day retention; it was in Trash msg 71 when recorded) — cite it
+by date + subject, not by folder. Nothing in any registry, no page change, no deploy.
+
 Answers used (reusable for the reference/audience fields if the portal asks again):
 
 > Our Gamma review (aitoolsessentials.com/tools/gamma/) documents dated pricing, an
