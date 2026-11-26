@@ -1,0 +1,79 @@
+{
+  "_note": "Editorial judgement for the 2026-11-26 run. Everything measurable (ages, badges, HTTP, feed membership, figures, crossings) is derived by scripts/build_digest.py from verified-requests.json (390 carried rows re-checked today, checked=2026-11-26) and _window_1126.json. Only the judgements below are typed. The sitemap window produced 63 new slugs, 5 carrying an AI slug token and 1 AI+spend by slug (a false positive - 'pay' in a labour story); every one of the 63 window bodies was fetched and read, and the body scan found 7 AI-token bodies, of which 1 also carries a real spend token (a school-budget word in a Deaf-education post). NONE of the seven is on-beat: not one asks what an AI tool costs to buy, and none publishes a reply route. They are recorded and assessed rather than drafted. The sendable rows this run are carried, not new.",
+  "new_rows": {
+    "people-bringing-ai-partners-to-couples-therapy-relationship-impact": {
+      "who": "Not named on the page - no author field, no outlet. The post is a first-person casting call.",
+      "category": "AI / Human-AI Relationships",
+      "contact": "The body says 'Please reach out if you have done this'; it publishes no address, handle or link of its own and the request page carries no reply route.",
+      "relevance": "low",
+      "notes": "Wants people who have brought an AI partner/companion into couples therapy. A human-interest first-person casting call with no route and no pricing angle.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "ai-engineers-and-tech-leaders-agentic-automation-critique": {
+      "who": "The page's own author field; no outlet named.",
+      "category": "AI / Agentic Automation Critique",
+      "contact": "The body asks AI engineers/tech leaders to comment; it publishes no address or handle of its own and the page carries a 'Comment' hint only, not a route.",
+      "relevance": "low",
+      "notes": "Asks engineers/leaders to weigh in on a critique of agentic automations built at a well-known brand. Engineering-practice commentary, not AI-tool pricing, and no reply route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "sports-tech-experts-ai-and-sport": {
+      "who": "The page's own author field; no outlet named.",
+      "category": "AI / Sports Technology",
+      "contact": "A 'source callout' with 'DMs are open'; it publishes no address, handle or link of its own and the page carries no reply route.",
+      "relevance": "low",
+      "notes": "Looking for sports-tech experts for a story on AI + sport. Sports-domain expertise we do not hold; no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "ai-and-ml-engineers-data-scientists-career-paths-and-ai-impact": {
+      "who": "Business Insider (businessinsider.com on the page's domain field); author not named.",
+      "category": "AI / Career & Industry Testimony",
+      "contact": "Sourcee redacts the body's address; the page publishes only a redirect link (https://lnkd.in/erSx6dTf), not a route.",
+      "relevance": "low",
+      "notes": "Wants AI/ML engineers and data scientists to describe their career path and how AI is transforming their role, for Business Insider. First-hand practitioner testimony we cannot give; address redacted, route unresolved.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "us-workers-who-used-ai-challenging-layoffs-and-pay-delays": {
+      "who": "Business Insider (businessinsider.com on the page's domain field); author not named.",
+      "category": "AI / Labour & Workforce Testimony",
+      "contact": "The body says 'DM me'/'email me' but publishes no handle; the request page carries no reply route and the address is redacted.",
+      "relevance": "low",
+      "notes": "Wants US workers who used AI to draft responses or counterproposals in layoff/pay-delay disputes (Littler 2026 European Employer Survey, 48%). First-hand testimony we cannot give; the 'pay' spend token is a labour-story false positive.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "k12-deaf-and-hard-of-hearing-students-missing-iep-services": {
+      "who": "Not named on the page - no author field, no outlet.",
+      "category": "AI / Special-Education Data",
+      "contact": "The body references the National Deaf Education Data Index (NDEDI); it publishes no address, handle or link of its own and the page carries no reply route.",
+      "relevance": "low",
+      "notes": "A Deaf-education advocacy post about K-12 students missing IEP services, with a National Deaf Education Data Index angle. The AI token is incidental and the real-spend 'budget' token is a school budget, not tool spend; no route.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    },
+    "property-viewers-who-saw-aigenerated-listing-images-reactions": {
+      "who": "The i Paper (theipaper.com on the page's domain field); author not named.",
+      "category": "AI / Property & Consumer",
+      "contact": "Sourcee redacts the body's address ('[email redacted]'); the request page publishes no address, handle or link of its own.",
+      "relevance": "low",
+      "notes": "Wants property viewers who have seen a listing advertised with AI-generated images, for The i Paper. Consumer anecdote with no pricing angle; address redacted.",
+      "template": "None. No route and no standing. NOT DRAFTED."
+    }
+  },
+  "new_this_run": [
+    "63-slug sitemap window (2026-11-25T03:23:52Z -> 2026-11-26T08:20:08Z): 5 AI-token by slug, 1 AI+spend by slug (a 'pay' false positive in a labour story), 5 spend-only by slug. All 63 window bodies were fetched (63/63 HTTP 200) and read; the body scan found 7 AI-token bodies, of which 1 also carries a real spend token (a school-budget word in a Deaf-education post).",
+    "Zero on-beat, routable rows this run. All seven AI bodies ask for first-person testimony, domain expertise we do not hold, or a casting call - a therapy casting call, an agentic-automation critique, a sports-tech callout, two Business Insider testimony calls, a Deaf-education data post and a property-image reaction call. None asks what an AI tool costs and none publishes a reply route, so all are recorded and assessed rather than drafted.",
+    "The sendable rows this run are carried, not new: HR Professionals - AI Hiring Economics (Personnel Today, Jo Faragher), Brits Using AI - Subscription Spend (Telegraph Money, Katie Strick) and Former Software Engineers - Left Tech After AI Coding Tools (Business Insider, Thibault Spirlet at its 10-day line)."
+  ],
+  "why_not_drafted": [
+    "unattributed casting call: human-interest AI-partner therapy story, no route",
+    "agentic-automation critique: engineering-practice commentary, no route",
+    "sports-tech (AI + sport): sports-domain expertise we do not hold, no route",
+    "Business Insider career-paths: first-hand practitioner testimony, address redacted",
+    "Business Insider layoff/pay-delay testimony: first-hand testimony, 'pay' spend token is a labour false positive",
+    "Deaf-education IEP post: AI incidental, real-spend token is a school budget, no route",
+    "The i Paper property-image reactions: consumer anecdote, address redacted"
+  ],
+  "extra_actions": [
+    "Re-probed the full route set (18 routes) for 2026-11-26 (scripts/probe_routes.py): personneltoday.com/contact-us/ HTTP 200 (243,136 bytes, full page carrying 'Jo Faragher, contributing editor'), businessinsider.com/author/thibault-spirlet/ HTTP 200 (328,012 bytes, address present), katiestrick.co.uk/ and /contact/ HTTP 200 (212,116 / 99,121 bytes, address present). All three carried sendable rows' routes re-confirmed live today.",
+    "Verified the seven new window rows against their pages (all HTTP 200, badge 'Posted in last 7 days') so the digest carries measured ages rather than the sitemap lastmod."
+  ]
+}
