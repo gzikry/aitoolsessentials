@@ -1,0 +1,40 @@
+{
+  "_note": "2026-11-27 editorial decisions. Four AI body hits in the 53-request sitemap window; all four are outside AIToolsEssentials' pricing and tool-selection evidence, and none offers an appropriate source role. All 53 window pages returned HTTP 200. Sourcee's rolling AI topic feed is not used to infer expiry for carried requests.",
+  "new_rows": {
+    "accountants-and-finance-professionals-ai-data-privacy-hurdles": {
+      "who": "Pitch & Shout repost; journalist and publication not named on Sourcee.",
+      "category": "AI / Accountancy / Data privacy",
+      "contact": "Original post links to https://t.co/U6uparVncd as 'Pitch here'; destination not verified as an accessible reply route. Sourcee page does not expose a contact address.",
+      "relevance": "low",
+      "notes": "Requires first-hand accountancy/finance privacy expertise. Our tool-price census does not establish this expertise.",
+      "template": "None. No qualified privacy/accountancy source; do not draft."
+    },
+    "food-delivery-and-grocery-app-users-ai-chatbot-customer-care-issues": {
+      "who": "Anushka Vats — News18.com (named in request).",
+      "category": "AI / Customer service / Consumer testimony",
+      "contact": "Request asks for DM or email with subject 'Story Request – AI Chatbot & Customer Care Issues'; Sourcee redacts the email and exposes no author handle.",
+      "relevance": "low",
+      "notes": "First-person food-delivery or grocery-app customer-service experience required; our dataset is not testimony.",
+      "template": "None. Not a first-hand consumer source; do not draft."
+    },
+    "uk-ai-and-data-centre-experts-economic-and-environmental-impact": {
+      "who": "Matthew Graham (named on page); publication not supplied.",
+      "category": "AI / Data centres / UK economy and environment",
+      "contact": "Original platform reply; no address, handle, or submission link published on Sourcee.",
+      "relevance": "low",
+      "notes": "Needs specialist UK data-centre economic and environmental expertise; our price data does not support that role.",
+      "template": "None. No qualified data-centre source; do not draft."
+    },
+    "traveltech-companies-agentic-ai-systems-in-hospitality-and-booking": {
+      "who": "Chandreyi Bandyopadhyay (named on page); print outlet not stated.",
+      "category": "AI / Travel technology / Hospitality",
+      "contact": "Email invitation in source request is redacted by Sourcee; no published direct address. Original platform reply requires human access.",
+      "relevance": "low",
+      "notes": "Deadline Nov 30, 2026 on page; seeks companies building agentic hospitality/booking systems. We are not such a vendor.",
+      "template": "None. No qualifying travel-tech product; do not draft."
+    }
+  },
+  "new_this_run": ["53 newly indexed requests fetched; four AI body matches, none matched AIToolsEssentials' pricing evidence or source qualifications."],
+  "why_not_drafted": ["accountancy privacy expertise outside our evidence", "News18 consumer testimony not ours", "UK data-centre environmental expertise outside our evidence", "travel-tech vendor case study not ours"],
+  "extra_actions": ["Carried requests verified directly by URL today. The AI-topic feed is a rolling browse page, not evidence of an old request's expiry."]
+}

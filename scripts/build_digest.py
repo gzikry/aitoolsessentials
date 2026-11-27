@@ -635,6 +635,9 @@ def main() -> None:
     # made the age column print "was Noned" for every one of them, because a 404 page has no
     # datePublished left to carry. The baseline is the previous digest's own page verdict.
     dead_rows = [o for o in opps if o.get("_page_live") is False]
+    old_feed = {p.get("slug") for p in prev["opportunities"] if p.get("_in_ai_topic_feed")}
+    feed_dropoffs = [o["slug"] for o in opps if o["slug"] in old_feed
+                     and not o.get("_in_ai_topic_feed") and o.get("_page_live")]
     _prev_age = {p.get("slug"): p.get("_days_old") for p in prev["opportunities"]}
     _prev_live = {p.get("slug"): p.get("_page_live") for p in prev["opportunities"]}
     newly_dead = [o for o in dead_rows if _prev_live.get(o["slug"]) is not False]
@@ -693,8 +696,9 @@ def main() -> None:
             (f"{len(at_ten)} ROW(S) SIT AT EXACTLY {STALE_DAYS} DAYS AND CROSS TOMORROW: "
              + "; ".join(at_ten) + "." if at_ten
              else "No row sits at exactly 10 days today, so the next run has no scheduled crossing."),
-            "ROWS THAT DROPPED OFF THE NEWEST DIGEST: 0. Every tracked row is carried in every digest by "
-            "design, so this figure is a monitor convention and not platform evidence.",
+            (f"ROWS THAT LEFT THE SOURCEE AI TOPIC FEED SINCE {prev_day}: "
+             f"{len(feed_dropoffs)}. " + ("; ".join(feed_dropoffs) if feed_dropoffs else "None")
+             + ". These URLs were checked by page, not assumed expired from feed absence."),
         ],
         "summary": summary,
         "recommended_actions": actions,

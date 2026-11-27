@@ -225,8 +225,16 @@ def collect() -> list[dict]:
     # re-keyed, and scripts/haro_monitor.py's undefined `run()` call that produced them is
     # fixed). Treating such a digest as "did not carry this request" flagged every row in the
     # queue as dropped off at once, which is a data defect masquerading as a cold signal.
-    members = [day for day, n in digest_urls.items() if n > 0]
-    latest = max((r["last_seen"] for r in seen.values()), default="")
+    # Distinguish the actual rolling AI feed from digest carry-forward. Every tracked URL is
+    # copied into each daily digest, so last_seen == latest says nothing about feed presence.
+    prior_feed: dict[str, bool] = {}
+    if len(digests) >= 2:
+        try:
+            prior = json.loads(digests[-2].read_text())
+            prior_feed = {_canon(o.get("url", "")): bool(o.get("_in_ai_topic_feed"))
+                          for o in prior.get("opportunities", []) if o.get("url")}
+        except (OSError, json.JSONDecodeError):
+            pass
     for rec in seen.values():
         v = _verified_for(rec["url"], verified)
         # Age: the page's own datePublished beats anything the digest text claimed. The digest
@@ -272,29 +280,14 @@ def collect() -> list[dict]:
         rec["published_links"] = v.get("published_links") or []
         rec["stale"] = rec["days_old"] is not None and rec["days_old"] > STALE_DAYS
         rec["automatable"] = _automatable(rec["contact"], rec)
-        # A request that appears in the newest digest was re-verified live by that run; one that
-        # stopped appearing has dropped off the feed, which is a stronger cold signal than age.
-        rec["in_latest"] = rec["last_seen"] == latest
+        # Real feed membership, not digest carry-forward. A request that was listed yesterday
+        # and vanished today is colder, although its page may still answer HTTP 200. A request
+        # never listed in this topic feed (such as the Personnel Today route) is not a dropoff.
+        rec["in_latest"] = rec["in_ai_topic_feed"]
         if rec["page_live"] is False:
             rec["dropped_off"] = "page no longer serves the request"
-        elif not rec["in_latest"] and members:
-            # Absent from the newest URL-carrying digest. Note what is deliberately NOT used as
-            # evidence here: Sourcee's /topics/ai/journo-requests page. Measured on 2026-09-17,
-            # all 42 of its slugs have a lastmod inside a single 15.7-hour window (2026-09-16
-            # 12:14Z to 2026-09-17 03:59Z) and it shares 0 of 36 slugs with the previous day's
-            # capture. It is a recency window over the newest ~42 requests, so any carried
-            # request is absent from it by construction. Treating that absence as a cold signal
-            # flagged requests as "dropped off" for the sole reason that they were posted more
-            # than a day ago.
-            #
-            # 2026-10-10 CORRECTION: the "by construction" half of that reasoning was never
-            # measured and is now falsified. Re-measured today: the AI topic page listed 50 slugs
-            # and only 40 of them sat inside that day's new-sitemap window, so the page is NOT a
-            # pure recency window over the newest requests. The RULE above is unchanged and does
-            # not depend on the retracted half: absence from that page is still not evidence that
-            # a carried request is dead, which is the only thing this branch needs.
-            rec["dropped_off"] = (f"not carried by the {latest} digest "
-                                  f"({digest_sizes.get(latest, '?')} items)")
+        elif prior_feed.get(rec["url"]) and not rec["in_ai_topic_feed"]:
+            rec["dropped_off"] = "left the newest Sourcee AI topic feed; page still live, but colder than age suggests"
         else:
             rec["dropped_off"] = ""
     return list(seen.values())
@@ -1041,23 +1034,8 @@ def render(queue: list[dict], ledger: dict) -> str:
     stale = [q for q in live if q["stale"]]
 
     def key(q):
-        # Specified ranking: still-live-in-the-feed first, then relevance, then age. Feed
-        # membership comes from the newest URL-carrying digest. Sourcee's AI topic page is
-        # deliberately NOT used here: it is a recency window over the newest ~42 requests
-        # (all 42 slugs dated inside one 15.7-hour window on 2026-09-17, 0 of 36 shared with
-        # the previous capture), so every carried request is absent from it by construction
-        # and using it as a membership test would demote the whole queue.
-        #
-        # 2026-10-10 CORRECTION: the overlap was measured for the first time today and is 40 of
-        # 50, not 50 of 50 — the page is not a pure recency window over the newest requests, so
-        # "by construction" is retired. The decision above stands on its own argument: no carried
-        # row is on that page either way, so it cannot be used as a membership test.
-        #
-        # 2026-09-21: all 41 tracked requests now carry last_seen == the newest digest day, so
-        # `in_latest` is True for every row and the first key component no longer discriminates.
-        # That is a property of carrying every request forward in each digest, not a ranking error,
-        # and relevance + age still order the list correctly. Left in place because the moment a
-        # digest stops carrying a row it becomes the strongest cold signal available.
+        # Actual latest AI topic feed membership, followed by relevance and page-derived age.
+        # Digest membership is carry-forward and cannot serve as a feed freshness signal.
         live_in_feed = q["in_latest"]
         return (0 if live_in_feed else 1,
                 _rel_rank(q["relevance"]),
