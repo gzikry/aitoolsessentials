@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-26",
-  "tools_count": 137,
+  "tools_count": 138,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -994,6 +994,13 @@
       "category": "Creative",
       "price": "Free $0/month with 10 free credits (no credit card). Personal $10.00/month, or $9.00/month billed annually at $108.00, for 500 credits a month ($0.018 per credit). Professional $30.00/month, or $27.00/month billed annually at $324.00, for 2,000 credits a month ($0.0135 per credit). All paid plans list the same features: AI image, video and music generation, AI Effects, embroidery digitizing, batch conversion (up to 30 files), more storage (5 GB Personal / 10 GB Professional), no watermark and a commercial license. Each annual total is twelve monthly payments at the discounted rate (9x12=108; 27x12=324) and the card is labelled 'Billed annually'. Checkout is Stripe on the web; in-app purchases run through Google Play Billing (Android) or Apple's App Store (iOS). Verified 2026-11-26 on the rendered /pricing with enabled 'Buy Now' / 'Sign Up Free' buttons and a Monthly/Yearly toggle, and against the privacy policy's processor list.",
       "url": "https://aitoolsessentials.com/tools/sharkfoto/"
+    },
+    {
+      "name": "Auteo (auteo.ai)",
+      "slug": "auteo",
+      "category": "Creative",
+      "price": "Subscription plans: Starter $15/month, or $12/month billed annually ($144/year, save $36) for 200 credits a month; Plus $29/month, or $23/month billed annually ($276/year, save $72) for 500 credits a month; Ultra $129/month, or $103/month billed annually ($1,236/year, save $312) for 3,000 credits a month. Annual billing is a flat 20% off the monthly rate and each annual total is exactly twelve discounted monthly payments. One-time credit packs, valid 1 year: Small 200 credits $26; Medium 500 credits $56 ($46 Plus, $36 Ultra); Large 3,000 credits $276 ($219 Plus, $176 Ultra), i.e. Plus/Ultra members save up to 36% on packs. Black Friday offer running through Dec 1 2026: 40% off the first payment of any plan (monthly or annual) and 30% off credit packs. Z Image and FLUX.2 are 'unlimited' on Plus and Ultra; Starter is 'access to selected models only'. Credit equivalences quoted by the site: 200 credits is about 100 Nano Banana 2.1 images, 4 Seedance 2.5 videos or 66 Suno V6 songs. Checkout is Stripe or PayPal. Verified 2026-11-26 on the rendered /pricing (post-hydration), including the credit-pack tab and the FAQ.",
+      "url": "https://aitoolsessentials.com/tools/auteo/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

@@ -1238,6 +1238,15 @@
       "public_href": "/go/sharkfoto/",
       "partner": false
     },
+    "auteo": {
+      "name": "Auteo (auteo.ai)",
+      "slug": "auteo",
+      "official": "https://auteo.ai/",
+      "destination": "https://auteo.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/auteo/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",
