@@ -1,8 +1,8 @@
 {
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
-  "generated": "2026-11-26",
-  "tools_count": 138,
+  "generated": "2026-11-27",
+  "tools_count": 139,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -1001,6 +1001,13 @@
       "category": "Creative",
       "price": "Subscription plans: Starter $15/month, or $12/month billed annually ($144/year, save $36) for 200 credits a month; Plus $29/month, or $23/month billed annually ($276/year, save $72) for 500 credits a month; Ultra $129/month, or $103/month billed annually ($1,236/year, save $312) for 3,000 credits a month. Annual billing is a flat 20% off the monthly rate and each annual total is exactly twelve discounted monthly payments. One-time credit packs, valid 1 year: Small 200 credits $26; Medium 500 credits $56 ($46 Plus, $36 Ultra); Large 3,000 credits $276 ($219 Plus, $176 Ultra), i.e. Plus/Ultra members save up to 36% on packs. Black Friday offer running through Dec 1 2026: 40% off the first payment of any plan (monthly or annual) and 30% off credit packs. Z Image and FLUX.2 are 'unlimited' on Plus and Ultra; Starter is 'access to selected models only'. Credit equivalences quoted by the site: 200 credits is about 100 Nano Banana 2.1 images, 4 Seedance 2.5 videos or 66 Suno V6 songs. Checkout is Stripe or PayPal. Verified 2026-11-26 on the rendered /pricing (post-hydration), including the credit-pack tab and the FAQ.",
       "url": "https://aitoolsessentials.com/tools/auteo/"
+    },
+    {
+      "name": "Magi2AI (magi2ai.video)",
+      "slug": "magi2ai",
+      "category": "Video",
+      "price": "Starter 200 credits/month $15 monthly or $12/month billed annually ($144/year); Plus 500 credits/month $29 monthly or $23/month annually ($276/year); Ultra 3,000 credits/month $129 monthly or $103/month annually ($1,236/year). One-time packs valid 1 year: 200 credits $26, 500 $56 (Plus $46, Ultra $36), 3,000 $276 (Plus $219, Ultra $176). Black Friday through Dec 1, 2026: 40% off the first monthly or annual subscription payment, 30% off packs (e.g. first monthly Starter $9; first annual Starter $86.40). Tax extra. Pricing page checked 2026-11-27 with monthly and annual tabs rendered.",
+      "url": "https://aitoolsessentials.com/tools/magi2ai/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

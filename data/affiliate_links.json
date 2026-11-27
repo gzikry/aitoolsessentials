@@ -1247,6 +1247,15 @@
       "public_href": "/go/auteo/",
       "partner": false
     },
+    "magi2ai": {
+      "name": "Magi2AI (magi2ai.video)",
+      "slug": "magi2ai",
+      "official": "https://magi2ai.video/",
+      "destination": "https://magi2ai.video/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/magi2ai/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

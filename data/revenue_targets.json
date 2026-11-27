@@ -2572,5 +2572,24 @@
     "status": "not_started",
     "next_action": "Ask in the publication reply whether auteo.ai (Sigmify LLC) runs an affiliate, referral or partner programme, and whether any such terms also cover the sibling domain magi2ai.video; nothing is published and no affiliate path was found, so no tracking URL is invented.",
     "notes": "A $15/$29/$129 a month plan ladder plus one-time credit packs is a workable affiliate shape if a programme exists, but the vendor's pages publish none. Sigmify LLC operates two domains (auteo.ai and magi2ai.video); both would need to be covered by any partner agreement. Low priority until traffic grows."
+  },
+  {
+    "tool_slug": "magi2ai",
+    "tool_name": "Magi2AI",
+    "priority": "low",
+    "category": "Video",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [],
+    "target_pages": [
+      "/tools/magi2ai/"
+    ],
+    "best_audiences": [
+      "creators comparing MAGI-2 video generation pricing against other video models"
+    ],
+    "status": "not_started",
+    "next_action": "No affiliate program currently: Sigmify LLC said so in its 2026-11-27 reply; revisit only if vendor announces one. Do not invent affiliate URL.",
+    "notes": "Separate listing from Auteo under the same operator. Editorial rating independent of commercial relationship."
   }
 ]

@@ -573,6 +573,11 @@
     "auteo": {
       "date": "2026-11-26",
       "digest": "Subscriptions: Starter $15/mo or $12/mo billed annually ($144/yr, save $36) for 200 credits/mo; Plus $29/mo or $23/mo annually ($276/yr, save $72) for 500 credits/mo; Ultra $129/mo or $103/mo annually ($1,236/yr, save $312) for 3,000 credits/mo. Annual is a flat 20% off and each annual total is twelve discounted monthly payments. One-time credit packs valid 1 year: 200 credits $26; 500 credits $56 (Plus $46, Ultra $36); 3,000 credits $276 (Plus $219, Ultra $176). Black Friday through Dec 1 2026: 40% off the first plan payment and 30% off packs. Z Image and FLUX.2 unlimited on Plus/Ultra; Starter 'selected models only'. Credit equivalences: 200 credits ~ 100 Nano Banana 2.1 images / ~4 Seedance 2.5 videos / ~66 Suno V6 songs. Checkout Stripe or PayPal. Refund: request within 3 days, credits unused. Operator Sigmify LLC (Wyoming) with Wyoming governing law and venue named on the legal pages; address is a registered-agent address; no-training statement present; retention per category but no fixed periods. Verified 2026-11-26 on the rendered /pricing across all tabs."
+    },
+    "magi2ai": {
+      "date": "2026-11-27",
+      "digest": "Starter 200 credits/month $15 monthly or $12/month billed annually ($144/year); Plus 500 credits/month $29 monthly or $23/month annually ($276/year); Ultra 3,000 credits/month $129 monthly or $103/month annually ($1,236/year). One-time packs valid 1 year: 200 credits $26, 500 $56 (Plus $46, Ultra $36), 3,000 $276 (Plus $219, Ultra $176). Black Friday through Dec 1, 2026: 40% off the first monthly or annual subscription payment, 30% off packs (e.g. first monthly Starter $9; first annual Starter $86.40). Tax extra. Pricing page checked 2026-11-27 with monthly and annual tabs rendered.",
+      "verified_against": "https://magi2ai.video/pricing"
     }
   },
   "changes": [
@@ -997,5 +1002,5 @@
       "note": "SharkFoto (sharkfoto.com): first recorded pricing snapshot - Free $0/10 credits (no card); Personal $10/mo or $9/mo billed annually ($108/yr) for 500 credits/mo at $0.018/credit; Professional $30/mo or $27/mo billed annually ($324/yr) for 2,000 credits/mo at $0.0135/credit. All paid plans add no watermark and a commercial licence; Stripe on web, Google Play Billing / Apple App Store in-app. Refund Policy gives a 7-day window for subscription credits only, disqualifies >50 subscription credits used, excludes add-on credits and reserves up to a 6% fee. Operated by SharkAI Limited (Hong Kong)."
     }
   ],
-  "updated": "2026-11-26"
+  "updated": "2026-11-27"
 }

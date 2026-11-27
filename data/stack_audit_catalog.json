@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26",
+  "generated_at": "2026-11-27",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -3419,6 +3419,32 @@
         "video",
         "audio",
         "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "magi2ai",
+      "name": "Magi2AI (magi2ai.video)",
+      "category": "Video",
+      "official_url": "https://magi2ai.video/",
+      "review_url": "/tools/magi2ai/",
+      "price_label": "Starter 200 credits/month $15 monthly or $12/month billed annually ($144/year); Plus 500 credits/month $29 monthly or $23/month annually ($276/year); Ultra 3,000 credits/month $129 monthly or $103/month annually ($1,236/year). One-time packs valid 1 year: 200 credits $26, 500 $56 (Plus $46, Ultra $36), 3,000 $276 (Plus $219, Ultra $176). Black Friday through Dec 1, 2026: 40% off the first monthly or annual subscription payment, 30% off packs (e.g. first monthly Starter $9; first annual Starter $86.40). Tax extra. Pricing page checked 2026-11-27 with monthly and annual tabs rendered.",
+      "pricing_summary": "Starter 200 credits/month $15 monthly or $12/month billed annually ($144/year); Plus 500 credits/month $29 monthly or $23/month annually ($276/year); Ultra 3,000 credits/month $129 monthly or $103/month annually ($1,236/year). One-time packs valid 1 year: 200 credits $26, 500 $56 (Plus $46, Ultra $36), 3,000 $276 (Plus $219, Ultra $176). Black Friday through Dec 1, 2026: 40% off the first monthly or annual subscription payment, 30% off packs (e.g. first monthly Starter $9; first annual Starter $86.40). Tax extra. Pricing page checked 2026-11-27 with monthly and annual tabs rendered.",
+      "pricing_url": "https://magi2ai.video/pricing",
+      "pricing_checked_date": "2026-11-27",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": true,
+      "suggested_use_cases": [
+        "writing",
+        "coding",
+        "design",
+        "video",
+        "audio"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

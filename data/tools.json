@@ -9029,5 +9029,71 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5 - this is a real, live, priced multi-model studio: video, image, voice and music on one balance, with a coherent plan ladder (Starter/Plus/Ultra), one-time packs, and named engines that genuinely exist in 2026 and are correctly attributed to their suppliers (Seedance, MiniMax, Sand AI's MAGI-2, OpenAI GPT Image, ByteDance Seedream, Google Nano Banana, Kling, Suno). The pricing reconciles across the monthly, annual and pack tabs and the credit-to-output equivalences are given. It loses points because there is no free tier to evaluate the generator on, full model access needs Plus/Ultra, and credit packs expire after a year. Transparency 3.7/5 - the disclosure is unusually complete for this class: a named operating entity (Sigmify LLC, Wyoming) with a real governing-law and venue clause, processors named as companies, an explicit no-training statement, a plain statement that prompts and uploads go to third-party model providers, and retention described per category. What holds it back is that the published address is a registered-agent address rather than an operating one, the policy expressly declines to commit to fixed retention periods, the disclosed session recorder captures form-field text on the marketing pages, a Chinese model provider (DeepSeek) is named as a feedback processor, and the legal set was rewritten the same week (effective 27 November 2026) so there is no track record. Overall 3.9; the score is an editorial judgement, not a hands-on test result - the review page carries the hands-on status separately."
+  },
+  {
+    "slug": "magi2ai",
+    "name": "Magi2AI (magi2ai.video)",
+    "category": "Video",
+    "best_for": "Creators making short MAGI-2 video clips with dialogue and native sound from a prompt, first/last frame, or reference media, who prefer a single-model studio to Auteo’s broader multi-model suite. Check the credit cost and the no-test-generation limitation before paying.",
+    "price": "Starter 200 credits/month $15 monthly or $12/month billed annually ($144/year); Plus 500 credits/month $29 monthly or $23/month annually ($276/year); Ultra 3,000 credits/month $129 monthly or $103/month annually ($1,236/year). One-time packs valid 1 year: 200 credits $26, 500 $56 (Plus $46, Ultra $36), 3,000 $276 (Plus $219, Ultra $176). Black Friday through Dec 1, 2026: 40% off the first monthly or annual subscription payment, 30% off packs (e.g. first monthly Starter $9; first annual Starter $86.40). Tax extra. Pricing page checked 2026-11-27 with monthly and annual tabs rendered.",
+    "rating": 3.8,
+    "official": "https://magi2ai.video/",
+    "summary": "Magi2AI is a browser video generator centered on Sand.ai’s MAGI-2, operated by Sigmify LLC, the same Wyoming company behind Auteo. Its Terms say it accesses MAGI-2 through a third-party API; its privacy notice identifies Sand.ai via NanoAPI and names TypeSafe as the prompt-safety provider. NanoAPI independently publishes a MAGI-2 endpoint and model ID magi-2.0. The studio offers text-to-video, first/last-frame and reference-based creation, with video and sound together. This is an independent service, not Sand.ai itself; no paid render was tested.",
+    "use_cases": [
+      "Create a short clip with spoken dialogue and synchronized sound from a text prompt",
+      "Animate a first frame with an optional last frame",
+      "Use image, video or audio references to guide a MAGI-2 scene",
+      "Download MP4 video for personal or commercial projects under the service terms"
+    ],
+    "pros": [
+      "The model developer and independent intermediary are named: Sand.ai via NanoAPI, whose own public docs offer MAGI-2 as magi-2.0",
+      "Sigmify LLC and a Sheridan, Wyoming mailing address are published, with Wyoming law and Wyoming courts named in Terms section 10",
+      "Privacy identifies Stripe and PayPal payments, TypeSafe prompt screening, Supabase, Cloudflare, Resend, PostHog, Google Ads and DeepSeek feedback processing",
+      "The privacy policy says submitted prompts and references go to third-party providers, and says the service does not use content to train its models",
+      "The pricing page discloses monthly and annual tiers, one-time packs, credit cost before generation and credit return on failed generations"
+    ],
+    "cons": [
+      "There is no free generation allowance shown; a reader cannot independently test MAGI-2 output before payment without buying a plan or pack",
+      "The privacy policy explicitly declines to commit to fixed retention periods; residual backups may remain after user deletion for an unspecified period",
+      "The disclosed first-party session recorder captures text entered into fields; PostHog and Google Ads also process visitor activity",
+      "The mailing address is a widely used registered-agent address, not an operating office",
+      "Credit packs expire after one year and the refund policy excludes packs and renewals, allows only three days for a first subscription refund with no purchased credits used, and may deduct up to 6%",
+      "Magi2AI and Auteo are separate products under the same operator, Sigmify LLC; buying one does not establish access to the other"
+    ],
+    "key_features": [
+      "MAGI-2 text, first/last-frame and reference-to-video creation with native audio",
+      "4–30 second, 1080p clips in six aspect ratios according to the vendor and model provider",
+      "Credit-metered Generate button with cost before submission",
+      "200/500/3,000-credit monthly and annual subscription tiers; one-time top-ups",
+      "Email or Google sign-in; Stripe or PayPal payments"
+    ],
+    "faq": [
+      [
+        "Who makes the model and who runs this site?",
+        "Sand.ai developed MAGI-2. Magi2AI is an independent Sigmify LLC service, not affiliated with Sand.ai. Its Terms say it accesses the model through a third-party API provider, and its Privacy Policy names Sand.ai through NanoAPI."
+      ],
+      [
+        "What does it cost?",
+        "Starter $15/month or $144/year, Plus $29/month or $276/year, Ultra $129/month or $1,236/year; one-time 200/500/3,000-credit packs start at $26, before temporary Black Friday discounts. Credits on packs are valid for one year."
+      ],
+      [
+        "Can I request a refund?",
+        "The Refund Policy gives three days for a first subscription payment only if none of the credits from that purchase have been used. Packs and renewals are excluded; an approved refund may have a processing fee of up to 6%."
+      ],
+      [
+        "Who handles my uploads?",
+        "The Privacy Policy says uploaded media and prompts are sent to third-party providers, identifies Sand.ai through NanoAPI for generation and TypeSafe for text screening, and says no fixed retention periods are currently promised."
+      ]
+    ],
+    "trial_checklist": [
+      "Confirm MAGI-2 rather than another model is selected; the public studio names it but no render was purchased for this review",
+      "Check the credit charge at the Generate button for your chosen duration, resolution and sound settings",
+      "Compare monthly and annual totals, and note the introductory discount applies only to the first payment",
+      "Read the 3-day unused-credits subscription refund rule and the exclusion of one-time packs and renewals",
+      "Avoid sensitive reference media or field text until comfortable with the stated third-party processing, session recording and unspecified retention"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.0/5: the single-model MAGI-2 studio, API provenance, live model selection, reference inputs and displayed credit cost make a coherent video workflow, but no paid generation was tested and no free generation allowance is advertised. Transparency 3.6/5: the operator, Wyoming venue, provider chain and training position are now stated, while the registered-agent address, unspecified retention and field-text session recording leave meaningful buyer caveats. Overall 3.8/5, editorial source assessment rather than hands-on output verification."
   }
 ]
