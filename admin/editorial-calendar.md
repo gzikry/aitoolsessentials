@@ -124,3 +124,8 @@ Next up: another workflow piece, then a question-intent interleave.
 Still open (unchanged): Month 2 (Oct) Premium member drop — Cursor vs Copilot hands-on results. Gated on running the test protocol first; cannot be written without a logged result.
 
 
+
+## Backlog: batch 8 (from 2026-11-27)
+21. Handing off an AI-assisted client deliverable ✅ shipped 2026-11-27 (workflow, articles/ai-client-deliverable-handoff-workflow.html; added to Learn hub)
+22. Can you trust AI-generated citations? ✅ shipped 2026-11-27 (question-intent, articles/can-you-trust-ai-citations.html; added to Learn hub)
+Next up: an audience guide, then another workflow piece. Month 2 Premium Cursor vs Copilot hands-on results remain gated on the logged test protocol.

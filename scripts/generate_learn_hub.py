@@ -68,6 +68,8 @@ LEARN = [
     ('ai-agents-vs-automation.html', 'Do you need an AI agent, or just automation?', 'Who picks the next step, where each approach fails, the costs people forget, and how to test one workflow before buying.'),
     ('best-ai-tools-for-social-media-managers.html', 'Best AI tools for social media managers', 'Platform copy, branded visuals, long-form repurposing, and cited research — with disclosure and brand voice treated as part of the job.'),
     ('content-repurposing-workflow.html', 'Repurposing one long asset into a week of content', 'A five-step workflow from one recording or article to a week of posts — extraction by hand, a claim-by-claim review, and a send a person keeps.'),
+    ('ai-client-deliverable-handoff-workflow.html', 'Handing off an AI-assisted client deliverable', 'Scope, source register, rights check, and human approval before a client-facing send.'),
+    ('can-you-trust-ai-citations.html', 'Can you trust AI-generated citations?', 'Open each source and verify the passage, date, and scope before citing an AI answer.'),
 ]
 
 HEADER = '<header class="global-nav"><a class="brand" href="/"><span class="brand-glyph">ATE</span><span>AIToolsEssentials</span></a><nav class="nav-links"><a href="../tools/index.html">Tools</a><a href="../comparisons/best-ai-tools.html">Best AI tools</a><a href="../categories/index.html">Categories</a><a href="../articles/index.html">Guides</a><a href="../benchmarks/">Benchmarks</a>\n</nav><a class="nav-cta" href="../legal/affiliate-disclosure.html">Disclosure</a></header>'
