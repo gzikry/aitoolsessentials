@@ -7,8 +7,8 @@
   "evidence_freshness": {
     "pricing_records": 139,
     "latest_pricing_checked": "2026-11-27",
-    "pricing_checked_on_latest_date": 1,
-    "pricing_older_than_latest": 138,
+    "pricing_checked_on_latest_date": 2,
+    "pricing_older_than_latest": 137,
     "pricing_undated_or_invalid": 0
   },
   "hardware_records": 5,
