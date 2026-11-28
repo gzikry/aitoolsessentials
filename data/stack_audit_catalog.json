@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27",
+  "generated_at": "2026-11-28",
   "policy": "Normalized Stack Audit contract generated from data/tools.json and data/tool_sources.json. Numeric spend is never invented. Missing price or capability yields Review. Affiliate and sponsor flags are disclosure-only and never change score, inclusion, or recommendations. The viral.js $20/$35 heuristic is not used.",
   "rules": {
     "version": 1,
@@ -3471,6 +3471,31 @@
         "audio",
         "marketing",
         "automation"
+      ],
+      "capability_confidence": "keyword",
+      "capabilities_known": true,
+      "affiliate_status": null,
+      "affiliate": false,
+      "sponsored": false
+    },
+    {
+      "slug": "aivane",
+      "name": "AIVane",
+      "category": "Automation",
+      "official_url": "https://aivane.net/",
+      "review_url": "/tools/aivane/",
+      "price_label": "Free: 3 saved automations, 300 one-time AI credits valid 12 months, one 10-minute cloud trial. Starter $12/month or $120/year: 1,000 AI credits and 3 cloud hours monthly. Pro $29/month or $290/year: 3,000 credits and 15 cloud hours monthly. Business $39/seat/month or $390/seat/year, minimum 3 seats: 3,000 credits and 10 cloud hours per seat monthly. Enterprise by quote. One-time AI credit packs: $10/1,000, $25/2,500, $50/5,000; cloud packs $8/10 hours, $35/50 hours (eligible paid plan). Extra devices $10/month or $120/year each. USD before applicable tax; checked 2026-11-28.",
+      "pricing_summary": "Free: 3 saved automations, 300 one-time AI credits valid 12 months, one 10-minute cloud trial. Starter $12/month or $120/year: 1,000 AI credits and 3 cloud hours monthly. Pro $29/month or $290/year: 3,000 credits and 15 cloud hours monthly. Business $39/seat/month or $390/seat/year, minimum 3 seats: 3,000 credits and 10 cloud hours per seat monthly. Enterprise by quote. One-time AI credit packs: $10/1,000, $25/2,500, $50/5,000; cloud packs $8/10 hours, $35/50 hours (eligible paid plan). Extra devices $10/month or $120/year each. USD before applicable tax; checked 2026-11-28.",
+      "pricing_url": "https://aivane.net/pricing/",
+      "pricing_checked_date": "2026-11-28",
+      "price_confidence": "official_summary",
+      "numeric_list_price_usd": null,
+      "promotion_mentioned": false,
+      "suggested_use_cases": [
+        "writing",
+        "automation",
+        "data",
+        "local"
       ],
       "capability_confidence": "keyword",
       "capabilities_known": true,

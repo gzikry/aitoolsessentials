@@ -2612,5 +2612,26 @@
     "status": "not_started",
     "next_action": "Email vendor about affiliate or partner terms separately; editorial assessment remains independent.",
     "notes": "No affiliate URL verified or published."
+  },
+  {
+    "tool_slug": "aivane",
+    "tool_name": "AIVane",
+    "priority": "low",
+    "category": "Automation",
+    "recommended_networks_to_check": [
+      "Direct vendor program via Creem"
+    ],
+    "search_queries": [
+      "AIVane affiliate program official terms"
+    ],
+    "target_pages": [
+      "/tools/aivane/"
+    ],
+    "best_audiences": [
+      "buyers comparing AI browser automation and local workflow recorders"
+    ],
+    "status": "not_started",
+    "next_action": "Email vendor about affiliate/partner terms separately; do not apply or use a link until commercial review.",
+    "notes": "Vendor publishes 35% affiliate terms but approval, Creem participation and attribution are separate; no affiliate URL verified or published."
   }
 ]

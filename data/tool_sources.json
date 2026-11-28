@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-27",
+  "checked_at": "2026-11-28",
   "source_policy": "Official vendor sources only. Missing values remain null or unresolved; no inference.",
   "tools": [
     {
@@ -1884,6 +1884,16 @@
       "rights_url": "https://reigniter.ai/terms",
       "docs_url": "https://reigniter.ai/docs/",
       "verification_notes": "Submitted via form by vendor; editorial entry written independently. Checked official home, pricing, privacy, terms, contact and security on 2026-11-27. Flittor Ltd 17255586 and registered office independently matched Companies House. Purchase, generation, agent actions and social publishing not tested; model/voice subprocessors not individually named in privacy. Name Reignitor is an alternate trading name on the site."
+    },
+    {
+      "slug": "aivane",
+      "pricing_checked_date": "2026-11-28",
+      "pricing_summary": "Free: 3 saved automations, 300 one-time AI credits valid 12 months, one 10-minute cloud trial. Starter $12/month or $120/year: 1,000 AI credits and 3 cloud hours monthly. Pro $29/month or $290/year: 3,000 credits and 15 cloud hours monthly. Business $39/seat/month or $390/seat/year, minimum 3 seats: 3,000 credits and 10 cloud hours per seat monthly. Enterprise by quote. One-time AI credit packs: $10/1,000, $25/2,500, $50/5,000; cloud packs $8/10 hours, $35/50 hours (eligible paid plan). Extra devices $10/month or $120/year each. USD before applicable tax; checked 2026-11-28.",
+      "pricing_url": "https://aivane.net/pricing/",
+      "docs_url": "https://aivane.net/docs/",
+      "privacy_url": "https://aivane.net/privacy/",
+      "rights_url": "https://aivane.net/terms/",
+      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Rechecked home, pricing, About, Terms (cache-busted after the Nov 28 remedy), privacy, desktop notice, refunds, documentation and downloads on 2026-11-28. Public operator Sam Luo; product law and forum mainland China, Creem separately resells purchases. No automation, installer, signup or purchase tested. INITE Atlas incorrectly attributes operator to PostHog; not adopted."
     }
   ]
 }

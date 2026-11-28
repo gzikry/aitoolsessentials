@@ -9164,5 +9164,74 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.2/5: the site documents multiple creative and builder workflows with visible plan gates, but no actual output was tested. Transparency 3.8/5: the named registered operator, pricing and UK venue are clear, while upstream model/voice suppliers are unnamed and credit expiry is short. Overall 4.0/5 based on source review, not hands-on testing."
+  },
+  {
+    "slug": "aivane",
+    "name": "AIVane",
+    "category": "Automation",
+    "best_for": "People who need editable AI-assisted browser or desktop workflows, including cloud runs and optional local execution, and can test with non-sensitive sample data first.",
+    "price": "Free: 3 saved automations, 300 one-time AI credits valid 12 months, one 10-minute cloud trial. Starter $12/month or $120/year: 1,000 AI credits and 3 cloud hours monthly. Pro $29/month or $290/year: 3,000 credits and 15 cloud hours monthly. Business $39/seat/month or $390/seat/year, minimum 3 seats: 3,000 credits and 10 cloud hours per seat monthly. Enterprise by quote. One-time AI credit packs: $10/1,000, $25/2,500, $50/5,000; cloud packs $8/10 hours, $35/50 hours (eligible paid plan). Extra devices $10/month or $120/year each. USD before applicable tax; checked 2026-11-28.",
+    "rating": 4.0,
+    "official": "https://aivane.net/",
+    "summary": "AIVane turns described or recorded browser and desktop tasks into editable automation workflows. It offers a browser app, Windows and Mac downloads, Hosted AI via DeepInfra and optional bring-your-own model configuration. Sam Luo publicly identifies as its independent operator; Creem separately sells purchases. Workflow execution, installers and checkout were not independently tested.",
+    "use_cases": [
+      "Describe a browser task and inspect the proposed workflow before running it",
+      "Record repetitive form or spreadsheet work locally and edit the resulting automation",
+      "Schedule eligible cloud runs and review outputs with sample data",
+      "Call saved automations from an MCP-compatible AI assistant"
+    ],
+    "pros": [
+      "The public About identifies the independent operator and the Terms distinguish AIVane product obligations from Creem purchase obligations",
+      "Plan prices, allowances, seat minimums, pack expiry and cancellation terms are described publicly",
+      "Privacy pages distinguish local recording, user-selected model providers and Hosted AI, and name DeepInfra and PostHog",
+      "Generated workflows and recordings remain the user’s under the Terms; the site provides use-case and setup documentation"
+    ],
+    "cons": [
+      "No actual automation run, paid checkout or installer integrity was independently tested; vendor examples are not hands-on evidence",
+      "Hosted AI sends task context and evidence to AIVane and DeepInfra, and AIVane retains request/response content for 30 days; avoid confidential data until the processing fits your needs",
+      "PostHog analytics and session replays can capture visible or typed account-page content; outside the stated EU/EEA/UK/Swiss regions analytics defaults on with opt-out",
+      "Free is limited to 3 saved automations and a one-time 10-minute cloud trial; purchased packs expire after 12 months unless law provides longer",
+      "AIVane Labs is described as an independently operated product, not an incorporated company; Creem is the transaction reseller, not the software operator"
+    ],
+    "key_features": [
+      "AI-assisted creation and editing of browser/desktop workflows",
+      "Browser cloud execution and scheduled runs on eligible plans",
+      "Windows and Mac desktop downloads with optional local execution",
+      "Optional Hosted AI credits or own model provider",
+      "MCP access to saved automations",
+      "One-time credit and cloud-time packs"
+    ],
+    "faq": [
+      [
+        "Who operates AIVane?",
+        "The About page names Sam Luo as independent developer and operator. AIVane Labs is a product brand; Creem (Armitage Labs OÜ) acts as merchant of record and contractual reseller for purchases, not as the software operator."
+      ],
+      [
+        "What does AIVane cost?",
+        "Free includes three saved automations and one-time trial allowances. Starter is $12/month or $120/year, Pro $29/month or $290/year, and Business $39/seat/month or $390/seat/year with a three-seat minimum. Check the official pricing page for packs and taxes."
+      ],
+      [
+        "Where do Hosted AI tasks go?",
+        "AIVane says its current Hosted AI inference provider is DeepInfra and that its own service retains request and response content for 30 days. Own-provider configurations follow the chosen provider’s terms."
+      ],
+      [
+        "Can I use my workflows elsewhere?",
+        "The Terms say users retain rights to recordings, inputs and workflows; portability and execution outside AIVane were not tested."
+      ],
+      [
+        "Which law governs the product terms?",
+        "The Terms specify the laws of the People’s Republic of China and competent courts in mainland China where permitted, while preserving mandatory consumer protections. Creem purchases are governed separately by Creem Buyer Terms."
+      ]
+    ],
+    "trial_checklist": [
+      "Use a non-sensitive test website and sample spreadsheet before granting access to real accounts",
+      "Inspect and edit each proposed workflow before allowing changes in third-party systems",
+      "Compare the Free one-time credits and 10-minute cloud trial against the task duration you need",
+      "Check whether the workflow needs the Browser Bridge extension, cloud time, a paid plan or your own model provider",
+      "Review the Hosted AI 30-day content retention, session-replay policy and pack expiration before using sensitive data or buying"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5: several documented browser and desktop automation paths, but no execution tested. Transparency 3.8/5: public operator, law/forum, purchase reseller and prices are clear; hosted task retention, replay exposure, pack expiry and untested installer/checkout temper confidence. Overall 4.0/5 based on source review, not hands-on testing."
   }
 ]

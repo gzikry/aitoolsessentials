@@ -1265,6 +1265,15 @@
       "public_href": "/go/reigniter/",
       "partner": false
     },
+    "aivane": {
+      "name": "AIVane",
+      "slug": "aivane",
+      "official": "https://aivane.net/",
+      "destination": "https://aivane.net/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/aivane/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",
