@@ -1256,6 +1256,15 @@
       "public_href": "/go/magi2ai/",
       "partner": false
     },
+    "reigniter": {
+      "name": "Reigniter",
+      "slug": "reigniter",
+      "official": "https://reigniter.ai/",
+      "destination": "https://reigniter.ai/?utm_source=aitoolsessentials&utm_medium=calculator&utm_campaign=keep_test_cut",
+      "affiliate_url": "",
+      "public_href": "/go/reigniter/",
+      "partner": false
+    },
     "windsurf": {
       "name": "Windsurf",
       "slug": "windsurf",

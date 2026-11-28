@@ -2591,5 +2591,26 @@
     "status": "not_started",
     "next_action": "No affiliate program currently: Sigmify LLC said so in its 2026-11-27 reply; revisit only if vendor announces one. Do not invent affiliate URL.",
     "notes": "Separate listing from Auteo under the same operator. Editorial rating independent of commercial relationship."
+  },
+  {
+    "tool_slug": "reigniter",
+    "tool_name": "Reigniter",
+    "priority": "low",
+    "category": "Creative",
+    "recommended_networks_to_check": [
+      "Direct vendor partnership"
+    ],
+    "search_queries": [
+      "Reigniter affiliate program"
+    ],
+    "target_pages": [
+      "/tools/reigniter/"
+    ],
+    "best_audiences": [
+      "small-business creators evaluating branded video and app-building subscriptions"
+    ],
+    "status": "not_started",
+    "next_action": "Email vendor about affiliate or partner terms separately; editorial assessment remains independent.",
+    "notes": "No affiliate URL verified or published."
   }
 ]

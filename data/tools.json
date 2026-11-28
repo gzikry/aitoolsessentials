@@ -9100,5 +9100,69 @@
     "hands_on_status": "not_tested",
     "hands_on_priority": "standard",
     "rating_rationale": "Job fit 4.0/5: the single-model MAGI-2 studio, API provenance, live model selection, reference inputs and displayed credit cost make a coherent video workflow, but no paid generation was tested and no free generation allowance is advertised. Transparency 3.6/5: the operator, Wyoming venue, provider chain and training position are now stated, while the registered-agent address, unspecified retention and field-text session recording leave meaningful buyer caveats. Overall 3.8/5, editorial source assessment rather than hands-on output verification."
+  },
+  {
+    "slug": "reigniter",
+    "name": "Reigniter",
+    "category": "Creative",
+    "best_for": "Small teams making branded AI video adverts, interactive training and simple app prototypes from one shared credit balance, with human approval before social publishing.",
+    "price": "Free Starter: 5 signup credits, 1 scene and watermark. Pro $29/month for 75 credits (175 $68, 275 $106, 375 $145, 475 $184), one seat and 5 GB. Interactive Training $149/month for 385 credits, five seats, ten clients and 50 GB. Agency $199/month for 515 credits, ten seats, ten clients and 100 GB. Extra 100-credit increments and capacities are shown on the official pricing page. Credits expire two months after addition under the Terms; tax may be added outside UK and US. Checked 2026-11-27.",
+    "rating": 4.0,
+    "official": "https://reigniter.ai/",
+    "summary": "Reigniter combines a branded AI video studio, prompt-led app builder, interactive training and marketing agents. Flittor Ltd (England and Wales company 17255586) operates it. Public pricing and legal pages describe credits, content rights and UK governing law; an actual generation and social posting were not tested.",
+    "use_cases": [
+      "Make a short branded product video from a photo and brand assets",
+      "Build a website or app prototype from a prompt",
+      "Turn slides into a voiced training module",
+      "Review and schedule marketing posts for connected social accounts"
+    ],
+    "pros": [
+      "Flittor Ltd, its company number and registered office match the UK Companies House record",
+      "Public pricing shows free and paid credit limits, seats, storage and video length",
+      "Terms state output ownership remains with users subject to applicable law and describe failed-job credit refunds",
+      "Privacy notice explains social-account permissions and says customer content is not used to train models without opt-in"
+    ],
+    "cons": [
+      "No generation, publishing or checkout was tested independently; public samples are vendor-made",
+      "Five free signup credits and one draft video scene are a narrow test of the paid video capabilities",
+      "Credits expire two months after being added, including top-ups, under the Terms",
+      "Uploaded faces, voices, briefs and media can be passed to unnamed AI, voice, hosting, email and error-monitoring suppliers; verify processing before sensitive uploads",
+      "The pricing page spans app building, training and video; their credit use and plan gating should be checked inside the account before paying"
+    ],
+    "key_features": [
+      "Branded AI product, UGC-style and commercial video formats",
+      "Prompt-based app and website builder",
+      "Agent-assisted campaign planning and approval-gated posting",
+      "Interactive training exports including SCORM 1.2 and xAPI on eligible plans",
+      "Shared credit balance across product lines"
+    ],
+    "faq": [
+      [
+        "Who runs Reigniter?",
+        "Flittor Ltd, registered in England and Wales as company 17255586, identifies Reigniter and Reignitor as trading names. The Terms specify English and Welsh law and courts."
+      ],
+      [
+        "What does a plan cost?",
+        "Starter offers 5 free signup credits. Pro starts at $29/month for 75 credits, Interactive Training at $149/month for 385, and Agency at $199/month for 515; check the current pricing page for higher credit quantities and tax."
+      ],
+      [
+        "Do credits roll over?",
+        "The Terms say credits from plans and top-ups expire two months after being added and the oldest are used first."
+      ],
+      [
+        "Can I use the outputs commercially?",
+        "The Terms say users own their uploads and generated media insofar as law permits; obtain rights and consent for uploaded faces, voices and third-party brand assets."
+      ]
+    ],
+    "trial_checklist": [
+      "Start with one owned product image and brand kit; compare a free draft with an intended paid workflow",
+      "Check the per-action credit quote for app builds, video scenes and agents before running",
+      "Read the two-month credit expiry and refund conditions before subscribing",
+      "Confirm social publishing requires approval for the exact account and channel connected",
+      "Avoid sensitive customer media until comfortable with the privacy notice and the provider disclosures"
+    ],
+    "hands_on_status": "not_tested",
+    "hands_on_priority": "standard",
+    "rating_rationale": "Job fit 4.2/5: the site documents multiple creative and builder workflows with visible plan gates, but no actual output was tested. Transparency 3.8/5: the named registered operator, pricing and UK venue are clear, while upstream model/voice suppliers are unnamed and credit expiry is short. Overall 4.0/5 based on source review, not hands-on testing."
   }
 ]

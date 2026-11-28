@@ -32,7 +32,7 @@ Two live, routable requests. **Neither pitch has been sent.** Sourcee request pa
 >
 > ChatGPT Plus and Claude Pro each list $20/month on month-to-month billing (vendor pages checked 2026-11-14). A reader paying for both therefore has two separate subscriptions to account for before calculating whether either saves or earns them money.
 >
-> Our vendor-page snapshots cover 139 AI tools; 54 publish a monthly price, and the median cheapest paid monthly price among those 54 is $15 (snapshot updated 2026-11-27). These are US-dollar listed prices, not UK bank-statement spending, exchange-rate-adjusted costs or evidence of personal returns. We can share the underlying vendor URLs and check dates for your pricing context.
+> Our vendor-page snapshots cover 1140 AI tools; 54 publish a monthly price, and the median cheapest paid monthly price among those 54 is $15 (snapshot updated 2026-11-27). These are US-dollar listed prices, not UK bank-statement spending, exchange-rate-adjusted costs or evidence of personal returns. We can share the underlying vendor URLs and check dates for your pricing context.
 >
 > Your request calls for British subscribers with first-hand savings or earnings stories. We cannot supply one and would not represent ourselves as one; this is background price evidence only, if useful alongside your interviews.
 >

@@ -2,7 +2,7 @@
   "site": "AIToolsEssentials",
   "domain": "https://aitoolsessentials.com",
   "generated": "2026-11-27",
-  "tools_count": 139,
+  "tools_count": 140,
   "core_pages": [
     {
       "title": "Stack Builder",
@@ -1008,6 +1008,13 @@
       "category": "Video",
       "price": "Starter 200 credits/month $15 monthly or $12/month billed annually ($144/year); Plus 500 credits/month $29 monthly or $23/month annually ($276/year); Ultra 3,000 credits/month $129 monthly or $103/month annually ($1,236/year). One-time packs valid 1 year: 200 credits $26, 500 $56 (Plus $46, Ultra $36), 3,000 $276 (Plus $219, Ultra $176). Black Friday through Dec 1, 2026: 40% off the first monthly or annual subscription payment, 30% off packs (e.g. first monthly Starter $9; first annual Starter $86.40). Tax extra. Pricing page checked 2026-11-27 with monthly and annual tabs rendered.",
       "url": "https://aitoolsessentials.com/tools/magi2ai/"
+    },
+    {
+      "name": "Reigniter",
+      "slug": "reigniter",
+      "category": "Creative",
+      "price": "Free Starter: 5 signup credits, 1 scene and watermark. Pro $29/month for 75 credits (175 $68, 275 $106, 375 $145, 475 $184), one seat and 5 GB. Interactive Training $149/month for 385 credits, five seats, ten clients and 50 GB. Agency $199/month for 515 credits, ten seats, ten clients and 100 GB. Extra 100-credit increments and capacities are shown on the official pricing page. Credits expire two months after addition under the Terms; tax may be added outside UK and US. Checked 2026-11-27.",
+      "url": "https://aitoolsessentials.com/tools/reigniter/"
     }
   ],
   "editorial_note": "AIToolsEssentials separates editorial scoring from affiliate and sponsor relationships."

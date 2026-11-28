@@ -1874,6 +1874,16 @@
       "rights_url": "https://magi2ai.video/terms-of-service",
       "docs_url": "https://magi2ai.video/create",
       "verification_notes": "Submitted via form by vendor 2026-11-25; held pending namesake provenance, jurisdiction, legal inconsistencies and relationship with Auteo. Editorial entry written independently. Rechecked 2026-11-27: Terms section 2 says Sand.ai MAGI-2 through a third-party API; Privacy section 3 names Sand.ai via NanoAPI and TypeSafe; NanoAPI publicly offers magi-2.0 at https://nanoapi.ai/magi-2. Terms section 10 names Wyoming law and courts; section 12 names Sigmify LLC and its Sheridan address. Privacy sections 4 and 9 state no service-side model training and per-category deletion, but no fixed periods. Terms section 3, Privacy section 11 and Refund section 7 agree on 13 minimum with guardian consent for minors. Pricing monthly and annual tabs and one-time packs rendered; buttons enabled; checkout and actual generation not attempted. Vendor email dated 2026-11-27 17:15 +08:00 subject Re: Auteo (auteo.ai) is live on AIToolsEssentials - the three blockers cleared asks for separate Magi2AI listing; same operator Sigmify LLC. The 2026-11-25 request subject Magi2AI submission - who serves MAGI-2, and four smaller things was sent once; no duplicate request. Earlier refund condition of fewer than 10 credits is superseded by current zero-credit rule. No account or paid render tested."
+    },
+    {
+      "slug": "reigniter",
+      "pricing_checked_date": "2026-11-27",
+      "pricing_summary": "Free Starter: 5 signup credits, 1 scene and watermark. Pro $29/month for 75 credits (175 $68, 275 $106, 375 $145, 475 $184), one seat and 5 GB. Interactive Training $149/month for 385 credits, five seats, ten clients and 50 GB. Agency $199/month for 515 credits, ten seats, ten clients and 100 GB. Extra 100-credit increments and capacities are shown on the official pricing page. Credits expire two months after addition under the Terms; tax may be added outside UK and US. Checked 2026-11-27.",
+      "pricing_url": "https://reigniter.ai/pricing",
+      "privacy_url": "https://reigniter.ai/privacy",
+      "rights_url": "https://reigniter.ai/terms",
+      "docs_url": "https://reigniter.ai/docs/",
+      "verification_notes": "Submitted via form by vendor; editorial entry written independently. Checked official home, pricing, privacy, terms, contact and security on 2026-11-27. Flittor Ltd 17255586 and registered office independently matched Companies House. Purchase, generation, agent actions and social publishing not tested; model/voice subprocessors not individually named in privacy. Name Reignitor is an alternate trading name on the site."
     }
   ]
 }
